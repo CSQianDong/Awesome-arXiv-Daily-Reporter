@@ -1,18 +1,5 @@
 # DnDScore: Decontextualization and Decomposition for Factuality Verification in Long-Form Text Generation 
 
-**Title (ZH)**: DnDScore：长文本生成中事实性验证的去语境化与分解方法 
-
-**Authors**: Miriam Wanner, Benjamin Van Durme, Mark Dredze  
-
-**Link**: [PDF](https://arxiv.org/pdf/2412.13175)  
-
-**Abstract**: The decompose-then-verify strategy for verification of Large Language Model (LLM) generations decomposes claims that are then independently verified. Decontextualization augments text (claims) to ensure it can be verified outside of the original context, enabling reliable verification. While decomposition and decontextualization have been explored independently, their interactions in a complete system have not been investigated. Their conflicting purposes can create tensions: decomposition isolates atomic facts while decontextualization inserts relevant information. Furthermore, a decontextualized subclaim presents a challenge to the verification step: what part of the augmented text should be verified as it now contains multiple atomic facts? We conduct an evaluation of different decomposition, decontextualization, and verification strategies and find that the choice of strategy matters in the resulting factuality scores. Additionally, we introduce DnDScore, a decontextualization aware verification method which validates subclaims in the context of contextual information. 
-
-**Abstract (ZH)**: 对于大型语言模型（LLM）生成内容的验证策略采用“分解再验证”方法，即将声明分解后再独立验证。脱情境化通过对文本（声明）进行扩展，确保可以在原始上下文之外进行验证，从而实现可靠验证。虽然分解和脱情境化独立研究过，但它们在完整系统中的相互作用尚未被探讨。这两种策略有冲突的目的：分解孤立原子事实，而脱情境化则插入相关信息。此外，脱情境化的子声明对验证步骤构成挑战：在现在包含多个原子事实的情况下，应该验证文本中的哪一部分？我们对不同的分解、脱情境化和验证策略进行了评估，并发现策略的选择会影响到最终的事实评分。此外，我们引入了DnDScore，这是一种脱情境化感知的验证方法，能够在背景信息的背景下验证子声明。 
-
----
-# DnDScore: Decontextualization and Decomposition for Factuality Verification in Long-Form Text Generation 
-
 **Title (ZH)**: DnDScore：长文本生成中的去语境化与分解事实验证方法 
 
 **Authors**: Miriam Wanner, Benjamin Van Durme, Mark Dredze  
