@@ -2,7 +2,7 @@
 
 | Date | Link | Number of Papers |
 |:----:|:----:|:----------------:|
-| 25-Dec-2024 | [Link](https://github.com/Deriq-Qian-Dong/Awesome-arXiv-Daily-Reporter/blob/main/25-Dec-2024/topic/LLM_related_papers.md) | 37 |
+| 25-Dec-2024 | [Link](https://github.com/Deriq-Qian-Dong/Awesome-arXiv-Daily-Reporter/blob/main/25-Dec-2024/topic/LLM_related_papers.md) | 48 |
 | 24-Dec-2024 | [Link](https://github.com/Deriq-Qian-Dong/Awesome-arXiv-Daily-Reporter/blob/main/24-Dec-2024/topic/LLM_related_papers.md) | 71 |
 | 23-Dec-2024 | [Link](https://github.com/Deriq-Qian-Dong/Awesome-arXiv-Daily-Reporter/blob/main/23-Dec-2024/topic/LLM_related_papers.md) | 49 |
 | 20-Dec-2024 | [Link](https://github.com/Deriq-Qian-Dong/Awesome-arXiv-Daily-Reporter/blob/main/20-Dec-2024/topic/LLM_related_papers.md) | 49 |
