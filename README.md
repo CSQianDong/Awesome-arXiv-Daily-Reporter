@@ -4,6 +4,8 @@
 
 | Date | Link | Number of Papers |
 |:----:|:----:|:----------------:|
+| 6-Jan-2025 | [Link](https://github.com/Deriq-Qian-Dong/Awesome-arXiv-Daily-Reporter/tree/main/6-Jan-2025) | 105 |
+| 3-Jan-2025 | [Link](https://github.com/Deriq-Qian-Dong/Awesome-arXiv-Daily-Reporter/tree/main/3-Jan-2025) | 360 |
 | 3-Jan-2025 | [Link](https://github.com/Deriq-Qian-Dong/Awesome-arXiv-Daily-Reporter/tree/main/3-Jan-2025) | 360 |
 | 31-Dec-2024 | [Link](https://github.com/Deriq-Qian-Dong/Awesome-arXiv-Daily-Reporter/tree/main/31-Dec-2024) | 241 |
 | 30-Dec-2024 | [Link](https://github.com/Deriq-Qian-Dong/Awesome-arXiv-Daily-Reporter/tree/main/30-Dec-2024) | 246 |
