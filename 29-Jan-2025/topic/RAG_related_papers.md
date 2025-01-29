@@ -1,0 +1,39 @@
+# Multiple Abstraction Level Retrieve Augment Generation 
+
+**Title (ZH)**: 多抽象层次检索增强生成 
+
+**Authors**: Zheng Zheng, Xinyi Ni, Pengyu Hong  
+
+**Link**: [PDF](https://arxiv.org/pdf/2501.16952)  
+
+**Abstract**: A Retrieval-Augmented Generation (RAG) model powered by a large language model (LLM) provides a faster and more cost-effective solution for adapting to new data and knowledge. It also delivers more specialized responses compared to pre-trained LLMs. However, most existing approaches rely on retrieving prefix-sized chunks as references to support question-answering (Q/A). This approach is often deployed to address information needs at a single level of abstraction, as it struggles to generate answers across multiple levels of abstraction. In an RAG setting, while LLMs can summarize and answer questions effectively when provided with sufficient details, retrieving excessive information often leads to the 'lost in the middle' problem and exceeds token limitations. We propose a novel RAG approach that uses chunks of multiple abstraction levels (MAL), including multi-sentence-level, paragraph-level, section-level, and document-level. The effectiveness of our approach is demonstrated in an under-explored scientific domain of Glycoscience. Compared to traditional single-level RAG approaches, our approach improves AI evaluated answer correctness of Q/A by 25.739\% on Glyco-related papers. 
+
+**Abstract (ZH)**: 由大规模语言模型（LLM）驱动的检索增强生成（RAG）模型为适应新数据和知识提供了更快、更经济的解决方案。与预训练的LLM相比，它还能提供更加专业化的回答。然而，现有的大多数方法依赖于检索前缀大小的片段作为支持问答（Q/A）的参考。这种方法通常仅在单一抽象层次上解决信息需求，因为它难以生成跨越多个抽象层次的答案。在RAG框架中，虽然LLM在提供足够细节时可以有效地进行总结和回答问题，但检索过多信息往往会导致“中间迷失”问题，并超过标记限制。我们提出了一种新颖的具有多抽象层次（MAL）片段的RAG方法，包括多句子级别、段落级别、部分级别和文档级别。我们的方法在尚未充分开发的糖科学领域中得到了验证。与传统的单一抽象层次RAG方法相比，我们的方法在与糖相关的论文中提高了AI评估的问答正确性25.739%。 
+
+---
+# URAG: Implementing a Unified Hybrid RAG for Precise Answers in University Admission Chatbots -- A Case Study at HCMUT 
+
+**Title (ZH)**: URAG：在胡志明市科技大学大学入学聊天机器人中实现统一混合检索生成模型以获取精确答案——一个案例研究 
+
+**Authors**: Long Nguyen, Tho Quan  
+
+**Link**: [PDF](https://arxiv.org/pdf/2501.16276)  
+
+**Abstract**: With the rapid advancement of Artificial Intelligence, particularly in Natural Language Processing, Large Language Models (LLMs) have become pivotal in educational question-answering systems, especially university admission chatbots. Concepts such as Retrieval-Augmented Generation (RAG) and other advanced techniques have been developed to enhance these systems by integrating specific university data, enabling LLMs to provide informed responses on admissions and academic counseling. However, these enhanced RAG techniques often involve high operational costs and require the training of complex, specialized modules, which poses challenges for practical deployment. Additionally, in the educational context, it is crucial to provide accurate answers to prevent misinformation, a task that LLM-based systems find challenging without appropriate strategies and methods. In this paper, we introduce the Unified RAG (URAG) Framework, a hybrid approach that significantly improves the accuracy of responses, particularly for critical queries. Experimental results demonstrate that URAG enhances our in-house, lightweight model to perform comparably to state-of-the-art commercial models. Moreover, to validate its practical applicability, we conducted a case study at our educational institution, which received positive feedback and acclaim. This study not only proves the effectiveness of URAG but also highlights its feasibility for real-world implementation in educational settings. 
+
+**Abstract (ZH)**: 随着人工智能的迅速发展，特别是在自然语言处理领域的进步，大型语言模型（LLMs）在教育问答系统中扮演着关键角色，尤其是在大学入学聊天机器人方面。检索增强生成（RAG）等先进技术和其他相关技术的发展，通过融合特定的大学数据，增强这些系统的能力，使LLMs能够在录取和学术咨询方面提供更加精准的回答。然而，这些增强的RAG技术通常涉及较高的运营成本，并需要培训复杂的专用模块，这给实际部署带来了挑战。此外，在教育领域，提供准确的答案以防止信息误导至关重要，这是一项LLM基于系统难以完成的任务，除非具备适当的战略和方法。在这项论文中，我们提出了统一的RAG（URAG）框架，这是一种混合方法，显著提高了关键查询的准确性。实验结果表明，URAG提升了我们内部的轻量级模型，使其与最先进的商用模型性能相当。此外，为了验证其实际应用可能性，我们在教育机构进行了案例研究，获得了积极的反馈和认可。这项研究不仅证明了URAG的有效性，还突显了其在教育场景中实际实施的可行性。 
+
+---
+# ASTRAL: Automated Safety Testing of Large Language Models 
+
+**Title (ZH)**: ASTRAL：自动化大型语言模型安全性测试 
+
+**Authors**: Miriam Ugarte, Pablo Valle, José Antonio Parejo, Sergio Segura, Aitor Arrieta  
+
+**Link**: [PDF](https://arxiv.org/pdf/2501.17132)  
+
+**Abstract**: Large Language Models (LLMs) have recently gained attention due to their ability to understand and generate sophisticated human-like content. However, ensuring their safety is paramount as they might provide harmful and unsafe responses. Existing LLM testing frameworks address various safety-related concerns (e.g., drugs, terrorism, animal abuse) but often face challenges due to unbalanced and obsolete datasets. In this paper, we present ASTRAL, a tool that automates the generation and execution of test cases (i.e., prompts) for testing the safety of LLMs. First, we introduce a novel black-box coverage criterion to generate balanced and diverse unsafe test inputs across a diverse set of safety categories as well as linguistic writing characteristics (i.e., different style and persuasive writing techniques). Second, we propose an LLM-based approach that leverages Retrieval Augmented Generation (RAG), few-shot prompting strategies and web browsing to generate up-to-date test inputs. Lastly, similar to current LLM test automation techniques, we leverage LLMs as test oracles to distinguish between safe and unsafe test outputs, allowing a fully automated testing approach. We conduct an extensive evaluation on well-known LLMs, revealing the following key findings: i) GPT3.5 outperforms other LLMs when acting as the test oracle, accurately detecting unsafe responses, and even surpassing more recent LLMs (e.g., GPT-4), as well as LLMs that are specifically tailored to detect unsafe LLM outputs (e.g., LlamaGuard); ii) the results confirm that our approach can uncover nearly twice as many unsafe LLM behaviors with the same number of test inputs compared to currently used static datasets; and iii) our black-box coverage criterion combined with web browsing can effectively guide the LLM on generating up-to-date unsafe test inputs, significantly increasing the number of unsafe LLM behaviors. 
+
+**Abstract (ZH)**: 大型语言模型（LLMs）由于其理解和生成高级别类人内容的能力，最近引起了广泛关注。然而，确保它们的安全性至关重要，因为它们可能会提供有害和不安全的回应。现有的LLM测试框架针对各种安全相关问题（如药物、恐怖主义、虐待动物）进行了处理，但通常会面临数据集不平衡和过时等问题的挑战。在本文中，我们介绍了一种名为ASTRAL的工具，该工具可以自动生成和执行用于测试LLM安全性的测试案例（即提示词）。首先，我们引入了一个新颖的黑盒覆盖率标准，以生成覆盖广泛安全类别以及语言写作风格（即不同的写作风格和说服性写作风格）的平衡和多样化不安全测试输入。其次，我们提出了一种基于LLM的方法，该方法利用了检索增强生成（RAG）、少量示例提示策略和网络浏览来生成最新的测试输入。最后，类似于当前的LLM测试自动化技术，我们利用LLM作为测试 oracle，区分安全和不安全的测试输出，从而实现完全自动化的测试方法。我们对知名大型语言模型进行了广泛的评估，揭示了以下关键发现：i) 当充当测试 oracle 时，GPT3.5 的表现优于其他大型语言模型，准确检测不安全的回应，并甚至超过了更近期的语言模型（例如GPT-4），以及专门用于检测不安全的大型语言模型输出的语言模型（例如LlamaGuard）；ii) 结果证实，我们的方法能在相同数量的测试输入下发现近两倍的不安全大型语言模型行为；iii) 我们结合黑盒覆盖率标准和网络浏览，可有效引导大型语言模型生成最新的不安全测试输入，显著提高了不安全大型语言模型行为的数量。 
+
+---
