@@ -1,0 +1,169 @@
+# Janus-Pro: Unified Multimodal Understanding and Generation with Data and Model Scaling 
+
+**Title (ZH)**: Janus-Pro：统一的多模态理解和生成方法通过数据和模型扩展 
+
+**Authors**: Xiaokang Chen, Zhiyu Wu, Xingchao Liu, Zizheng Pan, Wen Liu, Zhenda Xie, Xingkai Yu, Chong Ruan  
+
+**Link**: [PDF](https://arxiv.org/pdf/2501.17811)  
+
+**Abstract**: In this work, we introduce Janus-Pro, an advanced version of the previous work Janus. Specifically, Janus-Pro incorporates (1) an optimized training strategy, (2) expanded training data, and (3) scaling to larger model size. With these improvements, Janus-Pro achieves significant advancements in both multimodal understanding and text-to-image instruction-following capabilities, while also enhancing the stability of text-to-image generation. We hope this work will inspire further exploration in the field. Code and models are publicly available. 
+
+**Abstract (ZH)**: 在本文中，我们介绍了Janus-Pro，这是之前工作的Janus的先进版本。具体而言，Janus-Pro 包含以下改进：（1）优化的训练策略；（2）扩展的训练数据；以及（3）较大的模型规模。通过这些改进，Janus-Pro 在多模态理解以及文本到图像指令遵循能力方面取得了显著进步，同时提高了文本到图像生成的稳定性。我们希望本工作能够激发领域内的进一步探索。相关代码和模型已公开提供。 
+
+---
+# Reflections on "Can AI Understand Our Universe?" 
+
+**Title (ZH)**: 《对“AI能否理解我们的宇宙？”的思考》 
+
+**Authors**: Yu Wang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2501.17507)  
+
+**Abstract**: This article briefly discusses the philosophical and technical aspects of AI. It focuses on two concepts of understanding: intuition and causality, and highlights three AI technologies: Transformers, chain-of-thought reasoning, and multimodal processing. We anticipate that in principle AI could form understanding, with these technologies representing promising advancements. 
+
+**Abstract (ZH)**: 本文简要探讨了人工智能的哲学和技术方面。文章侧重讨论了两种理解概念：直觉和因果关系，并强调了三项AI技术：变换器、链式推理和多模态处理。我们预期从原则上讲，AI能够形成理解，而这些技术则代表了潜在的进步方向。 
+
+---
+# U2A: Unified Unimodal Adaptation for Robust and Efficient Multimodal Learning 
+
+**Title (ZH)**: U2A：统一的单模态适应方法以实现鲁棒高效的多模态学习 
+
+**Authors**: Md Kaykobad Reza, Niki Nezakati, Ameya Patil, Mashhour Solh, M. Salman Asif  
+
+**Link**: [PDF](https://arxiv.org/pdf/2501.17823)  
+
+**Abstract**: Multimodal learning often relies on designing new models and complex training strategies to achieve optimal performance. We present Unified Unimodal Adaptation (U2A), which jointly fine-tunes pretrained unimodal encoders using low-rank adaptation (LoRA) for various multimodal tasks. Our method significantly reduces the number of learnable parameters and eliminates the need for complex training strategies, such as alternating training, gradient modifications, or unimodal fine-tuning. To address missing modalities during both training and testing, we introduce Mask Tokens (MT), which generate missing modality features from available modalities using a single token per modality. This simplifies the process, removing the need for specialized feature estimation or prompt-tuning methods. Our evaluation demonstrates that U2A matches or outperforms state-of-the-art methods in both complete and missing modality settings, showcasing strong performance and robustness across various modalities, tasks, and datasets. We also analyze and report the effectiveness of Mask Tokens in different missing modality scenarios. Overall, our method provides a robust, flexible, and efficient solution for multimodal learning, with minimal computational overhead. 
+
+**Abstract (ZH)**: 多模态学习经常依赖于设计新的模型和复杂的训练策略以实现最佳性能。我们提出了统一单模态适应（Unified Unimodal Adaptation, U2A），该方法利用低秩适应（Low-Rank Adaptation, LoRA）联合微调预训练的单模态编码器，以适应多种多模态任务。我们的方法显著减少了可学习参数的数量，并消除了交替训练、梯度修改或单模态微调等复杂训练策略的需要。为了解决训练和测试过程中缺失的模态，我们引入了掩码标记（Mask Tokens, MT），这种方法通过每个模态一个标记，从可用的模态中生成缺失模态特征。这简化了过程，消除了专门特征估算或提示调优方法的需要。我们的评估结果表明，在完整和缺失模态设置下，U2A 方法与其相比具有相当或更优的性能，展示了其在各种模态、任务和数据集上的强大性能和稳健性。我们还分析和报告了在不同缺失模态场景下掩码标记的有效性。总体而言，我们的方法提供了一种在最小计算开销下的稳健、灵活且高效的多模态学习解决方案。 
+
+---
+# PulmoFusion: Advancing Pulmonary Health with Efficient Multi-Modal Fusion 
+
+**Title (ZH)**: PulmoFusion：以高效多模态融合促进肺部健康的研究 
+
+**Authors**: Ahmed Sharshar, Yasser Attia, Mohammad Yaqub, Mohsen Guizani  
+
+**Link**: [PDF](https://arxiv.org/pdf/2501.17699)  
+
+**Abstract**: Traditional remote spirometry lacks the precision required for effective pulmonary monitoring. We present a novel, non-invasive approach using multimodal predictive models that integrate RGB or thermal video data with patient metadata. Our method leverages energy-efficient Spiking Neural Networks (SNNs) for the regression of Peak Expiratory Flow (PEF) and classification of Forced Expiratory Volume (FEV1) and Forced Vital Capacity (FVC), using lightweight CNNs to overcome SNN limitations in regression tasks. Multimodal data integration is improved with a Multi-Head Attention Layer, and we employ K-Fold validation and ensemble learning to boost robustness. Using thermal data, our SNN models achieve 92% accuracy on a breathing-cycle basis and 99.5% patient-wise. PEF regression models attain Relative RMSEs of 0.11 (thermal) and 0.26 (RGB), with an MAE of 4.52% for FEV1/FVC predictions, establishing state-of-the-art performance. Code and dataset can be found on this https URL 
+
+**Abstract (ZH)**: 传统远程肺功能检测缺乏有效的精准度。我们提出了一种新颖的非侵入性方法，该方法利用多模态预测模型整合RGB或热成像视频数据与患者元数据。该方法结合了节能型脉冲神经网络（SNNs）和轻量级CNNs，用于Pef最大呼气流量的回归及FEV1和FVC的分类。通过多头注意力层改进了多模态数据的集成，并采用K-Fold验证和集成学习来提高鲁棒性。使用热成像数据，我们的SNN模型在每次呼吸周期上的准确率为92%，个体水平上为99.5%。Pef回归模型获得了相对RMSE为0.11（热成像）和0.26（RGB），以及FEV1/FVC预测的MAE为4.52%，确立了最先进的性能。代码和数据集可以在以下链接找到：this https URL 
+
+---
+# Planning with Vision-Language Models and a Use Case in Robot-Assisted Teaching 
+
+**Title (ZH)**: 使用视觉-语言模型进行规划及一项基于机器人辅助教学的应用案例 
+
+**Authors**: Xuzhe Dang, Lada Kudláčková, Stefan Edelkamp  
+
+**Link**: [PDF](https://arxiv.org/pdf/2501.17665)  
+
+**Abstract**: Automating the generation of Planning Domain Definition Language (PDDL) with Large Language Model (LLM) opens new research topic in AI planning, particularly for complex real-world tasks. This paper introduces Image2PDDL, a novel framework that leverages Vision-Language Models (VLMs) to automatically convert images of initial states and descriptions of goal states into PDDL problems. By providing a PDDL domain alongside visual inputs, Imasge2PDDL addresses key challenges in bridging perceptual understanding with symbolic planning, reducing the expertise required to create structured problem instances, and improving scalability across tasks of varying complexity. We evaluate the framework on various domains, including standard planning domains like blocksworld and sliding tile puzzles, using datasets with multiple difficulty levels. Performance is assessed on syntax correctness, ensuring grammar and executability, and content correctness, verifying accurate state representation in generated PDDL problems. The proposed approach demonstrates promising results across diverse task complexities, suggesting its potential for broader applications in AI planning. We will discuss a potential use case in robot-assisted teaching of students with Autism Spectrum Disorder. 
+
+**Abstract (ZH)**: 使用大型语言模型（LLM）自动化生成Planning Domain Definition Language (PDDL) 为人工智能规划领域开辟了新的研究课题，尤其是针对复杂的现实任务。本文介绍了Image2PDDL，这是一种新颖的框架，利用视觉语言模型（VLMs）将初始状态的图像和目标状态的描述自动转换为PDDL问题。通过提供PDDL域和视觉输入，Image2PDDL解决了知觉理解和符号规划之间的桥梁构建难题，减少了创建结构化问题实例所需的专业知识，并提高了不同复杂度任务的可扩展性。我们在各种领域对框架进行了评估，包括标准规划域如积木世界和滑块拼图，使用具有多种难度级别的数据集。性能评估从语法正确性和内容正确性两个方面进行，确保语法正确、可执行性，并验证生成的PDDL问题中状态表示的准确性。提出的这种方法在不同任务复杂性下表现出有前途的结果，这表明其在人工智能规划中的广泛应用潜力。我们还将讨论其在自闭症谱系障碍学生辅助教学中的潜在应用场景。 
+
+---
+# Exploring Vision Language Models for Multimodal and Multilingual Stance Detection 
+
+**Title (ZH)**: 探索视觉语言模型在多模态多语言立场检测中的应用 
+
+**Authors**: Jake Vasilakes, Carolina Scarton, Zhixue Zhao  
+
+**Link**: [PDF](https://arxiv.org/pdf/2501.17654)  
+
+**Abstract**: Social media's global reach amplifies the spread of information, highlighting the need for robust Natural Language Processing tasks like stance detection across languages and modalities. Prior research predominantly focuses on text-only inputs, leaving multimodal scenarios, such as those involving both images and text, relatively underexplored. Meanwhile, the prevalence of multimodal posts has increased significantly in recent years. Although state-of-the-art Vision-Language Models (VLMs) show promise, their performance on multimodal and multilingual stance detection tasks remains largely unexamined. This paper evaluates state-of-the-art VLMs on a newly extended dataset covering seven languages and multimodal inputs, investigating their use of visual cues, language-specific performance, and cross-modality interactions. Our results show that VLMs generally rely more on text than images for stance detection and this trend persists across languages. Additionally, VLMs rely significantly more on text contained within the images than other visual content. Regarding multilinguality, the models studied tend to generate consistent predictions across languages whether they are explicitly multilingual or not, although there are outliers that are incongruous with macro F1, language support, and model size. 
+
+**Abstract (ZH)**: 社交媒体的全球影响力放大了信息传播的速度，突显了在多种语言和模态下进行稳健自然语言处理任务（如立场检测）的重要性。现有研究主要集中在文本输入上，而涉及图像和文本等多种模态的情景则相对较少被探索。与此同时，近年来多模态帖子的数量显著增加。尽管最先进的视觉语言模型（VLM）表现出潜力，但它们在多模态和跨语言立场检测任务上的性能尚未得到充分研究。本文在涵盖七种语言和多种模态输入的全新扩展数据集上评估了最先进的VLM，考察了它们对视觉线索的使用、语言特定性能以及跨模态交互情况。我们的结果表明，VLMs在立场检测中通常更依赖文本而非图像，这种趋势在不同语言中依然持续。此外，VLMs更依赖图像中的文本而非其他视觉内容。至于多语言性，研究的模型即使不是明确的多语言模型，也倾向于在多种语言中生成一致的预测，但存在一些模型在宏F1分数、语言支持和模型规模方面与这一趋势不符。 
+
+---
+# General Scene Adaptation for Vision-and-Language Navigation 
+
+**Title (ZH)**: 视觉语言导航中的通用场景适应 
+
+**Authors**: Haodong Hong, Yanyuan Qiao, Sen Wang, Jiajun Liu, Qi Wu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2501.17403)  
+
+**Abstract**: Vision-and-Language Navigation (VLN) tasks mainly evaluate agents based on one-time execution of individual instructions across multiple environments, aiming to develop agents capable of functioning in any environment in a zero-shot manner. However, real-world navigation robots often operate in persistent environments with relatively consistent physical layouts, visual observations, and language styles from instructors. Such a gap in the task setting presents an opportunity to improve VLN agents by incorporating continuous adaptation to specific environments. To better reflect these real-world conditions, we introduce GSA-VLN, a novel task requiring agents to execute navigation instructions within a specific scene and simultaneously adapt to it for improved performance over time. To evaluate the proposed task, one has to address two challenges in existing VLN datasets: the lack of OOD data, and the limited number and style diversity of instructions for each scene. Therefore, we propose a new dataset, GSA-R2R, which significantly expands the diversity and quantity of environments and instructions for the R2R dataset to evaluate agent adaptability in both ID and OOD contexts. Furthermore, we design a three-stage instruction orchestration pipeline that leverages LLMs to refine speaker-generated instructions and apply role-playing techniques to rephrase instructions into different speaking styles. This is motivated by the observation that each individual user often has consistent signatures or preferences in their instructions. We conducted extensive experiments on GSA-R2R to thoroughly evaluate our dataset and benchmark various methods. Based on our findings, we propose a novel method, GR-DUET, which incorporates memory-based navigation graphs with an environment-specific training strategy, achieving state-of-the-art results on all GSA-R2R splits. 
+
+**Abstract (ZH)**: 视觉语言导航（VLN）任务主要评估代理在多个环境中一次性执行个别指令的能力，旨在开发能够在任何环境中以零样本方式进行工作的代理。然而，现实世界中的导航机器人通常在物理布局相对一致且视觉观察和指导语言风格也相对一致的持久环境中运行。这种任务设置之间的差距为通过持续适应特定环境来改进VLN代理提供了机会。为了更好地反映这些现实条件，我们引入了GSA-VLN，这是一种新颖的任务，要求代理在特定场景中执行导航指令并同时适应该场景，以在时间上提高性能。为了评估该任务，必须解决现有VLN数据集中两个关键挑战：OOD（out-of-distribution）数据的缺失，以及每个场景中指令数量和风格的有限多样性。因此，我们提出了一种新的数据集GSA-R2R，该数据集显著扩展了R2R数据集中的环境和指令的多样性和数量，以评估代理在ID（in-distribution）和OOD（out-of-distribution）环境中的适应性。此外，我们设计了一个三阶段指令协调流水线，利用大模型（LLM）来优化生成的指令，并运用角色扮演技术将其重新表述为不同的话语风格。这一设计受到观察的启发，即每个用户往往在指令中表现出一致的特征或偏好。我们在GSA-R2R上进行了广泛实验，以全面评估我们的数据集并基准多种方法。根据我们的研究发现，我们提出了一种新颖的方法——GR-DUET，该方法结合了基于记忆的导航图与环境特定的训练策略，实现了在所有GSA-R2R分割上的前沿结果。 
+
+---
+# Learning Free Token Reduction for Multi-Modal LLM 
+
+**Title (ZH)**: 基于学习的自由 Tokens 减少方法在多模态 LLM 中的应用 
+
+**Authors**: Zihui Zhao, Yingxin Li, Yang Li  
+
+**Link**: [PDF](https://arxiv.org/pdf/2501.17391)  
+
+**Abstract**: Vision-Language Models (VLMs) have achieved remarkable success across a range of multimodal tasks; however, their practical deployment is often constrained by high computational costs and prolonged inference times. Since the vision modality typically carries more information than the text modality, compressing visual prompts offers a promising solution to alleviate these challenges. Existing approaches predominantly focus on refining model architectures or directly reducing the number of visual tokens. However, these methods often compromise inference performance due to a lack of consideration for the unique spatial and temporal characteristics of visual data. In this work, we propose a token compression paradigm that operates on both spatial and temporal dimensions. Our approach includes a learning-free, plug-and-play compression pipeline that can be seamlessly integrated into most Multimodal Large Language Model (MLLM) frameworks. By leveraging this method, we enhance the model inference capability while simultaneously reducing its computational cost. Experimental results on the Video-QA task demonstrate the effectiveness of the proposed approach, showcasing significant improvements in efficiency without sacrificing performance. 
+
+**Abstract (ZH)**: 视觉-语言模型（Vision-Language Models, VLMs）在多种多模态任务中取得了显著的成功；然而，它们的实际部署往往受到高计算成本和长时间推理时间的限制。由于视觉模态通常比文本模态承载更多的信息，压缩视觉提示为缓解这些挑战提供了一种有前景的解决方案。现有的方法主要集中在优化模型架构或直接减少视觉令牌的数量。然而，这些方法往往因为缺乏对视觉数据独特时空特性的考虑而影响了推理性能。在本工作中，我们提出了一种在时空两个维度上进行令牌压缩的范式。我们的方法包括一个无需学习、即插即用的压缩流水线，该流水线可以无缝集成到大多数多模态大型语言模型（Multimodal Large Language Models, MLLMs）框架中。通过利用该方法，我们同时提升了模型的推理能力并降低了其计算成本。在Video-QA任务上的实验结果表明，所提出的方法有效，能够显著提高效率而不牺牲性能。 
+
+---
+# Separated Inter/Intra-Modal Fusion Prompts for Compositional Zero-Shot Learning 
+
+**Title (ZH)**: 分离的跨模态/同模态融合提示用于组合零样本学习 
+
+**Authors**: Sua Jung  
+
+**Link**: [PDF](https://arxiv.org/pdf/2501.17171)  
+
+**Abstract**: Compositional Zero-Shot Learning (CZSL) aims to recognize subtle differences in meaning or the combination of states and objects through the use of known and unknown concepts during training. Existing methods either focused on prompt configuration or on using prompts to tune the pre-trained Vision-Language model. However, these methods faced challenges in accurately identifying subtle differences in meaning or combining states with objects. To jointly eradicate the above issues and construct an efficient and effective CZSL technique, we suggest a method to improve attribute recognition performance by utilizing diverse Prompt Learning with an Inter/Intra-Modality Fusion Synthesizer in scene understanding involving subtle semantic differences and multiple objects. 
+
+**Abstract (ZH)**: 组合零样本学习（CZSL）旨在通过在训练过程中利用已知和未知概念来识别意义上的细微差别或状态与对象的组合差异。现有方法要么侧重于提示配置，要么利用提示调整预训练的视觉-语言模型。然而，这些方法在准确识别意义上的细微差别或组合状态与对象方面遇到了挑战。为了共同解决上述问题并构建一种高效且有效的CZSL技术，我们建议利用具有跨模态/同模态融合合成器的多样化提示学习方法，以场景理解中涉及细微语义差异和多种物体的属性识别性能提升为目的。 
+
+---
+# NUS-Emo at SemEval-2024 Task 3: Instruction-Tuning LLM for Multimodal Emotion-Cause Analysis in Conversations 
+
+**Title (ZH)**: 新加坡国立大学情感分析团队在SemEval-2024 任务3中的研究成果：通过指令调优大语言模型进行多模态对话情感成因分析 
+
+**Authors**: Meng Luo, Han Zhang, Shengqiong Wu, Bobo Li, Hong Han, Hao Fei  
+
+**Link**: [PDF](https://arxiv.org/pdf/2501.17261)  
+
+**Abstract**: This paper describes the architecture of our system developed for Task 3 of SemEval-2024: Multimodal Emotion-Cause Analysis in Conversations. Our project targets the challenges of subtask 2, dedicated to Multimodal Emotion-Cause Pair Extraction with Emotion Category (MECPE-Cat), and constructs a dual-component system tailored to the unique challenges of this task. We divide the task into two subtasks: emotion recognition in conversation (ERC) and emotion-cause pair extraction (ECPE). To address these subtasks, we capitalize on the abilities of Large Language Models (LLMs), which have consistently demonstrated state-of-the-art performance across various natural language processing tasks and domains. Most importantly, we design an approach of emotion-cause-aware instruction-tuning for LLMs, to enhance the perception of the emotions with their corresponding causal rationales. Our method enables us to adeptly navigate the complexities of MECPE-Cat, achieving a weighted average 34.71% F1 score of the task, and securing the 2nd rank on the leaderboard. The code and metadata to reproduce our experiments are all made publicly available. 
+
+**Abstract (ZH)**: 本文描述了我们为SemEval-2024任务3：对话多模态情感原因分析系统开发的架构。我们的项目针对子任务2，即多模态情感原因配对提取（带情感类别）（MECPE-Cat）所面临的挑战，并构建了一个双组件系统，以应对这一任务的独特挑战。我们将任务细分为两个子任务：对话中的情感识别（ERC）和情感原因配对提取（ECPE）。为了解决这些子任务，我们利用了大型语言模型（LLMs）的能力，这些模型在各种自然语言处理任务和领域中始终表现出最先进的性能。最重要的是，我们设计了一种情感-原因意识的指令微调方法，以增强LLMs对情感及其相应因果分析的感知能力。我们的方法使我们能够熟练应对MECPE-Cat的复杂性，任务加权平均F1得分为34.71%，并取得了排行榜第2名的成绩。我们已将复现实验所需的代码和元数据全部公开。 
+
+---
+# VICCA: Visual Interpretation and Comprehension of Chest X-ray Anomalies in Generated Report Without Human Feedback 
+
+**Title (ZH)**: VICCA：生成报告中胸部X光异常的视觉解释与理解，无需人类反馈 
+
+**Authors**: Sayeh Gholipour Picha, Dawood Al Chanti, Alice Caplier  
+
+**Link**: [PDF](https://arxiv.org/pdf/2501.17726)  
+
+**Abstract**: As artificial intelligence (AI) becomes increasingly central to healthcare, the demand for explainable and trustworthy models is paramount. Current report generation systems for chest X-rays (CXR) often lack mechanisms for validating outputs without expert oversight, raising concerns about reliability and interpretability. To address these challenges, we propose a novel multimodal framework designed to enhance the semantic alignment and localization accuracy of AI-generated medical reports. Our framework integrates two key modules: a Phrase Grounding Model, which identifies and localizes pathologies in CXR images based on textual prompts, and a Text-to-Image Diffusion Module, which generates synthetic CXR images from prompts while preserving anatomical fidelity. By comparing features between the original and generated images, we introduce a dual-scoring system: one score quantifies localization accuracy, while the other evaluates semantic consistency. This approach significantly outperforms existing methods, achieving state-of-the-art results in pathology localization and text-to-image alignment. The integration of phrase grounding with diffusion models, coupled with the dual-scoring evaluation system, provides a robust mechanism for validating report quality, paving the way for more trustworthy and transparent AI in medical imaging. 
+
+**Abstract (ZH)**: 随着人工智能（AI）在医疗保健领域的日益重要，可解释性和可信度模型的需求至关重要。当前的胸部X光片（CXR）报告生成系统在缺乏专家监督的情况下难以验证输出，这引发了可靠性和可解释性的担忧。为了解决这些问题，我们提出了一种新颖的多模态框架，旨在增强AI生成的医疗报告的语义对齐和定位准确性。该框架整合了两个关键模块：一个短语接地模型，该模型基于文本提示在CXR图像中识别并定位病理；以及一个文本到图像扩散模块，该模块根据提示生成合成的CXR图像，同时保留解剖的真实性。通过比较原始图像和生成图像之间的特征，我们引入了一种双评分系统：一个评分衡量定位准确性，而另一个则评估语义一致性。这种方法显著优于现有方法，在病理定位和文本到图像对齐方面达到了最先进的结果。将短语接地与扩散模型相结合，并采用双评分评估系统，提供了一种可靠的报告验证机制，为医疗成像中更可信和透明的人工智能铺平了道路。 
+
+---
+# Audio Large Language Models Can Be Descriptive Speech Quality Evaluators 
+
+**Title (ZH)**: 音频大型语言模型可以作为描述性语音质量评估器 
+
+**Authors**: Chen Chen, Yuchen Hu, Siyin Wang, Helin Wang, Zhehuai Chen, Chao Zhang, Chao-Han Huck Yang, Eng Siong Chng  
+
+**Link**: [PDF](https://arxiv.org/pdf/2501.17202)  
+
+**Abstract**: An ideal multimodal agent should be aware of the quality of its input modalities. Recent advances have enabled large language models (LLMs) to incorporate auditory systems for handling various speech-related tasks. However, most audio LLMs remain unaware of the quality of the speech they process. This limitation arises because speech quality evaluation is typically excluded from multi-task training due to the lack of suitable datasets. To address this, we introduce the first natural language-based speech evaluation corpus, generated from authentic human ratings. In addition to the overall Mean Opinion Score (MOS), this corpus offers detailed analysis across multiple dimensions and identifies causes of quality degradation. It also enables descriptive comparisons between two speech samples (A/B tests) with human-like judgment. Leveraging this corpus, we propose an alignment approach with LLM distillation (ALLD) to guide the audio LLM in extracting relevant information from raw speech and generating meaningful responses. Experimental results demonstrate that ALLD outperforms the previous state-of-the-art regression model in MOS prediction, with a mean square error of 0.17 and an A/B test accuracy of 98.6%. Additionally, the generated responses achieve BLEU scores of 25.8 and 30.2 on two tasks, surpassing the capabilities of task-specific models. This work advances the comprehensive perception of speech signals by audio LLMs, contributing to the development of real-world auditory and sensory intelligent agents. 
+
+**Abstract (ZH)**: 理想的多模态代理应当意识到其输入模态的质量。近期的进展使大型语言模型（LLMs）能够集成声学系统以处理各种语音相关任务。然而，大多数音频LLMs仍然无法意识到其所处理语音的质量。这一限制主要是由于缺乏合适的数据集，导致语音质量评估通常不作为多任务训练的一部分。为解决这一问题，我们引入了第一个基于自然语言的语音评估语料库，该语料库源自真实的人员评分。除了总体的意见评分（MOS）之外，该语料库还提供了在多个维度上的详细分析，并确定了质量下降的原因。它还能够以类似于人类判断的方式对两个语音样本（A/B测试）进行描述性比较。通过利用该语料库，我们提出了一种利用LLM蒸馏的对齐方法（ALLD），以指导音频LLMs从原始语音中提取相关信息并生成有意义的响应。实验结果表明，ALLD在MOS预测方面的性能优于之前的最佳回归模型，均方误差为0.17，A/B测试准确率为98.6%。此外，生成的响应在两个任务上的BLEU分数分别为25.8和30.2，超过了专门模型的能力。本工作提高了音频LLMs对语音信号的综合感知，有助于开发实用的听觉和感觉智能代理。 
+
+---
+# Leveraging Multimodal LLM for Inspirational User Interface Search 
+
+**Title (ZH)**: 利用多模态大语言模型进行启发式用户界面搜索 
+
+**Authors**: Seokhyeon Park, Yumin Song, Soohyun Lee, Jaeyoung Kim, Jinwook Seo  
+
+**Link**: [PDF](https://arxiv.org/pdf/2501.17799)  
+
+**Abstract**: Inspirational search, the process of exploring designs to inform and inspire new creative work, is pivotal in mobile user interface (UI) design. However, exploring the vast space of UI references remains a challenge. Existing AI-based UI search methods often miss crucial semantics like target users or the mood of apps. Additionally, these models typically require metadata like view hierarchies, limiting their practical use. We used a multimodal large language model (MLLM) to extract and interpret semantics from mobile UI images. We identified key UI semantics through a formative study and developed a semantic-based UI search system. Through computational and human evaluations, we demonstrate that our approach significantly outperforms existing UI retrieval methods, offering UI designers a more enriched and contextually relevant search experience. We enhance the understanding of mobile UI design semantics and highlight MLLMs' potential in inspirational search, providing a rich dataset of UI semantics for future studies. 
+
+**Abstract (ZH)**: 启发式搜索是指探索设计方案以启发新创造力的过程，在移动用户界面（UI）设计中至关重要。然而，探索大量的UI参考空间仍然是一个挑战。现有的基于AI的UI搜索方法往往忽略了目标用户或应用程序的情绪等关键语义。此外，这些模型通常需要视图层次结构等元数据，限制了其实际应用。我们采用了多模态大型语言模型（MLLM）来从移动UI图像中提取和解释语义。通过形成性研究，我们识别了关键的UI语义，并开发了一个基于语义的UI搜索系统。通过计算和人工评估，我们证明了我们的方法显著优于现有的UI检索方法，为UI设计师提供了更为丰富和相关的搜索体验。我们加深了对移动UI设计语义的理解，并突显了MLLM在启发式搜索中的潜力，提供了丰富的UI语义数据集，以供未来研究使用。 
+
+---
