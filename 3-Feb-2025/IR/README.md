@@ -1,0 +1,110 @@
+# mFollowIR: a Multilingual Benchmark for Instruction Following in Retrieval 
+
+**Title (ZH)**: mFollowIR：一种用于检索中的指令跟随的多语言基准数据集 
+
+**Authors**: Orion Weller, Benjamin Chang, Eugene Yang, Mahsa Yarmohammadi, Sam Barham, Sean MacAvaney, Arman Cohan, Luca Soldaini, Benjamin Van Durme, Dawn Lawrie  
+
+**Link**: [PDF](https://arxiv.org/pdf/2501.19264)  
+
+**Abstract**: Retrieval systems generally focus on web-style queries that are short and underspecified. However, advances in language models have facilitated the nascent rise of retrieval models that can understand more complex queries with diverse intents. However, these efforts have focused exclusively on English; therefore, we do not yet understand how they work across languages. We introduce mFollowIR, a multilingual benchmark for measuring instruction-following ability in retrieval models. mFollowIR builds upon the TREC NeuCLIR narratives (or instructions) that span three diverse languages (Russian, Chinese, Persian) giving both query and instruction to the retrieval models. We make small changes to the narratives and isolate how well retrieval models can follow these nuanced changes. We present results for both multilingual (XX-XX) and cross-lingual (En-XX) performance. We see strong cross-lingual performance with English-based retrievers that trained using instructions, but find a notable drop in performance in the multilingual setting, indicating that more work is needed in developing data for instruction-based multilingual retrievers. 
+
+**Abstract (ZH)**: 检索系统通常专注于网页风格的查询，这些查询较短且不明确。然而，语言模型的进步促进了对能够理解和处理更为复杂、多样化意图查询的检索模型的初步发展。不过，这些努力主要集中在英语上；因此，我们尚未了解这些模型在其他语言中的表现。我们引入了 mFollowIR，这是一个多语言基准，用于评估检索模型的指令遵循能力。mFollowIR 建立在 TREC NeuCLIR 叙述（或指令）之上，这些叙述覆盖了三种不同的语言（俄语、中文、波斯语），并向检索模型提供查询和指令。我们对这些叙述进行了细微调整，以考察检索模型在处理细微变化方面的能力。我们展示了多语言（XX-XX）和跨语言（En-XX）性能的结果。我们观察到使用英语指令进行训练的检索模型在跨语言性能方面表现强劲，但在多语言设置中性能显著下降，这表明在开发基于指令的多语言检索数据方面还有更多工作要做。 
+
+---
+# Emancipatory Information Retrieval 
+
+**Title (ZH)**: 解放性信息检索 
+
+**Authors**: Bhaskar Mitra  
+
+**Link**: [PDF](https://arxiv.org/pdf/2501.19241)  
+
+**Abstract**: Our world today is facing a confluence of several mutually reinforcing crises each of which intersects with concerns of social justice and emancipation. This paper is a provocation for the role of computer-mediated information access in our emancipatory struggles. We define emancipatory information retrieval as the study and development of information access methods that challenge various forms of human oppression, and situates its activities within broader collective emancipatory praxis. The term "emancipatory" here signifies the moral concerns of universal humanization of all peoples and the elimination of oppression to create the conditions under which we can collectively flourish. To develop an emancipatory research agenda for IR, in this paper we speculate about the practices that the community can adopt, enumerate some of the projects that the field should undertake, and discuss provocations to spark new ideas and directions for research. We challenge the field of information retrieval (IR) research to embrace humanistic values and commit to universal emancipation and social justice as part of our research. 
+
+**Abstract (ZH)**: 当今世界面临着多个相互强化的危机，这些危机与社会公正和平等息息相关。本文是对计算机介导的信息访问在我们的解放斗争中所扮演的角色的一种挑战性的论述。我们定义解放性的信息检索为挑战各种形式的人类压迫的研究和发展，并将其活动置于更广泛的集体解放实践之中。这里的“解放性”意味着对所有人进行普遍的人道关怀，消除压迫，创造一个我们能够共同繁荣的条件。为了构建信息检索（IR）研究的解放性议程，本文推测了社区可以采纳的实践，列出了领域内应该承担的一些项目，并讨论了一些 provocation 以激发新的研究思路和方向。我们挑战信息检索研究领域拥抱人文学科的价值观，并将普遍解放和社会公正作为我们研究的一部分。 
+
+---
+# A Zero-Shot Generalization Framework for LLM-Driven Cross-Domain Sequential Recommendation 
+
+**Title (ZH)**: 面向大模型驱动跨域序列推荐的零样本泛化框架 
+
+**Authors**: Yunzhe Li, Junting Wang, Hari Sundaram, Zhining Liu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2501.19232)  
+
+**Abstract**: Zero-shot cross-domain sequential recommendation (ZCDSR) enables predictions in unseen domains without the need for additional training or fine-tuning, making it particularly valuable in data-sparse environments where traditional models struggle. Recent advancements in large language models (LLMs) have greatly improved ZCDSR by leveraging rich pretrained representations to facilitate cross-domain knowledge transfer. However, a key challenge persists: domain semantic bias, which arises from variations in vocabulary and content focus across domains. This misalignment leads to inconsistencies in item embeddings and hinders generalization.
+To address this issue, we propose a novel framework designed to enhance LLM-based ZCDSR by improving cross-domain alignment at both the item and sequential levels. At the item level, we introduce a generalization loss that promotes inter-domain compactness by aligning embeddings of similar items across domains while maintaining intra-domain diversity to preserve unique item characteristics. This prevents embeddings from becoming overly generic while ensuring effective transferability. At the sequential level, we develop a method for transferring user behavioral patterns by clustering user sequences in the source domain and applying attention-based aggregation for target domain inference. This dynamic adaptation of user embeddings allows effective zero-shot recommendations without requiring target-domain interactions.
+Comprehensive experiments across multiple datasets and domains demonstrate that our framework significantly improves sequential recommendation performance in the ZCDSR setting. By mitigating domain bias and enhancing the transferability of sequential patterns, our method provides a scalable and robust approach for achieving more effective zero-shot recommendations across domains. 
+
+**Abstract (ZH)**: 零样本跨域序列推荐（ZCDSR）能够在未见领域中进行预测，而无需额外的训练或微调，特别是在数据稀疏环境中具有特别的价值，因为传统模型在这种环境中表现不佳。最近大型语言模型（LLMs）的进展极大地改进了ZCDSR，通过利用丰富的预训练表示来促进跨领域的知识转移。然而，一个核心挑战仍然存在：领域语义偏见，它源自不同领域词汇和内容侧重点的变化。这种不一致导致了物品嵌入的不一致性，阻碍了泛化。
+
+为了解决这一问题，我们提出了一种新的框架，旨在通过提高物品和序列层次上的跨域对齐来增强基于LLM的ZCDSR。在物品层次上，我们引入了一种推广损失，通过在不同领域中对相似物品的嵌入进行对齐以促进跨域紧凑性，同时保持域内多样性以保留物品的独特特征。这可以防止嵌入变得过度通用，同时确保有效的迁移。在序列层次上，我们开发了一种转移用户行为模式的方法，即在源域中聚类用户序列，并应用注意力机制聚合以推断目标域。这种动态适应的用户嵌入允许在无需目标域互动的情况下实现有效的零样本推荐。
+
+在多个数据集和领域的全面实验中，我们的框架显著改善了ZCDSR设置中的序列推荐性能。通过减轻领域偏见并增强序列模式的迁移性，我们的方法提供了一种可扩展且鲁棒的方法，以便在不同领域中实现更有效的零样本推荐。 
+
+---
+# Collaborative Diffusion Model for Recommender System 
+
+**Title (ZH)**: 协作扩散模型在推荐系统中的应用 
+
+**Authors**: Gyuseok Lee, Yaochen Zhu, Hwanjo Yu, Yao Zhou, Jundong Li  
+
+**Link**: [PDF](https://arxiv.org/pdf/2501.18997)  
+
+**Abstract**: Diffusion-based recommender systems (DR) have gained increasing attention for their advanced generative and denoising capabilities. However, existing DR face two central limitations: (i) a trade-off between enhancing generative capacity via noise injection and retaining the loss of personalized information. (ii) the underutilization of rich item-side information. To address these challenges, we present a Collaborative Diffusion model for Recommender System (CDiff4Rec). Specifically, CDiff4Rec generates pseudo-users from item features and leverages collaborative signals from both real and pseudo personalized neighbors identified through behavioral similarity, thereby effectively reconstructing nuanced user preferences. Experimental results on three public datasets show that CDiff4Rec outperforms competitors by effectively mitigating the loss of personalized information through the integration of item content and collaborative signals. 
+
+**Abstract (ZH)**: 基于扩散的推荐系统（DR）因其先进的生成能力和去噪能力而引起了越来越多的关注。然而，现有的DR面临着两个主要限制：（i）通过注入噪声来增强生成能力与保留个性化信息损失之间的权衡；（ii）对丰富的物品侧信息利用不足。为了解决这些挑战，我们提出了一种用于推荐系统的协作扩散模型（CDiff4Rec）。具体而言，CDiff4Rec 从物品特征中生成伪用户，并通过行为相似性识别出真实的和伪的个性化邻居，从而有效地重构用户的复杂偏好。在三个公开数据集上的实验结果表明，CDiff4Rec 通过整合物品内容和协作信号有效地减轻了个性化信息损失，从而在性能上优于竞争对手。 
+
+---
+# Are Representation Disentanglement and Interpretability Linked in Recommendation Models? A Critical Review and Reproducibility Study 
+
+**Title (ZH)**: 推荐模型中表示解耦与可解释性是否存在联系？一篇批判性回顾与重现研究 
+
+**Authors**: Ervin Dervishaj, Tuukka Ruotsalo, Maria Maistro, Christina Lioma  
+
+**Link**: [PDF](https://arxiv.org/pdf/2501.18805)  
+
+**Abstract**: Unsupervised learning of disentangled representations has been closely tied to enhancing the representation intepretability of Recommender Systems (RSs). This has been achieved by making the representation of individual features more distinctly separated, so that it is easier to attribute the contribution of features to the model's predictions. However, such advantages in interpretability and feature attribution have mainly been explored qualitatively. Moreover, the effect of disentanglement on the model's recommendation performance has been largely overlooked. In this work, we reproduce the recommendation performance, representation disentanglement and representation interpretability of five well-known recommendation models on four RS datasets. We quantify disentanglement and investigate the link of disentanglement with recommendation effectiveness and representation interpretability. While several existing work in RSs have proposed disentangled representations as a gateway to improved effectiveness and interpretability, our findings show that disentanglement is not necessarily related to effectiveness but is closely related to representation interpretability. Our code and results are publicly available at this https URL. 
+
+**Abstract (ZH)**: 无监督学习中得到的解耦表示与增强推荐系统（RSs）的表示可解释性密切相关。通过使个体特征的表示更加明显地分离，从而使特征对模型预测的贡献更容易归因。然而，这种在可解释性和特征归因方面的优势主要通过定性的方法进行探讨。此外，解耦对模型推荐性能的影响尚未得到充分重视。本文中，我们对四种RS数据集上的五种知名推荐模型的推荐性能、表示解耦和表示可解释性进行了重现。我们量化了解耦，并探讨了解耦与推荐效果和表示可解释性之间的关系。虽然RS中已有研究将解耦表示视为提高效果和可解释性的途径之一，但我们的发现表明，解耦并不必然与效果相关，而是与表示可解释性密切相关。我们的代码和结果已在以下网址公开: [提供网址] 
+
+---
+# Hierarchical Multi-field Representations for Two-Stage E-commerce Retrieval 
+
+**Title (ZH)**: 两级电子商务检索的分层多场表示方法 
+
+**Authors**: Niklas Freymuth, Dong Liu, Thomas Ricatte, Saab Mansour  
+
+**Link**: [PDF](https://arxiv.org/pdf/2501.18707)  
+
+**Abstract**: Dense retrieval methods typically target unstructured text data represented as flat strings. However, e-commerce catalogs often include structured information across multiple fields, such as brand, title, and description, which contain important information potential for retrieval systems. We present Cascading Hierarchical Attention Retrieval Model (CHARM), a novel framework designed to encode structured product data into hierarchical field-level representations with progressively finer detail. Utilizing a novel block-triangular attention mechanism, our method captures the interdependencies between product fields in a specified hierarchy, yielding field-level representations and aggregated vectors suitable for fast and efficient retrieval. Combining both representations enables a two-stage retrieval pipeline, in which the aggregated vectors support initial candidate selection, while more expressive field-level representations facilitate precise fine-tuning for downstream ranking. Experiments on publicly available large-scale e-commerce datasets demonstrate that CHARM matches or outperforms state-of-the-art baselines. Our analysis highlights the framework's ability to align different queries with appropriate product fields, enhancing retrieval accuracy and explainability. 
+
+**Abstract (ZH)**: 密集检索方法通常针对以平面字符串表示的无结构文本数据。然而，电子商务目录往往包含跨越多个字段的结构化信息，如品牌、标题和描述，这些信息对检索系统来说具有重要的潜在价值。我们提出了级联层次注意检索模型（CHARM），这是一种新型框架，旨在将结构化的产品数据编码为具有逐渐细化细节的层次字段表示。利用一种新颖的块三角注意机制，我们的方法能够捕捉指定层次结构中各产品字段之间的相互依赖关系，从而生成适合快速高效检索的字段级表示和聚合向量。将两种表示相结合，可以构建一个两阶段的检索流水线，其中聚合向量支持初始候选对象的选择，而更具表现力的字段级表示则有助于下游排序中的精细微调。在公共大型电子商务数据集上的实验表明，CHARM可以与最先进的基线模型匹配或超越它们。我们的分析还突显了该框架在匹配不同查询与适当的产品字段方面的能力，从而提升检索的准确性和可解释性。 
+
+---
+# Characterizing User Behavior: The Interplay Between Mobility Patterns and Mobile Traffic 
+
+**Title (ZH)**: 用户行为特征化：移动模式与移动流量的相互作用 
+
+**Authors**: Anne Josiane Kouam, Aline Carneiro Viana, Mariano G. Beiró, Leo Ferres, Luca Pappalardo  
+
+**Link**: [PDF](https://arxiv.org/pdf/2501.19348)  
+
+**Abstract**: Mobile devices have become essential for capturing human activity, and eXtended Data Records (XDRs) offer rich opportunities for detailed user behavior modeling, which is useful for designing personalized digital services. Previous studies have primarily focused on aggregated mobile traffic and mobility analyses, often neglecting individual-level insights. This paper introduces a novel approach that explores the dependency between traffic and mobility behaviors at the user level. By analyzing 13 individual features that encompass traffic patterns and various mobility aspects, we enhance the understanding of how these behaviors interact. Our advanced user modeling framework integrates traffic and mobility behaviors over time, allowing for fine-grained dependencies while maintaining population heterogeneity through user-specific signatures. Furthermore, we develop a Markov model that infers traffic behavior from mobility and vice versa, prioritizing significant dependencies while addressing privacy concerns. Using a week-long XDR dataset from 1,337,719 users across several provinces in Chile, we validate our approach, demonstrating its robustness and applicability in accurately inferring user behavior and matching mobility and traffic profiles across diverse urban contexts. 
+
+**Abstract (ZH)**: 移动设备已成为捕捉人类活动不可或缺的工具，而扩展数据记录（XDRs）提供了丰富的机会，用于详细建模用户行为，这对于设计个性化的数字服务非常有用。以往的研究主要集中在聚合的移动流量和移动性分析上，往往忽略了个体层面的洞察。本文介绍了一种新颖的方法，该方法在个体水平上探索了流量行为和移动性行为之间的依赖关系。通过分析包括流量模式和各种移动性方面的13个个体特征，我们增强了对这些行为如何相互作用的理解。我们的高级用户建模框架随着时间的推移将流量行为和移动性行为进行整合，通过用户特定的签名来维护人群异质性，同时保持细粒度的依赖关系。此外，我们开发了一个马尔可夫模型，该模型从移动性推断流量行为，反之亦然，优先考虑重要的依赖关系并解决隐私问题。利用智利多个省份1,337,719名用户长达一周的XDR数据集，我们验证了这种方法的有效性，证明了其在不同城市背景下精确推断用户行为并匹配移动性与流量特征的稳健性和适用性。 
+
+---
+# Revisiting Projection-based Data Transfer for Cross-Lingual Named Entity Recognition in Low-Resource Languages 
+
+**Title (ZH)**: 重新审视基于投影的数据转移在低资源语言跨语言命名实体识别中的应用 
+
+**Authors**: Andrei Politov, Oleh Shkalikov, René Jäkel, Michael Färber  
+
+**Link**: [PDF](https://arxiv.org/pdf/2501.18750)  
+
+**Abstract**: Cross-lingual Named Entity Recognition (NER) leverages knowledge transfer between languages to identify and classify named entities, making it particularly useful for low-resource languages. We show that the data-based cross-lingual transfer method is an effective technique for crosslingual NER and can outperform multilingual language models for low-resource languages. This paper introduces two key enhancements to the annotation projection step in cross-lingual NER for low-resource languages. First, we explore refining word alignments using back-translation to improve accuracy. Second, we present a novel formalized projection approach of matching source entities with extracted target candidates. Through extensive experiments on two datasets spanning 57 languages, we demonstrated that our approach surpasses existing projectionbased methods in low-resource settings. These findings highlight the robustness of projection-based data transfer as an alternative to model-based methods for crosslingual named entity recognition in lowresource languages. 
+
+**Abstract (ZH)**: 跨语言命名实体识别（NER）利用语言间的知识迁移来识别和分类命名实体，特别适用于低资源语言。我们展示了基于数据的跨语言转移方法在跨语言NER中是一种有效的技术，并且可以超越多语言语言模型在低资源语言中的表现。本文在低资源语言的跨语言NER中引入了两个关键的改进步骤。首先，我们探索使用回译来细化词对齐，以提高准确性；其次，我们提出了一种新的形式化投影方法，将源语言实体与提取的目标候选实体进行匹配。通过在两个跨越57种语言的数据集上进行广泛实验，我们证明了我们的方法在低资源环境中优于现有的基于投影的方法。这些发现强调了基于投影的数据转移在低资源语言跨语言命名实体识别中的稳健性，作为一种与基于模型的方法不同的替代方案。 
+
+---
