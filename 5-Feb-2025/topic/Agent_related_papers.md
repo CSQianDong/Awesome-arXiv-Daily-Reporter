@@ -1,0 +1,282 @@
+# A Minimax Approach to Ad Hoc Teamwork 
+
+**Title (ZH)**: 一种最小最大方法应用于自组团队合作 
+
+**Authors**: Victor Villin, Thomas Kleine Buening, Christos Dimitrakakis  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.02377)  
+
+**Abstract**: We propose a minimax-Bayes approach to Ad Hoc Teamwork (AHT) that optimizes policies against an adversarial prior over partners, explicitly accounting for uncertainty about partners at time of deployment. Unlike existing methods that assume a specific distribution over partners, our approach improves worst-case performance guarantees. Extensive experiments, including evaluations on coordinated cooking tasks from the Melting Pot suite, show our method's superior robustness compared to self-play, fictitious play, and best response learning. Our work highlights the importance of selecting an appropriate training distribution over teammates to achieve robustness in AHT. 
+
+**Abstract (ZH)**: 我们提出了一种最小最大-Bayes方法来优化即兴团队合作（Ad Hoc Teamwork, AHT），该方法针对伙伴的对抗先验进行优化，并在部署时明确考虑伙伴的不确定性。不同于现有的方法假设伙伴的特定分布，我们的方法提高了最坏情况下的性能保证。在包括从Melting Pot系列中任务协调烹饪任务的广泛实验中，我们的方法在鲁棒性方面表现优于自我对弈、假想博弈和最佳反应学习。我们的工作强调了在AHT中选择适当的队友训练分布以实现鲁棒性的重要性。 
+
+---
+# CH-MARL: Constrained Hierarchical Multiagent Reinforcement Learning for Sustainable Maritime Logistics 
+
+**Title (ZH)**: CH-MARL：受约束的层次化多智能体强化学习在可持续海运物流中的应用 
+
+**Authors**: Saad Alqithami  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.02060)  
+
+**Abstract**: Addressing global challenges such as greenhouse gas emissions and resource inequity demands advanced AI-driven coordination among autonomous agents. We propose CH-MARL (Constrained Hierarchical Multiagent Reinforcement Learning), a novel framework that integrates hierarchical decision-making with dynamic constraint enforcement and fairness-aware reward shaping. CH-MARL employs a real-time constraint-enforcement layer to ensure adherence to global emission caps, while incorporating fairness metrics that promote equitable resource distribution among agents. Experiments conducted in a simulated maritime logistics environment demonstrate considerable reductions in emissions, along with improvements in fairness and operational efficiency. Beyond this domain-specific success, CH-MARL provides a scalable, generalizable solution to multi-agent coordination challenges in constrained, dynamic settings, thus advancing the state of the art in reinforcement learning. 
+
+**Abstract (ZH)**: 应对全球挑战，如温室气体排放和资源不平等，需要借助先进的人工智能驱动自主代理之间的协调。我们提出了一种名为CH-MARL（Constrained Hierarchical Multiagent Reinforcement Learning）的新颖框架，该框架结合了层级决策制定、动态约束执行以及公平意识的奖励塑造。CH-MARL采用实时约束执行层来确保遵守全球排放上限，并纳入公平性指标以促进资源在代理间的公平分配。在模拟的海运物流环境中进行的实验显示，CH-MARL在减排方面取得了显著成效，并在公平性和运营效率方面也有所提升。超越这一特定应用场景的成功，CH-MARL还提供了一种适用于受限和动态设置下多代理协调问题的可扩展、通用解决方案，从而推动了强化学习领域的进步。 
+
+---
+# Building a Cognitive Twin Using a Distributed Cognitive System and an Evolution Strategy 
+
+**Title (ZH)**: 使用分布式认知系统和进化策略构建认知双胞胎 
+
+**Authors**: Wandemberg Gibaut, Ricardo Gudwin  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.01834)  
+
+**Abstract**: This work presents a technique to build interaction-based Cognitive Twins (a computational version of an external agent) using input-output training and an Evolution Strategy on top of a framework for distributed Cognitive Architectures. Here, we show that it's possible to orchestrate many simple physical and virtual devices to achieve good approximations of a person's interaction behavior by training the system in an end-to-end fashion and present performance metrics. The generated Cognitive Twin may later be used to automate tasks, generate more realistic human-like artificial agents or further investigate its behaviors. 
+
+**Abstract (ZH)**: 本研究提出了一种技术，利用输入输出训练和进化策略构建基于交互的认知孪生体（一种外部代理的计算版本），并在分布式认知架构框架之上实现。在本研究中，我们展示了如何通过端到端训练的方式协调许多简单物理和虚拟设备，以接近模拟人类的交互行为，并提出了性能指标。生成的认知孪生体随后可用于自动化任务、生成更具人类特征的虚拟代理，或进一步研究其行为。 
+
+---
+# An Agentic AI Workflow for Detecting Cognitive Concerns in Real-world Data 
+
+**Title (ZH)**: 一种代理型AI工作流在现实世界数据中检测认知问题的设计与实现 
+
+**Authors**: Jiazi Tian, Liqin Wang, Pedram Fard, Valdery Moura Junior, Deborah Blacker, Jennifer S. Haas, Chirag Patel, Shawn N. Murphy, Lidia M.V.R. Moura, Hossein Estiri  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.01789)  
+
+**Abstract**: Early identification of cognitive concerns is critical but often hindered by subtle symptom presentation. This study developed and validated a fully automated, multi-agent AI workflow using LLaMA 3 8B to identify cognitive concerns in 3,338 clinical notes from Mass General Brigham. The agentic workflow, leveraging task-specific agents that dynamically collaborate to extract meaningful insights from clinical notes, was compared to an expert-driven benchmark. Both workflows achieved high classification performance, with F1-scores of 0.90 and 0.91, respectively. The agentic workflow demonstrated improved specificity (1.00) and achieved prompt refinement in fewer iterations. Although both workflows showed reduced performance on validation data, the agentic workflow maintained perfect specificity. These findings highlight the potential of fully automated multi-agent AI workflows to achieve expert-level accuracy with greater efficiency, offering a scalable and cost-effective solution for detecting cognitive concerns in clinical settings. 
+
+**Abstract (ZH)**: 早期识别认知问题至关重要，但常因症状表现隐微而受阻。本研究开发并验证了使用LLaMA 3 8B构建的一种完全自动化、多智能体AI工作流，以识别马萨诸塞州综合医院和波士顿医疗系统的3,338份临床笔记中的认知问题。该智能体工作流利用了任务特定的智能体，它们能够动态协作以从临床笔记中提取有意义的洞察。该工作流与专家驱动的基准进行了比较。两者的分类性能均很高，F1分数分别为0.90和0.91。智能体工作流表现出更高的特异性（1.00），并且在较少的迭代中实现了快速改进。尽管两种工作流在验证数据上的表现有所下降，但智能体工作流依然保持了完美的特异性。这些发现突显了全自动多智能体AI工作流在效率更高、达到专家级准确性的潜力，为临床环境中检测认知问题提供了一种可扩展且成本效益高的解决方案。 
+
+---
+# QLASS: Boosting Language Agent Inference via Q-Guided Stepwise Search 
+
+**Title (ZH)**: QLASS：通过Q引导的逐步搜索增强语言代理推理 
+
+**Authors**: Zongyu Lin, Yao Tang, Xingcheng Yao, Da Yin, Ziniu Hu, Yizhou Sun, Kai-Wei Chang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.02584)  
+
+**Abstract**: Language agents have become a promising solution to complex interactive tasks. One of the key ingredients to the success of language agents is the reward model on the trajectory of the agentic workflow, which provides valuable guidance during training or inference. However, due to the lack of annotations of intermediate interactions, most existing works use an outcome reward model to optimize policies across entire trajectories. This may lead to sub-optimal policies and hinder the overall performance. To address this, we propose QLASS (Q-guided Language Agent Stepwise Search), to automatically generate annotations by estimating Q-values in a stepwise manner for open language agents. By introducing a reasoning tree and performing process reward modeling, QLASS provides effective intermediate guidance for each step. With the stepwise guidance, we propose a Q-guided generation strategy to enable language agents to better adapt to long-term value, resulting in significant performance improvement during model inference on complex interactive agent tasks. Notably, even with almost half the annotated data, QLASS retains strong performance, demonstrating its efficiency in handling limited supervision. We also empirically demonstrate that QLASS can lead to more effective decision making through qualitative analysis. We will release our code and data. 
+
+**Abstract (ZH)**: 语言代理已成为解决复杂交互任务的有前途的解决方案之一。其中，轨迹上的奖励模型是语言代理成功的关键因素之一，它在训练或推理过程中提供有价值的方向。然而，由于缺乏中间交互的注释，大多数现有工作使用结果奖励模型来在整个轨迹上优化策略，这可能导致次优策略并阻碍整体性能。为了解决这一问题，我们提出了QLASS（Q引导的语言代理逐步搜索），通过逐步估计Q值自动生成注释，为开放语言代理提供有效的中间指导。通过引入推理树和进行过程奖励建模，QLASS为每个步骤提供了有效的中间指导。借助逐步指导，我们提出了一种Q引导的生成策略，使语言代理能够更好地适应长期价值，从而在复杂交互代理任务的模型推理中表现出显著的性能提升。值得注意的是，即使仅使用近乎一半的标注数据，QLASS仍然保持了强大的性能，展示了其在处理有限监督方面的效率。此外，通过定性的分析，我们还实验证明了QLASS能够促进更有效的决策。我们将发布我们的代码和数据。 
+
+---
+# Multi-Agent Design: Optimizing Agents with Better Prompts and Topologies 
+
+**Title (ZH)**: 多agent系统设计：通过更好的提示和拓扑结构优化agent 
+
+**Authors**: Han Zhou, Xingchen Wan, Ruoxi Sun, Hamid Palangi, Shariq Iqbal, Ivan Vulić, Anna Korhonen, Sercan Ö. Arık  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.02533)  
+
+**Abstract**: Large language models, employed as multiple agents that interact and collaborate with each other, have excelled at solving complex tasks. The agents are programmed with prompts that declare their functionality, along with the topologies that orchestrate interactions across agents. Designing prompts and topologies for multi-agent systems (MAS) is inherently complex. To automate the entire design process, we first conduct an in-depth analysis of the design space aiming to understand the factors behind building effective MAS. We reveal that prompts together with topologies play critical roles in enabling more effective MAS design. Based on the insights, we propose Multi-Agent System Search (MASS), a MAS optimization framework that efficiently exploits the complex MAS design space by interleaving its optimization stages, from local to global, from prompts to topologies, over three stages: 1) block-level (local) prompt optimization; 2) workflow topology optimization; 3) workflow-level (global) prompt optimization, where each stage is conditioned on the iteratively optimized prompts/topologies from former stages. We show that MASS-optimized multi-agent systems outperform a spectrum of existing alternatives by a substantial margin. Based on the MASS-found systems, we finally propose design principles behind building effective multi-agent systems. 
+
+**Abstract (ZH)**: 大规模语言模型被用作多个相互交互和协作的代理，在解决复杂任务方面表现出色。这些代理被编程以声明其功能，并通过拓扑结构来协调跨代理的交互。设计多代理系统（Multi-Agent System, MAS）中的代理及其交互拓扑本身是复杂的过程。为了自动化整个设计过程，我们首先进行了深入分析，以理解构建有效MAS的驱动因素。我们发现，代理和拓扑在使MAS设计更有效方面发挥着关键作用。基于这些见解，我们提出了多代理系统搜索（Multi-Agent System Search, MASS）框架，该框架通过从局部到全局、从提示到拓扑的三个优化阶段交错其优化阶段，有效地利用了复杂的MAS设计空间。具体而言，这三个阶段包括：1）块级（局部）提示优化；2）工作流拓扑优化；3）工作流级（全局）提示优化，每个阶段均依赖于从前一阶段优化迭代得到的提示/拓扑。我们展示了经过MASS优化的多代理系统明显优于现有多种替代方案。基于MASS发现的系统，我们最终提出了构建有效多代理系统的若干设计原则。 
+
+---
+# Adviser-Actor-Critic: Eliminating Steady-State Error in Reinforcement Learning Control 
+
+**Title (ZH)**: 导师-actor-critic：消除强化学习控制中的稳态误差 
+
+**Authors**: Donghe Chen, Yubin Peng, Tengjie Zheng, Han Wang, Chaoran Qu, Lin Cheng  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.02265)  
+
+**Abstract**: High-precision control tasks present substantial challenges for reinforcement learning (RL) algorithms, frequently resulting in suboptimal performance attributed to network approximation inaccuracies and inadequate sample this http URL issues are exacerbated when the task requires the agent to achieve a precise goal state, as is common in robotics and other real-world this http URL introduce Adviser-Actor-Critic (AAC), designed to address the precision control dilemma by combining the precision of feedback control theory with the adaptive learning capability of RL and featuring an Adviser that mentors the actor to refine control actions, thereby enhancing the precision of goal this http URL, through benchmark tests, AAC outperformed standard RL algorithms in precision-critical, goal-conditioned tasks, demonstrating AAC's high precision, reliability, and this http URL are available at: this https URL. 
+
+**Abstract (ZH)**: 高精度控制任务给强化学习（RL）算法带来了巨大的挑战，往往会导致性能不佳，这归因于网络逼近不准确性和样本效率不足。这些问题在任务要求智能体实现精确的状态时尤为突出，这在机器人学和其他实际应用中是常见的。为此，我们引入了Advisor-Actor-Critic（AAC），这是一种结合了反馈控制理论的精确性和强化学习的自适应学习能力的算法。AAC包含一个顾问（Adviser），它指导actor改进控制动作，从而提高目标状态的精确性。通过基准测试，AAC在精度要求高的、基于目标的任务中显著优于标准的RL算法，展示了AAC的高度精确性、可靠性和泛化能力。更多详细信息请参见：[此处插入文献链接]。 
+
+---
+# Conversation AI Dialog for Medicare powered by Finetuning and Retrieval Augmented Generation 
+
+**Title (ZH)**: 由微调和检索增强生成驱动的医保对话AI对话 
+
+**Authors**: Atharva Mangeshkumar Agrawal, Rutika Pandurang Shinde, Vasanth Kumar Bhukya, Ashmita Chakraborty, Sagar Bharat Shah, Tanmay Shukla, Sree Pradeep Kumar Relangi, Nilesh Mutyam  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.02249)  
+
+**Abstract**: Large language models (LLMs) have shown impressive capabilities in natural language processing tasks, including dialogue generation. This research aims to conduct a novel comparative analysis of two prominent techniques, fine-tuning with LoRA (Low-Rank Adaptation) and the Retrieval-Augmented Generation (RAG) framework, in the context of doctor-patient chat conversations with multiple datasets of mixed medical domains. The analysis involves three state-of-the-art models: Llama-2, GPT, and the LSTM model. Employing real-world doctor-patient dialogues, we comprehensively evaluate the performance of models, assessing key metrics such as language quality (perplexity, BLEU score), factual accuracy (fact-checking against medical knowledge bases), adherence to medical guidelines, and overall human judgments (coherence, empathy, safety). The findings provide insights into the strengths and limitations of each approach, shedding light on their suitability for healthcare applications. Furthermore, the research investigates the robustness of the models in handling diverse patient queries, ranging from general health inquiries to specific medical conditions. The impact of domain-specific knowledge integration is also explored, highlighting the potential for enhancing LLM performance through targeted data augmentation and retrieval strategies. 
+
+**Abstract (ZH)**: 大型语言模型（LLMs）在自然语言处理任务中展现了令人印象深刻的性能，包括对话生成。本研究旨在在多种医学领域混合的数据集背景下，对比分析两种突出的技术——基于LoRA（低秩适应）的微调和检索增强生成（RAG）框架——在医生与患者对话中的性能。分析将涉及三款最先进的模型：Llama-2、GPT以及LSTM模型。通过使用真实的医生与患者对话数据，我们将全面评估这些模型的表现，评估关键指标，如语言质量（困惑度、BLEU分数）、事实准确性（通过医学知识库进行事实核查）、遵守医学指南情况，以及总体的人类判断（连贯性、同理心、安全性）。研究结果将揭示每种方法的优势和局限性，为其在医疗保健应用中的适用性提供洞察。此外，研究还将探讨模型在处理各种患者查询时的鲁棒性，这些问题范围从一般健康咨询到特定医学状况。研究还将探索领域特定知识整合的影响，突显通过针对性的数据增强和检索策略增强LLM性能的潜力。 
+
+---
+# AdaptBot: Combining LLM with Knowledge Graphs and Human Input for Generic-to-Specific Task Decomposition and Knowledge Refinement 
+
+**Title (ZH)**: AdaptBot：将大规模语言模型与知识图谱及人性输入相结合，实现从通用到具体任务分解与知识精炼 
+
+**Authors**: Shivam Singh, Karthik Swaminathan, Nabanita Dash, Ramandeep Singh, Snehasis Banerjee, Mohan Sridharan, Madhava Krishna  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.02067)  
+
+**Abstract**: Embodied agents assisting humans are often asked to complete a new task in a new scenario. An agent preparing a particular dish in the kitchen based on a known recipe may be asked to prepare a new dish or to perform cleaning tasks in the storeroom. There may not be sufficient resources, e.g., time or labeled examples, to train the agent for these new situations. Large Language Models (LLMs) trained on considerable knowledge across many domains are able to predict a sequence of abstract actions for such new tasks and scenarios, although it may not be possible for the agent to execute this action sequence due to task-, agent-, or domain-specific constraints. Our framework addresses these challenges by leveraging the generic predictions provided by LLM and the prior domain-specific knowledge encoded in a Knowledge Graph (KG), enabling an agent to quickly adapt to new tasks and scenarios. The robot also solicits and uses human input as needed to refine its existing knowledge. Based on experimental evaluation over cooking and cleaning tasks in simulation domains, we demonstrate that the interplay between LLM, KG, and human input leads to substantial performance gains compared with just using the LLM output. 
+
+**Abstract (ZH)**: 在新的场景中执行新任务的实体代理经常被要求完成未接触过的任务。例如，基于已知食谱在厨房里准备某种菜肴的代理可能被要求准备新菜肴或对储藏室进行清洁。由于缺乏资源，如时间或标注数据，可能不足以对这些新情况进行训练。大规模语言模型（LLMs）通过对多个领域大量知识的训练，能够预测此类新任务和场景的抽象动作序列，但由于任务、代理或领域特定的约束，代理可能无法执行这些动作序列。我们的框架通过利用LLM提供的通用预测和知识图谱（KG）中编码的先验领域特定知识，使代理能够快速适应新任务和场景。同时，机器也会根据需要请求并利用人类输入来完善其现有知识。通过对烹饪和清洁任务在模拟领域进行实验评估，结果显示，LLM、KG和人类输入之间的互动能够带来显著的性能提升，相比仅使用LLM输出效果更佳。 
+
+---
+# DHP: Discrete Hierarchical Planning for Hierarchical Reinforcement Learning Agents 
+
+**Title (ZH)**: DHP：分层离散规划在分层强化学习代理中的应用 
+
+**Authors**: Shashank Sharma, Janina Hoffmann, Vinay Namboodiri  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.01956)  
+
+**Abstract**: In this paper, we address the challenge of long-horizon visual planning tasks using Hierarchical Reinforcement Learning (HRL). Our key contribution is a Discrete Hierarchical Planning (DHP) method, an alternative to traditional distance-based approaches. We provide theoretical foundations for the method and demonstrate its effectiveness through extensive empirical evaluations.
+Our agent recursively predicts subgoals in the context of a long-term goal and receives discrete rewards for constructing plans as compositions of abstract actions. The method introduces a novel advantage estimation strategy for tree trajectories, which inherently encourages shorter plans and enables generalization beyond the maximum tree depth. The learned policy function allows the agent to plan efficiently, requiring only $\log N$ computational steps, making re-planning highly efficient. The agent, based on a soft-actor critic (SAC) framework, is trained using on-policy imagination data. Additionally, we propose a novel exploration strategy that enables the agent to generate relevant training examples for the planning modules. We evaluate our method on long-horizon visual planning tasks in a 25-room environment, where it significantly outperforms previous benchmarks at success rate and average episode length. Furthermore, an ablation study highlights the individual contributions of key modules to the overall performance. 
+
+**Abstract (ZH)**: 本文探讨了使用层次强化学习（HRL）解决长期视觉规划任务的挑战。我们的主要贡献是一种称为离散层次规划（DHP）的方法，这是一种与基于距离的传统方法不同的替代方案。我们为该方法提供了理论基础，并通过广泛的实证评估展示了其有效性。
+
+我们的代理递归地在长期目标的背景下预测子目标，并通过组合抽象动作来构造计划，从而获得离散奖励。该方法引入了一种新的树轨迹优势估计策略，这固有地鼓励使用更短的计划，并使模型能够超越最大树深度进行泛化。学习到的策略函数使代理能够高效地进行规划，仅需$\log N$计算步骤，从而使得重新规划非常高效。代理基于软值评论家（SAC）框架，使用在线政策想象数据进行训练。此外，我们提出了一种新的探索策略，使代理能够为规划模块生成相关训练示例。我们在一个包含25个房间的环境中对长期视觉规划任务进行了方法评估，结果显示该方法在成功率达到和平均episode长度方面显著优于先前的基准。进一步的消融研究强调了各个模块对整体性能的单独贡献。 
+
+---
+# VolleyBots: A Testbed for Multi-Drone Volleyball Game Combining Motion Control and Strategic Play 
+
+**Title (ZH)**: VolleyBots：结合运动控制与战术布局的多无人机排球游戏试验平台 
+
+**Authors**: Zelai Xu, Chao Yu, Ruize Zhang, Huining Yuan, Xiangmin Yi, Shilong Ji, Chuqi Wang, Wenhao Tang, Yu Wang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.01932)  
+
+**Abstract**: Multi-agent reinforcement learning (MARL) has made significant progress, largely fueled by the development of specialized testbeds that enable systematic evaluation of algorithms in controlled yet challenging scenarios. However, existing testbeds often focus on purely virtual simulations or limited robot morphologies such as robotic arms, quadrupeds, and humanoids, leaving high-mobility platforms with real-world physical constraints like drones underexplored. To bridge this gap, we present VolleyBots, a new MARL testbed where multiple drones cooperate and compete in the sport of volleyball under physical dynamics. VolleyBots features a turn-based interaction model under volleyball rules, a hierarchical decision-making process that combines motion control and strategic play, and a high-fidelity simulation for seamless sim-to-real transfer. We provide a comprehensive suite of tasks ranging from single-drone drills to multi-drone cooperative and competitive tasks, accompanied by baseline evaluations of representative MARL and game-theoretic algorithms. Results in simulation show that while existing algorithms handle simple tasks effectively, they encounter difficulty in complex tasks that require both low-level control and high-level strategy. We further demonstrate zero-shot deployment of a simulation-learned policy to real-world drones, highlighting VolleyBots' potential to propel MARL research involving agile robotic platforms. The project page is at this https URL. 
+
+**Abstract (ZH)**: 多智能体强化学习（MARL）已经取得了显著进展，这主要得益于专门测试平台的发展，这些平台使算法能够在可控且具有挑战性的场景中进行系统评估。然而，现有的测试平台通常侧重于纯粹的虚拟仿真或有限的机器人形态，如机械臂、四足机器人和类人机器人，而具有真实物理约束的高机动平台，如无人机，则尚未得到充分探索。为了弥合这一差距，我们提出了VolleyBots，这是一个新的MARL测试平台，其中多个无人机在物理动力学规则下合作和竞争排球。VolleyBots的特点是一个基于排球规则的轮流交互模型、一个结合运动控制和策略玩法的分层决策过程以及一个高保真模拟，以实现无缝的仿真到现实过渡。我们提供了一系列从单个无人机训练任务到多无人机协同和竞争任务的全面任务集，并附有代表性MARL和博弈论算法的基本评估。仿真结果显示，尽管现有算法能够有效地处理简单的任务，但在需要低层次控制和高层次策略的任务中却遇到了困难。我们进一步展示了如何将仿真学习策略在真实世界中的无人机上进行零样本部署，突出了VolleyBots在涉及敏捷机器人平台的MARL研究方面的潜力。该项目页面可在以下链接访问：这个 https URL。 
+
+---
+# Agentic Bug Reproduction for Effective Automated Program Repair at Google 
+
+**Title (ZH)**: Google 中的代理型bug复现以实现有效的自动化程序修复 
+
+**Authors**: Runxiang Cheng, Michele Tufano, Jürgen Cito, José Cambronero, Pat Rondon, Renyao Wei, Aaron Sun, Satish Chandra  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.01821)  
+
+**Abstract**: Bug reports often lack sufficient detail for developers to reproduce and fix the underlying defects. Bug Reproduction Tests (BRTs), tests that fail when the bug is present and pass when it has been resolved, are crucial for debugging, but they are rarely included in bug reports, both in open-source and in industrial settings. Thus, automatically generating BRTs from bug reports has the potential to accelerate the debugging process and lower time to repair. This paper investigates automated BRT generation within an industry setting, specifically at Google, focusing on the challenges of a large-scale, proprietary codebase and considering real-world industry bugs extracted from Google's internal issue tracker. We adapt and evaluate a state-of-the-art BRT generation technique, LIBRO, and present our agent-based approach, BRT Agent, which makes use of a fine-tuned Large Language Model (LLM) for code editing. Our BRT Agent significantly outperforms LIBRO, achieving a 28% plausible BRT generation rate, compared to 10% by LIBRO, on 80 human-reported bugs from Google's internal issue tracker. We further investigate the practical value of generated BRTs by integrating them with an Automated Program Repair (APR) system at Google. Our results show that providing BRTs to the APR system results in 30% more bugs with plausible fixes. Additionally, we introduce Ensemble Pass Rate (EPR), a metric which leverages the generated BRTs to select the most promising fixes from all fixes generated by APR system. Our evaluation on EPR for Top-K and threshold-based fix selections demonstrates promising results and trade-offs. For example, EPR correctly selects a plausible fix from a pool of 20 candidates in 70% of cases, based on its top-1 ranking. 
+
+**Abstract (ZH)**: bug报告往往缺乏足够的详细信息，使得开发人员难以重现和修复潜在的缺陷。Bug重现测试（BRTs）是指在bug存在时失败，在bug修复后通过的测试，对于调试至关重要，但在开源和工业环境中，它们很少包含在bug报告中。因此，从bug报告中自动生成BRTs有望加速调试过程，减少修复时间。本文在工业环境中探讨了BRTs的自动生成，特别是在Google这样的企业中重点研究了大规模专有代码库带来的挑战，并考虑来自Google内部问题跟踪器的实际行业bug。我们调整并评估了一种最先进的BRT自动生成技术LIBRO，并提出了一种基于代理的解决方案BRT Agent，该方案利用微调的大语言模型（LLM）进行代码编辑。我们的BRT Agent在80个来自Google内部问题跟踪器的人工报告bug上实现了28%的合理BRT生成率，而LIBRO仅为10%。我们进一步通过将生成的BRTs整合到Google的自动程序修复（APR）系统中，探讨了生成的BRTs的实际价值。结果显示，提供BRTs给APR系统可以使可能修复的bug数量增加30%。此外，我们介绍了集成通过率（EPR）指标，该指标利用生成的BRTs从APR系统生成的所有修复中选择最有前途的修复。对于Top-K和基于阈值的修复选择，我们的EPR评估展示了有希望的结果和权衡。例如，基于其首位排序，EPR在20个候选修复中正确选择了合理修复的比例为70%。 
+
+---
+# Position: Towards a Responsible LLM-empowered Multi-Agent Systems 
+
+**Title (ZH)**: 标题：向负责任的大型语言模型赋能多代理系统方向迈进 
+
+**Authors**: Jinwei Hu, Yi Dong, Shuang Ao, Zhuoyun Li, Boxuan Wang, Lokesh Singh, Guangliang Cheng, Sarvapali D. Ramchurn, Xiaowei Huang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.01714)  
+
+**Abstract**: The rise of Agent AI and Large Language Model-powered Multi-Agent Systems (LLM-MAS) has underscored the need for responsible and dependable system operation. Tools like LangChain and Retrieval-Augmented Generation have expanded LLM capabilities, enabling deeper integration into MAS through enhanced knowledge retrieval and reasoning. However, these advancements introduce critical challenges: LLM agents exhibit inherent unpredictability, and uncertainties in their outputs can compound across interactions, threatening system stability. To address these risks, a human-centered design approach with active dynamic moderation is essential. Such an approach enhances traditional passive oversight by facilitating coherent inter-agent communication and effective system governance, allowing MAS to achieve desired outcomes more efficiently. 
+
+**Abstract (ZH)**: 随着代理AI和大型语言模型驱动的多代理系统（LLM-MAS）的发展，负责任且可靠的系统运营变得尤为重要。工具如LangChain和检索增强生成技术扩展了大型语言模型的能力，使其能够通过增强的知识检索和推理更深入地融入多代理系统。然而，这些进步也引入了关键挑战：LLM代理表现出固有的不可预测性，其输出的不确定性在交互中可能会累积，从而威胁系统的稳定性。为了应对这些风险，一种以人为中心的设计方法并结合主动动态监督是必不可少的。这种方法通过促进协调的代理间沟通和有效的系统治理，增强了传统的被动监督，从而使得多代理系统更高效地实现预期目标。 
+
+---
+# Agent-Based Uncertainty Awareness Improves Automated Radiology Report Labeling with an Open-Source Large Language Model 
+
+**Title (ZH)**: 基于代理的不确定性意识到提高了使用开源大规模语言模型的自动化放射学报告标签化效能 
+
+**Authors**: Hadas Ben-Atya, Naama Gavrielov, Zvi Badash, Gili Focht, Ruth Cytter-Kuint, Talar Hagopian, Dan Turner, Moti Freiman  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.01691)  
+
+**Abstract**: Reliable extraction of structured data from radiology reports using Large Language Models (LLMs) remains challenging, especially for complex, non-English texts like Hebrew. This study introduces an agent-based uncertainty-aware approach to improve the trustworthiness of LLM predictions in medical applications. We analyzed 9,683 Hebrew radiology reports from Crohn's disease patients (from 2010 to 2023) across three medical centers. A subset of 512 reports was manually annotated for six gastrointestinal organs and 15 pathological findings, while the remaining reports were automatically annotated using HSMP-BERT. Structured data extraction was performed using Llama 3.1 (Llama 3-8b-instruct) with Bayesian Prompt Ensembles (BayesPE), which employed six semantically equivalent prompts to estimate uncertainty. An Agent-Based Decision Model integrated multiple prompt outputs into five confidence levels for calibrated uncertainty and was compared against three entropy-based models. Performance was evaluated using accuracy, F1 score, precision, recall, and Cohen's Kappa before and after filtering high-uncertainty cases. The agent-based model outperformed the baseline across all metrics, achieving an F1 score of 0.3967, recall of 0.6437, and Cohen's Kappa of 0.3006. After filtering high-uncertainty cases (greater than or equal to 0.5), the F1 score improved to 0.4787, and Kappa increased to 0.4258. Uncertainty histograms demonstrated clear separation between correct and incorrect predictions, with the agent-based model providing the most well-calibrated uncertainty estimates. By incorporating uncertainty-aware prompt ensembles and an agent-based decision model, this approach enhances the performance and reliability of LLMs in structured data extraction from radiology reports, offering a more interpretable and trustworthy solution for high-stakes medical applications. 
+
+**Abstract (ZH)**: 使用大型语言模型（LLMs）从放射学报告中可靠地提取结构化数据仍然具有挑战性，尤其是在处理复杂且非英语文本（如希伯来文）时。本研究引入了一种基于代理的不确定性感知方法，以提高医疗应用中LLM预测的可信度。我们分析了来自三个医疗机构的9,683份克罗恩病患者的希伯来文放射学报告（时间范围为2010年至2023年）。其中512份报告被手动标注了六个胃肠道器官和15项病理发现，其余报告则使用HSMP-BERT进行了自动标注。结构化数据提取使用了Llama 3.1（Llama 3-8b-instruct）并结合了贝叶斯提示集（BayesPE），该方法使用六个语义等效提示来估计不确定性。基于代理的决策模型将多种提示输出整合到五个信心水平中，以校准不确定性，并与三种基于熵的方法进行了比较。性能评估使用了准确率、F1分数、精确率、召回率和柯克帕特里克系数（Cohen's Kappa）在筛选出高不确定性病例之前和之后进行。基于代理的模型在所有指标上都优于 baseline，F1分数达到了0.3967，召回率为0.6437，柯克帕特里克系数为0.3006。在筛选出高不确定性病例（大于或等于0.5）之后，F1分数提高到0.4787，Kappa增加到0.4258。不确定性直方图显示了正确和错误预测之间的明确分离，基于代理的模型提供了最准确的不确定性估计。通过结合不确定性感知提示集和基于代理的决策模型，本方法增强了LLMs在放射学报告中结构化数据提取的性能和可靠性，为具有高风险的医疗应用提供了更可解释和可信的解决方案。 
+
+---
+# Hybrid Group Relative Policy Optimization: A Multi-Sample Approach to Enhancing Policy Optimization 
+
+**Title (ZH)**: 混合组相对策略优化：一种增强策略优化的多样本方法 
+
+**Authors**: Soham Sane  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.01652)  
+
+**Abstract**: Hybrid Group Relative Policy Optimization (Hybrid GRPO) is a reinforcement learning framework that extends Proximal Policy Optimization (PPO) and Group Relative Policy Optimization (GRPO) by incorporating empirical multi-sample action evaluation while preserving the stability of value function-based learning. Unlike DeepSeek GRPO, which eliminates the value function in favor of purely empirical reward estimation, Hybrid GRPO introduces a structured advantage computation method that balances empirical action sampling with bootstrapped value estimation. This approach enhances sample efficiency, improves learning stability, and mitigates variance amplification observed in purely empirical methods. A detailed mathematical comparison between PPO, DeepSeek GRPO, and Hybrid GRPO is presented, highlighting key differences in advantage estimation and policy updates. Experimental validation in a controlled reinforcement learning environment demonstrates that Hybrid GRPO achieves superior convergence speed, more stable policy updates, and improved sample efficiency compared to existing methods. Several extensions to Hybrid GRPO are explored, including entropy-regularized sampling, hierarchical multi-step sub-sampling, adaptive reward normalization, and value-based action selection. Beyond reinforcement learning in simulated environments, Hybrid GRPO provides a scalable framework for bridging the gap between large language models (LLMs) and real-world agent-based decision-making. By integrating structured empirical sampling with reinforcement learning stability mechanisms, Hybrid GRPO has potential applications in autonomous robotics, financial modeling, and AI-driven control systems. These findings suggest that Hybrid GRPO serves as a robust and adaptable reinforcement learning methodology, paving the way for further advancements in policy optimization. 
+
+**Abstract (ZH)**: 混合组相对策略优化（Hybrid Group Relative Policy Optimization, Hybrid GRPO）是一种强化学习框架，它通过结合经验多样本动作评估来扩展 proximal 策略优化（PPO）和组相对策略优化（GRPO），同时保持基于价值函数的学习稳定性。与 DeepSeek GRPO 不同，DeepSeek GRPO 通过完全依赖于经验奖励估计来消除价值函数，Hybrid GRPO 引入了一种结构化的优势计算方法，该方法平衡了经验动作采样与-bootstrap 值估计。这种方法增强了样本效率，提高了学习稳定性，并减轻了在纯经验方法中观察到的优势方差放大问题。详细阐述了 PPO、DeepSeek GRPO 和 Hybrid GRPO 之间的数学比较，突出了优势估计和策略更新中的关键差异。在受控的强化学习环境中的实验验证表明，Hybrid GRPO 较之现有方法具有更快的收敛速度、更稳定的策略更新和更高的样本效率。还探讨了 Hybrid GRPO 的几种扩展，包括熵正则化采样、层次多步子采样、自适应奖励规范化和基于价值的动作选择。除了在模拟环境中的强化学习之外，Hybrid GRPO 提供了一个可扩展的框架，用于弥合大规模语言模型（LLMs）与基于代理的真实世界决策之间的差距。通过结合结构化经验采样与强化学习稳定性机制，Hybrid GRPO 在自主机器人、金融建模和基于AI的控制系统等领域具有潜在应用价值。这些发现表明，Hybrid GRPO 是一种稳健且适应性强的强化学习方法，为策略优化的进一步发展铺平了道路。 
+
+---
+# Adaptive Self-improvement LLM Agentic System for ML Library Development 
+
+**Title (ZH)**: 面向机器学习库开发的自适应自我改进代理系统 
+
+**Authors**: Genghan Zhang, Weixin Liang, Olivia Hsu, Kunle Olukotun  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.02534)  
+
+**Abstract**: ML libraries, often written in architecture-specific programming languages (ASPLs) that target domain-specific architectures, are key to efficient ML systems. However, writing these high-performance ML libraries is challenging because it requires expert knowledge of ML algorithms and the ASPL. Large language models (LLMs), on the other hand, have shown general coding capabilities. However, challenges remain when using LLMs for generating ML libraries using ASPLs because 1) this task is complicated even for experienced human programmers and 2) there are limited code examples because of the esoteric and evolving nature of ASPLs. Therefore, LLMs need complex reasoning with limited data in order to complete this task. To address these challenges, we introduce an adaptive self-improvement agentic system. In order to evaluate the effectiveness of our system, we construct a benchmark of a typical ML library and generate ASPL code with both open and closed-source LLMs on this benchmark. Our results show improvements of up to $3.9\times$ over a baseline single LLM. 
+
+**Abstract (ZH)**: 以下是对论文内容或标题的翻译，符合学术规范：
+
+机器学习（ML）库通常用针对特定架构的编程语言（ASPLs，Architecture-specific Programming Languages）编写，是高效ML系统的关键。然而，编写这些高性能ML库具有挑战性，因为这需要对ML算法和ASPL有深刻的专业知识。相比之下，大规模语言模型（LLMs）已经展示了普遍的编码能力。然而，使用LLMs生成基于ASPL的ML库仍然存在挑战，原因在于：1）即使对于经验丰富的程序员，这项任务也非常复杂；2）由于ASPLs的专有性和不断演变性，可用的代码示例较少。因此，LLMs需要在有限的数据下进行复杂的推理以完成这一任务。为了应对这些挑战，我们提出了一种自适应自我改进的代理系统。为了评估该系统的有效性，我们基于一个典型的ML库构建了一个基准测试，并使用开源和闭源的LLMs在此基准测试上生成了ASPL代码。我们的结果显示，与单一LLM基线相比，改进幅度最高可达$3.9\times$。 
+
+---
+# SelfCheckAgent: Zero-Resource Hallucination Detection in Generative Large Language Models 
+
+**Title (ZH)**: SelfCheckAgent：生成型大规模语言模型中的零资源幻觉检测 
+
+**Authors**: Diyana Muhammed, Gollam Rabby, Sören Auer  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.01812)  
+
+**Abstract**: Detecting hallucinations in Large Language Models (LLMs) remains a critical challenge for their reliable deployment in real-world applications. To address this, we introduce SelfCheckAgent, a novel framework integrating three different agents: the Symbolic Agent, the Specialized Detection Agent, and the Contextual Consistency Agent. These agents provide a robust multi-dimensional approach to hallucination detection. Notable results include the Contextual Consistency Agent leveraging Llama 3.1 with Chain-of-Thought (CoT) to achieve outstanding performance on the WikiBio dataset, with NonFactual hallucination detection scoring 93.64%, Factual 70.26%, and Ranking 78.48% respectively. On the AIME dataset, GPT-4o with CoT excels in NonFactual detection with 94.89% but reveals trade-offs in Factual with 30.58% and Ranking with 30.68%, underscoring the complexity of hallucination detection in the complex mathematical domains. The framework also incorporates a triangulation strategy, which increases the strengths of the SelfCheckAgent, yielding significant improvements in real-world hallucination identification. The comparative analysis demonstrates SelfCheckAgent's applicability across diverse domains, positioning it as a crucial advancement for trustworthy LLMs. These findings highlight the potentiality of consistency-driven methodologies in detecting hallucinations in LLMs. 
+
+**Abstract (ZH)**: 在现实世界应用中可靠部署大型语言模型（LLMs）的关键挑战之一是检测幻觉。为此，我们引入了SelfCheckAgent，这是一种新颖的框架，集成了三个不同的智能体：符号智能体、专业化检测智能体以及上下文一致性智能体。这些智能体提供了一种稳健的多维方法来检测幻觉。值得注意的是，上下文一致性智能体利用Llama 3.1和思维链（CoT）在WikiBio数据集上取得了显著性能，非事实幻觉检测得分为93.64%，事实幻觉得分为70.26%，排名得分为78.48%。在AIME数据集上，GPT-4o配以思维链在非事实幻觉检测方面表现出色，得分为94.89%，但在事实幻觉和排名方面分别仅得30.58%和30.68%，这表明在复杂数学领域中幻觉检测的复杂性。该框架还采用了三角测量策略，这增强了SelfCheckAgent的优势，显著改善了实际幻觉识别的性能。通过比较分析可以看出，SelfCheckAgent适用于多种领域，将其确立为增强可信LLMs的关键进步。这些发现突显了以一致性驱动方法在检测LLMs中幻觉方面的潜力。 
+
+---
+# VaiBot: Shuttle Between the Instructions and Parameters 
+
+**Title (ZH)**: VaiBot：指令与参数之间的桥梁 
+
+**Authors**: Wangtao Sun, Haotian Xu, Huanxuan Liao, Xuanqing Yu, Zhongtao Jiang, Shizhu He, Jun Zhao, Kang Liu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.02315)  
+
+**Abstract**: How to interact with LLMs through \emph{instructions} has been widely studied by researchers. However, previous studies have treated the emergence of instructions and the training of LLMs on task data as separate processes, overlooking the inherent unity between the two. This paper proposes a neural network framework, VaiBot, that integrates VAE and VIB, designed to uniformly model, learn, and infer both deduction and induction tasks under LLMs. Through experiments, we demonstrate that VaiBot performs on par with existing baseline methods in terms of deductive capabilities while significantly surpassing them in inductive capabilities. We also find that VaiBot can scale up using general instruction-following data and exhibits excellent one-shot induction abilities. We finally synergistically integrate the deductive and inductive processes of VaiBot. Through T-SNE dimensionality reduction, we observe that its inductive-deductive process significantly improves the distribution of training parameters, enabling it to outperform baseline methods in inductive reasoning tasks. The code and data for this paper can be found at this https URL. 
+
+**Abstract (ZH)**: 通过指令与大规模语言模型（LLM）互动的方式已被研究人员广泛研究。然而，之前的研究所处理的指令的出现与LLM在任务数据上的训练这两个过程被当作独立的过程，忽视了两者之间的内在统一性。本文提出了一种神经网络框架VaiBot，该框架结合了VAE（变分自编码器）和VIB（变异信息瓶颈），旨在统一建模、学习和推断LLM下的演绎和归纳任务。通过实验，我们证明了VaiBot在演绎能力方面与现有基线方法相当，而在归纳能力方面显著超越它们。我们还发现，VaiBot可以用一般的指令遵循数据进行扩展，并表现出优异的一次性归纳能力。最后，我们以一种协同方式整合了VaiBot的演绎和归纳过程。通过T-SNE降维，我们观察到其演绎归纳过程显著改善了训练参数的分布，使其在归纳推理任务中超越了基线方法。这篇论文的代码和数据可以在这个网址 https://github.com/example-repo 找到。 
+
+---
+# Can You Move These Over There? An LLM-based VR Mover for Supporting Object Manipulation 
+
+**Title (ZH)**: 当然，以下是翻译内容：
+
+《物体操作支持的基于LLM的VR搬运器：你可以把这些移到那边吗？》
+
+这里的“LLM”指的是语言模型（Language Model），在翻译时可以根据上下文具体指代的内容来选择合适的术语或保持原文缩写。如果是指特定的技术或模型，可以进一步明确为“基于语言模型”或直接使用“LLM”。 
+
+**Authors**: Xiangzhi Eric Wang, Zackary P. T. Sin, Ye Jia, Daniel Archer, Wynonna H. Y. Fong, Qing Li, Chen Li  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.02201)  
+
+**Abstract**: In our daily lives, we can naturally convey instructions for the spatial manipulation of objects using words and gestures. Transposing this form of interaction into virtual reality (VR) object manipulation can be beneficial. We propose VR Mover, an LLM-empowered solution that can understand and interpret the user's vocal instruction to support object manipulation. By simply pointing and speaking, the LLM can manipulate objects without structured input. Our user study demonstrates that VR Mover enhances user usability, overall experience and performance on multi-object manipulation, while also reducing workload and arm fatigue. Users prefer the proposed natural interface for broad movements and may complementarily switch to gizmos or virtual hands for finer adjustments. These findings are believed to contribute to design implications for future LLM-based object manipulation interfaces, highlighting the potential for more intuitive and efficient user interactions in VR environments. 
+
+**Abstract (ZH)**: 在我们的日常生活中，我们自然能够通过语言和手势传达对物体的空间操作指令。将这种交互形式移植到虚拟现实（VR）物体操作中是有益的。我们提出了VR Mover，这是一种由语言模型（LLM）赋能的解决方案，能够理解和解释用户的语音指令以支持物体操作。用户只需指一指、说一说，LLM 就能够无需结构化输入地操作物体。我们的用户研究显示，VR Mover 能够提升用户的易用性、整体体验和多物体操作的表现，同时减少工作负担和手臂疲劳。用户更偏好提出的自然界面用于广泛的操作，并且可以在需要精细调整时切换到操纵杆或虚拟手。这些发现被认为有助于为未来基于语言模型的物体操作界面的设计提供启示，强调了在 VR 环境中实现更直观和高效用户交互的潜力。 
+
+---
+# Anticipate & Act : Integrating LLMs and Classical Planning for Efficient Task Execution in Household Environments 
+
+**Title (ZH)**: 预见与行动：将大语言模型与经典规划相结合以在家庭环境中高效执行任务 
+
+**Authors**: Raghav Arora, Shivam Singh, Karthik Swaminathan, Ahana Datta, Snehasis Banerjee, Brojeshwar Bhowmick, Krishna Murthy Jatavallabhula, Mohan Sridharan, Madhava Krishna  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.02066)  
+
+**Abstract**: Assistive agents performing household tasks such as making the bed or cooking breakfast often compute and execute actions that accomplish one task at a time. However, efficiency can be improved by anticipating upcoming tasks and computing an action sequence that jointly achieves these tasks. State-of-the-art methods for task anticipation use data-driven deep networks and Large Language Models (LLMs), but they do so at the level of high-level tasks and/or require many training examples. Our framework leverages the generic knowledge of LLMs through a small number of prompts to perform high-level task anticipation, using the anticipated tasks as goals in a classical planning system to compute a sequence of finer-granularity actions that jointly achieve these goals. We ground and evaluate our framework's abilities in realistic scenarios in the VirtualHome environment and demonstrate a 31% reduction in execution time compared with a system that does not consider upcoming tasks. 
+
+**Abstract (ZH)**: 执行诸如整理床铺或准备早餐等家务任务的辅助代理通常会计算和执行完成单一任务的操作。然而，通过预测即将执行的任务并计算一个能够同时完成这些任务的操作序列，效率可以得到提升。当前最先进的任务预测方法使用数据驱动的深度网络和大语言模型（LLMs），但这些方法通常是在高层任务的水平上进行的，并且需要大量的训练示例。我们的框架通过少量提示利用LLMs的通用知识来进行高层任务预测，并将预测的任务作为目标，在经典规划系统中计算实现这些目标的一系列细粒度动作。我们已在VirtualHome环境中将该框架的能力应用于现实场景，并展示了与不考虑即将执行的任务的系统相比，执行时间减少了31%。 
+
+---
+# Policy-Guided Causal State Representation for Offline Reinforcement Learning Recommendation 
+
+**Title (ZH)**: 基于策略引导的因果状态表示在 Offline 强化学习推荐中的应用 
+
+**Authors**: Siyu Wang, Xiaocong Chen, Lina Yao  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.02327)  
+
+**Abstract**: In offline reinforcement learning-based recommender systems (RLRS), learning effective state representations is crucial for capturing user preferences that directly impact long-term rewards. However, raw state representations often contain high-dimensional, noisy information and components that are not causally relevant to the reward. Additionally, missing transitions in offline data make it challenging to accurately identify features that are most relevant to user satisfaction. To address these challenges, we propose Policy-Guided Causal Representation (PGCR), a novel two-stage framework for causal feature selection and state representation learning in offline RLRS. In the first stage, we learn a causal feature selection policy that generates modified states by isolating and retaining only the causally relevant components (CRCs) while altering irrelevant components. This policy is guided by a reward function based on the Wasserstein distance, which measures the causal effect of state components on the reward and encourages the preservation of CRCs that directly influence user interests. In the second stage, we train an encoder to learn compact state representations by minimizing the mean squared error (MSE) loss between the latent representations of the original and modified states, ensuring that the representations focus on CRCs. We provide a theoretical analysis proving the identifiability of causal effects from interventions, validating the ability of PGCR to isolate critical state components for decision-making. Extensive experiments demonstrate that PGCR significantly improves recommendation performance, confirming its effectiveness for offline RL-based recommender systems. 
+
+**Abstract (ZH)**: 基于离线强化学习的推荐系统（RLRS）中，学习有效的状态表示对于捕捉直接影响长期奖励的用户偏好至关重要。然而，原始状态表示通常包含大量高维、噪声信息和与奖励无因果关系的成分。此外，离线数据中的缺失过渡使得准确识别最相关的特征以满足用户满意度变得具有挑战性。为了解决这些挑战，我们提出了一种名为因果表示引导策略（Policy-Guided Causal Representation, PGCR）的新颖两阶段框架，用于离线RLRS中的因果特征选择和状态表示学习。在第一阶段，我们学习一个因果特征选择策略，通过隔离并保留仅因果相关的成分（因果相关成分，Causal-Relevant Components, CRCs）并修改无关成分生成修改后状态。该策略受到基于Wasserstein距离的奖励函数的指导，该奖励函数衡量状态成分对奖励的因果效应，并鼓励保留直接影响用户兴趣的CRCs。在第二阶段，我们训练一个编码器，通过最小化原始状态和修改后状态的潜在表示之间的均方误差（MSE）损失，来学习紧凑的状态表示，确保表示聚焦于CRCs。我们提供了理论分析，证明干预条件下因果效应的可识别性，并验证了PGCR在决策中隔离关键状态成分的能力。广泛的经验实验证明，PGCR显著提高了推荐性能，证实了其在基于离线RL的推荐系统中的有效性。 
+
+---
