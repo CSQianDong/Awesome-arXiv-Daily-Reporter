@@ -1,0 +1,158 @@
+# SensorChat: Answering Qualitative and Quantitative Questions during Long-Term Multimodal Sensor Interactions 
+
+**Title (ZH)**: SensorChat: 在长期多模态传感器交互中回答定性与定量问题 
+
+**Authors**: Xiaofan Yu, Lanxiang Hu, Benjamin Reichman, Dylan Chu, Rushil Chandrupatla, Xiyuan Zhang, Larry Heck, Tajana Rosing  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.02883)  
+
+**Abstract**: Natural language interaction with sensing systems is crucial for enabling all users to comprehend sensor data and its impact on their everyday lives. However, existing systems, which typically operate in a Question Answering (QA) manner, are significantly limited in terms of the duration and complexity of sensor data they can handle. In this work, we introduce SensorChat, the first end-to-end QA system designed for long-term sensor monitoring with multimodal and high-dimensional data including time series. SensorChat effectively answers both qualitative (requiring high-level reasoning) and quantitative (requiring accurate responses derived from sensor data) questions in real-world scenarios. To achieve this, SensorChat uses an innovative three-stage pipeline that includes question decomposition, sensor data query, and answer assembly. The first and third stages leverage Large Language Models (LLMs) for intuitive human interactions and to guide the sensor data query process. Unlike existing multimodal LLMs, SensorChat incorporates an explicit query stage to precisely extract factual information from long-duration sensor data. We implement SensorChat and demonstrate its capability for real-time interactions on a cloud server while also being able to run entirely on edge platforms after quantization. Comprehensive QA evaluations show that SensorChat achieves up to 26% higher answer accuracy than state-of-the-art systems on quantitative questions. Additionally, a user study with eight volunteers highlights SensorChat's effectiveness in handling qualitative and open-ended questions. 
+
+**Abstract (ZH)**: 自然语言与传感系统的交互对于使所有用户能够理解传感器数据及其对日常生活的影响至关重要。然而，现有的系统通常以问答（QA）的方式运行，它们在处理传感器数据的时间长度和复杂性方面存在显著限制。在此项工作中，我们引入了SensorChat，这是一种专门为长时间传感器监测设计的端到端问答系统，能够处理包括时间序列在内的多模态和高维数据。SensorChat能够有效地回答质性问题（需要高层次的推理）和量化问题（需要从传感器数据中得出精确的回答），这些问题在实际场景中频繁出现。为了实现这一点，SensorChat采用了一个创新性的三阶段管道，包括问题分解、传感器数据查询和答案组装。前两阶段使用大语言模型（LLMs）来实现直观的人机交互，并指导传感器数据查询过程。与现有的多模态大语言模型不同，SensorChat引入了一个显式查询阶段，能够精确提取长时间传感器数据中的事实信息。我们实现了SensorChat，并在云服务器上展示了其实时交互的能力，同时在量化后也可以在边缘平台上完全运行。全面的问答评估表明，在量化问题上，SensorChat的回答准确性比最先进的系统高出26%。此外，一项涉及八名志愿者的用户研究证实了SensorChat在处理质性和开放性问题方面的有效性。 
+
+---
+# Secure & Personalized Music-to-Video Generation via CHARCHA 
+
+**Title (ZH)**: 基于CHARCHA的安全个性化音乐到视频生成 
+
+**Authors**: Mehul Agarwal, Gauri Agarwal, Santiago Benoit, Andrew Lippman, Jean Oh  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.02610)  
+
+**Abstract**: Music is a deeply personal experience and our aim is to enhance this with a fully-automated pipeline for personalized music video generation. Our work allows listeners to not just be consumers but co-creators in the music video generation process by creating personalized, consistent and context-driven visuals based on lyrics, rhythm and emotion in the music. The pipeline combines multimodal translation and generation techniques and utilizes low-rank adaptation on listeners' images to create immersive music videos that reflect both the music and the individual. To ensure the ethical use of users' identity, we also introduce CHARCHA (patent pending), a facial identity verification protocol that protects people against unauthorized use of their face while at the same time collecting authorized images from users for personalizing their videos. This paper thus provides a secure and innovative framework for creating deeply personalized music videos. 
+
+**Abstract (ZH)**: 音乐是一种高度个人化体验，我们的目标是通过一个完全自动化的个性化音乐视频生成管道来提升这种体验。我们的工作使听众不仅能够作为消费者，还能在音乐视频生成过程中成为共同创造者，根据歌词、节奏和情感生成个性化的、一致且具有情景驱动的视觉效果。该管道结合了多模态翻译和生成技术，并利用低秩适应技术对听众的图像进行处理，从而生成既反映音乐又反映个人情感的沉浸式音乐视频。为了确保在使用用户身份信息时的伦理规范，我们还引入了 CHARCHA（待申请专利）面部身份验证协议，该协议能够在保护人们免受面部未经授权使用的风险的同时，收集用户的授权图像以个性化其视频。因此，本文提供了一种安全且创新的框架，用于创建高度个性化的音乐视频。 
+
+---
+# On Fairness of Unified Multimodal Large Language Model for Image Generation 
+
+**Title (ZH)**: 统一多模态大语言模型的图像生成公平性研究 
+
+**Authors**: Ming Liu, Hao Chen, Jindong Wang, Liwen Wang, Bhiksha Raj Ramakrishnan, Wensheng Zhang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.03429)  
+
+**Abstract**: Unified multimodal large language models (U-MLLMs) have demonstrated impressive performance in visual understanding and generation in an end-to-end pipeline. Compared with generation-only models (e.g., Stable Diffusion), U-MLLMs may raise new questions about bias in their outputs, which can be affected by their unified capabilities. This gap is particularly concerning given the under-explored risk of propagating harmful stereotypes. In this paper, we benchmark the latest U-MLLMs and find that most exhibit significant demographic biases, such as gender and race bias. To better understand and mitigate this issue, we propose a locate-then-fix strategy, where we audit and show how the individual model component is affected by bias. Our analysis shows that bias originates primarily from the language model. More interestingly, we observe a "partial alignment" phenomenon in U-MLLMs, where understanding bias appears minimal, but generation bias remains substantial. Thus, we propose a novel balanced preference model to balance the demographic distribution with synthetic data. Experiments demonstrate that our approach reduces demographic bias while preserving semantic fidelity. We hope our findings underscore the need for more holistic interpretation and debiasing strategies of U-MLLMs in the future. 
+
+**Abstract (ZH)**: 统一多模态大语言模型（U-MLLMs）已经在端到端管道中的视觉理解和生成任务中展现了卓越的性能。与仅生成模型（例如Stable Diffusion）相比，U-MLLMs可能会在其输出中产生新的偏差问题，这些问题可能受到其统一能力的影响。鉴于传播有害刻板印象的风险尚未充分探索，这一点尤其令人担忧。在本文中，我们对标了最新的U-MLLMs，并发现大多数模型在性别和种族方面表现出显著的民概况念偏差。为了更深入地理解和缓解这一问题，我们提出了一种“定位-修复”策略，其中我们审计并展示了各个模型组件如何受到偏差的影响。我们的分析表明，偏差主要源于语言模型。更有趣的是，我们发现在U-MLLMs中存在一种“部分对齐”现象，即理解偏差似乎较小，但生成偏差仍然显著。因此，我们提出了一种新颖的平衡偏好模型，该模型旨在通过合成数据平衡民概况念分布与语义保真度。实验结果表明，我们的方法能够减少民概况念偏差而不影响语义保真度。我们希望研究结果能强调对未来U-MLLMs进行全面解释和去偏见策略的需要。 
+
+---
+# RadVLM: A Multitask Conversational Vision-Language Model for Radiology 
+
+**Title (ZH)**: RadVLM：一种用于放射学的多任务对话型视觉-语言模型 
+
+**Authors**: Nicolas Deperrois, Hidetoshi Matsuo, Samuel Ruipérez-Campillo, Moritz Vandenhirtz, Sonia Laguna, Alain Ryser, Koji Fujimoto, Mizuho Nishio, Thomas M. Sutter, Julia E. Vogt, Jonas Kluckert, Thomas Frauenfelder, Christian Blüthgen, Farhad Nooralahzadeh, Michael Krauthammer  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.03333)  
+
+**Abstract**: The widespread use of chest X-rays (CXRs), coupled with a shortage of radiologists, has driven growing interest in automated CXR analysis and AI-assisted reporting. While existing vision-language models (VLMs) show promise in specific tasks such as report generation or abnormality detection, they often lack support for interactive diagnostic capabilities. In this work we present RadVLM, a compact, multitask conversational foundation model designed for CXR interpretation. To this end, we curate a large-scale instruction dataset comprising over 1 million image-instruction pairs containing both single-turn tasks -- such as report generation, abnormality classification, and visual grounding -- and multi-turn, multi-task conversational interactions. After fine-tuning RadVLM on this instruction dataset, we evaluate it across different tasks along with re-implemented baseline VLMs. Our results show that RadVLM achieves state-of-the-art performance in conversational capabilities and visual grounding while remaining competitive in other radiology tasks. Ablation studies further highlight the benefit of joint training across multiple tasks, particularly for scenarios with limited annotated data. Together, these findings highlight the potential of RadVLM as a clinically relevant AI assistant, providing structured CXR interpretation and conversational capabilities to support more effective and accessible diagnostic workflows. 
+
+**Abstract (ZH)**: 胸片（CXR）的广泛应用与放射科医师短缺推动了自动化CXR分析和AI辅助报告的日益增长的兴趣。现有的视觉-语言模型（VLMs）在特定任务，如报告生成或异常检测方面显示出潜力，但在交互诊断能力方面往往缺乏支持。在此研究中，我们提出了RadVLM，这是一种紧凑的多功能对话基础模型，专门用于CXR解释。为此，我们编制了一个大规模的指令数据集，包含超过一百万张图像指令对，既包括单轮任务，如报告生成、异常分类和视觉定位，也包括多轮多任务对话交互。在对这一指令数据集进行微调后，我们以重新实现的基本VLMs为基础，对其进行了不同任务的评估。结果显示，RadVLM在对话能力和视觉定位方面达到了最先进的性能，而在其他放射学任务上仍具有竞争力。进一步的消融研究强调了在多个任务上联合训练的好处，特别是在标注数据有限的情况下。综上所述，这些结果突显了RadVLM作为临床相关AI助理的潜力，提供结构化的CXR解释和对话功能，以支持更有效的和易于获取的诊断工作流程。 
+
+---
+# When Pre-trained Visual Representations Fall Short: Limitations in Visuo-Motor Robot Learning 
+
+**Title (ZH)**: 当预训练视觉表示不足时：视觉-运动机器人学习中的局限性 
+
+**Authors**: Nikolaos Tsagkas, Andreas Sochopoulos, Duolikun Danier, Chris Xiaoxuan Lu, Oisin Mac Aodha  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.03270)  
+
+**Abstract**: The integration of pre-trained visual representations (PVRs) into visuo-motor robot learning has emerged as a promising alternative to training visual encoders from scratch. However, PVRs face critical challenges in the context of policy learning, including temporal entanglement and an inability to generalise even in the presence of minor scene perturbations. These limitations hinder performance in tasks requiring temporal awareness and robustness to scene changes. This work identifies these shortcomings and proposes solutions to address them. First, we augment PVR features with temporal perception and a sense of task completion, effectively disentangling them in time. Second, we introduce a module that learns to selectively attend to task-relevant local features, enhancing robustness when evaluated on out-of-distribution scenes. Our experiments demonstrate significant performance improvements, particularly in PVRs trained with masking objectives, and validate the effectiveness of our enhancements in addressing PVR-specific limitations. 
+
+**Abstract (ZH)**: 将预先训练的视觉表示（PVRs）整合到视觉与运动机器人学习中已成为从零开始训练视觉编码器的一种有 promise 的替代方案。然而，PVRs 在策略学习情境下面临关键挑战，包括时间纠缠和即使在场景轻微变动的情况下也难以泛化。这些限制阻碍了在需要时间感知和场景变化鲁棒性的任务中的表现。本研究识别了这些问题，并提出了相应的解决方案。首先，我们通过添加时间感知和任务完成感来增强 PVR 特征，有效地在时间上解耦这些特征。其次，我们引入了一个模块，使其能够选择性地关注与任务相关的局部特征，在评估非分布场景时增强鲁棒性。我们的实验结果表明，在带有遮蔽目标训练的 PVRs 中尤为显著的性能提升，并验证了我们在解决 PVR 特有局限性方面增强措施的有效性。 
+
+---
+# iVISPAR -- An Interactive Visual-Spatial Reasoning Benchmark for VLMs 
+
+**Title (ZH)**: iVISPAR -- 一种面向VLMs的交互式视觉-空间推理基准测试 
+
+**Authors**: Julius Mayer, Mohamad Ballout, Serwan Jassim, Farbod Nosrat Nezami, Elia Bruni  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.03214)  
+
+**Abstract**: Vision-Language Models (VLMs) are known to struggle with spatial reasoning and visual alignment. To help overcome these limitations, we introduce iVISPAR, an interactive multi-modal benchmark designed to evaluate the spatial reasoning capabilities of VLMs acting as agents. iVISPAR is based on a variant of the sliding tile puzzle-a classic problem that demands logical planning, spatial awareness, and multi-step reasoning. The benchmark supports visual 2D, 3D, and text-based input modalities, enabling comprehensive assessments of VLMs' planning and reasoning skills. We evaluate a broad suite of state-of-the-art open-source and closed-source VLMs, comparing their performance while also providing optimal path solutions and a human baseline to assess the task's complexity and feasibility for humans. Results indicate that while some VLMs perform well on simple spatial tasks, they encounter difficulties with more complex configurations and problem properties. Notably, while VLMs generally perform better in 2D vision compared to 3D or text-based representations, they consistently fall short of human performance, illustrating the persistent challenge of visual alignment. This highlights critical gaps in current VLM capabilities, highlighting their limitations in achieving human-level cognition. 
+
+**Abstract (ZH)**: 视觉语言模型（VLMs）已知在空间推理和视觉对齐方面存在困难。为克服这些局限，我们引入了iVISPAR，这是一个交互式的多模态基准，旨在评估VLM作为代理时的空间推理能力。iVISPAR基于滑动拼图问题的一种变体——这是一个经典的逻辑规划、空间意识和多步推理需求的问题。该基准支持视觉2D、3D和基于文本的输入模态，使得对VLM的规划和推理能力进行全面评估成为可能。我们评估了一系列最新的开源和封闭源VLM，对比了它们的表现，并提供了最优路径解决方案和人类基线，以评估任务的复杂性和对人类的可行性。结果显示，尽管有些VLM在简单空间任务上表现良好，但在更复杂的空间配置和问题属性上遇到困难。值得注意的是，虽然VLM在2D视觉上的表现普遍优于3D或基于文本的表示，但在所有情况下，它们都未能达到人类的性能，这突显了视觉对齐的持续挑战。这一结果表明，当前VLM在实现人类级认知方面存在关键差距和限制。
+
+（译者注：学术翻译应尽可能精确传达原文含义，同时符合中文表达习惯。上述翻译在保持原文意思的基础上，进行了适当的技术性措辞调整，以适应学术表述。） 
+
+---
+# Tell2Reg: Establishing spatial correspondence between images by the same language prompts 
+
+**Title (ZH)**: Tell2Reg：通过相同的语言提示建立图像之间的空间对应关系 
+
+**Authors**: Wen Yan, Qianye Yang, Shiqi Huang, Yipei Wang, Shonit Punwani, Mark Emberton, Vasilis Stavrinides, Yipeng Hu, Dean Barratt  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.03118)  
+
+**Abstract**: Spatial correspondence can be represented by pairs of segmented regions, such that the image registration networks aim to segment corresponding regions rather than predicting displacement fields or transformation parameters. In this work, we show that such a corresponding region pair can be predicted by the same language prompt on two different images using the pre-trained large multimodal models based on GroundingDINO and SAM. This enables a fully automated and training-free registration algorithm, potentially generalisable to a wide range of image registration tasks. In this paper, we present experimental results using one of the challenging tasks, registering inter-subject prostate MR images, which involves both highly variable intensity and morphology between patients. Tell2Reg is training-free, eliminating the need for costly and time-consuming data curation and labelling that was previously required for this registration task. This approach outperforms unsupervised learning-based registration methods tested, and has a performance comparable to weakly-supervised methods. Additional qualitative results are also presented to suggest that, for the first time, there is a potential correlation between language semantics and spatial correspondence, including the spatial invariance in language-prompted regions and the difference in language prompts between the obtained local and global correspondences. Code is available at this https URL. 
+
+**Abstract (ZH)**: 空间对应可以通过分割区域的配对来表示，因此图像配准网络的目标是分割对应的区域而不是预测位移场或变换参数。在本研究中，我们展示了可以通过在两个不同图像上使用预训练的大规模跨模态模型（基于GroundingDINO和SAM）的相同语言提示来预测这样的对应区域对。这使得一个完全自动化且无需训练的配准算法成为可能，该算法有可能适用于广泛的图像配准任务。在本文中，我们使用一个具有挑战性的任务——跨个体前列腺磁共振图像配准来展示实验结果，该任务涉及到患者之间高度可变的强度和形态。Tell2Reg方法无需训练，消除了之前为这种配准任务所需的数据整理和标注的昂贵和耗时的工作。该方法在测试的基于无监督学习的配准方法中表现出更好的性能，并且其性能与弱监督方法相当。还呈现了额外的定性结果，表明语言语义与空间对应之间可能存在关联，包括语言提示区域的空间不变性和所得局部和全局对应处的语言提示之间的差异。相关代码可在以下链接获取：this https URL。 
+
+---
+# Position: Multimodal Large Language Models Can Significantly Advance Scientific Reasoning 
+
+**Title (ZH)**: 位置：多模态大型语言模型可以显著推进科学推理 
+
+**Authors**: Yibo Yan, Shen Wang, Jiahao Huo, Jingheng Ye, Zhendong Chu, Xuming Hu, Philip S. Yu, Carla Gomes, Bart Selman, Qingsong Wen  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.02871)  
+
+**Abstract**: Scientific reasoning, the process through which humans apply logic, evidence, and critical thinking to explore and interpret scientific phenomena, is essential in advancing knowledge reasoning across diverse fields. However, despite significant progress, current scientific reasoning models still struggle with generalization across domains and often fall short of multimodal perception. Multimodal Large Language Models (MLLMs), which integrate text, images, and other modalities, present an exciting opportunity to overcome these limitations and enhance scientific reasoning. Therefore, this position paper argues that MLLMs can significantly advance scientific reasoning across disciplines such as mathematics, physics, chemistry, and biology. First, we propose a four-stage research roadmap of scientific reasoning capabilities, and highlight the current state of MLLM applications in scientific reasoning, noting their ability to integrate and reason over diverse data types. Second, we summarize the key challenges that remain obstacles to achieving MLLM's full potential. To address these challenges, we propose actionable insights and suggestions for the future. Overall, our work offers a novel perspective on MLLM integration with scientific reasoning, providing the LLM community with a valuable vision for achieving Artificial General Intelligence (AGI). 
+
+**Abstract (ZH)**: 科学推理是人类运用逻辑、证据和批判性思维探索和解释科学现象的过程，对于跨学科知识推理的发展至关重要。尽管已取得显著进展，现有科学推理模型仍然在领域间的泛化以及多模态感知方面存在局限。多模态大型语言模型（MLLMs），通过集成文本、图像和其他模态信息，为克服这些局限和提升科学推理提供了令人兴奋的机遇。因此，本文立场认为MLLMs可以在数学、物理学、化学和生物学等学科中显著推进科学推理。首先，我们提出了科学推理能力的四阶段研究路线图，并强调了当前MLLM在科学推理中的应用状态，指出其在整合和处理多种数据类型方面的优势。其次，我们总结了仍然阻碍MLLM充分发挥潜力的关键挑战，并提出了解决这些挑战的具体建议。总体而言，我们的工作为MLLM与科学推理集成提供了一个新颖视角，为大语言模型（LLM）社区提供了实现通用人工智能（AGI）的宝贵愿景。 
+
+---
+# Cross-Modality Embedding of Force and Language for Natural Human-Robot Communication 
+
+**Title (ZH)**: 力与语言的跨模态嵌入以实现自然的人机通信 
+
+**Authors**: Ravi Tejwani, Karl Velazquez, John Payne, Paolo Bonato, Harry Asada  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.02772)  
+
+**Abstract**: A method for cross-modality embedding of force profile and words is presented for synergistic coordination of verbal and haptic communication. When two people carry a large, heavy object together, they coordinate through verbal communication about the intended movements and physical forces applied to the object. This natural integration of verbal and physical cues enables effective coordination. Similarly, human-robot interaction could achieve this level of coordination by integrating verbal and haptic communication modalities. This paper presents a framework for embedding words and force profiles in a unified manner, so that the two communication modalities can be integrated and coordinated in a way that is effective and synergistic. Here, it will be shown that, although language and physical force profiles are deemed completely different, the two can be embedded in a unified latent space and proximity between the two can be quantified. In this latent space, a force profile and words can a) supplement each other, b) integrate the individual effects, and c) substitute in an exchangeable manner. First, the need for cross-modality embedding is addressed, and the basic architecture and key building block technologies are presented. Methods for data collection and implementation challenges will be addressed, followed by experimental results and discussions. 
+
+**Abstract (ZH)**: 本文提出了一个用于力廓线和文字跨模态嵌入的方法，以实现口语和触觉通信的协同协调。当两人共同搬运一个大型重物时，他们通过言语沟通来协调各自的动作意图及对物体施加的物理力。这种自然的语境与物理信号的结合可以使协调变得更加有效。类似地，通过整合口语和触觉交流模式，人机交互可以实现这种水平的协调。本文提出了一种协作框架，将文字和力廓线以统一的方式嵌入其中，从而使两种交流模式能够有效且协同地整合与协调。研究证明，尽管语言和物理力廓线被认为是完全不同的，但这两者可以嵌入到一个统一的潜在空间中，并可以量化两者之间的接近程度。在该潜在空间中，力廓线和文字能够：(a) 相互补充，(b) 整合个体影响，(c) 互换地替代。首先，本文将讨论跨模态嵌入的需求，并介绍基本架构和关键技术组件。接着，将讨论数据收集方法和实施挑战，并给出实验结果和讨论。 
+
+---
+# Vision-Language Model Dialog Games for Self-Improvement 
+
+**Title (ZH)**: 视觉-语言模型对话游戏以实现自我提升 
+
+**Authors**: Ksenia Konyushkova, Christos Kaplanis, Serkan Cabi, Misha Denil  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.02740)  
+
+**Abstract**: The increasing demand for high-quality, diverse training data poses a significant bottleneck in advancing vision-language models (VLMs). This paper presents VLM Dialog Games, a novel and scalable self-improvement framework for VLMs. Our approach leverages self-play between two agents engaged in a goal-oriented play centered around image identification. By filtering for successful game interactions, we automatically curate a high-quality dataset of interleaved images and text. We demonstrate that fine-tuning on this synthetic data leads to performance gains on downstream tasks and generalises across datasets. Moreover, as the improvements in the model lead to better game play, this procedure can be applied iteratively. This work paves the way for self-improving VLMs, with potential applications in various real-world scenarios especially when the high-quality multimodal data is scarce. 
+
+**Abstract (ZH)**: 不断提升对高品质、多样化训练数据的需求已成为视觉-语言模型（VLMs）发展的瓶颈之一。本文提出了一种新颖且可扩展的自我改进框架——VLM对话游戏（VLM Dialog Games），该框架通过两个参与目标导向图像识别游戏的智能体之间的自博弈来提升VLMs的能力。通过筛选成功的游戏交互，我们自动生成高质量的图文交错数据集。实验证明，基于这种合成数据的微调能够提高下游任务的性能，并且能够跨数据集泛化。此外，随着模型改进导致游戏表现的提升，这种过程可以迭代进行。本研究为自我改进的VLMs铺平了道路，尤其是在高质量多模态数据稀缺的情况下，这种框架具有广泛的实际应用场景。 
+
+---
+# MedRAX: Medical Reasoning Agent for Chest X-ray 
+
+**Title (ZH)**: MedRAX：胸部X光诊断智能推理Agent 
+
+**Authors**: Adibvafa Fallahpour, Jun Ma, Alif Munim, Hongwei Lyu, Bo Wang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.02673)  
+
+**Abstract**: Chest X-rays (CXRs) play an integral role in driving critical decisions in disease management and patient care. While recent innovations have led to specialized models for various CXR interpretation tasks, these solutions often operate in isolation, limiting their practical utility in clinical practice. We present MedRAX, the first versatile AI agent that seamlessly integrates state-of-the-art CXR analysis tools and multimodal large language models into a unified framework. MedRAX dynamically leverages these models to address complex medical queries without requiring additional training. To rigorously evaluate its capabilities, we introduce ChestAgentBench, a comprehensive benchmark containing 2,500 complex medical queries across 7 diverse categories. Our experiments demonstrate that MedRAX achieves state-of-the-art performance compared to both open-source and proprietary models, representing a significant step toward the practical deployment of automated CXR interpretation systems. Data and code have been publicly available at this https URL 
+
+**Abstract (ZH)**: 胸部X光片（CXR）在诊疗决策和患者护理中发挥着关键作用。尽管近期的技术创新已经催生了各种专门用于CXR解释任务的模型，但这些解决方案往往独立存在，限制了其在临床实践中的实用价值。我们提出了MedRAX，这是首款无缝集成最新CXR分析工具和多模态大语言模型的通用人工智能代理。MedRAX能够动态利用这些模型以解决复杂的医疗问题，无需额外训练。为了系统地评估其能力，我们引入了包含2,500个复杂医疗问题的ChestAgentBench基准测试，涵盖7个不同的类别。我们的实验表明，MedRAX在此类基准测试中的性能达到了最新技术水平，标志着自动CXR解释系统实用部署的重要一步。数据和代码可在以下网址公开获取：[此处提供网址] 
+
+---
+# LLaVAC: Fine-tuning LLaVA as a Multimodal Sentiment Classifier 
+
+**Title (ZH)**: LLaVAC：将LLaVA微调为多模态情感分类器 
+
+**Authors**: T. Chay-intr, Y. Chen, K. Viriyayudhakorn, T. Theeramunkong  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.02938)  
+
+**Abstract**: We present LLaVAC, a method for constructing a classifier for multimodal sentiment analysis. This method leverages fine-tuning of the Large Language and Vision Assistant (LLaVA) to predict sentiment labels across both image and text modalities. Our approach involves designing a structured prompt that incorporates both unimodal and multimodal labels to fine-tune LLaVA, enabling it to perform sentiment classification effectively. Experiments on the MVSA-Single dataset demonstrate that LLaVAC outperforms existing methods in multimodal sentiment analysis across three data processing procedures. The implementation of LLaVAC is publicly available at this https URL. 
+
+**Abstract (ZH)**: 我们提出了LLaVAC方法，用于构建一个多模态情感分析分类器。该方法利用了对大型语言和视觉助手（LLaVA）进行微调，以在图像和文本模态中预测情感标签。我们的方法包括设计一个结构化的提示，该提示结合了单模态和多模态标签来微调LLaVA，从而使其能够有效地进行情感分类。在MVSA-Single数据集上的实验表明，LLaVAC在三种数据处理程序下的多模态情感分析中均优于现有方法。LLaVAC的实现已公开发布在以下链接：[](https://example-url.com)（注意：URL需要替换为实际的公开链接地址）。 
+
+---
