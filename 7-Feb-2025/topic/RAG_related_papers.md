@@ -1,0 +1,43 @@
+# Experiments with Large Language Models on Retrieval-Augmented Generation for Closed-Source Simulation Software 
+
+**Title (ZH)**: 大型语言模型在闭源仿真软件检索增强生成实验中的应用 
+
+**Authors**: Andreas Baumann, Peter Eberhard  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.03916)  
+
+**Abstract**: Large Language Models (LLMs) are increasingly helpful in text generation, even writing code in programming languages based on user prompts written in natural language. They are even applied to generate simulation models for multibody systems from natural language. Research results suggest that LLMs surpass the mere replication of existing code examples, where some LLMs have been trained on an open-source multibody simulation code. However, for closed-source simulation software, such results are not to be expected as their ideas and concepts might differ from other publicly available ones. LLMs can hallucinate for knowledge-intensive tasks, such as model creation, which can lead to wrong responses. This is especially the case for the LLM unknown closed-source simulation software. The same applies to other internal knowledge kept private to protect intellectual property or data privacy. The Retrieval-Augmented Generation (RAG) approach might yield a solution for these knowledge-intensive tasks. This paper explores the application of RAG to closed-source simulation software and presents first experiments. After a brief introduction to LLMs, the RAG approach, and the simulation method applied by the close-source simulation software, several examples are provided to test LLMs' knowledge of the simulation software and the creation of simulation models using two RAG systems. The examples show promising results indicating the benefits of applying RAG systems to closed-source simulation software, helping to access their knowledge. Nevertheless, they also reveal gaps in the applied information and open questions for further research. 
+
+**Abstract (ZH)**: 大型语言模型（LLMs）在文本生成方面越来越有帮助，甚至可以根据自然语言撰写的用户提示编写编程语言代码。它们甚至被应用于根据自然语言生成多体系统模拟模型。研究结果表明，LLMs不仅能够复制现有的代码示例，有些LLMs还被训练在开放源代码多体系统模拟代码上。然而，对于封闭源代码的模拟软件，这样的结果并不常见，因为它们的理念和概念可能与其他公开可用的软件不同。对于知识密集型任务，如模型创建，LLMs可能会产生错误的回答，尤其是在未知的封闭源代码模拟软件情况下。同样，对于其他内部知识，这些知识被保留在私有信息中以保护知识产权或数据隐私，也存在这种情况。检索增强生成（RAG）方法可能为这些知识密集型任务提供解决方案。本文探讨了RAG在封闭源代码模拟软件中的应用，并报告了初步实验。文章首先简要介绍了大型语言模型、RAG方法以及封闭源代码模拟软件所采用的模拟方法，然后提供了几个实验示例，以测试大型语言模型对模拟软件的知识以及利用两个RAG系统创建模拟模型的情况。这些示例表明了应用RAG系统于封闭源代码模拟软件的潜在益处，有助于获取其知识。然而，这些示例也揭示了所应用信息的不足之处，并提出了进一步研究中的开放问题。 
+
+---
+# LLMs to Support a Domain Specific Knowledge Assistant 
+
+**Title (ZH)**: 支持特定领域知识助手的大规模语言模型 
+
+**Authors**: Maria-Flavia Lovin  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.04095)  
+
+**Abstract**: This work presents a custom approach to developing a domain specific knowledge assistant for sustainability reporting using the International Financial Reporting Standards (IFRS). In this domain, there is no publicly available question-answer dataset, which has impeded the development of a high-quality chatbot to support companies with IFRS reporting. The two key contributions of this project therefore are:
+(1) A high-quality synthetic question-answer (QA) dataset based on IFRS sustainability standards, created using a novel generation and evaluation pipeline leveraging Large Language Models (LLMs). This comprises 1,063 diverse QA pairs that address a wide spectrum of potential user queries in sustainability reporting. Various LLM-based techniques are employed to create the dataset, including chain-of-thought reasoning and few-shot prompting. A custom evaluation framework is developed to assess question and answer quality across multiple dimensions, including faithfulness, relevance, and domain specificity. The dataset averages a score range of 8.16 out of 10 on these metrics.
+(2) Two architectures for question-answering in the sustainability reporting domain - a RAG pipeline and a fully LLM-based pipeline. The architectures are developed by experimenting, fine-tuning, and training on the QA dataset. The final pipelines feature an LLM fine-tuned on domain specific data and an industry classification component to improve the handling of complex queries. The RAG architecture achieves an accuracy of 85.32% on single-industry and 72.15% on cross-industry multiple-choice questions, outperforming the baseline approach by 4.67 and 19.21 percentage points, respectively. The LLM-based pipeline achieves an accuracy of 93.45% on single-industry and 80.30% on cross-industry multiple-choice questions, an improvement of 12.80 and 27.36 percentage points over the baseline, respectively. 
+
+**Abstract (ZH)**: 本文提出了一种定制方法，旨在利用国际财务报告准则（IFRS）开发一个专注于可持续报告的专用知识助手。在该领域中，没有公开可用的问答数据集，这阻碍了开发高质量的聊天机器人以支持使用IFRS进行报告的公司。因此，该项目的两大主要贡献是：
+(1) 基于IFRS可持续性标准的一个高质量合成问答（QA）数据集，该数据集利用大型语言模型（LLMs）的新型生成和评估管道创建。该数据集包含1,063个多样化的问答对，涵盖了可持续报告中潜在用户查询的广泛范围。使用多种基于LLM的技术来创建数据集，包括链式推理和少样本提示。开发了一个自定义评估框架来从多个维度评估问题和答案的质量，包括忠实性、相关性和领域特定性。这些指标下该数据集平均得分为8.16/10。
+(2) 在可持续报告领域中的两套问答架构——即检索与生成（Retrieval-Augmented Generation, RAG）流程和全基于LLM的流程。这些架构通过实验、微调和基于问答数据集进行训练而开发。最终的流程包括一个针对特定领域数据进行微调的LLM和一个行业分类组件，以提高处理复杂查询的能力。RAG架构在单一行业单选题中实现了85.32%的准确率，在跨行业多选题中实现了72.15%的准确率，分别超出基线方法4.67和19.21个百分点。基于LLM的流程在单一行业单选题中的准确率为93.45%，在跨行业多选题中的准确率为80.30%，分别提高了12.80和27.36个百分点。 
+
+---
+# Enhancing Online Learning Efficiency Through Heterogeneous Resource Integration with a Multi-Agent RAG System 
+
+**Title (ZH)**: 通过多智能体RAG系统进行异质资源集成以增强在线学习效率 
+
+**Authors**: Devansh Srivastav, Hasan Md Tusfiqur Alam, Afsaneh Asaei, Mahmoud Fazeli, Tanisha Sharma, Daniel Sonntag  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.03948)  
+
+**Abstract**: Efficient online learning requires seamless access to diverse resources such as videos, code repositories, documentation, and general web content. This poster paper introduces early-stage work on a Multi-Agent Retrieval-Augmented Generation (RAG) System designed to enhance learning efficiency by integrating these heterogeneous resources. Using specialized agents tailored for specific resource types (e.g., YouTube tutorials, GitHub repositories, documentation websites, and search engines), the system automates the retrieval and synthesis of relevant information. By streamlining the process of finding and combining knowledge, this approach reduces manual effort and enhances the learning experience. A preliminary user study confirmed the system's strong usability and moderate-high utility, demonstrating its potential to improve the efficiency of knowledge acquisition. 
+
+**Abstract (ZH)**: 高效的在线学习需要无缝访问各种资源，如视频、代码仓库、文档和一般网络内容。本海报介绍了一个多智能体检索增强生成（RAG）系统的初步工作，该系统旨在通过整合这些异构资源来提高学习效率。该系统使用针对特定资源类型进行定制的专业智能体（例如，YouTube教程、GitHub仓库、文档网站和搜索引擎），自动检索和合成相关的信息。通过简化知识查找和整合的过程，这种方法减少了手工劳动，并提升了学习体验。初步的用户研究证实了该系统的良好易用性和中等到高度的实用性，展示了其提高知识获取效率的潜力。 
+
+---
