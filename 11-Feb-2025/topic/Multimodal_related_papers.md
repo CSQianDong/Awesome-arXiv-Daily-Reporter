@@ -193,19 +193,6 @@
 **Abstract (ZH)**: 工业环境中气体泄漏和电弧放电存在重大风险，需要可靠的检测系统以确保安全和运营效率。受人类检查规程综合视觉识别和声学验证的启发，本研究提出了一种基于深度学习的机器人系统，用于自主检测和分类制造环境中气体泄漏和电弧放电。该系统设计为在机器人上独立执行所有实验任务。系统利用一个具有112个通道和96 kHz采样率的声学摄像机捕捉超声频率，处理在不同工业场景中记录的真实数据集。这些数据集包括多种气体泄漏配置（如针孔、敞开端）和不同类型的部分放电（如电晕放电、表面放电、悬浮放电），在各种环境噪声条件下进行。所提出的系统结合了视觉检测和基于波束形成增强的声学分析管道。信号使用STFT进行了变换并通过伽玛校正进行了细化，以实现稳健的特征提取。一种灵感源自Inception的卷积神经网络（CNN）进一步对危害进行分类，准确率达到99%的气体泄漏检测率。该系统不仅能检测单个危害源，还能通过融合来自视觉和声学传感器的多模态数据来提高分类可靠性。在具有回音和噪声增强的环境中测试时，该系统在某些方面优于传统模型，准确率最高可提高44%。所有实验任务都精心设计，以确保公平性和可重复性。此外，该系统还针对实时部署进行了优化，能够在移动机器人平台上实现每秒2.1秒的推理时间。通过模拟人类检查规程，并结合视觉与声学模态，本研究提供了一种有效的工业自动化解决方案，显著提高了安全性和操作可靠性。 
 
 ---
-# ConRFT: A Reinforced Fine-tuning Method for VLA Models via Consistency Policy 
-
-**Title (ZH)**: ConRFT：基于一致性策略的VLA模型强化微调方法 
-
-**Authors**: Yuhui Chen, Shuai Tian, Shugao Liu, Yingting Zhou, Haoran Li, Dongbin Zhao  
-
-**Link**: [PDF](https://arxiv.org/pdf/2502.05450)  
-
-**Abstract**: Vision-Language-Action (VLA) models have shown substantial potential in real-world robotic manipulation. However, fine-tuning these models through supervised learning struggles to achieve robust performance due to limited, inconsistent demonstrations, especially in contact-rich environments. In this paper, we propose a reinforced fine-tuning approach for VLA models, named ConRFT, which consists of offline and online fine-tuning with a unified consistency-based training objective, to address these challenges. In the offline stage, our method integrates behavior cloning and Q-learning to effectively extract policy from a small set of demonstrations and stabilize value estimating. In the online stage, the VLA model is further fine-tuned via consistency policy, with human interventions to ensure safe exploration and high sample efficiency. We evaluate our approach on eight diverse real-world manipulation tasks. It achieves an average success rate of 96.3% within 45-90 minutes of online fine-tuning, outperforming prior supervised methods with a 144% improvement in success rate and 1.9x shorter episode length. This work highlights the potential of integrating reinforcement learning to enhance the performance of VLA models for real-world robotic applications. 
-
-**Abstract (ZH)**: 视觉-语言-行动（VLA）模型在现实中的机器人操作中展现了巨大的潜力。然而，通过监督学习进行精细化调整的方法由于演示数据有限且不一致，特别是在接触丰富的环境中，难以实现稳健的性能。在本文中，我们提出了一种强化学习驱动的精细化调整方法，命名为ConRFT，该方法通过统一的基于一致性的训练目标，在离线和在线阶段进行精细化调整，以解决这些挑战。在离线阶段，我们的方法结合行为克隆和Q学习，有效从少量演示数据中提取策略，并稳定价值估计。在线阶段，进一步通过一致性策略进行精细化调整，并结合人类干预确保安全探索和高效样本利用率。我们在八个不同的真实世界操作任务上评估了该方法。在线精细化调整45-90分钟内，方法的平均成功率达到了96.3%，相较于之前的监督学习方法，成功率提高了144%，取样长度缩短了1.9倍。本工作强调了将强化学习集成到VLA模型以提升其现实应用性能的潜力。 
-
----
 # Show-o Turbo: Towards Accelerated Unified Multimodal Understanding and Generation 
 
 **Title (ZH)**: Show-o Turbo: 向统一多模态理解与生成的加速方向迈进 
