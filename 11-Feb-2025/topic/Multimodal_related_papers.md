@@ -1,0 +1,234 @@
+# HCMRM: A High-Consistency Multimodal Relevance Model for Search Ads 
+
+**Title (ZH)**: HCMRM：一种高一致性的多模态相关性模型用于搜索广告 
+
+**Authors**: Guobing Gan, Kaiming Gao, Li Wang, Shen Jiang, Peng Jiang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.05822)  
+
+**Abstract**: Search advertising is essential for merchants to reach the target users on short video platforms. Short video ads aligned with user search intents are displayed through relevance matching and bid ranking mechanisms. This paper focuses on improving query-to-video relevance matching to enhance the effectiveness of ranking in ad systems. Recent vision-language pre-training models have demonstrated promise in various multimodal tasks. However, their contribution to downstream query-video relevance tasks is limited, as the alignment between the pair of visual signals and text differs from the modeling of the triplet of the query, visual signals, and video text. In addition, our previous relevance model provides limited ranking capabilities, largely due to the discrepancy between the binary cross-entropy fine-tuning objective and the ranking objective. To address these limitations, we design a high-consistency multimodal relevance model (HCMRM). It utilizes a simple yet effective method to enhance the consistency between pre-training and relevance tasks. Specifically, during the pre-training phase, along with aligning visual signals and video text, several keywords are extracted from the video text as pseudo-queries to perform the triplet relevance modeling. For the fine-tuning phase, we introduce a hierarchical softmax loss, which enables the model to learn the order within labels while maximizing the distinction between positive and negative samples. This promotes the fusion ranking of relevance and bidding in the subsequent ranking stage. The proposed method has been deployed in the Kuaishou search advertising system for over a year, contributing to a 6.1% reduction in the proportion of irrelevant ads and a 1.4% increase in ad revenue. 
+
+**Abstract (ZH)**: 短视频广告对于商家在短视频平台上触及目标用户至关重要。通过相关性匹配和出价排名机制，与用户搜索意图相匹配的短视频广告会在平台上展示。本文聚焦于提升查询与视频的相关性匹配，以增强广告系统的排名效果。近期的视觉-语言预训练模型已显示出在多种多模态任务上的潜力，但它们对下游查询与视频相关性任务的贡献有限，因为视觉信号对齐与文本之间的对齐和查询、视觉信号与视频文本三元组建模之间存在差异。此外，我们之前的相关性模型在排序能力方面相对有限，主要原因在于二元交叉熵微调目标与排序目标之间的差距。为了解决这些问题，我们设计了一种高一致性多模态相关性模型（HCMRM）。该模型利用简单而有效的方法，增强了预训练与相关性建模任务之间的一致性。具体而言，在预训练阶段，除了对齐视觉信号和视频文本外，还从视频文本中提取多个关键词作为伪查询，以进行三元组相关性建模。在微调阶段，我们引入了一种层次softmax损失，使模型能够在最大化正负样本区分的同时学习标签内的顺序。这促进了后续排名阶段相关性和出价的融合排序。所提出的该方法已在抖音搜索广告系统中部署超过一年，成功将无关广告的比例减少了6.1%，广告收入增长了1.4%。 
+
+---
+# Multi-Branch Collaborative Learning Network for Video Quality Assessment in Industrial Video Search 
+
+**Title (ZH)**: 工业视频搜索中基于多分支协作学习网络的视频质量评估 
+
+**Authors**: Hengzhu Tang, Zefeng Zhang, Zhiping Li, Zhenyu Zhang, Xing Wu, Li Gao, Suqi Cheng, Dawei Yin  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.05924)  
+
+**Abstract**: Video Quality Assessment (VQA) is vital for large-scale video retrieval systems, aimed at identifying quality issues to prioritize high-quality videos. In industrial systems, low-quality video characteristics fall into four categories: visual-related issues like mosaics and black boxes, textual issues from video titles and OCR content, and semantic issues like frame incoherence and frame-text mismatch from AI-generated videos. Despite their prevalence in industrial settings, these low-quality videos have been largely overlooked in academic research, posing a challenge for accurate identification. To address this, we introduce the Multi-Branch Collaborative Network (MBCN) tailored for industrial video retrieval systems. MBCN features four branches, each designed to tackle one of the aforementioned quality issues. After each branch independently scores videos, we aggregate these scores using a weighted approach and a squeeze-and-excitation mechanism to dynamically address quality issues across different scenarios. We implement point-wise and pair-wise optimization objectives to ensure score stability and reasonableness. Extensive offline and online experiments on a world-level video search engine demonstrate MBCN's effectiveness in identifying video quality issues, significantly enhancing the retrieval system's ranking performance. Detailed experimental analyses confirm the positive contribution of all four evaluation branches. Furthermore, MBCN significantly improves recognition accuracy for low-quality AI-generated videos compared to the baseline. 
+
+**Abstract (ZH)**: 视频质量评估（VQA）对于大规模视频检索系统至关重要，旨在识别质量问题以优先处理高质量视频。在工业系统中，低质量视频特征可以归入四类：视觉相关问题，如马赛克和黑框；视频标题和OCR内容中的文本问题；以及人工智能生成视频中的语义问题，如帧不一致和帧-文本不匹配。尽管这些低质量视频在工业环境中极为常见，但它们在学术研究中却很少被关注，这给准确识别带来了挑战。为了解决这一问题，我们引入了一种针对工业视频检索系统的多分支协作网络（MBCN）。MBCN 包含四个分支，每个分支专门针对上述的一种质量问题。在每个分支独立对视频进行打分后，我们通过加权方法和挤压-注意力机制来综合这些分数，以动态地解决不同场景中的质量问题。我们实施了点间和对间的优化目标，以确保评分的稳定性和合理性。在世界级视频搜索引擎上进行的大量离线和在线实验表明，MBCN 在识别视频质量问题方面非常有效，显著提高了检索系统的排名性能。详细的实验分析表明，所有四个评估分支都对整体性能产生了积极的贡献。此外，MBCN 在识别低质量AI生成视频方面的准确性显著高于基线方法。 
+
+---
+# Evaluation of Multilingual Image Captioning: How far can we get with CLIP models? 
+
+**Title (ZH)**: 多语言图像字幕评价：CLIP模型能带我们走多远？ 
+
+**Authors**: Gonçalo Gomes, Chrysoula Zerva, Bruno Martins  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.06600)  
+
+**Abstract**: The evaluation of image captions, looking at both linguistic fluency and semantic correspondence to visual contents, has witnessed a significant effort. Still, despite advancements such as the CLIPScore metric, multilingual captioning evaluation has remained relatively unexplored. This work presents several strategies, and extensive experiments, related to evaluating CLIPScore variants in multilingual settings. To address the lack of multilingual test data, we consider two different strategies: (1) using quality aware machine-translated datasets with human judgements, and (2) re-purposing multilingual datasets that target semantic inference and reasoning. Our results highlight the potential of finetuned multilingual models to generalize across languages and to handle complex linguistic challenges. Tests with machine-translated data show that multilingual CLIPScore models can maintain a high correlation with human judgements across different languages, and additional tests with natively multilingual and multicultural data further attest to the high-quality assessments. 
+
+**Abstract (ZH)**: 对图像描述进行评价，不仅关注其语言流畅性，还关注其与视觉内容的语义对应性，这一领域已取得显著进展。尽管如此，尽管有CLIPScore等指标的进步，多语言描述评价仍相对未被充分探索。本研究提出了几种策略，并进行了大量实验，以评估在多语言环境下的CLIPScore变体。为应对缺乏多语言测试数据的问题，我们考虑了两种不同的策略：（1）使用高质量的机器翻译数据集，并辅以人工评判，（2）重新利用旨在进行语义推理和推断的多语言数据集。我们的研究结果突显了微调多语言模型在跨语言泛化和处理复杂语言挑战方面的潜力。通过机器翻译数据的测试表明，多语言CLIPScore模型能够在不同语言之间保持与人工评判的高相关性，而额外的测试使用了本族多语言和多元文化的测试数据，进一步证明了评估的质量。 
+
+---
+# MTPChat: A Multimodal Time-Aware Persona Dataset for Conversational Agents 
+
+**Title (ZH)**: MTPChat：面向对话代理的多模态时序意识人格数据集 
+
+**Authors**: Wanqi Yang, Yanda Li, Meng Fang, Ling Chen  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.05887)  
+
+**Abstract**: Understanding temporal dynamics is critical for conversational agents, enabling effective content analysis and informed decision-making. However, time-aware datasets, particularly for persona-grounded conversations, are still limited, which narrows their scope and diminishes their complexity. To address this gap, we introduce MTPChat, a multimodal, time-aware persona dialogue dataset that integrates linguistic, visual, and temporal elements within dialogue and persona memory. Leveraging MTPChat, we propose two time-sensitive tasks: Temporal Next Response Prediction (TNRP) and Temporal Grounding Memory Prediction (TGMP), both designed to assess a model's ability to understand implicit temporal cues and dynamic interactions. Additionally, we present an innovative framework featuring an adaptive temporal module to effectively integrate multimodal streams and capture temporal dependencies. Experimental results validate the challenges posed by MTPChat and demonstrate the effectiveness of our framework in multimodal time-sensitive scenarios. 
+
+**Abstract (ZH)**: 理解时间动态对于对话代理至关重要，它能够促进有效的内容分析和明智的决策。然而，时间感知数据集，尤其是在人物导向的对话中，仍然相对有限，这限制了它们的应用范围并减弱了它们的复杂性。为了解决这一差距，我们引入了MTPChat，这是一个多模态、时间感知的人物对话数据集，集成了对话和人物记忆中的语言、视觉和时间元素。利用MTPChat，我们提出了两个时间敏感任务：时间敏感的下一个响应预测（TNRP）和时间场景的 grounding 记忆预测（TGMP），这些都是为了评估模型理解隐含的时间线索和动态交互的能力。此外，我们还提出了一种创新框架，其中包含一个自适应时间模块，以有效整合多模态流并捕获时间依赖性。实验结果验证了MTPChat带来的挑战，并展示了该框架在多模态时间敏感场景中的有效性。 
+
+---
+# Large Multimodal Models for Low-Resource Languages: A Survey 
+
+**Title (ZH)**: 低资源语言的大规模多模态模型：一篇综述 
+
+**Authors**: Marian Lupascu, Ana-Cristina Rogoz, Mihai Sorin Stupariu, Radu Tudor Ionescu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.05568)  
+
+**Abstract**: In this survey, we systematically analyze techniques used to adapt large multimodal models (LMMs) for low-resource (LR) languages, examining approaches ranging from visual enhancement and data creation to cross-modal transfer and fusion strategies. Through a comprehensive analysis of 106 studies across 75 LR languages, we identify key patterns in how researchers tackle the challenges of limited data and computational resources. We find that visual information often serves as a crucial bridge for improving model performance in LR settings, though significant challenges remain in areas such as hallucination mitigation and computational efficiency. We aim to provide researchers with a clear understanding of current approaches and remaining challenges in making LMMs more accessible to speakers of LR (understudied) languages. We complement our survey with an open-source repository available at: this https URL. 
+
+**Abstract (ZH)**: 在这项综述中，我们系统分析了用于适应低资源（Low-Resource，LR）语言的大规模多模态模型（Large Multimodal Models，LMMs）的技术，研究了从视觉增强和数据创建到跨模态转移和融合策略等多种方法。通过对75种LR语言中106项相关研究的全面分析，我们识别了研究人员在面对数据和计算资源有限挑战时的关键模式。我们发现视觉信息通常是提高在LR环境中模型性能的关键桥梁，但仍然面临诸多挑战，特别是在幻觉减轻和计算效率方面。我们旨在为研究人员提供当前方法和待解决挑战的清晰理解，以使LMMs更加适用于LR（未充分研究）语言的演讲者。我们还通过一个开源仓库补充了这篇综述，网址为: this https URL。 
+
+---
+# Self-Correcting Decoding with Generative Feedback for Mitigating Hallucinations in Large Vision-Language Models 
+
+**Title (ZH)**: 使用生成反馈进行自我纠正解码以减轻大型视觉-语言模型中的幻觉 
+
+**Authors**: Ce Zhang, Zifu Wan, Zhehan Kan, Martin Q. Ma, Simon Stepputtis, Deva Ramanan, Russ Salakhutdinov, Louis-Philippe Morency, Katia Sycara, Yaqi Xie  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.06130)  
+
+**Abstract**: While recent Large Vision-Language Models (LVLMs) have shown remarkable performance in multi-modal tasks, they are prone to generating hallucinatory text responses that do not align with the given visual input, which restricts their practical applicability in real-world scenarios. In this work, inspired by the observation that the text-to-image generation process is the inverse of image-conditioned response generation in LVLMs, we explore the potential of leveraging text-to-image generative models to assist in mitigating hallucinations in LVLMs. We discover that generative models can offer valuable self-feedback for mitigating hallucinations at both the response and token levels. Building on this insight, we introduce self-correcting Decoding with Generative Feedback (DeGF), a novel training-free algorithm that incorporates feedback from text-to-image generative models into the decoding process to effectively mitigate hallucinations in LVLMs. Specifically, DeGF generates an image from the initial response produced by LVLMs, which acts as an auxiliary visual reference and provides self-feedback to verify and correct the initial response through complementary or contrastive decoding. Extensive experimental results validate the effectiveness of our approach in mitigating diverse types of hallucinations, consistently surpassing state-of-the-art methods across six benchmarks. Code is available at this https URL. 
+
+**Abstract (ZH)**: 尽管近年来大规模视觉-语言模型（LVLMs）在多模态任务中展现出了卓越的表现，但它们容易生成与给定的视觉输入不一致的虚构文本响应，这限制了它们在现实世界场景中的实用应用。本项研究受到观察到的视觉条件响应生成与文本到图像生成过程是逆向关系的启发，我们探索了利用生成型模型辅助减轻LVLMs中的虚构响应的可能性。我们发现，生成型模型可以在响应级别和标记级别提供有价值的自反馈，以减轻虚构响应。基于这一见解，我们提出了一种名为自纠正解码与生成反馈（DeGF）的新型无训练算法，该算法将文本到图像生成模型的反馈融入解码过程，以有效减轻LVLMs中的虚构响应。具体而言，DeGF 从LVLMs 初始生成的文本响应中生成图像，该图像作为辅助的视觉参考，通过互补或对比解码来验证和纠正初始响应，提供自反馈。大量实验结果验证了我们方法在减轻不同类型的虚构响应方面的有效性，能够在六大基准测试中持续超越最先进的方法。代码可在以下链接获取：[插入代码链接]。 
+
+---
+# A Generative Framework for Bidirectional Image-Report Understanding in Chest Radiography 
+
+**Title (ZH)**: 胸部X光图像和报告双向理解的生成框架 
+
+**Authors**: Nicholas Evans, Stephen Baker, Miles Reed  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.05926)  
+
+**Abstract**: The rapid advancements in large language models (LLMs) have unlocked their potential for multimodal tasks, where text and visual data are processed jointly. However, applying LLMs to medical imaging, particularly for chest X-rays (CXR), poses significant challenges due to the need for precise visual-textual alignment and the preservation of critical diagnostic details. In this paper, we propose Multi-Stage Adaptive Vision-Language Tuning (MAViLT), a novel framework designed to enhance multimodal reasoning and generation for CXR understanding. MAViLT incorporates a clinical gradient-weighted tokenization process and a hierarchical fine-tuning strategy, enabling it to generate accurate radiology reports, synthesize realistic CXRs from text, and answer vision-based clinical questions. We evaluate MAViLT on two benchmark datasets, MIMIC-CXR and Indiana University CXR, achieving state-of-the-art results across all tasks. Human evaluations further validate the clinical relevance and utility of MAViLT, making it a robust tool for real-world medical applications. This work demonstrates the feasibility of leveraging LLMs for multimodal medical imaging while addressing key challenges in vision-language integration. 
+
+**Abstract (ZH)**: 大型语言模型（LLMs）的迅猛发展为其在多模态任务中的应用打开了新的可能性，特别是在处理文本和视觉数据的同时。然而，将LLMs应用于医学成像，尤其是胸片（CXR），存在重大挑战，主要是需要精确的视觉-文本对齐，并保留关键的诊断细节。本文提出了一种新的框架——多阶段自适应视觉-语言调整（MAViLT），旨在增强CXR理解中的多模态推理和生成能力。MAViLT结合了临床导向的梯度加权分词过程和分层微调策略，使其能够生成准确的放射学报告、从文本合成逼真的CXR图像，并回答基于视觉的临床问题。我们在MIMIC-CXR和印第安纳大学CXR两个基准数据集上评估了MAViLT，实现了所有任务的最先进结果。进一步的人类评估验证了MAViLT在临床相关性和实用性方面的优势，使其成为现实世界医疗应用的强大工具。这项工作展示了利用LLMs进行多模态医学成像的可行性，并解决了视觉-语言整合中的关键挑战。 
+
+---
+# Evaluating Vision-Language Models for Emotion Recognition 
+
+**Title (ZH)**: 评估视觉语言模型在情绪识别中的性能 
+
+**Authors**: Sree Bhattacharyya, James Z. Wang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.05660)  
+
+**Abstract**: Large Vision-Language Models (VLMs) have achieved unprecedented success in several objective multimodal reasoning tasks. However, to further enhance their capabilities of empathetic and effective communication with humans, improving how VLMs process and understand emotions is crucial. Despite significant research attention on improving affective understanding, there is a lack of detailed evaluations of VLMs for emotion-related tasks, which can potentially help inform downstream fine-tuning efforts. In this work, we present the first comprehensive evaluation of VLMs for recognizing evoked emotions from images. We create a benchmark for the task of evoked emotion recognition and study the performance of VLMs for this task, from perspectives of correctness and robustness. Through several experiments, we demonstrate important factors that emotion recognition performance depends on, and also characterize the various errors made by VLMs in the process. Finally, we pinpoint potential causes for errors through a human evaluation study. We use our experimental results to inform recommendations for the future of emotion research in the context of VLMs. 
+
+**Abstract (ZH)**: 大型多模态视觉-语言模型（VLMs）已在多个客观多模态推理任务中取得了前所未有的成功。然而，为了进一步增强其与人类进行共情和有效沟通的能力，提高VLMs处理和理解情感的方式至关重要。尽管在这方面已有大量研究关注情感理解的提升，但对于情感相关任务的VLMs评估仍然不足，这可能有助于指导下游细调工作。在本研究中，我们首次全面评估了VLMs在识别人类由此产生的情感方面的表现。我们构建了一个由此引发的情感识别基准任务，并从正确性和鲁棒性的角度研究了VLMs在该任务上的性能。通过一系列实验，我们展示了情感识别性能依赖的重要因素，并且详细分析了VLMs在该过程中犯下的各种错误。最后，我们通过一项人工评估研究确定了错误的原因。我们使用实验结果来指导未来VLMs情感研究的建议。 
+
+---
+# EVEv2: Improved Baselines for Encoder-Free Vision-Language Models 
+
+**Title (ZH)**: EVEv2：提高的无编码器视觉-语言模型基线 
+
+**Authors**: Haiwen Diao, Xiaotong Li, Yufeng Cui, Yueze Wang, Haoge Deng, Ting Pan, Wenxuan Wang, Huchuan Lu, Xinlong Wang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.06788)  
+
+**Abstract**: Existing encoder-free vision-language models (VLMs) are rapidly narrowing the performance gap with their encoder-based counterparts, highlighting the promising potential for unified multimodal systems with structural simplicity and efficient deployment. We systematically clarify the performance gap between VLMs using pre-trained vision encoders, discrete tokenizers, and minimalist visual layers from scratch, deeply excavating the under-examined characteristics of encoder-free VLMs. We develop efficient strategies for encoder-free VLMs that rival mainstream encoder-based ones. After an in-depth investigation, we launch EVEv2.0, a new and improved family of encoder-free VLMs. We show that: (i) Properly decomposing and hierarchically associating vision and language within a unified model reduces interference between modalities. (ii) A well-designed training strategy enables effective optimization for encoder-free VLMs. Through extensive evaluation, our EVEv2.0 represents a thorough study for developing a decoder-only architecture across modalities, demonstrating superior data efficiency and strong vision-reasoning capability. Code is publicly available at: this https URL. 
+
+**Abstract (ZH)**: 现有的无需编码器的多模态模型（Vision-Language Models, VLMs）正在迅速缩小与基于编码器的模型之间的性能差距，突显了结构简单且高效部署的统一多模态系统具有巨大的潜力。我们系统地澄清了使用预训练视觉编码器、离散分词器和从零构建的简约视觉层的VLMs之间的性能差距，深入挖掘了无需编码器VLMs的一些未被充分研究的特点。我们开发了高效的策略，这些策略可以与主流的基于编码器的方法相媲美。经过深入的研究，我们推出了EVEv2.0，这是一个新的改进版的无需编码器的VLMs系列。我们表明：(i) 在统一模型中适当地分解和层级关联视觉和语言可以减少模态之间的干扰。(ii) 有效的训练策略能够促进无需编码器的VLMs的有效优化。通过广泛的评估，我们的EVEv2.0展示了跨模态解码器架构开发过程中的全面研究，证明了其卓越的数据效率和强大的视觉推理能力。相关的代码已在如下地址公开：this https URL。 
+
+---
+# Conformal Predictions for Human Action Recognition with Vision-Language Models 
+
+**Title (ZH)**: 使用视觉-语言模型进行人体动作识别的配准预测 
+
+**Authors**: Bary Tim, Fuchs Clément, Macq Benoît  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.06631)  
+
+**Abstract**: Human-In-The-Loop (HITL) frameworks are integral to many real-world computer vision systems, enabling human operators to make informed decisions with AI assistance. Conformal Predictions (CP), which provide label sets with rigorous guarantees on ground truth inclusion probabilities, have recently gained traction as a valuable tool in HITL settings. One key application area is video surveillance, closely associated with Human Action Recognition (HAR). This study explores the application of CP on top of state-of-the-art HAR methods that utilize extensively pre-trained Vision-Language Models (VLMs). Our findings reveal that CP can significantly reduce the average number of candidate classes without modifying the underlying VLM. However, these reductions often result in distributions with long tails. To address this, we introduce a method based on tuning the temperature parameter of the VLMs to minimize these tails without requiring additional calibration data. Our code is made available on GitHub at the address this https URL. 
+
+**Abstract (ZH)**: Human-in-the-Loop (HITL)框架在许多实际的计算机视觉系统中至关重要，它们允许人类操作者在人工智能辅助下做出明智的决策。一致性预测（Conformal Predictions, CP）提供了严格的关于 ground truth 包含概率的保证，近年来在HITL环境中被广泛应用，成为一种有价值的工具。其中一个关键应用领域是视频监控，与人类行为识别（Human Action Recognition, HAR）密切相关。本研究探讨了在最先进的HAR方法基础上应用CP的可能性，这些方法广泛利用预训练的Vision-Language模型（VLMs）。研究发现，CP可以在不修改VLM的前提下显著减少候选类别的平均数量。然而，这些减少往往会导致具有较长尾部的分布。为了解决这个问题，我们提出了一种方法，通过调整VLM的温度参数来最小化这些尾部，而不需要额外的校准数据。我们的代码已在GitHub上公开，地址为：https://github.com/example/repo。 
+
+---
+# Multi-modal Data Fusion and Deep Ensemble Learning for Accurate Crop Yield Prediction 
+
+**Title (ZH)**: 多模态数据融合与深度集成学习在作物产量精准预测中的应用 
+
+**Authors**: Akshay Dagadu Yewle, Laman Mirzayeva, Oktay Karakuş  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.06062)  
+
+**Abstract**: This study introduces RicEns-Net, a novel Deep Ensemble model designed to predict crop yields by integrating diverse data sources through multimodal data fusion techniques. The research focuses specifically on the use of synthetic aperture radar (SAR), optical remote sensing data from Sentinel 1, 2, and 3 satellites, and meteorological measurements such as surface temperature and rainfall. The initial field data for the study were acquired through Ernst & Young's (EY) Open Science Challenge 2023. The primary objective is to enhance the precision of crop yield prediction by developing a machine-learning framework capable of handling complex environmental data. A comprehensive data engineering process was employed to select the most informative features from over 100 potential predictors, reducing the set to 15 features from 5 distinct modalities. This step mitigates the ``curse of dimensionality" and enhances model performance. The RicEns-Net architecture combines multiple machine learning algorithms in a deep ensemble framework, integrating the strengths of each technique to improve predictive accuracy. Experimental results demonstrate that RicEns-Net achieves a mean absolute error (MAE) of 341 kg/Ha (roughly corresponds to 5-6\% of the lowest average yield in the region), significantly exceeding the performance of previous state-of-the-art models, including those developed during the EY challenge. 
+
+**Abstract (ZH)**: 本研究介绍了RicEns-Net，这是一种新型的深度集成模型，旨在通过多模态数据融合技术整合多种数据来源，预测作物产量。研究主要集中在使用合成孔径雷达（SAR）数据、Sentinel 1、2和3号卫星的光学遥感数据以及地表温度和降雨量等气象测量数据。研究的初始现场数据通过埃森和扬（Ernst & Young, EY）2023年开放式科学挑战获得。主要目标是通过开发一种能够处理复杂环境数据的机器学习框架，提高作物产量预测的精度。采用了一个全面的数据工程技术，从超过100个潜在的预测因子中选择了最有信息量的特征，将特征集从5种不同的模态减少到15个特征。这一步骤减轻了“维度诅咒”问题，并提高了模型性能。RicEns-Net架构将多个机器学习算法组合在一个深度集成框架中，利用每种技术的优点来提高预测准确性。实验结果表明，RicEns-Net实现了绝对均方误差（MAE）为341 kg/公顷（大致相当于该地区最低平均产量的5-6%），显著超过了包括EY挑战中开发的模型在内的先前最先进的模型的性能。 
+
+---
+# MMGDreamer: Mixed-Modality Graph for Geometry-Controllable 3D Indoor Scene Generation 
+
+**Title (ZH)**: MMGDreamer：混合模态图生成几何可控的3D室内场景 
+
+**Authors**: Zhifei Yang, Keyang Lu, Chao Zhang, Jiaxing Qi, Hanqi Jiang, Ruifei Ma, Shenglin Yin, Yifan Xu, Mingzhe Xing, Zhen Xiao, Jieyi Long, Xiangde Liu, Guangyao Zhai  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.05874)  
+
+**Abstract**: Controllable 3D scene generation has extensive applications in virtual reality and interior design, where the generated scenes should exhibit high levels of realism and controllability in terms of geometry. Scene graphs provide a suitable data representation that facilitates these applications. However, current graph-based methods for scene generation are constrained to text-based inputs and exhibit insufficient adaptability to flexible user inputs, hindering the ability to precisely control object geometry. To address this issue, we propose MMGDreamer, a dual-branch diffusion model for scene generation that incorporates a novel Mixed-Modality Graph, visual enhancement module, and relation predictor. The mixed-modality graph allows object nodes to integrate textual and visual modalities, with optional relationships between nodes. It enhances adaptability to flexible user inputs and enables meticulous control over the geometry of objects in the generated scenes. The visual enhancement module enriches the visual fidelity of text-only nodes by constructing visual representations using text embeddings. Furthermore, our relation predictor leverages node representations to infer absent relationships between nodes, resulting in more coherent scene layouts. Extensive experimental results demonstrate that MMGDreamer exhibits superior control of object geometry, achieving state-of-the-art scene generation performance. Project page: this https URL. 
+
+**Abstract (ZH)**: 可控的三维场景生成在虚拟现实和室内设计中有广泛的应用，生成的场景应具备高度的现实感和可控性，特别是在几何结构方面。场景图提供了一种适合的数据表示形式，能够促进这些应用。然而，目前基于图的方法主要局限于文本输入，对灵活的用户输入适应性不足，影响了对对象几何结构的精确控制。为解决这一问题，我们提出了一种名为MMGDreamer的双分支扩散模型，该模型融合了新型混合模态图、视觉增强模块和关系预测器。混合模态图允许对象节点整合文本和视觉模态信息，并可选地建立节点之间的关系，增强了对灵活用户输入的适应性，使得在生成场景中能够精细控制对象的几何结构。视觉增强模块通过使用文本嵌入构建视觉表示来丰富仅文本节点的视觉 fidelity。此外，我们的关系预测器利用节点表示来推断节点之间的缺失关系，从而产生更连贯的场景布局。大量的实验结果表明，MMGDreamer在控制对象几何结构方面表现出更优越的能力，达到了当前最先进的场景生成性能。项目页面：[此处链接] 
+
+---
+# Effective Black-Box Multi-Faceted Attacks Breach Vision Large Language Model Guardrails 
+
+**Title (ZH)**: 有效的黑盒多维度攻击突破视觉大型语言模型防护边界 
+
+**Authors**: Yijun Yang, Lichao Wang, Xiao Yang, Lanqing Hong, Jun Zhu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.05772)  
+
+**Abstract**: Vision Large Language Models (VLLMs) integrate visual data processing, expanding their real-world applications, but also increasing the risk of generating unsafe responses. In response, leading companies have implemented Multi-Layered safety defenses, including alignment training, safety system prompts, and content moderation. However, their effectiveness against sophisticated adversarial attacks remains largely unexplored. In this paper, we propose MultiFaceted Attack, a novel attack framework designed to systematically bypass Multi-Layered Defenses in VLLMs. It comprises three complementary attack facets: Visual Attack that exploits the multimodal nature of VLLMs to inject toxic system prompts through images; Alignment Breaking Attack that manipulates the model's alignment mechanism to prioritize the generation of contrasting responses; and Adversarial Signature that deceives content moderators by strategically placing misleading information at the end of the response. Extensive evaluations on eight commercial VLLMs in a black-box setting demonstrate that MultiFaceted Attack achieves a 61.56% attack success rate, surpassing state-of-the-art methods by at least 42.18%. 
+
+**Abstract (ZH)**: 视觉大型语言模型（VLLMs）将视觉数据处理融入其中，扩展了其在实际应用中的范围，但也增加了生成不安全响应的风险。为此，领先公司实施了多层次的安全防御措施，包括对齐训练、安全系统提示和内容审核。然而，这些防御措施对高级对手攻击的有效性尚未得到充分探索。在本文中，我们提出了多维度攻击（MultiFaceted Attack），这是一种新型攻击框架，旨在系统地绕过VLLMs中的多层次防御。该框架包括三个互补的攻击维度：视觉攻击（利用VLLMs的跨模态特性，通过图像注入有毒系统提示）；对齐破坏攻击（操纵模型的对齐机制，优先生成对比响应）；以及对抗签名（通过在响应末尾战略性地放置误导性信息，欺骗内容审核人员）。在黑盒设置下对八个商用VLLMs的广泛评估表明，多维度攻击实现了61.56%的攻击成功率，超越了最先进的方法至少42.18%。 
+
+---
+# Generating Physically Realistic and Directable Human Motions from Multi-Modal Inputs 
+
+**Title (ZH)**: 从多模态输入生成物理现实且可操控的人体运动 
+
+**Authors**: Aayam Shrestha, Pan Liu, German Ros, Kai Yuan, Alan Fern  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.05641)  
+
+**Abstract**: This work focuses on generating realistic, physically-based human behaviors from multi-modal inputs, which may only partially specify the desired motion. For example, the input may come from a VR controller providing arm motion and body velocity, partial key-point animation, computer vision applied to videos, or even higher-level motion goals. This requires a versatile low-level humanoid controller that can handle such sparse, under-specified guidance, seamlessly switch between skills, and recover from failures. Current approaches for learning humanoid controllers from demonstration data capture some of these characteristics, but none achieve them all. To this end, we introduce the Masked Humanoid Controller (MHC), a novel approach that applies multi-objective imitation learning on augmented and selectively masked motion demonstrations. The training methodology results in an MHC that exhibits the key capabilities of catch-up to out-of-sync input commands, combining elements from multiple motion sequences, and completing unspecified parts of motions from sparse multimodal input. We demonstrate these key capabilities for an MHC learned over a dataset of 87 diverse skills and showcase different multi-modal use cases, including integration with planning frameworks to highlight MHC's ability to solve new user-defined tasks without any finetuning. 
+
+**Abstract (ZH)**: 本文专注于从多模态输入生成现实且基于物理的人类行为，而这些输入可能仅部分指定了所需的动作。例如，输入可能来自VR控制器提供的手臂动作和身体速度、部分关键点动画、视频中的计算机视觉，甚至高级别的动作目标。这需要一个多功能的低级类人控制器，能够处理这些稀疏且不完全指定的指导，无缝切换技能，并从失败中恢复。当前从演示数据学习类人控制器的方法在某些方面具备这些特征，但没有一种方法能够全部实现这些功能。为此，我们引入了掩码类人控制器（MHC），这是一个新颖的方法，它通过增强和选择性掩码的动作演示进行多目标模仿学习。训练方法导致MHC表现出关键能力：对接收到的延迟输入命令的追赶、结合多个动作序列的元素，并从稀疏多模态输入中完成动作的未指定部分。我们展示了在涵盖87种多样技能的数据集上学习的MHC的关键能力，并展示了不同的多模态应用场景，包括与规划框架集成以突出MHC解决新用户定义任务的能力，而无需任何微调。 
+
+---
+# Vision-Ultrasound Robotic System based on Deep Learning for Gas and Arc Hazard Detection in Manufacturing 
+
+**Title (ZH)**: 基于深度学习的视觉-超声机器人系统及其在制造过程中爆炸气体和电弧危害检测中的应用 
+
+**Authors**: Jin-Hee Lee, Dahyun Nam, Robin Inho Kee, YoungKey Kim, Seok-Jun Buu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.05500)  
+
+**Abstract**: Gas leaks and arc discharges present significant risks in industrial environments, requiring robust detection systems to ensure safety and operational efficiency. Inspired by human protocols that combine visual identification with acoustic verification, this study proposes a deep learning-based robotic system for autonomously detecting and classifying gas leaks and arc discharges in manufacturing settings. The system is designed to execute all experimental tasks entirely onboard the robot. Utilizing a 112-channel acoustic camera operating at a 96 kHz sampling rate to capture ultrasonic frequencies, the system processes real-world datasets recorded in diverse industrial scenarios. These datasets include multiple gas leak configurations (e.g., pinhole, open end) and partial discharge types (Corona, Surface, Floating) under varying environmental noise conditions. Proposed system integrates visual detection and a beamforming-enhanced acoustic analysis pipeline. Signals are transformed using STFT and refined through Gamma Correction, enabling robust feature extraction. An Inception-inspired CNN further classifies hazards, achieving 99% gas leak detection accuracy. The system not only detects individual hazard sources but also enhances classification reliability by fusing multi-modal data from both vision and acoustic sensors. When tested in reverberation and noise-augmented environments, the system outperformed conventional models by up to 44%p, with experimental tasks meticulously designed to ensure fairness and reproducibility. Additionally, the system is optimized for real-time deployment, maintaining an inference time of 2.1 seconds on a mobile robotic platform. By emulating human-like inspection protocols and integrating vision with acoustic modalities, this study presents an effective solution for industrial automation, significantly improving safety and operational reliability. 
+
+**Abstract (ZH)**: 工业环境中气体泄漏和电弧放电存在重大风险，需要可靠的检测系统以确保安全和运营效率。受人类检查规程综合视觉识别和声学验证的启发，本研究提出了一种基于深度学习的机器人系统，用于自主检测和分类制造环境中气体泄漏和电弧放电。该系统设计为在机器人上独立执行所有实验任务。系统利用一个具有112个通道和96 kHz采样率的声学摄像机捕捉超声频率，处理在不同工业场景中记录的真实数据集。这些数据集包括多种气体泄漏配置（如针孔、敞开端）和不同类型的部分放电（如电晕放电、表面放电、悬浮放电），在各种环境噪声条件下进行。所提出的系统结合了视觉检测和基于波束形成增强的声学分析管道。信号使用STFT进行了变换并通过伽玛校正进行了细化，以实现稳健的特征提取。一种灵感源自Inception的卷积神经网络（CNN）进一步对危害进行分类，准确率达到99%的气体泄漏检测率。该系统不仅能检测单个危害源，还能通过融合来自视觉和声学传感器的多模态数据来提高分类可靠性。在具有回音和噪声增强的环境中测试时，该系统在某些方面优于传统模型，准确率最高可提高44%。所有实验任务都精心设计，以确保公平性和可重复性。此外，该系统还针对实时部署进行了优化，能够在移动机器人平台上实现每秒2.1秒的推理时间。通过模拟人类检查规程，并结合视觉与声学模态，本研究提供了一种有效的工业自动化解决方案，显著提高了安全性和操作可靠性。 
+
+---
+# ConRFT: A Reinforced Fine-tuning Method for VLA Models via Consistency Policy 
+
+**Title (ZH)**: ConRFT：基于一致性策略的VLA模型强化微调方法 
+
+**Authors**: Yuhui Chen, Shuai Tian, Shugao Liu, Yingting Zhou, Haoran Li, Dongbin Zhao  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.05450)  
+
+**Abstract**: Vision-Language-Action (VLA) models have shown substantial potential in real-world robotic manipulation. However, fine-tuning these models through supervised learning struggles to achieve robust performance due to limited, inconsistent demonstrations, especially in contact-rich environments. In this paper, we propose a reinforced fine-tuning approach for VLA models, named ConRFT, which consists of offline and online fine-tuning with a unified consistency-based training objective, to address these challenges. In the offline stage, our method integrates behavior cloning and Q-learning to effectively extract policy from a small set of demonstrations and stabilize value estimating. In the online stage, the VLA model is further fine-tuned via consistency policy, with human interventions to ensure safe exploration and high sample efficiency. We evaluate our approach on eight diverse real-world manipulation tasks. It achieves an average success rate of 96.3% within 45-90 minutes of online fine-tuning, outperforming prior supervised methods with a 144% improvement in success rate and 1.9x shorter episode length. This work highlights the potential of integrating reinforcement learning to enhance the performance of VLA models for real-world robotic applications. 
+
+**Abstract (ZH)**: 视觉-语言-行动（VLA）模型在现实中的机器人操作中展现了巨大的潜力。然而，通过监督学习进行精细化调整的方法由于演示数据有限且不一致，特别是在接触丰富的环境中，难以实现稳健的性能。在本文中，我们提出了一种强化学习驱动的精细化调整方法，命名为ConRFT，该方法通过统一的基于一致性的训练目标，在离线和在线阶段进行精细化调整，以解决这些挑战。在离线阶段，我们的方法结合行为克隆和Q学习，有效从少量演示数据中提取策略，并稳定价值估计。在线阶段，进一步通过一致性策略进行精细化调整，并结合人类干预确保安全探索和高效样本利用率。我们在八个不同的真实世界操作任务上评估了该方法。在线精细化调整45-90分钟内，方法的平均成功率达到了96.3%，相较于之前的监督学习方法，成功率提高了144%，取样长度缩短了1.9倍。本工作强调了将强化学习集成到VLA模型以提升其现实应用性能的潜力。 
+
+---
+# Show-o Turbo: Towards Accelerated Unified Multimodal Understanding and Generation 
+
+**Title (ZH)**: Show-o Turbo: 向统一多模态理解与生成的加速方向迈进 
+
+**Authors**: Chenkai Xu, Xu Wang, Zhenyi Liao, Yishun Li, Tianqi Hou, Zhijie Deng  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.05415)  
+
+**Abstract**: There has been increasing research interest in building unified multimodal understanding and generation models, among which Show-o stands as a notable representative, demonstrating great promise for both text-to-image and image-to-text generation. The inference of Show-o involves progressively denoising image tokens and autoregressively decoding text tokens, and hence, unfortunately, suffers from inefficiency issues from both sides. This paper introduces Show-o Turbo to bridge the gap. We first identify a unified denoising perspective for the generation of images and text in Show-o based on the parallel decoding of text tokens. We then propose to extend consistency distillation (CD), a qualified approach for shortening the denoising process of diffusion models, to the multimodal denoising trajectories of Show-o. We introduce a trajectory segmentation strategy and a curriculum learning procedure to improve the training convergence. Empirically, in text-to-image generation, Show-o Turbo displays a GenEval score of 0.625 at 4 sampling steps without using classifier-free guidance (CFG), outperforming that of the original Show-o with 8 steps and CFG; in image-to-text generation, Show-o Turbo exhibits a 1.5x speedup without significantly sacrificing performance. The code is available at this https URL. 
+
+**Abstract (ZH)**: 近年来，统一多模态理解与生成模型的研究逐渐成为热点，其中Show-o作为一个显著的代表，展示了其在图文生成方面的巨大潜力，无论是从文本生成图片还是从图片生成文本。Show-o的推理过程涉及逐步去噪图像标记并自回归解码文本标记，因此从两个方面都存在效率问题。本文提出Show-o Turbo以解决这一问题。我们首先基于Show-o中文本标记并行解码的视角，为其图像和文本的生成提供了一个统一的去噪观点。然后，我们提出了将一致性蒸馏（Consistency Distillation，CD），一种用于缩短扩散模型去噪过程的有效方法，应用于Show-o的多模态去噪轨迹。我们引入了一条轨迹分割策略和一种逐步学习过程来改善训练收敛性。实验结果表明，在文本生成图片的任务中，无需使用条件提示去噪（Classifier-Free Guidance，CFG），Show-o Turbo在4步采样中的GenEval得分为0.625，优于原始的8步Show-o和CFG方法；在图片生成文本的任务中，Show-o Turbo展现了1.5倍的加速，同时在性能上几乎没有显著的牺牲。代码可在以下链接获取：[链接]。 
+
+---
+# Multimodal Stock Price Prediction 
+
+**Title (ZH)**: 多模态股票价格预测 
+
+**Authors**: Furkan Karadaş, Bahaeddin Eravcı, Ahmet Murat Özbayoğlu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.05186)  
+
+**Abstract**: In an era where financial markets are heavily influenced by many static and dynamic factors, it has become increasingly critical to carefully integrate diverse data sources with machine learning for accurate stock price prediction. This paper explores a multimodal machine learning approach for stock price prediction by combining data from diverse sources, including traditional financial metrics, tweets, and news articles. We capture real-time market dynamics and investor mood through sentiment analysis on these textual data using both ChatGPT-4o and FinBERT models. We look at how these integrated data streams augment predictions made with a standard Long Short-Term Memory (LSTM model) to illustrate the extent of performance gains. Our study's results indicate that incorporating the mentioned data sources considerably increases the forecast effectiveness of the reference model by up to 5%. We also provide insights into the individual and combined predictive capacities of these modalities, highlighting the substantial impact of incorporating sentiment analysis from tweets and news articles. This research offers a systematic and effective framework for applying multimodal data analytics techniques in financial time series forecasting that provides a new view for investors to leverage data for decision-making. 
+
+**Abstract (ZH)**: 在金融市场受到众多静态和动态因素强烈影响的时代背景下，利用机器学习整合多样化的数据源以实现精准的股票价格预测变得尤为重要。本文探讨了一种多模态机器学习方法，通过结合传统的财务指标、推特和新闻文章等多种数据源来进行股票价格预测。我们通过使用ChatGPT-4和FinBERT模型对这些文本数据进行情感分析，捕捉实时的市场动态和投资者情绪。我们展示了这些集成数据流如何增强使用标准长短期记忆（LSTM）模型所作出的预测，以说明性能提升的程度。研究结果表明，结合上述数据源可以显著提高参考模型的预测准确性，最高提升5%。我们还对这些模态的单独和联合预测能力提供了深刻的见解，突显了从推特和新闻文章中进行情感分析对预测能力的重要影响。本研究提供了一种系统而有效的方法，用于在金融时间序列预测中应用多模态数据分析技术，为投资者提供新的视角以利用数据进行决策。 
+
+---
