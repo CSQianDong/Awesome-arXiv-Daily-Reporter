@@ -1,0 +1,39 @@
+# Can AI Examine Novelty of Patents?: Novelty Evaluation Based on the Correspondence between Patent Claim and Prior Art 
+
+**Title (ZH)**: AI能否评估专利的新颖性？：基于专利权利要求与现有技术对应关系的新颖性评价 
+
+**Authors**: Hayato Ikoma, Teruko Mitamura  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.06316)  
+
+**Abstract**: Assessing the novelty of patent claims is a critical yet challenging task traditionally performed by patent examiners. While advancements in NLP have enabled progress in various patent-related tasks, novelty assessment remains unexplored. This paper introduces a novel challenge by evaluating the ability of large language models (LLMs) to assess patent novelty by comparing claims with cited prior art documents, following the process similar to that of patent examiners done. We present the first dataset specifically designed for novelty evaluation, derived from real patent examination cases, and analyze the capabilities of LLMs to address this task. Our study reveals that while classification models struggle to effectively assess novelty, generative models make predictions with a reasonable level of accuracy, and their explanations are accurate enough to understand the relationship between the target patent and prior art. These findings demonstrate the potential of LLMs to assist in patent evaluation, reducing the workload for both examiners and applicants. Our contributions highlight the limitations of current models and provide a foundation for improving AI-driven patent analysis through advanced models and refined datasets. 
+
+**Abstract (ZH)**: 评估专利权利要求的新颖性是一项关键但具有挑战性的任务，传统上由专利审查员完成。尽管自然语言处理（NLP）的进步在各种专利相关任务中取得了进展，但新颖性评估仍处于未探索的领域。本文通过构建一个新的挑战来评估大型语言模型（LLMs）在审查专利新颖性方面的能力，该挑战模仿了专利审查员在将专利权利要求与引用的现有技术文献进行比较过程中所采用的过程。我们提出了第一个专门设计用于新颖性评估的数据集，该数据集源自实际的专利审查案例，并分析了LLMs完成此任务的能力。研究结果显示，尽管分类模型在有效地评估新颖性方面存在困难，但生成模型能够以合理的准确性做出预测，并且其解释足够准确以理解目标专利与现有技术之间的关系。这些发现展示了LLMs在专利评估中协助的可能性，减轻了审查员和申请人的工作负担。我们的贡献突显了当前模型的局限性，并为通过高级模型和精炼数据集改进AI驱动的专利分析奠定了基础。 
+
+---
+# Investigating the Shortcomings of LLMs in Step-by-Step Legal Reasoning 
+
+**Title (ZH)**: 探究大规模语言模型在法律推理步骤中的不足之处 
+
+**Authors**: Venkatesh Mishra, Bimsara Pathiraja, Mihir Parmar, Sat Chidananda, Jayanth Srinivasa, Gaowen Liu, Ali Payani, Chitta Baral  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.05675)  
+
+**Abstract**: Reasoning abilities of LLMs have been a key focus in recent years. One challenging reasoning domain with interesting nuances is legal reasoning, which requires careful application of rules, and precedents while balancing deductive and analogical reasoning, and conflicts between rules. Although there have been a few works on using LLMs for legal reasoning, their focus has been on overall accuracy. In this paper, we dig deeper to do a step-by-step analysis and figure out where they commit errors. We use the college-level Multiple Choice Question-Answering (MCQA) task from the \textit{Civil Procedure} dataset and propose a new error taxonomy derived from initial manual analysis of reasoning chains with respect to several LLMs, including two objective measures: soundness and correctness scores. We then develop an LLM-based automated evaluation framework to identify reasoning errors and evaluate the performance of LLMs. The computation of soundness and correctness on the dataset using the auto-evaluator framework reveals several interesting insights. Furthermore, we show that incorporating the error taxonomy as feedback in popular prompting techniques marginally increases LLM performance. Our work will also serve as an evaluation framework that can be used in detailed error analysis of reasoning chains for logic-intensive complex tasks. 
+
+**Abstract (ZH)**: 近年来，大型语言模型（LLMs）的推理能力已成为研究的重点。一个具有有趣细微差别的挑战性推理领域是法律推理，它要求仔细应用规则和先例，同时平衡演绎推理和类比推理，并处理规则之间的冲突。尽管已有少量工作集中在使用LLMs进行法律推理上，但这些工作的重点主要是整体准确度。本文深入分析，逐步探讨LLMs在推理过程中的错误，并提出一个自动评估框架来识别推理错误并评估LLMs的性能。通过自动评估框架计算数据集上的严谨度和正确度揭示了几个有趣的观点。此外，我们证明将错误分类作为反馈加入到流行的提示技术中，可以略微提升LLMs的性能。我们的工作还将作为评估框架，用于逻辑密集型复杂任务中推理过程的详细错误分析。 
+
+---
+# Can LLMs Replace Human Evaluators? An Empirical Study of LLM-as-a-Judge in Software Engineering 
+
+**Title (ZH)**: LLM能否替代人类评价者？一项关于软件工程中LLM作为仲裁者的实证研究 
+
+**Authors**: Ruiqi Wang, Jiyu Guo, Cuiyun Gao, Guodong Fan, Chun Yong Chong, Xin Xia  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.06193)  
+
+**Abstract**: Recently, large language models (LLMs) have been deployed to tackle various software engineering (SE) tasks like code generation, significantly advancing the automation of SE tasks. However, assessing the quality of these LLM-generated code and text remains challenging. The commonly used Pass@k metric necessitates extensive unit tests and configured environments, demands a high labor cost, and is not suitable for evaluating LLM-generated text. Conventional metrics like BLEU, which measure only lexical rather than semantic similarity, have also come under scrutiny. In response, a new trend has emerged to employ LLMs for automated evaluation, known as LLM-as-a-judge. These LLM-as-a-judge methods are claimed to better mimic human assessment than conventional metrics without relying on high-quality reference answers. Nevertheless, their exact human alignment in SE tasks remains unexplored. In this paper, we empirically explore LLM-as-a-judge methods for evaluating SE tasks, focusing on their alignment with human judgments. We select seven LLM-as-a-judge methods that utilize general-purpose LLMs, alongside two LLMs specifically fine-tuned for evaluation. After generating and manually scoring LLM responses on three recent SE datasets of code translation, code generation, and code summarization, we then prompt these methods to evaluate each response. Finally, we compare the scores generated by these methods with human evaluation. The results indicate that output-based methods reach the highest Pearson correlation of 81.32 and 68.51 with human scores in code translation and generation, achieving near-human evaluation, noticeably outperforming ChrF++, one of the best conventional metrics, at 34.23 and 64.92. Such output-based methods prompt LLMs to output judgments directly, and exhibit more balanced score distributions that resemble human score patterns. Finally, we provide... 
+
+**Abstract (ZH)**: 近年来，大规模语言模型（LLMs）被部署到代码生成等多种软件工程（SE）任务中，显著推进了SE任务的自动化。然而，评估这些LLM生成的代码和文本的质量依然具有挑战性。常用的Pass@k指标要求进行大量的单元测试和配置环境，需要较高的劳动成本，并且不适合评估LLM生成的文本。传统的度量标准，如BLEU，仅仅衡量词级相似性而非语义相似性，也受到了质疑。为了解决这一问题，涌现出了一种新的趋势，即利用LLM进行自动化评估，称为LLM-as-a-judge。这些LLM-as-a-judge方法声称比传统的度量标准更接近人类评估，无需依赖高质量的参考答案。然而，这些方法在SE任务中与人类判断的具体对齐情况尚未得到探索。在本文中，我们通过实证研究LLM-as-a-judge方法，重点关注其与人类判断的对齐情况。我们选择了七种利用通用LLM的LLM-as-a-judge方法，以及两种专门针对评估进行微调的LLM。在对三个最新的代码翻译、代码生成和代码总结数据集进行LLM响应生成和手动评分后，我们进一步要求这些方法对每个响应进行评估。最后，我们将这些方法生成的分数与人工评估进行比较。结果显示，在代码翻译和生成任务中，基于输出的方法分别达到了与人类评分的皮尔森相关系数81.32和68.51，实现了接近人类的评估，并且明显优于ChrF++，这是表现最好的传统度量标准之一，其相关系数分别为34.23和64.92。基于输出的方法促使LLM直接输出判断，并展现出更符合人类评分模式的分数分布。最后，我们提供... 
+
+---

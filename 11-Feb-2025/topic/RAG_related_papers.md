@@ -1,0 +1,113 @@
+# RALLRec: Improving Retrieval Augmented Large Language Model Recommendation with Representation Learning 
+
+**Title (ZH)**: RALLRec：通过表示学习提高检索增强大规模语言模型推荐的效果 
+
+**Authors**: Jian Xu, Sichun Luo, Xiangyu Chen, Haoming Huang, Hanxu Hou, Linqi Song  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.06101)  
+
+**Abstract**: Large Language Models (LLMs) have been integrated into recommendation systems to enhance user behavior comprehension. The Retrieval Augmented Generation (RAG) technique is further incorporated into these systems to retrieve more relevant items and improve system performance. However, existing RAG methods rely primarily on textual semantics and often fail to incorporate the most relevant items, limiting the effectiveness of the systems.
+In this paper, we propose Representation learning for retrieval-Augmented Large Language model Recommendation (RALLRec). Specifically, we enhance textual semantics by prompting LLMs to generate more detailed item descriptions, followed by joint representation learning of textual and collaborative semantics, which are extracted by the LLM and recommendation models, respectively. Considering the potential time-varying characteristics of user interest, a simple yet effective reranking method is further introduced to capture the dynamics of user preference. We conducted extensive experiments on three real-world datasets, and the evaluation results validated the effectiveness of our method. Code is made public at this https URL. 
+
+**Abstract (ZH)**: 在本文中，我们提出了一种名为检索增强大型语言模型推荐 (RALLRec) 的方法。具体而言，我们通过促使大型语言模型 (LLM) 生成更详细的项目描述来增强文本语义，然后进行文本和协同语义的联合表示学习，这些语义分别由 LLM 和推荐模型提取。考虑到用户兴趣可能具有时间变化性，我们进一步引入了一种简单而有效的再排序方法，以捕捉用户偏好的动态变化。我们在三个现实世界的数据集上进行了广泛的实验，评估结果验证了我们方法的有效性。代码已在此处公开：[请提供具体的URL]。 
+
+---
+# Optimizing Knowledge Integration in Retrieval-Augmented Generation with Self-Selection 
+
+**Title (ZH)**: 使用自我选择优化检索增强生成中的知识集成 
+
+**Authors**: Yan Weng, Fengbin Zhu, Tong Ye, Haoyan Liu, Fuli Feng, Tat-Seng Chua  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.06148)  
+
+**Abstract**: Retrieval-Augmented Generation (RAG), which integrates external knowledge into Large Language Models (LLMs), has proven effective in enabling LLMs to produce more accurate and reliable responses. However, it remains a significant challenge how to effectively integrate external retrieved knowledge with internal parametric knowledge in LLMs. In this work, we propose a novel Self-Selection RAG framework, where the LLM is made to select from pairwise responses generated with internal parametric knowledge solely and with external retrieved knowledge together to achieve enhanced accuracy. To this end, we devise a Self-Selection-RGP method to enhance the capabilities of the LLM in both generating and selecting the correct answer, by training the LLM with Direct Preference Optimization (DPO) over a curated Retrieval Generation Preference (RGP) dataset. Experimental results with two open-source LLMs (i.e., Llama2-13B-Chat and Mistral-7B) well demonstrate the superiority of our approach over other baseline methods on Natural Questions (NQ) and TrivialQA datasets. 
+
+**Abstract (ZH)**: 将以下论文的内容或标题翻译成中文，符合学术规范：
+
+Retrieval-Augmented Generation (RAG)，即将外部知识纳入大型语言模型（LLMs）中，已被证明能够使LLMs生成更准确和可靠的回答。然而，如何有效整合LLMs中的参数知识与外部检索到的知识仍然是一个显著的挑战。在本文中，我们提出了一种新颖的自选择RAG框架，该框架使LLM在仅使用内部参数知识生成回复和共同使用外部检索到的知识生成回复之间进行选择，以实现增强的准确性。为此，我们设计了一种自选择-RGP方法，通过使用直接偏好优化（DPO）对筛选过的检索生成偏好（RGP）数据集进行训练，来增强LLM在生成和选择正确答案方面的能力。使用两种开源LLM（即Llama2-13B-Chat和Mistral-7B）进行的实验结果显示，我们的方法在自然问题（NQ）和TrivialQA数据集上优于其他基线方法。 
+
+---
+# Transparent NLP: Using RAG and LLM Alignment for Privacy Q&A 
+
+**Title (ZH)**: 透明NLP：使用 retriever-Augmented Generation (RAG) 和大语言模型对齐进行隐私问答 
+
+**Authors**: Anna Leschanowsky, Zahra Kolagar, Erion Çano, Ivan Habernal, Dara Hallinan, Emanuël A. P. Habets, Birgit Popp  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.06652)  
+
+**Abstract**: The transparency principle of the General Data Protection Regulation (GDPR) requires data processing information to be clear, precise, and accessible. While language models show promise in this context, their probabilistic nature complicates truthfulness and comprehensibility.
+This paper examines state-of-the-art Retrieval Augmented Generation (RAG) systems enhanced with alignment techniques to fulfill GDPR obligations. We evaluate RAG systems incorporating an alignment module like Rewindable Auto-regressive Inference (RAIN) and our proposed multidimensional extension, MultiRAIN, using a Privacy Q&A dataset. Responses are optimized for preciseness and comprehensibility and are assessed through 21 metrics, including deterministic and large language model-based evaluations.
+Our results show that RAG systems with an alignment module outperform baseline RAG systems on most metrics, though none fully match human answers. Principal component analysis of the results reveals complex interactions between metrics, highlighting the need to refine metrics. This study provides a foundation for integrating advanced natural language processing systems into legal compliance frameworks. 
+
+**Abstract (ZH)**: 《通用数据保护条例》（GDPR）的透明度原则要求数据处理信息应清晰、精确且易于获取。虽然语言模型在这方面显示出一定的潜力，但其概率性质使得可信度和可理解性变得复杂。
+
+本文探讨了结合对齐技术的先进检索增强生成（RAG）系统，以满足GDPR的要求。我们使用一个隐私问答数据集评估了带有对齐模块的RAG系统，如可回溯自回归推理（RAIN）及其我们提出的多维扩展MultiRAIN。响应经过优化以提高精确性和可理解性，并通过21个指标进行评估，包括确定性和基于大型语言模型的评估。
+
+我们的结果显示，在大多数指标上带有对齐模块的RAG系统优于基线RAG系统，但没有任何一个系统能够完全匹配人类的答案。对结果进行主成分分析揭示了各指标之间的复杂交互关系，突显了需要进一步精炼评估指标的重要性。本文为将先进的自然语言处理系统整合到法律合规框架中提供了基础。 
+
+---
+# C-3PO: Compact Plug-and-Play Proxy Optimization to Achieve Human-like Retrieval-Augmented Generation 
+
+**Title (ZH)**: C-3PO：紧凑型即插即用代理优化以实现类人类检索增强生成 
+
+**Authors**: Guoxin Chen, Minpeng Liao, Peiying Yu, Dingmin Wang, Zile Qiao, Chao Yang, Xin Zhao, Kai Fan  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.06205)  
+
+**Abstract**: Retrieval-augmented generation (RAG) systems face a fundamental challenge in aligning independently developed retrievers and large language models (LLMs). Existing approaches typically involve modifying either component or introducing simple intermediate modules, resulting in practical limitations and sub-optimal performance. Inspired by human search behavior -- typically involving a back-and-forth process of proposing search queries and reviewing documents, we propose C-3PO, a proxy-centric framework that facilitates communication between retrievers and LLMs through a lightweight multi-agent system. Our framework implements three specialized agents that collaboratively optimize the entire RAG pipeline without altering the retriever and LLMs. These agents work together to assess the need for retrieval, generate effective queries, and select information suitable for the LLMs. To enable effective multi-agent coordination, we develop a tree-structured rollout approach for reward credit assignment in reinforcement learning. Extensive experiments in both in-domain and out-of-distribution scenarios demonstrate that C-3PO significantly enhances RAG performance while maintaining plug-and-play flexibility and superior generalization capabilities. 
+
+**Abstract (ZH)**: 检索增强生成（RAG）系统面临一个基本挑战，即独立开发的检索器和大型语言模型（LLMs）之间的对齐问题。现有方法通常涉及修改其中一个组件或引入简单的中间模块，从而导致实际应用中的局限性和次优性能。受人类搜索行为的启发——通常涉及提出搜索查询和审阅文档的往返过程，我们提出了一种以代理为中心的C-3PO框架，通过轻量级的多代理系统促进检索器和LLMs之间的通信。该框架实施了三个专门的代理，共同优化整个RAG管道，而不修改检索器和LLMs。这些代理协同工作，评估检索的需求，生成有效的查询，并选择适合LLMs的信息。为了实现有效的多代理协调，我们开发了一种基于树结构滚动策略的强化学习奖励信用分配方法。在领域内和领域外场景下的广泛实验表明，C-3PO显著提高了RAG性能，同时保持了插拔灵活和优越的泛化能力。 
+
+---
+# Retrieval-augmented Large Language Models for Financial Time Series Forecasting 
+
+**Title (ZH)**: 增强检索的大语言模型在金融时间序列预测中的应用 
+
+**Authors**: Mengxi Xiao, Zihao Jiang, Lingfei Qian, Zhengyu Chen, Yueru He, Yijing Xu, Yuecheng Jiang, Dong Li, Ruey-Ling Weng, Min Peng, Jimin Huang, Sophia Ananiadou, Qianqian Xie  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.05878)  
+
+**Abstract**: Stock movement prediction, a fundamental task in financial time-series forecasting, requires identifying and retrieving critical influencing factors from vast amounts of time-series data. However, existing text-trained or numeric similarity-based retrieval methods fall short in handling complex financial analysis. To address this, we propose the first retrieval-augmented generation (RAG) framework for financial time-series forecasting, featuring three key innovations: a fine-tuned 1B parameter large language model (StockLLM) as the backbone, a novel candidate selection method leveraging LLM feedback, and a training objective that maximizes similarity between queries and historically significant sequences. This enables our retriever, FinSeer, to uncover meaningful patterns while minimizing noise in complex financial data. We also construct new datasets integrating financial indicators and historical stock prices to train FinSeer and ensure robust evaluation. Experimental results demonstrate that our RAG framework outperforms bare StockLLM and random retrieval, highlighting its effectiveness, while FinSeer surpasses existing retrieval methods, achieving an 8\% higher accuracy on BIGDATA22 and retrieving more impactful sequences. This work underscores the importance of tailored retrieval models in financial forecasting and provides a novel framework for future research. 
+
+**Abstract (ZH)**: 股票价格预测是金融时间序列预测中的基本任务，要求从大量的时间序列数据中识别和检索关键影响因素。然而，现有基于文本训练或基于数值相似性的检索方法在处理复杂的金融分析时存在不足。为了解决这一问题，我们首次提出了一种用于金融时间序列预测的检索增强生成（RAG）框架，该框架包含三个关键技术创新：1B参数量微调过的大型语言模型（StockLLM）作为基础模型，结合LLM反馈的新型候选选择方法，以及最大化查询与历史重要序列之间相似性的训练目标。这使得我们的检索模块FinSeer能够在复杂金融数据中发现有意义的模式，同时减少噪声。我们还构建了新的数据集，将金融指标与历史股票价格结合起来，用于训练FinSeer，并确保稳健的评估。实验结果表明，我们的RAG框架在裸StockLLM和随机检索之上表现出色，证实了其有效性；同时，FinSeer超过了现有的检索方法，在BIGDATA22上准确率提高了8%，并检索到更多具有影响性的序列。这项工作强调了定制检索模型在金融预测中的重要性，并为未来研究提供了一个新的框架。 
+
+---
+# MetaChain: A Fully-Automated and Zero-Code Framework for LLM Agents 
+
+**Title (ZH)**: MetaChain：一个完全自动化且无需编码的LLM代理框架 
+
+**Authors**: Jiabin Tang, Tianyu Fan, Chao Huang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.05957)  
+
+**Abstract**: Large Language Model (LLM) Agents have demonstrated remarkable capabilities in task automation and intelligent decision-making, driving the widespread adoption of agent development frameworks such as LangChain and AutoGen. However, these frameworks predominantly serve developers with extensive technical expertise - a significant limitation considering that only 0.03 % of the global population possesses the necessary programming skills. This stark accessibility gap raises a fundamental question: Can we enable everyone, regardless of technical background, to build their own LLM agents using natural language alone? To address this challenge, we introduce MetaChain-a Fully-Automated and highly Self-Developing framework that enables users to create and deploy LLM agents through Natural Language Alone. Operating as an autonomous Agent Operating System, MetaChain comprises four key components: i) Agentic System Utilities, ii) LLM-powered Actionable Engine, iii) Self-Managing File System, and iv) Self-Play Agent Customization module. This lightweight yet powerful system enables efficient and dynamic creation and modification of tools, agents, and workflows without coding requirements or manual intervention. Beyond its code-free agent development capabilities, MetaChain also serves as a versatile multi-agent system for General AI Assistants. Comprehensive evaluations on the GAIA benchmark demonstrate MetaChain's effectiveness in generalist multi-agent tasks, surpassing existing state-of-the-art methods. Furthermore, MetaChain's Retrieval-Augmented Generation (RAG)-related capabilities have shown consistently superior performance compared to many alternative LLM-based solutions. 
+
+**Abstract (ZH)**: 大规模语言模型（LLM）代理展示了在任务自动化和智能决策方面非凡的能力，推动了诸如LangChain和AutoGen等代理开发框架的广泛应用。然而，这些框架主要面向具有丰富技术背景的开发者，这一现状存在显著的局限性—全球仅有0.03%的人口具备必要的编程技能。这一明显的可访问性差距引发了一个根本性的问题：我们是否能够让没有技术背景的人仅通过自然语言就能构建自己的LLM代理？为应对这一挑战，我们提出了一种名为MetaChain的全自动且高度自发展的框架，它允许用户仅通过自然语言创建和部署LLM代理。MetaChain作为一个自主的代理操作系统，包括四个核心组件：i）代理系统工具集，ii）基于LLM的可执行引擎，iii）自管理文件系统，以及iv）自玩代理定制模块。这个轻量级但强大的系统能够无需编码要求或人工干预地高效动态地创建和修改工具、代理和工作流程。除了其免代码的代理开发能力外，MetaChain 还作为一个多功能多代理系统，服务于通用人工智能辅助。在对GAIA基准的全面评估中，MetaChain 在通用多代理任务中的有效性超越了现有最先进的方法。此外，MetaChain 在检索增强生成（RAG）方面的功能与许多基于LLM的替代方案相比，表现持续更优。 
+
+---
+# Combining Large Language Models with Static Analyzers for Code Review Generation 
+
+**Title (ZH)**: 将大型语言模型与静态分析器结合用于代码审查生成 
+
+**Authors**: Imen Jaoua, Oussama Ben Sghaier, Houari Sahraoui  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.06633)  
+
+**Abstract**: Code review is a crucial but often complex, subjective, and time-consuming activity in software development. Over the past decades, significant efforts have been made to automate this process. Early approaches focused on knowledge-based systems (KBS) that apply rule-based mechanisms to detect code issues, providing precise feedback but struggling with complex, context-dependent cases. More recent work has shifted toward fine-tuning pre-trained language models for code review, enabling broader issue coverage but often at the expense of precision. In this paper, we propose a hybrid approach that combines the strengths of KBS and learning-based systems (LBS) to generate high-quality, comprehensive code reviews. Our method integrates knowledge at three distinct stages of the language model pipeline: during data preparation (Data-Augmented Training, DAT), at inference (Retrieval-Augmented Generation, RAG), and after inference (Naive Concatenation of Outputs, NCO). We empirically evaluate our combination strategies against standalone KBS and LBS fine-tuned on a real-world dataset. Our results show that these hybrid strategies enhance the relevance, completeness, and overall quality of review comments, effectively bridging the gap between rule-based tools and deep learning models. 
+
+**Abstract (ZH)**: 代码审查是软件开发中至关重要但又常被视为复杂、主观且耗时的活动。过去几十年里，人们已经投入了大量精力来自动化这一过程。早期的方法侧重于基于知识的系统（KBS），这些系统利用基于规则的机制来检测代码问题，提供精准的反馈，但在处理复杂的、依赖于上下文的情况时存在困难。近年来的工作转向利用预训练语言模型进行代码审查的细调，这使得能够覆盖更广泛的代码问题，但通常会牺牲精确性。在本文中，我们提出了一种混合方法，将基于知识的系统（KBS）和基于学习的系统（LBS）的优势结合起来，以生成高质量、全面的代码审查。我们的方法在语言模型pipeline的三个不同阶段整合了知识：数据准备阶段（数据增强训练，DAT）、推理阶段（检索增强生成，RAG）和推理之后（输出的简单拼接，NCO）。我们通过对比基于单一知识系统的数据集和基于学习系统的模型，实证评估了我们的组合策略。实验结果表明，这些混合策略提高了审查评论的相关性、完整性和整体质量，有效地弥合了基于规则的工具与深度学习模型之间的差距。 
+
+---
+# RAG-Verus: Repository-Level Program Verification with LLMs using Retrieval Augmented Generation 
+
+**Title (ZH)**: RAG-Verus：利用检索增强生成在代码仓库级别进行程序验证 
+
+**Authors**: Sicheng Zhong, Jiading Zhu, Yifang Tian, Xujie Si  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.05344)  
+
+**Abstract**: Scaling automated formal verification to real-world projects requires resolving cross-module dependencies and global contexts, which are challenges overlooked by existing function-centric methods. We introduce RagVerus, a framework that synergizes retrieval-augmented generation with context-aware prompting to automate proof synthesis for multi-module repositories, achieving a 27% relative improvement on our novel RepoVBench benchmark -- the first repository-level dataset for Verus with 383 proof completion tasks. RagVerus triples proof pass rates on existing benchmarks under constrained language model budgets, demonstrating a scalable and sample-efficient verification. 
+
+**Abstract (ZH)**: 将自动化形式化验证扩展到真实项目中需要解决跨模块依赖和全局上下文问题，而现有以函数为中心的方法忽视了这些问题。我们介绍了一种名为RagVerus的框架，该框架结合了检索增强生成与上下文意识提示，以自动化多模块仓库的证明合成。RagVerus在我们建立的新型RepoVBench基准测试中实现了27%的相对改进——这是首个针对Verus的仓库级数据集，包含383个证明完成任务。在受限的语言模型预算下，RagVerus将现有基准测试中的证明通过率提高了三倍，展示了其可扩展性和样本高效性。 
+
+---
