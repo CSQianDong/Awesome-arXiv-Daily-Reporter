@@ -1,0 +1,288 @@
+# MAGELLAN: Metacognitive predictions of learning progress guide autotelic LLM agents in large goal spaces 
+
+**Title (ZH)**: MAGELLAN：元认知预测学习进展引导自主学习目标空间中的大型语言模型代理 
+
+**Authors**: Loris Gaven, Thomas Carta, Clément Romac, Cédric Colas, Sylvain Lamprier, Olivier Sigaud, Pierre-Yves Oudeyer  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.07709)  
+
+**Abstract**: Open-ended learning agents must efficiently prioritize goals in vast possibility spaces, focusing on those that maximize learning progress (LP). When such autotelic exploration is achieved by LLM agents trained with online RL in high-dimensional and evolving goal spaces, a key challenge for LP prediction is modeling one's own competence, a form of metacognitive monitoring. Traditional approaches either require extensive sampling or rely on brittle expert-defined goal groupings. We introduce MAGELLAN, a metacognitive framework that lets LLM agents learn to predict their competence and LP online. By capturing semantic relationships between goals, MAGELLAN enables sample-efficient LP estimation and dynamic adaptation to evolving goal spaces through generalization. In an interactive learning environment, we show that MAGELLAN improves LP prediction efficiency and goal prioritization, being the only method allowing the agent to fully master a large and evolving goal space. These results demonstrate how augmenting LLM agents with a metacognitive ability for LP predictions can effectively scale curriculum learning to open-ended goal spaces. 
+
+**Abstract (ZH)**: 开放学习代理必须在广阔的可能空间中有效地优先考虑目标，专注于那些能够最大化学习进展（Learning Progress, LP）的目标。当使用在线强化学习训练的语言模型代理在高维度和不断演化的目标空间中实现自主探索时，LP预测中的一个关键挑战是对其自身能力进行建模，这是一种元认知监控的形式。传统方法要么需要大量的采样，要么依赖于脆弱的专家定义的目标分组。我们提出了MAGELLAN（元认知框架），该框架使得语言模型代理能够在在线预测其能力和LP时学习这些技能。通过捕获目标之间的语义关系，MAGELLAN能够实现高效的样本利用，并通过泛化适应不断演化的目标空间。在交互式学习环境中，我们显示MAGELLAN能够提高LP预测效率和目标优先级管理，是唯一能够让代理完全掌握一个庞大且不断演化的目标空间的方法。这些结果表明，通过为语言模型代理增加一个LP预测的元认知能力，可以有效地将课程学习扩展到开放的目标空间。 
+
+---
+# Approximating Human Strategic Reasoning with LLM-Enhanced Recursive Reasoners Leveraging Multi-agent Hypergames 
+
+**Title (ZH)**: 使用增强递归推理器和多agent超博弈相结合来近似人类战略推理 
+
+**Authors**: Vince Trencsenyi, Agnieszka Mensfelt, Kostas Stathis  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.07443)  
+
+**Abstract**: LLM-driven multi-agent-based simulations have been gaining traction with applications in game-theoretic and social simulations. While most implementations seek to exploit or evaluate LLM-agentic reasoning, they often do so with a weak notion of agency and simplified architectures. We implement a role-based multi-agent strategic interaction framework tailored to sophisticated recursive reasoners, providing the means for systematic in-depth development and evaluation of strategic reasoning. Our game environment is governed by the umpire responsible for facilitating games, from matchmaking through move validation to environment management. Players incorporate state-of-the-art LLMs in their decision mechanism, relying on a formal hypergame-based model of hierarchical beliefs. We use one-shot, 2-player beauty contests to evaluate the recursive reasoning capabilities of the latest LLMs, providing a comparison to an established baseline model from economics and data from human experiments. Furthermore, we introduce the foundations of an alternative semantic measure of reasoning to the k-level theory. Our experiments show that artificial reasoners can outperform the baseline model in terms of both approximating human behaviour and reaching the optimal solution. 
+
+**Abstract (ZH)**: 基于LLM的多代理系统模拟在博弈理论和社会模拟领域的应用正逐渐受到关注。尽管大多数实现试图利用或评估LLM代理推理能力，但它们通常基于一种弱代理概念和简化架构。我们实现了一个基于角色的多代理战略互动框架，旨在适应复杂的递归推理者，提供系统深入开发和评估战略推理的手段。我们的游戏环境由裁判员管理，负责从匹配玩家到验证移动和环境管理的整个游戏流程。玩家在其决策机制中采用最先进的LLM，并依赖于基于形式化超博弈层次信仰模型。我们使用一次性两人的美丽竞赛来评估最新LLM的递归推理能力，提供了与经济学中的传统基准模型及人类实验数据的对比。此外，我们还引入了一种替代性语义推理度量的基础，该度量扩展了k级理论。实验结果表明，人工推理者在接近人类行为和达到最优解方面均能超越基准模型。 
+
+---
+# KABB: Knowledge-Aware Bayesian Bandits for Dynamic Expert Coordination in Multi-Agent Systems 
+
+**Title (ZH)**: KABB：面向知识的贝叶斯拉普拉斯机组建模在多agent系统中动态专家协调 
+
+**Authors**: Jusheng Zhang, Zimeng Huang, Yijia Fan, Ningyuan Liu, Mingyan Li, Zhuojie Yang, Jiawei Yao, Jian Wang, Keze Wang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.07350)  
+
+**Abstract**: As scaling large language models faces prohibitive costs, multi-agent systems emerge as a promising alternative, though challenged by static knowledge assumptions and coordination inefficiencies. We introduces Knowledge-Aware Bayesian Bandits (KABB), a novel framework that enhances multi-agent system coordination through semantic understanding and dynamic adaptation. The framework features three key innovations: a three-dimensional knowledge distance model for deep semantic understanding, a dual-adaptation mechanism for continuous expert optimization, and a knowledge-aware Thompson Sampling strategy for efficient expert selection. Extensive evaluation demonstrates KABB achieves an optimal cost-performance balance, maintaining high performance while keeping computational demands relatively low in multi-agent coordination. 
+
+**Abstract (ZH)**: 随着大规模语言模型的扩展面临高昂的成本，多智能体系统成为一种有前景的替代方案，但同时也面临着静态知识假设和协调效率低下的挑战。我们提出了知识感知贝叶斯双臂bandit算法（KABB），这是一种通过语义理解和动态适应来增强多智能体系统协调的新框架。该框架包含三个关键创新点：三维度知识距离模型，用于实现深层语义理解；双重适应机制，用于持续的专家优化；以及知识感知的托马斯采样策略，用于高效的专家选择。广泛的评估结果表明，KABB实现了最优的成本效益平衡，在多智能体协调中保持了高性能，同时将计算需求保持在相对较低的水平。 
+
+---
+# Monte Carlo Tree Diffusion for System 2 Planning 
+
+**Title (ZH)**: 系统二规划中的蒙特卡洛树 diffusion 方法 
+
+**Authors**: Jaesik Yoon, Hyeonseo Cho, Doojin Baek, Yoshua Bengio, Sungjin Ahn  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.07202)  
+
+**Abstract**: Diffusion models have recently emerged as a powerful tool for planning. However, unlike Monte Carlo Tree Search (MCTS)-whose performance naturally improves with additional test-time computation (TTC), standard diffusion-based planners offer only limited avenues for TTC scalability. In this paper, we introduce Monte Carlo Tree Diffusion (MCTD), a novel framework that integrates the generative strength of diffusion models with the adaptive search capabilities of MCTS. Our method reconceptualizes denoising as a tree-structured process, allowing partially denoised plans to be iteratively evaluated, pruned, and refined. By selectively expanding promising trajectories while retaining the flexibility to revisit and improve suboptimal branches, MCTD achieves the benefits of MCTS such as controlling exploration-exploitation trade-offs within the diffusion framework. Empirical results on challenging long-horizon tasks show that MCTD outperforms diffusion baselines, yielding higher-quality solutions as TTC increases. 
+
+**Abstract (ZH)**: 扩散模型最近已成为规划的强大工具。然而，与蒙特卡洛树搜索(Monte Carlo Tree Search, MCTS)不同，MCTS 的性能随着测试时间计算（Test-Time Computation, TTC）的增加而自然提升，而标准的基于扩散的方法在 TTC 扩展方面提供的途径有限。在本文中，我们引入了蒙特卡洛树扩散（Monte Carlo Tree Diffusion, MCTD），这是一种将扩散模型的生成能力与 MCTS 的自适应搜索能力相结合的新型框架。我们的方法重新构想了去噪过程，使其成为一种树状结构的过程，使得部分去噪的计划可以迭代地评估、修剪和改进。通过有选择地扩展有希望的轨迹，同时保留重新访问和改进非最优分支的灵活性，MCTD 能够在扩散框架内实现 MCTS 的优势，如控制探索与利用的权衡。实验证实在具有挑战性的长期任务上，MCTD 在 TTC 增加时能够产生更高质量的解决方案，且表现优于基于扩散的标准基线。 
+
+---
+# Interactive Data Harmonization with LLM Agents 
+
+**Title (ZH)**: 带有LLM代理的交互式数据 harmonization 
+
+**Authors**: Aécio Santos, Eduardo H. M. Pena, Roque Lopez, Juliana Freire  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.07132)  
+
+**Abstract**: Data harmonization is an essential task that entails integrating datasets from diverse sources. Despite years of research in this area, it remains a time-consuming and challenging task due to schema mismatches, varying terminologies, and differences in data collection methodologies. This paper presents the case for agentic data harmonization as a means to both empower experts to harmonize their data and to streamline the process. We introduce Harmonia, a system that combines LLM-based reasoning, an interactive user interface, and a library of data harmonization primitives to automate the synthesis of data harmonization pipelines. We demonstrate Harmonia in a clinical data harmonization scenario, where it helps to interactively create reusable pipelines that map datasets to a standard format. Finally, we discuss challenges and open problems, and suggest research directions for advancing our vision. 
+
+**Abstract (ZH)**: 数据整合是将来源于不同数据源的数据库进行集成的一项重要任务。尽管在这一领域已有多年的研究，但由于模式不匹配、术语差异和数据采集方法的不同，这一任务仍耗时且具有挑战性。本文提出了代理数据整合的概念，旨在通过为专家赋能并简化这一过程来推动数据整合。我们引入了Harmonia系统，该系统结合了基于大语言模型（LLM）的推理、交互式的用户界面以及数据整合的基本组件库，自动地生成数据整合管道。我们通过在临床数据整合场景中的应用展示了Harmonia的功能，其中它帮助用户交互式地创建可重复使用的管道，将数据集映射到标准格式。最后，我们讨论了面临的挑战和开放问题，并提出了推进这一愿景的研究方向。 
+
+---
+# Autonomous Deep Agent 
+
+**Title (ZH)**: 自主深度代理 
+
+**Authors**: Amy Yu, Erik Lebedev, Lincoln Everett, Xiaoxin Chen, Terry Chen  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.07056)  
+
+**Abstract**: This technical brief introduces Deep Agent, an advanced autonomous AI system designed to manage complex multi-phase tasks through a novel hierarchical task management architecture. The system's foundation is built on our Hierarchical Task DAG (HTDAG) framework, which dynamically decomposes high-level objectives into manageable sub-tasks while rigorously maintaining dependencies and execution coherence. Deep Agent advances beyond traditional agent systems through three key innovations: First, it implements a recursive two-stage planner-executor architecture that enables continuous task refinement and adaptation as circumstances change. Second, it features an Autonomous API & Tool Creation (AATC) system that automatically generates reusable components from UI interactions, substantially reducing operational costs for similar tasks. Third, it incorporates Prompt Tweaking Engine and Autonomous Prompt Feedback Learning components that optimize Large Language Model prompts for specific scenarios, enhancing both inference accuracy and operational stability. These components are integrated to form a service infrastructure that manages user contexts, handles complex task dependencies, and orchestrates end-to-end agentic workflow execution. Through this sophisticated architecture, Deep Agent establishes a novel paradigm in self-governing AI systems, demonstrating robust capability to independently handle intricate, multi-step tasks while maintaining consistent efficiency and reliability through continuous self-optimization. 
+
+**Abstract (ZH)**: 本文简介了Deep Agent，这是一种先进的自主人工智能系统，旨在通过一种新颖的分层任务管理架构来管理复杂的多阶段任务。该系统的基石是基于我们开发的层次化任务有向无环图（HTDAG）框架，该框架能够动态地将高层次目标分解成可管理的子任务，同时严格维护依赖性和执行一致性。Deep Agent 通过三种关键技术创新超越了传统的代理系统：首先，它采用递归两阶段规划-执行架构，能够在环境变化时实现持续的任务优化和适应。其次，它拥有自主API及工具创建（AATC）系统，能够从用户界面交互中自动生成可重复使用的组件，大幅降低类似任务的操作成本。第三，它集成了提示调整引擎和自主提示反馈学习组件，能够针对特定场景优化大型语言模型的提示，从而提高推断准确性和操作稳定性。这些组件共同构成了一个服务平台，能够处理用户上下文、处理复杂任务依赖关系，并协调全流程的自动化工作流程执行。通过这一先进的架构，Deep Agent 成立了自我治理人工智能系统的一个新范式，展示了其强大的独立处理复杂多步骤任务的能力，并通过持续的自优化保持了一致的高效性和可靠性。 
+
+---
+# Position: Episodic Memory is the Missing Piece for Long-Term LLM Agents 
+
+**Title (ZH)**: 位置： episodic 记忆是长期大语言模型代理所需的缺失环节 
+
+**Authors**: Mathis Pink, Qinyuan Wu, Vy Ai Vo, Javier Turek, Jianing Mu, Alexander Huth, Mariya Toneva  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.06975)  
+
+**Abstract**: As Large Language Models (LLMs) evolve from text-completion tools into fully fledged agents operating in dynamic environments, they must address the challenge of continually learning and retaining long-term knowledge. Many biological systems solve these challenges with episodic memory, which supports single-shot learning of instance-specific contexts. Inspired by this, we present an episodic memory framework for LLM agents, centered around five key properties of episodic memory that underlie adaptive and context-sensitive behavior. With various research efforts already partially covering these properties, this position paper argues that now is the right time for an explicit, integrated focus on episodic memory to catalyze the development of long-term agents. To this end, we outline a roadmap that unites several research directions under the goal to support all five properties of episodic memory for more efficient long-term LLM agents. 
+
+**Abstract (ZH)**: 随着大型语言模型（LLMs）从文本补全工具转变为在动态环境中运作的完整代理，它们必须应对持续学习和保留长期知识的挑战。许多生物系统通过使用事例记忆来解决这些问题，这种记忆支持特定实例背景的一次性学习。受此启发，我们提出了一种为LLM代理构建的事例记忆框架，该框架围绕着事例记忆五个核心属性展开，这些属性是实现适应性和上下文敏感行为的基础。尽管已经有多项研究分别涵盖了这些属性的一部分，本文认为现在是明确关注并整合事例记忆以促进长期代理发展的恰当时机。为此，我们提出了一个路线图，旨在通过支持事例记忆的五个属性来推动更高效的长期逻辑记忆模型（LLMs）的发展。 
+
+---
+# Distributed Value Decomposition Networks with Networked Agents 
+
+**Title (ZH)**: 网络代理的分布式价值分解网络 
+
+**Authors**: Guilherme S. Varela, Alberto Sardinha, Francisco S. Melo  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.07635)  
+
+**Abstract**: We investigate the problem of distributed training under partial observability, whereby cooperative multi-agent reinforcement learning agents (MARL) maximize the expected cumulative joint reward. We propose distributed value decomposition networks (DVDN) that generate a joint Q-function that factorizes into agent-wise Q-functions. Whereas the original value decomposition networks rely on centralized training, our approach is suitable for domains where centralized training is not possible and agents must learn by interacting with the physical environment in a decentralized manner while communicating with their peers. DVDN overcomes the need for centralized training by locally estimating the shared objective. We contribute with two innovative algorithms, DVDN and DVDN (GT), for the heterogeneous and homogeneous agents settings respectively. Empirically, both algorithms approximate the performance of value decomposition networks, in spite of the information loss during communication, as demonstrated in ten MARL tasks in three standard environments. 
+
+**Abstract (ZH)**: 我们在部分可观情况下研究分布式训练问题，其中协作多智能体强化学习代理（MARL）旨在最大化期望的联合累积奖励。我们提出了分布式价值分解网络（DVDN），该网络生成一个可以分解为代理特定价值函数的联合Q函数。尽管原始的价值分解网络依赖于集中式训练，我们的方法适用于集中式训练不可能且代理必须以去中心化方式与物理环境进行交互并与其同伴通信的领域。DVDN通过在局部估计共同目标来克服集中式训练的需要。为了适应异构代理和同构代理的不同情况，我们贡献了两种创新算法，分别为DVDN和DVDN（GT）。在实验中，两种算法在三种标准环境中的十个MARL任务中均能近似达到价值分解网络的表现，即使在通信过程中存在信息损失这一点也得到了验证。 
+
+---
+# DMWM: Dual-Mind World Model with Long-Term Imagination 
+
+**Title (ZH)**: DMWM：双Mind世界模型与长期想象 
+
+**Authors**: Lingyi Wang, Rashed Shelim, Walid Saad, Naren Ramakrishnan  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.07591)  
+
+**Abstract**: Imagination in world models is crucial for enabling agents to learn long-horizon policy in a sample-efficient manner. Existing recurrent state-space model (RSSM)-based world models depend on single-step statistical inference to capture the environment dynamics, and, hence, they are unable to perform long-term imagination tasks due to the accumulation of prediction errors. Inspired by the dual-process theory of human cognition, we propose a novel dual-mind world model (DMWM) framework that integrates logical reasoning to enable imagination with logical consistency. DMWM is composed of two components: an RSSM-based System 1 (RSSM-S1) component that handles state transitions in an intuitive manner and a logic-integrated neural network-based System 2 (LINN-S2) component that guides the imagination process through hierarchical deep logical reasoning. The inter-system feedback mechanism is designed to ensure that the imagination process follows the logical rules of the real environment. The proposed framework is evaluated on benchmark tasks that require long-term planning from the DMControl suite. Extensive experimental results demonstrate that the proposed framework yields significant improvements in terms of logical coherence, trial efficiency, data efficiency and long-term imagination over the state-of-the-art world models. 
+
+**Abstract (ZH)**: 世界模型中的想象对于使智能体以样本高效的方式学习长期策略至关重要。现有的基于递归状态空间模型（RSSM）的世界模型依赖于单步统计推理来捕捉环境动力学，因此它们无法执行长期想象任务，因为预测误差会逐步累积。受到人类认知的双过程理论的启发，我们提出了一种新型的双心智世界模型（DMWM）框架，该框架结合了逻辑推理以实现逻辑一致性的想象。DMWM 由两个组件组成：一个基于RSSM的心理过程1系统（RSSM-S1），它以直观的方式处理状态转换，以及一个结合逻辑推理的神经网络心理过程2系统（LINN-S2），它通过分层深度逻辑推理引导想象过程。系统间的反馈机制设计用于确保想象过程遵循真实环境的逻辑规则。该框架已在DMControl套件中要求长期规划的任务上进行了评估。广泛的实验结果表明，与最先进的世界模型相比，所提出的框架在逻辑一致性、试验效率、数据效率和长期想象方面均表现出显著的改进。 
+
+---
+# Exploratory Diffusion Policy for Unsupervised Reinforcement Learning 
+
+**Title (ZH)**: 探索性扩散策略用于无监督强化学习 
+
+**Authors**: Chengyang Ying, Huayu Chen, Xinning Zhou, Zhongkai Hao, Hang Su, Jun Zhu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.07279)  
+
+**Abstract**: Unsupervised reinforcement learning (RL) aims to pre-train agents by exploring states or skills in reward-free environments, facilitating the adaptation to downstream tasks. However, existing methods often overlook the fitting ability of pre-trained policies and struggle to handle the heterogeneous pre-training data, which are crucial for achieving efficient exploration and fast fine-tuning. To address this gap, we propose Exploratory Diffusion Policy (EDP), which leverages the strong expressive ability of diffusion models to fit the explored data, both boosting exploration and obtaining an efficient initialization for downstream tasks. Specifically, we estimate the distribution of collected data in the replay buffer with the diffusion policy and propose a score intrinsic reward, encouraging the agent to explore unseen states. For fine-tuning the pre-trained diffusion policy on downstream tasks, we provide both theoretical analyses and practical algorithms, including an alternating method of Q function optimization and diffusion policy distillation. Extensive experiments demonstrate the effectiveness of EDP in efficient exploration during pre-training and fast adaptation during fine-tuning. 
+
+**Abstract (ZH)**: 无监督强化学习（RL）旨在通过探索奖励缺失环境中的状态或技能来预训练智能体，从而促进其适应下游任务。然而，现有的方法往往忽略了预训练策略的拟合能力，并且难以处理异质的预训练数据，这对于实现高效的探索和快速微调至关重要。为解决这一问题，我们提出了一种探索扩散策略（Exploratory Diffusion Policy，EDP），该方法利用扩散模型的强大表达能力来拟合探索数据，既增强了探索能力，又获得了适用于下游任务的有效初始化。具体而言，我们使用扩散策略估计回放缓冲区中收集数据的概率分布，并提出了一种评分内在奖励，鼓励智能体探索未见过的状态。为了在下游任务上微调预训练的扩散策略，我们提供了理论分析和实际算法，包括Q函数优化和扩散策略蒸馏的交替方法。广泛实验表明，EDP 在预训练和微调期间均能有效探索和快速适应。 
+
+---
+# Fairness in Multi-Agent AI: A Unified Framework for Ethical and Equitable Autonomous Systems 
+
+**Title (ZH)**: 多agent人工智能中的公正性：一个综合框架以确保自主系统的伦理性和公平性 
+
+**Authors**: Rajesh Ranjan, Shailja Gupta, Surya Narayan Singh  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.07254)  
+
+**Abstract**: Ensuring fairness in decentralized multi-agent systems presents significant challenges due to emergent biases, systemic inefficiencies, and conflicting agent incentives. This paper provides a comprehensive survey of fairness in multi-agent AI, introducing a novel framework where fairness is treated as a dynamic, emergent property of agent interactions. The framework integrates fairness constraints, bias mitigation strategies, and incentive mechanisms to align autonomous agent behaviors with societal values while balancing efficiency and robustness. Through empirical validation, we demonstrate that incorporating fairness constraints results in more equitable decision-making. This work bridges the gap between AI ethics and system design, offering a foundation for accountable, transparent, and socially responsible multi-agent AI systems. 
+
+**Abstract (ZH)**: 确保在去中心化的多智能体系统中实现公平性面临着巨大的挑战，原因包括新兴的偏见、系统性的低效以及智能体间相互矛盾的激励机制。本文提供了一个全面的多智能体AI中的公平性综述，介绍了一个全新的框架，其中公平性被视为智能体互动中的一种动态、 emergent 属性。该框架整合了公平性约束、偏见缓解策略以及激励机制，以使自主智能体的行为与社会价值相一致，同时平衡效率与鲁棒性。通过实证验证，我们证明了纳入公平性约束可以实现更公平的决策制定。本研究填补了AI伦理与系统设计之间的空白，为可问责、透明和社会责任性的多智能体AI系统提供了基础。 
+
+---
+# Don't Just Demo, Teach Me the Principles: A Principle-Based Multi-Agent Prompting Strategy for Text Classification 
+
+**Title (ZH)**: 不只是演示，教给我原理：一种基于原理的多agent提示策略用于文本分类 
+
+**Authors**: Peipei Wei, Dimitris Dimitriadis, Yan Xu, Mingwei Shen  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.07165)  
+
+**Abstract**: We present PRINCIPLE-BASED PROMPTING, a simple but effective multi-agent prompting strategy for text classification. It first asks multiple LLM agents to independently generate candidate principles based on analysis of demonstration samples with or without labels, consolidates them into final principles via a finalizer agent, and then sends them to a classifier agent to perform downstream classification tasks. Extensive experiments on binary and multi-class classification datasets with different sizes of LLMs show that our approach not only achieves substantial performance gains (1.55% - 19.37%) over zero-shot prompting on macro-F1 score but also outperforms other strong baselines (CoT and stepback prompting). Principles generated by our approach help LLMs perform better on classification tasks than human crafted principles on two private datasets. Our multi-agent PRINCIPLE-BASED PROMPTING approach also shows on-par or better performance compared to demonstration-based few-shot prompting approaches, yet with substantially lower inference costs. Ablation studies show that label information and the multi-agent cooperative LLM framework play an important role in generating high-quality principles to facilitate downstream classification tasks. 
+
+**Abstract (ZH)**: 我们提出了基于原则的提示策略（PRINCIPLE-BASED PROMPTING），这是一种简单而有效的多智能体提示策略，适用于文本分类任务。该方法首先让多个大型语言模型（LLM）智能体独立地基于示例样本的分析（带标签或不带标签）生成候选原则，然后通过一个最终处理智能体将这些原则整合为最终原则，并将最终原则发送给分类智能体以执行下游分类任务。在不同大小的LLM上进行的二分类和多分类数据集的广泛实验表明，我们的方法不仅在宏F1评分上优于零-shot提示（1.55% - 19.37%的显著性能提升），还优于其他强基线方法（即显性推理和反向提示）。通过我们方法生成的原则在两个私有数据集上帮助LLM在分类任务上表现优于手工设计的原则。此外，我们的多智能体PRINCIPLE-BASED PROMPTING方法在性能上与基于示例的少样本提示方法持平或更好，但推理成本显著降低。消融研究显示，标签信息和多智能体合作的LLM框架在生成高质量原则以促进下游分类任务方面发挥着重要作用。 
+
+---
+# SyncMind: Measuring Agent Out-of-Sync Recovery in Collaborative Software Engineering 
+
+**Title (ZH)**: SyncMind: 测量协作软件工程中代理脱同步恢复能力 
+
+**Authors**: Xuehang Guo, Xingyao Wang, Yangyi Chen, Sha Li, Chi Han, Manling Li, Heng Ji  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.06994)  
+
+**Abstract**: Software engineering (SE) is increasingly collaborative, with developers working together on shared complex codebases. Effective collaboration in shared environments requires participants -- whether humans or AI agents -- to stay on the same page as their environment evolves. When a collaborator's understanding diverges from the current state -- what we term the out-of-sync challenge -- the collaborator's actions may fail, leading to integration issues. In this work, we introduce SyncMind, a framework that systematically defines the out-of-sync problem faced by large language model (LLM) agents in collaborative software engineering (CSE). Based on SyncMind, we create SyncBench, a benchmark featuring 24,332 instances of agent out-of-sync scenarios in real-world CSE derived from 21 popular GitHub repositories with executable verification tests. Experiments on SyncBench uncover critical insights into existing LLM agents' capabilities and limitations. Besides substantial performance gaps among agents (from Llama-3.1 agent <= 3.33% to Claude-3.5-Sonnet >= 28.18%), their consistently low collaboration willingness (<= 4.86%) suggests fundamental limitations of existing LLM in CSE. However, when collaboration occurs, it positively correlates with out-of-sync recovery success. Minimal performance differences in agents' resource-aware out-of-sync recoveries further reveal their significant lack of resource awareness and adaptability, shedding light on future resource-efficient collaborative systems. Code and data are openly available on our project website: this https URL. 
+
+**Abstract (ZH)**: 软件工程（SE）正变得越来越具协作性，开发人员需要共同处理复杂共享的代码库。在共享环境中进行有效协作要求参与者（无论是人类还是AI代理）在环境发生变化时保持同步。当一名合作者的理解与当前状态不一致时（我们将其称为脱同步挑战），可能会导致合作失败，进而引发集成问题。在本研究中，我们引入了SyncMind框架，该框架系统地定义了大型语言模型（LLM）代理在协作软件工程（CSE）中面临的脱同步问题。基于SyncMind，我们创建了SyncBench基准测试，该基准测试包含了从21个流行的GitHub仓库中提取的24,332个代理脱同步场景实例，这些仓库均包含可执行验证测试。SyncBench上的实验揭示了现有LLM代理能力及短板的诸多关键见解。不同代理（从Llama-3.1代理≤3.33%到Claude-3.5-Sonnet代理≥28.18%）之间的显著性能差距，以及其持续低下的合作意愿（≤4.86%），表明现有LLM在CSE中存在根本性的局限性。然而，合作的发生与脱同步恢复的成功正相关。代理在资源感知下的脱同步恢复性能最小的差异进一步揭示了其显著的资源感知不足和适应性不足，这为未来高效协作系统指明了方向。源代码和数据可在我们的项目网站上公开获取：this https URL。 
+
+---
+# Who is Helping Whom? Analyzing Inter-dependencies to Evaluate Cooperation in Human-AI Teaming 
+
+**Title (ZH)**: 谁在帮助谁？分析相互依赖性以评估人机团队合作中的合作值得关注。
+
+（注：这里的翻译保留了原文的核心意思，同时尽量符合中文的学术表达习惯。原文中的“Teaming”一词在不同的上下文中可能有不同的翻译，此处翻译为“团队合作”，具体可以根据实际语境调整为更合适的表达。） 
+
+**Authors**: Upasana Biswas, Siddhant Bhambri, Subbarao Kambhampati  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.06976)  
+
+**Abstract**: The long-standing research challenges of Human-AI Teaming(HAT) and Zero-shot Cooperation(ZSC) have been tackled by applying multi-agent reinforcement learning(MARL) to train an agent by optimizing the environment reward function and evaluating their performance through task performance metrics such as task reward. However, such evaluation focuses only on task completion, while being agnostic to `how' the two agents work with each other. Specifically, we are interested in understanding the cooperation arising within the team when trained agents are paired with humans. To formally address this problem, we propose the concept of interdependence to measure how much agents rely on each other's actions to achieve the shared goal, as a key metric for evaluating cooperation in human-agent teams. Towards this, we ground this concept through a symbolic formalism and define evaluation metrics that allow us to assess the degree of reliance between the agents' actions. We pair state-of-the-art agents trained through MARL for HAT, with learned human models for the the popular Overcooked domain, and evaluate the team performance for these human-agent teams. Our results demonstrate that trained agents are not able to induce cooperative behavior, reporting very low levels of interdependence across all the teams. We also report that teaming performance of a team is not necessarily correlated with the task reward. 
+
+**Abstract (ZH)**: 人机团队（HAT）和零样本合作（ZSC）领域的长期研究挑战通过应用多代理强化学习（MARL）得到了解决，通过优化环境奖励函数来训练代理，并通过任务完成度指标（如任务奖励）来评估其性能。然而，这种评估仅关注任务完成情况，而忽略了“双方如何协作”的问题。具体而言，我们对在训练好的代理与人类搭档时产生的合作机制产生了兴趣。为了正式解决这一问题，我们提出了相互依赖性的概念，用以衡量代理之间为了实现共同目标而依赖对方行动的程度，这是评估人机团队合作的关键指标。为实现这一目标，我们通过符号形式化方法对这一概念进行了定义，并制定了评估指标，以评估代理之间行为的依赖程度。我们使用通过MARL训练的最新代理（适用于HAT）与Overcooked领域中学习到的人类模型配对，并评估这些人机团队的表现。实验结果表明，训练好的代理未能诱导出合作行为，所有团队的相互依赖性都非常低。我们还指出，团队表现与任务奖励之间并不一定存在关联。 
+
+---
+# Multi-Agent Simulator Drives Language Models for Legal Intensive Interaction 
+
+**Title (ZH)**: 多agents模拟器驱动的语言模型在法律密集型交互中的应用 
+
+**Authors**: Shengbin Yue, Ting Huang, Zheng Jia, Siyuan Wang, Shujun Liu, Yun Song, Xuanjing Huang, Zhongyu Wei  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.06882)  
+
+**Abstract**: Large Language Models (LLMs) have significantly advanced legal intelligence, but the scarcity of scenario data impedes the progress toward interactive legal scenarios. This paper introduces a Multi-agent Legal Simulation Driver (MASER) to scalably generate synthetic data by simulating interactive legal scenarios. Leveraging real-legal case sources, MASER ensures the consistency of legal attributes between participants and introduces a supervisory mechanism to align participants' characters and behaviors as well as addressing distractions. A Multi-stage Interactive Legal Evaluation (MILE) benchmark is further constructed to evaluate LLMs' performance in dynamic legal scenarios. Extensive experiments confirm the effectiveness of our framework. 
+
+**Abstract (ZH)**: 大规模语言模型（LLMs）在法律智能方面取得了显著进展，但场景数据的稀缺性阻碍了交互式法律场景的发展。本文介绍了一种多智能体法律模拟驱动器（MASER），通过模拟交互式法律场景来大规模生成合成数据。利用真实的法律案例源，MASER 确保了参与者之间法律属性的一致性，并引入了一个监督机制来对齐参与者的性格和行为，同时解决干扰问题。进一步构建了一个多阶段交互式法律评估（MILE）基准，以评估在动态法律场景中LLMs 的表现。广泛的实验验证了我们框架的有效性。 
+
+---
+# Vision-Integrated LLMs for Autonomous Driving Assistance : Human Performance Comparison and Trust Evaluation 
+
+**Title (ZH)**: 面向自主驾驶辅助的视觉集成大规模语言模型：人类性能比较与信任评估 
+
+**Authors**: Namhee Kim, Woojin Park  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.06843)  
+
+**Abstract**: Traditional autonomous driving systems often struggle with reasoning in complex, unexpected scenarios due to limited comprehension of spatial relationships. In response, this study introduces a Large Language Model (LLM)-based Autonomous Driving (AD) assistance system that integrates a vision adapter and an LLM reasoning module to enhance visual understanding and decision-making. The vision adapter, combining YOLOv4 and Vision Transformer (ViT), extracts comprehensive visual features, while GPT-4 enables human-like spatial reasoning and response generation. Experimental evaluations with 45 experienced drivers revealed that the system closely mirrors human performance in describing situations and moderately aligns with human decisions in generating appropriate responses. 
+
+**Abstract (ZH)**: 传统自动驾驶系统在应对复杂和不可预见场景时往往难以进行有效的推理，主要是因为其对空间关系的理解有限。为解决这一问题，本研究提出了一种基于大型语言模型（LLM）的自动驾驶（Autonomous Driving, AD）辅助系统，该系统整合了视觉适配器和LLM推理模块，以增强视觉理解和决策能力。视觉适配器结合了YOLOv4和视觉变压器（Vision Transformer, ViT），提取全面的视觉特征，而GPT-4则实现类似人类的空间推理和响应生成。实验评估了45名经验丰富驾驶员的表现，结果显示该系统在描述场景方面与人类表现非常接近，在生成适当响应方面与人类决策有一定的对齐度。 
+
+---
+# Policy Guided Tree Search for Enhanced LLM Reasoning 
+
+**Title (ZH)**: 政策引导的树搜索方法以增强语言模型推理能力 
+
+**Authors**: Yang Li  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.06813)  
+
+**Abstract**: Despite their remarkable capabilities, large language models often struggle with tasks requiring complex reasoning and planning. While existing approaches like Chain-of-Thought prompting and tree search techniques show promise, they are limited by their reliance on predefined heuristics and computationally expensive exploration strategies. We propose Policy-Guided Tree Search (PGTS), a framework that combines reinforcement learning with structured tree exploration to efficiently navigate reasoning paths. Our key innovation is a learned policy that dynamically decides between expanding, branching, backtracking, or terminating exploration, eliminating the need for manual heuristics or exhaustive search. Experiments across mathematical reasoning, logical deduction, and planning benchmarks demonstrate that PGTS achieves superior reasoning performance while significantly reducing computational costs compared to existing methods. These results establish PGTS as a scalable and effective solution for tackling complex reasoning tasks with LLMs. 
+
+**Abstract (ZH)**: 尽管大型语言模型具有卓越的能力，但在需要复杂推理和规划的任务中常常表现出色有限。现有的方法，如链式思考提示和树搜索技术虽然显示出前景，但由于依赖预定义的启发式方法和计算成本较高的探索策略，它们仍存在局限性。本文提出了一种结合强化学习与结构化树探索的Policy-Guided Tree Search（PGTS）框架，以高效地导航推理路径。我们的主要创新在于一个学习到的策略，该策略能够动态地决定在扩展、分叉、回溯或终止探索之间做出选择，从而消除了手动启发式或穷举搜索的需要。在数学推理、逻辑推导和规划基准测试中的实验表明，PGTS不仅在推理性能方面优于现有方法，而且在计算成本方面显著降低。这些结果验证了PGTS作为利用大规模语言模型处理复杂推理任务的可扩展且有效解决方案的有效性。 
+
+---
+# Emergence of Self-Awareness in Artificial Systems: A Minimalist Three-Layer Approach to Artificial Consciousness 
+
+**Title (ZH)**: 人工系统中自我意识的涌现：人工意识的 minimalist 三层方法 
+
+**Authors**: Kurando Iida  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.06810)  
+
+**Abstract**: This paper proposes a minimalist three-layer model for artificial consciousness, focusing on the emergence of self-awareness. The model comprises a Cognitive Integration Layer, a Pattern Prediction Layer, and an Instinctive Response Layer, interacting with Access-Oriented and Pattern-Integrated Memory systems. Unlike brain-replication approaches, we aim to achieve minimal self-awareness through essential elements only. Self-awareness emerges from layer interactions and dynamic self-modeling, without initial explicit self-programming. We detail each component's structure, function, and implementation strategies, addressing technical feasibility. This research offers new perspectives on consciousness emergence in artificial systems, with potential implications for human consciousness understanding and adaptable AI development. We conclude by discussing ethical considerations and future research directions. 
+
+**Abstract (ZH)**: 本文提出了一种简约的三层模型，旨在探讨人工意识中的自我意识涌现。该模型包含认知整合层、模式预测层和本能反应层，并与面向访问的记忆系统和模式整合记忆系统相互作用。与脑模拟方法不同，我们旨在通过使用最基本的元素来实现最少的自我意识。自我意识源自各层之间的交互和动态自我建模，而无需初始显式的自我编程。本文详细介绍了每个组件的结构、功能和实现策略，并讨论了其实现的技术可行性和潜在挑战。本研究为人工系统中意识涌现提供了新的视角，并可能对人类意识的理解和适应性人工智能的发展产生影响。最后，本文还讨论了伦理考虑及未来的研究方向。 
+
+---
+# CreAgent: Towards Long-Term Evaluation of Recommender System under Platform-Creator Information Asymmetry 
+
+**Title (ZH)**: CreAgent：在平台创造者信息不对称情境下的推荐系统长期评估方法探究 
+
+**Authors**: Xiaopeng Ye, Chen Xu, Zhongxiang Sun, Jun Xu, Gang Wang, Zhenhua Dong, Ji-Rong Wen  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.07307)  
+
+**Abstract**: Ensuring the long-term sustainability of recommender systems (RS) emerges as a crucial issue. Traditional offline evaluation methods for RS typically focus on immediate user feedback, such as clicks, but they often neglect the long-term impact of content creators. On real-world content platforms, creators can strategically produce and upload new items based on user feedback and preference trends. While previous studies have attempted to model creator behavior, they often overlook the role of information asymmetry. This asymmetry arises because creators primarily have access to feedback on the items they produce, while platforms possess data on the entire spectrum of user feedback. Current RS simulators, however, fail to account for this asymmetry, leading to inaccurate long-term evaluations. To address this gap, we propose CreAgent, a Large Language Model (LLM)-empowered creator simulation agent. By incorporating game theory's belief mechanism and the fast-and-slow thinking framework, CreAgent effectively simulates creator behavior under conditions of information asymmetry. Additionally, we enhance CreAgent's simulation ability by fine-tuning it using Proximal Policy Optimization (PPO). Our credibility validation experiments show that CreAgent aligns well with the behaviors between real-world platform and creator, thus improving the reliability of long-term RS evaluations. Moreover, through the simulation of RS involving CreAgents, we can explore how fairness- and diversity-aware RS algorithms contribute to better long-term performance for various stakeholders. CreAgent and the simulation platform are publicly available at this https URL. 
+
+**Abstract (ZH)**: 确保推荐系统（RS）的长期可持续性成为了一个关键问题。传统意义上的离线评估方法通常侧重于用户的即时反馈，例如点击行为，但往往忽视了内容创作者的长期影响。在现实生活中的内容平台中，创作者可以根据用户反馈和偏好趋势战略性地生产并上传新内容。虽然之前的研究尝试建模创作者的行为，但这些研究往往忽略了信息不对称的作用。这种不对称性源于创作者对其生产内容的反馈有更多接触，而平台则拥有整个用户反馈谱的数据。然而，目前的RS模拟器未能考虑到这一点不对称性，导致长期评价不够准确。为了填补这一缺口，我们提出了一种由大型语言模型（LLM）赋能的创作者模拟代理——CreAgent。通过结合博弈论的信任机制和快速思考与慢速思考框架，CreAgent有效地模拟了在信息不对称条件下的创作者行为。此外，我们通过使用近端策略优化（PPO）对CreAgent进行微调，从而增强其模拟能力。我们的信誉验证实验表明，CreAgent与实际平台和创作者的行为高度契合，从而提高了长期RS评价的可靠性。此外，通过对涉及CreAgent的RS进行模拟，我们可以探究公平性和多样化感知的算法如何促进各种利益相关者的长期性能提升。CreAgent及其模拟平台已公开可供访问：https://this-url-edited-by-ai.com 
+
+---
+# Multi-Agent Collaboration for Multilingual Code Instruction Tuning 
+
+**Title (ZH)**: 多agent协作的多语言代码指令调优 
+
+**Authors**: Jian Yang, Wei Zhang, Jiaxi Yang, Yibo Miao, Shanghaoran Quan, Zhenhe Wu, Qiyao Peng, Liqun Yang, Tianyu Liu, Zeyu Cui, Binyuan Hui, Junyang Lin  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.07487)  
+
+**Abstract**: Recent advancement in code understanding and generation demonstrates that code LLMs fine-tuned on a high-quality instruction dataset can gain powerful capabilities to address wide-ranging code-related tasks. However, most previous existing methods mainly view each programming language in isolation and ignore the knowledge transfer among different programming languages. To bridge the gap among different programming languages, we introduce a novel multi-agent collaboration framework to enhance multilingual instruction tuning for code LLMs, where multiple language-specific intelligent agent components with generation memory work together to transfer knowledge from one language to another efficiently and effectively. Specifically, we first generate the language-specific instruction data from the code snippets and then provide the generated data as the seed data for language-specific agents. Multiple language-specific agents discuss and collaborate to formulate a new instruction and its corresponding solution (A new programming language or existing programming language), To further encourage the cross-lingual transfer, each agent stores its generation history as memory and then summarizes its merits and faults. Finally, the high-quality multilingual instruction data is used to encourage knowledge transfer among different programming languages to train Qwen2.5-xCoder. Experimental results on multilingual programming benchmarks demonstrate the superior performance of Qwen2.5-xCoder in sharing common knowledge, highlighting its potential to reduce the cross-lingual gap. 
+
+**Abstract (ZH)**: 近年来，在代码理解和生成方面的最新进展表明，使用高质量指令数据集微调的代码LLM可以获得强大的能力来解决广泛的代码相关任务。然而，大多数现有方法主要将每种编程语言孤立看待，并忽略了不同编程语言之间的知识迁移。为了弥合不同编程语言之间的差距，我们引入了一种新颖的多智能体协作框架，以增强多语言指令调优，其中多个具有生成记忆的语言特定智能体组件共同工作，以高效有效地从一种语言转移知识到另一种语言。具体来说，我们首先从代码片段中生成语言特定的指令数据，然后将生成的数据作为语言特定代理的种子数据。多个语言特定代理讨论并合作制定一个新的指令及其相应解决方案（新的编程语言或现有编程语言）。为了进一步促进跨语言迁移，每个代理都会将其生成历史记录作为记忆存储，并总结其优点和缺点。最后，高质量的多语言指令数据用于促进不同编程语言之间的知识转移，以训练Qwen2.5-xCoder。多语言编程基准上的实验结果表明，Qwen2.5-xCoder在共享通用知识方面具有优越性能，突显了其减小跨语言差距的潜力。 
+
+---
+# Ask Patients with Patience: Enabling LLMs for Human-Centric Medical Dialogue with Grounded Reasoning 
+
+**Title (ZH)**: 耐心问询患者：通过基于推理的支持来实现以人文本的医学对话的人工智能模型 
+
+**Authors**: Jiayuan Zhu, Junde Wu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.07143)  
+
+**Abstract**: Accurate and efficient diagnosis in online medical consultations remains a challenge for current large language models. These models often rely on single-turn interactions and lack the ability to refine their predictions through follow-up questions. Additionally, their responses frequently contain complex medical terminology, making them less accessible to non-medical users and creating barriers to effective communication. In this paper, we introduce Ask Patients with Patience (APP), the first multi-turn dialogue that enables LLMs to iteratively refine diagnoses based on grounded reasoning. By integrating medical guidelines and entropy minimization, APP improves both diagnostic accuracy and efficiency. Furthermore, it features human-centric communication that bridges the gap between user comprehension and medical terminology, significantly enhancing user accessibility and engagement. We evaluated APP using a subset of the ReMeDi dataset, comparing it with single-turn and traditional multi-turn LLM baselines. APP achieved higher similarity scores in diagnosis predictions, demonstrating better alignment with ground truth diagnoses. Entropy analysis showed that APP reduces diagnostic uncertainty more rapidly across iterations, increasing confidence in its predictions. APP also excels in user accessibility and empathy, further bridging the gap between complex medical language and user understanding. Code will be released at: this https URL. 
+
+**Abstract (ZH)**: 当前的大语言模型在在线医疗咨询中实现准确且高效的诊断仍面临挑战。这些模型通常依赖单一回合的交互，缺乏通过后续问题来逐步细化预测的能力。此外，它们的回答经常包含复杂医学术语，这使得对非医疗用户来说不太易懂，从而成为有效沟通的障碍。在本文中，我们提出了“耐心询问患者”（Ask Patients with Patience, APP），这是第一个多回合对话系统，能够使大语言模型基于情境推理逐步细化预测。通过结合医学指南和最小熵原理，APP提高了诊断的准确性和效率。此外，APP还包括以用户体验为中心的沟通方式，这种沟通方式缩小了用户理解和医学术语之间的差距，显著提高了用户使用的易用性和参与度。我们使用ReMeDi数据集的一部分对APP进行了评估，并将其与单回合和传统的多回合大语言模型基准进行了比较。APP在诊断预测相似度方面得分更高，表明其预测更有助于与真实诊断对齐。熵分析显示，APP在每次迭代中更快地减少了诊断不确定性，增强了其预测的信心。此外，APP在用户易用性和同理心方面表现出色，进一步缩小了复杂医学语言与用户理解之间的差距。代码将发布于：this https URL。 
+
+---
+# EvoFlow: Evolving Diverse Agentic Workflows On The Fly 
+
+**Title (ZH)**: EvoFlow：在运行时演化多样的代理工作流 
+
+**Authors**: Guibin Zhang, Kaijie Chen, Guancheng Wan, Heng Chang, Hong Cheng, Kun Wang, Shuyue Hu, Lei Bai  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.07373)  
+
+**Abstract**: The past two years have witnessed the evolution of large language model (LLM)-based multi-agent systems from labor-intensive manual design to partial automation (\textit{e.g.}, prompt engineering, communication topology) and eventually to fully automated design. However, existing agentic automation pipelines often lack LLM heterogeneity and focus on single-objective performance optimization, limiting their potential to combine weaker models for more customized and cost-effective solutions. To address this challenge, we propose EvoFlow, a niching evolutionary algorithm-based framework to automatically search a population of heterogeneous and complexity-adaptive agentic workflows, rather than a single homogeneous, complex workflow. Technically, EvoFlow performs \textit{(1) tag-based retrieval} to extract parent workflows from an agentic population, evolves new workflows through \textit{(2) crossover} and \textit{(3) mutation}, and employs \textit{(4) niching-based selection} to maintain population diversity and quality. Extensive evaluations across seven benchmarks demonstrate that EvoFlow is: \textbf{(I) diverse}, evolving a population of workflows ranging from simple I/O tasks to complex multi-turn interactions; \textbf{(II) high-performing}, outperforming previous handcrafted and automated workflows by $1.23\%\sim29.86\%$; \textbf{(III) economical}, surpassing powerful \llmname{o1-preview} at $12.4\%$ of its inference cost using weaker open-source models. 
+
+**Abstract (ZH)**: 过去的两年见证了基于大规模语言模型（LLM）的多智能体系统从劳动密集型的手工设计向部分自动化（例如，提示工程、通信拓扑）的发展，最终实现了完全自动化的设计。然而，现有的代理自动化管道常常缺乏LLM异质性，专注于单一目标性能优化，从而限制了其结合较弱模型的能力，以提供更加定制化和成本效益更高的解决方案。为了解决这一挑战，我们提出了一种基于生态位演化算法的框架EvoFlow，用于自动搜索异质性和复杂性自适应的代理工作流群体，而不是单一的同质化复杂工作流。从技术上讲，EvoFlow执行以下步骤：\textbf{(1)基于标签的检索}以从代理群体中提取父工作流，通过\textbf{(2)交叉}和\textbf{(3)突变}来演化新的工作流，并通过\textbf{(4)基于生态位的选择}来维持群体的多样性和质量。在七个基准上的广泛评估表明，EvoFlow是：\textbf{(I)多样化的}，能够演化出从简单的输入输出任务到复杂的多轮交互的工作流群体；\textbf{(II)高性能的}，相较于之前的手工设计和自动化工作流，其性能提高了1.23%至29.86%；\textbf{(III)经济高效的}，使用较弱的开源模型，其推理成本仅为强大的\llmname{o1-preview}的12.4%。 
+
+---
