@@ -1,0 +1,185 @@
+# QA-Expand: Multi-Question Answer Generation for Enhanced Query Expansion in Information Retrieval 
+
+**Title (ZH)**: QA-Expand：增强信息检索中的查询扩展的多问题回答生成 
+
+**Authors**: Wonduk Seo, Seunghyun Lee  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.08557)  
+
+**Abstract**: Query expansion is widely used in Information Retrieval (IR) to improve search outcomes by enriching queries with additional contextual information. Although recent Large Language Model (LLM) based methods generate pseudo-relevant content and expanded terms via multiple prompts, they often yield repetitive, narrow expansions that lack the diverse context needed to retrieve all relevant information. In this paper, we introduce QA-Expand, a novel and effective framework for query expansion. It first generates multiple relevant questions from the initial query and subsequently produces corresponding pseudo-answers as surrogate documents. A feedback model further rewrites and filters these answers to ensure only the most informative augmentations are incorporated. Extensive experiments on benchmarks such as BEIR and TREC demonstrate that QA-Expand enhances retrieval performance by up to 13% over state-of-the-art methods, offering a robust solution for modern retrieval challenges. 
+
+**Abstract (ZH)**: 查询扩展在信息检索（IR）中被广泛应用于通过增加背景信息来改进搜索结果。尽管基于大型语言模型（LLM）的方法通过多次提示生成伪相关内容和扩展词汇，但它们往往会产生重复且具有局限性的扩展，缺乏检索所有相关信息所需的多样背景。本文介绍了一种名为QA-Expand的新颖且有效的查询扩展框架。该框架首先从初始查询生成多个相关问题，然后生成相应的伪答案作为代理文档。反馈模型进一步重写和过滤这些答案，确保仅纳入最有信息量的扩展。通过对BEIR和TREC等基准的广泛实验表明，与最先进的方法相比，QA-Expand可在检索性能上提高高达13%，为现代检索挑战提供了一个稳健的解决方案。 
+
+---
+# Fine-Tuning Topics through Weighting Aspect Keywords 
+
+**Title (ZH)**: 通过加权aspect关键词 fine-tuning 主题 
+
+**Authors**: Ali Nazari, Michael Weiss  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.08496)  
+
+**Abstract**: Topic modeling often requires examining topics from multiple perspectives to uncover hidden patterns, especially in less explored areas. This paper presents an approach to address this need, utilizing weighted keywords from various aspects derived from a domain knowledge. The research method starts with standard topic modeling. Then, it adds a process consisting of four key steps. First, it defines keywords for each aspect. Second, it gives weights to these keywords based on their relevance. Third, it calculates relevance scores for aspect-weighted keywords and topic keywords to create aspect-topic models. Fourth, it uses these scores to tune relevant new documents. Finally, the generated topic models are interpreted and validated. The findings show that top-scoring documents are more likely to be about the same aspect of a topic. This highlights the model's effectiveness in finding the related documents to the aspects. 
+
+**Abstract (ZH)**: 主题建模通常需要从多个角度来审视主题，以揭示隐藏的模式，尤其是在探索较少的领域。本文提出了一种方法，以满足这一需求，该方法利用了从领域知识中派生出的带权重的关键词。研究方法首先基于标准的主题建模。然后，添加了一个包含四个关键步骤的过程。首先，为每个方面定义关键词。其次，根据其相关性给这些关键词赋予权重。第三，计算方面加权关键词和主题关键词的相关性得分，以构建方面-主题模型。第四，使用这些得分来调整相关的新文档。最后，生成的主题模型将被解释和验证。研究结果表明，得分最高的文档更有可能探讨同一主题的同一方面。这突显了该模型在找到相关方面文档方面的有效性。 
+
+---
+# Graph Foundation Models for Recommendation: A Comprehensive Survey 
+
+**Title (ZH)**: 图基础模型在推荐系统中的应用：一个全面的综述 
+
+**Authors**: Bin Wu, Yihang Wang, Yuanhao Zeng, Jiawei Liu, Jiashu Zhao, Cheng Yang, Yawen Li, Long Xia, Dawei Yin, Chuan Shi  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.08346)  
+
+**Abstract**: Recommender systems (RS) serve as a fundamental tool for navigating the vast expanse of online information, with deep learning advancements playing an increasingly important role in improving ranking accuracy. Among these, graph neural networks (GNNs) excel at extracting higher-order structural information, while large language models (LLMs) are designed to process and comprehend natural language, making both approaches highly effective and widely adopted. Recent research has focused on graph foundation models (GFMs), which integrate the strengths of GNNs and LLMs to model complex RS problems more efficiently by leveraging the graph-based structure of user-item relationships alongside textual understanding. In this survey, we provide a comprehensive overview of GFM-based RS technologies by introducing a clear taxonomy of current approaches, diving into methodological details, and highlighting key challenges and future directions. By synthesizing recent advancements, we aim to offer valuable insights into the evolving landscape of GFM-based recommender systems. 
+
+**Abstract (ZH)**: 推荐系统（RS）作为导航在线信息浩瀚海洋的基本工具，深度学习的进步在提高排名准确性方面发挥着日益重要的作用。在这其中，图神经网络（GNNs）擅长提取高层次的结构信息，而大型语言模型（LLMs）则被设计用于处理和理解自然语言，使这两种方法都变得极为有效且广泛采用。最近的研究集中在图基础模型（GFMs）上，GFMs结合了GNNs和LLMs的优点，通过利用用户-项目关系的基于图的结构以及文本理解来更有效地建模复杂的RS问题。在本文综述中，我们通过介绍当前方法的清晰分类、深入探讨方法论细节以及强调关键挑战和未来方向，提供了一种全面的GFMs为基础的RS技术综述。通过综合最新进展，我们旨在为GFMs为基础的推荐系统不断演变的景观提供有价值的见解。 
+
+---
+# Unlocking Scaling Law in Industrial Recommendation Systems with a Three-step Paradigm based Large User Model 
+
+**Title (ZH)**: 基于大型用户模型的三步 Paradigm 方法解锁工业推荐系统中的扩展法则 
+
+**Authors**: Bencheng Yan, Shilei Liu, Zhiyuan Zeng, Zihao Wang, Yizhen Zhang, Yujin Yuan, Langming Liu, Jiaqi Liu, Di Wang, Wenbo Su, Wang Pengjie, Jian Xu, Bo Zheng  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.08309)  
+
+**Abstract**: Recent advancements in autoregressive Large Language Models (LLMs) have achieved significant milestones, largely attributed to their scalability, often referred to as the "scaling law". Inspired by these achievements, there has been a growing interest in adapting LLMs for Recommendation Systems (RecSys) by reformulating RecSys tasks into generative problems. However, these End-to-End Generative Recommendation (E2E-GR) methods tend to prioritize idealized goals, often at the expense of the practical advantages offered by traditional Deep Learning based Recommendation Models (DLRMs) in terms of in features, architecture, and practices. This disparity between idealized goals and practical needs introduces several challenges and limitations, locking the scaling law in industrial RecSys. In this paper, we introduce a large user model (LUM) that addresses these limitations through a three-step paradigm, designed to meet the stringent requirements of industrial settings while unlocking the potential for scalable recommendations. Our extensive experimental evaluations demonstrate that LUM outperforms both state-of-the-art DLRMs and E2E-GR approaches. Notably, LUM exhibits excellent scalability, with performance improvements observed as the model scales up to 7 billion parameters. Additionally, we have successfully deployed LUM in an industrial application, where it achieved significant gains in an A/B test, further validating its effectiveness and practicality. 
+
+**Abstract (ZH)**: 近年来，自回归大型语言模型（LLMs）取得了一系列显著进展，很大程度上归因于它们的可扩展性，经常被称为“规模法则”。受到这些成就的启发，人们越来越关注将LLMs适应到推荐系统（RecSys）中，并通过将RecSys任务重新表述为生成问题来进行这一适应。然而，端到端生成推荐（E2E-GR）方法往往优先追求理想化目标，这可能会牺牲传统基于深度学习的推荐模型（DLRMs）在特征、架构和实践方面提供的实际优势。理想化目标与实际需求之间的差距引入了多个挑战和限制，阻碍了规模法则在工业推荐系统（RecSys）中的应用。本文我们提出了一种大型用户模型（LUM），通过三步范式来解决这些问题，旨在满足工业环境的严格要求，同时释放可扩展推荐的潜力。我们广泛进行的实验评估表明，LUM在多个方面优于最先进的DLRMs和E2E-GR方法。值得注意的是，LUM展现了出色的可扩展性，随着模型参数规模增加到70亿时，观察到性能提升。此外，我们在一个工业应用中成功部署了LUM，A/B测试结果显示其显著改进，进一步验证了其有效性和实用性。 
+
+---
+# ChorusCVR: Chorus Supervision for Entire Space Post-Click Conversion Rate Modeling 
+
+**Title (ZH)**: ChorusCVR：全场域点击后转换率的合唱监督建模 
+
+**Authors**: Wei Cheng, Yucheng Lu, Boyang Xia, Jiangxia Cao, Kuan Xu, Mingxing Wen, Wei Jiang, Jiaming Zhang, Zhaojie Liu, Kun Gai, Guorui Zhou  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.08277)  
+
+**Abstract**: Post-click conversion rate (CVR) estimation is a vital task in many recommender systems of revenue businesses, e.g., e-commerce and advertising. In a perspective of sample, a typical CVR positive sample usually goes through a funnel of exposure to click to conversion. For lack of post-event labels for un-clicked samples, CVR learning task commonly only utilizes clicked samples, rather than all exposed samples as for click-through rate (CTR) learning task. However, during online inference, CVR and CTR are estimated on the same assumed exposure space, which leads to a inconsistency of sample space between training and inference, i.e., sample selection bias (SSB). To alleviate SSB, previous wisdom proposes to design novel auxiliary tasks to enable the CVR learning on un-click training samples, such as CTCVR and counterfactual CVR, etc. Although alleviating SSB to some extent, none of them pay attention to the discrimination between ambiguous negative samples (un-clicked) and factual negative samples (clicked but un-converted) during modelling, which makes CVR model lacks robustness. To full this gap, we propose a novel ChorusCVR model to realize debiased CVR learning in entire-space. 
+
+**Abstract (ZH)**: 点击后转换率（CVR）估计是许多收入业务推荐系统中的一个重要任务，例如电子商务和广告。从样本的角度来看，典型的CVR正面样本通常会经历一个从曝光到点击再到转化的过程。由于未点击样本缺乏事件后标签，因此CVR学习任务通常仅利用点击样本，而不是像点击率（CTR）学习任务那样利用所有曝光样本。然而，在线推理时，CVR和CTR是在相同的假设曝光空间下估算的，这造成了训练和推理样本空间的一致性问题，即样本选择偏差（SSB）。为了缓解SSB，先前的方法提出设计新的辅助任务，以便在未点击训练样本上进行CVR学习，例如CTCVR和反事实CVR等。虽然在一定程度上缓解了SSB，但它们在建模过程中忽略了对模糊负样本（未点击）和实际负样本（已点击但未转化）之间进行区分，从而使CVR模型缺乏鲁棒性。为弥补这一不足，我们提出了一种新的ChorusCVR模型，以在整个空间实现去偏CVR学习。 
+
+---
+# MoLoRec: A Generalizable and Efficient Framework for LLM-Based Recommendation 
+
+**Title (ZH)**: MoLoRec: 一种基于大规模语言模型的可泛化和高效推荐框架 
+
+**Authors**: Min Hou, Chenxi Bai, Le Wu, Hao Liu, Kun Zhang, Kai Zhang, Richang Hong, Meng Wang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.08271)  
+
+**Abstract**: Large Language Models (LLMs) have achieved remarkable success in recent years, owing to their impressive generalization capabilities and rich world knowledge. To capitalize on the potential of using LLMs as recommender systems, mainstream approaches typically focus on two paradigms. The first paradigm designs multi-domain or multi-task instruction data for generalizable recommendation, so as to align LLMs with general recommendation areas and deal with cold-start recommendation. The second paradigm enhances domain-specific recommendation tasks with parameter-efficient fine-tuning techniques, in order to improve models under the warm recommendation scenarios. While most previous works treat these two paradigms separately, we argue that they have complementary advantages, and combining them together would be helpful.
+To that end, in this paper, we propose a generalizable and efficient LLM-based recommendation framework MoLoRec. Our approach starts by parameter-efficient fine-tuning a domain-general module with general recommendation instruction data, to align LLM with recommendation knowledge. Then, given users' behavior of a specific domain, we construct a domain-specific instruction dataset and apply efficient fine-tuning to the pre-trained LLM. After that, we provide approaches to integrate the above domain-general part and domain-specific part with parameters mixture. Please note that, MoLoRec is efficient with plug and play, as the domain-general module is trained only once, and any domain-specific plug-in can be efficiently merged with only domain-specific fine-tuning. Extensive experiments on multiple datasets under both warm and cold-start recommendation scenarios validate the effectiveness and generality of the proposed MoLoRec. 
+
+**Abstract (ZH)**: 大型语言模型（LLMs）在近几年取得了显著的成功，归功于它们出色的泛化能力和丰富的世界知识。为了充分利用作为推荐系统使用LLMs的潜力，主流方法通常专注于两个范式。第一个范式是设计跨领域或多任务的指令数据以实现通用推荐，从而将LLMs与通用推荐领域对齐，并解决冷启动推荐问题。第二个范式是通过参数高效的微调技术增强特定领域的推荐任务，以提高在温启动推荐场景下的模型性能。虽然大多数以往的工作分别对待这两个范式，但我们认为它们具有互补的优势，将它们结合起来会很有帮助。
+
+为此，本文提出了一种通用且高效的基于LLM的推荐框架MoLoRec。我们的方法首先通过参数高效的微调具有通用推荐指令数据的通用模块，使LLMs与推荐知识对齐。然后，针对特定领域的用户行为，构建特定领域的指令数据集，并对该预训练的LLM进行高效的微调。之后，我们提供方法将上述通用部分和特定部分通过参数混合的方式进行集成。请注意，MoLoRec 是可插拔且高效的，因为通用模块仅训练一次，而任何特定领域的插件仅需进行特定领域的微调即可高效地合并。在多种数据集下的温启动推荐和冷启动推荐场景下进行的广泛实验验证了MoLoRec的有效性和通用性。 
+
+---
+# MixDec Sampling: A Soft Link-based Sampling Method of Graph Neural Network for Recommendation 
+
+**Title (ZH)**: MixDec采样方法：图神经网络的一种软链接基于采样方法用于推荐系统 
+
+**Authors**: Xiangjin Xie, Yuxin Chen, Ruipeng Wang, Kai Ouyang, Zihan Zhang, Hai-Tao Zheng, Buyue Qian, Hansen Zheng, Bo Hu, Chengxiang Zhuo, Zang Li  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.08161)  
+
+**Abstract**: Graph neural networks have been widely used in recent recommender systems, where negative sampling plays an important role. Existing negative sampling methods restrict the relationship between nodes as either hard positive pairs or hard negative pairs. This leads to the loss of structural information, and lacks the mechanism to generate positive pairs for nodes with few neighbors. To overcome limitations, we propose a novel soft link-based sampling method, namely MixDec Sampling, which consists of Mixup Sampling module and Decay Sampling module. The Mixup Sampling augments node features by synthesizing new nodes and soft links, which provides sufficient number of samples for nodes with few neighbors. The Decay Sampling strengthens the digestion of graph structure information by generating soft links for node embedding learning. To the best of our knowledge, we are the first to model sampling relationships between nodes by soft links in GNN-based recommender systems. Extensive experiments demonstrate that the proposed MixDec Sampling can significantly and consistently improve the recommendation performance of several representative GNN-based models on various recommendation benchmarks. 
+
+**Abstract (ZH)**: 在最近的推荐系统中，图神经网络（Graph Neural Networks, GNNs）已经得到了广泛应用，而负采样在其中扮演着重要角色。现有的负采样方法将节点之间的关系严格限定为硬正样本对或硬负样本对，这导致了结构信息的损失，并且缺乏生成邻居节点较少的节点的正样本对的机制。为了克服这些局限性，我们提出了一种新的基于软链接的采样方法，即MixDec采样，该方法由Mixup采样模块和衰减采样模块组成。Mixup采样通过合成新的节点和软链接来增强节点特征，从而为邻居节点较少的节点提供了充足的样本数量。衰减采样通过生成软链接来增强对图结构信息的消化，以加强节点嵌入学习。据我们所知，这是首次在基于GNN的推荐系统中通过软链接建模节点之间的采样关系。广泛的经验表明，提出的MixDec采样可以显著且一致地提高几种代表性GNN模型在各种推荐基准上的推荐性能。 
+
+---
+# SS4Rec: Continuous-Time Sequential Recommendation with State Space Models 
+
+**Title (ZH)**: SS4Rec：基于状态空间模型的连续时间序列推荐 
+
+**Authors**: Wei Xiao, Huiying Wang, Qifeng Zhou, Qing Wang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.08132)  
+
+**Abstract**: Sequential recommendation is a key area in the field of recommendation systems aiming to model user interest based on historical interaction sequences with irregular intervals. While previous recurrent neural network-based and attention-based approaches have achieved significant results, they have limitations in capturing system continuity due to the discrete characteristics. In the context of continuous-time modeling, state space model (SSM) offers a potential solution, as it can effectively capture the dynamic evolution of user interest over time. However, existing SSM-based approaches ignore the impact of irregular time intervals within historical user interactions, making it difficult to model complexed user-item transitions in sequences. To address this issue, we propose a hybrid SSM-based model called SS4Rec for continuous-time sequential recommendation. SS4Rec integrates a time-aware SSM to handle irregular time intervals and a relation-aware SSM to model contextual dependencies, enabling it to infer user interest from both temporal and sequential perspectives. In the training process, the time-aware SSM and the relation-aware SSM are discretized by variable stepsizes according to user interaction time intervals and input data, respectively. This helps capture the continuous dependency from irregular time intervals and provides time-specific personalized recommendations. Experimental studies on five benchmark datasets demonstrate the superiority and effectiveness of SS4Rec. 
+
+**Abstract (ZH)**: 连续时间序列推荐是推荐系统领域的一个关键领域，旨在基于用户历史交互序列（间隔不规则）建模用户兴趣。虽然之前基于循环神经网络和注意力机制的方法取得了显著成果，但它们在捕捉系统连续性方面受限于离散特性。在连续时间建模的背景下，状态空间模型（SSM）提供了一种潜在的解决方案，因为它可以有效捕捉用户兴趣随时间动态演变的趋势。然而，现有的基于SSM的方法忽视了历史用户交互中的不规则时间间隔的影响，使得难以建模序列中复杂化的用户-项目过渡。为了解决这一问题，我们提出了一种基于混合SSM的模型——SS4Rec，用于连续时间序列推荐。SS4Rec结合了时间感知SSM来处理不规则时间间隔，以及关系感知SSM来建模上下文依赖性，使其能够从时间和序列两个视角推断用户兴趣。在训练过程中，时间感知SSM和关系感知SSM分别根据用户交互时间间隔和输入数据进行变步长离散化，这有助于捕获不规则时间间隔的连续依赖性，并提供时间特定的个性化推荐。在五个基准数据集上的实验研究证明了SS4Rec的优势和有效性。 
+
+---
+# Collaborative Filtering Meets Spectrum Shift: Connecting User-Item Interaction with Graph-Structured Side Information 
+
+**Title (ZH)**: 协同过滤遇上频谱偏移：连接用户-项目交互与图结构辅助信息 
+
+**Authors**: Yunhang He, Cong Xu, Jun Wang, Wei Zhang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.08071)  
+
+**Abstract**: Graph Neural Network (GNN) has demonstrated their superiority in collaborative filtering, where the user-item (U-I) interaction bipartite graph serves as the fundamental data format. However, when graph-structured side information (e.g., multimodal similarity graphs or social networks) is integrated into the U-I bipartite graph, existing graph collaborative filtering methods fall short of achieving satisfactory performance. We quantitatively analyze this problem from a spectral perspective. Recall that a bipartite graph possesses a full spectrum within the range of [-1, 1], with the highest frequency exactly achievable at -1 and the lowest frequency at 1; however, we observe as more side information is incorporated, the highest frequency of the augmented adjacency matrix progressively shifts rightward. This spectrum shift phenomenon has caused previous approaches built for the full spectrum [-1, 1] to assign mismatched importance to different frequencies. To this end, we propose Spectrum Shift Correction (dubbed SSC), incorporating shifting and scaling factors to enable spectral GNNs to adapt to the shifted spectrum. Unlike previous paradigms of leveraging side information, which necessitate tailored designs for diverse data types, SSC directly connects traditional graph collaborative filtering with any graph-structured side information. Experiments on social and multimodal recommendation demonstrate the effectiveness of SSC, achieving relative improvements of up to 23% without incurring any additional computational overhead. 
+
+**Abstract (ZH)**: 图神经网络（GNN）在协同过滤中已经展示了其优越性，其中用户-项目（U-I）交互双图作为基础数据格式。然而，当通过整合图结构的辅助信息（如多模态相似图或社会网络）来扩展U-I双图时，现有的图协同过滤方法无法实现令人满意的性能。我们从谱的角度对这一问题进行了定量分析。回溯到双图的存在谱范围为[-1, 1]，最高频率精确位于-1，最低频率位于1；但随着更多辅助信息的加入，增广的邻接矩阵的最高频率逐渐向右移动。这种谱移现象导致了以前针对[-1, 1]完整谱设计的方法对不同频率分配了不匹配的重要性。为此，我们提出了谱移校正（称为SSC），通过引入移动和缩放因子使谱图神经网络能够适应移位的谱。与以往利用辅助信息的方法不同，这些方法需要根据不同数据类型进行定制设计，而SSC可以直接将传统的图协同过滤方法与任何图结构的辅助信息相连接。通过社会和多模态推荐实验，我们展示了SSC的有效性，不需要增加额外的计算开销即可实现高达23%的相对性能提升。 
+
+---
+# ReTreever: Tree-based Coarse-to-Fine Representations for Retrieval 
+
+**Title (ZH)**: ReTreever：基于树结构的粗细分级表示用于检索 
+
+**Authors**: Shubham Gupta, Zichao Li, Tianyi Chen, Cem Subakan, Siva Reddy, Perouz Taslakian, Valentina Zantedeschi  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.07971)  
+
+**Abstract**: Document retrieval is a core component of question-answering systems, as it enables conditioning answer generation on new and large-scale corpora. While effective, the standard practice of encoding documents into high-dimensional embeddings for similarity search entails large memory and compute footprints, and also makes it hard to inspect the inner workings of the system. In this paper, we propose a tree-based method for organizing and representing reference documents at various granular levels, which offers the flexibility to balance cost and utility, and eases the inspection of the corpus content and retrieval operations. Our method, called ReTreever, jointly learns a routing function per internal node of a binary tree such that query and reference documents are assigned to similar tree branches, hence directly optimizing for retrieval performance. Our evaluations show that ReTreever generally preserves full representation accuracy. Its hierarchical structure further provides strong coarse representations and enhances transparency by indirectly learning meaningful semantic groupings. Among hierarchical retrieval methods, ReTreever achieves the best retrieval accuracy at the lowest latency, proving that this family of techniques can be viable in practical applications. 
+
+**Abstract (ZH)**: 文档检索是问答系统的核心组件之一，因为它使生成答案能够基于新的和大规模的语料库进行调整。尽管有效，但将文档编码为高维嵌入以进行相似性搜索的标准做法导致了巨大的内存和计算需求，并且也使得难以检查系统的内部工作原理。在本文中，我们提出了一种基于树的方法来组织和在不同粒度级别表示参考文档，这种方法提供了在成本和实用性之间权衡的灵活性，并简化了语料库内容和检索操作的检查。我们的方法称为ReTreever，在二叉树的每个内部节点处联合学习路由函数，使得查询和参考文档分配到相似的树分支，从而直接优化检索性能。我们的评估表明，ReTreever通常能够保持完整的表示准确性。其分层结构进一步提供了强大的粗表示能力，并通过间接学习有意义的语义聚类增强了透明度。在分层检索方法中，ReTreever在最低延迟下达到最佳检索准确性，证明了这一类技术在实际应用中是可行的。 
+
+---
+# Composite Sketch+Text Queries for Retrieving Objects with Elusive Names and Complex Interactions 
+
+**Title (ZH)**: 含有难以命名对象和复杂交互的检索中的复合草图+文本查询 
+
+**Authors**: Prajwal Gatti, Kshitij Parikh, Dhriti Prasanna Paul, Manish Gupta, Anand Mishra  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.08438)  
+
+**Abstract**: Non-native speakers with limited vocabulary often struggle to name specific objects despite being able to visualize them, e.g., people outside Australia searching for numbats. Further, users may want to search for such elusive objects with difficult-to-sketch interactions, e.g., numbat digging in the ground. In such common but complex situations, users desire a search interface that accepts composite multimodal queries comprising hand-drawn sketches of difficult-to-name but easy-to-draw objects and text describing difficult-to-sketch but easy-to-verbalize object attributes or interaction with the scene. This novel problem statement distinctly differs from the previously well-researched TBIR (text-based image retrieval) and SBIR (sketch-based image retrieval) problems. To study this under-explored task, we curate a dataset, CSTBIR (Composite Sketch+Text Based Image Retrieval), consisting of approx. 2M queries and 108K natural scene images. Further, as a solution to this problem, we propose a pretrained multimodal transformer-based baseline, STNET (Sketch+Text Network), that uses a hand-drawn sketch to localize relevant objects in the natural scene image, and encodes the text and image to perform image retrieval. In addition to contrastive learning, we propose multiple training objectives that improve the performance of our model. Extensive experiments show that our proposed method outperforms several state-of-the-art retrieval methods for text-only, sketch-only, and composite query modalities. We make the dataset and code available at our project website. 
+
+**Abstract (ZH)**: 非母语使用者由于词汇量有限，常常在能够想象具体物体的情况下，仍然难以命名这些物体，例如澳大利亚以外地区的人们寻找数万蚁骓。此外，用户可能还希望使用难以描绘的交互方式搜索这些难以命名的物体，例如描述数万蚁Truthy在地面上挖掘的动作。在这些常见但复杂的场景中，用户希望能够使用一个接受组合多模态查询的搜索界面，该查询包括难以命名但容易绘制的对象手绘草图和描述难以描绘但易于口头描述的对象属性或与场景的交互。这一新颖的问题表述与之前广泛研究的文本图像检索(TBIR)和草图图像检索(SBIR)问题有明显区别。为了研究这一尚未充分探索的任务，我们创建了一个名为CSTBIR（组合草图+文本基于图像检索）的数据集，包含约200万查询和10.8万自然场景图像。此外，为了解决这一问题，我们提出了一种预训练的多模态变压器基线模型STNET（草图+文本网络），该模型利用手绘草图在自然场景图像中标记相关物体，并将文本和图像编码以执行图像检索。除了对比学习之外，我们还提出了多种训练目标，以提高我们模型的性能。广泛实验表明，我们提出的方法在文本查询、草图查询和组合查询模式下均优于多种最先进的检索方法。我们已在项目网站上发布了该数据集和代码。 
+
+---
+# Model-Free Counterfactual Subset Selection at Scale 
+
+**Title (ZH)**: 无模型驱动的.counterfarefect 子集选择大规模方法 
+
+**Authors**: Minh Hieu Nguyen, Viet Hung Doan, Anh Tuan Nguyen, Jun Jo, Quoc Viet Hung Nguyen  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.08326)  
+
+**Abstract**: Ensuring transparency in AI decision-making requires interpretable explanations, particularly at the instance level. Counterfactual explanations are a powerful tool for this purpose, but existing techniques frequently depend on synthetic examples, introducing biases from unrealistic assumptions, flawed models, or skewed data. Many methods also assume full dataset availability, an impractical constraint in real-time environments where data flows continuously. In contrast, streaming explanations offer adaptive, real-time insights without requiring persistent storage of the entire dataset. This work introduces a scalable, model-free approach to selecting diverse and relevant counterfactual examples directly from observed data. Our algorithm operates efficiently in streaming settings, maintaining $O(\log k)$ update complexity per item while ensuring high-quality counterfactual selection. Empirical evaluations on both real-world and synthetic datasets demonstrate superior performance over baseline methods, with robust behavior even under adversarial conditions. 
+
+**Abstract (ZH)**: 确保人工智能决策的透明性需要可解释的解释，尤其是在实例层面。反事实解释是实现这一目标的强大工具，但现有的技术通常依赖于合成示例，这会引入来自不现实假设、存在缺陷的模型或数据偏斜的偏差。许多方法还假设整个数据集的可用性，而在实时环境中，数据连续流式传输，这是不切实际的限制。相比之下，流式解释能够在无需持久存储整个数据集的情况下提供适应性强的实时洞察。本文提出了一种可扩展、无需模型的算法，可以从观测数据中直接选择多样且相关的反事实示例。该算法在流式设置中高效运行，每项更新的复杂度为$O(\log k)$，同时确保高质量的反事实选择。在现实世界数据集和合成数据集上的实验评估表明，该方法在基线方法上表现出更优的性能，即使在对抗条件下也能提供稳健的行为。 
+
+---
+# Wisdom of the Crowds in Forecasting: Forecast Summarization for Supporting Future Event Prediction 
+
+**Title (ZH)**: 群体的智慧在预测中的应用：预测总结以支持未来事件预测 
+
+**Authors**: Anisha Saha, Adam Jatowt  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.08205)  
+
+**Abstract**: Future Event Prediction (FEP) is an essential activity whose demand and application range across multiple domains. While traditional methods like simulations, predictive and time-series forecasting have demonstrated promising outcomes, their application in forecasting complex events is not entirely reliable due to the inability of numerical data to accurately capture the semantic information related to events. One forecasting way is to gather and aggregate collective opinions on the future to make predictions as cumulative perspectives carry the potential to help estimating the likelihood of upcoming events. In this work, we organize the existing research and frameworks that aim to support future event prediction based on crowd wisdom through aggregating individual forecasts. We discuss the challenges involved, available datasets, as well as the scope of improvement and future research directions for this task. We also introduce a novel data model to represent individual forecast statements. 
+
+**Abstract (ZH)**: 未来事件预测（FEP）是一项重要的活动，其需求和应用范围横跨多个领域。尽管传统方法如模拟、预测和时间序列预测已经展示了令人鼓舞的结果，但在预测复杂事件方面，它们的应用并不完全可靠，因为数值数据无法准确捕捉与事件相关的语义信息。一种预测方法是收集和聚合对未来事件的看法来做出预测，因为累积的观点可能有助于估算即将发生的事件的可能性。在此项研究中，我们组织了旨在通过聚合个人预测来利用群众智慧支持未来事件预测的现有研究和框架。我们讨论了这一任务中面临的挑战、可用的数据集，以及改进范围和未来的研究方向。此外，我们还介绍了一种新的数据模型，用于表示个人预测陈述。 
+
+---
+# Training Sparse Mixture Of Experts Text Embedding Models 
+
+**Title (ZH)**: 训练稀疏专家混合文本嵌入模型 
+
+**Authors**: Zach Nussbaum, Brandon Duderstadt  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.07972)  
+
+**Abstract**: Transformer-based text embedding models have improved their performance on benchmarks like MIRACL and BEIR by increasing their parameter counts. However, this scaling approach introduces significant deployment challenges, including increased inference latency and memory usage. These challenges are particularly severe in retrieval-augmented generation (RAG) applications, where large models' increased memory requirements constrain dataset ingestion capacity, and their higher latency directly impacts query-time performance. While causal language models have addressed similar efficiency challenges using Mixture of Experts (MoE) architectures, this approach hasn't been successfully adapted to the general text embedding setting. In this paper, we introduce Nomic Embed v2, the first general purpose MoE text embedding model. Our model outperforms models in the same parameter class on both monolingual and multilingual benchmarks while also maintaining competitive performance with models twice its size. We open-source all code, models, and evaluation data to ensure full reproducibility of our training pipeline. 
+
+**Abstract (ZH)**: 基于Transformer的文本嵌入模型通过增加参数数量，在MIRACL和BEIR等基准测试中的性能得到了提升。然而，这种扩展方法引入了重要的部署挑战，包括推理延迟和内存使用量的增加。这些挑战在检索增强生成（RAG）应用中尤为严重，其中大型模型的内存需求限制了数据集摄入能力，而更高的延迟也直接影响了查询时的表现。虽然因果语言模型使用混合专家（MoE）架构解决了类似效率挑战，但这一方法尚未成功应用于通用文本嵌入设置中。在本文中，我们引入了Nomic Embed v2，这是首个通用目的的MoE文本嵌入模型。我们的模型在单语和多语基准测试中的性能优于同一参数量级的模型，同时在性能上也达到了两倍参数量模型的竞争水平。我们开源了所有代码、模型和评估数据，以确保训练管道的完全可再现性。 
+
+---

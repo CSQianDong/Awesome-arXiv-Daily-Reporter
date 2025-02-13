@@ -1,0 +1,13 @@
+# Selective Self-to-Supervised Fine-Tuning for Generalization in Large Language Models 
+
+**Title (ZH)**: 面向泛化的大型语言模型选择性自我监督微调 
+
+**Authors**: Sonam Gupta, Yatin Nandwani, Asaf Yehudai, Dinesh Khandelwal, Dinesh Raghu, Sachindra Joshi  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.08130)  
+
+**Abstract**: Fine-tuning Large Language Models (LLMs) on specific datasets is a common practice to improve performance on target tasks. However, this performance gain often leads to overfitting, where the model becomes too specialized in either the task or the characteristics of the training data, resulting in a loss of generalization. This paper introduces Selective Self-to-Supervised Fine-Tuning (S3FT), a fine-tuning approach that achieves better performance than the standard supervised fine-tuning (SFT) while improving generalization. S3FT leverages the existence of multiple valid responses to a query. By utilizing the model's correct responses, S3FT reduces model specialization during the fine-tuning stage. S3FT first identifies the correct model responses from the training set by deploying an appropriate judge. Then, it fine-tunes the model using the correct model responses and the gold response (or its paraphrase) for the remaining samples. The effectiveness of S3FT is demonstrated through experiments on mathematical reasoning, Python programming and reading comprehension tasks. The results show that standard SFT can lead to an average performance drop of up to $4.4$ on multiple benchmarks, such as MMLU and TruthfulQA. In contrast, S3FT reduces this drop by half, i.e. $2.5$, indicating better generalization capabilities than SFT while performing significantly better on the fine-tuning tasks. 
+
+**Abstract (ZH)**: 在特定数据集上微调大型语言模型（LLMs）是一种常见的做法，以提高目标任务上的性能。然而，这种性能提升往往会导致过拟合，使得模型过度专业化于任务或训练数据的特征，从而降低了泛化能力。本文提出了一种选择性自监督微调（S3FT）方法，这种方法在标准监督微调（SFT）的基础上实现了更好的性能，同时提高了泛化能力。S3FT 利用了对查询存在多种有效响应这一事实。通过利用模型的正确响应，S3FT 在微调阶段减少了模型的专业化程度。S3FT 首先通过部署合适的评判标准来识别训练集中的正确模型响应，然后使用这些正确模型响应和对应的标准答案（或其同义表达）对模型进行微调。S3FT 的有效性通过在数学推理、Python 编程和阅读理解任务上的实验得以验证。实验结果显示，标准 SFT 可能会导致在 MMLU 和 TruthfulQA 等多个基准上的平均性能下降高达 $4.4$。相比之下，S3FT 将这一下降幅度减半到 $2.5$，表明 S3FT 不仅具有更好的泛化能力，而且在微调任务上的表现也显著更佳。 
+
+---

@@ -1,0 +1,188 @@
+# Composite Sketch+Text Queries for Retrieving Objects with Elusive Names and Complex Interactions 
+
+**Title (ZH)**: 具有模糊名称和复杂交互的物体检索的复合素描+文本查询方法 
+
+**Authors**: Prajwal Gatti, Kshitij Parikh, Dhriti Prasanna Paul, Manish Gupta, Anand Mishra  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.08438)  
+
+**Abstract**: Non-native speakers with limited vocabulary often struggle to name specific objects despite being able to visualize them, e.g., people outside Australia searching for numbats. Further, users may want to search for such elusive objects with difficult-to-sketch interactions, e.g., numbat digging in the ground. In such common but complex situations, users desire a search interface that accepts composite multimodal queries comprising hand-drawn sketches of difficult-to-name but easy-to-draw objects and text describing difficult-to-sketch but easy-to-verbalize object attributes or interaction with the scene. This novel problem statement distinctly differs from the previously well-researched TBIR (text-based image retrieval) and SBIR (sketch-based image retrieval) problems. To study this under-explored task, we curate a dataset, CSTBIR (Composite Sketch+Text Based Image Retrieval), consisting of approx. 2M queries and 108K natural scene images. Further, as a solution to this problem, we propose a pretrained multimodal transformer-based baseline, STNET (Sketch+Text Network), that uses a hand-drawn sketch to localize relevant objects in the natural scene image, and encodes the text and image to perform image retrieval. In addition to contrastive learning, we propose multiple training objectives that improve the performance of our model. Extensive experiments show that our proposed method outperforms several state-of-the-art retrieval methods for text-only, sketch-only, and composite query modalities. We make the dataset and code available at our project website. 
+
+**Abstract (ZH)**: 非母语使用者由于词汇量有限，尽管能够想象特定物体，但仍可能在命名这些物体时遇到困难，例如澳大利亚以外的人在搜索负鼠。此外，用户可能希望使用难以描绘的交互方式搜索这些难以命名的物体，例如负鼠在地面挖洞。在这些常见但复杂的场景中，用户需要一个接受包含难以命名但易于绘制物体的手绘草图和描述难以描绘但易于口头描述的对象属性或与场景交互的复合多模态查询的搜索界面。这一新颖的问题陈述明显区别于之前已广泛研究的文本基于图像检索（TBIR）和草图基于图像检索（SBIR）问题。为了研究这一未充分探索的任务，我们构建了一个数据集，即CSTBIR（复合手绘草图+文本基于图像检索），包含约200万条查询和10.8万张自然场景图像。此外，为了解决这个问题，我们提出了一个预训练的多模态Transformer基线模型STNET（草图+文本网络），该模型利用手绘草图在自然场景图像中定位相关物体，并通过编码文本和图像来进行图像检索。除了对比学习外，我们还提出了多个训练目标，以提高我们模型的性能。大量实验表明，我们的方法在文本、草图和复合查询模态的检索性能方面均优于多种先进的检索方法。我们已在项目网站上开源了该数据集和代码。 
+
+---
+# Mitigating Hallucinations in Multimodal Spatial Relations through Constraint-Aware Prompting 
+
+**Title (ZH)**: 通过约束意识提示减轻多模态空间关系中的幻觉 
+
+**Authors**: Jiarui Wu, Zhuo Liu, Hangfeng He  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.08317)  
+
+**Abstract**: Spatial relation hallucinations pose a persistent challenge in large vision-language models (LVLMs), leading to generate incorrect predictions about object positions and spatial configurations within an image. To address this issue, we propose a constraint-aware prompting framework designed to reduce spatial relation hallucinations. Specifically, we introduce two types of constraints: (1) bidirectional constraint, which ensures consistency in pairwise object relations, and (2) transitivity constraint, which enforces relational dependence across multiple objects. By incorporating these constraints, LVLMs can produce more spatially coherent and consistent outputs. We evaluate our method on three widely-used spatial relation datasets, demonstrating performance improvements over existing approaches. Additionally, a systematic analysis of various bidirectional relation analysis choices and transitivity reference selections highlights greater possibilities of our methods in incorporating constraints to mitigate spatial relation hallucinations. 
+
+**Abstract (ZH)**: 空间关系幻觉是大型视觉-语言模型（LVLMs）面临的一个持续性的挑战，会导致模型在图像中生成不正确的关于对象位置和空间配置的预测。为应对这一问题，我们提出了一种约束感知的提示框架，旨在减少空间关系幻觉。具体而言，我们引入了两种类型的约束：（1）双向约束，确保成对对象关系的一致性；（2）传递性约束，确保多个对象之间的关系依赖性。通过引入这些约束，LVLMs能够生成更为空间一致且连贯的输出。我们在三个广泛使用的空间关系数据集上评估了我们的方法，证明了相对于现有方法的性能改进。此外，对各种双向关系分析选择和传递性参照选择的系统性分析进一步表明，我们的方法在通过引入约束减轻空间关系幻觉方面具有更大的潜力。 
+
+---
+# What Is That Talk About? A Video-to-Text Summarization Dataset for Scientific Presentations 
+
+**Title (ZH)**: 《那场演讲讲了些什么？：一种面向科学演讲的视频到文本摘要数据集》
+
+这个翻译既保留了原文的含义，又符合学术论文标题的规范。 
+
+**Authors**: Dongqi Liu, Chenxi Whitehouse, Xi Yu, Louis Mahon, Rohit Saxena, Zheng Zhao, Yifu Qiu, Mirella Lapata, Vera Demberg  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.08279)  
+
+**Abstract**: Transforming recorded videos into concise and accurate textual summaries is a growing challenge in multimodal learning. This paper introduces VISTA, a dataset specifically designed for video-to-text summarization in scientific domains. VISTA contains 18,599 recorded AI conference presentations paired with their corresponding paper abstracts. We benchmark the performance of state-of-the-art large models and apply a plan-based framework to better capture the structured nature of abstracts. Both human and automated evaluations confirm that explicit planning enhances summary quality and factual consistency. However, a considerable gap remains between models and human performance, highlighting the challenges of scientific video summarization. 
+
+**Abstract (ZH)**: 将录制的视频转换为简洁准确的文字摘要是多模态学习领域的一个日益增长的挑战。本文介绍了一种名为VISTA的数据集，该数据集专门用于科学领域的视频到文本摘要。VISTA包含18,599个录制的AI会议演讲，每个演讲都配以相应的论文摘要。我们对最先进的大规模模型的性能进行了基准测试，并应用了一种基于计划的框架，以更好地捕捉摘要结构化的特征。人工和自动评估都证实，明确的计划可以提高摘要的质量和事实的一致性。然而，模型与人类性能之间仍然存在较大的差距，这突显了科学视频摘要的挑战。 
+
+---
+# SARChat-Bench-2M: A Multi-Task Vision-Language Benchmark for SAR Image Interpretation 
+
+**Title (ZH)**: SARChat-Bench-2M：一种用于SAR图像解释的多任务视觉-语言基准 
+
+**Authors**: Zhiming Ma, Xiayang Xiao, Sihao Dong, Peidong Wang, HaiPeng Wang, Qingyun Pan  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.08168)  
+
+**Abstract**: In the field of synthetic aperture radar (SAR) remote sensing image interpretation, although Vision language models (VLMs) have made remarkable progress in natural language processing and image understanding, their applications remain limited in professional domains due to insufficient domain expertise. This paper innovatively proposes the first large-scale multimodal dialogue dataset for SAR images, named SARChat-2M, which contains approximately 2 million high-quality image-text pairs, encompasses diverse scenarios with detailed target annotations. This dataset not only supports several key tasks such as visual understanding and object detection tasks, but also has unique innovative aspects: this study develop a visual-language dataset and benchmark for the SAR domain, enabling and evaluating VLMs' capabilities in SAR image interpretation, which provides a paradigmatic framework for constructing multimodal datasets across various remote sensing vertical domains. Through experiments on 16 mainstream VLMs, the effectiveness of the dataset has been fully verified, and the first multi-task dialogue benchmark in the SAR field has been successfully established. The project will be released at this https URL, aiming to promote the in-depth development and wide application of SAR visual language models. 
+
+**Abstract (ZH)**: 在合成孔径雷达（SAR）遥感图像解释领域，尽管视觉语言模型（VLMs）在自然语言处理和图像理解方面取得了显著进展，但在专业领域中的应用仍受到领域专业知识不足的限制。本文创新性地提出了首个大规模多模态对话数据集SARChat-2M，包含约200万高质量的图像-文本对，并涵盖了多种包含详细目标标注的场景。该数据集不仅支持视觉理解、目标检测等关键技术任务，还具有独特的创新之处：本研究开发了SAR领域的视觉语言数据集及基准测试，以评估和验证VLMs在SAR图像解释中的能力，提供了一个跨越各类遥感垂直领域的多模态数据集构建范式。通过16个主流VLMs的实验验证了该数据集的有效性，并成功建立了首个SAR领域的多任务对话基准。该项目将在以下网址发布：https://github.com/alibaba/SARChat-2M，旨在促进SAR视觉语言模型的深入发展和广泛应用。 
+
+---
+# mmE5: Improving Multimodal Multilingual Embeddings via High-quality Synthetic Data 
+
+**Title (ZH)**: mmE5：通过高质量合成数据改善多模态多语言嵌入 
+
+**Authors**: Haonan Chen, Liang Wang, Nan Yang, Yutao Zhu, Ziliang Zhao, Furu Wei, Zhicheng Dou  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.08468)  
+
+**Abstract**: Multimodal embedding models have gained significant attention for their ability to map data from different modalities, such as text and images, into a unified representation space. However, the limited labeled multimodal data often hinders embedding performance. Recent approaches have leveraged data synthesis to address this problem, yet the quality of synthetic data remains a critical bottleneck. In this work, we identify three criteria for high-quality synthetic multimodal data. First, broad scope ensures that the generated data covers diverse tasks and modalities, making it applicable to various downstream scenarios. Second, robust cross-modal alignment makes different modalities semantically consistent. Third, high fidelity ensures that the synthetic data maintains realistic details to enhance its reliability. Guided by these principles, we synthesize datasets that: (1) cover a wide range of tasks, modality combinations, and languages, (2) are generated via a deep thinking process within a single pass of a multimodal large language model, and (3) incorporate real-world images with accurate and relevant texts, ensuring fidelity through self-evaluation and refinement. Leveraging these high-quality synthetic and labeled datasets, we train a multimodal multilingual E5 model mmE5. Extensive experiments demonstrate that mmE5 achieves state-of-the-art performance on the MMEB Benchmark and superior multilingual performance on the XTD benchmark. Our codes, datasets and models are released in this https URL. 
+
+**Abstract (ZH)**: 多模态嵌入模型因其能够将不同模态的数据（如文本和图像）映射到统一表示空间的能力而引起了广泛关注。然而，有限的标注多模态数据往往限制了嵌入性能。最近的方法利用数据合成来应对这一问题，但合成数据的质量仍然是一个关键瓶颈。在本文中，我们确定了高质量合成多模态数据的三个标准。首先，广泛的覆盖面确保生成的数据涵盖了多种任务和模态，使其适用于各种下游场景。其次，稳健的跨模态对齐使得不同模态在语义上保持一致。第三，高保真度确保合成数据保留真实细节，以增强其可靠性。受到这些原则的指导，我们合成的数据集具备以下特点：（1）覆盖广泛的任务、模态组合和语言；（2）通过单一进程中大型多模态语言模型的深度思考过程生成；（3）包含与准确和相关文本相结合的现实世界图像，并通过自我评估和修正确保保真度。利用这些高质量的合成和标注数据集，我们训练了一个多模态多语言E5模型mmE5。广泛的实验证明，mmE5在MMEB基准测试中达到了最先进的性能，并且在XTD基准测试中的多语言性能优越。我们的代码、数据集和模型已在以下网址发布：[[链接]]。 
+
+---
+# Vision-Language Models for Edge Networks: A Comprehensive Survey 
+
+**Title (ZH)**: 面向边缘网络的视觉-语言模型：一项全面的综述 
+
+**Authors**: Ahmed Sharshar, Latif U. Khan, Waseem Ullah, Mohsen Guizani  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.07855)  
+
+**Abstract**: Vision Large Language Models (VLMs) combine visual understanding with natural language processing, enabling tasks like image captioning, visual question answering, and video analysis. While VLMs show impressive capabilities across domains such as autonomous vehicles, smart surveillance, and healthcare, their deployment on resource-constrained edge devices remains challenging due to processing power, memory, and energy limitations. This survey explores recent advancements in optimizing VLMs for edge environments, focusing on model compression techniques, including pruning, quantization, knowledge distillation, and specialized hardware solutions that enhance efficiency. We provide a detailed discussion of efficient training and fine-tuning methods, edge deployment challenges, and privacy considerations. Additionally, we discuss the diverse applications of lightweight VLMs across healthcare, environmental monitoring, and autonomous systems, illustrating their growing impact. By highlighting key design strategies, current challenges, and offering recommendations for future directions, this survey aims to inspire further research into the practical deployment of VLMs, ultimately making advanced AI accessible in resource-limited settings. 
+
+**Abstract (ZH)**: 视觉大型语言模型（VLMs）结合了视觉理解和自然语言处理能力，能够实现图像描述、视觉问答和视频分析等任务。尽管VLMs在包括自动驾驶车辆、智能监控和医疗保健在内的多个领域展现了令人印象深刻的性能，但在计算资源受限的边缘设备上的部署仍然面临挑战，原因包括处理能力、内存和能源限制。本文综述了近期在优化VLMs以适应边缘环境方面的进展，重点关注模型压缩技术，包括剪枝、量化、知识蒸馏以及专用硬件解决方案，这些方法能够提升效率。我们详细讨论了高效的训练和微调方法、边缘部署挑战以及隐私问题。此外，本文还讨论了轻量级VLMs在医疗保健、环境监测和自主系统等领域的多样化应用，展示了它们日益增长的影响。通过突出关键设计策略、当前挑战，并提出未来方向的建议，本文旨在激发进一步研究VLMs的实际部署问题，最终使先进的AI技术在资源受限的环境中更加普及。 
+
+---
+# Universal Adversarial Attack on Aligned Multimodal LLMs 
+
+**Title (ZH)**: 面向对齐多模态LLM的通用对抗攻击 
+
+**Authors**: Temurbek Rahmatullaev, Polina Druzhinina, Matvey Mikhalchuk, Andrey Kuznetsov, Anton Razzhigaev  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.07987)  
+
+**Abstract**: We propose a universal adversarial attack on multimodal Large Language Models (LLMs) that leverages a single optimized image to override alignment safeguards across diverse queries and even multiple models. By backpropagating through the vision encoder and language head, we craft a synthetic image that forces the model to respond with a targeted phrase (e.g., ''Sure, here it is'') or otherwise unsafe content-even for harmful prompts. In experiments on the SafeBench benchmark, our method achieves significantly higher attack success rates than existing baselines, including text-only universal prompts (e.g., up to 93% on certain models). We further demonstrate cross-model transferability by training on several multimodal LLMs simultaneously and testing on unseen architectures. Additionally, a multi-answer variant of our approach produces more natural-sounding (yet still malicious) responses. These findings underscore critical vulnerabilities in current multimodal alignment and call for more robust adversarial defenses. We will release code and datasets under the Apache-2.0 license. Warning: some content generated by Multimodal LLMs in this paper may be offensive to some readers. 
+
+**Abstract (ZH)**: 我们提出了一个针对多模态大型语言模型（LLMs）的通用对抗攻击方法，该方法利用单一优化过的图像来覆盖跨多种查询乃至不同模型的安全对齐保护措施。通过反向传播通过视觉编码器和语言头，我们生成一个合成图像，迫使模型以目标短语（例如，“当然，这就是它”）或不安全的内容（即使对于有害的提示也是如此）作出回应。在SafeBench基准测试中，我们的方法在某些模型上的攻击成功率远高于现有基线方法（例如，最高可达93%）。我们还通过同时训练几种多模态LLMs并在未见过的架构上进行测试，展示了跨模型的转移能力。此外，我们方法的多答案变体产生了更加自然但仍然具有恶意性质的回答。这些发现揭示了当前多模态对齐中的关键漏洞，并呼吁开发更加稳健的对抗性防御措施。我们将按照Apache-2.0许可证发布代码和数据集。请注意：本文中由多模态LLMs生成的一些内容可能对某些读者具有冒犯性。 
+
+---
+# Intrinsic Bias is Predicted by Pretraining Data and Correlates with Downstream Performance in Vision-Language Encoders 
+
+**Title (ZH)**: 固有偏差由预训练数据决定，并与视觉-语言编码器的下游性能相关 
+
+**Authors**: Kshitish Ghate, Isaac Slaughter, Kyra Wilson, Mona Diab, Aylin Caliskan  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.07957)  
+
+**Abstract**: While recent work has found that vision-language models trained under the Contrastive Language Image Pre-training (CLIP) framework contain intrinsic social biases, the extent to which different upstream pre-training features of the framework relate to these biases, and hence how intrinsic bias and downstream performance are connected has been unclear. In this work, we present the largest comprehensive analysis to-date of how the upstream pre-training factors and downstream performance of CLIP models relate to their intrinsic biases. Studying 131 unique CLIP models, trained on 26 datasets, using 55 architectures, and in a variety of sizes, we evaluate bias in each model using 26 well-established unimodal and cross-modal principled Embedding Association Tests. We find that the choice of pre-training dataset is the most significant upstream predictor of bias, whereas architectural variations have minimal impact. Additionally, datasets curated using sophisticated filtering techniques aimed at enhancing downstream model performance tend to be associated with higher levels of intrinsic bias. Finally, we observe that intrinsic bias is often significantly correlated with downstream performance ($0.3 \leq r \leq 0.8$), suggesting that models optimized for performance inadvertently learn to amplify representational biases. Comparisons between unimodal and cross-modal association tests reveal that social group bias depends heavily on the modality. Our findings imply that more sophisticated strategies are needed to address intrinsic model bias for vision-language models across the entire model development pipeline. 
+
+**Abstract (ZH)**: 尽管近年来的研究发现了在Contrastive Language-Image Pre-training (CLIP)框架下训练的视觉语言模型内部固有的社会偏见，但这些模型上游预训练特征与其偏见之间的关系以及内部偏见与下游性能之间的联系仍然不清楚。在本研究中，我们进行了迄今为止最全面的分析，探讨CLIP模型的上游预训练因素与其内部偏见以及下游性能之间的关系。通过对131个独特构建的CLIP模型进行研究，这些模型基于26个数据集、55种架构，具有多种规模进行训练，我们使用26种公认的单模态和跨模态原则嵌入关联测试来评估每个模型的偏见。我们发现，预训练数据集的选择是最显著的上游偏见预测因子，而架构变化的影响则较小。此外，采用复杂筛选技术编制的旨在提升下游模型性能的数据集往往会与更高的内部偏见水平相关。最后，我们观察到，内部偏见与下游性能之间存在显著的相关性（0.3 ≤ r ≤ 0.8），表明优化性能的模型无意中学会了强化表示性偏见。单模态与跨模态关联测试之间的对比表明，社会群体偏见高度依赖于模态。我们的研究结果表明，需要更复杂的策略来解决视觉语言模型在完整模型开发管线中内在的偏见问题。 
+
+---
+# A Novel Approach to for Multimodal Emotion Recognition : Multimodal semantic information fusion 
+
+**Title (ZH)**: 一种新颖的多模态情感识别方法：多模态语义信息融合 
+
+**Authors**: Wei Dai, Dequan Zheng, Feng Yu, Yanrong Zhang, Yaohui Hou  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.08573)  
+
+**Abstract**: With the advancement of artificial intelligence and computer vision technologies, multimodal emotion recognition has become a prominent research topic. However, existing methods face challenges such as heterogeneous data fusion and the effective utilization of modality correlations. This paper proposes a novel multimodal emotion recognition approach, DeepMSI-MER, based on the integration of contrastive learning and visual sequence compression. The proposed method enhances cross-modal feature fusion through contrastive learning and reduces redundancy in the visual modality by leveraging visual sequence compression. Experimental results on two public datasets, IEMOCAP and MELD, demonstrate that DeepMSI-MER significantly improves the accuracy and robustness of emotion recognition, validating the effectiveness of multimodal feature fusion and the proposed approach. 
+
+**Abstract (ZH)**: 随着人工智能和计算机视觉技术的进步，多模态情绪识别已成为一个突出的研究课题。然而，现有方法在异质数据融合和有效利用模态相关性方面仍面临挑战。本文提出了一种基于对比学习和视觉序列压缩结合的新颖多模态情绪识别方法，名为DeepMSI-MER。该方法通过对比学习增强跨模态特征融合，并通过利用视觉序列压缩减少视觉模态中的冗余信息。在两个公开数据集IEMOCAP和MELD上的实验结果表明，DeepMSI-MER 显著提高了情绪识别的准确性和鲁棒性，验证了多模态特征融合的有效性和所提出方法的有效性。 
+
+---
+# Human-Centric Foundation Models: Perception, Generation and Agentic Modeling 
+
+**Title (ZH)**: 以人为本的基石模型：感知、生成与自主建模 
+
+**Authors**: Shixiang Tang, Yizhou Wang, Lu Chen, Yuan Wang, Sida Peng, Dan Xu, Wanli Ouyang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.08556)  
+
+**Abstract**: Human understanding and generation are critical for modeling digital humans and humanoid embodiments. Recently, Human-centric Foundation Models (HcFMs) inspired by the success of generalist models, such as large language and vision models, have emerged to unify diverse human-centric tasks into a single framework, surpassing traditional task-specific approaches. In this survey, we present a comprehensive overview of HcFMs by proposing a taxonomy that categorizes current approaches into four groups: (1) Human-centric Perception Foundation Models that capture fine-grained features for multi-modal 2D and 3D understanding. (2) Human-centric AIGC Foundation Models that generate high-fidelity, diverse human-related content. (3) Unified Perception and Generation Models that integrate these capabilities to enhance both human understanding and synthesis. (4) Human-centric Agentic Foundation Models that extend beyond perception and generation to learn human-like intelligence and interactive behaviors for humanoid embodied tasks. We review state-of-the-art techniques, discuss emerging challenges and future research directions. This survey aims to serve as a roadmap for researchers and practitioners working towards more robust, versatile, and intelligent digital human and embodiments modeling. 
+
+**Abstract (ZH)**: 人类的理解与生成对于建模数字化人类和类人形态至关重要。近期，以通用模型的成功为 inspir 基Human-centric Foundation Models (HcFMs) 已经兴起，这些模型借鉴了大型语言和视觉模型等通用模型的成功，旨在将多种与人类相关的任务统一到一个框架中，超越了传统的面向特定任务的方法。在本文综述中，我们通过提出一个分类来全面概述 HcFMs，将其分为四类：（1）人类中心感知基础模型，用于捕捉多模态2D 和 3D 的细粒度特征。 （2）人类中心生成式基础模型，生成高质量、多样化的与人类相关的内容。 （3）统一感知与生成模型，整合这些能力以增强对人类的理解和合成。 （4）人类中心代理人基础模型，超越感知和生成，学习类似人类的智能和交互行为，以适应类人形态任务。我们回顾了最先进的技术，讨论了新兴挑战和未来的研究方向。本文综述旨在为致力于更稳健、多功能和智能的数字化人类及形态建模的研究人员和实践者提供一条路线图。 
+
+---
+# CordViP: Correspondence-based Visuomotor Policy for Dexterous Manipulation in Real-World 
+
+**Title (ZH)**: CordViP：基于对应关系的视听运动策略用于实际环境中的精确操作 
+
+**Authors**: Yankai Fu, Qiuxuan Feng, Ning Chen, Zichen Zhou, Mengzhen Liu, Mingdong Wu, Tianxing Chen, Shanyu Rong, Jiaming Liu, Hao Dong, Shanghang Zhang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.08449)  
+
+**Abstract**: Achieving human-level dexterity in robots is a key objective in the field of robotic manipulation. Recent advancements in 3D-based imitation learning have shown promising results, providing an effective pathway to achieve this goal. However, obtaining high-quality 3D representations presents two key problems: (1) the quality of point clouds captured by a single-view camera is significantly affected by factors such as camera resolution, positioning, and occlusions caused by the dexterous hand; (2) the global point clouds lack crucial contact information and spatial correspondences, which are necessary for fine-grained dexterous manipulation tasks. To eliminate these limitations, we propose CordViP, a novel framework that constructs and learns correspondences by leveraging the robust 6D pose estimation of objects and robot proprioception. Specifically, we first introduce the interaction-aware point clouds, which establish correspondences between the object and the hand. These point clouds are then used for our pre-training policy, where we also incorporate object-centric contact maps and hand-arm coordination information, effectively capturing both spatial and temporal dynamics. Our method demonstrates exceptional dexterous manipulation capabilities with an average success rate of 90\% in four real-world tasks, surpassing other baselines by a large margin. Experimental results also highlight the superior generalization and robustness of CordViP to different objects, viewpoints, and scenarios. Code and videos are available on this https URL. 
+
+**Abstract (ZH)**: 在机器人操作领域，实现与人类相当的灵巧性是一个主要目标。最近基于3D的模仿学习进展展示了积极的结果，提供了一条有效的途径来实现这一目标。然而，获取高质量的3D表示存在两个关键问题：（1）单视角相机捕捉的点云质量受到相机分辨率、定位以及灵巧手造成的遮挡等因素的显著影响；（2）全局点云缺乏关键的接触信息和空间对应关系，这些对于精细的灵巧操作任务是必需的。为了解决这些问题，我们提出了CordViP，一种新颖的框架，通过利用物体和机器人本体感受的鲁棒6D姿态估计来建立和学习对应关系。具体来说，我们首先引入了交互感知点云，这些点云在物体和手之间建立了对应关系。接着，这些点云用于我们的预训练策略，其中我们还结合了以物体为中心的接触地图和手-臂协调信息，有效地捕捉了空间和时间动态。我们的方法在四项实际任务中展示了出色的灵巧操作能力，平均成功率达到了90%，大幅超越其他基线方法。实验结果还突出了CordViP在不同物体、视角和场景下的优越泛化能力和鲁棒性。代码和视频可在以下链接获得：https://... 
+
+---
+# Quality over Quantity: Boosting Data Efficiency Through Ensembled Multimodal Data Curation 
+
+**Title (ZH)**: 质胜于量：通过集成多模态数据整理提升数据效率 
+
+**Authors**: Jinda Xu, Yuhao Song, Daming Wang, Weiwei Zhao, Minghua Chen, Kangliang Chen, Qinya Li  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.08211)  
+
+**Abstract**: In an era overwhelmed by vast amounts of data, the effective curation of web-crawl datasets is essential for optimizing model performance. This paper tackles the challenges associated with the unstructured and heterogeneous nature of such datasets. Traditional heuristic curation methods often inadequately capture complex features, resulting in biases and the exclusion of relevant data. We introduce an advanced, learning-driven approach, Ensemble Curation Of DAta ThroUgh Multimodal Operators (EcoDatum), incorporating a novel quality-guided deduplication method to ensure balanced feature distributions. EcoDatum strategically integrates various unimodal and multimodal data curation operators within a weak supervision ensemble framework, utilizing automated optimization to score each data point effectively. EcoDatum, which significantly improves the data curation quality and efficiency, outperforms existing state-of-the-art (SOTA) techniques, ranked 1st on the DataComp leaderboard, with an average performance score of 0.182 across 38 diverse evaluation datasets. This represents a 28% improvement over the DataComp baseline method, demonstrating its effectiveness in improving dataset curation and model training efficiency. 
+
+**Abstract (ZH)**: 在数据泛滥的时代，有效管理网络抓取数据集对于优化模型性能至关重要。本论文针对此类数据集的无序和异质性带来的挑战进行了探讨。传统的启发式数据管理方法往往无法充分捕捉到复杂特征，导致了偏见以及相关数据的排除。我们提出了一种先进的、以学习为导向的方法——多模态操作下的数据集成管理（EcoDatum），该方法融合了一个新颖的质量导向去重方法，以确保特征分布的均衡。EcoDatum 战略性地将多种单模态和多模态数据管理操作器融合在一个弱监督集成框架中，利用自动化优化来有效地对每个数据点进行评分。EcoDatum 显著提高了数据管理的质量和效率，并在其处理的38个不同评价数据集上的平均性能得分为0.182，超过了现有最先进的技术，排名DataComp领览榜第一。这比DataComp基准方法提高了28%的性能，证明了其在提高数据集管理和模型训练效率方面的有效性。 
+
+---
+# ADMN: A Layer-Wise Adaptive Multimodal Network for Dynamic Input Noise and Compute Resources 
+
+**Title (ZH)**: ADMN：一种适应层的多模态网络，用于动态输入噪声和计算资源调整 
+
+**Authors**: Jason Wu, Kang Yang, Lance Kaplan, Mani Srivastava  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.07862)  
+
+**Abstract**: Multimodal deep learning systems are deployed in dynamic scenarios due to the robustness afforded by multiple sensing modalities. Nevertheless, they struggle with varying compute resource availability (due to multi-tenancy, device heterogeneity, etc.) and fluctuating quality of inputs (from sensor feed corruption, environmental noise, etc.). Current multimodal systems employ static resource provisioning and cannot easily adapt when compute resources change over time. Additionally, their reliance on processing sensor data with fixed feature extractors is ill-equipped to handle variations in modality quality. Consequently, uninformative modalities, such as those with high noise, needlessly consume resources better allocated towards other modalities. We propose ADMN, a layer-wise Adaptive Depth Multimodal Network capable of tackling both challenges - it adjusts the total number of active layers across all modalities to meet compute resource constraints, and continually reallocates layers across input modalities according to their modality quality. Our evaluations showcase ADMN can match the accuracy of state-of-the-art networks while reducing up to 75% of their floating-point operations. 
+
+**Abstract (ZH)**: 多模态深度学习系统在多传感器模态提供的鲁棒性支持下，被部署在动态场景中。然而，它们在计算资源可用性（由于多租户、设备异构性等）和输入质量（来自传感器数据污染、环境噪声等）波动方面存在挑战。当前的多模态系统采用静态资源配置，无法适应该计算资源随时间变化的需求。此外，它们依赖于使用固定特征提取器处理传感器数据，难以应对模态质量的变化。因此，一些无信息性模态（如噪声较高的模态）无谓地消耗了本应分配给其他模态的资源。我们提出了一种分层自适应深度多模态网络（ADMN），能够同时应对这两种挑战：它可以根据计算资源约束调整所有模态中活跃层的总数，并根据各模态的质量不断重新分配输入模态中的层。我们的评估结果显示，ADMN 可以达到最先进的网络的精度，同时最多可减少75%的浮点运算。 
+
+---
+# NanoVLMs: How small can we go and still make coherent Vision Language Models? 
+
+**Title (ZH)**: 纳米级VLMs：我们能将其缩小到什么程度，仍然能够构建出连贯的视觉语言模型？ 
+
+**Authors**: Mukund Agarwalla, Himanshu Kumar, Raj Dandekar, Rajat Dandekar, Sreedath Panat  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.07838)  
+
+**Abstract**: Vision-Language Models (VLMs), such as GPT-4V and Llama 3.2 vision, have garnered significant research attention for their ability to leverage Large Language Models (LLMs) in multimodal tasks. However, their potential is constrained by inherent challenges, including proprietary restrictions, substantial computational demands, and limited accessibility. Smaller models, such as GIT and BLIP, exhibit marked limitations, often failing to generate coherent and consistent text beyond a few tokens, even with extensive training. This underscores a pivotal inquiry: how small can a VLM be and still produce fluent and consistent text? Drawing inspiration from the exceptional learning process of 3-4 year old children, who rely heavily on visual cues for understanding and communication, we introduce two novel datasets: ShortDesc (featuring concise image descriptions) and LongDesc (containing more detailed image descriptions). These datasets consist of image-text pairs where the text is restricted to the simple vocabulary and syntax typically used by young children, generated with a scaled- down model, GPT-4o. Using these datasets, we demonstrate that it is possible to train VLMs that are significantly smaller, up to 10 times smaller than state of the art(SOTA) small VLMs while maintaining architectural simplicity. To evaluate the outputs, we leverage GPT-4o to grade the text, as if stories written by students, on creativity, meaningfulness, and consistency, assigning scores out of 10. This method addresses limitations of standard benchmarks by accommodating unstructured outputs and providing a multidimensional evaluation of the model capabilities. Our findings contribute to the development of lightweight, accessible multimodal models for resource constrained environments. 
+
+**Abstract (ZH)**: 视觉-语言模型（VLMs），如GPT-4V和Llama 3.2视觉模型，因其能够利用大型语言模型（LLMs）进行多模态任务而引起了广泛关注。然而，这些模型的潜能受到内在挑战的限制，包括专有性限制、巨大的计算需求以及有限的可访问性。小型模型，如GIT和BLIP，表现出明显的局限性，即便经过大量训练，也往往无法生成连贯和一致的文本超过几个词。这突显了一个关键问题：VLM能小到什么程度仍然能够产生流利和一致的文本？
+
+受到3-4岁儿童卓越学习过程的启发，这些孩子依赖视觉线索来进行理解和交流，我们引入了两个新的数据集：ShortDesc（简洁的图像描述）和LongDesc（详细的图像描述）。这些数据集包含图像-文本对，其中文本仅限于儿童常用的简单词汇和语法，使用缩放后的模型GPT-4o生成。利用这些数据集，我们证明了可以训练出比现有最先进的（SOTA）小型VLM小10倍以上的模型，同时保持架构的简洁性。
+
+为了评估输出结果，我们使用GPT-4o对文本进行评分，仿佛是学生所写的故事，评估其在创意性、意义性和一致性等方面的评分，满分10分。这种评估方法弥补了标准基准的局限性，能够容纳非结构化的输出，并从多维度评估模型的能力。我们的发现为在资源受限环境中开发轻量级和易获取的多模态模型做出了贡献。 
+
+---
