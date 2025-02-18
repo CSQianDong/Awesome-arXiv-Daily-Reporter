@@ -1,0 +1,242 @@
+# Cognitive-Aligned Document Selection for Retrieval-augmented Generation 
+
+**Title (ZH)**: 认知对齐的文档选择用于检索增强生成 
+
+**Authors**: Bingyu Wan, Fuxi Zhang, Zhongpeng Qi, Jiayi Ding, Jijun Li, Baoshi Fan, Yijia Zhang, Jun Zhang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.11770)  
+
+**Abstract**: Large language models (LLMs) inherently display hallucinations since the precision of generated texts cannot be guaranteed purely by the parametric knowledge they include. Although retrieval-augmented generation (RAG) systems enhance the accuracy and reliability of generative models by incorporating external documents, these retrieved documents often fail to adequately support the model's responses in practical applications. To address this issue, we propose GGatrieval (Fine-\textbf{G}rained \textbf{G}rounded \textbf{A}lignment Re\textbf{trieval} for verifiable generation), which leverages an LLM to dynamically update queries and filter high-quality, reliable retrieval documents. Specifically, we parse the user query into its syntactic components and perform fine-grained grounded alignment with the retrieved documents. For query components that cannot be individually aligned, we propose a dynamic semantic compensation mechanism that iteratively refines and rewrites the query while continuously updating the retrieval results. This iterative process continues until the retrieved documents sufficiently support the query's response. Our approach introduces a novel criterion for filtering retrieved documents, closely emulating human strategies for acquiring targeted information. This ensures that the retrieved content effectively supports and verifies the generated outputs. On the ALCE benchmark, our method significantly surpasses a wide range of baselines, achieving state-of-the-art performance. 
+
+**Abstract (ZH)**: 大规模语言模型（LLMs）固有地表现出幻觉现象，因为生成的文本精确度无法仅通过它们所包含的参数化知识来完全保证。尽管检索增强生成（RAG）系统通过引入外部文档来提高生成模型的准确性和可靠性，但在实际应用中，这些检索到的文档往往无法充分支持模型的响应。为了解决这一问题，我们提出了GGatrieval（细粒度、基于证据的检索以实现可验证生成），其利用LLM动态更新查询并筛选高质量、可靠的检索文档。具体来说，我们将用户查询解析为语法组件，并与检索到的文档进行细粒度的对齐。对于无法单独对齐的查询组件，我们提出了一种动态语义补偿机制，该机制会迭代地细化并重写查询，同时不断更新检索结果。这一迭代过程将持续到检索到的文档能够充分支持查询的响应为止。我们的方法引入了一种新的检索文档筛选标准，使其紧密模拟了人类获取目标信息的策略。这确保了检索内容能够有效地支持和验证生成的输出。在ALCE基准测试中，我们的方法显著超越了多种基线方法，达到了最先进的性能。 
+
+---
+# NavRAG: Generating User Demand Instructions for Embodied Navigation through Retrieval-Augmented LLM 
+
+**Title (ZH)**: NavRAG：通过检索增强的大语言模型生成用户导向的实体导航指令 
+
+**Authors**: Zihan Wang, Yaohui Zhu, Gim Hee Lee, Yachun Fan  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.11142)  
+
+**Abstract**: Vision-and-Language Navigation (VLN) is an essential skill for embodied agents, allowing them to navigate in 3D environments following natural language instructions. High-performance navigation models require a large amount of training data, the high cost of manually annotating data has seriously hindered this field. Therefore, some previous methods translate trajectory videos into step-by-step instructions for expanding data, but such instructions do not match well with users' communication styles that briefly describe destinations or state specific needs. Moreover, local navigation trajectories overlook global context and high-level task planning. To address these issues, we propose NavRAG, a retrieval-augmented generation (RAG) framework that generates user demand instructions for VLN. NavRAG leverages LLM to build a hierarchical scene description tree for 3D scene understanding from global layout to local details, then simulates various user roles with specific demands to retrieve from the scene tree, generating diverse instructions with LLM. We annotate over 2 million navigation instructions across 861 scenes and evaluate the data quality and navigation performance of trained models. 
+
+**Abstract (ZH)**: 视觉-语言导航（VLN）是具身代理的一项基本技能，允许它们遵循自然语言指令在3D环境中导航。高性能的导航模型需要大量的训练数据，手动标注数据的高昂成本严重阻碍了这一领域的进展。因此，一些先前的方法将轨迹视频转换为分步骤的指令以扩充数据集，但这些指令并不符合用户的交流风格，用户往往只是简要描述目的地或提出特定需求。此外，局部导航轨迹忽略了全局上下文和高层次的任务规划。为了应对这些挑战，我们提出了一种检索增强生成（RAG）框架NavRAG，该框架用于为VLN生成用户需求指令。NavRAG利用大语言模型（LLM）构建一个分层场景描述树，从全局布局到局部细节进行3D场景理解，然后模拟具有不同需求的多种用户角色，从场景树中检索信息，生成多种多样的指令。我们对超过200万条导航指令进行了标注，覆盖了861个场景，并评估了训练模型的数据质量和导航性能。 
+
+---
+# Fast or Better? Balancing Accuracy and Cost in Retrieval-Augmented Generation with Flexible User Control 
+
+**Title (ZH)**: 快速还是更好？在具有灵活用户控制的检索增强生成中权衡准确性和成本 
+
+**Authors**: Jinyan Su, Jennifer Healey, Preslav Nakov, Claire Cardie  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.12145)  
+
+**Abstract**: Retrieval-Augmented Generation (RAG) has emerged as a powerful approach to mitigate large language model (LLM) hallucinations by incorporating external knowledge retrieval. However, existing RAG frameworks often apply retrieval indiscriminately,leading to inefficiencies-over-retrieving when unnecessary or failing to retrieve iteratively when required for complex reasoning. Recent adaptive retrieval strategies, though adaptively navigates these retrieval strategies, predict only based on query complexity and lacks user-driven flexibility, making them infeasible for diverse user application needs. In this paper, we introduce a novel user-controllable RAG framework that enables dynamic adjustment of the accuracy-cost trade-off. Our approach leverages two classifiers: one trained to prioritize accuracy and another to prioritize retrieval efficiency. Via an interpretable control parameter $\alpha$, users can seamlessly navigate between minimal-cost retrieval and high-accuracy retrieval based on their specific requirements. We empirically demonstrate that our approach effectively balances accuracy, retrieval cost, and user controllability, making it a practical and adaptable solution for real-world applications. 
+
+**Abstract (ZH)**: 检索增强生成（RAG）作为一种通过引入外部知识检索来减轻大型语言模型（LLM）幻觉的方法，已经逐渐成为一项强有力的技术。然而，现有的RAG框架通常不分青红皂白地进行检索，导致在不需要检索时过度检索，在需要进行复杂推理时又无法进行迭代检索。最近的自适应检索策略虽然能够在一定程度上适应这些检索策略，但仅基于查询复杂性进行预测，缺乏用户驱动的灵活性，无法满足多样化的用户应用需求。在本文中，我们提出了一种新型的用户可控的RAG框架，能够动态调整准确性和成本之间的权衡关系。该方法利用了两个分类器：一个用于优先考虑准确性，另一个用于优先考虑检索效率。通过一个可解释的控制参数 $\alpha$，用户可以根据自身的具体需求，在低成本检索和高准确度检索之间无缝切换。我们通过实验证明，我们的方法能够有效平衡准确率、检索成本和用户可控性，成为一种实用且具有适应性的现实应用解决方案。 
+
+---
+# Vendi-RAG: Adaptively Trading-Off Diversity And Quality Significantly Improves Retrieval Augmented Generation With LLMs 
+
+**Title (ZH)**: Vendi-RAG：适当地权衡多样性和质量显著改进了大规模语言模型增强生成 retrieval-augmented generation方法 
+
+**Authors**: Mohammad Reza Rezaei, Adji Bousso Dieng  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.11228)  
+
+**Abstract**: Retrieval-augmented generation (RAG) enhances large language models (LLMs) for domain-specific question-answering (QA) tasks by leveraging external knowledge sources. However, traditional RAG systems primarily focus on relevance-based retrieval and often struggle with redundancy, especially when reasoning requires connecting information from multiple sources. This paper introduces Vendi-RAG, a framework based on an iterative process that jointly optimizes retrieval diversity and answer quality. This joint optimization leads to significantly higher accuracy for multi-hop QA tasks. Vendi-RAG leverages the Vendi Score (VS), a flexible similarity-based diversity metric, to promote semantic diversity in document retrieval. It then uses an LLM judge that evaluates candidate answers, generated after a reasoning step, and outputs a score that the retriever uses to balance relevance and diversity among the retrieved documents during each iteration. Experiments on three challenging datasets -- HotpotQA, MuSiQue, and 2WikiMultiHopQA -- demonstrate Vendi-RAG's effectiveness in multi-hop reasoning tasks. The framework achieves significant accuracy improvements over traditional single-step and multi-step RAG approaches, with accuracy increases reaching up to +4.2% on HotpotQA, +4.1% on 2WikiMultiHopQA, and +1.3% on MuSiQue compared to Adaptive-RAG, the current best baseline. The benefits of Vendi-RAG are even more pronounced as the number of retrieved documents increases. Finally, we evaluated Vendi-RAG across different LLM backbones, including GPT-3.5, GPT-4, and GPT-4o-mini, and observed consistent improvements, demonstrating that the framework's advantages are model-agnostic. 
+
+**Abstract (ZH)**: 检索增强生成（RAG）通过利用外部知识源提升了大型语言模型（LLMs）在特定领域问题求解（QA）任务中的性能。然而，传统RAG系统主要侧重于相关性检索，往往在多源信息连接推理时难以避免冗余。本文介绍了一种名为Vendi-RAG的框架，该框架基于迭代过程，同时优化检索多样性和答案质量。这种联合优化能够显著提高多跳QA任务的准确性。Vendi-RAG利用Vendi评分（VS），这是一种基于相似度的灵活性多样度度量，以促进文档检索中的语义多样性。然后，通过评估推理步骤后生成的候选答案，使用LLM判别器输出一个评分，该评分在每次迭代中用于检索器平衡检索的文档的相关性和多样性。在三个具有挑战性的数据集——HotpotQA、MuSiQue和2WikiMultiHopQA——上的实验表明，Vendi-RAG在多跳推理任务中具有有效性。该框架在与传统单步骤和多步骤RAG方法相比时，实现了显著的准确性提升，在HotpotQA数据集上达到+4.2%、在2WikiMultiHopQA数据集上达到+4.1%、在MuSiQue数据集上达到+1.3%，相对于Adaptive-RAG，这是当前最佳基线。随着检索文档数量的增加，Vendi-RAG的好处更为显著。最后，我们还评估了Vendi-RAG在不同的LLM基础模型上的表现，包括GPT-3.5、GPT-4和GPT-4o-mini，并观察到一致的改进，表明该框架的优势具有模型的通用性。 
+
+---
+# MultiTEND: A Multilingual Benchmark for Natural Language to NoSQL Query Translation 
+
+**Title (ZH)**: MultiTEND：一种多语言基准，用于自然语言到NoSQL查询的转换 
+
+**Authors**: Zhiqian Qin, Yuanfeng Song, Jinwei Lu, Yuanwei Song, Shuaimin Li, Chen Jason Zhang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.11022)  
+
+**Abstract**: Natural language interfaces for NoSQL databases are increasingly vital in the big data era, enabling users to interact with complex, unstructured data without deep technical expertise. However, most recent advancements focus on English, leaving a gap for multilingual support. This paper introduces MultiTEND, the first and largest multilingual benchmark for natural language to NoSQL query generation, covering six languages: English, German, French, Russian, Japanese and Mandarin Chinese. Using MultiTEND, we analyze challenges in translating natural language to NoSQL queries across diverse linguistic structures, including lexical and syntactic differences. Experiments show that performance accuracy in both English and non-English settings remains relatively low, with a 4%-6% gap across scenarios like fine-tuned SLM, zero-shot LLM, and RAG for LLM. To address the aforementioned challenges, we introduce MultiLink, a novel framework that bridges the multilingual input to NoSQL query generation gap through a Parallel Linking Process. It breaks down the task into multiple steps, integrating parallel multilingual processing, Chain-of-Thought (CoT) reasoning, and Retrieval-Augmented Generation (RAG) to tackle lexical and structural challenges inherent in multilingual NoSQL generation. MultiLink shows enhancements in all metrics for every language against the top baseline, boosting execution accuracy by about 15% for English and averaging a 10% improvement for non-English languages. 
+
+**Abstract (ZH)**: 自然语言接口对于NoSQL数据库在大数据时代越来越重要，能够使用户在无需深厚技术背景的情况下与复杂、未结构化的数据进行交互。然而，目前大多数进展主要集中在英语上，忽略了多语言支持的需求。本文介绍了MultiTEND，这是首个也是规模最大的多语言基准数据集，用于自然语言到NoSQL查询生成，涵盖了六种语言：英语、德语、法语、俄语、日语和普通话。通过MultiTEND，我们分析了在不同语言结构下将自然语言转换为NoSQL查询所面临的挑战，包括词汇和句法差异。实验结果显示，在英语和非英语环境中，性能准确性相对较低，各种场景（如微调的语言模型、零样本学习语言模型和基于检索增强生成的语言模型）间有4%-6%的差距。为了解决上述挑战，我们提出了一种名为MultiLink的新颖框架，该框架通过并行联结过程填补了多语言输入与NoSQL查询生成之间的差距。MultiLink将任务分解为多个步骤，整合并行多语言处理、思维链推理（Chain-of-Thought, CoT）和检索增强生成（RAG），以应对多语言NoSQL生成固有的词汇和结构挑战。实验表明，与顶级基线相比，MultiLink在每种语言上所有指标上都有提升，尤其是对英语的执行准确性提升了约15%，对非英语语言平均提升了10%。 
+
+---
+# QuOTE: Question-Oriented Text Embeddings 
+
+**Title (ZH)**: 引言：问题导向的文本嵌入 
+
+**Authors**: Andrew Neeser, Kaylen Latimer, Aadyant Khatri, Chris Latimer, Naren Ramakrishnan  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.10976)  
+
+**Abstract**: We present QuOTE (Question-Oriented Text Embeddings), a novel enhancement to retrieval-augmented generation (RAG) systems, aimed at improving document representation for accurate and nuanced retrieval. Unlike traditional RAG pipelines, which rely on embedding raw text chunks, QuOTE augments chunks with hypothetical questions that the chunk can potentially answer, enriching the representation space. This better aligns document embeddings with user query semantics, and helps address issues such as ambiguity and context-dependent relevance. Through extensive experiments across diverse benchmarks, we demonstrate that QuOTE significantly enhances retrieval accuracy, including in multi-hop question-answering tasks. Our findings highlight the versatility of question generation as a fundamental indexing strategy, opening new avenues for integrating question generation into retrieval-based AI pipelines. 
+
+**Abstract (ZH)**: 我们提出了QuOTE（Question-Oriented Text Embeddings），这是一种针对检索增强生成（RAG）系统的新型增强技术，旨在通过改进文档表示来提高准确和细腻的检索效果。与传统的RAG流水线依赖嵌入原始文本片段不同，QuOTE通过在片段中添加假设问题来增强文档片段，这些问题是该片段可能能够回答的。这使得文档嵌入更好地与用户查询语义相匹配，并有助于解决诸如歧义性和上下文相关性等问题。通过在多种基准测试上的广泛实验，我们证明QuOTE显著提高了检索准确性，包括多跳问答任务中的准确性。我们的研究结果强调了问题生成作为基本索引策略的多功能性，为将问题生成集成到基于检索的人工智能流水线中开辟了新的途径。 
+
+---
+# Post-training an LLM for RAG? Train on Self-Generated Demonstrations 
+
+**Title (ZH)**: 对LLM进行后训练以支持RAG？使用自生成示例进行训练 
+
+**Authors**: Matthew Finlayson, Ilia Kulikov, Daneil M. Bikel, Barlas Oguz, Xilun Chen, Aasish Pappu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.10596)  
+
+**Abstract**: Large language models (LLMs) often struggle with knowledge intensive NLP tasks, such as answering "Who won the latest World Cup?" because the knowledge they learn during training may be insufficient or outdated. Conditioning generation on retrieved documents -- a technique known as retrieval augmented generation (RAG) -- mitigates these shortcomings by allowing the model to leverage in-context information. Practitioners can improve LLM RAG performance by fine-tuning on retrieval-augmented instructions, but must beware that this can cause undesirable model behaviors like hallucinations. We attribute this degradation to the fact that the training data is likely to be out-of-distribution for the model and may suffer from quality issues, such as misalignment between retrievals and target responses (since retrievals are frequently added post-hoc). We propose a recipe for training RAG-enabled LLMs using self-generated demonstrations, thereby avoiding training on out-of-distribution text and integrating retrievals into the LLM responses. We evaluate our method on knowledge intensive question answering (QA) tasks and show that our method teaches LLMs to properly handle in-context retrievals and abstain from questions it will likely get wrong. Compared to conventional RA-IT methods, our method prevents model degradation in non-RAG settings while exhibiting superior QA performance. 
+
+**Abstract (ZH)**: 大型语言模型（LLMs）在知识密集型自然语言处理（NLP）任务中往往表现不佳，例如回答“最新世界杯的获胜者是谁？”这类问题，因为它们在训练过程中学到的知识可能不足或过时。通过检索文档来条件化生成——这一技术被称为检索增强生成（RAG）——可以通过使模型利用上下文信息来缓解这些问题。实践者可以通过在增强检索的基础上微调LLM来提高RAG性能，但必须注意这可能导致不可 desirable 的模型行为，如幻觉。我们归因于这一退化的原因是训练数据很可能对于模型来说是域外的，并且可能存在质量方面的问题，例如检索与目标响应之间存在偏差（因为检索通常是后来添加的）。我们提出了一种使用自我生成的示范训练RAG增强的LLMs的方法，从而避免在域外文本上进行训练，并将检索整合到LLM的响应中。我们在知识密集型问答（QA）任务上评估了该方法，并展示了该方法教会LLMs正确处理上下文信息检索和避免对它可能答错的问题进行提问。与传统的RA-IT方法相比，该方法在非RAG设置中防止了模型性能的退化，并展现了更好的问答性能。 
+
+---
+# Hallucinations and Truth: A Comprehensive Accuracy Evaluation of RAG, LoRA and DoRA 
+
+**Title (ZH)**: 幻觉与真相：RAG、LoRA和DoRA的整体准确度评估 
+
+**Authors**: Mohammad Baqar, Rajat Khanda  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.10497)  
+
+**Abstract**: Recent advancements in Generative AI have significantly improved the efficiency and adaptability of natural language processing (NLP) systems, particularly through Retrieval-Augmented Generation (RAG), Low-Rank Adaptation (LoRA), and Weight-Decomposed Low-Rank Adaptation (DoRA). RAG integrates external knowledge to enhance factual consistency in generative outputs, while LoRA enables parameter-efficient fine-tuning of large language models (LLMs). DoRA further refines this process by optimizing fine-tuning through adaptive parameter ranking and domain-aware weight adjustments, improving learning efficiency while maintaining inference performance.
+This paper presents a large-scale empirical evaluation of RAG, LoRA, and DoRA, with model fine-tuning and generation performance assessed on 20,000 FAQ-based queries, while the knowledge base spans 400,000 entries. The study analyzes key performance metrics such as accuracy, relevance, and inference latency. Experimental results demonstrate that DoRA achieves the highest accuracy (90.1%), relevance score (0.88), and lowest latency (110 ms per query), outperforming both LoRA and RAG in real-world, domain-specific generative AI applications.
+Furthermore, this study examines the trade-offs between fine-tuning efficiency, computational cost, and real-time adaptability across different models. Findings highlight RAG's effectiveness in knowledge grounding, LoRA's cost-efficient domain adaptation, and DoRA's ability to balance fine-tuning efficiency with model precision. These insights provide practical guidance for deploying AI-driven generative systems in accuracy-critical domains such as healthcare, finance, and legal services, ensuring scalability, reliability, and optimal performance in dynamic environments. 
+
+**Abstract (ZH)**: 近年来，生成式人工智能在自然语言处理（NLP）系统中的效率和适应性方面取得了显著进步，特别是在检索增强生成（RAG）、低秩适应（LoRA）和分解低秩适应（DoRA）技术的应用中。RAG通过整合外部知识来提高生成输出的事实一致性，而LoRA使大型语言模型（LLMs）的微调更加参数高效。DoRA在通过自适应参数排名和领域意识权重调整优化微调的过程中进一步提升了过程，同时保持了推理性能，提高了学习效率。
+
+本论文对RAG、LoRA和DoRA进行了大规模的实证评估，通过20,000个基于FAQ的查询对模型微调和生成性能进行了评估，知识库包含400,000条记录。研究分析了关键性能指标，如准确度、相关性和推理延迟。实验结果表明，DoRA在准确度（90.1%）、相关性得分（0.88）和查询延迟（每查询110毫秒）方面均优于LoRA和RAG，在实际应用中的领域特定生成式AI应用中表现最佳。
+
+此外，本研究还探讨了不同模型在微调效率、计算成本和实时适应性之间的权衡。研究结果表明，RAG在知识落地方面效果显著，LoRA在成本效益的领域适应性方面表现出色，而DoRA则能够在微调效率和模型精度之间取得平衡。这些见解为在医疗、金融和法律服务等关键准确度领域部署以AI驱动的生成系统提供了实用指导，确保了在动态环境中实现可扩展性、可靠性和最佳性能。 
+
+---
+# RAG vs. GraphRAG: A Systematic Evaluation and Key Insights 
+
+**Title (ZH)**: RAG与GraphRAG的系统性评估与关键洞察 
+
+**Authors**: Haoyu Han, Harry Shomer, Yu Wang, Yongjia Lei, Kai Guo, Zhigang Hua, Bo Long, Hui Liu, Jiliang Tang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.11371)  
+
+**Abstract**: Retrieval-Augmented Generation (RAG) enhances the performance of LLMs across various tasks by retrieving relevant information from external sources, particularly on text-based data. For structured data, such as knowledge graphs, GraphRAG has been widely used to retrieve relevant information. However, recent studies have revealed that structuring implicit knowledge from text into graphs can benefit certain tasks, extending the application of GraphRAG from graph data to general text-based data. Despite their successful extensions, most applications of GraphRAG for text data have been designed for specific tasks and datasets, lacking a systematic evaluation and comparison between RAG and GraphRAG on widely used text-based benchmarks. In this paper, we systematically evaluate RAG and GraphRAG on well-established benchmark tasks, such as Question Answering and Query-based Summarization. Our results highlight the distinct strengths of RAG and GraphRAG across different tasks and evaluation perspectives. Inspired by these observations, we investigate strategies to integrate their strengths to improve downstream tasks. Additionally, we provide an in-depth discussion of the shortcomings of current GraphRAG approaches and outline directions for future research. 
+
+**Abstract (ZH)**: 检索增强生成（RAG）通过从外部资源中检索相关信息，增强了跨各种任务的大规模语言模型（LLM）的性能，特别是在基于文本的数据上。对于结构化数据，如知识图谱，GraphRAG 广泛用于检索相关信息。然而，近期的研究表明，将隐含知识从文本结构化为图可以在某些任务上受益，从而将 GraphRAG 的应用从图数据扩展到一般的基于文本的数据。尽管 GraphRAG 在文本数据上的成功扩展已经应用于特定任务和数据集，但大多数 GraphRAG 对文本数据的应用缺乏系统性地评估和比较，尤其是在广泛使用的基于文本的基准测试上的 RAG 和 GraphRAG 之间的比较。在这篇论文中，我们系统地评估了 RAG 和 GraphRAG 在诸如问答和查询驱动的总结等成熟的基准任务上的性能。我们的结果强调了 RAG 和 GraphRAG 在不同任务和评估视角下的独特优势。受此观察的启发，我们研究了整合它们优势的策略以提高下游任务。此外，我们深入讨论了当前 GraphRAG 方法的局限性，并指出了未来研究的方向。 
+
+---
+# REVERSUM: A Multi-staged Retrieval-Augmented Generation Method to Enhance Wikipedia Tail Biographies through Personal Narratives 
+
+**Title (ZH)**: REVERSUM：一种通过个人叙事增强 Wikipedia 尾部传记的多阶段检索增强生成方法 
+
+**Authors**: Sayantan Adak, Pauras Mangesh Meher, Paramita Das, Animesh Mukherjee  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.12137)  
+
+**Abstract**: Wikipedia is an invaluable resource for factual information about a wide range of entities. However, the quality of articles on less-known entities often lags behind that of the well-known ones. This study proposes a novel approach to enhancing Wikipedia's B and C category biography articles by leveraging personal narratives such as autobiographies and biographies. By utilizing a multi-staged retrieval-augmented generation technique -- REVerSum -- we aim to enrich the informational content of these lesser-known articles. Our study reveals that personal narratives can significantly improve the quality of Wikipedia articles, providing a rich source of reliable information that has been underutilized in previous studies. Based on crowd-based evaluation, REVerSum generated content outperforms the best performing baseline by 17% in terms of integrability to the original Wikipedia article and 28.5\% in terms of informativeness. Code and Data are available at: this https URL 
+
+**Abstract (ZH)**: 维基百科是获取广泛实体事实信息的重要资源。然而，不那么广为人知的实体的文章质量往往落后于广为人知的实体。本研究提出了一种新的方法，通过利用个人叙述（如自传和传记），来提升维基百科B和C类类别的人物传记文章的质量。通过利用多阶段检索增强生成技术——REVerSum，我们旨在丰富这些较不知名的条目的信息内容。我们的研究揭示，个人叙述可以显著提高维基百科文章的质量，提供了一种之前研究中未充分利用的丰富可靠信息来源。基于群体评估，REVerSum生成的内容在与原维基百科文章的整合性方面优于最佳基线方法17%，在信息量方面则超出28.5%。相关代码和数据可访问：[这里](this https URL)。 
+
+---
+# RA-MTR: A Retrieval Augmented Multi-Task Reader based Approach for Inspirational Quote Extraction from Long Documents 
+
+**Title (ZH)**: RA-MTR：一种用于长文档 Inspirational 引言提取的检索增强多任务阅读器方法 
+
+**Authors**: Sayantan Adak, Animesh Mukherjee  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.12124)  
+
+**Abstract**: Inspirational quotes from famous individuals are often used to convey thoughts in news articles, essays, and everyday conversations. In this paper, we propose a novel context-based quote extraction system that aims to extract the most relevant quote from a long text. We formulate this quote extraction as an open domain question answering problem first by employing a vector-store based retriever and then applying a multi-task reader. We curate three context-based quote extraction datasets and introduce a novel multi-task framework RA-MTR that improves the state-of-the-art performance, achieving a maximum improvement of 5.08% in BoW F1-score. 
+
+**Abstract (ZH)**: 著名人士的励志名言在新闻文章、散文和日常对话中常被用来传达思想。本文提出了一种新颖的基于上下文的引语提取系统，旨在从长篇文章中提取最相关的引语。我们首先使用基于向量存储的检索器将引语提取问题表述为一个开放领域问答问题，然后应用一个多任务阅读器。我们收集了三个基于上下文的引语提取数据集，并引入了一种新颖的多任务框架RA-MTR，该框架显著提高了最先进的性能，最大改善了5.08%的BoW F1分数。 
+
+---
+# FineFilter: A Fine-grained Noise Filtering Mechanism for Retrieval-Augmented Large Language Models 
+
+**Title (ZH)**: FineFilter：面向检索增强大型语言模型的细粒度噪声过滤机制 
+
+**Authors**: Qianchi Zhang, Hainan Zhang, Liang Pang, Hongwei Zheng, Yongxin Tong, Zhiming Zheng  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.11811)  
+
+**Abstract**: Retrieved documents containing noise will hinder Retrieval-Augmented Generation (RAG) from detecting answer clues, necessitating noise filtering mechanisms to enhance this http URL methods use re-ranking or summarization to identify the most relevant sentences, but directly and accurately locating answer clues from these large-scale and complex documents remains challenging. Unlike these document-level operations, we treat noise filtering as a sentence-level MinMax optimization problem: first identifying the potential clues from multiple documents using contextual information, then ranking them by relevance, and finally retaining the least clues through truncation. In this paper, we propose FineFilter, a novel fine-grained noise filtering mechanism for RAG consisting of a clue extractor, a re-ranker, and a truncator. We optimize each module to tackle complex reasoning challenges: (1) Clue extractor firstly uses sentences containing the answer and similar ones as fine-tuned targets, aiming at extracting sufficient potential clues; (2) Re-ranker is trained to prioritize effective clues based on the real feedback from generation module, with clues capable of generating correct answer as positive samples and others as negative; (3) Truncator takes the minimum clues needed to answer the question (truncation point) as fine-tuned targets, and performs truncation on the re-ranked clues to achieve fine-grained noise filtering. Experiments on three QA datasets demonstrate that FineFilter significantly outperforms baselines in terms of performance and inference cost. Further analysis on each module shows the effectiveness of our optimizations for complex reasoning. 
+
+**Abstract (ZH)**: 含有噪声的检索文档将妨碍 Retrieval-Augmented Generation (RAG) 检测答案线索的能力，因此需要噪声过滤机制来增强此功能。现有方法通常使用重排序或总结来识别最相关的句子，但直接且精确地从这些大规模且复杂的文档中定位答案线索仍然极具挑战性。与这些文档级别的操作不同，我们将其噪声过滤视为一个句子级别的 MinMax 最优化问题：首先利用上下文信息在多个文档中识别潜在线索，然后按相关性进行排序，最后通过截断保留最少的线索。在本文中，我们提出了一种新颖的细粒度噪声过滤机制 FineFilter，该机制包含线索提取器、重排序器和截断器三个模块。我们优化每个模块以应对复杂的推理挑战：(1) 线索提取器首先使用包含答案及其相似句子作为微调目标，旨在提取足够的潜在线索；(2) 重排序器基于生成模块的真实反馈进行训练，优先排序有效线索，具有生成正确答案的线索作为正样本，其他作为负样本；(3) 截断器将需要回答问题的最少线索（截断点）作为微调目标，并在排序后的线索上进行截断以实现细粒度的噪声过滤。在三个问答数据集上的实验表明，FineFilter 在性能和推理成本方面显著优于基线方法。进一步对每个模块的分析表明，我们的优化措施在复杂推理方面具有有效性。 
+
+---
+# Does RAG Really Perform Bad For Long-Context Processing? 
+
+**Title (ZH)**: RAG在长上下文处理中真的表现不佳吗？ 
+
+**Authors**: Kun Luo, Zheng Liu, Peitian Zhang, Hongjin Qian, Jun Zhao, Kang Liu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.11444)  
+
+**Abstract**: The efficient processing of long context poses a serious challenge for large language models (LLMs). Recently, retrieval-augmented generation (RAG) has emerged as a promising strategy for this problem, as it enables LLMs to make selective use of the long context for efficient computation. However, existing RAG approaches lag behind other long-context processing methods due to inherent limitations on inaccurate retrieval and fragmented contexts. To address these challenges, we introduce RetroLM, a novel RAG framework for long-context processing. Unlike traditional methods, RetroLM employs KV-level retrieval augmentation, where it partitions the LLM's KV cache into contiguous pages and retrieves the most crucial ones for efficient computation. This approach enhances robustness to retrieval inaccuracy, facilitates effective utilization of fragmented contexts, and saves the cost from repeated computation. Building on this framework, we further develop a specialized retriever for precise retrieval of critical pages and conduct unsupervised post-training to optimize the model's ability to leverage retrieved information. We conduct comprehensive evaluations with a variety of benchmarks, including LongBench, InfiniteBench, and RULER, where RetroLM significantly outperforms existing long-context LLMs and efficient long-context processing methods, particularly in tasks requiring intensive reasoning or extremely long-context comprehension. 
+
+**Abstract (ZH)**: 处理长上下文的高效计算对大规模语言模型（LLMs）构成了严重挑战。最近，检索增强生成（RAG）作为一种有前途的策略出现了，因为它使LLMs能够有选择地利用长上下文进行高效的计算。然而，现有的RAG方法由于在检索不准确和上下文碎片化方面存在固有局限性，其性能落后于其他长上下文处理方法。为了解决这些挑战，我们引入了RetroLM，这是一种新的RAG框架，用于处理长上下文。与传统方法不同，RetroLM采用KV级检索增强，即它将LLM的KV缓存分割成连续的页面，并检索最关键的页面以实现高效的计算。这种方法增强了对检索不准确性的鲁棒性，促进了对碎片化上下文的有效利用，并节省了重复计算的成本。在此基础上，我们进一步开发了一种专门的检索器，用于精确检索关键页面，并进行了无监督的后训练以优化模型利用检索信息的能力。我们使用LongBench、InfiniteBench和RULER等多种基准进行了全面评估，其中RetroLM显著优于现有的长上下文LLMs和高效的长上下文处理方法，特别是在要求密集推理或极长上下文理解的任务中表现更为突出。 
+
+---
+# Revisiting Robust RAG: Do We Still Need Complex Robust Training in the Era of Powerful LLMs? 
+
+**Title (ZH)**: 重新审视鲁棒RAG：在强大语言模型时代，我们还需要复杂的鲁棒训练吗？ 
+
+**Authors**: Hanxing Ding, Shuchang Tao, Liang Pang, Zihao Wei, Liwei Chen, Kun Xu, Huawei Shen, Xueqi Cheng  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.11400)  
+
+**Abstract**: Retrieval-augmented generation (RAG) systems often suffer from performance degradation when encountering noisy or irrelevant documents, driving researchers to develop sophisticated training strategies to enhance their robustness against such retrieval noise. However, as large language models (LLMs) continue to advance, the necessity of these complex training methods is increasingly questioned. In this paper, we systematically investigate whether complex robust training strategies remain necessary as model capacity grows. Through comprehensive experiments spanning multiple model architectures and parameter scales, we evaluate various document selection methods and adversarial training techniques across diverse datasets. Our extensive experiments consistently demonstrate that as models become more powerful, the performance gains brought by complex robust training methods drop off dramatically. We delve into the rationale and find that more powerful models inherently exhibit superior confidence calibration, better generalization across datasets (even when trained with randomly selected documents), and optimal attention mechanisms learned with simpler strategies. Our findings suggest that RAG systems can benefit from simpler architectures and training strategies as models become more powerful, enabling more scalable applications with minimal complexity. 
+
+**Abstract (ZH)**: 检索增强生成（RAG）系统在遇到噪声或不相关文档时常常性能下降，促使研究人员开发复杂的训练策略以增强其对检索噪声的鲁棒性。然而，随着大规模语言模型（LLMs）的不断发展，这些复杂训练方法的必要性正受到越来越多的质疑。在本文中，我们系统地研究了模型容量增加时，是否还需要这些复杂的鲁棒训练策略。我们通过涵盖多种模型架构和参数规模的全面实验，评估了各种文档选择方法和对抗训练技术在不同数据集上的表现。广泛的实验结果一致表明，随着模型变得越来越强大，复杂鲁棒训练方法所带来的性能提升急剧下降。我们深入探讨了这一现象的原因，发现更强大的模型能够表现出更好的置信度校准，对不同数据集有更好的泛化能力（即使使用随机选择的文档进行训练），并且能够通过更简单的策略学习到最合适的注意力机制。我们的研究结果表明，随着模型变得越来越强大，RAG系统可以从更简单的架构和训练策略中受益，从而实现更易于扩展的应用，同时保持较低的复杂度。 
+
+---
+# Investigating Language Preference of Multilingual RAG Systems 
+
+**Title (ZH)**: 探究多语言RAG系统的语言偏好 
+
+**Authors**: Jeonghyun Park, Hwanhee Lee  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.11175)  
+
+**Abstract**: Multilingual Retrieval-Augmented Generation (mRAG) systems enhance language models by integrating external multilingual information to produce context-aware responses. However, mRAG systems struggle with retrieving relevant information due to linguistic variations between queries and documents, generating inconsistent responses when multilingual sources conflict. In this work, we systematically investigate language preferences in both retrieval and generation of mRAG through a series of experiments. Our analysis indicates that retrievers tend to prefer high-resource and query languages, yet this preference does not consistently improve generation performance. Moreover, we observe that generators prefer the query language or Latin scripts, leading to inconsistent outputs. To overcome these issues, we propose Dual Knowledge Multilingual RAG (DKM-RAG), a simple yet effective framework that fuses translated multilingual passages with complementary model knowledge. Empirical results demonstrate that DKM-RAG mitigates language preference in generation and enhances performance across diverse linguistic settings. 
+
+**Abstract (ZH)**: 多语言检索增强生成（mRAG）系统通过整合外部多语言信息来增强语言模型，从而生成上下文感知的响应。然而，mRAG系统在检索相关信息时因查询和文档之间的语言差异而受到影响，当多语言来源存在冲突时，会导致生成不一致的响应。在本文中，我们通过一系列实验系统地研究了mRAG在检索和生成中的语言偏好。我们的分析表明，检索器倾向于偏好资源丰富和查询语言，但这种偏好并不总能提升生成性能。此外，我们观察到生成器倾向于偏好查询语言或拉丁字母，从而导致生成不一致的输出。为了克服这些问题，我们提出了一种简单而有效的框架——双知识多语言RAG（DKM-RAG），该框架将翻译的多语言段落与互补的模型知识融合。实验结果表明，DKM-RAG减轻了生成中的语言偏好，提高了在各种语言环境中的一致性能。 
+
+---
+# Streamlining the Collaborative Chain of Models into A Single Forward Pass in Generation-Based Tasks 
+
+**Title (ZH)**: 将基于生成的任务中的协作模型链简化为单次前向传递 
+
+**Authors**: Yuanjie Lyu, Chao Zhang, Yuhao Chen, Yong Chen, Tong Xu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.11083)  
+
+**Abstract**: In Retrieval-Augmented Generation (RAG) and agent-based frameworks, the "Chain of Models" approach is widely used, where multiple specialized models work sequentially on distinct sub-tasks. This approach is effective but increases resource demands as each model must be deployed separately. Recent advancements attempt to address this by applying prompt tuning, which allows a shared base model to adapt to multiple tasks with minimal parameter changes. However, a key challenge remains: intermediate outputs, passed between models as plain text, require recomputation of hidden states (i.e., Key and Value (KV) states in Transformers) during inference. In this paper, we introduce FTHSS, a novel prompt-tuning method that enables models to share KV hidden states, eliminating redundant forward passes and reducing KV cache storage. By modifying input and attention masks during training, FTHSS allows models to effectively utilize KV hidden states from prior models in both single- and multi-round scenarios. Empirical results on four tasks show that FTHSS matches the performance of traditional model chains while improving inference efficiency. 
+
+**Abstract (ZH)**: 在检索增强生成（RAG）和基于代理的框架中，广泛使用了“模型链”方法，多个专门的模型按顺序处理不同的子任务。这种方法虽然有效，但会增加资源需求，因为每个模型都需要单独部署。最近的进展尝试通过提示调优来解决这个问题，这种技术允许共享的基本模型在最小参数变化的情况下适应多种任务。然而，一个主要挑战仍然存在：作为纯文本在模型之间传递的中间输出，在推理过程中需要重新计算隐藏状态（即Transformer中的Key和Value状态）。在本文中，我们提出了一种名为FTHSS的新颖的提示调优方法，该方法使模型能够共享KV隐藏状态，从而消除冗余的前向传递并减少KV缓存存储。通过在训练过程中修改输入和注意力掩码，FTHSS使模型能够在单轮和多轮场景中有效地利用前序模型的KV隐藏状态。在四个任务上的实验证明，FTHSS在提高推理效率的同时能达到传统模型链的性能。 
+
+---
+# RoseRAG: Robust Retrieval-augmented Generation with Small-scale LLMs via Margin-aware Preference Optimization 
+
+**Title (ZH)**: RoseRAG：通过边际意识偏好优化在小规模LLM中实现稳健的检索增强生成 
+
+**Authors**: Tianci Liu, Haoxiang Jiang, Tianze Wang, Ran Xu, Yue Yu, Linjun Zhang, Tuo Zhao, Haoyu Wang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.10993)  
+
+**Abstract**: Large language models (LLMs) have achieved impressive performance but face high computational costs and latency, limiting their deployment in resource-constrained settings. In contrast, small-scale LLMs (SLMs) are more efficient yet struggle to capture evolving real-world knowledge. Retrieval-augmented generation (RAG) helps by integrating external knowledge, but imperfect retrieval can introduce distracting noise that misleads SLMs. We propose RoseRAG, a robust RAG framework for SLMs via Margin-aware Preference Optimization. RoseRAG employs multi-turn prompting for detailed reasoning, rejection sampling for high-quality explanations, and contrastive preference selection to refine responses by maximizing the likelihood gap between preferred and non-preferred outputs. By integrating these components into a margin-aware optimization process, RoseRAG robustly enhances the accuracy and reliability of SLMs for RAG applications. Extensive experiments on three open-domain question answering benchmarks indicate that our innovative RoseRAG surpasses state-of-the-art baselines significantly. 
+
+**Abstract (ZH)**: 大型语言模型（LLMs）在性能上取得了令人印象深刻的成果，但同时也面临着高昂的计算成本和延迟问题，这限制了它们在资源受限环境中的应用。相比之下，小型语言模型（SLMs）更加高效，但难以捕捉到不断变化的现实世界知识。检索增强生成（Rag）可以通过整合外部知识来帮助解决这一问题，然而不完善的检索可能会引入分散注意力的噪声，从而误导SLMs。
+
+为此，我们提出了RoseRAG，这是一种通过边缘意识偏好优化来增强SLMs的鲁棒Rag框架。RoseRAG采用多轮提示进行详细的推理，使用拒绝采样来生成高质量的解释，并通过对比偏好选择来优化响应，以最大化优选输出与非优选输出之间的似然性差距。通过将这些组件整合到一种边缘意识的优化过程中，RoseRAG能够稳健地提高SLMs在Rag应用中的准确性和可靠性。在对三个开放域问答基准上的广泛实验表明，我们的创新性RoseRAG显著超过了现有最先进的基线方法。 
+
+---
+# TrueReason: An Exemplar Personalised Learning System Integrating Reasoning with Foundational Models 
+
+**Title (ZH)**: TrueReason：一种结合推理与基础模型的范例个性化学习系统 
+
+**Authors**: Sahan Bulathwela, Daniel Van Niekerk, Jarrod Shipton, Maria Perez-Ortiz, Benjamin Rosman, John Shawe-Taylor  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.10411)  
+
+**Abstract**: Personalised education is one of the domains that can greatly benefit from the most recent advances in Artificial Intelligence (AI) and Large Language Models (LLM). However, it is also one of the most challenging applications due to the cognitive complexity of teaching effectively while personalising the learning experience to suit independent learners. We hypothesise that one promising approach to excelling in such demanding use cases is using a \emph{society of minds}. In this chapter, we present TrueReason, an exemplar personalised learning system that integrates a multitude of specialised AI models that can mimic micro skills that are composed together by a LLM to operationalise planning and reasoning. The architecture of the initial prototype is presented while describing two micro skills that have been incorporated in the prototype. The proposed system demonstrates the first step in building sophisticated AI systems that can take up very complex cognitive tasks that are demanded by domains such as education. 
+
+**Abstract (ZH)**: 个性化教育是能够从最近的人工智能（AI）和大型语言模型（LLM）的最新进展中受益匪浅的领域之一。然而，这也是一项最具挑战性的应用之一，原因在于在个性化学习体验以适应独立学习者的同时，有效进行认知教学的复杂性。我们假设，在这样的苛刻应用场景中表现出色的一个有前途的方法是使用“多元心智体系”。在本章中，我们将介绍TrueReason，这是一种范例性的个性化学习系统，该系统整合了多种专门的AI模型，这些模型能够模拟由LLM组合而成的微技能，从而实现规划和推理功能的运作。同时，我们将介绍原型的架构，并描述已集成到原型中的两个微技能。所提出的系统展示了构建能够承担教育等复杂领域所需求的复杂认知任务的高级AI系统的第一步。 
+
+---

@@ -1,0 +1,52 @@
+# EssayJudge: A Multi-Granular Benchmark for Assessing Automated Essay Scoring Capabilities of Multimodal Large Language Models 
+
+**Title (ZH)**: EssayJudge：评估多模态大型语言模型自动作文评分能力的多粒度基准 
+
+**Authors**: Jiamin Su, Yibo Yan, Fangteng Fu, Han Zhang, Jingheng Ye, Xiang Liu, Jiahao Huo, Huiyu Zhou, Xuming Hu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.11916)  
+
+**Abstract**: Automated Essay Scoring (AES) plays a crucial role in educational assessment by providing scalable and consistent evaluations of writing tasks. However, traditional AES systems face three major challenges: (1) reliance on handcrafted features that limit generalizability, (2) difficulty in capturing fine-grained traits like coherence and argumentation, and (3) inability to handle multimodal contexts. In the era of Multimodal Large Language Models (MLLMs), we propose EssayJudge, the first multimodal benchmark to evaluate AES capabilities across lexical-, sentence-, and discourse-level traits. By leveraging MLLMs' strengths in trait-specific scoring and multimodal context understanding, EssayJudge aims to offer precise, context-rich evaluations without manual feature engineering, addressing longstanding AES limitations. Our experiments with 18 representative MLLMs reveal gaps in AES performance compared to human evaluation, particularly in discourse-level traits, highlighting the need for further advancements in MLLM-based AES research. Our dataset and code will be available upon acceptance. 
+
+**Abstract (ZH)**: 自动化作文评分（Automated Essay Scoring, AES）在教育评估中发挥着关键作用，通过提供可扩展且一致的写作任务评估。然而，传统的AES系统面临三大挑战：（1）依赖手工设计的特征，限制了其普适性；（2）难以捕捉细粒度的特征如连贯性和论证能力；（3）无法处理多模态上下文。在多模态大型语言模型（Multimodal Large Language Models, MLLMs）的时代，我们提出了EssayJudge，这是第一个评估AES能力的多模态基准，可以评估其在词级、句级和话语级特征上的表现。通过利用MLLMs在特征特定评分和多模态上下文理解方面的优势，EssayJudge旨在提供精确且富有上下文的信息评估，无需手动特征工程，解决传统AES的长期限制。我们的实验结果显示，18个代表性MLLMs在AES性能上存在与人工评估的差距，尤其是在话语级特征上，这表明需要进一步改进基于MLLMs的AES研究。我们的数据集和代码将在接受后提供。 
+
+---
+# An Empirical Analysis of Uncertainty in Large Language Model Evaluations 
+
+**Title (ZH)**: 大型语言模型评估中不确定性的实证分析 
+
+**Authors**: Qiujie Xie, Qingqiu Li, Zhuohao Yu, Yuejie Zhang, Yue Zhang, Linyi Yang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.10709)  
+
+**Abstract**: As LLM-as-a-Judge emerges as a new paradigm for assessing large language models (LLMs), concerns have been raised regarding the alignment, bias, and stability of LLM evaluators. While substantial work has focused on alignment and bias, little research has concentrated on the stability of LLM evaluators. In this paper, we conduct extensive experiments involving 9 widely used LLM evaluators across 2 different evaluation settings to investigate the uncertainty in model-based LLM evaluations. We pinpoint that LLM evaluators exhibit varying uncertainty based on model families and sizes. With careful comparative analyses, we find that employing special prompting strategies, whether during inference or post-training, can alleviate evaluation uncertainty to some extent. By utilizing uncertainty to enhance LLM's reliability and detection capability in Out-Of-Distribution (OOD) data, we further fine-tune an uncertainty-aware LLM evaluator named ConfiLM using a human-annotated fine-tuning set and assess ConfiLM's OOD evaluation ability on a manually designed test set sourced from the 2024 Olympics. Experimental results demonstrate that incorporating uncertainty as additional information during the fine-tuning phase can largely improve the model's evaluation performance in OOD scenarios. The code and data are released at: this https URL. 
+
+**Abstract (ZH)**: 随着LLM-as-a-Judge作为评估大型语言模型（LLMs）的新范式出现，人们对LLM评估者的一致性、偏差和稳定性提出了担忧。虽然大量研究集中在一致性与偏差方面，但关于LLM评估者稳定性的研究相对较少。本文通过在两种不同的评估设置中使用9种广泛使用的LLM评估工具，进行了大量的实验，以探究基于模型的LLM评估中的不确定性。研究发现，基于不同模型家族和规模的LLM评估工具表现出不同的不确定性。通过仔细比较分析，我们发现，无论是通过特殊的提示策略进行推理，还是在训练后应用特殊提示策略，都可以在一定程度上缓解评估不确定性。通过利用不确定性来增强LLM在异常分布（OOD）数据中的可靠性和检测能力，我们进一步微调了一个不确定性感知的LLM评估工具ConfiLM，并在人工设计的测试集上评估了ConfiLM的OOD评估能力，该测试集来源于2024年奥运会数据。实验结果表明，在微调阶段引入不确定性作为额外信息可以显著提高模型在OOD场景下的评估性能。本文的代码和数据已发布在：this https URL。 
+
+---
+# Improve LLM-as-a-Judge Ability as a General Ability 
+
+**Title (ZH)**: 提升作为通用能力的LLM法官能力 
+
+**Authors**: Jiachen Yu, Shaoning Sun, Xiaohui Hu, Jiaxu Yan, Kaidong Yu, Xuelong Li  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.11689)  
+
+**Abstract**: LLM-as-a-Judge leverages the generative and reasoning capabilities of large language models (LLMs) to evaluate LLM responses across diverse scenarios, providing accurate preference signals. This approach plays a vital role in aligning LLMs with human values, ensuring ethical and reliable AI outputs that align with societal norms. Recent studies have raised many methods to train LLM as generative judges, but most of them are data consuming or lack accuracy, and only focus on LLM's judge ability. In this work, we regard judge ability as a general ability of LLM and implement a two-stage training approach, comprising supervised fine-tuning (SFT) warm-up and direct preference optimization (DPO) enhancement, to achieve judge style adaptation and improve judgment accuracy. Additionally, we introduce an efficient data synthesis method to generate judgmental content. Experimental results demonstrate that our approach, utilizing only about 2% to 40% of the data required by other methods, achieves SOTA performance on RewardBench. Furthermore, our training method enhances the general capabilities of the model by constructing complicated judge task, and the judge signals provided by our model have significantly enhanced the downstream DPO training performance of our internal models in our test to optimize policy model with Judge Model. We also open-source our model weights and training data to facilitate further research. 
+
+**Abstract (ZH)**: LLM-as-a-Judge 利用了大语言模型（LLMs）的生成和推理能力，评估各种场景下的LLM响应，提供准确的偏好信号。这种方法在使LLMs与人类价值观保持一致方面发挥着关键作用，确保生成符合社会规范的伦理可靠AI输出。最近的研究提出了许多训练LLM作为生成性法官的方法，但大多数方法都消耗大量数据且缺乏准确性，并且仅专注于LLM的法官能力。在本研究中，我们将法官能力视为LLM的普遍能力，并采用两阶段训练方法，包括监督微调（SFT）预热和直接偏好优化（DPO）增强，以实现法官风格适应并提高判断准确性。此外，我们介绍了一种高效的数据合成方法，用于生成判断内容。实验结果表明，我们的方法仅需其他方法所需数据的大约2%到40%，即可在RewardBench上达到SOTA性能。此外，我们的训练方法通过构建复杂的法官任务来增强模型的通用能力，并且我们模型提供的法官信号显著提高了我们的内部模型在使用法官模型优化策略模型时的DPO训练性能。我们也开源了我们的模型权重和训练数据，以促进进一步的研究。 
+
+---
+# Deviation Ratings: A General, Clone-Invariant Rating Method 
+
+**Title (ZH)**: 偏差评分：一种通用且克隆无关的评估方法 
+
+**Authors**: Luke Marris, Siqi Liu, Ian Gemp, Georgios Piliouras, Marc Lanctot  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.11645)  
+
+**Abstract**: Many real-world multi-agent or multi-task evaluation scenarios can be naturally modelled as normal-form games due to inherent strategic (adversarial, cooperative, and mixed motive) interactions. These strategic interactions may be agentic (e.g. players trying to win), fundamental (e.g. cost vs quality), or complementary (e.g. niche finding and specialization). In such a formulation, it is the strategies (actions, policies, agents, models, tasks, prompts, etc.) that are rated. However, the rating problem is complicated by redundancy and complexity of N-player strategic interactions. Repeated or similar strategies can distort ratings for those that counter or complement them. Previous work proposed ``clone invariant'' ratings to handle such redundancies, but this was limited to two-player zero-sum (i.e. strictly competitive) interactions. This work introduces the first N-player general-sum clone invariant rating, called deviation ratings, based on coarse correlated equilibria. The rating is explored on several domains including LLMs evaluation. 
+
+**Abstract (ZH)**: 许多实际世界的多智能体或多任务评估场景可以自然地用标准形式博弈进行建模，因为这些场景包含内在的战略（对抗性的、合作性的和混合动机）互动。这些战略互动可能是代理性的（例如，玩家试图获胜）、基本性的（例如，成本与质量之间的权衡），或互补性的（例如，专业特化和专长领域发现）。在此类模型中，是策略（行动、政策、代理、模型、任务、提示等）被评分的。然而，评分问题由于N玩家战略互动的冗余性和复杂性而变得更加复杂。重复的或相似的策略可能扭曲那些与之对抗或互补的策略的评分。先前的研究提出了一种“克隆不变”评分法来处理这种冗余性，但这种方法仅限于两人零和博弈（即严格竞争性）的互动。本研究在此基础上，首次提出了基于粗略关联均衡的N玩家一般和克隆不变评分法，称为偏差评分法，并在多个领域进行了探索，包括大型语言模型的评估。 
+
+---

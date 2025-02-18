@@ -1,0 +1,617 @@
+# GRAPHGPT-O: Synergistic Multimodal Comprehension and Generation on Graphs 
+
+**Title (ZH)**: GRAPHGPT-O：图上的多模态理解与生成协同模型 
+
+**Authors**: Yi Fang, Bowen Jin, Jiacheng Shen, Sirui Ding, Qiaoyu Tan, Jiawei Han  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.11925)  
+
+**Abstract**: The rapid development of Multimodal Large Language Models (MLLMs) has enabled the integration of multiple modalities, including texts and images, within the large language model (LLM) framework. However, texts and images are usually interconnected, forming a multimodal attributed graph (MMAG). It is underexplored how MLLMs can incorporate the relational information (\textit{i.e.}, graph structure) and semantic information (\textit{i.e.,} texts and images) on such graphs for multimodal comprehension and generation. In this paper, we propose GraphGPT-o, which supports omni-multimodal understanding and creation on MMAGs. We first comprehensively study linearization variants to transform semantic and structural information as input for MLLMs. Then, we propose a hierarchical aligner that enables deep graph encoding, bridging the gap between MMAGs and MLLMs. Finally, we explore the inference choices, adapting MLLM to interleaved text and image generation in graph scenarios. Extensive experiments on three datasets from different domains demonstrate the effectiveness of our proposed method. Datasets and codes will be open-sourced upon acceptance. 
+
+**Abstract (ZH)**: 随着多模态大型语言模型（Multimodal Large Language Models, MLLMs）的快速发展，已经能够在大型语言模型（Large Language Model, LLM）框架中整合多种模态，包括文本和图像。然而，文本和图像通常彼此关联，形成多模态带属性的图（multimodal attributed graph, MMAG）。当前对于如何将MLLMs整合到MMAGs中的关系信息（即，图结构）和语义信息（即，文本和图像）中的研究尚不够深入，这对于多模态理解和生成仍然是未探索的领域。本文中，我们提出了GraphGPT-o，该方法支持在MMAGs上实现全方位的多模态理解和创作。首先，我们全面研究了线性化变体，将语义和结构信息转换为MLLMs的输入。然后，我们提出了一个层次对齐器，能够实现深度图编码，从而弥合MMAGs和MLLMs之间的差距。最后，我们探讨了推理选择，使MLLM能够适应在图场景中交错的文本和图像生成。来自不同领域的三个数据集的大量实验充分证明了我们所提出方法的有效性。方法的相关数据集和代码将在论文被接受后开源。 
+
+---
+# HintsOfTruth: A Multimodal Checkworthiness Detection Dataset with Real and Synthetic Claims 
+
+**Title (ZH)**: 《Tips of Truth：真实与合成声明的多模态可信度检测数据集》 
+
+**Authors**: Michiel van der Meer, Pavel Korshunov, Sébastien Marcel, Lonneke van der Plas  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.11753)  
+
+**Abstract**: Misinformation can be countered with fact-checking, but the process is costly and slow. Identifying checkworthy claims is the first step, where automation can help scale fact-checkers' efforts. However, detection methods struggle with content that is 1) multimodal, 2) from diverse domains, and 3) synthetic. We introduce HintsOfTruth, a public dataset for multimodal checkworthiness detection with $27$K real-world and synthetic image/claim pairs. The mix of real and synthetic data makes this dataset unique and ideal for benchmarking detection methods. We compare fine-tuned and prompted Large Language Models (LLMs). We find that well-configured lightweight text-based encoders perform comparably to multimodal models but the first only focus on identifying non-claim-like content. Multimodal LLMs can be more accurate but come at a significant computational cost, making them impractical for large-scale applications. When faced with synthetic data, multimodal models perform more robustly 
+
+**Abstract (ZH)**: 错误信息可以通过事实核查来对抗，但这一过程成本高且耗时。识别可核查的断言是第一步，自动化可以帮助扩展事实核查员的努力。然而，检测方法在处理以下类型的内容时存在困难：1）多模态内容，2）来自多种领域的内容，3）合成内容。我们介绍了一个名为 HintsOfTruth 的公开数据集，包含 27,000 对真实和合成的图像/断言对，用于多模态核查性检测。真实和合成数据的混合使该数据集独具特色，非常适合用于评估检测方法。我们比较了微调和提示的大规模语言模型（LLMs）。研究发现，配置良好的轻量级文本编码器在表现上可与多模态模型媲美，但仅专注于识别非断言性内容。多模态 LLM 可能更准确，但计算成本高昂，使其在大规模应用中不可行。在面对合成数据时，多模态模型表现出更高的鲁棒性。 
+
+---
+# A Survey of Automatic Prompt Engineering: An Optimization Perspective 
+
+**Title (ZH)**: 自动提示工程综述：从优化视角探讨 
+
+**Authors**: Wenwu Li, Xiangfeng Wang, Wenhao Li, Bo Jin  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.11560)  
+
+**Abstract**: The rise of foundation models has shifted focus from resource-intensive fine-tuning to prompt engineering, a paradigm that steers model behavior through input design rather than weight updates. While manual prompt engineering faces limitations in scalability, adaptability, and cross-modal alignment, automated methods, spanning foundation model (FM) based optimization, evolutionary methods, gradient-based optimization, and reinforcement learning, offer promising solutions. Existing surveys, however, remain fragmented across modalities and methodologies. This paper presents the first comprehensive survey on automated prompt engineering through a unified optimization-theoretic lens. We formalize prompt optimization as a maximization problem over discrete, continuous, and hybrid prompt spaces, systematically organizing methods by their optimization variables (instructions, soft prompts, exemplars), task-specific objectives, and computational frameworks. By bridging theoretical formulation with practical implementations across text, vision, and multimodal domains, this survey establishes a foundational framework for both researchers and practitioners, while highlighting underexplored frontiers in constrained optimization and agent-oriented prompt design. 
+
+**Abstract (ZH)**: 基础模型的兴起将研究重点从资源密集型的微调转向提示工程，这是一种通过输入设计而非权重更新来引导模型行为的范式。虽然手动提示工程在可扩展性、适应性和跨模态对齐方面存在局限性，但涵盖基础模型（FM）优化、进化方法、梯度基优化和强化学习的自动化方法则提供了有前景的解决方案。然而，现有综述仍呈碎片化状态，分布在不同的模态和方法论上。本文通过统一的优化理论视角首次对自动化提示工程进行了全面综述。我们将提示优化形式化为离散、连续和混合提示空间上的最大化问题，并系统地按优化变量（指令、软提示、示例）、任务特定目标和计算框架对方法进行分类。通过将理论建模与文本、视觉和多模态领域的实践实施相结合，本综述为研究人员和实践者提供了基础框架，同时指出了约束优化和面向代理的提示设计中未充分探索的前沿领域。 
+
+---
+# Why Vision Language Models Struggle with Visual Arithmetic? Towards Enhanced Chart and Geometry Understanding 
+
+**Title (ZH)**: 视觉语言模型在视觉算术任务上为何表现不佳？迈向增强的图表与几何理解 
+
+**Authors**: Kung-Hsiang Huang, Can Qin, Haoyi Qiu, Philippe Laban, Shafiq Joty, Caiming Xiong, Chien-Sheng Wu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.11492)  
+
+**Abstract**: Vision Language Models (VLMs) have achieved remarkable progress in multimodal tasks, yet they often struggle with visual arithmetic, seemingly simple capabilities like object counting or length comparison, which are essential for relevant complex tasks like chart understanding and geometric reasoning. In this work, we first investigate the root causes of this deficiency through a suite of probing tasks focusing on basic visual arithmetic. Our analysis reveals that while pre-trained vision encoders typically capture sufficient information, the text decoder often fails to decode it correctly for arithmetic reasoning. To address this, we propose CogAlign, a novel post-training strategy inspired by Piaget's theory of cognitive development. CogAlign trains VLMs to recognize invariant properties under visual transformations. We demonstrate that this approach significantly improves the performance of three diverse VLMs on our proposed probing tasks. Furthermore, CogAlign enhances performance by an average of 4.6% on CHOCOLATE and 2.9% on MATH-VISION, outperforming or matching supervised fine-tuning methods while requiring only 60% less training data. These results highlight the effectiveness and generalizability of CogAlign in improving fundamental visual arithmetic capabilities and their transfer to downstream tasks. 
+
+**Abstract (ZH)**: 视觉语言模型（VLMs）在多模态任务中取得了显著进展，但在视觉算术任务上常常表现不佳，这包括对象计数或长度比较等看似简单的任务，而这些任务对于复杂的图表理解和几何推理等任务至关重要。在本文中，我们首先通过一系列旨在针对基本视觉算术的探针任务来探究这一缺陷的根本原因。我们的分析表明，尽管预训练的视觉编码器通常可以捕获足够多的信息，但文本解码器往往未能正确地进行算术推理。为此，我们提出了CogAlign，这是一种受皮亚杰认知发展理论启发的后训练策略。CogAlign旨在训练VLMs识别在视变换下的不变属性。我们展示了该方法在我们提出的探针任务中显著提升了三种不同VLMs的表现。此外，CogAlign在CHOCOLATE上的表现平均提高了4.6%，在MATH-VISION上提高了2.9%，仅需较少的训练数据（减少60%），就能超越或匹配监督微调方法。这些结果突显了CogAlign在提高基本视觉算术能力和向下游任务迁移中的有效性和通用性。 
+
+---
+# Explorer: Scaling Exploration-driven Web Trajectory Synthesis for Multimodal Web Agents 
+
+**Title (ZH)**: Explorer: 扩展基于探索的网页轨迹合成以支持多模态网页代理 
+
+**Authors**: Vardaan Pahuja, Yadong Lu, Corby Rosset, Boyu Gou, Arindam Mitra, Spencer Whitehead, Yu Su, Ahmed Awadallah  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.11357)  
+
+**Abstract**: Recent success in large multimodal models (LMMs) has sparked promising applications of agents capable of autonomously completing complex web tasks. While open-source LMM agents have made significant advances in offline evaluation benchmarks, their performance still falls substantially short of human-level capabilities in more realistic online settings. A key bottleneck is the lack of diverse and large-scale trajectory-level datasets across various domains, which are expensive to collect. In this paper, we address this challenge by developing a scalable recipe to synthesize the largest and most diverse trajectory-level dataset to date, containing over 94K successful multimodal web trajectories, spanning 49K unique URLs, 720K screenshots, and 33M web elements. In particular, we leverage extensive web exploration and refinement to obtain diverse task intents. The average cost is 28 cents per successful trajectory, making it affordable to a wide range of users in the community. Leveraging this dataset, we train Explorer, a multimodal web agent, and demonstrate strong performance on both offline and online web agent benchmarks such as Mind2Web-Live, Multimodal-Mind2Web, and MiniWob++. Additionally, our experiments highlight data scaling as a key driver for improving web agent capabilities. We hope this study makes state-of-the-art LMM-based agent research at a larger scale more accessible. 
+
+**Abstract (ZH)**: 近年来，大型多模态模型（LMMs）的突破性进展激发了能够自主完成复杂 Web 任务的代理的应用潜力。虽然开源的 LMM 代理在离线评估基准上取得了显著进展，但在更具现实性的在线环境中，它们的表现仍然远远低于人类的水平。一个关键瓶颈是缺乏覆盖各个领域的多样性和大规模的轨迹级数据集，这些数据集的收集成本较高。在本文中，我们通过开发一个可扩展的方法来解决这一挑战，该方法合成出了迄今为止最大的最多样化轨迹级数据集，包含超过 94,000 条成功的多模态 Web 轨迹，覆盖 49,000 个唯一的 URL，320 万张屏幕截图，以及 3300 万网页元素。特别是，我们利用广泛的 Web 探索和优化来获取多样化的任务意图。平均每条成功的轨迹成本为 28 美分，使其对社区中的广大用户来说都是负担得起的。利用此数据集，我们训练了 Explorer，这是一种多模态 Web 代理，并在如 Mind2Web-Live、Multimodal-Mind2Web 和 MiniWob++ 等离线和在线 Web 代理基准测试中展示了强劲的性能。此外，我们的实验强调了数据规模在提高 Web 代理能力方面是一个关键驱动因素。我们希望这项研究能使得更大规模的 LMM 基础的代理研究更加普及和容易获取。 
+
+---
+# Leveraging Multimodal-LLMs Assisted by Instance Segmentation for Intelligent Traffic Monitoring 
+
+**Title (ZH)**: 利用实例分割辅助的多模态大模型进行智能交通监控 
+
+**Authors**: Murat Arda Onsu, Poonam Lohan, Burak Kantarci, Aisha Syed, Matthew Andrews, Sean Kennedy  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.11304)  
+
+**Abstract**: A robust and efficient traffic monitoring system is essential for smart cities and Intelligent Transportation Systems (ITS), using sensors and cameras to track vehicle movements, optimize traffic flow, reduce congestion, enhance road safety, and enable real-time adaptive traffic control. Traffic monitoring models must comprehensively understand dynamic urban conditions and provide an intuitive user interface for effective management. This research leverages the LLaVA visual grounding multimodal large language model (LLM) for traffic monitoring tasks on the real-time Quanser Interactive Lab simulation platform, covering scenarios like intersections, congestion, and collisions. Cameras placed at multiple urban locations collect real-time images from the simulation, which are fed into the LLaVA model with queries for analysis. An instance segmentation model integrated into the cameras highlights key elements such as vehicles and pedestrians, enhancing training and throughput. The system achieves 84.3% accuracy in recognizing vehicle locations and 76.4% in determining steering direction, outperforming traditional models. 
+
+**Abstract (ZH)**: 智能城市和智能运输系统（ITS）中的鲁棒且高效的交通监控系统对于保障交通安全、优化交通流量、减少拥堵和实现实时自适应交通控制至关重要。交通监控系统必须全面理解动态城市条件，并提供直观的用户界面以有效管理交通。本研究利用LLaVA多模态大语言模型（LLM）在实时Quanser Interactive Lab仿真平台上进行交通监控任务，覆盖交叉口、拥堵和碰撞等场景。部署在多个城市位置的摄像头收集实时图像，通过查询输入LLaVA模型进行分析。摄像头内嵌的实例分割模型突出显示重要元素如车辆和行人，增强训练效果并提高处理速度。该系统在识别车辆位置方面达到了84.3%的准确率，在确定转向方向方面达到了76.4%的准确率，优于传统模型。 
+
+---
+# Demographic User Modeling for Social Robotics with Multimodal Pre-trained Models 
+
+**Title (ZH)**: 使用多模态预训练模型进行社交机器人的人口统计学用户建模 
+
+**Authors**: Hamed Rahimi, Mouad Abrini, Mahdi Khoramshahi, Mohamed Chetouani  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.10642)  
+
+**Abstract**: This paper investigates the performance of multimodal pre-trained models in user profiling tasks based on visual-linguistic demographic data. These models are critical for adapting to the needs and preferences of human users in social robotics, thereby providing personalized responses and enhancing interaction quality. First, we introduce two datasets specifically curated to represent demographic characteristics derived from user facial images. Next, we evaluate the performance of a prominent contrastive multimodal pre-trained model, CLIP, on these datasets, both in its out-of-the-box state and after fine-tuning. Initial results indicate that CLIP performs suboptimal in matching images to demographic descriptions without fine-tuning. Although fine-tuning significantly enhances its predictive capacity, the model continues to exhibit limitations in effectively generalizing subtle demographic nuances. To address this, we propose adopting a masked image modeling strategy to improve generalization and better capture subtle demographic attributes. This approach offers a pathway for enhancing demographic sensitivity in multimodal user modeling tasks. 
+
+**Abstract (ZH)**: 本文探讨了多模态预训练模型在基于视觉语言人口统计学数据的用户画像任务中的表现。这些模型对于适应社会机器人领域中人类用户的需求和偏好至关重要，从而能够提供个性化响应并提升交互质量。首先，我们介绍了两个专门用于表示从用户面部图像提取的人口统计特征的数据集。随后，我们评估了一种主流对比多模态预训练模型CLIP在这些数据集上的表现，包括其“即用型”状态以及经过微调后的表现。初步结果显示，未经微调的CLIP在匹配图像和人口统计描述方面表现不佳。尽管微调显著提升了其预测能力，但模型仍存在难以有效泛化微妙人口统计特征的局限性。为解决这一问题，我们提出了采用掩码图像建模策略以提高泛化能力，并更好地捕捉微妙的人口统计属性。这种方法为提高多模态用户建模任务中的人口统计敏感性提供了一条途径。 
+
+---
+# USER-VLM 360: Personalized Vision Language Models with User-aware Tuning for Social Human-Robot Interactions 
+
+**Title (ZH)**: USER-VLM 360：面向社交人机交互的用户感知自适应视觉语言模型 
+
+**Authors**: Hamed Rahimi, Adil Bahaj, Mouad Abrini, Mahdi Khoramshahi, Mounir Ghogho, Mohamed Chetouani  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.10636)  
+
+**Abstract**: The integration of vision-language models into robotic systems constitutes a significant advancement in enabling machines to interact with their surroundings in a more intuitive manner. While VLMs offer rich multimodal reasoning, existing approaches lack user-specific adaptability, often relying on generic interaction paradigms that fail to account for individual behavioral, contextual, or socio-emotional nuances. When customization is attempted, ethical concerns arise from unmitigated biases in user data, risking exclusion or unfair treatment. To address these dual challenges, we propose User-VLM 360°, a holistic framework integrating multimodal user modeling with bias-aware optimization. Our approach features: (1) user-aware tuning that adapts interactions in real time using visual-linguistic signals; (2) bias mitigation via preference optimization; and (3) curated 360° socio-emotive interaction datasets annotated with demographic, emotion, and relational metadata. Evaluations across eight benchmarks demonstrate state-of-the-art results: +35.3% F1 in personalized VQA, +47.5% F1 in facial features understanding, 15% bias reduction, and 30X speedup over baselines. Ablation studies confirm component efficacy, and deployment on the Pepper robot validates real-time adaptability across diverse users. We open-source parameter-efficient 3B/10B models and an ethical verification framework for responsible adaptation. 
+
+**Abstract (ZH)**: 将下面的论文内容或标题翻译成中文，符合学术规范：
+
+将视觉-语言模型集成到机器人系统中，构成了使机器以更加直观的方式与环境互动的重要进步。虽然视觉-语言模型提供了丰富的跨模态推理能力，但现有方法缺乏针对用户的适应性，经常依赖于通用的交互范式，这些范式未能考虑到个体的行为、情境或社会情感的细微差别。在尝试进行个性化定制时，由于未缓解用户数据中的偏见，可能会引发伦理问题，进而导致排斥或不公平的对待。为解决这些双重挑战，我们提出了User-VLM 360°这一整体框架，该框架结合了跨模态用户建模与偏见感知优化。我们的方法包括：（1）用户感知调整，通过视觉-语言信号实时适应交互；（2）通过偏好优化缓解偏见；以及（3）包含人口、情绪和关系元数据的360°社会情感交互数据集。在八个基准测试中的评估展示了最先进的结果：个性化问答的F1分数提高35.3%，面部特征理解的F1分数提高47.5%，偏见减少15%，并比基线快30倍。消融研究确认了各个组件的有效性，在Pepper机器人上的部署证明了其在不同用户群体中的实时适应能力。我们开源了参数高效的小模型（3B/10B）和一套伦理验证框架，以促进负责任的适应。 
+
+---
+# ProMRVL-CAD: Proactive Dialogue System with Multi-Round Vision-Language Interactions for Computer-Aided Diagnosis 
+
+**Title (ZH)**: ProMRVL-CAD：面向未来的对话系统，支持多轮视觉-语言交互的计算机辅助诊断 
+
+**Authors**: Xueshen Li, Xinlong Hou, Ziyi Huang, Yu Gan  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.10620)  
+
+**Abstract**: Recent advancements in large language models (LLMs) have demonstrated extraordinary comprehension capabilities with remarkable breakthroughs on various vision-language tasks. However, the application of LLMs in generating reliable medical diagnostic reports remains in the early stages. Currently, medical LLMs typically feature a passive interaction model where doctors respond to patient queries with little or no involvement in analyzing medical images. In contrast, some ChatBots simply respond to predefined queries based on visual inputs, lacking interactive dialogue or consideration of medical history. As such, there is a gap between LLM-generated patient-ChatBot interactions and those occurring in actual patient-doctor consultations. To bridge this gap, we develop an LLM-based dialogue system, namely proactive multi-round vision-language interactions for computer-aided diagnosis (ProMRVL-CAD), to generate patient-friendly disease diagnostic reports. The proposed ProMRVL-CAD system allows proactive dialogue to provide patients with constant and reliable medical access via an integration of knowledge graph into a recommendation system. Specifically, we devise two generators: a Proactive Question Generator (Pro-Q Gen) to generate proactive questions that guide the diagnostic procedure and a Multi-Vision Patient-Text Diagnostic Report Generator (MVP-DR Gen) to produce high-quality diagnostic reports. Evaluating two real-world publicly available datasets, MIMIC-CXR and IU-Xray, our model has better quality in generating medical reports. We further demonstrate the performance of ProMRVL achieves robust under the scenarios with low image quality. Moreover, we have created a synthetic medical dialogue dataset that simulates proactive diagnostic interactions between patients and doctors, serving as a valuable resource for training LLM. 
+
+**Abstract (ZH)**: 近年来，大型语言模型（LLMs）在各种视觉-语言任务上取得了显著突破，展现了令人惊叹的理解能力。然而，将LLMs应用于生成可靠的医学诊断报告仍处于早期阶段。目前，医学LLMs通常采用被动交互模式，医生以较少或无分析医学图片的主动参与来回应患者的咨询。相比之下，一些聊天机器人仅依据视觉输入响应预定义的问题，缺乏互动对话或考虑患者的医学历史。因此，LLMs生成的患者-聊天机器人互动与实际患者-医生咨询之间的差距仍然存在。为弥补这种差距，我们开发了一种基于LLM的对话系统，称为主动多轮视觉-语言交互以辅助诊断（ProMRVL-CAD），以生成患者友好的疾病诊断报告。所提出的ProMRVL-CAD系统通过将知识图谱集成到推荐系统中，提供主动对话，以便患者获得持续且可靠的医疗访问。具体而言，我们设计了两个生成器：主动问题生成器（Pro-Q Gen），用于生成引导诊断过程的主动问题；以及多视图患者-文本诊断报告生成器（MVP-DR Gen），用于生成高质量的诊断报告。通过评估两个公开可用的大型医疗数据集MIMIC-CXR和IU-Xray，我们的模型在生成医学报告方面质量更高。我们进一步展示，ProMRVL在低质量图像场景下表现出色。此外，我们构建了一个合成的医疗对话数据集，模拟患者与医生之间的主动诊断交互，为训练LLMs提供了宝贵资源。 
+
+---
+# PRISM: Self-Pruning Intrinsic Selection Method for Training-Free Multimodal Data Selection 
+
+**Title (ZH)**: PRISM: 自身修剪内在选择方法，用于无训练多模态数据选择 
+
+**Authors**: Jinhe Bi, Yifan Wang, Danqi Yan, Xun Xiao, Artur Hecker, Volker Tresp, Yunpu Ma  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.12119)  
+
+**Abstract**: Visual instruction tuning refines pre-trained Multimodal Large Language Models (MLLMs) to enhance their real-world task performance. However, the rapid expansion of visual instruction datasets introduces significant data redundancy, leading to excessive computational costs. Existing data selection methods predominantly rely on proxy models or loss-based metrics, both of which impose substantial computational overheads due to the necessity of model inference and backpropagation. To address this challenge, we propose PRISM, a novel training-free approach for efficient multimodal data selection. Unlike existing methods, PRISM eliminates the reliance on proxy models, warm-up pretraining, and gradient-based optimization. Instead, it leverages Pearson correlation analysis to quantify the intrinsic visual encoding properties of MLLMs, computing a task-specific correlation score to identify high-value instances. This not only enbles data-efficient selection,but maintains the original performance. Empirical evaluations across multiple MLLMs demonstrate that PRISM reduces the overall time required for visual instruction tuning and data selection to just 30% of conventional methods, while surpassing fully fine-tuned models across eight multimodal and three language understanding benchmarks, achieving a 101.7% relative improvement in final performance. 
+
+**Abstract (ZH)**: 视觉指令调优通过精炼预训练的多模态大型语言模型（MLLMs），以增强其实用任务性能。然而，视觉指令数据集的迅速扩展带来了显著的数据冗余，导致计算成本过高。现有的数据选择方法主要依赖于代理模型或基于损失的度量，这两种方法都因需要模型推理和反向传播而产生巨大的计算开销。为应对这一挑战，我们提出了一种名为PRISM的新型无训练数据选择方法，该方法旨在高效地进行多模态数据选择。与现有方法不同，PRISM去掉了对代理模型、预热训练和基于梯度的优化的依赖。相反，它利用皮尔森相关分析来量化MLLMs固有的视觉编码特性，计算出任务特定的相关性得分以识别高价值实例。这不仅实现了数据高效的筛选，还能维持原有的性能。在多项多模态和语言理解基准测试中的实证评估表明，PRISM将视觉指令调优和数据选择的整体所需时间减少了70%，同时在八个多模态和三个语言理解基准测试中超过完全微调的模型，最终性能相对提高了101.7%。 
+
+---
+# Step-Audio: Unified Understanding and Generation in Intelligent Speech Interaction 
+
+**Title (ZH)**: Step-Audio：智能语音交互中的统一理解和生成 
+
+**Authors**: Ailin Huang, Boyong Wu, Bruce Wang, Chao Yan, Chen Hu, Chengli Feng, Fei Tian, Feiyu Shen, Jingbei Li, Mingrui Chen, Peng Liu, Ruihang Miao, Wang You, Xi Chen, Xuerui Yang, Yechang Huang, Yuxiang Zhang, Zheng Gong, Zixin Zhang, Brian Li, Changyi Wan, Hanpeng Hu, Ranchen Ming, Song Yuan, Xuelin Zhang, Yu Zhou, Bingxin Li, Buyun Ma, Kang An, Wei Ji, Wen Li, Xuan Wen, Yuankai Ma, Yuanwei Liang, Yun Mou, Bahtiyar Ahmidi, Bin Wang, Bo Li, Changxin Miao, Chen Xu, Chengting Feng, Chenrun Wang, Dapeng Shi, Deshan Sun, Dingyuan Hu, Dula Sai, Enle Liu, Guanzhe Huang, Gulin Yan, Heng Wang, Haonan Jia, Haoyang Zhang, Jiahao Gong, Jianchang Wu, Jiahong Liu, Jianjian Sun, Jiangjie Zhen, Jie Feng, Jie Wu, Jiaoren Wu, Jie Yang, Jinguo Wang, Jingyang Zhang, Junzhe Lin, Kaixiang Li, Lei Xia, Li Zhou, Longlong Gu, Mei Chen, Menglin Wu, Ming Li, Mingxiao Li, Mingyao Liang, Na Wang, Nie Hao, Qiling Wu, Qinyuan Tan, Shaoliang Pang, Shiliang Yang, Shuli Gao, Siqi Liu, Sitong Liu, Tiancheng Cao, Tianyu Wang, Wenjin Deng, Wenqing He, Wen Sun, Xin Han, Xiaomin Deng, Xiaojia Liu, Xu Zhao, Yanan Wei, Yanbo Yu, Yang Cao, Yangguang Li, Yangzhen Ma, Yanming Xu, Yaqiang Shi, Yilei Wang, Yinmin Zhong  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.11946)  
+
+**Abstract**: Real-time speech interaction, serving as a fundamental interface for human-machine collaboration, holds immense potential. However, current open-source models face limitations such as high costs in voice data collection, weakness in dynamic control, and limited intelligence. To address these challenges, this paper introduces Step-Audio, the first production-ready open-source solution. Key contributions include: 1) a 130B-parameter unified speech-text multi-modal model that achieves unified understanding and generation, with the Step-Audio-Chat version open-sourced; 2) a generative speech data engine that establishes an affordable voice cloning framework and produces the open-sourced lightweight Step-Audio-TTS-3B model through distillation; 3) an instruction-driven fine control system enabling dynamic adjustments across dialects, emotions, singing, and RAP; 4) an enhanced cognitive architecture augmented with tool calling and role-playing abilities to manage complex tasks effectively. Based on our new StepEval-Audio-360 evaluation benchmark, Step-Audio achieves state-of-the-art performance in human evaluations, especially in terms of instruction following. On open-source benchmarks like LLaMA Question, shows 9.3% average performance improvement, demonstrating our commitment to advancing the development of open-source multi-modal language technologies. Our code and models are available at this https URL. 
+
+**Abstract (ZH)**: 实时语音交互作为人机协作的基本接口，具有巨大的潜力。然而，当前开源模型在语音数据收集成本高、动态控制能力弱以及智能化水平有限等方面存在局限性。为解决这些问题，本论文介绍了Step-Audio，这是首个生产级的开源解决方案。其主要贡献包括：1) 一个包含130亿参数的统一语音-文本多模态模型，实现了统一的理解和生成能力，Step-Audio-Chat版本已开源；2) 生成式语音数据引擎，建立了经济实惠的语音克隆框架，并通过知识蒸馏开源了轻量级的Step-Audio-TTS-3B模型；3) 指令驱动的精细控制系统，支持对方言、情感、歌唱和说唱等进行动态调整；4) 增强的认知架构，具备工具调用和角色扮演能力，以有效管理复杂的任务。基于我们全新的StepEval-Audio-360评估基准，Step-Audio 在人类评估中表现出色，特别是在指令遵循方面。在开放源代码基准测试（如LLaMA Question）上，平均性能提升了9.3%，展示了我们对推动开源多模态语言技术发展的承诺。我们的代码和模型可在以下链接获取：[此 https URL]。 
+
+---
+# EssayJudge: A Multi-Granular Benchmark for Assessing Automated Essay Scoring Capabilities of Multimodal Large Language Models 
+
+**Title (ZH)**: EssayJudge：评估多模态大型语言模型自动作文评分能力的多粒度基准 
+
+**Authors**: Jiamin Su, Yibo Yan, Fangteng Fu, Han Zhang, Jingheng Ye, Xiang Liu, Jiahao Huo, Huiyu Zhou, Xuming Hu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.11916)  
+
+**Abstract**: Automated Essay Scoring (AES) plays a crucial role in educational assessment by providing scalable and consistent evaluations of writing tasks. However, traditional AES systems face three major challenges: (1) reliance on handcrafted features that limit generalizability, (2) difficulty in capturing fine-grained traits like coherence and argumentation, and (3) inability to handle multimodal contexts. In the era of Multimodal Large Language Models (MLLMs), we propose EssayJudge, the first multimodal benchmark to evaluate AES capabilities across lexical-, sentence-, and discourse-level traits. By leveraging MLLMs' strengths in trait-specific scoring and multimodal context understanding, EssayJudge aims to offer precise, context-rich evaluations without manual feature engineering, addressing longstanding AES limitations. Our experiments with 18 representative MLLMs reveal gaps in AES performance compared to human evaluation, particularly in discourse-level traits, highlighting the need for further advancements in MLLM-based AES research. Our dataset and code will be available upon acceptance. 
+
+**Abstract (ZH)**: 自动化作文评分（Automated Essay Scoring, AES）在教育评估中发挥着关键作用，通过提供可扩展且一致的写作任务评估。然而，传统的AES系统面临三大挑战：（1）依赖手工设计的特征，限制了其普适性；（2）难以捕捉细粒度的特征如连贯性和论证能力；（3）无法处理多模态上下文。在多模态大型语言模型（Multimodal Large Language Models, MLLMs）的时代，我们提出了EssayJudge，这是第一个评估AES能力的多模态基准，可以评估其在词级、句级和话语级特征上的表现。通过利用MLLMs在特征特定评分和多模态上下文理解方面的优势，EssayJudge旨在提供精确且富有上下文的信息评估，无需手动特征工程，解决传统AES的长期限制。我们的实验结果显示，18个代表性MLLMs在AES性能上存在与人工评估的差距，尤其是在话语级特征上，这表明需要进一步改进基于MLLMs的AES研究。我们的数据集和代码将在接受后提供。 
+
+---
+# Language Models Can See Better: Visual Contrastive Decoding For LLM Multimodal Reasoning 
+
+**Title (ZH)**: 语言模型视觉能力提升：用于大模型多模态推理的视觉对比解码 
+
+**Authors**: Yuqi Pang, Bowen Yang, Haoqin Tu, Yun Cao, Zeyu Zhang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.11751)  
+
+**Abstract**: Although Large Language Models (LLMs) excel in reasoning and generation for language tasks, they are not specifically designed for multimodal challenges. Training Multimodal Large Language Models (MLLMs), however, is resource-intensive and constrained by various training limitations. In this paper, we propose the Modular-based Visual Contrastive Decoding (MVCD) framework to move this obstacle. Our framework leverages LLMs' In-Context Learning (ICL) capability and the proposed visual contrastive-example decoding (CED), specifically tailored for this framework, without requiring any additional training. By converting visual signals into text and focusing on contrastive output distributions during decoding, we can highlight the new information introduced by contextual examples, explore their connections, and avoid over-reliance on prior encoded knowledge. MVCD enhances LLMs' visual perception to make it see and reason over the input visuals. To demonstrate MVCD's effectiveness, we conduct experiments with four LLMs across five question answering datasets. Our results not only show consistent improvement in model accuracy but well explain the effective components inside our decoding strategy. Our code will be available at this https URL. 
+
+**Abstract (ZH)**: 尽管大型语言模型（LLMs）在语言任务中的推理和生成表现优异，但它们并没有专门为多模态挑战而设计。然而，训练多模态大型语言模型（MLLMs）需要大量资源，并受到各种训练限制。在本文中，我们提出了基于模块化视觉对比解码（MVCD）框架来克服这一障碍。我们的框架利用了LLMs的上下文学习（ICL）能力，并结合了专门为该框架设计的视觉对比解码（CED），而不需要额外的训练。通过将视觉信号转换为文本并在解码过程中关注对比输出分布，我们可以突出上下文示例引入的新信息，探索它们之间的关联，从而避免过度依赖先验编码知识。MVCD增强了LLMs的视觉感知能力，使其能够对输入视觉进行观察和推理。为了展示MVCD的有效性，我们在五个问答数据集中对四种LLMs进行了实验。我们的结果不仅展示了模型准确性的持续改进，还详细解释了解码策略中的有效组件。相关代码将在此网址中提供：this https URL。 
+
+---
+# MMXU: A Multi-Modal and Multi-X-ray Understanding Dataset for Disease Progression 
+
+**Title (ZH)**: MMXU：一种用于疾病进展理解的多模态和多X射线数据集 
+
+**Authors**: Linjie Mu, Zhongzhen Huang, Shengqian Qin, Yakun Zhu, Shaoting Zhang, Xiaofan Zhang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.11651)  
+
+**Abstract**: Large vision-language models (LVLMs) have shown great promise in medical applications, particularly in visual question answering (MedVQA) and diagnosis from medical images. However, existing datasets and models often fail to consider critical aspects of medical diagnostics, such as the integration of historical records and the analysis of disease progression over time. In this paper, we introduce MMXU (Multimodal and MultiX-ray Understanding), a novel dataset for MedVQA that focuses on identifying changes in specific regions between two patient visits. Unlike previous datasets that primarily address single-image questions, MMXU enables multi-image questions, incorporating both current and historical patient data. We demonstrate the limitations of current LVLMs in identifying disease progression on MMXU-\textit{test}, even those that perform well on traditional benchmarks. To address this, we propose a MedRecord-Augmented Generation (MAG) approach, incorporating both global and regional historical records. Our experiments show that integrating historical records significantly enhances diagnostic accuracy by at least 20\%, bridging the gap between current LVLMs and human expert performance. Additionally, we fine-tune models with MAG on MMXU-\textit{dev}, which demonstrates notable improvements. We hope this work could illuminate the avenue of advancing the use of LVLMs in medical diagnostics by emphasizing the importance of historical context in interpreting medical images. Our dataset is released at \href{this https URL}{this https URL}. 
+
+**Abstract (ZH)**: 大规模视觉-语言模型（LVLMs）在医疗应用中显示出巨大的潜力，特别是在医学视觉问答（MedVQA）和医学图像诊断方面。然而，现有的数据集和模型往往未能考虑医学诊断中的关键方面，如历史记录的整合和疾病进展的分析。在本文中，我们介绍了MMXU（多模态和多X光理解），一个新的用于MedVQA的数据集，专注于识别两位患者就诊之间特定区域的变化。与主要处理单张图片问题的先前数据集不同，MMXU 支持多张图片的问题，结合了当前和历史患者的双重数据。我们通过MMXU-\textit{test}展示了当前LVLMs在识别疾病进展方面的局限性，即使是那些在传统基准测试中表现良好的模型。为了解决这一问题，我们提出了一种MedRecord-Augmented Generation（MAG）方法，结合了全局和区域的历史记录。实验结果表明，整合历史记录可以显著提高诊断准确性至少20%，缩小当前LVLMs与人类专家表现之间的差距。此外，我们在MMXU-\textit{dev}上对MAG进行了微调，证明了显著的改进。我们希望这项工作能够揭示出通过强调医疗图像解释中的历史上下文来推进LVLMs在医疗诊断中的使用方向。我们的数据集可以在 \href{this https URL}{这个链接} 获取。 
+
+---
+# InfiR : Crafting Effective Small Language Models and Multimodal Small Language Models in Reasoning 
+
+**Title (ZH)**: InfiR：打造高效的小型语言模型与推理性的小型多模态语言模型 
+
+**Authors**: Congkai Xie, Shuo Cai, Wenjun Wang, Pengxiang Li, Zhijie Sang, Kejing Yang, Yiming Zhang, Zhen Li, Guanghao Zhu, Zeyu Liu, Yang Yu, Yuhang Liu, Su Lu, Baoyi He, Qi Zhou, Xiaotian Han, Jianbo Yuan, Shengyu Zhang, Fei Wu, Hongxia Yang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.11573)  
+
+**Abstract**: Large Language Models (LLMs) and Multimodal Large Language Models (MLLMs) have made significant advancements in reasoning capabilities. However, they still face challenges such as high computational demands and privacy concerns. This paper focuses on developing efficient Small Language Models (SLMs) and Multimodal Small Language Models (MSLMs) that retain competitive reasoning abilities. We introduce a novel training pipeline that enhances reasoning capabilities and facilitates deployment on edge devices, achieving state-of-the-art performance while minimizing development costs. \InfR~ aims to advance AI systems by improving reasoning, reducing adoption barriers, and addressing privacy concerns through smaller model sizes. Resources are available at https://github. com/Reallm-Labs/InfiR. 
+
+**Abstract (ZH)**: 大规模语言模型（LLMs）和多模态大规模语言模型（MLLMs）在推理能力方面取得了显著进步。然而，它们仍然面临计算成本高的挑战以及隐私问题。本文致力于开发高效的中小型语言模型（SLMs）和多模态中小型语言模型（MSLMs），这些模型能够在保留竞争性推理能力的基础上降低开发成本。我们提出了一种新的训练流程，旨在增强推理能力并促进边缘设备上的部署，从而实现最先进的性能。InInfR 旨在通过提升推理能力、降低采用门槛和通过较小的模型规模解决隐私问题，来推动AI系统的进步。更多资源可在 https://github.com/Reallm-Labs/InInfR 获取。 
+
+---
+# Connector-S: A Survey of Connectors in Multi-modal Large Language Models 
+
+**Title (ZH)**: Connector-S：多模态大型语言模型中连接器综述 
+
+**Authors**: Xun Zhu, Zheng Zhang, Xi Chen, Yiming Shi, Miao Li, Ji Wu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.11453)  
+
+**Abstract**: With the rapid advancements in multi-modal large language models (MLLMs), connectors play a pivotal role in bridging diverse modalities and enhancing model performance. However, the design and evolution of connectors have not been comprehensively analyzed, leaving gaps in understanding how these components function and hindering the development of more powerful connectors. In this survey, we systematically review the current progress of connectors in MLLMs and present a structured taxonomy that categorizes connectors into atomic operations (mapping, compression, mixture of experts) and holistic designs (multi-layer, multi-encoder, multi-modal scenarios), highlighting their technical contributions and advancements. Furthermore, we discuss several promising research frontiers and challenges, including high-resolution input, dynamic compression, guide information selection, combination strategy, and interpretability. This survey is intended to serve as a foundational reference and a clear roadmap for researchers, providing valuable insights into the design and optimization of next-generation connectors to enhance the performance and adaptability of MLLMs. 
+
+**Abstract (ZH)**: 随着多模态大型语言模型（多模态大语言模型，MM-LLMs）的快速发展，连接器在连接不同模态和提升模型性能方面发挥着关键作用。然而，连接器的设计和演进尚未得到全面分析，这在一定程度上阻碍了我们对这些组件功能的理解，并阻碍了更强大连接器的发展。在本文综述中，我们系统地回顾了当前MM-LLMs中连接器的发展情况，并提出了一个结构化的分类框架，将连接器分为原子操作（映射、压缩、专家混搭）和整体设计（多层、多编码器、多模态场景），突显其技术贡献和进步。此外，我们讨论了几个具有前景的研究前沿和挑战，包括高分辨率输入、动态压缩、指导信息选择、组合策略和可解释性。本文综述旨在为研究人员提供一个基础参考和清晰的路线图，提供有关设计和优化下一代连接器以增强MM-LLMs性能和适应性的宝贵见解。 
+
+---
+# Multi-Turn Multi-Modal Question Clarification for Enhanced Conversational Understanding 
+
+**Title (ZH)**: 增强对话理解的多轮多模态疑问澄清 
+
+**Authors**: Kimia Ramezan, Alireza Amiri Bavandpour, Yifei Yuan, Clemencia Siro, Mohammad Aliannejadi  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.11442)  
+
+**Abstract**: Conversational query clarification enables users to refine their search queries through interactive dialogue, improving search effectiveness. Traditional approaches rely on text-based clarifying questions, which often fail to capture complex user preferences, particularly those involving visual attributes. While recent work has explored single-turn multi-modal clarification with images alongside text, such methods do not fully support the progressive nature of user intent refinement over multiple turns. Motivated by this, we introduce the Multi-turn Multi-modal Clarifying Questions (MMCQ) task, which combines text and visual modalities to refine user queries in a multi-turn conversation. To facilitate this task, we create a large-scale dataset named ClariMM comprising over 13k multi-turn interactions and 33k question-answer pairs containing multi-modal clarifying questions. We propose Mario, a retrieval framework that employs a two-phase ranking strategy: initial retrieval with BM25, followed by a multi-modal generative re-ranking model that integrates textual and visual information from conversational history. Our experiments show that multi-turn multi-modal clarification outperforms uni-modal and single-turn approaches, improving MRR by 12.88%. The gains are most significant in longer interactions, demonstrating the value of progressive refinement for complex queries. 
+
+**Abstract (ZH)**: 对话查询澄清通过交互对话帮助用户细化搜索查询，从而提高搜索效果。传统方法依赖于基于文本的澄清问题，但往往无法捕捉到复杂用户偏好，尤其是涉及视觉属性的偏好。虽然近期的研究探讨了结合文本和图像的一轮多模态澄清方法，但这些方法未能全面支持用户意向在多轮次中的渐进细化。鉴于此，我们引入了多轮多模态澄清问题（MMCQ）任务，该任务结合了文本和视觉模态，在多轮对话中细化用户的查询。为了开展这一任务，我们创建了一个包含超过13,000个多轮互动和33,000个包含多模态澄清问题的问题-答案对的大规模数据集，命名为ClariMM。我们提出了Mario，一个检索框架，采用两阶段排名策略：初始阶段使用BM25进行检索，随后是一个多模态生成再排名模型，该模型整合了对话历史中的文本和视觉信息。实验结果显示，多轮多模态澄清方法优于单一模态和单轮方法，MRR提升了12.88%。特别是在较长的互动中，收益最为显著，证明了渐进细化对于复杂查询的价值。 
+
+---
+# Exploiting Point-Language Models with Dual-Prompts for 3D Anomaly Detection 
+
+**Title (ZH)**: 利用双提示点语言模型进行3D异常检测 
+
+**Authors**: Jiaxiang Wang, Haote Xu, Xiaolu Chen, Haodi Xu, Yue Huang, Xinghao Ding, Xiaotong Tu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.11307)  
+
+**Abstract**: Anomaly detection (AD) in 3D point clouds is crucial in a wide range of industrial applications, especially in various forms of precision manufacturing. Considering the industrial demand for reliable 3D AD, several methods have been developed. However, most of these approaches typically require training separate models for each category, which is memory-intensive and lacks flexibility. In this paper, we propose a novel Point-Language model with dual-prompts for 3D ANomaly dEtection (PLANE). The approach leverages multi-modal prompts to extend the strong generalization capabilities of pre-trained Point-Language Models (PLMs) to the domain of 3D point cloud AD, achieving impressive detection performance across multiple categories using a single model. Specifically, we propose a dual-prompt learning method, incorporating both text and point cloud prompts. The method utilizes a dynamic prompt creator module (DPCM) to produce sample-specific dynamic prompts, which are then integrated with class-specific static prompts for each modality, effectively driving the PLMs. Additionally, based on the characteristics of point cloud data, we propose a pseudo 3D anomaly generation method (Ano3D) to improve the model's detection capabilities in an unsupervised setting. Experimental results demonstrate that the proposed method, which is under the multi-class-one-model paradigm, achieves a +8.7%/+17% gain on anomaly detection and localization performance as compared to the state-of-the-art one-class-one-model methods for the Anomaly-ShapeNet dataset, and obtains +4.3%/+4.1% gain for the Real3D-AD dataset. Code will be available upon publication. 
+
+**Abstract (ZH)**: 三维点云中的异常检测（AD）在众多工业应用中至关重要，特别是在各种精密制造领域。鉴于工业对可靠三维异常检测的需求，已经开发出了多种方法。然而，这些方法大多需要为每个类别训练单独的模型，这既消耗内存且缺乏灵活性。本文提出了一种新型的Point-Language模型（PLANE），其具有双重提示方法。该方法通过多模态提示，将预训练的Point-Language模型（PLMs）的强泛化能力扩展到三维点云异常检测领域，使用单一模型即可在多个类别上实现出色的检测性能。具体而言，我们提出了一种双重提示学习方法，同时融入了文本和点云提示。该方法利用动态提示生成模块（DPCM）生成样本特定的动态提示，然后将这些动态提示与每个模态的类别特定静态提示结合，有效驱动PLMs。另外，根据点云数据的特点，我们提出了一种伪三维异常生成方法（Ano3D），在无监督环境下提高模型的检测能力。实验结果表明，该方法在多类单模型范式下，与最先进的单类单模型方法相比，Anomaly-ShapeNet数据集的异常检测和定位性能分别提高了8.7%/17%，Real3D-AD数据集分别提高了4.3%/4.1%。出版后将提供代码。 
+
+---
+# CORDIAL: Can Multimodal Large Language Models Effectively Understand Coherence Relationships? 
+
+**Title (ZH)**: CORDIAL：多模态大规模语言模型能否有效理解连贯性关系？ 
+
+**Authors**: Aashish Anantha Ramakrishnan, Aadarsh Anantha Ramakrishnan, Dongwon Lee  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.11300)  
+
+**Abstract**: Multimodal Large Language Models (MLLMs) are renowned for their superior instruction-following and reasoning capabilities across diverse problem domains. However, existing benchmarks primarily focus on assessing factual and logical correctness in downstream tasks, with limited emphasis on evaluating MLLMs' ability to interpret pragmatic cues and intermodal relationships. To address this gap, we assess the competency of MLLMs in performing Multimodal Discourse Analysis (MDA) using Coherence Relations. Our benchmark, CORDIAL, encompasses a broad spectrum of Coherence Relations across 3 different discourse domains at varying levels of granularity. Through our experiments on 10+ MLLMs employing different prompting strategies, we show that even top models like Gemini 1.5 Pro and GPT-4o fail to match the performance of simple classifier-based baselines. This study emphasizes the need to move beyond similarity-based metrics and adopt a discourse-driven framework for evaluating MLLMs, providing a more nuanced assessment of their capabilities. The benchmark and code are available at: this https URL. 
+
+**Abstract (ZH)**: 多模态大语言模型（MLLMs）以其在多种问题领域中的卓越指令遵循能力和推理能力而闻名。然而，现有的基准主要关注下游任务中的事实和逻辑正确性，对评估MLLMs在解释语用线索和跨模态关系方面的能力关注不足。为解决这一问题，我们使用连贯性关系（Coherence Relations）对MLLMs进行多模态话语分析（MDA）的能力进行了评估。我们的基准测试Cordial涵盖了三个不同的话语领域中不同粒度层次的广泛连贯性关系。通过在10多种使用不同提示策略的MLLMs上进行实验，我们发现即使是像Gemini 1.5 Pro和GPT-4o这样的顶级模型也无法达到基于简单分类器的基线模型的性能。本研究强调了超越基于相似性的评估指标，采用基于话语驱动的框架来评估MLLMs的重要性，提供一种更细致的能力评估。基准测试和代码可在以下链接获取：[此链接]。 
+
+---
+# Can't See the Forest for the Trees: Benchmarking Multimodal Safety Awareness for Multimodal LLMs 
+
+**Title (ZH)**: 《只见树木不见森林：多模态安全意识的基准测试》
+
+这个标题翻译成中文后，既保留了原意，又符合学术规范。这里“只见树木不见森林”是一个比喻，用来形象地描述在评估多模态大语言模型（Multimodal LLMs）的多模态安全意识时，容易过于关注局部细节（树木），而忽视整体（森林）。 
+
+**Authors**: Wenxuan Wang, Xiaoyuan Liu, Kuiyi Gao, Jen-tse Huang, Youliang Yuan, Pinjia He, Shuai Wang, Zhaopeng Tu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.11184)  
+
+**Abstract**: Multimodal Large Language Models (MLLMs) have expanded the capabilities of traditional language models by enabling interaction through both text and images. However, ensuring the safety of these models remains a significant challenge, particularly in accurately identifying whether multimodal content is safe or unsafe-a capability we term safety awareness. In this paper, we introduce MMSafeAware, the first comprehensive multimodal safety awareness benchmark designed to evaluate MLLMs across 29 safety scenarios with 1500 carefully curated image-prompt pairs. MMSafeAware includes both unsafe and over-safety subsets to assess models abilities to correctly identify unsafe content and avoid over-sensitivity that can hinder helpfulness. Evaluating nine widely used MLLMs using MMSafeAware reveals that current models are not sufficiently safe and often overly sensitive; for example, GPT-4V misclassifies 36.1% of unsafe inputs as safe and 59.9% of benign inputs as unsafe. We further explore three methods to improve safety awareness-prompting-based approaches, visual contrastive decoding, and vision-centric reasoning fine-tuning-but find that none achieve satisfactory performance. Our findings highlight the profound challenges in developing MLLMs with robust safety awareness, underscoring the need for further research in this area. All the code and data will be publicly available to facilitate future research. 
+
+**Abstract (ZH)**: 多模态大型语言模型（MLLMs）通过同时支持文本和图像交互，扩展了传统语言模型的能力。然而，确保这些模型的安全性仍然是一个重大挑战，尤其是在准确识别多模态内容是否安全方面——我们称之为安全性意识。在本文中，我们介绍了MMSafeAware，这是首个全面的多模态安全性意识基准，旨在通过1500个精心挑选的图像-提示对，评估MLLMs在29种安全场景中的表现。MMSafeAware不仅包括不安全的内容子集，还包括过度安全的内容子集，以评估模型正确识别不安全内容和避免过度敏感（这可能妨碍其可用性）的能力。使用MMSafeAware评估九个广泛使用的MLLMs表明，当前的模型并不足够安全，并且往往过于敏感；例如，GPT-4V将36.1%的不安全输入错误分类为安全输入，还将59.9%的良性输入错误分类为不安全输入。我们进一步探讨了三种提高安全性意识的方法——基于提示的方法、视觉对比解码和以视觉为中心的推理微调，但发现这些方法均未达到令人满意的效果。我们的研究结果突显了开发具有强大安全性意识的MLLMs所面临的巨大挑战，强调了在该领域进行进一步研究的必要性。所有代码和数据将公开发布，以促进未来的研究。 
+
+---
+# Phantom: Subject-consistent video generation via cross-modal alignment 
+
+**Title (ZH)**: Phantom：基于跨模态对齐的主体一致视频生成 
+
+**Authors**: Lijie Liu, Tianxiang Ma, Bingchuan Li, Zhuowei Chen, Jiawei Liu, Qian He, Xinglong Wu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.11079)  
+
+**Abstract**: The continuous development of foundational models for video generation is evolving into various applications, with subject-consistent video generation still in the exploratory stage. We refer to this as Subject-to-Video, which extracts subject elements from reference images and generates subject-consistent video through textual instructions. We believe that the essence of subject-to-video lies in balancing the dual-modal prompts of text and image, thereby deeply and simultaneously aligning both text and visual content. To this end, we propose Phantom, a unified video generation framework for both single and multi-subject references. Building on existing text-to-video and image-to-video architectures, we redesign the joint text-image injection model and drive it to learn cross-modal alignment via text-image-video triplet data. In particular, we emphasize subject consistency in human generation, covering existing ID-preserving video generation while offering enhanced advantages. The project homepage is here this https URL. 
+
+**Abstract (ZH)**: 基础模型在视频生成中的持续发展正逐步应用于各种场景，而基于主题的一致性视频生成仍处于探索阶段。我们将其称之为“主题到视频”，该方法从参考图像中提取主题元素，并通过文本指令生成主题一致的视频。我们认为，主题到视频的核心在于平衡文本和图像的双重提示，从而实现文本和视觉内容的深度和同步对齐。为此，我们提出了Phantom，一个统一的主题一致视频生成框架，支持单主题和多主题参考。基于现有的文本到视频和图像到视频架构，我们重新设计了联合文本-图像注入模型，并通过文本-图像-视频三元组数据驱动其学习跨模态对齐。特别是在人类生成中强调主题一致性，不仅保留现有的ID保持视频生成特性，还提供了增强的优势。该项目主页为：[此链接](https://github.com/alibaba/qwen)。 
+
+---
+# MMUNLEARNER: Reformulating Multimodal Machine Unlearning in the Era of Multimodal Large Language Models 
+
+**Title (ZH)**: MMUNLEARNER: 重塑多模态机器遗忘在多模态大型语言模型时代的范式 
+
+**Authors**: Jiahao Huo, Yibo Yan, Xu Zheng, Yuanhuiyi Lyu, Xin Zou, Zhihua Wei, Xuming Hu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.11051)  
+
+**Abstract**: Recent progress in Machine Unlearning (MU) has introduced solutions for the selective removal of private or sensitive information encoded within deep neural networks. Nonetheless, MU for Multimodal Large Language Models (MLLMs) remains in its nascent phase. Therefore, we propose to reformulate the task of multimodal MU in the era of MLLMs, which aims to erase only the visual patterns associated with a given entity while preserving the corresponding textual knowledge encoded within the original parameters of the language model backbone. Furthermore, we develop a novel geometry-constrained gradient descent method MMUnlearner. It updates the weights of MLLMs with a weight saliency map jointly restricted by the remaining concepts and textual knowledge during unlearning, thereby preserving parameters essential for non-target knowledge. Extensive experiments demonstrate that MMUnlearner surpasses baselines that finetuning MLLMs with VQA data directly through Gradient Ascent (GA) or Negative Preference Optimization (NPO), across all evaluation dimensions. Our code will be released upon acceptance. 
+
+**Abstract (ZH)**: 近年来，机器遗忘（Machine Unlearning, MU）的研究取得了进展，提出了从深度神经网络中选择性移除私人或敏感信息的解决方案。然而，面向多模态大型语言模型（Multimodal Large Language Models, MLLMs）的MU仍处于初级阶段。因此，我们提出了在MLLM时代重新定义多模态MU的任务，该任务旨在仅擦除与给定实体相关的视觉模式，同时保留语言模型骨干网络中原有的相应文本知识。此外，我们提出了一种新的几何约束梯度下降方法Multimodal Unlearner（MMUnlearner）。该方法在遗忘过程中通过联合限制剩余概念和文本知识来更新MLLM的权重，从而保留对非目标知识至关重要的参数。广泛实验证明，MMUnlearner在所有评估维度上均优于直接使用问答数据（VQA数据）通过梯度上升（Gradient Ascent, GA）或负面偏好优化（Negative Preference Optimization, NPO）微调MLLM的基线方法。我们的代码将在接受后发布。 
+
+---
+# CL-MFAP: A Contrastive Learning-Based Multimodal Foundation Model for Molecular Property Prediction and Antibiotic Screening 
+
+**Title (ZH)**: CL-MFAP：基于对比学习的多模态基础模型在分子性质预测和抗生素筛选中的应用 
+
+**Authors**: Gen Zhou, Sugitha Janarthanan, Yutong Lu, Pingzhao Hu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.11001)  
+
+**Abstract**: Due to the rise in antimicrobial resistance, identifying novel compounds with antibiotic potential is crucial for combatting this global health issue. However, traditional drug development methods are costly and inefficient. Recognizing the pressing need for more effective solutions, researchers have turned to machine learning techniques to streamline the prediction and development of novel antibiotic compounds. While foundation models have shown promise in antibiotic discovery, current mainstream efforts still fall short of fully leveraging the potential of multimodal molecular data. Recent studies suggest that contrastive learning frameworks utilizing multimodal data exhibit excellent performance in representation learning across various domains. Building upon this, we introduce CL-MFAP, an unsupervised contrastive learning (CL)-based multimodal foundation (MF) model specifically tailored for discovering small molecules with potential antibiotic properties (AP) using three types of molecular data. This model employs 1.6 million bioactive molecules with drug-like properties from the ChEMBL dataset to jointly pretrain three encoders: (1) a transformer-based encoder with rotary position embedding for processing SMILES strings; (2) another transformer-based encoder, incorporating a novel bi-level routing attention mechanism to handle molecular graph representations; and (3) a Morgan fingerprint encoder using a multilayer perceptron, to achieve the contrastive learning purpose. The CL-MFAP outperforms baseline models in antibiotic property prediction by effectively utilizing different molecular modalities and demonstrates superior domain-specific performance when fine-tuned for antibiotic-related property prediction tasks. 
+
+**Abstract (ZH)**: 由于抗菌素耐药性的不断上升，发现具有抗生素潜在活性的新化合物对于应对这一全球健康问题至关重要。然而，传统药物开发方法成本高且效率低下。鉴于此紧迫需求，研究人员转向机器学习技术以简化新型抗生素化合物的预测和开发流程。虽然基础模型在抗生素发现方面显示出潜力，但当前主流努力尚未充分挖掘多模态分子数据的全部潜力。最近的研究表明，利用多模态数据的对比学习框架在不同领域中表现出色。在此基础上，我们介绍了CL-MFAP，这是一种基于对比学习（CL）的多模态基础（MF）模型，专为利用三种类型的数据发现具有潜在抗生素特性的小分子而定制。该模型利用来自ChEMBL数据集的160万种具有药理特性的生物活性分子，联合预训练三个编码器：（1）一种带有旋转位置嵌入的基于变换器的编码器，用于处理SMILES字符串；（2）另一种基于变换器的编码器，结合了一种新的两层路由注意力机制，以处理分子图表示；（3）一种使用多层感知器的摩根指纹编码器，以实现对比学习的目的。CL-MFAP在抗生素特性预测方面的表现优于基线模型，有效利用了不同类型的分子模态，并在针对抗生素相关特性预测任务进行微调后展现出更优的领域特异性性能。 
+
+---
+# PolyPath: Adapting a Large Multimodal Model for Multi-slide Pathology Report Generation 
+
+**Title (ZH)**: PolyPath: 调整大型多模态模型以生成多张病理切片报告 
+
+**Authors**: Faruk Ahmed, Lin Yang, Tiam Jaroensri, Andrew Sellergren, Yossi Matias, Avinatan Hassidim, Greg S. Corrado, Dale R. Webster, Shravya Shetty, Shruthi Prabhakara, Yun Liu, Daniel Golden, Ellery Wulczyn, David F. Steiner  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.10536)  
+
+**Abstract**: The interpretation of histopathology cases underlies many important diagnostic and treatment decisions in medicine. Notably, this process typically requires pathologists to integrate and summarize findings across multiple slides per case. Existing vision-language capabilities in computational pathology have so far been largely limited to small regions of interest, larger regions at low magnification, or single whole-slide images (WSIs). This limits interpretation of findings that span multiple high-magnification regions across multiple WSIs. By making use of Gemini 1.5 Flash, a large multimodal model (LMM) with a 1-million token context window, we demonstrate the ability to generate bottom-line diagnoses from up to 40,000 768x768 pixel image patches from multiple WSIs at 10X magnification. This is the equivalent of up to 11 hours of video at 1 fps. Expert pathologist evaluations demonstrate that the generated report text is clinically accurate and equivalent to or preferred over the original reporting for 68% (95% CI: [60%, 76%]) of multi-slide examples with up to 5 slides. While performance decreased for examples with 6 or more slides, this study demonstrates the promise of leveraging the long-context capabilities of modern LMMs for the uniquely challenging task of medical report generation where each case can contain thousands of image patches. 
+
+**Abstract (ZH)**: 病理组织学案例的解释对于医学中的许多重要诊断和治疗决策至关重要。这一过程通常要求病理学家整合和总结多个切片中的各项发现。目前，在计算病理学中的视觉-语言能力主要局限于感兴趣的小区域、低放大倍数的大区域或单张全切片图像（WSI）。这限制了对跨越多个WSI的多个高倍率区域的发现进行解释的能力。通过利用Gemini 1.5 Flash，一种具有100万词上下文窗口的大规模多模态模型（LMM），我们展示了从多张10倍放大倍率的WSI中多达40,000个768x768像素的图像块生成最终诊断结果的能力。这相当于长达11小时的1 fps视频。专家病理学家的评估表明，生成的报告文本在临床准确性上与原报告相当或更优，对于包含至多5张切片的68%（95%置信区间：[60%, 76%]）的多切片示例，生成的报告文本更受偏好。尽管对于包含6张或更多切片的示例，性能有所下降，但本研究展示了利用现代LMM的长上下文能力来完成医学报告生成这一独特挑战任务的潜力，而每例病例可能包含数千个图像块。 
+
+---
+# VLM-Guard: Safeguarding Vision-Language Models via Fulfilling Safety Alignment Gap 
+
+**Title (ZH)**: VLM-Guard：通过填补安全对齐缺口来保障视觉语言模型的安全性 
+
+**Authors**: Qin Liu, Fei Wang, Chaowei Xiao, Muhao Chen  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.10486)  
+
+**Abstract**: The emergence of vision language models (VLMs) comes with increased safety concerns, as the incorporation of multiple modalities heightens vulnerability to attacks. Although VLMs can be built upon LLMs that have textual safety alignment, it is easily undermined when the vision modality is integrated. We attribute this safety challenge to the modality gap, a separation of image and text in the shared representation space, which blurs the distinction between harmful and harmless queries that is evident in LLMs but weakened in VLMs. To avoid safety decay and fulfill the safety alignment gap, we propose VLM-Guard, an inference-time intervention strategy that leverages the LLM component of a VLM as supervision for the safety alignment of the VLM. VLM-Guard projects the representations of VLM into the subspace that is orthogonal to the safety steering direction that is extracted from the safety-aligned LLM. Experimental results on three malicious instruction settings show the effectiveness of VLM-Guard in safeguarding VLM and fulfilling the safety alignment gap between VLM and its LLM component. 
+
+**Abstract (ZH)**: 视觉语言模型（VLMs）的出现带来了安全性方面的担忧，因为多种模态的整合增加了模型对攻击的脆弱性。虽然VLMs可以在具有文本安全性对齐的大型语言模型（LLMs）的基础上构建，但在引入视觉模态后，这种安全性对齐容易受到破坏。我们将这一安全性挑战归因于模态差距，即在共享表示空间中图像与文本之间的分离，这模糊了在LLMs中清晰区分有害和无害查询的能力，而在VLMs中这种区分能力则减弱了。为了防止安全性衰退并弥补安全性对齐缺口，我们提出了VLM-Guard，这是一种在推断时使用的干预策略，利用VLM中的LLMs组件作为监督，实现VLM的安全性对齐。VLM-Guard将VLM的表示投影到从安全对齐的LLM中提取的安全导向方向的正交子空间中。在三个恶意指令设置上的实验结果表明，VLM-Guard在保护VLM并弥补VLM与其中LLMs组件的安全性对齐缺口方面是有效的。 
+
+---
+# X-SG$^2$S: Safe and Generalizable Gaussian Splatting with X-dimensional Watermarks 
+
+**Title (ZH)**: X-SG$^2$S: 安全且通用的高维水印高斯散射方法 
+
+**Authors**: Zihang Cheng, Huiping Zhuang, Chun Li, Xin Meng, Ming Li, Fei Richard Yu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.10475)  
+
+**Abstract**: 3D Gaussian Splatting (3DGS) has been widely used in 3D reconstruction and 3D generation. Training to get a 3DGS scene often takes a lot of time and resources and even valuable inspiration. The increasing amount of 3DGS digital asset have brought great challenges to the copyright protection. However, it still lacks profound exploration targeted at 3DGS. In this paper, we propose a new framework X-SG$^2$S which can simultaneously watermark 1 to 3D messages while keeping the original 3DGS scene almost unchanged. Generally, we have a X-SG$^2$S injector for adding multi-modal messages simultaneously and an extractor for extract them. Specifically, we first split the watermarks into message patches in a fixed manner and sort the 3DGS points. A self-adaption gate is used to pick out suitable location for watermarking. Then use a XD(multi-dimension)-injection heads to add multi-modal messages into sorted 3DGS points. A learnable gate can recognize the location with extra messages and XD-extraction heads can restore hidden messages from the location recommended by the learnable gate. Extensive experiments demonstrated that the proposed X-SG$^2$S can effectively conceal multi modal messages without changing pretrained 3DGS pipeline or the original form of 3DGS parameters. Meanwhile, with simple and efficient model structure and high practicality, X-SG$^2$S still shows good performance in hiding and extracting multi-modal inner structured or unstructured messages. X-SG$^2$S is the first to unify 1 to 3D watermarking model for 3DGS and the first framework to add multi-modal watermarks simultaneous in one 3DGS which pave the wave for later researches. 
+
+**Abstract (ZH)**: 3D 高斯体绘制（3DGS）在三维重建和三维生成中有广泛应用。训练一个3DGS场景往往需要大量的时间和资源，甚至会带来宝贵的灵感。随着3DGS数字资产数量的不断增加，版权保护面临着巨大挑战。然而，针对3DGS的深刻探索仍然相对缺乏。在本文中，我们提出了一种新的框架X-SG$^2$S，该框架能够同时嵌入1到3D的消息，同时几乎保持原始3DGS场景不变。总体而言，我们有一个X-SG$^2$S嵌入器用于同时添加多模态消息，还有一个提取器用于提取这些消息。具体而言，我们首先以固定的方式将水印切成消息片，对3DGS点进行排序。使用自适应门来挑选合适的水印位置。然后使用多维XD嵌入头部将多模态消息添加到排序后的3DGS点中。可学习的门可以识别带有额外消息的位置，XD提取头部可以从可学习的门推荐的位置恢复隐藏的消息。广泛的经验实验证明，所提出的X-SG$^2$S能够在不改变预训练的3DGS管道或原始3DGS参数形式的情况下有效隐藏多模态消息。同时，凭借其简单高效的模型结构和高度的实用性，X-SG$^2$S在隐藏和提取多模态有序或无序消息方面仍然表现出良好的性能。X-SG$^2$S是第一个统一1到3D消息嵌入模型的框架，并且是第一个在单一3DGS中同时添加多模态水印的框架，为后续研究奠定了基础。 
+
+---
+# I Think, Therefore I Diffuse: Enabling Multimodal In-Context Reasoning in Diffusion Models 
+
+**Title (ZH)**: 因此我思考，因此我扩散：在扩散模型中实现多模态上下文推理的能力 
+
+**Authors**: Zhenxing Mi, Kuan-Chieh Wang, Guocheng Qian, Hanrong Ye, Runtao Liu, Sergey Tulyakov, Kfir Aberman, Dan Xu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.10458)  
+
+**Abstract**: This paper presents ThinkDiff, a novel alignment paradigm that empowers text-to-image diffusion models with multimodal in-context understanding and reasoning capabilities by integrating the strengths of vision-language models (VLMs). Existing multimodal diffusion finetuning methods largely focus on pixel-level reconstruction rather than in-context reasoning, and are constrained by the complexity and limited availability of reasoning-based datasets. ThinkDiff addresses these challenges by leveraging vision-language training as a proxy task, aligning VLMs with the decoder of an encoder-decoder large language model (LLM) instead of a diffusion decoder. This proxy task builds on the observation that the $\textbf{LLM decoder}$ shares the same input feature space with $\textbf{diffusion decoders}$ that use the corresponding $\textbf{LLM encoder}$ for prompt embedding. As a result, aligning VLMs with diffusion decoders can be simplified through alignment with the LLM decoder. Without complex training and datasets, ThinkDiff effectively unleashes understanding, reasoning, and composing capabilities in diffusion models. Experiments demonstrate that ThinkDiff significantly improves accuracy from 19.2% to 46.3% on the challenging CoBSAT benchmark for multimodal in-context reasoning generation, with only 5 hours of training on 4 A100 GPUs. Additionally, ThinkDiff demonstrates exceptional performance in composing multiple images and texts into logically coherent images. Project page: this https URL. 
+
+**Abstract (ZH)**: 本文介绍了一种新的对齐范式——ThinkDiff，它通过结合视觉语言模型（VLM）的优势，赋予文本到图像扩散模型多模态的上下文理解和推理能力。现有的多模态扩散微调方法主要集中在像素级重建上，而忽视了上下文推理，且受限于推理数据集的复杂性和稀缺性。ThinkDiff 通过利用视觉语言训练作为代理任务来应对这些挑战，将视觉语言模型与编码器-解码器大型语言模型（LLM）的解码器对齐，而不是与扩散解码器对齐。这种代理任务基于观察到的：使用相同 LLM 编码器进行提示嵌入的扩散解码器与 LLM 解码器具有相同的输入特征空间。因此，通过与 LLM 解码器对齐视觉语言模型，可以简化扩散解码器的对齐过程。在无需复杂训练和数据集的情况下，ThinkDiff 有效地提升了扩散模型的理解、推理和组合能力。实验表明，在具有挑战性的 CoBSAT 多模态上下文推理生成基准测试中，ThinkDiff 的准确率从 19.2% 提高到了 46.3%，仅需在 4 块 A100 GPU 上进行 5 小时的训练。此外，ThinkDiff 在将多个图像和文本组合成逻辑上连贯的图像方面表现出色。项目页面：[请填写具体链接]。 
+
+---
+# RAMer: Reconstruction-based Adversarial Model for Multi-party Multi-modal Multi-label Emotion Recognition 
+
+**Title (ZH)**: RAMer：基于重建的对抗模型多模态多标签情感识别 
+
+**Authors**: Xudong Yang, Yizhang Zhu, Nan Tang, Yuyu Luo  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.10435)  
+
+**Abstract**: Conventional multi-modal multi-label emotion recognition (MMER) from videos typically assumes full availability of visual, textual, and acoustic modalities. However, real-world multi-party settings often violate this assumption, as non-speakers frequently lack acoustic and textual inputs, leading to a significant degradation in model performance. Existing approaches also tend to unify heterogeneous modalities into a single representation, overlooking each modality's unique characteristics. To address these challenges, we propose RAMer (Reconstruction-based Adversarial Model for Emotion Recognition), which leverages adversarial learning to refine multi-modal representations by exploring both modality commonality and specificity through reconstructed features enhanced by contrastive learning. RAMer also introduces a personality auxiliary task to complement missing modalities using modality-level attention, improving emotion reasoning. To further strengthen the model's ability to capture label and modality interdependency, we propose a stack shuffle strategy to enrich correlations between labels and modality-specific features. Experiments on three benchmarks, i.e., MEmoR, CMU-MOSEI, and $M^3$ED, demonstrate that RAMer achieves state-of-the-art performance in dyadic and multi-party MMER scenarios. 
+
+**Abstract (ZH)**: 传统的多模态多标签情绪识别（MMER）通常假设视频中的视觉、文本和声学模态都能完全可用。然而，在现实世界中的多参与者设置中，这一假设常常被违背，因为非说话者经常缺乏声学和文本输入，这导致了模型性能显著下降。现有的方法也往往会将异构模态统一到一个表示中，忽略了每个模态的独特特征。为了解决这些问题，我们提出了一种基于重构的对抗模型（RAMer，Reconstruction-based Adversarial Model for Emotion Recognition），该模型利用对抗学习通过重构特征来探索模态的共性和特性，从而改进多模态表示。RAMer 还引入了一个个性辅助任务，通过模态级注意力来补充缺失的模态，从而提高情绪推理能力。为了进一步增强模型捕捉标签和模态间依赖关系的能力，我们提出了堆叠洗牌策略以丰富标签和模态特定特征之间的关联。在三个基准数据集（MEmoR、CMU-MOSEI 和 $M^3$ED）上的实验结果表明，RAMer 在二元和多参与者 MMER 场景中达到了最先进的性能。 
+
+---
+# TrueReason: An Exemplar Personalised Learning System Integrating Reasoning with Foundational Models 
+
+**Title (ZH)**: TrueReason：一个结合推理与基础模型的范例个性化学习系统 
+
+**Authors**: Sahan Bulathwela, Daniel Van Niekerk, Jarrod Shipton, Maria Perez-Ortiz, Benjamin Rosman, John Shawe-Taylor  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.10411)  
+
+**Abstract**: Personalised education is one of the domains that can greatly benefit from the most recent advances in Artificial Intelligence (AI) and Large Language Models (LLM). However, it is also one of the most challenging applications due to the cognitive complexity of teaching effectively while personalising the learning experience to suit independent learners. We hypothesise that one promising approach to excelling in such demanding use cases is using a \emph{society of minds}. In this chapter, we present TrueReason, an exemplar personalised learning system that integrates a multitude of specialised AI models that can mimic micro skills that are composed together by a LLM to operationalise planning and reasoning. The architecture of the initial prototype is presented while describing two micro skills that have been incorporated in the prototype. The proposed system demonstrates the first step in building sophisticated AI systems that can take up very complex cognitive tasks that are demanded by domains such as education. 
+
+**Abstract (ZH)**: 个性化教育是可以从最近人工智能（AI）和大型语言模型（LLM）的最新进展中受益匪浅的一个领域。然而，这也是一项最具挑战性的应用之一，原因在于有效进行认知教学的同时还需要为自主学习者个性化学习体验所带来的复杂性。我们假设，这样具有挑战性的应用场景中取得优异成果的一种有前途的方法是采用“心灵社会”（society of minds）这一理念。在本章中，我们介绍了TrueReason，这是一种具有代表性的个性化学习系统，该系统集成了多种专门的AI模型，这些模型可以模拟大型语言模型组合的小技能，从而实现计划和推理的运作。我们描述了初始原型的架构，并介绍了原型中已集成的两种小技能。所提出的系统展示了构建能够承担教育等领域所要求的极其复杂认知任务的复杂AI系统的初始步骤。 
+
+---
+# Multi-Modal Retrieval Augmentation for Open-Ended and Knowledge-Intensive Video Question Answering 
+
+**Title (ZH)**: 面向开放性和知识密集型视频问答的多模态检索增强 
+
+**Authors**: Md Zarif Ul Alam, Hamed Zamani  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.11747)  
+
+**Abstract**: While current video question answering systems perform well on some tasks requiring only direct visual understanding, they struggle with questions demanding knowledge beyond what is immediately observable in the video content. We refer to this challenging scenario as knowledge-intensive video question answering (KI-VideoQA), where models must retrieve and integrate external information with visual understanding to generate accurate responses. This work presents the first attempt to (1) study multi-modal retrieval-augmented generation for KI-VideoQA, and (2) go beyond multi-choice questions by studying open-ended questions in this task. Through an extensive empirical study of state-of-the-art retrieval and vision language models in both zero-shot and fine-tuned settings, we explore how different retrieval augmentation strategies can enhance knowledge integration in KI-VideoQA. We analyze three key aspects: (1) model's effectiveness across different information sources and modalities, (2) the impact of heterogeneous multi-modal context integration, and (3) model's effectiveness across different query formulation and retrieval result consumption. Our results suggest that while retrieval augmentation generally improves performance, its effectiveness varies significantly based on modality choice and retrieval strategy. Additionally, we find that successful knowledge integration often requires careful consideration of query formulation and optimal retrieval depth. Our exploration advances state-of-the-art accuracy for multiple choice questions by over 17.5% on the KnowIT VQA dataset. 
+
+**Abstract (ZH)**: 尽管当前的视频问答系统在仅需直接视觉理解的任务上表现良好，但在要求超出视频内容直接观察的知识的问题上，它们却难以应对。我们称这种具有挑战性的场景为知识密集型视频问答（KI-VideoQA），在这种场景中，模型必须检索和整合外部信息与视觉理解相结合，以生成准确的回答。本文提出了第一个尝试：(1) 研究多模态检索增强生成在 KI-VideoQA 中的应用，以及 (2) 超越多项选择题，研究该任务中的开放式问题。通过全面研究最先进的检索和视觉语言模型在零样本和微调设置下的表现，我们探讨了不同检索增强策略如何增强 KI-VideoQA 中的知识整合。我们分析了三个关键方面：(1) 模型在不同信息源和模态上的有效性，(2) 异构多模态上下文整合的影响，以及 (3) 模型在不同查询构建和检索结果消费上的有效性。我们的结果显示，虽然检索增强通常能改善性能，但其效果在不同模态选择和检索策略下差异显著。此外，我们发现成功的知识整合往往需要仔细考虑查询构建和最优检索深度。我们的研究在 KnowIT VQA 数据集上将多项选择题的准确率提升了超过 17.5%，从而推进了最先进的准确率。 
+
+---
+# MemeSense: An Adaptive In-Context Framework for Social Commonsense Driven Meme Moderation 
+
+**Title (ZH)**: MemeSense：一种适应性上下文框架，用于社会常识驱动的 meme 监管 
+
+**Authors**: Sayantan Adak, Somnath Banerjee, Rajarshi Mandal, Avik Halder, Sayan Layek, Rima Hazra, Animesh Mukherjee  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.11246)  
+
+**Abstract**: Memes present unique moderation challenges due to their subtle, multimodal interplay of images, text, and social context. Standard systems relying predominantly on explicit textual cues often overlook harmful content camouflaged by irony, symbolism, or cultural references. To address this gap, we introduce MemeSense, an adaptive in-context learning framework that fuses social commonsense reasoning with visually and semantically related reference examples. By encoding crucial task information into a learnable cognitive shift vector, MemeSense effectively balances lexical, visual, and ethical considerations, enabling precise yet context-aware meme intervention. Extensive evaluations on a curated set of implicitly harmful memes demonstrate that MemeSense substantially outperforms strong baselines, paving the way for safer online communities. Code and data available at: this https URL 
+
+**Abstract (ZH)**: 模因因其隐晦的、多模态的图像、文本和社会语境的交织而带来独特的管理挑战。传统系统主要依赖显式的文本提示，常常未能识别因其反讽、象征意义或文化引用而隐蔽的有害内容。为解决这一问题，我们提出了MemeSense，这是一种结合社会常识推理与视觉和语义相关参考示例的自适应上下文学习框架。通过将关键任务信息编码到可学习的认知转换向量中，MemeSense能够有效地平衡词汇、视觉和伦理方面的考虑，从而实现精准且具备上下文意识的模因干预。通过对精心挑选的隐含有害模因的广泛评估表明，MemeSense显著优于强baseline模型，为构建更安全的在线社区铺平了道路。相关代码和数据可通过以下链接获取：this https URL 
+
+---
+# VLM$^2$-Bench: A Closer Look at How Well VLMs Implicitly Link Explicit Matching Visual Cues 
+
+**Title (ZH)**: VLM$^2$-Bench：更深入探究视觉语言模型如何隐式关联显式匹配的视觉线索 
+
+**Authors**: Jianshu Zhang, Dongyu Yao, Renjie Pi, Paul Pu Liang, Yi R., Fung  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.12084)  
+
+**Abstract**: Visually linking matching cues is a crucial ability in daily life, such as identifying the same person in multiple photos based on their cues, even without knowing who they are. Despite the extensive knowledge that vision-language models (VLMs) possess, it remains largely unexplored whether they are capable of performing this fundamental task. To address this, we introduce VLM$^2$-Bench, a benchmark designed to assess whether VLMs can Visually Link Matching cues, with 9 subtasks and over 3,000 test cases. Comprehensive evaluation across eight open-source VLMs and GPT-4o, along with further analysis of various language-side and vision-side prompting methods, leads to a total of eight key findings. We identify critical challenges in models' ability to link visual cues, highlighting a significant performance gap where even GPT-4o lags 34.80% behind humans. Based on these insights, we advocate for (i) enhancing core visual capabilities to improve adaptability and reduce reliance on prior knowledge, (ii) establishing clearer principles for integrating language-based reasoning in vision-centric tasks to prevent unnecessary biases, and (iii) shifting vision-text training paradigms toward fostering models' ability to independently structure and infer relationships among visual cues. 
+
+**Abstract (ZH)**: 视觉连接匹配线索是一项在日常生活中至关重要的能力，例如，根据线索在多张照片中识别人物，即使不知道他们是谁。尽管视觉语言模型（VLMs）拥有广泛的知识，但尚未充分探索它们是否能够执行这一基本任务。为解决这一问题，我们引入了VLM$^2$-Bench，这是一个基准测试工具，旨在评估VLMs是否能够进行视觉连接匹配线索。该基准测试包含9个子任务和超过3000个测试案例。对八个开源VLMs和GPT-4o进行了全方位评估，并进一步分析了各种语言侧和视觉侧的提示方法，得出了八项关键发现。我们指出了模型在连接视觉线索方面面临的关键挑战，突显了显著的性能差距，甚至GPT-4o也落后于人类34.80%。基于这些见解，我们建议采取以下措施：（i）增强核心视觉能力以提高适应性并减少对先验知识的依赖；（ii）明确整合基于语言的推理在以视觉为中心的任务中的原则，以防止不必要的偏见；（iii）将视觉-文本训练范式转向培养模型独立构建和推理视觉线索之间关系的能力。 
+
+---
+# MMRC: A Large-Scale Benchmark for Understanding Multimodal Large Language Model in Real-World Conversation 
+
+**Title (ZH)**: MMRC：一个大规模基准，用于理解现实生活对话中的多媒体大型语言模型 
+
+**Authors**: Haochen Xue, Feilong Tang, Ming Hu, Yexin Liu, Qidong Huang, Yulong Li, Chengzhi Liu, Zhongxing Xu, Chong Zhang, Chun-Mei Feng, Yutong Xie, Imran Razzak, Zongyuan Ge, Jionglong Su, Junjun He, Yu Qiao  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.11903)  
+
+**Abstract**: Recent multimodal large language models (MLLMs) have demonstrated significant potential in open-ended conversation, generating more accurate and personalized responses. However, their abilities to memorize, recall, and reason in sustained interactions within real-world scenarios remain underexplored. This paper introduces MMRC, a Multi-Modal Real-world Conversation benchmark for evaluating six core open-ended abilities of MLLMs: information extraction, multi-turn reasoning, information update, image management, memory recall, and answer refusal. With data collected from real-world scenarios, MMRC comprises 5,120 conversations and 28,720 corresponding manually labeled questions, posing a significant challenge to existing MLLMs. Evaluations on 20 MLLMs in MMRC indicate an accuracy drop during open-ended interactions. We identify four common failure patterns: long-term memory degradation, inadequacies in updating factual knowledge, accumulated assumption of error propagation, and reluctance to say no. To mitigate these issues, we propose a simple yet effective NOTE-TAKING strategy, which can record key information from the conversation and remind the model during its responses, enhancing conversational capabilities. Experiments across six MLLMs demonstrate significant performance improvements. 
+
+**Abstract (ZH)**: 近年来的多模态大规模语言模型（MLLMs）在开放性对话中表现出巨大的潜力，能够生成更加准确和个性化的响应。然而，它们在实际场景中进行长时间互动时的记忆能力、回忆能力和推理能力尚未得到充分探索。本文介绍了一种名为MMRC的多模态真实世界对话基准，用于评估MLLMs的六项核心开放性能力：信息提取、多轮推理、信息更新、图像管理、记忆回忆和拒绝回答。该基准数据来源于实际场景，包含5,120场对话和28,720个对应的手动标注问题，为现有的MLLMs提出了巨大挑战。在MMRC中对20种MLLMs的评估表明，在开放性互动中准确率有所下降。我们识别出四种常见的失败模式：长期记忆退化、事实知识更新不足、错误传播的累积假设以及拒绝回答的迟疑。为了缓解这些问题，我们提出了一种简单且有效的记录策略——笔记提取（NOTE-TAKING），该策略可以在对话中记录关键信息，并在模型的响应中提醒模型，从而增强对话能力。在六种MLLMs上的实验表明，该策略显著提高了模型的性能。 
+
+---
+# Code-Vision: Evaluating Multimodal LLMs Logic Understanding and Code Generation Capabilities 
+
+**Title (ZH)**: Code-Vision：评估多模态大语言模型的逻辑理解和代码生成能力 
+
+**Authors**: Hanbin Wang, Xiaoxuan Zhou, Zhipeng Xu, Keyuan Cheng, Yuxin Zuo, Kai Tian, Jingwei Song, Junting Lu, Wenhui Hu, Xueyang Liu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.11829)  
+
+**Abstract**: This paper introduces Code-Vision, a benchmark designed to evaluate the logical understanding and code generation capabilities of Multimodal Large Language Models (MLLMs). It challenges MLLMs to generate a correct program that fulfills specific functionality requirements based on a given flowchart, which visually represents the desired algorithm or process. Code-Vision comprises three subsets: HumanEval-V, Algorithm, and MATH, which evaluate MLLMs' coding abilities across basic programming, algorithmic, and mathematical problem-solving domains. Our experiments evaluate 12 MLLMs on Code-Vision. Experimental results demonstrate that there is a large performance difference between proprietary and open-source models. On Hard problems, GPT-4o can achieve 79.3% pass@1, but the best open-source model only achieves 15%. Further experiments reveal that Code-Vision can pose unique challenges compared to other multimodal reasoning benchmarks MMCode and MathVista. We also explore the reason for the poor performance of the open-source models. All data and codes are available at this https URL. 
+
+**Abstract (ZH)**: 本文介绍了Code-Vision，这是一个用于评估多模态大型语言模型（MLLMs）的逻辑理解和代码生成能力的基准。该基准挑战MLLMs根据给定的流程图生成满足特定功能要求的正确程序，而流程图则直观地表示了所需算法或过程。Code-Vision 包含三个子集：HumanEval-V、Algorithm 和 MATH，分别评估MLLMs在基本编程、算法和数学问题解决领域的编码能力。我们的实验在Code-Vision上评估了12个MLLMs。实验结果表明，专有模型和开源模型之间的性能差距很大。在难题上，GPT-4o 可以实现79.3%的通过率，但最好的开源模型仅能达到15%。进一步的实验表明，与多模态推理基准MMCode和MathVista相比，Code-Vision 可能会提出独特的挑战。我们还探讨了开源模型表现不佳的原因。所有数据和代码均可在此访问：https://example.com（请将https://example.com替换为实际的网址）。 
+
+---
+# CLASS: Enhancing Cross-Modal Text-Molecule Retrieval Performance and Training Efficiency 
+
+**Title (ZH)**: CLASS: 提升跨模态文本-分子检索性能和训练效率 
+
+**Authors**: Hongyan Wu, Peijian Zeng, Weixiong Zheng, Lianxi Wang, Nankai Lin, Shengyi Jiang, Aimin Yang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.11633)  
+
+**Abstract**: Cross-modal text-molecule retrieval task bridges molecule structures and natural language descriptions. Existing methods predominantly focus on aligning text modality and molecule modality, yet they overlook adaptively adjusting the learning states at different training stages and enhancing training efficiency. To tackle these challenges, this paper proposes a Curriculum Learning-bAsed croSS-modal text-molecule training framework (CLASS), which can be integrated with any backbone to yield promising performance improvement. Specifically, we quantify the sample difficulty considering both text modality and molecule modality, and design a sample scheduler to introduce training samples via an easy-to-difficult paradigm as the training advances, remarkably reducing the scale of training samples at the early stage of training and improving training efficiency. Moreover, we introduce adaptive intensity learning to increase the training intensity as the training progresses, which adaptively controls the learning intensity across all curriculum stages. Experimental results on the ChEBI-20 dataset demonstrate that our proposed method gains superior performance, simultaneously achieving prominent time savings. 
+
+**Abstract (ZH)**: 跨模态文本-分子检索任务连接了分子结构和自然语言描述。现有方法主要关注于对齐文本模态和分子模态，但忽略了在不同训练阶段自适应调整学习状态和提高训练效率的需求。为应对这些挑战，本文提出了一种基于 Curriculum Learning 的跨模态文本-分子训练框架（CLASS），该框架可以与任何主干网络结合，从而显著提升性能。具体而言，我们综合考虑文本模态和分子模态的样本难度，并设计了一个样本调度器，通过易到难的训练范式逐步引入训练样本，显著减少训练初期的样本规模，提高训练效率。此外，我们引入了自适应强度学习，在训练过程中逐步增加训练强度，从而在整个Curriculum Learning阶段自适应控制学习强度。实验结果表明，提出的方法在ChEBI-20数据集上取得了优异性能，同时实现了显著的时间节省。 
+
+---
+# Investigating Inference-time Scaling for Chain of Multi-modal Thought: A Preliminary Study 
+
+**Title (ZH)**: 链式多模态思维推理时的缩放研究：一项初步探究 
+
+**Authors**: Yujie Lin, Ante Wang, Moye Chen, Jingyao Liu, Hao Liu, Jinsong Su, Xinyan Xiao  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.11514)  
+
+**Abstract**: Recently, inference-time scaling of chain-of-thought (CoT) has been demonstrated as a promising approach for addressing multi-modal reasoning tasks. While existing studies have predominantly centered on text-based thinking, the integration of both visual and textual modalities within the reasoning process remains unexplored. In this study, we pioneer the exploration of inference-time scaling with multi-modal thought, aiming to bridge this gap. To provide a comprehensive analysis, we systematically investigate popular sampling-based and tree search-based inference-time scaling methods on 10 challenging tasks spanning various domains. Besides, we uniformly adopt a consistency-enhanced verifier to ensure effective guidance for both methods across different thought paradigms. Results show that multi-modal thought promotes better performance against conventional text-only thought, and blending the two types of thought fosters more diverse thinking. Despite these advantages, multi-modal thoughts necessitate higher token consumption for processing richer visual inputs, which raises concerns in practical applications. We hope that our findings on the merits and drawbacks of this research line will inspire future works in the field. 
+
+**Abstract (ZH)**: 近期，推理时间的链式思考（CoT）缩放已被证明是解决多模态推理任务的一种有前途的方法。虽然现有研究主要集中在基于文本的思考上，但将视觉和文本模态同时纳入推理过程仍是一个未被探索的领域。在本研究中，我们首次探索多模态思考的推理时间缩放，旨在弥合这一空白。为了进行全面分析，我们系统地研究了10个涵盖不同领域挑战性任务的常用采样和树搜索方法的推理时间缩放方法。此外，我们采用了一致性增强的验证器，确保这些方法在不同思考模式下都能有效地提供指导。结果显示，多模态思考在性能上优于传统的仅文本思考，并且结合这两种类型的思考可以促进更多样化的想法。尽管具有这些优势，多模态思考需要更高的标记消耗来处理更丰富的视觉输入，这在实际应用中引发了担忧。我们希望本文对这一研究线的优点和缺点的发现能激发未来的相关研究工作。 
+
+---
+# Token Pruning in Multimodal Large Language Models: Are We Solving the Right Problem? 
+
+**Title (ZH)**: 多模态大型语言模型中的令牌裁剪：我们正在解决正确的问题吗？ 
+
+**Authors**: Zichen Wen, Yifeng Gao, Weijia Li, Conghui He, Linfeng Zhang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.11501)  
+
+**Abstract**: Multimodal large language models (MLLMs) have shown remarkable performance for cross-modal understanding and generation, yet still suffer from severe inference costs. Recently, abundant works have been proposed to solve this problem with token pruning, which identifies the redundant tokens in MLLMs and then prunes them to reduce the computation and KV storage costs, leading to significant acceleration without training. While these methods claim efficiency gains, critical questions about their fundamental design and evaluation remain unanswered: Why do many existing approaches underperform even compared to naive random token selection? Are attention-based scoring sufficient for reliably identifying redundant tokens? Is language information really helpful during token pruning? What makes a good trade-off between token importance and duplication? Are current evaluation protocols comprehensive and unbiased? The ignorance of previous research on these problems hinders the long-term development of token pruning. In this paper, we answer these questions one by one, providing insights into the design of future token pruning methods. 
+
+**Abstract (ZH)**: 多模态大语言模型（MLLMs）在跨模态理解和生成方面表现出色，但在推断成本方面仍存在严重问题。最近，有大量的研究提出了通过标记修剪的方法来解决这一问题，这些方法识别出MLLM中的冗余标记并对其进行修剪，从而减少计算和KV存储成本，并显著提高推断速度，无需重新训练。尽管这些方法声称可以获得效率提升，但关于其基本设计和评估的关键问题仍然没有得到解答：为什么许多现有方法的表现甚至不如随机选择标记的方法？基于注意力得分的冗余标记识别是否足够可靠？在标记修剪过程中，语言信息是否真的有所帮助？如何在标记的重要性与重复之间做出一个好的权衡？当前的评估标准是否全面且公正？以往研究对这些问题的忽视阻碍了标记修剪方法的长期发展。本文依次回答了这些问题，为未来标记修剪方法的设计提供了见解。 
+
+---
+# Stop Looking for Important Tokens in Multimodal Language Models: Duplication Matters More 
+
+**Title (ZH)**: 停止在多模态语言模型中寻找重要token：重复更为重要 
+
+**Authors**: Zichen Wen, Yifeng Gao, Shaobo Wang, Junyuan Zhang, Qintong Zhang, Weijia Li, Conghui He, Linfeng Zhang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.11494)  
+
+**Abstract**: Vision tokens in multimodal large language models often dominate huge computational overhead due to their excessive length compared to linguistic modality. Abundant recent methods aim to solve this problem with token pruning, which first defines an importance criterion for tokens and then prunes the unimportant vision tokens during inference. However, in this paper, we show that the importance is not an ideal indicator to decide whether a token should be pruned. Surprisingly, it usually results in inferior performance than random token pruning and leading to incompatibility to efficient attention computation this http URL, we propose DART (Duplication-Aware Reduction of Tokens), which prunes tokens based on its duplication with other tokens, leading to significant and training-free acceleration. Concretely, DART selects a small subset of pivot tokens and then retains the tokens with low duplication to the pivots, ensuring minimal information loss during token pruning. Experiments demonstrate that DART can prune 88.9% vision tokens while maintaining comparable performance, leading to a 1.99$\times$ and 2.99$\times$ speed-up in total time and prefilling stage, respectively, with good compatibility to efficient attention operators. Our codes are available at this https URL. 
+
+**Abstract (ZH)**: 多模态大型语言模型中的视觉标记往往由于其长度远超过语言模态，导致巨大的计算开销。近期许多方法试图通过标记修剪来解决这一问题，首先定义一个标记的重要性标准，然后在推理过程中修剪不重要的视觉标记。然而，在本文中，我们展示了标记的重要性并不是决定是否修剪标记的理想指标。令人惊讶的是，这种方法通常会导致性能劣于随机修剪标记，并且不兼容高效的注意力计算。为了解决这一问题，我们提出了 DART（基于重复性的标记修剪，Duplication-Aware Reduction of Tokens），它根据标记与其他标记的重复性来修剪标记，从而实现显著且无需训练的加速。具体而言，DART 选择一部分关键标记作为枢纽，然后保留与这些枢纽标记重复性低的标记，以确保标记修剪过程中的最小信息损失。实验结果表明，DART 能在保持相当性能的情况下修剪 88.9% 的视觉标记，分别在总时间和填充阶段实现 1.99 倍和 2.99 倍的加速，且与高效的注意力操作具有良好的兼容性。我们的代码已在此处提供：[提供的链接]。 
+
+---
+# Any Information Is Just Worth One Single Screenshot: Unifying Search With Visualized Information Retrieval 
+
+**Title (ZH)**: 任何信息仅值得一个截图：统一搜索与可视化信息检索
+
+在这个翻译中，“Any Information Is Just Worth One Single Screenshot”被翻译为“任何信息仅值得一个截图”，保持了原文的简洁和冲击力。“Unifying Search With Visualized Information Retrieval”被翻译为“统一搜索与可视化信息检索”，这在学术翻译中保持了术语的专业性和准确性。 
+
+**Authors**: Ze Liu, Zhengyang Liang, Junjie Zhou, Zheng Liu, Defu Lian  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.11431)  
+
+**Abstract**: With the popularity of multimodal techniques, it receives growing interests to acquire useful information in visual forms. In this work, we formally define an emerging IR paradigm called \textit{Visualized Information Retrieval}, or \textbf{Vis-IR}, where multimodal information, such as texts, images, tables and charts, is jointly represented by a unified visual format called \textbf{Screenshots}, for various retrieval applications. We further make three key contributions for Vis-IR. First, we create \textbf{VIRA} (Vis-IR Aggregation), a large-scale dataset comprising a vast collection of screenshots from diverse sources, carefully curated into captioned and question-answer formats. Second, we develop \textbf{UniSE} (Universal Screenshot Embeddings), a family of retrieval models that enable screenshots to query or be queried across arbitrary data modalities. Finally, we construct \textbf{MVRB} (Massive Visualized IR Benchmark), a comprehensive benchmark covering a variety of task forms and application scenarios. Through extensive evaluations on MVRB, we highlight the deficiency from existing multimodal retrievers and the substantial improvements made by UniSE. Our work will be shared with the community, laying a solid foundation for this emerging field. 
+
+**Abstract (ZH)**: 随着多模态技术的流行，人们越来越关注从视觉形式中获取有用信息。在此项工作中，我们正式定义了一种新兴的检索范式，称为**可视化信息检索**（Visualized Information Retrieval，简称Vis-IR），其中，诸如文本、图像、表格和图表等多种模态信息通过一种统一的视觉格式——快照（Screenshots）联合表示，应用于各种检索应用。我们进一步为Vis-IR做出了三个关键贡献。首先，我们创建了**VIRA**（Vis-IR Aggregation），这是一个大规模数据集，包含来自多种来源的海量快照，并精心整理为带有描述和问答对的形式。其次，我们开发了**UniSE**（Universal Screenshot Embeddings），这是一种检索模型家族，使得快照可以在任意数据模态下进行查询或被查询。最后，我们构建了**MVRB**（Massive Visualized IR Benchmark），这是一个全面的基准测试，涵盖了多种任务形式和应用场景。通过在MVRB上的广泛评估，我们强调了现有多模态检索方法的不足，并展示了UniSE带来的显著改进。我们的工作将与社区分享，为这一新兴领域奠定坚实的基础。 
+
+---
+# Do we Really Need Visual Instructions? Towards Visual Instruction-Free Fine-tuning for Large Vision-Language Models 
+
+**Title (ZH)**: 我们真的需要视觉指令吗？向着无视觉指令的大型视觉-语言模型微调方法研究 
+
+**Authors**: Zikang Liu, Kun Zhou, Wayne Xin Zhao, Dawei Gao, Yaliang Li, Ji-Rong Wen  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.11427)  
+
+**Abstract**: Visual instruction tuning has become the predominant technology in eliciting the multimodal task-solving capabilities of large vision-language models (LVLMs). Despite the success, as visual instructions require images as the input, it would leave the gap in inheriting the task-solving capabilities from the backbone LLMs, and make it costly to collect a large-scale dataset. To address it, we propose ViFT, a visual instruction-free fine-tuning framework for LVLMs. In ViFT, we only require the text-only instructions and image caption data during training, to separately learn the task-solving and visual perception abilities. During inference, we extract and combine the representations of the text and image inputs, for fusing the two abilities to fulfill multimodal tasks. Experimental results demonstrate that ViFT can achieve state-of-the-art performance on several visual reasoning and visual instruction following benchmarks, with rather less training data. Our code and data will be publicly released. 
+
+**Abstract (ZH)**: 视觉指令调优已成为激发大型视觉语言模型（LVLMs）多模态任务解决能力的主要技术。尽管取得了成功，但由于视觉指令需要图像作为输入，这会导致从骨干语言模型继承任务解决能力的差距，并且收集大规模数据集的成本较高。为解决这一问题，我们提出了一种名为ViFT的视觉指令免费微调框架。在ViFT中，我们仅在训练过程中需要文本指令和图像描述数据，以分别学习任务解决能力和视觉感知能力。在推理过程中，我们提取并结合文本和图像输入的表示，将两种能力融合以完成多模态任务。实验结果表明，ViFT在多个视觉推理和视觉指令遵循基准测试中达到了最先进的性能，且所需的训练数据较少。我们的代码和数据也将公开发布。 
+
+---
+# VLDBench: Vision Language Models Disinformation Detection Benchmark 
+
+**Title (ZH)**: VLDBench：视觉语言模型虚假信息检测基准 
+
+**Authors**: Shaina Raza, Ashmal Vayani, Aditya Jain, Aravind Narayanan, Vahid Reza Khazaie, Syed Raza Bashir, Elham Dolatabadi, Gias Uddin, Christos Emmanouilidis, Rizwan Qureshi, Mubarak Shah  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.11361)  
+
+**Abstract**: The rapid rise of AI-generated content has made detecting disinformation increasingly challenging. In particular, multimodal disinformation, i.e., online posts-articles that contain images and texts with fabricated information are specially designed to deceive. While existing AI safety benchmarks primarily address bias and toxicity, multimodal disinformation detection remains largely underexplored. To address this challenge, we present the Vision-Language Disinformation Detection Benchmark VLDBench, the first comprehensive benchmark for detecting disinformation across both unimodal (text-only) and multimodal (text and image) content, comprising 31,000} news article-image pairs, spanning 13 distinct categories, for robust evaluation. VLDBench features a rigorous semi-automated data curation pipeline, with 22 domain experts dedicating 300 plus hours} to annotation, achieving a strong inter-annotator agreement (Cohen kappa = 0.78). We extensively evaluate state-of-the-art Large Language Models (LLMs) and Vision-Language Models (VLMs), demonstrating that integrating textual and visual cues in multimodal news posts improves disinformation detection accuracy by 5 - 35 % compared to unimodal models. Developed in alignment with AI governance frameworks such as the EU AI Act, NIST guidelines, and the MIT AI Risk Repository 2024, VLDBench is expected to become a benchmark for detecting disinformation in online multi-modal contents. Our code and data will be publicly available. 
+
+**Abstract (ZH)**: 人工智能生成内容的迅速崛起使得虚假信息的检测变得更加具有挑战性。特别是，多模态虚假信息，即包含虚假信息图像和文本的在线帖子，特别设计以诱导他人。尽管现有的AI安全基准主要关注偏见和毒性问题，但多模态虚假信息的检测仍处于很大程度上的未被探索状态。为应对这一挑战，我们提出了视觉-语言虚假信息检测基准VLDBench，这是首个涵盖单模态（仅文本）和多模态（文本和图像）内容的全面基准，包含31,000个新闻文章-图像对，涵盖了13个不同的类别，以实现稳健的评估。VLDBench具有严格的半自动化数据整理流程，22名领域专家共花费300多个小时进行标注，实现了强的注释者间一致性（Cohen’s Kappa = 0.78）。我们对最先进的大规模语言模型（LLMs）和视觉-语言模型（VLMs）进行了广泛评估，结果表明，将文本和视觉提示整合到多模态新闻帖子中可以将虚假信息检测的准确性提高5%到35%。该基准开发遵循了欧盟AI法案、NIST指南和MIT人工智能风险库2024等AI治理框架，预计将成为检测在线多模态内容中虚假信息的基准。我们的代码和数据将公开发布。 
+
+---
+# DuplexMamba: Enhancing Real-time Speech Conversations with Duplex and Streaming Capabilities 
+
+**Title (ZH)**: DuplexMamba：通过 duplex 和流式传输能力提升实时语音对话性能 
+
+**Authors**: Xiangyu Lu, Wang Xu, Haoyu Wang, Hongyun Zhou, Haiyan Zhao, Conghui Zhu, Tiejun Zhao, Muyun Yang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.11123)  
+
+**Abstract**: Real-time speech conversation is essential for natural and efficient human-machine interactions, requiring duplex and streaming capabilities. Traditional Transformer-based conversational chatbots operate in a turn-based manner and exhibit quadratic computational complexity that grows as the input size increases. In this paper, we propose DuplexMamba, a Mamba-based end-to-end multimodal duplex model for speech-to-text conversation. DuplexMamba enables simultaneous input processing and output generation, dynamically adjusting to support real-time streaming. Specifically, we develop a Mamba-based speech encoder and adapt it with a Mamba-based language model. Furthermore, we introduce a novel duplex decoding strategy that enables DuplexMamba to process input and generate output simultaneously. Experimental results demonstrate that DuplexMamba successfully implements duplex and streaming capabilities while achieving performance comparable to several recently developed Transformer-based models in automatic speech recognition (ASR) tasks and voice assistant benchmark evaluations. 
+
+**Abstract (ZH)**: 实时语音对话对自然高效的人机交互至关重要，需要具备双工和流式传输能力。传统的基于Transformer的对话聊天机器人以轮流方式进行操作，并且随着输入量的增加，其计算复杂度会呈二次增长。本文提出了一种基于Mamba的端到端多模态双工模型DuplexMamba，该模型能够同时处理输入和生成输出，并能够动态调整以支持实时流式传输。具体而言，我们开发了基于Mamba的语音编码器，并将其与基于Mamba的语言模型进行适配。此外，我们还引入了一种新颖的双工解码策略，使DuplexMamba能够同时处理输入并生成输出。实验结果表明，DuplexMamba成功地实现了双工和流式传输能力，并且在自动语音识别（ASR）任务和语音助手基准测试评估中，其性能与几种最近开发的基于Transformer的模型相当。 
+
+---
+# Demystifying Hateful Content: Leveraging Large Multimodal Models for Hateful Meme Detection with Explainable Decisions 
+
+**Title (ZH)**: 揭开仇恨内容的面纱：利用可解释决策的大规模多模态模型进行仇恨 meme 识别 
+
+**Authors**: Ming Shan Hee, Roy Ka-Wei Lee  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.11073)  
+
+**Abstract**: Hateful meme detection presents a significant challenge as a multimodal task due to the complexity of interpreting implicit hate messages and contextual cues within memes. Previous approaches have fine-tuned pre-trained vision-language models (PT-VLMs), leveraging the knowledge they gained during pre-training and their attention mechanisms to understand meme content. However, the reliance of these models on implicit knowledge and complex attention mechanisms renders their decisions difficult to explain, which is crucial for building trust in meme classification. In this paper, we introduce IntMeme, a novel framework that leverages Large Multimodal Models (LMMs) for hateful meme classification with explainable decisions. IntMeme addresses the dual challenges of improving both accuracy and explainability in meme moderation. The framework uses LMMs to generate human-like, interpretive analyses of memes, providing deeper insights into multimodal content and context. Additionally, it uses independent encoding modules for both memes and their interpretations, which are then combined to enhance classification performance. Our approach addresses the opacity and misclassification issues associated with PT-VLMs, optimizing the use of LMMs for hateful meme detection. We demonstrate the effectiveness of IntMeme through comprehensive experiments across three datasets, showcasing its superiority over state-of-the-art models. 
+
+**Abstract (ZH)**: 仇恨表情包检测是一项多模态任务，由于需要解释隐含的仇恨信息及其上下文线索，因此具有显著的挑战性。此前的方法通过对预训练的视觉-语言模型（PT-VLMs）进行微调，利用它们在预训练过程中获得的知识和注意力机制来理解表情包的内容。然而，这些模型过于依赖隐含知识和复杂的注意力机制，导致其决策难以解释，这在建立对表情包分类的信任方面至关重要。本论文提出了一种名为IntMeme的新型框架，利用大型多模态模型（LMMs）进行可解释的仇恨表情包分类。IntMeme解决了表情包审查双重挑战，即提高准确性和可解释性。该框架使用LMMs生成类似人类的、可解释的分析，以深入理解多模态内容和上下文。此外，它还针对表情包及其解释使用独立的编码模块，这些模块随后结合以提升分类性能。我们的方法解决了PT-VLMs的透明度低和分类错误等问题，优化了LMMs在仇恨表情包检测中的使用。通过在三个数据集上进行全面的实验，展示了IntMeme相较于最先进的模型的有效性。 
+
+---
+# Akan Cinematic Emotions (ACE): A Multimodal Multi-party Dataset for Emotion Recognition in Movie Dialogues 
+
+**Title (ZH)**: 《Akan电影情感（ACE）：电影对话中情感识别的多模态多主体数据集》 
+
+**Authors**: David Sasu, Zehui Wu, Ziwei Gong, Run Chen, Pengyuan Shi, Lin Ai, Julia Hirschberg, Natalie Schluter  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.10973)  
+
+**Abstract**: In this paper, we introduce the Akan Conversation Emotion (ACE) dataset, the first multimodal emotion dialogue dataset for an African language, addressing the significant lack of resources for low-resource languages in emotion recognition research. ACE, developed for the Akan language, contains 385 emotion-labeled dialogues and 6,162 utterances across audio, visual, and textual modalities, along with word-level prosodic prominence annotations. The presence of prosodic labels in this dataset also makes it the first prosodically annotated African language dataset. We demonstrate the quality and utility of ACE through experiments using state-of-the-art emotion recognition methods, establishing solid baselines for future research. We hope ACE inspires further work on inclusive, linguistically and culturally diverse NLP resources. 
+
+**Abstract (ZH)**: 在本文中，我们介绍了阿堪语对话情感（ACE）数据集，这是首个针对非洲语言的情感对话多模态数据集，旨在弥补情感识别研究中低资源语言资源严重不足的问题。ACE 数据集为阿堪语开发，包含385条标记了情感的对话和6,162个跨音频、视觉和文本模态的语句，同时还包含词级音调 prominence 注释。ACE 数据集中的音调标签使其成为首个标注音调信息的非洲语言数据集。我们通过使用当前最先进的表情识别方法进行实验，展示了 ACE 的质量和实用性，并为未来研究建立了坚实的基础。我们希望 ACE 能激励更多关于包容性、语言和文化多样性的自然语言处理资源的研究。 
+
+---
+# MET-Bench: Multimodal Entity Tracking for Evaluating the Limitations of Vision-Language and Reasoning Models 
+
+**Title (ZH)**: MET-Bench: 多模态实体跟踪用于评估视觉-语言和推理模型的局限性 
+
+**Authors**: Vanya Cohen, Raymond Mooney  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.10886)  
+
+**Abstract**: Entity tracking is a fundamental challenge in natural language understanding, requiring models to maintain coherent representations of entities. Previous work has benchmarked entity tracking performance in purely text-based tasks. We introduce MET-Bench, a multimodal entity tracking benchmark designed to evaluate the ability of vision-language models to track entity states across modalities. Using two structured domains, Chess and the Shell Game, we assess how effectively current models integrate textual and image-based state updates. Our findings reveal a significant performance gap between text-based and image-based tracking and that this performance gap stems from deficits in visual reasoning rather than perception. We further show that explicit text-based reasoning strategies improve performance, yet substantial limitations remain, especially in long-horizon multimodal scenarios. Our results highlight the need for improved multimodal representations and reasoning techniques to bridge the gap between textual and visual entity tracking. 
+
+**Abstract (ZH)**: 实体跟踪是自然语言理解中的一个基本挑战，要求模型保持实体的一致表示。以往的工作已经在纯文本任务中对实体跟踪性能进行了基准测试。我们提出了 MET-Bench，一个用于评估视觉-语言模型跨模态跟踪实体状态能力的多模态实体跟踪基准。通过使用两个结构化领域，国际象棋和猜豆游戏，我们评估了当前模型在文本和图像状态更新方面的整合能力。我们的发现揭示了基于文本和基于图像跟踪之间的显著性能差距，这一差距源自于视觉推理缺陷而不是感知缺陷。我们进一步证明了显式的基于文本的推理策略可以改进性能，但仍然存在重大局限性，特别是在长时程多模态场景中。我们的结果强调了改善多模态表示和推理技术的需求，以弥合文本和视觉实体跟踪之间的差距。 
+
+---
+# VLMs as GeoGuessr Masters: Exceptional Performance, Hidden Biases, and Privacy Risks 
+
+**Title (ZH)**: VLMs作为GeoGuessr大师：卓越表现、隐藏偏见与隐私风险 
+
+**Authors**: Jingyuan Huang, Jen-tse Huang, Ziyi Liu, Xiaoyuan Liu, Wenxuan Wang, Jieyu Zhao  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.11163)  
+
+**Abstract**: Visual-Language Models (VLMs) have shown remarkable performance across various tasks, particularly in recognizing geographic information from images. However, significant challenges remain, including biases and privacy concerns. To systematically address these issues in the context of geographic information recognition, we introduce a benchmark dataset consisting of 1,200 images paired with detailed geographic metadata. Evaluating four VLMs, we find that while these models demonstrate the ability to recognize geographic information from images, achieving up to $53.8\%$ accuracy in city prediction, they exhibit significant regional biases. Specifically, performance is substantially higher for economically developed and densely populated regions compared to less developed ($-12.5\%$) and sparsely populated ($-17.0\%$) areas. Moreover, the models exhibit regional biases, frequently overpredicting certain locations; for instance, they consistently predict Sydney for images taken in Australia. The strong performance of VLMs also raises privacy concerns, particularly for users who share images online without the intent of being identified. Our code and dataset are publicly available at this https URL. 
+
+**Abstract (ZH)**: 视觉-语言模型（VLMs）在各种任务中展现了卓越的性能，特别是在从图像中识别地理信息方面。然而，仍存在一些重大挑战，包括偏见和隐私安全问题。为了系统地解决地理信息识别方面的这些问题，我们引入了一个包含1,200张图像及其详细地理元数据的基准数据集。评估了四种VLMs，发现尽管这些模型能够从图像中识别地理信息，城市预测的最高准确率达到53.8%，但它们在识别过程中的表现存在显著的区域偏向。具体表现为，经济发达和人口密集地区的识别性能显著高于经济欠发达地区（下降12.5%）和人口稀少地区（下降17.0%）。此外，模型也表现出地域偏向，经常过度预测某些地点，例如，对于在澳大利亚拍摄的图像，它们经常预测为悉尼。VLMs的强大性能也引发了隐私问题，特别是对于那些无意被识别的在线共享图像的用户。我们的代码和数据集可在以下链接公开获取：[此链接](this https URL)。 
+
+---
+# MoHAVE: Mixture of Hierarchical Audio-Visual Experts for Robust Speech Recognition 
+
+**Title (ZH)**: MoHAVE: 嵌套混合音视频专家系统在鲁棒语音识别中的应用 
+
+**Authors**: Sungnyun Kim, Kangwook Jang, Sangmin Bae, Sungwoo Cho, Se-Young Yun  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.10447)  
+
+**Abstract**: Audio-visual speech recognition (AVSR) has become critical for enhancing speech recognition in noisy environments by integrating both auditory and visual modalities. However, existing AVSR systems struggle to scale up without compromising computational efficiency. In this study, we introduce MoHAVE (Mixture of Hierarchical Audio-Visual Experts), a novel robust AVSR framework designed to address these scalability constraints. By leveraging a Mixture-of-Experts (MoE) architecture, MoHAVE activates modality-specific expert groups, ensuring dynamic adaptation to various audio-visual inputs with minimal computational overhead. Key contributions of MoHAVE include: (1) a sparse MoE framework that efficiently scales AVSR model capacity, (2) a hierarchical gating mechanism that dynamically utilizes the expert groups based on input context, enhancing adaptability and robustness, and (3) remarkable performance across robust AVSR benchmarks, including LRS3 and MuAViC transcription and translation tasks, setting a new standard for scalable speech recognition systems. 
+
+**Abstract (ZH)**: 音频-视觉语音识别（AVSR）在通过结合听觉和视觉模态增强噪声环境下的语音识别方面变得至关重要。然而，现有的AVSR系统在扩大规模时往往难以保持计算效率。本研究介绍了MoHAVE（混合层次音频-视觉专家系统），这是一种新型的鲁棒AVSR框架，旨在解决这些可扩展性限制问题。通过利用Mixture-of-Experts（MoE）架构，MoHAVE激活特定模态的专家组，确保在各种音频-视觉输入下实现动态适应性，同时最小化计算开销。MoHAVE的关键贡献包括：（1）稀疏MoE框架，有效扩展AVSR模型容量，（2）分层门控机制，基于输入上下文动态利用专家组，增强适应性和鲁棒性，以及（3）在鲁棒AVSR基准测试中表现出色，包括LRS3和MuAViC转录和翻译任务，为可扩展的语音识别系统确立了新标准。 
+
+---
