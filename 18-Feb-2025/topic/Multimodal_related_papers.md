@@ -1,3 +1,16 @@
+# A Survey on Bridging EEG Signals and Generative AI: From Image and Text to Beyond 
+
+**Title (ZH)**: 一种关于连接脑电波信号与生成式AI的综述：从图像和文本到更广泛的领域 
+
+**Authors**: Shreya Shukla, Jose Torres, Abhijit Mishra, Jacek Gwizdka, Shounak Roychowdhury  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.12048)  
+
+**Abstract**: Integration of Brain-Computer Interfaces (BCIs) and Generative Artificial Intelligence (GenAI) has opened new frontiers in brain signal decoding, enabling assistive communication, neural representation learning, and multimodal integration. BCIs, particularly those leveraging Electroencephalography (EEG), provide a non-invasive means of translating neural activity into meaningful outputs. Recent advances in deep learning, including Generative Adversarial Networks (GANs) and Transformer-based Large Language Models (LLMs), have significantly improved EEG-based generation of images, text, and speech. This paper provides a literature review of the state-of-the-art in EEG-based multimodal generation, focusing on (i) EEG-to-image generation through GANs, Variational Autoencoders (VAEs), and Diffusion Models, and (ii) EEG-to-text generation leveraging Transformer based language models and contrastive learning methods. Additionally, we discuss the emerging domain of EEG-to-speech synthesis, an evolving multimodal frontier. We highlight key datasets, use cases, challenges, and EEG feature encoding methods that underpin generative approaches. By providing a structured overview of EEG-based generative AI, this survey aims to equip researchers and practitioners with insights to advance neural decoding, enhance assistive technologies, and expand the frontiers of brain-computer interaction. 
+
+**Abstract (ZH)**: 脑-计算机接口（BCIs）与生成型人工智能（GenAI）的集成开辟了脑信号解码的新前沿，使辅助通信、神经表示学习以及多模态集成成为可能。BCIs，尤其是利用脑电图（EEG）的技术，提供了一种无创的方法，将神经活动转化为有意义的输出。近年来，通过生成对抗网络（GANs）和基于变换器的语言模型（LLMs）等深度学习的进展，大大提升了基于EEG的图像、文本和语音生成的效果。本文提供了基于EEG的多模态生成领域的综述，重点关注（i）通过GANs、变分自编码器（VAEs）和扩散模型实现的EEG到图像的生成，以及（ii）通过基于变换器的语言模型和对比学习方法实现的EEG到文本的生成。此外，我们还讨论了新兴的EEG到语音合成领域，这是一个正在演进的多模态前沿。文中强调了关键的数据集、应用场景、挑战以及用于生成方法的EEG特征编码方法。通过提供基于EEG的生成型人工智能的结构化概述，本文旨在为研究者和从业者提供洞见，以促进神经解码、提升辅助技术并扩展脑-计算机交互的前沿。 
+
+---
 # GRAPHGPT-O: Synergistic Multimodal Comprehension and Generation on Graphs 
 
 **Title (ZH)**: GRAPHGPT-O：图上的多模态理解与生成协同模型 
@@ -262,6 +275,32 @@
 **Abstract (ZH)**: 多模态大型语言模型（MLLMs）通过同时支持文本和图像交互，扩展了传统语言模型的能力。然而，确保这些模型的安全性仍然是一个重大挑战，尤其是在准确识别多模态内容是否安全方面——我们称之为安全性意识。在本文中，我们介绍了MMSafeAware，这是首个全面的多模态安全性意识基准，旨在通过1500个精心挑选的图像-提示对，评估MLLMs在29种安全场景中的表现。MMSafeAware不仅包括不安全的内容子集，还包括过度安全的内容子集，以评估模型正确识别不安全内容和避免过度敏感（这可能妨碍其可用性）的能力。使用MMSafeAware评估九个广泛使用的MLLMs表明，当前的模型并不足够安全，并且往往过于敏感；例如，GPT-4V将36.1%的不安全输入错误分类为安全输入，还将59.9%的良性输入错误分类为不安全输入。我们进一步探讨了三种提高安全性意识的方法——基于提示的方法、视觉对比解码和以视觉为中心的推理微调，但发现这些方法均未达到令人满意的效果。我们的研究结果突显了开发具有强大安全性意识的MLLMs所面临的巨大挑战，强调了在该领域进行进一步研究的必要性。所有代码和数据将公开发布，以促进未来的研究。 
 
 ---
+# Knowing Your Target: Target-Aware Transformer Makes Better Spatio-Temporal Video Grounding 
+
+**Title (ZH)**: 了解目标：目标-aware 视觉变压器实现更好的时空视频目标定位 
+
+**Authors**: Xin Gu, Yaojie Shen, Chenxi Luo, Tiejian Luo, Yan Huang, Yuewei Lin, Heng Fan, Libo Zhang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.11168)  
+
+**Abstract**: Transformer has attracted increasing interest in STVG, owing to its end-to-end pipeline and promising result. Existing Transformer-based STVG approaches often leverage a set of object queries, which are initialized simply using zeros and then gradually learn target position information via iterative interactions with multimodal features, for spatial and temporal localization. Despite simplicity, these zero object queries, due to lacking target-specific cues, are hard to learn discriminative target information from interactions with multimodal features in complicated scenarios (\e.g., with distractors or occlusion), resulting in degradation. Addressing this, we introduce a novel Target-Aware Transformer for STVG (TA-STVG), which seeks to adaptively generate object queries via exploring target-specific cues from the given video-text pair, for improving STVG. The key lies in two simple yet effective modules, comprising text-guided temporal sampling (TTS) and attribute-aware spatial activation (ASA), working in a cascade. The former focuses on selecting target-relevant temporal cues from a video utilizing holistic text information, while the latter aims at further exploiting the fine-grained visual attribute information of the object from previous target-aware temporal cues, which is applied for object query initialization. Compared to existing methods leveraging zero-initialized queries, object queries in our TA-STVG, directly generated from a given video-text pair, naturally carry target-specific cues, making them adaptive and better interact with multimodal features for learning more discriminative information to improve STVG. In our experiments on three benchmarks, TA-STVG achieves state-of-the-art performance and significantly outperforms the baseline, validating its efficacy. 
+
+**Abstract (ZH)**: Transformer 在时空视觉定位与生成（STVG）领域引起了越来越多的关注，这得益于其端到端的处理流程和出色的性能。现有的基于Transformer的STVG方法常常采用一组对象查询，这些查询初始化为零，并通过与多模态特征的迭代交互逐渐学习目标的位置信息，以实现空间和时间上的定位。尽管如此，这些零初始化的对象查询由于缺乏目标特异性线索，在复杂场景下（例如存在干扰或遮挡时）难以通过与多模态特征的交互学习到有效的目标信息，导致性能退化。为了解决这一问题，我们提出了一个新颖的目标感知Transformer（TA-STVG），旨在通过探索给定视频-文本对中目标特异性线索来自适应生成对象查询，从而提升STVG。其关键在于两个简单而有效的模块，包括文本引导的时间抽样（TTS）和属性感知的空间激活（ASA），这两个模块依次工作。TTS主要集中在利用整体文本信息从视频中选择与目标相关的时间线索，而ASA则致力于进一步从先前的目标感知时间线索中挖掘对象的精细视觉属性信息，用于对象查询的初始化。与现有利用零初始化查询的方法相比，我们的TA-STVG直接从给定的视频-文本对中生成的对象查询自然携带目标特异性线索，使其更加适应与多模态特征的交互，从而学习到更多的判别性信息以提升STVG。在三个基准上的实验表明，TA-STVG取得了最先进的性能并显著超越了基线模型，验证了其有效性。 
+
+---
+# Large Language-Geometry Model: When LLM meets Equivariance 
+
+**Title (ZH)**: 大型语言-几何模型：当大规模语言模型遇到等变性 
+
+**Authors**: Zongzhao Li, Jiacheng Cen, Bing Su, Wenbing Huang, Tingyang Xu, Yu Rong, Deli Zhao  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.11149)  
+
+**Abstract**: Accurately predicting 3D structures and dynamics of physical systems is crucial in scientific applications. Existing approaches that rely on geometric Graph Neural Networks (GNNs) effectively enforce $\mathrm{E}(3)$-equivariance, but they often fall in leveraging extensive broader information. While direct application of Large Language Models (LLMs) can incorporate external knowledge, they lack the capability for spatial reasoning with guaranteed equivariance. In this paper, we propose EquiLLM, a novel framework for representing 3D physical systems that seamlessly integrates E(3)-equivariance with LLM capabilities. Specifically, EquiLLM comprises four key components: geometry-aware prompting, an equivariant encoder, an LLM, and an equivariant adaptor. Essentially, the LLM guided by the instructive prompt serves as a sophisticated invariant feature processor, while 3D directional information is exclusively handled by the equivariant encoder and adaptor modules. Experimental results demonstrate that EquiLLM delivers significant improvements over previous methods across molecular dynamics simulation, human motion simulation, and antibody design, highlighting its promising generalizability. 
+
+**Abstract (ZH)**: 准确预测物理系统的三维结构和动态在科学研究中至关重要。现有的依赖几何图神经网络（GNNs）的方法能够有效强制 $\mathrm{E}(3)$-酉变性，但它们往往未能充分利用广泛的信息。虽然直接应用大型语言模型（LLMs）可以整合外部知识，但它们缺乏保证酉变性的空间推理能力。在本文中，我们提出了一种新的框架EquiLLM，该框架能够无缝集成 $\mathrm{E}(3)$-酉变性与LLM的能力。具体而言，EquiLLM 包含四个关键组件：几何感知提示、酉变编码器、LLM 和酉变适配器模块。通过指令性的提示引导的LLM 作为复杂的不变特征处理器，而3D方向信息则仅由酉变编码器和适配器模块处理。实验结果表明，EquiLLM 在分子动力学模拟、人体运动模拟和抗体设计等方面显著优于先前的方法，并突出显示了其潜在的良好泛化能力。 
+
+---
 # Phantom: Subject-consistent video generation via cross-modal alignment 
 
 **Title (ZH)**: Phantom：基于跨模态对齐的主体一致视频生成 
@@ -327,19 +366,6 @@
 **Abstract (ZH)**: 视觉语言模型（VLMs）的出现带来了安全性方面的担忧，因为多种模态的整合增加了模型对攻击的脆弱性。虽然VLMs可以在具有文本安全性对齐的大型语言模型（LLMs）的基础上构建，但在引入视觉模态后，这种安全性对齐容易受到破坏。我们将这一安全性挑战归因于模态差距，即在共享表示空间中图像与文本之间的分离，这模糊了在LLMs中清晰区分有害和无害查询的能力，而在VLMs中这种区分能力则减弱了。为了防止安全性衰退并弥补安全性对齐缺口，我们提出了VLM-Guard，这是一种在推断时使用的干预策略，利用VLM中的LLMs组件作为监督，实现VLM的安全性对齐。VLM-Guard将VLM的表示投影到从安全对齐的LLM中提取的安全导向方向的正交子空间中。在三个恶意指令设置上的实验结果表明，VLM-Guard在保护VLM并弥补VLM与其中LLMs组件的安全性对齐缺口方面是有效的。 
 
 ---
-# X-SG$^2$S: Safe and Generalizable Gaussian Splatting with X-dimensional Watermarks 
-
-**Title (ZH)**: X-SG$^2$S: 安全且通用的高维水印高斯散射方法 
-
-**Authors**: Zihang Cheng, Huiping Zhuang, Chun Li, Xin Meng, Ming Li, Fei Richard Yu  
-
-**Link**: [PDF](https://arxiv.org/pdf/2502.10475)  
-
-**Abstract**: 3D Gaussian Splatting (3DGS) has been widely used in 3D reconstruction and 3D generation. Training to get a 3DGS scene often takes a lot of time and resources and even valuable inspiration. The increasing amount of 3DGS digital asset have brought great challenges to the copyright protection. However, it still lacks profound exploration targeted at 3DGS. In this paper, we propose a new framework X-SG$^2$S which can simultaneously watermark 1 to 3D messages while keeping the original 3DGS scene almost unchanged. Generally, we have a X-SG$^2$S injector for adding multi-modal messages simultaneously and an extractor for extract them. Specifically, we first split the watermarks into message patches in a fixed manner and sort the 3DGS points. A self-adaption gate is used to pick out suitable location for watermarking. Then use a XD(multi-dimension)-injection heads to add multi-modal messages into sorted 3DGS points. A learnable gate can recognize the location with extra messages and XD-extraction heads can restore hidden messages from the location recommended by the learnable gate. Extensive experiments demonstrated that the proposed X-SG$^2$S can effectively conceal multi modal messages without changing pretrained 3DGS pipeline or the original form of 3DGS parameters. Meanwhile, with simple and efficient model structure and high practicality, X-SG$^2$S still shows good performance in hiding and extracting multi-modal inner structured or unstructured messages. X-SG$^2$S is the first to unify 1 to 3D watermarking model for 3DGS and the first framework to add multi-modal watermarks simultaneous in one 3DGS which pave the wave for later researches. 
-
-**Abstract (ZH)**: 3D 高斯体绘制（3DGS）在三维重建和三维生成中有广泛应用。训练一个3DGS场景往往需要大量的时间和资源，甚至会带来宝贵的灵感。随着3DGS数字资产数量的不断增加，版权保护面临着巨大挑战。然而，针对3DGS的深刻探索仍然相对缺乏。在本文中，我们提出了一种新的框架X-SG$^2$S，该框架能够同时嵌入1到3D的消息，同时几乎保持原始3DGS场景不变。总体而言，我们有一个X-SG$^2$S嵌入器用于同时添加多模态消息，还有一个提取器用于提取这些消息。具体而言，我们首先以固定的方式将水印切成消息片，对3DGS点进行排序。使用自适应门来挑选合适的水印位置。然后使用多维XD嵌入头部将多模态消息添加到排序后的3DGS点中。可学习的门可以识别带有额外消息的位置，XD提取头部可以从可学习的门推荐的位置恢复隐藏的消息。广泛的经验实验证明，所提出的X-SG$^2$S能够在不改变预训练的3DGS管道或原始3DGS参数形式的情况下有效隐藏多模态消息。同时，凭借其简单高效的模型结构和高度的实用性，X-SG$^2$S在隐藏和提取多模态有序或无序消息方面仍然表现出良好的性能。X-SG$^2$S是第一个统一1到3D消息嵌入模型的框架，并且是第一个在单一3DGS中同时添加多模态水印的框架，为后续研究奠定了基础。 
-
----
 # I Think, Therefore I Diffuse: Enabling Multimodal In-Context Reasoning in Diffusion Models 
 
 **Title (ZH)**: 因此我思考，因此我扩散：在扩散模型中实现多模态上下文推理的能力 
@@ -364,19 +390,6 @@
 **Abstract**: Conventional multi-modal multi-label emotion recognition (MMER) from videos typically assumes full availability of visual, textual, and acoustic modalities. However, real-world multi-party settings often violate this assumption, as non-speakers frequently lack acoustic and textual inputs, leading to a significant degradation in model performance. Existing approaches also tend to unify heterogeneous modalities into a single representation, overlooking each modality's unique characteristics. To address these challenges, we propose RAMer (Reconstruction-based Adversarial Model for Emotion Recognition), which leverages adversarial learning to refine multi-modal representations by exploring both modality commonality and specificity through reconstructed features enhanced by contrastive learning. RAMer also introduces a personality auxiliary task to complement missing modalities using modality-level attention, improving emotion reasoning. To further strengthen the model's ability to capture label and modality interdependency, we propose a stack shuffle strategy to enrich correlations between labels and modality-specific features. Experiments on three benchmarks, i.e., MEmoR, CMU-MOSEI, and $M^3$ED, demonstrate that RAMer achieves state-of-the-art performance in dyadic and multi-party MMER scenarios. 
 
 **Abstract (ZH)**: 传统的多模态多标签情绪识别（MMER）通常假设视频中的视觉、文本和声学模态都能完全可用。然而，在现实世界中的多参与者设置中，这一假设常常被违背，因为非说话者经常缺乏声学和文本输入，这导致了模型性能显著下降。现有的方法也往往会将异构模态统一到一个表示中，忽略了每个模态的独特特征。为了解决这些问题，我们提出了一种基于重构的对抗模型（RAMer，Reconstruction-based Adversarial Model for Emotion Recognition），该模型利用对抗学习通过重构特征来探索模态的共性和特性，从而改进多模态表示。RAMer 还引入了一个个性辅助任务，通过模态级注意力来补充缺失的模态，从而提高情绪推理能力。为了进一步增强模型捕捉标签和模态间依赖关系的能力，我们提出了堆叠洗牌策略以丰富标签和模态特定特征之间的关联。在三个基准数据集（MEmoR、CMU-MOSEI 和 $M^3$ED）上的实验结果表明，RAMer 在二元和多参与者 MMER 场景中达到了最先进的性能。 
-
----
-# TrueReason: An Exemplar Personalised Learning System Integrating Reasoning with Foundational Models 
-
-**Title (ZH)**: TrueReason：一个结合推理与基础模型的范例个性化学习系统 
-
-**Authors**: Sahan Bulathwela, Daniel Van Niekerk, Jarrod Shipton, Maria Perez-Ortiz, Benjamin Rosman, John Shawe-Taylor  
-
-**Link**: [PDF](https://arxiv.org/pdf/2502.10411)  
-
-**Abstract**: Personalised education is one of the domains that can greatly benefit from the most recent advances in Artificial Intelligence (AI) and Large Language Models (LLM). However, it is also one of the most challenging applications due to the cognitive complexity of teaching effectively while personalising the learning experience to suit independent learners. We hypothesise that one promising approach to excelling in such demanding use cases is using a \emph{society of minds}. In this chapter, we present TrueReason, an exemplar personalised learning system that integrates a multitude of specialised AI models that can mimic micro skills that are composed together by a LLM to operationalise planning and reasoning. The architecture of the initial prototype is presented while describing two micro skills that have been incorporated in the prototype. The proposed system demonstrates the first step in building sophisticated AI systems that can take up very complex cognitive tasks that are demanded by domains such as education. 
-
-**Abstract (ZH)**: 个性化教育是可以从最近人工智能（AI）和大型语言模型（LLM）的最新进展中受益匪浅的一个领域。然而，这也是一项最具挑战性的应用之一，原因在于有效进行认知教学的同时还需要为自主学习者个性化学习体验所带来的复杂性。我们假设，这样具有挑战性的应用场景中取得优异成果的一种有前途的方法是采用“心灵社会”（society of minds）这一理念。在本章中，我们介绍了TrueReason，这是一种具有代表性的个性化学习系统，该系统集成了多种专门的AI模型，这些模型可以模拟大型语言模型组合的小技能，从而实现计划和推理的运作。我们描述了初始原型的架构，并介绍了原型中已集成的两种小技能。所提出的系统展示了构建能够承担教育等领域所要求的极其复杂认知任务的复杂AI系统的初始步骤。 
 
 ---
 # Multi-Modal Retrieval Augmentation for Open-Ended and Knowledge-Intensive Video Question Answering 
@@ -429,19 +442,6 @@
 **Abstract**: Recent multimodal large language models (MLLMs) have demonstrated significant potential in open-ended conversation, generating more accurate and personalized responses. However, their abilities to memorize, recall, and reason in sustained interactions within real-world scenarios remain underexplored. This paper introduces MMRC, a Multi-Modal Real-world Conversation benchmark for evaluating six core open-ended abilities of MLLMs: information extraction, multi-turn reasoning, information update, image management, memory recall, and answer refusal. With data collected from real-world scenarios, MMRC comprises 5,120 conversations and 28,720 corresponding manually labeled questions, posing a significant challenge to existing MLLMs. Evaluations on 20 MLLMs in MMRC indicate an accuracy drop during open-ended interactions. We identify four common failure patterns: long-term memory degradation, inadequacies in updating factual knowledge, accumulated assumption of error propagation, and reluctance to say no. To mitigate these issues, we propose a simple yet effective NOTE-TAKING strategy, which can record key information from the conversation and remind the model during its responses, enhancing conversational capabilities. Experiments across six MLLMs demonstrate significant performance improvements. 
 
 **Abstract (ZH)**: 近年来的多模态大规模语言模型（MLLMs）在开放性对话中表现出巨大的潜力，能够生成更加准确和个性化的响应。然而，它们在实际场景中进行长时间互动时的记忆能力、回忆能力和推理能力尚未得到充分探索。本文介绍了一种名为MMRC的多模态真实世界对话基准，用于评估MLLMs的六项核心开放性能力：信息提取、多轮推理、信息更新、图像管理、记忆回忆和拒绝回答。该基准数据来源于实际场景，包含5,120场对话和28,720个对应的手动标注问题，为现有的MLLMs提出了巨大挑战。在MMRC中对20种MLLMs的评估表明，在开放性互动中准确率有所下降。我们识别出四种常见的失败模式：长期记忆退化、事实知识更新不足、错误传播的累积假设以及拒绝回答的迟疑。为了缓解这些问题，我们提出了一种简单且有效的记录策略——笔记提取（NOTE-TAKING），该策略可以在对话中记录关键信息，并在模型的响应中提醒模型，从而增强对话能力。在六种MLLMs上的实验表明，该策略显著提高了模型的性能。 
-
----
-# Code-Vision: Evaluating Multimodal LLMs Logic Understanding and Code Generation Capabilities 
-
-**Title (ZH)**: Code-Vision：评估多模态大语言模型的逻辑理解和代码生成能力 
-
-**Authors**: Hanbin Wang, Xiaoxuan Zhou, Zhipeng Xu, Keyuan Cheng, Yuxin Zuo, Kai Tian, Jingwei Song, Junting Lu, Wenhui Hu, Xueyang Liu  
-
-**Link**: [PDF](https://arxiv.org/pdf/2502.11829)  
-
-**Abstract**: This paper introduces Code-Vision, a benchmark designed to evaluate the logical understanding and code generation capabilities of Multimodal Large Language Models (MLLMs). It challenges MLLMs to generate a correct program that fulfills specific functionality requirements based on a given flowchart, which visually represents the desired algorithm or process. Code-Vision comprises three subsets: HumanEval-V, Algorithm, and MATH, which evaluate MLLMs' coding abilities across basic programming, algorithmic, and mathematical problem-solving domains. Our experiments evaluate 12 MLLMs on Code-Vision. Experimental results demonstrate that there is a large performance difference between proprietary and open-source models. On Hard problems, GPT-4o can achieve 79.3% pass@1, but the best open-source model only achieves 15%. Further experiments reveal that Code-Vision can pose unique challenges compared to other multimodal reasoning benchmarks MMCode and MathVista. We also explore the reason for the poor performance of the open-source models. All data and codes are available at this https URL. 
-
-**Abstract (ZH)**: 本文介绍了Code-Vision，这是一个用于评估多模态大型语言模型（MLLMs）的逻辑理解和代码生成能力的基准。该基准挑战MLLMs根据给定的流程图生成满足特定功能要求的正确程序，而流程图则直观地表示了所需算法或过程。Code-Vision 包含三个子集：HumanEval-V、Algorithm 和 MATH，分别评估MLLMs在基本编程、算法和数学问题解决领域的编码能力。我们的实验在Code-Vision上评估了12个MLLMs。实验结果表明，专有模型和开源模型之间的性能差距很大。在难题上，GPT-4o 可以实现79.3%的通过率，但最好的开源模型仅能达到15%。进一步的实验表明，与多模态推理基准MMCode和MathVista相比，Code-Vision 可能会提出独特的挑战。我们还探讨了开源模型表现不佳的原因。所有数据和代码均可在此访问：https://example.com（请将https://example.com替换为实际的网址）。 
 
 ---
 # CLASS: Enhancing Cross-Modal Text-Molecule Retrieval Performance and Training Efficiency 

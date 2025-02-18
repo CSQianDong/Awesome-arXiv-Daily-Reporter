@@ -37,6 +37,19 @@
 **Abstract (ZH)**: LLM-as-a-Judge 利用了大语言模型（LLMs）的生成和推理能力，评估各种场景下的LLM响应，提供准确的偏好信号。这种方法在使LLMs与人类价值观保持一致方面发挥着关键作用，确保生成符合社会规范的伦理可靠AI输出。最近的研究提出了许多训练LLM作为生成性法官的方法，但大多数方法都消耗大量数据且缺乏准确性，并且仅专注于LLM的法官能力。在本研究中，我们将法官能力视为LLM的普遍能力，并采用两阶段训练方法，包括监督微调（SFT）预热和直接偏好优化（DPO）增强，以实现法官风格适应并提高判断准确性。此外，我们介绍了一种高效的数据合成方法，用于生成判断内容。实验结果表明，我们的方法仅需其他方法所需数据的大约2%到40%，即可在RewardBench上达到SOTA性能。此外，我们的训练方法通过构建复杂的法官任务来增强模型的通用能力，并且我们模型提供的法官信号显著提高了我们的内部模型在使用法官模型优化策略模型时的DPO训练性能。我们也开源了我们的模型权重和训练数据，以促进进一步的研究。 
 
 ---
+# Uncertainty-Aware Step-wise Verification with Generative Reward Models 
+
+**Title (ZH)**: 带有不确定性意识的逐级验证生成奖励模型方法 
+
+**Authors**: Zihuiwen Ye, Luckeciano Carvalho Melo, Younesse Kaddar, Phil Blunsom, Sam Staton, Yarin Gal  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.11250)  
+
+**Abstract**: Complex multi-step reasoning tasks, such as solving mathematical problems, remain challenging for large language models (LLMs). While outcome supervision is commonly used, process supervision via process reward models (PRMs) provides intermediate rewards to verify step-wise correctness in solution traces. However, as proxies for human judgement, PRMs suffer from reliability issues, including susceptibility to reward hacking. In this work, we propose leveraging uncertainty quantification (UQ) to enhance the reliability of step-wise verification with generative reward models for mathematical reasoning tasks. We introduce CoT Entropy, a novel UQ method that outperforms existing approaches in quantifying a PRM's uncertainty in step-wise verification. Our results demonstrate that incorporating uncertainty estimates improves the robustness of judge-LM PRMs, leading to more reliable verification. 
+
+**Abstract (ZH)**: 在解决数学问题等复杂的多步推理任务方面，大型语言模型（LLMs）仍然面临挑战。尽管结果监督是常用的方法，但通过过程奖励模型（PRMs）进行过程监督可以提供中间奖励，用于验证解题过程中的每一步是否正确。然而，作为人类判断的代理，PRMs 存在可靠性问题，包括易受奖励拐棍（reward hacking）的影响。在本工作中，我们提出利用不确定性量化（UQ）来增强生成奖励模型在数学推理任务中逐步验证的可靠性。我们引入了CoT熵（CoT Entropy），这是一种新颖的UQ方法，并且在量度PRM在逐步验证中的不确定性方面优于现有方法。我们的结果表明，整合不确定性估计能够提高判断-语言模型（judge-LM）PRMs的稳定性，从而实现更可靠的验证。 
+
+---
 # Deviation Ratings: A General, Clone-Invariant Rating Method 
 
 **Title (ZH)**: 偏差评分：一种通用且克隆无关的评估方法 
@@ -48,5 +61,18 @@
 **Abstract**: Many real-world multi-agent or multi-task evaluation scenarios can be naturally modelled as normal-form games due to inherent strategic (adversarial, cooperative, and mixed motive) interactions. These strategic interactions may be agentic (e.g. players trying to win), fundamental (e.g. cost vs quality), or complementary (e.g. niche finding and specialization). In such a formulation, it is the strategies (actions, policies, agents, models, tasks, prompts, etc.) that are rated. However, the rating problem is complicated by redundancy and complexity of N-player strategic interactions. Repeated or similar strategies can distort ratings for those that counter or complement them. Previous work proposed ``clone invariant'' ratings to handle such redundancies, but this was limited to two-player zero-sum (i.e. strictly competitive) interactions. This work introduces the first N-player general-sum clone invariant rating, called deviation ratings, based on coarse correlated equilibria. The rating is explored on several domains including LLMs evaluation. 
 
 **Abstract (ZH)**: 许多实际世界的多智能体或多任务评估场景可以自然地用标准形式博弈进行建模，因为这些场景包含内在的战略（对抗性的、合作性的和混合动机）互动。这些战略互动可能是代理性的（例如，玩家试图获胜）、基本性的（例如，成本与质量之间的权衡），或互补性的（例如，专业特化和专长领域发现）。在此类模型中，是策略（行动、政策、代理、模型、任务、提示等）被评分的。然而，评分问题由于N玩家战略互动的冗余性和复杂性而变得更加复杂。重复的或相似的策略可能扭曲那些与之对抗或互补的策略的评分。先前的研究提出了一种“克隆不变”评分法来处理这种冗余性，但这种方法仅限于两人零和博弈（即严格竞争性）的互动。本研究在此基础上，首次提出了基于粗略关联均衡的N玩家一般和克隆不变评分法，称为偏差评分法，并在多个领域进行了探索，包括大型语言模型的评估。 
+
+---
+# TrueReason: An Exemplar Personalised Learning System Integrating Reasoning with Foundational Models 
+
+**Title (ZH)**: TrueReason：一种结合推理与基础模型的范例个性化学习系统 
+
+**Authors**: Sahan Bulathwela, Daniel Van Niekerk, Jarrod Shipton, Maria Perez-Ortiz, Benjamin Rosman, John Shawe-Taylor  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.10411)  
+
+**Abstract**: Personalised education is one of the domains that can greatly benefit from the most recent advances in Artificial Intelligence (AI) and Large Language Models (LLM). However, it is also one of the most challenging applications due to the cognitive complexity of teaching effectively while personalising the learning experience to suit independent learners. We hypothesise that one promising approach to excelling in such demanding use cases is using a \emph{society of minds}. In this chapter, we present TrueReason, an exemplar personalised learning system that integrates a multitude of specialised AI models that can mimic micro skills that are composed together by a LLM to operationalise planning and reasoning. The architecture of the initial prototype is presented while describing two micro skills that have been incorporated in the prototype. The proposed system demonstrates the first step in building sophisticated AI systems that can take up very complex cognitive tasks that are demanded by domains such as education. 
+
+**Abstract (ZH)**: 个性化教育是能够从最近的人工智能（AI）和大型语言模型（LLM）的最新进展中受益匪浅的领域之一。然而，这也是一项最具挑战性的应用之一，原因在于在个性化学习体验以适应独立学习者的同时，有效进行认知教学的复杂性。我们假设，在这样的苛刻应用场景中表现出色的一个有前途的方法是使用“多元心智体系”。在本章中，我们将介绍TrueReason，这是一种范例性的个性化学习系统，该系统整合了多种专门的AI模型，这些模型能够模拟由LLM组合而成的微技能，从而实现规划和推理功能的运作。同时，我们将介绍原型的架构，并描述已集成到原型中的两个微技能。所提出的系统展示了构建能够承担教育等复杂领域所需求的复杂认知任务的高级AI系统的第一步。 
 
 ---

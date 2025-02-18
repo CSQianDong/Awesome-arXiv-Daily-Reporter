@@ -50,6 +50,19 @@
 **Abstract (ZH)**: 检索增强生成（RAG）通过利用外部知识源提升了大型语言模型（LLMs）在特定领域问题求解（QA）任务中的性能。然而，传统RAG系统主要侧重于相关性检索，往往在多源信息连接推理时难以避免冗余。本文介绍了一种名为Vendi-RAG的框架，该框架基于迭代过程，同时优化检索多样性和答案质量。这种联合优化能够显著提高多跳QA任务的准确性。Vendi-RAG利用Vendi评分（VS），这是一种基于相似度的灵活性多样度度量，以促进文档检索中的语义多样性。然后，通过评估推理步骤后生成的候选答案，使用LLM判别器输出一个评分，该评分在每次迭代中用于检索器平衡检索的文档的相关性和多样性。在三个具有挑战性的数据集——HotpotQA、MuSiQue和2WikiMultiHopQA——上的实验表明，Vendi-RAG在多跳推理任务中具有有效性。该框架在与传统单步骤和多步骤RAG方法相比时，实现了显著的准确性提升，在HotpotQA数据集上达到+4.2%、在2WikiMultiHopQA数据集上达到+4.1%、在MuSiQue数据集上达到+1.3%，相对于Adaptive-RAG，这是当前最佳基线。随着检索文档数量的增加，Vendi-RAG的好处更为显著。最后，我们还评估了Vendi-RAG在不同的LLM基础模型上的表现，包括GPT-3.5、GPT-4和GPT-4o-mini，并观察到一致的改进，表明该框架的优势具有模型的通用性。 
 
 ---
+# Bridging the Gap: Enabling Natural Language Queries for NoSQL Databases through Text-to-NoSQL Translation 
+
+**Title (ZH)**: 缩小差距：通过文本到NoSQL数据库转换实现自然语言查询 
+
+**Authors**: Jinwei Lu, Yuanfeng Song, Zhiqian Qin, Haodi Zhang, Chen Zhang, Raymond Chi-Wing Wong  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.11201)  
+
+**Abstract**: NoSQL databases have become increasingly popular due to their outstanding performance in handling large-scale, unstructured, and semi-structured data, highlighting the need for user-friendly interfaces to bridge the gap between non-technical users and complex database queries. In this paper, we introduce the Text-to-NoSQL task, which aims to convert natural language queries into NoSQL queries, thereby lowering the technical barrier for non-expert users. To promote research in this area, we developed a novel automated dataset construction process and released a large-scale and open-source dataset for this task, named TEND (short for Text-to-NoSQL Dataset). Additionally, we designed a SLM (Small Language Model)-assisted and RAG (Retrieval-augmented Generation)-assisted multi-step framework called SMART, which is specifically designed for Text-to-NoSQL conversion. To ensure comprehensive evaluation of the models, we also introduced a detailed set of metrics that assess the model's performance from both the query itself and its execution results. Our experimental results demonstrate the effectiveness of our approach and establish a benchmark for future research in this emerging field. We believe that our contributions will pave the way for more accessible and intuitive interactions with NoSQL databases. 
+
+**Abstract (ZH)**: NoSQL数据库由于在处理大规模、非结构化和半结构化数据方面的出色性能，已经变得越来越受欢迎，凸显了用户友好界面的重要性，以便非技术人员能够更容易地理解和使用复杂的数据库查询。在这篇论文中，我们介绍了将自然语言查询转换为NoSQL查询的Text-to-NoSQL任务，旨在降低非专家用户的技术门槛。为了促进该领域的研究，我们开发了一种新颖的自动化数据集构建过程，并发布了包含大量数据且开源的Text-to-NoSQL数据集TEND。此外，我们设计了一种名为SMART（Small Language Model辅助和Retrieval-augmented Generation辅助多步框架）的框架，专门用于实现Text-to-NoSQL转换。为了全面评估模型性能，我们还引入了一套详细的评估指标，该指标不仅评估查询本身，还评估其执行结果。实验结果表明了我们方法的有效性，并为未来在这一新兴领域的研究建立了基准。我们相信，我们的贡献将为NoSQL数据库的更易于使用和直观交互铺平道路。 
+
+---
 # MultiTEND: A Multilingual Benchmark for Natural Language to NoSQL Query Translation 
 
 **Title (ZH)**: MultiTEND：一种多语言基准，用于自然语言到NoSQL查询的转换 
@@ -106,6 +119,19 @@ Furthermore, this study examines the trade-offs between fine-tuning efficiency, 
 本论文对RAG、LoRA和DoRA进行了大规模的实证评估，通过20,000个基于FAQ的查询对模型微调和生成性能进行了评估，知识库包含400,000条记录。研究分析了关键性能指标，如准确度、相关性和推理延迟。实验结果表明，DoRA在准确度（90.1%）、相关性得分（0.88）和查询延迟（每查询110毫秒）方面均优于LoRA和RAG，在实际应用中的领域特定生成式AI应用中表现最佳。
 
 此外，本研究还探讨了不同模型在微调效率、计算成本和实时适应性之间的权衡。研究结果表明，RAG在知识落地方面效果显著，LoRA在成本效益的领域适应性方面表现出色，而DoRA则能够在微调效率和模型精度之间取得平衡。这些见解为在医疗、金融和法律服务等关键准确度领域部署以AI驱动的生成系统提供了实用指导，确保了在动态环境中实现可扩展性、可靠性和最佳性能。 
+
+---
+# Multi-Modal Retrieval Augmentation for Open-Ended and Knowledge-Intensive Video Question Answering 
+
+**Title (ZH)**: 面向开放性和知识密集型视频问答的多模态检索增强 
+
+**Authors**: Md Zarif Ul Alam, Hamed Zamani  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.11747)  
+
+**Abstract**: While current video question answering systems perform well on some tasks requiring only direct visual understanding, they struggle with questions demanding knowledge beyond what is immediately observable in the video content. We refer to this challenging scenario as knowledge-intensive video question answering (KI-VideoQA), where models must retrieve and integrate external information with visual understanding to generate accurate responses. This work presents the first attempt to (1) study multi-modal retrieval-augmented generation for KI-VideoQA, and (2) go beyond multi-choice questions by studying open-ended questions in this task. Through an extensive empirical study of state-of-the-art retrieval and vision language models in both zero-shot and fine-tuned settings, we explore how different retrieval augmentation strategies can enhance knowledge integration in KI-VideoQA. We analyze three key aspects: (1) model's effectiveness across different information sources and modalities, (2) the impact of heterogeneous multi-modal context integration, and (3) model's effectiveness across different query formulation and retrieval result consumption. Our results suggest that while retrieval augmentation generally improves performance, its effectiveness varies significantly based on modality choice and retrieval strategy. Additionally, we find that successful knowledge integration often requires careful consideration of query formulation and optimal retrieval depth. Our exploration advances state-of-the-art accuracy for multiple choice questions by over 17.5% on the KnowIT VQA dataset. 
+
+**Abstract (ZH)**: 尽管当前的视频问答系统在仅需直接视觉理解的任务上表现良好，但在要求超出视频内容直接观察的知识的问题上，它们却难以应对。我们称这种具有挑战性的场景为知识密集型视频问答（KI-VideoQA），在这种场景中，模型必须检索和整合外部信息与视觉理解相结合，以生成准确的回答。本文提出了第一个尝试：(1) 研究多模态检索增强生成在 KI-VideoQA 中的应用，以及 (2) 超越多项选择题，研究该任务中的开放式问题。通过全面研究最先进的检索和视觉语言模型在零样本和微调设置下的表现，我们探讨了不同检索增强策略如何增强 KI-VideoQA 中的知识整合。我们分析了三个关键方面：(1) 模型在不同信息源和模态上的有效性，(2) 异构多模态上下文整合的影响，以及 (3) 模型在不同查询构建和检索结果消费上的有效性。我们的结果显示，虽然检索增强通常能改善性能，但其效果在不同模态选择和检索策略下差异显著。此外，我们发现成功的知识整合往往需要仔细考虑查询构建和最优检索深度。我们的研究在 KnowIT VQA 数据集上将多项选择题的准确率提升了超过 17.5%，从而推进了最先进的准确率。 
 
 ---
 # RAG vs. GraphRAG: A Systematic Evaluation and Key Insights 
