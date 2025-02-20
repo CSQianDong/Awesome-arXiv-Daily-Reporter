@@ -1,0 +1,80 @@
+# TALKPLAY: Multimodal Music Recommendation with Large Language Models 
+
+**Title (ZH)**: TALKPLAY：基于大型语言模型的多模态音乐推荐 
+
+**Authors**: Seungheon Doh, Keunwoo Choi, Juhan Nam  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.13713)  
+
+**Abstract**: We present TalkPlay, a multimodal music recommendation system that reformulates the recommendation task as large language model token generation. TalkPlay represents music through an expanded token vocabulary that encodes multiple modalities - audio, lyrics, metadata, semantic tags, and playlist co-occurrence. Using these rich representations, the model learns to generate recommendations through next-token prediction on music recommendation conversations, that requires learning the associations natural language query and response, as well as music items. In other words, the formulation transforms music recommendation into a natural language understanding task, where the model's ability to predict conversation tokens directly optimizes query-item relevance. Our approach eliminates traditional recommendation-dialogue pipeline complexity, enabling end-to-end learning of query-aware music recommendations. In the experiment, TalkPlay is successfully trained and outperforms baseline methods in various aspects, demonstrating strong context understanding as a conversational music recommender. 
+
+**Abstract (ZH)**: 我们提出了一种名为TalkPlay的多模态音乐推荐系统，将推荐任务重新定义为大型语言模型标记生成。TalkPlay 通过扩展的标记词汇表来表示音乐，该词汇表编码了多种模态的信息——包括音频、歌词、元数据、语义标签以及播放列表共现情况。利用这些丰富的表示形式，模型通过音乐推荐对话中下一个标记的预测来学习生成推荐，从而需要学习自然语言查询和响应之间的关联，以及音乐项目。换句话说，这种表述将音乐推荐转化为一个自然语言理解任务，模型预测对话标记的能力直接优化了查询与项目的相关性。我们的方法消除了传统的推荐对话流水线复杂性，从而实现基于查询的音乐推荐的端到端学习。在实验中，TalkPlay 成功地进行了训练，并在多个方面超越了基准方法，展示了其作为对话式音乐推荐系统强大的上下文理解能力。 
+
+---
+# Symmetrical Visual Contrastive Optimization: Aligning Vision-Language Models with Minimal Contrastive Images 
+
+**Title (ZH)**: 对称视觉对比优化：利用最小对比图像对齐视觉语言模型 
+
+**Authors**: Shengguang Wu, Fan-Yun Sun, Kaiyue Wen, Nick Haber  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.13928)  
+
+**Abstract**: Recent studies have shown that Large Vision-Language Models (VLMs) tend to neglect image content and over-rely on language-model priors, resulting in errors in visually grounded tasks and hallucinations. We hypothesize that this issue arises because existing VLMs are not explicitly trained to generate texts that are accurately grounded in fine-grained image details. To enhance visual feedback during VLM training, we propose S-VCO (Symmetrical Visual Contrastive Optimization), a novel finetuning objective that steers the model toward capturing important visual details and aligning them with corresponding text tokens. To further facilitate this detailed alignment, we introduce MVC, a paired image-text dataset built by automatically filtering and augmenting visual counterfactual data to challenge the model with hard contrastive cases involving Minimal Visual Contrasts. Experiments show that our method consistently improves VLM performance across diverse benchmarks covering various abilities and domains, achieving up to a 22% reduction in hallucinations, and significant gains in vision-centric and general tasks. Notably, these improvements become increasingly pronounced in benchmarks with higher visual dependency. In short, S-VCO offers a significant enhancement of VLM's visually-dependent task performance while retaining or even improving the model's general abilities. We opensource our code at this https URL 
+
+**Abstract (ZH)**: 近年来的研究表明，大规模的多模态模型（如视觉-语言模型VLMs）倾向于忽视图像内容，过度依赖语言模型的先验知识，导致在视觉接地任务中出现错误，并产生幻觉。我们假设这一问题的根源在于现有的VLMs未能明确地训练以生成与精细图像细节准确对接的文本。为了在VLM训练过程中增强视觉反馈，我们提出了一种新的微调目标——S-VCO（Symmetrical Visual Contrastive Optimization），该目标旨在引导模型捕捉重要的视觉细节，并将这些细节与相应的文本标记对齐。为了进一步促进这一详细的对齐，我们引入了MVC，这是一个由自动过滤和增强视觉反事实数据构建的配对图像-文本数据集，用于挑战模型处理涉及最小视觉差异的困难对比案例。实验结果表明，我们的方法在涵盖各种能力和领域的大规模基准测试中均能提升VLM的性能，实现幻觉减少高达22%的效果，并在视觉中心和一般任务中取得显著进步。值得注意的是，在更高视觉依赖的基准测试中，这些改进变得更加明显。简而言之，S-VCO在保持甚至提升模型一般能力的同时，显著提升了VLM在视觉依赖任务上的表现。我们的代码开源在以下链接：[此处插入网址] 
+
+---
+# Quantifying Memorization and Retriever Performance in Retrieval-Augmented Vision-Language Models 
+
+**Title (ZH)**: 量化检索增强视觉语言模型中的记忆作用与检索器性能 
+
+**Authors**: Peter Carragher, Abhinand Jha, R Raghav, Kathleen M. Carley  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.13836)  
+
+**Abstract**: Large Language Models (LLMs) demonstrate remarkable capabilities in question answering (QA), but metrics for assessing their reliance on memorization versus retrieval remain underdeveloped. Moreover, while finetuned models are state-of-the-art on closed-domain tasks, general-purpose models like GPT-4o exhibit strong zero-shot performance. This raises questions about the trade-offs between memorization, generalization, and retrieval. In this work, we analyze the extent to which multimodal retrieval-augmented VLMs memorize training data compared to baseline VLMs. Using the WebQA benchmark, we contrast finetuned models with baseline VLMs on multihop retrieval and question answering, examining the impact of finetuning on data memorization. To quantify memorization in end-to-end retrieval and QA systems, we propose several proxy metrics by investigating instances where QA succeeds despite retrieval failing. Our results reveal the extent to which finetuned models rely on memorization. In contrast, retrieval-augmented VLMs have lower memorization scores, at the cost of accuracy (72% vs 52% on WebQA test set). As such, our measures pose a challenge for future work to reconcile memorization and generalization in both Open-Domain QA and joint Retrieval-QA tasks. 
+
+**Abstract (ZH)**: 大型语言模型（LLMs）在问答（QA）方面展现了 remarkable 的能力，但评估它们对记忆依赖与检索依赖的指标仍处于发展中阶段。此外，尽管微调模型在封闭领域任务上是目前最先进的，通用模型如GPT-4o却在零样本任务中表现出色。这引发了记忆、泛化和检索之间权衡关系的疑问。在本研究中，我们分析了多模态检索增强VLMs与基线VLMs相比在多跳检索和问答中记忆训练数据的程度。我们使用WebQA基准进行对照实验，比较微调模型与基线VLMs在多跳检索和问答任务上的表现，探讨微调对数据记忆的影响。为了量化端到端检索和问答系统中的记忆程度，我们通过探讨即使检索失败问答也能成功的实例，提出了若干代理指标。我们的结果显示了微调模型在多大程度上依赖记忆。相对而言，检索增强的VLMs的记忆分数较低（在WebQA测试集上的准确率为72%对52%），代价是准确性下降。因此，我们的指标对未来的研究提出了挑战，即解决开放领域问答和联合检索问答任务中的记忆与泛化之间的矛盾。 
+
+---
+# Unlocking Multimodal Integration in EHRs: A Prompt Learning Framework for Language and Time Series Fusion 
+
+**Title (ZH)**: 解锁EHR多模态集成：一种语言与时间序列融合的提示学习框架 
+
+**Authors**: Shuai Niu, Jing Ma, Hongzhan Lin, Liang Bai, Zhihua Wang, Wei Bi, Yida Xu, Guo Li, Xian Yang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.13509)  
+
+**Abstract**: Large language models (LLMs) have shown remarkable performance in vision-language tasks, but their application in the medical field remains underexplored, particularly for integrating structured time series data with unstructured clinical notes. In clinical practice, dynamic time series data such as lab test results capture critical temporal patterns, while clinical notes provide rich semantic context. Merging these modalities is challenging due to the inherent differences between continuous signals and discrete text. To bridge this gap, we introduce ProMedTS, a novel self-supervised multimodal framework that employs prompt-guided learning to unify these heterogeneous data types. Our approach leverages lightweight anomaly detection to generate anomaly captions that serve as prompts, guiding the encoding of raw time series data into informative embeddings. These embeddings are aligned with textual representations in a shared latent space, preserving fine-grained temporal nuances alongside semantic insights. Furthermore, our framework incorporates tailored self-supervised objectives to enhance both intra- and inter-modal alignment. We evaluate ProMedTS on disease diagnosis tasks using real-world datasets, and the results demonstrate that our method consistently outperforms state-of-the-art approaches. 
+
+**Abstract (ZH)**: 大型语言模型（LLMs）在视觉-语言任务中表现出色，但在医疗领域的应用尚待探索，尤其是在将结构化时间序列数据与非结构化临床笔记整合方面的应用尤为不足。在临床实践中，动态时间序列数据（如实验室检查结果）捕捉关键的时间模式，而临床笔记则提供了丰富的语义背景。由于连续信号与离散文本之间的固有差异，将这些模态进行整合颇具挑战性。为了弥合这一差距，我们提出了一种名为ProMedTS的创新自监督多模态框架，采用提示引导学习来统一这些异构数据类型。我们的方法利用轻量级的异常检测生成异常描述，作为提示，引导原始时间序列数据的编码过程，生成包含信息的嵌入表示。这些嵌入表示与共享的潜在空间中的文本表示对齐，同时保留了细微的时间特质和语义洞察。此外，我们的框架还集成了定制的自监督目标以增强跨模态和同模态的对齐性。我们在真实世界的数据集上对ProMedTS进行了疾病诊断任务的评估，结果表明我们的方法始终优于现有最先进的方法。 
+
+---
+# Transferring Textual Preferences to Vision-Language Understanding through Model Merging 
+
+**Title (ZH)**: 通过模型合并将文本偏好转移到视觉-语言理解 
+
+**Authors**: Chen-An Li, Tzu-Han Lin, Yun-Nung Chen, Hung-yi Lee  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.13487)  
+
+**Abstract**: Large vision-language models (LVLMs) perform outstandingly across various multimodal tasks. However, their ability to evaluate generated content remains limited, and training vision-language reward models (VLRMs) with preference data is computationally expensive. This paper explores a training-free alternative by merging text-based reward models (RMs) with LVLMs to create VLRMs. Our approach shows that integrating these models leads to improved performance over LVLMs' scoring and text-based RMs, offering an efficient method for incorporating textual preferences into LVLMs. 
+
+**Abstract (ZH)**: 大型多模态模型（Large Vision-Language Models, LVLMs）在各种多模态任务中表现出色。然而，它们对生成内容的评估能力仍然有限，使用偏好数据训练视觉-语言奖励模型（Vision-Language Reward Models, VLRMs）在计算上也非常昂贵。本文探索了一种无需训练的替代方案，即将基于文本的奖励模型（Reward Models, RMs）与LVLMs结合以创建VLRMs。我们的方法表明，将这些模型进行集成可以提高LVLMs评分和基于文本的RMs的表现，提供了一种高效的方法来将文本偏好融入LVLMs中。 
+
+---
+# HyperGCL: Multi-Modal Graph Contrastive Learning via Learnable Hypergraph Views 
+
+**Title (ZH)**: HyperGCL：通过可学习超图视图进行多模态图对比学习 
+
+**Authors**: Khaled Mohammed Saifuddin, Jonathan Shihao Ji, Esra Akbas  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.13277)  
+
+**Abstract**: Recent advancements in Graph Contrastive Learning (GCL) have demonstrated remarkable effectiveness in improving graph representations. However, relying on predefined augmentations (e.g., node dropping, edge perturbation, attribute masking) may result in the loss of task-relevant information and a lack of adaptability to diverse input data. Furthermore, the selection of negative samples remains rarely explored. In this paper, we introduce HyperGCL, a novel multimodal GCL framework from a hypergraph perspective. HyperGCL constructs three distinct hypergraph views by jointly utilizing the input graph's structure and attributes, enabling a comprehensive integration of multiple modalities in contrastive learning. A learnable adaptive topology augmentation technique enhances these views by preserving important relations and filtering out noise. View-specific encoders capture essential characteristics from each view, while a network-aware contrastive loss leverages the underlying topology to define positive and negative samples effectively. Extensive experiments on benchmark datasets demonstrate that HyperGCL achieves state-of-the-art node classification performance. 
+
+**Abstract (ZH)**: 基于超图的图对比学习（HyperGCL）：一种新颖的多模态图对比学习框架
+
+近年来，图对比学习（GCL）的发展已经证明了其在改进图表示方面的显著有效性。然而，依赖预定义的增强方法（如节点删除、边扰动和属性掩蔽）可能会损失与任务相关的信息，并且对不同输入数据缺乏适应性。此外，负样本的选择尚未得到充分探索。本文提出了HyperGCL，这是一种从超图视角出发的新型多模态图对比学习框架。HyperGCL通过综合利用输入图的结构和属性，构建三个不同的超图视图，从而实现对比学习中多种模态的全面整合。一种可学习的自适应拓扑增强技术通过保留重要关系并排除噪声来增强这些视图。针对每个视图的编码器捕获每个视图的关键特征，而网络感知的对比损失利用潜在的拓扑结构有效地定义正样本和负样本。基准数据集上的广泛实验表明，HyperGCL实现了最先进的节点分类性能。 
+
+---
