@@ -1,0 +1,305 @@
+# I-MCTS: Enhancing Agentic AutoML via Introspective Monte Carlo Tree Search 
+
+**Title (ZH)**: I-MCTS：基于反省蒙特卡罗树搜索的自主智能自动化机器学习增强方法 
+
+**Authors**: Zujie Liang, Feng Wei, Wujiang Xu, Lin Chen, Yuxi Qian, Xinhui Wu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.14693)  
+
+**Abstract**: Recent advancements in large language models (LLMs) have shown remarkable potential in automating machine learning tasks. However, existing LLM-based agents often struggle with low-diversity and suboptimal code generation. While recent work has introduced Monte Carlo Tree Search (MCTS) to address these issues, limitations persist in the quality and diversity of thoughts generated, as well as in the scalar value feedback mechanisms used for node selection. In this study, we introduce Introspective Monte Carlo Tree Search (I-MCTS), a novel approach that iteratively expands tree nodes through an introspective process that meticulously analyzes solutions and results from parent and sibling nodes. This facilitates a continuous refinement of the node in the search tree, thereby enhancing the overall decision-making this http URL, we integrate a Large Language Model (LLM)-based value model to facilitate direct evaluation of each node's solution prior to conducting comprehensive computational rollouts. A hybrid rewarding mechanism is implemented to seamlessly transition the Q-value from LLM-estimated scores to actual performance scores. This allows higher-quality nodes to be traversed this http URL to the various ML tasks, our approach demonstrates a6\% absolute improvement in performance compared to the strong open-source AutoML agents, showcasing its effectiveness in enhancing agentic AutoML systems. 
+
+**Abstract (ZH)**: 近年来，大型语言模型（LLMs）在自动化机器学习任务方面展现出了显著的潜力。然而，现有的基于LLM的代理程序常常面临低多样性和生成次优代码的问题。尽管最近的研究引入了蒙特卡洛树搜索（MCTS）来解决这些问题，但在生成思维的质量和多样性以及节点选择的标量反馈机制方面仍然存在局限。在本研究中，我们提出了反省蒙特卡洛树搜索（I-MCTS），这是一种新颖的方法，通过一个反省的过程，详细分析父节点和同族节点的解决方案和结果，逐步扩展树节点。这有助于在搜索树中不断优化节点，从而提高整体决策质量。为了实现这一目标，我们整合了一个基于大型语言模型（LLM）的价值模型，可以在进行全面计算展开之前直接评估每个节点的解决方案。我们实现了一个混合奖励机制，使Q值能够平滑过渡从LLM估计的分数到实际性能分数。这使得更高质量的节点能够被更频繁地访问。对于各种机器学习任务，我们的方法在性能上相对于现有的强大开源自动机器学习代理取得了绝对6%的提升，这表明了其在增强代理型自动机器学习系统方面的有效性。 
+
+---
+# InstructAgent: Building User Controllable Recommender via LLM Agent 
+
+**Title (ZH)**: 《InstructAgent：通过LLM代理构建用户可控的推荐系统》
+
+在这个翻译中，“InstructAgent”被保留为专有名词，“LLM”代表“大型语言模型”（Large Language Model），符合学术翻译的规范。 
+
+**Authors**: Wujiang Xu, Yunxiao Shi, Zujie Liang, Xuying Ning, Kai Mei, Kun Wang, Xi Zhu, Min Xu, Yongfeng Zhang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.14662)  
+
+**Abstract**: Traditional recommender systems usually take the user-platform paradigm, where users are directly exposed under the control of the platform's recommendation algorithms. However, the defect of recommendation algorithms may put users in very vulnerable positions under this paradigm. First, many sophisticated models are often designed with commercial objectives in mind, focusing on the platform's benefits, which may hinder their ability to protect and capture users' true interests. Second, these models are typically optimized using data from all users, which may overlook individual user's preferences. Due to these shortcomings, users may experience several disadvantages under the traditional user-platform direct exposure paradigm, such as lack of control over the recommender system, potential manipulation by the platform, echo chamber effects, or lack of personalization for less active users due to the dominance of active users during collaborative learning. Therefore, there is an urgent need to develop a new paradigm to protect user interests and alleviate these issues. Recently, some researchers have introduced LLM agents to simulate user behaviors, these approaches primarily aim to optimize platform-side performance, leaving core issues in recommender systems unresolved. To address these limitations, we propose a new user-agent-platform paradigm, where agent serves as the protective shield between user and recommender system that enables indirect exposure. To this end, we first construct four recommendation datasets, denoted as $\dataset$, along with user instructions for each record. 
+
+**Abstract (ZH)**: 传统的推荐系统通常采取用户-平台范式，用户直接在平台的推荐算法控制下接收推荐内容。然而，在这种范式下，推荐算法的缺陷可能会使用户处于非常脆弱的位置。首先，许多复杂模型往往旨在追求商业目标，关注平台的利益，这可能削弱它们保护和捕捉用户真实兴趣的能力。其次，这些模型通常使用所有用户的数据进行优化，这可能会忽略个别用户的偏好。由于这些缺陷，用户在传统用户-平台直接暴露范式下可能会经历多种不利影响，如对推荐系统的控制力薄弱、平台可能进行操控、回音室效应，或者由于活跃用户主导协作学习过程而导致的个性化不足。因此，迫切需要开发一种新范式来保护用户利益并缓解这些问题。近期，一些研究人员提出了使用大语言模型（LLM）代理来模拟用户行为的方法，这些方法主要旨在优化平台侧的表现，但未能解决推荐系统的根本问题。为了解决这些局限性，我们提出了一种新的用户-代理-平台范式，其中代理作为用户和推荐系统之间的防护屏障，实现了间接暴露。为此，我们首先构建了四个推荐数据集，分别标记为$\dataset$，并为每个记录提供用户指令。 
+
+---
+# How Far are LLMs from Being Our Digital Twins? A Benchmark for Persona-Based Behavior Chain Simulation 
+
+**Title (ZH)**: 大语言模型与数字孪生之间的差距：基于人设的行为链模拟基准研究 
+
+**Authors**: Rui Li, Heming Xia, Xinfeng Yuan, Qingxiu Dong, Lei Sha, Wenjie Li, Zhifang Sui  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.14642)  
+
+**Abstract**: Recently, LLMs have garnered increasing attention across academic disciplines for their potential as human digital twins, virtual proxies designed to replicate individuals and autonomously perform tasks such as decision-making, problem-solving, and reasoning on their behalf. However, current evaluations of LLMs primarily emphasize dialogue simulation while overlooking human behavior simulation, which is crucial for digital twins. To address this gap, we introduce BehaviorChain, the first benchmark for evaluating LLMs' ability to simulate continuous human behavior. BehaviorChain comprises diverse, high-quality, persona-based behavior chains, totaling 15,846 distinct behaviors across 1,001 unique personas, each with detailed history and profile metadata. For evaluation, we integrate persona metadata into LLMs and employ them to iteratively infer contextually appropriate behaviors within dynamic scenarios provided by BehaviorChain. Comprehensive evaluation results demonstrated that even state-of-the-art models struggle with accurately simulating continuous human behavior. 
+
+**Abstract (ZH)**: 近年来，大语言模型（LLMs）在学术界获得了广泛关注，因其作为人类数字双胞胎的潜力而受到重视。这些数字双胞胎是设计用于模仿个体，并自主完成诸如决策、问题解决和推理等任务的虚拟代理。然而，目前对LLMs的评估主要集中在对话模拟上，而忽视了对人类行为的模拟，这对于数字双胞胎至关重要。为弥补这一空白，我们提出了BehaviorChain，这是一个用于评估LLMs模拟连续人类行为能力的第一个基准。BehaviorChain包含多种多样的高质量行为链，共计涵盖1,001个独特的人格，这些人格之间的行为总数达到15,846种，每个性格都有详细的背景信息和个性资料。在评估过程中，我们将人格资料整合到LLMs中，并运用它们在由BehaviorChain提供的动态场景中逐步推断出上下文合适的行为。全面的评估结果表明，即使是当前最先进的模型，在准确模拟连续人类行为方面也存在困难。 
+
+---
+# CORBA: Contagious Recursive Blocking Attacks on Multi-Agent Systems Based on Large Language Models 
+
+**Title (ZH)**: 基于大型语言模型的多智能体系统中的传染性递归阻塞攻击（CORBA） 
+
+**Authors**: Zhenhong Zhou, Zherui Li, Jie Zhang, Yuanhe Zhang, Kun Wang, Yang Liu, Qing Guo  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.14529)  
+
+**Abstract**: Large Language Model-based Multi-Agent Systems (LLM-MASs) have demonstrated remarkable real-world capabilities, effectively collaborating to complete complex tasks. While these systems are designed with safety mechanisms, such as rejecting harmful instructions through alignment, their security remains largely unexplored. This gap leaves LLM-MASs vulnerable to targeted disruptions. In this paper, we introduce Contagious Recursive Blocking Attacks (Corba), a novel and simple yet highly effective attack that disrupts interactions between agents within an LLM-MAS. Corba leverages two key properties: its contagious nature allows it to propagate across arbitrary network topologies, while its recursive property enables sustained depletion of computational resources. Notably, these blocking attacks often involve seemingly benign instructions, making them particularly challenging to mitigate using conventional alignment methods. We evaluate Corba on two widely-used LLM-MASs, namely, AutoGen and Camel across various topologies and commercial models. Additionally, we conduct more extensive experiments in open-ended interactive LLM-MASs, demonstrating the effectiveness of Corba in complex topology structures and open-source models. Our code is available at: this https URL. 
+
+**Abstract (ZH)**: 基于大规模语言模型的多智能体系统（LLM-MAS）已经在实际应用中展现了卓越的能力，能够有效协作完成复杂任务。尽管这些系统设计了安全机制，例如通过对齐来拒绝有害指令，但它们的安全性仍很大程度上未被探索。这一差距使LLM-MASs容易受到有针对性的干扰。在本文中，我们介绍了一种新颖且简单但极具效果的攻击方法——传染性递归阻断攻击（Corba），这种攻击能够破坏LLM-MAS内部智能体之间的交互。Corba利用了两个关键特性：传染性使它能够在任意网络拓扑下传播，而递归性则使其能够持续耗尽计算资源。值得注意的是，这些阻断攻击通常涉及看似无害的指令，这使得它们更难以通过传统的对齐方法进行缓解。我们分别在AutoGen和Camel两个广泛使用的LLM-MAS上，在不同的拓扑结构和商用模型上评估了Corba。此外，我们在开放生成互动的LLM-MAS中进行了更广泛的实验，展示了Corba在复杂拓扑结构和开源模型中的有效性。相关代码可在以下链接获取：这个 https URL。 
+
+---
+# MLGym: A New Framework and Benchmark for Advancing AI Research Agents 
+
+**Title (ZH)**: MLGym：一个新的框架与基准，用于推动AI研究代理的发展 
+
+**Authors**: Deepak Nathani, Lovish Madaan, Nicholas Roberts, Nikolay Bashlykov, Ajay Menon, Vincent Moens, Amar Budhiraja, Despoina Magka, Vladislav Vorotilov, Gaurav Chaurasia, Dieuwke Hupkes, Ricardo Silveira Cabral, Tatiana Shavrina, Jakob Foerster, Yoram Bachrach, William Yang Wang, Roberta Raileanu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.14499)  
+
+**Abstract**: We introduce Meta MLGym and MLGym-Bench, a new framework and benchmark for evaluating and developing LLM agents on AI research tasks. This is the first Gym environment for machine learning (ML) tasks, enabling research on reinforcement learning (RL) algorithms for training such agents. MLGym-bench consists of 13 diverse and open-ended AI research tasks from diverse domains such as computer vision, natural language processing, reinforcement learning, and game theory. Solving these tasks requires real-world AI research skills such as generating new ideas and hypotheses, creating and processing data, implementing ML methods, training models, running experiments, analyzing the results, and iterating through this process to improve on a given task. We evaluate a number of frontier large language models (LLMs) on our benchmarks such as Claude-3.5-Sonnet, Llama-3.1 405B, GPT-4o, o1-preview, and Gemini-1.5 Pro. Our MLGym framework makes it easy to add new tasks, integrate and evaluate models or agents, generate synthetic data at scale, as well as develop new learning algorithms for training agents on AI research tasks. We find that current frontier models can improve on the given baselines, usually by finding better hyperparameters, but do not generate novel hypotheses, algorithms, architectures, or substantial improvements. We open-source our framework and benchmark to facilitate future research in advancing the AI research capabilities of LLM agents. 
+
+**Abstract (ZH)**: 我们将介绍一种新的框架和基准MLGym和MLGym-Bench，用于评估和开发在AI研究任务中工作的LLM代理。这是第一个专为机器学习(ML)任务设计的Gym环境，它使研究人员能够研究强化学习(RL)算法以训练此类代理。MLGym-Bench包含了来自计算机视觉、自然语言处理、强化学习和博弈论等多个领域的13个多样性和开放性研究任务。解决这些任务需要实际的AI研究技能，如提出新想法和假说、创建和处理数据、实施机器学习方法、训练模型、运行实验、分析结果，并通过这一过程迭代以提高任务表现。我们对我们的基准测试评估了若干前沿的大型语言模型（LLMs），如Claude-3.5-Sonnet、Llama-3.1 405B、GPT-4o、o1-preview和Gemini-1.5 Pro。我们的MLGym框架使新增任务、整合和评估模型或代理、大规模生成合成数据以及为训练代理于AI研究任务开发新的学习算法变得更加简便。我们发现，当前的前沿模型通常通过找到更优的超参数来改善给定的基线，但并未生成新的假说、算法、架构或显著的改进。我们将我们的框架和基准测试开源，以促进未来在提升LLM代理的AI研究能力方面的工作。 
+
+---
+# Enhancing Language Multi-Agent Learning with Multi-Agent Credit Re-Assignment for Interactive Environment Generalization 
+
+**Title (ZH)**: 通过多agent信用重新分配增强语言多agent学习以实现交互环境泛化 
+
+**Authors**: Zhitao He, Zijun Liu, Peng Li, May Fung, Ming Yan, Ji Zhang, Fei Huang, Yang Liu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.14496)  
+
+**Abstract**: LLM-based agents have made significant advancements in interactive environments, such as mobile operations and web browsing, and other domains beyond computer using. Current multi-agent systems universally excel in performance, compared to single agents, but struggle with generalization across environments due to predefined roles and inadequate strategies for generalizing language agents. The challenge of achieving both strong performance and good generalization has hindered the progress of multi-agent systems for interactive environments. To address these issues, we propose CollabUIAgents, a multi-agent reinforcement learning framework with a novel multi-agent credit re-assignment (CR) strategy, assigning process rewards with LLMs rather than environment-specific rewards and learning with synthesized preference data, in order to foster generalizable, collaborative behaviors among the role-free agents' policies. Empirical results show that our framework improves both performance and cross-environment generalizability of multi-agent systems. Moreover, our 7B-parameter system achieves results on par with or exceed strong closed-source models, and the LLM that guides the CR. We also provide insights in using granular CR rewards effectively for environment generalization, and accommodating trained LLMs in multi-agent systems. 
+
+**Abstract (ZH)**: 基于大语言模型（LLM）的智能体在交互环境中取得了显著进展，包括移动操作和网页浏览等领域，以及其他不依赖计算机的领域。目前，多智能体系统在与单智能体相比时普遍表现出更优秀的性能，但因预设的角色限制和语言智能体泛化策略不足，在跨环境的泛化上存在困难。实现强性能和良好泛化之间的挑战阻碍了交互环境中多智能体系统的进步。为了解决这些问题，我们提出了CollabUIAgents，这是一种具有新颖的多智能体信用重分配（CR）策略的多智能体增强学习框架。该框架通过使用LLM分配过程奖励，而非环境特定的奖励，并利用合成偏好数据进行学习，来促进无角色限制智能体政策之间的协作行为泛化。实验结果表明，我们的框架提高了多智能体系统的性能和跨环境泛化能力。此外，我们的7亿参数系统在性能上达到了或超过了强大的封闭源模型，并且引导CR的LLM也取得了优异成绩。我们还提供了如何有效使用粒度化的CR奖励以促进环境泛化以及如何在多智能体系统中纳入训练好的LLM的见解。 
+
+---
+# Enhancing Smart Environments with Context-Aware Chatbots using Large Language Models 
+
+**Title (ZH)**: 使用大规模语言模型增强基于情境意识的智能环境中的聊天机器人 
+
+**Authors**: Aurora Polo-Rodríguez, Laura Fiorini, Erika Rovini, Filippo Cavallo, Javier Medina-Quero  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.14469)  
+
+**Abstract**: This work presents a novel architecture for context-aware interactions within smart environments, leveraging Large Language Models (LLMs) to enhance user experiences. Our system integrates user location data obtained through UWB tags and sensor-equipped smart homes with real-time human activity recognition (HAR) to provide a comprehensive understanding of user context. This contextual information is then fed to an LLM-powered chatbot, enabling it to generate personalised interactions and recommendations based on the user's current activity and environment. This approach moves beyond traditional static chatbot interactions by dynamically adapting to the user's real-time situation. A case study conducted from a real-world dataset demonstrates the feasibility and effectiveness of our proposed architecture, showcasing its potential to create more intuitive and helpful interactions within smart homes. The results highlight the significant benefits of integrating LLM with real-time activity and location data to deliver personalised and contextually relevant user experiences. 
+
+**Abstract (ZH)**: 本研究提出了一种新的架构，旨在增强智能环境中的上下文感知交互，通过利用大规模语言模型（LLMs）提升用户体验。我们的系统将通过超宽带（UWB）标签和传感器装备的智能家庭获得的用户位置数据与实时人体活动识别（HAR）集成，从而提供对用户上下文的全面理解。随后，该上下文信息被输送到一个基于LLMs的聊天机器人中，使其能够根据用户的当前活动和环境生成个性化的交互和建议。这种方法超越了传统的静态聊天机器人交互，能够根据用户的实时情况动态调整。通过对真实世界数据集进行的案例研究展示了我们提出的架构的实际可行性和有效性，展示了其在智能家庭中创建更加直观和有用交互的潜力。研究结果突显了将LLMs与实时活动和位置数据相结合以提供个性化和上下文相关的用户体验的巨大优势。 
+
+---
+# Enhancing Conversational Agents with Theory of Mind: Aligning Beliefs, Desires, and Intentions for Human-Like Interaction 
+
+**Title (ZH)**: 增强对话代理的心智理论：使信念、欲望和意图对齐以实现类似人类的互动 
+
+**Authors**: Mohammadmahdi Jafari, Devin Yuncheng Hua, Hao Xue, Flora Salim  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.14171)  
+
+**Abstract**: Natural language interaction with agentic Artificial Intelligence (AI), driven by Large Language Models (LLMs), is expected to remain a dominant paradigm in the near future. While humans instinctively align their communication with mental states -- an ability known as Theory of Mind (ToM), current LLM powered systems exhibit significant limitations in this regard. This study examines the extent to which open source language models (LLaMA) can capture and preserve ToM related information and how effectively it contributes to consistent ToM reasoning in generated responses. We further investigate whether explicit manipulation of ToM related components, such as beliefs, desires, and intentions, can enhance response alignment. Experiments on two LLaMA 3 variants demonstrate that incorporating ToM informed alignment improves response quality, achieving win rates of 67 and 63 percent for the 3B and 8B models, respectively. These findings highlight the potential of ToM driven strategies to improve alignment in LLM based conversational agents. 
+
+**Abstract (ZH)**: 由大规模语言模型（LLMs）驱动的代理人工智能（AGI）自然语言交互，预计在未来一段时间内仍将是主导范式。尽管人类本能地根据心理状态调整自己的交流方式（这种能力被称为心智理论，即Theory of Mind, ToM），但当前的LLM驱动系统在这方面表现出明显的局限性。本研究考察了开源语言模型（例如LaMA）能否捕捉和保留与ToM相关的信息，以及这些信息如何有效促进生成响应中的持续性ToM推理。此外，我们还研究了显式操纵与ToM相关的成分（如信念、欲望和意图）是否能够提升响应的对齐程度。在两种LaMA 3变体的实验中，将ToM导向的对齐机制纳入模型显著提高了响应质量，3B模型和8B模型的赢率分别为67%和63%。这些发现突显了ToM驱动策略在提高基于LLM的对话代理对齐程度方面的潜力。 
+
+---
+# Beyond Self-Talk: A Communication-Centric Survey of LLM-Based Multi-Agent Systems 
+
+**Title (ZH)**: 超越自我对话：基于通信的LLM驱动多Agent系统综述 
+
+**Authors**: Bingyu Yan, Xiaoming Zhang, Litian Zhang, Lian Zhang, Ziyi Zhou, Dezhuang Miao, Chaozhuo Li  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.14321)  
+
+**Abstract**: Large Language Models (LLMs) have recently demonstrated remarkable capabilities in reasoning, planning, and decision-making. Building upon these strengths, researchers have begun incorporating LLMs into multi-agent systems (MAS), where agents collaborate or compete through natural language interactions to tackle tasks beyond the scope of single-agent setups. In this survey, we present a communication-centric perspective on LLM-based multi-agent systems, examining key system-level features such as architecture design and communication goals, as well as internal mechanisms like communication strategies, paradigms, objects and content. We illustrate how these communication elements interplay to enable collective intelligence and flexible collaboration. Furthermore, we discuss prominent challenges, including scalability, security, and multimodal integration, and propose directions for future work to advance research in this emerging domain. Ultimately, this survey serves as a catalyst for further innovation, fostering more robust, scalable, and intelligent multi-agent systems across diverse application domains. 
+
+**Abstract (ZH)**: 大型语言模型（LLMs）最近在推理、规划和决策方面展现了卓越的能力。在此基础上，研究人员开始将LLMs融入多Agent系统（MAS），其中的Agent通过自然语言交互合作或竞争，以应对单Agent系统无法胜任的任务。本文综述了以通信为中心的LLM基多Agent系统视角，探讨了系统层面的关键特征，如架构设计和通信目标，以及内部机制，如通信策略、范式、对象和内容。我们展示了这些通信元素如何相互作用，以实现集体智能和灵活的合作。此外，我们讨论了包括扩展性、安全性和多模态集成在内的主要挑战，并提出了未来工作的方向，以推动这一新兴领域的研究。最终，本文综述旨在激发进一步的创新，促进在各种应用领域更加稳健、可扩展和智能的多Agent系统的发展。 
+
+---
+# STeCa: Step-level Trajectory Calibration for LLM Agent Learning 
+
+**Title (ZH)**: STeCa：LLM代理学习的步骤级轨迹校准 
+
+**Authors**: Hanlin Wang, Jian Wang, Chak Tou Leong, Wenjie Li  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.14276)  
+
+**Abstract**: Large language model (LLM)-based agents have shown promise in tackling complex tasks by interacting dynamically with the environment. Existing work primarily focuses on behavior cloning from expert demonstrations and preference learning through exploratory trajectory sampling. However, these methods often struggle in long-horizon tasks, where suboptimal actions accumulate step by step, causing agents to deviate from correct task trajectories. To address this, we highlight the importance of timely calibration and the need to automatically construct calibration trajectories for training agents. We propose Step-Level Trajectory Calibration (STeCa), a novel framework for LLM agent learning. Specifically, STeCa identifies suboptimal actions through a step-level reward comparison during exploration. It constructs calibrated trajectories using LLM-driven reflection, enabling agents to learn from improved decision-making processes. These calibrated trajectories, together with successful trajectory data, are utilized for reinforced training. Extensive experiments demonstrate that STeCa significantly outperforms existing methods. Further analysis highlights that step-level calibration enables agents to complete tasks with greater robustness. Our code and data are available at this https URL. 
+
+**Abstract (ZH)**: 基于大规模语言模型（LLM）的代理在通过与环境动态交互来应对复杂任务方面展现了潜力。现有工作主要集中在从专家示范行为克隆以及通过探索性轨迹采样学习偏好上。然而，这些方法在长时任务中往往表现不佳，因为次优行为逐步累积，导致代理偏离正确的任务轨迹。为解决这一问题，我们强调了及时校准的重要性，并阐明了自动构建校准轨迹以培训代理的必要性。我们提出了一种名为Step-Level Trajectory Calibration（STeCa）的新颖框架，用于LLM代理学习。具体而言，STeCa通过探索中的步骤级奖励比较识别次优行为，并利用LLM驱动的反思构建校准轨迹，使代理能够从改进的决策过程中学习。这些校准轨迹与成功的轨迹数据一起用于强化训练。广泛的实验表明，STeCa显著优于现有方法。进一步的分析表明，步骤级校准使代理能够以更高的鲁棒性完成任务。我们的代码和数据可在以下链接中获取：this https URL。 
+
+---
+# Making Universal Policies Universal 
+
+**Title (ZH)**: 使通用政策真正通用 
+
+**Authors**: Niklas Höpner, David Kuric, Herke van Hoof  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.14777)  
+
+**Abstract**: The development of a generalist agent capable of solving a wide range of sequential decision-making tasks remains a significant challenge. We address this problem in a cross-agent setup where agents share the same observation space but differ in their action spaces. Our approach builds on the universal policy framework, which decouples policy learning into two stages: a diffusion-based planner that generates observation sequences and an inverse dynamics model that assigns actions to these plans. We propose a method for training the planner on a joint dataset composed of trajectories from all agents. This method offers the benefit of positive transfer by pooling data from different agents, while the primary challenge lies in adapting shared plans to each agent's unique constraints. We evaluate our approach on the BabyAI environment, covering tasks of varying complexity, and demonstrate positive transfer across agents. Additionally, we examine the planner's generalisation ability to unseen agents and compare our method to traditional imitation learning approaches. By training on a pooled dataset from multiple agents, our universal policy achieves an improvement of up to $42.20\%$ in task completion accuracy compared to a policy trained on a dataset from a single agent. 
+
+**Abstract (ZH)**: 开发能够在广泛范围的序列决策任务中求解的通用智能体仍然是一个显著的挑战。我们通过跨智能体设置解决了这个问题，即智能体共享相同观测空间但动作空间不同。我们的方法基于通用策略框架，将策略学习分为两个阶段：一个基于扩散的规划器生成观测序列，以及一个逆动力学模型将动作分配给这些计划。我们提出了一种在由所有智能体轨迹组成的联合数据集上训练规划器的方法。这种方法通过从不同智能体中汇集数据，提供了正向迁移的好处，但主要挑战在于使共享计划适应每个智能体的独特约束。我们通过BabyAI环境评估了我们的方法，该环境涵盖了不同难度的任务，并展示了智能体之间的正向迁移能力。此外，我们还探讨了规划器对未见过的智能体的泛化能力，并将我们的方法与传统的模仿学习方法进行了比较。通过在多个智能体的联合数据集上进行训练，我们的通用策略在任务完成准确性方面的提高幅度达到了$42.20\%$，相比仅在一个智能体数据集上训练的策略。 
+
+---
+# Building reliable sim driving agents by scaling self-play 
+
+**Title (ZH)**: 通过扩展自我对弈构建可靠的模拟驾驶代理 
+
+**Authors**: Daphne Cornelisse, Aarav Pandya, Kevin Joseph, Joseph Suárez, Eugene Vinitsky  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.14706)  
+
+**Abstract**: Simulation agents are essential for designing and testing systems that interact with humans, such as autonomous vehicles (AVs). These agents serve various purposes, from benchmarking AV performance to stress-testing the system's limits, but all use cases share a key requirement: reliability. A simulation agent should behave as intended by the designer, minimizing unintended actions like collisions that can compromise the signal-to-noise ratio of analyses. As a foundation for reliable sim agents, we propose scaling self-play to thousands of scenarios on the Waymo Open Motion Dataset under semi-realistic limits on human perception and control. Training from scratch on a single GPU, our agents nearly solve the full training set within a day. They generalize effectively to unseen test scenes, achieving a 99.8% goal completion rate with less than 0.8% combined collision and off-road incidents across 10,000 held-out scenarios. Beyond in-distribution generalization, our agents show partial robustness to out-of-distribution scenes and can be fine-tuned in minutes to reach near-perfect performance in those cases. Demonstrations of agent behaviors can be found at this link. We open-source both the pre-trained agents and the complete code base. Demonstrations of agent behaviors can be found at \url{this https URL}. 
+
+**Abstract (ZH)**: 仿真实体对于设计和测试与人类交互的系统（如自动驾驶车辆AV）是必不可少的。这些实体具有多种用途，从评估AV性能到检验系统的极限性能，但所有应用场景都共享一个关键要求：可靠性。仿真实体应按设计者的意图行动，尽量减少诸如碰撞等意外行为，这些行为可能会影响分析中的信噪比。为建立可靠的仿真实体基础，我们建议在Waymo Open Motion数据集中对数千种场景进行半现实条件下的人类感知与控制限制下的自我对弈扩展。在单块GPU上从头训练，我们的实体在不到一天的时间内几乎可以解决整个训练集。它们在未见过的测试场景中表现出色，完成了99.8%的任务，总计发生不到0.8%的碰撞和离开道路事件，其中包含了10000个保留场景。除了内部泛化，我们的实体对未见过的场景也显示出部分鲁棒性，并且可以在几分钟内微调以达到近乎完美的性能。实体行为的演示可以在以下链接中找到：[这个链接](this https URL)。我们已开源了预训练的实体和完整的代码库。实体行为的演示可以在[这个URL](this https URL)中找到。 
+
+---
+# Plan-over-Graph: Towards Parallelable LLM Agent Schedule 
+
+**Title (ZH)**: 基于图的计划：朝着可并行的LLM代理调度方向 
+
+**Authors**: Shiqi Zhang, Xinbei Ma, Zouying Cao, Zhuosheng Zhang, Hai Zhao  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.14563)  
+
+**Abstract**: Large Language Models (LLMs) have demonstrated exceptional abilities in reasoning for task planning. However, challenges remain under-explored for parallel schedules. This paper introduces a novel paradigm, plan-over-graph, in which the model first decomposes a real-life textual task into executable subtasks and constructs an abstract task graph. The model then understands this task graph as input and generates a plan for parallel execution. To enhance the planning capability of complex, scalable graphs, we design an automated and controllable pipeline to generate synthetic graphs and propose a two-stage training scheme. Experimental results show that our plan-over-graph method significantly improves task performance on both API-based LLMs and trainable open-sourced LLMs. By normalizing complex tasks as graphs, our method naturally supports parallel execution, demonstrating global efficiency. The code and data are available at this https URL. 
+
+**Abstract (ZH)**: 大型语言模型（LLMs）在任务规划推理方面展现出了卓越的能力。然而，对于并行调度的挑战仍存在未探索的空间。本文引入了一种新颖的范式——“计划覆盖图”（Plan-over-Graph），该范式使模型首先将实际文本任务分解为可执行子任务，并构建一个抽象的任务图。然后，模型将理解该任务图作为输入，并生成一个用于并行执行的计划。为了增强处理复杂可扩展图形的规划能力，我们设计了一个自动化且可控的管道来生成合成图形，并提出了一种两阶段训练方案。实验结果表明，我们的“计划覆盖图”方法在基于API的LLMs和可训练的开源LLMs上显著提高了任务性能。通过将复杂的任务规范化为图形表示，该方法自然支持并行执行，从而展示出全局效率。代码和数据已发布在该链接：[此处提供链接]。 
+
+---
+# FlowAgent: Achieving Compliance and Flexibility for Workflow Agents 
+
+**Title (ZH)**: FlowAgent: 实现工作流代理的合规性和灵活性 
+
+**Authors**: Yuchen Shi, Siqi Cai, Zihan Xu, Yuei Qin, Gang Li, Hang Shao, Jiawei Chen, Deqing Yang, Ke Li, Xing Sun  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.14345)  
+
+**Abstract**: The integration of workflows with large language models (LLMs) enables LLM-based agents to execute predefined procedures, enhancing automation in real-world applications. Traditional rule-based methods tend to limit the inherent flexibility of LLMs, as their predefined execution paths restrict the models' action space, particularly when the unexpected, out-of-workflow (OOW) queries are encountered. Conversely, prompt-based methods allow LLMs to fully control the flow, which can lead to diminished enforcement of procedural compliance. To address these challenges, we introduce FlowAgent, a novel agent framework designed to maintain both compliance and flexibility. We propose the Procedure Description Language (PDL), which combines the adaptability of natural language with the precision of code to formulate workflows. Building on PDL, we develop a comprehensive framework that empowers LLMs to manage OOW queries effectively, while keeping the execution path under the supervision of a set of controllers. Additionally, we present a new evaluation methodology to rigorously assess an LLM agent's ability to handle OOW scenarios, going beyond routine flow compliance tested in existing benchmarks. Experiments on three datasets demonstrate that FlowAgent not only adheres to workflows but also effectively manages OOW queries, highlighting its dual strengths in compliance and flexibility. The code is available at this https URL. 
+
+**Abstract (ZH)**: 将以下论文内容或标题翻译成中文，符合学术规范：
+
+将工作流与大规模语言模型（LLMs）集成可以使基于LLM的代理执行预定义的程序，从而在实际应用中增强自动化。传统的基于规则的方法往往限制了LLM的固有灵活性，因为它们预定义的执行路径限制了模型的动作空间，特别是在遇到超出工作流（Out-of-Workflow, OOW）的查询时。相反，基于提示的方法使LLM能够完全控制流程，但可能会导致程序合规性的减弱。为了解决这些挑战，我们提出了FlowAgent这一新的代理框架，旨在同时保持合规性和灵活性。我们提出了过程描述语言（PDL），它结合了自然语言的灵活性和代码的精确性来定义工作流。基于PDL，我们开发了一个全面的框架，使LLM能够有效地处理OOW查询，同时在一系列控制器的监督下保留执行路径。此外，我们提出了一种新的评估方法，以严格评估LLM代理处理OOW场景的能力，超越了现有基准中测试的常规流程合规性。在三个数据集中进行的实验表明，FlowAgent不仅遵循工作流，还能有效处理OOW查询，突显了其在合规性和灵活性方面的双重优势。源代码可在以下链接获取：this https URL。 
+
+---
+# SPRIG: Stackelberg Perception-Reinforcement Learning with Internal Game Dynamics 
+
+**Title (ZH)**: SPRIG：基于内部博弈动力学的梯度 Stackelberg 感知强化学习 
+
+**Authors**: Fernando Martinez-Lopez, Juntao Chen, Yingdong Lu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.14264)  
+
+**Abstract**: Deep reinforcement learning agents often face challenges to effectively coordinate perception and decision-making components, particularly in environments with high-dimensional sensory inputs where feature relevance varies. This work introduces SPRIG (Stackelberg Perception-Reinforcement learning with Internal Game dynamics), a framework that models the internal perception-policy interaction within a single agent as a cooperative Stackelberg game. In SPRIG, the perception module acts as a leader, strategically processing raw sensory states, while the policy module follows, making decisions based on extracted features. SPRIG provides theoretical guarantees through a modified Bellman operator while preserving the benefits of modern policy optimization. Experimental results on the Atari BeamRider environment demonstrate SPRIG's effectiveness, achieving around 30% higher returns than standard PPO through its game-theoretical balance of feature extraction and decision-making. 
+
+**Abstract (ZH)**: 深度强化学习代理常常面临在高维感官输入环境中有效协调感知和决策模块的挑战，特别是在感官输入特征重要性变化的环境中。本文引入了SPRIG（Stackelberg感知-强化学习与内部博弈动力学）框架，该框架将单个代理内的感知-政策交互建模为合作的Stackelberg博弈。在SPRIG中，感知模块充当领导者，战略性地处理原始感官状态，而政策模块则跟随其后，基于提取的特征进行决策。通过修改的贝尔曼算子提供理论保证，同时保持现代策略优化的好处。在Atari BeamRider环境上的实验结果表明，SPRIG在特征提取和决策平衡的博弈论框架下，比标准PPO实现了约30%更高的回报。 
+
+---
+# Causal Mean Field Multi-Agent Reinforcement Learning 
+
+**Title (ZH)**: 因果均场多智能体强化学习 
+
+**Authors**: Hao Ma, Zhiqiang Pu, Yi Pan, Boyin Liu, Junlong Gao, Zhenyu Guo  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.14200)  
+
+**Abstract**: Scalability remains a challenge in multi-agent reinforcement learning and is currently under active research. A framework named mean-field reinforcement learning (MFRL) could alleviate the scalability problem by employing the Mean Field Theory to turn a many-agent problem into a two-agent problem. However, this framework lacks the ability to identify essential interactions under nonstationary environments. Causality contains relatively invariant mechanisms behind interactions, though environments are nonstationary. Therefore, we propose an algorithm called causal mean-field Q-learning (CMFQ) to address the scalability problem. CMFQ is ever more robust toward the change of the number of agents though inheriting the compressed representation of MFRL's action-state space. Firstly, we model the causality behind the decision-making process of MFRL into a structural causal model (SCM). Then the essential degree of each interaction is quantified via intervening on the SCM. Furthermore, we design the causality-aware compact representation for behavioral information of agents as the weighted sum of all behavioral information according to their causal effects. We test CMFQ in a mixed cooperative-competitive game and a cooperative game. The result shows that our method has excellent scalability performance in both training in environments containing a large number of agents and testing in environments containing much more agents. 
+
+**Abstract (ZH)**: 多智能体强化学习中的可扩展性仍然是一个重要挑战，当前正处于活跃的研究之中。一种名为均场强化学习（Mean-Field Reinforcement Learning, MFRL）的框架可以通过应用均场理论，将多智能体问题简化为两智能体问题，从而缓解可扩展性问题。然而，这种框架缺乏在非稳态环境中识别关键交互的能力。因果性包含在交互背后的相对不变机制，尽管环境是非稳态的。因此，我们提出了一种名为因果均场Q学习（Causal Mean-Field Q-learning, CMFQ）的算法来解决可扩展性问题。CMFQ在保留MFRL压缩动作-状态空间表示的同时，对智能体数量变化具有更强的鲁棒性。首先，我们将MFRL决策过程背后的因果性建模为结构因果模型（Structural Causal Model, SCM）。然后，通过干预SCM来量化每个交互的本征程度。此外，我们设计了一种因果性感知的紧凑表示来表征智能体的行为信息，该表示是所有行为信息的加权和，权重由它们的因果效应确定。我们在混合合作-竞争游戏和合作游戏中测试了CMFQ。结果表明，我们的方法在包含大量智能体的训练环境和包含更多智能体的测试环境中都表现出出色的可扩展性。 
+
+---
+# Multi-Agent Coordination across Diverse Applications: A Survey 
+
+**Title (ZH)**: 跨领域多智能体协同综述 
+
+**Authors**: Lijun Sun, Yijun Yang, Qiqi Duan, Yuhui Shi, Chao Lyu, Yu-Cheng Chang, Chin-Teng Lin, Yang Shen  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.14743)  
+
+**Abstract**: Multi-agent coordination studies the underlying mechanism enabling the trending spread of diverse multi-agent systems (MAS) and has received increasing attention, driven by the expansion of emerging applications and rapid AI advances. This survey outlines the current state of coordination research across applications through a unified understanding that answers four fundamental coordination questions: (1) what is coordination; (2) why coordination; (3) who to coordinate with; and (4) how to coordinate. Our purpose is to explore existing ideas and expertise in coordination and their connections across diverse applications, while identifying and highlighting emerging and promising research directions. First, general coordination problems that are essential to varied applications are identified and analyzed. Second, a number of MAS applications are surveyed, ranging from widely studied domains, e.g., search and rescue, warehouse automation and logistics, and transportation systems, to emerging fields including humanoid and anthropomorphic robots, satellite systems, and large language models (LLMs). Finally, open challenges about the scalability, heterogeneity, and learning mechanisms of MAS are analyzed and discussed. In particular, we identify the hybridization of hierarchical and decentralized coordination, human-MAS coordination, and LLM-based MAS as promising future directions. 
+
+**Abstract (ZH)**: 多智能体协调研究探讨了使多种多智能体系统（MAS）趋势性传播的潜在机制，并因其新兴应用的扩展和快速的人工智能进步而越来越受到关注。本综述通过统一的理解概述了跨不同应用领域的协调研究现状，并回答了四个基本的协调问题：（1）协调是什么；（2）为什么需要协调；（3）需要与谁协调；以及（4）如何协调。我们的目的是探索协调领域已有的理念和专业知识及其在不同应用领域的联系，并识别和强调新兴及有前景的研究方向。首先，我们识别并分析了对于各种应用来说都至关重要的基础协调问题。其次，综述了多种MAS应用，包括广泛研究的领域（如搜救、仓库自动化与物流、交通系统），以及新兴领域（如类人和拟人机器人、卫星系统和大规模语言模型（LLM））。最后，分析和讨论了MAS的可扩展性、异构性和学习机制方面的开放挑战。特别是，我们确定了层次结构与去中心化协调的结合、人类与MAS的协调以及基于LLM的MAS作为有前景的未来发展方向。 
+
+---
+# Efficient Inverse Multiagent Learning 
+
+**Title (ZH)**: 高效的逆多智能体学习 
+
+**Authors**: Denizalp Goktas, Amy Greenwald, Sadie Zhao, Alec Koppel, Sumitra Ganesh  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.14160)  
+
+**Abstract**: In this paper, we study inverse game theory (resp. inverse multiagent learning) in which the goal is to find parameters of a game's payoff functions for which the expected (resp. sampled) behavior is an equilibrium. We formulate these problems as generative-adversarial (i.e., min-max) optimization problems, for which we develop polynomial-time algorithms to solve, the former of which relies on an exact first-order oracle, and the latter, a stochastic one. We extend our approach to solve inverse multiagent simulacral learning in polynomial time and number of samples. In these problems, we seek a simulacrum, meaning parameters and an associated equilibrium that replicate the given observations in expectation. We find that our approach outperforms the widely-used ARIMA method in predicting prices in Spanish electricity markets based on time-series data. 
+
+**Abstract (ZH)**: 在本文中，我们研究逆博弈理论（即逆多智能体学习），其目标是在给定期望（或采样）行为是均衡的情况下，找到博弈支付函数的参数。我们将这些问题形式化为生成式对抗（即最小-最大）优化问题，并为此开发了多项式时间算法，前者依赖于精确的一阶 oracle，后者依赖于随机的一阶 oracle。我们将该方法推广，以便多项式时间及样本数量内解决逆多智能体仿真学习问题。在这些问题中，我们寻求一个仿真体，即找到能够复制给定观测的参数和相应的均衡。我们发现，我们的方法在基于时间序列数据预测西班牙电力市场电价方面优于广泛使用的 ARIMA 方法。 
+
+---
+# Multi-Agent Risks from Advanced AI 
+
+**Title (ZH)**: 高级人工智能中的多智能体风险 
+
+**Authors**: Lewis Hammond, Alan Chan, Jesse Clifton, Jason Hoelscher-Obermaier, Akbir Khan, Euan McLean, Chandler Smith, Wolfram Barfuss, Jakob Foerster, Tomáš Gavenčiak, Anh Han, Edward Hughes, Vojtěch Kovařík, Jan Kulveit, Joel Z. Leibo, Caspar Oesterheld, Christian Schroeder de Witt, Nisarg Shah, Michael Wellman, Paolo Bova, Theodor Cimpeanu, Carson Ezell, Quentin Feuillade-Montixi, Matija Franklin, Esben Kran, Igor Krawczuk, Max Lamparth, Niklas Lauffer, Alexander Meinke, Sumeet Motwani, Anka Reuel, Vincent Conitzer, Michael Dennis, Iason Gabriel, Adam Gleave, Gillian Hadfield, Nika Haghtalab, Atoosa Kasirzadeh, Sébastien Krier, Kate Larson, Joel Lehman, David C. Parkes, Georgios Piliouras, Iyad Rahwan  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.14143)  
+
+**Abstract**: The rapid development of advanced AI agents and the imminent deployment of many instances of these agents will give rise to multi-agent systems of unprecedented complexity. These systems pose novel and under-explored risks. In this report, we provide a structured taxonomy of these risks by identifying three key failure modes (miscoordination, conflict, and collusion) based on agents' incentives, as well as seven key risk factors (information asymmetries, network effects, selection pressures, destabilising dynamics, commitment problems, emergent agency, and multi-agent security) that can underpin them. We highlight several important instances of each risk, as well as promising directions to help mitigate them. By anchoring our analysis in a range of real-world examples and experimental evidence, we illustrate the distinct challenges posed by multi-agent systems and their implications for the safety, governance, and ethics of advanced AI. 
+
+**Abstract (ZH)**: 先进的AI代理的快速发展以及这些代理即将部署的实例将导致前所未有的复杂多代理系统。这些系统带来了新颖且尚未充分探索的风险。本报告通过基于代理激励来识别三种关键失败模式（协调不当、冲突和勾结），以及七个关键风险因素（信息不对称、网络效应、选择性压力、不稳定的动态、承诺问题、新兴代理和多代理安全），为这些风险提供了一个结构化的分类体系。我们强调了每种风险的重要实例，并指出了有助于缓解这些风险的潜在方向。通过结合一系列现实世界案例和实验证据，我们阐述了多代理系统所提出的独特挑战及其对先进AI的安全性、治理和伦理的影响。 
+
+---
+# Human-Artificial Interaction in the Age of Agentic AI: A System-Theoretical Approach 
+
+**Title (ZH)**: agency人工智能时代的个体-人工交互：系统理论视角 
+
+**Authors**: Uwe M. Borghoff, Paolo Bottoni, Remo Pareschi  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.14000)  
+
+**Abstract**: This paper presents a novel perspective on human-computer interaction (HCI), framing it as a dynamic interplay between human and computational agents within a networked system. Going beyond traditional interface-based approaches, we emphasize the importance of coordination and communication among heterogeneous agents with different capabilities, roles, and goals. A key distinction is made between multi-agent systems (MAS) and Centaurian systems, which represent two different paradigms of human-AI collaboration. MAS maintain agent autonomy, with structured protocols enabling cooperation, while Centaurian systems deeply integrate human and AI capabilities, creating unified decision-making entities.
+To formalize these interactions, we introduce a framework for communication spaces, structured into surface, observation, and computation layers, ensuring seamless integration between MAS and Centaurian architectures, where colored Petri nets effectively represent structured Centaurian systems and high-level reconfigurable networks address the dynamic nature of MAS.
+Our research has practical applications in autonomous robotics, human-in-the-loop decision making, and AI-driven cognitive architectures, and provides a foundation for next-generation hybrid intelligence systems that balance structured coordination with emergent behavior. 
+
+**Abstract (ZH)**: 本文从一个新的角度探讨了人机交互（HCI），将其视为网络系统中人类代理与计算代理之间动态互动的过程。超越传统的基于界面的方法，我们强调了不同能力、角色和目标的异质代理之间协调与沟通的重要性。我们区分了多代理系统（MAS）和赛博坦（Centaurian）系统，这两种系统代表了人与人工智能合作的两种不同范式。MAS 保持代理的自主性，通过结构化的协议实现合作，而Centaurian系统则深入整合了人类和人工智能的能力，创造了统一的决策实体。
+
+为了正式化这些互动，我们提出了一种通信空间框架，分为表面、观察和计算三层，确保MAS和Centaurian架构之间的无缝集成，其中带颜色的Petri网有效代表了结构化的Centaurian系统，而高级可重构网络则解决了MAS的动态特性。
+
+我们的研究在自主机器人、人参与决策以及人工智能驱动的认知架构方面具有实际应用，并为下一代混合智能系统提供了基础，这些系统平衡了结构化协调与涌现行为之间的关系。 
+
+---
+# A Multi-Agent Perspective on Modern Information Retrieval 
+
+**Title (ZH)**: 现代信息检索的多agent视角 
+
+**Authors**: Haya Nachimovsky, Moshe Tennenholtz, Oren Kurland  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.14796)  
+
+**Abstract**: The rise of large language models (LLMs) has introduced a new era in information retrieval (IR), where queries and documents that were once assumed to be generated exclusively by humans can now also be created by automated agents. These agents can formulate queries, generate documents, and perform ranking. This shift challenges some long-standing IR paradigms and calls for a reassessment of both theoretical frameworks and practical methodologies. We advocate for a multi-agent perspective to better capture the complex interactions between query agents, document agents, and ranker agents. Through empirical exploration of various multi-agent retrieval settings, we reveal the significant impact of these interactions on system performance. Our findings underscore the need to revisit classical IR paradigms and develop new frameworks for more effective modeling and evaluation of modern retrieval systems. 
+
+**Abstract (ZH)**: 大型语言模型（LLMs）的兴起为信息检索（IR）引入了一个新时代，其中原本认为仅由人类生成的查询和文档现在也可以由自动化代理生成。这些代理可以构建查询、生成文档并进行排序。这一转变挑战了一些长期存在的IR范式，并要求重新评估理论框架和实践方法。我们提倡从多代理视角出发，以更好地捕捉查询代理、文档代理和排序代理之间的复杂交互。通过探索各种多代理检索设置的实证研究，我们揭示了这些交互对系统性能的影响。我们的研究强调了重新审视经典IR范式和为现代检索系统的更有效建模和评估开发新框架的必要性。 
+
+---
+# An Evaluation of Sakana's AI Scientist for Autonomous Research: Wishful Thinking or an Emerging Reality Towards 'Artificial General Research Intelligence' (AGRI)? 
+
+**Title (ZH)**: 对Sakana的AI科学家进行自主研究评估：憧憬还是“通用人工智能研究智能”（AGRI）的新兴现实？ 
+
+**Authors**: Joeran Beel, Min-Yen Kan, Moritz Baumgart  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.14297)  
+
+**Abstract**: A major step toward Artificial General Intelligence (AGI) and Super Intelligence is AI's ability to autonomously conduct research - what we term Artificial General Research Intelligence (AGRI). If machines could generate hypotheses, conduct experiments, and write research papers without human intervention, it would transform science. Recently, this http URL introduced the AI Scientist, a system claiming to automate the research lifecycle, generating both excitement and skepticism.
+We evaluated the AI Scientist and found it a milestone in AI-driven research. While it streamlines some aspects, it falls short of expectations. Literature reviews are weak, nearly half the experiments failed, and manuscripts sometimes contain hallucinated results. Most notably, users must provide an experimental pipeline, limiting the AI Scientist's autonomy in research design and execution.
+Despite its limitations, the AI Scientist advances research automation. Many reviewers or instructors who assess work superficially may not recognize its output as AI-generated. The system produces research papers with minimal human effort and low cost. Our analysis suggests a paper costs a few USD with a few hours of human involvement, making it significantly faster than human researchers. Compared to AI capabilities from a few years ago, this marks progress toward AGRI.
+The rise of AI-driven research systems requires urgent discussion within Information Retrieval (IR) and broader scientific communities. Enhancing literature retrieval, citation validation, and evaluation benchmarks could improve AI-generated research reliability. We propose concrete steps, including AGRI-specific benchmarks, refined peer review, and standardized attribution frameworks. Whether AGRI becomes a stepping stone to AGI depends on how the academic and AI communities shape its development. 
+
+**Abstract (ZH)**: 向通用人工智能（AGI）和超级智能迈出的重大一步是人工智能能够自主进行研究——我们称之为人工智能通用科研智能（AGRI）。如果机器能够在没有人类干预的情况下生成假设、进行实验并撰写研究论文，这将彻底改变科学研究的面貌。最近，这个问题链接介绍了一种称为“AI科学家”的系统，该系统声称能够自动化科研生命周期，引起了人们对该系统的兴趣和怀疑。
+
+我们评估了AI科学家，并认为它在AI驱动的研究领域是一个重大里程碑。尽管它在某些方面简化了流程，但仍未能满足预期。文献综述能力较弱，几乎有一半的实验未成功，而部分文稿中还包含虚构的结果。最值得注意的是，用户必须提供实验管道，这限制了AI科学家在研究设计和执行方面的自主性。
+
+尽管存在这些限制，AI科学家仍推动了科研自动化。很多仅对工作进行表面评估的审阅人或导师可能不会认识到其输出为人工智能生成。系统能够以较低的人力成本和成本快速生成研究论文。我们的分析显示，一篇论文仅需几小时的人力投入，成本在几美元左右，这比人类研究人员要快得多。相比于几年前的人工智能能力，这标志着向AGRI迈进了一步。
+
+人工智能驱动的科研系统的发展要求信息检索（IR）和更广泛的科学界立即进行讨论。通过改进文献检索、引用验证和评价标准等，可以提高人工智能生成研究的可靠性。我们提出了一些具体的步骤，包括针对AGRI的特定基准、精炼的同行评审以及标准化的归因框架。AGRI是否成为通向AGI的一步，取决于学术界和人工智能社区如何塑造其发展。 
+
+---
