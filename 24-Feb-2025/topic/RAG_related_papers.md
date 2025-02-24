@@ -1,0 +1,117 @@
+# Cross-Format Retrieval-Augmented Generation in XR with LLMs for Context-Aware Maintenance Assistance 
+
+**Title (ZH)**: 在 XR 中利用大语言模型进行跨格式检索增强生成，以实现上下文感知的维护辅助 
+
+**Authors**: Akos Nagy, Yannis Spyridis, Vasileios Argyriou  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.15604)  
+
+**Abstract**: This paper presents a detailed evaluation of a Retrieval-Augmented Generation (RAG) system that integrates large language models (LLMs) to enhance information retrieval and instruction generation for maintenance personnel across diverse data formats. We assessed the performance of eight LLMs, emphasizing key metrics such as response speed and accuracy, which were quantified using BLEU and METEOR scores. Our findings reveal that advanced models like GPT-4 and GPT-4o-mini significantly outperform their counterparts, particularly when addressing complex queries requiring multi-format data integration. The results validate the system's ability to deliver timely and accurate responses, highlighting the potential of RAG frameworks to optimize maintenance operations. Future research will focus on refining retrieval techniques for these models and enhancing response generation, particularly for intricate scenarios, ultimately improving the system's practical applicability in dynamic real-world environments. 
+
+**Abstract (ZH)**: 本文详细评估了一种检索增强生成（RAG）系统，该系统通过集成大规模语言模型（LLMs）来增强信息检索和指令生成能力，以满足不同数据格式下的维护人员需求。我们对八种LLMs进行了性能评估，重点考察了响应速度和准确性等关键指标，这些指标通过BLEU和METEOR评分进行了量化。研究结果表明，如GPT-4和GPT-4o-mini等先进模型，在处理需要多格式数据集成的复杂查询时，显著优于其他模型。研究结果证明了该系统的及时和准确响应能力，突显了RAG框架在优化维护操作方面的潜力。未来的研究将集中在改进这些模型的检索技术，并增强响应生成，特别是针对复杂的场景，最终提高系统在动态实际环境中的实际应用能力。 
+
+---
+# From Documents to Dialogue: Building KG-RAG Enhanced AI Assistants 
+
+**Title (ZH)**: 从文档到对话：构建增强知识图谱-RAG的AI助理 
+
+**Authors**: Manisha Mukherjee, Sungchul Kim, Xiang Chen, Dan Luo, Tong Yu, Tung Mai  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.15237)  
+
+**Abstract**: The Adobe Experience Platform AI Assistant is a conversational tool that enables organizations to interact seamlessly with proprietary enterprise data through a chatbot. However, due to access restrictions, Large Language Models (LLMs) cannot retrieve these internal documents, limiting their ability to generate accurate zero-shot responses. To overcome this limitation, we use a Retrieval-Augmented Generation (RAG) framework powered by a Knowledge Graph (KG) to retrieve relevant information from external knowledge sources, enabling LLMs to answer questions over private or previously unseen document collections. In this paper, we propose a novel approach for building a high-quality, low-noise KG. We apply several techniques, including incremental entity resolution using seed concepts, similarity-based filtering to deduplicate entries, assigning confidence scores to entity-relation pairs to filter for high-confidence pairs, and linking facts to source documents for provenance. Our KG-RAG system retrieves relevant tuples, which are added to the user prompts context before being sent to the LLM generating the response. Our evaluation demonstrates that this approach significantly enhances response relevance, reducing irrelevant answers by over 50% and increasing fully relevant answers by 88% compared to the existing production system. 
+
+**Abstract (ZH)**: Adobe Experience Platform AI助手是一种对话工具，能够让组织通过聊天机器人无缝地与自有企业数据进行交互。然而，由于访问限制，大型语言模型（LLMs）无法检索这些内部文件，限制了它们生成准确的零样本响应的能力。为克服这一限制，我们利用基于知识图谱（KG）的检索增强生成（RAG）框架，从外部知识源中检索相关信息，从而让LLMs能够回答私有或以前未见过的文档集合中的问题。在本文中，我们提出了一种新的方法来构建高质量、低噪音的知识图谱。我们运用了多种技术，包括增量实体解析、基于相似性的去重、为实体-关系对分配置信度评分以过滤高置信度对，以及为事实链接源文档以追溯源头。我们的KG-RAG系统检索相关的元组，并在将其发送给生成响应的LLM之前将其添加到用户提示的上下文之中。我们的评估结果表明，这种方法显著提高了响应的相关性，相比现有生产系统，减少了超过50%的不相关答案，并增加了88%的完全相关答案。 
+
+---
+# Is Relevance Propagated from Retriever to Generator in RAG? 
+
+**Title (ZH)**: 在RAG中，检索器到生成器是否传播相关性？ 
+
+**Authors**: Fangzheng Tian, Debasis Ganguly, Craig Macdonald  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.15025)  
+
+**Abstract**: Retrieval Augmented Generation (RAG) is a framework for incorporating external knowledge, usually in the form of a set of documents retrieved from a collection, as a part of a prompt to a large language model (LLM) to potentially improve the performance of a downstream task, such as question answering. Different from a standard retrieval task's objective of maximising the relevance of a set of top-ranked documents, a RAG system's objective is rather to maximise their total utility, where the utility of a document indicates whether including it as a part of the additional contextual information in an LLM prompt improves a downstream task. Existing studies investigate the role of the relevance of a RAG context for knowledge-intensive language tasks (KILT), where relevance essentially takes the form of answer containment. In contrast, in our work, relevance corresponds to that of topical overlap between a query and a document for an information seeking task. Specifically, we make use of an IR test collection to empirically investigate whether a RAG context comprised of topically relevant documents leads to improved downstream performance. Our experiments lead to the following findings: (a) there is a small positive correlation between relevance and utility; (b) this correlation decreases with increasing context sizes (higher values of k in k-shot); and (c) a more effective retrieval model generally leads to better downstream RAG performance. 
+
+**Abstract (ZH)**: 检索增强生成（RAG）是一种框架，通过将从集合中检索到的一组外部知识（通常是以文档的形式）作为大型语言模型（LLM）生成提示的一部分，以期提高下游任务（如问答）的性能。与标准检索任务的目标有所不同，即最大化一组高排名文档的相关性，RAG系统的目标则是最大化这些文档的总效用，其中文档的效用指的是将其作为附加背景信息的一部分添加到LLM提示中，是否能够改善下游任务。现有研究探讨了RAG上下文在知识密集型语言任务（KILT）中的作用，其中相关性主要表现为答案包含。相比之下，在我们的研究中，相关性对应于查询与文档之间的话题重叠，特别是在信息检索任务中。具体来说，我们利用信息检索测试集合，实证研究了由相关话题文档组成的RAG上下文是否能够提高下游性能。我们的实验得出以下结论：(a) 相关性和效用之间存在微弱的正相关；(b) 随着上下文规模的增大（即k-shot中的k值增大），这种相关性会降低；(c) 更有效的检索模型通常会导致更好的下游RAG性能。 
+
+---
+# PathRAG: Pruning Graph-based Retrieval Augmented Generation with Relational Paths 
+
+**Title (ZH)**: PathRAG：基于关系路径的图检索增强生成精简方法 
+
+**Authors**: Boyu Chen, Zirui Guo, Zidan Yang, Yuluo Chen, Junze Chen, Zhenghao Liu, Chuan Shi, Cheng Yang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.14902)  
+
+**Abstract**: Retrieval-augmented generation (RAG) improves the response quality of large language models (LLMs) by retrieving knowledge from external databases. Typical RAG approaches split the text database into chunks, organizing them in a flat structure for efficient searches. To better capture the inherent dependencies and structured relationships across the text database, researchers propose to organize textual information into an indexing graph, known asgraph-based RAG. However, we argue that the limitation of current graph-based RAG methods lies in the redundancy of the retrieved information, rather than its insufficiency. Moreover, previous methods use a flat structure to organize retrieved information within the prompts, leading to suboptimal performance. To overcome these limitations, we propose PathRAG, which retrieves key relational paths from the indexing graph, and converts these paths into textual form for prompting LLMs. Specifically, PathRAG effectively reduces redundant information with flow-based pruning, while guiding LLMs to generate more logical and coherent responses with path-based prompting. Experimental results show that PathRAG consistently outperforms state-of-the-art baselines across six datasets and five evaluation dimensions. The code is available at the following link: this https URL 
+
+**Abstract (ZH)**: Retrieval-augmented生成（RAG）通过从外部数据库检索知识，提高了大型语言模型（LLMs）的回复质量。典型的RAG方法将文本数据库拆分为片段，并组织成扁平结构以进行高效搜索。为了更好地捕捉文本数据库中固有的依赖关系和结构化关系，研究人员提出将文本信息组织成索引图，称为图基RAG。然而，我们认为当前图基RAG方法的主要限制在于检索信息的冗余性，而不是其不足。此外，以往的方法使用扁平结构在提示中组织检索信息，导致性能不佳。为克服这些限制，我们提出了PathRAG，该方法从索引图中检索关键关系路径，并将这些路径转换为文本形式，用于提示LLMs。具体来说，PathRAG通过基于流的剪枝有效减少了冗余信息，同时通过路径驱动的提示引导LLMs生成更逻辑性和连贯性的回复。实验结果显示，在六个数据集和五个评估维度上，PathRAG始终优于当前最先进的基线方法。相关代码可在以下链接获取：this https URL 
+
+---
+# Chats-Grid: An Iterative Retrieval Q&A Optimization Scheme Leveraging Large Model and Retrieval Enhancement Generation in smart grid 
+
+**Title (ZH)**: Chats-Grid：一种利用大规模模型和检索增强生成进行迭代检索问答优化的方案在智能电网中 
+
+**Authors**: Yunfeng Li, Jiqun Zhang, Guofu Liao, Xue Shi, Junhong Liu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.15583)  
+
+**Abstract**: With rapid advancements in artificial intelligence, question-answering (Q&A) systems have become essential in intelligent search engines, virtual assistants, and customer service platforms. However, in dynamic domains like smart grids, conventional retrieval-augmented generation(RAG) Q&A systems face challenges such as inadequate retrieval quality, irrelevant responses, and inefficiencies in handling large-scale, real-time data streams. This paper proposes an optimized iterative retrieval-based Q&A framework called Chats-Grid tailored for smart grid environments. In the pre-retrieval phase, Chats-Grid advanced query expansion ensures comprehensive coverage of diverse data sources, including sensor readings, meter records, and control system parameters. During retrieval, Best Matching 25(BM25) sparse retrieval and BAAI General Embedding(BGE) dense retrieval in Chats-Grid are combined to process vast, heterogeneous datasets effectively. Post-retrieval, a fine-tuned large language model uses prompt engineering to assess relevance, filter irrelevant results, and reorder documents based on contextual accuracy. The model further generates precise, context-aware answers, adhering to quality criteria and employing a self-checking mechanism for enhanced reliability. Experimental results demonstrate Chats-Grid's superiority over state-of-the-art methods in fidelity, contextual recall, relevance, and accuracy by 2.37%, 2.19%, and 3.58% respectively. This framework advances smart grid management by improving decision-making and user interactions, fostering resilient and adaptive smart grid infrastructures. 
+
+**Abstract (ZH)**: 随着人工智能的飞速发展，问答（Q&A）系统已成为智能搜索引擎、虚拟助手和客户服务平台的核心组成部分。然而，在如智能电网等动态领域中，传统的检索增强生成（RAG）Q&A系统面临诸如检索质量不足、回应不相关以及处理大规模实时数据流不高效等问题。本文提出了一种针对智能电网环境优化的迭代检索式问答框架——Chats-Grid。在预检索阶段，Chats-Grid 使用高级查询扩展确保全面覆盖多样化的数据源，包括传感器读数、计量记录和控制系统参数。在检索过程中，Chats-Grid 结合使用最佳匹配25（BM25）稀疏检索和BAI General Embedding（BGE）密集检索，以有效地处理大规模异构数据集。在检索后，微调后的大型语言模型通过提示工程技术评估相关性、过滤不相关信息，并根据上下文准确性对文档进行重新排序。该模型进一步生成精确且上下文相关的答案，遵循质量标准，并采用自我检查机制以提高可靠性。实验结果表明，与最先进的方法相比，Chats-Grid 在忠实度、上下文召回率、相关性和准确性方面分别提高了2.37%、2.19%和3.58%。该框架通过改进决策支持和用户交互，促进了智能电网管理，从而推动了更具弹性和适应性的智能电网基础设施的发展。 
+
+---
+# Retrieval-Augmented Speech Recognition Approach for Domain Challenges 
+
+**Title (ZH)**: 针对领域挑战的检索增强语音识别方法 
+
+**Authors**: Peng Shen, Xugang Lu, Hisashi Kawai  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.15264)  
+
+**Abstract**: Speech recognition systems often face challenges due to domain mismatch, particularly in real-world applications where domain-specific data is unavailable because of data accessibility and confidentiality constraints. Inspired by Retrieval-Augmented Generation (RAG) techniques for large language models (LLMs), this paper introduces a LLM-based retrieval-augmented speech recognition method that incorporates domain-specific textual data at the inference stage to enhance recognition performance. Rather than relying on domain-specific textual data during the training phase, our model is trained to learn how to utilize textual information provided in prompts for LLM decoder to improve speech recognition performance. Benefiting from the advantages of the RAG retrieval mechanism, our approach efficiently accesses locally available domain-specific documents, ensuring a convenient and effective process for solving domain mismatch problems. Experiments conducted on the CSJ database demonstrate that the proposed method significantly improves speech recognition accuracy and achieves state-of-the-art results on the CSJ dataset, even without relying on the full training data. 
+
+**Abstract (ZH)**: 由于领域不匹配，语音识别系统常常面临挑战，尤其是在现实应用中，由于数据获取和保密限制，无法获得特定领域的数据。受到大型语言模型（LLMs）中检索增强生成（RAG）技术的启发，本文提出了一种基于LLM的检索增强语音识别方法，在推断阶段融合特定领域的文本数据以提高识别性能。与在训练阶段依赖特定领域的文本数据不同，我们的模型是在学习如何利用提示提供的文本信息来增强LLM解码器的处理，从而提高语音识别性能。借助RAG检索机制的优势，我们的方法能够高效地访问本地可用的特定领域文档，确保解决领域不匹配问题的过程既方便又有效。在CSJ数据库上的实验结果表明，所提出的方法显著提高了语音识别的准确性，并在CSJ数据集上达到了最先进的性能，即使没有依赖完整的训练数据。 
+
+---
+# Chain-of-Rank: Enhancing Large Language Models for Domain-Specific RAG in Edge Device 
+
+**Title (ZH)**: 链式秩优化：增强边缘设备上面向特定领域的大语言模型的检索增强生成（RAG）能力 
+
+**Authors**: Juntae Lee, Jihwan Bang, Seunghan Yang, Kyuhong Shim, Simyung Chang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.15134)  
+
+**Abstract**: Retrieval-augmented generation (RAG) with large language models (LLMs) is especially valuable in specialized domains, where precision is critical. To more specialize the LLMs into a target domain, domain-specific RAG has recently been developed by allowing the LLM to access the target domain early via finetuning. The domain-specific RAG makes more sense in resource-constrained environments like edge devices, as they should perform a specific task (e.g. personalization) reliably using only small-scale LLMs. While the domain-specific RAG is well-aligned with edge devices in this respect, it often relies on widely-used reasoning techniques like chain-of-thought (CoT). The reasoning step is useful to understand the given external knowledge, and yet it is computationally expensive and difficult for small-scale LLMs to learn it. Tackling this, we propose the Chain of Rank (CoR) which shifts the focus from intricate lengthy reasoning to simple ranking of the reliability of input external documents. Then, CoR reduces computational complexity while maintaining high accuracy, making it particularly suited for resource-constrained environments. We attain the state-of-the-art (SOTA) results in benchmarks, and analyze its efficacy. 
+
+**Abstract (ZH)**: 利用大规模语言模型（LLM）的检索增强生成（RAG）在专门领域中尤其有价值，因为精确度至关重要。为了使LLM更加专门化于目标领域，最近通过微调允许LLM在早期访问目标领域，发展了领域特定的RAG。在资源受限的环境中，如边缘设备，领域特定的RAG更为合理，因为它们仅使用小型规模的LLM来可靠地执行特定任务（例如个性化）。虽然从这一点来看，领域特定的RAG与边缘设备非常契合，但它通常依赖于广泛使用的推理技术，如思维链（CoT）。推理步骤有助于理解给定的外部知识，但对小型规模的LLM来说，计算成本较高且难以学习。为了解决这一问题，我们提出了一种称为“推理链”（CoR）的方法，将重点从复杂的长篇推理转移到简单地对输入外部文档可靠性的排序。然后，CoR 在保持高准确性的同时，减少了计算复杂度，使其特别适合资源受限的环境。我们在基准测试中实现了目前最先进的（SOTA）结果，并对其有效性进行了分析。 
+
+---
+# Reducing Hallucinations of Medical Multimodal Large Language Models with Visual Retrieval-Augmented Generation 
+
+**Title (ZH)**: 使用视觉检索增强生成方法减少医疗多模态大型语言模型的幻觉 
+
+**Authors**: Yun-Wei Chu, Kai Zhang, Christopher Malon, Martin Renqiang Min  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.15040)  
+
+**Abstract**: Multimodal Large Language Models (MLLMs) have shown impressive performance in vision and text tasks. However, hallucination remains a major challenge, especially in fields like healthcare where details are critical. In this work, we show how MLLMs may be enhanced to support Visual RAG (V-RAG), a retrieval-augmented generation framework that incorporates both text and visual data from retrieved images. On the MIMIC-CXR chest X-ray report generation and Multicare medical image caption generation datasets, we show that Visual RAG improves the accuracy of entity probing, which asks whether a medical entities is grounded by an image. We show that the improvements extend both to frequent and rare entities, the latter of which may have less positive training data. Downstream, we apply V-RAG with entity probing to correct hallucinations and generate more clinically accurate X-ray reports, obtaining a higher RadGraph-F1 score. 
+
+**Abstract (ZH)**: 多模态大型语言模型（MLLMs）在视觉和文本任务中展现了出色的性能。然而，幻觉仍然是一个主要挑战，特别是在如医疗健康等对细节要求较高的领域。在本文中，我们展示了如何通过引入Visual RAG（视觉检索增强生成）框架来增强MLLMs，该框架结合了检索到的图像中的文本和视觉数据。我们在MIMIC-CXR胸部X光报告生成和Multicare医学图像字幕生成数据集上展示了Visual RAG如何提高实体探查的准确性，即检查医学实体是否通过图像得到支撑。我们证明了这种改进不仅适用于常见的实体，还适用于缺乏积极训练数据的罕见实体。进一步的应用中，我们使用包含实体探查的Visual RAG来纠正幻觉，生成更符合临床准确性的X光报告，并获得了更高的RadGraph-F1评分。 
+
+---
+# A Socratic RAG Approach to Connect Natural Language Queries on Research Topics with Knowledge Organization Systems 
+
+**Title (ZH)**: 一种苏格拉底式检索辅助方法，用于连接研究主题的自然语言查询与知识组织系统 
+
+**Authors**: Lew Lefton, Kexin Rong, Chinar Dankhara, Lila Ghemri, Firdous Kausar, A. Hannibal Hamdallahi  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.15005)  
+
+**Abstract**: In this paper, we propose a Retrieval Augmented Generation (RAG) agent that maps natural language queries about research topics to precise, machine-interpretable semantic entities. Our approach combines RAG with Socratic dialogue to align a user's intuitive understanding of research topics with established Knowledge Organization Systems (KOSs). The proposed approach will effectively bridge "little semantics" (domain-specific KOS structures) with "big semantics" (broad bibliometric repositories), making complex academic taxonomies more accessible. Such agents have the potential for broad use. We illustrate with a sample application called CollabNext, which is a person-centric knowledge graph connecting people, organizations, and research topics. We further describe how the application design has an intentional focus on HBCUs and emerging researchers to raise visibility of people historically rendered invisible in the current science system. 
+
+**Abstract (ZH)**: 在本文中，我们提出一种检索增强生成（RAG）代理，能够将关于研究主题的自然语言查询映射到精确且机器可解释的语义实体。我们的方法结合了RAG和苏格拉底式对话，从而将用户对研究主题的直观理解与已建立的知识组织系统（KOS）相一致。所提出的方法将有效地将“小语义”（领域特定的KOS结构）与“大语义”（广泛的文献计量repository）相连接，使得复杂的学术分类更加易于访问。此类代理有广泛的应用潜力。我们通过一个名为CollabNext的示例应用进行了说明，该应用以个人为中心的知识图谱将个人、组织和研究主题连接起来。进一步阐述了该应用设计的初衷，旨在关注HBCU（哈莱姆宝物大学）和新兴研究者，以提高历史上在当前科学系统中被忽视的人群的能见度。 
+
+---
