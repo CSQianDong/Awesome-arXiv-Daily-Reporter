@@ -1,0 +1,658 @@
+# LLM-QE: Improving Query Expansion by Aligning Large Language Models with Ranking Preferences 
+
+**Title (ZH)**: LLM-QE: 通过将大型语言模型与排名偏好对齐以改进查询扩展 
+
+**Authors**: Sijia Yao, Pengcheng Huang, Zhenghao Liu, Yu Gu, Yukun Yan, Shi Yu, Ge Yu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.17057)  
+
+**Abstract**: Query expansion plays a crucial role in information retrieval, which aims to bridge the semantic gap between queries and documents to improve matching performance. This paper introduces LLM-QE, a novel approach that leverages Large Language Models (LLMs) to generate document-based query expansions, thereby enhancing dense retrieval models. Unlike traditional methods, LLM-QE designs both rank-based and answer-based rewards and uses these reward models to optimize LLMs to align with the ranking preferences of both retrievers and LLMs, thus mitigating the hallucination of LLMs during query expansion. Our experiments on the zero-shot dense retrieval model, Contriever, demonstrate the effectiveness of LLM-QE, achieving an improvement of over 8%. Furthermore, by incorporating answer-based reward modeling, LLM-QE generates more relevant and precise information related to the documents, rather than simply producing redundant tokens to maximize rank-based rewards. Notably, LLM-QE also improves the training process of dense retrievers, achieving a more than 5% improvement after fine-tuning. All codes are available at this https URL. 
+
+**Abstract (ZH)**: 查询扩展在信息检索中扮演着关键角色，旨在弥合查询和文档之间的语义差距，从而提高匹配性能。本文介绍了LLM-QE，这是一种新颖的方法，利用大型语言模型（LLMs）生成基于文档的查询扩展，从而增强密集检索模型。与传统方法不同，LLM-QE 设计了基于排名和基于答案的奖励模型，并使用这些奖励模型优化LLMs，使其与检索器和LLMs的排名偏好相一致，从而减轻查询扩展过程中LLMs的幻觉现象。在零样本密集检索模型Contriever上的实验表明，LLM-QE 是有效的，实现了超过8%的性能提升。此外，通过引入基于答案的奖励模型，LLM-QE 生成了更多与文档相关的相关信息，而不是仅仅生成冗余的令牌来最大化基于排名的奖励。值得注意的是，LLM-QE 还改善了密集检索训练过程，微调后实现了超过5%的性能提升。所有代码可在以下链接获取：`这个 https URL`。 
+
+---
+# FilterLLM: Text-To-Distribution LLM for Billion-Scale Cold-Start Recommendation 
+
+**Title (ZH)**: FilterLLM：针对十亿规模冷启动推荐的文本到分布大语言模型 
+
+**Authors**: Ruochen Liu, Hao Chen, Yuanchen Bei, Zheyu Zhou, Lijia Chen, Qijie Shen, Feiran Huang, Fakhri Karray, Senzhang Wang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.16924)  
+
+**Abstract**: Large Language Model (LLM)-based cold-start recommendation systems continue to face significant computational challenges in billion-scale scenarios, as they follow a "Text-to-Judgment" paradigm. This approach processes user-item content pairs as input and evaluates each pair iteratively. To maintain efficiency, existing methods rely on pre-filtering a small candidate pool of user-item pairs. However, this severely limits the inferential capabilities of LLMs by reducing their scope to only a few hundred pre-filtered candidates. To overcome this limitation, we propose a novel "Text-to-Distribution" paradigm, which predicts an item's interaction probability distribution for the entire user set in a single inference. Specifically, we present FilterLLM, a framework that extends the next-word prediction capabilities of LLMs to billion-scale filtering tasks. FilterLLM first introduces a tailored distribution prediction and cold-start framework. Next, FilterLLM incorporates an efficient user-vocabulary structure to train and store the embeddings of billion-scale users. Finally, we detail the training objectives for both distribution prediction and user-vocabulary construction. The proposed framework has been deployed on the Alibaba platform, where it has been serving cold-start recommendations for two months, processing over one billion cold items. Extensive experiments demonstrate that FilterLLM significantly outperforms state-of-the-art methods in cold-start recommendation tasks, achieving over 30 times higher efficiency. Furthermore, an online A/B test validates its effectiveness in billion-scale recommendation systems. 
+
+**Abstract (ZH)**: 基于大规模语言模型（LLM）的冷启动推荐系统在十亿规模的场景中仍然面临着重大的计算挑战，因为它们采用了“文本到判断”的范式。这种方法将用户-项内容对作为输入，并迭代评估每个对。为了保持高效性，现有方法依赖于预先筛选一小部分候选用户-项对池。然而，这严重限制了LLM的推断能力，将其范围仅限于少数几百个预筛选候选对。为克服这一局限性，我们提出了一种新颖的“文本到分布”范式，该范式可以在单次推断中为整个用户集预测一个项目的交互概率分布。具体来说，我们提出了一种称为FilterLLM的框架，该框架将LLM的下一个词预测能力扩展到十亿规模的过滤任务。FilterLLM首先引入了适合的分布预测和冷启动框架。接下来，FilterLLM整合了一种高效用户词汇结构，用于训练和存储十亿规模用户的嵌入。最后，我们详细介绍了分布预测和用户词汇构建的训练目标。该提出的框架已被部署在阿里云平台上，已经为两种月处理超过十亿冷启动项的冷启动推荐提供服务。广泛实验表明，FilterLLM在冷启动推荐任务中显著优于现有方法，效率提高了30多倍。此外，线上A/B测试验证了其在十亿规模推荐系统中的有效性。 
+
+---
+# Multimodal Search in Chemical Documents and Reactions 
+
+**Title (ZH)**: 化学文献和反应的多模态搜索 
+
+**Authors**: Ayush Kumar Shah, Abhisek Dey, Leo Luo, Bryan Amador, Patrick Philippy, Ming Zhong, Siru Ouyang, David Mark Friday, David Bianchi, Nick Jackson, Richard Zanibbi, Jiawei Han  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.16865)  
+
+**Abstract**: We present a multimodal search tool that facilitates retrieval of chemical reactions, molecular structures, and associated text from scientific literature. Queries may combine molecular diagrams, textual descriptions, and reaction data, allowing users to connect different representations of chemical information. To support this, the indexing process includes chemical diagram extraction and parsing, extraction of reaction data from text in tabular form, and cross-modal linking of diagrams and their mentions in text. We describe the system's architecture, key functionalities, and retrieval process, along with expert assessments of the system. This demo highlights the workflow and technical components of the search system. 
+
+**Abstract (ZH)**: 我们介绍了一种多模态搜索工具，该工具能够从科学文献中检索化学反应、分子结构及其相关文本。查询可以结合分子示意图、文本描述和化学反应数据，使用户能够连接化学信息的不同表示方式。为了支持这一功能，索引过程包括化学示意图的提取和解析、从文本表格中提取反应数据以及跨模态链接示意图及其在文本中的提及。我们将描述该系统的体系结构、关键功能和检索过程，并提供专家对该系统的评估。此演示旨在突出搜索系统的workflow和技术组件。 
+
+---
+# The Blessing of Reasoning: LLM-Based Contrastive Explanations in Black-Box Recommender Systems 
+
+**Title (ZH)**: 基于推理的恩赐：在黑盒推荐系统中基于LLM的对比解释 
+
+**Authors**: Yuyan Wang, Pan Li, Minmin Chen  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.16759)  
+
+**Abstract**: Modern recommender systems use ML models to predict consumer preferences from consumption history. Although these "black-box" models achieve impressive predictive performance, they often suffer from a lack of transparency and explainability. Contrary to the presumed tradeoff between explainability and accuracy, we show that integrating large language models (LLMs) with deep neural networks (DNNs) can improve both. We propose LR-Recsys, which augments DNN-based systems with LLM reasoning capabilities. LR-Recsys introduces a contrastive-explanation generator that produces human-readable positive explanations and negative explanations. These explanations are embedded via a fine-tuned autoencoder and combined with consumer and product features to improve predictions. Beyond offering explainability, we show that LR-Recsys also improves learning efficiency and predictive accuracy, as supported by high-dimensional, multi-environment statistical learning theory.
+LR-Recsys outperforms state-of-the-art recommender systems by 3-14% on three real-world datasets. Importantly, our analysis reveals that these gains primarily derive from LLMs' reasoning capabilities rather than their external domain knowledge. LR-RecSys presents an effective approach to combine LLMs with traditional DNNs, two of the most widely used ML models today. The explanations generated by LR-Recsys provide actionable insights for consumers, sellers, and platforms, helping to build trust, optimize product offerings, and inform targeting strategies. 
+
+**Abstract (ZH)**: 现代推荐系统利用机器学习模型从消费历史中预测消费者偏好。尽管这些“黑匣子”模型在预测性能方面取得了令人印象深刻的成果，但它们通常缺乏透明性和可解释性。与预期中的可解释性和准确性之间的权衡不同，我们展示了将大型语言模型（LLMs）与深度神经网络（DNNs）结合起来可以同时改善两者。我们提出了LR-Recsys，这是一种将LLM推理能力嵌入到基于DNN的推荐系统中的方法。LR-Recsys引入了一个对比性解释生成器，生成可读的正解释和负解释。这些解释通过微调的自动编码器嵌入，并与消费者和产品特征结合，以提高预测性能。除了提供可解释性之外，我们还展示了LR-Recsys在学习效率和预测准确性方面的改进，这一点得到了高维多环境统计学习理论的支持。
+
+在三个实际数据集上，LR-Recsys相较于最新的推荐系统提高了3-14%的表现。重要的是，我们的分析揭示了这些增益主要来自于LLMs的推理能力，而不是它们的外部领域知识。LR-Recsys提供了一种将LLMs与传统的DNNs（当今两种最广泛使用的机器学习模型）结合的有效方法。LR-Recsys生成的解释为消费者、卖方和平台提供了可采取的洞察，有助于建立信任、优化产品供应并指导目标策略。 
+
+---
+# Design and Implementation of a Scalable Clinical Data Warehouse for Resource-Constrained Healthcare Systems 
+
+**Title (ZH)**: 面向资源受限医疗卫生系统的可扩展临床数据中心的设计与实现 
+
+**Authors**: Shovito Barua Soumma, Fahim Shahriar, Umme Niraj Mahi, Md Hasin Abrar, Md Abdur Rahman Fahad, Abu Sayed Md. Latiful Hoque  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.16674)  
+
+**Abstract**: Centralized electronic health record repositories are critical for advancing disease surveillance, public health research, and evidence-based policymaking. However, developing countries face persistent challenges in achieving this due to fragmented healthcare data sources, inconsistent record-keeping practices, and the absence of standardized patient identifiers, limiting reliable record linkage, compromise data interoperability, and limit scalability-obstacles exacerbated by infrastructural constraints and privacy concerns. To address these barriers, this study proposes a scalable, privacy-preserving clinical data warehouse, NCDW, designed for heterogeneous EHR integration in resource-limited settings and tested with 1.16 million clinical records. The framework incorporates a wrapper-based data acquisition layer for secure, automated ingestion of multisource health data and introduces a soundex algorithm to resolve patient identity mismatches in the absence of unique IDs. A modular data mart is designed for disease-specific analytics, demonstrated through a dengue fever case study in Bangladesh, integrating clinical, demographic, and environmental data for outbreak prediction and resource planning. Quantitative assessment of the data mart underscores its utility in strengthening national decision-support systems, highlighting the model's adaptability for infectious disease management. Comparative evaluation of database technologies reveals NoSQL outperforms relational SQL by 40-69% in complex query processing, while system load estimates validate the architecture's capacity to manage 19 million daily records (34TB over 5 years). The framework can be adapted to various healthcare settings across developing nations by modifying the ingestion layer to accommodate standards like ICD-11 and HL7 FHIR, facilitating interoperability for managing infectious diseases (i.e., COVID, tuberculosis). 
+
+**Abstract (ZH)**: 集中化的电子健康记录数据库对于推进疾病监测、公共卫生研究和基于证据的政策制定至关重要。然而，由于发展中国家存在分散的医疗数据来源、不一致的记录保存实践以及缺乏标准化的患者标识符，这些地区在实现这一目标方面面临持续的挑战，限制了可靠的记录关联，影响了数据互操作性，并限制了可扩展性，而基础设施限制和隐私问题进一步加剧了这些障碍。为应对这些障碍，本研究提出了一种可扩展的、保护隐私的临床数据仓库NCDW，该数据仓库旨在解决资源有限环境下的异质电子健康记录整合问题，并测试了116万临床记录。该框架包含一个基于包装器的数据获取层，以实现多源医疗数据的安全、自动化摄入，并引入了音似算法（Soundex）以在缺乏唯一标识符的情况下解决患者身份不匹配问题。模块化的数据集市用于疾病特定分析，通过在孟加拉国的登革热病例研究中集成临床、人口统计和环境数据，展示了暴发预测和资源规划的能力。对数据集市的定量评估强调了其在强化国家决策支持系统方面的有用性，突显了该模型在传染病管理中的适应性。数据库技术的比较评价表明，NoSQL在复杂查询处理方面的性能比关系型SQL高出40-69%，而系统负载估算验证了该架构能够管理每天1900万条记录（5年内总计34TB数据）的能力。该框架可以通过修改数据获取层以容纳ICD-11和HL7 FHIR等标准来适应不同国家的各种医疗保健环境，从而促进传染病（如COVID-19、结核病）的管理互操作性。 
+
+---
+# Unified Semantic and ID Representation Learning for Deep Recommenders 
+
+**Title (ZH)**: 统一语义和ID表示学习用于深层推荐系统 
+
+**Authors**: Guanyu Lin, Zhigang Hua, Tao Feng, Shuang Yang, Bo Long, Jiaxuan You  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.16474)  
+
+**Abstract**: Effective recommendation is crucial for large-scale online platforms. Traditional recommendation systems primarily rely on ID tokens to uniquely identify items, which can effectively capture specific item relationships but suffer from issues such as redundancy and poor performance in cold-start scenarios. Recent approaches have explored using semantic tokens as an alternative, yet they face challenges, including item duplication and inconsistent performance gains, leaving the potential advantages of semantic tokens inadequately examined. To address these limitations, we propose a Unified Semantic and ID Representation Learning framework that leverages the complementary strengths of both token types. In our framework, ID tokens capture unique item attributes, while semantic tokens represent shared, transferable characteristics. Additionally, we analyze the role of cosine similarity and Euclidean distance in embedding search, revealing that cosine similarity is more effective in decoupling accumulated embeddings, while Euclidean distance excels in distinguishing unique items. Our framework integrates cosine similarity in earlier layers and Euclidean distance in the final layer to optimize representation learning. Experiments on three benchmark datasets show that our method significantly outperforms state-of-the-art baselines, with improvements ranging from 6\% to 17\% and a reduction in token size by over 80%. These results demonstrate the effectiveness of combining ID and semantic tokenization to enhance the generalization ability of recommender systems. 
+
+**Abstract (ZH)**: 大规模在线平台中的有效推荐至关重要。传统推荐系统主要依赖于ID标记来唯一标识项目，这种方法可以有效地捕捉特定的项目关系，但存在冗余和冷启动场景下性能不佳等问题。近期的研究探索了使用语义标记作为替代方案，但它们面临诸如项目重复和性能提升不一致等挑战，使得语义标记的潜在优势未能充分评估。为了解决这些问题，我们提出了一种统一语义和ID表示学习框架，利用这两种标记类型的优势互补。在该框架中，ID标记捕获独特的项目属性，而语义标记表示共享且可转移的特征。此外，我们分析了余弦相似度和欧几里得距离在嵌入搜索中的作用，发现余弦相似度在解耦累加嵌入方面更为有效，而欧几里得距离则在区分独特项目方面更有优势。在该框架中，余弦相似度应用于更早的层级，欧几里得距离应用于最终层级，以优化表示学习。在三个基准数据集上的实验表明，我们的方法显著优于最先进的基线，性能提升范围从6%到17%，且标记尺寸减少了超过80%。这些结果表明，结合ID和语义标记化可以增强推荐系统的泛化能力。 
+
+---
+# Ensemble ToT of LLMs and Its Application to Automatic Grading System for Supporting Self-Learning 
+
+**Title (ZH)**: 以下是符合学术规范的翻译：
+
+“大型语言模型的集成ToT及其在支持自主学习的自动评分系统中的应用” 
+
+**Authors**: Yuki Ito, Qiang Ma  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.16399)  
+
+**Abstract**: Providing students with detailed and timely grading feedback is essential for self-learning. While existing LLM-based grading systems are promising, most of them rely on one single model, which limits their performance. To address this, we propose Ensemble Tree-of-Thought (ToT), a framework that enhances LLM outputs by integrating multiple models. Using this framework, we develop a grading system. Ensemble ToT follows three steps: (1) analyzing LLM performance, (2) generating candidate answers, and (3) refining them into a final result. Based on this, our grading system first evaluates the grading tendencies of LLMs, then generates multiple results, and finally integrates them via a simulated debate. Experimental results demonstrate our approach's ability to provide accurate and explainable grading by effectively coordinating multiple LLMs. 
+
+**Abstract (ZH)**: 为学生提供详细和及时的反馈对于自我学习至关重要。虽然现有的基于大语言模型（LLM）的批改系统具有很大潜力，但大多数系统依赖单一模型，限制了其性能。为此，我们提出了一种名为Ensemble Tree-of-Thought（ToT）的框架，该框架通过整合多个模型来增强LLM的输出。在此框架基础上，我们开发了一个批改系统。Ensemble ToT遵循三个步骤：（1）分析LLM的表现，（2）生成候选答案，（3）将它们精练成最终结果。基于此，我们的批改系统首先评估LLMs的批改倾向，然后生成多个结果，最后通过模拟辩论的方式整合它们。实验结果证明，该方法能够通过有效协调多个LLM来提供准确且可解释的批改。 
+
+---
+# Exploiting Epistemic Uncertainty in Cold-Start Recommendation Systems 
+
+**Title (ZH)**: 利用冷启动推荐系统中的认识不确定性 
+
+**Authors**: Yang Xiang, Li Fan, Chenke Yin, Menglin Kong, Chengtao Ji  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.16256)  
+
+**Abstract**: The cold-start problem remains a significant challenge in recommendation systems based on generative models. Current methods primarily focus on enriching embeddings or inputs by gathering more data, often overlooking the effectiveness of how existing training knowledge is utilized. This inefficiency can lead to missed opportunities for improving cold-start recommendations. To address this, we propose the use of epistemic uncertainty, which reflects a lack of certainty about the optimal model, as a tool to measure and enhance the efficiency with which a recommendation system leverages available knowledge. By considering epistemic uncertainty as a reducible component of overall uncertainty, we introduce a new approach to refine model performance. The effectiveness of this approach is validated through extensive offline experiments on publicly available datasets, demonstrating its superior performance and robustness in tackling the cold-start problem. 
+
+**Abstract (ZH)**: 冷启动问题仍然是基于生成模型的推荐系统中的一项重大挑战。当前的方法主要集中在通过收集更多数据来丰富嵌入或输入，往往忽视了如何有效利用现有训练知识的重要性。这种低效性可能导致错过改进冷启动推荐的机会。为了解决这一问题，我们提出使用表征性不确定性（反映对最优模型的不确定性的不确定性）作为工具，以衡量和提高推荐系统利用现有知识的效率。通过将表征性不确定性视为总体不确定性的可减少部分，我们介绍了一种新的方法来优化模型性能。通过在公开可用的数据集上进行广泛的离线实验，验证了该方法的有效性，展示了其在应对冷启动问题方面的优越性能和鲁棒性。 
+
+---
+# Separated Contrastive Learning for Matching in Cross-domain Recommendation with Curriculum Scheduling 
+
+**Title (ZH)**: 跨域推荐中的阶梯式调度分离对比学习方法 
+
+**Authors**: Heng Chang, Liang Gu, Cheng Hu, Zhinan Zhang, Hong Zhu, Yuhui Xu, Yuan Fang, Zhen Chen  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.16239)  
+
+**Abstract**: Cross-domain recommendation (CDR) is a task that aims to improve the recommendation performance in a target domain by leveraging the information from source domains. Contrastive learning methods have been widely adopted among intra-domain (intra-CL) and inter-domain (inter-CL) users/items for their representation learning and knowledge transfer during the matching stage of CDR. However, we observe that directly employing contrastive learning on mixed-up intra-CL and inter-CL tasks ignores the difficulty of learning from inter-domain over learning from intra-domain, and thus could cause severe training instability. Therefore, this instability deteriorates the representation learning process and hurts the quality of generated embeddings. To this end, we propose a novel framework named SCCDR built up on a separated intra-CL and inter-CL paradigm and a stop-gradient operation to handle the drawback. Specifically, SCCDR comprises two specialized curriculum stages: intra-inter separation and inter-domain curriculum scheduling. The former stage explicitly uses two distinct contrastive views for the intra-CL task in the source and target domains, respectively. Meanwhile, the latter stage deliberately tackles the inter-CL tasks with a curriculum scheduling strategy that derives effective curricula by accounting for the difficulty of negative samples anchored by overlapping users. Empirical experiments on various open-source datasets and an offline proprietary industrial dataset extracted from a real-world recommender system, and an online A/B test verify that SCCDR achieves state-of-the-art performance over multiple baselines. 
+
+**Abstract (ZH)**: 跨域推荐（CDR）是旨在通过利用源域的信息来提高目标域的推荐性能的一项任务。对比学习方法在跨域用户/物品（inter-CL）匹配阶段中因其表示学习和知识转移能力，已经在同域（intra-CL）和跨域（inter-CL）中得到广泛应用。然而，我们发现直接在混合的同域和跨域对比学习任务中应用对比学习方法忽视了跨域学习的难度高于同域学习，这可能引起严重的训练不稳定。因此，这种不稳定性会损害表示学习过程，并降低生成嵌入的质量。为了应对这一问题，我们提出了一种名为SCCDR的新框架，该框架基于分离的同域和跨域对比学习范式以及停止梯度操作来解决这一缺陷。具体而言，SCCDR 包含两个专门的教学阶段：同跨分离阶段和跨域教学调度阶段。前者阶段明确利用了针对源域和目标域的同域对比学习任务中的两种不同对比视图。与此同时，后者阶段通过考虑负样本锚定的重叠用户来确定有效教学计划，故意针对跨域对比学习任务采取教学策略。实证实验在各种开源数据集和一个从实际推荐系统中提取的离线自有的行业数据集上，以及在线A/B测试中验证了SCCDR在多种基线方法上达到了最先进的性能。 
+
+---
+# Tag-Pag: A Dedicated Tool for Systematic Web Page Annotations 
+
+**Title (ZH)**: Tag-Pag：一种专门用于系统化网页标注的工具 
+
+**Authors**: Anton Pogrebnjak, Julian Schelb, Andreas Spitz, Celina Kacperski, Roberto Ulloa  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.16150)  
+
+**Abstract**: Tag-Pag is an application designed to simplify the categorization of web pages, a task increasingly common for researchers who scrape web pages to analyze individuals' browsing patterns or train machine learning classifiers. Unlike existing tools that focus on annotating sections of text, Tag-Pag systematizes page-level annotations, allowing users to determine whether an entire document relates to one or multiple predefined topics.
+Tag-Pag offers an intuitive interface to configure the input web pages and annotation labels. It integrates libraries to extract content from the HTML and URL indicators to aid the annotation process. It provides direct access to both scraped and live versions of the web page. Our tool is designed to expedite the annotation process with features like quick navigation, label assignment, and export functionality, making it a versatile and efficient tool for various research applications. Tag-Pag is available at this https URL. 
+
+**Abstract (ZH)**: Tag-Pag 是一个旨在简化网页分类的应用程序，这一任务对于那些通过爬取网页来分析个体浏览模式或训练机器学习分类器的研究人员越来越常见。与现有的主要关注标注文本部分的工具不同，Tag-Pag 系统化了页面级别的标注，允许用户确定整个文档是否与一个或多个预定义的主题相关。
+
+Tag-Pag 提供了一个直观的界面来配置输入网页和标注标签。它集成了从 HTML 中提取内容的库，并利用 URL 标记来辅助标注过程。它提供了对爬取版本和实时版本网页的直接访问。我们的工具以快速导航、标签分配和导出功能为特点，旨在加速标注过程，使其成为各种研究应用中一个多功能且高效的工具。Tag-Pag 可从以下链接获得：[请将具体网址补充完整]。
+
+请注意，将“this https URL”替换为具体的网址链接，以便读者可以直接访问该工具。 
+
+---
+# Semantic Gaussian Mixture Variational Autoencoder for Sequential Recommendation 
+
+**Title (ZH)**: 基于语义高斯混合变分自编码器的序列推荐方法 
+
+**Authors**: Beibei Li, Tao Xiang, Beihong Jin, Yiyuan Zheng, Rui Zhao  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.16140)  
+
+**Abstract**: Variational AutoEncoder (VAE) for Sequential Recommendation (SR), which learns a continuous distribution for each user-item interaction sequence rather than a determinate embedding, is robust against data deficiency and achieves significant performance. However, existing VAE-based SR models assume a unimodal Gaussian distribution as the prior distribution of sequence representations, leading to restricted capability to capture complex user interests and limiting recommendation performance when users have more than one interest. Due to that it is common for users to have multiple disparate interests, we argue that it is more reasonable to establish a multimodal prior distribution in SR scenarios instead of a unimodal one. Therefore, in this paper, we propose a novel VAE-based SR model named SIGMA. SIGMA assumes that the prior of sequence representation conforms to a Gaussian mixture distribution, where each component of the distribution semantically corresponds to one of multiple interests. For multi-interest elicitation, SIGMA includes a probabilistic multi-interest extraction module that learns a unimodal Gaussian distribution for each interest according to implicit item hyper-categories. Additionally, to incorporate the multimodal interests into sequence representation learning, SIGMA constructs a multi-interest-aware ELBO, which is compatible with the Gaussian mixture prior. Extensive experiments on public datasets demonstrate the effectiveness of SIGMA. The code is available at this https URL. 
+
+**Abstract (ZH)**: variational 自动编码器（VAE）在序列推荐（SR）中的应用，该方法通过学习每个用户-项目交互序列的连续分布，而不是确定性的嵌入，能够有效应对数据不足的问题，并取得显著的性能提升。然而，现有的基于 VAE 的 SR 模型假定序列表示的先验分布为单模高斯分布，这限制了其捕捉复杂用户兴趣的能力，并在用户有多个兴趣时限制了推荐性能。由于用户通常具有多个不同的兴趣，我们认为在 SR 场景中建立一个多模态先验分布比单模态先验更合适。因此，本文提出了一种新颖的基于 VAE 的 SR 模型 SIGMA。SIGMA 假设序列表示的先验分布符合高斯混合分布，其中分布的每个分量从语义上对应于多个兴趣中的一个。为了提取多兴趣，SIGMA 包含了一个概率性的多兴趣提取模块，该模块根据显式的项目超类别学习每个兴趣的单模态高斯分布。此外，为了将多模态兴趣融入序列表示学习中，SIGMA 构建了一个多兴趣感知的 ELBO，该 ELBO 与高斯混合先验兼容。在公共数据集上的广泛实验表明了 SIGMA 的有效性。代码可在以下链接获取：[这个链接](this https URL)。 
+
+---
+# ESANS: Effective and Semantic-Aware Negative Sampling for Large-Scale Retrieval Systems 
+
+**Title (ZH)**: ESANS：有效的具有语义意识的负样本采样方法在大规模检索系统中的应用 
+
+**Authors**: Haibo Xing, Kanefumi Matsuyama, Hao Deng, Jinxin Hu, Yu Zhang, Xiaoyi Zeng  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.16077)  
+
+**Abstract**: Industrial recommendation systems typically involve a two-stage process: retrieval and ranking, which aims to match users with millions of items. In the retrieval stage, classic embedding-based retrieval (EBR) methods depend on effective negative sampling techniques to enhance both performance and efficiency. However, existing techniques often suffer from false negatives, high cost for ensuring sampling quality and semantic information deficiency. To address these limitations, we propose Effective and Semantic-Aware Negative Sampling (ESANS), which integrates two key components: Effective Dense Interpolation Strategy (EDIS) and Multimodal Semantic-Aware Clustering (MSAC). EDIS generates virtual samples within the low-dimensional embedding space to improve the diversity and density of the sampling distribution while minimizing computational costs. MSAC refines the negative sampling distribution by hierarchically clustering item representations based on multimodal information (visual, textual, behavioral), ensuring semantic consistency and reducing false negatives. Extensive offline and online experiments demonstrate the superior efficiency and performance of ESANS. 
+
+**Abstract (ZH)**: 工业推荐系统通常涉及两阶段过程：检索和排序，旨在将用户与数百万个项目匹配。在检索阶段，经典的基于嵌入的检索（EBR）方法依赖于有效的负样本技术以提高性能和效率。然而，现有技术往往遭受虚假负样本、高质量负样本采样成本高和语义信息不足等局限。为解决这些问题，我们提出了有效且语义感知的负样本采样方法（ESANS），它结合了两个关键组件：有效的密集插值策略（EDIS）和多模态语义感知聚类（MSAC）。EDIS在低维嵌入空间中生成虚拟样本，以提高采样分布的多样性和密度，同时降低计算成本。MSAC通过基于多模态信息（视觉、文本、行为）的层次聚类对负样本分布进行精细化处理，确保语义一致性并减少虚假负样本。广泛的离线和在线实验表明，ESANS在效率和性能上具有明显优势。 
+
+---
+# Joint Similarity Item Exploration and Overlapped User Guidance for Multi-Modal Cross-Domain Recommendation 
+
+**Title (ZH)**: 多模态跨域推荐中的联合相似性物品探索与重叠用户引导 
+
+**Authors**: Weiming Liu, Chaochao Chen, Jiahe Xu, Xinting Liao, Fan Wang, Xiaolin Zheng, Zhihui Fu, Ruiguang Pei, Jun Wang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.16068)  
+
+**Abstract**: Cross-Domain Recommendation (CDR) has been widely investigated for solving long-standing data sparsity problem via knowledge sharing across domains. In this paper, we focus on the Multi-Modal Cross-Domain Recommendation (MMCDR) problem where different items have multi-modal information while few users are overlapped across domains. MMCDR is particularly challenging in two aspects: fully exploiting diverse multi-modal information within each domain and leveraging useful knowledge transfer across domains. However, previous methods fail to cluster items with similar characteristics while filtering out inherit noises within different modalities, hurdling the model performance. What is worse, conventional CDR models primarily rely on overlapped users for domain adaptation, making them ill-equipped to handle scenarios where the majority of users are non-overlapped. To fill this gap, we propose Joint Similarity Item Exploration and Overlapped User Guidance (SIEOUG) for solving the MMCDR problem. SIEOUG first proposes similarity item exploration module, which not only obtains pair-wise and group-wise item-item graph knowledge, but also reduces irrelevant noise for multi-modal modeling. Then SIEOUG proposes user-item collaborative filtering module to aggregate user/item embeddings with the attention mechanism for collaborative filtering. Finally SIEOUG proposes overlapped user guidance module with optimal user matching for knowledge sharing across domains. Our empirical study on Amazon dataset with several different tasks demonstrates that SIEOUG significantly outperforms the state-of-the-art models under the MMCDR setting. 
+
+**Abstract (ZH)**: 跨域推荐（Cross-Domain Recommendation, CDR）通过在不同领域间共享知识来解决长期存在的数据稀疏问题而得到了广泛的研究。本文聚焦于多模态跨域推荐（Multi-Modal Cross-Domain Recommendation, MMCDR）问题，该问题的特点是不同项目具有多模态信息，但不同领域间的重叠用户很少。MMCDR 在两个方面具有挑战性：充分利用各自领域内的多样化多模态信息，以及在不同领域间有效利用知识转移。然而，之前的许多方法未能在过滤不同模态中的固有噪声的同时聚类具有相似特征的项目，从而阻碍了模型性能的提升。更糟糕的是，传统的跨域推荐模型主要依赖于重叠用户来进行领域适应，这使它们无法很好地处理大部分用户不存在重叠的场景。为了解决这一问题，我们提出了一种联合相似性项目探索和重叠用户引导（Similarity Item Exploration and Overlapped User Guidance, SIEOUG）的方法来解决MMCDR 问题。SIEOUG 首先提出了一种相似性项目探索模块，不仅可以获取项目对和群组之间的项目图知识，而且还能减少多模态建模中的无关噪声。然后提出了用户-项目协同过滤模块，通过注意力机制聚合用户/项目的嵌入以进行协同过滤。最后提出了重叠用户引导模块，通过最佳用户匹配来促进不同领域间的知识共享。我们在 Amazon 数据集上的实证研究表明，SIEOUG 在MMCDR 设置下显著优于最先进的模型。 
+
+---
+# Inference Computation Scaling for Feature Augmentation in Recommendation Systems 
+
+**Title (ZH)**: 推荐系统中特征增强的推理计算扩展方法 
+
+**Authors**: Weihao Liu, Zhaocheng Du, Haiyuan Zhao, Wenbo Zhang, Xiaoyan Zhao, Gang Wang, Zhenhua Dong, Jun Xu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.16040)  
+
+**Abstract**: Large language models have become a powerful method for feature augmentation in recommendation systems. However, existing approaches relying on quick inference often suffer from incomplete feature coverage and insufficient specificity in feature descriptions, limiting their ability to capture fine-grained user preferences and undermining overall performance. Motivated by the recent success of inference scaling in math and coding tasks, we explore whether scaling inference can address these limitations and enhance feature quality.
+Our experiments show that scaling inference leads to significant improvements in recommendation performance, with a 12% increase in NDCG@10. The gains can be attributed to two key factors: feature quantity and specificity. In particular, models using extended Chain-of-Thought (CoT) reasoning generate a greater number of detailed and precise features, offering deeper insights into user preferences and overcoming the limitations of quick inference. We further investigate the factors influencing feature quantity, revealing that model choice and search strategy play critical roles in generating a richer and more diverse feature set. This is the first work to apply inference scaling to feature augmentation in recommendation systems, bridging advances in reasoning tasks to enhance personalized recommendation. 
+
+**Abstract (ZH)**: 大型语言模型已成为推荐系统中特征增强的一种有力方法。然而，现有依赖快速推理的方法往往面临特征覆盖不完整和特征描述不够具体的问题，限制了它们捕捉用户精细化偏好和整体性能的能力。受到近期数学和编程任务中推理扩展成功的启发，我们探索是否可以通过扩展推理来解决这些问题并提升特征质量。
+
+我们的实验表明，扩展推理在推荐性能上带来了显著改进，NDCG@10的增幅达到了12%。这些收益可以归因于两个关键因素：特征数量和具体性。特别是使用扩展的链式推理（CoT）的模型生成了更多的详细和精准的特征，为用户偏好提供了更深入的洞察，并克服了快速推理的局限性。我们进一步研究了影响特征数量的因素，发现模型选择和搜索策略在生成更丰富和多样化的特征集中起着关键作用。这是将推理扩展应用于推荐系统中特征增强的首次工作，将推理任务的进步融合到个性化推荐中，以增强推荐能力。 
+
+---
+# Automated Query-Product Relevance Labeling using Large Language Models for E-commerce Search 
+
+**Title (ZH)**: 使用大规模语言模型自动标注查询与产品相关性标签以优化电商搜索 
+
+**Authors**: Jayant Sachdev, Sean D Rosario, Abhijeet Phatak, He Wen, Swati Kirti, Chittaranjan Tripathy  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.15990)  
+
+**Abstract**: Accurate query-product relevance labeling is indispensable to generate ground truth dataset for search ranking in e-commerce. Traditional approaches for annotating query-product pairs rely on human-based labeling services, which is expensive, time-consuming and prone to errors. In this work, we explore the application of Large Language Models (LLMs) to automate query-product relevance labeling for large-scale e-commerce search. We use several publicly available and proprietary LLMs for this task, and conducted experiments on two open-source datasets and an in-house e-commerce search dataset. Using prompt engineering techniques such as Chain-of-Thought (CoT) prompting, In-context Learning (ICL), and Retrieval Augmented Generation (RAG) with Maximum Marginal Relevance (MMR), we show that LLM's performance has the potential to approach human-level accuracy on this task in a fraction of the time and cost required by human-labelers, thereby suggesting that our approach is more efficient than the conventional methods. We have generated query-product relevance labels using LLMs at scale, and are using them for evaluating improvements to our search algorithms. Our work demonstrates the potential of LLMs to improve query-product relevance thus enhancing e-commerce search user experience. More importantly, this scalable alternative to human-annotation has significant implications for information retrieval domains including search and recommendation systems, where relevance scoring is crucial for optimizing the ranking of products and content to improve customer engagement and other conversion metrics. 
+
+**Abstract (ZH)**: 精确的查询-产品相关性标注对于电子商务搜索排名生成真实数据集至关重要。传统的查询-产品对标注方法依赖于人力标注服务，这成本高、耗时且容易出错。在本工作中，我们探索了大规模电子商务搜索中利用大规模语言模型（LLMs）自动化查询-产品相关性标注的应用。我们使用了多个公开可用和专有的LLMs进行此项任务，并在两个开源数据集和一个内部电子商务搜索数据集上进行了实验。利用提示工程技术，如思维链（CoT）提示、上下文学习（ICL）、检索增强生成（RAG）以及最大边际相关性（MMR），我们展示了在完成任务所需的人力标注者时间和成本少得多的情况下，LLMs的性能有潜力达到人类级别的准确度，从而表明我们提出的方法相较于传统方法更加高效。我们已使用大规模语言模型生成了查询-产品相关性标签，并将其用于评估搜索算法的改进。本工作展示了大规模语言模型在提高查询-产品相关性方面的潜力，从而提升了电子商务搜索的用户体验。更重要的是，这一可扩展的人工标注替代方案对包括搜索和推荐系统在内的信息检索领域具有重要意义，这些领域的相关性评分对于优化产品和内容的排名、提高客户参与度及其他转化指标至关重要。 
+
+---
+# Visual Zero-Shot E-Commerce Product Attribute Value Extraction 
+
+**Title (ZH)**: 视觉驱动的零样本电子商务产品属性值提取 
+
+**Authors**: Jiaying Gong, Ming Cheng, Hongda Shen, Pierre-Yves Vandenbussche, Janet Jenq, Hoda Eldardiry  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.15979)  
+
+**Abstract**: Existing zero-shot product attribute value (aspect) extraction approaches in e-Commerce industry rely on uni-modal or multi-modal models, where the sellers are asked to provide detailed textual inputs (product descriptions) for the products. However, manually providing (typing) the product descriptions is time-consuming and frustrating for the sellers. Thus, we propose a cross-modal zero-shot attribute value generation framework (ViOC-AG) based on CLIP, which only requires product images as the inputs. ViOC-AG follows a text-only training process, where a task-customized text decoder is trained with the frozen CLIP text encoder to alleviate the modality gap and task disconnection. During the zero-shot inference, product aspects are generated by the frozen CLIP image encoder connected with the trained task-customized text decoder. OCR tokens and outputs from a frozen prompt-based LLM correct the decoded outputs for out-of-domain attribute values. Experiments show that ViOC-AG significantly outperforms other fine-tuned vision-language models for zero-shot attribute value extraction. 
+
+**Abstract (ZH)**: 现有的电子商务领域零样本产品属性值（方面）提取方法依赖于单模态或跨模态模型，要求卖方提供产品的详细文本输入（产品描述）。然而，手动提供（输入）产品描述对于卖方来说既耗时又令人沮丧。因此，我们提出了一种基于CLIP的跨模态零样本属性值生成框架（ViOC-AG），该框架仅需要产品图像作为输入。ViOC-AG 采用纯文本训练过程，通过冻结的CLIP文本编码器训练任务定制的文本解码器，以缓解模态差距和任务断连问题。在零样本推理过程中，通过冻结的CLIP图像编码器与训练好的任务定制的文本解码器连接生成产品方面。使用冻结的基于提示的语言模型（LLM）生成的OCR标记和输出纠正解码输出中的离域属性值。实验表明，ViOC-AG 在零样本属性值提取方面显著优于其他微调的视觉-语言模型。 
+
+---
+# Instruction-Based Fine-tuning of Open-Source LLMs for Predicting Customer Purchase Behaviors 
+
+**Title (ZH)**: 基于指令的开源大语言模型微调以预测客户购买行为 
+
+**Authors**: Halil Ibrahim Ergul, Selim Balcisoy, Burcin Bozkaya  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.15724)  
+
+**Abstract**: In this study, the performance of various predictive models, including probabilistic baseline, CNN, LSTM, and finetuned LLMs, in forecasting merchant categories from financial transaction data have been evaluated. Utilizing datasets from Bank A for training and Bank B for testing, the superior predictive capabilities of the fine-tuned Mistral Instruct model, which was trained using customer data converted into natural language format have been demonstrated. The methodology of this study involves instruction fine-tuning Mistral via LoRA (LowRank Adaptation of Large Language Models) to adapt its vast pre-trained knowledge to the specific domain of financial transactions. The Mistral model significantly outperforms traditional sequential models, achieving higher F1 scores in the three key merchant categories of bank transaction data (grocery, clothing, and gas stations) that is crucial for targeted marketing campaigns. This performance is attributed to the model's enhanced semantic understanding and adaptability which enables it to better manage minority classes and predict transaction categories with greater accuracy. These findings highlight the potential of LLMs in predicting human behavior. 
+
+**Abstract (ZH)**: 在本研究中，对各种预测模型（包括概率基线模型、卷积神经网络CNN、长短期记忆网络LSTM以及微调的大语言模型LLM）在从金融交易数据预测商户类别的性能进行了评估。利用来自Bank A的数据进行训练，并使用来自Bank B的数据进行测试，展示了使用客户数据转换为自然语言格式后进行微调的Mistral Instruct模型的卓越预测能力。本研究的方法是通过LoRA（大型语言模型的低秩适应）对Mistral进行指令微调，以使其广泛预训练的知识适应金融交易领域。微调后的Mistral模型显著优于传统的序列模型，在银行交易数据的三大关键商户类别（杂货店、服装店和加油站）上获得了更高的F1分数，这对于针对性营销活动至关重要。这种性能归因于模型增强的语义理解和适应性，使其能够更好地处理少数类别并更准确地预测交易类别。这些发现突显了大语言模型在预测人类行为方面的潜力。 
+
+---
+# Balancing Content Size in RAG-Text2SQL System 
+
+**Title (ZH)**: 平衡RAG-Text2SQL系统中的内容大小 
+
+**Authors**: Prakhar Gurawa, Anjali Dharmik  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.15723)  
+
+**Abstract**: Large Language Models (LLMs) have emerged as a promising solution for converting natural language queries into SQL commands, enabling seamless database interaction. However, these Text-to-SQL (Text2SQL) systems face inherent limitations, hallucinations, outdated knowledge, and untraceable reasoning. To address these challenges, the integration of retrieval-augmented generation (RAG) with Text2SQL models has gained traction. RAG serves as a retrieval mechanism, providing essential contextual information, such as table schemas and metadata, to enhance the query generation process. Despite their potential, RAG + Text2SQL systems are susceptible to the quality and size of retrieved documents. While richer document content can improve schema relevance and retrieval accuracy, it also introduces noise, increasing the risk of hallucinations and reducing query fidelity as the prompt size of the Text2SQL model increases. This research investigates the nuanced trade-off between document size and quality, aiming to strike a balance that optimizes system performance. Key thresholds are identified where performance degradation occurs, along with actionable strategies to mitigate these challenges. Additionally, we explore the phenomenon of hallucinations in Text2SQL models, emphasizing the critical role of curated document presentation in minimizing errors. Our findings provide a roadmap for enhancing the robustness of RAG + Text2SQL systems, offering practical insights for real-world applications. 
+
+**Abstract (ZH)**: 大型语言模型（LLMs）已展现出将自然语言查询转化为SQL命令的潜在解决方案，从而实现与数据库的无缝交互。然而，这些文本到SQL（Text2SQL）系统存在固有的局限性，如虚构事实、过时知识以及不可追溯的推理。为应对这些挑战，将检索增强生成（RAG）与Text2SQL模型结合的应用逐渐受到关注。RAG充当一种检索机制，提供如表结构和元数据等关键的上下文信息，以提高查询生成的质量。尽管RAG + Text2SQL系统具有潜在优势，但它们对检索到文档的质量和数量非常敏感。丰富的文档内容有助于提高模式的相关性和检索准确性，但也可能引入噪音，增加虚构事实的风险，并随着Text2SQL模型提示长度的增加而降低查询精度。本研究探讨了文档大小与质量之间的微妙权衡，旨在寻找优化系统性能的最佳平衡点。我们识别出导致性能下降的关键阈值，并提出了一系列可操作的策略来应对这些挑战。此外，我们还探讨了Text2SQL模型中虚构事实的现象，强调精心呈现的文档在减少错误方面的作用。本研究的发现为增强RAG + Text2SQL系统的稳健性提供了蓝图，提供了实用的见解，适用于实际应用。 
+
+---
+# Open-Source Retrieval Augmented Generation Framework for Retrieving Accurate Medication Insights from Formularies for African Healthcare Workers 
+
+**Title (ZH)**: 面向非洲医疗工作者从药典中检索准确药物洞察的开源检索增强生成框架 
+
+**Authors**: Axum AI, J. Owoyemi, S. Abubakar, A. Owoyemi, T.O. Togunwa, F.C. Madubuko, S. Oyatoye, Z. Oyetolu, K. Akyea, A.O. Mohammed, A. Adebakin  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.15722)  
+
+**Abstract**: Accessing accurate medication insights is vital for enhancing patient safety, minimizing errors, and supporting clinical decision-making. However, healthcare professionals in Africa often rely on manual and time-consuming processes to retrieve drug information, exacerbated by limited access to pharmacists due to brain drain and healthcare disparities. This paper presents "Drug Insights," an open-source Retrieval-Augmented Generation (RAG) chatbot designed to streamline medication lookup for healthcare workers in Africa. By leveraging a corpus of Nigerian pharmaceutical data and advanced AI technologies, including Pinecone databases and GPT models, the system delivers accurate, context-specific responses with minimal hallucination. The chatbot integrates prompt engineering and S-BERT evaluation to optimize retrieval and response generation. Preliminary tests, including pharmacist feedback, affirm the tool's potential to improve drug information access while highlighting areas for enhancement, such as UI/UX refinement and extended corpus integration. 
+
+**Abstract (ZH)**: 获取准确的药物见解对于提高患者安全、减少错误并支持临床决策至关重要。然而，由于人才流失和医疗资源分配不均，非洲的医疗卫生专业人员往往依赖耗时的手动过程来检索药物信息。本文介绍了“Drug Insights”，一个基于开源检索增强生成（RAG）聊天机器人的系统，旨在简化非洲医疗卫生工作者的药物检索流程。通过利用尼日利亚药学数据语料库和先进的AI技术，包括Pinecone数据库和GPT模型，该系统能够提供高精度、情境相关的响应，且极少出现幻觉。该聊天机器人集成了提示工程和S-BERT评估，以优化检索和响应生成。初步测试，包括药剂师的反馈，证实了该工具在提高药物信息访问方面的潜力，并指出了需要改进的领域，如用户界面/用户体验的优化和语料库扩展。 
+
+---
+# iTRI-QA: a Toolset for Customized Question-Answer Dataset Generation Using Language Models for Enhanced Scientific Research 
+
+**Title (ZH)**: iTRI-QA：一种基于语言模型的定制化问答数据集生成工具集，以增强科学研究 
+
+**Authors**: Qiming Liu, Zhongzheng Niu, Siting Liu, Mao Tian  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.15721)  
+
+**Abstract**: The exponential growth of AI in science necessitates efficient and scalable solutions for retrieving and preserving research information. Here, we present a tool for the development of a customized question-answer (QA) dataset, called Interactive Trained Research Innovator (iTRI) - QA, tailored for the needs of researchers leveraging language models (LMs) to retrieve scientific knowledge in a QA format. Our approach integrates curated QA datasets with a specialized research paper dataset to enhance responses' contextual relevance and accuracy using fine-tuned LM. The framework comprises four key steps: (1) the generation of high-quality and human-generated QA examples, (2) the creation of a structured research paper database, (3) the fine-tuning of LMs using domain-specific QA examples, and (4) the generation of QA dataset that align with user queries and the curated database. This pipeline provides a dynamic and domain-specific QA system that augments the utility of LMs in academic research that will be applied for future research LM deployment. We demonstrate the feasibility and scalability of our tool for streamlining knowledge retrieval in scientific contexts, paving the way for its integration into broader multi-disciplinary applications. 
+
+**Abstract (ZH)**: AI在科学研究中的指数级增长 necessitates 有效的可扩展解决方案 来检索和保存研究信息。在此，我们介绍了一个用于开发定制化问答（QA）数据集的工具，称为互动训练科研创新者（iTRI）-QA，该工具专门针对利用语言模型（LMs）以问答格式检索科学知识的研究人员的需求。我们的方法结合了已人工筛选的问答数据集和专门的科研论文数据集，通过微调LM来增强响应的相关性和准确性。该框架包含四个关键步骤：（1）生成高质量的人工问答示例，（2）创建结构化的科研论文数据库，（3）使用领域特定的问答示例微调LM，以及（4）生成与用户查询和筛选数据库相匹配的问答数据集。此流水线提供了一个动态且领域特异性的问答系统，增强语言模型在学术研究中的应用，并为未来研究LM部署作准备。我们展示了该工具在科学语境中简化知识检索可行性和扩展性的可能性，为其在更广泛的跨学科应用中集成铺平道路。 
+
+---
+# Making Sense of Data in the Wild: Data Analysis Automation at Scale 
+
+**Title (ZH)**: 在自然环境中理解数据：大规模数据自动分析 
+
+**Authors**: Mara Graziani, Malina Molnar, Irina Espejo Morales, Joris Cadow-Gossweiler, Teodoro Laino  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.15718)  
+
+**Abstract**: As the volume of publicly available data continues to grow, researchers face the challenge of limited diversity in benchmarking machine learning tasks. Although thousands of datasets are available in public repositories, the sheer abundance often complicates the search for suitable data, leaving many valuable datasets underexplored. This situation is further amplified by the fact that, despite longstanding advocacy for improving data curation quality, current solutions remain prohibitively time-consuming and resource-intensive. In this paper, we propose a novel approach that combines intelligent agents with retrieval augmented generation to automate data analysis, dataset curation and indexing at scale. Our system leverages multiple agents to analyze raw, unstructured data across public repositories, generating dataset reports and interactive visual indexes that can be easily explored. We demonstrate that our approach results in more detailed dataset descriptions, higher hit rates and greater diversity in dataset retrieval tasks. Additionally, we show that the dataset reports generated by our method can be leveraged by other machine learning models to improve the performance on specific tasks, such as improving the accuracy and realism of synthetic data generation. By streamlining the process of transforming raw data into machine-learning-ready datasets, our approach enables researchers to better utilize existing data resources. 
+
+**Abstract (ZH)**: 随着可用的公开数据量不断增长，研究人员在对机器学习任务进行基准测试时面临着数据多样性不足的挑战。尽管公共存储库中有成千上万的数据集可供使用，但由于数据量巨大，寻找适合的数据仍然十分复杂，许多有价值的数据库资源被长期忽视。这一情况进一步加剧了当前数据管理质量提高长期倡导的现状，当前的解决方案仍具有极大的时间和资源需求，令人望而却步。本文提出了一种新颖的方法，结合智能代理和检索增强生成技术，自动化大规模的数据分析、数据集管理和索引。我们的系统利用多个智能代理来分析公共存储库中的原始未结构化数据，生成数据集报告和可交互的可视化索引，便于快速探索。我们证明，这种方法可以产生更详细的数据集描述、更高的命中率以及更广泛的数据集检索多样性。此外，我们展示了由我们的方法生成的数据集报告可以供其他机器学习模型使用，以提高特定任务的性能，例如提高合成数据生成的准确性和真实性。通过简化将原始数据转化为可用于机器学习的数据集的过程，我们的方法使研究人员能够更好地利用现有的数据资源。 
+
+---
+# TrustDataFilter:Leveraging Trusted Knowledge Base Data for More Effective Filtering of Unknown Information 
+
+**Title (ZH)**: TrustDataFilter：利用可信赖的知识库数据进行更有效的未知信息过滤 
+
+**Authors**: Jinghong Zhang, Yidong Cui, Weiling Wang, Xianyou Cheng  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.15714)  
+
+**Abstract**: With the advancement of technology and changes in the market, the demand for the construction of domain-specific knowledge bases has been increasing, either to improve model performance or to promote enterprise innovation and competitiveness. The construction of domain-specific knowledge bases typically relies on web crawlers or existing industry databases, leading to problems with accuracy and consistency of the data. To address these challenges, we considered the characteristics of domain data, where internal knowledge is interconnected, and proposed the Self-Natural Language Inference Data Filtering (self-nli-TDF) framework. This framework compares trusted filtered knowledge with the data to be filtered, deducing the reasoning relationship between them, thus improving filtering performance. The framework uses plug-and-play large language models for trustworthiness assessment and employs the RoBERTa-MNLI model from the NLI domain for reasoning. We constructed three datasets in the domains of biology, radiation, and science, and conducted experiments using RoBERTa, GPT3.5, and the local Qwen2 model. The experimental results show that this framework improves filter quality, producing more consistent and reliable filtering results. 
+
+**Abstract (ZH)**: 随着技术的进步和市场变化，对领域专门知识库的需求不断增加，无论是为了提高模型性能还是促进企业创新和竞争力。专门领域知识库的构建通常依赖于网络爬虫或现有的行业数据库，这导致了数据准确性和一致性方面的问题。为了解决这些挑战，我们考虑了领域数据的特点，其中内部知识相互关联，提出了自自然语言推理数据过滤（Self-Natural Language Inference Data Filtering，简称self-nli-TDF）框架。该框架将可信过滤知识与待过滤数据进行对比，推理它们之间的逻辑关系，从而提高过滤性能。该框架使用插件式的大型语言模型进行可信性评估，并采用了来自自然语言推理（NLI）领域的RoBERTa-MNLI模型进行推理。我们在这三个领域——生物学、辐射和科学——构建了三个数据集，并使用了RoBERTa、GPT3.5和本地的Qwen2模型进行了实验。实验结果表明，该框架提高了过滤质量，产生了更加一致和可靠的过滤结果。 
+
+---
+# A Survey on Multimodal Recommender Systems: Recent Advances and Future Directions 
+
+**Title (ZH)**: 多模态推荐系统综述： Recent Advances and Future Directions 
+
+**Authors**: Jinfeng Xu, Zheyu Chen, Shuo Yang, Jinze Li, Wei Wang, Xiping Hu, Steven Hoi, Edith Ngai  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.15711)  
+
+**Abstract**: Acquiring valuable data from the rapidly expanding information on the internet has become a significant concern, and recommender systems have emerged as a widely used and effective tool for helping users discover items of interest. The essence of recommender systems lies in their ability to predict users' ratings or preferences for various items and subsequently recommend the most relevant ones based on historical interaction data and publicly available information. With the advent of diverse multimedia services, including text, images, video, and audio, humans can perceive the world through multiple modalities. Consequently, a recommender system capable of understanding and interpreting different modal data can more effectively refer to individual preferences. Multimodal Recommender Systems (MRS) not only capture implicit interaction information across multiple modalities but also have the potential to uncover hidden relationships between these modalities. The primary objective of this survey is to comprehensively review recent research advancements in MRS and to analyze the models from a technical perspective. Specifically, we aim to summarize the general process and main challenges of MRS from a technical perspective. We then introduce the existing MRS models by categorizing them into four key areas: Feature Extraction, Encoder, Multimodal Fusion, and Loss Function. Finally, we further discuss potential future directions for developing and enhancing MRS. This survey serves as a comprehensive guide for researchers and practitioners in MRS field, providing insights into the current state of MRS technology and identifying areas for future research. We hope to contribute to developing a more sophisticated and effective multimodal recommender system. To access more details of this paper, we open source a repository: this https URL. 
+
+**Abstract (ZH)**: 从互联网上迅速增长的信息中获取有价值的数据已成为一个重要关注点，推荐系统因此成为帮助用户发现感兴趣项目的一种广泛使用且有效的工具。推荐系统的核心在于预测用户对各种项目的评分或偏好，并基于历史交互数据和公开信息推荐最相关的内容。随着包括文本、图像、视频和音频在内的多元媒体服务的出现，人类可以通过多种感官感知世界。因此，能够理解并解释不同模态数据的推荐系统可以更有效地个性化推荐。多元模态推荐系统（MRS）不仅能够捕获多个模态间的隐含交互信息，还能潜在地揭示这些模态之间的隐藏关系。本综述的主要目标是全面回顾MRS领域的近期研究进展，并从技术角度分析现有模型。具体来说，我们旨在从技术角度总结MRS的一般过程和主要挑战。然后，我们通过将现有模型归类为四个关键领域：特征提取、编码器、多元模态融合和损失函数来进行介绍。最后，我们进一步探讨了开发和增强MRS的潜在未来方向。本综述旨在为MRS领域的研究者和实践者提供全面指南，揭示当前MRS技术的状态，并确定未来研究的方向。我们希望通过这一综述促进开发更加复杂且有效的多元模态推荐系统。如有更多信息，您可以访问我们开源的仓库：this https URL。 
+
+---
+# TutorLLM: Customizing Learning Recommendations with Knowledge Tracing and Retrieval-Augmented Generation 
+
+**Title (ZH)**: TutorLLM：基于知识追踪和检索增强生成的个性化学习推荐 
+
+**Authors**: Zhaoxing Li, Vahid Yazdanpanah, Jindi Wang, Wen Gu, Lei Shi, Alexandra I. Cristea, Sarah Kiden, Sebastian Stein  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.15709)  
+
+**Abstract**: The integration of AI in education offers significant potential to enhance learning efficiency. Large Language Models (LLMs), such as ChatGPT, Gemini, and Llama, allow students to query a wide range of topics, providing unprecedented flexibility. However, LLMs face challenges, such as handling varying content relevance and lack of personalization. To address these challenges, we propose TutorLLM, a personalized learning recommender LLM system based on Knowledge Tracing (KT) and Retrieval-Augmented Generation (RAG). The novelty of TutorLLM lies in its unique combination of KT and RAG techniques with LLMs, which enables dynamic retrieval of context-specific knowledge and provides personalized learning recommendations based on the student's personal learning state. Specifically, this integration allows TutorLLM to tailor responses based on individual learning states predicted by the Multi-Features with Latent Relations BERT-based KT (MLFBK) model and to enhance response accuracy with a Scraper model. The evaluation includes user assessment questionnaires and performance metrics, demonstrating a 10\% improvement in user satisfaction and a 5\% increase in quiz scores compared to using general LLMs alone. 
+
+**Abstract (ZH)**: 将人工智能（AI）集成到教育中具有显著潜力，可提升学习效率。大型语言模型（LLMs），如ChatGPT、Gemini和Llama，使学生能够查询广泛的主题，提供了前所未有的灵活性。然而，LLMs 面临挑战，例如处理内容相关性的变化以及缺乏个性化。为了解决这些挑战，我们提出了一种基于知识追踪（KT）和检索增强生成（RAG）技术的个性化学习推荐LLMs系统——TutorLLM。TutorLLM 的创新之处在于将KT和RAG技术与LLMs相结合，使其能够动态检索上下文相关的知识，并基于学生的个人学习状态提供个性化学习建议。具体而言，这种集成允许TutorLLM 根据由基于多特征潜在关系BERT的知识追踪（MLFBK模型）预测的个别学习状态定制响应，并通过Scraper模型增强响应准确性。评估包括用户评估问卷和性能指标，结果显示，与单独使用通用的LLMs相比，用户满意度提高了10%，测验成绩提高了5%。 
+
+---
+# EMK-KEN: A High-Performance Approach for Assessing Knowledge Value in Citation Network 
+
+**Title (ZH)**: EMK-KEN：一种高性能的引文网络中知识价值评估方法 
+
+**Authors**: Zehui Qu, Chengzhi Liu, Hanwen Cui, Xianping Yu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.15704)  
+
+**Abstract**: With the explosive growth of academic literature, effectively evaluating the knowledge value of literature has become quite essential. However, most of the existing methods focus on modeling the entire citation network, which is structurally complex and often suffers from long sequence dependencies when dealing with text embeddings. Thus, they might have low efficiency and poor robustness in different fields. To address these issues, a novel knowledge evaluation method is proposed, called EMK-KEN. The model consists of two modules. Specifically, the first module utilizes MetaFP and Mamba to capture semantic features of node metadata and text embeddings to learn contextual representations of each paper. The second module utilizes KAN to further capture the structural information of citation networks in order to learn the differences in different fields of networks. Extensive experiments based on ten benchmark datasets show that our method outperforms the state-of-the-art competitors in effectiveness and robustness. 
+
+**Abstract (ZH)**: 随着学术文献的爆炸性增长，有效地评估文献的知识价值变得尤为重要。然而，现有方法大多集中在建模整个引文网络，这使得它们在处理文本嵌入时通常会遇到结构复杂性和长序列依赖性的问题，从而导致在不同领域中效率低下且鲁棒性较差。为了解决这些问题，提出了一种新的知识评估方法，称为EMK-KEN。该模型由两个模块组成。具体而言，第一个模块利用MetaFP和Mamba来捕获结点元数据和文本嵌入的语义特征，以学习每篇论文的上下文表示。第二个模块利用KAN进一步捕获引文网络的结构信息，以学习不同领域网络之间的差异。基于十个基准数据集进行的广泛实验表明，我们的方法在有效性和鲁棒性方面优于当前最先进的方法。 
+
+---
+# Large language models streamline automated systematic review: A preliminary study 
+
+**Title (ZH)**: 大型语言模型简化自动系统综述：一项初步研究 
+
+**Authors**: Xi Chen, Xue Zhang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.15702)  
+
+**Abstract**: Large Language Models (LLMs) have shown promise in natural language processing tasks, with the potential to automate systematic reviews. This study evaluates the performance of three state-of-the-art LLMs in conducting systematic review tasks. We assessed GPT-4, Claude-3, and Mistral 8x7B across four systematic review tasks: study design formulation, search strategy development, literature screening, and data extraction. Sourced from a previously published systematic review, we provided reference standard including standard PICO (Population, Intervention, Comparison, Outcome) design, standard eligibility criteria, and data from 20 reference literature. Three investigators evaluated the quality of study design and eligibility criteria using 5-point Liker Scale in terms of accuracy, integrity, relevance, consistency and overall performance. For other tasks, the output is defined as accurate if it is the same as the reference standard. Search strategy performance was evaluated through accuracy and retrieval efficacy. Screening accuracy was assessed for both abstracts screening and full texts screening. Data extraction accuracy was evaluated across 1,120 data points comprising 3,360 individual fields. Claude-3 demonstrated superior overall performance in PICO design. In search strategy formulation, GPT-4 and Claude-3 achieved comparable accuracy, outperforming Mistral. For abstract screening, GPT-4 achieved the highest accuracy, followed by Mistral and Claude-3. In data extraction, GPT-4 significantly outperformed other models. LLMs demonstrate potential for automating systematic review tasks, with GPT-4 showing superior performance in search strategy formulation, literature screening and data extraction. These capabilities make them promising assistive tools for researchers and warrant further development and validation in this field. 
+
+**Abstract (ZH)**: 大规模语言模型（LLMs）在自然语言处理任务中表现出一定的前景，并且有可能自动化系统评价。本研究评估了三种最先进的LLMs在执行系统评价任务中的表现。我们分别在研究设计制定、搜索策略开发、文献筛选和数据提取四个方面评估了GPT-4、Claude-3和Mistral 8x7B的表现。这些任务基于一篇之前发表的系统评价，提供了一个参考标准，包括标准的PICO（Population, Intervention, Comparison, Outcome）设计、标准的纳入标准和来自20篇参考文献的数据。三名评估员使用5点李克特量表从准确度、完整性、相关性、一致性和整体表现五个方面评估研究设计和纳入标准的质量。在其他任务中，如果产出与参考标准相同，则视为准确。搜索策略的表现通过准确性和检索效果进行评估。筛查准确度分别针对摘要筛查和全文筛查。数据提取准确度在涵盖3,360个单独字段的1,120个数据点上进行了评估。Claude-3在PICO设计方面表现出优越的整体性能。在搜索策略制定方面，GPT-4和Claude-3的准确性相当，且优于Mistral。对摘要筛查而言，GPT-4表现最高，其次是Mistral和Claude-3。在数据提取方面，GPT-4显著优于其他模型。LLMs显示出在系统评价任务中自动化的潜力，特别是GPT-4在搜索策略制定、文献筛选和数据提取方面表现突出。这些能力使它们成为研究人员的有前景的支持工具，同时也值得在这个领域进一步开发和验证。 
+
+---
+# Political Events using RAG with LLMs 
+
+**Title (ZH)**: 使用LLM的RAG进行政治事件处理 
+
+**Authors**: Muhammad Arslan, Saba Munawar, Christophe Cruz  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.15701)  
+
+**Abstract**: In the contemporary digital landscape, media content stands as the foundation for political news analysis, offering invaluable insights sourced from various channels like news articles, social media updates, speeches, and reports. Natural Language Processing (NLP) has revolutionized Political Information Extraction (IE), automating tasks such as Event Extraction (EE) from these diverse media outlets. While traditional NLP methods often necessitate specialized expertise to build rule-based systems or train machine learning models with domain-specific datasets, the emergence of Large Language Models (LLMs) driven by Generative Artificial Intelligence (GenAI) presents a promising alternative. These models offer accessibility, alleviating challenges associated with model construction from scratch and reducing the dependency on extensive datasets during the training phase, thus facilitating rapid implementation. However, challenges persist in handling domain-specific tasks, leading to the development of the Retrieval-Augmented Generation (RAG) framework. RAG enhances LLMs by integrating external data retrieval, enriching their contextual understanding, and expanding their knowledge base beyond pre-existing training data. To illustrate RAG's efficacy, we introduce the Political EE system, specifically tailored to extract political event information from news articles. Understanding these political insights is essential for remaining informed about the latest political advancements, whether on a national or global scale. 
+
+**Abstract (ZH)**: 在当今的数字景观中，媒体内容构成了政治新闻分析的基础，提供了来自各种渠道（如新闻文章、社交媒体更新、演讲和报告）的宝贵见解。自然语言处理（NLP）已彻底改变了政治信息抽取（IE），实现了从这些多元媒体渠道自动提取事件（EE）等任务的自动化。虽然传统的NLP方法通常需要专门的专家构建基于规则的系统或使用领域特定数据集训练机器学习模型，但生成人工智能（GenAI）驱动的大规模语言模型（LLMs）的出现为这一领域的自动化提供了有前景的替代方案。这些模型提高了可访问性，减轻了从头构建模型的挑战，并在训练阶段减少了对大量数据集的依赖，从而促进了快速实现。然而，处理领域特定任务仍然存在挑战，这促进了检索增强生成（RAG）框架的发展。RAG通过整合外部数据检索，增强了大规模语言模型的上下文理解能力，并扩展了它们的知识库，使其超越了预先存在的训练数据。为了展示RAG的有效性，我们介绍了一种专门用于从新闻文章中抽取政治事件信息的政治事件提取系统。理解这些政治见解对于了解最新的政治进展至关重要，无论是国家级的还是国际性的。 
+
+---
+# Sustainable Digitalization of Business with Multi-Agent RAG and LLM 
+
+**Title (ZH)**: 基于多代理检索增强和大语言模型的可持续数字化商业 
+
+**Authors**: Muhammad Arslan, Saba Munawar, Christophe Cruz  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.15700)  
+
+**Abstract**: Businesses heavily rely on data sourced from various channels like news articles, financial reports, and consumer reviews to drive their operations, enabling informed decision-making and identifying opportunities. However, traditional manual methods for data extraction are often time-consuming and resource-intensive, prompting the adoption of digital transformation initiatives to enhance efficiency. Yet, concerns persist regarding the sustainability of such initiatives and their alignment with the United Nations (UN)'s Sustainable Development Goals (SDGs). This research aims to explore the integration of Large Language Models (LLMs) with Retrieval-Augmented Generation (RAG) as a sustainable solution for Information Extraction (IE) and processing. The research methodology involves reviewing existing solutions for business decision-making, noting that many systems require training new machine learning models, which are resource-intensive and have significant environmental impacts. Instead, we propose a sustainable business solution using pre-existing LLMs that can work with diverse datasets. We link domain-specific datasets to tailor LLMs to company needs and employ a Multi-Agent architecture to divide tasks such as information retrieval, enrichment, and classification among specialized agents. This approach optimizes the extraction process and improves overall efficiency. Through the utilization of these technologies, businesses can optimize resource utilization, improve decision-making processes, and contribute to sustainable development goals, thereby fostering environmental responsibility within the corporate sector. 
+
+**Abstract (ZH)**: 企业高度依赖来自各种渠道的数据，如新闻报道、财务报告和消费者评论，以驱动其运营活动，从而实现明智的决策并识别机遇。然而，传统的手动数据提取方法通常耗时且资源密集，因此企业需采取数字化转型举措以提高效率。尽管如此，仍有关于这些举措可持续性和其与联合国可持续发展目标（SDGs）一致性方面的担忧。本研究旨在探讨将大型语言模型（LLMs）与检索增强生成（RAG）相结合作为信息提取（IE）和处理的可持续解决方案。研究方法包括审查现有企业决策支持解决方案，指出许多系统需要训练新的机器学习模型，这在资源和环境影响方面都具有显著的负担。相反，我们提出了一个可持续的商业解决方案，使用现有的LLMs并使其能够与多样化的数据集合作。通过将领域特定的数据集与公司需求相结合，优化LLMs，并采用多代理架构来分配信息检索、丰富和分类等任务，以此提高整体效率。通过利用这些技术，企业可以优化资源利用率、改进决策过程，并为可持续发展目标贡献力量，从而在企业界培养环境责任意识。 
+
+---
+# Disentangling Popularity and Quality: An Edge Classification Approach for Fair Recommendation 
+
+**Title (ZH)**: 分离流行度与质量：一种公平推荐的边分类方法 
+
+**Authors**: Nemat Gholinejad, Mostafa Haghir Chehreghani  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.15699)  
+
+**Abstract**: Graph neural networks (GNNs) have proven to be an effective tool for enhancing the performance of recommender systems. However, these systems often suffer from popularity bias, leading to an unfair advantage for frequently interacted items, while overlooking high-quality but less popular items. In this paper, we propose a GNN-based recommendation model that disentangles popularity and quality to address this issue. Our approach introduces an edge classification technique to differentiate between popularity bias and genuine quality disparities among items. Furthermore, it uses cost-sensitive learning to adjust the misclassification penalties, ensuring that underrepresented yet relevant items are not unfairly disregarded. Experimental results demonstrate improvements in fairness metrics by approximately 2-74%, while maintaining competitive accuracy, with only minor variations compared to state-of-the-art methods. 
+
+**Abstract (ZH)**: 图神经网络（GNNs）已被证明是提高推荐系统性能的有效工具。然而，这些系统通常会受到流行度偏差的影响，导致频繁互动的项目获得了不公平的优势，而忽视了高质量但不那么流行的项目。在本文中，我们提出了一种基于GNN的推荐模型，以解决这一问题。我们的方法引入了一种边分类技术，以区分流行度偏差和项目之间真实的质量差异。此外，该方法采用成本敏感学习来调整分类错误的惩罚，确保未被充分代表但相关性较高的项目不会被不公平地忽视。实验结果表明，在提高公平性指标方面（约2%到74%），同时保持竞争力的准确率，与最先进的方法相比，只有微小的差异。 
+
+---
+# Developing an Artificial Intelligence Tool for Personalized Breast Cancer Treatment Plans based on the NCCN Guidelines 
+
+**Title (ZH)**: 基于NCCN指南的个性化乳腺癌治疗方案人工智能工具的开发 
+
+**Authors**: Abdul M. Mohammed, Iqtidar Mansoor, Sarah Blythe, Dennis Trujillo  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.15698)  
+
+**Abstract**: Cancer treatments require personalized approaches based on a patient's clinical condition, medical history, and evidence-based guidelines. The National Comprehensive Cancer Network (NCCN) provides frequently updated, complex guidelines through visuals like flowcharts and diagrams, which can be time consuming for oncologists to stay current with treatment protocols. This study presents an AI (Artificial Intelligence)-driven methodology to accurately automate treatment regimens following NCCN guidelines for breast cancer patients.
+We proposed two AI-driven methods: Agentic-RAG (Retrieval-Augmented Generation) and Graph-RAG. Agentic-RAG used a three-step Large Language Model (LLM) process to select clinical titles from NCCN guidelines, retrieve matching JSON content, and iteratively refine recommendations based on insufficiency checks. Graph-RAG followed a Microsoft-developed framework with proprietary prompts, where JSON data was converted to text via an LLM, summarized, and mapped into graph structures representing key treatment relationships. Final recommendations were generated by querying relevant graph summaries. Both were evaluated using a set of patient descriptions, each with four associated questions.
+As shown in Table 1, Agentic RAG achieved a 100% adherence (24/24) with no hallucinations or incorrect treatments. Graph-RAG had 95.8% adherence (23/24) with one incorrect treatment and no hallucinations. Chat GPT-4 showed 91.6% adherence (22/24) with two wrong treatments and no hallucinations. Both Agentic RAG and Graph-RAG provided detailed treatment recommendations with accurate references to relevant NCCN document page numbers. 
+
+**Abstract (ZH)**: 癌症治疗需要根据患者的临床状况、医疗史和基于证据的指南采用个性化的方法。美国国家综合癌症网络（NCCN）提供了经常更新且复杂的指南，通过流程图和图表等形式呈现，这些对于肿瘤学家来说跟上治疗规范可能需要花费较多时间。本研究提出了一种人工智能（AI）驱动的方法，以准确地根据NCCN指南自动制定乳腺癌患者的治疗方案。
+
+我们提出了两种AI驱动的方法：Agentic-RAG（检索增强生成）和Graph-RAG。Agentic-RAG采用了一种包含三个步骤的大规模语言模型（LLM）过程，从NCCN指南中选择临床标题，检索匹配的JSON内容，并基于不足检查逐步细化推荐。Graph-RAG遵循了由微软开发的框架，并使用专有提示，通过LLM将JSON数据转换为文本，进行总结并映射到表示关键治疗关系的图结构。最终的推荐通过查询相关图摘要生成。这两种方法都使用了一组患者的描述进行评估，每组描述包含四个关联的问题。
+
+如表1所示，Agentic RAG达到了100%的合规性（24/24），没有出现幻觉或错误治疗。Graph-RAG的合规性为95.8%（23/24），有一个错误的治疗并且没有出现幻觉。Chat GPT-4的合规性为91.6%（22/24），有两个错误的治疗但没有出现幻觉。Agentic RAG和Graph-RAG两种方法都提供了详细的治疗建议，并准确引用了相关的NCCN文档页码。 
+
+---
+# Robust Uplift Modeling with Large-Scale Contexts for Real-time Marketing 
+
+**Title (ZH)**: 大规模上下文下的稳健提升建模及其在实时营销中的应用 
+
+**Authors**: Zexu Sun, Qiyu Han, Minqin Zhu, Hao Gong, Dugang Liu, Chen Ma  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.15697)  
+
+**Abstract**: Improving user engagement and platform revenue is crucial for online marketing platforms. Uplift modeling is proposed to solve this problem, which applies different treatments (e.g., discounts, bonus) to satisfy corresponding users. Despite progress in this field, limitations persist. Firstly, most of them focus on scenarios where only user features exist. However, in real-world scenarios, there are rich contexts available in the online platform (e.g., short videos, news), and the uplift model needs to infer an incentive for each user on the specific item, which is called real-time marketing. Thus, only considering the user features will lead to biased prediction of the responses, which may cause the cumulative error for uplift prediction. Moreover, due to the large-scale contexts, directly concatenating the context features with the user features will cause a severe distribution shift in the treatment and control groups. Secondly, capturing the interaction relationship between the user features and context features can better predict the user response. To solve the above limitations, we propose a novel model-agnostic Robust Uplift Modeling with Large-Scale Contexts (UMLC) framework for Real-time Marketing. Our UMLC includes two customized modules. 1) A response-guided context grouping module for extracting context features information and condensing value space through clusters. 2) A feature interaction module for obtaining better uplift prediction. Specifically, this module contains two parts: a user-context interaction component for better modeling the response; a treatment-feature interaction component for discovering the treatment assignment sensitive feature of each instance to better predict the uplift. Moreover, we conduct extensive experiments on a synthetic dataset and a real-world product dataset to verify the effectiveness and compatibility of our UMLC. 
+
+**Abstract (ZH)**: 提高用户参与度和平台收入是在线营销平台的关键问题。提升模型被提出以解决这一问题，该模型通过施加不同的治疗措施（例如折扣和奖励）来满足对应的用户需要。尽管该领域取得了进展，但仍存在一些局限性。首先，大多数研究集中在仅存在用户特征的情景中。然而，在现实场景中，平台中存在丰富的上下文信息（例如短视频、新闻），提升模型需要为每个用户在特定项目上推断出相应的激励措施，这称为实时营销。仅考虑用户特征会导致响应预测产生偏差，进而累积误差。此外，由于上下文的规模较大，直接将上下文特征与用户特征拼接会导致治疗组和对照组之间的分布严重偏移。其次，捕捉用户特征和上下文特征之间的交互关系有助于更好地预测用户响应。为了克服上述局限性，我们提出了一种新的模型无关的鲁棒提升模型框架（Robust Uplift Modeling with Large-Scale Contexts，UMLC），适用于实时营销。我们的UMLC包含两个定制化的模块。1）响应引导的上下文分组模块，用于提取上下文信息并通过聚类压缩价值空间。2）特征交互模块，用于获得更好的提升预测。具体来说，该模块包含两个部分：用户-上下文交互组件，用于更好地建模响应；治疗-特征交互组件，用于发现每个实例对治疗分配敏感的特征，从而更好地预测提升效果。此外，我们在合成数据集和实际产品数据集上进行了广泛实验，以验证UMLC的有效性和兼容性。 
+
+---
+# Social Relation Meets Recommendation: Denoising and Alignment 
+
+**Title (ZH)**: 社会关系与推荐系统的融合：去噪与对齐 
+
+**Authors**: Lin Wang, Weisong Wang, Xuanji Xiao, Qing Li  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.15695)  
+
+**Abstract**: Recommender systems have now become an essential part of modern content platforms. Yet, traditional behavior-based recommendation models often struggle with cold users, who have limited interaction data. Despite this, engaging these users is crucial for the ongoing growth of content platforms. To bridge this gap, we propose utilizing the social-relation graph to enrich the interest profiles derived from behavior-based models. While social graphs are ubiquitous on content platforms, extracting value from this data is challenging due to social-relation noise and interest inconsistency. To address the noise propagation issue in graph data and obtain accurate social interest, we employ a dual-view denoising strategy. It first applies low-rank SVD to the user-item matrix to extract denoised user embeddings. These embeddings are then used to generate a reconstructed social graph. Finally, the strategy implements contrastive learning between the original and reconstructed social graphs. Addressing the interest inconsistency between social and behavioral interests, we adopt a mutual distillation technique to isolate the original interests into four sub-interests, namely aligned social/behavior interests and social/behavior specific interests, which maximally fuse the two interests. Experimental results on industry datasets demonstrate the effectiveness of our method, particularly for cold users, verifying that effectively fusing social relations and behaviors can be highly beneficial for modern recommendation platforms. 
+
+**Abstract (ZH)**: 推荐系统现在已成为现代内容平台的重要组成部分。然而，传统的基于行为的推荐模型常常在处理冷启动用户时遇到困难，这些用户互动数据有限。尽管如此，吸引这些用户对于内容平台的持续增长至关重要。为了解决这一问题，我们建议利用社交关系图来丰富行为模型推导出的兴趣轮廓。尽管社交图在内容平台上普遍存在，但从中提取有价值的信息具有挑战性，因为社交关系噪声和兴趣不一致的存在。为了应对图数据中的噪声传播问题并获得准确的社会兴趣，我们采用了一种双视角去噪策略。该策略首先通过低秩SVD对用户-项矩阵进行去噪处理，从而提取出去噪后的用户嵌入向量。这些嵌入向量随后用于生成重构的社会图。最后，该策略在原始社会图和重构的社会图之间实施了对比学习。
+
+为了解决社会兴趣和行为兴趣之间的不一致性问题，我们采用了相互泛化技术，将原始兴趣隔离为四个子兴趣类别，即对齐的社会/行为兴趣和社会/行为特异性兴趣，从而最大限度地融合两种兴趣。实验结果表明，我们的方法在工业数据集上是有效的，尤其对于冷启动用户而言，验证了有效融合社会关系和行为信息对现代推荐平台具有高度益处。 
+
+---
+# Image Fusion for Cross-Domain Sequential Recommendation 
+
+**Title (ZH)**: 跨域序列推荐中的图像融合方法 
+
+**Authors**: Wangyu Wu, Siqi Song, Xianglin Qiu, Xiaowei Huang, Fei Ma, Jimin Xiao  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.15694)  
+
+**Abstract**: Cross-Domain Sequential Recommendation (CDSR) aims to predict future user interactions based on historical interactions across multiple domains. The key challenge in CDSR is effectively capturing cross-domain user preferences by fully leveraging both intra-sequence and inter-sequence item interactions. In this paper, we propose a novel method, Image Fusion for Cross-Domain Sequential Recommendation (IFCDSR), which incorporates item image information to better capture visual preferences. Our approach integrates a frozen CLIP model to generate image embeddings, enriching original item embeddings with visual data from both intra-sequence and inter-sequence interactions. Additionally, we employ a multiple attention layer to capture cross-domain interests, enabling joint learning of single-domain and cross-domain user preferences. To validate the effectiveness of IFCDSR, we re-partitioned four e-commerce datasets and conducted extensive experiments. Results demonstrate that IFCDSR significantly outperforms existing methods. 
+
+**Abstract (ZH)**: 跨域序列推荐（CDSR）旨在根据多个领域中的历史交互来预测未来的用户交互。CDSR面临的关键挑战是有效捕捉跨域用户偏好，这一过程需要充分利用序列内部和序列之间项目交互信息。在本文中，我们提出了一种新颖的方法——跨域序列推荐中的图像融合（IFCDSR），该方法结合了项目图像信息，以更好地捕捉视觉偏好。我们的方法利用冻结的CLIP模型生成图像嵌入，从而通过序列内部和序列之间交互的视觉数据丰富原始项目嵌入。此外，我们采用了多注意力层来捕捉跨域兴趣，使得单域和跨域用户偏好的联合学习成为可能。为了验证IFCDSR的有效性，我们重新分区了四个电子商务数据集，并进行了广泛的实验。实验结果表明，IFCDSR在性能上显著优于现有方法。 
+
+---
+# Hgformer: Hyperbolic Graph Transformer for Recommendation 
+
+**Title (ZH)**: Hgformer：双曲图变换器推荐模型 
+
+**Authors**: Xin Yang, Xingrun Li, Heng Chang, Jinze Yang, Xihong Yang, Shengyu Tao, Ningkang Chang, Maiko Shigeno, Junfeng Wang, Dawei Yin, Erxue Min  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.15693)  
+
+**Abstract**: The cold start problem is a challenging problem faced by most modern recommender systems. By leveraging knowledge from other domains, cross-domain recommendation can be an effective method to alleviate the cold start problem. However, the modelling distortion for long-tail data, which is widely present in recommender systems, is often overlooked in cross-domain recommendation. In this research, we propose a hyperbolic manifold based cross-domain collaborative filtering model using BiTGCF as the base model. We introduce the hyperbolic manifold and construct new propagation layer and transfer layer to address these challenges. The significant performance improvements across various datasets compared to the baseline models demonstrate the effectiveness of our proposed model. 
+
+**Abstract (ZH)**: 冷启动问题是大多数现代推荐系统面临的挑战之一。通过借鉴其他领域的知识，跨域推荐可以有效缓解冷启动问题。然而，在推荐系统中普遍存在长尾数据的建模失真问题往往在跨域推荐中被忽视。在本研究中，我们提出了一种基于双曲流形的跨域协作过滤模型，以BiTGCF作为基础模型。我们引入了双曲流形，并构建了新的传播层和转移层，以应对这些挑战。与基线模型相比，在多个数据集上显示出显著的性能提升，证明了我们所提出模型的有效性。 
+
+---
+# The Synergy of Automated Pipelines with Prompt Engineering and Generative AI in Web Crawling 
+
+**Title (ZH)**: 自动化流水线与提示工程及生成式AI在网页爬取中的协同作用 
+
+**Authors**: Chau-Jian Huang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.15691)  
+
+**Abstract**: Web crawling is a critical technique for extracting online data, yet it poses challenges due to webpage diversity and anti-scraping mechanisms. This study investigates the integration of generative AI tools Claude AI (Sonnet 3.5) and ChatGPT4.0 with prompt engineering to automate web scraping. Using two prompts, PROMPT I (general inference, tested on Yahoo News) and PROMPT II (element-specific, tested on this http URL), we evaluate the code quality and performance of AI-generated scripts. Claude AI consistently outperformed ChatGPT-4.0 in script quality and adaptability, as confirmed by predefined evaluation metrics, including functionality, readability, modularity, and robustness. Performance data were collected through manual testing and structured scoring by three evaluators. Visualizations further illustrate Claude AI's superiority. Anti-scraping solutions, including undetected_chromedriver, Selenium, and fake_useragent, were incorporated to enhance performance. This paper demonstrates how generative AI combined with prompt engineering can simplify and improve web scraping workflows. 
+
+**Abstract (ZH)**: 网络爬虫是一种关键的技术，用于提取在线数据，但由于网页多样性及反爬虫机制的存在，这给网络爬虫带来了挑战。本研究探索了将生成式AI工具Claude AI（Sonnet 3.5）和ChatGPT4.0与提示工程相结合，以自动化网络爬虫。通过使用两种提示，提示I（一般推理，测试于Yahoo News）和提示II（元素特定，测试于特定网址），我们评估了AI生成脚本的质量和性能。Claude AI在脚本质量和适应性方面始终优于ChatGPT-4.0，这得到了预设评估指标的证实，包括功能、可读性、模块化和鲁棒性。性能数据是通过人工测试和三名评估者结构化评分收集的。可视化进一步展示了Claude AI的优势。我们还结合了undetected_chromedriver、Selenium和fake_useragent等反爬虫解决方案，以提高性能。本文展示了将生成式AI与提示工程相结合如何简化并改进网络爬虫工作流。 
+
+---
+# Level-Navi Agent: A Framework and benchmark for Chinese Web Search Agents 
+
+**Title (ZH)**: Level-Navi 代理：中文网络搜索代理的框架与基准 
+
+**Authors**: Chuanrui Hu, Shichong Xie, Baoxin Wang, Bin Chen, Xiaofeng Cong, Jun Zhang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.15690)  
+
+**Abstract**: Large language models (LLMs), adopted to understand human language, drive the development of artificial intelligence (AI) web search agents. Compared to traditional search engines, LLM-powered AI search agents are capable of understanding and responding to complex queries with greater depth, enabling more accurate operations and better context recognition. However, little attention and effort has been paid to the Chinese web search, which results in that the capabilities of open-source models have not been uniformly and fairly evaluated. The difficulty lies in lacking three aspects: an unified agent framework, an accurately labeled dataset, and a suitable evaluation metric. To address these issues, we propose a general-purpose and training-free web search agent by level-aware navigation, Level-Navi Agent, accompanied by a well-annotated dataset (Web24) and a suitable evaluation metric. Level-Navi Agent can think through complex user questions and conduct searches across various levels on the internet to gather information for questions. Meanwhile, we provide a comprehensive evaluation of state-of-the-art LLMs under fair settings. To further facilitate future research, source code is available at Github. 
+
+**Abstract (ZH)**: 大型语言模型（LLMs）被用于理解和处理人类语言，推动了人工智能（AI）网络搜索代理的发展。与传统的搜索引擎相比，由LLM驱动的AI搜索代理能够更深入地理解复杂查询并作出响应，从而实现更精确的操作和更好的上下文识别。然而，中国网络搜索领域缺乏足够的关注与努力，导致开源模型的能力未能得到公平和统一的评估。这一问题源于三个方面的缺失：统一的代理框架、准确标记的数据集和合适的评价指标。为了解决这些问题，我们提出了一种基于层级感知导航的一般用途且无需训练的网络搜索代理，即Level-Navi Agent，并提供了一个标注良好的数据集（Web24）和合适的评价指标。Level-Navi Agent能够思考复杂的用户问题，并在网络的不同层级上进行搜索以收集问题所需的信息。同时，我们在此公平条件下对最先进的LLM进行了全面评估。为了进一步促进未来的研究，我们已将源代码发布在GitHub上。 
+
+---
+# XPath Agent: An Efficient XPath Programming Agent Based on LLM for Web Crawler 
+
+**Title (ZH)**: XPath代理：基于LLM的高效XPath编程代理用于Web抓取 
+
+**Authors**: Yu Li, Bryce Wang, Xinyu Luan  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.15688)  
+
+**Abstract**: We present XPath Agent, a production-ready XPath programming agent specifically designed for web crawling and web GUI testing. A key feature of XPath Agent is its ability to automatically generate XPath queries from a set of sampled web pages using a single natural language query. To demonstrate its effectiveness, we benchmark XPath Agent against a state-of-the-art XPath programming agent across a range of web crawling tasks. Our results show that XPath Agent achieves comparable performance metrics while significantly reducing token usage and improving clock-time efficiency. The well-designed two-stage pipeline allows for seamless integration into existing web crawling or web GUI testing workflows, thereby saving time and effort in manual XPath query development. The source code for XPath Agent is available at this https URL. 
+
+**Abstract (ZH)**: 我们介绍了XPath Agent，这是一种专门为网络爬取和Web GUI测试设计的生产级XPath编程代理。XPath Agent的一个关键特性是能够从一组采样的网页中自动生成XPath查询，仅需一个自然语言查询即可。为了展示其有效性，我们在一系列网络爬取任务中将XPath Agent与最先进的XPath编程代理进行了基准测试。结果显示，XPath Agent在达到可比的性能指标的同时，显著减少了Token的使用量并提高了时间效率。精心设计的两阶段流水线使其可以无缝地集成到现有的网络爬取或Web GUI测试工作流中，从而节省了手动开发XPath查询所需的时间和精力。XPath Agent的源代码可在以下网址获取：[此 https URL](https://example.com/xpath-agent-source-code)。 
+
+---
+# Entire-Space Variational Information Exploitation for Post-Click Conversion Rate Prediction 
+
+**Title (ZH)**: 整个空间变分信息利用方法在点击后转换率预测中的应用 
+
+**Authors**: Ke Fei, Xinyue Zhang, Jingjing Li  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.15687)  
+
+**Abstract**: In recommender systems, post-click conversion rate (CVR) estimation is an essential task to model user preferences for items and estimate the value of recommendations. Sample selection bias (SSB) and data sparsity (DS) are two persistent challenges for post-click conversion rate (CVR) estimation. Currently, entire-space approaches that exploit unclicked samples through knowledge distillation are promising to mitigate SSB and DS simultaneously. Existing methods use non-conversion, conversion, or adaptive conversion predictors to generate pseudo labels for unclicked samples. However, they fail to consider the unbiasedness and information limitations of these pseudo labels. Motivated by such analysis, we propose an entire-space variational information exploitation framework (EVI) for CVR prediction. First, EVI uses a conditional entire-space CVR teacher to generate unbiased pseudo labels. Then, it applies variational information exploitation and logit distillation to transfer non-click space information to the target CVR estimator. We conduct extensive offline experiments on six large-scale datasets. EVI demonstrated a 2.25\% average improvement compared to the state-of-the-art baselines. 
+
+**Abstract (ZH)**: 在推荐系统中，点击后转化率（Post-Click Conversion Rate, PCVR）估计是一个关键任务，用于建模用户对项目的偏好并评估推荐的价值。点击后转化率估计面临的两个持久性挑战是样本选择偏差（Sample Selection Bias, SSB）和数据稀疏性（Data Sparsity, DS）。目前，通过知识蒸馏利用未点击样本的全部空间方法（Entire-Space Approaches）显示出同时缓解SSB和DS的潜力。现有方法使用未转化样本、转化样本或自适应转化样本预测器来生成未点击样本的伪标签。然而，这些方法未能考虑这些伪标签的无偏性和信息限制。受此分析的启发，我们提出了一种全部空间变分信息利用框架（Entire-Space Variational Information Utilization Framework, EVI）用于PCVR预测。首先，EVI使用条件全部空间PCVR教师生成无偏伪标签。然后，它通过变分信息利用和逻辑回归蒸馏将非点击空间信息转移到目标PCVR估计器。我们在六个大规模数据集上进行了广泛的离线实验。EVI相对于当前最先进的基线方法显示出2.25%的平均改进。 
+
+---
+# Active Large Language Model-based Knowledge Distillation for Session-based Recommendation 
+
+**Title (ZH)**: 基于活跃大型语言模型的知识蒸馏用于会话推荐 
+
+**Authors**: Yingpeng Du, Zhu Sun, Ziyan Wang, Haoyan Chua, Jie Zhang, Yew-Soon Ong  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.15685)  
+
+**Abstract**: Large language models (LLMs) provide a promising way for accurate session-based recommendation (SBR), but they demand substantial computational time and memory. Knowledge distillation (KD)-based methods can alleviate these issues by transferring the knowledge to a small student, which trains a student based on the predictions of a cumbersome teacher. However, these methods encounter difficulties for \textit{LLM-based KD in SBR}. 1) It is expensive to make LLMs predict for all instances in KD. 2) LLMs may make ineffective predictions for some instances in KD, e.g., incorrect predictions for hard instances or similar predictions as existing recommenders for easy instances. In this paper, we propose an active LLM-based KD method in SBR, contributing to sustainable AI. To efficiently distill knowledge from LLMs with limited cost, we propose to extract a small proportion of instances predicted by LLMs. Meanwhile, for a more effective distillation, we propose an active learning strategy to extract instances that are as effective as possible for KD from a theoretical view. Specifically, we first formulate gains based on potential effects (e.g., effective, similar, and incorrect predictions by LLMs) and difficulties (e.g., easy or hard to fit) of instances for KD. Then, we propose to maximize the minimal gains of distillation to find the optimal selection policy for active learning, which can largely avoid extracting ineffective instances in KD. Experiments on real-world datasets show that our method significantly outperforms state-of-the-art methods for SBR. 
+
+**Abstract (ZH)**: 大规模语言模型（LLMs）为基于会话的推荐（SBR）提供了准确的方法，但它们需要大量的计算时间和内存。基于知识蒸馏（KD）的方法可以通过将知识转移到一个较小的学生模型中来缓解这些问题，这种方法是基于教师模型的预测来训练较小的学生模型。然而，这些方法在LBMK（基于LLM的KD）方面遇到了困难。1）在KD中制作LLM为所有实例进行预测是成本高昂的。2）在KD中，LLM可能会对某些实例做出无效的预测，例如对困难实例做出错误预测，或者对简单实例做出与现有推荐器相似的预测。在本文中，我们提出了一种新的基于LLM的主动KD方法，有助于可持续的人工智能。为了以较低的成本有效提取LLM的预测实例，我们提出仅提取一部分由LLM预测的实例。同时，为了更有效地进行知识蒸馏，我们提出了一种主动学习策略，从理论角度来看，可以提取出对KD最有用的实例。具体而言，我们首先基于实例潜在效果（例如，有效、相似和错误预测）和难度（例如，容易或难以适应）来制定收益指标。然后，我们提出最大化蒸馏过程中的最小收益，以找到合适的主动学习选择策略，这可以大大避免在KD中提取无效实例。实验结果表明，我们的方法在基于会话的推荐方面显著优于现有最先进的方法。 
+
+---
+# An Agent Framework for Real-Time Financial Information Searching with Large Language Models 
+
+**Title (ZH)**: 基于大型语言模型的实时金融信息检索代理框架 
+
+**Authors**: Jinzheng Li, Jingshu Zhang, Hongguang Li, Yiqing Shen  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.15684)  
+
+**Abstract**: Financial decision-making requires processing vast amounts of real-time information while understanding their complex temporal relationships. While traditional search engines excel at providing real-time information access, they often struggle to comprehend sophisticated user intentions and contextual nuances. Conversely, Large Language Models (LLMs) demonstrate reasoning and interaction capabilities but may generate unreliable outputs without access to current data. While recent attempts have been made to combine LLMs with search capabilities, they suffer from (1) restricted access to specialized financial data, (2) static query structures that cannot adapt to dynamic market conditions, and (3) insufficient temporal awareness in result generation. To address these challenges, we present FinSearch, a novel agent-based search framework specifically designed for financial applications that interface with diverse financial data sources including market, stock, and news data. Innovatively, FinSearch comprises four components: (1) an LLM-based multi-step search pre-planner that decomposes user queries into structured sub-queries mapped to specific data sources through a graph representation; (2) a search executor with an LLM-based adaptive query rewriter that executes the searching of each sub-query while dynamically refining the sub-queries in its subsequent node based on intermediate search results; (3) a temporal weighting mechanism that prioritizes information relevance based on the deduced time context from the user's query; (4) an LLM-based response generator that synthesizes results into coherent, contextually appropriate outputs. To evaluate FinSearch, we construct FinSearchBench-24, a benchmark of 1,500 four-choice questions across the stock market, rate changes, monetary policy, and industry developments spanning from June to October 2024. 
+
+**Abstract (ZH)**: 金融决策需要处理大量的实时信息并理解其复杂的时序关系。虽然传统的搜索引擎在提供实时信息访问方面表现出色，但在理解复杂用户意图和上下文细微差别方面常常力不从心。相反，大型语言模型（LLMs）展示了推理和交互的能力，但在缺乏当前数据接入的情况下可能会生成不可靠的输出。尽管最近已经尝试将LLMs与搜索引擎结合，但这些方法还面临以下问题：（1）受限于专门金融数据的接入；（2）静态查询结构无法适应动态市场条件；（3）结果生成中缺乏足够的时序意识。为了解决这些挑战，我们提出了FinSearch，这是一种专为金融应用设计的新型基于代理的搜索框架，可与多种金融数据源接口，包括市场数据、股票数据和新闻数据。创新性地，FinSearch 包含四个组成部分：（1）基于LLM的多步搜索预规划器，将用户查询分解为结构化的子查询，并通过图表示映射到特定数据源；（2）一个包含基于LLM的适应性查询重写器的搜索执行器，在执行每个子查询搜索的同时，根据中间搜索结果动态调整后续节点中的子查询；（3）一个时序权重机制，根据用户查询推断出的时间上下文优先处理信息的相关性；（4）一个基于LLM的响应生成器，将结果综合成逻辑连贯且上下文适切的输出。为了评估FinSearch，我们构建了FinSearchBench-24基准测试，包含1,500个关于股票市场、利率变化、货币政策和行业发展的四选一问题，覆盖从2024年6月到10月的时间范围。 
+
+---
+# Evaluating the Effectiveness of Large Language Models in Automated News Article Summarization 
+
+**Title (ZH)**: 评估大型语言模型在自动新闻文章摘要生成中的有效性 
+
+**Authors**: Lionel Richy Panlap Houamegni, Fatih Gedikli  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.17136)  
+
+**Abstract**: The automation of news analysis and summarization presents a promising solution to the challenge of processing and analyzing vast amounts of information prevalent in today's information society. Large Language Models (LLMs) have demonstrated the capability to transform vast amounts of textual data into concise and easily comprehensible summaries, offering an effective solution to the problem of information overload and providing users with a quick overview of relevant information. A particularly significant application of this technology lies in supply chain risk analysis. Companies must monitor the news about their suppliers and respond to incidents for several critical reasons, including compliance with laws and regulations, risk management, and maintaining supply chain resilience. This paper develops an automated news summarization system for supply chain risk analysis using LLMs. The proposed solution aggregates news from various sources, summarizes them using LLMs, and presents the condensed information to users in a clear and concise format. This approach enables companies to optimize their information processing and make informed decisions. Our study addresses two main research questions: (1) Are LLMs effective in automating news summarization, particularly in the context of supply chain risk analysis? (2) How effective are various LLMs in terms of readability, duplicate detection, and risk identification in their summarization quality? In this paper, we conducted an offline study using a range of publicly available LLMs at the time and complemented it with a user study focused on the top performing systems of the offline experiments to evaluate their effectiveness further. Our results demonstrate that LLMs, particularly Few-Shot GPT-4o mini, offer significant improvements in summary quality and risk identification. 
+
+**Abstract (ZH)**: 新闻分析与总结的自动化为处理今天信息社会中大量信息带来了前景广阔的新解决方案。大型语言模型（LLMs）已经展示了将大量文本数据转化为简洁且易于理解的摘要的能力，从而为信息过载的问题提供有效解决方案，并为用户提供相关信息的快速概览。这项技术的一个特别重要应用在于供应链风险分析。公司必须监控其供应商的相关新闻并及时响应事件，原因包括遵守法律法规、风险管理以及维持供应链韧性。本文提出了一种使用LLMs的自动化新闻摘要系统，用于供应链风险分析。该解决方案汇总来自各种来源的新闻，使用LLMs进行总结，并以清晰简洁的格式向用户呈现凝练的信息。这种方法使公司能够优化信息处理并做出明智的决策。本研究探讨了两个主要的研究问题：(1) LLMs在供应链风险分析的背景下是否有效用于自动化新闻摘要？(2) 各种LLMs在可读性、重复检测和风险识别方面的摘要质量效果如何？在本文中，我们使用当时可用的多种公开LLM进行了离线研究，并通过针对离线实验中表现最佳系统的用户研究进一步评估了它们的效果。我们的研究结果表明，特别是Few-Shot GPT-4o mini，LLMs在摘要质量和风险识别方面提供了显著的改进。 
+
+---
+# Retrieval-Augmented Visual Question Answering via Built-in Autoregressive Search Engines 
+
+**Title (ZH)**: 内置自回归搜索引擎辅助的检索增强视觉问答 
+
+**Authors**: Xinwei Long, Zhiyuan Ma, Ermo Hua, Kaiyan Zhang, Biqing Qi, Bowen Zhou  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.16641)  
+
+**Abstract**: Retrieval-augmented generation (RAG) has emerged to address the knowledge-intensive visual question answering (VQA) task. Current methods mainly employ separate retrieval and generation modules to acquire external knowledge and generate answers, respectively. We propose ReAuSE, an alternative to the previous RAG model for the knowledge-based VQA task, which seamlessly integrates knowledge retriever into the generative multi-modal large language model, serving as a built-in search engine. Specifically, our model functions both as a generative retriever and an accurate answer generator. It not only helps retrieve documents from the knowledge base by producing identifiers for each document, but it also answers visual questions based on the retrieved documents. Furthermore, we propose a reinforced retrieval calibration module from relevance feedback to improve retrieval performance and align with the preferences for accurate answer generation. Extensive experiments on two representative OKVQA and A-OKVQA datasets demonstrate significant improvements ranging from 2.9\% to 9.6\% across all evaluation metrics when compared to strong baselines. 
+
+**Abstract (ZH)**: 检索增强生成（RAG）方法已 emergence 用于解决知识密集型视觉问答（VQA）任务。当前的方法主要通过独立的检索和生成模块来获取外部知识并生成答案。我们提出了一种名为 ReAuSE 的替代性 RAG 模型，专门用于基于知识的 VQA 任务，能够在生成多模态大型语言模型中无缝集成知识检索器，充当内置搜索引擎。具体来说，我们的模型既可以作为生成检索器，又可以作为准确的答案生成器。它不仅通过为每个文档生成标识符来帮助从知识库检索文档，还可以基于检索到的文档来回答视觉问题。此外，我们还提出了一种强化检索校准模块，利用相关反馈来提高检索性能，并与准确答案生成的需求保持一致。在两个典型的 OKVQA 和 A-OKVQA 数据集上的广泛实验表明，与强基线相比，所有评估指标均取得了从 2.9% 到 9.6% 的显著改进。 
+
+---
+# Wrong Answers Can Also Be Useful: PlausibleQA -- A Large-Scale QA Dataset with Answer Plausibility Scores 
+
+**Title (ZH)**: 错误的答案也可能具有用途：PlausibleQA——一个具有答案可信度评分的大规模问答数据集 
+
+**Authors**: Jamshid Mozafari, Abdelrahman Abdallah, Bhawna Piryani, Adam Jatowt  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.16358)  
+
+**Abstract**: Large Language Models (LLMs) are revolutionizing information retrieval, with chatbots becoming an important source for answering user queries. As by their design, LLMs prioritize generating correct answers, the value of highly plausible yet incorrect answers (candidate answers) tends to be overlooked. However, such answers can still prove useful, for example, they can play a crucial role in tasks like Multiple-Choice Question Answering (MCQA) and QA Robustness Assessment (QARA). Existing QA datasets primarily focus on correct answers without explicit consideration of the plausibility of other candidate answers, limiting opportunity for more nuanced evaluations of models. To address this gap, we introduce PlausibleQA, a large-scale dataset comprising 10,000 questions and 100,000 candidate answers, each annotated with plausibility scores and justifications for their selection. Additionally, the dataset includes 900,000 justifications for pairwise comparisons between candidate answers, further refining plausibility assessments. We evaluate PlausibleQA through human assessments and empirical experiments, demonstrating its utility in MCQA and QARA analysis. Our findings show that plausibility-aware approaches are effective for MCQA distractor generation and QARA. We release PlausibleQA as a resource for advancing QA research and enhancing LLM performance in distinguishing plausible distractors from correct answers. 
+
+**Abstract (ZH)**: 大规模语言模型（LLMs）正在革新信息检索，聊天机器人已成为解答用户查询的重要来源。由于设计原因，LLMs 侧重于生成正确答案，这导致了高度可信但不正确的候选答案（候选答案）的价值往往被忽视。然而，这些答案依然具有实用性，例如它们在多项选择题答案（MCQA）和问答稳健性评估（QARA）等任务中扮演着关键角色。现有的问答数据集主要关注正确的答案，而没有明确考虑其他候选答案的可信度，这限制了对模型进行更细致评估的机会。为弥补这一不足，我们引入了 PlausibleQA，这是一个包含10,000个问题和100,000个候选答案的大规模数据集，每个候选答案都标注了可信度评分和选择依据。此外，数据集还包括了900,000个用于两两候选答案之间比较的依据，进一步细化了可信度评估。我们通过人工评估和实证实验评估了 PlausibleQA，证明了其在MCQA 和 QARA 分析中的应用价值。我们的研究结果表明，可信度感知的方法对于生成MCQA的干扰选项和QARA是有效的。我们发布 PlausibleQA 作为促进问答研究和提升LLM在区分可信干扰选项和正确答案方面性能的资源。 
+
+---
+# Conflicts of Interest in Published NLP Research 2000-2024 
+
+**Title (ZH)**: 2000-2024年发表的NLP研究中的利益冲突 
+
+**Authors**: Maarten Bosten, Bennett Kleinberg  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.16218)  
+
+**Abstract**: Natural Language Processing research is increasingly reliant on large scale data and computational power. Many achievements in the past decade resulted from collaborations with the tech industry. But an increasing entanglement of academic research and industry interests leads to conflicts of interest. We assessed published NLP research from 2000-2024 and labeled author affiliations as academic or industry-affiliated to measure conflicts of interest. Overall 27.65% of the papers contained at least one industry-affiliated author. That figure increased substantially with more than 1 in 3 papers having a conflict of interest in 2024. We identify top-tier venues (ACL, EMNLP) as main drivers for that effect. The paper closes with a discussion and a simple, concrete suggestion for the future. 
+
+**Abstract (ZH)**: 自然语言处理研究越来越依赖大规模数据和计算能力。过去十年中取得的许多成就是与科技行业合作的结果。然而，学术研究与行业利益的日益交织导致了利益冲突。我们评估了2000年至2024年间发表的自然语言处理研究，并将作者的隶属关系标记为学术或行业隶属，以衡量这些利益冲突。总体而言，27.65%的论文至少包含一名行业隶属的作者。到2024年，有超过三分之一的论文存在利益冲突。我们发现顶尖会议（如ACL、EMNLP）是推动这一现象的主要因素。文章最后讨论了这一问题，并提出了一项简单而具体的未来建议。 
+
+---
+# Worse than Zero-shot? A Fact-Checking Dataset for Evaluating the Robustness of RAG Against Misleading Retrievals 
+
+**Title (ZH)**: 比零样本更糟糕？一种用于评估RAG抵御误导性检索 robustness 的事实核查数据集 
+
+**Authors**: Linda Zeng, Rithwik Gupta, Divij Motwani, Diji Yang, Yi Zhang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.16101)  
+
+**Abstract**: Retrieval-augmented generation (RAG) has shown impressive capabilities in mitigating hallucinations in large language models (LLMs). However, LLMs struggle to handle misleading retrievals and often fail to maintain their own reasoning when exposed to conflicting or selectively-framed evidence, making them vulnerable to real-world misinformation. In such real-world retrieval scenarios, misleading and conflicting information is rampant, particularly in the political domain, where evidence is often selectively framed, incomplete, or polarized. However, existing RAG benchmarks largely assume a clean retrieval setting, where models succeed by accurately retrieving and generating answers from gold-standard documents. This assumption fails to align with real-world conditions, leading to an overestimation of RAG system performance. To bridge this gap, we introduce RAGuard, a fact-checking dataset designed to evaluate the robustness of RAG systems against misleading retrievals. Unlike prior benchmarks that rely on synthetic noise, our dataset constructs its retrieval corpus from Reddit discussions, capturing naturally occurring misinformation. It categorizes retrieved evidence into three types: supporting, misleading, and irrelevant, providing a realistic and challenging testbed for assessing how well RAG systems navigate different retrieval information. Our benchmark experiments reveal that when exposed to misleading retrievals, all tested LLM-powered RAG systems perform worse than their zero-shot baselines (i.e., no retrieval at all), highlighting their susceptibility to noisy environments. To the best of our knowledge, RAGuard is the first benchmark to systematically assess RAG robustness against misleading evidence. We expect this benchmark will drive future research toward improving RAG systems beyond idealized datasets, making them more reliable for real-world applications. 
+
+**Abstract (ZH)**: 检索增强生成（RAG）在减轻大型语言模型（LLMs）幻觉方面表现出令人印象深刻的 capability。然而，当接触到误导性或部分呈现的证据时，LLMs 往往难以处理误导性的检索结果，常常在摇摆或有偏向的信息面前无法保持自己的推理能力，从而容易受到现实世界中的误导信息的影响。在这样的现实检索场景中，误导性和矛盾的信息非常普遍，尤其是在政治领域，证据往往是部分的、有偏向的或极化的。然而，现有的 RAG 基准测试大多假设一个干净的检索设置，在这种设置下，模型可以通过准确检索和生成答案来从金标准文档中取得成功。这种假设未能与现实世界的条件相吻合，导致对 RAG 系统性能的高估。为了弥合这一差距，我们介绍了一种名为 RAGuard 的事实核查数据集，用于评估 RAG 系统在面对误导性检索结果时的稳健性。与依赖合成噪声的前基准测试不同，我们的数据集从 Reddit 讨论中构建了其检索语料库，从而捕捉到真实发生的误导信息。该数据集将检索到的证据分为三类：支持性、误导性和不相关性，提供了一个现实和具有挑战性的测试平台，用于评估 RAG 系统如何处理不同的检索信息。我们的基准测试实验显示，当面对误导性检索结果时，所有测试的 LLM 动力 RAG 系统的表现都劣于零样本基准（即完全没有检索），突显了它们在嘈杂环境下的脆弱性。据我们所知，RAGuard 是第一个系统性评估 RAG 系统对误导性证据稳健性的基准测试。我们期望这一基准测试能够推动未来的研究，以改进 RAG 系统并超越理想化的数据集，使它们在实际应用中更可靠。 
+
+---
+# Retrieval Augmented Generation Based LLM Evaluation For Protocol State Machine Inference With Chain-of-Thought Reasoning 
+
+**Title (ZH)**: 基于检索增强生成的大型语言模型评估：带有链式思考推理的协议状态机推理 
+
+**Authors**: Youssef Maklad, Fares Wael, Wael Elsersy, Ali Hamdi  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.15727)  
+
+**Abstract**: This paper presents a novel approach to evaluate the efficiency of a RAG-based agentic Large Language Model (LLM) architecture in network packet seed generation for network protocol fuzzing. Enhanced by chain-of-thought (COT) prompting techniques, the proposed approach focuses on the improvement of the seeds structural quality in order to guide protocol fuzzing frameworks through a wide exploration of the protocol state space. Our method leverages RAG and text embeddings in a two-stages. In the first stage, the agent dynamically refers to the Request For Comments (RFC) documents knowledge base for answering queries regarding the protocol Finite State Machine (FSM), then it iteratively reasons through the retrieved knowledge, for output refinement and proper seed placement. In the second stage, we evaluate the response structure quality of the agent's output, based on metrics as BLEU, ROUGE, and Word Error Rate (WER) by comparing the generated packets against the ground truth packets. Our experiments demonstrate significant improvements of up to 18.19%, 14.81%, and 23.45% in BLEU, ROUGE, and WER, respectively, over baseline models. These results confirm the potential of such approach, improving LLM-based protocol fuzzing frameworks for the identification of hidden vulnerabilities. 
+
+**Abstract (ZH)**: 本文提出了一种评估基于 Retrieval-Augmented Generation (RAG) 的代理型大型语言模型（LLM）架构在网络协议 fuzzing 中网络数据包种子生成效率的新方法。通过链式思考（Chain-of-Thought, COT）提示技术的增强，该方法专注于提高种子的结构质量，以指导 protocol fuzzing 框架在同一协议状态空间中进行广泛的探索。我们的方法在两个阶段中利用了 RAG 和文本嵌入。在第一阶段，代理动态地参考 RFC 文档知识库以回答有关协议有限状态机（FSM）的问题，然后通过检索到的知识进行迭代推理，以优化输出并正确放置种子。在第二阶段，我们根据 BLEU、ROUGE 和单词错误率（Word Error Rate, WER）等指标评估代理输出的响应结构质量，通过将生成的数据包与真实数据包进行比较。实验结果显示，与基线模型相比，我们的方法在 BLEU、ROUGE 和 WER 上分别取得了高达 18.19%、14.81% 和 23.45% 的改进。这些结果证实了该方法的潜力，可以改进基于 LLM 的协议 fuzzing 框架，以识别隐藏的漏洞。 
+
+---
+# Integrating Domain Knowledge into Large Language Models for Enhanced Fashion Recommendations 
+
+**Title (ZH)**: 将领域知识集成到大型语言模型中以增强时尚推荐 
+
+**Authors**: Zhan Shi, Shanglin Yang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.15696)  
+
+**Abstract**: Fashion, deeply rooted in sociocultural dynamics, evolves as individuals emulate styles popularized by influencers and iconic figures. In the quest to replicate such refined tastes using artificial intelligence, traditional fashion ensemble methods have primarily used supervised learning to imitate the decisions of style icons, which falter when faced with distribution shifts, leading to style replication discrepancies triggered by slight variations in input. Meanwhile, large language models (LLMs) have become prominent across various sectors, recognized for their user-friendly interfaces, strong conversational skills, and advanced reasoning capabilities. To address these challenges, we introduce the Fashion Large Language Model (FLLM), which employs auto-prompt generation training strategies to enhance its capacity for delivering personalized fashion advice while retaining essential domain knowledge. Additionally, by integrating a retrieval augmentation technique during inference, the model can better adjust to individual preferences. Our results show that this approach surpasses existing models in accuracy, interpretability, and few-shot learning capabilities. 
+
+**Abstract (ZH)**: 时尚植根于社会文化动态之中，随着个体效仿影响者和标志性人物的流行风格而不断演变。为了利用人工智能复制这些精致的品味，传统的时尚集成方法主要使用监督学习来模仿风格偶像的决策，但在面对分布偏移时往往会失败，导致在输入有轻微变化时出现风格复制的偏差。与此同时，在各种领域中，大型语言模型（LLMs）已成为显赫的存在，它们以其用户友好的界面、强大的对话能力以及高级的推理能力而著称。为了解决这些挑战，我们提出了时尚大型语言模型（FLLM），该模型采用自动生成提示的训练策略，以增强其提供个性化时尚建议的能力，同时保留关键的专业知识。此外，在推理过程中，通过整合检索增强技术，模型能够更好地适应个人偏好。我们的研究表明，这种方法在准确度、可解释性和少样本学习能力方面均优于现有模型。 
+
+---
+# ACL-rlg: A Dataset for Reading List Generation 
+
+**Title (ZH)**: ACL-rlg：一个阅读列表生成数据集 
+
+**Authors**: Julien Aubert-Béduchaud, Florian Boudin, Béatrice Daille, Richard Dufour  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.15692)  
+
+**Abstract**: Familiarizing oneself with a new scientific field and its existing literature can be daunting due to the large amount of available articles. Curated lists of academic references, or reading lists, compiled by experts, offer a structured way to gain a comprehensive overview of a domain or a specific scientific challenge. In this work, we introduce ACL-rlg, the largest open expert-annotated reading list dataset. We also provide multiple baselines for evaluating reading list generation and formally define it as a retrieval task. Our qualitative study highlights the fact that traditional scholarly search engines and indexing methods perform poorly on this task, and GPT-4o, despite showing better results, exhibits signs of potential data contamination. 
+
+**Abstract (ZH)**: 熟悉新的科学领域及其现有文献可能会因为可获取的文章数量庞大而令人感到 daunting。由专家编写的精选学术参考文献列表或阅读列表，可以提供一种系统的方法来全面了解一个领域或特定的科学挑战。在本工作中，我们介绍了ACL-rlg，这是目前最大的开放专家注释阅读列表数据集。我们还提供了多种基准，用于评估阅读列表生成的效果，并正式将此任务定义为检索任务。我们的定性研究表明，传统的学术搜索引擎和索引方法在这一任务上表现不佳，尽管GPT-4o显示出更好的结果，但其可能存在潜在的数据污染迹象。 
+
+---
+# Results of the 2024 Video Browser Showdown 
+
+**Title (ZH)**: 2024年视频浏览器对决结果 
+
+**Authors**: Luca Rossetto, Klaus Schoeffmann, Cathal Gurrin, Jakub Lokoč, Werner Bailer  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.15683)  
+
+**Abstract**: This report presents the results of the 13th Video Browser Showdown, held at the 2024 International Conference on Multimedia Modeling on the 29th of January 2024 in Amsterdam, the Netherlands. 
+
+**Abstract (ZH)**: 本报告呈现了于2024年1月29日在荷兰阿姆斯特丹举行的第13届视频浏览器竞技赛（Video Browser Showdown）的成果，该竞技赛是在2024年国际多媒体建模会议（International Conference on Multimedia Modeling）上举行的。 
+
+---

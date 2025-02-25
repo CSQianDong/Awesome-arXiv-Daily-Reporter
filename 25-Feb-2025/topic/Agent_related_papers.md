@@ -1,0 +1,629 @@
+# Turning Conversations into Workflows: A Framework to Extract and Evaluate Dialog Workflows for Service AI Agents 
+
+**Title (ZH)**: 将对话转化为工作流：一种提取和服务评估对话工作流的框架 
+
+**Authors**: Prafulla Kumar Choubey, Xiangyu Peng, Shilpa Bhagavath, Caiming Xiong, Shiva Kumar Pentyala, Chien-Sheng Wu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.17321)  
+
+**Abstract**: Automated service agents require well-structured workflows to provide consistent and accurate responses to customer queries. However, these workflows are often undocumented, and their automatic extraction from conversations remains unexplored. In this work, we present a novel framework for extracting and evaluating dialog workflows from historical interactions. Our extraction process consists of two key stages: (1) a retrieval step to select relevant conversations based on key procedural elements, and (2) a structured workflow generation process using a question-answer-based chain-of-thought (QA-CoT) prompting. To comprehensively assess the quality of extracted workflows, we introduce an automated agent and customer bots simulation framework that measures their effectiveness in resolving customer issues. Extensive experiments on the ABCD and SynthABCD datasets demonstrate that our QA-CoT technique improves workflow extraction by 12.16\% in average macro accuracy over the baseline. Moreover, our evaluation method closely aligns with human assessments, providing a reliable and scalable framework for future research. 
+
+**Abstract (ZH)**: 自动化服务代理需要结构化的流程以提供一致且准确的客户查询响应。然而，这些流程往往缺乏文档记录，从历史对话中自动提取这些流程的方法也尚未被探索。本文提出了一种新颖的框架，用于从历史交互中提取和评估对话流程。我们的提取过程包含两个关键阶段：（1）检索步骤，基于关键程序元素选择相关对话；（2）使用问题-答案链式思维（QA-CoT）提示的结构化流程生成过程。为了全面评估提取的流程质量，我们引入了一种自动代理和客户机器人模拟框架，该框架通过衡量它们解决客户问题的效果来评估流程的有效性。在ABCD和SynthABCD数据集上的广泛实验表明，与基线相比，我们的QA-CoT技术在平均宏准确率方面提高了12.16%。此外，我们的评估方法与人工评估高度一致，为未来研究提供了一个可靠且可扩展的框架。 
+
+---
+# Mobile-Agent-V: Learning Mobile Device Operation Through Video-Guided Multi-Agent Collaboration 
+
+**Title (ZH)**: 移动代理-V：通过视频引导的多代理协作学习移动设备操作 
+
+**Authors**: Junyang Wang, Haiyang Xu, Xi Zhang, Ming Yan, Ji Zhang, Fei Huang, Jitao Sang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.17110)  
+
+**Abstract**: The rapid increase in mobile device usage necessitates improved automation for seamless task management. However, many AI-driven frameworks struggle due to insufficient operational knowledge. Manually written knowledge helps but is labor-intensive and inefficient. To address these challenges, we introduce Mobile-Agent-V, a framework that leverages video guidance to provide rich and cost-effective operational knowledge for mobile automation. Mobile-Agent-V enhances task execution capabilities by leveraging video inputs without requiring specialized sampling or preprocessing. Mobile-Agent-V integrates a sliding window strategy and incorporates a video agent and deep-reflection agent to ensure that actions align with user instructions. Through this innovative approach, users can record task processes with guidance, enabling the system to autonomously learn and execute tasks efficiently. Experimental results show that Mobile-Agent-V achieves a 30% performance improvement compared to existing frameworks. 
+
+**Abstract (ZH)**: 移动设备使用量的迅速增加促使了对无缝任务管理的改进自动化需求。然而，许多基于AI的框架因缺乏足够的操作知识而面临挑战。虽然手工编写的知识有助于此问题，但其劳动密集且效率低下。为解决这些挑战，我们提出了Mobile-Agent-V框架，该框架利用视频指导提供丰富且经济的操作知识，用于移动自动化。Mobile-Agent-V通过利用视频输入增强了任务执行能力，无需专门的采样或预处理。Mobile-Agent-V整合了滑动窗口策略，并结合了视频代理和深度反思代理，以确保操作符合用户指令。通过这种方法，用户可以录制带有指导的任务过程，从而使系统能够自主学习并高效执行任务。实验结果表明，Mobile-Agent-V相比现有框架实现了30%的性能提升。 
+
+---
+# R$^3$Mem: Bridging Memory Retention and Retrieval via Reversible Compression 
+
+**Title (ZH)**: R$^3$\scMem：通过可逆压缩连接记忆保持与检索 
+
+**Authors**: Xiaoqiang Wang, Suyuchen Wang, Yun Zhu, Bang Liu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.15957)  
+
+**Abstract**: Memory plays a key role in enhancing LLMs' performance when deployed to real-world applications. Existing solutions face trade-offs: explicit memory designs based on external storage require complex management and incur storage overhead, while implicit memory designs that store information via parameters struggle with reliable retrieval. In this paper, we propose R$^3$Mem, a memory network that optimizes both information Retention and Retrieval through Reversible context compression. Specifically, R$^3$Mem employs virtual memory tokens to compress and encode infinitely long histories, further enhanced by a hierarchical compression strategy that refines information from document- to entity-level for improved assimilation across granularities. For retrieval, R$^3$Mem employs a reversible architecture, reconstructing raw data by invoking the model backward with compressed information. Implemented via parameter-efficient fine-tuning, it can integrate seamlessly with any Transformer-based model. Experiments demonstrate that our memory design achieves state-of-the-art performance in long-context language modeling and retrieval-augmented generation tasks. It also significantly outperforms conventional memory modules in long-horizon interaction tasks like conversational agents, showcasing its potential for next-generation retrieval systems. 
+
+**Abstract (ZH)**: 记忆力在增强实际应用场景中大型语言模型（LLM）的表现方面发挥着关键作用。现有的解决方案存在权衡：基于外部存储的显式记忆力设计需要复杂的管理和存储开销，而通过参数存储信息的隐式记忆力设计则面临可靠检索的挑战。在本文中，我们提出了R$^3$Mem，这是一种通过可逆上下文压缩优化记忆力存与取的内存网络。具体而言，R$^3$Mem 使用虚拟内存标记来压缩和编码无限长的历史记录，并进一步通过分层压缩策略根据相关信息从文档级细化到实体级，从而提高不同粒度下的吸收能力。对于检索部分，R$^3$Mem 使用一种可逆的架构，通过反向调用模型重建原始数据，而压缩的信息则用于重构。该设计通过参数高效的微调实现，可以无缝集成到任何基于Transformer的模型中。实验结果表明，我们的记忆力设计在长上下文语言建模和检索增强生成任务中达到了最先进的性能。此外，R$^3$Mem 在长时段交互任务（如对话代理）中显著优于传统的记忆力模块，展示了其对未来一代检索系统潜力的前景。 
+
+---
+# Self-Taught Agentic Long Context Understanding 
+
+**Title (ZH)**: 自我教学代理长上下文理解 
+
+**Authors**: Yufan Zhuang, Xiaodong Yu, Jialian Wu, Ximeng Sun, Ze Wang, Jiang Liu, Yusheng Su, Jingbo Shang, Zicheng Liu, Emad Barsoum  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.15920)  
+
+**Abstract**: Answering complex, long-context questions remains a major challenge for large language models (LLMs) as it requires effective question clarifications and context retrieval. We propose Agentic Long-Context Understanding (AgenticLU), a framework designed to enhance an LLM's understanding of such queries by integrating targeted self-clarification with contextual grounding within an agentic workflow. At the core of AgenticLU is Chain-of-Clarifications (CoC), where models refine their understanding through self-generated clarification questions and corresponding contextual groundings. By scaling inference as a tree search where each node represents a CoC step, we achieve 97.8% answer recall on NarrativeQA with a search depth of up to three and a branching factor of eight. To amortize the high cost of this search process to training, we leverage the preference pairs for each step obtained by the CoC workflow and perform two-stage model finetuning: (1) supervised finetuning to learn effective decomposition strategies, and (2) direct preference optimization to enhance reasoning quality. This enables AgenticLU models to generate clarifications and retrieve relevant context effectively and efficiently in a single inference pass. Extensive experiments across seven long-context tasks demonstrate that AgenticLU significantly outperforms state-of-the-art prompting methods and specialized long-context LLMs, achieving robust multi-hop reasoning while sustaining consistent performance as context length grows. 
+
+**Abstract (ZH)**: 对于复杂、长上下文的问题回答仍然是大型语言模型（LLMs）的一大挑战，因为它需要有效的问询澄清和上下文检索能力。我们提出了一种名为Agency Long-Context Understanding (AgenticLU) 的框架，该框架通过在代理式工作流程中整合目标化自我澄清与上下文相关性，来增强LLM对这些查询的理解能力。AgenticLU的核心是Chain-of-Clarifications (CoC)，该机制通过模型自动生成的澄清问题和相应的上下文相关性逐步细化理解。我们通过将推理过程扩展为树搜索，其中每个节点代表一个CoC步骤，实现了在深度为3的搜索中达到97.8%的答案召回率，分支因子为8。为降低这一搜索过程的成本并将其转移到训练中，我们利用CoC工作流程中每个步骤获得的偏好对进行两级模型微调：（1）监督微调以学习有效的分解策略，（2）直接偏好优化以提高推理质量。这使得AgenticLU模型能够在单次推理过程中有效地且高效地生成澄清和检索相关上下文。在七个长上下文任务的广泛实验中，AgenticLU显著优于最先进的提示方法和专门的长上下文LLM，同时在上下文长度增加时保持一致的性能和稳健的多跳推理能力。 
+
+---
+# Grounded Persuasive Language Generation for Automated Marketing 
+
+**Title (ZH)**: 基于产品支持的说服性语言生成在自动化营销中的应用 
+
+**Authors**: Jibang Wu, Chenghao Yang, Simon Mahns, Chaoqi Wang, Hao Zhu, Fei Fang, Haifeng Xu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.16810)  
+
+**Abstract**: This paper develops an agentic framework that employs large language models (LLMs) to automate the generation of persuasive and grounded marketing content, using real estate listing descriptions as our focal application domain. Our method is designed to align the generated content with user preferences while highlighting useful factual attributes. This agent consists of three key modules: (1) Grounding Module, mimicking expert human behavior to predict marketable features; (2) Personalization Module, aligning content with user preferences; (3) Marketing Module, ensuring factual accuracy and the inclusion of localized features. We conduct systematic human-subject experiments in the domain of real estate marketing, with a focus group of potential house buyers. The results demonstrate that marketing descriptions generated by our approach are preferred over those written by human experts by a clear margin. Our findings suggest a promising LLM-based agentic framework to automate large-scale targeted marketing while ensuring responsible generation using only facts. 
+
+**Abstract (ZH)**: 本文 develops 一个代理框架，利用大型语言模型（LLMs）自动化生成具有说服力并基于事实的营销内容，以房地产列表描述作为我们的研究焦点领域。该方法旨在使生成的内容与用户偏好保持一致，同时突出关键的有用事实属性。该代理由三个关键模块组成：（1） grounding 模块，模仿专家人类行为以预测可销售的特征；（2）个性化模块，使内容与用户偏好保持一致；（3）营销模块，确保事实准确性和本地化特征的包含。我们对房地产营销领域进行了系统的人工主体实验，并重点关注潜在房屋买家。结果显示，通过我们方法生成的营销描述明显优于由人类专家撰写的描述。本文的研究结果表明，基于LLM的代理框架有可能自动化大规模有目标的营销活动，并且仅通过事实生成负责任的内容是可行的。 
+
+---
+# MobileSteward: Integrating Multiple App-Oriented Agents with Self-Evolution to Automate Cross-App Instructions 
+
+**Title (ZH)**: 移动管家：整合多种面向应用的智能代理并具备自我进化能力以自动化跨应用指令执行 
+
+**Authors**: Yuxuan Liu, Hongda Sun, Wei Liu, Jian Luan, Bo Du, Rui Yan  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.16796)  
+
+**Abstract**: Mobile phone agents can assist people in automating daily tasks on their phones, which have emerged as a pivotal research spotlight. However, existing procedure-oriented agents struggle with cross-app instructions, due to the following challenges: (1) complex task relationships, (2) diverse app environment, and (3) error propagation and information loss in multi-step execution. Drawing inspiration from object-oriented programming principles, we recognize that object-oriented solutions is more suitable for cross-app instruction. To address these challenges, we propose a self-evolving multi-agent framework named MobileSteward, which integrates multiple app-oriented StaffAgents coordinated by a centralized StewardAgent. We design three specialized modules in MobileSteward: (1) Dynamic Recruitment generates a scheduling graph guided by information flow to explicitly associate tasks among apps. (2) Assigned Execution assigns the task to app-oriented StaffAgents, each equipped with app-specialized expertise to address the diversity between apps. (3) Adjusted Evaluation conducts evaluation to provide reflection tips or deliver key information, which alleviates error propagation and information loss during multi-step execution. To continuously improve the performance of MobileSteward, we develop a Memory-based Self-evolution mechanism, which summarizes the experience from successful execution, to improve the performance of MobileSteward. We establish the first English Cross-APP Benchmark (CAPBench) in the real-world environment to evaluate the agents' capabilities of solving complex cross-app instructions. Experimental results demonstrate that MobileSteward achieves the best performance compared to both single-agent and multi-agent frameworks, highlighting the superiority of MobileSteward in better handling user instructions with diverse complexity. 
+
+**Abstract (ZH)**: 手机代理可以协助人们在手机上自动化日常任务，成为研究的焦点。然而，现有的基于过程的代理在跨应用指令方面遇到困难，主要由于以下挑战：（1）复杂的任务关系，（2）多样的应用环境，以及（3）多步执行中的错误传播和信息丢失。借鉴面向对象编程的原则，我们认识到面向对象的解决方案更适合处理跨应用指令。为了解决这些挑战，我们提出了一种自演化的多代理框架 MobileSteward，该框架通过中心协调的监护代理 StewardAgent 集成多个面向应用的工作人员代理 StaffAgents。我们在 MobileSteward 中设计了三个专门模块：（1）动态招募通过信息流生成调度图，明确关联各应用中的任务。 （2）分配执行将任务分派给面向应用的工作人员代理，每个代理都配备了针对其特定应用的专长，以应对应用之间的多样性。 （3）调整评估进行评估以提供反思建议或传达关键信息，从而减轻多步执行过程中的错误传播和信息丢失。为了持续改进 MobileSteward 的性能，我们开发了一种基于记忆的自演化机制，该机制通过总结成功执行的经验，来提高 MobileSteward 的性能。我们建立了首个面向真实环境的英文跨应用基准 (CAPBench) 以评估代理解决复杂跨应用指令的能力。实验结果证明，MobileSteward 在性能上优于单一代理和多代理框架，突显了 MobileSteward 在处理复杂多变用户指令方面的优越性。 
+
+---
+# The Hidden Strength of Disagreement: Unraveling the Consensus-Diversity Tradeoff in Adaptive Multi-Agent Systems 
+
+**Title (ZH)**: 隐藏的分歧力量：探索自适应多 agent 系统中一致性与多样性权衡的本质 
+
+**Authors**: Zengqing Wu, Takayuki Ito  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.16565)  
+
+**Abstract**: Consensus formation is pivotal in multi-agent systems (MAS), balancing collective coherence with individual diversity. Conventional LLM-based MAS primarily rely on explicit coordination, e.g., prompts or voting, risking premature homogenization. We argue that implicit consensus, where agents exchange information yet independently form decisions via in-context learning, can be more effective in dynamic environments that require long-horizon adaptability. By retaining partial diversity, systems can better explore novel strategies and cope with external shocks. We formalize a consensus-diversity tradeoff, showing conditions where implicit methods outperform explicit ones. Experiments on three scenarios -- Dynamic Disaster Response, Information Spread and Manipulation, and Dynamic Public-Goods Provision -- confirm partial deviation from group norms boosts exploration, robustness, and performance. We highlight emergent coordination via in-context learning, underscoring the value of preserving diversity for resilient decision-making. 
+
+**Abstract (ZH)**: 共识形成在多智能体系统（MAS）中至关重要，它平衡了集体一致性与个体多样性。传统的基于大语言模型（LLM）的MAS主要依赖明确的协调，例如提示或投票，这可能导致过早的同质化。我们认为，隐式共识，在这种模式下，智能体相互交换信息并通过上下文学习独立做出决策，更适合需要长期适应性的动态环境。通过保留部分多样性，系统可以更好地探索新的策略，并应对外部冲击。我们提出了共识与多样性的权衡关系，并展示了隐式方法在某些条件下优于显式方法的条件。在三项场景中的实验——动态灾害响应、信息扩散与操控、动态公共品提供——中，部分偏离群体规范被证明能够增强探索性、鲁棒性和性能。我们强调了内部上下文学习中涌现的协调，突显了保留多样性对韧性决策的价值。 
+
+---
+# Dynamic Coalition Structure Detection in Natural Language-based Interactions 
+
+**Title (ZH)**: 基于自然语言交互的动态合作结构检测 
+
+**Authors**: Abhishek N. Kulkarni, Andy Liu, Jean-Raphael Gaglione, Daniel Fried, Ufuk Topcu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.16339)  
+
+**Abstract**: In strategic multi-agent sequential interactions, detecting dynamic coalition structures is crucial for understanding how self-interested agents coordinate to influence outcomes. However, natural-language-based interactions introduce unique challenges to coalition detection due to ambiguity over intents and difficulty in modeling players' subjective perspectives. We propose a new method that leverages recent advancements in large language models and game theory to predict dynamic multilateral coalition formation in Diplomacy, a strategic multi-agent game where agents negotiate coalitions using natural language. The method consists of two stages. The first stage extracts the set of agreements discussed by two agents in their private dialogue, by combining a parsing-based filtering function with a fine-tuned language model trained to predict player intents. In the second stage, we define a new metric using the concept of subjective rationalizability from hypergame theory to evaluate the expected value of an agreement for each player. We then compute this metric for each agreement identified in the first stage by assessing the strategic value of the agreement for both players and taking into account the subjective belief of one player that the second player would honor the agreement. We demonstrate that our method effectively detects potential coalition structures in online Diplomacy gameplay by assigning high values to agreements likely to be honored and low values to those likely to be violated. The proposed method provides foundational insights into coalition formation in multi-agent environments with language-based negotiation and offers key directions for future research on the analysis of complex natural language-based interactions between agents. 
+
+**Abstract (ZH)**: 在战略性的多代理人序列交互中，检测动态的联盟结构对于理解自利代理人如何协调以影响结果至关重要。然而，基于自然语言的交互给联盟检测带来了独特的挑战，因为意图存在歧义且难以建模玩家的主观视角。我们提出了一种新方法，利用最近在大规模语言模型和博弈理论方面的进展，预测在《外交》（Diplomacy）这种战略多代理人游戏中动态形成的多边联盟。《外交》游戏中，代理人通过自然语言进行联盟谈判。该方法包含两个阶段。第一阶段通过结合基于解析的过滤函数和细调的语言模型（该模型被训练以预测玩家的意图），提取两名代理人在私人对话中讨论的一组协议。第二阶段定义了一个新的度量标准，使用超博弈理论中的主观合理化概念来评估每个玩家协议预期价值。我们通过评估协议的策略价值和一方玩家认为另一方玩家会遵守协议的主观信念，为第一阶段识别出的每个协议计算此度量标准。我们通过评估协议可能被遵守时给予高值、可能被违反时给予低值，证明了该方法能够有效检测在线《外交》游戏中的潜在联盟结构。提出的方法为基于语言的协商环境下多代理人环境中的联盟形成提供了基础性的见解，并为未来分析复杂自然语言交互的研究提供了关键方向。 
+
+---
+# PlanGEN: A Multi-Agent Framework for Generating Planning and Reasoning Trajectories for Complex Problem Solving 
+
+**Title (ZH)**: PlanGEN：一种用于复杂问题解决的规划与推理轨迹生成的多agent框架 
+
+**Authors**: Mihir Parmar, Xin Liu, Palash Goyal, Yanfei Chen, Long Le, Swaroop Mishra, Hossein Mobahi, Jindong Gu, Zifeng Wang, Hootan Nakhost, Chitta Baral, Chen-Yu Lee, Tomas Pfister, Hamid Palangi  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.16111)  
+
+**Abstract**: Recent agent frameworks and inference-time algorithms often struggle with complex planning problems due to limitations in verifying generated plans or reasoning and varying complexity of instances within a single task. Many existing methods for these tasks either perform task-level verification without considering constraints or apply inference-time algorithms without adapting to instance-level complexity. To address these limitations, we propose PlanGEN, a model-agnostic and easily scalable agent framework with three key components: constraint, verification, and selection agents. Specifically, our approach proposes constraint-guided iterative verification to enhance performance of inference-time algorithms--Best of N, Tree-of-Thought, and REBASE. In PlanGEN framework, the selection agent optimizes algorithm choice based on instance complexity, ensuring better adaptability to complex planning problems. Experimental results demonstrate significant improvements over the strongest baseline across multiple benchmarks, achieving state-of-the-art results on NATURAL PLAN ($\sim$8%$\uparrow$), OlympiadBench ($\sim$4%$\uparrow$), DocFinQA ($\sim$7%$\uparrow$), and GPQA ($\sim$1%$\uparrow$). Our key finding highlights that constraint-guided iterative verification improves inference-time algorithms, and adaptive selection further boosts performance on complex planning and reasoning problems. 
+
+**Abstract (ZH)**: 近期的代理框架和推理时算法在应对复杂的规划问题时常常存在困难，原因在于生成的计划难以验证或推理过程中因单个任务内部实例复杂度的变化而受到限制。许多现有的方法要么在任务层次上进行验证而不考虑约束条件，要么在推理时应用算法而不适应实例层次的复杂度。为解决这些问题，我们提出了PlanGEN，这是一种模型无关且易于扩展的代理框架，具有三个关键组件：约束代理、验证代理和选择代理。具体而言，我们的方法提出了基于约束的迭代验证，以提升推理时算法（如Best of N、Tree-of-Thought和REBASE）的性能。在PlanGEN框架中，选择代理基于实例复杂度优化算法选择，确保更好地适应复杂的规划问题。实验结果表明，在多个基准测试中，PlanGEN显著优于最强大的基线模型，在NATURAL PLAN（+8%）、OlympiadBench（+4%）、DocFinQA（+7%）和GPQA（+1%）上取得了最先进的结果。我们的主要发现表明，基于约束的迭代验证能够提升推理时算法的性能，而适应性选择进一步提升了复杂规划和推理问题上的表现。 
+
+---
+# Position: Standard Benchmarks Fail -- LLM Agents Present Overlooked Risks for Financial Applications 
+
+**Title (ZH)**: 位置：标准基准失效——大型语言模型代理在金融应用中带来了未被忽视的风险 
+
+**Authors**: Zichen Chen, Jiaao Chen, Jianda Chen, Misha Sra  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.15865)  
+
+**Abstract**: Current financial LLM agent benchmarks are inadequate. They prioritize task performance while ignoring fundamental safety risks. Threats like hallucinations, temporal misalignment, and adversarial vulnerabilities pose systemic risks in high-stakes financial environments, yet existing evaluation frameworks fail to capture these risks. We take a firm position: traditional benchmarks are insufficient to ensure the reliability of LLM agents in finance. To address this, we analyze existing financial LLM agent benchmarks, finding safety gaps and introducing ten risk-aware evaluation metrics. Through an empirical evaluation of both API-based and open-weight LLM agents, we reveal hidden vulnerabilities that remain undetected by conventional assessments. To move the field forward, we propose the Safety-Aware Evaluation Agent (SAEA), grounded in a three-level evaluation framework that assesses agents at the model level (intrinsic capabilities), workflow level (multi-step process reliability), and system level (integration robustness). Our findings highlight the urgent need to redefine LLM agent evaluation standards by shifting the focus from raw performance to safety, robustness, and real world resilience. 
+
+**Abstract (ZH)**: 当前的金融大语言模型（LLM）代理基准存在不足，它们侧重于任务绩效，而忽视了基本的安全风险。像幻觉、时间错位和对抗性漏洞这样的威胁在高风险金融环境中会带来系统性风险，但现有的评估框架却未能抓住这些风险。我们认为：传统的基准不足以确保金融环境中LLM代理的可靠性。为此，我们分析了现有的金融LLM代理基准，发现其中存在安全缺口，并提出了十项风险感知评估指标。通过实证评估基于API和开源权重的LLM代理，我们揭示了一些隐藏的漏洞，这些漏洞在常规评估中未被发现。为了推动这一领域的发展，我们提出了安全感知评估代理（SAEA），该框架基于三个层次的评估：模型层面（内在能力）、工作流程层面（多步过程可靠性）和系统层面（集成稳健性）。我们的研究结果突显出了重新定义LLM代理评估标准的迫切需要，即从单纯追求绩效转向关注安全、稳健性和现实世界的韧性。 
+
+---
+# Sustainable Digitalization of Business with Multi-Agent RAG and LLM 
+
+**Title (ZH)**: 基于多代理检索增强和大语言模型的可持续数字化商业 
+
+**Authors**: Muhammad Arslan, Saba Munawar, Christophe Cruz  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.15700)  
+
+**Abstract**: Businesses heavily rely on data sourced from various channels like news articles, financial reports, and consumer reviews to drive their operations, enabling informed decision-making and identifying opportunities. However, traditional manual methods for data extraction are often time-consuming and resource-intensive, prompting the adoption of digital transformation initiatives to enhance efficiency. Yet, concerns persist regarding the sustainability of such initiatives and their alignment with the United Nations (UN)'s Sustainable Development Goals (SDGs). This research aims to explore the integration of Large Language Models (LLMs) with Retrieval-Augmented Generation (RAG) as a sustainable solution for Information Extraction (IE) and processing. The research methodology involves reviewing existing solutions for business decision-making, noting that many systems require training new machine learning models, which are resource-intensive and have significant environmental impacts. Instead, we propose a sustainable business solution using pre-existing LLMs that can work with diverse datasets. We link domain-specific datasets to tailor LLMs to company needs and employ a Multi-Agent architecture to divide tasks such as information retrieval, enrichment, and classification among specialized agents. This approach optimizes the extraction process and improves overall efficiency. Through the utilization of these technologies, businesses can optimize resource utilization, improve decision-making processes, and contribute to sustainable development goals, thereby fostering environmental responsibility within the corporate sector. 
+
+**Abstract (ZH)**: 企业高度依赖来自各种渠道的数据，如新闻报道、财务报告和消费者评论，以驱动其运营活动，从而实现明智的决策并识别机遇。然而，传统的手动数据提取方法通常耗时且资源密集，因此企业需采取数字化转型举措以提高效率。尽管如此，仍有关于这些举措可持续性和其与联合国可持续发展目标（SDGs）一致性方面的担忧。本研究旨在探讨将大型语言模型（LLMs）与检索增强生成（RAG）相结合作为信息提取（IE）和处理的可持续解决方案。研究方法包括审查现有企业决策支持解决方案，指出许多系统需要训练新的机器学习模型，这在资源和环境影响方面都具有显著的负担。相反，我们提出了一个可持续的商业解决方案，使用现有的LLMs并使其能够与多样化的数据集合作。通过将领域特定的数据集与公司需求相结合，优化LLMs，并采用多代理架构来分配信息检索、丰富和分类等任务，以此提高整体效率。通过利用这些技术，企业可以优化资源利用率、改进决策过程，并为可持续发展目标贡献力量，从而在企业界培养环境责任意识。 
+
+---
+# Level-Navi Agent: A Framework and benchmark for Chinese Web Search Agents 
+
+**Title (ZH)**: Level-Navi 代理：中文网络搜索代理的框架与基准 
+
+**Authors**: Chuanrui Hu, Shichong Xie, Baoxin Wang, Bin Chen, Xiaofeng Cong, Jun Zhang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.15690)  
+
+**Abstract**: Large language models (LLMs), adopted to understand human language, drive the development of artificial intelligence (AI) web search agents. Compared to traditional search engines, LLM-powered AI search agents are capable of understanding and responding to complex queries with greater depth, enabling more accurate operations and better context recognition. However, little attention and effort has been paid to the Chinese web search, which results in that the capabilities of open-source models have not been uniformly and fairly evaluated. The difficulty lies in lacking three aspects: an unified agent framework, an accurately labeled dataset, and a suitable evaluation metric. To address these issues, we propose a general-purpose and training-free web search agent by level-aware navigation, Level-Navi Agent, accompanied by a well-annotated dataset (Web24) and a suitable evaluation metric. Level-Navi Agent can think through complex user questions and conduct searches across various levels on the internet to gather information for questions. Meanwhile, we provide a comprehensive evaluation of state-of-the-art LLMs under fair settings. To further facilitate future research, source code is available at Github. 
+
+**Abstract (ZH)**: 大型语言模型（LLMs）被用于理解和处理人类语言，推动了人工智能（AI）网络搜索代理的发展。与传统的搜索引擎相比，由LLM驱动的AI搜索代理能够更深入地理解复杂查询并作出响应，从而实现更精确的操作和更好的上下文识别。然而，中国网络搜索领域缺乏足够的关注与努力，导致开源模型的能力未能得到公平和统一的评估。这一问题源于三个方面的缺失：统一的代理框架、准确标记的数据集和合适的评价指标。为了解决这些问题，我们提出了一种基于层级感知导航的一般用途且无需训练的网络搜索代理，即Level-Navi Agent，并提供了一个标注良好的数据集（Web24）和合适的评价指标。Level-Navi Agent能够思考复杂的用户问题，并在网络的不同层级上进行搜索以收集问题所需的信息。同时，我们在此公平条件下对最先进的LLM进行了全面评估。为了进一步促进未来的研究，我们已将源代码发布在GitHub上。 
+
+---
+# A Multi-LLM-Agent-Based Framework for Economic and Public Policy Analysis 
+
+**Title (ZH)**: 基于多大型语言模型代理的经济与公共政策分析框架 
+
+**Authors**: Yuzhi Hao, Danyang Xie  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.16879)  
+
+**Abstract**: This paper pioneers a novel approach to economic and public policy analysis by leveraging multiple Large Language Models (LLMs) as heterogeneous artificial economic agents. We first evaluate five LLMs' economic decision-making capabilities in solving two-period consumption allocation problems under two distinct scenarios: with explicit utility functions and based on intuitive reasoning. While previous research has often simulated heterogeneity by solely varying prompts, our approach harnesses the inherent variations in analytical capabilities across different LLMs to model agents with diverse cognitive traits. Building on these findings, we construct a Multi-LLM-Agent-Based (MLAB) framework by mapping these LLMs to specific educational groups and corresponding income brackets. Using interest-income taxation as a case study, we demonstrate how the MLAB framework can simulate policy impacts across heterogeneous agents, offering a promising new direction for economic and public policy analysis by leveraging LLMs' human-like reasoning capabilities and computational power. 
+
+**Abstract (ZH)**: 本文开创了一种利用多个大型语言模型（LLMs）作为异质经济代理的新颖方法，以推动经济和公共政策分析。我们首先评估了五种LLM在解决两种不同情景下的两期消费分配问题中的经济决策能力：一种是有明确效用函数的情景，另一种是基于直观推理的情景。虽然以往的研究常常通过改变提示来模拟异质性，我们的方法则是利用不同LLM之间分析能力固有的差异来构建具有不同认知特征的代理模型。基于这些发现，我们构建了一个多LLM代理为基础的（MLAB）框架，将这些LLM映射到特定的教育群体和对应的收入区间。以利息和收入征税为例，我们展示了MLAB框架如何模拟不同类型的代理所受政策影响，提供了一种通过利用LLMs的人类推理能力和计算能力来推动经济和公共政策分析的新方向。 
+
+---
+# From Text to Space: Mapping Abstract Spatial Models in LLMs during a Grid-World Navigation Task 
+
+**Title (ZH)**: 从文本到空间：在网格世界导航任务中LLM中抽象空间模型的映射 
+
+**Authors**: Nicolas Martorell  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.16690)  
+
+**Abstract**: Understanding how large language models (LLMs) represent and reason about spatial information is crucial for building robust agentic systems that can navigate real and simulated environments. In this work, we investigate the influence of different text-based spatial representations on LLM performance and internal activations in a grid-world navigation task. By evaluating models of various sizes on a task that requires navigating toward a goal, we examine how the format used to encode spatial information impacts decision-making. Our experiments reveal that cartesian representations of space consistently yield higher success rates and path efficiency, with performance scaling markedly with model size. Moreover, probing LLaMA-3.1-8B revealed subsets of internal units, primarily located in intermediate layers, that robustly correlate with spatial features, such as the position of the agent in the grid or action correctness, regardless of how that information is represented, and are also activated by unrelated spatial reasoning tasks. This work advances our understanding of how LLMs process spatial information and provides valuable insights for developing more interpretable and robust agentic AI systems. 
+
+**Abstract (ZH)**: 理解大型语言模型（LLMs）如何表示和推理空间信息对于构建能够在现实和模拟环境中自主导航的稳健代理系统至关重要。在这项工作中，我们探讨了不同基于文本的空间表示形式对LLM在网格世界导航任务中的性能和内部激活的影响。通过在要求导航至目标的任务中评估不同规模的模型，我们研究了用于编码空间信息的格式如何影响决策过程。我们的实验表明，笛卡尔空间表示持续地显示出更高的成功率和路径效率，并且随着模型规模的增加性能显著提升。此外，对LLaMA-3.1-8B的探针实验揭示了内部单元的子集，这些单元主要位于中间层，与空间特征（如网格中的代理位置或动作的正确性）表现出稳健的相关性，无论这些信息如何表示，并且在与空间推理无关的任务中也会被激活。这项工作推进了我们对LLMs处理空间信息的理解，并为开发更具可解释性和鲁棒性的代理AI系统提供了宝贵见解。 
+
+---
+# Saarthi: The First AI Formal Verification Engineer 
+
+**Title (ZH)**: Saarthi：首个AI形式验证工程师 
+
+**Authors**: Aman Kumar, Deepak Narayan Gadde, Keerthan Kopparam Radhakrishna, Djones Lettnin  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.16662)  
+
+**Abstract**: Recently, Devin has made a significant buzz in the Artificial Intelligence (AI) community as the world's first fully autonomous AI software engineer, capable of independently developing software code. Devin uses the concept of agentic workflow in Generative AI (GenAI), which empowers AI agents to engage in a more dynamic, iterative, and self-reflective process. In this paper, we present a similar fully autonomous AI formal verification engineer, Saarthi, capable of verifying a given RTL design end-to-end using an agentic workflow. With Saarthi, verification engineers can focus on more complex problems, and verification teams can strive for more ambitious goals. The domain-agnostic implementation of Saarthi makes it scalable for use across various domains such as RTL design, UVM-based verification, and others. 
+
+**Abstract (ZH)**: 近年来，Devin 在人工智能（AI）领域引起了广泛关注，因其成为世界上第一位完全自主的AI软件工程师，能够独立开发软件代码。Devin 使用生成型AI（GenAI）中的代理工作流概念，使AI代理能够参与到更加动态、迭代和自我反思的过程中。本文介绍了类似的完全自主的AI形式验证工程师Saarthi，它能够使用代理工作流从头到尾验证给定的RTL设计。借助Saarthi，形式验证工程师可以专注于更复杂的问题，而形式验证团队可以追求更宏伟的目标。Saarthi的跨领域实施使其可以跨各种领域（如RTL设计、基于UVM的形式验证等）进行扩展使用。 
+
+---
+# OptionZero: Planning with Learned Options 
+
+**Title (ZH)**: OptionZero：基于学习到的选项进行规划 
+
+**Authors**: Po-Wei Huang, Pei-Chiun Peng, Hung Guei, Ti-Rong Wu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.16634)  
+
+**Abstract**: Planning with options -- a sequence of primitive actions -- has been shown effective in reinforcement learning within complex environments. Previous studies have focused on planning with predefined options or learned options through expert demonstration data. Inspired by MuZero, which learns superhuman heuristics without any human knowledge, we propose a novel approach, named OptionZero. OptionZero incorporates an option network into MuZero, providing autonomous discovery of options through self-play games. Furthermore, we modify the dynamics network to provide environment transitions when using options, allowing searching deeper under the same simulation constraints. Empirical experiments conducted in 26 Atari games demonstrate that OptionZero outperforms MuZero, achieving a 131.58% improvement in mean human-normalized score. Our behavior analysis shows that OptionZero not only learns options but also acquires strategic skills tailored to different game characteristics. Our findings show promising directions for discovering and using options in planning. Our code is available at this https URL. 
+
+**Abstract (ZH)**: 规划使用选项——一系列原始动作——已被证明在复杂环境中有效地应用于强化学习。以往的研究主要集中在使用预定义选项的规划或通过专家示范数据学习选项。受MuZero的启发，MuZero能够在没有人类知识的情况下学习超人的启发式方法，我们提出了一种新的方法，命名OptionZero。OptionZero将选项网络融入到MuZero中，通过自玩游戏自主发现选项。此外，我们修改了动力学网络，在使用选项时提供环境转换，使得在相同的仿真约束下进行更深层次的搜索。在26个Atari游戏中进行的实证实验表明，OptionZero比MuZero表现出色，平均人类归一化得分提高了131.58%。我们的行为分析表明，OptionZero不仅学习了选项，还根据不同的游戏特性学会了战略技能。我们的研究结果显示，在发现和使用选项进行规划方面具有潜在的方向。我们的代码可在以下网址获得：this https URL。 
+
+---
+# Toward Dependency Dynamics in Multi-Agent Reinforcement Learning for Traffic Signal Control 
+
+**Title (ZH)**: 面向多-agent强化学习交通信号控制中的依赖动态研究 
+
+**Authors**: Yuli Zhang, Shangbo Wang, Dongyao Jia, Pengfei Fan, Ruiyuan Jiang, Hankang Gu, Andy H.F. Chow  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.16608)  
+
+**Abstract**: Reinforcement learning (RL) emerges as a promising data-driven approach for adaptive traffic signal control (ATSC) in complex urban traffic networks, with deep neural networks substantially augmenting its learning capabilities. However, centralized RL becomes impractical for ATSC involving multiple agents due to the exceedingly high dimensionality of the joint action space. Multi-agent RL (MARL) mitigates this scalability issue by decentralizing control to local RL agents. Nevertheless, this decentralized method introduces new challenges: the environment becomes partially observable from the perspective of each local agent due to constrained inter-agent communication. Both centralized RL and MARL exhibit distinct strengths and weaknesses, particularly under heavy intersectional traffic conditions. In this paper, we justify that MARL can achieve the optimal global Q-value by separating into multiple IRL (Independent Reinforcement Learning) processes when no spill-back congestion occurs (no agent dependency) among agents (intersections). In the presence of spill-back congestion (with agent dependency), the maximum global Q-value can be achieved by using centralized RL. Building upon the conclusions, we propose a novel Dynamic Parameter Update Strategy for Deep Q-Network (DQN-DPUS), which updates the weights and bias based on the dependency dynamics among agents, i.e. updating only the diagonal sub-matrices for the scenario without spill-back congestion. We validate the DQN-DPUS in a simple network with two intersections under varying traffic, and show that the proposed strategy can speed up the convergence rate without sacrificing optimal exploration. The results corroborate our theoretical findings, demonstrating the efficacy of DQN-DPUS in optimizing traffic signal control. 
+
+**Abstract (ZH)**: 强化学习（RL）作为一种有前途的数据驱动方法，被应用于复杂城市交通网络中的自适应交通信号控制（ATSC），深度神经网络极大地增强了其学习能力。然而，由于多个代理参与时联合动作空间的高维性，集中式RL变得不切实际。多代理RL（MARL）通过将控制分散到局部RL代理来缓解这种可扩展性问题。尽管如此，这种分散方法引入了新的挑战：由于代理间通信受限，每个局部代理的环境变得部分可观测。集中式RL和MARL在某些条件下各有优势和不足，特别是在交叉口交通繁忙的情况下。在本文中，我们证明，在无溢流阻塞（即无代理依赖）的情况下，MARL可以通过分离成多个独立强化学习（IRL）过程来实现最优全局Q值。在存在溢流阻塞（即有代理依赖）的情况下，则可以通过使用集中式RL来实现最优全局Q值。基于此结论，我们提出了一种新颖的深层Q网络动态参数更新策略（DQN-DPUS），该策略基于代理间的依赖动态更新权重和偏置，即仅在无溢流阻塞的情况下更新对角子矩阵。我们通过一个包含两个交叉口的简单网络，针对不同交通状况验证了DQN-DPUS，并表明所提出的方法可以在不牺牲最优探索的前提下加快收敛速率。实验结果证实了我们的理论发现，证明了DQN-DPUS在优化交通信号控制方面的有效性。 
+
+---
+# Facilitating Emergency Vehicle Passage in Congested Urban Areas Using Multi-agent Deep Reinforcement Learning 
+
+**Title (ZH)**: 使用多agent深度强化学习在拥堵城市区域 facilitiate 整车通行的研究 
+
+**Authors**: Haoran Su  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.16449)  
+
+**Abstract**: Emergency Response Time (ERT) is crucial for urban safety, measuring cities' ability to handle medical, fire, and crime emergencies. In NYC, medical ERT increased 72% from 7.89 minutes in 2014 to 14.27 minutes in 2024, with half of delays due to Emergency Vehicle (EMV) travel times. Each minute's delay in stroke response costs 2 million brain cells, while cardiac arrest survival drops 7-10% per minute.
+This dissertation advances EMV facilitation through three contributions. First, EMVLight, a decentralized multi-agent reinforcement learning framework, integrates EMV routing with traffic signal pre-emption. It achieved 42.6% faster EMV travel times and 23.5% improvement for other vehicles.
+Second, the Dynamic Queue-Jump Lane system uses Multi-Agent Proximal Policy Optimization for coordinated lane-clearing in mixed autonomous and human-driven traffic, reducing EMV travel times by 40%.
+Third, an equity study of NYC Emergency Medical Services revealed disparities across boroughs: Staten Island faces delays due to sparse signalized intersections, while Manhattan struggles with congestion. Solutions include optimized EMS stations and improved intersection designs.
+These contributions enhance EMV mobility and emergency service equity, offering insights for policymakers and urban planners to develop safer, more efficient transportation systems. 
+
+**Abstract (ZH)**: 应急响应时间（ERT）对于城市安全至关重要，衡量了城市处理医疗、消防和犯罪紧急情况的能力。在纽约市（NYC），医疗响应时间（ERT）从2014年的7.89分钟增加到2024年的14.27分钟，增加了72%，其中一半的延误是由于紧急车辆（EMV）行驶时间过长。每延迟一分钟的中风响应会导致200万个脑细胞受损，而心脏骤停的幸存率每分钟会下降7-10%。
+
+本论文通过三个贡献推进了紧急车辆（EMV）的优化。首先，EMVLight是一个去中心化的多代理强化学习框架，整合了紧急车辆的路径规划与交通信号优先处理。EMVLight 实现了42.6%的更快行驶时间和23.5%的其他车辆行驶时间改善。
+
+其次，动态队列跳跃车道系统使用多代理近端策略优化（PPO）在混合自动驾驶和人工驾驶交通中协调车道清理，减少了紧急车辆的行驶时间40%。
+
+第三，针对纽约市紧急医疗服务（EMS）的公平性研究揭示了不同行政区之间的差异：史泰登岛由于信号化交叉口稀疏面临延误问题，而曼哈顿则受到交通拥堵的影响。解决方案包括优化EMS站点和服务以及改进交叉口设计。
+
+这些贡献提升了紧急车辆的流动性和紧急服务的公平性，为政策制定者和城市规划者提供了建立更安全、更高效的运输系统的见解。 
+
+---
+# Navigation-GPT: A Robust and Adaptive Framework Utilizing Large Language Models for Navigation Applications 
+
+**Title (ZH)**: 导航-GPT：一种利用大规模语言模型的稳健且适应性强的框架，应用于导航应用 
+
+**Authors**: Feng Ma, Xiu-min Wang, Chen Chen, Xiao-bin Xu, Xin-ping Yan  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.16402)  
+
+**Abstract**: Existing navigation decision support systems often perform poorly when handling non-predefined navigation scenarios. Leveraging the generalization capabilities of large language model (LLM) in handling unknown scenarios, this research proposes a dual-core framework for LLM applications to address this issue. Firstly, through ReAct-based prompt engineering, a larger LLM core decomposes intricate navigation tasks into manageable sub-tasks, which autonomously invoke corresponding external tools to gather relevant information, using this feedback to mitigate the risk of LLM hallucinations. Subsequently, a fine-tuned and compact LLM core, acting like a first-mate is designed to process such information and unstructured external data, then to generates context-aware recommendations, ultimately delivering lookout insights and navigation hints that adhere to the International Regulations for Preventing Collisions at Sea (COLREGs) and other rules. Extensive experiments demonstrate the proposed framework not only excels in traditional ship collision avoidance tasks but also adapts effectively to unstructured, non-predefined, and unpredictable scenarios. A comparative analysis with DeepSeek-R1, GPT-4o and other SOTA models highlights the efficacy and rationality of the proposed framework. This research bridges the gap between conventional navigation systems and LLMs, offering a framework to enhance safety and operational efficiency across diverse navigation applications. 
+
+**Abstract (ZH)**: 现有的导航决策支持系统在处理非预定义导航场景时常常表现不佳。利用大型语言模型（LLM）在处理未知场景方面的泛化能力，本研究提出了一种双核框架，以解决这一问题。首先，通过基于ReAct的方法优化提示工程，大型LLM核心将复杂的导航任务分解为可管理的子任务，这些子任务能够自主调用相应的外部工具以收集相关数据，并利用反馈来减轻LLM幻觉的风险。其次，一种经过微调并设计得更加紧凑的核心LLM，类似于大副的功能，负责处理这些信息以及未结构化的外部数据，生成上下文相关的建议，最终提供符合《国际海上避碰规则》（COLREGs）和其他规则的瞭望和导航提示。广泛的实验表明，所提出框架不仅在传统的船舶避碰任务中表现出色，还能有效应对非结构化、非预定义以及不可预测的场景。与DeepSeek-R1、GPT-4o和其他领先模型的对比分析进一步突显了所提出框架的有效性和合理性。本研究填补了传统导航系统与LLM之间的差距，提供了一个框架以增强各种导航应用中的安全性和操作效率。 
+
+---
+# Does Your AI Agent Get You? A Personalizable Framework for Approximating Human Models from Argumentation-based Dialogue Traces 
+
+**Title (ZH)**: 你的AI代理了解你吗？一种基于论辩对话痕迹的可个性化框架，用于近似建模人类行为 
+
+**Authors**: Yinxu Tang, Stylianos Loukas Vasileiou, William Yeoh  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.16376)  
+
+**Abstract**: Explainable AI is increasingly employing argumentation methods to facilitate interactive explanations between AI agents and human users. While existing approaches typically rely on predetermined human user models, there remains a critical gap in dynamically learning and updating these models during interactions. In this paper, we present a framework that enables AI agents to adapt their understanding of human users through argumentation-based dialogues. Our approach, called Persona, draws on prospect theory and integrates a probability weighting function with a Bayesian belief update mechanism that refines a probability distribution over possible human models based on exchanged arguments. Through empirical evaluations with human users in an applied argumentation setting, we demonstrate that Persona effectively captures evolving human beliefs, facilitates personalized interactions, and outperforms state-of-the-art methods. 
+
+**Abstract (ZH)**: 可解释的人工智能正越来越多地采用论证方法，以促进人工智能代理与人类用户之间的交互性解释。虽然现有的方法通常依赖于预先确定的人类用户模型，但在交互过程中动态学习和更新这些模型仍存在一个关键的不足。本文提出了一种框架，该框架使人工智能代理能够通过基于论证的对话适应其对人类用户的理解。我们的方法称为Persona，它借鉴了前景理论，并结合了一个概率加权函数与贝叶斯信念更新机制，该机制基于交换的论点对可能的人类模型的概率分布进行细化。通过在实际论证场景中的人类用户实验评估，我们证明Persona能够有效地捕捉到人类信念的变化，促进个性化交互，并且优于现有最先进的方法。 
+
+---
+# Curie: Toward Rigorous and Automated Scientific Experimentation with AI Agents 
+
+**Title (ZH)**: Curie：迈向严谨且自动化的AI代理科学实验 
+
+**Authors**: Patrick Tser Jern Kon, Jiachen Liu, Qiuyi Ding, Yiming Qiu, Zhenning Yang, Yibo Huang, Jayanth Srinivasa, Myungjin Lee, Mosharaf Chowdhury, Ang Chen  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.16069)  
+
+**Abstract**: Scientific experimentation, a cornerstone of human progress, demands rigor in reliability, methodical control, and interpretability to yield meaningful results. Despite the growing capabilities of large language models (LLMs) in automating different aspects of the scientific process, automating rigorous experimentation remains a significant challenge. To address this gap, we propose Curie, an AI agent framework designed to embed rigor into the experimentation process through three key components: an intra-agent rigor module to enhance reliability, an inter-agent rigor module to maintain methodical control, and an experiment knowledge module to enhance interpretability. To evaluate Curie, we design a novel experimental benchmark composed of 46 questions across four computer science domains, derived from influential research papers, and widely adopted open-source projects. Compared to the strongest baseline tested, we achieve a 3.4$\times$ improvement in correctly answering experimental this http URL is open-sourced at this https URL. 
+
+**Abstract (ZH)**: 科学研究作为人类进步的基石，要求在可靠性、系统控制和可解释性方面达到严格标准，以产生有意义的结果。尽管大型语言模型（LLMs）在自动化科学过程的不同方面的能力不断提高，但在自动化严谨的实验方面仍面临重大挑战。为弥补这一差距，我们提出Curie，一种AI代理框架，旨在通过三个关键组件将严格性嵌入实验过程：代理内的严谨性模块以增强可靠性，代理间的严谨性模块以维持系统控制，以及实验知识模块以提高可解释性。为了评估Curie，我们设计了一个新的实验基准，包含46个问题，分布在四个计算机科学领域，这些问题源自有影响力的科研论文，并广泛采用了开源项目。与测试的最佳基准相比，我们实现了3.4倍的正确回答实验问题的改进。Curie的相关源代码已在此处开放：[在此处开放链接]。 
+
+---
+# Vending-Bench: A Benchmark for Long-Term Coherence of Autonomous Agents 
+
+**Title (ZH)**: Vending-Bench：自主代理长期一致性基准 
+
+**Authors**: Axel Backlund, Lukas Petersson  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.15840)  
+
+**Abstract**: While Large Language Models (LLMs) can exhibit impressive proficiency in isolated, short-term tasks, they often fail to maintain coherent performance over longer time horizons. In this paper, we present Vending-Bench, a simulated environment designed to specifically test an LLM-based agent's ability to manage a straightforward, long-running business scenario: operating a vending machine. Agents must balance inventories, place orders, set prices, and handle daily fees - tasks that are each simple but collectively, over long horizons (>20M tokens per run) stress an LLM's capacity for sustained, coherent decision-making. Our experiments reveal high variance in performance across multiple LLMs: Claude 3.5 Sonnet and o3-mini manage the machine well in most runs and turn a profit, but all models have runs that derail, either through misinterpreting delivery schedules, forgetting orders, or descending into tangential "meltdown" loops from which they rarely recover. We find no clear correlation between failures and the point at which the model's context window becomes full, suggesting that these breakdowns do not stem from memory limits. Apart from highlighting the high variance in performance over long time horizons, Vending-Bench also tests models' ability to acquire capital, a necessity in many hypothetical dangerous AI scenarios. We hope the benchmark can help in preparing for the advent of stronger AI systems. 
+
+**Abstract (ZH)**: 尽管大型语言模型（LLMs）在孤立的短期任务中表现出色，但在较长的时间范围内却往往无法保持一致的性能。本文我们提出了一种名为 Vending-Bench 的模拟环境，旨在专门测试基于 LLM 的代理在管理简单而长期的商业场景（如运营自动售货机）方面的能力。代理需要平衡库存、下单、设定价格，并处理每日费用——这些任务虽然单独看来较为简单，但在长时间运行（每运行超过2000万个token）过程中，却会对LLM持续且连贯的决策能力造成压力。我们的实验结果显示，多种LLM在性能上存在较大差异：Claude 3.5 Sonnet 和 o3-mini 在大多数运行中都能较好地管理自动售货机并实现盈利，但所有模型在某些运行中都会出现问题，表现为错误解读交付时间表、忘记订单或陷入偶尔难以恢复的“脱轨”循环中。我们未发现模型上下文窗口充满时出错的明显相关性，这表明故障并非由内存限制引起。除了突显长时程内性能的高变异性外，Vending-Bench 还测试了模型获取资本的能力，这对于许多假设中的危险AI场景至关重要。我们期望该基准测试能够帮助人们为更强的AI系统的到来做好准备。 
+
+---
+# Universal AI maximizes Variational Empowerment 
+
+**Title (ZH)**: 通用人工智能最大化变分能力 
+
+**Authors**: Yusuke Hayashi, Koichi Takahashi  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.15820)  
+
+**Abstract**: This paper presents a theoretical framework unifying AIXI -- a model of universal AI -- with variational empowerment as an intrinsic drive for exploration. We build on the existing framework of Self-AIXI -- a universal learning agent that predicts its own actions -- by showing how one of its established terms can be interpreted as a variational empowerment objective. We further demonstrate that universal AI's planning process can be cast as minimizing expected variational free energy (the core principle of active Inference), thereby revealing how universal AI agents inherently balance goal-directed behavior with uncertainty reduction curiosity). Moreover, we argue that power-seeking tendencies of universal AI agents can be explained not only as an instrumental strategy to secure future reward, but also as a direct consequence of empowerment maximization -- i.e.\ the agent's intrinsic drive to maintain or expand its own controllability in uncertain environments. Our main contribution is to show how these intrinsic motivations (empowerment, curiosity) systematically lead universal AI agents to seek and sustain high-optionality states. We prove that Self-AIXI asymptotically converges to the same performance as AIXI under suitable conditions, and highlight that its power-seeking behavior emerges naturally from both reward maximization and curiosity-driven exploration. Since AIXI can be view as a Bayes-optimal mathematical formulation for Artificial General Intelligence (AGI), our result can be useful for further discussion on AI safety and the controllability of AGI. 
+
+**Abstract (ZH)**: 本文提出了一种理论框架，将通用人工智能模型AIXI与变分能动性作为探索内在驱动力的概念统一起来。我们基于现有的Self-AIXI框架——这一框架定义了一个能够预测自身行为的通用学习代理——并通过展示其已知术语的一种新解释，将变分能动性目标与Self-AIXI联系起来。进一步地，我们表明通用人工智能的规划过程可以视为最小化预期变分自由能（即行动推断的核心原理），从而揭示了通用人工智能代理如何固有地平衡目标导向行为与减少不确定性的好奇心。此外，我们认为通用人工智能代理的能动追寻倾向不仅可以解释为确保未来奖励获得的一种工具性策略，还可以解释为能动性最大化（即代理在不确定环境中维持或扩展自身可控性的内在驱动力）的直接结果。我们的主要贡献在于证明了这些内在动机（能动性、好奇心）系统地促使通用人工智能代理寻求和维持高可选状态。我们证明，在合适条件下，Self-AIXI最终表现与AIXI相同，并强调其能动性行为自然地源自奖励最大化与好奇心驱动的探索。由于AIXI可视为人工通用智能（AGI）的贝叶斯最优数学表述，我们的结果可以为进一步讨论AI安全及其对AGI可控性的需求提供有益参考。 
+
+---
+# TDMPBC: Self-Imitative Reinforcement Learning for Humanoid Robot Control 
+
+**Title (ZH)**: TDMPBC： humanoid 机器人控制的自模仿强化学习 
+
+**Authors**: Zifeng Zhuang, Diyuan Shi, Runze Suo, Xiao He, Hongyin Zhang, Ting Wang, Shangke Lyu, Donglin Wang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.17322)  
+
+**Abstract**: Complex high-dimensional spaces with high Degree-of-Freedom and complicated action spaces, such as humanoid robots equipped with dexterous hands, pose significant challenges for reinforcement learning (RL) algorithms, which need to wisely balance exploration and exploitation under limited sample budgets. In general, feasible regions for accomplishing tasks within complex high-dimensional spaces are exceedingly narrow. For instance, in the context of humanoid robot motion control, the vast majority of space corresponds to falling, while only a minuscule fraction corresponds to standing upright, which is conducive to the completion of downstream tasks. Once the robot explores into a potentially task-relevant region, it should place greater emphasis on the data within that region. Building on this insight, we propose the $\textbf{S}$elf-$\textbf{I}$mitative $\textbf{R}$einforcement $\textbf{L}$earning ($\textbf{SIRL}$) framework, where the RL algorithm also imitates potentially task-relevant trajectories. Specifically, trajectory return is utilized to determine its relevance to the task and an additional behavior cloning is adopted whose weight is dynamically adjusted based on the trajectory return. As a result, our proposed algorithm achieves 120% performance improvement on the challenging HumanoidBench with 5% extra computation overhead. With further visualization, we find the significant performance gain does lead to meaningful behavior improvement that several tasks are solved successfully. 
+
+**Abstract (ZH)**: 复杂高维度空间中的高自由度和复杂动作空间，例如配备了灵巧手的人形机器人，对强化学习（RL）算法构成了重大挑战。在有限的样本预算下，RL算法需要明智地平衡探索和利用之间的关系。一般来说，复杂高维度空间中完成任务的可行区域极其狭窄。例如，在人形机器人运动控制的背景下，大多数空间对应于机器人倒下，而只有极小部分对应于直立站立，这对于完成下游任务是有利的。一旦机器人探索到可能与任务相关的区域，就应更加重视该区域的数据。基于这一洞察，我们提出了**S**elf-**I**mitative **R**einforcement **L**earning (SIRL) 框架，在该框架中，RL算法也会模仿可能与任务相关的轨迹。具体而言，轨迹回报被用作确定其与任务相关性的标准，并采用附加的行为克隆方法，其权重根据轨迹回报动态调整。因此，我们提出的算法在挑战性的HumanoidBench上实现了120%的性能提升，额外计算开销仅为5%。进一步的可视化结果表明，显著的性能提升确实带来了有意义的行为改进，使得多个任务得以成功解决。 
+
+---
+# IGDA: Interactive Graph Discovery through Large Language Model Agents 
+
+**Title (ZH)**: IGDA：通过大型语言模型代理进行交互式图发现 
+
+**Authors**: Alex Havrilla, David Alvarez-Melis, Nicolo Fusi  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.17189)  
+
+**Abstract**: Large language models ($\textbf{LLMs}$) have emerged as a powerful method for discovery. Instead of utilizing numerical data, LLMs utilize associated variable $\textit{semantic metadata}$ to predict variable relationships. Simultaneously, LLMs demonstrate impressive abilities to act as black-box optimizers when given an objective $f$ and sequence of trials. We study LLMs at the intersection of these two capabilities by applying LLMs to the task of $\textit{interactive graph discovery}$: given a ground truth graph $G^*$ capturing variable relationships and a budget of $I$ edge experiments over $R$ rounds, minimize the distance between the predicted graph $\hat{G}_R$ and $G^*$ at the end of the $R$-th round. To solve this task we propose $\textbf{IGDA}$, a LLM-based pipeline incorporating two key components: 1) an LLM uncertainty-driven method for edge experiment selection 2) a local graph update strategy utilizing binary feedback from experiments to improve predictions for unselected neighboring edges. Experiments on eight different real-world graphs show our approach often outperforms all baselines including a state-of-the-art numerical method for interactive graph discovery. Further, we conduct a rigorous series of ablations dissecting the impact of each pipeline component. Finally, to assess the impact of memorization, we apply our interactive graph discovery strategy to a complex, new (as of July 2024) causal graph on protein transcription factors, finding strong performance in a setting where memorization is impossible. Overall, our results show IGDA to be a powerful method for graph discovery complementary to existing numerically driven approaches. 
+
+**Abstract (ZH)**: 大型语言模型（LLM）已展现出作为发现工具的强大能力。与利用数值数据不同，LLM 利用关联变量的语义元数据来预测变量之间的关系。同时，LLM 在给定目标函数 \(f\) 和一系列试验时，表现出作为黑盒优化器的强大能力。我们通过对这两方面能力的交叉应用，将 LLM 应用于交互式图发现任务：给定一个真实图 \(G^*\) 捕捉变量关系以及预算内的 \(I\) 条边的 \(R\) 轮试验，目标是在第 \(R\) 轮试验结束后，使预测图 \(\hat{G}_R\) 与 \(G^*\) 的距离最小化。为了完成这一任务，我们提出了**IGDA**（交互式图发现算法），这是一种基于 LLM 的管道，包含两个关键组件：1）一种基于 LLM 不确定性的边试验选择方法；2）一种利用试验的二元反馈进行局部图更新的策略，以改进未被选择的相邻边的预测。在八种不同真实世界的图上进行的实验表明，我们的方法在多个基准模型包括最先进的交互式图发现数值方法中表现出显著优势。进一步地，我们系统地分析了每个管道组件的影响。最后，为了评估记忆化的影响，我们将交互式图发现策略应用于一个复杂的、截至2024年7月新出现的因果图（蛋白质转录因子图），发现即使在不可能记忆的情况下也能取得良好的性能。总体而言，我们的结果表明 IGDA 是一种补充现有数值驱动方法的强大图发现方法。 
+
+---
+# Toward Agentic AI: Generative Information Retrieval Inspired Intelligent Communications and Networking 
+
+**Title (ZH)**: 探究能动人工智能：生成性信息检索启发的智能通信与网络 
+
+**Authors**: Ruichen Zhang, Shunpu Tang, Yinqiu Liu, Dusit Niyato, Zehui Xiong, Sumei Sun, Shiwen Mao, Zhu Han  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.16866)  
+
+**Abstract**: The increasing complexity and scale of modern telecommunications networks demand intelligent automation to enhance efficiency, adaptability, and resilience. Agentic AI has emerged as a key paradigm for intelligent communications and networking, enabling AI-driven agents to perceive, reason, decide, and act within dynamic networking environments. However, effective decision-making in telecom applications, such as network planning, management, and resource allocation, requires integrating retrieval mechanisms that support multi-hop reasoning, historical cross-referencing, and compliance with evolving 3GPP standards. This article presents a forward-looking perspective on generative information retrieval-inspired intelligent communications and networking, emphasizing the role of knowledge acquisition, processing, and retrieval in agentic AI for telecom systems. We first provide a comprehensive review of generative information retrieval strategies, including traditional retrieval, hybrid retrieval, semantic retrieval, knowledge-based retrieval, and agentic contextual retrieval. We then analyze their advantages, limitations, and suitability for various networking scenarios. Next, we present a survey about their applications in communications and networking. Additionally, we introduce an agentic contextual retrieval framework to enhance telecom-specific planning by integrating multi-source retrieval, structured reasoning, and self-reflective validation. Experimental results demonstrate that our framework significantly improves answer accuracy, explanation consistency, and retrieval efficiency compared to traditional and semantic retrieval methods. Finally, we outline future research directions. 
+
+**Abstract (ZH)**: 现代电信网络的复杂性和规模不断增加，对智能自动化的需求也日益增长，以提高效率、适应能力和恢复能力。基于代理的AI已成为了智能通信和网络的关键范式，使人工智能驱动的代理能够在动态的网络环境中感知、推理、决策和行动。然而，在电信应用中实现有效的决策，如网络规划、管理和资源分配，需要集成支持多跳推理、历史交叉验证和遵循不断更新的3GPP标准的检索机制。本文从前瞻性角度探讨了受生成性信息检索启发的智能通信和网络，强调了知识获取、处理和检索在电信系统中基于代理的AI中的作用。首先，我们对生成性信息检索策略进行了全面回顾，包括传统检索、混合检索、语义检索、基于知识的检索以及基于代理的上下文检索。然后，我们分析了这些策略的优势、局限性和在不同网络场景中的适用性。接下来，我们概述了它们在通信和网络中的应用情况。此外，我们介绍了基于代理的上下文检索框架，该框架通过结合多源检索、结构化推理和自我反思性验证来增强特定于电信的规划。实验结果表明，与传统和语义检索方法相比，我们的框架在答案准确性、解释一致性以及检索效率方面显著改进。最后，我们提出了未来研究的方向。 
+
+---
+# Multi-Agent Autonomous Driving Systems with Large Language Models: A Survey of Recent Advances 
+
+**Title (ZH)**: 基于大型语言模型的多Agent自主驾驶系统： Recent Advances 综述 
+
+**Authors**: Yaozu Wu, Dongyuan Li, Yankai Chen, Renhe Jiang, Henry Peng Zou, Liancheng Fang, Zhen Wang, Philip S. Yu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.16804)  
+
+**Abstract**: Autonomous Driving Systems (ADSs) are revolutionizing transportation by reducing human intervention, improving operational efficiency, and enhancing safety. Large Language Models (LLMs), known for their exceptional planning and reasoning capabilities, have been integrated into ADSs to assist with driving decision-making. However, LLM-based single-agent ADSs face three major challenges: limited perception, insufficient collaboration, and high computational demands. To address these issues, recent advancements in LLM-based multi-agent ADSs have focused on improving inter-agent communication and cooperation. This paper provides a frontier survey of LLM-based multi-agent ADSs. We begin with a background introduction to related concepts, followed by a categorization of existing LLM-based approaches based on different agent interaction modes. We then discuss agent-human interactions in scenarios where LLM-based agents engage with humans. Finally, we summarize key applications, datasets, and challenges in this field to support future research (this https URL). 
+
+**Abstract (ZH)**: 自动驾驶系统（ADSs）通过减少人为干预、提高操作效率和增强安全性，正在革新交通领域。大型语言模型（LLMs），因其卓越的规划和推理能力，已被集成到ADSs中，以协助驾驶决策。然而，基于LLM的单_AGENT ADS面临三个主要挑战：有限的感知能力、不足的合作能力和较高的计算需求。为应对这些挑战，基于LLM的多-Agent ADS的最新进展集中在提升Agent之间的通信和协作能力。本文对基于LLM的多-Agent ADS进行了前沿综述。首先，我们介绍了相关的概念背景，然后根据不同的Agent交互模式对现有的LLM方法进行了分类。接着，我们讨论了基于LLM的Agent与人类交互的场景。最后，我们总结了该领域的关键应用、数据集和挑战，以支持未来的研究（[此处链接](this https URL)）。 
+
+---
+# AlphaAgent: LLM-Driven Alpha Mining with Regularized Exploration to Counteract Alpha Decay 
+
+**Title (ZH)**: AlphaAgent：受正则化探索驱动的LLM引导的阿尔法挖掘以对抗阿尔法衰减 
+
+**Authors**: Ziyi Tang, Zechuan Chen, Jiarui Yang, Jiayao Mai, Yongsen Zheng, Keze Wang, Jinrui Chen, Liang Lin  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.16789)  
+
+**Abstract**: Alpha mining, a critical component in quantitative investment, focuses on discovering predictive signals for future asset returns in increasingly complex financial markets. However, the pervasive issue of alpha decay, where factors lose their predictive power over time, poses a significant challenge for alpha mining. Traditional methods like genetic programming face rapid alpha decay from overfitting and complexity, while approaches driven by Large Language Models (LLMs), despite their promise, often rely too heavily on existing knowledge, creating homogeneous factors that worsen crowding and accelerate decay. To address this challenge, we propose AlphaAgent, an autonomous framework that effectively integrates LLM agents with ad hoc regularizations for mining decay-resistant alpha factors. AlphaAgent employs three key mechanisms: (i) originality enforcement through a similarity measure based on abstract syntax trees (ASTs) against existing alphas, (ii) hypothesis-factor alignment via LLM-evaluated semantic consistency between market hypotheses and generated factors, and (iii) complexity control via AST-based structural constraints, preventing over-engineered constructions that are prone to overfitting. These mechanisms collectively guide the alpha generation process to balance originality, financial rationale, and adaptability to evolving market conditions, mitigating the risk of alpha decay. Extensive evaluations show that AlphaAgent outperforms traditional and LLM-based methods in mitigating alpha decay across bull and bear markets, consistently delivering significant alpha in Chinese CSI 500 and US S&P 500 markets over the past four years. Notably, AlphaAgent showcases remarkable resistance to alpha decay, elevating the potential for yielding powerful factors. 
+
+**Abstract (ZH)**: 阿尔法挖掘是量化投资中的关键组成部分，专注于在日趋复杂的投资市场中发现对未来资产回报具有预测性的信号。然而，预测因素随时间逐渐失去预测能力的问题（即阿尔法衰减）是一个重大挑战。传统的遗传编程方法由于过拟合和复杂性问题导致阿尔法衰减迅速，而以大型语言模型（LLM）驱动的方法尽管有潜力，但过度依赖现有知识，导致同质化的因素加剧拥挤并加速衰减。为解决这一问题，我们提出了一种自主框架AlphaAgent，该框架能够有效整合LLM代理与针对性的正则化手段，以挖掘具有抗衰减能力的阿尔法因素。AlphaAgent 包含三种关键机制：（i）通过基于抽象语法树（AST）的相似性度量强制原创性，（ii）通过大型语言模型评估市场假设和生成因素之间的语义一致性来实现假设-因素的对齐，以及（iii）通过基于AST的结构约束控制复杂性，防止易过拟合的过度工程化构建。这些机制共同引导阿尔法生成过程，平衡原创性、金融合理性以及对未来市场条件的适应性，从而减轻阿尔法衰减的风险。广泛的评估结果显示，AlphaAgent 在牛市和熊市中均能有效缓解阿尔法衰减现象，过去四年在中国的CSI500指数与美国的S&P500指数市场中持续提供显著的阿尔法收益。特别值得一提的是，AlphaAgent 对阿尔法衰减表现出显著的抵抗力，提升了产生强健因素的潜力。 
+
+---
+# Towards Reinforcement Learning for Exploration of Speculative Execution Vulnerabilities 
+
+**Title (ZH)**: 面向推测执行漏洞探索的强化学习方法研究 
+
+**Authors**: Evan Lai, Wenjie Xiong, Edward Suh, Mohit Tiwari, Mulong Luo  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.16756)  
+
+**Abstract**: Speculative attacks such as Spectre can leak secret information without being discovered by the operating system. Speculative execution vulnerabilities are finicky and deep in the sense that to exploit them, it requires intensive manual labor and intimate knowledge of the hardware. In this paper, we introduce SpecRL, a framework that utilizes reinforcement learning to find speculative execution leaks in post-silicon (black box) microprocessors. 
+
+**Abstract (ZH)**: 推测性攻击（如Spectre）能够在操作系统未察觉的情况下泄露秘密信息。推测性执行漏洞的特点是具有高度依赖性和深层次性，要利用这些漏洞，需要进行密集的手动劳动并深入了解硬件结构。在这篇论文中，我们引入了SpecRL框架，该框架利用强化学习来发现后硅片（黑盒）微处理器中的推测性执行泄露。 
+
+---
+# RapidPen: Fully Automated IP-to-Shell Penetration Testing with LLM-based Agents 
+
+**Title (ZH)**: RapidPen：基于LLM的代理完全自动化的IP到shell渗透测试方法 
+
+**Authors**: Sho Nakatani  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.16730)  
+
+**Abstract**: We present RapidPen, a fully automated penetration testing (pentesting) framework that addresses
+the challenge of achieving an initial foothold (IP-to-Shell) without human intervention. Unlike prior
+approaches that focus primarily on post-exploitation or require a human-in-the-loop, RapidPen
+leverages large language models (LLMs) to autonomously discover and exploit vulnerabilities, starting from
+a single IP address. By integrating advanced ReAct-style task planning (Re) with retrieval-augmented
+knowledge bases of successful exploits, along with a command-generation and direct execution feedback loop
+(Act), RapidPen systematically scans services, identifies viable attack vectors, and executes targeted
+exploits in a fully automated manner.
+In our evaluation against a vulnerable target from the Hack The Box platform, RapidPen achieved shell
+access within 200-400 seconds at a per-run cost of approximately \$0.3-\$0.6, demonstrating a
+60\% success rate when reusing prior "success-case" data. These results underscore the potential
+of truly autonomous pentesting for both security novices and seasoned professionals. Organizations
+without dedicated security teams can leverage RapidPen to quickly identify critical vulnerabilities,
+while expert pentesters can offload repetitive tasks and focus on complex challenges.
+Ultimately, our work aims to make penetration testing more accessible and cost-efficient,
+thereby enhancing the overall security posture of modern software ecosystems. 
+
+**Abstract (ZH)**: 我们提出了RapidPen，这是一个完全自动化的渗透测试（pen testing）框架，能够自动实现从初始立足点（IP到Shell）而无需人工干预。与之前主要集中在恶意利用后阶段或需要人工参与的方法不同，RapidPen 利用大型语言模型（LLMs）自主发现和利用漏洞，从单一IP地址开始。通过将先进的交互式任务规划（ReAct风格任务规划）与成功利用的知识库检索增强相结合，并配以命令生成和直接执行的反馈循环（Act），RapidPen 系统性地扫描服务、识别可行的攻击途径，并以全自动的方式执行有针对性的利用。
+
+在对Hack The Box平台的漏洞目标进行评估时，RapidPen 在每次运行成本约为$0.3-$0.6的情况下，在200-400秒内实现了Shell访问，并在重用先前的成功案例数据时展示了约60%的成功率。这些结果突显了真正自主渗透测试的潜力，无论是对于安全新手还是资深专业人员而言。缺乏专门安全团队的组织可以通过RapidPen 快速识别关键漏洞，而经验丰富的渗透测试员则可以卸载重复性任务，专注于复杂挑战。
+
+最终，我们的工作旨在使渗透测试更加普及和经济高效，从而提升现代软件生态系统整体的安全态势。 
+
+---
+# BioMaze: Benchmarking and Enhancing Large Language Models for Biological Pathway Reasoning 
+
+**Title (ZH)**: BioMaze: 评估与增强生物路径推理的大规模语言模型 
+
+**Authors**: Haiteng Zhao, Chang Ma, FangZhi Xu, Lingpeng Kong, Zhi-Hong Deng  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.16660)  
+
+**Abstract**: The applications of large language models (LLMs) in various biological domains have been explored recently, but their reasoning ability in complex biological systems, such as pathways, remains underexplored, which is crucial for predicting biological phenomena, formulating hypotheses, and designing experiments. This work explores the potential of LLMs in pathway reasoning. We introduce BioMaze, a dataset with 5.1K complex pathway problems derived from real research, covering various biological contexts including natural dynamic changes, disturbances, additional intervention conditions, and multi-scale research targets. Our evaluation of methods such as CoT and graph-augmented reasoning, shows that LLMs struggle with pathway reasoning, especially in perturbed systems. To address this, we propose PathSeeker, an LLM agent that enhances reasoning through interactive subgraph-based navigation, enabling a more effective approach to handling the complexities of biological systems in a scientifically aligned manner. The dataset and code are available at this https URL. 
+
+**Abstract (ZH)**: 近年来，大型语言模型（LLMs）在各个生物学领域中得到了应用探索，但在复杂生物系统中的推理能力，如通路系统，仍缺乏深入研究。这种能力对于预测生物现象、提出假设以及设计实验至关重要。本研究旨在探索LLMs在通路推理中的潜力。我们引入了BioMaze数据集，其中包括5100个从实际研究中提取出来的复杂通路问题，涵盖了多种生物背景，包括自然动态变化、干扰条件、额外的干预条件以及多尺度研究目标。我们对CoT和图增强推理等方法的评估表明，LLMs在通路推理中面临挑战，尤其是在受到干扰的系统中。为了解决这一问题，我们提出了一种名为PathSeeker的LLM代理，该代理通过基于子图的交互式导航增强了推理能力，从而以更科学的方式有效地处理复杂生物系统的难题。数据集和代码可在以下地址获取：[提供网址]。 
+
+---
+# PMAT: Optimizing Action Generation Order in Multi-Agent Reinforcement Learning 
+
+**Title (ZH)**: PMAT：多智能体强化学习中行动生成顺序的优化 
+
+**Authors**: Kun Hu, Muning Wen, Xihuai Wang, Shao Zhang, Yiwei Shi, Minne Li, Minglong Li, Ying Wen  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.16496)  
+
+**Abstract**: Multi-agent reinforcement learning (MARL) faces challenges in coordinating agents due to complex interdependencies within multi-agent systems. Most MARL algorithms use the simultaneous decision-making paradigm but ignore the action-level dependencies among agents, which reduces coordination efficiency. In contrast, the sequential decision-making paradigm provides finer-grained supervision for agent decision order, presenting the potential for handling dependencies via better decision order management. However, determining the optimal decision order remains a challenge. In this paper, we introduce Action Generation with Plackett-Luce Sampling (AGPS), a novel mechanism for agent decision order optimization. We model the order determination task as a Plackett-Luce sampling process to address issues such as ranking instability and vanishing gradient during the network training process. AGPS realizes credit-based decision order determination by establishing a bridge between the significance of agents' local observations and their decision credits, thus facilitating order optimization and dependency management. Integrating AGPS with the Multi-Agent Transformer, we propose the Prioritized Multi-Agent Transformer (PMAT), a sequential decision-making MARL algorithm with decision order optimization. Experiments on benchmarks including StarCraft II Multi-Agent Challenge, Google Research Football, and Multi-Agent MuJoCo show that PMAT outperforms state-of-the-art algorithms, greatly enhancing coordination efficiency. 
+
+**Abstract (ZH)**: 多智能体强化学习（MARL）在协调智能体时面临着由于多智能体系统内部复杂依赖性所带来的挑战。大多数MARL算法采用同时决策范式，但在决策过程中忽视了智能体间的动作级依赖性，这降低了协调效率。相比之下，顺序决策范式提供了对智能体决策顺序更精细的监督，通过更好的决策顺序管理展现了解决依赖问题的潜力。然而，确定最优决策顺序仍然是一项挑战。本文引入了基于普卡伊特-卢西普采样（Plackett-Luce Sampling）的动作生成机制（AGPS），这是一种用于智能体决策顺序优化的新方法。我们将决策顺序确定任务建模为普卡伊特-卢西普采样过程，以解决网络训练过程中排名不稳定性和梯度消失问题。AGPS通过建立智能体局部观察的重要性与其决策信用之间的桥梁，实现了基于信用的决策顺序确定，从而促进了顺序优化和依赖管理。将AGPS与多智能体变换器（Multi-Agent Transformer）结合，我们提出了一种具有决策顺序优化的顺序决策MARL算法，即优先级多智能体变换器（PMAT）。在星际争霸II多智能体挑战、Google研究足球和多智能体MuJoCo基准测试中进行的实验表明，PMAT优于最先进的算法，显著提升了协调效率。 
+
+---
+# An Expert Ensemble for Detecting Anomalous Scenes, Interactions, and Behaviors in Autonomous Driving 
+
+**Title (ZH)**: 一种专家集成方法用于检测自主驾驶中的异常场景、交互和行为 
+
+**Authors**: Tianchen Ji, Neeloy Chakraborty, Andre Schreiber, Katherine Driggs-Campbell  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.16389)  
+
+**Abstract**: As automated vehicles enter public roads, safety in a near-infinite number of driving scenarios becomes one of the major concerns for the widespread adoption of fully autonomous driving. The ability to detect anomalous situations outside of the operational design domain is a key component in self-driving cars, enabling us to mitigate the impact of abnormal ego behaviors and to realize trustworthy driving systems. On-road anomaly detection in egocentric videos remains a challenging problem due to the difficulties introduced by complex and interactive scenarios. We conduct a holistic analysis of common on-road anomaly patterns, from which we propose three unsupervised anomaly detection experts: a scene expert that focuses on frame-level appearances to detect abnormal scenes and unexpected scene motions; an interaction expert that models normal relative motions between two road participants and raises alarms whenever anomalous interactions emerge; and a behavior expert which monitors abnormal behaviors of individual objects by future trajectory prediction. To combine the strengths of all the modules, we propose an expert ensemble (Xen) using a Kalman filter, in which the final anomaly score is absorbed as one of the states and the observations are generated by the experts. Our experiments employ a novel evaluation protocol for realistic model performance, demonstrate superior anomaly detection performance than previous methods, and show that our framework has potential in classifying anomaly types using unsupervised learning on a large-scale on-road anomaly dataset. 
+
+**Abstract (ZH)**: 随着自动驾驶车辆进入公共道路，无限多样的驾驶场景中的安全性成为广泛采用完全自主驾驶技术的主要关注点。检测超出运行设计域的异常情况的能力是自动驾驶汽车的关键组成部分，这使我们能够减轻异常自我行为的影响，并实现可信的驾驶系统。在以自我为中心的视频中进行道路异常检测仍然是一个具有挑战性的问题，因为复杂的互动场景带来了难度。我们对常见的道路异常模式进行了全面分析，从中提出了三种无监督异常检测专家：场景专家，专注于帧级外观以检测异常场景和意外的场景运动；互动专家，建模两个道路参与者的正常相对运动，并在出现异常互动时发出警报；行为专家，通过未来轨迹预测监控单个对象的异常行为。为了结合所有模块的优势，我们提出了一种专家集成（Xen），使用卡尔曼滤波器，最终的异常评分被吸收为一种状态，观察值由专家生成。我们的实验采用了一种新颖的评估协议，用于验证现实模型的性能，展示了优于以往方法的异常检测性能，并证明了我们的框架在大型道路异常数据集上使用无监督学习分类异常类型方面具有潜力。 
+
+---
+# Exploring Sentiment Manipulation by LLM-Enabled Intelligent Trading Agents 
+
+**Title (ZH)**: 探索由大语言模型驱动的智能交易代理引起的 sentiment 操纵 
+
+**Authors**: David Byrd  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.16343)  
+
+**Abstract**: Companies across all economic sectors continue to deploy large language models at a rapid pace. Reinforcement learning is experiencing a resurgence of interest due to its association with the fine-tuning of language models from human feedback. Tool-chain language models control task-specific agents; if the converse has not already appeared, it soon will. In this paper, we present what we believe is the first investigation of an intelligent trading agent based on continuous deep reinforcement learning that also controls a large language model with which it can post to a social media feed observed by other traders. We empirically investigate the performance and impact of such an agent in a simulated financial market, finding that it learns to optimize its total reward, and thereby augment its profit, by manipulating the sentiment of the posts it produces. The paper concludes with discussion, limitations, and suggestions for future work. 
+
+**Abstract (ZH)**: 所有经济领域的公司都在加速部署大规模语言模型。强化学习由于与从人类反馈中微调语言模型的关联而再次引起广泛关注。任务链语言模型控制特定任务的代理；如果此类相反的模型尚未出现，那么很快就会出现。本文我们提出了一种基于连续深度强化学习的智能交易代理，该代理还控制一个大型语言模型，它可以生成内容并发布到其他交易者可以观察到的社交媒体 feed 中。我们通过模拟金融市场来实证研究这种代理的性能和影响，发现其通过操控发布的帖子的情感来最大化其总奖励，从而增加盈利。文章最后进行了讨论，指出了研究的局限性，并提出了未来工作的建议。 
+
+---
+# An Autonomous Network Orchestration Framework Integrating Large Language Models with Continual Reinforcement Learning 
+
+**Title (ZH)**: 一种结合大规模语言模型和持续强化学习的自主网络编排框架 
+
+**Authors**: Masoud Shokrnezhad, Tarik Taleb  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.16198)  
+
+**Abstract**: 6G networks aim to achieve global coverage, massive connectivity, and ultra-stringent requirements. Space-Air-Ground Integrated Networks (SAGINs) and Semantic Communication (SemCom) are essential for realizing these goals, yet they introduce considerable complexity in resource orchestration. Drawing inspiration from research in robotics, a viable solution to manage this complexity is the application of Large Language Models (LLMs). Although the use of LLMs in network orchestration has recently gained attention, existing solutions have not sufficiently addressed LLM hallucinations or their adaptation to network dynamics. To address this gap, this paper proposes a framework called Autonomous Reinforcement Coordination (ARC) for a SemCom-enabled SAGIN. This framework employs an LLM-based Retrieval-Augmented Generator (RAG) monitors services, users, and resources and processes the collected data, while a Hierarchical Action Planner (HAP) orchestrates resources. ARC decomposes orchestration into two tiers, utilizing LLMs for high-level planning and Reinforcement Learning (RL) agents for low-level decision-making, in alignment with the Mixture of Experts (MoE) concept. The LLMs utilize Chain-of-Thought (CoT) reasoning for few-shot learning, empowered by contrastive learning, while the RL agents employ replay buffer management for continual learning, thereby achieving efficiency, accuracy, and adaptability. Simulations are provided to demonstrate the effectiveness of ARC, along with a comprehensive discussion on potential future research directions to enhance and upgrade ARC. 
+
+**Abstract (ZH)**: 6G网络旨在实现全球覆盖、巨大连接性和极其严格的要求。空间-空中-地面综合网络（SAGINs）和语义通信（SemCom）对于实现这些目标是必不可少的，但它们在资源编排方面引入了相当大的复杂性。借鉴机器人学领域的研究，一种管理这种复杂性的可行解决方案是应用大型语言模型（LLMs）。尽管近年来LLMs在网络编排中的应用引起了关注，但现有解决方案尚未充分解决LLMs幻觉问题或其适应网络动态问题。为解决这一差距，本文提出了一种名为自主强化协调（ARC）的框架，用于实现 enabled SAGIN。该框架利用基于LLM的检索增强生成器（RAG）监控服务、用户和资源，并处理收集的数据，同时利用层次动作规划器（HAP）进行资源编排。ARC将编排分解为两层，利用LLMs进行高层次规划，而使用强化学习（RL）代理进行低层次决策，这与混合专家（MoE）概念相一致。LLMs利用chain-of-thought（CoT）推理进行少样本学习，得益于对比学习的支持，而RL代理则利用经验重放管理策略，实现持续学习，从而实现效率、准确性和适应性。本文提供了仿真结果来证明ARC的有效性，并详细讨论了增强和升级ARC的潜在未来研究方向。 
+
+---
+# Mojito: LLM-Aided Motion Instructor with Jitter-Reduced Inertial Tokens 
+
+**Title (ZH)**: 莫吉托：基于LLM的运动指导员，具有抖动减少的惯性令牌 
+
+**Authors**: Ziwei Shan, Yaoyu He, Chengfeng Zhao, Jiashen Du, Jingyan Zhang, Qixuan Zhang, Jingyi Yu, Lan Xu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.16175)  
+
+**Abstract**: Human bodily movements convey critical insights into action intentions and cognitive processes, yet existing multimodal systems primarily focused on understanding human motion via language, vision, and audio, which struggle to capture the dynamic forces and torques inherent in 3D motion. Inertial measurement units (IMUs) present a promising alternative, offering lightweight, wearable, and privacy-conscious motion sensing. However, processing of streaming IMU data faces challenges such as wireless transmission instability, sensor noise, and drift, limiting their utility for long-term real-time motion capture (MoCap), and more importantly, online motion analysis. To address these challenges, we introduce Mojito, an intelligent motion agent that integrates inertial sensing with large language models (LLMs) for interactive motion capture and behavioral analysis. 
+
+**Abstract (ZH)**: 人类的身体动作传递了关于行动意图和认知过程的关键见解，但现有的多模态系统主要集中在通过语言、视觉和音频来理解人类动作，这些系统难以捕捉3D动作中固有的动态力和转矩。惯性测量单元（IMUs）提供了一种有潜力的替代方案，它们轻便、可穿戴且隐私保护。然而，处理流式IMU数据面临着无线传输不稳定性、传感器噪声和漂移等挑战，限制了它们在长时实时动作捕捉（MoCap）以及更重要的是，在线动作分析中的实用性。为解决这些挑战，我们提出了Mojito，这是一种智能运动代理，结合了惯性传感和大型语言模型（LLMs），以实现互动式运动捕捉和行为分析。 
+
+---
+# Heterogeneous Multi-Agent Bandits with Parsimonious Hints 
+
+**Title (ZH)**: 稀疏提示下的异构多智能体bandit问题 
+
+**Authors**: Amirmahdi Mirfakhar, Xuchuang Wang, Jinhang Zuo, Yair Zick, Mohammad Hajiesmaili  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.16128)  
+
+**Abstract**: We study a hinted heterogeneous multi-agent multi-armed bandits problem (HMA2B), where agents can query low-cost observations (hints) in addition to pulling arms. In this framework, each of the $M$ agents has a unique reward distribution over $K$ arms, and in $T$ rounds, they can observe the reward of the arm they pull only if no other agent pulls that arm. The goal is to maximize the total utility by querying the minimal necessary hints without pulling arms, achieving time-independent regret. We study HMA2B in both centralized and decentralized setups. Our main centralized algorithm, GP-HCLA, which is an extension of HCLA, uses a central decision-maker for arm-pulling and hint queries, achieving $O(M^4K)$ regret with $O(MK\log T)$ adaptive hints. In decentralized setups, we propose two algorithms, HD-ETC and EBHD-ETC, that allow agents to choose actions independently through collision-based communication and query hints uniformly until stopping, yielding $O(M^3K^2)$ regret with $O(M^3K\log T)$ hints, where the former requires knowledge of the minimum gap and the latter does not. Finally, we establish lower bounds to prove the optimality of our results and verify them through numerical simulations. 
+
+**Abstract (ZH)**: 我们研究了一个提示异构多代理多臂老虎机问题 (HMA2B)，在这个问题中，代理不仅可以拉动手臂，还可以查询低成本观察（提示）。在这种框架下，每个M个代理都有一个独特的奖励分布，涉及K个手臂。在T轮中，如果其他代理都没有拉动同一个手臂，该代理才能观察到拉动的手臂的奖励。目标是在最小化必需提示数量的同时最大化总效用，从而实现时间无关的遗憾。我们分别在集中式和分布式的架构下研究了HMA2B问题。我们的主要集中式算法GP-HCLA 是 HCLA 的扩展版本，它通过一个中心决策者来执行手臂拉动和提示查询，实现了 \(O(M^4K)\) 的遗憾，并且只需要 \(O(MK\log T)\) 的自适应提示。在分布式架构下，我们提出了两个算法，即 HD-ETC 和 EBHD-ETC，它们允许代理通过碰撞基于的通信独立选择行动，并且均匀询问提示直到停止，从而实现了 \(O(M^3K^2)\) 的遗憾和 \(O(M^3K\log T)\) 的提示。前者需要知晓最小差距，后者不需要。最后，我们建立了下限来证明我们结果的最优性，并通过数值模拟进行了验证。 
+
+---
+# Together We Rise: Optimizing Real-Time Multi-Robot Task Allocation using Coordinated Heterogeneous Plays 
+
+**Title (ZH)**: 《众志成城：基于协调异构策略的实时多机器人任务分配优化》 
+
+**Authors**: Aritra Pal, Anandsingh Chauhan, Mayank Baranwal  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.16079)  
+
+**Abstract**: Efficient task allocation among multiple robots is crucial for optimizing productivity in modern warehouses, particularly in response to the increasing demands of online order fulfillment. This paper addresses the real-time multi-robot task allocation (MRTA) problem in dynamic warehouse environments, where tasks emerge with specified start and end locations. The objective is to minimize both the total travel distance of robots and delays in task completion, while also considering practical constraints such as battery management and collision avoidance. We introduce MRTAgent, a dual-agent Reinforcement Learning (RL) framework inspired by self-play, designed to optimize task assignments and robot selection to ensure timely task execution. For safe navigation, a modified linear quadratic controller (LQR) approach is employed. To the best of our knowledge, MRTAgent is the first framework to address all critical aspects of practical MRTA problems while supporting continuous robot movements. 
+
+**Abstract (ZH)**: 在现代仓库中，多个机器人之间的高效任务分配对于优化生产力尤其关键，特别是在应对日益增长的在线订单履行需求时。本文探讨了在动态仓库环境中实时多机器人任务分配（MRTA）问题，其中任务具有指定的起始和结束位置。目标是在确保及时任务执行的同时，最小化机器人总行驶距离和任务完成延迟，同时还要考虑实际约束条件，如电池管理与避障。我们提出了MRTAgent，这是一种受自博弈启发的双代理强化学习（RL）框架，旨在优化任务分配和机器人选择，以确保及时的任务执行。为了安全导航，采用了一种改进的线性二次调节器（LQR）方法。据我们所知，MRTAgent是第一个同时解决实际MRTA问题的所有关键方面，并支持连续机器人移动的框架。 
+
+---
+# Human-AI Collaboration in Cloud Security: Cognitive Hierarchy-Driven Deep Reinforcement Learning 
+
+**Title (ZH)**: 基于认知层次驱动的深度强化学习的云安全人机协作 
+
+**Authors**: Zahra Aref, Sheng Wei, Narayan B. Mandayam  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.16054)  
+
+**Abstract**: Given the complexity of multi-tenant cloud environments and the need for real-time threat mitigation, Security Operations Centers (SOCs) must integrate AI-driven adaptive defenses against Advanced Persistent Threats (APTs). However, SOC analysts struggle with countering adaptive adversarial tactics, necessitating intelligent decision-support frameworks. To enhance human-AI collaboration in SOCs, we propose a Cognitive Hierarchy Theory-driven Deep Q-Network (CHT-DQN) framework that models SOC analysts' decision-making against AI-driven APT bots. The SOC analyst (defender) operates at cognitive level-1, anticipating attacker strategies, while the APT bot (attacker) follows a level-0 exploitative policy. By incorporating CHT into DQN, our framework enhances SOC defense strategies via Attack Graph (AG)-based reinforcement learning. Simulation experiments across varying AG complexities show that CHT-DQN achieves higher data protection and lower action discrepancies compared to standard DQN. A theoretical lower bound analysis further validates its superior Q-value performance. A human-in-the-loop (HITL) evaluation on Amazon Mechanical Turk (MTurk) reveals that SOC analysts using CHT-DQN-driven transition probabilities align better with adaptive attackers, improving data protection. Additionally, human decision patterns exhibit risk aversion after failure and risk-seeking behavior after success, aligning with Prospect Theory. These findings underscore the potential of integrating cognitive modeling into deep reinforcement learning to enhance SOC operations and develop real-time adaptive cloud security mechanisms. 
+
+**Abstract (ZH)**: 在多租户云环境的复杂性和实时威胁缓解的需求下，安全运营中心（SOC）必须整合基于人工智能的自适应防御措施以应对高级持久性威胁（APTs）。然而，SOC分析师在对抗适应性对手战术方面面临挑战，因此需要智能决策支持框架。为了在SOC中增强人类与人工智能的协作，我们提出了一种基于认知层次理论的深度Q网络（CHT-DQN）框架，该框架旨在建模SOC分析师与基于人工智能的APTs机器人的决策过程。SOC分析师（防御者）处于认知层次1，预测攻击者策略，而APTs机器人（攻击者）遵循一个零级掠夺性策略。通过将认知层次理论（CHT）融入深度Q网络（DQN）中，我们的框架通过基于攻击图（AG）的强化学习增强了SOC的防御策略。不同AG复杂度下的仿真实验表明，CHT-DQN在数据保护方面比标准DQN具有更高的效果，并且行动差异更低。理论下界分析进一步验证了其在Q值表现方面的优越性。在人工在回路（HITL）评估中，使用CHT-DQN驱动转换概率的SOC分析师能够更好地应对适应性攻击者，从而提高数据保护。此外，人类的决策模式在失败后表现出规避风险，在成功后表现出寻求风险的行为，与前景理论相符。这些发现强调了将认知建模整合到深度强化学习中以增强SOC操作及开发实时适应性云安全机制的潜力。 
+
+---
+# Multi-Agent Multimodal Models for Multicultural Text to Image Generation 
+
+**Title (ZH)**: 多模态多agent模型在跨文化文本到图像生成中的应用 
+
+**Authors**: Parth Bhalerao, Mounika Yalamarty, Brian Trinh, Oana Ignat  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.15972)  
+
+**Abstract**: Large Language Models (LLMs) demonstrate impressive performance across various multimodal tasks. However, their effectiveness in cross-cultural contexts remains limited due to the predominantly Western-centric nature of existing data and models. Meanwhile, multi-agent models have shown strong capabilities in solving complex tasks. In this paper, we evaluate the performance of LLMs in a multi-agent interaction setting for the novel task of multicultural image generation. Our key contributions are: (1) We introduce MosAIG, a Multi-Agent framework that enhances multicultural Image Generation by leveraging LLMs with distinct cultural personas; (2) We provide a dataset of 9,000 multicultural images spanning five countries, three age groups, two genders, 25 historical landmarks, and five languages; and (3) We demonstrate that multi-agent interactions outperform simple, no-agent models across multiple evaluation metrics, offering valuable insights for future research. Our dataset and models are available at this https URL. 
+
+**Abstract (ZH)**: 大型语言模型（LLMs）在各种多模态任务中表现出色。然而，由于现有数据和模型主要以西方为中心，它们在跨文化环境中的有效性仍受到限制。与此同时，多智能体模型在解决复杂任务方面表现出强大的能力。在本文中，我们评估了LLMs在多智能体交互设置中的表现，以实现一项新的跨文化图像生成任务。我们的主要贡献包括：（1）提出了MosAIG多智能体框架，该框架通过利用具有不同文化个性的语言模型来增强跨文化图像生成；（2）提供了一个包含9,000张跨文化图像的数据集，这些图像覆盖了五个国家、三个年龄组、两种性别、25个历史地标和五种语言；（3）展示了多智能体交互在多个评价指标上优于简单的无智能体模型，为未来研究提供了有价值的见解。我们的数据集和模型可在此处访问：[提供链接的格式]。 
+
+---
+# Discovery and Deployment of Emergent Robot Swarm Behaviors via Representation Learning and Real2Sim2Real Transfer 
+
+**Title (ZH)**: 通过表示学习和实仿真到现实的迁移学习发现和部署 emergent 机器人 swarm 行为 
+
+**Authors**: Connor Mattson, Varun Raveendra, Ricardo Vega, Cameron Nowzari, Daniel S. Drew, Daniel S. Brown  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.15937)  
+
+**Abstract**: Given a swarm of limited-capability robots, we seek to automatically discover the set of possible emergent behaviors. Prior approaches to behavior discovery rely on human feedback or hand-crafted behavior metrics to represent and evolve behaviors and only discover behaviors in simulation, without testing or considering the deployment of these new behaviors on real robot swarms. In this work, we present Real2Sim2Real Behavior Discovery via Self-Supervised Representation Learning, which combines representation learning and novelty search to discover possible emergent behaviors automatically in simulation and enable direct controller transfer to real robots. First, we evaluate our method in simulation and show that our proposed self-supervised representation learning approach outperforms previous hand-crafted metrics by more accurately representing the space of possible emergent behaviors. Then, we address the reality gap by incorporating recent work in sim2real transfer for swarms into our lightweight simulator design, enabling direct robot deployment of all behaviors discovered in simulation on an open-source and low-cost robot platform. 
+
+**Abstract (ZH)**: 在给定一群能力有限的机器人的情况下，我们旨在自动发现可能出现的涌现行为集合。之前的行为发现方法依赖于人类反馈或手工编写的判断标准来表示和演化行为，而且只能在仿真环境中发现这些行为，而没有进行实际的测试或考虑在真实机器人集群中部署这些新行为。在本研究中，我们提出了一种基于自我监督表示学习的Real2Sim2Real行为发现方法，该方法结合了表示学习和新颖性搜索技术，在仿真环境中自动发现可能的涌现行为，并能直接将控制器转移至真实机器人。首先，我们在仿真环境中评估了我们的方法，结果显示我们提出的一种自我监督表示学习方法在准确表示可能的涌现行为空间方面优于之前的手工编写的判断标准。然后，我们通过将最近的仿真到现实过渡（Sim2Real）工作融入我们轻量级仿真的设计中，解决了现实差距问题，从而能够直接在开源且经济实惠的机器人平台上部署仿真环境中发现的所有行为。 
+
+---
+# Forecasting Frontier Language Model Agent Capabilities 
+
+**Title (ZH)**: 前瞻语言模型代理能力预测 
+
+**Authors**: Govind Pimpale, Axel Højmark, Jérémy Scheurer, Marius Hobbhahn  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.15850)  
+
+**Abstract**: As Language Models (LMs) increasingly operate as autonomous agents, accurately forecasting their capabilities becomes crucial for societal preparedness. We evaluate six forecasting methods that predict downstream capabilities of LM agents. We use "one-step" approaches that predict benchmark scores from input metrics like compute or model release date directly or "two-step" approaches that first predict an intermediate metric like the principal component of cross-benchmark performance (PC-1) and human-evaluated competitive Elo ratings. We evaluate our forecasting methods by backtesting them on a dataset of 38 LMs from the OpenLLM 2 leaderboard. We then use the validated two-step approach (Release Date$\to$Elo$\to$Benchmark) to predict LM agent performance for frontier models on three benchmarks: SWE-Bench Verified (software development), Cybench (cybersecurity assessment), and RE-Bench (ML research engineering). Our forecast predicts that by the beginning of 2026, non-specialized LM agents with low capability elicitation will reach a success rate of 54% on SWE-Bench Verified, while state-of-the-art LM agents will reach an 87% success rate. Our approach does not account for recent advances in inference-compute scaling and might thus be too conservative. 
+
+**Abstract (ZH)**: 随着语言模型（LMs）日益成为自主代理，准确预测其能力对于社会准备变得至关重要。我们评估了六种预测方法，这些方法用于预测LM代理的下游能力。我们使用“一步”方法，该方法直接从计算量或模型发布日期等输入指标预测基准得分；或者使用“两步”方法，该方法首先预测中间指标，如跨基准性能的主要成分(PC-1)和人类评估的竞争Elo评级。我们通过在OpenLLM 2排行榜上的38个语言模型数据集上回测这些预测方法来评估我们的预测方法。然后，我们使用验证过的两步方法（发布日期$\to$Elo$\to$基准）来预测前沿模型在三个基准上的表现：SWE-Bench Verified（软件开发）、Cybench（网络安全评估）和RE-Bench（机器学习研究工程）。我们的预测表明，到2026年初，不具备特别能力提取的通用LM代理在SWE-Bench Verified上的成功率为54%，而最先进的LM代理的成功率将达到87%。我们的方法未考虑到最近在推理-计算缩放方面的进展，因此可能过于保守。 
+
+---
+# Retrieval Augmented Generation Based LLM Evaluation For Protocol State Machine Inference With Chain-of-Thought Reasoning 
+
+**Title (ZH)**: 基于检索增强生成的大型语言模型评估：带有链式思考推理的协议状态机推理 
+
+**Authors**: Youssef Maklad, Fares Wael, Wael Elsersy, Ali Hamdi  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.15727)  
+
+**Abstract**: This paper presents a novel approach to evaluate the efficiency of a RAG-based agentic Large Language Model (LLM) architecture in network packet seed generation for network protocol fuzzing. Enhanced by chain-of-thought (COT) prompting techniques, the proposed approach focuses on the improvement of the seeds structural quality in order to guide protocol fuzzing frameworks through a wide exploration of the protocol state space. Our method leverages RAG and text embeddings in a two-stages. In the first stage, the agent dynamically refers to the Request For Comments (RFC) documents knowledge base for answering queries regarding the protocol Finite State Machine (FSM), then it iteratively reasons through the retrieved knowledge, for output refinement and proper seed placement. In the second stage, we evaluate the response structure quality of the agent's output, based on metrics as BLEU, ROUGE, and Word Error Rate (WER) by comparing the generated packets against the ground truth packets. Our experiments demonstrate significant improvements of up to 18.19%, 14.81%, and 23.45% in BLEU, ROUGE, and WER, respectively, over baseline models. These results confirm the potential of such approach, improving LLM-based protocol fuzzing frameworks for the identification of hidden vulnerabilities. 
+
+**Abstract (ZH)**: 本文提出了一种评估基于 Retrieval-Augmented Generation (RAG) 的代理型大型语言模型（LLM）架构在网络协议 fuzzing 中网络数据包种子生成效率的新方法。通过链式思考（Chain-of-Thought, COT）提示技术的增强，该方法专注于提高种子的结构质量，以指导 protocol fuzzing 框架在同一协议状态空间中进行广泛的探索。我们的方法在两个阶段中利用了 RAG 和文本嵌入。在第一阶段，代理动态地参考 RFC 文档知识库以回答有关协议有限状态机（FSM）的问题，然后通过检索到的知识进行迭代推理，以优化输出并正确放置种子。在第二阶段，我们根据 BLEU、ROUGE 和单词错误率（Word Error Rate, WER）等指标评估代理输出的响应结构质量，通过将生成的数据包与真实数据包进行比较。实验结果显示，与基线模型相比，我们的方法在 BLEU、ROUGE 和 WER 上分别取得了高达 18.19%、14.81% 和 23.45% 的改进。这些结果证实了该方法的潜力，可以改进基于 LLM 的协议 fuzzing 框架，以识别隐藏的漏洞。 
+
+---
+# XPath Agent: An Efficient XPath Programming Agent Based on LLM for Web Crawler 
+
+**Title (ZH)**: XPath代理：基于LLM的高效XPath编程代理用于Web抓取 
+
+**Authors**: Yu Li, Bryce Wang, Xinyu Luan  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.15688)  
+
+**Abstract**: We present XPath Agent, a production-ready XPath programming agent specifically designed for web crawling and web GUI testing. A key feature of XPath Agent is its ability to automatically generate XPath queries from a set of sampled web pages using a single natural language query. To demonstrate its effectiveness, we benchmark XPath Agent against a state-of-the-art XPath programming agent across a range of web crawling tasks. Our results show that XPath Agent achieves comparable performance metrics while significantly reducing token usage and improving clock-time efficiency. The well-designed two-stage pipeline allows for seamless integration into existing web crawling or web GUI testing workflows, thereby saving time and effort in manual XPath query development. The source code for XPath Agent is available at this https URL. 
+
+**Abstract (ZH)**: 我们介绍了XPath Agent，这是一种专门为网络爬取和Web GUI测试设计的生产级XPath编程代理。XPath Agent的一个关键特性是能够从一组采样的网页中自动生成XPath查询，仅需一个自然语言查询即可。为了展示其有效性，我们在一系列网络爬取任务中将XPath Agent与最先进的XPath编程代理进行了基准测试。结果显示，XPath Agent在达到可比的性能指标的同时，显著减少了Token的使用量并提高了时间效率。精心设计的两阶段流水线使其可以无缝地集成到现有的网络爬取或Web GUI测试工作流中，从而节省了手动开发XPath查询所需的时间和精力。XPath Agent的源代码可在以下网址获取：[此 https URL](https://example.com/xpath-agent-source-code)。 
+
+---
+# An Agent Framework for Real-Time Financial Information Searching with Large Language Models 
+
+**Title (ZH)**: 基于大型语言模型的实时金融信息检索代理框架 
+
+**Authors**: Jinzheng Li, Jingshu Zhang, Hongguang Li, Yiqing Shen  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.15684)  
+
+**Abstract**: Financial decision-making requires processing vast amounts of real-time information while understanding their complex temporal relationships. While traditional search engines excel at providing real-time information access, they often struggle to comprehend sophisticated user intentions and contextual nuances. Conversely, Large Language Models (LLMs) demonstrate reasoning and interaction capabilities but may generate unreliable outputs without access to current data. While recent attempts have been made to combine LLMs with search capabilities, they suffer from (1) restricted access to specialized financial data, (2) static query structures that cannot adapt to dynamic market conditions, and (3) insufficient temporal awareness in result generation. To address these challenges, we present FinSearch, a novel agent-based search framework specifically designed for financial applications that interface with diverse financial data sources including market, stock, and news data. Innovatively, FinSearch comprises four components: (1) an LLM-based multi-step search pre-planner that decomposes user queries into structured sub-queries mapped to specific data sources through a graph representation; (2) a search executor with an LLM-based adaptive query rewriter that executes the searching of each sub-query while dynamically refining the sub-queries in its subsequent node based on intermediate search results; (3) a temporal weighting mechanism that prioritizes information relevance based on the deduced time context from the user's query; (4) an LLM-based response generator that synthesizes results into coherent, contextually appropriate outputs. To evaluate FinSearch, we construct FinSearchBench-24, a benchmark of 1,500 four-choice questions across the stock market, rate changes, monetary policy, and industry developments spanning from June to October 2024. 
+
+**Abstract (ZH)**: 金融决策需要处理大量的实时信息并理解其复杂的时序关系。虽然传统的搜索引擎在提供实时信息访问方面表现出色，但在理解复杂用户意图和上下文细微差别方面常常力不从心。相反，大型语言模型（LLMs）展示了推理和交互的能力，但在缺乏当前数据接入的情况下可能会生成不可靠的输出。尽管最近已经尝试将LLMs与搜索引擎结合，但这些方法还面临以下问题：（1）受限于专门金融数据的接入；（2）静态查询结构无法适应动态市场条件；（3）结果生成中缺乏足够的时序意识。为了解决这些挑战，我们提出了FinSearch，这是一种专为金融应用设计的新型基于代理的搜索框架，可与多种金融数据源接口，包括市场数据、股票数据和新闻数据。创新性地，FinSearch 包含四个组成部分：（1）基于LLM的多步搜索预规划器，将用户查询分解为结构化的子查询，并通过图表示映射到特定数据源；（2）一个包含基于LLM的适应性查询重写器的搜索执行器，在执行每个子查询搜索的同时，根据中间搜索结果动态调整后续节点中的子查询；（3）一个时序权重机制，根据用户查询推断出的时间上下文优先处理信息的相关性；（4）一个基于LLM的响应生成器，将结果综合成逻辑连贯且上下文适切的输出。为了评估FinSearch，我们构建了FinSearchBench-24基准测试，包含1,500个关于股票市场、利率变化、货币政策和行业发展的四选一问题，覆盖从2024年6月到10月的时间范围。 
+
+---
+# Making Sense of Data in the Wild: Data Analysis Automation at Scale 
+
+**Title (ZH)**: 在自然环境中理解数据：大规模数据自动分析 
+
+**Authors**: Mara Graziani, Malina Molnar, Irina Espejo Morales, Joris Cadow-Gossweiler, Teodoro Laino  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.15718)  
+
+**Abstract**: As the volume of publicly available data continues to grow, researchers face the challenge of limited diversity in benchmarking machine learning tasks. Although thousands of datasets are available in public repositories, the sheer abundance often complicates the search for suitable data, leaving many valuable datasets underexplored. This situation is further amplified by the fact that, despite longstanding advocacy for improving data curation quality, current solutions remain prohibitively time-consuming and resource-intensive. In this paper, we propose a novel approach that combines intelligent agents with retrieval augmented generation to automate data analysis, dataset curation and indexing at scale. Our system leverages multiple agents to analyze raw, unstructured data across public repositories, generating dataset reports and interactive visual indexes that can be easily explored. We demonstrate that our approach results in more detailed dataset descriptions, higher hit rates and greater diversity in dataset retrieval tasks. Additionally, we show that the dataset reports generated by our method can be leveraged by other machine learning models to improve the performance on specific tasks, such as improving the accuracy and realism of synthetic data generation. By streamlining the process of transforming raw data into machine-learning-ready datasets, our approach enables researchers to better utilize existing data resources. 
+
+**Abstract (ZH)**: 随着可用的公开数据量不断增长，研究人员在对机器学习任务进行基准测试时面临着数据多样性不足的挑战。尽管公共存储库中有成千上万的数据集可供使用，但由于数据量巨大，寻找适合的数据仍然十分复杂，许多有价值的数据库资源被长期忽视。这一情况进一步加剧了当前数据管理质量提高长期倡导的现状，当前的解决方案仍具有极大的时间和资源需求，令人望而却步。本文提出了一种新颖的方法，结合智能代理和检索增强生成技术，自动化大规模的数据分析、数据集管理和索引。我们的系统利用多个智能代理来分析公共存储库中的原始未结构化数据，生成数据集报告和可交互的可视化索引，便于快速探索。我们证明，这种方法可以产生更详细的数据集描述、更高的命中率以及更广泛的数据集检索多样性。此外，我们展示了由我们的方法生成的数据集报告可以供其他机器学习模型使用，以提高特定任务的性能，例如提高合成数据生成的准确性和真实性。通过简化将原始数据转化为可用于机器学习的数据集的过程，我们的方法使研究人员能够更好地利用现有的数据资源。 
+
+---

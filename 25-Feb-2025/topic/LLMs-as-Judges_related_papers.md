@@ -1,0 +1,26 @@
+# GuidedBench: Equipping Jailbreak Evaluation with Guidelines 
+
+**Title (ZH)**: GuidedBench：为越狱评估提供指导原则 
+
+**Authors**: Ruixuan Huang, Xunguang Wang, Zongjie Li, Daoyuan Wu, Shuai Wang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.16903)  
+
+**Abstract**: Jailbreaking methods for large language models (LLMs) have gained increasing attention for building safe and responsible AI systems. After analyzing 35 jailbreak methods across six categories, we find that existing benchmarks, relying on universal LLM-based or keyword-matching scores, lack case-specific criteria, leading to conflicting results. In this paper, we introduce a more robust evaluation framework for jailbreak methods, with a curated harmful question dataset, detailed case-by-case evaluation guidelines, and a scoring system equipped with these guidelines. Our experiments show that existing jailbreak methods exhibit better discrimination when evaluated using our benchmark. Some jailbreak methods that claim to achieve over 90% attack success rate (ASR) on other benchmarks only reach a maximum of 30.2% on our benchmark, providing a higher ceiling for more advanced jailbreak research; furthermore, using our scoring system reduces the variance of disagreements between different evaluator LLMs by up to 76.33%. This demonstrates its ability to provide more fair and stable evaluation. 
+
+**Abstract (ZH)**: 对于大型语言模型（LLMs）的越狱方法（Jailbreaking）的研究正在逐渐受到关注，以构建安全和负责任的AI系统。经过对6个类别中的35种越狱方法进行分析后，我们发现现有的基准方法依赖于通用的LLM评分或关键词匹配评分，缺乏针对具体情况的标准，导致结果存在矛盾。在本文中，我们提出了一种更为 robust 的评估框架，其中包括一个精选的有害问题数据集、详细的逐案例评估指南以及与这些指南相结合的评分系统。实验结果表明，利用我们提出的基准方法评估越狱方法时，它们的区分能力更强。一些声称在其他基准上实现超过90%攻击成功率（ASR）的越狱方法，在我们的基准上仅达到30.2%的最大值，这为更先进的越狱研究设置了更高的门槛；此外，使用我们的评分系统可以将不同评估者语言模型之间分歧的方差降低高达76.33%，这证明了其提供更公平和稳定的评估能力。 
+
+---
+# Towards Fully-Automated Materials Discovery via Large-Scale Synthesis Dataset and Expert-Level LLM-as-a-Judge 
+
+**Title (ZH)**: 通过大规模合成数据集和专家级LLM评判实现完全自动的材料发现 
+
+**Authors**: Heegyu Kim, Taeyang Jeon, Seungtaek Choi, Jihoon Hong, Dongwon Jeon, Sungbum Cho, Ga-Yeon Baek, Kyung-Won Kwak, Dong-Hee Lee, Sun-Jin Choi, Jisu Bae, Chihoon Lee, Yunseo Kim, Jinsung Park, Hyunsouk Cho  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.16457)  
+
+**Abstract**: Materials synthesis is vital for innovations such as energy storage, catalysis, electronics, and biomedical devices. Yet, the process relies heavily on empirical, trial-and-error methods guided by expert intuition. Our work aims to support the materials science community by providing a practical, data-driven resource. We have curated a comprehensive dataset of 17K expert-verified synthesis recipes from open-access literature, which forms the basis of our newly developed benchmark, AlchemyBench. AlchemyBench offers an end-to-end framework that supports research in large language models applied to synthesis prediction. It encompasses key tasks, including raw materials and equipment prediction, synthesis procedure generation, and characterization outcome forecasting. We propose an LLM-as-a-Judge framework that leverages large language models for automated evaluation, demonstrating strong statistical agreement with expert assessments. Overall, our contributions offer a supportive foundation for exploring the capabilities of LLMs in predicting and guiding materials synthesis, ultimately paving the way for more efficient experimental design and accelerated innovation in materials science. 
+
+**Abstract (ZH)**: 材料合成对于能源存储、催化、电子和生物医学设备等创新至关重要。然而，这一过程主要依赖于专家直觉指导下的经验性和试验性方法。我们致力于通过提供一个实用的数据驱动资源来支持材料科学界的研究。我们从开源文献中整理了一个包含17000个专家验证的合成配方的数据集，形成了我们新开发的基准——AlchemyBench。AlchemyBench提供了一个端到端的框架，支持大型语言模型在合成预测中的应用研究。该框架涵盖了关键任务，包括原材料和设备预测、合成过程生成以及表征结果预测。我们提出了一种LLM-as-a-Judge框架，利用大型语言模型进行自动化评估，显示出与专家评估结果的强烈统计一致性。总体而言，我们的贡献为探索LLM在预测和指导材料合成方面的潜力提供了一个支持性基础，最终为材料科学中的更高效实验设计和加速创新铺平了道路。 
+
+---
