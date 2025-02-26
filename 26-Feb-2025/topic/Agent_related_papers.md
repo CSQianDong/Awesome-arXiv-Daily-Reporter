@@ -1,0 +1,306 @@
+# AgentRM: Enhancing Agent Generalization with Reward Modeling 
+
+**Title (ZH)**: AgentRM：通过奖励建模增强智能体的泛化能力 
+
+**Authors**: Yu Xia, Jingru Fan, Weize Chen, Siyu Yan, Xin Cong, Zhong Zhang, Yaxi Lu, Yankai Lin, Zhiyuan Liu, Maosong Sun  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.18407)  
+
+**Abstract**: Existing LLM-based agents have achieved strong performance on held-in tasks, but their generalizability to unseen tasks remains poor. Hence, some recent work focus on fine-tuning the policy model with more diverse tasks to improve the generalizability. In this work, we find that finetuning a reward model to guide the policy model is more robust than directly finetuning the policy model. Based on this finding, we propose AgentRM, a generalizable reward model, to guide the policy model for effective test-time search. We comprehensively investigate three approaches to construct the reward model, including explicit reward modeling, implicit reward modeling and LLM-as-a-judge. We then use AgentRM to guide the answer generation with Best-of-N sampling and step-level beam search. On four types of nine agent tasks, AgentRM enhances the base policy model by $8.8$ points on average, surpassing the top general agent by $4.0$. Moreover, it demonstrates weak-to-strong generalization, yielding greater improvement of $12.6$ on LLaMA-3-70B policy model. As for the specializability, AgentRM can also boost a finetuned policy model and outperform the top specialized agent by $11.4$ on three held-in tasks. Further analysis verifies its effectiveness in test-time scaling. Codes will be released to facilitate the research in this area. 
+
+**Abstract (ZH)**: 现有的基于LLM的智能体在已有任务上表现出色，但在未见任务上的泛化能力仍然较差。因此，一些近期的工作集中在使用更多样化的任务微调策略模型，以提高其泛化能力。本工作中，我们发现微调奖励模型来引导策略模型比直接微调策略模型更具鲁棒性。基于这一发现，我们提出了AgentRM，这是一种通用的奖励模型，用于在有效测试时搜索中引导策略模型。我们综合调查了三种构建奖励模型的方法，包括显式奖励建模、隐式奖励建模以及LLM作为评判者。然后，我们使用AgentRM来利用Best-of-N抽样和步骤级束搜索引导答案生成。在四种不同类型的任务中，AgentRM通过平均提高8.8个点增强了基线策略模型，并在九个代理任务中超越了顶级通用智能体4.0个点。此外，它在LLaMA-3-70B策略模型上的结果表明，它具有从弱到强的泛化能力，使其在策略改进方面达到了12.6个点的更大提升。在两个专用任务和一个已有任务上，AgentRM还能够提升微调后的策略模型，并在三个已见任务中以11.4个点的优势超越顶级专用智能体。进一步的分析验证了其在测试时扩展的有效性。代码将在本研究领域中公开，以促进相关研究。 
+
+---
+# RefuteBench 2.0 -- Agentic Benchmark for Dynamic Evaluation of LLM Responses to Refutation Instruction 
+
+**Title (ZH)**: RefuteBench 2.0 —基于代理视角的动态评估大规模语言模型反驳指令响应的标准库 
+
+**Authors**: Jianhao Yan, Yun Luo, Yue Zhang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.18308)  
+
+**Abstract**: In the multi-turn interaction schema, large language models (LLMs) can leverage user feedback to enhance the quality and relevance of their responses. However, evaluating an LLM's ability to incorporate user refutation feedback is crucial yet challenging. In this study, we introduce RefuteBench 2.0, which significantly extends the original RefuteBench by incorporating LLM agents as refuters and evaluators, which allows for flexible and comprehensive assessment.
+We design both transient and persistent refutation instructions with different validity periods. Meta-evaluation shows that the LLM-based refuter could generate more human-like refutations and the evaluators could assign scores with high correlation with humans. Experimental results of various LLMs show that current models could effectively satisfy the refutation but fail to memorize the refutation information. Interestingly, we also observe that the performance of the initial task decreases as the refutations increase. Analysis of the attention scores further shows a potential weakness of current LLMs: they struggle to retain and correctly use previous information during long context dialogues. this https URL 
+
+**Abstract (ZH)**: 在多轮交互模式下，大型语言模型（LLMs）能够利用用户反馈来提高其响应的质量和相关性。然而，评估LLM Incorporate用户反驳反馈的能力既关键又具有挑战性。在本研究中，我们介绍了RefuteBench 2.0，这是一个显著扩展了原始RefuteBench的评估框架，通过引入基于LLM的反驳者和评估者，使评估更加灵活和全面。
+
+我们设计了具有不同有效期限的临时反驳指令和持久反驳指令。元评估显示，基于LLM的反驳者能够生成更加接近人类的反驳，评估者能够给出与人类高度相关的评分。各种LLM的实验证据表明，当前模型能够有效地回应反驳，但未能妥善保留反驳信息。有趣的是，我们还观察到，随着反驳次数的增加，初始任务的表现逐渐下降。对注意力分数的进一步分析显示，当前LLM可能存在的一个潜在弱点：它们在长时间上下文对话中难以有效地保留和正确使用先前的信息。
+
+参考链接：[此处提供参考链接] 
+
+---
+# Debt Collection Negotiations with Large Language Models: An Evaluation System and Optimizing Decision Making with Multi-Agent 
+
+**Title (ZH)**: 使用大型语言模型进行债务追收谈判：评估系统与多代理优化决策研究 
+
+**Authors**: Xiaofeng Wang, Zhixin Zhang, Jinguang Zheng, Yiming Ai, Rui Wang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.18228)  
+
+**Abstract**: Debt collection negotiations (DCN) are vital for managing non-performing loans (NPLs) and reducing creditor losses. Traditional methods are labor-intensive, while large language models (LLMs) offer promising automation potential. However, prior systems lacked dynamic negotiation and real-time decision-making capabilities. This paper explores LLMs in automating DCN and proposes a novel evaluation framework with 13 metrics across 4 aspects. Our experiments reveal that LLMs tend to over-concede compared to human negotiators. To address this, we propose the Multi-Agent Debt Negotiation (MADeN) framework, incorporating planning and judging modules to improve decision rationality. We also apply post-training techniques, including DPO with rejection sampling, to optimize performance. Our studies provide valuable insights for practitioners and researchers seeking to enhance efficiency and outcomes in this domain. 
+
+**Abstract (ZH)**: 债务催收谈判（DCN）对于管理不良贷款（NPLs）和减少债权人的损失至关重要。传统方法耗时且劳动密集，而大型语言模型（LLMs）则提供了自动化的潜力。然而，之前的系统缺乏动态谈判和实时决策的能力。本文探讨了利用LLMs自动进行DCN的方法，并提出了一种全新的评估框架，涵盖4个方面的13个指标。我们的实验表明，与人类谈判者相比，LLMs往往会过度让步。为解决这一问题，我们提出了一个多智能体债务谈判（MADeN）框架，该框架通过引入计划和判断模块以提高决策的合理性。此外，我们还应用了后训练技术，包括带 rejection sampling 的 DPO，以优化性能。我们的研究为希望在此领域提高效率和成果的实践者和研究人员提供了宝贵的见解。 
+
+---
+# Assessing Large Language Models in Agentic Multilingual National Bias 
+
+**Title (ZH)**: 评估代理多语言国家偏见中的大型语言模型 
+
+**Authors**: Qianying Liu, Katrina Qiyao Wang, Fei Cheng, Sadao Kurohashi  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.17945)  
+
+**Abstract**: Large Language Models have garnered significant attention for their capabilities in multilingual natural language processing, while studies on risks associated with cross biases are limited to immediate context preferences. Cross-language disparities in reasoning-based recommendations remain largely unexplored, with a lack of even descriptive analysis. This study is the first to address this gap. We test LLM's applicability and capability in providing personalized advice across three key scenarios: university applications, travel, and relocation. We investigate multilingual bias in state-of-the-art LLMs by analyzing their responses to decision-making tasks across multiple languages. We quantify bias in model-generated scores and assess the impact of demographic factors and reasoning strategies (e.g., Chain-of-Thought prompting) on bias patterns. Our findings reveal that local language bias is prevalent across different tasks, with GPT-4 and Sonnet reducing bias for English-speaking countries compared to GPT-3.5 but failing to achieve robust multilingual alignment, highlighting broader implications for multilingual AI agents and applications such as education. 
+
+**Abstract (ZH)**: 大规模语言模型因其在多语言自然语言处理方面的能力而备受关注，然而与跨语言偏见相关风险的研究主要集中在即时背景偏好上。基于推理的跨语言推荐差异尚未得到充分探索，几乎没有描述性的分析。本研究首次填补了这一空白。我们测试了大型语言模型在三个关键场景下提供个性化建议的应用性和能力：大学申请、旅行和搬迁。我们通过分析大型语言模型在多语言环境下的决策任务响应，来研究其多语言偏见。我们量化了模型生成的评分中的偏见，并评估了人口统计学因素和推理策略（如因果推理提示）对偏见模式的影响。研究结果揭示了不同任务中普遍存在地方语言偏见，GPT-4 和 Sonnet 在减少英语国家偏见方面相比 GPT-3.5 更有效，但未能实现稳健的多语言对齐，这突显了多语言人工智能代理及其在教育等应用方面更广泛的影响。 
+
+---
+# FACT-AUDIT: An Adaptive Multi-Agent Framework for Dynamic Fact-Checking Evaluation of Large Language Models 
+
+**Title (ZH)**: FACT-AUDIT：一种适应性多代理框架，用于大型语言模型动态事实核查评估 
+
+**Authors**: Hongzhan Lin, Yang Deng, Yuxuan Gu, Wenxuan Zhang, Jing Ma, See-Kiong Ng, Tat-Seng Chua  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.17924)  
+
+**Abstract**: Large Language Models (LLMs) have significantly advanced the fact-checking studies. However, existing automated fact-checking evaluation methods rely on static datasets and classification metrics, which fail to automatically evaluate the justification production and uncover the nuanced limitations of LLMs in fact-checking. In this work, we introduce FACT-AUDIT, an agent-driven framework that adaptively and dynamically assesses LLMs' fact-checking capabilities. Leveraging importance sampling principles and multi-agent collaboration, FACT-AUDIT generates adaptive and scalable datasets, performs iterative model-centric evaluations, and updates assessments based on model-specific responses. By incorporating justification production alongside verdict prediction, this framework provides a comprehensive and evolving audit of LLMs' factual reasoning capabilities, to investigate their trustworthiness. Extensive experiments demonstrate that FACT-AUDIT effectively differentiates among state-of-the-art LLMs, providing valuable insights into model strengths and limitations in model-centric fact-checking analysis. 
+
+**Abstract (ZH)**: 大型语言模型（LLMs）在事实核查研究中取得了显著进展。然而，现有的自动化事实核查评估方法依赖于静态数据集和分类指标，无法自动评估推理过程中的论证生成，并揭示LLMs在事实核查中的细微限制。在此项工作中，我们引入了FACT-AUDIT，这是一种基于代理的框架，能够适应性和动态地评估LLMs的事实核查能力。通过利用重要性采样原理和多代理协作，FACT-AUDIT生成适应性和可扩展的数据集，进行迭代的模型导向评估，并根据模型特定的响应更新评估结果。通过结合论证生成与判决预测，这一框架提供了对LLMs事实推理能力的全面且不断演化的审计，以研究其可信度。大量实验证明，FACT-AUDIT能够有效地区分最先进的LLMs，并提供了有关模型在模型导向的事实核查分析中优势和局限性的宝贵见解。 
+
+---
+# Towards Enhanced Immersion and Agency for LLM-based Interactive Drama 
+
+**Title (ZH)**: 面向基于大规模语言模型的互动戏剧，提升沉浸感和自主性的方法 
+
+**Authors**: Hongqiu Wu, Weiqi Wu, Tianyang Xu, Jiameng Zhang, Hai Zhao  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.17878)  
+
+**Abstract**: LLM-based Interactive Drama is a novel AI-based dialogue scenario, where the user (i.e. the player) plays the role of a character in the story, has conversations with characters played by LLM agents, and experiences an unfolding story. This paper begins with understanding interactive drama from two aspects: Immersion, the player's feeling of being present in the story, and Agency, the player's ability to influence the story world. Both are crucial to creating an enjoyable interactive experience, while they have been underexplored in previous work. To enhance these two aspects, we first propose Playwriting-guided Generation, a novel method that helps LLMs craft dramatic stories with substantially improved structures and narrative quality. Additionally, we introduce Plot-based Reflection for LLM agents to refine their reactions to align with the player's intentions. Our evaluation relies on human judgment to assess the gains of our methods in terms of immersion and agency. 
+
+**Abstract (ZH)**: 基于LLM的互动戏剧是一种新型的人工智能对话场景，其中用户（即玩家）扮演故事中的角色，与由LLM代理扮演的角色进行对话，并体验故事的发展。本文从两个方面理解互动戏剧：沉浸感，玩家在故事中的存在感；以及能动性，玩家对故事世界的影响力。这两者对于创造令人愉悦的互动体验至关重要，但它们在之前的工作中尚未得到充分探索。为了增强这两个方面，我们首先提出了剧本指导生成这一新颖的方法，通过这种方法帮助LLM生成具有显著改进结构和叙述质量的戏剧性故事。此外，我们引入了基于剧情的反思，使LLM代理能够调整其反应以符合玩家的意图。我们的评估依赖于人类评委的判断，以评估我们的方法在提高沉浸感和能动性方面的成效。 
+
+---
+# Citrus: Leveraging Expert Cognitive Pathways in a Medical Language Model for Advanced Medical Decision Support 
+
+**Title (ZH)**: 柑橘：利用专家认知路径增强医疗语言模型的高级医疗决策支持 
+
+**Authors**: Guoxin Wang, Minyu Gao, Shuai Yang, Ya Zhang, Lizhi He, Liang Huang, Hanlin Xiao, Yexuan Zhang, Wanyue Li, Lu Chen, Jintao Fei, Xin Li  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.18274)  
+
+**Abstract**: Large language models (LLMs), particularly those with reasoning capabilities, have rapidly advanced in recent years, demonstrating significant potential across a wide range of applications. However, their deployment in healthcare, especially in disease reasoning tasks, is hindered by the challenge of acquiring expert-level cognitive data. In this paper, we introduce Citrus, a medical language model that bridges the gap between clinical expertise and AI reasoning by emulating the cognitive processes of medical experts. The model is trained on a large corpus of simulated expert disease reasoning data, synthesized using a novel approach that accurately captures the decision-making pathways of clinicians. This approach enables Citrus to better simulate the complex reasoning processes involved in diagnosing and treating medical this http URL further address the lack of publicly available datasets for medical reasoning tasks, we release the last-stage training data, including a custom-built medical diagnostic dialogue dataset. This open-source contribution aims to support further research and development in the field. Evaluations using authoritative benchmarks such as MedQA, covering tasks in medical reasoning and language understanding, show that Citrus achieves superior performance compared to other models of similar size. These results highlight Citrus potential to significantly enhance medical decision support systems, providing a more accurate and efficient tool for clinical decision-making. 
+
+**Abstract (ZH)**: 近年来，尤其是具备推理能力的大规模语言模型（LLMs）取得了迅速发展，展示了在各种应用领域中的巨大潜力。然而，这些模型在医疗领域的部署，尤其是在疾病推理任务中的应用，受到了获取专家级认知数据的挑战。本文介绍了Citrus，这是一种医疗语言模型，通过模拟医学专家的认知过程，弥合了临床专业知识与人工智能推理之间的差距。该模型是基于大量模拟的专家级疾病推理数据集进行训练的，这些数据是通过一种新颖的方法合成的，该方法能够准确捕捉临床决策的路径。这种方法使Citrus能够更好地模拟诊断和治疗过程中的复杂推理机制。
+
+为进一步解决医学推理任务中缺乏公共数据集的问题，我们公开了模型的最后一阶段训练数据，包括一个自定义构建的医疗诊断对话数据集。这一开放源代码的贡献旨在支持该领域进一步的研究和开发。使用MedQA等权威基准进行的评估涵盖了医学推理和语言理解的任务，结果显示，Citrus在性能上优于其他同类型规模的模型。这些结果突显了Citrus在增强医疗决策支持系统方面的巨大潜力，可以为临床决策提供更加准确和高效的工具。 
+
+---
+# ViDoRAG: Visual Document Retrieval-Augmented Generation via Dynamic Iterative Reasoning Agents 
+
+**Title (ZH)**: ViDoRAG：基于动态迭代推理代理的视觉文档检索增强生成方法 
+
+**Authors**: Qiuchen Wang, Ruixue Ding, Zehui Chen, Weiqi Wu, Shihang Wang, Pengjun Xie, Feng Zhao  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.18017)  
+
+**Abstract**: Understanding information from visually rich documents remains a significant challenge for traditional Retrieval-Augmented Generation (RAG) methods. Existing benchmarks predominantly focus on image-based question answering (QA), overlooking the fundamental challenges of efficient retrieval, comprehension, and reasoning within dense visual documents. To bridge this gap, we introduce ViDoSeek, a novel dataset designed to evaluate RAG performance on visually rich documents requiring complex reasoning. Based on it, we identify key limitations in current RAG approaches: (i) purely visual retrieval methods struggle to effectively integrate both textual and visual features, and (ii) previous approaches often allocate insufficient reasoning tokens, limiting their effectiveness. To address these challenges, we propose ViDoRAG, a novel multi-agent RAG framework tailored for complex reasoning across visual documents. ViDoRAG employs a Gaussian Mixture Model (GMM)-based hybrid strategy to effectively handle multi-modal retrieval. To further elicit the model's reasoning capabilities, we introduce an iterative agent workflow incorporating exploration, summarization, and reflection, providing a framework for investigating test-time scaling in RAG domains. Extensive experiments on ViDoSeek validate the effectiveness and generalization of our approach. Notably, ViDoRAG outperforms existing methods by over 10% on the competitive ViDoSeek benchmark. 
+
+**Abstract (ZH)**: 传统的检索增强生成（RAG）方法在理解视觉丰富的文档信息方面仍面临显著挑战。现有的基准主要侧重于基于图像的问题回答（QA），忽视了密集视觉文档中高效检索、理解和推理的基本挑战。为弥合这一差距，我们引入了ViDoSeek，这是一个新数据集，旨在评估RAG在需要复杂推理的视觉丰富文档中的性能。基于此，我们识别了当前RAG方法的关键局限性：(i) 纯视觉检索方法难以有效地整合文本和视觉特征，(ii) 以前的方法往往分配不足的推理令牌，限制了它们的效果。为了应对这些挑战，我们提出了ViDoRAG，这是一个专门为视觉文档中复杂推理设计的多agent RAG框架。ViDoRAG采用基于高斯混合模型（GMM）的混合策略有效地处理多模态检索。为了进一步激发模型的推理能力，我们引入了一种迭代的agent工作流，包括探索、总结和反思，为RAG领域中的测试时尺度研究提供了框架。在ViDoSeek上的广泛实验验证了我们方法的有效性和泛化能力。值得注意的是，ViDoRAG在竞争性的ViDoSeek基准测试中性能优于现有方法超过10%。 
+
+---
+# LLM Knows Geometry Better than Algebra: Numerical Understanding of LLM-Based Agents in A Trading Arena 
+
+**Title (ZH)**: LLM 在几何知识上优于代数：基于 LLM 的代理在交易竞技场中的数值理解 
+
+**Authors**: Tianmi Ma, Jiawei Du, Wenxin Huang, Wenjie Wang, Liang Xie, Xian Zhong, Joey Tianyi Zhou  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.17967)  
+
+**Abstract**: Recent advancements in large language models (LLMs) have significantly improved performance in natural language processing tasks. However, their ability to generalize to dynamic, unseen tasks, particularly in numerical reasoning, remains a challenge. Existing benchmarks mainly evaluate LLMs on problems with predefined optimal solutions, which may not align with real-world scenarios where clear answers are absent. To bridge this gap, we design the Agent Trading Arena, a virtual numerical game simulating complex economic systems through zero-sum games, where agents invest in stock portfolios. Our experiments reveal that LLMs, including GPT-4o, struggle with algebraic reasoning when dealing with plain-text stock data, often focusing on local details rather than global trends. In contrast, LLMs perform significantly better with geometric reasoning when presented with visual data, such as scatter plots or K-line charts, suggesting that visual representations enhance numerical reasoning. This capability is further improved by incorporating the reflection module, which aids in the analysis and interpretation of complex data. We validate our findings on NASDAQ Stock dataset, where LLMs demonstrate stronger reasoning with visual data compared to text. Our code and data are publicly available at this https URL. 
+
+**Abstract (ZH)**: 近年来，大型语言模型（LLMs）在自然语言处理任务中的性能显著提升。然而，它们在动态、未见过的任务中的泛化能力，尤其是在数值推理方面，仍然存在挑战。现有基准测试主要评估LLMs在具有预定义最优解的问题上的表现，这可能与现实世界中缺乏明确答案的场景不一致。为解决这一问题，我们设计了Agent Trading Arena，这是一种虚拟数值游戏，通过零和博弈模拟复杂经济系统，其中的代理投资于股票组合。我们的实验表明，包括GPT-4o在内的LLMs在处理平文本股票数据时，在代数推理方面表现困难，往往关注局部细节而非整体趋势。相比之下，当提供可视化数据（如散点图或K线图）时，LLMs在几何推理方面的表现显著更好，这表明可视化表示能够增强数值推理能力。通过引入反射模块，这一能力得到进一步提升，该模块有助于复杂数据的分析和解释。我们在纳斯达克股票数据集上验证了上述发现，结果显示，与文本相比，LLMs在可视化数据上的推理能力更强。我们的代码和数据已在以下网址公开：[请在此处填写网址]。 
+
+---
+# METAL: A Multi-Agent Framework for Chart Generation with Test-Time Scaling 
+
+**Title (ZH)**: METAL：一种用于图表生成的多智能体框架，具备测试时扩展能力 
+
+**Authors**: Bingxuan Li, Yiwei Wang, Jiuxiang Gu, Kai-Wei Chang, Nanyun Peng  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.17651)  
+
+**Abstract**: Chart generation aims to generate code to produce charts satisfying the desired visual properties, e.g., texts, layout, color, and type. It has great potential to empower the automatic professional report generation in financial analysis, research presentation, education, and healthcare. In this work, we build a vision-language model (VLM) based multi-agent framework for effective automatic chart generation. Generating high-quality charts requires both strong visual design skills and precise coding capabilities that embed the desired visual properties into code. Such a complex multi-modal reasoning process is difficult for direct prompting of VLMs. To resolve these challenges, we propose METAL, a multi-agent framework that decomposes the task of chart generation into the iterative collaboration among specialized agents. METAL achieves 5.2% improvement in accuracy over the current best result in the chart generation task. The METAL framework exhibits the phenomenon of test-time scaling: its performance increases monotonically as the logarithmic computational budget grows from 512 to 8192 tokens. In addition, we find that separating different modalities during the critique process of METAL boosts the self-correction capability of VLMs in the multimodal context. 
+
+**Abstract (ZH)**: 图表生成旨在生成能够满足预期视觉属性（如文本、布局、颜色和类型）的代码，具有在金融分析、研究展示、教育和医疗保健等领域自动专业报告生成的巨大潜力。在这项工作中，我们构建了一个基于视觉-语言模型（VLM）的多智能体框架，以有效地实现自动图表生成。生成高质量的图表需要具备强大的视觉设计技能和精确的编程能力，将预期的视觉属性嵌入到代码中。这种复杂的多模态推理过程难以直接通过指导VLMs来实现。为了解决这些问题，我们提出了一种多智能体框架METAL，该框架将图表生成任务分解为专门智能体之间的迭代合作。METAL在图表生成任务中的准确度提高了5.2%，并且在测试时表现出计算预算随日志计算预算从512增长到8192时性能单调提升的现象。此外，我们发现，在METAL的批判过程中分离不同模态可以增强VLMs在多模态环境下的自我校正能力。 
+
+---
+# Training a Generally Curious Agent 
+
+**Title (ZH)**: 训练一个普遍好奇的智能体 
+
+**Authors**: Fahim Tajwar, Yiding Jiang, Abitha Thankaraj, Sumaita Sadia Rahman, J Zico Kolter, Jeff Schneider, Ruslan Salakhutdinov  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.17543)  
+
+**Abstract**: Efficient exploration is essential for intelligent systems interacting with their environment, but existing language models often fall short in scenarios that require strategic information gathering. In this paper, we present PAPRIKA, a fine-tuning approach that enables language models to develop general decision-making capabilities that are not confined to particular environments. By training on synthetic interaction data from different tasks that require diverse strategies, PAPRIKA teaches models to explore and adapt their behavior on a new task based on environment feedback in-context without more gradient updates. Experimental results show that models fine-tuned with PAPRIKA can effectively transfer their learned decision-making capabilities to entirely unseen tasks without additional training. Unlike traditional training, our approach's primary bottleneck lies in sampling useful interaction data instead of model updates. To improve sample efficiency, we propose a curriculum learning strategy that prioritizes sampling trajectories from tasks with high learning potential. These results suggest a promising path towards AI systems that can autonomously solve novel sequential decision-making problems that require interactions with the external world. 
+
+**Abstract (ZH)**: 有效的探索对于智能系统与其环境交互至关重要，但现有的语言模型在需要战略信息收集的场景中常常表现不佳。本文介绍了PAPRIKA，这是一种精细调整方法，使语言模型能够发展出不受特定环境限制的一般决策能力。通过在不同的任务上进行训练，这些任务需要不同的策略，PAPRIKA 教育模型在其首次接触新任务时根据环境反馈进行探索和调整行为，而无需增加梯度更新。实验结果表明，使用PAPRIKA进行微调的模型能够有效地将学到的决策能力转移到完全未见过的任务上，而无需额外训练。与传统的训练方法相比，我们方法的主要瓶颈在于采集有用交互数据，而非模型更新。为了提高样本效率，我们提出了一种课程学习策略，优先从具有高学习潜力的任务中采样轨迹。这些结果表明，朝着自主解决需要与外部世界互动的新序列决策问题的AI系统方向前进是值得期待的。 
+
+---
+# MAPoRL: Multi-Agent Post-Co-Training for Collaborative Large Language Models with Reinforcement Learning 
+
+**Title (ZH)**: MAPoRL：基于强化学习的多智能体共训练协作大语言模型 
+
+**Authors**: Chanwoo Park, Seungju Han, Xingzhi Guo, Asuman Ozdaglar, Kaiqing Zhang, Joo-Kyung Kim  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.18439)  
+
+**Abstract**: Leveraging multiple large language models (LLMs) to build collaborative multi-agentic workflows has demonstrated significant potential. However, most previous studies focus on prompting the out-of-the-box LLMs, relying on their innate capability for collaboration, which may not improve LLMs' performance as shown recently. In this paper, we introduce a new post-training paradigm MAPoRL (Multi-Agent Post-co-training for collaborative LLMs with Reinforcement Learning), to explicitly elicit the collaborative behaviors and further unleash the power of multi-agentic LLM frameworks. In MAPoRL, multiple LLMs first generate their own responses independently and engage in a multi-turn discussion to collaboratively improve the final answer. In the end, a MAPoRL verifier evaluates both the answer and the discussion, by assigning a score that verifies the correctness of the answer, while adding incentives to encourage corrective and persuasive discussions. The score serves as the co-training reward, and is then maximized through multi-agent RL. Unlike existing LLM post-training paradigms, MAPoRL advocates the co-training of multiple LLMs together using RL for better generalization. Accompanied by analytical insights, our experiments demonstrate that training individual LLMs alone is insufficient to induce effective collaboration. In contrast, multi-agent co-training can boost the collaboration performance across benchmarks, with generalization to unseen domains. 
+
+**Abstract (ZH)**: 利用多个大规模语言模型（LLMs）构建协作多智能体工作流展现出显著潜力。然而，大多数前期研究集中在通过提示现成的LLMs来激发其协作能力上，依赖它们固有的协作能力，这可能未如最近研究所示那样提高LLMs的表现。本文介绍了一种新的后训练范式MAPoRL（Multi-Agent Post-co-training for collaborative LLMs with Reinforcement Learning），以明确地引发协作行为，并进一步释放多智能体LLM框架的能力。在MAPoRL中，多个LLMs首先独立生成自己的回应，并通过多轮讨论协作改进最终答案。最后，一个MAPoRL验证器评估答案和讨论，通过分配证明答案正确性的分数，同时鼓励正确的和有说服力的讨论，从而激励讨论。该分数作为共训练奖励，并通过多智能体强化学习进行最大化。与现有的LLM后训练范式不同，MAPoRL提倡使用强化学习共同训练多个LLMs以提高泛化能力。我们的实验配以分析洞察，证明单独训练单个LLM不足以引发有效的协作。相反，多智能体共同训练可以在基准测试上提升协作性能，并扩展到未见过的领域。 
+
+---
+# ChatMotion: A Multimodal Multi-Agent for Human Motion Analysis 
+
+**Title (ZH)**: ChatMotion：一种多模态多智能体系统用于人类动作分析 
+
+**Authors**: Li Lei, Jia Sen, Wang Jianhao, An Zhaochong, Li Jiaang, Hwang Jenq-Neng, Belongie Serge  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.18180)  
+
+**Abstract**: Advancements in Multimodal Large Language Models (MLLMs) have improved human motion understanding. However, these models remain constrained by their "instruct-only" nature, lacking interactivity and adaptability for diverse analytical perspectives. To address these challenges, we introduce ChatMotion, a multimodal multi-agent framework for human motion analysis. ChatMotion dynamically interprets user intent, decomposes complex tasks into meta-tasks, and activates specialized function modules for motion comprehension. It integrates multiple specialized modules, such as the MotionCore, to analyze human motion from various perspectives. Extensive experiments demonstrate ChatMotion's precision, adaptability, and user engagement for human motion understanding. 
+
+**Abstract (ZH)**: 多模态大型语言模型（MLLMs）的进步提高了对人类运动的理解。然而，这些模型仍受限于其“仅指令”性质，缺乏交互性和适应性以应对多样化的分析视角。为解决这些挑战，我们提出了一种名为ChatMotion的多模态多智能体框架，用于人类运动分析。ChatMotion动态解读用户意图，将复杂的任务分解为元任务，并激活专门的功能模块以进行运动理解。该框架整合了多个专业化模块，如MotionCore，从多个角度分析人类运动。广泛的经验表明，ChatMotion在人类运动理解方面具有精确性、适应性和用户参与度。 
+
+---
+# ToMCAT: Theory-of-Mind for Cooperative Agents in Teams via Multiagent Diffusion Policies 
+
+**Title (ZH)**: ToMCAT：通过多智能体扩散策略在团队中实现共情代理的理论-of-心智 
+
+**Authors**: Pedro Sequeira, Vidyasagar Sadhu, Melinda Gervasio  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.18438)  
+
+**Abstract**: In this paper we present ToMCAT (Theory-of-Mind for Cooperative Agents in Teams), a new framework for generating ToM-conditioned trajectories. It combines a meta-learning mechanism, that performs ToM reasoning over teammates' underlying goals and future behavior, with a multiagent denoising-diffusion model, that generates plans for an agent and its teammates conditioned on both the agent's goals and its teammates' characteristics, as computed via ToM. We implemented an online planning system that dynamically samples new trajectories (replans) from the diffusion model whenever it detects a divergence between a previously generated plan and the current state of the world. We conducted several experiments using ToMCAT in a simulated cooking domain. Our results highlight the importance of the dynamic replanning mechanism in reducing the usage of resources without sacrificing team performance. We also show that recent observations about the world and teammates' behavior collected by an agent over the course of an episode combined with ToM inferences are crucial to generate team-aware plans for dynamic adaptation to teammates, especially when no prior information is provided about them. 
+
+**Abstract (ZH)**: 在本文中，我们提出了ToMCAT（Theory-of-Mind for Cooperative Agents in Teams）框架，这是一个生成基于理论心智（ToM）轨迹的新框架。该框架结合了元学习机制，该机制在队友的潜在目标和未来行为上进行理论心智推理，以及一个多智能体去噪扩散模型，该模型根据代理的目标及其队友的特征（通过理论心智计算得出）为代理及其队友生成计划。我们实现了一个在线规划系统，在检测到先前生成的计划与当前世界状态之间的偏离时，会动态从扩散模型中采样新的轨迹（重规划）。我们使用ToMCAT在模拟烹饪领域进行了多项实验。实验结果强调了动态重规划机制在减少资源使用的同时不牺牲团队性能的重要性。我们还展示了代理在整个情景过程中收集到的关于世界和队友行为的最近观察信息与理论心智推理相结合，对于生成针对队友的团队意识计划至关重要，尤其是在没有提供关于他们任何先验信息的情况下。 
+
+---
+# TextGames: Learning to Self-Play Text-Based Puzzle Games via Language Model Reasoning 
+
+**Title (ZH)**: 基于文本的游戏：通过语言模型推理实现自学对弈的文本谜题游戏 
+
+**Authors**: Frederikus Hudi, Genta Indra Winata, Ruochen Zhang, Alham Fikri Aji  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.18431)  
+
+**Abstract**: Reasoning is a fundamental capability of large language models (LLMs), enabling them to comprehend, analyze, and solve complex problems. In this paper, we introduce TextGames, an innovative benchmark specifically crafted to assess LLMs through demanding text-based games that require advanced skills in pattern recognition, spatial awareness, arithmetic, and logical reasoning. Our analysis probes LLMs' performance in both single-turn and multi-turn reasoning, and their abilities in leveraging feedback to correct subsequent answers through self-reflection. Our findings reveal that, although LLMs exhibit proficiency in addressing most easy and medium-level problems, they face significant challenges with more difficult tasks. In contrast, humans are capable of solving all tasks when given sufficient time. Moreover, we observe that LLMs show improved performance in multi-turn predictions through self-reflection, yet they still struggle with sequencing, counting, and following complex rules consistently. Additionally, models optimized for reasoning outperform pre-trained LLMs that prioritize instruction following, highlighting the crucial role of reasoning skills in addressing highly complex problems. 
+
+**Abstract (ZH)**: 推理是大型语言模型（LLMs）的一项基本能力，使它们能够理解、分析并解决复杂问题。在本文中，我们介绍了TextGames，这是一种创新的基准测试，专门设计通过具有复杂要求的文字游戏来评估LLMs，这些游戏需要高级的模式识别、空间意识、算术和逻辑推理能力。我们的分析探索了LLMs在单步推理和多步推理中的表现，并考察了它们在自我反思过程中利用反馈修正后续答案的能力。我们的研究发现，虽然LLMs在处理大多数简单和中等难度问题上表现出色，但在更困难的任务上却面临重大挑战。相比之下，当给予足够的时间，人类可以解决所有任务。此外，我们观察到，通过自我反思，LLMs在多步预测中的表现有所提高，但仍难以一致地进行序列化、计数和遵循复杂规则。此外，优化用于推理的模型在解决高度复杂问题方面优于侧重指令遵循的预训练LLMs，这突显了推理技能在处理复杂问题中的关键作用。 
+
+---
+# Smart and Efficient IoT-Based Irrigation System Design: Utilizing a Hybrid Agent-Based and System Dynamics Approach 
+
+**Title (ZH)**: 基于物联网的智能高效灌溉系统设计：利用混合代理基础与系统动力学方法 
+
+**Authors**: Taha Ahmadi Pargo, Mohsen Akbarpour Shirazi, Dawud Fadai  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.18298)  
+
+**Abstract**: Regarding problems like reduced precipitation and an increase in population, water resource scarcity has become one of the most critical problems in modern-day societies, as a consequence, there is a shortage of available water resources for irrigation in arid and semi-arid countries. On the other hand, it is possible to utilize modern technologies to control irrigation and reduce water loss. One of these technologies is the Internet of Things (IoT). Despite the possibility of using the IoT in irrigation control systems, there are complexities in designing such systems. Considering this issue, it is possible to use agent-oriented software engineering (AOSE) methodologies to design complex cyber-physical systems such as IoT-based systems. In this research, a smart irrigation system is designed based on Prometheus AOSE methodology, to reduce water loss by maintaining soil moisture in a suitable interval. The designed system comprises sensors, a central agent, and irrigation nodes. These agents follow defined rules to maintain soil moisture at a desired level cooperatively. For system simulation, a hybrid agent-based and system dynamics model was designed. In this hybrid model, soil moisture dynamics were modeled based on the system dynamics approach. The proposed model, was implemented in AnyLogic computer simulation software. Utilizing the simulation model, irrigation rules were examined. The system's functionality in automatic irrigation mode was tested based on a 256-run, fractional factorial design, and the effects of important factors such as soil properties on total irrigated water and total operation time were analyzed. Based on the tests, the system consistently irrigated nearly optimal water amounts in all tests. Moreover, the results were also used to minimize the system's energy consumption by reducing the system's operational time. 
+
+**Abstract (ZH)**: 关于如降水量减少和人口增加等问题，水资源短缺已成为现代社会中最为关键的问题之一。因此，在干旱和半干旱国家中，可用于灌溉的水资源短缺问题日益严重。另一方面，可以利用现代技术来控制灌溉并减少水分损失。其中一种技术就是物联网（IoT）。尽管可以在灌溉控制系统中使用IoT，但在设计此类系统时仍存在复杂性。为了解决这一问题，可以采用面向代理的软件工程（AOSE）方法来设计复杂的网络物理系统，如基于IoT的系统。在本研究中，我们基于普罗米修斯AOSE方法设计了一个智能灌溉系统，通过维持土壤湿度在适当区间来减少水分损失。所设计的系统包括传感器、中央代理和灌溉节点。这些代理遵循定义的规则协作维持土壤湿度在所需水平。为了系统仿真，我们设计了一个混合基于代理和系统动力学的模型。在这个混合模型中，基于系统动力学方法模拟能量水分动态学。所提出的模型在AnyLogic计算机仿真软件中实施。利用仿真模型，我们检查了灌溉规则，并基于256次部分因子设计测试系统的自动灌溉模式功能。我们分析了诸如土壤性质等重要因素对总灌溉水量和总运行时间的影响。根据测试结果，该系统在所有测试中均能自动灌溉近乎最优的水量。此外，测试结果还被用于通过减少系统运行时间来最小化系统的能耗。 
+
+---
+# LAG: LLM agents for Leaderboard Auto Generation on Demanding 
+
+**Title (ZH)**: LAG: 用于苛刻需求下排行榜自动生成的大规模语言模型代理 
+
+**Authors**: Jian Wu, Jiayu Zhang, Dongyuan Li, Linyi Yang, Aoxiao Zhong, Renhe Jiang, Qingsong Wen, Yue Zhang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.18209)  
+
+**Abstract**: This paper introduces Leaderboard Auto Generation (LAG), a novel and well-organized framework for automatic generation of leaderboards on a given research topic in rapidly evolving fields like Artificial Intelligence (AI). Faced with a large number of AI papers updated daily, it becomes difficult for researchers to track every paper's proposed methods, experimental results, and settings, prompting the need for efficient automatic leaderboard construction. While large language models (LLMs) offer promise in automating this process, challenges such as multi-document summarization, leaderboard generation, and experiment fair comparison still remain under exploration. LAG solves these challenges through a systematic approach that involves the paper collection, experiment results extraction and integration, leaderboard generation, and quality evaluation. Our contributions include a comprehensive solution to the leaderboard construction problem, a reliable evaluation method, and experimental results showing the high quality of leaderboards. 
+
+**Abstract (ZH)**: 本文介绍了Leaderboard 自动生成 (LAG) 框架，这是一种新颖且井然有序的框架，用于在人工智能（AI）等快速发展的研究领域中自动生成给定研究主题的排行榜。面对每日更新的大量AI论文，研究人员难以追踪每篇论文提出的算法、实验结果和设置，这促使了高效自动排行榜构建的需求。尽管大规模语言模型（LLMs）在自动化这一过程中提供了希望，但在多文档总结、排行榜生成和实验公正比较等方面仍面临诸多挑战。LAG 通过一个系统化的流程来解决这些挑战，该流程包括论文收集、实验结果提取与整合、排行榜生成以及质量评估。我们的贡献包括针对排行榜构建问题的综合解决方案、可靠的评估方法以及展示排行榜高质量的实验结果。 
+
+---
+# Large Language Model Driven Agents for Simulating Echo Chamber Formation 
+
+**Title (ZH)**: 基于大型语言模型的智能代理用于模拟回声室效应形成 
+
+**Authors**: Chenhao Gu, Ling Luo, Zainab Razia Zaidi, Shanika Karunasekera  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.18138)  
+
+**Abstract**: The rise of echo chambers on social media platforms has heightened concerns about polarization and the reinforcement of existing beliefs. Traditional approaches for simulating echo chamber formation have often relied on predefined rules and numerical simulations, which, while insightful, may lack the nuance needed to capture complex, real-world interactions. In this paper, we present a novel framework that leverages large language models (LLMs) as generative agents to simulate echo chamber dynamics within social networks. The novelty of our approach is that it incorporates both opinion updates and network rewiring behaviors driven by LLMs, allowing for a context-aware and semantically rich simulation of social interactions. Additionally, we utilize real-world Twitter (now X) data to benchmark the LLM-based simulation against actual social media behaviors, providing insights into the accuracy and realism of the generated opinion trends. Our results demonstrate the efficacy of LLMs in modeling echo chamber formation, capturing both structural and semantic dimensions of opinion clustering. %This work contributes to a deeper understanding of social influence dynamics and offers a new tool for studying polarization in online communities. 
+
+**Abstract (ZH)**: 社交媒体平台上回声室现象的兴起加剧了关于极化和现有信念强化的担忧。传统上用于模拟回声室形成的手段往往依赖于预设规则和数值模拟，虽然具有一定的启发性，但在捕捉复杂现实世界交互方面可能缺乏细腻之处。在本文中，我们提出了一种新颖的框架，利用大语言模型（LLMs）作为生成代理来模拟社交网络中的回声室动态。我们方法的新颖之处在于，它结合了由LLMs驱动的意见更新和网络重连行为，从而实现对社交互动的上下文意识和语义丰富的模拟。此外，我们使用真实世界的Twitter（现在称为X）数据，将基于LLM的模拟与实际社交媒体行为进行基准测试，以洞察生成意见趋势的准确性和现实性。实验结果表明，LLMs在建模回声室形成方面具有有效性，能够捕获意见集群的结构和语义维度。%本研究加深了对社会影响动力学的理解，并提供了一个研究在线社区极化的新工具。 
+
+---
+# CAML: Collaborative Auxiliary Modality Learning for Multi-Agent Systems 
+
+**Title (ZH)**: CAML：多智能体系统中的协作辅助模态学习 
+
+**Authors**: Rui Liu, Yu Shen, Peng Gao, Pratap Tokekar, Ming Lin  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.17821)  
+
+**Abstract**: Multi-modality learning has become a crucial technique for improving the performance of machine learning applications across domains such as autonomous driving, robotics, and perception systems. While existing frameworks such as Auxiliary Modality Learning (AML) effectively utilize multiple data sources during training and enable inference with reduced modalities, they primarily operate in a single-agent context. This limitation is particularly critical in dynamic environments, such as connected autonomous vehicles (CAV), where incomplete data coverage can lead to decision-making blind spots. To address these challenges, we propose Collaborative Auxiliary Modality Learning ($\textbf{CAML}$), a novel multi-agent multi-modality framework that enables agents to collaborate and share multimodal data during training while allowing inference with reduced modalities per agent during testing. We systematically analyze the effectiveness of $\textbf{CAML}$ from the perspective of uncertainty reduction and data coverage, providing theoretical insights into its advantages over AML. Experimental results in collaborative decision-making for CAV in accident-prone scenarios demonstrate that \ours~achieves up to a ${\bf 58.13}\%$ improvement in accident detection. Additionally, we validate $\textbf{CAML}$ on real-world aerial-ground robot data for collaborative semantic segmentation, achieving up to a ${\bf 10.61}\%$ improvement in mIoU. 
+
+**Abstract (ZH)**: 多模态学习已成为提升跨领域（如自主驾驶、机器人和感知系统）机器学习应用性能的关键技术。现有的框架，如辅助模态学习（AML），能够有效利用多个数据源进行训练，并在推理时使用减少的模态数量，但这些框架主要在单个代理的上下文中运行。这一限制在动态环境中尤为关键，例如连接的自动驾驶车辆（CAV），因为不完整的数据覆盖可能导致决策盲点。为了解决这些挑战，我们提出了一种新的多代理多模态框架——协作辅助模态学习（$\textbf{CAML}$），该框架允许代理在训练过程中协作并共享多模态数据，在测试过程中每个代理可以使用减少的模态数量进行推理。我们从不确定性和数据覆盖的角度系统地分析了$\textbf{CAML}$的有效性，提供了其相对于AML的优势的理论见解。在事故多发场景下进行的合作决策实验结果表明，$\textbf{CAML}$在事故检测方面的性能提高了$\textbf{58.13}\%$。此外，我们还在实际的空地机器人数据上验证了$\textbf{CAML}$在协作语义分割上的有效性，取得了$\textbf{mIoU}$提高了$\textbf{10.61}\%$的成果。 
+
+---
+# Aligning Compound AI Systems via System-level DPO 
+
+**Title (ZH)**: 通过系统级DPO对齐复合AI系统 
+
+**Authors**: Xiangwen Wang, Yibo Jacky Zhang, Zhoujie Ding, Katherine Tsai, Sanmi Koyejo  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.17721)  
+
+**Abstract**: Compound AI systems, comprising multiple interacting components such as LLM agents and external tools, demonstrate state-of-the-art results across diverse tasks. It is hence crucial to align components within the system to produce consistent results that match human expectations. However, conventional alignment methods, such as Direct Preference Optimization (DPO), are not directly applicable to compound AI systems. These challenges include the non-differentiable interactions between components, making end-to-end gradient optimization infeasible. Additionally, system-level preferences cannot be directly translated into component-level preferences, further complicating alignment. We address the issues by formulating compound AI systems as Directed Acyclic Graphs (DAGs), capturing the connections between agents and the data generation processes. We propose a system-level DPO (SysDPO) to jointly align compound systems by adapting the DPO to operate on these DAGs. We study the joint alignment of an LLM and a diffusion model to demonstrate the effectiveness of our approach. Our exploration provides insights into the alignment of compound AI systems and lays a foundation for future advancements. 
+
+**Abstract (ZH)**: 复合人工智能系统由多个相互作用的组件组成，例如LLM代理和外部工具，在多种任务中展现出最先进的结果。因此，确保系统中的组件产生一致的结果以匹配人类期望变得至关重要。然而，传统的对齐方法，如直接偏好优化（DPO），却不适用于复合人工智能系统。这些挑战包括组件之间的非可微交互，使得端到端的梯度优化不可行。此外，系统级别的偏好无法直接转化为组件级别的偏好，进一步增加了对齐的复杂性。我们通过将复合人工智能系统形式化为有向无环图（DAGs），捕捉代理之间的连接及其数据生成过程，解决了这些问题。我们提出了一种系统级DPO（SysDPO）方法，通过将DPO适应于这些DAGs来联合对齐复合系统。我们研究了LLM和扩散模型的联合对齐，以展示我们方法的有效性。我们的探索为复合人工智能系统的对齐提供了见解，并为未来的进展奠定了基础。 
+
+---
+# Hierarchical Imitation Learning of Team Behavior from Heterogeneous Demonstrations 
+
+**Title (ZH)**: 来自异质示例的分层模仿学习团队行为 
+
+**Authors**: Sangwon Seo, Vaibhav Unhelkar  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.17618)  
+
+**Abstract**: Successful collaboration requires team members to stay aligned, especially in complex sequential tasks. Team members must dynamically coordinate which subtasks to perform and in what order. However, real-world constraints like partial observability and limited communication bandwidth often lead to suboptimal collaboration. Even among expert teams, the same task can be executed in multiple ways. To develop multi-agent systems and human-AI teams for such tasks, we are interested in data-driven learning of multimodal team behaviors. Multi-Agent Imitation Learning (MAIL) provides a promising framework for data-driven learning of team behavior from demonstrations, but existing methods struggle with heterogeneous demonstrations, as they assume that all demonstrations originate from a single team policy. Hence, in this work, we introduce DTIL: a hierarchical MAIL algorithm designed to learn multimodal team behaviors in complex sequential tasks. DTIL represents each team member with a hierarchical policy and learns these policies from heterogeneous team demonstrations in a factored manner. By employing a distribution-matching approach, DTIL mitigates compounding errors and scales effectively to long horizons and continuous state representations. Experimental results show that DTIL outperforms MAIL baselines and accurately models team behavior across a variety of collaborative scenarios. 
+
+**Abstract (ZH)**: 成功的协作需要团队成员保持一致，特别是在复杂的顺序任务中。团队成员必须动态协调执行哪些子任务以及执行的顺序。然而，现实世界的限制，如部分可观测性和有限的通信带宽，往往会导致协作效果不佳。即使是专家团队，相同的任务也可以有不同的执行方式。为了开发适用于此类任务的多智能体系统和人机团队，我们关注基于数据的学习多模式团队行为。多智能体模仿学习（MAIL）为从演示中学习团队行为提供了一种有前途的框架，但现有方法在处理异质演示时存在困难，因为它们假设所有演示都源自单一团队策略。因此，在本工作中，我们引入了DTIL：一种用于在复杂顺序任务中学习多模式团队行为的分层MAIL算法。DTIL将每个团队成员表示为一个分层策略，并以因素分解的方式从异质团队演示中学习这些策略。通过采用分布匹配的方法，DTIL减轻了累积错误并能够有效地扩展到长时间序列和连续状态表示。实验结果表明，DTIL在基准MAIL方法上表现出色，并且能够准确地建模多种协作场景中的团队行为。 
+
+---
+# RAG-Enhanced Collaborative LLM Agents for Drug Discovery 
+
+**Title (ZH)**: 增强记忆辅助的协作大语言模型代理在药物发现中的应用 
+
+**Authors**: Namkyeong Lee, Edward De Brouwer, Ehsan Hajiramezanali, Chanyoung Park, Gabriele Scalia  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.17506)  
+
+**Abstract**: Recent advances in large language models (LLMs) have shown great potential to accelerate drug discovery. However, the specialized nature of biochemical data often necessitates costly domain-specific fine-tuning, posing critical challenges. First, it hinders the application of more flexible general-purpose LLMs in cutting-edge drug discovery tasks. More importantly, it impedes the rapid integration of the vast amounts of scientific data continuously generated through experiments and research. To investigate these challenges, we propose CLADD, a retrieval-augmented generation (RAG)-empowered agentic system tailored to drug discovery tasks. Through the collaboration of multiple LLM agents, CLADD dynamically retrieves information from biomedical knowledge bases, contextualizes query molecules, and integrates relevant evidence to generate responses -- all without the need for domain-specific fine-tuning. Crucially, we tackle key obstacles in applying RAG workflows to biochemical data, including data heterogeneity, ambiguity, and multi-source integration. We demonstrate the flexibility and effectiveness of this framework across a variety of drug discovery tasks, showing that it outperforms general-purpose and domain-specific LLMs as well as traditional deep learning approaches. 
+
+**Abstract (ZH)**: 近年来，大型语言模型（LLMs）的发展展现出加速药物发现的强大潜力。然而，生物化学数据的专业性往往需要进行昂贵的领域特定微调，这带来了关键性的挑战。首先，这阻碍了更灵活的通用LLM在前沿药物发现任务中的应用。更重要的是，这妨碍了迅速整合通过实验和研究不断生成的大量科学数据。为了应对这些挑战，我们提出了一种CLADD系统，这是一种由检索增强生成（RAG）赋能的特制于药物发现任务的代理系统。通过多个LLM代理的协作，CLADD动态地从生物医学知识库中检索信息，上下文化查询分子，并整合相关证据生成回应——所有这些都不需要进行领域特定的微调。至关重要的是，我们解决了将RAG工作流应用于生物化学数据的关键障碍，包括数据异质性、歧义性和多源整合。我们展示了该框架在多种药物发现任务中的灵活性和有效性，证明其性能优于通用和领域特定的LLM以及传统的深度学习方法。 
+
+---
+# AI Agentic workflows and Enterprise APIs: Adapting API architectures for the age of AI agents 
+
+**Title (ZH)**: AI代理工作流与企业API：适应AI代理时代的企业API架构 
+
+**Authors**: Vaibhav Tupe, Shrinath Thube  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.17443)  
+
+**Abstract**: The rapid advancement of Generative AI has catalyzed the emergence of autonomous AI agents, presenting unprecedented challenges for enterprise computing infrastructures. Current enterprise API architectures are predominantly designed for human-driven, predefined interaction patterns, rendering them ill-equipped to support intelligent agents' dynamic, goal-oriented behaviors. This research systematically examines the architectural adaptations for enterprise APIs to support AI agentic workflows effectively. Through a comprehensive analysis of existing API design paradigms, agent interaction models, and emerging technological constraints, the paper develops a strategic framework for API transformation. The study employs a mixed-method approach, combining theoretical modeling, comparative analysis, and exploratory design principles to address critical challenges in standardization, performance, and intelligent interaction. The proposed research contributes a conceptual model for next-generation enterprise APIs that can seamlessly integrate with autonomous AI agent ecosystems, offering significant implications for future enterprise computing architectures. 
+
+**Abstract (ZH)**: 生成式人工智能的快速发展促生了自主人工智能代理的出现，给企业计算基础设施带来了前所未有的挑战。当前的企业API架构主要针对由人类引导的预定义交互模式设计，这使得它们难以支持智能代理动态的目标导向行为。本研究系统地探讨了企业API架构的调整，以有效支持人工智能代理的工作流程。通过全面分析现有API设计范式、代理交互模型以及新兴的技术约束，本文提出了一种API转型的战略框架。研究采用混合方法，结合理论建模、比较分析和探索性设计原则，以解决标准制定、性能和智能交互的关键挑战。提出的研究所提供的概念模型能够无缝集成到自主人工智能代理生态系统中，对未来的企业计算架构具有重要意义。 
+
+---
