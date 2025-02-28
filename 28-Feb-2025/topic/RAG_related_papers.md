@@ -1,0 +1,52 @@
+# Trustworthy Answers, Messier Data: Bridging the Gap in Low-Resource Retrieval-Augmented Generation for Domain Expert Systems 
+
+**Title (ZH)**: 可信的答案，复杂的数据：领域专家系统中低资源检索增强生成鸿沟的跨越 
+
+**Authors**: Nayoung Choi, Grace Byun, Andrew Chung, Ellie S. Paek, Shinsun Lee, Jinho D. Choi  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.19596)  
+
+**Abstract**: RAG has become a key technique for enhancing LLMs by reducing hallucinations, especially in domain expert systems where LLMs may lack sufficient inherent knowledge. However, developing these systems in low-resource settings introduces several challenges: (1) handling heterogeneous data sources, (2) optimizing retrieval phase for trustworthy answers, and (3) evaluating generated answers across diverse aspects. To address these, we introduce a data generation pipeline that transforms raw multi-modal data into structured corpus and Q&A pairs, an advanced re-ranking phase improving retrieval precision, and a reference matching algorithm enhancing answer traceability. Applied to the automotive engineering domain, our system improves factual correctness (+1.94), informativeness (+1.16), and helpfulness (+1.67) over a non-RAG baseline, based on a 1-5 scale by an LLM judge. These results highlight the effectiveness of our approach across distinct aspects, with strong answer grounding and transparency. 
+
+**Abstract (ZH)**: RAG已成为通过减少幻觉来增强大规模语言模型（LLM）的关键技术，特别是在LLM可能缺乏足够内在知识的领域专家系统中表现尤为突出。然而，在低资源环境中开发这些系统也带来了若干挑战：（1）处理异构数据源，（2）优化检索阶段以获得可靠的答案，以及（3）从多方面评价生成的答案。为解决这些问题，我们提出了一种数据生成流水线，将原始多模态数据转换为结构化的语料库和问答对，引入先进的重新排名阶段以提高检索精度，并采用参考匹配算法增强答案的可追溯性。在汽车工程领域应用时，我们的系统在事实正确性（+1.94）、信息量（+1.16）和有用性（+1.67）方面超过了非RAG基线，评分标准为1到5分，由LLM评判员基于1-5分进行评估。这些结果突显了我们方法在多个方面的有效性，具有强大的答案落地性和透明度。 
+
+---
+# Bridging Legal Knowledge and AI: Retrieval-Augmented Generation with Vector Stores, Knowledge Graphs, and Hierarchical Non-negative Matrix Factorization 
+
+**Title (ZH)**: 法律知识与人工智能融合：基于向量存储、知识图谱和层次非负矩阵分解的检索增强生成 
+
+**Authors**: Ryan C. Barron, Maksim E. Eren, Olga M. Serafimova, Cynthia Matuszek, Boian S. Alexandrov  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.20364)  
+
+**Abstract**: Agentic Generative AI, powered by Large Language Models (LLMs) with Retrieval-Augmented Generation (RAG), Knowledge Graphs (KGs), and Vector Stores (VSs), represents a transformative technology applicable to specialized domains such as legal systems, research, recommender systems, cybersecurity, and global security, including proliferation research. This technology excels at inferring relationships within vast unstructured or semi-structured datasets. The legal domain here comprises complex data characterized by extensive, interrelated, and semi-structured knowledge systems with complex relations. It comprises constitutions, statutes, regulations, and case law. Extracting insights and navigating the intricate networks of legal documents and their relations is crucial for effective legal research. Here, we introduce a generative AI system that integrates RAG, VS, and KG, constructed via Non-Negative Matrix Factorization (NMF), to enhance legal information retrieval and AI reasoning and minimize hallucinations. In the legal system, these technologies empower AI agents to identify and analyze complex connections among cases, statutes, and legal precedents, uncovering hidden relationships and predicting legal trends-challenging tasks that are essential for ensuring justice and improving operational efficiency. Our system employs web scraping techniques to systematically collect legal texts, such as statutes, constitutional provisions, and case law, from publicly accessible platforms like Justia. It bridges the gap between traditional keyword-based searches and contextual understanding by leveraging advanced semantic representations, hierarchical relationships, and latent topic discovery. This framework supports legal document clustering, summarization, and cross-referencing, for scalable, interpretable, and accurate retrieval for semi-structured data while advancing computational law and AI. 
+
+**Abstract (ZH)**: 基于大型语言模型（LLMs）的代理生成人工智能，借助检索增强生成（RAG）、知识图谱（KGs）和向量存储（VSs），代表了一种变革性的技术，适用于诸如法律系统、研究、推荐系统、网络安全以及大规模安全，包括扩散研究等专门领域。该技术擅长推断大量非结构化或半结构化数据集中的关系。这里的法律领域包括复杂的数据，这些数据具有广泛的、相互关联的和半结构化的知识系统，具有复杂的关系。它包括宪法、法律法规、规章制度和判例法。从复杂的法律文件和其关系中提取洞察力并导航它们的网络对于有效的法律研究至关重要。为了解决这个问题，我们介绍了一种集成了RAG、VS和KG的生成AI系统，通过非负矩阵分解（NMF）进行构建，以增强法律信息检索和AI推理并减少幻觉。在法律系统中，这些技术赋予AI代理识别和分析案件、法律条文和先例之间的复杂联系的能力，揭示隐藏的关系并预测法律趋势，这是确保公正和提高运营效率必不可少的任务。我们的系统采用网页抓取技术系统地收集法律文本，如法律法规、宪法条款和判例法，来自类似于Justia的公共访问平台。它通过利用先进的语义表示、层次关系和潜在主题发现，弥补了传统关键词搜索与上下文理解之间的差距。该框架支持法律文件聚类、摘要和跨参照，以实现半结构化数据的大规模、可解释和准确检索，从而推动计算法学和人工智能的发展。 
+
+---
+# Do Retrieval-Augmented Language Models Adapt to Varying User Needs? 
+
+**Title (ZH)**: 检索增强语言模型能够适应不同用户需求吗？ 
+
+**Authors**: Peilin Wu, Xinlu Zhang, Wenhao Yu, Xingyu Liu, Xinya Du, Zhiyu Zoey Chen  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.19779)  
+
+**Abstract**: Recent advancements in Retrieval-Augmented Language Models (RALMs) have demonstrated their efficacy in knowledge-intensive tasks. However, existing evaluation benchmarks often assume a single optimal approach to leveraging retrieved information, failing to account for varying user needs. This paper introduces a novel evaluation framework that systematically assesses RALMs under three user need cases-Context-Exclusive, Context-First, and Memory-First-across three distinct context settings: Context Matching, Knowledge Conflict, and Information Irrelevant. By varying both user instructions and the nature of retrieved information, our approach captures the complexities of real-world applications where models must adapt to diverse user requirements. Through extensive experiments on multiple QA datasets, including HotpotQA, DisentQA, and our newly constructed synthetic URAQ dataset, we find that restricting memory usage improves robustness in adversarial retrieval conditions but decreases peak performance with ideal retrieval results and model family dominates behavioral differences. Our findings highlight the necessity of user-centric evaluations in the development of retrieval-augmented systems and provide insights into optimizing model performance across varied retrieval contexts. We will release our code and URAQ dataset upon acceptance of the paper. 
+
+**Abstract (ZH)**: 近年来，检索增强语言模型（RALMs）在知识密集型任务中的有效性得到了证明。然而，现有的评估基准往往假定存在一种最佳方法来利用检索到的信息，未能考虑用户需求的差异。本文介绍了一个新的评估框架，该框架系统地评估了RALMs在三种用户需求场景下的表现：仅上下文、先上下文后检索和先记忆后检索，这些场景分别在三种不同的上下文设置中进行评估：上下文匹配、知识冲突和信息无关。通过改变用户指令和检索到信息的性质，本文的方法捕捉到了实际应用中的复杂性，其中模型必须适应多样的用户需求。通过在多个问答数据集（包括HotpotQA、DisentQA以及我们新构建的合成URAQ数据集）上进行广泛的实验，我们发现限制内存使用在对抗性检索条件下可以提高鲁棒性，但在理想检索结果的情况下会降低峰值性能，模型家族主导了行为差异。我们的研究结果强调了在开发检索增强系统时进行用户中心评估的必要性，并提供了优化模型在各种检索上下文中的性能的见解。我们将在论文被接受后发布我们的代码和URAQ数据集。 
+
+---
+# Long-Context Inference with Retrieval-Augmented Speculative Decoding 
+
+**Title (ZH)**: 长上下文推理与检索增强推测性解码 
+
+**Authors**: Guanzheng Chen, Qilong Feng, Jinjie Ni, Xin Li, Michael Qizhe Shieh  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.20330)  
+
+**Abstract**: The emergence of long-context large language models (LLMs) offers a promising alternative to traditional retrieval-augmented generation (RAG) for processing extensive documents. However, the computational overhead of long-context inference, particularly in managing key-value (KV) caches, presents significant efficiency challenges. While Speculative Decoding (SD) traditionally accelerates inference using smaller draft models, its effectiveness diminishes substantially in long-context scenarios due to memory-bound KV cache operations. We present Retrieval-Augmented Speculative Decoding (RAPID), which leverages RAG for both accelerating and enhancing generation quality in long-context inference. RAPID introduces the RAG drafter-a draft LLM operating on shortened retrieval contexts-to speculate on the generation of long-context target LLMs. Our approach enables a new paradigm where same-scale or even larger LLMs can serve as RAG drafters while maintaining computational efficiency. To fully leverage the potentially superior capabilities from stronger RAG drafters, we develop an inference-time knowledge transfer dynamic that enriches the target distribution by RAG. Extensive experiments on the LLaMA-3.1 and Qwen2.5 backbones demonstrate that RAPID effectively integrates the strengths of both approaches, achieving significant performance improvements (e.g., from 39.33 to 42.83 on InfiniteBench for LLaMA-3.1-8B) with more than 2x speedups. Our analyses reveal that RAPID achieves robust acceleration beyond 32K context length and demonstrates superior generation quality in real-world applications. 
+
+**Abstract (ZH)**: 长上下文大型语言模型（LLM）的出现为处理大量文档提供了一个有希望的替代传统检索增强生成（RAG）的选择。然而，长上下文推断中的计算开销，特别是在管理键值（KV）缓存时，带来了显著的效率挑战。虽然推测解码（Speculative Decoding，SD）传统上通过较小的草稿模型加速推断，但在长上下文场景中，由于受限于内存的KV缓存操作，其效果大幅减弱。我们提出了一种检索增强推测解码（Retrieval-Augmented Speculative Decoding，RAPID），利用RAG来加速和提升长上下文生成的质量。RAPID引入了RAG草稿模型，这是一种在缩短检索上下文中运行的草稿LLM，用于推测长上下文目标LLM的生成过程。我们的方法允许在同一规模或更大规模的LLM担任RAG草稿模型的同时，保持计算效率。为了充分利用更强的RAG草稿模型的潜在优势，我们开发了一种推断时的知识转移动态，通过RAG丰富目标分布。在LLaMA-3.1和Qwen2.5基座上的大量实验表明，RAPID有效地结合了两种方法的优势，实现了显著的性能提升（例如，对于LLaMA-3.1-8B，在InfiniteBench上的提升从39.33到42.83，且速度快了2倍以上）。我们的分析表明，RAPID在超过32K上下文长度时实现了稳健加速，并在实际应用中展现了更好的生成质量。 
+
+---

@@ -1,0 +1,13 @@
+# Do LLMs exhibit demographic parity in responses to queries about Human Rights? 
+
+**Title (ZH)**: 大型语言模型在回答人权相关查询时whether LLMs 在回答人权相关查询时是否存在人口统计学公平性？ 
+
+**Authors**: Rafiya Javed, Jackie Kay, David Yanni, Abdullah Zaini, Anushe Sheikh, Maribeth Rauh, Iason Gabriel, Laura Weidinger  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.19463)  
+
+**Abstract**: This research describes a novel approach to evaluating hedging behaviour in large language models (LLMs), specifically in the context of human rights as defined in the Universal Declaration of Human Rights (UDHR). Hedging and non-affirmation are behaviours that express ambiguity or a lack of clear endorsement on specific statements. These behaviours are undesirable in certain contexts, such as queries about whether different groups are entitled to specific human rights; since all people are entitled to human rights. Here, we present the first systematic attempt to measure these behaviours in the context of human rights, with a particular focus on between-group comparisons. To this end, we design a novel prompt set on human rights in the context of different national or social identities. We develop metrics to capture hedging and non-affirmation behaviours and then measure whether LLMs exhibit demographic parity when responding to the queries. We present results on three leading LLMs and find that all models exhibit some demographic disparities in how they attribute human rights between different identity groups. Futhermore, there is high correlation between different models in terms of how disparity is distributed amongst identities, with identities that have high disparity in one model also facing high disparity in both the other models. While baseline rates of hedging and non-affirmation differ, these disparities are consistent across queries that vary in ambiguity and they are robust across variations of the precise query wording. Our findings highlight the need for work to explicitly align LLMs to human rights principles, and to ensure that LLMs endorse the human rights of all groups equally. 
+
+**Abstract (ZH)**: 本研究提出了一种评估大型语言模型（LLMs）在人权语境下（根据《世界人权宣言》定义的人权）对冲行为的新方法。对冲和非肯定行为表示对具体陈述的模糊或缺乏明确背书。在某些情境下，如有关不同群体是否有权享有特定人权的查询中，这种行为是不理想的，因为所有人均应享有基本人权。为此，我们首次系统地尝试在人权语境下衡量这些行为，特别关注不同群体之间的比较。为了实现这一目标，我们设计了一套专门针对不同国家或社会身份的人权新提示。我们开发了衡量对冲和非肯定行为的指标，然后测量这些指标在各个人工智能模型中的表现，以评估它们在回应查询时是否体现了群体公正。我们对三个主要LILM模型进行了评估，并发现所有模型在赋予不同身份群体人权方面都存在一定程度的群体差异。此外，各个模型在不同身份群体间的差异分布方面存在高度相关性，即在某一模型中存在显著差异的身份群体，在其他模型中也存在显著差异。虽然不同模型的基本对冲和非肯定率有所不同，但这些差异在不同模糊程度的查询中表现出一致性，并且在查询措辞变化时仍然稳定。我们的研究结果强调了明确让大型语言模型符合人权原则的必要性，确保所有群体在享有基本人权方面得到平等的背书。 
+
+---
