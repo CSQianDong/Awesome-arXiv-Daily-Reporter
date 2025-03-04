@@ -1,0 +1,293 @@
+# LLMInit: A Free Lunch from Large Language Models for Selective Initialization of Recommendation 
+
+**Authors**: Weizhi Zhang, Liangwei Yang, Wooseong Yang, Henry Peng Zou, Yuqing Liu, Ke Xu, Sourav Medya, Philip S. Yu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.01814)  
+
+**Abstract**: Collaborative filtering models, particularly graph-based approaches, have demonstrated strong performance in capturing user-item interactions for recommendation systems. However, they continue to struggle in cold-start and data-sparse scenarios. The emergence of large language models (LLMs) like GPT and LLaMA presents new possibilities for enhancing recommendation performance, especially in cold-start settings. Despite their promise, LLMs pose challenges related to scalability and efficiency due to their high computational demands and limited ability to model complex user-item relationships effectively. In this work, we introduce a novel perspective on leveraging LLMs for CF model initialization. Through experiments, we uncover an embedding collapse issue when scaling CF models to larger embedding dimensions. To effectively harness large-scale LLM embeddings, we propose innovative selective initialization strategies utilizing random, uniform, and variance-based index sampling. Our comprehensive evaluation on multiple real-world datasets demonstrates significant performance gains across various CF models while maintaining a lower computational cost compared to existing LLM-based recommendation approaches. 
+
+---
+# MAPS: Motivation-Aware Personalized Search via LLM-Driven Consultation Alignment 
+
+**Authors**: Weicong Qin, Yi Xu, Weijie Yu, Chenglei Shen, Ming He, Jianping Fan, Xiao Zhang, Jun Xu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.01711)  
+
+**Abstract**: Personalized product search aims to retrieve and rank items that match users' preferences and search intent. Despite their effectiveness, existing approaches typically assume that users' query fully captures their real motivation. However, our analysis of a real-world e-commerce platform reveals that users often engage in relevant consultations before searching, indicating they refine intents through consultations based on motivation and need. The implied motivation in consultations is a key enhancing factor for personalized search. This unexplored area comes with new challenges including aligning contextual motivations with concise queries, bridging the category-text gap, and filtering noise within sequence history. To address these, we propose a Motivation-Aware Personalized Search (MAPS) method. It embeds queries and consultations into a unified semantic space via LLMs, utilizes a Mixture of Attention Experts (MoAE) to prioritize critical semantics, and introduces dual alignment: (1) contrastive learning aligns consultations, reviews, and product features; (2) bidirectional attention integrates motivation-aware embeddings with user preferences. Extensive experiments on real and synthetic data show MAPS outperforms existing methods in both retrieval and ranking tasks. 
+
+---
+# Hierarchical Causal Transformer with Heterogeneous Information for Expandable Sequential Recommendation 
+
+**Authors**: Hao Deng, Haibo Xing, Kanefumi Matsuyama, Yulei Huang, Jinxin Hu, Hong Wen, Jia Xu, Zulong Chen, Yu Zhang, Xiaoyi Zeng, Jing Zhang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.01469)  
+
+**Abstract**: Sequential recommendation systems leveraging transformer architectures have demonstrated exceptional capabilities in capturing user behavior patterns. At the core of these systems lies the critical challenge of constructing effective item representations. Traditional approaches employ feature fusion through simple concatenation or basic neural architectures to create uniform representation sequences. However, these conventional methods fail to address the intrinsic diversity of item attributes, thereby constraining the transformer's capacity to discern fine-grained patterns and hindering model extensibility. Although recent research has begun incorporating user-related heterogeneous features into item sequences, the equally crucial item-side heterogeneous feature continue to be neglected. To bridge this methodological gap, we present HeterRec - an innovative framework featuring two novel components: the Heterogeneous Token Flattening Layer (HTFL) and Hierarchical Causal Transformer (HCT). HTFL pioneers a sophisticated tokenization mechanism that decomposes items into multi-dimensional token sets and structures them into heterogeneous sequences, enabling scalable performance enhancement through model expansion. The HCT architecture further enhances pattern discovery through token-level and item-level attention mechanisms. furthermore, we develop a Listwise Multi-step Prediction (LMP) objective function to optimize learning process. Rigorous validation, including real-world industrial platforms, confirms HeterRec's state-of-the-art performance in both effective and efficiency. 
+
+---
+# Composed Multi-modal Retrieval: A Survey of Approaches and Applications 
+
+**Authors**: Kun Zhang, Jingyu Li, Zhe Li, Jingjing Zhang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.01334)  
+
+**Abstract**: With the rapid growth of multi-modal data from social media, short video platforms, and e-commerce, content-based retrieval has become essential for efficiently searching and utilizing heterogeneous information. Over time, retrieval techniques have evolved from Unimodal Retrieval (UR) to Cross-modal Retrieval (CR) and, more recently, to Composed Multi-modal Retrieval (CMR). CMR enables users to retrieve images or videos by integrating a reference visual input with textual modifications, enhancing search flexibility and precision. This paper provides a comprehensive review of CMR, covering its fundamental challenges, technical advancements, and categorization into supervised, zero-shot, and semi-supervised learning paradigms. We discuss key research directions, including data augmentation, model architecture, and loss optimization in supervised CMR, as well as transformation frameworks and external knowledge integration in zero-shot CMR. Additionally, we highlight the application potential of CMR in composed image retrieval, video retrieval, and person retrieval, which have significant implications for e-commerce, online search, and public security. Given its ability to refine and personalize search experiences, CMR is poised to become a pivotal technology in next-generation retrieval systems. A curated list of related works and resources is available at: this https URL 
+
+---
+# HI-Series Algorithms A Hybrid of Substance Diffusion Algorithm and Collaborative Filtering 
+
+**Authors**: Yu Peng, Ya-Hui An  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.01305)  
+
+**Abstract**: Recommendation systems face the challenge of balancing accuracy and diversity, as traditional collaborative filtering (CF) and network-based diffusion algorithms exhibit complementary limitations. While item-based CF (ItemCF) enhances diversity through item similarity, it compromises accuracy. Conversely, mass diffusion (MD) algorithms prioritize accuracy by favoring popular items but lack diversity. To address this trade-off, we propose the HI-series algorithms, hybrid models integrating ItemCF with diffusion-based approaches (MD, HHP, BHC, BD) through a nonlinear combination controlled by parameter $\epsilon$. This hybridization leverages ItemCF's diversity and MD's accuracy, extending to advanced diffusion models (HI-HHP, HI-BHC, HI-BD) for enhanced performance. Experiments on MovieLens, Netflix, and RYM datasets demonstrate that HI-series algorithms significantly outperform their base counterparts. In sparse data ($20\%$ training), HI-MD achieves a $0.8\%$-$4.4\%$ improvement in F1-score over MD while maintaining higher diversity (Diversity@20: 459 vs. 396 on MovieLens). For dense data ($80\%$ training), HI-BD improves F1-score by $2.3\%$-$5.2\%$ compared to BD, with diversity gains up to $18.6\%$. Notably, hybrid models consistently enhance novelty in sparse settings and exhibit robust parameter adaptability. The results validate that strategic hybridization effectively breaks the accuracy-diversity trade-off, offering a flexible framework for optimizing recommendation systems across data sparsity levels. 
+
+---
+# A Semantic Search Pipeline for Causality-driven Adhoc Information Retrieval 
+
+**Authors**: Dhairya Dalal, Sharmi Dev Gupta, Bentolhoda Binaei  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.01003)  
+
+**Abstract**: We present a unsupervised semantic search pipeline for the Causality-driven Adhoc Information Retrieval (CAIR-2021) shared task. The CAIR shared task expands traditional information retrieval to support the retrieval of documents containing the likely causes of a query event. A successful system must be able to distinguish between topical documents and documents containing causal descriptions of events that are causally related to the query event. Our approach involves aggregating results from multiple query strategies over a semantic and lexical index. The proposed approach leads the CAIR-2021 leaderboard and outperformed both traditional IR and pure semantic embedding-based approaches. 
+
+---
+# Towards An Efficient LLM Training Paradigm for CTR Prediction 
+
+**Authors**: Allen Lin, Renqin Cai, Yun He, Hanchao Yu, Jing Qian, Rui Li, Qifan Wang, James Caverlee  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.01001)  
+
+**Abstract**: Large Language Models (LLMs) have demonstrated tremendous potential as the next-generation ranking-based recommendation system. Many recent works have shown that LLMs can significantly outperform conventional click-through-rate (CTR) prediction approaches. Despite such promising results, the computational inefficiency inherent in the current training paradigm makes it particularly challenging to train LLMs for ranking-based recommendation tasks on large datasets. To train LLMs for CTR prediction, most existing studies adopt the prevalent ''sliding-window'' paradigm. Given a sequence of $m$ user interactions, a unique training prompt is constructed for each interaction by designating it as the prediction target along with its preceding $n$ interactions serving as context. In turn, the sliding-window paradigm results in an overall complexity of $O(mn^2)$ that scales linearly with the length of user interactions. Consequently, a direct adoption to train LLMs with such strategy can result in prohibitively high training costs as the length of interactions grows. To alleviate the computational inefficiency, we propose a novel training paradigm, namely Dynamic Target Isolation (DTI), that structurally parallelizes the training of $k$ (where $k >> 1$) target interactions. Furthermore, we identify two major bottlenecks - hidden-state leakage and positional bias overfitting - that limit DTI to only scale up to a small value of $k$ (e.g., 5) then propose a computationally light solution to effectively tackle each. Through extensive experiments on three widely adopted public CTR datasets, we empirically show that DTI reduces training time by an average of $\textbf{92%}$ (e.g., from $70.5$ hrs to $5.31$ hrs), without compromising CTR prediction performance. 
+
+---
+# Federated Conversational Recommender System 
+
+**Authors**: Allen Lin, Jianling Wang, Ziwei Zhu, James Caverlee  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.00999)  
+
+**Abstract**: Conversational Recommender Systems (CRSs) have become increasingly popular as a powerful tool for providing personalized recommendation experiences. By directly engaging with users in a conversational manner to learn their current and fine-grained preferences, a CRS can quickly derive recommendations that are relevant and justifiable. However, existing conversational recommendation systems (CRSs) typically rely on a centralized training and deployment process, which involves collecting and storing explicitly-communicated user preferences in a centralized repository. These fine-grained user preferences are completely human-interpretable and can easily be used to infer sensitive information (e.g., financial status, political stands, and health information) about the user, if leaked or breached. To address the user privacy concerns in CRS, we first define a set of privacy protection guidelines for preserving user privacy under the conversational recommendation setting. Based on these guidelines, we propose a novel federated conversational recommendation framework that effectively reduces the risk of exposing user privacy by (i) de-centralizing both the historical interests estimation stage and the interactive preference elicitation stage and (ii) strictly bounding privacy leakage by enforcing user-level differential privacy with meticulously selected privacy budgets. Through extensive experiments, we show that the proposed framework not only satisfies these user privacy protection guidelines, but also enables the system to achieve competitive recommendation performance even when compared to the state-of-the-art non-private conversational recommendation approach. 
+
+---
+# Towards Efficient Educational Chatbots: Benchmarking RAG Frameworks 
+
+**Authors**: Umar Ali Khan, Ekram Khan, Fiza Khan, Athar Ali Moinuddin  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.00781)  
+
+**Abstract**: Large Language Models (LLMs) have proven immensely beneficial in education by capturing vast amounts of literature-based information, allowing them to generate context without relying on external sources. In this paper, we propose a generative AI-powered GATE question-answering framework (GATE stands for Graduate Aptitude Test in Engineering) that leverages LLMs to explain GATE solutions and support students in their exam preparation. We conducted extensive benchmarking to select the optimal embedding model and LLM, evaluating our framework based on criteria such as latency, faithfulness, and relevance, with additional validation through human evaluation. Our chatbot integrates state-of-the-art embedding models and LLMs to deliver accurate, context-aware responses. Through rigorous experimentation, we identified configurations that balance performance and computational efficiency, ensuring a reliable chatbot to serve students' needs. Additionally, we discuss the challenges faced in data processing and modeling and implemented solutions. Our work explores the application of Retrieval-Augmented Generation (RAG) for GATE Q/A explanation tasks, and our findings demonstrate significant improvements in retrieval accuracy and response quality. This research offers practical insights for developing effective AI-driven educational tools while highlighting areas for future enhancement in usability and scalability. 
+
+---
+# OrdRankBen: A Novel Ranking Benchmark for Ordinal Relevance in NLP 
+
+**Authors**: Yan Wang, Lingfei Qian, Xueqing Peng, Jimin Huang, Dongji Feng  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.00674)  
+
+**Abstract**: The evaluation of ranking tasks remains a significant challenge in natural language processing (NLP), particularly due to the lack of direct labels for results in real-world scenarios. Benchmark datasets play a crucial role in providing standardized testbeds that ensure fair comparisons, enhance reproducibility, and enable progress tracking, facilitating rigorous assessment and continuous improvement of ranking models. Existing NLP ranking benchmarks typically use binary relevance labels or continuous relevance scores, neglecting ordinal relevance scores. However, binary labels oversimplify relevance distinctions, while continuous scores lack a clear ordinal structure, making it challenging to capture nuanced ranking differences effectively. To address these challenges, we introduce OrdRankBen, a novel benchmark designed to capture multi-granularity relevance distinctions. Unlike conventional benchmarks, OrdRankBen incorporates structured ordinal labels, enabling more precise ranking evaluations. Given the absence of suitable datasets for ordinal relevance ranking in NLP, we constructed two datasets with distinct ordinal label distributions. We further evaluate various models for three model types, ranking-based language models, general large language models, and ranking-focused large language models on these datasets. Experimental results show that ordinal relevance modeling provides a more precise evaluation of ranking models, improving their ability to distinguish multi-granularity differences among ranked items-crucial for tasks that demand fine-grained relevance differentiation. 
+
+---
+# PinLanding: Content-First Keyword Landing Page Generation via Multi-Modal AI for Web-Scale Discovery 
+
+**Authors**: Faye Zhang, Jasmine Wan, Qianyu Cheng, Jinfeng Rao  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.00619)  
+
+**Abstract**: Online platforms like Pinterest hosting vast content collections traditionally rely on manual curation or user-generated search logs to create keyword landing pages (KLPs) -- topic-centered collection pages that serve as entry points for content discovery. While manual curation ensures quality, it doesn't scale to millions of collections, and search log approaches result in limited topic coverage and imprecise content matching. In this paper, we present PinLanding, a novel content-first architecture that transforms the way platforms create topical collections. Instead of deriving topics from user behavior, our system employs a multi-stage pipeline combining vision-language model (VLM) for attribute extraction, large language model (LLM) for topic generation, and a CLIP-based dual-encoder architecture for precise content matching. Our model achieves 99.7% Recall@10 on Fashion200K benchmark, demonstrating strong attribute understanding capabilities. In production deployment for search engine optimization with 4.2 million shopping landing pages, the system achieves a 4X increase in topic coverage and 14.29% improvement in collection attribute precision over the traditional search log-based approach via human evaluation. The architecture can be generalized beyond search traffic to power various user experiences, including content discovery and recommendations, providing a scalable solution to transform unstructured content into curated topical collections across any content domain. 
+
+---
+# Qilin: A Multimodal Information Retrieval Dataset with APP-level User Sessions 
+
+**Authors**: Jia Chen, Qian Dong, Haitao Li, Xiaohui He, Yan Gao, Shaosheng Cao, Yi Wu, Ping Yang, Chen Xu, Yao Hu, Qingyao Ai, Yiqun Liu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.00501)  
+
+**Abstract**: User-generated content (UGC) communities, especially those featuring multimodal content, improve user experiences by integrating visual and textual information into results (or items). The challenge of improving user experiences in complex systems with search and recommendation (S\&R) services has drawn significant attention from both academia and industry these years. However, the lack of high-quality datasets has limited the research progress on multimodal S\&R. To address the growing need for developing better S\&R services, we present a novel multimodal information retrieval dataset in this paper, namely Qilin. The dataset is collected from Xiaohongshu, a popular social platform with over 300 million monthly active users and an average search penetration rate of over 70\%. In contrast to existing datasets, \textsf{Qilin} offers a comprehensive collection of user sessions with heterogeneous results like image-text notes, video notes, commercial notes, and direct answers, facilitating the development of advanced multimodal neural retrieval models across diverse task settings. To better model user satisfaction and support the analysis of heterogeneous user behaviors, we also collect extensive APP-level contextual signals and genuine user feedback. Notably, Qilin contains user-favored answers and their referred results for search requests triggering the Deep Query Answering (DQA) module. This allows not only the training \& evaluation of a Retrieval-augmented Generation (RAG) pipeline, but also the exploration of how such a module would affect users' search behavior. Through comprehensive analysis and experiments, we provide interesting findings and insights for further improving S\&R systems. We hope that \textsf{Qilin} will significantly contribute to the advancement of multimodal content platforms with S\&R services in the future. 
+
+---
+# Pseudo-Knowledge Graph: Meta-Path Guided Retrieval and In-Graph Text for RAG-Equipped LLM 
+
+**Authors**: Yuxin Yang, Haoyang Wu, Tao Wang, Jia Yang, Hao Ma, Guojie Luo  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.00309)  
+
+**Abstract**: The advent of Large Language Models (LLMs) has revolutionized natural language processing. However, these models face challenges in retrieving precise information from vast datasets. Retrieval-Augmented Generation (RAG) was developed to combining LLMs with external information retrieval systems to enhance the accuracy and context of responses. Despite improvements, RAG still struggles with comprehensive retrieval in high-volume, low-information-density databases and lacks relational awareness, leading to fragmented answers.
+To address this, this paper introduces the Pseudo-Knowledge Graph (PKG) framework, designed to overcome these limitations by integrating Meta-path Retrieval, In-graph Text and Vector Retrieval into LLMs. By preserving natural language text and leveraging various retrieval techniques, the PKG offers a richer knowledge representation and improves accuracy in information retrieval. Extensive evaluations using Open Compass and MultiHop-RAG benchmarks demonstrate the framework's effectiveness in managing large volumes of data and complex relationships. 
+
+---
+# Passage Query Methods for Retrieval and Reranking in Conversational Agents 
+
+**Authors**: Victor De Lima. Grace Hui Yang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.00238)  
+
+**Abstract**: This paper presents our approach to the TREC Interactive Knowledge Assistance Track (iKAT), which focuses on improving conversational information-seeking (CIS) systems. While recent advancements in CIS have improved conversational agents' ability to assist users, significant challenges remain in understanding context and retrieving relevant documents across domains and dialogue turns. To address these issues, we extend the Generate-Retrieve-Generate pipeline by developing passage queries (PQs) that align with the target document's expected format to improve query-document matching during retrieval. We propose two variations of this approach: Weighted Reranking and Short and Long Passages. Each method leverages a Meta Llama model for context understanding and generating queries and responses. Passage ranking evaluation results show that the Short and Long Passages approach outperformed the organizers' baselines, performed best among Llama-based systems in the track, and achieved results comparable to GPT-4-based systems. These results indicate that the method effectively balances efficiency and performance. Findings suggest that PQs improve semantic alignment with target documents and demonstrate their potential to improve multi-turn dialogue systems. 
+
+---
+# DeepRetrieval: Powerful Query Generation for Information Retrieval with Reinforcement Learning 
+
+**Authors**: Pengcheng Jiang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.00223)  
+
+**Abstract**: Information retrieval systems are crucial for enabling effective access to large document collections. Recent approaches have leveraged Large Language Models (LLMs) to enhance retrieval performance through query augmentation, but often rely on expensive supervised learning or distillation techniques that require significant computational resources and hand-labeled data. In this paper, we introduce DeepRetrieval, a novel reinforcement learning-based approach that trains LLMs to perform query augmentation directly through trial and error, without requiring supervised data. By using the retrieval recall as a reward signal, our system learns to generate effective queries that maximize document retrieval performance. Our preliminary results demonstrate that DeepRetrieval significantly outperforms existing state-of-the-art methods, including the recent LEADS system, achieving 60.82\% recall on publication search and 70.84\% recall on trial search tasks while using a smaller model (3B vs. 7B parameters) and requiring no supervision data. These results suggest that our reinforcement learning approach offers a more efficient and effective paradigm for information retrieval, potentially changing the landscape of document retrieval systems. code is available at this https URL. 
+
+---
+# Zero-Shot and Efficient Clarification Need Prediction in Conversational Search 
+
+**Authors**: Lili Lu, Chuan Meng, Federico Ravenda, Mohammad Aliannejadi, Fabio Crestani  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.00179)  
+
+**Abstract**: Clarification need prediction (CNP) is a key task in conversational search, aiming to predict whether to ask a clarifying question or give an answer to the current user query. However, current research on CNP suffers from the issues of limited CNP training data and low efficiency. In this paper, we propose a zero-shot and efficient CNP framework (Zef-CNP), in which we first prompt large language models (LLMs) in a zero-shot manner to generate two sets of synthetic queries: ambiguous and specific (unambiguous) queries. We then use the generated queries to train efficient CNP models. Zef-CNP eliminates the need for human-annotated clarification-need labels during training and avoids the use of LLMs with high query latency at query time. To further improve the generation quality of synthetic queries, we devise a topic-, information-need-, and query-aware chain-of-thought (CoT) prompting strategy (TIQ-CoT). Moreover, we enhance TIQ-CoT with counterfactual query generation (CoQu), which guides LLMs first to generate a specific/ambiguous query and then sequentially generate its corresponding ambiguous/specific query. Experimental results show that Zef-CNP achieves superior CNP effectiveness and efficiency compared with zero- and few-shot LLM-based CNP predictors. 
+
+---
+# Beyond Matryoshka: Revisiting Sparse Coding for Adaptive Representation 
+
+**Authors**: Tiansheng Wen, Yifei Wang, Zequn Zeng, Zhong Peng, Yudi Su, Xinyang Liu, Bo Chen, Hongwei Liu, Stefanie Jegelka, Chenyu You  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.01776)  
+
+**Abstract**: Many large-scale systems rely on high-quality deep representations (embeddings) to facilitate tasks like retrieval, search, and generative modeling. Matryoshka Representation Learning (MRL) recently emerged as a solution for adaptive embedding lengths, but it requires full model retraining and suffers from noticeable performance degradations at short lengths. In this paper, we show that sparse coding offers a compelling alternative for achieving adaptive representation with minimal overhead and higher fidelity. We propose Contrastive Sparse Representation (CSR), a method that sparsifies pre-trained embeddings into a high-dimensional but selectively activated feature space. By leveraging lightweight autoencoding and task-aware contrastive objectives, CSR preserves semantic quality while allowing flexible, cost-effective inference at different sparsity levels. Extensive experiments on image, text, and multimodal benchmarks demonstrate that CSR consistently outperforms MRL in terms of both accuracy and retrieval speed-often by large margins-while also cutting training time to a fraction of that required by MRL. Our results establish sparse coding as a powerful paradigm for adaptive representation learning in real-world applications where efficiency and fidelity are both paramount. Code is available at this https URL 
+
+---
+# Retrieval Models Aren't Tool-Savvy: Benchmarking Tool Retrieval for Large Language Models 
+
+**Authors**: Zhengliang Shi, Yuhan Wang, Lingyong Yan, Pengjie Ren, Shuaiqiang Wang, Dawei Yin, Zhaochun Ren  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.01763)  
+
+**Abstract**: Tool learning aims to augment large language models (LLMs) with diverse tools, enabling them to act as agents for solving practical tasks. Due to the limited context length of tool-using LLMs, adopting information retrieval (IR) models to select useful tools from large toolsets is a critical initial step. However, the performance of IR models in tool retrieval tasks remains underexplored and unclear. Most tool-use benchmarks simplify this step by manually pre-annotating a small set of relevant tools for each task, which is far from the real-world scenarios. In this paper, we propose ToolRet, a heterogeneous tool retrieval benchmark comprising 7.6k diverse retrieval tasks, and a corpus of 43k tools, collected from existing datasets. We benchmark six types of models on ToolRet. Surprisingly, even the models with strong performance in conventional IR benchmarks, exhibit poor performance on ToolRet. This low retrieval quality degrades the task pass rate of tool-use LLMs. As a further step, we contribute a large-scale training dataset with over 200k instances, which substantially optimizes the tool retrieval ability of IR models. 
+
+---
+# SAGE: A Framework of Precise Retrieval for RAG 
+
+**Authors**: Jintao Zhang, Guoliang Li, Jinyang Su  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.01713)  
+
+**Abstract**: Retrieval-augmented generation (RAG) has demonstrated significant proficiency in conducting question-answering (QA) tasks within a specified corpus. Nonetheless, numerous failure instances of RAG in QA still exist. These failures are not solely attributable to the limitations of Large Language Models (LLMs); instead, they predominantly arise from the retrieval of inaccurate information for LLMs due to two limitations: (1) Current RAG methods segment the corpus without considering semantics, making it difficult to find relevant context due to impaired correlation between questions and the segments. (2) There is a trade-off between missing essential context with fewer context retrieved and getting irrelevant context with more context retrieved.
+In this paper, we introduce a RAG framework (SAGE), to overcome these limitations. First, to address the segmentation issue without considering semantics, we propose to train a semantic segmentation model. This model is trained to segment the corpus into semantically complete chunks. Second, to ensure that only the most relevant chunks are retrieved while the irrelevant ones are ignored, we design a chunk selection algorithm to dynamically select chunks based on the decreasing speed of the relevance score, leading to a more relevant selection. Third, to further ensure the precision of the retrieved chunks, we propose letting LLMs assess whether retrieved chunks are excessive or lacking and then adjust the amount of context accordingly. Experiments show that SAGE outperforms baselines by 61.25% in the quality of QA on average. Moreover, by avoiding retrieving noisy context, SAGE lowers the cost of the tokens consumed in LLM inference and achieves a 49.41% enhancement in cost efficiency on average. Additionally, our work offers valuable insights for boosting RAG. 
+
+---
+# Evaluating LLMs' Assessment of Mixed-Context Hallucination Through the Lens of Summarization 
+
+**Authors**: Siya Qi, Rui Cao, Yulan He, Zheng Yuan  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.01670)  
+
+**Abstract**: With the rapid development of large language models (LLMs), LLM-as-a-judge has emerged as a widely adopted approach for text quality evaluation, including hallucination evaluation. While previous studies have focused exclusively on single-context evaluation (e.g., discourse faithfulness or world factuality), real-world hallucinations typically involve mixed contexts, which remains inadequately evaluated. In this study, we use summarization as a representative task to comprehensively evaluate LLMs' capability in detecting mixed-context hallucinations, specifically distinguishing between factual and non-factual hallucinations. Through extensive experiments across direct generation and retrieval-based models of varying scales, our main observations are: (1) LLMs' intrinsic knowledge introduces inherent biases in hallucination evaluation; (2) These biases particularly impact the detection of factual hallucinations, yielding a significant performance bottleneck; (3) The fundamental challenge lies in effective knowledge utilization, balancing between LLMs' intrinsic knowledge and external context for accurate mixed-context hallucination evaluation. 
+
+---
+# CoPL: Collaborative Preference Learning for Personalizing LLMs 
+
+**Authors**: Youngbin Choi, Seunghyuk Cho, Minjong Lee, MoonJeong Park, Yesong Ko, Jungseul Ok, Dongwoo Kim  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.01658)  
+
+**Abstract**: Personalizing large language models (LLMs) is important for aligning outputs with diverse user preferences, yet existing methods struggle with flexibility and generalization. We propose CoPL (Collaborative Preference Learning), a graph-based collaborative filtering framework that models user-response relationships to enhance preference estimation, particularly in sparse annotation settings. By integrating a mixture of LoRA experts, CoPL efficiently fine-tunes LLMs while dynamically balancing shared and user-specific preferences. Additionally, an optimization-free adaptation strategy enables generalization to unseen users without fine-tuning. Experiments on UltraFeedback-P demonstrate that CoPL outperforms existing personalized reward models, effectively capturing both common and controversial preferences, making it a scalable solution for personalized LLM alignment. 
+
+---
+# Leveraging LLMs for Mental Health: Detection and Recommendations from Social Discussions 
+
+**Authors**: Vaishali Aggarwal, Sachin Thukral, Krushil Patel, Arnab Chatterjee  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.01442)  
+
+**Abstract**: Textual data from social platforms captures various aspects of mental health through discussions around and across issues, while users reach out for help and others sympathize and offer support. We propose a comprehensive framework that leverages Natural Language Processing (NLP) and Generative AI techniques to identify and assess mental health disorders, detect their severity, and create recommendations for behavior change and therapeutic interventions based on users' posts on Reddit.
+To classify the disorders, we use rule-based labeling methods as well as advanced pre-trained NLP models to extract nuanced semantic features from the data. We fine-tune domain-adapted and generic pre-trained NLP models based on predictions from specialized Large Language Models (LLMs) to improve classification accuracy. Our hybrid approach combines the generalization capabilities of pre-trained models with the domain-specific insights captured by LLMs, providing an improved understanding of mental health discourse. Our findings highlight the strengths and limitations of each model, offering valuable insights into their practical applicability.
+This research potentially facilitates early detection and personalized care to aid practitioners and aims to facilitate timely interventions and improve overall well-being, thereby contributing to the broader field of mental health surveillance and digital health analytics. 
+
+---
+# Streaming Piano Transcription Based on Consistent Onset and Offset Decoding with Sustain Pedal Detection 
+
+**Authors**: Weixing Wei, Jiahao Zhao, Yulun Wu, Kazuyoshi Yoshii  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.01362)  
+
+**Abstract**: This paper describes a streaming audio-to-MIDI piano transcription approach that aims to sequentially translate a music signal into a sequence of note onset and offset events. The sequence-to-sequence nature of this task may call for the computationally-intensive transformer model for better performance, which has recently been used for offline transcription benchmarks and could be extended for streaming transcription with causal attention mechanisms. We assume that the performance limitation of this naive approach lies in the decoder. Although time-frequency features useful for onset detection are considerably different from those for offset detection, the single decoder is trained to output a mixed sequence of onset and offset events without guarantee of the correspondence between the onset and offset events of the same note. To overcome this limitation, we propose a streaming encoder-decoder model that uses a convolutional encoder aggregating local acoustic features, followed by an autoregressive Transformer decoder detecting a variable number of onset events and another decoder detecting the offset events for the active pitches with validation of the sustain pedal at each time frame. Experiments using the MAESTRO dataset showed that the proposed streaming method performed comparably with or even better than the state-of-the-art offline methods while significantly reducing the computational cost. 
+
+---
+# SRAG: Structured Retrieval-Augmented Generation for Multi-Entity Question Answering over Wikipedia Graph 
+
+**Authors**: Teng Lin, Yizhang Zhu, Yuyu Luo, Nan Tang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.01346)  
+
+**Abstract**: Multi-entity question answering (MEQA) poses significant challenges for large language models (LLMs), which often struggle to consolidate scattered information across multiple documents. An example question might be "What is the distribution of IEEE Fellows among various fields of study?", which requires retrieving information from diverse sources e.g., Wikipedia pages. The effectiveness of current retrieval-augmented generation (RAG) methods is limited by the LLMs' capacity to aggregate insights from numerous pages. To address this gap, this paper introduces a structured RAG (SRAG) framework that systematically organizes extracted entities into relational tables (e.g., tabulating entities with schema columns like "name" and "field of study") and then apply table-based reasoning techniques. Our approach decouples retrieval and reasoning, enabling LLMs to focus on structured data analysis rather than raw text aggregation. Extensive experiments on Wikipedia-based multi-entity QA tasks demonstrate that SRAG significantly outperforms state-of-the-art long-context LLMs and RAG solutions, achieving a 29.6% improvement in accuracy. The results underscore the efficacy of structuring unstructured data to enhance LLMs' reasoning capabilities. 
+
+---
+# Cancer Type, Stage and Prognosis Assessment from Pathology Reports using LLMs 
+
+**Authors**: Rachit Saluja, Jacob Rosenthal, Yoav Artzi, David J. Pisapia, Benjamin L. Liechty, Mert R. Sabuncu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.01194)  
+
+**Abstract**: Large Language Models (LLMs) have shown significant promise across various natural language processing tasks. However, their application in the field of pathology, particularly for extracting meaningful insights from unstructured medical texts such as pathology reports, remains underexplored and not well quantified. In this project, we leverage state-of-the-art language models, including the GPT family, Mistral models, and the open-source Llama models, to evaluate their performance in comprehensively analyzing pathology reports. Specifically, we assess their performance in cancer type identification, AJCC stage determination, and prognosis assessment, encompassing both information extraction and higher-order reasoning tasks. Based on a detailed analysis of their performance metrics in a zero-shot setting, we developed two instruction-tuned models: Path-llama3.1-8B and Path-GPT-4o-mini-FT. These models demonstrated superior performance in zero-shot cancer type identification, staging, and prognosis assessment compared to the other models evaluated. 
+
+---
+# ReaderLM-v2: Small Language Model for HTML to Markdown and JSON 
+
+**Authors**: Feng Wang, Zesheng Shi, Bo Wang, Nan Wang, Han Xiao  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.01151)  
+
+**Abstract**: We present ReaderLM-v2, a compact 1.5 billion parameter language model designed for efficient web content extraction. Our model processes documents up to 512K tokens, transforming messy HTML into clean Markdown or JSON formats with high accuracy -- making it an ideal tool for grounding large language models. The model's effectiveness results from two key innovations: (1) a three-stage data synthesis pipeline that generates high quality, diverse training data by iteratively drafting, refining, and critiquing web content extraction; and (2) a unified training framework combining continuous pre-training with multi-objective optimization. Intensive evaluation demonstrates that ReaderLM-v2 outperforms GPT-4o-2024-08-06 and other larger models by 15-20\% on carefully curated benchmarks, particularly excelling at documents exceeding 100K tokens, while maintaining significantly lower computational requirements. 
+
+---
+# Can We Find the Code? An Empirical Study of Google Scholar's Code Retrieval 
+
+**Authors**: Shi-Shun Chen  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.01031)  
+
+**Abstract**: Academic codes associated with research papers are valuable resources for scholars. In specialized fields outside computer science, code availability is often limited, making effective code retrieval essential. Google Scholar is a crucial academic search tool. If a code published in the paper is not retrievable via Google Scholar, its accessibility and impact are significantly reduced. This study takes the term "accelerated degradation" combined with "reliability" as an example, and finds that, for papers published by Elsevier, only GitHub links included in abstracts are comprehensively retrieved by Google Scholar. When such links appear within the main body of a paper, even in the "Data Availability" section, they may be ignored and become unsearchable. These findings highlight the importance of strategically placing GitHub links in abstracts to enhance code discoverability on Google Scholar. 
+
+---
+# Systematic Literature Review on Clinical Trial Eligibility Matching 
+
+**Authors**: Muhammad Talha Sharif, Abdul Rehman  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.00863)  
+
+**Abstract**: Clinical trial eligibility matching is a critical yet often labor-intensive and error-prone step in medical research, as it ensures that participants meet precise criteria for safe and reliable study outcomes. Recent advances in Natural Language Processing (NLP) have shown promise in automating and improving this process by rapidly analyzing large volumes of unstructured clinical text and structured electronic health record (EHR) data. In this paper, we present a systematic overview of current NLP methodologies applied to clinical trial eligibility screening, focusing on data sources, annotation practices, machine learning approaches, and real-world implementation challenges. A comprehensive literature search (spanning Google Scholar, Mendeley, and PubMed from 2015 to 2024) yielded high-quality studies, each demonstrating the potential of techniques such as rule-based systems, named entity recognition, contextual embeddings, and ontology-based normalization to enhance patient matching accuracy. While results indicate substantial improvements in screening efficiency and precision, limitations persist regarding data completeness, annotation consistency, and model scalability across diverse clinical domains. The review highlights how explainable AI and standardized ontologies can bolster clinician trust and broaden adoption. Looking ahead, further research into advanced semantic and temporal representations, expanded data integration, and rigorous prospective evaluations is necessary to fully realize the transformative potential of NLP in clinical trial recruitment. 
+
+---
+# Bayesian Active Learning for Multi-Criteria Comparative Judgement in Educational Assessment 
+
+**Authors**: Andy Gray, Alma Rahat, Tom Crick, Stephen Lindsay  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.00479)  
+
+**Abstract**: Comparative Judgement (CJ) provides an alternative assessment approach by evaluating work holistically rather than breaking it into discrete criteria. This method leverages human ability to make nuanced comparisons, yielding more reliable and valid assessments. CJ aligns with real-world evaluations, where overall quality emerges from the interplay of various elements. However, rubrics remain widely used in education, offering structured criteria for grading and detailed feedback. This creates a gap between CJ's holistic ranking and the need for criterion-based performance breakdowns.
+This paper addresses this gap using a Bayesian approach. We build on Bayesian CJ (BCJ) by Gray et al., which directly models preferences instead of using likelihoods over total scores, allowing for expected ranks with uncertainty estimation. Their entropy-based active learning method selects the most informative pairwise comparisons for assessors. We extend BCJ to handle multiple independent learning outcome (LO) components, defined by a rubric, enabling both holistic and component-wise predictive rankings with uncertainty estimates. Additionally, we propose a method to aggregate entropies and identify the most informative comparison for assessors. Experiments on synthetic and real data demonstrate our method's effectiveness. Finally, we address a key limitation of BCJ, which is the inability to quantify assessor agreement. We show how to derive agreement levels, enhancing transparency in assessment. 
+
+---
+# U-NIAH: Unified RAG and LLM Evaluation for Long Context Needle-In-A-Haystack 
+
+**Authors**: Yunfan Gao, Yun Xiong, Wenlong Wu, Zijing Huang, Bohan Li, Haofen Wang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.00353)  
+
+**Abstract**: Recent advancements in Large Language Models (LLMs) have expanded their context windows to unprecedented lengths, sparking debates about the necessity of Retrieval-Augmented Generation (RAG). To address the fragmented evaluation paradigms and limited cases in existing Needle-in-a-Haystack (NIAH), this paper introduces U-NIAH, a unified framework that systematically compares LLMs and RAG methods in controlled long context settings. Our framework extends beyond traditional NIAH by incorporating multi-needle, long-needle, and needle-in-needle configurations, along with different retrieval settings, while leveraging the synthetic Starlight Academy dataset-a fictional magical universe-to eliminate biases from pre-trained knowledge. Through extensive experiments, we investigate three research questions: (1) performance trade-offs between LLMs and RAG, (2) error patterns in RAG, and (3) RAG's limitations in complex settings. Our findings show that RAG significantly enhances smaller LLMs by mitigating the "lost-in-the-middle" effect and improving robustness, achieving an 82.58% win-rate over LLMs. However, we observe that retrieval noise and reverse chunk ordering degrade performance, while surprisingly, advanced reasoning LLMs exhibit reduced RAG compatibility due to sensitivity to semantic distractors. We identify typical error patterns including omission due to noise, hallucination under high noise critical condition, and self-doubt behaviors. Our work not only highlights the complementary roles of RAG and LLMs, but also provides actionable insights for optimizing deployments. Code: this https URL. 
+
+---
+# Enhancing Collaborative Filtering-Based Course Recommendations by Exploiting Time-to-Event Information with Survival Analysis 
+
+**Authors**: Alireza Gharahighehi, Achilleas Ghinis, Michela Venturini, Frederik Cornillie, Celine Vens  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.00072)  
+
+**Abstract**: Massive Open Online Courses (MOOCs) are emerging as a popular alternative to traditional education, offering learners the flexibility to access a wide range of courses from various disciplines, anytime and anywhere. Despite this accessibility, a significant number of enrollments in MOOCs result in dropouts. To enhance learner engagement, it is crucial to recommend courses that align with their preferences and needs. Course Recommender Systems (RSs) can play an important role in this by modeling learners' preferences based on their previous interactions within the MOOC platform. Time-to-dropout and time-to-completion in MOOCs, like other time-to-event prediction tasks, can be effectively modeled using survival analysis (SA) methods. In this study, we apply SA methods to improve collaborative filtering recommendation performance by considering time-to-event in the context of MOOCs. Our proposed approach demonstrates superior performance compared to collaborative filtering methods trained based on learners' interactions with MOOCs, as evidenced by two performance measures on three publicly available datasets. The findings underscore the potential of integrating SA methods with RSs to enhance personalization in MOOCs. 
+
+---
+# Simple Is Effective: The Roles of Graphs and Large Language Models in Knowledge-Graph-Based Retrieval-Augmented Generation 
+
+**Authors**: Mufei Li, Siqi Miao, Pan Li  
+
+**Link**: [PDF](https://arxiv.org/pdf/2410.20724)  
+
+**Abstract**: Large Language Models (LLMs) demonstrate strong reasoning abilities but face limitations such as hallucinations and outdated knowledge. Knowledge Graph (KG)-based Retrieval-Augmented Generation (RAG) addresses these issues by grounding LLM outputs in structured external knowledge from KGs. However, current KG-based RAG frameworks still struggle to optimize the trade-off between retrieval effectiveness and efficiency in identifying a suitable amount of relevant graph information for the LLM to digest. We introduce SubgraphRAG, extending the KG-based RAG framework that retrieves subgraphs and leverages LLMs for reasoning and answer prediction. Our approach innovatively integrates a lightweight multilayer perceptron with a parallel triple-scoring mechanism for efficient and flexible subgraph retrieval while encoding directional structural distances to enhance retrieval effectiveness. The size of retrieved subgraphs can be flexibly adjusted to match the query's need and the downstream LLM's capabilities. This design strikes a balance between model complexity and reasoning power, enabling scalable and generalizable retrieval processes. Notably, based on our retrieved subgraphs, smaller LLMs like Llama3.1-8B-Instruct deliver competitive results with explainable reasoning, while larger models like GPT-4o achieve state-of-the-art accuracy compared with previous baselines -- all without fine-tuning. Extensive evaluations on the WebQSP and CWQ benchmarks highlight SubgraphRAG's strengths in efficiency, accuracy, and reliability by reducing hallucinations and improving response grounding. 
+
+---
