@@ -1,0 +1,180 @@
+# PersonaX: A Recommendation Agent Oriented User Modeling Framework for Long Behavior Sequence 
+
+**Authors**: Yunxiao Shi, Wujiang Xu, Zeqi Zhang, Xing Zi, Qiang Wu, Min Xu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.02398)  
+
+**Abstract**: Recommendation agents leverage large language models for user modeling LLM UM to construct textual personas guiding alignment with real users. However existing LLM UM methods struggle with long user generated content UGC due to context limitations and performance degradation. To address this sampling strategies prioritize relevance or recency are often applied yet they inevitably neglect the diverse user interests embedded within the discarded behaviors resulting in incomplete modeling and degraded profiling quality. Furthermore relevance based sampling requires real time retrieval forcing the user modeling process to operate online which introduces significant latency overhead. In this paper we propose PersonaX an agent agnostic LLM UM framework that tackles these challenges through sub behavior sequence SBS selection and offline multi persona construction. PersonaX extracts compact SBS segments offline to capture diverse user interests generating fine grained textual personas that are cached for efficient online retrieval. This approach ensures that the user persona used for prompting remains highly relevant to the current context while eliminating the need for online user modeling. For SBS selection we ensure both efficiency length less than five and high representational quality by balancing prototypicality and diversity within the sampled data. Extensive experiments validate the effectiveness and versatility of PersonaX in high quality user profiling. Utilizing only 30 to 50 percent of the behavioral data with a sequence length of 480 integrating PersonaX with AgentCF yields an absolute performance improvement of 3 to 11 percent while integration with Agent4Rec results in a gain of 10 to 50 percent. PersonaX as an agent agnostic framework sets a new benchmark for scalable user modeling paving the way for more accurate and efficient LLM driven recommendation agents. 
+
+---
+# AppAgentX: Evolving GUI Agents as Proficient Smartphone Users 
+
+**Authors**: Wenjia Jiang, Yangyang Zhuang, Chenxi Song, Xu Yang, Chi Zhang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.02268)  
+
+**Abstract**: Recent advancements in Large Language Models (LLMs) have led to the development of intelligent LLM-based agents capable of interacting with graphical user interfaces (GUIs). These agents demonstrate strong reasoning and adaptability, enabling them to perform complex tasks that traditionally required predefined rules. However, the reliance on step-by-step reasoning in LLM-based agents often results in inefficiencies, particularly for routine tasks. In contrast, traditional rule-based systems excel in efficiency but lack the intelligence and flexibility to adapt to novel scenarios. To address this challenge, we propose a novel evolutionary framework for GUI agents that enhances operational efficiency while retaining intelligence and flexibility. Our approach incorporates a memory mechanism that records the agent's task execution history. By analyzing this history, the agent identifies repetitive action sequences and evolves high-level actions that act as shortcuts, replacing these low-level operations and improving efficiency. This allows the agent to focus on tasks requiring more complex reasoning, while simplifying routine actions. Experimental results on multiple benchmark tasks demonstrate that our approach significantly outperforms existing methods in both efficiency and accuracy. The code will be open-sourced to support further research. 
+
+---
+# AutoEval: A Practical Framework for Autonomous Evaluation of Mobile Agents 
+
+**Authors**: Jiahui Sun, Zhichao Hua, Yubin Xia  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.02403)  
+
+**Abstract**: Accurate and systematic evaluation of mobile agents can significantly advance their development and real-world applicability. However, existing benchmarks for mobile agents lack practicality and scalability due to the extensive manual effort required to define task reward signals and implement corresponding evaluation codes. To this end, we propose AutoEval, an autonomous agent evaluation framework that tests a mobile agent without any manual effort. First, we design a Structured Substate Representation to describe the UI state changes while agent execution, such that task reward signals can be automatically generated. Second, we utilize a Judge System that can autonomously evaluate agents' performance given the automatically generated task reward signals. By providing only a task description, our framework evaluates agents with fine-grained performance feedback to that task without any extra manual effort. We implement a prototype of our framework and validate the automatically generated task reward signals, finding over 93% coverage to human-annotated reward signals. Moreover, to prove the effectiveness of our autonomous Judge System, we manually verify its judge results and demonstrate that it achieves 94% accuracy. Finally, we evaluate the state-of-the-art mobile agents using our framework, providing detailed insights into their performance characteristics and limitations. 
+
+---
+# ROCKET-2: Steering Visuomotor Policy via Cross-View Goal Alignment 
+
+**Authors**: Shaofei Cai, Zhancun Mu, Anji Liu, Yitao Liang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.02505)  
+
+**Abstract**: We aim to develop a goal specification method that is semantically clear, spatially sensitive, and intuitive for human users to guide agent interactions in embodied environments. Specifically, we propose a novel cross-view goal alignment framework that allows users to specify target objects using segmentation masks from their own camera views rather than the agent's observations. We highlight that behavior cloning alone fails to align the agent's behavior with human intent when the human and agent camera views differ significantly. To address this, we introduce two auxiliary objectives: cross-view consistency loss and target visibility loss, which explicitly enhance the agent's spatial reasoning ability. According to this, we develop ROCKET-2, a state-of-the-art agent trained in Minecraft, achieving an improvement in the efficiency of inference 3x to 6x. We show ROCKET-2 can directly interpret goals from human camera views for the first time, paving the way for better human-agent interaction. 
+
+---
+# MPO: Boosting LLM Agents with Meta Plan Optimization 
+
+**Authors**: Weimin Xiong, Yifan Song, Qingxiu Dong, Bingchan Zhao, Feifan Song, Xun Wang, Sujian Li  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.02682)  
+
+**Abstract**: Recent advancements in large language models (LLMs) have enabled LLM-based agents to successfully tackle interactive planning tasks. However, despite their successes, existing approaches often suffer from planning hallucinations and require retraining for each new agent. To address these challenges, we propose the Meta Plan Optimization (MPO) framework, which enhances agent planning capabilities by directly incorporating explicit guidance. Unlike previous methods that rely on complex knowledge, which either require significant human effort or lack quality assurance, MPO leverages high-level general guidance through meta plans to assist agent planning and enables continuous optimization of the meta plans based on feedback from the agent's task execution. Our experiments conducted on two representative tasks demonstrate that MPO significantly outperforms existing baselines. Moreover, our analysis indicates that MPO provides a plug-and-play solution that enhances both task completion efficiency and generalization capabilities in previous unseen scenarios. 
+
+---
+# Reinforcement Learning-based Threat Assessment 
+
+**Authors**: Wuzhou Sun, Siyi Li, Qingxiang Zou, Zixing Liao  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.02612)  
+
+**Abstract**: In some game scenarios, due to the uncertainty of the number of enemy units and the priority of various attributes, the evaluation of the threat level of enemy units as well as the screening has been a challenging research topic, and the core difficulty lies in how to reasonably set the priority of different attributes in order to achieve quantitative evaluation of the threat. In this paper, we innovatively transform the problem of threat assessment into a reinforcement learning problem, and through systematic reinforcement learning training, we successfully construct an efficient neural network evaluator. The evaluator can not only comprehensively integrate the multidimensional attribute features of the enemy, but also effectively combine our state information, thus realizing a more accurate and scientific threat assessment. 
+
+---
+# VisAgent: Narrative-Preserving Story Visualization Framework 
+
+**Authors**: Seungkwon Kim, GyuTae Park, Sangyeon Kim, Seung-Hun Nam  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.02399)  
+
+**Abstract**: Story visualization is the transformation of narrative elements into image sequences. While existing research has primarily focused on visual contextual coherence, the deeper narrative essence of stories often remains overlooked. This limitation hinders the practical application of these approaches, as generated images frequently fail to capture the intended meaning and nuances of the narrative fully. To address these challenges, we propose VisAgent, a training-free multi-agent framework designed to comprehend and visualize pivotal scenes within a given story. By considering story distillation, semantic consistency, and contextual coherence, VisAgent employs an agentic workflow. In this workflow, multiple specialized agents collaborate to: (i) refine layered prompts based on the narrative structure and (ii) seamlessly integrate \gt{generated} elements, including refined prompts, scene elements, and subject placement, into the final image. The empirically validated effectiveness confirms the framework's suitability for practical story visualization applications. 
+
+---
+# Target Return Optimizer for Multi-Game Decision Transformer 
+
+**Authors**: Kensuke Tatematsu, Akifumi Wachi  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.02311)  
+
+**Abstract**: Achieving autonomous agents with robust generalization capabilities across diverse games and tasks remains one of the ultimate goals in AI research. Recent advancements in transformer-based offline reinforcement learning, exemplified by the MultiGame Decision Transformer [Lee et al., 2022], have shown remarkable performance across various games or tasks. However, these approaches depend heavily on human expertise, presenting substantial challenges for practical deployment, particularly in scenarios with limited prior game-specific knowledge. In this paper, we propose an algorithm called Multi-Game Target Return Optimizer (MTRO) to autonomously determine game-specific target returns within the Multi-Game Decision Transformer framework using solely offline datasets. MTRO addresses the existing limitations by automating the target return configuration process, leveraging environmental reward information extracted from offline datasets. Notably, MTRO does not require additional training, enabling seamless integration into existing Multi-Game Decision Transformer architectures. Our experimental evaluations on Atari games demonstrate that MTRO enhances the performance of RL policies across a wide array of games, underscoring its potential to advance the field of autonomous agent development. 
+
+---
+# ATLaS: Agent Tuning via Learning Critical Steps 
+
+**Authors**: Zhixun Chen, Ming Li, Yuxuan Huang, Yali Du, Meng Fang, Tianyi Zhou  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.02197)  
+
+**Abstract**: Large Language Model (LLM) agents have demonstrated remarkable generalization capabilities across multi-domain tasks. Existing agent tuning approaches typically employ supervised finetuning on entire expert trajectories. However, behavior-cloning of full trajectories can introduce expert bias and weaken generalization to states not covered by the expert data. Additionally, critical steps, such as planning, complex reasoning for intermediate subtasks, and strategic decision-making, are essential to success in agent tasks, so learning these steps is the key to improving LLM agents. For more effective and efficient agent tuning, we propose ATLaS that identifies the critical steps in expert trajectories and finetunes LLMs solely on these steps with reduced costs. By steering the training's focus to a few critical steps, our method mitigates the risk of overfitting entire trajectories and promotes generalization across different environments and tasks. In extensive experiments, an LLM finetuned on only 30% critical steps selected by ATLaS outperforms the LLM finetuned on all steps and recent open-source LLM agents. ATLaS maintains and improves base LLM skills as generalist agents interacting with diverse environments. 
+
+---
+# LTL Verification of Memoryful Neural Agents 
+
+**Authors**: Mehran Hosseini, Alessio Lomuscio, Nicola Paoletti  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.02512)  
+
+**Abstract**: We present a framework for verifying Memoryful Neural Multi-Agent Systems (MN-MAS) against full Linear Temporal Logic (LTL) specifications. In MN-MAS, agents interact with a non-deterministic, partially observable environment. Examples of MN-MAS include multi-agent systems based on feed-forward and recurrent neural networks or state-space models. Different from previous approaches, we support the verification of both bounded and unbounded LTL specifications. We leverage well-established bounded model checking techniques, including lasso search and invariant synthesis, to reduce the verification problem to that of constraint solving. To solve these constraints, we develop efficient methods based on bound propagation, mixed-integer linear programming, and adaptive splitting. We evaluate the effectiveness of our algorithms in single and multi-agent environments from the Gymnasium and PettingZoo libraries, verifying unbounded specifications for the first time and improving the verification time for bounded specifications by an order of magnitude compared to the SoA. 
+
+---
+# MultiAgentBench: Evaluating the Collaboration and Competition of LLM agents 
+
+**Authors**: Kunlun Zhu, Hongyi Du, Zhaochen Hong, Xiaocheng Yang, Shuyi Guo, Zhe Wang, Zhenhailong Wang, Cheng Qian, Xiangru Tang, Heng Ji, Jiaxuan You  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.01935)  
+
+**Abstract**: Large Language Models (LLMs) have shown remarkable capabilities as autonomous agents, yet existing benchmarks either focus on single-agent tasks or are confined to narrow domains, failing to capture the dynamics of multi-agent coordination and competition. In this paper, we introduce MultiAgentBench, a comprehensive benchmark designed to evaluate LLM-based multi-agent systems across diverse, interactive scenarios. Our framework measures not only task completion but also the quality of collaboration and competition using novel, milestone-based key performance indicators. Moreover, we evaluate various coordination protocols (including star, chain, tree, and graph topologies) and innovative strategies such as group discussion and cognitive planning. Notably, gpt-4o-mini reaches the average highest task score, graph structure performs the best among coordination protocols in the research scenario, and cognitive planning improves milestone achievement rates by 3%. Code and datasets are public available at this https URL. 
+
+---
+# Adaptively evaluating models with task elicitation 
+
+**Authors**: Davis Brown, Prithvi Balehannina, Helen Jin, Shreya Havaldar, Hamed Hassani, Eric Wong  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.01986)  
+
+**Abstract**: Manual curation of evaluation datasets is struggling to keep up with the rapidly expanding capabilities and deployment scenarios of language models. Towards scalable model profiling, we introduce and validate a framework for evaluating LLMs, called Adaptive Evaluations. Adaptive evaluations use scaffolded language models (evaluator agents) to search through a target model's behavior on a domain dataset and create difficult questions (tasks) that can discover and probe the model's failure modes. We find that frontier models lack consistency when adaptively probed with our framework on a diverse suite of datasets and tasks, including but not limited to legal reasoning, forecasting, and online harassment. Generated questions pass human validity checks and often transfer to other models with different capability profiles, demonstrating that adaptive evaluations can also be used to create difficult domain-specific datasets. 
+
+---
+# AskToAct: Enhancing LLMs Tool Use via Self-Correcting Clarification 
+
+**Authors**: Xuan Zhang, Yongliang Shen, Zhe Zheng, Linjuan Wu, Wenqi Zhang, Yuchen Yan, Qiuying Peng, Jun Wang, Weiming Lu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.01940)  
+
+**Abstract**: Large language models (LLMs) have demonstrated remarkable capabilities in tool learning. In real-world scenarios, user queries are often ambiguous and incomplete, requiring effective clarification. However, existing interactive clarification approaches face two critical limitations: reliance on manually constructed datasets and lack of error correction mechanisms during multi-turn clarification. We present AskToAct, which addresses these challenges by exploiting the structural mapping between queries and their tool invocation solutions. Our key insight is that tool parameters naturally represent explicit user intents. By systematically removing key parameters from queries while retaining them as ground truth, we enable automated construction of high-quality training data. We further enhance model robustness by fine-tuning on error-correction augmented data using selective masking mechanism, enabling dynamic error detection during clarification interactions. Comprehensive experiments demonstrate that AskToAct significantly outperforms existing approaches, achieving above 79% accuracy in recovering critical unspecified intents and enhancing clarification efficiency by an average of 48.34% while maintaining high accuracy in tool invocation. Our framework exhibits robust performance across varying complexity levels and successfully generalizes to entirely unseen APIs without additional training, achieving performance comparable to GPT-4 with substantially fewer computational resources. 
+
+---
+# UDora: A Unified Red Teaming Framework against LLM Agents by Dynamically Hijacking Their Own Reasoning 
+
+**Authors**: Jiawei Zhang, Shuang Yang, Bo Li  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.01908)  
+
+**Abstract**: Large Language Model (LLM) agents equipped with external tools have become increasingly powerful for handling complex tasks such as web shopping, automated email replies, and financial trading. However, these advancements also amplify the risks of adversarial attacks, particularly when LLM agents can access sensitive external functionalities. Moreover, because LLM agents engage in extensive reasoning or planning before executing final actions, manipulating them into performing targeted malicious actions or invoking specific tools remains a significant challenge. Consequently, directly embedding adversarial strings in malicious instructions or injecting malicious prompts into tool interactions has become less effective against modern LLM agents. In this work, we present UDora, a unified red teaming framework designed for LLM Agents that dynamically leverages the agent's own reasoning processes to compel it toward malicious behavior. Specifically, UDora first samples the model's reasoning for the given task, then automatically identifies multiple optimal positions within these reasoning traces to insert targeted perturbations. Subsequently, it uses the modified reasoning as the objective to optimize the adversarial strings. By iteratively applying this process, the LLM agent will then be induced to undertake designated malicious actions or to invoke specific malicious tools. Our approach demonstrates superior effectiveness compared to existing methods across three LLM agent datasets. 
+
+---
+# Mapping representations in Reinforcement Learning via Semantic Alignment for Zero-Shot Stitching 
+
+**Authors**: Antonio Pio Ricciardi, Valentino Maiorca, Luca Moschella, Riccardo Marin, Emanuele Rodolà  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.01881)  
+
+**Abstract**: Deep Reinforcement Learning (RL) models often fail to generalize when even small changes occur in the environment's observations or task requirements. Addressing these shifts typically requires costly retraining, limiting the reusability of learned policies. In this paper, we build on recent work in semantic alignment to propose a zero-shot method for mapping between latent spaces across different agents trained on different visual and task variations. Specifically, we learn a transformation that maps embeddings from one agent's encoder to another agent's encoder without further fine-tuning. Our approach relies on a small set of "anchor" observations that are semantically aligned, which we use to estimate an affine or orthogonal transform. Once the transformation is found, an existing controller trained for one domain can interpret embeddings from a different (existing) encoder in a zero-shot fashion, skipping additional trainings. We empirically demonstrate that our framework preserves high performance under visual and task domain shifts. We empirically demonstrate zero-shot stitching performance on the CarRacing environment with changing background and task. By allowing modular re-assembly of existing policies, it paves the way for more robust, compositional RL in dynamically changing environments. 
+
+---
+# Towards Enterprise-Ready Computer Using Generalist Agent 
+
+**Authors**: Sami Marreed, Alon Oved, Avi Yaeli, Segev Shlomov, Ido Levy, Aviad Sela, Asaf Adi, Nir Mashkif  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.01861)  
+
+**Abstract**: This paper presents our ongoing work toward developing an enterprise-ready Computer Using Generalist Agent (CUGA) system. Our research highlights the evolutionary nature of building agentic systems suitable for enterprise environments. By integrating state-of-the-art agentic AI techniques with a systematic approach to iterative evaluation, analysis, and refinement, we have achieved rapid and cost-effective performance gains, notably reaching a new state-of-the-art performance on the WebArena benchmark. We detail our development roadmap, the methodology and tools that facilitated rapid learning from failures and continuous system refinement, and discuss key lessons learned and future challenges for enterprise adoption. 
+
+---
+# From Metaphor to Mechanism: How LLMs Decode Traditional Chinese Medicine Symbolic Language for Modern Clinical Relevance 
+
+**Authors**: Jiacheng Tang, Nankai Wu, Fan Gao, Chengxiao Dai, Mengyao Zhao, Xinjie Zhao  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.02760)  
+
+**Abstract**: Metaphorical expressions are abundant in Traditional Chinese Medicine (TCM), conveying complex disease mechanisms and holistic health concepts through culturally rich and often abstract terminology. Bridging these metaphors to anatomically driven Western medical (WM) concepts poses significant challenges for both automated language processing and real-world clinical practice. To address this gap, we propose a novel multi-agent and chain-of-thought (CoT) framework designed to interpret TCM metaphors accurately and map them to WM pathophysiology. Specifically, our approach combines domain-specialized agents (TCM Expert, WM Expert) with a Coordinator Agent, leveraging stepwise chain-of-thought prompts to ensure transparent reasoning and conflict resolution. We detail a methodology for building a metaphor-rich TCM dataset, discuss strategies for effectively integrating multi-agent collaboration and CoT reasoning, and articulate the theoretical underpinnings that guide metaphor interpretation across distinct medical paradigms. We present a comprehensive system design and highlight both the potential benefits and limitations of our approach, while leaving placeholders for future experimental validation. Our work aims to support clinical decision-making, cross-system educational initiatives, and integrated healthcare research, ultimately offering a robust scaffold for reconciling TCM's symbolic language with the mechanistic focus of Western medicine. 
+
+---
+# Generator-Assistant Stepwise Rollback Framework for Large Language Model Agent 
+
+**Authors**: Xingzuo Li, Kehai Chen, Yunfei Long, Xuefeng Bai, Yong Xu, Min Zhang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.02519)  
+
+**Abstract**: Large language model (LLM) agents typically adopt a step-by-step reasoning framework, in which they interleave the processes of thinking and acting to accomplish the given task. However, this paradigm faces a deep-rooted one-pass issue whereby each generated intermediate thought is plugged into the trajectory regardless of its correctness, which can cause irreversible error propagation. To address the issue, this paper proposes a novel framework called Generator-Assistant Stepwise Rollback (GA-Rollback) to induce better decision-making for LLM agents. Particularly, GA-Rollback utilizes a generator to interact with the environment and an assistant to examine each action produced by the generator, where the assistant triggers a rollback operation upon detection of incorrect actions. Moreover, we introduce two additional strategies tailored for the rollback scenario to further improve its effectiveness. Extensive experiments show that GA-Rollback achieves significant improvements over several strong baselines on three widely used benchmarks. Our analysis further reveals that GA-Rollback can function as a robust plug-and-play module, integrating seamlessly with other methods. 
+
+---
+# Haste Makes Waste: Evaluating Planning Abilities of LLMs for Efficient and Feasible Multitasking with Time Constraints Between Actions 
+
+**Authors**: Zirui Wu, Xiao Liu, Jiayi Li, Lingpeng Kong, Yansong Feng  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.02238)  
+
+**Abstract**: While Large Language Model-based agents have demonstrated substantial progress in task completion, existing evaluation benchmarks tend to overemphasize single-task performance, with insufficient attention given to the crucial aspects of multitask planning and execution efficiency required in real-world scenarios. To bridge this gap, we present Recipe2Plan, a novel benchmark framework based on real-world cooking scenarios. Unlike conventional benchmarks, Recipe2Plan challenges agents to optimize cooking time through parallel task execution while respecting temporal constraints i.e. specific actions need to be performed within a particular time intervals following the preceding steps. Overly aggressive local parallelization may disrupt this constraint, potentially compromising the entire cooking process. This strict time constraint between actions raises a unique challenge for agents to balance between maximizing concurrent operations and adhering to critical timing constraints. Extensive experiments with state-of-the-art models reveal challenges in maintaining this balance between efficiency and feasibility. The results highlight the need for improved temporal awareness and global multitasking capabilities in large language models. We open-source our benchmark and code at this https URL. 
+
+---
+# Persuasion at Play: Understanding Misinformation Dynamics in Demographic-Aware Human-LLM Interactions 
+
+**Authors**: Angana Borah, Rada Mihalcea, Verónica Pérez-Rosas  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.02038)  
+
+**Abstract**: Existing challenges in misinformation exposure and susceptibility vary across demographic groups, as some populations are more vulnerable to misinformation than others. Large language models (LLMs) introduce new dimensions to these challenges through their ability to generate persuasive content at scale and reinforcing existing biases. This study investigates the bidirectional persuasion dynamics between LLMs and humans when exposed to misinformative content. We analyze human-to-LLM influence using human-stance datasets and assess LLM-to-human influence by generating LLM-based persuasive arguments. Additionally, we use a multi-agent LLM framework to analyze the spread of misinformation under persuasion among demographic-oriented LLM agents. Our findings show that demographic factors influence susceptibility to misinformation in LLMs, closely reflecting the demographic-based patterns seen in human susceptibility. We also find that, similar to human demographic groups, multi-agent LLMs exhibit echo chamber behavior. This research explores the interplay between humans and LLMs, highlighting demographic differences in the context of misinformation and offering insights for future interventions. 
+
+---
