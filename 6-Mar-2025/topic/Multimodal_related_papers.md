@@ -1,0 +1,99 @@
+# Unified Mind Model: Reimagining Autonomous Agents in the LLM Era 
+
+**Authors**: Pengbo Hu, Xiang Ying  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.03459)  
+
+**Abstract**: Large language models (LLMs) have recently demonstrated remarkable capabilities across domains, tasks, and languages (e.g., ChatGPT and GPT-4), reviving the research of general autonomous agents with human-like cognitive this http URL human-level agents require semantic comprehension and instruction-following capabilities, which exactly fall into the strengths of this http URL there have been several initial attempts to build human-level agents based on LLMs, the theoretical foundation remains a challenging open problem. In this paper, we propose a novel theoretical cognitive architecture, the Unified Mind Model (UMM), which offers guidance to facilitate the rapid creation of autonomous agents with human-level cognitive abilities. Specifically, our UMM starts with the global workspace theory and further leverage LLMs to enable the agent with various cognitive abilities, such as multi-modal perception, planning, reasoning, tool use, learning, memory, reflection and motivation. Building upon UMM, we then develop an agent-building engine, MindOS, which allows users to quickly create domain-/task-specific autonomous agents without any programming effort. 
+
+---
+# COSINT-Agent: A Knowledge-Driven Multimodal Agent for Chinese Open Source Intelligence 
+
+**Authors**: Wentao Li, Congcong Wang, Xiaoxiao Cui, Zhi Liu, Wei Guo, Lizhen Cui  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.03215)  
+
+**Abstract**: Open Source Intelligence (OSINT) requires the integration and reasoning of diverse multimodal data, presenting significant challenges in deriving actionable insights. Traditional approaches, including multimodal large language models (MLLMs), often struggle to infer complex contextual relationships or deliver comprehensive intelligence from unstructured data sources. In this paper, we introduce COSINT-Agent, a knowledge-driven multimodal agent tailored to address the challenges of OSINT in the Chinese domain. COSINT-Agent seamlessly integrates the perceptual capabilities of fine-tuned MLLMs with the structured reasoning power of the Entity-Event-Scene Knowledge Graph (EES-KG). Central to COSINT-Agent is the innovative EES-Match framework, which bridges COSINT-MLLM and EES-KG, enabling systematic extraction, reasoning, and contextualization of multimodal insights. This integration facilitates precise entity recognition, event interpretation, and context retrieval, effectively transforming raw multimodal data into actionable intelligence. Extensive experiments validate the superior performance of COSINT-Agent across core OSINT tasks, including entity recognition, EES generation, and context matching. These results underscore its potential as a robust and scalable solution for advancing automated multimodal reasoning and enhancing the effectiveness of OSINT methodologies. 
+
+---
+# See What You Are Told: Visual Attention Sink in Large Multimodal Models 
+
+**Authors**: Seil Kang, Jinyeong Kim, Junhyeok Kim, Seong Jae Hwang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.03321)  
+
+**Abstract**: Large multimodal models (LMMs) "see" images by leveraging the attention mechanism between text and visual tokens in the transformer decoder. Ideally, these models should focus on key visual information relevant to the text token. However, recent findings indicate that LMMs have an extraordinary tendency to consistently allocate high attention weights to specific visual tokens, even when these tokens are irrelevant to the corresponding text. In this study, we investigate the property behind the appearance of these irrelevant visual tokens and examine their characteristics. Our findings show that this behavior arises due to the massive activation of certain hidden state dimensions, which resembles the attention sink found in language models. Hence, we refer to this phenomenon as the visual attention sink. In particular, our analysis reveals that removing the irrelevant visual sink tokens does not impact model performance, despite receiving high attention weights. Consequently, we recycle the attention to these tokens as surplus resources, redistributing the attention budget to enhance focus on the image. To achieve this, we introduce Visual Attention Redistribution (VAR), a method that redistributes attention in image-centric heads, which we identify as innately focusing on visual information. VAR can be seamlessly applied across different LMMs to improve performance on a wide range of tasks, including general vision-language tasks, visual hallucination tasks, and vision-centric tasks, all without the need for additional training, models, or inference steps. Experimental results demonstrate that VAR enables LMMs to process visual information more effectively by adjusting their internal attention mechanisms, offering a new direction to enhancing the multimodal capabilities of LMMs. 
+
+---
+# External Reliable Information-enhanced Multimodal Contrastive Learning for Fake News Detection 
+
+**Authors**: Biwei Cao, Qihang Wu, Jiuxin Cao, Bo Liu, Jie Gui  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.03107)  
+
+**Abstract**: With the rapid development of the Internet, the information dissemination paradigm has changed and the efficiency has been improved greatly. While this also brings the quick spread of fake news and leads to negative impacts on cyberspace. Currently, the information presentation formats have evolved gradually, with the news formats shifting from texts to multimodal contents. As a result, detecting multimodal fake news has become one of the research hotspots. However, multimodal fake news detection research field still faces two main challenges: the inability to fully and effectively utilize multimodal information for detection, and the low credibility or static nature of the introduced external information, which limits dynamic updates. To bridge the gaps, we propose ERIC-FND, an external reliable information-enhanced multimodal contrastive learning framework for fake news detection. ERIC-FND strengthens the representation of news contents by entity-enriched external information enhancement method. It also enriches the multimodal news information via multimodal semantic interaction method where the multimodal constrative learning is employed to make different modality representations learn from each other. Moreover, an adaptive fusion method is taken to integrate the news representations from different dimensions for the eventual classification. Experiments are done on two commonly used datasets in different languages, X (Twitter) and Weibo. Experiment results demonstrate that our proposed model ERIC-FND outperforms existing state-of-the-art fake news detection methods under the same settings. 
+
+---
+# A Multimodal Framework for Topic Propagation Classification in Social Networks 
+
+**Authors**: Yuchuan Jiang, Chaolong Jia, Yunyi Qin, Wei Cai, Yongsen Qian  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.03112)  
+
+**Abstract**: The rapid proliferation of the Internet and the widespread adoption of social networks have significantly accelerated information dissemination. However, this transformation has introduced complexities in information capture and processing, posing substantial challenges for researchers and practitioners. Predicting the dissemination of topic-related information within social networks has thus become a critical research focus. This paper proposes a predictive model for topic dissemination in social networks by integrating multidimensional features derived from key dissemination characteristics. Specifically, we introduce two novel indicators, user relationship breadth and user authority, into the PageRank algorithm to quantify user influence more effectively. Additionally, we employ a Text-CNN model for sentiment classification, extracting sentiment features from textual content. Temporal embeddings of nodes are encoded using a Bi-LSTM model to capture temporal dynamics. Furthermore, we refine the measurement of user interaction traces with topics, replacing traditional topic view metrics with a more precise communication characteristics measure. Finally, we integrate the extracted multidimensional features using a Transformer model, significantly enhancing predictive performance. Experimental results demonstrate that our proposed model outperforms traditional machine learning and unimodal deep learning models in terms of FI-Score, AUC, and Recall, validating its effectiveness in predicting topic propagation within social networks. 
+
+---
+# ClipGrader: Leveraging Vision-Language Models for Robust Label Quality Assessment in Object Detection 
+
+**Authors**: Hong Lu, Yali Bian, Rahul C. Shah  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.02897)  
+
+**Abstract**: High-quality annotations are essential for object detection models, but ensuring label accuracy - especially for bounding boxes - remains both challenging and costly. This paper introduces ClipGrader, a novel approach that leverages vision-language models to automatically assess the accuracy of bounding box annotations. By adapting CLIP (Contrastive Language-Image Pre-training) to evaluate both class label correctness and spatial precision of bounding box, ClipGrader offers an effective solution for grading object detection labels. Tested on modified object detection datasets with artificially disturbed bounding boxes, ClipGrader achieves 91% accuracy on COCO with a 1.8% false positive rate. Moreover, it maintains 87% accuracy with a 2.1% false positive rate when trained on just 10% of the COCO data. ClipGrader also scales effectively to larger datasets such as LVIS, achieving 79% accuracy across 1,203 classes. Our experiments demonstrate ClipGrader's ability to identify errors in existing COCO annotations, highlighting its potential for dataset refinement. When integrated into a semi-supervised object detection (SSOD) model, ClipGrader readily improves the pseudo label quality, helping achieve higher mAP (mean Average Precision) throughout the training process. ClipGrader thus provides a scalable AI-assisted tool for enhancing annotation quality control and verifying annotations in large-scale object detection datasets. 
+
+---
+# The Devil Is in the Details: Tackling Unimodal Spurious Correlations for Generalizable Multimodal Reward Models 
+
+**Authors**: Zichao Li, Xueru Wen, Jie Lou, Yuqiu Ji, Yaojie Lu, Xianpei Han, Debing Zhang, Le Sun  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.03122)  
+
+**Abstract**: Multimodal Reward Models (MM-RMs) are crucial for aligning Large Language Models (LLMs) with human preferences, particularly as LLMs increasingly interact with multimodal data. However, we find that MM-RMs trained on existing datasets often struggle to generalize to out-of-distribution data due to their reliance on unimodal spurious correlations, primarily text-only shortcuts within the training distribution, which prevents them from leveraging true multimodal reward functions. To address this, we introduce a Shortcut-aware MM-RM learning algorithm that mitigates this issue by dynamically reweighting training samples, shifting the distribution toward better multimodal understanding, and reducing dependence on unimodal spurious correlations. Our experiments demonstrate significant improvements in generalization, downstream task performance, and scalability, establishing a more robust framework for multimodal reward modeling. 
+
+---
+# iNews: A Multimodal Dataset for Modeling Personalized Affective Responses to News 
+
+**Authors**: Tiancheng Hu, Nigel Collier  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.03335)  
+
+**Abstract**: Current approaches to emotion detection often overlook the inherent subjectivity of affective experiences, instead relying on aggregated labels that mask individual variations in emotional responses. We introduce iNews, a novel large-scale dataset explicitly capturing subjective affective responses to news headlines. Our dataset comprises annotations from 291 demographically diverse UK participants across 2,899 multimodal Facebook news posts from major UK outlets, with an average of 5.18 annotators per sample. For each post, annotators provide multifaceted labels including valence, arousal, dominance, discrete emotions, content relevance judgments, sharing likelihood, and modality importance ratings (text, image, or both). Furthermore, we collect comprehensive annotator persona information covering demographics, personality, media trust, and consumption patterns, which explain 15.2% of annotation variance - higher than existing NLP datasets. Incorporating this information yields a 7% accuracy gain in zero-shot prediction and remains beneficial even with 32-shot. iNews will enhance research in LLM personalization, subjectivity, affective computing, and individual-level behavior simulation. 
+
+---
+# Enhancing Spoken Discourse Modeling in Language Models Using Gestural Cues 
+
+**Authors**: Varsha Suresh, M. Hamza Mughal, Christian Theobalt, Vera Demberg  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.03474)  
+
+**Abstract**: Research in linguistics shows that non-verbal cues, such as gestures, play a crucial role in spoken discourse. For example, speakers perform hand gestures to indicate topic shifts, helping listeners identify transitions in discourse. In this work, we investigate whether the joint modeling of gestures using human motion sequences and language can improve spoken discourse modeling in language models. To integrate gestures into language models, we first encode 3D human motion sequences into discrete gesture tokens using a VQ-VAE. These gesture token embeddings are then aligned with text embeddings through feature alignment, mapping them into the text embedding space. To evaluate the gesture-aligned language model on spoken discourse, we construct text infilling tasks targeting three key discourse cues grounded in linguistic research: discourse connectives, stance markers, and quantifiers. Results show that incorporating gestures enhances marker prediction accuracy across the three tasks, highlighting the complementary information that gestures can offer in modeling spoken discourse. We view this work as an initial step toward leveraging non-verbal cues to advance spoken language modeling in language models. 
+
+---
+# Enhancing Abnormality Grounding for Vision Language Models with Knowledge Descriptions 
+
+**Authors**: Jun Li, Che Liu, Wenjia Bai, Rossella Arcucci, Cosmin I. Bercea, Julia A. Schnabel  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.03278)  
+
+**Abstract**: Visual Language Models (VLMs) have demonstrated impressive capabilities in visual grounding tasks. However, their effectiveness in the medical domain, particularly for abnormality detection and localization within medical images, remains underexplored. A major challenge is the complex and abstract nature of medical terminology, which makes it difficult to directly associate pathological anomaly terms with their corresponding visual features. In this work, we introduce a novel approach to enhance VLM performance in medical abnormality detection and localization by leveraging decomposed medical knowledge. Instead of directly prompting models to recognize specific abnormalities, we focus on breaking down medical concepts into fundamental attributes and common visual patterns. This strategy promotes a stronger alignment between textual descriptions and visual features, improving both the recognition and localization of abnormalities in medical this http URL evaluate our method on the 0.23B Florence-2 base model and demonstrate that it achieves comparable performance in abnormality grounding to significantly larger 7B LLaVA-based medical VLMs, despite being trained on only 1.5% of the data used for such models. Experimental results also demonstrate the effectiveness of our approach in both known and previously unseen abnormalities, suggesting its strong generalization capabilities. 
+
+---
+# MCiteBench: A Benchmark for Multimodal Citation Text Generation in MLLMs 
+
+**Authors**: Caiyu Hu, Yikai Zhang, Tinghui Zhu, Yiwei Ye, Yanghua Xiao  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.02589)  
+
+**Abstract**: Multimodal Large Language Models (MLLMs) have advanced in integrating diverse modalities but frequently suffer from hallucination. A promising solution to mitigate this issue is to generate text with citations, providing a transparent chain for verification. However, existing work primarily focuses on generating citations for text-only content, overlooking the challenges and opportunities of multimodal contexts. To address this gap, we introduce MCiteBench, the first benchmark designed to evaluate and analyze the multimodal citation text generation ability of MLLMs. Our benchmark comprises data derived from academic papers and review-rebuttal interactions, featuring diverse information sources and multimodal content. We comprehensively evaluate models from multiple dimensions, including citation quality, source reliability, and answer accuracy. Through extensive experiments, we observe that MLLMs struggle with multimodal citation text generation. We also conduct deep analyses of models' performance, revealing that the bottleneck lies in attributing the correct sources rather than understanding the multimodal content. 
+
+---
