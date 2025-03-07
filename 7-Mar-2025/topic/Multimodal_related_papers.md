@@ -1,0 +1,162 @@
+# Simulating the Real World: A Unified Survey of Multimodal Generative Models 
+
+**Authors**: Yuqi Hu, Longguang Wang, Xian Liu, Ling-Hao Chen, Yuwei Guo, Yukai Shi, Ce Liu, Anyi Rao, Zeyu Wang, Hui Xiong  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.04641)  
+
+**Abstract**: Understanding and replicating the real world is a critical challenge in Artificial General Intelligence (AGI) research. To achieve this, many existing approaches, such as world models, aim to capture the fundamental principles governing the physical world, enabling more accurate simulations and meaningful interactions. However, current methods often treat different modalities, including 2D (images), videos, 3D, and 4D representations, as independent domains, overlooking their interdependencies. Additionally, these methods typically focus on isolated dimensions of reality without systematically integrating their connections. In this survey, we present a unified survey for multimodal generative models that investigate the progression of data dimensionality in real-world simulation. Specifically, this survey starts from 2D generation (appearance), then moves to video (appearance+dynamics) and 3D generation (appearance+geometry), and finally culminates in 4D generation that integrate all dimensions. To the best of our knowledge, this is the first attempt to systematically unify the study of 2D, video, 3D and 4D generation within a single framework. To guide future research, we provide a comprehensive review of datasets, evaluation metrics and future directions, and fostering insights for newcomers. This survey serves as a bridge to advance the study of multimodal generative models and real-world simulation within a unified framework. 
+
+---
+# The Best of Both Worlds: Integrating Language Models and Diffusion Models for Video Generation 
+
+**Authors**: Aoxiong Yin, Kai Shen, Yichong Leng, Xu Tan, Xinyu Zhou, Juncheng Li, Siliang Tang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.04606)  
+
+**Abstract**: Recent advancements in text-to-video (T2V) generation have been driven by two competing paradigms: autoregressive language models and diffusion models. However, each paradigm has intrinsic limitations: language models struggle with visual quality and error accumulation, while diffusion models lack semantic understanding and causal modeling. In this work, we propose LanDiff, a hybrid framework that synergizes the strengths of both paradigms through coarse-to-fine generation. Our architecture introduces three key innovations: (1) a semantic tokenizer that compresses 3D visual features into compact 1D discrete representations through efficient semantic compression, achieving a $\sim$14,000$\times$ compression ratio; (2) a language model that generates semantic tokens with high-level semantic relationships; (3) a streaming diffusion model that refines coarse semantics into high-fidelity videos. Experiments show that LanDiff, a 5B model, achieves a score of 85.43 on the VBench T2V benchmark, surpassing the state-of-the-art open-source models Hunyuan Video (13B) and other commercial models such as Sora, Keling, and Hailuo. Furthermore, our model also achieves state-of-the-art performance in long video generation, surpassing other open-source models in this field. Our demo can be viewed at this https URL. 
+
+---
+# Keeping Yourself is Important in Downstream Tuning Multimodal Large Language Model 
+
+**Authors**: Wenke Huang, Jian Liang, Xianda Guo, Yiyang Fang, Guancheng Wan, Xuankun Rong, Chi Wen, Zekun Shi, Qingyun Li, Didi Zhu, Yanbiao Ma, Ke Liang, Bin Yang, He Li, Jiawei Shao, Mang Ye, Bo Du  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.04543)  
+
+**Abstract**: Multi-modal Large Language Models (MLLMs) integrate visual and linguistic reasoning to address complex tasks such as image captioning and visual question answering. While MLLMs demonstrate remarkable versatility, MLLMs appears limited performance on special applications. But tuning MLLMs for downstream tasks encounters two key challenges: Task-Expert Specialization, where distribution shifts between pre-training and target datasets constrain target performance, and Open-World Stabilization, where catastrophic forgetting erases the model general knowledge. In this work, we systematically review recent advancements in MLLM tuning methodologies, classifying them into three paradigms: (I) Selective Tuning, (II) Additive Tuning, and (III) Reparameterization Tuning. Furthermore, we benchmark these tuning strategies across popular MLLM architectures and diverse downstream tasks to establish standardized evaluation analysis and systematic tuning principles. Finally, we highlight several open challenges in this domain and propose future research directions. To facilitate ongoing progress in this rapidly evolving field, we provide a public repository that continuously tracks developments: this https URL. 
+
+---
+# Multi-modal Summarization in Model-Based Engineering: Automotive Software Development Case Study 
+
+**Authors**: Nenad Petrovic, Yurui Zhang, Moaad Maaroufi, Kuo-Yi Chao, Lukasz Mazur, Fengjunjie Pan, Vahid Zolfaghari, Alois Knoll  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.04506)  
+
+**Abstract**: Multimodal summarization integrating information from diverse data modalities presents a promising solution to aid the understanding of information within various processes. However, the application and advantages of multimodal summarization have not received much attention in model-based engineering (MBE), where it has become a cornerstone in the design and development of complex systems, leveraging formal models to improve understanding, validation and automation throughout the engineering lifecycle. UML and EMF diagrams in model-based engineering contain a large amount of multimodal information and intricate relational data. Hence, our study explores the application of multimodal large language models within the domain of model-based engineering to evaluate their capacity for understanding and identifying relationships, features, and functionalities embedded in UML and EMF diagrams. We aim to demonstrate the transformative potential benefits and limitations of multimodal summarization in improving productivity and accuracy in MBE practices. The proposed approach is evaluated within the context of automotive software development, while many promising state-of-art models were taken into account. 
+
+---
+# Training-Free Graph Filtering via Multimodal Feature Refinement for Extremely Fast Multimodal Recommendation 
+
+**Authors**: Yu-Seung Roh, Joo-Young Kim, Jin-Duk Park, Won-Yong Shin  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.04406)  
+
+**Abstract**: Multimodal recommender systems improve the performance of canonical recommender systems with no item features by utilizing diverse content types such as text, images, and videos, while alleviating inherent sparsity of user-item interactions and accelerating user engagement. However, current neural network-based models often incur significant computational overhead due to the complex training process required to learn and integrate information from multiple modalities. To overcome this limitation, we propose MultiModal-Graph Filtering (MM-GF), a training-free method based on the notion of graph filtering (GF) for efficient and accurate multimodal recommendations. Specifically, MM-GF first constructs multiple similarity graphs through nontrivial multimodal feature refinement such as robust scaling and vector shifting by addressing the heterogeneous characteristics across modalities. Then, MM-GF optimally fuses multimodal information using linear low-pass filters across different modalities. Extensive experiments on real-world benchmark datasets demonstrate that MM-GF not only improves recommendation accuracy by up to 13.35% compared to the best competitor but also dramatically reduces computational costs by achieving the runtime of less than 10 seconds. 
+
+---
+# TAIL: Text-Audio Incremental Learning 
+
+**Authors**: Yingfei Sun, Xu Gu, Wei Ji, Hanbin Zhao, Hao Fei, Yifang Yin, Roger Zimmermann  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.04258)  
+
+**Abstract**: Many studies combine text and audio to capture multi-modal information but they overlook the model's generalization ability on new datasets. Introducing new datasets may affect the feature space of the original dataset, leading to catastrophic forgetting. Meanwhile, large model parameters can significantly impact training performance. To address these limitations, we introduce a novel task called Text-Audio Incremental Learning (TAIL) task for text-audio retrieval, and propose a new method, PTAT, Prompt Tuning for Audio-Text incremental learning. This method utilizes prompt tuning to optimize the model parameters while incorporating an audio-text similarity and feature distillation module to effectively mitigate catastrophic forgetting. We benchmark our method and previous incremental learning methods on AudioCaps, Clotho, BBC Sound Effects and Audioset datasets, and our method outperforms previous methods significantly, particularly demonstrating stronger resistance to forgetting on older datasets. Compared to the full-parameters Finetune (Sequential) method, our model only requires 2.42\% of its parameters, achieving 4.46\% higher performance. 
+
+---
+# MASTER: Multimodal Segmentation with Text Prompts 
+
+**Authors**: Fuyang Liu, Shun Lu, Jilin Mei, Yu Hu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.04199)  
+
+**Abstract**: RGB-Thermal fusion is a potential solution for various weather and light conditions in challenging scenarios. However, plenty of studies focus on designing complex modules to fuse different modalities. With the widespread application of large language models (LLMs), valuable information can be more effectively extracted from natural language. Therefore, we aim to leverage the advantages of large language models to design a structurally simple and highly adaptable multimodal fusion model architecture. We proposed MultimodAl Segmentation with TExt PRompts (MASTER) architecture, which integrates LLM into the fusion of RGB-Thermal multimodal data and allows complex query text to participate in the fusion process. Our model utilizes a dual-path structure to extract information from different modalities of images. Additionally, we employ LLM as the core module for multimodal fusion, enabling the model to generate learnable codebook tokens from RGB, thermal images, and textual information. A lightweight image decoder is used to obtain semantic segmentation results. The proposed MASTER performs exceptionally well in benchmark tests across various automated driving scenarios, yielding promising results. 
+
+---
+# Knowledge-Decoupled Synergetic Learning: An MLLM based Collaborative Approach to Few-shot Multimodal Dialogue Intention Recognition 
+
+**Authors**: Bin Chen, Yu Zhang, Hongfei Ye, Ziyi Huang, Hongyang Chen  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.04201)  
+
+**Abstract**: Few-shot multimodal dialogue intention recognition is a critical challenge in the e-commerce domainn. Previous methods have primarily enhanced model classification capabilities through post-training techniques. However, our analysis reveals that training for few-shot multimodal dialogue intention recognition involves two interconnected tasks, leading to a seesaw effect in multi-task learning. This phenomenon is attributed to knowledge interference stemming from the superposition of weight matrix updates during the training process. To address these challenges, we propose Knowledge-Decoupled Synergetic Learning (KDSL), which mitigates these issues by utilizing smaller models to transform knowledge into interpretable rules, while applying the post-training of larger models. By facilitating collaboration between the large and small multimodal large language models for prediction, our approach demonstrates significant improvements. Notably, we achieve outstanding results on two real Taobao datasets, with enhancements of 6.37\% and 6.28\% in online weighted F1 scores compared to the state-of-the-art method, thereby validating the efficacy of our framework. 
+
+---
+# The Role of Visual Modality in Multimodal Mathematical Reasoning: Challenges and Insights 
+
+**Authors**: Yufang Liu, Yao Du, Tao Ji, Jianing Wang, Yang Liu, Yuanbin Wu, Aimin Zhou, Mengdi Zhang, Xunliang Cai  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.04167)  
+
+**Abstract**: Recent research has increasingly focused on multimodal mathematical reasoning, particularly emphasizing the creation of relevant datasets and benchmarks. Despite this, the role of visual information in reasoning has been underexplored. Our findings show that existing multimodal mathematical models minimally leverage visual information, and model performance remains largely unaffected by changes to or removal of images in the dataset. We attribute this to the dominance of textual information and answer options that inadvertently guide the model to correct answers. To improve evaluation methods, we introduce the HC-M3D dataset, specifically designed to require image reliance for problem-solving and to challenge models with similar, yet distinct, images that change the correct answer. In testing leading models, their failure to detect these subtle visual differences suggests limitations in current visual perception capabilities. Additionally, we observe that the common approach of improving general VQA capabilities by combining various types of image encoders does not contribute to math reasoning performance. This finding also presents a challenge to enhancing visual reliance during math reasoning. Our benchmark and code would be available at \href{this https URL}{this https URL\_modality\_role}. 
+
+---
+# Chart-HQA: A Benchmark for Hypothetical Question Answering in Charts 
+
+**Authors**: Xiangnan Chen, Yuancheng Fang, Qian Xiao, Juncheng Li, Jun Lin, Siliang Tang, Yi Yang, Yueting Zhuang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.04095)  
+
+**Abstract**: Multimodal Large Language Models (MLLMs) have garnered significant attention for their strong visual-semantic understanding. Most existing chart benchmarks evaluate MLLMs' ability to parse information from charts to answer this http URL, they overlook the inherent output biases of MLLMs, where models rely on their parametric memory to answer questions rather than genuinely understanding the chart content. To address this limitation, we introduce a novel Chart Hypothetical Question Answering (HQA) task, which imposes assumptions on the same question to compel models to engage in counterfactual reasoning based on the chart content. Furthermore, we introduce HAI, a human-AI interactive data synthesis approach that leverages the efficient text-editing capabilities of LLMs alongside human expert knowledge to generate diverse and high-quality HQA data at a low cost. Using HAI, we construct Chart-HQA, a challenging benchmark synthesized from publicly available data sources. Evaluation results on 18 MLLMs of varying model sizes reveal that current models face significant generalization challenges and exhibit imbalanced reasoning performance on the HQA task. 
+
+---
+# InterChat: Enhancing Generative Visual Analytics using Multimodal Interactions 
+
+**Authors**: Juntong Chen, Jiang Wu, Jiajing Guo, Vikram Mohanty, Xueming Li, Jorge Piazentin Ono, Wenbin He, Liu Ren, Dongyu Liu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.04110)  
+
+**Abstract**: The rise of Large Language Models (LLMs) and generative visual analytics systems has transformed data-driven insights, yet significant challenges persist in accurately interpreting users' analytical and interaction intents. While language inputs offer flexibility, they often lack precision, making the expression of complex intents inefficient, error-prone, and time-intensive. To address these limitations, we investigate the design space of multimodal interactions for generative visual analytics through a literature review and pilot brainstorming sessions. Building on these insights, we introduce a highly extensible workflow that integrates multiple LLM agents for intent inference and visualization generation. We develop InterChat, a generative visual analytics system that combines direct manipulation of visual elements with natural language inputs. This integration enables precise intent communication and supports progressive, visually driven exploratory data analyses. By employing effective prompt engineering, and contextual interaction linking, alongside intuitive visualization and interaction designs, InterChat bridges the gap between user interactions and LLM-driven visualizations, enhancing both interpretability and usability. Extensive evaluations, including two usage scenarios, a user study, and expert feedback, demonstrate the effectiveness of InterChat. Results show significant improvements in the accuracy and efficiency of handling complex visual analytics tasks, highlighting the potential of multimodal interactions to redefine user engagement and analytical depth in generative visual analytics. 
+
+---
+# RetinalGPT: A Retinal Clinical Preference Conversational Assistant Powered by Large Vision-Language Models 
+
+**Authors**: Wenhui Zhu, Xin Li, Xiwen Chen, Peijie Qiu, Vamsi Krishna Vasa, Xuanzhao Dong, Yanxi Chen, Natasha Lepore, Oana Dumitrascu, Yi Su, Yalin Wang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.03987)  
+
+**Abstract**: Recently, Multimodal Large Language Models (MLLMs) have gained significant attention for their remarkable ability to process and analyze non-textual data, such as images, videos, and audio. Notably, several adaptations of general-domain MLLMs to the medical field have been explored, including LLaVA-Med. However, these medical adaptations remain insufficiently advanced in understanding and interpreting retinal images. In contrast, medical experts emphasize the importance of quantitative analyses for disease detection and interpretation. This underscores a gap between general-domain and medical-domain MLLMs: while general-domain MLLMs excel in broad applications, they lack the specialized knowledge necessary for precise diagnostic and interpretative tasks in the medical field. To address these challenges, we introduce \textit{RetinalGPT}, a multimodal conversational assistant for clinically preferred quantitative analysis of retinal images. Specifically, we achieve this by compiling a large retinal image dataset, developing a novel data pipeline, and employing customized visual instruction tuning to enhance both retinal analysis and enrich medical knowledge. In particular, RetinalGPT outperforms MLLM in the generic domain by a large margin in the diagnosis of retinal diseases in 8 benchmark retinal datasets. Beyond disease diagnosis, RetinalGPT features quantitative analyses and lesion localization, representing a pioneering step in leveraging LLMs for an interpretable and end-to-end clinical research framework. The code is available at this https URL 
+
+---
+# PP-DocBee: Improving Multimodal Document Understanding Through a Bag of Tricks 
+
+**Authors**: Feng Ni, Kui Huang, Yao Lu, Wenyu Lv, Guanzhong Wang, Zeyu Chen, Yi Liu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.04065)  
+
+**Abstract**: With the rapid advancement of digitalization, various document images are being applied more extensively in production and daily life, and there is an increasingly urgent need for fast and accurate parsing of the content in document images. Therefore, this report presents PP-DocBee, a novel multimodal large language model designed for end-to-end document image understanding. First, we develop a data synthesis strategy tailored to document scenarios in which we build a diverse dataset to improve the model generalization. Then, we apply a few training techniques, including dynamic proportional sampling, data preprocessing, and OCR postprocessing strategies. Extensive evaluations demonstrate the superior performance of PP-DocBee, achieving state-of-the-art results on English document understanding benchmarks and even outperforming existing open source and commercial models in Chinese document understanding. The source code and pre-trained models are publicly available at \href{this https URL}{this https URL}. 
+
+---
+# Rebalanced Multimodal Learning with Data-aware Unimodal Sampling 
+
+**Authors**: Qingyuan Jiang, Zhouyang Chi, Xiao Ma, Qirong Mao, Yang Yang, Jinhui Tang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.03792)  
+
+**Abstract**: To address the modality learning degeneration caused by modality imbalance, existing multimodal learning~(MML) approaches primarily attempt to balance the optimization process of each modality from the perspective of model learning. However, almost all existing methods ignore the modality imbalance caused by unimodal data sampling, i.e., equal unimodal data sampling often results in discrepancies in informational content, leading to modality imbalance. Therefore, in this paper, we propose a novel MML approach called \underline{D}ata-aware \underline{U}nimodal \underline{S}ampling~(\method), which aims to dynamically alleviate the modality imbalance caused by sampling. Specifically, we first propose a novel cumulative modality discrepancy to monitor the multimodal learning process. Based on the learning status, we propose a heuristic and a reinforcement learning~(RL)-based data-aware unimodal sampling approaches to adaptively determine the quantity of sampled data at each iteration, thus alleviating the modality imbalance from the perspective of sampling. Meanwhile, our method can be seamlessly incorporated into almost all existing multimodal learning approaches as a plugin. Experiments demonstrate that \method~can achieve the best performance by comparing with diverse state-of-the-art~(SOTA) baselines. 
+
+---
+# M2-omni: Advancing Omni-MLLM for Comprehensive Modality Support with Competitive Performance 
+
+**Authors**: Qingpei Guo, Kaiyou Song, Zipeng Feng, Ziping Ma, Qinglong Zhang, Sirui Gao, Xuzheng Yu, Yunxiao Sun, Tai-WeiChang, Jingdong Chen, Ming Yang, Jun Zhou  
+
+**Link**: [PDF](https://arxiv.org/pdf/2502.18778)  
+
+**Abstract**: We present M2-omni, a cutting-edge, open-source omni-MLLM that achieves competitive performance to GPT-4o. M2-omni employs a unified multimodal sequence modeling framework, which empowers Large Language Models(LLMs) to acquire comprehensive cross-modal understanding and generation capabilities. Specifically, M2-omni can process arbitrary combinations of audio, video, image, and text modalities as input, generating multimodal sequences interleaving with audio, image, or text outputs, thereby enabling an advanced and interactive real-time experience. The training of such an omni-MLLM is challenged by significant disparities in data quantity and convergence rates across modalities. To address these challenges, we propose a step balance strategy during pre-training to handle the quantity disparities in modality-specific data. Additionally, a dynamically adaptive balance strategy is introduced during the instruction tuning stage to synchronize the modality-wise training progress, ensuring optimal convergence. Notably, we prioritize preserving strong performance on pure text tasks to maintain the robustness of M2-omni's language understanding capability throughout the training process. To our best knowledge, M2-omni is currently a very competitive open-source model to GPT-4o, characterized by its comprehensive modality and task support, as well as its exceptional performance. We expect M2-omni will advance the development of omni-MLLMs, thus facilitating future research in this domain. 
+
+---
+# BIOSCAN-5M: A Multimodal Dataset for Insect Biodiversity 
+
+**Authors**: Zahra Gharaee, Scott C. Lowe, ZeMing Gong, Pablo Millan Arias, Nicholas Pellegrino, Austin T. Wang, Joakim Bruslund Haurum, Iuliia Zarubiieva, Lila Kari, Dirk Steinke, Graham W. Taylor, Paul Fieguth, Angel X. Chang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2406.12723)  
+
+**Abstract**: As part of an ongoing worldwide effort to comprehend and monitor insect biodiversity, this paper presents the BIOSCAN-5M Insect dataset to the machine learning community and establish several benchmark tasks. BIOSCAN-5M is a comprehensive dataset containing multi-modal information for over 5 million insect specimens, and it significantly expands existing image-based biological datasets by including taxonomic labels, raw nucleotide barcode sequences, assigned barcode index numbers, geographical, and size information. We propose three benchmark experiments to demonstrate the impact of the multi-modal data types on the classification and clustering accuracy. First, we pretrain a masked language model on the DNA barcode sequences of the BIOSCAN-5M dataset, and demonstrate the impact of using this large reference library on species- and genus-level classification performance. Second, we propose a zero-shot transfer learning task applied to images and DNA barcodes to cluster feature embeddings obtained from self-supervised learning, to investigate whether meaningful clusters can be derived from these representation embeddings. Third, we benchmark multi-modality by performing contrastive learning on DNA barcodes, image data, and taxonomic information. This yields a general shared embedding space enabling taxonomic classification using multiple types of information and modalities. The code repository of the BIOSCAN-5M Insect dataset is available at this https URL. 
+
+---
+# Multimodal AI predicts clinical outcomes of drug combinations from preclinical data 
+
+**Authors**: Yepeng Huang, Xiaorui Su, Varun Ullanat, Ivy Liang, Lindsay Clegg, Damilola Olabode, Nicholas Ho, Bino John, Megan Gibbs, Marinka Zitnik  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.02781)  
+
+**Abstract**: Predicting clinical outcomes from preclinical data is essential for identifying safe and effective drug combinations. Current models rely on structural or target-based features to identify high-efficacy, low-toxicity drug combinations. However, these approaches fail to incorporate the multimodal data necessary for accurate, clinically-relevant predictions. Here, we introduce MADRIGAL, a multimodal AI model that learns from structural, pathway, cell viability, and transcriptomic data to predict drug combination effects across 953 clinical outcomes and 21842 compounds, including combinations of approved drugs and novel compounds in development. MADRIGAL uses a transformer bottleneck module to unify preclinical drug data modalities while handling missing data during training and inference--a major challenge in multimodal learning. It outperforms single-modality methods and state-of-the-art models in predicting adverse drug interactions. MADRIGAL performs virtual screening of anticancer drug combinations and supports polypharmacy management for type II diabetes and metabolic dysfunction-associated steatohepatitis (MASH). It identifies transporter-mediated drug interactions. MADRIGAL predicts resmetirom, the first and only FDA-approved drug for MASH, among therapies with the most favorable safety profile. It supports personalized cancer therapy by integrating genomic profiles from cancer patients. Using primary acute myeloid leukemia samples and patient-derived xenograft models, it predicts the efficacy of personalized drug combinations. Integrating MADRIGAL with a large language model allows users to describe clinical outcomes in natural language, improving safety assessment by identifying potential adverse interactions and toxicity risks. MADRIGAL provides a multimodal approach for designing combination therapies with improved predictive accuracy and clinical relevance. 
+
+---
+# Vision-Language Models Struggle to Align Entities across Modalities 
+
+**Authors**: Iñigo Alonso, Ander Salaberria, Gorka Azkune, Jeremy Barnes, Oier Lopez de Lacalle  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.03854)  
+
+**Abstract**: Cross-modal entity linking refers to the ability to align entities and their attributes across different modalities. While cross-modal entity linking is a fundamental skill needed for real-world applications such as multimodal code generation, fake news detection, or scene understanding, it has not been thoroughly studied in the literature. In this paper, we introduce a new task and benchmark to address this gap. Our benchmark, MATE, consists of 5.5k evaluation instances featuring visual scenes aligned with their textual representations. To evaluate cross-modal entity linking performance, we design a question-answering task that involves retrieving one attribute of an object in one modality based on a unique attribute of that object in another modality. We evaluate state-of-the-art Vision-Language Models (VLMs) and humans on this task, and find that VLMs struggle significantly compared to humans, particularly as the number of objects in the scene increases. Our analysis also shows that, while chain-of-thought prompting can improve VLM performance, models remain far from achieving human-level proficiency. These findings highlight the need for further research in cross-modal entity linking and show that MATE is a strong benchmark to support that progress. 
+
+---

@@ -1,0 +1,63 @@
+# Training-Free Graph Filtering via Multimodal Feature Refinement for Extremely Fast Multimodal Recommendation 
+
+**Authors**: Yu-Seung Roh, Joo-Young Kim, Jin-Duk Park, Won-Yong Shin  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.04406)  
+
+**Abstract**: Multimodal recommender systems improve the performance of canonical recommender systems with no item features by utilizing diverse content types such as text, images, and videos, while alleviating inherent sparsity of user-item interactions and accelerating user engagement. However, current neural network-based models often incur significant computational overhead due to the complex training process required to learn and integrate information from multiple modalities. To overcome this limitation, we propose MultiModal-Graph Filtering (MM-GF), a training-free method based on the notion of graph filtering (GF) for efficient and accurate multimodal recommendations. Specifically, MM-GF first constructs multiple similarity graphs through nontrivial multimodal feature refinement such as robust scaling and vector shifting by addressing the heterogeneous characteristics across modalities. Then, MM-GF optimally fuses multimodal information using linear low-pass filters across different modalities. Extensive experiments on real-world benchmark datasets demonstrate that MM-GF not only improves recommendation accuracy by up to 13.35% compared to the best competitor but also dramatically reduces computational costs by achieving the runtime of less than 10 seconds. 
+
+---
+# In-depth Analysis of Graph-based RAG in a Unified Framework 
+
+**Authors**: Yingli Zhou, Yaodong Su, Youran Sun, Shu Wang, Taotao Wang, Runyuan He, Yongwei Zhang, Sicong Liang, Xilin Liu, Yuchi Ma, Yixiang Fang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.04338)  
+
+**Abstract**: Graph-based Retrieval-Augmented Generation (RAG) has proven effective in integrating external knowledge into large language models (LLMs), improving their factual accuracy, adaptability, interpretability, and trustworthiness. A number of graph-based RAG methods have been proposed in the literature. However, these methods have not been systematically and comprehensively compared under the same experimental settings. In this paper, we first summarize a unified framework to incorporate all graph-based RAG methods from a high-level perspective. We then extensively compare representative graph-based RAG methods over a range of questing-answering (QA) datasets -- from specific questions to abstract questions -- and examine the effectiveness of all methods, providing a thorough analysis of graph-based RAG approaches. As a byproduct of our experimental analysis, we are also able to identify new variants of the graph-based RAG methods over specific QA and abstract QA tasks respectively, by combining existing techniques, which outperform the state-of-the-art methods. Finally, based on these findings, we offer promising research opportunities. We believe that a deeper understanding of the behavior of existing methods can provide new valuable insights for future research. 
+
+---
+# Semantic Retrieval Augmented Contrastive Learning for Sequential Recommendation 
+
+**Authors**: Ziqiang Cui, Yunpeng Weng, Xing Tang, Xiaokun Zhang, Dugang Liu, Shiwei Li, Peiyang Liu, Bowei He, Weihong Luo, Xiuqiang He, Chen Ma  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.04162)  
+
+**Abstract**: Sequential recommendation aims to model user preferences based on historical behavior sequences, which is crucial for various online platforms. Data sparsity remains a significant challenge in this area as most users have limited interactions and many items receive little attention. To mitigate this issue, contrastive learning has been widely adopted. By constructing positive sample pairs from the data itself and maximizing their agreement in the embedding space,it can leverage available data more effectively. Constructing reasonable positive sample pairs is crucial for the success of contrastive learning. However, current approaches struggle to generate reliable positive pairs as they either rely on representations learned from inherently sparse collaborative signals or use random perturbations which introduce significant uncertainty. To address these limitations, we propose a novel approach named Semantic Retrieval Augmented Contrastive Learning (SRA-CL), which leverages semantic information to improve the reliability of contrastive samples. SRA-CL comprises two main components: (1) Cross-Sequence Contrastive Learning via User Semantic Retrieval, which utilizes large language models (LLMs) to understand diverse user preferences and retrieve semantically similar users to form reliable positive samples through a learnable sample synthesis method; and (2) Intra-Sequence Contrastive Learning via Item Semantic Retrieval, which employs LLMs to comprehend items and retrieve similar items to perform semantic-based item substitution, thereby creating semantically consistent augmented views for contrastive learning. SRA-CL is plug-and-play and can be integrated into standard sequential recommendation models. Extensive experiments on four public datasets demonstrate the effectiveness and generalizability of the proposed approach. 
+
+---
+# HEISIR: Hierarchical Expansion of Inverted Semantic Indexing for Training-free Retrieval of Conversational Data using LLMs 
+
+**Authors**: Sangyeop Kim, Hangyeul Lee, Yohan Lee  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.04141)  
+
+**Abstract**: The growth of conversational AI services has increased demand for effective information retrieval from dialogue data. However, existing methods often face challenges in capturing semantic intent or require extensive labeling and fine-tuning. This paper introduces HEISIR (Hierarchical Expansion of Inverted Semantic Indexing for Retrieval), a novel framework that enhances semantic understanding in conversational data retrieval through optimized data ingestion, eliminating the need for resource-intensive labeling or model adaptation. HEISIR implements a two-step process: (1) Hierarchical Triplets Formulation and (2) Adjunct Augmentation, creating semantic indices consisting of Subject-Verb-Object-Adjunct (SVOA) quadruplets. This structured representation effectively captures the underlying semantic information from dialogue content. HEISIR achieves high retrieval performance while maintaining low latency during the actual retrieval process. Our experimental results demonstrate that HEISIR outperforms fine-tuned models across various embedding types and language models. Beyond improving retrieval capabilities, HEISIR also offers opportunities for intent and topic analysis in conversational data, providing a versatile solution for dialogue systems. 
+
+---
+# RadIR: A Scalable Framework for Multi-Grained Medical Image Retrieval via Radiology Report Mining 
+
+**Authors**: Tengfei Zhang, Ziheng Zhao, Chaoyi Wu, Xiao Zhou, Ya Zhang, Yangfeng Wang, Weidi Xie  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.04653)  
+
+**Abstract**: Developing advanced medical imaging retrieval systems is challenging due to the varying definitions of `similar images' across different medical contexts. This challenge is compounded by the lack of large-scale, high-quality medical imaging retrieval datasets and benchmarks. In this paper, we propose a novel methodology that leverages dense radiology reports to define image-wise similarity ordering at multiple granularities in a scalable and fully automatic manner. Using this approach, we construct two comprehensive medical imaging retrieval datasets: MIMIC-IR for Chest X-rays and CTRATE-IR for CT scans, providing detailed image-image ranking annotations conditioned on diverse anatomical structures. Furthermore, we develop two retrieval systems, RadIR-CXR and model-ChestCT, which demonstrate superior performance in traditional image-image and image-report retrieval tasks. These systems also enable flexible, effective image retrieval conditioned on specific anatomical structures described in text, achieving state-of-the-art results on 77 out of 78 metrics. 
+
+---
+# IFIR: A Comprehensive Benchmark for Evaluating Instruction-Following in Expert-Domain Information Retrieval 
+
+**Authors**: Tingyu Song, Guo Gan, Mingsheng Shang, Yilun Zhao  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.04644)  
+
+**Abstract**: We introduce IFIR, the first comprehensive benchmark designed to evaluate instruction-following information retrieval (IR) in expert domains. IFIR includes 2,426 high-quality examples and covers eight subsets across four specialized domains: finance, law, healthcare, and science literature. Each subset addresses one or more domain-specific retrieval tasks, replicating real-world scenarios where customized instructions are critical. IFIR enables a detailed analysis of instruction-following retrieval capabilities by incorporating instructions at different levels of complexity. We also propose a novel LLM-based evaluation method to provide a more precise and reliable assessment of model performance in following instructions. Through extensive experiments on 15 frontier retrieval models, including those based on LLMs, our results reveal that current models face significant challenges in effectively following complex, domain-specific instructions. We further provide in-depth analyses to highlight these limitations, offering valuable insights to guide future advancements in retriever development. 
+
+---
+# Measuring temporal effects of agent knowledge by date-controlled tool use 
+
+**Authors**: R. Patrick Xian, Qiming Cui, Stefan Bauer, Reza Abbasi-Asl  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.04188)  
+
+**Abstract**: Temporal progression is an integral part of knowledge accumulation and update. Web search is frequently adopted as grounding for agent knowledge, yet its inappropriate configuration affects the quality of agent responses. Here, we construct a tool-based out-of-sample testing framework to measure the knowledge variability of large language model (LLM) agents from distinct date-controlled tools (DCTs). We demonstrate the temporal effects of an LLM agent as a writing assistant, which can use web search to help complete scientific publication abstracts. We show that temporal effects of the search engine translates into tool-dependent agent performance but can be alleviated with base model choice and explicit reasoning instructions such as chain-of-thought prompting. Our results indicate that agent evaluation should take a dynamical view and account for the temporal influence of tools and the updates of external resources. 
+
+---
