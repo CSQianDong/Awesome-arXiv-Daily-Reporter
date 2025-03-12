@@ -1,0 +1,128 @@
+# LongEval at CLEF 2025: Longitudinal Evaluation of IR Model Performance 
+
+**Authors**: Matteo Cancellieri, Alaa El-Ebshihy, Tobias Fink, Petra Galuščáková, Gabriela Gonzalez-Saez, Lorraine Goeuriot, David Iommi, Jüri Keller, Petr Knoth, Philippe Mulhem, Florina Piroi, David Pride, Philipp Schaer  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.08541)  
+
+**Abstract**: This paper presents the third edition of the LongEval Lab, part of the CLEF 2025 conference, which continues to explore the challenges of temporal persistence in Information Retrieval (IR). The lab features two tasks designed to provide researchers with test data that reflect the evolving nature of user queries and document relevance over time. By evaluating how model performance degrades as test data diverge temporally from training data, LongEval seeks to advance the understanding of temporal dynamics in IR systems. The 2025 edition aims to engage the IR and NLP communities in addressing the development of adaptive models that can maintain retrieval quality over time in the domains of web search and scientific retrieval. 
+
+---
+# KAP: MLLM-assisted OCR Text Enhancement for Hybrid Retrieval in Chinese Non-Narrative Documents 
+
+**Authors**: Hsin-Ling Hsu, Ping-Sheng Lin, Jing-Di Lin, Jengnan Tzeng  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.08452)  
+
+**Abstract**: We propose Knowledge-Aware Preprocessing (KAP), a two-stage preprocessing framework tailored for Traditional Chinese non-narrative documents, designed to enhance retrieval accuracy in Hybrid Retrieval systems. Hybrid Retrieval, which integrates Sparse Retrieval (e.g., BM25) and Dense Retrieval (e.g., vector embeddings), has become a widely adopted approach for improving search effectiveness. However, its performance heavily depends on the quality of input text, which is often degraded when dealing with non-narrative documents such as PDFs containing financial statements, contractual clauses, and tables. KAP addresses these challenges by integrating Multimodal Large Language Models (MLLMs) with LLM-driven post-OCR processing, refining extracted text to reduce OCR noise, restore table structures, and optimize text format. By ensuring better compatibility with Hybrid Retrieval, KAP improves the accuracy of both Sparse and Dense Retrieval methods without modifying the retrieval architecture itself. 
+
+---
+# Weighted Tensor Decompositions for Context-aware Collaborative Filtering 
+
+**Authors**: Joey De Pauw, Bart Goethals  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.08393)  
+
+**Abstract**: Over recent years it has become well accepted that user interest is not static or immutable. There are a variety of contextual factors, such as time of day, the weather or the user's mood, that influence the current interests of the user. Modelling approaches need to take these factors into account if they want to succeed at finding the most relevant content to recommend given the situation.
+A popular method for context-aware recommendation is to encode context attributes as extra dimensions of the classic user-item interaction matrix, effectively turning it into a tensor, followed by applying the appropriate tensor decomposition methods to learn missing values. However, unlike with matrix factorization, where all decompositions are essentially a product of matrices, there exist many more options for decomposing tensors by combining vector, matrix and tensor products. We study the most successful decomposition methods that use weighted square loss and categorize them based on their tensor structure and regularization strategy. Additionally, we further extend the pool of methods by filling in the missing combinations.
+In this paper we provide an overview of the properties of the different decomposition methods, such as their complexity, scalability, and modelling capacity. These benefits are then contrasted with the performances achieved in offline experiments to gain more insight into which method to choose depending on a specific situation and constraints. 
+
+---
+# JurisTCU: A Brazilian Portuguese Information Retrieval Dataset with Query Relevance Judgments 
+
+**Authors**: Leandro Carísio Fernandes, Leandro dos Santos Ribeiro, Marcos Vinícius Borela de Castro, Leonardo Augusto da Silva Pacheco, Edans Flávius de Oliveira Sandes  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.08379)  
+
+**Abstract**: This paper introduces JurisTCU, a Brazilian Portuguese dataset for legal information retrieval (LIR). The dataset is freely available and consists of 16,045 jurisprudential documents from the Brazilian Federal Court of Accounts, along with 150 queries annotated with relevance judgments. It addresses the scarcity of Portuguese-language LIR datasets with query relevance annotations. The queries are organized into three groups: real user keyword-based queries, synthetic keyword-based queries, and synthetic question-based queries. Relevance judgments were produced through a hybrid approach combining LLM-based scoring with expert domain validation. We used JurisTCU in 14 experiments using lexical search (document expansion methods) and semantic search (BERT-based and OpenAI embeddings). We show that the document expansion methods significantly improve the performance of standard BM25 search on this dataset, with improvements exceeding 45% in P@10, R@10, and nDCG@10 metrics when evaluating short keyword-based queries. Among the embedding models, the OpenAI models produced the best results, with improvements of approximately 70% in P@10, R@10, and nDCG@10 metrics for short keyword-based queries, suggesting that these dense embeddings capture semantic relationships in this domain, surpassing the reliance on lexical terms. Besides offering a dataset for the Portuguese-language IR research community, suitable for evaluating search systems, the results also contribute to enhancing a search system highly relevant to Brazilian citizens. 
+
+---
+# SoTCKGE:Continual Knowledge Graph Embedding Based on Spatial Offset Transformation 
+
+**Authors**: Xinyan Wang, Jinshuo Liu, Cheng Bi, Kaijian Xie, Meng Wang, Juan Deng, Jeff Pan  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.08189)  
+
+**Abstract**: Current Continual Knowledge Graph Embedding (CKGE) methods primarily rely on translation-based embedding methods, leveraging previously acquired knowledge to initialize new facts. To enhance learning efficiency, these methods often integrate fine-tuning or continual learning strategies. However, this compromises the model's prediction accuracy and the translation-based methods lack support for complex relational structures (multi-hop relations). To tackle this challenge, we propose a novel CKGE framework SoTCKGE grounded in Spatial Offset Transformation. Within this framework, entity positions are defined as being jointly determined by base position vectors and offset vectors. This not only enhances the model's ability to represent complex relational structures but also allows for the embedding update of both new and old knowledge through simple spatial offset transformations, without the need for continuous learning methods. Furthermore, we introduce a hierarchical update strategy and a balanced embedding method to refine the parameter update process, effectively minimizing training costs and augmenting model accuracy. To comprehensively assess the performance of our model, we have conducted extensive experimlents on four publicly accessible datasets and a new dataset constructed by us. Experimental results demonstrate the advantage of our model in enhancing multi-hop relationship learning and further improving prediction accuracy. 
+
+---
+# MultiConIR: Towards multi-condition Information Retrieval 
+
+**Authors**: Xuan Lu, Sifan Liu, Bochao Yin, Yongqi Li, Xinghao Chen, Hui Su, Yaohui Jin, Wenjun Zeng, Xiaoyu Shen  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.08046)  
+
+**Abstract**: In this paper, we introduce MultiConIR, the first benchmark designed to evaluate retrieval models in multi-condition scenarios. Unlike existing datasets that primarily focus on single-condition queries from search engines, MultiConIR captures real-world complexity by incorporating five diverse domains: books, movies, people, medical cases, and legal documents. We propose three tasks to systematically assess retrieval and reranking models on multi-condition robustness, monotonic relevance ranking, and query format sensitivity. Our findings reveal that existing retrieval and reranking models struggle with multi-condition retrieval, with rerankers suffering severe performance degradation as query complexity increases. We further investigate the performance gap between retrieval and reranking models, exploring potential reasons for these discrepancies, and analysis the impact of different pooling strategies on condition placement sensitivity. Finally, we highlight the strengths of GritLM and Nv-Embed, which demonstrate enhanced adaptability to multi-condition queries, offering insights for future retrieval models. The code and datasets are available at this https URL. 
+
+---
+# Reproducibility and Artifact Consistency of the SIGIR 2022 Recommender Systems Papers Based on Message Passing 
+
+**Authors**: Maurizio Ferrari Dacrema, Michael Benigni, Nicola Ferro  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.07823)  
+
+**Abstract**: Graph-based techniques relying on neural networks and embeddings have gained attention as a way to develop Recommender Systems (RS) with several papers on the topic presented at SIGIR 2022 and 2023. Given the importance of ensuring that published research is methodologically sound and reproducible, in this paper we analyze 10 graph-based RS papers, most of which were published at SIGIR 2022, and assess their impact on subsequent work published in SIGIR 2023. Our analysis reveals several critical points that require attention: (i) the prevalence of bad practices, such as erroneous data splits or information leakage between training and testing data, which call into question the validity of the results; (ii) frequent inconsistencies between the provided artifacts (source code and data) and their descriptions in the paper, causing uncertainty about what is actually being evaluated; and (iii) the preference for new or complex baselines that are weaker compared to simpler ones, creating the impression of continuous improvement even when, particularly for the Amazon-Book dataset, the state-of-the-art has significantly worsened. Due to these issues, we are unable to confirm the claims made in most of the papers we examined and attempted to reproduce. 
+
+---
+# Uncovering Cross-Domain Recommendation Ability of Large Language Models 
+
+**Authors**: Xinyi Liu, Ruijie Wang, Dachun Sun, Dilek Hakkani-Tur, Tarek Abdelzaher  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.07761)  
+
+**Abstract**: Cross-Domain Recommendation (CDR) seeks to enhance item retrieval in low-resource domains by transferring knowledge from high-resource domains. While recent advancements in Large Language Models (LLMs) have demonstrated their potential in Recommender Systems (RS), their ability to effectively transfer domain knowledge for improved recommendations remains underexplored. To bridge this gap, we propose LLM4CDR, a novel CDR pipeline that constructs context-aware prompts by leveraging users' purchase history sequences from a source domain along with shared features between source and target domains. Through extensive experiments, we show that LLM4CDR achieves strong performance, particularly when using LLMs with large parameter sizes and when the source and target domains exhibit smaller domain gaps. For instance, incorporating CD and Vinyl purchase history for recommendations in Movies and TV yields a 64.28 percent MAP 1 improvement. We further investigate key factors including source domain data, domain gap, prompt design, and LLM size, which impact LLM4CDR's effectiveness in CDR tasks. Our results highlight that LLM4CDR excels when leveraging a single, closely related source domain and benefits significantly from larger LLMs. These insights pave the way for future research on LLM-driven cross-domain recommendations. 
+
+---
+# Perplexity Trap: PLM-Based Retrievers Overrate Low Perplexity Documents 
+
+**Authors**: Haoyu Wang, Sunhao Dai, Haiyuan Zhao, Liang Pang, Xiao Zhang, Gang Wang, Zhenhua Dong, Jun Xu, Ji-Rong Wen  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.08684)  
+
+**Abstract**: Previous studies have found that PLM-based retrieval models exhibit a preference for LLM-generated content, assigning higher relevance scores to these documents even when their semantic quality is comparable to human-written ones. This phenomenon, known as source bias, threatens the sustainable development of the information access ecosystem. However, the underlying causes of source bias remain unexplored. In this paper, we explain the process of information retrieval with a causal graph and discover that PLM-based retrievers learn perplexity features for relevance estimation, causing source bias by ranking the documents with low perplexity higher. Theoretical analysis further reveals that the phenomenon stems from the positive correlation between the gradients of the loss functions in language modeling task and retrieval task. Based on the analysis, a causal-inspired inference-time debiasing method is proposed, called Causal Diagnosis and Correction (CDC). CDC first diagnoses the bias effect of the perplexity and then separates the bias effect from the overall estimated relevance score. Experimental results across three domains demonstrate the superior debiasing effectiveness of CDC, emphasizing the validity of our proposed explanatory framework. Source codes are available at this https URL. 
+
+---
+# OpenRAG: Optimizing RAG End-to-End via In-Context Retrieval Learning 
+
+**Authors**: Jiawei Zhou, Lei Chen  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.08398)  
+
+**Abstract**: In this paper, we analyze and empirically show that the learned relevance for conventional information retrieval (IR) scenarios may be inconsistent in retrieval-augmented generation (RAG) scenarios. To bridge this gap, we introduce OpenRAG, a RAG framework that is optimized end-to-end by tuning the retriever to capture in-context relevance, enabling adaptation to the diverse and evolving needs. Extensive experiments across a wide range of tasks demonstrate that OpenRAG, by tuning a retriever end-to-end, leads to a consistent improvement of 4.0% over the original retriever, consistently outperforming existing state-of-the-art retrievers by 2.1%. Additionally, our results indicate that for some tasks, an end-to-end tuned 0.2B retriever can achieve improvements that surpass those of RAG-oriented or instruction-tuned 8B large language models (LLMs), highlighting the cost-effectiveness of our approach in enhancing RAG systems. 
+
+---
+# MFRS: A Multi-Frequency Reference Series Approach to Scalable and Accurate Time-Series Forecasting 
+
+**Authors**: Liang Yu, Lai Tu, Xiang Bai  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.08328)  
+
+**Abstract**: Multivariate time-series forecasting holds immense value across diverse applications, requiring methods to effectively capture complex temporal and inter-variable dynamics. A key challenge lies in uncovering the intrinsic patterns that govern predictability, beyond conventional designs, focusing on network architectures to explore latent relationships or temporal dependencies. Inspired by signal decomposition, this paper posits that time series predictability is derived from periodic characteristics at different frequencies. Consequently, we propose a novel time series forecasting method based on multi-frequency reference series correlation analysis. Through spectral analysis on long-term training data, we identify dominant spectral components and their harmonics to design base-pattern reference series. Unlike signal decomposition, which represents the original series as a linear combination of basis signals, our method uses a transformer model to compute cross-attention between the original series and reference series, capturing essential features for forecasting. Experiments on major open and synthetic datasets show state-of-the-art performance. Furthermore, by focusing on attention with a small number of reference series rather than pairwise variable attention, our method ensures scalability and broad applicability. The source code is available at: this https URL 
+
+---
+# OASIS: Order-Augmented Strategy for Improved Code Search 
+
+**Authors**: Zuchen Gao, Zizheng Zhan, Xianming Li, Erxin Yu, Haotian Zhang, Yuqun Zhang, Jing Li  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.08161)  
+
+**Abstract**: Code embeddings capture the semantic representations of code and are crucial for various code-related large language model (LLM) applications, such as code search. Previous training primarily relies on optimizing the InfoNCE loss by comparing positive natural language (NL)-code pairs with in-batch negatives. However, due to the sparse nature of code contexts, training solely by comparing the major differences between positive and negative pairs may fail to capture deeper semantic nuances. To address this issue, we propose a novel order-augmented strategy for improved code search (OASIS). It leverages order-based similarity labels to train models to capture subtle differences in similarity among negative pairs. Extensive benchmark evaluations demonstrate that our OASIS model significantly outperforms previous state-of-the-art models focusing solely on major positive-negative differences. It underscores the value of exploiting subtle differences among negative pairs with order labels for effective code embedding training. 
+
+---
+# MapQA: Open-domain Geospatial Question Answering on Map Data 
+
+**Authors**: Zekun Li, Malcolm Grossman, Eric, Qasemi, Mihir Kulkarni, Muhao Chen, Yao-Yi Chiang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.07871)  
+
+**Abstract**: Geospatial question answering (QA) is a fundamental task in navigation and point of interest (POI) searches. While existing geospatial QA datasets exist, they are limited in both scale and diversity, often relying solely on textual descriptions of geo-entities without considering their geometries. A major challenge in scaling geospatial QA datasets for reasoning lies in the complexity of geospatial relationships, which require integrating spatial structures, topological dependencies, and multi-hop reasoning capabilities that most text-based QA datasets lack. To address these limitations, we introduce MapQA, a novel dataset that not only provides question-answer pairs but also includes the geometries of geo-entities referenced in the questions. MapQA is constructed using SQL query templates to extract question-answer pairs from OpenStreetMap (OSM) for two study regions: Southern California and Illinois. It consists of 3,154 QA pairs spanning nine question types that require geospatial reasoning, such as neighborhood inference and geo-entity type identification. Compared to existing datasets, MapQA expands both the number and diversity of geospatial question types. We explore two approaches to tackle this challenge: (1) a retrieval-based language model that ranks candidate geo-entities by embedding similarity, and (2) a large language model (LLM) that generates SQL queries from natural language questions and geo-entity attributes, which are then executed against an OSM database. Our findings indicate that retrieval-based methods effectively capture concepts like closeness and direction but struggle with questions that require explicit computations (e.g., distance calculations). LLMs (e.g., GPT and Gemini) excel at generating SQL queries for one-hop reasoning but face challenges with multi-hop reasoning, highlighting a key bottleneck in advancing geospatial QA systems. 
+
+---
+# Antibiotic Resistance Microbiology Dataset (ARMD): A De-identified Resource for Studying Antimicrobial Resistance Using Electronic Health Records 
+
+**Authors**: Fateme Nateghi Haredasht, Fatemeh Amrollahi, Manoj Maddali, Nicholas Marshall, Stephen P. Ma, Lauren N. Cooper, Richard J. Medford, Sanjat Kanjilal, Niaz Banaei, Stanley Deresinski, Mary K. Goldstein, Steven M. Asch, Amy Chang, Jonathan H. Chen  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.07664)  
+
+**Abstract**: The Antibiotic Resistance Microbiology Dataset (ARMD) is a de-identified resource derived from electronic health records (EHR) that facilitates research into antimicrobial resistance (AMR). ARMD encompasses data from adult patients, focusing on microbiological cultures, antibiotic susceptibilities, and associated clinical and demographic features. Key attributes include organism identification, susceptibility patterns for 55 antibiotics, implied susceptibility rules, and de-identified patient information. This dataset supports studies on antimicrobial stewardship, causal inference, and clinical decision-making. ARMD is designed to be reusable and interoperable, promoting collaboration and innovation in combating AMR. This paper describes the dataset's acquisition, structure, and utility while detailing its de-identification process. 
+
+---
