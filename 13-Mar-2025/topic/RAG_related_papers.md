@@ -1,0 +1,27 @@
+# MoC: Mixtures of Text Chunking Learners for Retrieval-Augmented Generation System 
+
+**Authors**: Jihao Zhao, Zhiyuan Ji, Zhaoxin Fan, Hanyu Wang, Simin Niu, Bo Tang, Feiyu Xiong, Zhiyu Li  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.09600)  
+
+**Abstract**: Retrieval-Augmented Generation (RAG), while serving as a viable complement to large language models (LLMs), often overlooks the crucial aspect of text chunking within its pipeline. This paper initially introduces a dual-metric evaluation method, comprising Boundary Clarity and Chunk Stickiness, to enable the direct quantification of chunking quality. Leveraging this assessment method, we highlight the inherent limitations of traditional and semantic chunking in handling complex contextual nuances, thereby substantiating the necessity of integrating LLMs into chunking process. To address the inherent trade-off between computational efficiency and chunking precision in LLM-based approaches, we devise the granularity-aware Mixture-of-Chunkers (MoC) framework, which consists of a three-stage processing mechanism. Notably, our objective is to guide the chunker towards generating a structured list of chunking regular expressions, which are subsequently employed to extract chunks from the original text. Extensive experiments demonstrate that both our proposed metrics and the MoC framework effectively settle challenges of the chunking task, revealing the chunking kernel while enhancing the performance of the RAG system. 
+
+---
+# Leveraging Retrieval Augmented Generative LLMs For Automated Metadata Description Generation to Enhance Data Catalogs 
+
+**Authors**: Mayank Singh, Abhijeet Kumar, Sasidhar Donaparthi, Gayatri Karambelkar  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.09003)  
+
+**Abstract**: Data catalogs serve as repositories for organizing and accessing diverse collection of data assets, but their effectiveness hinges on the ease with which business users can look-up relevant content. Unfortunately, many data catalogs within organizations suffer from limited searchability due to inadequate metadata like asset descriptions. Hence, there is a need of content generation solution to enrich and curate metadata in a scalable way. This paper explores the challenges associated with metadata creation and proposes a unique prompt enrichment idea of leveraging existing metadata content using retrieval based few-shot technique tied with generative large language models (LLM). The literature also considers finetuning an LLM on existing content and studies the behavior of few-shot pretrained LLM (Llama, GPT3.5) vis-à-vis few-shot finetuned LLM (Llama2-7b) by evaluating their performance based on accuracy, factual grounding, and toxicity. Our preliminary results exhibit more than 80% Rouge-1 F1 for the generated content. This implied 87%- 88% of instances accepted as is or curated with minor edits by data stewards. By automatically generating descriptions for tables and columns in most accurate way, the research attempts to provide an overall framework for enterprises to effectively scale metadata curation and enrich its data catalog thereby vastly improving the data catalog searchability and overall usability. 
+
+---
+# Everything Can Be Described in Words: A Simple Unified Multi-Modal Framework with Semantic and Temporal Alignment 
+
+**Authors**: Xiaowei Bi, Zheyuan Xu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.09081)  
+
+**Abstract**: Long Video Question Answering (LVQA) is challenging due to the need for temporal reasoning and large-scale multimodal data processing. Existing methods struggle with retrieving cross-modal information from long videos, especially when relevant details are sparsely distributed. We introduce UMaT (Unified Multi-modal as Text), a retrieval-augmented generation (RAG) framework that efficiently processes extremely long videos while maintaining cross-modal coherence. UMaT converts visual and auditory data into a unified textual representation, ensuring semantic and temporal alignment. Short video clips are analyzed using a vision-language model, while automatic speech recognition (ASR) transcribes dialogue. These text-based representations are structured into temporally aligned segments, with adaptive filtering to remove redundancy and retain salient details. The processed data is embedded into a vector database, enabling precise retrieval of dispersed yet relevant content. Experiments on a benchmark LVQA dataset show that UMaT outperforms existing methods in multimodal integration, long-form video understanding, and sparse information retrieval. Its scalability and interpretability allow it to process videos over an hour long while maintaining semantic and temporal coherence. These findings underscore the importance of structured retrieval and multimodal synchronization for advancing LVQA and long-form AI systems. 
+
+---
