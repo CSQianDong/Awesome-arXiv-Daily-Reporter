@@ -1,0 +1,117 @@
+# Uncertainty in Action: Confidence Elicitation in Embodied Agents 
+
+**Authors**: Tianjiao Yu, Vedant Shah, Muntasir Wahed, Kiet A. Nguyen, Adheesh Juvekar, Tal August, Ismini Lourentzou  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.10628)  
+
+**Abstract**: Expressing confidence is challenging for embodied agents navigating dynamic multimodal environments, where uncertainty arises from both perception and decision-making processes. We present the first work investigating embodied confidence elicitation in open-ended multimodal environments. We introduce Elicitation Policies, which structure confidence assessment across inductive, deductive, and abductive reasoning, along with Execution Policies, which enhance confidence calibration through scenario reinterpretation, action sampling, and hypothetical reasoning. Evaluating agents in calibration and failure prediction tasks within the Minecraft environment, we show that structured reasoning approaches, such as Chain-of-Thoughts, improve confidence calibration. However, our findings also reveal persistent challenges in distinguishing uncertainty, particularly under abductive settings, underscoring the need for more sophisticated embodied confidence elicitation methods. 
+
+---
+# StepMathAgent: A Step-Wise Agent for Evaluating Mathematical Processes through Tree-of-Error 
+
+**Authors**: Shu-Xun Yang, Cunxiang Wang, Yidong Wang, Xiaotao Gu, Minlie Huang, Jie Tang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.10105)  
+
+**Abstract**: Evaluating mathematical capabilities is critical for assessing the overall performance of large language models (LLMs). However, existing evaluation methods often focus solely on final answers, resulting in highly inaccurate and uninterpretable evaluation outcomes, as well as their failure to assess proof or open-ended problems. To address these issues, we propose a novel mathematical process evaluation agent based on Tree-of-Error, called StepMathAgent. This agent incorporates four internal core operations: logical step segmentation, step scoring, score aggregation and error tree generation, along with four external extension modules: difficulty calibration, simplicity evaluation, completeness validation and format assessment. Furthermore, we introduce StepMathBench, a benchmark comprising 1,000 step-divided process evaluation instances, derived from 200 high-quality math problems grouped by problem type, subject category and difficulty level. Experiments on StepMathBench show that our proposed StepMathAgent outperforms all state-of-the-art methods, demonstrating human-aligned evaluation preferences and broad applicability to various scenarios. Our data and code are available at this https URL. 
+
+---
+# AgentDAM: Privacy Leakage Evaluation for Autonomous Web Agents 
+
+**Authors**: Arman Zharmagambetov, Chuan Guo, Ivan Evtimov, Maya Pavlova, Ruslan Salakhutdinov, Kamalika Chaudhuri  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.09780)  
+
+**Abstract**: LLM-powered AI agents are an emerging frontier with tremendous potential to increase human productivity. However, empowering AI agents to take action on their user's behalf in day-to-day tasks involves giving them access to potentially sensitive and private information, which leads to a possible risk of inadvertent privacy leakage when the agent malfunctions. In this work, we propose one way to address that potential risk, by training AI agents to better satisfy the privacy principle of data minimization. For the purposes of this benchmark, by "data minimization" we mean instances where private information is shared only when it is necessary to fulfill a specific task-relevant purpose. We develop a benchmark called AgentDAM to evaluate how well existing and future AI agents can limit processing of potentially private information that we designate "necessary" to fulfill the task. Our benchmark simulates realistic web interaction scenarios and is adaptable to all existing web navigation agents. We use AgentDAM to evaluate how well AI agents built on top of GPT-4, Llama-3 and Claude can limit processing of potentially private information when unnecessary, and show that these agents are often prone to inadvertent use of unnecessary sensitive information. We finally propose a prompting-based approach that reduces this. 
+
+---
+# SurgRAW: Multi-Agent Workflow with Chain-of-Thought Reasoning for Surgical Intelligence 
+
+**Authors**: Chang Han Low, Ziyue Wang, Tianyi Zhang, Zhitao Zeng, Zhu Zhuo, Evangelos B. Mazomenos, Yueming Jin  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.10265)  
+
+**Abstract**: Integration of Vision-Language Models (VLMs) in surgical intelligence is hindered by hallucinations, domain knowledge gaps, and limited understanding of task interdependencies within surgical scenes, undermining clinical reliability. While recent VLMs demonstrate strong general reasoning and thinking capabilities, they still lack the domain expertise and task-awareness required for precise surgical scene interpretation. Although Chain-of-Thought (CoT) can structure reasoning more effectively, current approaches rely on self-generated CoT steps, which often exacerbate inherent domain gaps and hallucinations. To overcome this, we present SurgRAW, a CoT-driven multi-agent framework that delivers transparent, interpretable insights for most tasks in robotic-assisted surgery. By employing specialized CoT prompts across five tasks: instrument recognition, action recognition, action prediction, patient data extraction, and outcome assessment, SurgRAW mitigates hallucinations through structured, domain-aware reasoning. Retrieval-Augmented Generation (RAG) is also integrated to external medical knowledge to bridge domain gaps and improve response reliability. Most importantly, a hierarchical agentic system ensures that CoT-embedded VLM agents collaborate effectively while understanding task interdependencies, with a panel discussion mechanism promotes logical consistency. To evaluate our method, we introduce SurgCoTBench, the first reasoning-based dataset with structured frame-level annotations. With comprehensive experiments, we demonstrate the effectiveness of proposed SurgRAW with 29.32% accuracy improvement over baseline VLMs on 12 robotic procedures, achieving the state-of-the-art performance and advancing explainable, trustworthy, and autonomous surgical assistance. 
+
+---
+# Advanced Tool Learning and Selection System (ATLASS): A Closed-Loop Framework Using LLM 
+
+**Authors**: Mohd Ariful Haque, Justin Williams, Sunzida Siddique, Md. Hujaifa Islam, Hasmot Ali, Kishor Datta Gupta, Roy George  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.10071)  
+
+**Abstract**: The combination of LLM agents with external tools enables models to solve complex tasks beyond their knowledge base. Human-designed tools are inflexible and restricted to solutions within the scope of pre-existing tools created by experts. To address this problem, we propose ATLASS, an advanced tool learning and selection system designed as a closed-loop framework. It enables the LLM to solve problems by dynamically generating external tools on demand. In this framework, agents play a crucial role in orchestrating tool selection, execution, and refinement, ensuring adaptive problem-solving capabilities. The operation of ATLASS follows three phases: The first phase, Understanding Tool Requirements, involves the Agents determining whether tools are required and specifying their functionality; the second phase, Tool Retrieval/Generation, involves the Agents retrieving or generating tools based on their availability; and the third phase, Task Solving, involves combining all the component tools necessary to complete the initial task. The Tool Dataset stores the generated tools, ensuring reusability and minimizing inference cost. Current LLM-based tool generation systems have difficulty creating complex tools that need APIs or external packages. In ATLASS, we solve the problem by automatically setting up the environment, fetching relevant API documentation online, and using a Python interpreter to create a reliable, versatile tool that works in a wider range of situations. OpenAI GPT-4.0 is used as the LLM agent, and safety and ethical concerns are handled through human feedback before executing generated code. By addressing the limitations of predefined toolsets and enhancing adaptability, ATLASS serves as a real-world solution that empowers users with dynamically generated tools for complex problem-solving. 
+
+---
+# OR-LLM-Agent: Automating Modeling and Solving of Operations Research Optimization Problem with Reasoning Large Language Model 
+
+**Authors**: Bowen Zhang, Pengcheng Luo  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.10009)  
+
+**Abstract**: Operations Research (OR) has been widely applied in various fields such as resource allocation, production planning, and supply chain management. However, addressing real-world OR problems requires OR experts to perform mathematical modeling and programmers to develop solution algorithms. This traditional method, heavily reliant on experts, is costly and has long development cycles, severely limiting the widespread adoption of OR techniques. Few have considered using Artificial Intelligence (AI) to replace professionals to achieve fully automated solutions for OR problems. We propose OR-LLM-Agent, the first AI agent that enables end-to-end automation for solving real-world OR problems. OR-LLM-Agent leverages the Chain-of-Thought (CoT) reasoning capabilities of Large Language Models (LLMs) to translate natural language problem descriptions into formal mathematical models and automatically generate Gurobi solver code. In OR-LLM-Agent, OR-CodeAgent is designed to automate code execution and repair within a sandbox environment, facilitating the derivation of the final solution. Due to the lack of dedicated benchmark datasets for evaluating the automated solving of OR problems, we construct a benchmark dataset comprising 83 real-world OR problems described in natural language. We conduct comparative experiments with state-of-the-art (SOTA) reasoning LLMs, including GPT-o3-mini, DeepSeek-R1, and Gemini 2.0 Flash Thinking. The OR-LLM-Agent achieved the highest pass rate of 100% and the highest solution accuracy of 85%, demonstrating the feasibility of automated OR problem-solving. Data and code have been publicly available at this https URL. 
+
+---
+# LLM Agents Display Human Biases but Exhibit Distinct Learning Patterns 
+
+**Authors**: Idan Horowitz, Ori Plonsky  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.10248)  
+
+**Abstract**: We investigate the choice patterns of Large Language Models (LLMs) in the context of Decisions from Experience tasks that involve repeated choice and learning from feedback, and compare their behavior to human participants. We find that on the aggregate, LLMs appear to display behavioral biases similar to humans: both exhibit underweighting rare events and correlation effects. However, more nuanced analyses of the choice patterns reveal that this happens for very different reasons. LLMs exhibit strong recency biases, unlike humans, who appear to respond in more sophisticated ways. While these different processes may lead to similar behavior on average, choice patterns contingent on recent events differ vastly between the two groups. Specifically, phenomena such as ``surprise triggers change" and the ``wavy recency effect of rare events" are robustly observed in humans, but entirely absent in LLMs. Our findings provide insights into the limitations of using LLMs to simulate and predict humans in learning environments and highlight the need for refined analyses of their behavior when investigating whether they replicate human decision making tendencies. 
+
+---
+# Multi-Agent Q-Learning Dynamics in Random Networks: Convergence due to Exploration and Sparsity 
+
+**Authors**: Aamal Hussain, Dan Leonte, Francesco Belardinelli, Raphael Huser, Dario Paccagnan  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.10186)  
+
+**Abstract**: Beyond specific settings, many multi-agent learning algorithms fail to converge to an equilibrium solution, and instead display complex, non-stationary behaviours such as recurrent or chaotic orbits. In fact, recent literature suggests that such complex behaviours are likely to occur when the number of agents increases. In this paper, we study Q-learning dynamics in network polymatrix games where the network structure is drawn from classical random graph models. In particular, we focus on the Erdos-Renyi model, a well-studied model for social networks, and the Stochastic Block model, which generalizes the above by accounting for community structures within the network. In each setting, we establish sufficient conditions under which the agents' joint strategies converge to a unique equilibrium. We investigate how this condition depends on the exploration rates, payoff matrices and, crucially, the sparsity of the network. Finally, we validate our theoretical findings through numerical simulations and demonstrate that convergence can be reliably achieved in many-agent systems, provided network sparsity is controlled. 
+
+---
+# Vi-LAD: Vision-Language Attention Distillation for Socially-Aware Robot Navigation in Dynamic Environments 
+
+**Authors**: Mohamed Elnoor, Kasun Weerakoon, Gershom Seneviratne, Jing Liang, Vignesh Rajagopal, Dinesh Manocha  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.09820)  
+
+**Abstract**: We introduce Vision-Language Attention Distillation (Vi-LAD), a novel approach for distilling socially compliant navigation knowledge from a large Vision-Language Model (VLM) into a lightweight transformer model for real-time robotic navigation. Unlike traditional methods that rely on expert demonstrations or human-annotated datasets, Vi-LAD performs knowledge distillation and fine-tuning at the intermediate layer representation level (i.e., attention maps) by leveraging the backbone of a pre-trained vision-action model. These attention maps highlight key navigational regions in a given scene, which serve as implicit guidance for socially aware motion planning. Vi-LAD fine-tunes a transformer-based model using intermediate attention maps extracted from the pre-trained vision-action model, combined with attention-like semantic maps constructed from a large VLM. To achieve this, we introduce a novel attention-level distillation loss that fuses knowledge from both sources, generating augmented attention maps with enhanced social awareness. These refined attention maps are then utilized as a traversability costmap within a socially aware model predictive controller (MPC) for navigation. We validate our approach through real-world experiments on a Husky wheeled robot, demonstrating significant improvements over state-of-the-art (SOTA) navigation methods. Our results show up to 14.2% - 50% improvement in success rate, which highlights the effectiveness of Vi-LAD in enabling socially compliant and efficient robot navigation. 
+
+---
+# Fine-tuning Vision Language Models with Graph-based Knowledge for Explainable Medical Image Analysis 
+
+**Authors**: Chenjun Li, Laurin Lux, Alexander H. Berger, Martin J. Menten, Mert R. Sabuncu, Johannes C. Paetzold  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.09808)  
+
+**Abstract**: Accurate staging of Diabetic Retinopathy (DR) is essential for guiding timely interventions and preventing vision loss. However, current staging models are hardly interpretable, and most public datasets contain no clinical reasoning or interpretation beyond image-level labels. In this paper, we present a novel method that integrates graph representation learning with vision-language models (VLMs) to deliver explainable DR diagnosis. Our approach leverages optical coherence tomography angiography (OCTA) images by constructing biologically informed graphs that encode key retinal vascular features such as vessel morphology and spatial connectivity. A graph neural network (GNN) then performs DR staging while integrated gradients highlight critical nodes and edges and their individual features that drive the classification decisions. We collect this graph-based knowledge which attributes the model's prediction to physiological structures and their characteristics. We then transform it into textual descriptions for VLMs. We perform instruction-tuning with these textual descriptions and the corresponding image to train a student VLM. This final agent can classify the disease and explain its decision in a human interpretable way solely based on a single image input. Experimental evaluations on both proprietary and public datasets demonstrate that our method not only improves classification accuracy but also offers more clinically interpretable results. An expert study further demonstrates that our method provides more accurate diagnostic explanations and paves the way for precise localization of pathologies in OCTA images. 
+
+---
+# Enhance Exploration in Safe Reinforcement Learning with Contrastive Representation Learning 
+
+**Authors**: Duc Kien Doan, Bang Giang Le, Viet Cuong Ta  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.10318)  
+
+**Abstract**: In safe reinforcement learning, agent needs to balance between exploration actions and safety constraints. Following this paradigm, domain transfer approaches learn a prior Q-function from the related environments to prevent unsafe actions. However, because of the large number of false positives, some safe actions are never executed, leading to inadequate exploration in sparse-reward environments. In this work, we aim to learn an efficient state representation to balance the exploration and safety-prefer action in a sparse-reward environment. Firstly, the image input is mapped to latent representation by an auto-encoder. A further contrastive learning objective is employed to distinguish safe and unsafe states. In the learning phase, the latent distance is used to construct an additional safety check, which allows the agent to bias the exploration if it visits an unsafe state. To verify the effectiveness of our method, the experiment is carried out in three navigation-based MiniGrid environments. The result highlights that our method can explore the environment better while maintaining a good balance between safety and efficiency. 
+
+---
+# Can A Society of Generative Agents Simulate Human Behavior and Inform Public Health Policy? A Case Study on Vaccine Hesitancy 
+
+**Authors**: Abe Bohan Hou, Hongru Du, Yichen Wang, Jingyu Zhang, Zixiao Wang, Paul Pu Liang, Daniel Khashabi, Lauren Gardner, Tianxing He  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.09639)  
+
+**Abstract**: Can we simulate a sandbox society with generative agents to model human behavior, thereby reducing the over-reliance on real human trials for assessing public policies? In this work, we investigate the feasibility of simulating health-related decision-making, using vaccine hesitancy, defined as the delay in acceptance or refusal of vaccines despite the availability of vaccination services (MacDonald, 2015), as a case study. To this end, we introduce the VacSim framework with 100 generative agents powered by Large Language Models (LLMs). VacSim simulates vaccine policy outcomes with the following steps: 1) instantiate a population of agents with demographics based on census data; 2) connect the agents via a social network and model vaccine attitudes as a function of social dynamics and disease-related information; 3) design and evaluate various public health interventions aimed at mitigating vaccine hesitancy. To align with real-world results, we also introduce simulation warmup and attitude modulation to adjust agents' attitudes. We propose a series of evaluations to assess the reliability of various LLM simulations. Experiments indicate that models like Llama and Qwen can simulate aspects of human behavior but also highlight real-world alignment challenges, such as inconsistent responses with demographic profiles. This early exploration of LLM-driven simulations is not meant to serve as definitive policy guidance; instead, it serves as a call for action to examine social simulation for policy development. 
+
+---
+# Temporal Difference Flows 
+
+**Authors**: Jesse Farebrother, Matteo Pirotta, Andrea Tirinzoni, Rémi Munos, Alessandro Lazaric, Ahmed Touati  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.09817)  
+
+**Abstract**: Predictive models of the future are fundamental for an agent's ability to reason and plan. A common strategy learns a world model and unrolls it step-by-step at inference, where small errors can rapidly compound. Geometric Horizon Models (GHMs) offer a compelling alternative by directly making predictions of future states, avoiding cumulative inference errors. While GHMs can be conveniently learned by a generative analog to temporal difference (TD) learning, existing methods are negatively affected by bootstrapping predictions at train time and struggle to generate high-quality predictions at long horizons. This paper introduces Temporal Difference Flows (TD-Flow), which leverages the structure of a novel Bellman equation on probability paths alongside flow-matching techniques to learn accurate GHMs at over 5x the horizon length of prior methods. Theoretically, we establish a new convergence result and primarily attribute TD-Flow's efficacy to reduced gradient variance during training. We further show that similar arguments can be extended to diffusion-based methods. Empirically, we validate TD-Flow across a diverse set of domains on both generative metrics and downstream tasks including policy evaluation. Moreover, integrating TD-Flow with recent behavior foundation models for planning over pre-trained policies demonstrates substantial performance gains, underscoring its promise for long-horizon decision-making. 
+
+---
