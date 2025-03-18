@@ -1,0 +1,93 @@
+# Federated Mixture-of-Expert for Non-Overlapped Cross-Domain Sequential Recommendation 
+
+**Authors**: Yu Liu, Hanbin Jiang, Lei Zhu, Yu Zhang, Yuqi Mao, Jiangxia Cao, Shuchao Pang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.13254)  
+
+**Abstract**: In the real world, users always have multiple interests while surfing different services to enrich their daily lives, e.g., watching hot short videos/live streamings. To describe user interests precisely for a better user experience, the recent literature proposes cross-domain techniques by transferring the other related services (a.k.a. domain) knowledge to enhance the accuracy of target service prediction. In practice, naive cross-domain techniques typically require there exist some overlapped users, and sharing overall information across domains, including user historical logs, user/item embeddings, and model parameter checkpoints. Nevertheless, other domain's user-side historical logs and embeddings are not always available in real-world RecSys designing, since users may be totally non-overlapped across domains, or the privacy-preserving policy limits the personalized information sharing across domains. Thereby, a challenging but valuable problem is raised: How to empower target domain prediction accuracy by utilizing the other domain model parameters checkpoints only? To answer the question, we propose the FMoE-CDSR, which explores the non-overlapped cross-domain sequential recommendation scenario from the federated learning perspective. 
+
+---
+# Leveraging the Dynamics of Leadership in Group Recommendation Systems 
+
+**Authors**: Peijin Yu, Shin'ichi Konomi  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.12877)  
+
+**Abstract**: In the field of group recommendation systems (GRS), effectively addressing the diverse preferences of group members poses a significant challenge. Traditional GRS approaches often aggregate individual preferences into a collective group preference to generate recommendations, which may overlook the intricate interactions between group members. We introduce a novel approach to group recommendation, with a specific focus on small groups sharing common interests. In particular, we present a web-based restaurant recommendation system that enhances user satisfaction by modeling mutual interactions among group members. Drawing inspiration from group decision-making literature and leveraging graph theory, we propose a recommendation algorithm that emphasizes the dynamics of relationships and trust within the group. By representing group members as nodes and their interactions as directed edges, the algorithm captures pairwise relationships to foster consensus and improve the alignment of recommendations with group preferences. This interaction-focused framework ultimately seeks to enhance overall group satisfaction with the recommended choices. 
+
+---
+# LLMSeR: Enhancing Sequential Recommendation via LLM-based Data Augmentation 
+
+**Authors**: Yuqi Sun, Qidong Liu, Haiping Zhu, Feng Tian  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.12547)  
+
+**Abstract**: Sequential Recommender Systems (SRS) have become a cornerstone of online platforms, leveraging users' historical interaction data to forecast their next potential engagement. Despite their widespread adoption, SRS often grapple with the long-tail user dilemma, resulting in less effective recommendations for individuals with limited interaction records. The advent of Large Language Models (LLMs), with their profound capability to discern semantic relationships among items, has opened new avenues for enhancing SRS through data augmentation. Nonetheless, current methodologies encounter obstacles, including the absence of collaborative signals and the prevalence of hallucination this http URL this work, we present LLMSeR, an innovative framework that utilizes Large Language Models (LLMs) to generate pseudo-prior items, thereby improving the efficacy of Sequential Recommender Systems (SRS). To alleviate the challenge of insufficient collaborative signals, we introduce the Semantic Interaction Augmentor (SIA), a method that integrates both semantic and collaborative information to comprehensively augment user interaction data. Moreover, to weaken the adverse effects of hallucination in SRS, we develop the Adaptive Reliability Validation (ARV), a validation technique designed to assess the reliability of the generated pseudo items. Complementing these advancements, we also devise a Dual-Channel Training strategy, ensuring seamless integration of data augmentation into the SRS training this http URL experiments conducted with three widely-used SRS models demonstrate the generalizability and efficacy of LLMSeR. 
+
+---
+# Bridging Textual-Collaborative Gap through Semantic Codes for Sequential Recommendation 
+
+**Authors**: Enze Liu, Bowen Zheng, Wayne Xin Zhao, Ji-Rong Wen  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.12183)  
+
+**Abstract**: In recent years, substantial research efforts have been devoted to enhancing sequential recommender systems by integrating abundant side information with ID-based collaborative information. This study specifically focuses on leveraging the textual metadata (e.g., titles and brands) associated with items. While existing methods have achieved notable success by combining text and ID representations, they often struggle to strike a balance between textual information embedded in text representations and collaborative information from sequential patterns of user behavior. In light of this, we propose CoCoRec, a novel Code-based textual and Collaborative semantic fusion method for sequential Recommendation. The key idea behind our approach is to bridge the gap between textual and collaborative information using semantic codes. Specifically, we generate fine-grained semantic codes from multi-view text embeddings through vector quantization techniques. Subsequently, we develop a code-guided semantic-fusion module based on the cross-attention mechanism to flexibly extract and integrate relevant information from text representations. In order to further enhance the fusion of textual and collaborative semantics, we introduce an optimization strategy that employs code masking with two specific objectives: masked code modeling and masked sequence alignment. The merit of these objectives lies in leveraging mask prediction tasks and augmented item representations to capture code correlations within individual items and enhance the sequence modeling of the recommendation backbone. Extensive experiments conducted on four public datasets demonstrate the superiority of CoCoRec, showing significant improvements over various sequential recommendation models. Our code is available at this https URL. 
+
+---
+# Genicious: Contextual Few-shot Prompting for Insights Discovery 
+
+**Authors**: Vineet Kumar, Ronald Tony, Darshita Rathore, Vipasha Rana, Bhuvanesh Mandora, Kanishka, Chetna Bansal, Anindya Moitra  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.12062)  
+
+**Abstract**: Data and insights discovery is critical for decision-making in modern organizations. We present Genicious, an LLM-aided interface that enables users to interact with tabular datasets and ask complex queries in natural language. By benchmarking various prompting strategies and language models, we have developed an end-to-end tool that leverages contextual few-shot prompting, achieving superior performance in terms of latency, accuracy, and scalability. Genicious empowers stakeholders to explore, analyze and visualize their datasets efficiently while ensuring data security through role-based access control and a Text-to-SQL approach. 
+
+---
+# Knowledge-Aware Iterative Retrieval for Multi-Agent Systems 
+
+**Authors**: Seyoung Song  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.13275)  
+
+**Abstract**: We introduce a novel large language model (LLM)-driven agent framework, which iteratively refines queries and filters contextual evidence by leveraging dynamically evolving knowledge. A defining feature of the system is its decoupling of external sources from an internal knowledge cache that is progressively updated to guide both query generation and evidence selection. This design mitigates bias-reinforcement loops and enables dynamic, trackable search exploration paths, thereby optimizing the trade-off between exploring diverse information and maintaining accuracy through autonomous agent decision-making. Our approach is evaluated on a broad range of open-domain question answering benchmarks, including multi-step tasks that mirror real-world scenarios where integrating information from multiple sources is critical, especially given the vulnerabilities of LLMs that lack explicit reasoning or planning capabilities. The results show that the proposed system not only outperforms single-step baselines regardless of task difficulty but also, compared to conventional iterative retrieval methods, demonstrates pronounced advantages in complex tasks through precise evidence-based reasoning and enhanced efficiency. The proposed system supports both competitive and collaborative sharing of updated context, enabling multi-agent extension. The benefits of multi-agent configurations become especially prominent as task difficulty increases. The number of convergence steps scales with task difficulty, suggesting cost-effective scalability. 
+
+---
+# Disentangling the Power Dynamics in Participatory Data Physicalisation 
+
+**Authors**: Silvia Cazacu, Georgia Panagiotidou, Therese Steenberghen, Andrew Vande Moere  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.13018)  
+
+**Abstract**: Participatory data physicalisation (PDP) is recognised for its potential to support data-driven decisions among stakeholders who collaboratively construct physical elements into commonly insightful visualisations. Like all participatory processes, PDP is however influenced by underlying power dynamics that might lead to issues regarding extractive participation, marginalisation, or exclusion, among others. We first identified the decisions behind these power dynamics by developing an ontology that synthesises critical theoretical insights from both visualisation and participatory design research, which were then systematically applied unto a representative corpus of 23 PDP artefacts. By revealing how shared decisions are guided by different agendas, this paper presents three contributions: 1) a cross-disciplinary ontology that facilitates the systematic analysis of existing and novel PDP artefacts and processes; which leads to 2) six PDP agendas that reflect the key power dynamics in current PDP practice, revealing the diversity of orientations towards stakeholder participation in PDP practice; and 3) a set of critical considerations that should guide how power dynamics can be balanced, such as by reflecting on how issues are represented, data is contextualised, participants express their meanings, and how participants can dissent with flexible artefact construction. Consequently, this study advances a feminist research agenda by guiding researchers and practitioners in openly reflecting on and sharing responsibilities in data physicalisation and participatory data visualisation. 
+
+---
+# A novel association and ranking approach identifies factors affecting educational outcomes of STEM majors 
+
+**Authors**: Kira Adaricheva, Jonathan T. Brockman, Gillian Z. Elston, Lawrence Hobbie, Skylar Homan, Mohamad Khalefa, Jiyun V. Kim, Rochelle K. Nelson, Sarah Samad, Oren Segal  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.12321)  
+
+**Abstract**: Improving undergraduate success in STEM requires identifying actionable factors that impact student outcomes, allowing institutions to prioritize key leverage points for change. We examined academic, demographic, and institutional factors that might be associated with graduation rates at two four-year colleges in the northeastern United States using a novel association algorithm called D-basis to rank attributes associated with graduation. Importantly, the data analyzed included tracking data from the National Student Clearinghouse on students who left their original institutions to determine outcomes following transfer.
+Key predictors of successful graduation include performance in introductory STEM courses, the choice of first mathematics class, and flexibility in major selection. High grades in introductory biology, general chemistry, and mathematics courses were strongly correlated with graduation. At the same time, students who switched majors - especially from STEM to non-STEM - had higher overall graduation rates. Additionally, Pell eligibility and demographic factors, though less predictive overall, revealed disparities in time to graduation and retention rates.
+The findings highlight the importance of early academic support in STEM gateway courses and the implementation of institutional policies that provide flexibility in major selection. Enhancing student success in introductory mathematics, biology, and chemistry courses could greatly influence graduation rates. Furthermore, customized mathematics pathways and focused support for STEM courses may assist institutions in optimizing student outcomes. This study offers data-driven insights to guide strategies to increase STEM degree completion. 
+
+---
+# Interpretation Gaps in LLM-Assisted Comprehension of Privacy Documents 
+
+**Authors**: Rinku Dewri  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.12225)  
+
+**Abstract**: This article explores the gaps that can manifest when using a large language model (LLM) to obtain simplified interpretations of data practices from a complex privacy policy. We exemplify these gaps to showcase issues in accuracy, completeness, clarity and representation, while advocating for continued research to realize an LLM's true potential in revolutionizing privacy management through personal assistants and automated compliance checking. 
+
+---
+# REGEN: A Dataset and Benchmarks with Natural Language Critiques and Narratives 
+
+**Authors**: Kun Su, Krishna Sayana, Hubert Pham, James Pine, Yuri Vasilevski, Raghavendra Vasudeva, Marialena Kyriakidi, Liam Hebert, Ambarish Jash, Anushya Subbiah, Sukhdeep Sodhi  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.11924)  
+
+**Abstract**: This paper introduces a novel dataset REGEN (Reviews Enhanced with GEnerative Narratives), designed to benchmark the conversational capabilities of recommender Large Language Models (LLMs), addressing the limitations of existing datasets that primarily focus on sequential item prediction. REGEN extends the Amazon Product Reviews dataset by inpainting two key natural language features: (1) user critiques, representing user "steering" queries that lead to the selection of a subsequent item, and (2) narratives, rich textual outputs associated with each recommended item taking into account prior context. The narratives include product endorsements, purchase explanations, and summaries of user preferences.
+Further, we establish an end-to-end modeling benchmark for the task of conversational recommendation, where models are trained to generate both recommendations and corresponding narratives conditioned on user history (items and critiques). For this joint task, we introduce a modeling framework LUMEN (LLM-based Unified Multi-task Model with Critiques, Recommendations, and Narratives) which uses an LLM as a backbone for critiquing, retrieval and generation. We also evaluate the dataset's quality using standard auto-rating techniques and benchmark it by training both traditional and LLM-based recommender models. Our results demonstrate that incorporating critiques enhances recommendation quality by enabling the recommender to learn language understanding and integrate it with recommendation signals. Furthermore, LLMs trained on our dataset effectively generate both recommendations and contextual narratives, achieving performance comparable to state-of-the-art recommenders and language models. 
+
+---
