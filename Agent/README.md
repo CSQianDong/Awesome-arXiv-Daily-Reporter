@@ -2,6 +2,7 @@
 
 | Date | Link | Number of Papers |
 |:----:|:----:|:----------------:|
+| 20-Mar-2025 | [Link](https://github.com/Deriq-Qian-Dong/Awesome-arXiv-Daily-Reporter/blob/main/20-Mar-2025/topic/Agent_related_papers.md) | 0 |
 | 19-Mar-2025 | [Link](https://github.com/Deriq-Qian-Dong/Awesome-arXiv-Daily-Reporter/blob/main/19-Mar-2025/topic/Agent_related_papers.md) | 0 |
 | 18-Mar-2025 | [Link](https://github.com/Deriq-Qian-Dong/Awesome-arXiv-Daily-Reporter/blob/main/18-Mar-2025/topic/Agent_related_papers.md) | 0 |
 | 17-Mar-2025 | [Link](https://github.com/Deriq-Qian-Dong/Awesome-arXiv-Daily-Reporter/blob/main/17-Mar-2025/topic/Agent_related_papers.md) | 0 |

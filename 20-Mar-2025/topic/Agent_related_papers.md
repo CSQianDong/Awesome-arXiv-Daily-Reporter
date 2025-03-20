@@ -1,0 +1,117 @@
+# When Pigs Get Sick: Multi-Agent AI for Swine Disease Detection 
+
+**Authors**: Tittaya Mairittha, Tanakon Sawanglok, Panuwit Raden, Sorrawit Treesuk  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.15204)  
+
+**Abstract**: Swine disease surveillance is critical to the sustainability of global agriculture, yet its effectiveness is frequently undermined by limited veterinary resources, delayed identification of cases, and variability in diagnostic accuracy. To overcome these barriers, we introduce a novel AI-powered, multi-agent diagnostic system that leverages Retrieval-Augmented Generation (RAG) to deliver timely, evidence-based disease detection and clinical guidance. By automatically classifying user inputs into either Knowledge Retrieval Queries or Symptom-Based Diagnostic Queries, the system ensures targeted information retrieval and facilitates precise diagnostic reasoning. An adaptive questioning protocol systematically collects relevant clinical signs, while a confidence-weighted decision fusion mechanism integrates multiple diagnostic hypotheses to generate robust disease predictions and treatment recommendations. Comprehensive evaluations encompassing query classification, disease diagnosis, and knowledge retrieval demonstrate that the system achieves high accuracy, rapid response times, and consistent reliability. By providing a scalable, AI-driven diagnostic framework, this approach enhances veterinary decision-making, advances sustainable livestock management practices, and contributes substantively to the realization of global food security. 
+
+---
+# Generating Causal Explanations of Vehicular Agent Behavioural Interactions with Learnt Reward Profiles 
+
+**Authors**: Rhys Howard, Nick Hawes, Lars Kunze  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.14557)  
+
+**Abstract**: Transparency and explainability are important features that responsible autonomous vehicles should possess, particularly when interacting with humans, and causal reasoning offers a strong basis to provide these qualities. However, even if one assumes agents act to maximise some concept of reward, it is difficult to make accurate causal inferences of agent planning without capturing what is of importance to the agent. Thus our work aims to learn a weighting of reward metrics for agents such that explanations for agent interactions can be causally inferred. We validate our approach quantitatively and qualitatively across three real-world driving datasets, demonstrating a functional improvement over previous methods and competitive performance across evaluation metrics. 
+
+---
+# Aligning Crowd-sourced Human Feedback for Reinforcement Learning on Code Generation by Large Language Models 
+
+**Authors**: Man Fai Wong, Chee Wei Tan  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.15129)  
+
+**Abstract**: This paper studies how AI-assisted programming and large language models (LLM) improve software developers' ability via AI tools (LLM agents) like Github Copilot and Amazon CodeWhisperer, while integrating human feedback to enhance reinforcement learning (RLHF) with crowd-sourced computation to enhance text-to-code generation. Additionally, we demonstrate that our Bayesian optimization framework supports AI alignment in code generation by distributing the feedback collection burden, highlighting the value of collecting human feedback of good quality. Our empirical evaluations demonstrate the efficacy of this approach, showcasing how LLM agents can be effectively trained for improved text-to-code generation. Our Bayesian optimization framework can be designed for general domain-specific languages, promoting the alignment of large language model capabilities with human feedback in AI-assisted programming for code generation. 
+
+---
+# Behaviour Discovery and Attribution for Explainable Reinforcement Learning 
+
+**Authors**: Rishav Rishav, Somjit Nath, Vincent Michalski, Samira Ebrahimi Kahou  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.14973)  
+
+**Abstract**: Explaining the decisions made by reinforcement learning (RL) agents is critical for building trust and ensuring reliability in real-world applications. Traditional approaches to explainability often rely on saliency analysis, which can be limited in providing actionable insights. Recently, there has been growing interest in attributing RL decisions to specific trajectories within a dataset. However, these methods often generalize explanations to long trajectories, potentially involving multiple distinct behaviors. Often, providing multiple more fine grained explanations would improve clarity. In this work, we propose a framework for behavior discovery and action attribution to behaviors in offline RL trajectories. Our method identifies meaningful behavioral segments, enabling more precise and granular explanations associated with high level agent behaviors. This approach is adaptable across diverse environments with minimal modifications, offering a scalable and versatile solution for behavior discovery and attribution for explainable RL. 
+
+---
+# A Unified Framework for Real-Time Failure Handling in Robotics Using Vision-Language Models, Reactive Planner and Behavior Trees 
+
+**Authors**: Faseeh Ahmad, Hashim Ismail, Jonathan Styrud, Maj Stenmark, Volker Krueger  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.15202)  
+
+**Abstract**: Robotic systems often face execution failures due to unexpected obstacles, sensor errors, or environmental changes. Traditional failure recovery methods rely on predefined strategies or human intervention, making them less adaptable. This paper presents a unified failure recovery framework that combines Vision-Language Models (VLMs), a reactive planner, and Behavior Trees (BTs) to enable real-time failure handling. Our approach includes pre-execution verification, which checks for potential failures before execution, and reactive failure handling, which detects and corrects failures during execution by verifying existing BT conditions, adding missing preconditions and, when necessary, generating new skills. The framework uses a scene graph for structured environmental perception and an execution history for continuous monitoring, enabling context-aware and adaptive failure handling. We evaluate our framework through real-world experiments with an ABB YuMi robot on tasks like peg insertion, object sorting, and drawer placement, as well as in AI2-THOR simulator. Compared to using pre-execution and reactive methods separately, our approach achieves higher task success rates and greater adaptability. Ablation studies highlight the importance of VLM-based reasoning, structured scene representation, and execution history tracking for effective failure recovery in robotics. 
+
+---
+# MAMM-Refine: A Recipe for Improving Faithfulness in Generation with Multi-Agent Collaboration 
+
+**Authors**: David Wan, Justin Chih-Yao Chen, Elias Stengel-Eskin, Mohit Bansal  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.15272)  
+
+**Abstract**: Multi-agent collaboration among models has shown promise in reasoning tasks but is underexplored in long-form generation tasks like summarization and question-answering. We extend multi-agent multi-model reasoning to generation, specifically to improving faithfulness through refinement, i.e., revising model-generated outputs to remove factual inconsistencies. We investigate how iterative collaboration among multiple instances and types of large language models (LLMs) enhances subtasks in the refinement process, such as error detection, critiquing unfaithful sentences, and making corrections based on critiques. We design intrinsic evaluations for each subtask, with our findings indicating that both multi-agent (multiple instances) and multi-model (diverse LLM types) approaches benefit error detection and critiquing. Additionally, reframing critiquing and refinement as reranking rather than generation tasks improves multi-agent performance. We consolidate these insights into a final "recipe" called Multi-Agent Multi-Model Refinement (MAMM-Refine), where multi-agent and multi-model collaboration significantly boosts performance on three summarization datasets as well as on long-form question answering, demonstrating the effectiveness and generalizability of our recipe. 
+
+---
+# VIPER: Visual Perception and Explainable Reasoning for Sequential Decision-Making 
+
+**Authors**: Mohamed Salim Aissi, Clemence Grislain, Mohamed Chetouani, Olivier Sigaud, Laure Soulier, Nicolas Thome  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.15108)  
+
+**Abstract**: While Large Language Models (LLMs) excel at reasoning on text and Vision-Language Models (VLMs) are highly effective for visual perception, applying those models for visual instruction-based planning remains a widely open problem. In this paper, we introduce VIPER, a novel framework for multimodal instruction-based planning that integrates VLM-based perception with LLM-based reasoning. Our approach uses a modular pipeline where a frozen VLM generates textual descriptions of image observations, which are then processed by an LLM policy to predict actions based on the task goal. We fine-tune the reasoning module using behavioral cloning and reinforcement learning, improving our agent's decision-making capabilities. Experiments on the ALFWorld benchmark show that VIPER significantly outperforms state-of-the-art visual instruction-based planners while narrowing the gap with purely text-based oracles. By leveraging text as an intermediate representation, VIPER also enhances explainability, paving the way for a fine-grained analysis of perception and reasoning components. 
+
+---
+# Multi-Agent Actor-Critic with Harmonic Annealing Pruning for Dynamic Spectrum Access Systems 
+
+**Authors**: George Stamatelis, Angelos-Nikolaos Kanatas, George C. Alexandropoulos  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.15172)  
+
+**Abstract**: Multi-Agent Deep Reinforcement Learning (MADRL) has emerged as a powerful tool for optimizing decentralized decision-making systems in complex settings, such as Dynamic Spectrum Access (DSA). However, deploying deep learning models on resource-constrained edge devices remains challenging due to their high computational cost. To address this challenge, in this paper, we present a novel sparse recurrent MARL framework integrating gradual neural network pruning into the independent actor global critic paradigm. Additionally, we introduce a harmonic annealing sparsity scheduler, which achieves comparable, and in certain cases superior, performance to standard linear and polynomial pruning schedulers at large sparsities. Our experimental investigation demonstrates that the proposed DSA framework can discover superior policies, under diverse training conditions, outperforming conventional DSA, MADRL baselines, and state-of-the-art pruning techniques. 
+
+---
+# Curiosity-Diffuser: Curiosity Guide Diffusion Models for Reliability 
+
+**Authors**: Zihao Liu, Xing Liu, Yizhai Zhang, Zhengxiong Liu, Panfeng Huang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.14833)  
+
+**Abstract**: One of the bottlenecks in robotic intelligence is the instability of neural network models, which, unlike control models, lack a well-defined convergence domain and stability. This leads to risks when applying intelligence in the physical world. Specifically, imitation policy based on neural network may generate hallucinations, leading to inaccurate behaviors that impact the safety of real-world applications. To address this issue, this paper proposes the Curiosity-Diffuser, aimed at guiding the conditional diffusion model to generate trajectories with lower curiosity, thereby improving the reliability of policy. The core idea is to use a Random Network Distillation (RND) curiosity module to assess whether the model's behavior aligns with the training data, and then minimize curiosity by classifier guidance diffusion to reduce overgeneralization during inference. Additionally, we propose a computationally efficient metric for evaluating the reliability of the policy, measuring the similarity between the generated behaviors and the training dataset, to facilitate research about reliability learning. Finally, simulation verify the effectiveness and applicability of the proposed method to a variety of scenarios, showing that Curiosity-Diffuser significantly improves task performance and produces behaviors that are more similar to the training data. The code for this work is available at: this http URL 
+
+---
+# GR00T N1: An Open Foundation Model for Generalist Humanoid Robots 
+
+**Authors**: NVIDIA, Johan Bjorck, Fernando Castañeda, Nikita Cherniadev, Xingye Da, Runyu Ding, Linxi "Jim" Fan, Yu Fang, Dieter Fox, Fengyuan Hu, Spencer Huang, Joel Jang, Zhenyu Jiang, Jan Kautz, Kaushil Kundalia, Lawrence Lao, Zhiqi Li, Zongyu Lin, Kevin Lin, Guilin Liu, Edith Llontop, Loic Magne, Ajay Mandlekar, Avnish Narayan, Soroush Nasiriany, Scott Reed, You Liang Tan, Guanzhi Wang, Zu Wang, Jing Wang, Qi Wang, Jiannan Xiang, Yuqi Xie, Yinzhen Xu, Zhenjia Xu, Seonghyeon Ye, Zhiding Yu, Ao Zhang, Hao Zhang, Yizhou Zhao, Ruijie Zheng, Yuke Zhu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.14734)  
+
+**Abstract**: General-purpose robots need a versatile body and an intelligent mind. Recent advancements in humanoid robots have shown great promise as a hardware platform for building generalist autonomy in the human world. A robot foundation model, trained on massive and diverse data sources, is essential for enabling the robots to reason about novel situations, robustly handle real-world variability, and rapidly learn new tasks. To this end, we introduce GR00T N1, an open foundation model for humanoid robots. GR00T N1 is a Vision-Language-Action (VLA) model with a dual-system architecture. The vision-language module (System 2) interprets the environment through vision and language instructions. The subsequent diffusion transformer module (System 1) generates fluid motor actions in real time. Both modules are tightly coupled and jointly trained end-to-end. We train GR00T N1 with a heterogeneous mixture of real-robot trajectories, human videos, and synthetically generated datasets. We show that our generalist robot model GR00T N1 outperforms the state-of-the-art imitation learning baselines on standard simulation benchmarks across multiple robot embodiments. Furthermore, we deploy our model on the Fourier GR-1 humanoid robot for language-conditioned bimanual manipulation tasks, achieving strong performance with high data efficiency. 
+
+---
+# SocialJax: An Evaluation Suite for Multi-agent Reinforcement Learning in Sequential Social Dilemmas 
+
+**Authors**: Zihao Guo, Richard Willis, Shuqing Shi, Tristan Tomilin, Joel Z. Leibo, Yali Du  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.14576)  
+
+**Abstract**: Social dilemmas pose a significant challenge in the field of multi-agent reinforcement learning (MARL). Melting Pot is an extensive framework designed to evaluate social dilemma environments, providing an evaluation protocol that measures generalization to new social partners across various test scenarios. However, running reinforcement learning algorithms in the official Melting Pot environments demands substantial computational resources. In this paper, we introduce SocialJax, a suite of sequential social dilemma environments implemented in JAX. JAX is a high-performance numerical computing library for Python that enables significant improvements in the operational efficiency of SocialJax on GPUs and TPUs. Our experiments demonstrate that the training pipeline of SocialJax achieves a 50\texttimes{} speedup in real-time performance compared to Melting Pot's RLlib baselines. Additionally, we validate the effectiveness of baseline algorithms within the SocialJax environments. Finally, we use Schelling diagrams to verify the social dilemma properties of these environments, ensuring they accurately capture the dynamics of social dilemmas. 
+
+---
+# Synchronous vs Asynchronous Reinforcement Learning in a Real World Robot 
+
+**Authors**: Ali Parsaee, Fahim Shahriar, Chuxin He, Ruiqing Tan  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.14554)  
+
+**Abstract**: In recent times, reinforcement learning (RL) with physical robots has attracted the attention of a wide range of researchers. However, state-of-the-art RL algorithms do not consider that physical environments do not wait for the RL agent to make decisions or updates. RL agents learn by periodically conducting computationally expensive gradient updates. When decision-making and gradient update tasks are carried out sequentially by the RL agent in a physical robot, it significantly increases the agent's response time. In a rapidly changing environment, this increased response time may be detrimental to the performance of the learning agent. Asynchronous RL methods, which separate the computation of decision-making and gradient updates, are a potential solution to this problem. However, only a few comparisons between asynchronous and synchronous RL have been made with physical robots. For this reason, the exact performance benefits of using asynchronous RL methods over synchronous RL methods are still unclear. In this study, we provide a performance comparison between asynchronous and synchronous RL using a physical robotic arm called Franka Emika Panda. Our experiments show that the agents learn faster and attain significantly more returns using asynchronous RL. Our experiments also demonstrate that the learning agent with a faster response time performs better than the agent with a slower response time, even if the agent with a slower response time performs a higher number of gradient updates. 
+
+---
+# A Generalist Hanabi Agent 
+
+**Authors**: Arjun V Sudhakar, Hadi Nekoei, Mathieu Reymond, Miao Liu, Janarthanan Rajendran, Sarath Chandar  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.14555)  
+
+**Abstract**: Traditional multi-agent reinforcement learning (MARL) systems can develop cooperative strategies through repeated interactions. However, these systems are unable to perform well on any other setting than the one they have been trained on, and struggle to successfully cooperate with unfamiliar collaborators. This is particularly visible in the Hanabi benchmark, a popular 2-to-5 player cooperative card-game which requires complex reasoning and precise assistance to other agents. Current MARL agents for Hanabi can only learn one specific game-setting (e.g., 2-player games), and play with the same algorithmic agents. This is in stark contrast to humans, who can quickly adjust their strategies to work with unfamiliar partners or situations. In this paper, we introduce Recurrent Replay Relevance Distributed DQN (R3D2), a generalist agent for Hanabi, designed to overcome these limitations. We reformulate the task using text, as language has been shown to improve transfer. We then propose a distributed MARL algorithm that copes with the resulting dynamic observation- and action-space. In doing so, our agent is the first that can play all game settings concurrently, and extend strategies learned from one setting to other ones. As a consequence, our agent also demonstrates the ability to collaborate with different algorithmic agents -- agents that are themselves unable to do so. The implementation code is available at: $\href{this https URL}{R3D2-A-Generalist-Hanabi-Agent}$ 
+
+---
