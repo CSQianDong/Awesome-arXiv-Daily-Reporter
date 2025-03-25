@@ -1,0 +1,324 @@
+# ArchSeek: Retrieving Architectural Case Studies Using Vision-Language Models 
+
+**Authors**: Danrui Li, Yichao Shi, Yaluo Wang, Ziying Shi, Mubbasir Kapadia  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.18680)  
+
+**Abstract**: Efficiently searching for relevant case studies is critical in architectural design, as designers rely on precedent examples to guide or inspire their ongoing projects. However, traditional text-based search tools struggle to capture the inherently visual and complex nature of architectural knowledge, often leading to time-consuming and imprecise exploration. This paper introduces ArchSeek, an innovative case study search system with recommendation capability, tailored for architecture design professionals. Powered by the visual understanding capabilities from vision-language models and cross-modal embeddings, it enables text and image queries with fine-grained control, and interaction-based design case recommendations. It offers architects a more efficient, personalized way to discover design inspirations, with potential applications across other visually driven design fields. The source code is available at this https URL. 
+
+---
+# MammAlps: A multi-view video behavior monitoring dataset of wild mammals in the Swiss Alps 
+
+**Authors**: Valentin Gabeff, Haozhe Qi, Brendan Flaherty, Gencer Sumbül, Alexander Mathis, Devis Tuia  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.18223)  
+
+**Abstract**: Monitoring wildlife is essential for ecology and ethology, especially in light of the increasing human impact on ecosystems. Camera traps have emerged as habitat-centric sensors enabling the study of wildlife populations at scale with minimal disturbance. However, the lack of annotated video datasets limits the development of powerful video understanding models needed to process the vast amount of fieldwork data collected. To advance research in wild animal behavior monitoring we present MammAlps, a multimodal and multi-view dataset of wildlife behavior monitoring from 9 camera-traps in the Swiss National Park. MammAlps contains over 14 hours of video with audio, 2D segmentation maps and 8.5 hours of individual tracks densely labeled for species and behavior. Based on 6135 single animal clips, we propose the first hierarchical and multimodal animal behavior recognition benchmark using audio, video and reference scene segmentation maps as inputs. Furthermore, we also propose a second ecology-oriented benchmark aiming at identifying activities, species, number of individuals and meteorological conditions from 397 multi-view and long-term ecological events, including false positive triggers. We advocate that both tasks are complementary and contribute to bridging the gap between machine learning and ecology. Code and data are available at: this https URL 
+
+---
+# Enhancing Subsequent Video Retrieval via Vision-Language Models (VLMs) 
+
+**Authors**: Yicheng Duan, Xi Huang, Duo Chen  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.17415)  
+
+**Abstract**: The rapid growth of video content demands efficient and precise retrieval systems. While vision-language models (VLMs) excel in representation learning, they often struggle with adaptive, time-sensitive video retrieval. This paper introduces a novel framework that combines vector similarity search with graph-based data structures. By leveraging VLM embeddings for initial retrieval and modeling contextual relationships among video segments, our approach enables adaptive query refinement and improves retrieval accuracy. Experiments demonstrate its precision, scalability, and robustness, offering an effective solution for interactive video retrieval in dynamic environments. 
+
+---
+# Commander-GPT: Fully Unleashing the Sarcasm Detection Capability of Multi-Modal Large Language Models 
+
+**Authors**: Yazhou Zhang, Chunwang Zou, Bo Wang, Jing Qin  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.18681)  
+
+**Abstract**: Sarcasm detection, as a crucial research direction in the field of Natural Language Processing (NLP), has attracted widespread attention. Traditional sarcasm detection tasks have typically focused on single-modal approaches (e.g., text), but due to the implicit and subtle nature of sarcasm, such methods often fail to yield satisfactory results. In recent years, researchers have shifted the focus of sarcasm detection to multi-modal approaches. However, effectively leveraging multi-modal information to accurately identify sarcastic content remains a challenge that warrants further exploration. Leveraging the powerful integrated processing capabilities of Multi-Modal Large Language Models (MLLMs) for various information sources, we propose an innovative multi-modal Commander-GPT framework. Inspired by military strategy, we first decompose the sarcasm detection task into six distinct sub-tasks. A central commander (decision-maker) then assigns the best-suited large language model to address each specific sub-task. Ultimately, the detection results from each model are aggregated to identify sarcasm. We conducted extensive experiments on MMSD and MMSD 2.0, utilizing four multi-modal large language models and six prompting strategies. Our experiments demonstrate that our approach achieves state-of-the-art performance, with a 19.3% improvement in F1 score, without necessitating fine-tuning or ground-truth rationales. 
+
+---
+# MAGIC-VQA: Multimodal And Grounded Inference with Commonsense Knowledge for Visual Question Answering 
+
+**Authors**: Shuo Yang, Siwen Luo, Soyeon Caren Han, Eduard Hovy  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.18491)  
+
+**Abstract**: Visual Question Answering (VQA) requires reasoning across visual and textual modalities, yet Large Vision-Language Models (LVLMs) often lack integrated commonsense knowledge, limiting their robustness in real-world scenarios. To address this, we introduce MAGIC-VQA, a novel framework that enhances VQA by systematically integrating commonsense knowledge with LVLMs. MAGIC-VQA employs a three-stage process: (1) Explicit Knowledge Integration from external sources, (2) By-Type Post-Processing for contextual refinement, and (3) Implicit Knowledge Augmentation using a Graph Neural Network (GNN) for structured reasoning. While GNNs bring greater depth to structured inference, they enable superior relational inference beyond LVLMs. MAGIC-VQA bridges a key gap by unifying commonsensse knowledge with LVLM-driven reasoning, eliminating the need for extensive pre-training or complex prompt tuning. Our framework achieves state-of-the-art performance on benchmark datasets, significantly improving commonsense reasoning in VQA. 
+
+---
+# Unmasking Deceptive Visuals: Benchmarking Multimodal Large Language Models on Misleading Chart Question Answering 
+
+**Authors**: Zixin Chen, Sicheng Song, Kashun Shum, Yanna Lin, Rui Sheng, Huamin Qu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.18172)  
+
+**Abstract**: Misleading chart visualizations, which intentionally manipulate data representations to support specific claims, can distort perceptions and lead to incorrect conclusions. Despite decades of research, misleading visualizations remain a widespread and pressing issue. Recent advances in multimodal large language models (MLLMs) have demonstrated strong chart comprehension capabilities, yet no existing work has systematically evaluated their ability to detect and interpret misleading charts. This paper introduces the Misleading Chart Question Answering (Misleading ChartQA) Benchmark, a large-scale multimodal dataset designed to assess MLLMs in identifying and reasoning about misleading charts. It contains over 3,000 curated examples, covering 21 types of misleaders and 10 chart types. Each example includes standardized chart code, CSV data, and multiple-choice questions with labeled explanations, validated through multi-round MLLM checks and exhausted expert human review. We benchmark 16 state-of-the-art MLLMs on our dataset, revealing their limitations in identifying visually deceptive practices. We also propose a novel pipeline that detects and localizes misleaders, enhancing MLLMs' accuracy in misleading chart interpretation. Our work establishes a foundation for advancing MLLM-driven misleading chart comprehension. We publicly release the sample dataset to support further research in this critical area. 
+
+---
+# MathAgent: Leveraging a Mixture-of-Math-Agent Framework for Real-World Multimodal Mathematical Error Detection 
+
+**Authors**: Yibo Yan, Shen Wang, Jiahao Huo, Philip S. Yu, Xuming Hu, Qingsong Wen  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.18132)  
+
+**Abstract**: Mathematical error detection in educational settings presents a significant challenge for Multimodal Large Language Models (MLLMs), requiring a sophisticated understanding of both visual and textual mathematical content along with complex reasoning capabilities. Though effective in mathematical problem-solving, MLLMs often struggle with the nuanced task of identifying and categorizing student errors in multimodal mathematical contexts. Therefore, we introduce MathAgent, a novel Mixture-of-Math-Agent framework designed specifically to address these challenges. Our approach decomposes error detection into three phases, each handled by a specialized agent: an image-text consistency validator, a visual semantic interpreter, and an integrative error analyzer. This architecture enables more accurate processing of mathematical content by explicitly modeling relationships between multimodal problems and student solution steps. We evaluate MathAgent on real-world educational data, demonstrating approximately 5% higher accuracy in error step identification and 3% improvement in error categorization compared to baseline models. Besides, MathAgent has been successfully deployed in an educational platform that has served over one million K-12 students, achieving nearly 90% student satisfaction while generating significant cost savings by reducing manual error detection. 
+
+---
+# Mind with Eyes: from Language Reasoning to Multimodal Reasoning 
+
+**Authors**: Zhiyu Lin, Yifei Gao, Xian Zhao, Yunfan Yang, Jitao Sang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.18071)  
+
+**Abstract**: Language models have recently advanced into the realm of reasoning, yet it is through multimodal reasoning that we can fully unlock the potential to achieve more comprehensive, human-like cognitive capabilities. This survey provides a systematic overview of the recent multimodal reasoning approaches, categorizing them into two levels: language-centric multimodal reasoning and collaborative multimodal reasoning. The former encompasses one-pass visual perception and active visual perception, where vision primarily serves a supporting role in language reasoning. The latter involves action generation and state update within reasoning process, enabling a more dynamic interaction between modalities. Furthermore, we analyze the technical evolution of these methods, discuss their inherent challenges, and introduce key benchmark tasks and evaluation metrics for assessing multimodal reasoning performance. Finally, we provide insights into future research directions from the following two perspectives: (i) from visual-language reasoning to omnimodal reasoning and (ii) from multimodal reasoning to multimodal agents. This survey aims to provide a structured overview that will inspire further advancements in multimodal reasoning research. 
+
+---
+# Judge Anything: MLLM as a Judge Across Any Modality 
+
+**Authors**: Shu Pu, Yaochen Wang, Dongping Chen, Yuhang Chen, Guohao Wang, Qi Qin, Zhongyi Zhang, Zhiyuan Zhang, Zetong Zhou, Shuang Gong, Yi Gui, Yao Wan, Philip S. Yu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.17489)  
+
+**Abstract**: Evaluating generative foundation models on open-ended multimodal understanding (MMU) and generation (MMG) tasks across diverse modalities (e.g., images, audio, video) poses significant challenges due to the complexity of cross-modal interactions. To this end, the idea of utilizing Multimodal LLMs (MLLMs) as automated judges has emerged, with encouraging results in assessing vision-language understanding tasks. Moving further, this paper extends MLLM-as-a-Judge across modalities to a unified manner by introducing two benchmarks, TaskAnything and JudgeAnything, to respectively evaluate the overall performance and judging capabilities of MLLMs across any-to-any modality tasks. Specifically, TaskAnything evaluates the MMU and MMG capabilities across 15 any-to-any modality categories, employing 1,500 queries curated from well-established benchmarks. Furthermore, JudgeAnything evaluates the judging capabilities of 5 advanced (e.g., GPT-4o and Gemini-2.0-Flash) from the perspectives of Pair Comparison and Score Evaluation, providing a standardized testbed that incorporates human judgments and detailed rubrics. Our extensive experiments reveal that while these MLLMs show promise in assessing MMU (i.e., achieving an average of 66.55% in Pair Comparison setting and 42.79% in Score Evaluation setting), they encounter significant challenges with MMG tasks (i.e., averaging only 53.37% in Pair Comparison setting and 30.05% in Score Evaluation setting), exposing cross-modality biases and hallucination issues. To address this, we present OmniArena, an automated platform for evaluating omni-models and multimodal reward models. Our work highlights the need for fairer evaluation protocols and stronger alignment with human preferences. The source code and dataset are publicly available at: this https URL. 
+
+---
+# On the Perception Bottleneck of VLMs for Chart Understanding 
+
+**Authors**: Junteng Liu, Weihao Zeng, Xiwen Zhang, Yijun Wang, Zifei Shan, Junxian He  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.18435)  
+
+**Abstract**: Chart understanding requires models to effectively analyze and reason about numerical data, textual elements, and complex visual components. Our observations reveal that the perception capabilities of existing large vision-language models (LVLMs) constitute a critical bottleneck in this process. In this study, we delve into this perception bottleneck by decomposing it into two components: the vision encoder bottleneck, where the visual representation may fail to encapsulate the correct information, and the extraction bottleneck, where the language model struggles to extract the necessary information from the provided visual representations. Through comprehensive experiments, we find that (1) the information embedded within visual representations is substantially richer than what is typically captured by linear extractors, such as the widely used retrieval accuracy metric; (2) While instruction tuning effectively enhances the extraction capability of LVLMs, the vision encoder remains a critical bottleneck, demanding focused attention and improvement. Therefore, we further enhance the visual encoder to mitigate the vision encoder bottleneck under a contrastive learning framework. Empirical results demonstrate that our approach significantly mitigates the perception bottleneck and improves the ability of LVLMs to comprehend charts. Code is publicly available at this https URL. 
+
+---
+# PM4Bench: A Parallel Multilingual Multi-Modal Multi-task Benchmark for Large Vision Language Model 
+
+**Authors**: Junyuan Gao, Jiahe Song, Jiang Wu, Runchuan Zhu, Guanlin Shen, Shasha Wang, Xingjian Wei, Haote Yang, Songyang Zhang, Weijia Li, Bin Wang, Dahua Lin, Lijun Wu, Conghui He  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.18484)  
+
+**Abstract**: Existing multilingual benchmarks for Large Vision Language Models (LVLMs) suffer from limitations including language-specific content biases, disjointed multimodal input formats, and a lack of safety evaluation. To address these gaps, we propose PM4Bench, the first Parallel Multilingual Multi-Modal Multi-task Benchmark for LVLMs. PM4Bench features a parallel corpus design across 10 languages, enabling fair and accurate cross-lingual comparisons. It includes the vision setting where text and queries are embedded in images, requiring LVLMs to simultaneously "see", "read", and "think", aligning with real-world applications. Additionally, PM\textsuperscript{4}Bench incorporates safety evaluations, addressing critical oversight in existing multilingual benchmarks. Using PM4Bench, we evaluate 11 mainstream LVLMs, revealing significant cross-linguistic performance disparities, particularly in vision settings, and identifying OCR capability as a key determinant of these imbalances. We will release PM4Bench at this https URL . 
+
+---
+# Expanding the Boundaries of Vision Prior Knowledge in Multi-modal Large Language Models 
+
+**Authors**: Qiao Liang, Yanjiang Liu, Ben He, Yaojie Lu, Hongyu Lin, Jia Zheng, Xianpei Han, Le Sun, Yingfei Sun  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.18034)  
+
+**Abstract**: Does the prior knowledge of the vision encoder constrain the capability boundary of Multi-modal Large Language Models (MLLMs)? While most existing research treats MLLMs as unified systems optimized through end-to-end training, the impact of vision encoder's prior knowledge is seldom investigated. In this work, we introduce a novel metric, $Rank_e$, to quantify the effect of the vision encoder's prior knowledge on MLLM performance. Our analysis reveals a positive correlation between prior knowledge and MLLM performance. Moreover, we find that domain-specific fine-tuning using solely end-to-end visual question answering (VQA) data is insufficient--particularly for entities with low inherent visual prior knowledge. To address this issue, we propose VisPRE (Vision Prior Remediation), a two-stage training framework that explicitly incorporates prior knowledge at the vision encoder level. Experimental results demonstrate that augmenting vision encoder's prior knowledge substantially boosts the visual understanding capabilities of MLLMs, offering a novel and effective strategy for improving performance, especially in scenarios involving uncommon visual entities. 
+
+---
+# Unseen from Seen: Rewriting Observation-Instruction Using Foundation Models for Augmenting Vision-Language Navigation 
+
+**Authors**: Ziming Wei, Bingqian Lin, Yunshuang Nie, Jiaqi Chen, Shikui Ma, Hang Xu, Xiaodan Liang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.18065)  
+
+**Abstract**: Data scarcity is a long-standing challenge in the Vision-Language Navigation (VLN) field, which extremely hinders the generalization of agents to unseen environments. Previous works primarily rely on additional simulator data or web-collected images/videos to improve the generalization. However, the simulator environments still face limited diversity, and the web-collected data often requires extensive labor to remove the noise. In this paper, we propose a Rewriting-driven AugMentation (RAM) paradigm for VLN, which directly creates the unseen observation-instruction pairs via rewriting human-annotated training data. Benefiting from our rewriting mechanism, new observation-instruction can be obtained in both simulator-free and labor-saving manners to promote generalization. Specifically, we first introduce Object-Enriched Observation Rewriting, where we combine Vision-Language Models (VLMs) and Large Language Models (LLMs) to derive rewritten object-enriched scene descriptions, enabling observation synthesis with diverse objects and spatial layouts via Text-to-Image Generation Models (T2IMs). Then, we propose Observation-Contrast Instruction Rewriting, which generates observation-aligned rewritten instructions by requiring LLMs to reason the difference between original and new observations. We further develop a mixing-then-focusing training strategy with a random observation cropping scheme, effectively enhancing data distribution diversity while suppressing augmentation data noise during training. Experiments on both the discrete environments (R2R, REVERIE, and R4R datasets) and continuous environments (R2R-CE dataset) show the superior performance and impressive generalization ability of our method. Code is available at this https URL. 
+
+---
+# Debiasing Multimodal Large Language Models via Noise-Aware Preference Optimization 
+
+**Authors**: Zefeng Zhang, Hengzhu Tang, Jiawei Sheng, Zhenyu Zhang, Yiming Ren, Zhenyang Li, Dawei Yin, Duohe Ma, Tingwen Liu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.17928)  
+
+**Abstract**: Multimodal Large Language Models excel in various tasks, yet often struggle with modality bias, where the model tends to rely heavily on a single modality and overlook critical information in other modalities, which leads to incorrect focus and generating irrelevant responses. In this paper, we propose using the paradigm of preference optimization to solve the modality bias problem, including RLAIFVBias, a debiased preference optimization dataset, and a Noise Aware Preference Optimization algorithm. Specifically, we first construct the dataset by introducing perturbations to reduce the informational content of certain modalities, compelling the model to rely on a specific modality when generating negative responses. To address the inevitable noise in automatically constructed data, we combine the noise robust Mean Absolute Error with the Binary Cross Entropy in Direct Preference Optimization by a negative Box Cox transformation, and dynamically adjust the algorithm noise robustness based on the evaluated noise levels in the data. Extensive experiments validate our approach, demonstrating not only its effectiveness in mitigating modality bias but also its significant role in minimizing hallucinations. 
+
+---
+# V2P-Bench: Evaluating Video-Language Understanding with Visual Prompts for Better Human-Model Interaction 
+
+**Authors**: Yiming Zhao, Yu Zeng, Yukun Qi, YaoYang Liu, Lin Chen, Zehui Chen, Xikun Bao, Jie Zhao, Feng Zhao  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.17736)  
+
+**Abstract**: Large Vision-Language Models (LVLMs) have made significant progress in the field of video understanding recently. However, current benchmarks uniformly lean on text prompts for evaluation, which often necessitate complex referential language and fail to provide precise spatial and temporal references. This limitation diminishes the experience and efficiency of human-model interaction. To address this limitation, we propose the Video Visual Prompt Benchmark(V2P-Bench), a comprehensive benchmark specifically designed to evaluate LVLMs' video understanding capabilities in multimodal human-model interaction scenarios. V2P-Bench includes 980 unique videos and 1,172 QA pairs, covering 5 main tasks and 12 dimensions, facilitating instance-level fine-grained understanding aligned with human cognition. Benchmarking results reveal that even the most powerful models perform poorly on V2P-Bench (65.4% for GPT-4o and 67.9% for Gemini-1.5-Pro), significantly lower than the human experts' 88.3%, highlighting the current shortcomings of LVLMs in understanding video visual prompts. We hope V2P-Bench will serve as a foundation for advancing multimodal human-model interaction and video understanding evaluation. Project page: this https URL. 
+
+---
+# From Text to Talent: A Pipeline for Extracting Insights from Candidate Profiles 
+
+**Authors**: Paolo Frazzetto, Muhammad Uzair Ul Haq, Flavia Fabris, Alessandro Sperduti  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.17438)  
+
+**Abstract**: The recruitment process is undergoing a significant transformation with the increasing use of machine learning and natural language processing techniques. While previous studies have focused on automating candidate selection, the role of multiple vacancies in this process remains understudied. This paper addresses this gap by proposing a novel pipeline that leverages Large Language Models and graph similarity measures to suggest ideal candidates for specific job openings. Our approach represents candidate profiles as multimodal embeddings, enabling the capture of nuanced relationships between job requirements and candidate attributes. The proposed approach has significant implications for the recruitment industry, enabling companies to streamline their hiring processes and identify top talent more efficiently. Our work contributes to the growing body of research on the application of machine learning in human resources, highlighting the potential of LLMs and graph-based methods in revolutionizing the recruitment landscape. 
+
+---
+# MMCR: Advancing Visual Language Model in Multimodal Multi-Turn Contextual Reasoning 
+
+**Authors**: Dawei Yan, Yang Li, Qing-Guo Chen, Weihua Luo, Peng Wang, Haokui Zhang, Chunhua Shen  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.18533)  
+
+**Abstract**: Compared to single-turn dialogue, multi-turn dialogue involving multiple images better aligns with the needs of real-world human-AI interactions. Additionally, as training data, it provides richer contextual reasoning information, thereby guiding the model to achieve better performance. However, existing vision-language models (VLMs) primarily rely on single-turn dialogue training and evaluation benchmarks. In this paper, following the characteristics of human dialogue, such as focused topics and concise, clear content, we present MMCR (Multimodal Multi-turn Contextual Reasoning), a novel dataset comprising: (1) MMCR-310k -- the largest multi-image multi-turn instruction tuning dataset with 310K contextual dialogues, each covering 1-4 images and 4 or 8 dialogue turns; and (2) MMCR-Bench -- a diagnostic benchmark featuring dialogues, spanning 8 domains (Humanities, Natural, Science, Education, etc.) and 40 sub-topics. Extensive evaluations demonstrate that models fine-tuned with MMCR-310k achieve 5.2\% higher contextual accuracy on MMCR-Bench, while showing consistent improvements on existing benchmarks (+1.1\% on AI2D, +1.2\% on MMMU and MMVet). MMCR and prompt engineering will be released publicly. 
+
+---
+# MC-LLaVA: Multi-Concept Personalized Vision-Language Model 
+
+**Authors**: Ruichuan An, Sihan Yang, Ming Lu, Renrui Zhang, Kai Zeng, Yulin Luo, Jiajun Cao, Hao Liang, Ying Chen, Qi She, Shanghang Zhang, Wentao Zhang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.18854)  
+
+**Abstract**: Current vision-language models (VLMs) show exceptional abilities across diverse tasks, such as visual question answering. To enhance user experience, recent studies investigate VLM personalization to understand user-provided concepts. However, they mainly focus on single-concept personalization, neglecting the existence and interplay of multiple concepts, which limits real-world applicability. This paper proposes the first multi-concept personalization paradigm, MC-LLaVA. Specifically, MC-LLaVA employs a multi-concept instruction tuning strategy, effectively integrating multiple concepts in a single training step. To reduce the costs related to joint training, we propose a personalized textual prompt that uses visual token information to initialize concept tokens. Additionally, we introduce a personalized visual prompt during inference, aggregating location confidence maps for enhanced recognition and grounding capabilities. To advance multi-concept personalization research, we further contribute a high-quality instruction tuning dataset. We carefully collect images with multiple characters and objects from movies and manually generate question-answer samples for multi-concept scenarios, featuring superior diversity. Comprehensive qualitative and quantitative experiments demonstrate that MC-LLaVA can achieve impressive multi-concept personalized responses, paving the way for VLMs to become better user-specific assistants. The code and dataset will be publicly available at $\href{this https URL}{this https URL}$. 
+
+---
+# Enhanced OoD Detection through Cross-Modal Alignment of Multi-Modal Representations 
+
+**Authors**: Jeonghyeon Kim, Sangheum Hwang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.18817)  
+
+**Abstract**: Prior research on out-of-distribution detection (OoDD) has primarily focused on single-modality models. Recently, with the advent of large-scale pretrained vision-language models such as CLIP, OoDD methods utilizing such multi-modal representations through zero-shot and prompt learning strategies have emerged. However, these methods typically involve either freezing the pretrained weights or only partially tuning them, which can be suboptimal for downstream datasets. In this paper, we highlight that multi-modal fine-tuning (MMFT) can achieve notable OoDD performance. Despite some recent works demonstrating the impact of fine-tuning methods for OoDD, there remains significant potential for performance improvement. We investigate the limitation of naïve fine-tuning methods, examining why they fail to fully leverage the pretrained knowledge. Our empirical analysis suggests that this issue could stem from the modality gap within in-distribution (ID) embeddings. To address this, we propose a training objective that enhances cross-modal alignment by regularizing the distances between image and text embeddings of ID data. This adjustment helps in better utilizing pretrained textual information by aligning similar semantics from different modalities (i.e., text and image) more closely in the hyperspherical representation space. We theoretically demonstrate that the proposed regularization corresponds to the maximum likelihood estimation of an energy-based model on a hypersphere. Utilizing ImageNet-1k OoD benchmark datasets, we show that our method, combined with post-hoc OoDD approaches leveraging pretrained knowledge (e.g., NegLabel), significantly outperforms existing methods, achieving state-of-the-art OoDD performance and leading ID accuracy. 
+
+---
+# Galaxy Walker: Geometry-aware VLMs For Galaxy-scale Understanding 
+
+**Authors**: Tianyu Chen, Xingcheng Fu, Yisen Gao, Haodong Qian, Yuecen Wei, Kun Yan, Haoyi Zhou, Jianxin Li  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.18578)  
+
+**Abstract**: Modern vision-language models (VLMs) develop patch embedding and convolution backbone within vector space, especially Euclidean ones, at the very founding. When expanding VLMs to a galaxy scale for understanding astronomical phenomena, the integration of spherical space for planetary orbits and hyperbolic spaces for black holes raises two formidable challenges. a) The current pre-training model is confined to Euclidean space rather than a comprehensive geometric embedding. b) The predominant architecture lacks suitable backbones for anisotropic physical geometries. In this paper, we introduced Galaxy-Walker, a geometry-aware VLM, for the universe-level vision understanding tasks. We proposed the geometry prompt that generates geometry tokens by random walks across diverse spaces on a multi-scale physical graph, along with a geometry adapter that compresses and reshapes the space anisotropy in a mixture-of-experts manner. Extensive experiments demonstrate the effectiveness of our approach, with Galaxy-Walker achieving state-of-the-art performance in both galaxy property estimation ($R^2$ scores up to $0.91$) and morphology classification tasks (up to $+0.17$ F1 improvement in challenging features), significantly outperforming both domain-specific models and general-purpose VLMs. 
+
+---
+# MetaSpatial: Reinforcing 3D Spatial Reasoning in VLMs for the Metaverse 
+
+**Authors**: Zhenyu Pan, Han Liu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.18470)  
+
+**Abstract**: We present MetaSpatial, the first reinforcement learning (RL)-based framework designed to enhance 3D spatial reasoning in vision-language models (VLMs), enabling real-time 3D scene generation without the need for hard-coded optimizations. MetaSpatial addresses two core challenges: (i) the lack of internalized 3D spatial reasoning in VLMs, which limits their ability to generate realistic layouts, and (ii) the inefficiency of traditional supervised fine-tuning (SFT) for layout generation tasks, as perfect ground truth annotations are unavailable. Our key innovation is a multi-turn RL-based optimization mechanism that integrates physics-aware constraints and rendered image evaluations, ensuring generated 3D layouts are coherent, physically plausible, and aesthetically consistent. Methodologically, MetaSpatial introduces an adaptive, iterative reasoning process, where the VLM refines spatial arrangements over multiple turns by analyzing rendered outputs, improving scene coherence progressively. Empirical evaluations demonstrate that MetaSpatial significantly enhances the spatial consistency and formatting stability of various scale models. Post-training, object placements are more realistic, aligned, and functionally coherent, validating the effectiveness of RL for 3D spatial reasoning in metaverse, AR/VR, digital twins, and game development applications. Our code, data, and training pipeline are publicly available at this https URL. 
+
+---
+# HiRes-FusedMIM: A High-Resolution RGB-DSM Pre-trained Model for Building-Level Remote Sensing Applications 
+
+**Authors**: Guneet Mutreja, Philipp Schuegraf, Ksenia Bittner  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.18540)  
+
+**Abstract**: Recent advances in self-supervised learning have led to the development of foundation models that have significantly advanced performance in various computer vision tasks. However, despite their potential, these models often overlook the crucial role of high-resolution digital surface models (DSMs) in understanding urban environments, particularly for building-level analysis, which is essential for applications like digital twins. To address this gap, we introduce HiRes-FusedMIM, a novel pre-trained model specifically designed to leverage the rich information contained within high-resolution RGB and DSM data. HiRes-FusedMIM utilizes a dual-encoder simple masked image modeling (SimMIM) architecture with a multi-objective loss function that combines reconstruction and contrastive objectives, enabling it to learn powerful, joint representations from both modalities. We conducted a comprehensive evaluation of HiRes-FusedMIM on a diverse set of downstream tasks, including classification, semantic segmentation, and instance segmentation. Our results demonstrate that: 1) HiRes-FusedMIM outperforms previous state-of-the-art geospatial methods on several building-related datasets, including WHU Aerial and LoveDA, demonstrating its effectiveness in capturing and leveraging fine-grained building information; 2) Incorporating DSMs during pre-training consistently improves performance compared to using RGB data alone, highlighting the value of elevation information for building-level analysis; 3) The dual-encoder architecture of HiRes-FusedMIM, with separate encoders for RGB and DSM data, significantly outperforms a single-encoder model on the Vaihingen segmentation task, indicating the benefits of learning specialized representations for each modality. To facilitate further research and applications in this direction, we will publicly release the trained model weights. 
+
+---
+# Knowledge Graph Enhanced Generative Multi-modal Models for Class-Incremental Learning 
+
+**Authors**: Xusheng Cao, Haori Lu, Linlan Huang, Fei Yang, Xialei Liu, Ming-Ming Cheng  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.18403)  
+
+**Abstract**: Continual learning in computer vision faces the critical challenge of catastrophic forgetting, where models struggle to retain prior knowledge while adapting to new tasks. Although recent studies have attempted to leverage the generalization capabilities of pre-trained models to mitigate overfitting on current tasks, models still tend to forget details of previously learned categories as tasks progress, leading to misclassification. To address these limitations, we introduce a novel Knowledge Graph Enhanced Generative Multi-modal model (KG-GMM) that builds an evolving knowledge graph throughout the learning process. Our approach utilizes relationships within the knowledge graph to augment the class labels and assigns different relations to similar categories to enhance model differentiation. During testing, we propose a Knowledge Graph Augmented Inference method that locates specific categories by analyzing relationships within the generated text, thereby reducing the loss of detailed information about old classes when learning new knowledge and alleviating forgetting. Experiments demonstrate that our method effectively leverages relational information to help the model correct mispredictions, achieving state-of-the-art results in both conventional CIL and few-shot CIL settings, confirming the efficacy of knowledge graphs at preserving knowledge in the continual learning scenarios. 
+
+---
+# TopV: Compatible Token Pruning with Inference Time Optimization for Fast and Low-Memory Multimodal Vision Language Model 
+
+**Authors**: Cheng Yang, Yang Sui, Jinqi Xiao, Lingyi Huang, Yu Gong, Chendi Li, Jinghua Yan, Yu Bai, Ponnuswamy Sadayappan, Xia Hu, Bo Yuan  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.18278)  
+
+**Abstract**: Vision-Language Models (VLMs) demand substantial computational resources during inference, largely due to the extensive visual input tokens for representing visual information. Previous studies have noted that visual tokens tend to receive less attention than text tokens, suggesting their lower importance during inference and potential for pruning. However, their methods encounter several challenges: reliance on greedy heuristic criteria for token importance and incompatibility with FlashAttention and KV cache. To address these issues, we introduce \textbf{TopV}, a compatible \textbf{TO}ken \textbf{P}runing with inference Time Optimization for fast and low-memory \textbf{V}LM, achieving efficient pruning without additional training or fine-tuning. Instead of relying on attention scores, we formulate token pruning as an optimization problem, accurately identifying important visual tokens while remaining compatible with FlashAttention. Additionally, since we only perform this pruning once during the prefilling stage, it effectively reduces KV cache size. Our optimization framework incorporates a visual-aware cost function considering factors such as Feature Similarity, Relative Spatial Distance, and Absolute Central Distance, to measure the importance of each source visual token, enabling effective pruning of low-importance tokens. Extensive experiments demonstrate that our method outperforms previous token pruning methods, validating the effectiveness and efficiency of our approach. 
+
+---
+# Collaborating with AI Agents: Field Experiments on Teamwork, Productivity, and Performance 
+
+**Authors**: Harang Ju, Sinan Aral  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.18238)  
+
+**Abstract**: To uncover how AI agents change productivity, performance, and work processes, we introduce MindMeld: an experimentation platform enabling humans and AI agents to collaborate in integrative workspaces. In a large-scale marketing experiment on the platform, 2310 participants were randomly assigned to human-human and human-AI teams, with randomized AI personality traits. The teams exchanged 183,691 messages, and created 63,656 image edits, 1,960,095 ad copy edits, and 10,375 AI-generated images while producing 11,138 ads for a large think tank. Analysis of fine-grained communication, collaboration, and workflow logs revealed that collaborating with AI agents increased communication by 137% and allowed humans to focus 23% more on text and image content generation messaging and 20% less on direct text editing. Humans on Human-AI teams sent 23% fewer social messages, creating 60% greater productivity per worker and higher-quality ad copy. In contrast, human-human teams produced higher-quality images, suggesting that AI agents require fine-tuning for multimodal workflows. AI personality prompt randomization revealed that AI traits can complement human personalities to enhance collaboration. For example, conscientious humans paired with open AI agents improved image quality, while extroverted humans paired with conscientious AI agents reduced the quality of text, images, and clicks. In field tests of ad campaigns with ~5M impressions, ads with higher image quality produced by human collaborations and higher text quality produced by AI collaborations performed significantly better on click-through rate and cost per click metrics. Overall, ads created by human-AI teams performed similarly to those created by human-human teams. Together, these results suggest AI agents can improve teamwork and productivity, especially when tuned to complement human traits. 
+
+---
+# Vision-R1: Evolving Human-Free Alignment in Large Vision-Language Models via Vision-Guided Reinforcement Learning 
+
+**Authors**: Yufei Zhan, Yousong Zhu, Shurong Zheng, Hongyin Zhao, Fan Yang, Ming Tang, Jinqiao Wang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.18013)  
+
+**Abstract**: Large Vision-Language Models (LVLMs) typically follow a two-stage training paradigm-pretraining and supervised fine-tuning. Recently, preference optimization, derived from the language domain, has emerged as an effective post-training reinforcement strategy to enhance capabilities of LVLMs. However, constructing high-quality human-annotated preference data and developing robust reward models to mimic these preferences are both costly and challenging. Motivated by this observation, we propose Vision-R1, a novel vision-guided R1-like reinforcement learning algorithm for LVLMs that rewards models with definitive vision feedback. It only leverages curated instruction data, eliminating the need for specialized reward models and handcrafted preference datasets. We incorporate a criterion-driven reward function that further integrates multi-dimensional feedback to evaluate model completions comprehensively based on the vision task logic. Furthermore, we introduce a progressive rule refinement strategy that dynamically adjusts the reward criteria during training, enabling continuous model improvement and mitigating reward hacking. Extensive experiments on both in-distribution and out-of-distribution benchmarks demonstrate that fine-tuning the 7B LVLMs with Vision-R1 achieves consistent performance gains, with even up to 50% improvement and surpassing the state-of-the-art 10x size model. 
+
+---
+# good4cir: Generating Detailed Synthetic Captions for Composed Image Retrieval 
+
+**Authors**: Pranavi Kolouju, Eric Xing, Robert Pless, Nathan Jacobs, Abby Stylianou  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.17871)  
+
+**Abstract**: Composed image retrieval (CIR) enables users to search images using a reference image combined with textual modifications. Recent advances in vision-language models have improved CIR, but dataset limitations remain a barrier. Existing datasets often rely on simplistic, ambiguous, or insufficient manual annotations, hindering fine-grained retrieval. We introduce good4cir, a structured pipeline leveraging vision-language models to generate high-quality synthetic annotations. Our method involves: (1) extracting fine-grained object descriptions from query images, (2) generating comparable descriptions for target images, and (3) synthesizing textual instructions capturing meaningful transformations between images. This reduces hallucination, enhances modification diversity, and ensures object-level consistency. Applying our method improves existing datasets and enables creating new datasets across diverse domains. Results demonstrate improved retrieval accuracy for CIR models trained on our pipeline-generated datasets. We release our dataset construction framework to support further research in CIR and multi-modal retrieval. 
+
+---
+# Aligning Foundation Model Priors and Diffusion-Based Hand Interactions for Occlusion-Resistant Two-Hand Reconstruction 
+
+**Authors**: Gaoge Han, Yongkang Cheng, Zhe Chen, Shaoli Huang, Tongliang Liu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.17788)  
+
+**Abstract**: Two-hand reconstruction from monocular images faces persistent challenges due to complex and dynamic hand postures and occlusions, causing significant difficulty in achieving plausible interaction alignment. Existing approaches struggle with such alignment issues, often resulting in misalignment and penetration artifacts. To tackle this, we propose a novel framework that attempts to precisely align hand poses and interactions by synergistically integrating foundation model-driven 2D priors with diffusion-based interaction refinement for occlusion-resistant two-hand reconstruction. First, we introduce a Fusion Alignment Encoder that learns to align fused multimodal priors keypoints, segmentation maps, and depth cues from foundation models during training. This provides robust structured guidance, further enabling efficient inference without foundation models at test time while maintaining high reconstruction accuracy. Second, we employ a two-hand diffusion model explicitly trained to transform interpenetrated poses into plausible, non-penetrated interactions, leveraging gradient-guided denoising to correct artifacts and ensure realistic spatial relations. Extensive evaluations demonstrate that our method achieves state-of-the-art performance on InterHand2.6M, FreiHAND, and HIC datasets, significantly advancing occlusion handling and interaction robustness. 
+
+---
+# Multi-modality Anomaly Segmentation on the Road 
+
+**Authors**: Heng Gao, Zhuolin He, Shoumeng Qiu, Xiangyang Xue, Jian Pu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.17712)  
+
+**Abstract**: Semantic segmentation allows autonomous driving cars to understand the surroundings of the vehicle comprehensively. However, it is also crucial for the model to detect obstacles that may jeopardize the safety of autonomous driving systems. Based on our experiments, we find that current uni-modal anomaly segmentation frameworks tend to produce high anomaly scores for non-anomalous regions in images. Motivated by this empirical finding, we develop a multi-modal uncertainty-based anomaly segmentation framework, named MMRAS+, for autonomous driving systems. MMRAS+ effectively reduces the high anomaly outputs of non-anomalous classes by introducing text-modal using the CLIP text encoder. Indeed, MMRAS+ is the first multi-modal anomaly segmentation solution for autonomous driving. Moreover, we develop an ensemble module to further boost the anomaly segmentation performance. Experiments on RoadAnomaly, SMIYC, and Fishyscapes validation datasets demonstrate the superior performance of our method. The code is available in this https URL. 
+
+---
+# Safe RLHF-V: Safe Reinforcement Learning from Human Feedback in Multimodal Large Language Models 
+
+**Authors**: Jiaming Ji, Xinyu Chen, Rui Pan, Han Zhu, Conghui Zhang, Jiahao Li, Donghai Hong, Boyuan Chen, Jiayi Zhou, Kaile Wang, Juntao Dai, Chi-Min Chan, Sirui Han, Yike Guo, Yaodong Yang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.17682)  
+
+**Abstract**: Multimodal large language models (MLLMs) are critical for developing general-purpose AI assistants, yet they face growing safety risks. How can we ensure that MLLMs are safely aligned to prevent undesired behaviors such as discrimination, misinformation, or violations of ethical standards? In a further step, we need to explore how to fine-tune MLLMs to enhance reasoning performance while ensuring they satisfy safety constraints. Fundamentally, this can be formulated as a min-max optimization problem. In this study, we propose Safe RLHF-V, the first multimodal safety alignment framework that jointly optimizes helpfulness and safety using separate multimodal reward and cost models within a Lagrangian-based constrained optimization framework. Given that there is a lack of preference datasets that separate helpfulness and safety in multimodal scenarios, we introduce BeaverTails-V, the first open-source dataset with dual preference annotations for helpfulness and safety, along with multi-level safety labels (minor, moderate, severe). Additionally, we design a Multi-level Guardrail System to proactively defend against unsafe queries and adversarial attacks. By applying the Beaver-Guard-V moderation for 5 rounds of filtering and re-generation on the precursor model, the overall safety of the upstream model is significantly improved by an average of 40.9%. Experimental results demonstrate that fine-tuning different MLLMs with Safe RLHF can effectively enhance model helpfulness while ensuring improved safety. Specifically, Safe RLHF-V improves model safety by 34.2% and helpfulness by 34.3%. All of datasets, models, and code can be found at this https URL to support the safety development of MLLMs and reduce potential societal risks. 
+
+---
+# Audio-Enhanced Vision-Language Modeling with Latent Space Broadening for High Quality Data Expansion 
+
+**Authors**: Yu Sun, Yin Li, Ruixiao Sun, Chunhui Liu, Fangming Zhou, Ze Jin, Linjie Wang, Xiang Shen, Zhuolin Hao, Hongyu Xiong  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.17551)  
+
+**Abstract**: Transformer-based multimodal models are widely used in industrial-scale recommendation, search, and advertising systems for content understanding and relevance ranking. Enhancing labeled training data quality and cross-modal fusion significantly improves model performance, influencing key metrics such as quality view rates and ad revenue. High-quality annotations are crucial for advancing content modeling, yet traditional statistical-based active learning (AL) methods face limitations: they struggle to detect overconfident misclassifications and are less effective in distinguishing semantically similar items in deep neural networks. Additionally, audio information plays an increasing role, especially in short-video platforms, yet most pre-trained multimodal architectures primarily focus on text and images. While training from scratch across all three modalities is possible, it sacrifices the benefits of leveraging existing pre-trained visual-language (VL) and audio models. To address these challenges, we propose kNN-based Latent Space Broadening (LSB) to enhance AL efficiency and Vision-Language Modeling with Audio Enhancement (VLMAE), a mid-fusion approach integrating audio into VL models. This system deployed in production systems, leading to significant business gains. 
+
+---
+# Your voice is your voice: Supporting Self-expression through Speech Generation and LLMs in Augmented and Alternative Communication 
+
+**Authors**: Yiwen Xu, Monideep Chakraborti, Tianyi Zhang, Katelyn Eng, Aanchan Mohan, Mirjana Prpa  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.17479)  
+
+**Abstract**: In this paper, we present Speak Ease: an augmentative and alternative communication (AAC) system to support users' expressivity by integrating multimodal input, including text, voice, and contextual cues (conversational partner and emotional tone), with large language models (LLMs). Speak Ease combines automatic speech recognition (ASR), context-aware LLM-based outputs, and personalized text-to-speech technologies to enable more personalized, natural-sounding, and expressive communication. Through an exploratory feasibility study and focus group evaluation with speech and language pathologists (SLPs), we assessed Speak Ease's potential to enable expressivity in AAC. The findings highlight the priorities and needs of AAC users and the system's ability to enhance user expressivity by supporting more personalized and contextually relevant communication. This work provides insights into the use of multimodal inputs and LLM-driven features to improve AAC systems and support expressivity. 
+
+---
+# Enhanced Smart Contract Reputability Analysis using Multimodal Data Fusion on Ethereum 
+
+**Authors**: Cyrus Malik, Josef Bajada, Joshua Ellul  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.17426)  
+
+**Abstract**: The evaluation of smart contract reputability is essential to foster trust in decentralized ecosystems. However, existing methods that rely solely on static code analysis or transactional data, offer limited insight into evolving trustworthiness. We propose a multimodal data fusion framework that integrates static code features with transactional data to enhance reputability prediction. Our framework initially focuses on static code analysis, utilizing GAN-augmented opcode embeddings to address class imbalance, achieving 97.67% accuracy and a recall of 0.942 in detecting illicit contracts, surpassing traditional oversampling methods. This forms the crux of a reputability-centric fusion strategy, where combining static and transactional data improves recall by 7.25% over single-source models, demonstrating robust performance across validation sets. By providing a holistic view of smart contract behaviour, our approach enhances the model's ability to assess reputability, identify fraudulent activities, and predict anomalous patterns. These capabilities contribute to more accurate reputability assessments, proactive risk mitigation, and enhanced blockchain security. 
+
+---
+# Debugging and Runtime Analysis of Neural Networks with VLMs (A Case Study) 
+
+**Authors**: Boyue Caroline Hu, Divya Gopinath, Corina S. Pasareanu, Nina Narodytska, Ravi Mangal, Susmit Jha  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.17416)  
+
+**Abstract**: Debugging of Deep Neural Networks (DNNs), particularly vision models, is very challenging due to the complex and opaque decision-making processes in these networks. In this paper, we explore multi-modal Vision-Language Models (VLMs), such as CLIP, to automatically interpret the opaque representation space of vision models using natural language. This in turn, enables a semantic analysis of model behavior using human-understandable concepts, without requiring costly human annotations. Key to our approach is the notion of semantic heatmap, that succinctly captures the statistical properties of DNNs in terms of the concepts discovered with the VLM and that are computed off-line using a held-out data set. We show the utility of semantic heatmaps for fault localization -- an essential step in debugging -- in vision models. Our proposed technique helps localize the fault in the network (encoder vs head) and also highlights the responsible high-level concepts, by leveraging novel differential heatmaps, which summarize the semantic differences between the correct and incorrect behaviour of the analyzed DNN. We further propose a lightweight runtime analysis to detect and filter-out defects at runtime, thus improving the reliability of the analyzed DNNs. The runtime analysis works by measuring and comparing the similarity between the heatmap computed for a new (unseen) input and the heatmaps computed a-priori for correct vs incorrect DNN behavior. We consider two types of defects: misclassifications and vulnerabilities to adversarial attacks. We demonstrate the debugging and runtime analysis on a case study involving a complex ResNet-based classifier trained on the RIVAL10 dataset. 
+
+---
+# Leveraging OpenFlamingo for Multimodal Embedding Analysis of C2C Car Parts Data 
+
+**Authors**: Maisha Binte Rashid, Pablo Rivas  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.17408)  
+
+**Abstract**: In this paper, we aim to investigate the capabilities of multimodal machine learning models, particularly the OpenFlamingo model, in processing a large-scale dataset of consumer-to-consumer (C2C) online posts related to car parts. We have collected data from two platforms, OfferUp and Craigslist, resulting in a dataset of over 1.2 million posts with their corresponding images. The OpenFlamingo model was used to extract embeddings for the text and image of each post. We used $k$-means clustering on the joint embeddings to identify underlying patterns and commonalities among the posts. We have found that most clusters contain a pattern, but some clusters showed no internal patterns. The results provide insight into the fact that OpenFlamingo can be used for finding patterns in large datasets but needs some modification in the architecture according to the dataset. 
+
+---
+# Generative Modeling of Class Probability for Multi-Modal Representation Learning 
+
+**Authors**: Jungkyoo Shin, Bumsoo Kim, Eunwoo Kim  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.17417)  
+
+**Abstract**: Multi-modal understanding plays a crucial role in artificial intelligence by enabling models to jointly interpret inputs from different modalities. However, conventional approaches such as contrastive learning often struggle with modality discrepancies, leading to potential misalignments. In this paper, we propose a novel class anchor alignment approach that leverages class probability distributions for multi-modal representation learning. Our method, Class-anchor-ALigned generative Modeling (CALM), encodes class anchors as prompts to generate and align class probability distributions for each modality, enabling more effective alignment. Furthermore, we introduce a cross-modal probabilistic variational autoencoder to model uncertainty in the alignment, enhancing the ability to capture deeper relationships between modalities and data variations. Extensive experiments on four benchmark datasets demonstrate that our approach significantly outperforms state-of-the-art methods, especially in out-of-domain evaluations. This highlights its superior generalization capabilities in multi-modal representation learning. 
+
+---
