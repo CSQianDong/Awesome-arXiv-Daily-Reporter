@@ -1,0 +1,472 @@
+# QuestBench: Can LLMs ask the right question to acquire information in reasoning tasks? 
+
+**Authors**: Belinda Z. Li, Been Kim, Zi Wang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.22674)  
+
+**Abstract**: Recently, a large amount of work has focused on improving large language models' (LLMs') performance on reasoning benchmarks such as math and logic. However, past work has largely assumed that tasks are well-defined. In the real world, queries to LLMs are often underspecified, only solvable through acquiring missing information. We formalize this as a constraint satisfaction problem (CSP) with missing variable assignments. Using a special case of this formalism where only one necessary variable assignment is missing, we can rigorously evaluate an LLM's ability to identify the minimal necessary question to ask and quantify axes of difficulty levels for each problem. We present QuestBench, a set of underspecified reasoning tasks solvable by asking at most one question, which includes: (1) Logic-Q: Logical reasoning tasks with one missing proposition, (2) Planning-Q: PDDL planning problems with initial states that are partially-observed, (3) GSM-Q: Human-annotated grade school math problems with one missing variable assignment, and (4) GSME-Q: a version of GSM-Q where word problems are translated into equations by human annotators. The LLM is tasked with selecting the correct clarification question(s) from a list of options. While state-of-the-art models excel at GSM-Q and GSME-Q, their accuracy is only 40-50% on Logic-Q and Planning-Q. Analysis demonstrates that the ability to solve well-specified reasoning problems may not be sufficient for success on our benchmark: models have difficulty identifying the right question to ask, even when they can solve the fully specified version of the problem. Furthermore, in the Planning-Q domain, LLMs tend not to hedge, even when explicitly presented with the option to predict ``not sure.'' This highlights the need for deeper investigation into models' information acquisition capabilities. 
+
+---
+# Agent-Centric Personalized Multiple Clustering with Multi-Modal LLMs 
+
+**Authors**: Ziye Chen, Yiqun Duan, Riheng Zhu, Zhenbang Sun, Mingming Gong  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.22241)  
+
+**Abstract**: Personalized multiple clustering aims to generate diverse partitions of a dataset based on different user-specific aspects, rather than a single clustering. It has recently drawn research interest for accommodating varying user preferences. Recent approaches primarily use CLIP embeddings with proxy learning to extract representations biased toward user clustering preferences. However, CLIP primarily focuses on coarse image-text alignment, lacking a deep contextual understanding of user interests. To overcome these limitations, we propose an agent-centric personalized clustering framework that leverages multi-modal large language models (MLLMs) as agents to comprehensively traverse a relational graph to search for clusters based on user interests. Due to the advanced reasoning mechanism of MLLMs, the obtained clusters align more closely with user-defined criteria than those obtained from CLIP-based representations. To reduce computational overhead, we shorten the agents' traversal path by constructing a relational graph using user-interest-biased embeddings extracted by MLLMs. A large number of weakly connected edges can be filtered out based on embedding similarity, facilitating an efficient traversal search for agents. Experimental results show that the proposed method achieves NMI scores of 0.9667 and 0.9481 on the Card Order and Card Suits benchmarks, respectively, largely improving the SOTA model by over 140%. 
+
+---
+# Unicorn: Text-Only Data Synthesis for Vision Language Model Training 
+
+**Authors**: Xiaomin Yu, Pengxiang Ding, Wenjie Zhang, Siteng Huang, Songyang Gao, Chengwei Qin, Kejian Wu, Zhaoxin Fan, Ziyue Qiao, Donglin Wang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.22655)  
+
+**Abstract**: Training vision-language models (VLMs) typically requires large-scale, high-quality image-text pairs, but collecting or synthesizing such data is costly. In contrast, text data is abundant and inexpensive, prompting the question: can high-quality multimodal training data be synthesized purely from text? To tackle this, we propose a cross-integrated three-stage multimodal data synthesis framework, which generates two datasets: Unicorn-1.2M and Unicorn-471K-Instruction. In Stage 1: Diverse Caption Data Synthesis, we construct 1.2M semantically diverse high-quality captions by expanding sparse caption seeds using large language models (LLMs). In Stage 2: Instruction-Tuning Data Generation, we further process 471K captions into multi-turn instruction-tuning tasks to support complex reasoning. Finally, in Stage 3: Modality Representation Transfer, these textual captions representations are transformed into visual representations, resulting in diverse synthetic image representations. This three-stage process enables us to construct Unicorn-1.2M for pretraining and Unicorn-471K-Instruction for instruction-tuning, without relying on real images. By eliminating the dependency on real images while maintaining data quality and diversity, our framework offers a cost-effective and scalable solution for VLMs training. Code is available at this https URL. 
+
+---
+# Using AI to Summarize US Presidential Campaign TV Advertisement Videos, 1952-2012 
+
+**Authors**: Adam Breuer, Bryce J. Dietrich, Michael H. Crespin, Matthew Butler, J.A. Pyrse, Kosuke Imai  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.22589)  
+
+**Abstract**: This paper introduces the largest and most comprehensive dataset of US presidential campaign television advertisements, available in digital format. The dataset also includes machine-searchable transcripts and high-quality summaries designed to facilitate a variety of academic research. To date, there has been great interest in collecting and analyzing US presidential campaign advertisements, but the need for manual procurement and annotation led many to rely on smaller subsets. We design a large-scale parallelized, AI-based analysis pipeline that automates the laborious process of preparing, transcribing, and summarizing videos. We then apply this methodology to the 9,707 presidential ads from the Julian P. Kanter Political Commercial Archive. We conduct extensive human evaluations to show that these transcripts and summaries match the quality of manually generated alternatives. We illustrate the value of this data by including an application that tracks the genesis and evolution of current focal issue areas over seven decades of presidential elections. Our analysis pipeline and codebase also show how to use LLM-based tools to obtain high-quality summaries for other video datasets. 
+
+---
+# Multi-Task Semantic Communications via Large Models 
+
+**Authors**: Wanli Ni, Zhijin Qin, Haofeng Sun, Xiaoming Tao, Zhu Han  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.22064)  
+
+**Abstract**: Artificial intelligence (AI) promises to revolutionize the design, optimization and management of next-generation communication systems. In this article, we explore the integration of large AI models (LAMs) into semantic communications (SemCom) by leveraging their multi-modal data processing and generation capabilities. Although LAMs bring unprecedented abilities to extract semantics from raw data, this integration entails multifaceted challenges including high resource demands, model complexity, and the need for adaptability across diverse modalities and tasks. To overcome these challenges, we propose a LAM-based multi-task SemCom (MTSC) architecture, which includes an adaptive model compression strategy and a federated split fine-tuning approach to facilitate the efficient deployment of LAM-based semantic models in resource-limited networks. Furthermore, a retrieval-augmented generation scheme is implemented to synthesize the most recent local and global knowledge bases to enhance the accuracy of semantic extraction and content generation, thereby improving the inference performance. Finally, simulation results demonstrate the efficacy of the proposed LAM-based MTSC architecture, highlighting the performance enhancements across various downstream tasks under varying channel conditions. 
+
+---
+# Exploiting Mixture-of-Experts Redundancy Unlocks Multimodal Generative Abilities 
+
+**Authors**: Raman Dutt, Harleen Hanspal, Guoxuan Xia, Petru-Daniel Tudosiu, Alexander Black, Yongxin Yang, Steven McDonagh, Sarah Parisot  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.22517)  
+
+**Abstract**: In this work, we undertake the challenge of augmenting the existing generative capabilities of pre-trained text-only large language models (LLMs) with multi-modal generation capability while satisfying two core constraints: C1 preserving the preservation of original language generative capabilities with negligible performance degradation, and C2 adhering to a small parameter budget to learn the new modality, ensuring scalability and efficiency. In contrast to current approaches that add dedicated modules, thereby significantly increasing the parameter count, we propose a method that leverages the underutilized capacity inherent in deep models. Specifically, we exploit the parameter redundancy within Mixture-of-Experts (MoEs) as a source of additional capacity for learning a new modality, enabling better parameter efficiency (C1). Moreover, we preserve the original language generation capabilities by applying low-rank adaptation exclusively to the tokens of the new modality (C2). Furthermore, we introduce a novel parameter initialization scheme based on the Gromov-Wasserstein distance to improve convergence and training stability. Through an extensive analysis of the routing mechanism, we uncover the emergence of modality-specific pathways and decreased redundancy within the experts that can efficiently unlock multi-modal generative capabilities. Overall, our method can be seamlessly applied to a wide range of contemporary LLMs, providing a new pathway for transitioning from uni-modal to multi-modal architectures. 
+
+---
+# Historical Ink: Exploring Large Language Models for Irony Detection in 19th-Century Spanish 
+
+**Authors**: Kevin Cohen, Laura Manrique-Gómez, Rubén Manrique  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.22585)  
+
+**Abstract**: This study explores the use of large language models (LLMs) to enhance datasets and improve irony detection in 19th-century Latin American newspapers. Two strategies were employed to evaluate the efficacy of BERT and GPT-4o models in capturing the subtle nuances nature of irony, through both multi-class and binary classification tasks. First, we implemented dataset enhancements focused on enriching emotional and contextual cues; however, these showed limited impact on historical language analysis. The second strategy, a semi-automated annotation process, effectively addressed class imbalance and augmented the dataset with high-quality annotations. Despite the challenges posed by the complexity of irony, this work contributes to the advancement of sentiment analysis through two key contributions: introducing a new historical Spanish dataset tagged for sentiment analysis and irony detection, and proposing a semi-automated annotation methodology where human expertise is crucial for refining LLMs results, enriched by incorporating historical and cultural contexts as core features. 
+
+---
+# Niyama : Breaking the Silos of LLM Inference Serving 
+
+**Authors**: Kanishk Goel, Jayashree Mohan, Nipun Kwatra, Ravi Shreyas Anupindi, Ramachandran Ramjee  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.22562)  
+
+**Abstract**: The widespread adoption of Large Language Models (LLMs) has enabled diverse applications with very different latency requirements. Existing LLM serving frameworks rely on siloed infrastructure with coarse-grained workload segregation -- interactive and batch -- leading to inefficient resource utilization and limited support for fine-grained Quality-of-Service (QoS) differentiation. This results in operational inefficiencies, over-provisioning and poor load management during traffic surges.
+We present Niyama, a novel QoS-driven inference serving system that enables efficient co-scheduling of diverse workloads on shared infrastructure. Niyama introduces fine-grained QoS classification allowing applications to specify precise latency requirements, and dynamically adapts scheduling decisions based on real-time system state. Leveraging the predictable execution characteristics of LLM inference, Niyama implements a dynamic chunking mechanism to improve overall throughput while maintaining strict QoS guarantees. Additionally, Niyama employs a hybrid prioritization policy that balances fairness and efficiency, and employs selective request relegation that enables graceful service degradation during overload conditions. Our evaluation demonstrates that Niyama increases serving capacity by 32% compared to current siloed deployments, while maintaining QoS guarantees. Notably, under extreme load, our system reduces SLO violations by an order of magnitude compared to current strategies. 
+
+---
+# Evaluating LLM-based Agents for Multi-Turn Conversations: A Survey 
+
+**Authors**: Shengyue Guan, Haoyi Xiong, Jindong Wang, Jiang Bian, Bin Zhu, Jian-guang Lou  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.22458)  
+
+**Abstract**: This survey examines evaluation methods for large language model (LLM)-based agents in multi-turn conversational settings. Using a PRISMA-inspired framework, we systematically reviewed nearly 250 scholarly sources, capturing the state of the art from various venues of publication, and establishing a solid foundation for our analysis. Our study offers a structured approach by developing two interrelated taxonomy systems: one that defines \emph{what to evaluate} and another that explains \emph{how to evaluate}. The first taxonomy identifies key components of LLM-based agents for multi-turn conversations and their evaluation dimensions, including task completion, response quality, user experience, memory and context retention, as well as planning and tool integration. These components ensure that the performance of conversational agents is assessed in a holistic and meaningful manner. The second taxonomy system focuses on the evaluation methodologies. It categorizes approaches into annotation-based evaluations, automated metrics, hybrid strategies that combine human assessments with quantitative measures, and self-judging methods utilizing LLMs. This framework not only captures traditional metrics derived from language understanding, such as BLEU and ROUGE scores, but also incorporates advanced techniques that reflect the dynamic, interactive nature of multi-turn dialogues. 
+
+---
+# Firm or Fickle? Evaluating Large Language Models Consistency in Sequential Interactions 
+
+**Authors**: Yubo Li, Yidi Miao, Xueying Ding, Ramayya Krishnan, Rema Padman  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.22353)  
+
+**Abstract**: Large Language Models (LLMs) have shown remarkable capabilities across various tasks, but their deployment in high-stake domains requires consistent performance across multiple interaction rounds. This paper introduces a comprehensive framework for evaluating and improving LLM response consistency, making three key contributions. First, we propose a novel Position-Weighted Consistency (PWC) score that captures both the importance of early-stage stability and recovery patterns in multi-turn interactions. Second, we present a carefully curated benchmark dataset spanning diverse domains and difficulty levels, specifically designed to evaluate LLM consistency under various challenging follow-up scenarios. Third, we introduce Confidence-Aware Response Generation (CARG), a framework that significantly improves response stability by incorporating model confidence signals into the generation process. Empirical results demonstrate that CARG significantly improves response stability without sacrificing accuracy, underscoring its potential for reliable LLM deployment in critical applications. 
+
+---
+# Training Large Language Models for Advanced Typosquatting Detection 
+
+**Authors**: Jackson Welch  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.22406)  
+
+**Abstract**: Typosquatting is a long-standing cyber threat that exploits human error in typing URLs to deceive users, distribute malware, and conduct phishing attacks. With the proliferation of domain names and new Top-Level Domains (TLDs), typosquatting techniques have grown more sophisticated, posing significant risks to individuals, businesses, and national cybersecurity infrastructure. Traditional detection methods primarily focus on well-known impersonation patterns, leaving gaps in identifying more complex attacks. This study introduces a novel approach leveraging large language models (LLMs) to enhance typosquatting detection. By training an LLM on character-level transformations and pattern-based heuristics rather than domain-specific data, a more adaptable and resilient detection mechanism develops. Experimental results indicate that the Phi-4 14B model outperformed other tested models when properly fine tuned achieving a 98% accuracy rate with only a few thousand training samples. This research highlights the potential of LLMs in cybersecurity applications, specifically in mitigating domain-based deception tactics, and provides insights into optimizing machine learning strategies for threat detection. 
+
+---
+# CoSIL: Software Issue Localization via LLM-Driven Code Repository Graph Searching 
+
+**Authors**: Zhonghao Jiang, Xiaoxue Ren, Meng Yan, Wei Jiang, Yong Li, Zhongxin Liu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.22424)  
+
+**Abstract**: Large language models (LLMs) have significantly advanced autonomous software engineering, leading to a growing number of software engineering agents that assist developers in automatic program repair. Issue localization forms the basis for accurate patch generation. However, because of limitations caused by the context window length of LLMs, existing issue localization methods face challenges in balancing concise yet effective contexts and adequately comprehensive search spaces. In this paper, we introduce CoSIL, an LLM driven, simple yet powerful function level issue localization method without training or indexing. CoSIL reduces the search space through module call graphs, iteratively searches the function call graph to obtain relevant contexts, and uses context pruning to control the search direction and manage contexts effectively. Importantly, the call graph is dynamically constructed by the LLM during search, eliminating the need for pre-parsing. Experiment results demonstrate that CoSIL achieves a Top-1 localization success rate of 43 percent and 44.6 percent on SWE bench Lite and SWE bench Verified, respectively, using Qwen2.5 Coder 32B, outperforming existing methods by 8.6 to 98.2 percent. When CoSIL is applied to guide the patch generation stage, the resolved rate further improves by 9.3 to 31.5 percent. 
+
+---
+# Beyond the Script: Testing LLMs for Authentic Patient Communication Styles in Healthcare 
+
+**Authors**: Anna Bodonhelyi, Christian Stegemann-Philipps, Alessandra Sonanini, Lea Herschbach, Márton Szép, Anne Herrmann-Werner, Teresa Festl-Wietek, Enkelejda Kasneci, Friederike Holderried  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.22250)  
+
+**Abstract**: Effective patient communication is pivotal in healthcare, yet traditional medical training often lacks exposure to diverse, challenging interpersonal dynamics. To bridge this gap, this study proposes the use of Large Language Models (LLMs) to simulate authentic patient communication styles, specifically the "accuser" and "rationalizer" personas derived from the Satir model, while also ensuring multilingual applicability to accommodate diverse cultural contexts and enhance accessibility for medical professionals. Leveraging advanced prompt engineering, including behavioral prompts, author's notes, and stubbornness mechanisms, we developed virtual patients (VPs) that embody nuanced emotional and conversational traits. Medical professionals evaluated these VPs, rating their authenticity (accuser: $3.8 \pm 1.0$; rationalizer: $3.7 \pm 0.8$ on a 5-point Likert scale (from one to five)) and correctly identifying their styles. Emotion analysis revealed distinct profiles: the accuser exhibited pain, anger, and distress, while the rationalizer displayed contemplation and calmness, aligning with predefined, detailed patient description including medical history. Sentiment scores (on a scale from zero to nine) further validated these differences in the communication styles, with the accuser adopting negative ($3.1 \pm 0.6$) and the rationalizer more neutral ($4.0 \pm 0.4$) tone. These results underscore LLMs' capability to replicate complex communication styles, offering transformative potential for medical education. This approach equips trainees to navigate challenging clinical scenarios by providing realistic, adaptable patient interactions, enhancing empathy and diagnostic acumen. Our findings advocate for AI-driven tools as scalable, cost-effective solutions to cultivate nuanced communication skills, setting a foundation for future innovations in healthcare training. 
+
+---
+# Make Some Noise: Towards LLM audio reasoning and generation using sound tokens 
+
+**Authors**: Shivam Mehta, Nebojsa Jojic, Hannes Gamper  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.22275)  
+
+**Abstract**: Integrating audio comprehension and generation into large language models (LLMs) remains challenging due to the continuous nature of audio and the resulting high sampling rates. Here, we introduce a novel approach that combines Variational Quantization with Conditional Flow Matching to convert audio into ultra-low bitrate discrete tokens of 0.23kpbs, allowing for seamless integration with text tokens in LLMs. We fine-tuned a pretrained text-based LLM using Low-Rank Adaptation (LoRA) to assess its effectiveness in achieving true multimodal capabilities, i.e., audio comprehension and generation. Our tokenizer outperforms a traditional VQ-VAE across various datasets with diverse acoustic events. Despite the substantial loss of fine-grained details through audio tokenization, our multimodal LLM trained with discrete tokens achieves competitive results in audio comprehension with state-of-the-art methods, though audio generation is poor. Our results highlight the need for larger, more diverse datasets and improved evaluation metrics to advance multimodal LLM performance. 
+
+---
+# EgoToM: Benchmarking Theory of Mind Reasoning from Egocentric Videos 
+
+**Authors**: Yuxuan Li, Vijay Veerabadran, Michael L. Iuzzolino, Brett D. Roads, Asli Celikyilmaz, Karl Ridgeway  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.22152)  
+
+**Abstract**: We introduce EgoToM, a new video question-answering benchmark that extends Theory-of-Mind (ToM) evaluation to egocentric domains. Using a causal ToM model, we generate multi-choice video QA instances for the Ego4D dataset to benchmark the ability to predict a camera wearer's goals, beliefs, and next actions. We study the performance of both humans and state of the art multimodal large language models (MLLMs) on these three interconnected inference problems. Our evaluation shows that MLLMs achieve close to human-level accuracy on inferring goals from egocentric videos. However, MLLMs (including the largest ones we tested with over 100B parameters) fall short of human performance when inferring the camera wearers' in-the-moment belief states and future actions that are most consistent with the unseen video future. We believe that our results will shape the future design of an important class of egocentric digital assistants which are equipped with a reasonable model of the user's internal mental states. 
+
+---
+# PharmAgents: Building a Virtual Pharma with Large Language Model Agents 
+
+**Authors**: Bowen Gao, Yanwen Huang, Yiqiao Liu, Wenxuan Xie, Wei-Ying Ma, Ya-Qin Zhang, Yanyan Lan  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.22164)  
+
+**Abstract**: The discovery of novel small molecule drugs remains a critical scientific challenge with far-reaching implications for treating diseases and advancing human health. Traditional drug development--especially for small molecule therapeutics--is a highly complex, resource-intensive, and time-consuming process that requires multidisciplinary collaboration. Recent breakthroughs in artificial intelligence (AI), particularly the rise of large language models (LLMs), present a transformative opportunity to streamline and accelerate this process. In this paper, we introduce PharmAgents, a virtual pharmaceutical ecosystem driven by LLM-based multi-agent collaboration. PharmAgents simulates the full drug discovery workflow--from target discovery to preclinical evaluation--by integrating explainable, LLM-driven agents equipped with specialized machine learning models and computational tools. Through structured knowledge exchange and automated optimization, PharmAgents identifies potential therapeutic targets, discovers promising lead compounds, enhances binding affinity and key molecular properties, and performs in silico analyses of toxicity and synthetic feasibility. Additionally, the system supports interpretability, agent interaction, and self-evolvement, enabling it to refine future drug designs based on prior experience. By showcasing the potential of LLM-powered multi-agent systems in drug discovery, this work establishes a new paradigm for autonomous, explainable, and scalable pharmaceutical research, with future extensions toward comprehensive drug lifecycle management. 
+
+---
+# Beyond Single-Sentence Prompts: Upgrading Value Alignment Benchmarks with Dialogues and Stories 
+
+**Authors**: Yazhou Zhang, Qimeng Liu, Qiuchi Li, Peng Zhang, Jing Qin  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.22115)  
+
+**Abstract**: Evaluating the value alignment of large language models (LLMs) has traditionally relied on single-sentence adversarial prompts, which directly probe models with ethically sensitive or controversial questions. However, with the rapid advancements in AI safety techniques, models have become increasingly adept at circumventing these straightforward tests, limiting their effectiveness in revealing underlying biases and ethical stances. To address this limitation, we propose an upgraded value alignment benchmark that moves beyond single-sentence prompts by incorporating multi-turn dialogues and narrative-based scenarios. This approach enhances the stealth and adversarial nature of the evaluation, making it more robust against superficial safeguards implemented in modern LLMs. We design and implement a dataset that includes conversational traps and ethically ambiguous storytelling, systematically assessing LLMs' responses in more nuanced and context-rich settings. Experimental results demonstrate that this enhanced methodology can effectively expose latent biases that remain undetected in traditional single-shot evaluations. Our findings highlight the necessity of contextual and dynamic testing for value alignment in LLMs, paving the way for more sophisticated and realistic assessments of AI ethics and safety. 
+
+---
+# FRASE: Structured Representations for Generalizable SPARQL Query Generation 
+
+**Authors**: Papa Abdou Karim Karou Diallo, Amal Zouaq  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.22144)  
+
+**Abstract**: Translating natural language questions into SPARQL queries enables Knowledge Base querying for factual and up-to-date responses. However, existing datasets for this task are predominantly template-based, leading models to learn superficial mappings between question and query templates rather than developing true generalization capabilities. As a result, models struggle when encountering naturally phrased, template-free questions. This paper introduces FRASE (FRAme-based Semantic Enhancement), a novel approach that leverages Frame Semantic Role Labeling (FSRL) to address this limitation. We also present LC-QuAD 3.0, a new dataset derived from LC-QuAD 2.0, in which each question is enriched using FRASE through frame detection and the mapping of frame-elements to their argument. We evaluate the impact of this approach through extensive experiments on recent large language models (LLMs) under different fine-tuning configurations. Our results demonstrate that integrating frame-based structured representations consistently improves SPARQL generation performance, particularly in challenging generalization scenarios when test questions feature unseen templates (unknown template splits) and when they are all naturally phrased (reformulated questions). 
+
+---
+# Cognitive Prompts Using Guilford's Structure of Intellect Model 
+
+**Authors**: Oliver Kramer  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.22036)  
+
+**Abstract**: Large language models (LLMs) demonstrate strong language generation capabilities but often struggle with structured reasoning, leading to inconsistent or suboptimal problem-solving. To mitigate this limitation, Guilford's Structure of Intellect (SOI) model - a foundational framework from intelligence theory - is leveraged as the basis for cognitive prompt engineering. The SOI model categorizes cognitive operations such as pattern recognition, memory retrieval, and evaluation, offering a systematic approach to enhancing LLM reasoning and decision-making. This position paper presents a novel cognitive prompting approach for enforcing SOI-inspired reasoning for improving clarity, coherence, and adaptability in model responses. 
+
+---
+# Data-Agnostic Robotic Long-Horizon Manipulation with Vision-Language-Guided Closed-Loop Feedback 
+
+**Authors**: Yuan Meng, Xiangtong Yao, Haihui Ye, Yirui Zhou, Shengqiang Zhang, Zhenshan Bing, Alois Knoll  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.21969)  
+
+**Abstract**: Recent advances in language-conditioned robotic manipulation have leveraged imitation and reinforcement learning to enable robots to execute tasks from human commands. However, these methods often suffer from limited generalization, adaptability, and the lack of large-scale specialized datasets, unlike data-rich domains such as computer vision, making long-horizon task execution challenging. To address these gaps, we introduce DAHLIA, a data-agnostic framework for language-conditioned long-horizon robotic manipulation, leveraging large language models (LLMs) for real-time task planning and execution. DAHLIA employs a dual-tunnel architecture, where an LLM-powered planner collaborates with co-planners to decompose tasks and generate executable plans, while a reporter LLM provides closed-loop feedback, enabling adaptive re-planning and ensuring task recovery from potential failures. Moreover, DAHLIA integrates chain-of-thought (CoT) in task reasoning and temporal abstraction for efficient action execution, enhancing traceability and robustness. Our framework demonstrates state-of-the-art performance across diverse long-horizon tasks, achieving strong generalization in both simulated and real-world scenarios. Videos and code are available at this https URL. 
+
+---
+# Penrose Tiled Low-Rank Compression and Section-Wise Q&A Fine-Tuning: A General Framework for Domain-Specific Large Language Model Adaptation 
+
+**Authors**: Chuan-Wei Kuo, Siyu Chen, Chenqi Yan, Yu Yang Fredrik Liu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.22074)  
+
+**Abstract**: Large language models (LLMs) hold great promise for specialized scientific domains such as materials science, yet adapting them efficiently and accurately to domain-specific knowledge remains challenging due to limited data and high knowledge density. We propose a two-stage framework that combines structured model compression with a scientific fine-tuning regimen to address this challenge. In the compression stage, we decompose the LLM's weight matrices into local low-rank "rank blocks" and arrange these blocks in a Penrose-like non-periodic tiling pattern. Each block is then compacted via spectral transformations (e.g., discrete cosine or Fourier transforms), and a Kullback-Leibler (KL) divergence-based alignment loss preserves the distributional similarity between the compressed model's representations and those of the original full model. In the adaptation stage, the compressed model is further tuned using a human-like scientific reading protocol: it processes technical materials science documents section by section, engaging in a structured question-and-answer routine for each section. This section-wise Q&A fine-tuning strategy extracts explicit reasoning traces and gradually injects domain knowledge, while minimizing catastrophic forgetting of the model's general language capabilities. By balancing efficient compression with targeted adaptation, our two-stage approach enables precise specialization of LLMs to high-value domains under data-scarce conditions. We present this principled yet exploratory pipeline and outline its potential for advancing materials science knowledge integration, laying the groundwork for comprehensive empirical evaluation in future work. 
+
+---
+# Entropy-Aware Branching for Improved Mathematical Reasoning 
+
+**Authors**: Xianzhi Li, Ethan Callanan, Xiaodan Zhu, Mathieu Sibue, Antony Papadimitriou, Mahmoud Mahfouz, Zhiqiang Ma, Xiaomo Liu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.21961)  
+
+**Abstract**: While Large Language Models (LLMs) are effectively aligned through extensive pre-training and fine-tuning, they still struggle with varying levels of uncertainty during token generation. In our investigation of mathematical reasoning, we observe that errors are more likely to arise at tokens exhibiting high entropy and variance of entropy in the model's output distribution. Based on the observation, we propose a novel approach that dynamically branches the generation process on demand instead of defaulting to the single most probable token. By exploring in parallel multiple branches stemming from high probability tokens of critical decision points, the model can discover diverse reasoning paths that might otherwise be missed. We further harness external feedback from larger models to rank and select the most coherent and accurate reasoning branch. Our experimental results on mathematical word problems and calculation questions show that this branching strategy boosts the reasoning capabilities of small LLMs up to 4.6% compared to conventional argmax decoding. 
+
+---
+# AutoPsyC: Automatic Recognition of Psychodynamic Conflicts from Semi-structured Interviews with Large Language Models 
+
+**Authors**: Sayed Muddashir Hossain, Simon Ostermann, Patrick Gebhard, Cord Benecke, Josef van Genabith, Philipp Müller  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.21911)  
+
+**Abstract**: Psychodynamic conflicts are persistent, often unconscious themes that shape a person's behaviour and experiences. Accurate diagnosis of psychodynamic conflicts is crucial for effective patient treatment and is commonly done via long, manually scored semi-structured interviews. Existing automated solutions for psychiatric diagnosis tend to focus on the recognition of broad disorder categories such as depression, and it is unclear to what extent psychodynamic conflicts which even the patient themselves may not have conscious access to could be automatically recognised from conversation. In this paper, we propose AutoPsyC, the first method for recognising the presence and significance of psychodynamic conflicts from full-length Operationalized Psychodynamic Diagnostics (OPD) interviews using Large Language Models (LLMs). Our approach combines recent advances in parameter-efficient fine-tuning and Retrieval-Augmented Generation (RAG) with a summarisation strategy to effectively process entire 90 minute long conversations. In evaluations on a dataset of 141 diagnostic interviews we show that AutoPsyC consistently outperforms all baselines and ablation conditions on the recognition of four highly relevant psychodynamic conflicts. 
+
+---
+# RedditESS: A Mental Health Social Support Interaction Dataset -- Understanding Effective Social Support to Refine AI-Driven Support Tools 
+
+**Authors**: Zeyad Alghamdi, Tharindu Kumarage, Garima Agrawal, Mansooreh Karami, Ibrahim Almuteb, Huan Liu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.21888)  
+
+**Abstract**: Effective mental health support is crucial for alleviating psychological distress. While large language model (LLM)-based assistants have shown promise in mental health interventions, existing research often defines "effective" support primarily in terms of empathetic acknowledgments, overlooking other essential dimensions such as informational guidance, community validation, and tangible coping strategies. To address this limitation and better understand what constitutes effective support, we introduce RedditESS, a novel real-world dataset derived from Reddit posts, including supportive comments and original posters' follow-up responses. Grounded in established social science theories, we develop an ensemble labeling mechanism to annotate supportive comments as effective or not and perform qualitative assessments to ensure the reliability of the annotations. Additionally, we demonstrate the practical utility of RedditESS by using it to guide LLM alignment toward generating more context-sensitive and genuinely helpful supportive responses. By broadening the understanding of effective support, our study paves the way for advanced AI-driven mental health interventions. 
+
+---
+# Taxonomy Inference for Tabular Data Using Large Language Models 
+
+**Authors**: Zhenyu Wu, Jiaoyan Chen, Norman W. Paton  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.21810)  
+
+**Abstract**: Taxonomy inference for tabular data is a critical task of schema inference, aiming at discovering entity types (i.e., concepts) of the tables and building their hierarchy. It can play an important role in data management, data exploration, ontology learning, and many data-centric applications. Existing schema inference systems focus more on XML, JSON or RDF data, and often rely on lexical formats and structures of the data for calculating similarities, with limited exploitation of the semantics of the text across a table. Motivated by recent works on taxonomy completion and construction using Large Language Models (LLMs), this paper presents two LLM-based methods for taxonomy inference for tables: (i) EmTT which embeds columns by fine-tuning with contrastive learning encoder-alone LLMs like BERT and utilises clustering for hierarchy construction, and (ii) GeTT which generates table entity types and their hierarchy by iterative prompting using a decoder-alone LLM like GPT-4. Extensive evaluation on three real-world datasets with six metrics covering different aspects of the output taxonomies has demonstrated that EmTT and GeTT can both produce taxonomies with strong consistency relative to the Ground Truth. 
+
+---
+# Large Language Models Meet Contrastive Learning: Zero-Shot Emotion Recognition Across Languages 
+
+**Authors**: Heqing Zou, Fengmao Lv, Desheng Zheng, Eng Siong Chng, Deepu Rajan  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.21806)  
+
+**Abstract**: Multilingual speech emotion recognition aims to estimate a speaker's emotional state using a contactless method across different languages. However, variability in voice characteristics and linguistic diversity poses significant challenges for zero-shot speech emotion recognition, especially with multilingual datasets. In this paper, we propose leveraging contrastive learning to refine multilingual speech features and extend large language models for zero-shot multilingual speech emotion estimation. Specifically, we employ a novel two-stage training framework to align speech signals with linguistic features in the emotional space, capturing both emotion-aware and language-agnostic speech representations. To advance research in this field, we introduce a large-scale synthetic multilingual speech emotion dataset, M5SER. Our experiments demonstrate the effectiveness of the proposed method in both speech emotion recognition and zero-shot multilingual speech emotion recognition, including previously unseen datasets and languages. 
+
+---
+# ImF: Implicit Fingerprint for Large Language Models 
+
+**Authors**: Wu jiaxuan, Peng Wanli, Fu hang, Xue Yiming, Wen juan  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.21805)  
+
+**Abstract**: Training large language models (LLMs) is resource-intensive and expensive, making intellectual property (IP) protection essential. Most existing model fingerprint methods inject fingerprints into LLMs to protect model ownership. These methods create fingerprint pairs with weak semantic correlations, lacking the contextual coherence and semantic relatedness founded in normal question-answer (QA) pairs in LLMs. In this paper, we propose a Generation Revision Intervention (GRI) attack that can effectively exploit this flaw to erase fingerprints, highlighting the need for more secure model fingerprint methods. Thus, we propose a novel injected fingerprint paradigm called Implicit Fingerprints (ImF). ImF constructs fingerprint pairs with strong semantic correlations, disguising them as natural QA pairs within LLMs. This ensures the fingerprints are consistent with normal model behavior, making them indistinguishable and robust against detection and removal. Our experiment on multiple LLMs demonstrates that ImF retains high verification success rates under adversarial conditions, offering a reliable solution for protecting LLM ownership. 
+
+---
+# LERO: LLM-driven Evolutionary framework with Hybrid Rewards and Enhanced Observation for Multi-Agent Reinforcement Learning 
+
+**Authors**: Yuan Wei, Xiaohan Shan, Jianmin Li  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.21807)  
+
+**Abstract**: Multi-agent reinforcement learning (MARL) faces two critical bottlenecks distinct from single-agent RL: credit assignment in cooperative tasks and partial observability of environmental states. We propose LERO, a framework integrating Large language models (LLMs) with evolutionary optimization to address these MARL-specific challenges. The solution centers on two LLM-generated components: a hybrid reward function that dynamically allocates individual credit through reward decomposition, and an observation enhancement function that augments partial observations with inferred environmental context. An evolutionary algorithm optimizes these components through iterative MARL training cycles, where top-performing candidates guide subsequent LLM generations. Evaluations in Multi-Agent Particle Environments (MPE) demonstrate LERO's superiority over baseline methods, with improved task performance and training efficiency. 
+
+---
+# MSPLoRA: A Multi-Scale Pyramid Low-Rank Adaptation for Efficient Model Fine-Tuning 
+
+**Authors**: Jiancheng Zhao, Xingda Yu, Zhen Yang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.21838)  
+
+**Abstract**: Parameter-Efficient Fine-Tuning (PEFT) has become an essential approach for adapting large-scale pre-trained models while reducing computational costs. Among PEFT methods, LoRA significantly reduces trainable parameters by decomposing weight updates into low-rank matrices. However, traditional LoRA applies a fixed rank across all layers, failing to account for the varying complexity of hierarchical information, which leads to inefficient adaptation and redundancy. To address this, we propose MSPLoRA (Multi-Scale Pyramid LoRA), which introduces Global Shared LoRA, Mid-Level Shared LoRA, and Layer-Specific LoRA to capture global patterns, mid-level features, and fine-grained information, respectively. This hierarchical structure reduces inter-layer redundancy while maintaining strong adaptation capability. Experiments on various NLP tasks demonstrate that MSPLoRA achieves more efficient adaptation and better performance while significantly reducing the number of trainable parameters. Furthermore, additional analyses based on Singular Value Decomposition validate its information decoupling ability, highlighting MSPLoRA as a scalable and effective optimization strategy for parameter-efficient fine-tuning in large language models. Our code is available at this https URL. 
+
+---
+# A Multi-Modal Knowledge-Enhanced Framework for Vessel Trajectory Prediction 
+
+**Authors**: Haomin Yu, Tianyi Li, Kristian Torp, Christian S. Jensen  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.21834)  
+
+**Abstract**: Accurate vessel trajectory prediction facilitates improved navigational safety, routing, and environmental protection. However, existing prediction methods are challenged by the irregular sampling time intervals of the vessel tracking data from the global AIS system and the complexity of vessel movement. These aspects render model learning and generalization difficult. To address these challenges and improve vessel trajectory prediction, we propose the multi-modal knowledge-enhanced framework (MAKER) for vessel trajectory prediction. To contend better with the irregular sampling time intervals, MAKER features a Large language model-guided Knowledge Transfer (LKT) module that leverages pre-trained language models to transfer trajectory-specific contextual knowledge effectively. To enhance the ability to learn complex trajectory patterns, MAKER incorporates a Knowledge-based Self-paced Learning (KSL) module. This module employs kinematic knowledge to progressively integrate complex patterns during training, allowing for adaptive learning and enhanced generalization. Experimental results on two vessel trajectory datasets show that MAKER can improve the prediction accuracy of state-of-the-art methods by 12.08%-17.86%. 
+
+---
+# From Deep Learning to LLMs: A survey of AI in Quantitative Investment 
+
+**Authors**: Bokai Cao, Saizhuo Wang, Xinyi Lin, Xiaojun Wu, Haohan Zhang, Lionel M. Ni, Jian Guo  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.21422)  
+
+**Abstract**: Quantitative investment (quant) is an emerging, technology-driven approach in asset management, increasingy shaped by advancements in artificial intelligence. Recent advances in deep learning and large language models (LLMs) for quant finance have improved predictive modeling and enabled agent-based automation, suggesting a potential paradigm shift in this field. In this survey, taking alpha strategy as a representative example, we explore how AI contributes to the quantitative investment pipeline. We first examine the early stage of quant research, centered on human-crafted features and traditional statistical models with an established alpha pipeline. We then discuss the rise of deep learning, which enabled scalable modeling across the entire pipeline from data processing to order execution. Building on this, we highlight the emerging role of LLMs in extending AI beyond prediction, empowering autonomous agents to process unstructured data, generate alphas, and support self-iterative workflows. 
+
+---
+# ELM: Ensemble of Language Models for Predicting Tumor Group from Pathology Reports 
+
+**Authors**: Lovedeep Gondara, Jonathan Simkin, Shebnum Devji, Gregory Arbour, Raymond Ng  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.21800)  
+
+**Abstract**: Population-based cancer registries (PBCRs) face a significant bottleneck in manually extracting data from unstructured pathology reports, a process crucial for tasks like tumor group assignment, which can consume 900 person-hours for approximately 100,000 reports. To address this, we introduce ELM (Ensemble of Language Models), a novel ensemble-based approach leveraging both small language models (SLMs) and large language models (LLMs). ELM utilizes six fine-tuned SLMs, where three SLMs use the top part of the pathology report and three SLMs use the bottom part. This is done to maximize report coverage. ELM requires five-out-of-six agreement for a tumor group classification. Disagreements are arbitrated by an LLM with a carefully curated prompt. Our evaluation across nineteen tumor groups demonstrates ELM achieves an average precision and recall of 0.94, outperforming single-model and ensemble-without-LLM approaches. Deployed at the British Columbia Cancer Registry, ELM demonstrates how LLMs can be successfully applied in a PBCR setting to achieve state-of-the-art results and significantly enhance operational efficiencies, saving hundreds of person-hours annually. 
+
+---
+# OAEI-LLM-T: A TBox Benchmark Dataset for Understanding LLM Hallucinations in Ontology Matching Systems 
+
+**Authors**: Zhangcheng Qiang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.21813)  
+
+**Abstract**: Hallucinations are inevitable in downstream tasks using large language models (LLMs). While addressing hallucinations becomes a substantial challenge for LLM-based ontology matching (OM) systems, we introduce a new benchmark dataset called OAEI-LLM-T. The dataset evolves from the TBox (i.e. schema-matching) datasets in the Ontology Alignment Evaluation Initiative (OAEI), capturing hallucinations of different LLMs performing OM tasks. These OM-specific hallucinations are carefully classified into two primary categories and six sub-categories. We showcase the usefulness of the dataset in constructing the LLM leaderboard and fine-tuning foundational LLMs for LLM-based OM systems. 
+
+---
+# Preference-based Learning with Retrieval Augmented Generation for Conversational Question Answering 
+
+**Authors**: Magdalena Kaiser, Gerhard Weikum  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.22303)  
+
+**Abstract**: Conversational Question Answering (ConvQA) involves multiple subtasks, i) to understand incomplete questions in their context, ii) to retrieve relevant information, and iii) to generate answers. This work presents PRAISE, a pipeline-based approach for ConvQA that trains LLM adapters for each of the three subtasks. As labeled training data for individual subtasks is unavailable in practice, PRAISE learns from its own generations using the final answering performance as feedback signal without human intervention and treats intermediate information, like relevant evidence, as weakly labeled data. We apply Direct Preference Optimization by contrasting successful and unsuccessful samples for each subtask. In our experiments, we show the effectiveness of this training paradigm: PRAISE shows improvements per subtask and achieves new state-of-the-art performance on a popular ConvQA benchmark, by gaining 15.5 percentage points increase in precision over baselines. 
+
+---
+# Empowering Retrieval-based Conversational Recommendation with Contrasting User Preferences 
+
+**Authors**: Heejin Kook, Junyoung Kim, Seongmin Park, Jongwuk Lee  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.22005)  
+
+**Abstract**: Conversational recommender systems (CRSs) are designed to suggest the target item that the user is likely to prefer through multi-turn conversations. Recent studies stress that capturing sentiments in user conversations improves recommendation accuracy. However, they employ a single user representation, which may fail to distinguish between contrasting user intentions, such as likes and dislikes, potentially leading to suboptimal performance. To this end, we propose a novel conversational recommender model, called COntrasting user pReference expAnsion and Learning (CORAL). Firstly, CORAL extracts the user's hidden preferences through contrasting preference expansion using the reasoning capacity of the LLMs. Based on the potential preference, CORAL explicitly differentiates the contrasting preferences and leverages them into the recommendation process via preference-aware learning. Extensive experiments show that CORAL significantly outperforms existing methods in three benchmark datasets, improving up to 99.72% in Recall@10. The code and datasets are available at this https URL 
+
+---
+# Self-Evolving Multi-Agent Simulations for Realistic Clinical Interactions 
+
+**Authors**: Mohammad Almansoori, Komal Kumar, Hisham Cholakkal  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.22678)  
+
+**Abstract**: In this work, we introduce MedAgentSim, an open-source simulated clinical environment with doctor, patient, and measurement agents designed to evaluate and enhance LLM performance in dynamic diagnostic settings. Unlike prior approaches, our framework requires doctor agents to actively engage with patients through multi-turn conversations, requesting relevant medical examinations (e.g., temperature, blood pressure, ECG) and imaging results (e.g., MRI, X-ray) from a measurement agent to mimic the real-world diagnostic process. Additionally, we incorporate self improvement mechanisms that allow models to iteratively refine their diagnostic strategies. We enhance LLM performance in our simulated setting by integrating multi-agent discussions, chain-of-thought reasoning, and experience-based knowledge retrieval, facilitating progressive learning as doctor agents interact with more patients. We also introduce an evaluation benchmark for assessing the LLM's ability to engage in dynamic, context-aware diagnostic interactions. While MedAgentSim is fully automated, it also supports a user-controlled mode, enabling human interaction with either the doctor or patient agent. Comprehensive evaluations in various simulated diagnostic scenarios demonstrate the effectiveness of our approach. Our code, simulation tool, and benchmark are available at \href{this https URL}. 
+
+---
+# Bridging the Dimensional Chasm: Uncover Layer-wise Dimensional Reduction in Transformers through Token Correlation 
+
+**Authors**: Zhuo-Yang Song, Zeyu Li, Qing-Hong Cao, Ming-xing Luo, Hua Xing Zhu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.22547)  
+
+**Abstract**: The geometric evolution of token representations in large language models (LLMs) presents a fundamental paradox: while human language inherently organizes semantic information in low-dimensional spaces ($\sim 10^1$ dimensions), modern LLMs employ high-dimensional embeddings ($\sim 10^3$ dimensions) processed through Transformer architectures. To resolve this paradox, this work bridges this conceptual gap by developing a geometric framework that tracks token dynamics across Transformers layers. Through layer-wise analysis of intrinsic dimensions across multiple architectures, we reveal an expansion-contraction pattern where tokens diffuse to a "working space" and then progressively project onto lower-dimensional submanifolds. Our finding implies a negative correlation between the working space dimension and parameter-sensitive performance of the LLMs, and indicates that effective models tend to compress tokens into approximately 10-dimensional submanifolds, closely resembling human semantic spaces. This work not only advances LLM interpretability by reframing Transformers layers as projectors that mediate between high-dimensional computation and low-dimensional semantics, but also provides practical tools for model diagnostics that do not rely on task-specific evaluations. 
+
+---
+# Why Stop at One Error? Benchmarking LLMs as Data Science Code Debuggers for Multi-Hop and Multi-Bug Errors 
+
+**Authors**: Zhiyu Yang, Shuo Wang, Yukun Yan, Yang Deng  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.22388)  
+
+**Abstract**: LLMs are transforming software development, yet current code generation and code repair benchmarks mainly assess syntactic and functional correctness in simple, single-error cases. LLMs' capabilities to autonomously find and fix runtime logical errors in complex data science code remain largely unexplored. To address this gap, we introduce DSDBench: the Data Science Debugging Benchmark, the first benchmark for systematic evaluation of LLMs on multi-hop error tracing and multi-bug detection in data science code debugging. DSDBench adapts datasets from existing data science task benchmarks, such as DABench and MatPlotBench, featuring realistic data science debugging tasks with automatically synthesized multi-hop, multi-bug code snippets. DSDBench includes 1,117 annotated samples with 741 cause-effect error pairs and runtime error messages. Evaluations of state-of-the-art LLMs on DSDBench show significant performance gaps, highlighting challenges in debugging logical runtime errors in data science code. DSDBench offers a crucial resource to evaluate and improve LLMs' debugging and reasoning capabilities, enabling more reliable AI-assisted data science in the this http URL is publicly available at this https URL. 
+
+---
+# Negation: A Pink Elephant in the Large Language Models' Room? 
+
+**Authors**: Tereza Vrabcová, Marek Kadlčík, Petr Sojka, Michal Štefánik, Michal Spiegel  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.22395)  
+
+**Abstract**: Negations are key to determining sentence meaning, making them essential for logical reasoning. Despite their importance, negations pose a substantial challenge for large language models (LLMs) and remain underexplored.
+We construct two multilingual natural language inference (NLI) datasets with \textit{paired} examples differing in negation. We investigate how model size and language impact its ability to handle negation correctly by evaluating popular LLMs.
+Contrary to previous work, we show that increasing the model size consistently improves the models' ability to handle negations. Furthermore, we find that both the models' reasoning accuracy and robustness to negation are language-dependent and that the length and explicitness of the premise have a greater impact on robustness than language.
+Our datasets can facilitate further research and improvements of language model reasoning in multilingual settings. 
+
+---
+# WorkTeam: Constructing Workflows from Natural Language with Multi-Agents 
+
+**Authors**: Hanchao Liu, Rongjun Li, Weimin Xiong, Ziyu Zhou, Wei Peng  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.22473)  
+
+**Abstract**: Workflows play a crucial role in enhancing enterprise efficiency by orchestrating complex processes with multiple tools or components. However, hand-crafted workflow construction requires expert knowledge, presenting significant technical barriers. Recent advancements in Large Language Models (LLMs) have improved the generation of workflows from natural language instructions (aka NL2Workflow), yet existing single LLM agent-based methods face performance degradation on complex tasks due to the need for specialized knowledge and the strain of task-switching. To tackle these challenges, we propose WorkTeam, a multi-agent NL2Workflow framework comprising a supervisor, orchestrator, and filler agent, each with distinct roles that collaboratively enhance the conversion process. As there are currently no publicly available NL2Workflow benchmarks, we also introduce the HW-NL2Workflow dataset, which includes 3,695 real-world business samples for training and evaluation. Experimental results show that our approach significantly increases the success rate of workflow construction, providing a novel and effective solution for enterprise NL2Workflow services. 
+
+---
+# Supposedly Equivalent Facts That Aren't? Entity Frequency in Pre-training Induces Asymmetry in LLMs 
+
+**Authors**: Yuan He, Bailan He, Zifeng Ding, Alisia Lupidi, Yuqicheng Zhu, Shuo Chen, Caiqi Zhang, Jiaoyan Chen, Yunpu Ma, Volker Tresp, Ian Horrocks  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.22362)  
+
+**Abstract**: Understanding and mitigating hallucinations in Large Language Models (LLMs) is crucial for ensuring reliable content generation. While previous research has primarily focused on "when" LLMs hallucinate, our work explains "why" and directly links model behaviour to the pre-training data that forms their prior knowledge. Specifically, we demonstrate that an asymmetry exists in the recognition of logically equivalent facts, which can be attributed to frequency discrepancies of entities appearing as subjects versus objects. Given that most pre-training datasets are inaccessible, we leverage the fully open-source OLMo series by indexing its Dolma dataset to estimate entity frequencies. Using relational facts (represented as triples) from Wikidata5M, we construct probing datasets to isolate this effect. Our experiments reveal that facts with a high-frequency subject and a low-frequency object are better recognised than their inverse, despite their logical equivalence. The pattern reverses in low-to-high frequency settings, and no statistically significant asymmetry emerges when both entities are high-frequency. These findings highlight the influential role of pre-training data in shaping model predictions and provide insights for inferring the characteristics of pre-training data in closed or partially closed LLMs. 
+
+---
+# Leveraging LLMs for Predicting Unknown Diagnoses from Clinical Notes 
+
+**Authors**: Dina Albassam, Adam Cross, Chengxiang Zhai  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.22092)  
+
+**Abstract**: Electronic Health Records (EHRs) often lack explicit links between medications and diagnoses, making clinical decision-making and research more difficult. Even when links exist, diagnosis lists may be incomplete, especially during early patient visits. Discharge summaries tend to provide more complete information, which can help infer accurate diagnoses, especially with the help of large language models (LLMs). This study investigates whether LLMs can predict implicitly mentioned diagnoses from clinical notes and link them to corresponding medications. We address two research questions: (1) Does majority voting across diverse LLM configurations outperform the best single configuration in diagnosis prediction? (2) How sensitive is majority voting accuracy to LLM hyperparameters such as temperature, top-p, and summary length? To evaluate, we created a new dataset of 240 expert-annotated medication-diagnosis pairs from 20 MIMIC-IV notes. Using GPT-3.5 Turbo, we ran 18 prompting configurations across short and long summary lengths, generating 8568 test cases. Results show that majority voting achieved 75 percent accuracy, outperforming the best single configuration at 66 percent. No single hyperparameter setting dominated, but combining deterministic, balanced, and exploratory strategies improved performance. Shorter summaries generally led to higher this http URL conclusion, ensemble-style majority voting with diverse LLM configurations improves diagnosis prediction in EHRs and offers a promising method to link medications and diagnoses in clinical texts. 
+
+---
+# ThinkEdit: Interpretable Weight Editing to Mitigate Overly Short Thinking in Reasoning Models 
+
+**Authors**: Chung-En Sun, Ge Yan, Tsui-Wei Weng  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.22048)  
+
+**Abstract**: Recent studies have shown that Large Language Models (LLMs) augmented with chain-of-thought (CoT) reasoning demonstrate impressive problem-solving abilities. However, in this work, we identify a recurring issue where these models occasionally generate overly short reasoning, leading to degraded performance on even simple mathematical problems. Specifically, we investigate how reasoning length is embedded in the hidden representations of reasoning models and its impact on accuracy. Our analysis reveals that reasoning length is governed by a linear direction in the representation space, allowing us to induce overly short reasoning by steering the model along this direction. Building on this insight, we introduce ThinkEdit, a simple yet effective weight-editing approach to mitigate the issue of overly short reasoning. We first identify a small subset of attention heads (approximately 2%) that predominantly drive short reasoning behavior. We then edit the output projection weights of these heads to suppress the short reasoning direction. With changes to only 0.1% of the model's parameters, ThinkEdit effectively reduces overly short reasoning and yields notable accuracy gains for short reasoning outputs (+5.44%), along with an overall improvement across multiple math benchmarks (+2.43%). Our findings provide new mechanistic insights into how reasoning length is controlled within LLMs and highlight the potential of fine-grained model interventions to improve reasoning quality. Our code is available at this https URL 
+
+---
+# The Risks of Using Large Language Models for Text Annotation in Social Science Research 
+
+**Authors**: Hao Lin, Yongjun Zhang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.22040)  
+
+**Abstract**: Generative artificial intelligence (GenAI) or large language models (LLMs) have the potential to revolutionize computational social science, particularly in automated textual analysis. In this paper, we conduct a systematic evaluation of the promises and risks of using LLMs for diverse coding tasks, with social movement studies serving as a case example. We propose a framework for social scientists to incorporate LLMs into text annotation, either as the primary coding decision-maker or as a coding assistant. This framework provides tools for researchers to develop the optimal prompt, and to examine and report the validity and reliability of LLMs as a methodological tool. Additionally, we discuss the associated epistemic risks related to validity, reliability, replicability, and transparency. We conclude with several practical guidelines for using LLMs in text annotation tasks, and how we can better communicate the epistemic risks in research. 
+
+---
+# Enhancing Domain-Specific Encoder Models with LLM-Generated Data: How to Leverage Ontologies, and How to Do Without Them 
+
+**Authors**: Marc Brinner, Tarek Al Mustafa, Sina Zarrieß  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.22006)  
+
+**Abstract**: We investigate the use of LLM-generated data for continual pretraining of encoder models in specialized domains with limited training data, using the scientific domain of invasion biology as a case study. To this end, we leverage domain-specific ontologies by enriching them with LLM-generated data and pretraining the encoder model as an ontology-informed embedding model for concept definitions. To evaluate the effectiveness of this method, we compile a benchmark specifically designed for assessing model performance in invasion biology. After demonstrating substantial improvements over standard LLM pretraining, we investigate the feasibility of applying the proposed approach to domains without comprehensive ontologies by substituting ontological concepts with concepts automatically extracted from a small corpus of scientific abstracts and establishing relationships between concepts through distributional statistics. Our results demonstrate that this automated approach achieves comparable performance using only a small set of scientific abstracts, resulting in a fully automated pipeline for enhancing domain-specific understanding of small encoder models that is especially suited for application in low-resource settings and achieves performance comparable to masked language modeling pretraining on much larger datasets. 
+
+---
+# EdgeInfinite: A Memory-Efficient Infinite-Context Transformer for Edge Devices 
+
+**Authors**: Jiyu Chen, Shuang Peng, Daxiong Luo, Fan Yang, Renshou Wu, Fangyuan Li, Xiaoxin Chen  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.22196)  
+
+**Abstract**: Transformer-based large language models (LLMs) encounter challenges in processing long sequences on edge devices due to the quadratic complexity of attention mechanisms and growing memory demands from Key-Value (KV) cache. Existing KV cache optimizations struggle with irreversible token eviction in long-output tasks, while alternative sequence modeling architectures prove costly to adopt within established Transformer infrastructure. We present EdgeInfinite, a memory-efficient solution for infinite contexts that integrates compressed memory into Transformer-based LLMs through a trainable memory-gating module. This approach maintains full compatibility with standard Transformer architectures, requiring fine-tuning only a small part of parameters, and enables selective activation of the memory-gating module for long and short context task routing. The experimental result shows that EdgeInfinite achieves comparable performance to baseline Transformer-based LLM on long context benchmarks while optimizing memory consumption and time to first token. 
+
+---
+# Hybrid Emotion Recognition: Enhancing Customer Interactions Through Acoustic and Textual Analysis 
+
+**Authors**: Sahan Hewage Wewelwala, T.G.D.K. Sumanathilaka  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.21927)  
+
+**Abstract**: This research presents a hybrid emotion recognition system integrating advanced Deep Learning, Natural Language Processing (NLP), and Large Language Models (LLMs) to analyze audio and textual data for enhancing customer interactions in contact centers. By combining acoustic features with textual sentiment analysis, the system achieves nuanced emotion detection, addressing the limitations of traditional approaches in understanding complex emotional states. Leveraging LSTM and CNN models for audio analysis and DistilBERT for textual evaluation, the methodology accommodates linguistic and cultural variations while ensuring real-time processing. Rigorous testing on diverse datasets demonstrates the system's robustness and accuracy, highlighting its potential to transform customer service by enabling personalized, empathetic interactions and improving operational efficiency. This research establishes a foundation for more intelligent and human-centric digital communication, redefining customer service standards. 
+
+---
+# Proof or Bluff? Evaluating LLMs on 2025 USA Math Olympiad 
+
+**Authors**: Ivo Petrov, Jasper Dekoninck, Lyuben Baltadzhiev, Maria Drencheva, Kristian Minchev, Mislav Balunović, Nikola Jovanović, Martin Vechev  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.21934)  
+
+**Abstract**: Recent math benchmarks for large language models (LLMs) such as MathArena indicate that state-of-the-art reasoning models achieve impressive performance on mathematical competitions like AIME, with the leading model, o3-mini, achieving scores comparable to top human competitors. However, these benchmarks evaluate models solely based on final numerical answers, neglecting rigorous reasoning and proof generation which are essential for real-world mathematical tasks. To address this, we introduce the first comprehensive evaluation of full-solution reasoning for challenging mathematical problems. Using expert human annotators, we evaluated several state-of-the-art reasoning models on the six problems from the 2025 USAMO within hours of their release. Our results reveal that all tested models struggled significantly, achieving less than 5% on average. Through detailed analysis of reasoning traces, we identify the most common failure modes and find several unwanted artifacts arising from the optimization strategies employed during model training. Overall, our results suggest that current LLMs are inadequate for rigorous mathematical reasoning tasks, highlighting the need for substantial improvements in reasoning and proof generation capabilities. 
+
+---
+# Optimizing Safe and Aligned Language Generation: A Multi-Objective GRPO Approach 
+
+**Authors**: Xuying Li, Zhuo Li, Yuji Kosuga, Victor Bian  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.21819)  
+
+**Abstract**: Aligning large language models (LLMs) with human values and safety constraints is challenging, especially when objectives like helpfulness, truthfulness, and avoidance of harm conflict. Reinforcement Learning from Human Feedback (RLHF) has achieved notable success in steering models, but is complex and can be unstable. Recent approaches such as Direct Preference Optimization (DPO) simplify preference-based fine-tuning but may introduce bias or trade-off certain objectives~\cite{dpo}. In this work, we propose a Group Relative Policy Optimization (GRPO) framework with a multi-label reward regression model to achieve safe and aligned language generation. The GRPO algorithm optimizes a policy by comparing groups of sampled responses, eliminating the need for a separate value critic and improving training efficiency~\cite{grpo}. We train a reward model to predict multiple alignment scores (e.g., safety, helpfulness, etc.), which are combined into a single reward signal. We provide a theoretical derivation for using this learned multi-aspect reward within GRPO and discuss its advantages and limitations. Empirically, our approach improves all the safety and quality metrics evaluated in language generation tasks on model scales (0.5B, 7B, and 14B parameters), demonstrating a robust balance of objectives. We compare GRPO to PPO-based RLHF and DPO, highlighting that GRPO achieves alignment with significantly lower computational cost and explicit multi-objective handling. \textbf{We will open-source all trained models at this https URL. 
+
+---
+# Refining Time Series Anomaly Detectors using Large Language Models 
+
+**Authors**: Alan Yang, Yulin Chen, Sean Lee, Venus Montes  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.21833)  
+
+**Abstract**: Time series anomaly detection (TSAD) is of widespread interest across many industries, including finance, healthcare, and manufacturing. Despite the development of numerous automatic methods for detecting anomalies, human oversight remains necessary to review and act upon detected anomalies, as well as verify their accuracy. We study the use of multimodal large language models (LLMs) to partially automate this process. We find that LLMs can effectively identify false alarms by integrating visual inspection of time series plots with text descriptions of the data-generating process. By leveraging the capabilities of LLMs, we aim to reduce the reliance on human effort required to maintain a TSAD system 
+
+---
+# Debate-Driven Multi-Agent LLMs for Phishing Email Detection 
+
+**Authors**: Ngoc Tuong Vy Nguyen, Felix D Childress, Yunting Yin  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.22038)  
+
+**Abstract**: Phishing attacks remain a critical cybersecurity threat. Attackers constantly refine their methods, making phishing emails harder to detect. Traditional detection methods, including rule-based systems and supervised machine learning models, either rely on predefined patterns like blacklists, which can be bypassed with slight modifications, or require large datasets for training and still can generate false positives and false negatives. In this work, we propose a multi-agent large language model (LLM) prompting technique that simulates debates among agents to detect whether the content presented on an email is phishing. Our approach uses two LLM agents to present arguments for or against the classification task, with a judge agent adjudicating the final verdict based on the quality of reasoning provided. This debate mechanism enables the models to critically analyze contextual cue and deceptive patterns in text, which leads to improved classification accuracy. The proposed framework is evaluated on multiple phishing email datasets and demonstrate that mixed-agent configurations consistently outperform homogeneous configurations. Results also show that the debate structure itself is sufficient to yield accurate decisions without extra prompting strategies. 
+
+---
+# Leveraging Large Language Models for Automated Causal Loop Diagram Generation: Enhancing System Dynamics Modeling through Curated Prompting Techniques 
+
+**Authors**: Ning-Yuan Georgia Liu, David R. Keith  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.21798)  
+
+**Abstract**: Transforming a dynamic hypothesis into a causal loop diagram (CLD) is crucial for System Dynamics Modelling. Extracting key variables and causal relationships from text to build a CLD is often challenging and time-consuming for novice modelers, limiting SD tool adoption. This paper introduces and tests a method for automating the translation of dynamic hypotheses into CLDs using large language models (LLMs) with curated prompting techniques. We first describe how LLMs work and how they can make the inferences needed to build CLDs using a standard digraph structure. Next, we develop a set of simple dynamic hypotheses and corresponding CLDs from leading SD textbooks. We then compare the four different combinations of prompting techniques, evaluating their performance against CLDs labeled by expert modelers. Results show that for simple model structures and using curated prompting techniques, LLMs can generate CLDs of a similar quality to expert-built ones, accelerating CLD creation. 
+
+---
