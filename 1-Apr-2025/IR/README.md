@@ -1,0 +1,237 @@
+# Rec-R1: Bridging Generative Large Language Models and User-Centric Recommendation Systems via Reinforcement Learning 
+
+**Authors**: Jiacheng Lin, Tian Wang, Kun Qian  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.24289)  
+
+**Abstract**: We propose Rec-R1, a general reinforcement learning framework that bridges large language models (LLMs) with recommendation systems through closed-loop optimization. Unlike prompting and supervised fine-tuning (SFT), Rec-R1 directly optimizes LLM generation using feedback from a fixed black-box recommendation model, without relying on synthetic SFT data from proprietary models such as GPT-4o. This avoids the substantial cost and effort required for data distillation. To verify the effectiveness of Rec-R1, we evaluate it on two representative tasks: product search and sequential recommendation. Experimental results demonstrate that Rec-R1 not only consistently outperforms prompting- and SFT-based methods, but also achieves significant gains over strong discriminative baselines, even when used with simple retrievers such as BM25. Moreover, Rec-R1 preserves the general-purpose capabilities of the LLM, unlike SFT, which often impairs instruction-following and reasoning. These findings suggest Rec-R1 as a promising foundation for continual task-specific adaptation without catastrophic forgetting. 
+
+---
+# Combining Query Performance Predictors: A Reproducibility Study 
+
+**Authors**: Sourav Saha, Suchana Datta, Dwaipayan Roy, Mandar Mitra, Derek Greene  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.24251)  
+
+**Abstract**: A large number of approaches to Query Performance Prediction (QPP) have been proposed over the last two decades. As early as 2009, Hauff et al. [28] explored whether different QPP methods may be combined to improve prediction quality. Since then, significant research has been done both on QPP approaches, as well as their evaluation. This study revisits Hauff et al.s work to assess the reproducibility of their findings in the light of new prediction methods, evaluation metrics, and datasets. We expand the scope of the earlier investigation by: (i) considering post-retrieval methods, including supervised neural techniques (only pre-retrieval techniques were studied in [28]); (ii) using sMARE for evaluation, in addition to the traditional correlation coefficients and RMSE; and (iii) experimenting with additional datasets (Clueweb09B and TREC DL). Our results largely support previous claims, but we also present several interesting findings. We interpret these findings by taking a more nuanced look at the correlation between QPP methods, examining whether they capture diverse information or rely on overlapping factors. 
+
+---
+# Text2Tracks: Prompt-based Music Recommendation via Generative Retrieval 
+
+**Authors**: Enrico Palumbo, Gustavo Penha, Andreas Damianou, José Luis Redondo García, Timothy Christopher Heath, Alice Wang, Hugues Bouchard, Mounia Lalmas  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.24193)  
+
+**Abstract**: In recent years, Large Language Models (LLMs) have enabled users to provide highly specific music recommendation requests using natural language prompts (e.g. "Can you recommend some old classics for slow dancing?"). In this setup, the recommended tracks are predicted by the LLM in an autoregressive way, i.e. the LLM generates the track titles one token at a time. While intuitive, this approach has several limitation. First, it is based on a general purpose tokenization that is optimized for words rather than for track titles. Second, it necessitates an additional entity resolution layer that matches the track title to the actual track identifier. Third, the number of decoding steps scales linearly with the length of the track title, slowing down inference. In this paper, we propose to address the task of prompt-based music recommendation as a generative retrieval task. Within this setting, we introduce novel, effective, and efficient representations of track identifiers that significantly outperform commonly used strategies. We introduce Text2Tracks, a generative retrieval model that learns a mapping from a user's music recommendation prompt to the relevant track IDs directly. Through an offline evaluation on a dataset of playlists with language inputs, we find that (1) the strategy to create IDs for music tracks is the most important factor for the effectiveness of Text2Tracks and semantic IDs significantly outperform commonly used strategies that rely on song titles as identifiers (2) provided with the right choice of track identifiers, Text2Tracks outperforms sparse and dense retrieval solutions trained to retrieve tracks from language prompts. 
+
+---
+# On the Reproducibility of Learned Sparse Retrieval Adaptations for Long Documents 
+
+**Authors**: Emmanouil Georgios Lionis, Jia-Huei Ju  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.23824)  
+
+**Abstract**: Document retrieval is one of the most challenging tasks in Information Retrieval. It requires handling longer contexts, often resulting in higher query latency and increased computational overhead. Recently, Learned Sparse Retrieval (LSR) has emerged as a promising approach to address these challenges. Some have proposed adapting the LSR approach to longer documents by aggregating segmented document using different post-hoc methods, including n-grams and proximity scores, adjusting representations, and learning to ensemble all signals. In this study, we aim to reproduce and examine the mechanisms of adapting LSR for long documents. Our reproducibility experiments confirmed the importance of specific segments, with the first segment consistently dominating document retrieval performance. Furthermore, We re-evaluate recently proposed methods -- ExactSDM and SoftSDM -- across varying document lengths, from short (up to 2 segments) to longer (3+ segments). We also designed multiple analyses to probe the reproduced methods and shed light on the impact of global information on adapting LSR to longer contexts. The complete code and implementation for this project is available at: this https URL. 
+
+---
+# Finding Interest Needle in Popularity Haystack: Improving Retrieval by Modeling Item Exposure 
+
+**Authors**: Amit Jaspal, Rahul Agarwal  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.23630)  
+
+**Abstract**: Recommender systems operate in closed feedback loops, where user interactions reinforce popularity bias, leading to over-recommendation of already popular items while under-exposing niche or novel content. Existing bias mitigation methods, such as Inverse Propensity Scoring (IPS) and Off- Policy Correction (OPC), primarily operate at the ranking stage or during training, lacking explicit real-time control over exposure dynamics. In this work, we introduce an exposure- aware retrieval scoring approach, which explicitly models item exposure probability and adjusts retrieval-stage ranking at inference time. Unlike prior work, this method decouples exposure effects from engagement likelihood, enabling controlled trade-offs between fairness and engagement in large-scale recommendation platforms. We validate our approach through online A/B experiments in a real-world video recommendation system, demonstrating a 25% increase in uniquely retrieved items and a 40% reduction in the dominance of over-popular content, all while maintaining overall user engagement levels. Our results establish a scalable, deployable solution for mitigating popularity bias at the retrieval stage, offering a new paradigm for bias-aware personalization. 
+
+---
+# Understanding Visual Saliency of Outlier Items in Product Search 
+
+**Authors**: Fatemeh Sarvi, Mohammad Aliannejadi, Sebastian Schelter, Maarten de Rijke  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.23596)  
+
+**Abstract**: In two-sided marketplaces, items compete for user attention, which translates to revenue for suppliers. Item exposure, indicated by the amount of attention items receive in a ranking, can be influenced by factors like position bias. Recent work suggests that inter-item dependencies, such as outlier items in a ranking, also affect item exposure. Outlier items are items that observably deviate from the other items in a ranked list. Understanding outlier items is crucial for determining an item's exposure distribution. In our previous work, we investigated the impact of different presentational features on users' perception of outlier in search results. In this work, we focus on two key questions left unanswered by our previous work: (i) What is the effect of isolated bottom-up visual factors on item outlierness in product lists? (ii) How do top-down factors influence users' perception of item outlierness in a realistic online shopping scenario? We start with bottom-up factors and employ visual saliency models to evaluate their ability to detect outlier items in product lists purely based on visual attributes. Then, to examine top-down factors, we conduct eye-tracking experiments on an online shopping task. Moreover, we employ eye-tracking to not only be closer to the real-world case but also to address the accuracy problem of reaction time in the visual search task. Our experiments show the ability of visual saliency models to detect bottom-up factors, consistently highlighting areas with strong visual contrasts. The results of our eye-tracking experiment for lists without outliers show that despite being less visually attractive, product descriptions captured attention the fastest, indicating the importance of top-down factors. In our eye-tracking experiments, we observed that outlier items engaged users for longer durations compared to non-outlier items. 
+
+---
+# Filtering with Time-frequency Analysis: An Adaptive and Lightweight Model for Sequential Recommender Systems Based on Discrete Wavelet Transform 
+
+**Authors**: Sheng Lu, Mingxi Ge, Jiuyi Zhang, Wanli Zhu, Guanjin Li, Fangming Gu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.23436)  
+
+**Abstract**: Sequential Recommender Systems (SRS) aim to model sequential behaviors of users to capture their interests which usually evolve over time. Transformer-based SRS have achieved distinguished successes recently. However, studies reveal self-attention mechanism in Transformer-based models is essentially a low-pass filter and ignores high frequency information potentially including meaningful user interest patterns. This motivates us to seek better filtering technologies for SRS, and finally we find Discrete Wavelet Transform (DWT), a famous time-frequency analysis technique from digital signal processing field, can effectively process both low-frequency and high-frequency information. We design an adaptive time-frequency filter with DWT technique, which decomposes user interests into multiple signals with different frequency and time, and can automatically learn weights of these signals. Furthermore, we develop DWTRec, a model for sequential recommendation all based on the adaptive time-frequency filter. Thanks to fast DWT technique, DWTRec has a lower time complexity and space complexity theoretically, and is Proficient in modeling long sequences. Experiments show that our model outperforms state-of-the-art baseline models in datasets with different domains, sparsity levels and average sequence lengths. Especially, our model shows great performance increase in contrast with previous models when the sequence grows longer, which demonstrates another advantage of our model. 
+
+---
+# LIRA: A Learning-based Query-aware Partition Framework for Large-scale ANN Search 
+
+**Authors**: Ximu Zeng, Liwei Deng, Penghao Chen, Xu Chen, Han Su, Kai Zheng  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.23409)  
+
+**Abstract**: Approximate nearest neighbor search is fundamental in information retrieval. Previous partition-based methods enhance search efficiency by probing partial partitions, yet they face two common issues. In the query phase, a common strategy is to probe partitions based on the distance ranks of a query to partition centroids, which inevitably probes irrelevant partitions as it ignores data distribution. In the partition construction phase, all partition-based methods face the boundary problem that separates a query's nearest neighbors to multiple partitions, resulting in a long-tailed kNN distribution and degrading the optimal nprobe (i.e., the number of probing partitions). To address this gap, we propose LIRA, a LearnIng-based queRy-aware pArtition framework. Specifically, we propose a probing model to directly probe the partitions containing the kNN of a query, which can reduce probing waste and allow for query-aware probing with nprobe individually. Moreover, we incorporate the probing model into a learning-based redundancy strategy to mitigate the adverse impact of the long-tailed kNN distribution on search efficiency. Extensive experiments on real-world vector datasets demonstrate the superiority of LIRA in the trade-off among accuracy, latency, and query fan-out. The codes are available at this https URL. 
+
+---
+# RuleAgent: Discovering Rules for Recommendation Denoising with Autonomous Language Agents 
+
+**Authors**: Zongwei Wang, Min Gao, Junliang Yu, Yupeng Hou, Shazia Sadiq, Hongzhi Yin  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.23374)  
+
+**Abstract**: The implicit feedback (e.g., clicks) in real-world recommender systems is often prone to severe noise caused by unintentional interactions, such as misclicks or curiosity-driven behavior. A common approach to denoising this feedback is manually crafting rules based on observations of training loss patterns. However, this approach is labor-intensive and the resulting rules often lack generalization across diverse scenarios. To overcome these limitations, we introduce RuleAgent, a language agent based framework which mimics real-world data experts to autonomously discover rules for recommendation denoising. Unlike the high-cost process of manual rule mining, RuleAgent offers rapid and dynamic rule discovery, ensuring adaptability to evolving data and varying scenarios. To achieve this, RuleAgent is equipped with tailored profile, memory, planning, and action modules and leverages reflection mechanisms to enhance its reasoning capabilities for rule discovery. Furthermore, to avoid the frequent retraining in rule discovery, we propose LossEraser-an unlearning strategy that streamlines training without compromising denoising performance. Experiments on benchmark datasets demonstrate that, compared with existing denoising methods, RuleAgent not only derives the optimal recommendation performance but also produces generalizable denoising rules, assisting researchers in efficient data cleaning. 
+
+---
+# Graph-Structured Driven Dual Adaptation for Mitigating Popularity Bias 
+
+**Authors**: Miaomiao Cai, Lei Chen, Yifan Wang, Zhiyong Cheng, Min Zhang, Meng Wang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.23358)  
+
+**Abstract**: Popularity bias challenges recommender systems by causing uneven recommendation performance and amplifying the Matthew effect. Limited user-item interactions confine unpopular items within embedding neighborhoods of few users, leading to representation collapse and reduced model generalization. Existing supervised alignment and reweighting methods mitigate this bias but have key limitations: (1) ignoring inherent variability across Graph Convolutional Networks (GCNs) layers, causing negative effects in deeper layers; (2) reliance on fixed hyperparameters to balance item popularity, restricting adaptability and increasing complexity.
+To address these issues, we propose the Graph-Structured Dual Adaptation Framework (GSDA). Our theoretical analysis identifies a crucial limitation of supervised alignment methods caused by over-smoothing in GCNs. As GCN layers deepen, popular and unpopular items increasingly lose distinctiveness, quantified by reduced conditional entropy. This diminished distinctiveness weakens supervised alignment effectiveness in mitigating popularity bias. Motivated by this, GSDA captures structural and distribution characteristics from the adjacency matrix through a dual adaptive strategy. First, a hierarchical adaptive alignment mechanism uses the adjacency matrix's Frobenius norm for layer-specific weight decay, countering conditional entropy reduction effects at deeper layers. Second, a distribution-aware dynamic contrast weighting strategy, guided by a real-time Gini coefficient, removes dependence on fixed hyperparameters, enabling adaptability to diverse data. Experiments on three benchmark datasets demonstrate GSDA significantly alleviates popularity bias and consistently outperforms state-of-the-art recommendation methods. 
+
+---
+# Beyond Unimodal Boundaries: Generative Recommendation with Multimodal Semantics 
+
+**Authors**: Jing Zhu, Mingxuan Ju, Yozen Liu, Danai Koutra, Neil Shah, Tong Zhao  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.23333)  
+
+**Abstract**: Generative recommendation (GR) has become a powerful paradigm in recommendation systems that implicitly links modality and semantics to item representation, in contrast to previous methods that relied on non-semantic item identifiers in autoregressive models. However, previous research has predominantly treated modalities in isolation, typically assuming item content is unimodal (usually text). We argue that this is a significant limitation given the rich, multimodal nature of real-world data and the potential sensitivity of GR models to modality choices and usage. Our work aims to explore the critical problem of Multimodal Generative Recommendation (MGR), highlighting the importance of modality choices in GR nframeworks. We reveal that GR models are particularly sensitive to different modalities and examine the challenges in achieving effective GR when multiple modalities are available. By evaluating design strategies for effectively leveraging multiple modalities, we identify key challenges and introduce MGR-LF++, an enhanced late fusion framework that employs contrastive modality alignment and special tokens to denote different modalities, achieving a performance improvement of over 20% compared to single-modality alternatives. 
+
+---
+# Beyond Contrastive Learning: Synthetic Data Enables List-wise Training with Multiple Levels of Relevance 
+
+**Authors**: Reza Esfandiarpoor, George Zerveas, Ruochen Zhang, Macton Mgonzo, Carsten Eickhoff, Stephen H. Bach  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.23239)  
+
+**Abstract**: Recent advancements in large language models (LLMs) have allowed the augmentation of information retrieval (IR) pipelines with synthetic data in various ways. Yet, the main training paradigm remains: contrastive learning with binary relevance labels and the InfoNCE loss, where one positive document is compared against one or more negatives. This objective treats all documents that are not explicitly annotated as relevant on an equally negative footing, regardless of their actual degree of relevance, thus (a) missing subtle nuances that are useful for ranking and (b) being susceptible to annotation noise. To overcome this limitation, in this work we forgo real training documents and annotations altogether and use open-source LLMs to directly generate synthetic documents that answer real user queries according to several different levels of relevance. This fully synthetic ranking context of graduated relevance, together with an appropriate list-wise loss (Wasserstein distance), enables us to train dense retrievers in a way that better captures the ranking task. Experiments on various IR datasets show that our proposed approach outperforms conventional training with InfoNCE by a large margin. Without using any real documents for training, our dense retriever significantly outperforms the same retriever trained through self-supervision. More importantly, it matches the performance of the same retriever trained on real, labeled training documents of the same dataset, while being more robust to distribution shift and clearly outperforming it when evaluated zero-shot on the BEIR dataset collection. 
+
+---
+# Reproducibility Companion Paper:In-processing User Constrained Dominant Sets for User-Oriented Fairness in Recommender Systems 
+
+**Authors**: Yixiu Liu, Zehui He, Yuyuan Li, Zhongxuan Han, Chaochao Chen, Xiaolin Zheng  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.23040)  
+
+**Abstract**: In this paper, we reproduce experimental results presented in our earlier work titled "In-processing User Constrained Dominant Sets for User-Oriented Fairness in Recommender Systems" that was presented in the proceeding of the 31st ACM International Conference on this http URL work aims to verify the effectiveness of our previously proposed method and provide guidance for reproducibility. We present detailed descriptions of our preprocessed datasets, the structure of our source code, configuration file settings, experimental environment, and the reproduced experimental results. 
+
+---
+# Imagine All The Relevance: Scenario-Profiled Indexing with Knowledge Expansion for Dense Retrieval 
+
+**Authors**: Sangam Lee, Ryang Heo, SeongKu Kang, Dongha Lee  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.23033)  
+
+**Abstract**: Existing dense retrieval models struggle with reasoning-intensive retrieval task as they fail to capture implicit relevance that requires reasoning beyond surface-level semantic information. To address these challenges, we propose Scenario-Profiled Indexing with Knowledge Expansion (SPIKE), a dense retrieval framework that explicitly indexes implicit relevance by decomposing documents into scenario-based retrieval units. SPIKE organizes documents into scenario, which encapsulates the reasoning process necessary to uncover implicit relationships between hypothetical information needs and document content. SPIKE constructs a scenario-augmented dataset using a powerful teacher large language model (LLM), then distills these reasoning capabilities into a smaller, efficient scenario generator. During inference, SPIKE incorporates scenario-level relevance alongside document-level relevance, enabling reasoning-aware retrieval. Extensive experiments demonstrate that SPIKE consistently enhances retrieval performance across various query types and dense retrievers. It also enhances the retrieval experience for users through scenario and offers valuable contextual information for LLMs in retrieval-augmented generation (RAG). 
+
+---
+# Reproducibility Companion Paper: Making Users Indistinguishable: Attribute-wise Unlearning in Recommender Systems 
+
+**Authors**: Yuyuan Li, Junjie Fang, Chaochao Chen, Xiaolin Zheng, Yizhao Zhang, Zhongxuan Han  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.23032)  
+
+**Abstract**: In this paper, we reproduce the experimental results presented in our previous work titled "Making Users Indistinguishable: Attribute-wise Unlearning in Recommender Systems," which was published in the proceedings of the 31st ACM International Conference on Multimedia. This paper aims to validate the effectiveness of our proposed method and help others reproduce our experimental results. We provide detailed descriptions of our preprocessed datasets, source code structure, configuration file settings, experimental environment, and reproduced experimental results. 
+
+---
+# Federated Semantic Learning for Privacy-preserving Cross-domain Recommendation 
+
+**Authors**: Ziang Lu, Lei Guo, Xu Yu, Zhiyong Cheng, Xiaohui Han, Lei Zhu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.23026)  
+
+**Abstract**: In the evolving landscape of recommender systems, the challenge of effectively conducting privacy-preserving Cross-Domain Recommendation (CDR), especially under strict non-overlapping constraints, has emerged as a key focus. Despite extensive research has made significant progress, several limitations still exist: 1) Previous semantic-based methods fail to deeply exploit rich textual information, since they quantize the text into codes, losing its original rich semantics. 2) The current solution solely relies on the text-modality, while the synergistic effects with the ID-modality are ignored. 3) Existing studies do not consider the impact of irrelevant semantic features, leading to inaccurate semantic representation. To address these challenges, we introduce federated semantic learning and devise FFMSR as our solution. For Limitation 1, we locally learn items'semantic encodings from their original texts by a multi-layer semantic encoder, and then cluster them on the server to facilitate the transfer of semantic knowledge between domains. To tackle Limitation 2, we integrate both ID and Text modalities on the clients, and utilize them to learn different aspects of items. To handle Limitation 3, a Fast Fourier Transform (FFT)-based filter and a gating mechanism are developed to alleviate the impact of irrelevant semantic information in the local model. We conduct extensive experiments on two real-world datasets, and the results demonstrate the superiority of our FFMSR method over other SOTA methods. Our source codes are publicly available at: this https URL. 
+
+---
+# DAT: Dynamic Alpha Tuning for Hybrid Retrieval in Retrieval-Augmented Generation 
+
+**Authors**: Hsin-Ling Hsu, Jengnan Tzeng  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.23013)  
+
+**Abstract**: Hybrid retrieval techniques in Retrieval-Augmented Generation (RAG) systems enhance information retrieval by combining dense and sparse (e.g., BM25-based) retrieval methods. However, existing approaches struggle with adaptability, as fixed weighting schemes fail to adjust to different queries. To address this, we propose DAT (Dynamic Alpha Tuning), a novel hybrid retrieval framework that dynamically balances dense retrieval and BM25 for each query. DAT leverages a large language model (LLM) to evaluate the effectiveness of the top-1 results from both retrieval methods, assigning an effectiveness score to each. It then calibrates the optimal weighting factor through effectiveness score normalization, ensuring a more adaptive and query-aware weighting between the two approaches. Empirical results show that DAT consistently significantly outperforms fixed-weighting hybrid retrieval methods across various evaluation metrics. Even on smaller models, DAT delivers strong performance, highlighting its efficiency and adaptability. 
+
+---
+# A Systematic Evaluation of LLM Strategies for Mental Health Text Analysis: Fine-tuning vs. Prompt Engineering vs. RAG 
+
+**Authors**: Arshia Kermani, Veronica Perez-Rosas, Vangelis Metsis  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.24307)  
+
+**Abstract**: This study presents a systematic comparison of three approaches for the analysis of mental health text using large language models (LLMs): prompt engineering, retrieval augmented generation (RAG), and fine-tuning. Using LLaMA 3, we evaluate these approaches on emotion classification and mental health condition detection tasks across two datasets. Fine-tuning achieves the highest accuracy (91% for emotion classification, 80% for mental health conditions) but requires substantial computational resources and large training sets, while prompt engineering and RAG offer more flexible deployment with moderate performance (40-68% accuracy). Our findings provide practical insights for implementing LLM-based solutions in mental health applications, highlighting the trade-offs between accuracy, computational requirements, and deployment flexibility. 
+
+---
+# Music Information Retrieval on Representative Mexican Folk Vocal Melodies Through MIDI Feature Extraction 
+
+**Authors**: Mario Alberto Vallejo Reyes  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.24243)  
+
+**Abstract**: This study analyzes representative Mexican folk vocal melodies using MIDI feature extraction, examining ambitus, pitch-class entropy, and interval distribution. It also explores the relationship between these features and song popularity, as measured by Spotify plays. The study employs MATLAB and the MIDI Toolbox for extracting musical features and performing statistical analysis. The findings reveal a significant variation in ambitus, with values ranging from 8 to 27 semitones, indicating a diverse compositional style and vocal demand across the genre. The analysis of pitch-class entropy showcases a broad spectrum of melodic complexity, with Armando Manzanero's `Somos Novios' displaying the highest entropy, suggesting varied and complex melodic structures, while traditional pieces like `La Bamba' exhibit lower entropy, indicating simpler, more repetitive patterns. The interval distribution predominantly features prime intervals (P1), major and minor seconds (M2, m2), pointing to a compositional preference for close, contiguous intervals that contribute to the melodies' accessibility and appeal. Statistical analysis do not establish a significant correlation between the ambitus or entropy and the number of Spotify plays. 
+
+---
+# Get the Agents Drunk: Memory Perturbations in Autonomous Agent-based Recommender Systems 
+
+**Authors**: Shiyi Yang, Zhibo Hu, Chen Wang, Tong Yu, Xiwei Xu, Liming Zhu, Lina Yao  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.23804)  
+
+**Abstract**: Large language model-based agents are increasingly used in recommender systems (Agent4RSs) to achieve personalized behavior modeling. Specifically, Agent4RSs introduces memory mechanisms that enable the agents to autonomously learn and self-evolve from real-world interactions. However, to the best of our knowledge, how robust Agent4RSs are remains unexplored. As such, in this paper, we propose the first work to attack Agent4RSs by perturbing agents' memories, not only to uncover their limitations but also to enhance their security and robustness, ensuring the development of safer and more reliable AI agents.
+Given the security and privacy concerns, it is more practical to launch attacks under a black-box setting, where the accurate knowledge of the victim models cannot be easily obtained. Moreover, the practical attacks are often stealthy to maximize the impact. To this end, we propose a novel practical attack framework named DrunkAgent. DrunkAgent consists of a generation module, a strategy module, and a surrogate module. The generation module aims to produce effective and coherent adversarial textual triggers, which can be used to achieve attack objectives such as promoting the target items. The strategy module is designed to `get the target agents drunk' so that their memories cannot be effectively updated during the interaction process. As such, the triggers can play the best role. Both of the modules are optimized on the surrogate module to improve the transferability and imperceptibility of the attacks. By identifying and analyzing the vulnerabilities, our work provides critical insights that pave the way for building safer and more resilient Agent4RSs. Extensive experiments across various real-world datasets demonstrate the effectiveness of DrunkAgent. 
+
+---
+# Design and Experimental Validation of an Autonomous USV for Sensor Fusion-Based Navigation in GNSS-Denied Environments 
+
+**Authors**: Samuel Cohen-Salmon, Itzik Klein  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.23445)  
+
+**Abstract**: This paper presents the design, development, and experimental validation of MARVEL, an autonomous unmanned surface vehicle built for real-world testing of sensor fusion-based navigation algorithms in GNSS-denied environments. MARVEL was developed under strict constraints of cost-efficiency, portability, and seaworthiness, with the goal of creating a modular, accessible platform for high-frequency data acquisition and experimental learning. It integrates electromagnetic logs, Doppler velocity logs, inertial sensors, and real-time kinematic GNSS positioning. MARVEL enables real-time, in-situ validation of advanced navigation and AI-driven algorithms using redundant, synchronized sensors. Field experiments demonstrate the system's stability, maneuverability, and adaptability in challenging sea conditions. The platform offers a novel, scalable approach for researchers seeking affordable, open-ended tools to evaluate sensor fusion techniques under real-world maritime constraints. 
+
+---
+# CoRanking: Collaborative Ranking with Small and Large Ranking Agents 
+
+**Authors**: Wenhan Liu, Xinyu Ma, Yutao Zhu, Lixin Su, Shuaiqiang Wang, Dawei Yin, Zhicheng Dou  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.23427)  
+
+**Abstract**: Large Language Models (LLMs) have demonstrated superior listwise ranking performance. However, their superior performance often relies on large-scale parameters (\eg, GPT-4) and a repetitive sliding window process, which introduces significant efficiency challenges. In this paper, we propose \textbf{CoRanking}, a novel collaborative ranking framework that combines small and large ranking models for efficient and effective ranking. CoRanking first employs a small-size reranker to pre-rank all the candidate passages, bringing relevant ones to the top part of the list (\eg, top-20). Then, the LLM listwise reranker is applied to only rerank these top-ranked passages instead of the whole list, substantially enhancing overall ranking efficiency. Although more efficient, previous studies have revealed that the LLM listwise reranker have significant positional biases on the order of input passages. Directly feed the top-ranked passages from small reranker may result in the sub-optimal performance of LLM listwise reranker. To alleviate this problem, we introduce a passage order adjuster trained via reinforcement learning, which reorders the top passages from the small reranker to align with the LLM's preferences of passage order. Extensive experiments on three IR benchmarks demonstrate that CoRanking significantly improves efficiency (reducing ranking latency by about 70\%) while achieving even better effectiveness compared to using only the LLM listwise reranker. 
+
+---
+# CAWAL: A novel unified analytics framework for enterprise web applications and multi-server environments 
+
+**Authors**: Özkan Canay, Ümit Kocabıçak  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.23244)  
+
+**Abstract**: In web analytics, cloud-based solutions have limitations in data ownership and privacy, whereas client-side user tracking tools face challenges such as data accuracy and a lack of server-side metrics. This paper presents the Combined Analytics and Web Application Log (CAWAL) framework as an alternative model and an on-premises framework, offering web analytics with application logging integration. CAWAL enables precise data collection and cross-domain tracking in web farms while complying with data ownership and privacy regulations. The framework also improves software diagnostics and troubleshooting by incorporating application-specific data into analytical processes. Integrated into an enterprise-grade web application, CAWAL has demonstrated superior performance, achieving approximately 24% and 85% lower response times compared to Open Web Analytics (OWA) and Matomo, respectively. The empirical evaluation demonstrates that the framework eliminates certain limitations in existing tools and provides a robust data infrastructure for enhanced web analytics. 
+
+---
+# Understanding Inequality of LLM Fact-Checking over Geographic Regions with Agent and Retrieval models 
+
+**Authors**: Bruno Coelho, Shujaat Mirza, Yuyuan Cui, Christina Pöpper, Damon McCoy  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.22877)  
+
+**Abstract**: Fact-checking is a potentially useful application of Large Language Models (LLMs) to combat the growing dissemination of disinformation. However, the performance of LLMs varies across geographic regions. In this paper, we evaluate the factual accuracy of open and private models across a diverse set of regions and scenarios.
+Using a dataset containing 600 fact-checked statements balanced across six global regions we examine three experimental setups of fact-checking a statement: (1) when just the statement is available, (2) when an LLM-based agent with Wikipedia access is utilized, and (3) as a best case scenario when a Retrieval-Augmented Generation (RAG) system provided with the official fact check is employed. Our findings reveal that regardless of the scenario and LLM used, including GPT-4, Claude Sonnet, and LLaMA, statements from the Global North perform substantially better than those from the Global South. Furthermore, this gap is broadened for the more realistic case of a Wikipedia agent-based system, highlighting that overly general knowledge bases have a limited ability to address region-specific nuances. These results underscore the urgent need for better dataset balancing and robust retrieval strategies to enhance LLM fact-checking capabilities, particularly in geographically diverse contexts. 
+
+---
+# From Individual to Group: Developing a Context-Aware Multi-Criteria Group Recommender System 
+
+**Authors**: Ngoc Luyen Le, Marie-Hélène Abel  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.22752)  
+
+**Abstract**: Group decision-making is becoming increasingly common in areas such as education, dining, travel, and finance, where collaborative choices must balance diverse individual preferences. While conventional recommender systems are effective in personalization, they fall short in group settings due to their inability to manage conflicting preferences, contextual factors, and multiple evaluation criteria. This study presents the development of a Context-Aware Multi-Criteria Group Recommender System (CA-MCGRS) designed to address these challenges by integrating contextual factors and multiple criteria to enhance recommendation accuracy. By leveraging a Multi-Head Attention mechanism, our model dynamically weighs the importance of different features. Experiments conducted on an educational dataset with varied ratings and contextual variables demonstrate that CA-MCGRS consistently outperforms other approaches across four scenarios. Our findings underscore the importance of incorporating context and multi-criteria evaluations to improve group recommendations, offering valuable insights for developing more effective group recommender systems. 
+
+---
+# Adaptive Integrated Layered Attention (AILA) 
+
+**Authors**: William Claster, Suhas KM, Dhairya Gundechia  
+
+**Link**: [PDF](https://arxiv.org/pdf/2503.22742)  
+
+**Abstract**: We propose Adaptive Integrated Layered Attention (AILA), a neural network architecture that combines dense skip connections with different mechanisms for adaptive feature reuse across network layers. We evaluate AILA on three challenging tasks: price forecasting for various commodities and indices (S&P 500, Gold, US dollar Futures, Coffee, Wheat), image recognition using the CIFAR-10 dataset, and sentiment analysis on the IMDB movie review dataset. In all cases, AILA matches strong deep learning baselines (LSTMs, Transformers, and ResNets), achieving it at a fraction of the training and inference time. Notably, we implement and test two versions of the model - AILA-Architecture 1, which uses simple linear layers as the connection mechanism between layers, and AILA-Architecture 2, which implements an attention mechanism to selectively focus on outputs from previous layers. Both architectures are applied in a single-task learning setting, with each model trained separately for individual tasks. Results confirm that AILA's adaptive inter-layer connections yield robust gains by flexibly reusing pertinent features at multiple network depths. The AILA approach thus presents an extension to existing architectures, improving long-range sequence modeling, image recognition with optimised computational speed, and SOTA classification performance in practice. 
+
+---
