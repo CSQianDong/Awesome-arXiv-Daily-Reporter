@@ -1,0 +1,19 @@
+# CrackSQL: A Hybrid SQL Dialect Translation System Powered by Large Language Models 
+
+**Authors**: Wei Zhou, Yuyang Gao, Xuanhe Zhou, Guoliang Li  
+
+**Link**: [PDF](https://arxiv.org/pdf/2504.00882)  
+
+**Abstract**: Dialect translation plays a key role in enabling seamless interaction across heterogeneous database systems. However, translating SQL queries between different dialects (e.g., from PostgreSQL to MySQL) remains a challenging task due to syntactic discrepancies and subtle semantic variations. Existing approaches including manual rewriting, rule-based systems, and large language model (LLM)-based techniques often involve high maintenance effort (e.g., crafting custom translation rules) or produce unreliable results (e.g., LLM generates non-existent functions), especially when handling complex queries. In this demonstration, we present CrackSQL, the first hybrid SQL dialect translation system that combines rule and LLM-based methods to overcome these limitations. CrackSQL leverages the adaptability of LLMs to minimize manual intervention, while enhancing translation accuracy by segmenting lengthy complex SQL via functionality-based query processing. To further improve robustness, it incorporates a novel cross-dialect syntax embedding model for precise syntax alignment, as well as an adaptive local-to-global translation strategy that effectively resolves interdependent query operations. CrackSQL supports three translation modes and offers multiple deployment and access options including a web console interface, a PyPI package, and a command-line prompt, facilitating adoption across a variety of real-world use cases 
+
+---
+# Linked Array Tree: A Constant-Time Search Structure for Big Data 
+
+**Authors**: Songpeng Liu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2504.00828)  
+
+**Abstract**: As data volumes continue to grow rapidly, traditional search algorithms, like the red-black tree and B+ Tree, face increasing challenges in performance, especially in big data scenarios with intensive storage access. This paper presents the Linked Array Tree (LAT), a novel data structure designed to achieve constant-time complexity for search, insertion, and deletion operations. LAT leverages a sparse, non-moving hierarchical layout that enables direct access paths without requiring rebalancing or data movement. Its low memory overhead and avoidance of pointer-heavy structures make it well-suited for large-scale and intensive workloads. While not specifically tested under parallel or concurrent conditions, the structure's static layout and non-interfering operations suggest potential advantages in such environments.
+This paper first introduces the structure and algorithms of LAT, followed by a detailed analysis of its time complexity in search, insertion, and deletion operations. Finally, it presents experimental results across both data-intensive and sparse usage scenarios to evaluate LAT's practical performance. 
+
+---
