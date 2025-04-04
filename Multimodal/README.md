@@ -2,6 +2,7 @@
 
 | Date | Link | Number of Papers |
 |:----:|:----:|:----------------:|
+| 4-Apr-2025 | [Link](https://github.com/Deriq-Qian-Dong/Awesome-arXiv-Daily-Reporter/blob/main/4-Apr-2025/topic/Multimodal_related_papers.md) | 0 |
 | 3-Apr-2025 | [Link](https://github.com/Deriq-Qian-Dong/Awesome-arXiv-Daily-Reporter/blob/main/3-Apr-2025/topic/Multimodal_related_papers.md) | 0 |
 | 2-Apr-2025 | [Link](https://github.com/Deriq-Qian-Dong/Awesome-arXiv-Daily-Reporter/blob/main/2-Apr-2025/topic/Multimodal_related_papers.md) | 0 |
 | 1-Apr-2025 | [Link](https://github.com/Deriq-Qian-Dong/Awesome-arXiv-Daily-Reporter/blob/main/1-Apr-2025/topic/Multimodal_related_papers.md) | 0 |
