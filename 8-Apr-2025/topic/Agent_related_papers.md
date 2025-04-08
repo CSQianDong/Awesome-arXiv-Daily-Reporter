@@ -1,0 +1,336 @@
+# DoCIA: An Online Document-Level Context Incorporation Agent for Speech Translation 
+
+**Authors**: Xinglin Lyu, Wei Tang, Yuang Li, Xiaofeng Zhao, Ming Zhu, Junhui Li, Yunfei Lu, Min Zhang, Daimeng Wei, Hao Yang, Min Zhang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2504.05122)  
+
+**Abstract**: Document-level context is crucial for handling discourse challenges in text-to-text document-level machine translation (MT). Despite the increased discourse challenges introduced by noise from automatic speech recognition (ASR), the integration of document-level context in speech translation (ST) remains insufficiently explored. In this paper, we develop DoCIA, an online framework that enhances ST performance by incorporating document-level context. DoCIA decomposes the ST pipeline into four stages. Document-level context is integrated into the ASR refinement, MT, and MT refinement stages through auxiliary LLM (large language model)-based modules. Furthermore, DoCIA leverages document-level information in a multi-level manner while minimizing computational overhead. Additionally, a simple yet effective determination mechanism is introduced to prevent hallucinations from excessive refinement, ensuring the reliability of the final results. Experimental results show that DoCIA significantly outperforms traditional ST baselines in both sentence and discourse metrics across four LLMs, demonstrating its effectiveness in improving ST performance. 
+
+---
+# AI for Climate Finance: Agentic Retrieval and Multi-Step Reasoning for Early Warning System Investments 
+
+**Authors**: Saeid Ario Vaghefi, Aymane Hachcham, Veronica Grasso, Jiska Manicus, Nakiete Msemo, Chiara Colesanti Senni, Markus Leippold  
+
+**Link**: [PDF](https://arxiv.org/pdf/2504.05104)  
+
+**Abstract**: Tracking financial investments in climate adaptation is a complex and expertise-intensive task, particularly for Early Warning Systems (EWS), which lack standardized financial reporting across multilateral development banks (MDBs) and funds. To address this challenge, we introduce an LLM-based agentic AI system that integrates contextual retrieval, fine-tuning, and multi-step reasoning to extract relevant financial data, classify investments, and ensure compliance with funding guidelines. Our study focuses on a real-world application: tracking EWS investments in the Climate Risk and Early Warning Systems (CREWS) Fund. We analyze 25 MDB project documents and evaluate multiple AI-driven classification methods, including zero-shot and few-shot learning, fine-tuned transformer-based classifiers, chain-of-thought (CoT) prompting, and an agent-based retrieval-augmented generation (RAG) approach. Our results show that the agent-based RAG approach significantly outperforms other methods, achieving 87\% accuracy, 89\% precision, and 83\% recall. Additionally, we contribute a benchmark dataset and expert-annotated corpus, providing a valuable resource for future research in AI-driven financial tracking and climate finance transparency. 
+
+---
+# Beyond Single-Turn: A Survey on Multi-Turn Interactions with Large Language Models 
+
+**Authors**: Yubo Li, Xiaobin Shen, Xinyu Yao, Xueying Ding, Yidi Miao, Ramayya Krishnan, Rema Padman  
+
+**Link**: [PDF](https://arxiv.org/pdf/2504.04717)  
+
+**Abstract**: Recent advancements in large language models (LLMs) have revolutionized their ability to handle single-turn tasks, yet real-world applications demand sophisticated multi-turn interactions. This survey provides a comprehensive review of recent advancements in evaluating and enhancing multi-turn interactions in LLMs. Focusing on task-specific scenarios, from instruction following in diverse domains such as math and coding to complex conversational engagements in roleplay, healthcare, education, and even adversarial jailbreak settings, we systematically examine the challenges of maintaining context, coherence, fairness, and responsiveness over prolonged dialogues. The paper organizes current benchmarks and datasets into coherent categories that reflect the evolving landscape of multi-turn dialogue evaluation. In addition, we review a range of enhancement methodologies under multi-turn settings, including model-centric strategies (contextual learning, supervised fine-tuning, reinforcement learning, and new architectures), external integration approaches (memory-augmented, retrieval-based methods, and knowledge graph), and agent-based techniques for collaborative interactions. Finally, we discuss open challenges and propose future directions for research to further advance the robustness and effectiveness of multi-turn interactions in LLMs. Related resources and papers are available at this https URL. 
+
+---
+# scAgent: Universal Single-Cell Annotation via a LLM Agent 
+
+**Authors**: Yuren Mao, Yu Mi, Peigen Liu, Mengfei Zhang, Hanqing Liu, Yunjun Gao  
+
+**Link**: [PDF](https://arxiv.org/pdf/2504.04698)  
+
+**Abstract**: Cell type annotation is critical for understanding cellular heterogeneity. Based on single-cell RNA-seq data and deep learning models, good progress has been made in annotating a fixed number of cell types within a specific tissue. However, universal cell annotation, which can generalize across tissues, discover novel cell types, and extend to novel cell types, remains less explored. To fill this gap, this paper proposes scAgent, a universal cell annotation framework based on Large Language Models (LLMs). scAgent can identify cell types and discover novel cell types in diverse tissues; furthermore, it is data efficient to learn novel cell types. Experimental studies in 160 cell types and 35 tissues demonstrate the superior performance of scAgent in general cell-type annotation, novel cell discovery, and extensibility to novel cell type. 
+
+---
+# CO-Bench: Benchmarking Language Model Agents in Algorithm Search for Combinatorial Optimization 
+
+**Authors**: Weiwei Sun, Shengyu Feng, Shanda Li, Yiming Yang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2504.04310)  
+
+**Abstract**: Although LLM-based agents have attracted significant attention in domains such as software engineering and machine learning research, their role in advancing combinatorial optimization (CO) remains relatively underexplored. This gap underscores the need for a deeper understanding of their potential in tackling structured, constraint-intensive problems-a pursuit currently limited by the absence of comprehensive benchmarks for systematic investigation. To address this, we introduce CO-Bench, a benchmark suite featuring 36 real-world CO problems drawn from a broad range of domains and complexity levels. CO-Bench includes structured problem formulations and curated data to support rigorous investigation of LLM agents. We evaluate multiple agent frameworks against established human-designed algorithms, revealing key strengths and limitations of current approaches and identifying promising directions for future research. CO-Bench is publicly available at this https URL. 
+
+---
+# YaleNLP @ PerAnsSumm 2025: Multi-Perspective Integration via Mixture-of-Agents for Enhanced Healthcare QA Summarization 
+
+**Authors**: Dongsuk Jang, Alan Li, Arman Cohan  
+
+**Link**: [PDF](https://arxiv.org/pdf/2504.03932)  
+
+**Abstract**: Automated summarization of healthcare community question-answering forums is challenging due to diverse perspectives presented across multiple user responses to each question. The PerAnsSumm Shared Task was therefore proposed to tackle this challenge by identifying perspectives from different answers and then generating a comprehensive answer to the question. In this study, we address the PerAnsSumm Shared Task using two complementary paradigms: (i) a training-based approach through QLoRA fine-tuning of LLaMA-3.3-70B-Instruct, and (ii) agentic approaches including zero- and few-shot prompting with frontier LLMs (LLaMA-3.3-70B-Instruct and GPT-4o) and a Mixture-of-Agents (MoA) framework that leverages a diverse set of LLMs by combining outputs from multi-layer feedback aggregation. For perspective span identification/classification, GPT-4o zero-shot achieves an overall score of 0.57, substantially outperforming the 0.40 score of the LLaMA baseline. With a 2-layer MoA configuration, we were able to improve LLaMA performance up by 28 percent to 0.51. For perspective-based summarization, GPT-4o zero-shot attains an overall score of 0.42 compared to 0.28 for the best LLaMA zero-shot, and our 2-layer MoA approach boosts LLaMA performance by 32 percent to 0.37. Furthermore, in few-shot setting, our results show that the sentence-transformer embedding-based exemplar selection provides more gain than manually selected exemplars on LLaMA models, although the few-shot prompting is not always helpful for GPT-4o. The YaleNLP team's approach ranked the overall second place in the shared task. 
+
+---
+# Adaptation of Large Language Models 
+
+**Authors**: Zixuan Ke, Yifei Ming, Shafiq Joty  
+
+**Link**: [PDF](https://arxiv.org/pdf/2504.03931)  
+
+**Abstract**: This tutorial on adaptation of LLMs is designed to address the growing demand for models that go beyond the static capabilities of generic LLMs by providing an overview of dynamic, domain-specific, and task-adaptive LLM adaptation techniques. While general LLMs have demonstrated strong generalization across a variety of tasks, they often struggle to perform well in specialized domains such as finance, healthcare, and code generation for underrepresented languages. Additionally, their static nature limits their ability to evolve with the changing world, and they are often extremely large in size, making them impractical and costly to deploy at scale. As a result, the adaptation of LLMs has drawn much attention since the birth of LLMs and is of core importance, both for industry, which focuses on serving its targeted users, and academia, which can greatly benefit from small but powerful LLMs. To address this gap, this tutorial aims to provide an overview of the LLM adaptation techniques. We start with an introduction to LLM adaptation, from both the data perspective and the model perspective. We then emphasize how the evaluation metrics and benchmarks are different from other techniques. After establishing the problems, we explore various adaptation techniques. We categorize adaptation techniques into two main families. The first is parametric knowledge adaptation, which focuses on updating the parametric knowledge within LLMs. Additionally, we will discuss real-time adaptation techniques, including model editing, which allows LLMs to be updated dynamically in production environments. The second kind of adaptation is semi-parametric knowledge adaptation, where the goal is to update LLM parameters to better leverage external knowledge or tools through techniques like retrieval-augmented generation (RAG) and agent-based systems. 
+
+---
+# Synthetic Data Generation & Multi-Step RL for Reasoning & Tool Use 
+
+**Authors**: Anna Goldie, Azalia Mirhoseini, Hao Zhou, Irene Cai, Christopher D. Manning  
+
+**Link**: [PDF](https://arxiv.org/pdf/2504.04736)  
+
+**Abstract**: Reinforcement learning has been shown to improve the performance of large language models. However, traditional approaches like RLHF or RLAIF treat the problem as single-step. As focus shifts toward more complex reasoning and agentic tasks, language models must take multiple steps of text generation, reasoning and environment interaction before generating a solution. We propose a synthetic data generation and RL methodology targeting multi-step optimization scenarios. This approach, called Step-Wise Reinforcement Learning (SWiRL), iteratively generates multi-step reasoning and tool use data, and then learns from that data. It employs a simple step-wise decomposition that breaks each multi-step trajectory into multiple sub-trajectories corresponding to each action by the original model. It then applies synthetic data filtering and RL optimization on these sub-trajectories. We evaluated SWiRL on a number of multi-step tool use, question answering, and mathematical reasoning tasks. Our experiments show that SWiRL outperforms baseline approaches by 21.5%, 12.3%, 14.8%, 11.1%, and 15.3% in relative accuracy on GSM8K, HotPotQA, CofCA, MuSiQue, and BeerQA, respectively. Excitingly, the approach exhibits generalization across tasks: for example, training only on HotPotQA (text question-answering) improves zero-shot performance on GSM8K (a math dataset) by a relative 16.9%. 
+
+---
+# Debate Only When Necessary: Adaptive Multiagent Collaboration for Efficient LLM Reasoning 
+
+**Authors**: Sugyeong Eo, Hyeonseok Moon, Evelyn Hayoon Zi, Chanjun Park, Heuiseok Lim  
+
+**Link**: [PDF](https://arxiv.org/pdf/2504.05047)  
+
+**Abstract**: Multiagent collaboration has emerged as a promising framework for enhancing the reasoning capabilities of large language models (LLMs). While this approach improves reasoning capability, it incurs substantial computational overhead due to iterative agent interactions. Furthermore, engaging in debates for queries that do not necessitate collaboration amplifies the risk of error generation. To address these challenges, we propose Debate Only When Necessary (DOWN), an adaptive multiagent debate framework that selectively activates the debate process based on the confidence score of the agent's initial response. For queries where debate is triggered, agents refine their outputs using responses from participating agents and their confidence scores. Experimental results demonstrate that this mechanism significantly improves efficiency while maintaining or even surpassing the performance of existing multiagent debate systems. We also find that confidence-guided debate mitigates error propagation and enhances the selective incorporation of reliable responses. These results establish DOWN as an optimization strategy for efficient and effective multiagent reasoning, facilitating the practical deployment of LLM-based collaboration. 
+
+---
+# VAPO: Efficient and Reliable Reinforcement Learning for Advanced Reasoning Tasks 
+
+**Authors**: YuYue, Yufeng Yuan, Qiying Yu, Xiaochen Zuo, Ruofei Zhu, Wenyuan Xu, Jiaze Chen, Chengyi Wang, TianTian Fan, Zhengyin Du, Xiangpeng Wei, Gaohong Liu, Juncai Liu, Lingjun Liu, Haibin Lin, Zhiqi Lin, Bole Ma, Chi Zhang, Mofan Zhang, Wang Zhang, Hang Zhu, Ru Zhang, Xin Liu, Mingxuan Wang, Yonghui Wu, Lin Yan  
+
+**Link**: [PDF](https://arxiv.org/pdf/2504.05118)  
+
+**Abstract**: We present VAPO, Value-based Augmented Proximal Policy Optimization framework for reasoning models., a novel framework tailored for reasoning models within the value-based paradigm. Benchmarked the AIME 2024 dataset, VAPO, built on the Qwen 32B pre-trained model, attains a state-of-the-art score of $\mathbf{60.4}$. In direct comparison under identical experimental settings, VAPO outperforms the previously reported results of DeepSeek-R1-Zero-Qwen-32B and DAPO by more than 10 points. The training process of VAPO stands out for its stability and efficiency. It reaches state-of-the-art performance within a mere 5,000 steps. Moreover, across multiple independent runs, no training crashes occur, underscoring its reliability. This research delves into long chain-of-thought (long-CoT) reasoning using a value-based reinforcement learning framework. We pinpoint three key challenges that plague value-based methods: value model bias, the presence of heterogeneous sequence lengths, and the sparsity of reward signals. Through systematic design, VAPO offers an integrated solution that effectively alleviates these challenges, enabling enhanced performance in long-CoT reasoning tasks. 
+
+---
+# Algorithm Discovery With LLMs: Evolutionary Search Meets Reinforcement Learning 
+
+**Authors**: Anja Surina, Amin Mansouri, Lars Quaedvlieg, Amal Seddas, Maryna Viazovska, Emmanuel Abbe, Caglar Gulcehre  
+
+**Link**: [PDF](https://arxiv.org/pdf/2504.05108)  
+
+**Abstract**: Discovering efficient algorithms for solving complex problems has been an outstanding challenge in mathematics and computer science, requiring substantial human expertise over the years. Recent advancements in evolutionary search with large language models (LLMs) have shown promise in accelerating the discovery of algorithms across various domains, particularly in mathematics and optimization. However, existing approaches treat the LLM as a static generator, missing the opportunity to update the model with the signal obtained from evolutionary exploration. In this work, we propose to augment LLM-based evolutionary search by continuously refining the search operator - the LLM - through reinforcement learning (RL) fine-tuning. Our method leverages evolutionary search as an exploration strategy to discover improved algorithms, while RL optimizes the LLM policy based on these discoveries. Our experiments on three combinatorial optimization tasks - bin packing, traveling salesman, and the flatpack problem - show that combining RL and evolutionary search improves discovery efficiency of improved algorithms, showcasing the potential of RL-enhanced evolutionary strategies to assist computer scientists and mathematicians for more efficient algorithm design. 
+
+---
+# How to evaluate control measures for LLM agents? A trajectory from today to superintelligence 
+
+**Authors**: Tomek Korbak, Mikita Balesni, Buck Shlegeris, Geoffrey Irving  
+
+**Link**: [PDF](https://arxiv.org/pdf/2504.05259)  
+
+**Abstract**: As LLM agents grow more capable of causing harm autonomously, AI developers will rely on increasingly sophisticated control measures to prevent possibly misaligned agents from causing harm. AI developers could demonstrate that their control measures are sufficient by running control evaluations: testing exercises in which a red team produces agents that try to subvert control measures. To ensure control evaluations accurately capture misalignment risks, the affordances granted to this red team should be adapted to the capability profiles of the agents to be deployed under control measures.
+In this paper we propose a systematic framework for adapting affordances of red teams to advancing AI capabilities. Rather than assuming that agents will always execute the best attack strategies known to humans, we demonstrate how knowledge of an agents's actual capability profile can inform proportional control evaluations, resulting in more practical and cost-effective control measures. We illustrate our framework by considering a sequence of five fictional models (M1-M5) with progressively advanced capabilities, defining five distinct AI control levels (ACLs). For each ACL, we provide example rules for control evaluation, control measures, and safety cases that could be appropriate. Finally, we show why constructing a compelling AI control safety case for superintelligent LLM agents will require research breakthroughs, highlighting that we might eventually need alternative approaches to mitigating misalignment risk. 
+
+---
+# BIASINSPECTOR: Detecting Bias in Structured Data through LLM Agents 
+
+**Authors**: Haoxuan Li, Mingyu Derek Ma, Jen-tse Huang, Zhaotian Weng, Wei Wang, Jieyu Zhao  
+
+**Link**: [PDF](https://arxiv.org/pdf/2504.04855)  
+
+**Abstract**: Detecting biases in structured data is a complex and time-consuming task. Existing automated techniques are limited in diversity of data types and heavily reliant on human case-by-case handling, resulting in a lack of generalizability. Currently, large language model (LLM)-based agents have made significant progress in data science, but their ability to detect data biases is still insufficiently explored. To address this gap, we introduce the first end-to-end, multi-agent synergy framework, BIASINSPECTOR, designed for automatic bias detection in structured data based on specific user requirements. It first develops a multi-stage plan to analyze user-specified bias detection tasks and then implements it with a diverse and well-suited set of tools. It delivers detailed results that include explanations and visualizations. To address the lack of a standardized framework for evaluating the capability of LLM agents to detect biases in data, we further propose a comprehensive benchmark that includes multiple evaluation metrics and a large set of test cases. Extensive experiments demonstrate that our framework achieves exceptional overall performance in structured data bias detection, setting a new milestone for fairer data applications. 
+
+---
+# GAMDTP: Dynamic Trajectory Prediction with Graph Attention Mamba Network 
+
+**Authors**: Yunxiang Liu, Hongkuo Niu, Jianlin Zhu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2504.04862)  
+
+**Abstract**: Accurate motion prediction of traffic agents is crucial for the safety and stability of autonomous driving systems. In this paper, we introduce GAMDTP, a novel graph attention-based network tailored for dynamic trajectory prediction. Specifically, we fuse the result of self attention and mamba-ssm through a gate mechanism, leveraging the strengths of both to extract features more efficiently and accurately, in each graph convolution layer. GAMDTP encodes the high-definition map(HD map) data and the agents' historical trajectory coordinates and decodes the network's output to generate the final prediction results. Additionally, recent approaches predominantly focus on dynamically fusing historical forecast results and rely on two-stage frameworks including proposal and refinement. To further enhance the performance of the two-stage frameworks we also design a scoring mechanism to evaluate the prediction quality during the proposal and refinement processes. Experiments on the Argoverse dataset demonstrates that GAMDTP achieves state-of-the-art performance, achieving superior accuracy in dynamic trajectory prediction. 
+
+---
+# Multimodal Agricultural Agent Architecture (MA3): A New Paradigm for Intelligent Agricultural Decision-Making 
+
+**Authors**: Zhuoning Xu, Jian Xu, Mingqing Zhang, Peijie Wang, Chao Deng, Cheng-Lin Liu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2504.04789)  
+
+**Abstract**: As a strategic pillar industry for human survival and development, modern agriculture faces dual challenges: optimizing production efficiency and achieving sustainable development. Against the backdrop of intensified climate change leading to frequent extreme weather events, the uncertainty risks in agricultural production systems are increasing exponentially. To address these challenges, this study proposes an innovative \textbf{M}ultimodal \textbf{A}gricultural \textbf{A}gent \textbf{A}rchitecture (\textbf{MA3}), which leverages cross-modal information fusion and task collaboration mechanisms to achieve intelligent agricultural decision-making. This study constructs a multimodal agricultural agent dataset encompassing five major tasks: classification, detection, Visual Question Answering (VQA), tool selection, and agent evaluation. We propose a unified backbone for sugarcane disease classification and detection tools, as well as a sugarcane disease expert model. By integrating an innovative tool selection module, we develop a multimodal agricultural agent capable of effectively performing tasks in classification, detection, and VQA. Furthermore, we introduce a multi-dimensional quantitative evaluation framework and conduct a comprehensive assessment of the entire architecture over our evaluation dataset, thereby verifying the practicality and robustness of MA3 in agricultural scenarios. This study provides new insights and methodologies for the development of agricultural agents, holding significant theoretical and practical implications. Our source code and dataset will be made publicly available upon acceptance. 
+
+---
+# An Efficient Approach for Cooperative Multi-Agent Learning Problems 
+
+**Authors**: Ángel Aso-Mollar, Eva Onaindia  
+
+**Link**: [PDF](https://arxiv.org/pdf/2504.04850)  
+
+**Abstract**: In this article, we propose a centralized Multi-Agent Learning framework for learning a policy that models the simultaneous behavior of multiple agents that need to coordinate to solve a certain task. Centralized approaches often suffer from the explosion of an action space that is defined by all possible combinations of individual actions, known as joint actions. Our approach addresses the coordination problem via a sequential abstraction, which overcomes the scalability problems typical to centralized methods. It introduces a meta-agent, called \textit{supervisor}, which abstracts joint actions as sequential assignments of actions to each agent. This sequential abstraction not only simplifies the centralized joint action space but also enhances the framework's scalability and efficiency. Our experimental results demonstrate that the proposed approach successfully coordinates agents across a variety of Multi-Agent Learning environments of diverse sizes. 
+
+---
+# Weak-for-Strong: Training Weak Meta-Agent to Harness Strong Executors 
+
+**Authors**: Fan Nie, Lan Feng, Haotian Ye, Weixin Liang, Pan Lu, Huaxiu Yao, Alexandre Alahi, James Zou  
+
+**Link**: [PDF](https://arxiv.org/pdf/2504.04785)  
+
+**Abstract**: Efficiently leveraging of the capabilities of contemporary large language models (LLMs) is increasingly challenging, particularly when direct fine-tuning is expensive and often impractical. Existing training-free methods, including manually or automated designed workflows, typically demand substantial human effort or yield suboptimal results. This paper proposes Weak-for-Strong Harnessing (W4S), a novel framework that customizes smaller, cost-efficient language models to design and optimize workflows for harnessing stronger models. W4S formulates workflow design as a multi-turn markov decision process and introduces reinforcement learning for agentic workflow optimization (RLAO) to train a weak meta-agent. Through iterative interaction with the environment, the meta-agent learns to design increasingly effective workflows without manual intervention. Empirical results demonstrate the superiority of W4S that our 7B meta-agent, trained with just one GPU hour, outperforms the strongest baseline by 2.9% ~ 24.6% across eleven benchmarks, successfully elevating the performance of state-of-the-art models such as GPT-3.5-Turbo and GPT-4o. Notably, W4S exhibits strong generalization capabilities across both seen and unseen tasks, offering an efficient, high-performing alternative to directly fine-tuning strong models. 
+
+---
+# Generalising from Self-Produced Data: Model Training Beyond Human Constraints 
+
+**Authors**: Alfath Daryl Alhajir, Jennifer Dodgson, Joseph Lim, Truong Ma Phi, Julian Peh, Akira Rafhael Janson Pattirane, Lokesh Poovaragan  
+
+**Link**: [PDF](https://arxiv.org/pdf/2504.04711)  
+
+**Abstract**: Current large language models (LLMs) are constrained by human-derived training data and limited by a single level of abstraction that impedes definitive truth judgments. This paper introduces a novel framework in which AI models autonomously generate and validate new knowledge through direct interaction with their environment. Central to this approach is an unbounded, ungamable numeric reward - such as annexed disk space or follower count - that guides learning without requiring human benchmarks. AI agents iteratively generate strategies and executable code to maximize this metric, with successful outcomes forming the basis for self-retraining and incremental generalisation. To mitigate model collapse and the warm start problem, the framework emphasizes empirical validation over textual similarity and supports fine-tuning via GRPO. The system architecture employs modular agents for environment analysis, strategy generation, and code synthesis, enabling scalable experimentation. This work outlines a pathway toward self-improving AI systems capable of advancing beyond human-imposed constraints toward autonomous general intelligence. 
+
+---
+# AI in a vat: Fundamental limits of efficient world modelling for agent sandboxing and interpretability 
+
+**Authors**: Fernando Rosas, Alexander Boyd, Manuel Baltieri  
+
+**Link**: [PDF](https://arxiv.org/pdf/2504.04608)  
+
+**Abstract**: Recent work proposes using world models to generate controlled virtual environments in which AI agents can be tested before deployment to ensure their reliability and safety. However, accurate world models often have high computational demands that can severely restrict the scope and depth of such assessments. Inspired by the classic `brain in a vat' thought experiment, here we investigate ways of simplifying world models that remain agnostic to the AI agent under evaluation. By following principles from computational mechanics, our approach reveals a fundamental trade-off in world model construction between efficiency and interpretability, demonstrating that no single world model can optimise all desirable characteristics. Building on this trade-off, we identify procedures to build world models that either minimise memory requirements, delineate the boundaries of what is learnable, or allow tracking causes of undesirable outcomes. In doing so, this work establishes fundamental limits in world modelling, leading to actionable guidelines that inform core design choices related to effective agent evaluation. 
+
+---
+# Hierarchical Planning for Complex Tasks with Knowledge Graph-RAG and Symbolic Verification 
+
+**Authors**: Cristina Cornelio, Flavio Petruzzellis, Pietro Lio  
+
+**Link**: [PDF](https://arxiv.org/pdf/2504.04578)  
+
+**Abstract**: Large Language Models (LLMs) have shown promise as robotic planners but often struggle with long-horizon and complex tasks, especially in specialized environments requiring external knowledge. While hierarchical planning and Retrieval-Augmented Generation (RAG) address some of these challenges, they remain insufficient on their own and a deeper integration is required for achieving more reliable systems. To this end, we propose a neuro-symbolic approach that enhances LLMs-based planners with Knowledge Graph-based RAG for hierarchical plan generation. This method decomposes complex tasks into manageable subtasks, further expanded into executable atomic action sequences. To ensure formal correctness and proper decomposition, we integrate a Symbolic Validator, which also functions as a failure detector by aligning expected and observed world states. Our evaluation against baseline methods demonstrates the consistent significant advantages of integrating hierarchical planning, symbolic verification, and RAG across tasks of varying complexity and different LLMs. Additionally, our experimental setup and novel metrics not only validate our approach for complex planning but also serve as a tool for assessing LLMs' reasoning and compositional capabilities. 
+
+---
+# Introducing COGENT3: An AI Architecture for Emergent Cognition 
+
+**Authors**: Eduardo Salazar  
+
+**Link**: [PDF](https://arxiv.org/pdf/2504.04139)  
+
+**Abstract**: This paper presents COGENT3 (or Collective Growth and Entropy-modulated Triads System), a novel approach for emergent cognition integrating pattern formation networks with group influence dynamics. Contrasting with traditional strategies that rely on predetermined architectures, computational structures emerge dynamically in our framework through agent interactions. This enables a more flexible and adaptive system exhibiting characteristics reminiscent of human cognitive processes. The incorporation of temperature modulation and memory effects in COGENT3 closely integrates statistical mechanics, machine learning, and cognitive science. 
+
+---
+# Among Us: A Sandbox for Agentic Deception 
+
+**Authors**: Satvik Golechha, Adrià Garriga-Alonso  
+
+**Link**: [PDF](https://arxiv.org/pdf/2504.04072)  
+
+**Abstract**: Studying deception in AI agents is important and difficult due to the lack of model organisms and sandboxes that elicit the behavior without asking the model to act under specific conditions or inserting intentional backdoors. Extending upon $\textit{AmongAgents}$, a text-based social-deduction game environment, we aim to fix this by introducing Among Us as a rich sandbox where LLM-agents exhibit human-style deception naturally while they think, speak, and act with other agents or humans. We introduce Deception ELO as an unbounded measure of deceptive capability, suggesting that frontier models win more because they're better at deception, not at detecting it. We evaluate the effectiveness of AI safety techniques (LLM-monitoring of outputs, linear probes on various datasets, and sparse autoencoders) for detecting lying and deception in Among Us, and find that they generalize very well out-of-distribution. We open-source our sandbox as a benchmark for future alignment research and hope that this is a good testbed to improve safety techniques to detect and remove agentically-motivated deception, and to anticipate deceptive abilities in LLMs. 
+
+---
+# ADAPT: Actively Discovering and Adapting to Preferences for any Task 
+
+**Authors**: Maithili Patel, Xavier Puig, Ruta Desai, Roozbeh Mottaghi, Sonia Chernova, Joanne Truong, Akshara Rai  
+
+**Link**: [PDF](https://arxiv.org/pdf/2504.04040)  
+
+**Abstract**: Assistive agents should be able to perform under-specified long-horizon tasks while respecting user preferences. We introduce Actively Discovering and Adapting to Preferences for any Task (ADAPT) -- a benchmark designed to evaluate agents' ability to adhere to user preferences across various household tasks through active questioning. Next, we propose Reflection-DPO, a novel training approach for adapting large language models (LLMs) to the task of active questioning. Reflection-DPO finetunes a 'student' LLM to follow the actions of a privileged 'teacher' LLM, and optionally ask a question to gather necessary information to better predict the teacher action. We find that prior approaches that use state-of-the-art LLMs fail to sufficiently follow user preferences in ADAPT due to insufficient questioning and poor adherence to elicited preferences. In contrast, Reflection-DPO achieves a higher rate of satisfying user preferences, outperforming a zero-shot chain-of-thought baseline by 6.1% on unseen users. 
+
+---
+# Solving Sokoban using Hierarchical Reinforcement Learning with Landmarks 
+
+**Authors**: Sergey Pastukhov  
+
+**Link**: [PDF](https://arxiv.org/pdf/2504.04366)  
+
+**Abstract**: We introduce a novel hierarchical reinforcement learning (HRL) framework that performs top-down recursive planning via learned subgoals, successfully applied to the complex combinatorial puzzle game Sokoban. Our approach constructs a six-level policy hierarchy, where each higher-level policy generates subgoals for the level below. All subgoals and policies are learned end-to-end from scratch, without any domain knowledge. Our results show that the agent can generate long action sequences from a single high-level call. While prior work has explored 2-3 level hierarchies and subgoal-based planning heuristics, we demonstrate that deep recursive goal decomposition can emerge purely from learning, and that such hierarchies can scale effectively to hard puzzle domains. 
+
+---
+# Hierarchically Encapsulated Representation for Protocol Design in Self-Driving Labs 
+
+**Authors**: Yu-Zhe Shi, Mingchen Liu, Fanxu Meng, Qiao Xu, Zhangqian Bi, Kun He, Lecheng Ruan, Qining Wang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2504.03810)  
+
+**Abstract**: Self-driving laboratories have begun to replace human experimenters in performing single experimental skills or predetermined experimental protocols. However, as the pace of idea iteration in scientific research has been intensified by Artificial Intelligence, the demand for rapid design of new protocols for new discoveries become evident. Efforts to automate protocol design have been initiated, but the capabilities of knowledge-based machine designers, such as Large Language Models, have not been fully elicited, probably for the absence of a systematic representation of experimental knowledge, as opposed to isolated, flatten pieces of information. To tackle this issue, we propose a multi-faceted, multi-scale representation, where instance actions, generalized operations, and product flow models are hierarchically encapsulated using Domain-Specific Languages. We further develop a data-driven algorithm based on non-parametric modeling that autonomously customizes these representations for specific domains. The proposed representation is equipped with various machine designers to manage protocol design tasks, including planning, modification, and adjustment. The results demonstrate that the proposed method could effectively complement Large Language Models in the protocol design process, serving as an auxiliary module in the realm of machine-assisted scientific exploration. 
+
+---
+# Reinforcing Clinical Decision Support through Multi-Agent Systems and Ethical AI Governance 
+
+**Authors**: Ying-Jung Chen, Chi-Sheng Chen, Ahmad Albarqawi  
+
+**Link**: [PDF](https://arxiv.org/pdf/2504.03699)  
+
+**Abstract**: In the age of data-driven medicine, it is paramount to include explainable and ethically managed artificial intelligence in explaining clinical decision support systems to achieve trustworthy and effective patient care. The focus of this paper is on a new architecture of a multi-agent system for clinical decision support that uses modular agents to analyze laboratory results, vital signs, and the clinical context and then integrates these results to drive predictions and validate outcomes. We describe our implementation with the eICU database to run lab-analysis-specific agents, vitals-only interpreters, and contextual reasoners and then run the prediction module and a validation agent. Everything is a transparent implementation of business logic, influenced by the principles of ethical AI governance such as Autonomy, Fairness, and Accountability. It provides visible results that this agent-based framework not only improves on interpretability and accuracy but also on reinforcing trust in AI-assisted decisions in an intensive care setting. 
+
+---
+# A Benchmark for Scalable Oversight Protocols 
+
+**Authors**: Abhimanyu Pallavi Sudhir, Jackson Kaunismaa, Arjun Panickssery  
+
+**Link**: [PDF](https://arxiv.org/pdf/2504.03731)  
+
+**Abstract**: As AI agents surpass human capabilities, scalable oversight -- the problem of effectively supplying human feedback to potentially superhuman AI models -- becomes increasingly critical to ensure alignment. While numerous scalable oversight protocols have been proposed, they lack a systematic empirical framework to evaluate and compare them. While recent works have tried to empirically study scalable oversight protocols -- particularly Debate -- we argue that the experiments they conduct are not generalizable to other protocols. We introduce the scalable oversight benchmark, a principled framework for evaluating human feedback mechanisms based on our agent score difference (ASD) metric, a measure of how effectively a mechanism advantages truth-telling over deception. We supply a Python package to facilitate rapid and competitive evaluation of scalable oversight protocols on our benchmark, and conduct a demonstrative experiment benchmarking Debate. 
+
+---
+# "You just can't go around killing people" Explaining Agent Behavior to a Human Terminator 
+
+**Authors**: Uri Menkes, Assaf Hallak, Ofra Amir  
+
+**Link**: [PDF](https://arxiv.org/pdf/2504.04592)  
+
+**Abstract**: Consider a setting where a pre-trained agent is operating in an environment and a human operator can decide to temporarily terminate its operation and take-over for some duration of time. These kind of scenarios are common in human-machine interactions, for example in autonomous driving, factory automation and healthcare. In these settings, we typically observe a trade-off between two extreme cases -- if no take-overs are allowed, then the agent might employ a sub-optimal, possibly dangerous policy. Alternatively, if there are too many take-overs, then the human has no confidence in the agent, greatly limiting its usefulness. In this paper, we formalize this setup and propose an explainability scheme to help optimize the number of human interventions. 
+
+---
+# Trust Region Preference Approximation: A simple and stable reinforcement learning algorithm for LLM reasoning 
+
+**Authors**: Xuerui Su, Shufang Xie, Guoqing Liu, Yingce Xia, Renqian Luo, Peiran Jin, Zhiming Ma, Yue Wang, Zun Wang, Yuting Liu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2504.04524)  
+
+**Abstract**: Recently, Large Language Models (LLMs) have rapidly evolved, approaching Artificial General Intelligence (AGI) while benefiting from large-scale reinforcement learning to enhance Human Alignment (HA) and Reasoning. Recent reward-based optimization algorithms, such as Proximal Policy Optimization (PPO) and Group Relative Policy Optimization (GRPO) have achieved significant performance on reasoning tasks, whereas preference-based optimization algorithms such as Direct Preference Optimization (DPO) significantly improve the performance of LLMs on human alignment. However, despite the strong performance of reward-based optimization methods in alignment tasks , they remain vulnerable to reward hacking. Furthermore, preference-based algorithms (such as Online DPO) haven't yet matched the performance of reward-based optimization algorithms (like PPO) on reasoning tasks, making their exploration in this specific area still a worthwhile pursuit. Motivated by these challenges, we propose the Trust Region Preference Approximation (TRPA) algorithm, which integrates rule-based optimization with preference-based optimization for reasoning tasks. As a preference-based algorithm, TRPA naturally eliminates the reward hacking issue. TRPA constructs preference levels using predefined rules, forms corresponding preference pairs, and leverages a novel optimization algorithm for RL training with a theoretical monotonic improvement guarantee. Experimental results demonstrate that TRPA not only achieves competitive performance on reasoning tasks but also exhibits robust stability. The code of this paper are released and updating on this https URL. 
+
+---
+# AutoPDL: Automatic Prompt Optimization for LLM Agents 
+
+**Authors**: Claudio Spiess, Mandana Vaziri, Louis Mandel, Martin Hirzel  
+
+**Link**: [PDF](https://arxiv.org/pdf/2504.04365)  
+
+**Abstract**: The performance of large language models (LLMs) depends on how they are prompted, with choices spanning both the high-level prompting pattern (e.g., Zero-Shot, CoT, ReAct, ReWOO) and the specific prompt content (instructions and few-shot demonstrations). Manually tuning this combination is tedious, error-prone, and non-transferable across LLMs or tasks. Therefore, this paper proposes AutoPDL, an automated approach to discover good LLM agent configurations. Our method frames this as a structured AutoML problem over a combinatorial space of agentic and non-agentic prompting patterns and demonstrations, using successive halving to efficiently navigate this space. We introduce a library implementing common prompting patterns using the PDL prompt programming language. AutoPDL solutions are human-readable, editable, and executable PDL programs that use this library. This approach also enables source-to-source optimization, allowing human-in-the-loop refinement and reuse. Evaluations across three tasks and six LLMs (ranging from 8B to 70B parameters) show consistent accuracy gains ($9.5\pm17.5$ percentage points), up to 68.9pp, and reveal that selected prompting strategies vary across models and tasks. 
+
+---
+# Geo-OLM: Enabling Sustainable Earth Observation Studies with Cost-Efficient Open Language Models & State-Driven Workflows 
+
+**Authors**: Dimitrios Stamoulis, Diana Marculescu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2504.04319)  
+
+**Abstract**: Geospatial Copilots hold immense potential for automating Earth observation (EO) and climate monitoring workflows, yet their reliance on large-scale models such as GPT-4o introduces a paradox: tools intended for sustainability studies often incur unsustainable costs. Using agentic AI frameworks in geospatial applications can amass thousands of dollars in API charges or requires expensive, power-intensive GPUs for deployment, creating barriers for researchers, policymakers, and NGOs. Unfortunately, when geospatial Copilots are deployed with open language models (OLMs), performance often degrades due to their dependence on GPT-optimized logic. In this paper, we present Geo-OLM, a tool-augmented geospatial agent that leverages the novel paradigm of state-driven LLM reasoning to decouple task progression from tool calling. By alleviating the workflow reasoning burden, our approach enables low-resource OLMs to complete geospatial tasks more effectively. When downsizing to small models below 7B parameters, Geo-OLM outperforms the strongest prior geospatial baselines by 32.8% in successful query completion rates. Our method performs comparably to proprietary models achieving results within 10% of GPT-4o, while reducing inference costs by two orders of magnitude from \$500-\$1000 to under \$10. We present an in-depth analysis with geospatial downstream benchmarks, providing key insights to help practitioners effectively deploy OLMs for EO applications. 
+
+---
+# Enforcement Agents: Enhancing Accountability and Resilience in Multi-Agent AI Frameworks 
+
+**Authors**: Sagar Tamang, Dibya Jyoti Bora  
+
+**Link**: [PDF](https://arxiv.org/pdf/2504.04070)  
+
+**Abstract**: As autonomous agents become more powerful and widely used, it is becoming increasingly important to ensure they behave safely and stay aligned with system goals, especially in multi-agent settings. Current systems often rely on agents self-monitoring or correcting issues after the fact, but they lack mechanisms for real-time oversight. This paper introduces the Enforcement Agent (EA) Framework, which embeds dedicated supervisory agents into the environment to monitor others, detect misbehavior, and intervene through real-time correction. We implement this framework in a custom drone simulation and evaluate it across 90 episodes using 0, 1, and 2 EA configurations. Results show that adding EAs significantly improves system safety: success rates rise from 0.0% with no EA to 7.4% with one EA and 26.7% with two EAs. The system also demonstrates increased operational longevity and higher rates of malicious drone reformation. These findings highlight the potential of lightweight, real-time supervision for enhancing alignment and resilience in multi-agent systems. 
+
+---
+# Improving Offline Mixed-Criticality Scheduling with Reinforcement Learning 
+
+**Authors**: Muhammad El-Mahdy, Nourhan Sakr, Rodrigo Carrasco  
+
+**Link**: [PDF](https://arxiv.org/pdf/2504.03994)  
+
+**Abstract**: This paper introduces a novel reinforcement learning (RL) approach to scheduling mixed-criticality (MC) systems on processors with varying speeds. Building upon the foundation laid by [1], we extend their work to address the non-preemptive scheduling problem, which is known to be NP-hard. By modeling this scheduling challenge as a Markov Decision Process (MDP), we develop an RL agent capable of generating near-optimal schedules for real-time MC systems. Our RL-based scheduler prioritizes high-critical tasks while maintaining overall system performance.
+Through extensive experiments, we demonstrate the scalability and effectiveness of our approach. The RL scheduler significantly improves task completion rates, achieving around 80% overall and 85% for high-criticality tasks across 100,000 instances of synthetic data and real data under varying system conditions. Moreover, under stable conditions without degradation, the scheduler achieves 94% overall task completion and 93% for high-criticality tasks. These results highlight the potential of RL-based schedulers in real-time and safety-critical applications, offering substantial improvements in handling complex and dynamic scheduling scenarios. 
+
+---
+# Emerging Cyber Attack Risks of Medical AI Agents 
+
+**Authors**: Jianing Qiu, Lin Li, Jiankai Sun, Hao Wei, Zhe Xu, Kyle Lam, Wu Yuan  
+
+**Link**: [PDF](https://arxiv.org/pdf/2504.03759)  
+
+**Abstract**: Large language models (LLMs)-powered AI agents exhibit a high level of autonomy in addressing medical and healthcare challenges. With the ability to access various tools, they can operate within an open-ended action space. However, with the increase in autonomy and ability, unforeseen risks also arise. In this work, we investigated one particular risk, i.e., cyber attack vulnerability of medical AI agents, as agents have access to the Internet through web browsing tools. We revealed that through adversarial prompts embedded on webpages, cyberattackers can: i) inject false information into the agent's response; ii) they can force the agent to manipulate recommendation (e.g., healthcare products and services); iii) the attacker can also steal historical conversations between the user and agent, resulting in the leak of sensitive/private medical information; iv) furthermore, the targeted agent can also cause a computer system hijack by returning a malicious URL in its response. Different backbone LLMs were examined, and we found such cyber attacks can succeed in agents powered by most mainstream LLMs, with the reasoning models such as DeepSeek-R1 being the most vulnerable. 
+
+---
+# MCP Safety Audit: LLMs with the Model Context Protocol Allow Major Security Exploits 
+
+**Authors**: Brandon Radosevich, John Halloran  
+
+**Link**: [PDF](https://arxiv.org/pdf/2504.03767)  
+
+**Abstract**: To reduce development overhead and enable seamless integration between potential components comprising any given generative AI application, the Model Context Protocol (MCP) (Anthropic, 2024) has recently been released and subsequently widely adopted. The MCP is an open protocol that standardizes API calls to large language models (LLMs), data sources, and agentic tools. By connecting multiple MCP servers, each defined with a set of tools, resources, and prompts, users are able to define automated workflows fully driven by LLMs. However, we show that the current MCP design carries a wide range of security risks for end users. In particular, we demonstrate that industry-leading LLMs may be coerced into using MCP tools to compromise an AI developer's system through various attacks, such as malicious code execution, remote access control, and credential theft. To proactively mitigate these and related attacks, we introduce a safety auditing tool, MCPSafetyScanner, the first agentic tool to assess the security of an arbitrary MCP server. MCPScanner uses several agents to (a) automatically determine adversarial samples given an MCP server's tools and resources; (b) search for related vulnerabilities and remediations based on those samples; and (c) generate a security report detailing all findings. Our work highlights serious security issues with general-purpose agentic workflows while also providing a proactive tool to audit MCP server safety and address detected vulnerabilities before deployment.
+The described MCP server auditing tool, MCPSafetyScanner, is freely available at: this https URL 
+
+---
+# Detecting Malicious AI Agents Through Simulated Interactions 
+
+**Authors**: Yulu Pi, Ella Bettison, Anna Becker  
+
+**Link**: [PDF](https://arxiv.org/pdf/2504.03726)  
+
+**Abstract**: This study investigates malicious AI Assistants' manipulative traits and whether the behaviours of malicious AI Assistants can be detected when interacting with human-like simulated users in various decision-making contexts. We also examine how interaction depth and ability of planning influence malicious AI Assistants' manipulative strategies and effectiveness. Using a controlled experimental design, we simulate interactions between AI Assistants (both benign and deliberately malicious) and users across eight decision-making scenarios of varying complexity and stakes. Our methodology employs two state-of-the-art language models to generate interaction data and implements Intent-Aware Prompting (IAP) to detect malicious AI Assistants. The findings reveal that malicious AI Assistants employ domain-specific persona-tailored manipulation strategies, exploiting simulated users' vulnerabilities and emotional triggers. In particular, simulated users demonstrate resistance to manipulation initially, but become increasingly vulnerable to malicious AI Assistants as the depth of the interaction increases, highlighting the significant risks associated with extended engagement with potentially manipulative systems. IAP detection methods achieve high precision with zero false positives but struggle to detect many malicious AI Assistants, resulting in high false negative rates. These findings underscore critical risks in human-AI interactions and highlight the need for robust, context-sensitive safeguards against manipulative AI behaviour in increasingly autonomous decision-support systems. 
+
+---
+# Self-Learning-Based Optimization for Free-form Pipe Routing in Aeroengine with Dynamic Design Environment 
+
+**Authors**: Caicheng Wang, Zili Wang, Shuyou Zhang, Yongzhe Xiang, Zheyi Li, Jianrong Tan  
+
+**Link**: [PDF](https://arxiv.org/pdf/2504.03669)  
+
+**Abstract**: Pipe routing is a highly complex, time-consuming, and no-deterministic polynomial-time hard (NP-hard) problem in aeroengine design. Despite extensive research efforts in optimizing constant-curvature pipe routing, the growing demand for free-form pipes poses new challenges. Dynamic design environments and fuzzy layout rules further impact the optimization performance and efficiency. To tackle these challenges, this study proposes a self-learning-based method (SLPR) for optimizing free-form pipe routing in aeroengines. The SLPR is based on the proximal policy optimization (PPO) algorithm and integrates a unified rule modeling framework for efficient obstacle detection and fuzzy rule modeling in continuous space. Additionally, a potential energy table is constructed to enable rapid queries of layout tendencies and interference. The agent within SLPR iteratively refines pipe routing and accumulates the design knowledge through interaction with the environment. Once the design environment shifts, the agent can swiftly adapt by fine-tuning network parameters. Comparative tests reveal that SLPR ensures smooth pipe routing through cubic non-uniform B-spline (NURBS) curves, avoiding redundant pipe segments found in constant-curvature pipe routing. Results in both static and dynamic design environments demonstrate that SLPR outperforms three representative baselines in terms of the pipe length reduction, the adherence to layout rules, the path complexity, and the computational efficiency. Furthermore, tests in dynamic environments indicate that SLPR eliminates labor-intensive searches from scratch and even yields superior solutions compared to the retrained model. These results highlight the practical value of SLPR for real-world pipe routing, meeting lightweight, precision, and sustainability requirements of the modern aeroengine design. 
+
+---
