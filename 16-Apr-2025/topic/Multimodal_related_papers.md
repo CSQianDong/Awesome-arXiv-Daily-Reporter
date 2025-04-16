@@ -1,0 +1,171 @@
+# Distilling Transitional Pattern to Large Language Models for Multimodal Session-based Recommendation 
+
+**Authors**: Jiajie Su, Qiyong Zhong, Yunshan Ma, Weiming Liu, Chaochao Chen, Xiaolin Zheng, Jianwei Yin, Tat-Seng Chua  
+
+**Link**: [PDF](https://arxiv.org/pdf/2504.10538)  
+
+**Abstract**: Session-based recommendation (SBR) predicts the next item based on anonymous sessions. Traditional SBR explores user intents based on ID collaborations or auxiliary content. To further alleviate data sparsity and cold-start issues, recent Multimodal SBR (MSBR) methods utilize simplistic pre-trained models for modality learning but have limitations in semantic richness. Considering semantic reasoning abilities of Large Language Models (LLM), we focus on the LLM-enhanced MSBR scenario in this paper, which leverages LLM cognition for comprehensive multimodal representation generation, to enhance downstream MSBR. Tackling this problem faces two challenges: i) how to obtain LLM cognition on both transitional patterns and inherent multimodal knowledge, ii) how to align both features into one unified LLM, minimize discrepancy while maximizing representation utility. To this end, we propose a multimodal LLM-enhanced framework TPAD, which extends a distillation paradigm to decouple and align transitional patterns for promoting MSBR. TPAD establishes parallel Knowledge-MLLM and Transfer-MLLM, where the former interprets item knowledge-reflected features and the latter extracts transition-aware features underneath sessions. A transitional pattern alignment module harnessing mutual information estimation theory unites two MLLMs, alleviating distribution discrepancy and distilling transitional patterns into modal representations. Extensive experiments on real-world datasets demonstrate the effectiveness of our framework. 
+
+---
+# MSCRS: Multi-modal Semantic Graph Prompt Learning Framework for Conversational Recommender Systems 
+
+**Authors**: Yibiao Wei, Jie Zou, Weikang Guo, Guoqing Wang, Xing Xu, Yang Yang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2504.10921)  
+
+**Abstract**: Conversational Recommender Systems (CRSs) aim to provide personalized recommendations by interacting with users through conversations. Most existing studies of CRS focus on extracting user preferences from conversational contexts. However, due to the short and sparse nature of conversational contexts, it is difficult to fully capture user preferences by conversational contexts only. We argue that multi-modal semantic information can enrich user preference expressions from diverse dimensions (e.g., a user preference for a certain movie may stem from its magnificent visual effects and compelling storyline). In this paper, we propose a multi-modal semantic graph prompt learning framework for CRS, named MSCRS. First, we extract textual and image features of items mentioned in the conversational contexts. Second, we capture higher-order semantic associations within different semantic modalities (collaborative, textual, and image) by constructing modality-specific graph structures. Finally, we propose an innovative integration of multi-modal semantic graphs with prompt learning, harnessing the power of large language models to comprehensively explore high-dimensional semantic relationships. Experimental results demonstrate that our proposed method significantly improves accuracy in item recommendation, as well as generates more natural and contextually relevant content in response generation. We have released the code and the expanded multi-modal CRS datasets to facilitate further exploration in related research\footnote{this https URL}. 
+
+---
+# Multi-Modal Hypergraph Enhanced LLM Learning for Recommendation 
+
+**Authors**: Xu Guo, Tong Zhang, Yuanzhi Wang, Chenxu Wang, Fuyun Wang, Xudong Wang, Xiaoya Zhang, Xin Liu, Zhen Cui  
+
+**Link**: [PDF](https://arxiv.org/pdf/2504.10541)  
+
+**Abstract**: The burgeoning presence of Large Language Models (LLM) is propelling the development of personalized recommender systems. Most existing LLM-based methods fail to sufficiently explore the multi-view graph structure correlations inherent in recommendation scenarios. To this end, we propose a novel framework, Hypergraph Enhanced LLM Learning for multimodal Recommendation (HeLLM), designed to equip LLMs with the capability to capture intricate higher-order semantic correlations by fusing graph-level contextual signals with sequence-level behavioral patterns. In the recommender pre-training phase, we design a user hypergraph to uncover shared interest preferences among users and an item hypergraph to capture correlations within multimodal similarities among items. The hypergraph convolution and synergistic contrastive learning mechanism are introduced to enhance the distinguishability of learned representations. In the LLM fine-tuning phase, we inject the learned graph-structured embeddings directly into the LLM's architecture and integrate sequential features capturing each user's chronological behavior. This process enables hypergraphs to leverage graph-structured information as global context, enhancing the LLM's ability to perceive complex relational patterns and integrate multimodal information, while also modeling local temporal dynamics. Extensive experiments demonstrate the superiority of our proposed method over state-of-the-art baselines, confirming the advantages of fusing hypergraph-based context with sequential user behavior in LLMs for recommendation. 
+
+---
+# Enhancing multimodal analogical reasoning with Logic Augmented Generation 
+
+**Authors**: Anna Sofia Lippolis, Andrea Giovanni Nuzzolese, Aldo Gangemi  
+
+**Link**: [PDF](https://arxiv.org/pdf/2504.11190)  
+
+**Abstract**: Recent advances in Large Language Models have demonstrated their capabilities across a variety of tasks. However, automatically extracting implicit knowledge from natural language remains a significant challenge, as machines lack active experience with the physical world. Given this scenario, semantic knowledge graphs can serve as conceptual spaces that guide the automated text generation reasoning process to achieve more efficient and explainable results. In this paper, we apply a logic-augmented generation (LAG) framework that leverages the explicit representation of a text through a semantic knowledge graph and applies it in combination with prompt heuristics to elicit implicit analogical connections. This method generates extended knowledge graph triples representing implicit meaning, enabling systems to reason on unlabeled multimodal data regardless of the domain. We validate our work through three metaphor detection and understanding tasks across four datasets, as they require deep analogical reasoning capabilities. The results show that this integrated approach surpasses current baselines, performs better than humans in understanding visual metaphors, and enables more explainable reasoning processes, though still has inherent limitations in metaphor understanding, especially for domain-specific metaphors. Furthermore, we propose a thorough error analysis, discussing issues with metaphorical annotations and current evaluation methods. 
+
+---
+# Elucidating the Design Space of Multimodal Protein Language Models 
+
+**Authors**: Cheng-Yen, Hsieh, Xinyou Wang, Daiheng Zhang, Dongyu Xue, Fei Ye, Shujian Huang, Zaixiang Zheng, Quanquan Gu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2504.11454)  
+
+**Abstract**: Multimodal protein language models (PLMs) integrate sequence and token-based structural information, serving as a powerful foundation for protein modeling, generation, and design. However, the reliance on tokenizing 3D structures into discrete tokens causes substantial loss of fidelity about fine-grained structural details and correlations. In this paper, we systematically elucidate the design space of multimodal PLMs to overcome their limitations. We identify tokenization loss and inaccurate structure token predictions by the PLMs as major bottlenecks. To address these, our proposed design space covers improved generative modeling, structure-aware architectures and representation learning, and data exploration. Our advancements approach finer-grained supervision, demonstrating that token-based multimodal PLMs can achieve robust structural modeling. The effective design methods dramatically improve the structure generation diversity, and notably, folding abilities of our 650M model by reducing the RMSD from 5.52 to 2.36 on PDB testset, even outperforming 3B baselines and on par with the specialized folding models. 
+
+---
+# Toward Super Agent System with Hybrid AI Routers 
+
+**Authors**: Yuhang Yao, Haixin Wang, Yibo Chen, Jiawen Wang, Min Chang Jordan Ren, Bosheng Ding, Salman Avestimehr, Chaoyang He  
+
+**Link**: [PDF](https://arxiv.org/pdf/2504.10519)  
+
+**Abstract**: AI Agents powered by Large Language Models are transforming the world through enormous applications. A super agent has the potential to fulfill diverse user needs, such as summarization, coding, and research, by accurately understanding user intent and leveraging the appropriate tools to solve tasks. However, to make such an agent viable for real-world deployment and accessible at scale, significant optimizations are required to ensure high efficiency and low cost. This paper presents a design of the Super Agent System. Upon receiving a user prompt, the system first detects the intent of the user, then routes the request to specialized task agents with the necessary tools or automatically generates agentic workflows. In practice, most applications directly serve as AI assistants on edge devices such as phones and robots. As different language models vary in capability and cloud-based models often entail high computational costs, latency, and privacy concerns, we then explore the hybrid mode where the router dynamically selects between local and cloud models based on task complexity. Finally, we introduce the blueprint of an on-device super agent enhanced with cloud. With advances in multi-modality models and edge hardware, we envision that most computations can be handled locally, with cloud collaboration only as needed. Such architecture paves the way for super agents to be seamlessly integrated into everyday life in the near future. 
+
+---
+# Emergence of Goal-Directed Behaviors via Active Inference with Self-Prior 
+
+**Authors**: Dongmin Kim, Hoshinori Kanazawa, Naoto Yoshida, Yasuo Kuniyoshi  
+
+**Link**: [PDF](https://arxiv.org/pdf/2504.11075)  
+
+**Abstract**: Infants often exhibit goal-directed behaviors, such as reaching for a sensory stimulus, even when no external reward criterion is provided. These intrinsically motivated behaviors facilitate spontaneous exploration and learning of the body and environment during early developmental stages. Although computational modeling can offer insight into the mechanisms underlying such behaviors, many existing studies on intrinsic motivation focus primarily on how exploration contributes to acquiring external rewards. In this paper, we propose a novel density model for an agent's own multimodal sensory experiences, called the "self-prior," and investigate whether it can autonomously induce goal-directed behavior. Integrated within an active inference framework based on the free energy principle, the self-prior generates behavioral references purely from an intrinsic process that minimizes mismatches between average past sensory experiences and current observations. This mechanism is also analogous to the acquisition and utilization of a body schema through continuous interaction with the environment. We examine this approach in a simulated environment and confirm that the agent spontaneously reaches toward a tactile stimulus. Our study implements intrinsically motivated behavior shaped by the agent's own sensory experiences, demonstrating the spontaneous emergence of intentional behavior during early development. 
+
+---
+# TerraMind: Large-Scale Generative Multimodality for Earth Observation 
+
+**Authors**: Johannes Jakubik, Felix Yang, Benedikt Blumenstiel, Erik Scheurer, Rocco Sedona, Stefano Maurogiovanni, Jente Bosmans, Nikolaos Dionelis, Valerio Marsocci, Niklas Kopp, Rahul Ramachandran, Paolo Fraccaro, Thomas Brunschwiler, Gabriele Cavallaro, Juan Bernabe-Moreno, Nicolas Longépé  
+
+**Link**: [PDF](https://arxiv.org/pdf/2504.11171)  
+
+**Abstract**: We present TerraMind, the first any-to-any generative, multimodal foundation model for Earth observation (EO). Unlike other multimodal models, TerraMind is pretrained on dual-scale representations combining both token-level and pixel-level data across modalities. On a token level, TerraMind encodes high-level contextual information to learn cross-modal relationships, while on a pixel level, TerraMind leverages fine-grained representations to capture critical spatial nuances. We pretrained TerraMind on nine geospatial modalities of a global, large-scale dataset. In this paper, we demonstrate that (i) TerraMind's dual-scale early fusion approach unlocks a range of zero-shot and few-shot applications for Earth observation, (ii) TerraMind introduces "Thinking-in-Modalities" (TiM) -- the capability of generating additional artificial data during finetuning and inference to improve the model output -- and (iii) TerraMind achieves beyond state-of-the-art performance in community-standard benchmarks for EO like PANGAEA. The pretraining dataset, the model weights, and our code is open-sourced under a permissive license. 
+
+---
+# DeepMLF: Multimodal language model with learnable tokens for deep fusion in sentiment analysis 
+
+**Authors**: Efthymios Georgiou, Vassilis Katsouros, Yannis Avrithis, Alexandros Potamianos  
+
+**Link**: [PDF](https://arxiv.org/pdf/2504.11082)  
+
+**Abstract**: While multimodal fusion has been extensively studied in Multimodal Sentiment Analysis (MSA), the role of fusion depth and multimodal capacity allocation remains underexplored. In this work, we position fusion depth, scalability, and dedicated multimodal capacity as primary factors for effective fusion. We introduce DeepMLF, a novel multimodal language model (LM) with learnable tokens tailored toward deep fusion. DeepMLF leverages an audiovisual encoder and a pretrained decoder LM augmented with multimodal information across its layers. We append learnable tokens to the LM that: 1) capture modality interactions in a controlled fashion and 2) preserve independent information flow for each modality. These fusion tokens gather linguistic information via causal self-attention in LM Blocks and integrate with audiovisual information through cross-attention MM Blocks. Serving as dedicated multimodal capacity, this design enables progressive fusion across multiple layers, providing depth in the fusion process. Our training recipe combines modality-specific losses and language modelling loss, with the decoder LM tasked to predict ground truth polarity. Across three MSA benchmarks with varying dataset characteristics, DeepMLF achieves state-of-the-art performance. Our results confirm that deeper fusion leads to better performance, with optimal fusion depths (5-7) exceeding those of existing approaches. Additionally, our analysis on the number of fusion tokens reveals that small token sets ($\sim$20) achieve optimal performance. We examine the importance of representation learning order (fusion curriculum) through audiovisual encoder initialization experiments. Our ablation studies demonstrate the superiority of the proposed fusion design and gating while providing a holistic examination of DeepMLF's scalability to LLMs, and the impact of each training objective and embedding regularization. 
+
+---
+# MuSeD: A Multimodal Spanish Dataset for Sexism Detection in Social Media Videos 
+
+**Authors**: Laura De Grazia, Pol Pastells, Mauro Vázquez Chas, Desmond Elliott, Danae Sánchez Villegas, Mireia Farrús, Mariona Taulé  
+
+**Link**: [PDF](https://arxiv.org/pdf/2504.11169)  
+
+**Abstract**: Sexism is generally defined as prejudice and discrimination based on sex or gender, affecting every sector of society, from social institutions to relationships and individual behavior. Social media platforms amplify the impact of sexism by conveying discriminatory content not only through text but also across multiple modalities, highlighting the critical need for a multimodal approach to the analysis of sexism online. With the rise of social media platforms where users share short videos, sexism is increasingly spreading through video content. Automatically detecting sexism in videos is a challenging task, as it requires analyzing the combination of verbal, audio, and visual elements to identify sexist content. In this study, (1) we introduce MuSeD, a new Multimodal Spanish dataset for Sexism Detection consisting of $\approx$ 11 hours of videos extracted from TikTok and BitChute; (2) we propose an innovative annotation framework for analyzing the contribution of textual and multimodal labels in the classification of sexist and non-sexist content; and (3) we evaluate a range of large language models (LLMs) and multimodal LLMs on the task of sexism detection. We find that visual information plays a key role in labeling sexist content for both humans and models. Models effectively detect explicit sexism; however, they struggle with implicit cases, such as stereotypes, instances where annotators also show low agreement. This highlights the inherent difficulty of the task, as identifying implicit sexism depends on the social and cultural context. 
+
+---
+# TMCIR: Token Merge Benefits Composed Image Retrieval 
+
+**Authors**: Chaoyang Wang, Zeyu Zhang, Long Teng, Zijun Li, Shichao Kan  
+
+**Link**: [PDF](https://arxiv.org/pdf/2504.10995)  
+
+**Abstract**: Composed Image Retrieval (CIR) retrieves target images using a multi-modal query that combines a reference image with text describing desired modifications. The primary challenge is effectively fusing this visual and textual information. Current cross-modal feature fusion approaches for CIR exhibit an inherent bias in intention interpretation. These methods tend to disproportionately emphasize either the reference image features (visual-dominant fusion) or the textual modification intent (text-dominant fusion through image-to-text conversion). Such an imbalanced representation often fails to accurately capture and reflect the actual search intent of the user in the retrieval results. To address this challenge, we propose TMCIR, a novel framework that advances composed image retrieval through two key innovations: 1) Intent-Aware Cross-Modal Alignment. We first fine-tune CLIP encoders contrastively using intent-reflecting pseudo-target images, synthesized from reference images and textual descriptions via a diffusion model. This step enhances the encoder ability of text to capture nuanced intents in textual descriptions. 2) Adaptive Token Fusion. We further fine-tune all encoders contrastively by comparing adaptive token-fusion features with the target image. This mechanism dynamically balances visual and textual representations within the contrastive learning pipeline, optimizing the composed feature for retrieval. Extensive experiments on Fashion-IQ and CIRR datasets demonstrate that TMCIR significantly outperforms state-of-the-art methods, particularly in capturing nuanced user intent. 
+
+---
+# CDUPatch: Color-Driven Universal Adversarial Patch Attack for Dual-Modal Visible-Infrared Detectors 
+
+**Authors**: Jiahuan Long, Wen Yao, Tingsong Jiang, Chao Ma  
+
+**Link**: [PDF](https://arxiv.org/pdf/2504.10888)  
+
+**Abstract**: Adversarial patches are widely used to evaluate the robustness of object detection systems in real-world scenarios. These patches were initially designed to deceive single-modal detectors (e.g., visible or infrared) and have recently been extended to target visible-infrared dual-modal detectors. However, existing dual-modal adversarial patch attacks have limited attack effectiveness across diverse physical scenarios. To address this, we propose CDUPatch, a universal cross-modal patch attack against visible-infrared object detectors across scales, views, and scenarios. Specifically, we observe that color variations lead to different levels of thermal absorption, resulting in temperature differences in infrared imaging. Leveraging this property, we propose an RGB-to-infrared adapter that maps RGB patches to infrared patches, enabling unified optimization of cross-modal patches. By learning an optimal color distribution on the adversarial patch, we can manipulate its thermal response and generate an adversarial infrared texture. Additionally, we introduce a multi-scale clipping strategy and construct a new visible-infrared dataset, MSDrone, which contains aerial vehicle images in varying scales and perspectives. These data augmentation strategies enhance the robustness of our patch in real-world conditions. Experiments on four benchmark datasets (e.g., DroneVehicle, LLVIP, VisDrone, MSDrone) show that our method outperforms existing patch attacks in the digital domain. Extensive physical tests further confirm strong transferability across scales, views, and scenarios. 
+
+---
+# Can Vision-Language Models Understand and Interpret Dynamic Gestures from Pedestrians? Pilot Datasets and Exploration Towards Instructive Nonverbal Commands for Cooperative Autonomous Vehicles 
+
+**Authors**: Tonko E. W. Bossen, Andreas Møgelmose, Ross Greer  
+
+**Link**: [PDF](https://arxiv.org/pdf/2504.10873)  
+
+**Abstract**: In autonomous driving, it is crucial to correctly interpret traffic gestures (TGs), such as those of an authority figure providing orders or instructions, or a pedestrian signaling the driver, to ensure a safe and pleasant traffic environment for all road users. This study investigates the capabilities of state-of-the-art vision-language models (VLMs) in zero-shot interpretation, focusing on their ability to caption and classify human gestures in traffic contexts. We create and publicly share two custom datasets with varying formal and informal TGs, such as 'Stop', 'Reverse', 'Hail', etc. The datasets are "Acted TG (ATG)" and "Instructive TG In-The-Wild (ITGI)". They are annotated with natural language, describing the pedestrian's body position and gesture. We evaluate models using three methods utilizing expert-generated captions as baseline and control: (1) caption similarity, (2) gesture classification, and (3) pose sequence reconstruction similarity. Results show that current VLMs struggle with gesture understanding: sentence similarity averages below 0.59, and classification F1 scores reach only 0.14-0.39, well below the expert baseline of 0.70. While pose reconstruction shows potential, it requires more data and refined metrics to be reliable. Our findings reveal that although some SOTA VLMs can interpret zero-shot human traffic gestures, none are accurate and robust enough to be trustworthy, emphasizing the need for further research in this domain. 
+
+---
+# PuzzleBench: A Fully Dynamic Evaluation Framework for Large Multimodal Models on Puzzle Solving 
+
+**Authors**: Zeyu Zhang, Zijian Chen, Zicheng Zhang, Yuze Sun, Yuan Tian, Ziheng Jia, Chunyi Li, Xiaohong Liu, Xiongkuo Min, Guangtao Zhai  
+
+**Link**: [PDF](https://arxiv.org/pdf/2504.10885)  
+
+**Abstract**: Large Multimodal Models (LMMs) have demonstrated impressive capabilities across a wide range of multimodal tasks, achieving ever-increasing performance on various evaluation benchmarks. However, existing benchmarks are typically static and often overlap with pre-training datasets, leading to fixed complexity constraints and substantial data contamination issues. Meanwhile, manually annotated datasets are labor-intensive, time-consuming, and subject to human bias and inconsistency, leading to reliability and reproducibility issues. To address these problems, we propose a fully dynamic multimodal evaluation framework, named Open-ended Visual Puzzle Generation (OVPG), which aims to generate fresh, diverse, and verifiable evaluation data automatically in puzzle-solving tasks. Specifically, the OVPG pipeline consists of a raw material sampling module, a visual content generation module, and a puzzle rule design module, which ensures that each evaluation instance is primitive, highly randomized, and uniquely solvable, enabling continual adaptation to the evolving capabilities of LMMs. Built upon OVPG, we construct PuzzleBench, a dynamic and scalable benchmark comprising 11,840 VQA samples. It features six carefully designed puzzle tasks targeting three core LMM competencies, visual recognition, logical reasoning, and context understanding. PuzzleBench differs from static benchmarks that quickly become outdated. It enables ongoing dataset refreshing through OVPG and a rich set of open-ended puzzle designs, allowing seamless adaptation to the evolving capabilities of LMMs. 
+
+---
+# Large Language Model-Informed Feature Discovery Improves Prediction and Interpretation of Credibility Perceptions of Visual Content 
+
+**Authors**: Yilang Peng, Sijia Qian, Yingdan Lu, Cuihua Shen  
+
+**Link**: [PDF](https://arxiv.org/pdf/2504.10878)  
+
+**Abstract**: In today's visually dominated social media landscape, predicting the perceived credibility of visual content and understanding what drives human judgment are crucial for countering misinformation. However, these tasks are challenging due to the diversity and richness of visual features. We introduce a Large Language Model (LLM)-informed feature discovery framework that leverages multimodal LLMs, such as GPT-4o, to evaluate content credibility and explain its reasoning. We extract and quantify interpretable features using targeted prompts and integrate them into machine learning models to improve credibility predictions. We tested this approach on 4,191 visual social media posts across eight topics in science, health, and politics, using credibility ratings from 5,355 crowdsourced workers. Our method outperformed zero-shot GPT-based predictions by 13 percent in R2, and revealed key features like information concreteness and image format. We discuss the implications for misinformation mitigation, visual credibility, and the role of LLMs in social science. 
+
+---
+# CleanMAP: Distilling Multimodal LLMs for Confidence-Driven Crowdsourced HD Map Updates 
+
+**Authors**: Ankit Kumar Shaw, Kun Jiang, Tuopu Wen, Chandan Kumar Sah, Yining Shi, Mengmeng Yang, Diange Yang, Xiaoli Lian  
+
+**Link**: [PDF](https://arxiv.org/pdf/2504.10738)  
+
+**Abstract**: The rapid growth of intelligent connected vehicles (ICVs) and integrated vehicle-road-cloud systems has increased the demand for accurate, real-time HD map updates. However, ensuring map reliability remains challenging due to inconsistencies in crowdsourced data, which suffer from motion blur, lighting variations, adverse weather, and lane marking degradation. This paper introduces CleanMAP, a Multimodal Large Language Model (MLLM)-based distillation framework designed to filter and refine crowdsourced data for high-confidence HD map updates. CleanMAP leverages an MLLM-driven lane visibility scoring model that systematically quantifies key visual parameters, assigning confidence scores (0-10) based on their impact on lane detection. A novel dynamic piecewise confidence-scoring function adapts scores based on lane visibility, ensuring strong alignment with human evaluations while effectively filtering unreliable data. To further optimize map accuracy, a confidence-driven local map fusion strategy ranks and selects the top-k highest-scoring local maps within an optimal confidence range (best score minus 10%), striking a balance between data quality and quantity. Experimental evaluations on a real-world autonomous vehicle dataset validate CleanMAP's effectiveness, demonstrating that fusing the top three local maps achieves the lowest mean map update error of 0.28m, outperforming the baseline (0.37m) and meeting stringent accuracy thresholds (<= 0.32m). Further validation with real-vehicle data confirms 84.88% alignment with human evaluators, reinforcing the model's robustness and reliability. This work establishes CleanMAP as a scalable and deployable solution for crowdsourced HD map updates, ensuring more precise and reliable autonomous navigation. The code will be available at this https URL 
+
+---
+# ColorBench: Can VLMs See and Understand the Colorful World? A Comprehensive Benchmark for Color Perception, Reasoning, and Robustness 
+
+**Authors**: Yijun Liang, Ming Li, Chenrui Fan, Ziyue Li, Dang Nguyen, Kwesi Cobbina, Shweta Bhardwaj, Jiuhai Chen, Fuxiao Liu, Tianyi Zhou  
+
+**Link**: [PDF](https://arxiv.org/pdf/2504.10514)  
+
+**Abstract**: Color plays an important role in human perception and usually provides critical clues in visual reasoning. However, it is unclear whether and how vision-language models (VLMs) can perceive, understand, and leverage color as humans. This paper introduces ColorBench, an innovative benchmark meticulously crafted to assess the capabilities of VLMs in color understanding, including color perception, reasoning, and robustness. By curating a suite of diverse test scenarios, with grounding in real applications, ColorBench evaluates how these models perceive colors, infer meanings from color-based cues, and maintain consistent performance under varying color transformations. Through an extensive evaluation of 32 VLMs with varying language models and vision encoders, our paper reveals some undiscovered findings: (i) The scaling law (larger models are better) still holds on ColorBench, while the language model plays a more important role than the vision encoder. (ii) However, the performance gaps across models are relatively small, indicating that color understanding has been largely neglected by existing VLMs. (iii) CoT reasoning improves color understanding accuracies and robustness, though they are vision-centric tasks. (iv) Color clues are indeed leveraged by VLMs on ColorBench but they can also mislead models in some tasks. These findings highlight the critical limitations of current VLMs and underscore the need to enhance color comprehension. Our ColorBenchcan serve as a foundational tool for advancing the study of human-level color understanding of multimodal AI. 
+
+---
+# Dependency Structure Augmented Contextual Scoping Framework for Multimodal Aspect-Based Sentiment Analysis 
+
+**Authors**: Hao Liu, Lijun He, Jiaxi Liang, Zhihan Ren, Fan Li  
+
+**Link**: [PDF](https://arxiv.org/pdf/2504.11331)  
+
+**Abstract**: Multimodal Aspect-Based Sentiment Analysis (MABSA) seeks to extract fine-grained information from image-text pairs to identify aspect terms and determine their sentiment polarity. However, existing approaches often fall short in simultaneously addressing three core challenges: Sentiment Cue Perception (SCP), Multimodal Information Misalignment (MIM), and Semantic Noise Elimination (SNE). To overcome these limitations, we propose DASCO (\textbf{D}ependency Structure \textbf{A}ugmented \textbf{Sco}ping Framework), a fine-grained scope-oriented framework that enhances aspect-level sentiment reasoning by leveraging dependency parsing trees. First, we designed a multi-task pretraining strategy for MABSA on our base model, combining aspect-oriented enhancement, image-text matching, and aspect-level sentiment-sensitive cognition. This improved the model's perception of aspect terms and sentiment cues while achieving effective image-text alignment, addressing key challenges like SCP and MIM. Furthermore, we incorporate dependency trees as syntactic branch combining with semantic branch, guiding the model to selectively attend to critical contextual elements within a target-specific scope while effectively filtering out irrelevant noise for addressing SNE problem. Extensive experiments on two benchmark datasets across three subtasks demonstrate that DASCO achieves state-of-the-art performance in MABSA, with notable gains in JMASA (+3.1\% F1 and +5.4\% precision on Twitter2015). 
+
+---
+# Benchmarking Vision Language Models on German Factual Data 
+
+**Authors**: René Peinl, Vincent Tischler  
+
+**Link**: [PDF](https://arxiv.org/pdf/2504.11108)  
+
+**Abstract**: Similar to LLMs, the development of vision language models is mainly driven by English datasets and models trained in English and Chinese language, whereas support for other languages, even those considered high-resource languages such as German, remains significantly weaker. In this work we present an analysis of open-weight VLMs on factual knowledge in the German and English language. We disentangle the image-related aspects from the textual ones by analyzing accu-racy with jury-as-a-judge in both prompt languages and images from German and international contexts. We found that for celebrities and sights, VLMs struggle because they are lacking visual cognition of German image contents. For animals and plants, the tested models can often correctly identify the image contents ac-cording to the scientific name or English common name but fail in German lan-guage. Cars and supermarket products were identified equally well in English and German images across both prompt languages. 
+
+---

@@ -1,0 +1,18 @@
+# CLASH: Evaluating Language Models on Judging High-Stakes Dilemmas from Multiple Perspectives 
+
+**Authors**: Ayoung Lee, Ryan Sungmo Kwon, Peter Railton, Lu Wang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2504.10823)  
+
+**Abstract**: Navigating high-stakes dilemmas involving conflicting values is challenging even for humans, let alone for AI. Yet prior work in evaluating the reasoning capabilities of large language models (LLMs) in such situations has been limited to everyday scenarios. To close this gap, this work first introduces CLASH (Character perspective-based LLM Assessments in Situations with High-stakes), a meticulously curated dataset consisting of 345 high-impact dilemmas along with 3,795 individual perspectives of diverse values. In particular, we design CLASH in a way to support the study of critical aspects of value-based decision-making processes which are missing from prior work, including understanding decision ambivalence and psychological discomfort as well as capturing the temporal shifts of values in characters' perspectives. By benchmarking 10 open and closed frontier models, we uncover several key findings. (1) Even the strongest models, such as GPT-4o and Claude-Sonnet, achieve less than 50% accuracy in identifying situations where the decision should be ambivalent, while they perform significantly better in clear-cut scenarios. (2) While LLMs reasonably predict psychological discomfort as marked by human, they inadequately comprehend perspectives involving value shifts, indicating a need for LLMs to reason over complex values. (3) Our experiments also reveal a significant correlation between LLMs' value preferences and their steerability towards a given value. (4) Finally, LLMs exhibit greater steerability when engaged in value reasoning from a third-party perspective, compared to a first-person setup, though certain value pairs benefit uniquely from the first-person framing. 
+
+---
+# Who is More Bayesian: Humans or ChatGPT? 
+
+**Authors**: Tianshi Mu, Pranjal Rawat, John Rust, Chengjun Zhang, Qixuan Zhong  
+
+**Link**: [PDF](https://arxiv.org/pdf/2504.10636)  
+
+**Abstract**: We compare the performance of human and artificially intelligent (AI) decision makers in simple binary classification tasks where the optimal decision rule is given by Bayes Rule. We reanalyze choices of human subjects gathered from laboratory experiments conducted by El-Gamal and Grether and Holt and Smith. We confirm that while overall, Bayes Rule represents the single best model for predicting human choices, subjects are heterogeneous and a significant share of them make suboptimal choices that reflect judgement biases described by Kahneman and Tversky that include the ``representativeness heuristic'' (excessive weight on the evidence from the sample relative to the prior) and ``conservatism'' (excessive weight on the prior relative to the sample). We compare the performance of AI subjects gathered from recent versions of large language models (LLMs) including several versions of ChatGPT. These general-purpose generative AI chatbots are not specifically trained to do well in narrow decision making tasks, but are trained instead as ``language predictors'' using a large corpus of textual data from the web. We show that ChatGPT is also subject to biases that result in suboptimal decisions. However we document a rapid evolution in the performance of ChatGPT from sub-human performance for early versions (ChatGPT 3.5) to superhuman and nearly perfect Bayesian classifications in the latest versions (ChatGPT 4o). 
+
+---
