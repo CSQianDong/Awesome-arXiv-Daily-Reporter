@@ -1,0 +1,118 @@
+# Simulating Before Planning: Constructing Intrinsic User World Model for User-Tailored Dialogue Policy Planning 
+
+**Authors**: Tao He, Lizi Liao, Ming Liu, Bing Qin  
+
+**Link**: [PDF](https://arxiv.org/pdf/2504.13643)  
+
+**Abstract**: Recent advancements in dialogue policy planning have emphasized optimizing system agent policies to achieve predefined goals, focusing on strategy design, trajectory acquisition, and efficient training paradigms. However, these approaches often overlook the critical role of user characteristics, which are essential in real-world scenarios like conversational search and recommendation, where interactions must adapt to individual user traits such as personality, preferences, and goals. To address this gap, we first conduct a comprehensive study utilizing task-specific user personas to systematically assess dialogue policy planning under diverse user behaviors. By leveraging realistic user profiles for different tasks, our study reveals significant limitations in existing approaches, highlighting the need for user-tailored dialogue policy planning. Building on this foundation, we present the User-Tailored Dialogue Policy Planning (UDP) framework, which incorporates an Intrinsic User World Model to model user traits and feedback. UDP operates in three stages: (1) User Persona Portraying, using a diffusion model to dynamically infer user profiles; (2) User Feedback Anticipating, leveraging a Brownian Bridge-inspired anticipator to predict user reactions; and (3) User-Tailored Policy Planning, integrating these insights to optimize response strategies. To ensure robust performance, we further propose an active learning approach that prioritizes challenging user personas during training. Comprehensive experiments on benchmarks, including collaborative and non-collaborative settings, demonstrate the effectiveness of UDP in learning user-specific dialogue strategies. Results validate the protocol's utility and highlight UDP's robustness, adaptability, and potential to advance user-centric dialogue systems. 
+
+---
+# CodeVisionary: An Agent-based Framework for Evaluating Large Language Models in Code Generation 
+
+**Authors**: Xinchen Wang, Pengfei Gao, Chao Peng, Ruida Hu, Cuiyun Gao  
+
+**Link**: [PDF](https://arxiv.org/pdf/2504.13472)  
+
+**Abstract**: Large language models (LLMs) have demonstrated strong capabilities in code generation, underscoring the critical need for rigorous and comprehensive evaluation. Existing evaluation approaches fall into three categories, including human-centered, metric-based, and LLM-based. Considering that human-centered approaches are labour-intensive and metric-based ones overly rely on reference answers, LLM-based approaches are gaining increasing attention due to their stronger contextual understanding capabilities and superior efficiency. However, the performance of LLM-based approaches remains limited due to: (1) lack of multisource domain knowledge, and (2) insufficient comprehension of complex code.
+To mitigate the limitations, we propose CodeVisionary, the first LLM-based agent framework for evaluating LLMs in code generation. CodeVisionary consists of two stages: (1) Multiscore knowledge analysis stage, which aims to gather multisource and comprehensive domain knowledge by formulating and executing a stepwise evaluation plan. (2) Negotiation-based scoring stage, which involves multiple judges engaging in discussions to better comprehend the complex code and reach a consensus on the evaluation score. Extensive experiments demonstrate that CodeVisionary achieves the best performance for evaluating LLMs in code generation, outperforming the best baseline methods with average improvements of 0.202, 0.139, and 0.117 in Pearson, Spearman, and Kendall-Tau coefficients, respectively. Besides, CodeVisionary provides detailed evaluation reports, which assist developers in identifying shortcomings and making improvements. The resources of CodeVisionary are available at this https URL. 
+
+---
+# LangCoop: Collaborative Driving with Language 
+
+**Authors**: Xiangbo Gao, Yuheng Wu, Rujia Wang, Chenxi Liu, Yang Zhou, Zhengzhong Tu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2504.13406)  
+
+**Abstract**: Multi-agent collaboration holds great promise for enhancing the safety, reliability, and mobility of autonomous driving systems by enabling information sharing among multiple connected agents. However, existing multi-agent communication approaches are hindered by limitations of existing communication media, including high bandwidth demands, agent heterogeneity, and information loss. To address these challenges, we introduce LangCoop, a new paradigm for collaborative autonomous driving that leverages natural language as a compact yet expressive medium for inter-agent communication. LangCoop features two key innovations: Mixture Model Modular Chain-of-thought (M$^3$CoT) for structured zero-shot vision-language reasoning and Natural Language Information Packaging (LangPack) for efficiently packaging information into concise, language-based messages. Through extensive experiments conducted in the CARLA simulations, we demonstrate that LangCoop achieves a remarkable 96\% reduction in communication bandwidth (< 2KB per message) compared to image-based communication, while maintaining competitive driving performance in the closed-loop evaluation. 
+
+---
+# Not All Rollouts are Useful: Down-Sampling Rollouts in LLM Reinforcement Learning 
+
+**Authors**: Yixuan Even Xu, Yash Savani, Fei Fang, Zico Kolter  
+
+**Link**: [PDF](https://arxiv.org/pdf/2504.13818)  
+
+**Abstract**: Reinforcement learning (RL) has emerged as a powerful paradigm for enhancing reasoning capabilities in large language models, but faces a fundamental asymmetry in computation and memory requirements: inference is embarrassingly parallel with a minimal memory footprint, while policy updates require extensive synchronization and are memory-intensive. To address this asymmetry, we introduce PODS (Policy Optimization with Down-Sampling), a framework that strategically decouples these phases by generating numerous rollouts in parallel but updating only on an informative subset. Within this framework, we develop max-variance down-sampling, a theoretically motivated method that selects rollouts with maximally diverse reward signals. We prove that this approach has an efficient algorithmic solution, and empirically demonstrate that GRPO with PODS using max-variance down-sampling achieves superior performance over standard GRPO on the GSM8K benchmark. 
+
+---
+# X-Teaming: Multi-Turn Jailbreaks and Defenses with Adaptive Multi-Agents 
+
+**Authors**: Salman Rahman, Liwei Jiang, James Shiffer, Genglin Liu, Sheriff Issaka, Md Rizwan Parvez, Hamid Palangi, Kai-Wei Chang, Yejin Choi, Saadia Gabriel  
+
+**Link**: [PDF](https://arxiv.org/pdf/2504.13203)  
+
+**Abstract**: Multi-turn interactions with language models (LMs) pose critical safety risks, as harmful intent can be strategically spread across exchanges. Yet, the vast majority of prior work has focused on single-turn safety, while adaptability and diversity remain among the key challenges of multi-turn red-teaming. To address these challenges, we present X-Teaming, a scalable framework that systematically explores how seemingly harmless interactions escalate into harmful outcomes and generates corresponding attack scenarios. X-Teaming employs collaborative agents for planning, attack optimization, and verification, achieving state-of-the-art multi-turn jailbreak effectiveness and diversity with success rates up to 98.1% across representative leading open-weight and closed-source models. In particular, X-Teaming achieves a 96.2% attack success rate against the latest Claude 3.7 Sonnet model, which has been considered nearly immune to single-turn attacks. Building on X-Teaming, we introduce XGuard-Train, an open-source multi-turn safety training dataset that is 20x larger than the previous best resource, comprising 30K interactive jailbreaks, designed to enable robust multi-turn safety alignment for LMs. Our work offers essential tools and insights for mitigating sophisticated conversational attacks, advancing the multi-turn safety of LMs. 
+
+---
+# On the Definition of Robustness and Resilience of AI Agents for Real-time Congestion Management 
+
+**Authors**: Timothy Tjhay, Ricardo J. Bessa, Jose Paulos  
+
+**Link**: [PDF](https://arxiv.org/pdf/2504.13314)  
+
+**Abstract**: The European Union's Artificial Intelligence (AI) Act defines robustness, resilience, and security requirements for high-risk sectors but lacks detailed methodologies for assessment. This paper introduces a novel framework for quantitatively evaluating the robustness and resilience of reinforcement learning agents in congestion management. Using the AI-friendly digital environment Grid2Op, perturbation agents simulate natural and adversarial disruptions by perturbing the input of AI systems without altering the actual state of the environment, enabling the assessment of AI performance under various scenarios. Robustness is measured through stability and reward impact metrics, while resilience quantifies recovery from performance degradation. The results demonstrate the framework's effectiveness in identifying vulnerabilities and improving AI robustness and resilience for critical applications. 
+
+---
+# Trust, but verify 
+
+**Authors**: Michael J. Yuan, Carlos Campoy, Sydney Lai, James Snewin, Ju Long  
+
+**Link**: [PDF](https://arxiv.org/pdf/2504.13443)  
+
+**Abstract**: Decentralized AI agent networks, such as Gaia, allows individuals to run customized LLMs on their own computers and then provide services to the public. However, in order to maintain service quality, the network must verify that individual nodes are running their designated LLMs. In this paper, we demonstrate that in a cluster of mostly honest nodes, we can detect nodes that run unauthorized or incorrect LLM through social consensus of its peers. We will discuss the algorithm and experimental data from the Gaia network. We will also discuss the intersubjective validation system, implemented as an EigenLayer AVS to introduce financial incentives and penalties to encourage honest behavior from LLM nodes. 
+
+---
+# Causal-Copilot: An Autonomous Causal Analysis Agent 
+
+**Authors**: Xinyue Wang, Kun Zhou, Wenyi Wu, Har Simrat Singh, Fang Nan, Songyao Jin, Aryan Philip, Saloni Patnaik, Hou Zhu, Shivam Singh, Parjanya Prashant, Qian Shen, Biwei Huang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2504.13263)  
+
+**Abstract**: Causal analysis plays a foundational role in scientific discovery and reliable decision-making, yet it remains largely inaccessible to domain experts due to its conceptual and algorithmic complexity. This disconnect between causal methodology and practical usability presents a dual challenge: domain experts are unable to leverage recent advances in causal learning, while causal researchers lack broad, real-world deployment to test and refine their methods. To address this, we introduce Causal-Copilot, an autonomous agent that operationalizes expert-level causal analysis within a large language model framework. Causal-Copilot automates the full pipeline of causal analysis for both tabular and time-series data -- including causal discovery, causal inference, algorithm selection, hyperparameter optimization, result interpretation, and generation of actionable insights. It supports interactive refinement through natural language, lowering the barrier for non-specialists while preserving methodological rigor. By integrating over 20 state-of-the-art causal analysis techniques, our system fosters a virtuous cycle -- expanding access to advanced causal methods for domain experts while generating rich, real-world applications that inform and advance causal theory. Empirical evaluations demonstrate that Causal-Copilot achieves superior performance compared to existing baselines, offering a reliable, scalable, and extensible solution that bridges the gap between theoretical sophistication and real-world applicability in causal analysis. 
+
+---
+# Task Assignment and Exploration Optimization for Low Altitude UAV Rescue via Generative AI Enhanced Multi-agent Reinforcement Learning 
+
+**Authors**: Xin Tang, Qian Chen, Wenjie Weng, Chao Jin, Zhang Liu, Jiacheng Wang, Geng Sun, Xiaohuan Li, Dusit Niyato  
+
+**Link**: [PDF](https://arxiv.org/pdf/2504.13554)  
+
+**Abstract**: Artificial Intelligence (AI)-driven convolutional neural networks enhance rescue, inspection, and surveillance tasks performed by low-altitude uncrewed aerial vehicles (UAVs) and ground computing nodes (GCNs) in unknown environments. However, their high computational demands often exceed a single UAV's capacity, leading to system instability, further exacerbated by the limited and dynamic resources of GCNs. To address these challenges, this paper proposes a novel cooperation framework involving UAVs, ground-embedded robots (GERs), and high-altitude platforms (HAPs), which enable resource pooling through UAV-to-GER (U2G) and UAV-to-HAP (U2H) communications to provide computing services for UAV offloaded tasks. Specifically, we formulate the multi-objective optimization problem of task assignment and exploration optimization in UAVs as a dynamic long-term optimization problem. Our objective is to minimize task completion time and energy consumption while ensuring system stability over time. To achieve this, we first employ the Lyapunov optimization technique to transform the original problem, with stability constraints, into a per-slot deterministic problem. We then propose an algorithm named HG-MADDPG, which combines the Hungarian algorithm with a generative diffusion model (GDM)-based multi-agent deep deterministic policy gradient (MADDPG) approach. We first introduce the Hungarian algorithm as a method for exploration area selection, enhancing UAV efficiency in interacting with the environment. We then innovatively integrate the GDM and multi-agent deep deterministic policy gradient (MADDPG) to optimize task assignment decisions, such as task offloading and resource allocation. Simulation results demonstrate the effectiveness of the proposed approach, with significant improvements in task offloading efficiency, latency reduction, and system stability compared to baseline methods. 
+
+---
+# SwitchMT: An Adaptive Context Switching Methodology for Scalable Multi-Task Learning in Intelligent Autonomous Agents 
+
+**Authors**: Avaneesh Devkota, Rachmad Vidya Wicaksana Putra, Muhammad Shafique  
+
+**Link**: [PDF](https://arxiv.org/pdf/2504.13541)  
+
+**Abstract**: The ability to train intelligent autonomous agents (such as mobile robots) on multiple tasks is crucial for adapting to dynamic real-world environments. However, state-of-the-art reinforcement learning (RL) methods only excel in single-task settings, and still struggle to generalize across multiple tasks due to task interference. Moreover, real-world environments also demand the agents to have data stream processing capabilities. Toward this, a state-of-the-art work employs Spiking Neural Networks (SNNs) to improve multi-task learning by exploiting temporal information in data stream, while enabling lowpower/energy event-based operations. However, it relies on fixed context/task-switching intervals during its training, hence limiting the scalability and effectiveness of multi-task learning. To address these limitations, we propose SwitchMT, a novel adaptive task-switching methodology for RL-based multi-task learning in autonomous agents. Specifically, SwitchMT employs the following key ideas: (1) a Deep Spiking Q-Network with active dendrites and dueling structure, that utilizes task-specific context signals to create specialized sub-networks; and (2) an adaptive task-switching policy that leverages both rewards and internal dynamics of the network parameters. Experimental results demonstrate that SwitchMT achieves superior performance in multi-task learning compared to state-of-the-art methods. It achieves competitive scores in multiple Atari games (i.e., Pong: -8.8, Breakout: 5.6, and Enduro: 355.2) compared to the state-of-the-art, showing its better generalized learning capability. These results highlight the effectiveness of our SwitchMT methodology in addressing task interference while enabling multi-task learning automation through adaptive task switching, thereby paving the way for more efficient generalist agents with scalable multi-task learning capabilities. 
+
+---
+# Towards a Multi-Agent Vision-Language System for Zero-Shot Novel Hazardous Object Detection for Autonomous Driving Safety 
+
+**Authors**: Shashank Shriram, Srinivasa Perisetla, Aryan Keskar, Harsha Krishnaswamy, Tonko Emil Westerhof Bossen, Andreas Møgelmose, Ross Greer  
+
+**Link**: [PDF](https://arxiv.org/pdf/2504.13399)  
+
+**Abstract**: Detecting anomalous hazards in visual data, particularly in video streams, is a critical challenge in autonomous driving. Existing models often struggle with unpredictable, out-of-label hazards due to their reliance on predefined object categories. In this paper, we propose a multimodal approach that integrates vision-language reasoning with zero-shot object detection to improve hazard identification and explanation. Our pipeline consists of a Vision-Language Model (VLM), a Large Language Model (LLM), in order to detect hazardous objects within a traffic scene. We refine object detection by incorporating OpenAI's CLIP model to match predicted hazards with bounding box annotations, improving localization accuracy. To assess model performance, we create a ground truth dataset by denoising and extending the foundational COOOL (Challenge-of-Out-of-Label) anomaly detection benchmark dataset with complete natural language descriptions for hazard annotations. We define a means of hazard detection and labeling evaluation on the extended dataset using cosine similarity. This evaluation considers the semantic similarity between the predicted hazard description and the annotated ground truth for each video. Additionally, we release a set of tools for structuring and managing large-scale hazard detection datasets. Our findings highlight the strengths and limitations of current vision-language-based approaches, offering insights into future improvements in autonomous hazard detection systems. Our models, scripts, and data can be found at this https URL 
+
+---
+# CheatAgent: Attacking LLM-Empowered Recommender Systems via LLM Agent 
+
+**Authors**: Liang-bo Ning, Shijie Wang, Wenqi Fan, Qing Li, Xin Xu, Hao Chen, Feiran Huang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2504.13192)  
+
+**Abstract**: Recently, Large Language Model (LLM)-empowered recommender systems (RecSys) have brought significant advances in personalized user experience and have attracted considerable attention. Despite the impressive progress, the research question regarding the safety vulnerability of LLM-empowered RecSys still remains largely under-investigated. Given the security and privacy concerns, it is more practical to focus on attacking the black-box RecSys, where attackers can only observe the system's inputs and outputs. However, traditional attack approaches employing reinforcement learning (RL) agents are not effective for attacking LLM-empowered RecSys due to the limited capabilities in processing complex textual inputs, planning, and reasoning. On the other hand, LLMs provide unprecedented opportunities to serve as attack agents to attack RecSys because of their impressive capability in simulating human-like decision-making processes. Therefore, in this paper, we propose a novel attack framework called CheatAgent by harnessing the human-like capabilities of LLMs, where an LLM-based agent is developed to attack LLM-Empowered RecSys. Specifically, our method first identifies the insertion position for maximum impact with minimal input modification. After that, the LLM agent is designed to generate adversarial perturbations to insert at target positions. To further improve the quality of generated perturbations, we utilize the prompt tuning technique to improve attacking strategies via feedback from the victim RecSys iteratively. Extensive experiments across three real-world datasets demonstrate the effectiveness of our proposed attacking method. 
+
+---
+# HEAT:History-Enhanced Dual-phase Actor-Critic Algorithm with A Shared Transformer 
+
+**Authors**: Hong Yang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2504.13193)  
+
+**Abstract**: For a single-gateway LoRaWAN network, this study proposed a history-enhanced two-phase actor-critic algorithm with a shared transformer algorithm (HEAT) to improve network performance. HEAT considers uplink parameters and often neglected downlink parameters, and effectively integrates offline and online reinforcement learning, using historical data and real-time interaction to improve model performance. In addition, this study developed an open source LoRaWAN network simulator LoRaWANSim. The simulator considers the demodulator lock effect and supports multi-channel, multi-demodulator and bidirectional communication. Simulation experiments show that compared with the best results of all compared algorithms, HEAT improves the packet success rate and energy efficiency by 15% and 95%, respectively. 
+
+---
