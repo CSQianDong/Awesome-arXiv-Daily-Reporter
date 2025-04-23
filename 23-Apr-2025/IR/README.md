@@ -1,0 +1,109 @@
+# Intent-aware Diffusion with Contrastive Learning for Sequential Recommendation 
+
+**Authors**: Yuanpeng Qu, Hajime Nobuhara  
+
+**Link**: [PDF](https://arxiv.org/pdf/2504.16077)  
+
+**Abstract**: Contrastive learning has proven effective in training sequential recommendation models by incorporating self-supervised signals from augmented views. Most existing methods generate multiple views from the same interaction sequence through stochastic data augmentation, aiming to align their representations in the embedding space. However, users typically have specific intents when purchasing items (e.g., buying clothes as gifts or cosmetics for beauty). Random data augmentation used in existing methods may introduce noise, disrupting the latent intent information implicit in the original interaction sequence. Moreover, using noisy augmented sequences in contrastive learning may mislead the model to focus on irrelevant features, distorting the embedding space and failing to capture users' true behavior patterns and intents. To address these issues, we propose Intent-aware Diffusion with contrastive learning for sequential Recommendation (InDiRec). The core idea is to generate item sequences aligned with users' purchasing intents, thus providing more reliable augmented views for contrastive learning. Specifically, InDiRec first performs intent clustering on sequence representations using K-means to build intent-guided signals. Next, it retrieves the intent representation of the target interaction sequence to guide a conditional diffusion model, generating positive views that share the same underlying intent. Finally, contrastive learning is applied to maximize representation consistency between these intent-aligned views and the original sequence. Extensive experiments on five public datasets demonstrate that InDiRec achieves superior performance compared to existing baselines, learning more robust representations even under noisy and sparse data conditions. 
+
+---
+# From Human Memory to AI Memory: A Survey on Memory Mechanisms in the Era of LLMs 
+
+**Authors**: Yaxiong Wu, Sheng Liang, Chen Zhang, Yichao Wang, Yongyue Zhang, Huifeng Guo, Ruiming Tang, Yong Liu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2504.15965)  
+
+**Abstract**: Memory is the process of encoding, storing, and retrieving information, allowing humans to retain experiences, knowledge, skills, and facts over time, and serving as the foundation for growth and effective interaction with the world. It plays a crucial role in shaping our identity, making decisions, learning from past experiences, building relationships, and adapting to changes. In the era of large language models (LLMs), memory refers to the ability of an AI system to retain, recall, and use information from past interactions to improve future responses and interactions. Although previous research and reviews have provided detailed descriptions of memory mechanisms, there is still a lack of a systematic review that summarizes and analyzes the relationship between the memory of LLM-driven AI systems and human memory, as well as how we can be inspired by human memory to construct more powerful memory systems. To achieve this, in this paper, we propose a comprehensive survey on the memory of LLM-driven AI systems. In particular, we first conduct a detailed analysis of the categories of human memory and relate them to the memory of AI systems. Second, we systematically organize existing memory-related work and propose a categorization method based on three dimensions (object, form, and time) and eight quadrants. Finally, we illustrate some open problems regarding the memory of current AI systems and outline possible future directions for memory in the era of large language models. 
+
+---
+# Synergizing RAG and Reasoning: A Systematic Review 
+
+**Authors**: Yunfan Gao, Yun Xiong, Yijie Zhong, Yuxi Bi, Ming Xue, Haofen Wang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2504.15909)  
+
+**Abstract**: Recent breakthroughs in large language models (LLMs), particularly in reasoning capabilities, have propelled Retrieval-Augmented Generation (RAG) to unprecedented levels. By synergizing retrieval mechanisms with advanced reasoning, LLMs can now tackle increasingly complex problems. This paper presents a systematic review of the collaborative interplay between RAG and reasoning, clearly defining "reasoning" within the RAG context. It construct a comprehensive taxonomy encompassing multi-dimensional collaborative objectives, representative paradigms, and technical implementations, and analyze the bidirectional synergy methods. Additionally, we critically evaluate current limitations in RAG assessment, including the absence of intermediate supervision for multi-step reasoning and practical challenges related to cost-risk trade-offs. To bridge theory and practice, we provide practical guidelines tailored to diverse real-world applications. Finally, we identify promising research directions, such as graph-based knowledge integration, hybrid model collaboration, and RL-driven optimization. Overall, this work presents a theoretical framework and practical foundation to advance RAG systems in academia and industry, fostering the next generation of RAG solutions. 
+
+---
+# NLCTables: A Dataset for Marrying Natural Language Conditions with Table Discovery 
+
+**Authors**: Lingxi Cui, Huan Li, Ke Chen, Lidan Shou, Gang Chen  
+
+**Link**: [PDF](https://arxiv.org/pdf/2504.15849)  
+
+**Abstract**: With the growing abundance of repositories containing tabular data, discovering relevant tables for in-depth analysis remains a challenging task. Existing table discovery methods primarily retrieve desired tables based on a query table or several vague keywords, leaving users to manually filter large result sets. To address this limitation, we propose a new task: NL-conditional table discovery (nlcTD), where users combine a query table with natural language (NL) requirements to refine search results. To advance research in this area, we present nlcTables, a comprehensive benchmark dataset comprising 627 diverse queries spanning NL-only, union, join, and fuzzy conditions, 22,080 candidate tables, and 21,200 relevance annotations. Our evaluation of six state-of-the-art table discovery methods on nlcTables reveals substantial performance gaps, highlighting the need for advanced techniques to tackle this challenging nlcTD scenario. The dataset, construction framework, and baseline implementations are publicly available at this https URL to foster future research. 
+
+---
+# FinDER: Financial Dataset for Question Answering and Evaluating Retrieval-Augmented Generation 
+
+**Authors**: Chanyeol Choi, Jihoon Kwon, Jaeseon Ha, Hojun Choi, Chaewoon Kim, Yongjae Lee, Jy-yong Sohn, Alejandro Lopez-Lira  
+
+**Link**: [PDF](https://arxiv.org/pdf/2504.15800)  
+
+**Abstract**: In the fast-paced financial domain, accurate and up-to-date information is critical to addressing ever-evolving market conditions. Retrieving this information correctly is essential in financial Question-Answering (QA), since many language models struggle with factual accuracy in this domain. We present FinDER, an expert-generated dataset tailored for Retrieval-Augmented Generation (RAG) in finance. Unlike existing QA datasets that provide predefined contexts and rely on relatively clear and straightforward queries, FinDER focuses on annotating search-relevant evidence by domain experts, offering 5,703 query-evidence-answer triplets derived from real-world financial inquiries. These queries frequently include abbreviations, acronyms, and concise expressions, capturing the brevity and ambiguity common in the realistic search behavior of professionals. By challenging models to retrieve relevant information from large corpora rather than relying on readily determined contexts, FinDER offers a more realistic benchmark for evaluating RAG systems. We further present a comprehensive evaluation of multiple state-of-the-art retrieval models and Large Language Models, showcasing challenges derived from a realistic benchmark to drive future research on truthful and precise RAG in the financial domain. 
+
+---
+# The Viability of Crowdsourcing for RAG Evaluation 
+
+**Authors**: Lukas Gienapp, Tim Hagen, Maik Fröbe, Matthias Hagen, Benno Stein, Martin Potthast, Harrisen Scells  
+
+**Link**: [PDF](https://arxiv.org/pdf/2504.15689)  
+
+**Abstract**: How good are humans at writing and judging responses in retrieval-augmented generation (RAG) scenarios? To answer this question, we investigate the efficacy of crowdsourcing for RAG through two complementary studies: response writing and response utility judgment. We present the Crowd RAG Corpus 2025 (CrowdRAG-25), which consists of 903 human-written and 903 LLM-generated responses for the 301 topics of the TREC RAG'24 track, across the three discourse styles 'bulleted list', 'essay', and 'news'. For a selection of 65 topics, the corpus further contains 47,320 pairwise human judgments and 10,556 pairwise LLM judgments across seven utility dimensions (e.g., coverage and coherence). Our analyses give insights into human writing behavior for RAG and the viability of crowdsourcing for RAG evaluation. Human pairwise judgments provide reliable and cost-effective results compared to LLM-based pairwise or human/LLM-based pointwise judgments, as well as automated comparisons with human-written reference responses. All our data and tools are freely available. 
+
+---
+# CiteFix: Enhancing RAG Accuracy Through Post-Processing Citation Correction 
+
+**Authors**: Harsh Maheshwari, Srikanth Tenneti, Alwarappan Nakkiran  
+
+**Link**: [PDF](https://arxiv.org/pdf/2504.15629)  
+
+**Abstract**: Retrieval Augmented Generation (RAG) has emerged as a powerful application of Large Language Models (LLMs), revolutionizing information search and consumption. RAG systems combine traditional search capabilities with LLMs to generate comprehensive answers to user queries, ideally with accurate citations. However, in our experience of developing a RAG product, LLMs often struggle with source attribution, aligning with other industry studies reporting citation accuracy rates of only about 74% for popular generative search engines. To address this, we present efficient post-processing algorithms to improve citation accuracy in LLM-generated responses, with minimal impact on latency and cost. Our approaches cross-check generated citations against retrieved articles using methods including keyword + semantic matching, fine tuned model with BERTScore, and a lightweight LLM-based technique. Our experimental results demonstrate a relative improvement of 15.46% in the overall accuracy metrics of our RAG system. This significant enhancement potentially enables a shift from our current larger language model to a relatively smaller model that is approximately 12x more cost-effective and 3x faster in inference time, while maintaining comparable performance. This research contributes to enhancing the reliability and trustworthiness of AI-generated content in information retrieval and summarization tasks which is critical to gain customer trust especially in commercial products. 
+
+---
+# Comprehensive List Generation for Multi-Generator Reranking 
+
+**Authors**: Hailan Yang, Zhenyu Qi, Shuchang Liu, Xiaoyu Yang, Xiaobei Wang, Xiang Li, Lantao Hu, Han Li, Kun Gai  
+
+**Link**: [PDF](https://arxiv.org/pdf/2504.15625)  
+
+**Abstract**: Reranking models solve the final recommendation lists that best fulfill users' demands. While existing solutions focus on finding parametric models that approximate optimal policies, recent approaches find that it is better to generate multiple lists to compete for a ``pass'' ticket from an evaluator, where the evaluator serves as the supervisor who accurately estimates the performance of the candidate lists. In this work, we show that we can achieve a more efficient and effective list proposal with a multi-generator framework and provide empirical evidence on two public datasets and online A/B tests. More importantly, we verify that the effectiveness of a generator is closely related to how much it complements the views of other generators with sufficiently different rerankings, which derives the metric of list comprehensiveness. With this intuition, we design an automatic complementary generator-finding framework that learns a policy that simultaneously aligns the users' preferences and maximizes the list comprehensiveness metric. The experimental results indicate that the proposed framework can further improve the multi-generator reranking performance. 
+
+---
+# From Reviews to Dialogues: Active Synthesis for Zero-Shot LLM-based Conversational Recommender System 
+
+**Authors**: Rohan Surana, Junda Wu, Zhouhang Xie, Yu Xia, Harald Steck, Dawen Liang, Nathan Kallus, Julian McAuley  
+
+**Link**: [PDF](https://arxiv.org/pdf/2504.15476)  
+
+**Abstract**: Conversational recommender systems (CRS) typically require extensive domain-specific conversational datasets, yet high costs, privacy concerns, and data-collection challenges severely limit their availability. Although Large Language Models (LLMs) demonstrate strong zero-shot recommendation capabilities, practical applications often favor smaller, internally managed recommender models due to scalability, interpretability, and data privacy constraints, especially in sensitive or rapidly evolving domains. However, training these smaller models effectively still demands substantial domain-specific conversational data, which remains challenging to obtain. To address these limitations, we propose an active data augmentation framework that synthesizes conversational training data by leveraging black-box LLMs guided by active learning techniques. Specifically, our method utilizes publicly available non-conversational domain data, including item metadata, user reviews, and collaborative signals, as seed inputs. By employing active learning strategies to select the most informative seed samples, our approach efficiently guides LLMs to generate synthetic, semantically coherent conversational interactions tailored explicitly to the target domain. Extensive experiments validate that conversational data generated by our proposed framework significantly improves the performance of LLM-based CRS models, effectively addressing the challenges of building CRS in no- or low-resource scenarios. 
+
+---
+# Med-CoDE: Medical Critique based Disagreement Evaluation Framework 
+
+**Authors**: Mohit Gupta, Akiko Aizawa, Rajiv Ratn Shah  
+
+**Link**: [PDF](https://arxiv.org/pdf/2504.15330)  
+
+**Abstract**: The emergence of large language models (LLMs) has significantly influenced numerous fields, including healthcare, by enhancing the capabilities of automated systems to process and generate human-like text. However, despite their advancements, the reliability and accuracy of LLMs in medical contexts remain critical concerns. Current evaluation methods often lack robustness and fail to provide a comprehensive assessment of LLM performance, leading to potential risks in clinical settings. In this work, we propose Med-CoDE, a specifically designed evaluation framework for medical LLMs to address these challenges. The framework leverages a critique-based approach to quantitatively measure the degree of disagreement between model-generated responses and established medical ground truths. This framework captures both accuracy and reliability in medical settings. The proposed evaluation framework aims to fill the existing gap in LLM assessment by offering a systematic method to evaluate the quality and trustworthiness of medical LLMs. Through extensive experiments and case studies, we illustrate the practicality of our framework in providing a comprehensive and reliable evaluation of medical LLMs. 
+
+---
+# A Python Tool for Reconstructing Full News Text from GDELT 
+
+**Authors**: A. Fronzetti Colladon, R. Vestrelli  
+
+**Link**: [PDF](https://arxiv.org/pdf/2504.16063)  
+
+**Abstract**: News data have become an essential resource across various disciplines, including economics, finance, management, social sciences, and computer science. Researchers leverage newspaper articles to study economic trends, market dynamics, corporate strategies, public perception, political discourse, and the evolution of public opinion. Additionally, news datasets have been instrumental in training large-scale language models, with applications in sentiment analysis, fake news detection, and automated news summarization. Despite their significance, access to comprehensive news corpora remains a key challenge. Many full-text news providers, such as Factiva and LexisNexis, require costly subscriptions, while free alternatives often suffer from incomplete data and transparency issues. This paper presents a novel approach to obtaining full-text newspaper articles at near-zero cost by leveraging data from the Global Database of Events, Language, and Tone (GDELT). Specifically, we focus on the GDELT Web News NGrams 3.0 dataset, which provides high-frequency updates of n-grams extracted from global online news sources. We provide Python code to reconstruct full-text articles from these n-grams by identifying overlapping textual fragments and intelligently merging them. Our method enables researchers to access structured, large-scale newspaper data for text analysis while overcoming the limitations of existing proprietary datasets. The proposed approach enhances the accessibility of news data for empirical research, facilitating applications in economic forecasting, computational social science, and natural language processing. 
+
+---
+# Assessing FAIRness of the Digital Shadow Reference Model 
+
+**Authors**: Johannes Theissen-Lipp  
+
+**Link**: [PDF](https://arxiv.org/pdf/2504.15715)  
+
+**Abstract**: Models play a critical role in managing the vast amounts of data and increasing complexity found in the IoT, IIoT, and IoP domains. The Digital Shadow Reference Model, which serves as a foundational metadata schema for linking data and metadata in these environments, is an example of such a model. Ensuring FAIRness (adherence to the FAIR Principles) is critical because it improves data findability, accessibility, interoperability, and reusability, facilitating efficient data management and integration across systems.
+This paper presents an evaluation of the FAIRness of the Digital Shadow Reference Model using a structured evaluation framework based on the FAIR Data Principles. Using the concept of FAIR Implementation Profiles (FIPs), supplemented by a mini-questionnaire, we systematically evaluate the model's adherence to these principles. Our analysis identifies key strengths, including the model's metadata schema that supports rich descriptions and authentication techniques, and highlights areas for improvement, such as the need for globally unique identifiers and consequent support for different Web standards. The results provide actionable insights for improving the FAIRness of the model and promoting better data management and reuse. This research contributes to the field by providing a detailed assessment of the Digital Shadow Reference Model and recommending next steps to improve its FAIRness and usability. 
+
+---
