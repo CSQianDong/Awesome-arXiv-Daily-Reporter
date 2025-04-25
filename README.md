@@ -4,6 +4,29 @@
 
 | Date | Link | Number of Papers |
 |:----:|:----:|:----------------:|
+| 25-Apr-2025 | [Link](https://github.com/Deriq-Qian-Dong/Awesome-arXiv-Daily-Reporter/tree/main/25-Apr-2025) | 0 |
+| 9-Apr-2025 | [Link](https://github.com/Deriq-Qian-Dong/Awesome-arXiv-Daily-Reporter/tree/main/9-Apr-2025) | 0 |
+| 8-Apr-2025 | [Link](https://github.com/Deriq-Qian-Dong/Awesome-arXiv-Daily-Reporter/tree/main/8-Apr-2025) | 0 |
+| 7-Apr-2025 | [Link](https://github.com/Deriq-Qian-Dong/Awesome-arXiv-Daily-Reporter/tree/main/7-Apr-2025) | 0 |
+| 4-Apr-2025 | [Link](https://github.com/Deriq-Qian-Dong/Awesome-arXiv-Daily-Reporter/tree/main/4-Apr-2025) | 0 |
+| 3-Apr-2025 | [Link](https://github.com/Deriq-Qian-Dong/Awesome-arXiv-Daily-Reporter/tree/main/3-Apr-2025) | 0 |
+| 2-Apr-2025 | [Link](https://github.com/Deriq-Qian-Dong/Awesome-arXiv-Daily-Reporter/tree/main/2-Apr-2025) | 0 |
+| 1-Apr-2025 | [Link](https://github.com/Deriq-Qian-Dong/Awesome-arXiv-Daily-Reporter/tree/main/1-Apr-2025) | 0 |
+| 7-Mar-2025 | [Link](https://github.com/Deriq-Qian-Dong/Awesome-arXiv-Daily-Reporter/tree/main/7-Mar-2025) | 0 |
+| 6-Mar-2025 | [Link](https://github.com/Deriq-Qian-Dong/Awesome-arXiv-Daily-Reporter/tree/main/6-Mar-2025) | 0 |
+| 5-Mar-2025 | [Link](https://github.com/Deriq-Qian-Dong/Awesome-arXiv-Daily-Reporter/tree/main/5-Mar-2025) | 0 |
+| 4-Mar-2025 | [Link](https://github.com/Deriq-Qian-Dong/Awesome-arXiv-Daily-Reporter/tree/main/4-Mar-2025) | 0 |
+| 3-Mar-2025 | [Link](https://github.com/Deriq-Qian-Dong/Awesome-arXiv-Daily-Reporter/tree/main/3-Mar-2025) | 0 |
+| 7-Feb-2025 | [Link](https://github.com/Deriq-Qian-Dong/Awesome-arXiv-Daily-Reporter/tree/main/7-Feb-2025) | 176 |
+| 6-Feb-2025 | [Link](https://github.com/Deriq-Qian-Dong/Awesome-arXiv-Daily-Reporter/tree/main/6-Feb-2025) | 195 |
+| 5-Feb-2025 | [Link](https://github.com/Deriq-Qian-Dong/Awesome-arXiv-Daily-Reporter/tree/main/5-Feb-2025) | 234 |
+| 4-Feb-2025 | [Link](https://github.com/Deriq-Qian-Dong/Awesome-arXiv-Daily-Reporter/tree/main/4-Feb-2025) | 459 |
+| 3-Feb-2025 | [Link](https://github.com/Deriq-Qian-Dong/Awesome-arXiv-Daily-Reporter/tree/main/3-Feb-2025) | 180 |
+| 9-Jan-2025 | [Link](https://github.com/Deriq-Qian-Dong/Awesome-arXiv-Daily-Reporter/tree/main/9-Jan-2025) | 117 |
+| 8-Jan-2025 | [Link](https://github.com/Deriq-Qian-Dong/Awesome-arXiv-Daily-Reporter/tree/main/8-Jan-2025) | 145 |
+| 7-Jan-2025 | [Link](https://github.com/Deriq-Qian-Dong/Awesome-arXiv-Daily-Reporter/tree/main/7-Jan-2025) | 310 |
+| 6-Jan-2025 | [Link](https://github.com/Deriq-Qian-Dong/Awesome-arXiv-Daily-Reporter/tree/main/6-Jan-2025) | 105 |
+| 3-Jan-2025 | [Link](https://github.com/Deriq-Qian-Dong/Awesome-arXiv-Daily-Reporter/tree/main/3-Jan-2025) | 360 |
 | 24-Apr-2025 | [Link](https://github.com/Deriq-Qian-Dong/Awesome-arXiv-Daily-Reporter/tree/main/24-Apr-2025) | 0 |
 | 9-Apr-2025 | [Link](https://github.com/Deriq-Qian-Dong/Awesome-arXiv-Daily-Reporter/tree/main/9-Apr-2025) | 0 |
 | 8-Apr-2025 | [Link](https://github.com/Deriq-Qian-Dong/Awesome-arXiv-Daily-Reporter/tree/main/8-Apr-2025) | 0 |
