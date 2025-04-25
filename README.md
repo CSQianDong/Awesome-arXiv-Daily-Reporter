@@ -2,6 +2,8 @@
 
 ## 🚀 This repository contains the papers from arXiv, including the subjects of NLP(cs.CL), IR(cs.IR), and AI(cs.AI), and is updated daily.
 
+## 📌 The content of this repository is also featured on Xiaohongshu under the account: [🎃量子之心](https://www.xiaohongshu.com/user/profile/64d8bdc1000000000100f445)
+
 | Date | Link | Number of Papers |
 |:----:|:----:|:----------------:|
 | 25-Apr-2025 | [Link](https://github.com/Deriq-Qian-Dong/Awesome-arXiv-Daily-Reporter/tree/main/25-Apr-2025) | 0 |
