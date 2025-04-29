@@ -1,0 +1,45 @@
+# AutoJudge: Judge Decoding Without Manual Annotation 
+
+**Authors**: Roman Garipov, Fedor Velikonivtsev, Ruslan Svirschevski, Vage Egiazarian, Max Ryabinin  
+
+**Link**: [PDF](https://arxiv.org/pdf/2504.20039)  
+
+**Abstract**: We introduce AutoJudge, a framework that accelerates large language model (LLM) inference with task-specific lossy speculative decoding. Instead of matching the original model output distribution token-by-token, we identify which of the generated tokens affect the downstream quality of the generated response, relaxing the guarantee so that the "unimportant" tokens can be generated faster. Our approach relies on a semi-greedy search algorithm to test which of the mismatches between target and draft model should be corrected to preserve quality, and which ones may be skipped. We then train a lightweight classifier based on existing LLM embeddings to predict, at inference time, which mismatching tokens can be safely accepted without compromising the final answer quality. We test our approach with Llama 3.2 1B (draft) and Llama 3.1 8B (target) models on zero-shot GSM8K reasoning, where it achieves up to 1.5x more accepted tokens per verification cycle with under 1% degradation in answer accuracy compared to standard speculative decoding and over 2x with small loss in accuracy. When applied to the LiveCodeBench benchmark, our approach automatically detects other, programming-specific important tokens and shows similar speedups, demonstrating its ability to generalize across tasks. 
+
+---
+# Context-Guided Dynamic Retrieval for Improving Generation Quality in RAG Models 
+
+**Authors**: Jacky He, Guiran Liu, Binrong Zhu, Hanlu Zhang, Hongye Zheng, Xiaokai Wang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2504.19436)  
+
+**Abstract**: This paper focuses on the dynamic optimization of the Retrieval-Augmented Generation (RAG) architecture. It proposes a state-aware dynamic knowledge retrieval mechanism to enhance semantic understanding and knowledge scheduling efficiency in large language models for open-domain question answering and complex generation tasks. The method introduces a multi-level perceptive retrieval vector construction strategy and a differentiable document matching path. These components enable end-to-end joint training and collaborative optimization of the retrieval and generation modules. This effectively addresses the limitations of static RAG structures in context adaptation and knowledge access. Experiments are conducted on the Natural Questions dataset. The proposed structure is thoroughly evaluated across different large models, including GPT-4, GPT-4o, and DeepSeek. Comparative and ablation experiments from multiple perspectives confirm the significant improvements in BLEU and ROUGE-L scores. The approach also demonstrates stronger robustness and generation consistency in tasks involving semantic ambiguity and multi-document fusion. These results highlight its broad application potential and practical value in building high-quality language generation systems. 
+
+---
+# MTCSC: Retrieval-Augmented Iterative Refinement for Chinese Spelling Correction 
+
+**Authors**: Junhong Liang, Yu Zhou  
+
+**Link**: [PDF](https://arxiv.org/pdf/2504.18938)  
+
+**Abstract**: Chinese Spelling Correction (CSC) aims to detect and correct erroneous tokens in sentences. While Large Language Models (LLMs) have shown remarkable success in identifying and rectifying potential errors, they often struggle with maintaining consistent output lengths and adapting to domain-specific corrections. Furthermore, existing CSC task impose rigid constraints requiring input and output lengths to be identical, limiting their applicability. In this work, we extend traditional CSC to variable-length correction scenarios, including Chinese Splitting Error Correction (CSEC) and ASR N-best Error Correction. To address domain adaptation and length consistency, we propose MTCSC (Multi-Turn CSC) framework based on RAG enhanced with a length reflection mechanism. Our approach constructs a retrieval database from domain-specific training data and dictionaries, fine-tuning retrievers to optimize performance for error-containing inputs. Additionally, we introduce a multi-source combination strategy with iterative length reflection to ensure output length fidelity. Experiments across diverse domain datasets demonstrate that our method significantly outperforms current approaches in correction quality, particularly in handling domain-specific and variable-length error correction tasks. 
+
+---
+# Privacy-Preserving Federated Embedding Learning for Localized Retrieval-Augmented Generation 
+
+**Authors**: Qianren Mao, Qili Zhang, Hanwen Hao, Zhentao Han, Runhua Xu, Weifeng Jiang, Qi Hu, Zhijun Chen, Tyler Zhou, Bo Li, Yangqiu Song, Jin Dong, Jianxin Li, Philip S. Yu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2504.19101)  
+
+**Abstract**: Retrieval-Augmented Generation (RAG) has recently emerged as a promising solution for enhancing the accuracy and credibility of Large Language Models (LLMs), particularly in Question & Answer tasks. This is achieved by incorporating proprietary and private data from integrated databases. However, private RAG systems face significant challenges due to the scarcity of private domain data and critical data privacy issues. These obstacles impede the deployment of private RAG systems, as developing privacy-preserving RAG systems requires a delicate balance between data security and data availability. To address these challenges, we regard federated learning (FL) as a highly promising technology for privacy-preserving RAG services. We propose a novel framework called Federated Retrieval-Augmented Generation (FedE4RAG). This framework facilitates collaborative training of client-side RAG retrieval models. The parameters of these models are aggregated and distributed on a central-server, ensuring data privacy without direct sharing of raw data. In FedE4RAG, knowledge distillation is employed for communication between the server and client models. This technique improves the generalization of local RAG retrievers during the federated learning process. Additionally, we apply homomorphic encryption within federated learning to safeguard model parameters and mitigate concerns related to data leakage. Extensive experiments conducted on the real-world dataset have validated the effectiveness of FedE4RAG. The results demonstrate that our proposed framework can markedly enhance the performance of private RAG systems while maintaining robust data privacy protection. 
+
+---
+# Reconstructing Context: Evaluating Advanced Chunking Strategies for Retrieval-Augmented Generation 
+
+**Authors**: Carlo Merola, Jaspinder Singh  
+
+**Link**: [PDF](https://arxiv.org/pdf/2504.19754)  
+
+**Abstract**: Retrieval-augmented generation (RAG) has become a transformative approach for enhancing large language models (LLMs) by grounding their outputs in external knowledge sources. Yet, a critical question persists: how can vast volumes of external knowledge be managed effectively within the input constraints of LLMs? Traditional methods address this by chunking external documents into smaller, fixed-size segments. While this approach alleviates input limitations, it often fragments context, resulting in incomplete retrieval and diminished coherence in generation. To overcome these shortcomings, two advanced techniques, late chunking and contextual retrieval, have been introduced, both aiming to preserve global context. Despite their potential, their comparative strengths and limitations remain unclear. This study presents a rigorous analysis of late chunking and contextual retrieval, evaluating their effectiveness and efficiency in optimizing RAG systems. Our results indicate that contextual retrieval preserves semantic coherence more effectively but requires greater computational resources. In contrast, late chunking offers higher efficiency but tends to sacrifice relevance and completeness. 
+
+---
