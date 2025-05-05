@@ -1,0 +1,18 @@
+# Retrieval Augmented Learning: A Retrial-based Large Language Model Self-Supervised Learning and Autonomous Knowledge Generation 
+
+**Authors**: Zongyuan Li, Pengfei Li, Runnan Qi, Yanan Ni, Lumin Jiang, Hui Wu, Xuebo Zhang, Kuihua Huang, Xian Guo  
+
+**Link**: [PDF](https://arxiv.org/pdf/2505.01073)  
+
+**Abstract**: The lack of domain-specific data in the pre-training of Large Language Models (LLMs) severely limits LLM-based decision systems in specialized applications, while post-training a model in the scenarios requires significant computational resources. In this paper, we present Retrial-Augmented Learning (RAL), a reward-free self-supervised learning framework for LLMs that operates without model training. By developing Retrieval-Augmented Generation (RAG) into a module for organizing intermediate data, we realized a three-stage autonomous knowledge generation of proposing a hypothesis, validating the hypothesis, and generating the knowledge. The method is evaluated in the LLM-PySC2 environment, a representative decision-making platform that combines sufficient complexity with domain-specific knowledge requirements. Experiments demonstrate that the proposed method effectively reduces hallucination by generating and utilizing validated knowledge, and increases decision-making performance at an extremely low cost. Meanwhile, the approach exhibits potential in out-of-distribution(OOD) tasks, robustness, and transferability, making it a cost-friendly but effective solution for decision-making problems and autonomous knowledge generation. 
+
+---
+# Document Retrieval Augmented Fine-Tuning (DRAFT) for safety-critical software assessments 
+
+**Authors**: Regan Bolton, Mohammadreza Sheikhfathollahi, Simon Parkinson, Vanessa Vulovic, Gary Bamford, Dan Basher, Howard Parkinson  
+
+**Link**: [PDF](https://arxiv.org/pdf/2505.01307)  
+
+**Abstract**: Safety critical software assessment requires robust assessment against complex regulatory frameworks, a process traditionally limited by manual evaluation. This paper presents Document Retrieval-Augmented Fine-Tuning (DRAFT), a novel approach that enhances the capabilities of a large language model (LLM) for safety-critical compliance assessment. DRAFT builds upon existing Retrieval-Augmented Generation (RAG) techniques by introducing a novel fine-tuning framework that accommodates our dual-retrieval architecture, which simultaneously accesses both software documentation and applicable reference standards. To fine-tune DRAFT, we develop a semi-automated dataset generation methodology that incorporates variable numbers of relevant documents with meaningful distractors, closely mirroring real-world assessment scenarios. Experiments with GPT-4o-mini demonstrate a 7% improvement in correctness over the baseline model, with qualitative improvements in evidence handling, response structure, and domain-specific reasoning. DRAFT represents a practical approach to improving compliance assessment systems while maintaining the transparency and evidence-based reasoning essential in regulatory domains. 
+
+---
