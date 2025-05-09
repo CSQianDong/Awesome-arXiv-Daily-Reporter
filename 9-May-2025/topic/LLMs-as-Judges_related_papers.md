@@ -1,0 +1,18 @@
+# Benchmarking LLM Faithfulness in RAG with Evolving Leaderboards 
+
+**Authors**: Manveer Singh Tamber, Forrest Sheng Bao, Chenyu Xu, Ge Luo, Suleman Kazi, Minseok Bae, Miaoran Li, Ofer Mendelevitch, Renyi Qu, Jimmy Lin  
+
+**Link**: [PDF](https://arxiv.org/pdf/2505.04847)  
+
+**Abstract**: Hallucinations remain a persistent challenge for LLMs. RAG aims to reduce hallucinations by grounding responses in contexts. However, even when provided context, LLMs still frequently introduce unsupported information or contradictions. This paper presents our efforts to measure LLM hallucinations with a focus on summarization tasks, assessing how often various LLMs introduce hallucinations when summarizing documents. We discuss Vectara's existing LLM hallucination leaderboard, based on the Hughes Hallucination Evaluation Model (HHEM). While HHEM and Vectara's Hallucination Leaderboard have garnered great research interest, we examine challenges faced by HHEM and current hallucination detection methods by analyzing the effectiveness of these methods on existing hallucination datasets. To address these limitations, we propose FaithJudge, an LLM-as-a-judge approach guided by few-shot human hallucination annotations, which substantially improves automated LLM hallucination evaluation over current methods. We introduce an enhanced hallucination leaderboard centered on FaithJudge, alongside our current hallucination leaderboard, enabling more reliable benchmarking of LLMs for hallucinations in RAG. 
+
+---
+# ChatGPT for automated grading of short answer questions in mechanical ventilation 
+
+**Authors**: Tejas Jade, Alex Yartsev  
+
+**Link**: [PDF](https://arxiv.org/pdf/2505.04645)  
+
+**Abstract**: Standardised tests using short answer questions (SAQs) are common in postgraduate education. Large language models (LLMs) simulate conversational language and interpret unstructured free-text responses in ways aligning with applying SAQ grading rubrics, making them attractive for automated grading. We evaluated ChatGPT 4o to grade SAQs in a postgraduate medical setting using data from 215 students (557 short-answer responses) enrolled in an online course on mechanical ventilation (2020--2024). Deidentified responses to three case-based scenarios were presented to ChatGPT with a standardised grading prompt and rubric. Outputs were analysed using mixed-effects modelling, variance component analysis, intraclass correlation coefficients (ICCs), Cohen's kappa, Kendall's W, and Bland--Altman statistics. ChatGPT awarded systematically lower marks than human graders with a mean difference (bias) of -1.34 on a 10-point scale. ICC values indicated poor individual-level agreement (ICC1 = 0.086), and Cohen's kappa (-0.0786) suggested no meaningful agreement. Variance component analysis showed minimal variability among the five ChatGPT sessions (G-value = 0.87), indicating internal consistency but divergence from the human grader. The poorest agreement was observed for evaluative and analytic items, whereas checklist and prescriptive rubric items had less disagreement. We caution against the use of LLMs in grading postgraduate coursework. Over 60% of ChatGPT-assigned grades differed from human grades by more than acceptable boundaries for high-stakes assessments. 
+
+---
