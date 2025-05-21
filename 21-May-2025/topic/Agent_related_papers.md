@@ -1,0 +1,396 @@
+# Process vs. Outcome Reward: Which is Better for Agentic RAG Reinforcement Learning 
+
+**Authors**: Wenlin Zhang, Xiangyang Li, Kuicai Dong, Yichao Wang, Pengyue Jia, Xiaopeng Li, Yingyi Zhang, Derong Xu, Zhaocheng Du, Huifeng Guo, Ruiming Tang, Xiangyu Zhao  
+
+**Link**: [PDF](https://arxiv.org/pdf/2505.14069)  
+
+**Abstract**: Retrieval-augmented generation (RAG) enhances the text generation capabilities of large language models (LLMs) by integrating external knowledge and up-to-date information. However, traditional RAG systems are limited by static workflows and lack the adaptability required for multistep reasoning and complex task management. To address these limitations, agentic RAG systems (e.g., DeepResearch) have been proposed, enabling dynamic retrieval strategies, iterative context refinement, and adaptive workflows for handling complex search queries beyond the capabilities of conventional RAG. Recent advances, such as Search-R1, have demonstrated promising gains using outcome-based reinforcement learning, where the correctness of the final answer serves as the reward signal. Nevertheless, such outcome-supervised agentic RAG methods face challenges including low exploration efficiency, gradient conflict, and sparse reward signals. To overcome these challenges, we propose to utilize fine-grained, process-level rewards to improve training stability, reduce computational costs, and enhance efficiency. Specifically, we introduce a novel method ReasonRAG that automatically constructs RAG-ProGuide, a high-quality dataset providing process-level rewards for (i) query generation, (ii) evidence extraction, and (iii) answer generation, thereby enhancing model inherent capabilities via process-supervised reinforcement learning. With the process-level policy optimization, the proposed framework empowers LLMs to autonomously invoke search, generate queries, extract relevant evidence, and produce final answers. Compared to existing approaches such as Search-R1 and traditional RAG systems, ReasonRAG, leveraging RAG-ProGuide, achieves superior performance on five benchmark datasets using only 5k training instances, significantly fewer than the 90k training instances required by Search-R1. 
+
+---
+# LLM-Based User Simulation for Low-Knowledge Shilling Attacks on Recommender Systems 
+
+**Authors**: Shengkang Gu, Jiahao Liu, Dongsheng Li, Guangping Zhang, Mingzhe Han, Hansu Gu, Peng Zhang, Ning Gu, Li Shang, Tun Lu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2505.13528)  
+
+**Abstract**: Recommender systems (RS) are increasingly vulnerable to shilling attacks, where adversaries inject fake user profiles to manipulate system outputs. Traditional attack strategies often rely on simplistic heuristics, require access to internal RS data, and overlook the manipulation potential of textual reviews. In this work, we introduce Agent4SR, a novel framework that leverages Large Language Model (LLM)-based agents to perform low-knowledge, high-impact shilling attacks through both rating and review generation. Agent4SR simulates realistic user behavior by orchestrating adversarial interactions, selecting items, assigning ratings, and crafting reviews, while maintaining behavioral plausibility. Our design includes targeted profile construction, hybrid memory retrieval, and a review attack strategy that propagates target item features across unrelated reviews to amplify manipulation. Extensive experiments on multiple datasets and RS architectures demonstrate that Agent4SR outperforms existing low-knowledge baselines in both effectiveness and stealth. Our findings reveal a new class of emergent threats posed by LLM-driven agents, underscoring the urgent need for enhanced defenses in modern recommender systems. 
+
+---
+# An agentic system with reinforcement-learned subsystem improvements for parsing form-like documents 
+
+**Authors**: Ayesha Amjad, Saurav Sthapit, Tahir Qasim Syed  
+
+**Link**: [PDF](https://arxiv.org/pdf/2505.13504)  
+
+**Abstract**: Extracting alphanumeric data from form-like documents such as invoices, purchase orders, bills, and financial documents is often performed via vision (OCR) and learning algorithms or monolithic pipelines with limited potential for systemic improvements. We propose an agentic AI system that leverages Large Language Model (LLM) agents and a reinforcement learning (RL) driver agent to automate consistent, self-improving extraction under LLM inference uncertainty. Our work highlights the limitations of monolithic LLM-based extraction and introduces a modular, multi-agent framework with task-specific prompts and an RL policy of rewards and penalties to guide a meta-prompting agent to learn from past errors and improve prompt-based actor agents. This self-corrective adaptive system handles diverse documents, file formats, layouts, and LLMs, aiming to automate accurate information extraction without the need for human intervention. Results as reported on two benchmark datasets of SOIRE, and CORD, are promising for the agentic AI framework. 
+
+---
+# Beyond Chains: Bridging Large Language Models and Knowledge Bases in Complex Question Answering 
+
+**Authors**: Yihua Zhu, Qianying Liu, Akiko Aizawa, Hidetoshi Shimodaira  
+
+**Link**: [PDF](https://arxiv.org/pdf/2505.14099)  
+
+**Abstract**: Knowledge Base Question Answering (KBQA) aims to answer natural language questions using structured knowledge from KBs. While LLM-only approaches offer generalization, they suffer from outdated knowledge, hallucinations, and lack of transparency. Chain-based KG-RAG methods address these issues by incorporating external KBs, but are limited to simple chain-structured questions due to the absence of planning and logical structuring. Inspired by semantic parsing methods, we propose PDRR: a four-stage framework consisting of Predict, Decompose, Retrieve, and Reason. Our method first predicts the question type and decomposes the question into structured triples. Then retrieves relevant information from KBs and guides the LLM as an agent to reason over and complete the decomposed triples. Experimental results demonstrate that PDRR consistently outperforms existing methods across various LLM backbones and achieves superior performance on both chain-structured and non-chain complex questions. 
+
+---
+# Divide by Question, Conquer by Agent: SPLIT-RAG with Question-Driven Graph Partitioning 
+
+**Authors**: Ruiyi Yang, Hao Xue, Imran Razzak, Hakim Hacid, Flora D. Salim  
+
+**Link**: [PDF](https://arxiv.org/pdf/2505.13994)  
+
+**Abstract**: Retrieval-Augmented Generation (RAG) systems empower large language models (LLMs) with external knowledge, yet struggle with efficiency-accuracy trade-offs when scaling to large knowledge graphs. Existing approaches often rely on monolithic graph retrieval, incurring unnecessary latency for simple queries and fragmented reasoning for complex multi-hop questions. To address these challenges, this paper propose SPLIT-RAG, a multi-agent RAG framework that addresses these limitations with question-driven semantic graph partitioning and collaborative subgraph retrieval. The innovative framework first create Semantic Partitioning of Linked Information, then use the Type-Specialized knowledge base to achieve Multi-Agent RAG. The attribute-aware graph segmentation manages to divide knowledge graphs into semantically coherent subgraphs, ensuring subgraphs align with different query types, while lightweight LLM agents are assigned to partitioned subgraphs, and only relevant partitions are activated during retrieval, thus reduce search space while enhancing efficiency. Finally, a hierarchical merging module resolves inconsistencies across subgraph-derived answers through logical verifications. Extensive experimental validation demonstrates considerable improvements compared to existing approaches. 
+
+---
+# Hidden Ghost Hand: Unveiling Backdoor Vulnerabilities in MLLM-Powered Mobile GUI Agents 
+
+**Authors**: Pengzhou Cheng, Haowen Hu, Zheng Wu, Zongru Wu, Tianjie Ju, Daizong Ding, Zhuosheng Zhang, Gongshen Liu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2505.14418)  
+
+**Abstract**: Graphical user interface (GUI) agents powered by multimodal large language models (MLLMs) have shown greater promise for human-interaction. However, due to the high fine-tuning cost, users often rely on open-source GUI agents or APIs offered by AI providers, which introduces a critical but underexplored supply chain threat: backdoor attacks. In this work, we first unveil that MLLM-powered GUI agents naturally expose multiple interaction-level triggers, such as historical steps, environment states, and task progress. Based on this observation, we introduce AgentGhost, an effective and stealthy framework for red-teaming backdoor attacks. Specifically, we first construct composite triggers by combining goal and interaction levels, allowing GUI agents to unintentionally activate backdoors while ensuring task utility. Then, we formulate backdoor injection as a Min-Max optimization problem that uses supervised contrastive learning to maximize the feature difference across sample classes at the representation space, improving flexibility of the backdoor. Meanwhile, it adopts supervised fine-tuning to minimize the discrepancy between backdoor and clean behavior generation, enhancing effectiveness and utility. Extensive evaluations of various agent models in two established mobile benchmarks show that AgentGhost is effective and generic, with attack accuracy that reaches 99.7\% on three attack objectives, and shows stealthiness with only 1\% utility degradation. Furthermore, we tailor a defense method against AgentGhost that reduces the attack accuracy to 22.1\%. Our code is available at \texttt{anonymous}. 
+
+---
+# BAR: A Backward Reasoning based Agent for Complex Minecraft Tasks 
+
+**Authors**: Weihong Du, Wenrui Liao, Binyu Yan, Hongru Liang, Anthony G. Cohn, Wenqiang Lei  
+
+**Link**: [PDF](https://arxiv.org/pdf/2505.14079)  
+
+**Abstract**: Large language model (LLM) based agents have shown great potential in following human instructions and automatically completing various tasks. To complete a task, the agent needs to decompose it into easily executed steps by planning. Existing studies mainly conduct the planning by inferring what steps should be executed next starting from the agent's initial state. However, this forward reasoning paradigm doesn't work well for complex tasks. We propose to study this issue in Minecraft, a virtual environment that simulates complex tasks based on real-world scenarios. We believe that the failure of forward reasoning is caused by the big perception gap between the agent's initial state and task goal. To this end, we leverage backward reasoning and make the planning starting from the terminal state, which can directly achieve the task goal in one step. Specifically, we design a BAckward Reasoning based agent (BAR). It is equipped with a recursive goal decomposition module, a state consistency maintaining module and a stage memory module to make robust, consistent, and efficient planning starting from the terminal state. Experimental results demonstrate the superiority of BAR over existing methods and the effectiveness of proposed modules. 
+
+---
+# CAFES: A Collaborative Multi-Agent Framework for Multi-Granular Multimodal Essay Scoring 
+
+**Authors**: Jiamin Su, Yibo Yan, Zhuoran Gao, Han Zhang, Xiang Liu, Xuming Hu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2505.13965)  
+
+**Abstract**: Automated Essay Scoring (AES) is crucial for modern education, particularly with the increasing prevalence of multimodal assessments. However, traditional AES methods struggle with evaluation generalizability and multimodal perception, while even recent Multimodal Large Language Model (MLLM)-based approaches can produce hallucinated justifications and scores misaligned with human judgment. To address the limitations, we introduce CAFES, the first collaborative multi-agent framework specifically designed for AES. It orchestrates three specialized agents: an Initial Scorer for rapid, trait-specific evaluations; a Feedback Pool Manager to aggregate detailed, evidence-grounded strengths; and a Reflective Scorer that iteratively refines scores based on this feedback to enhance human alignment. Extensive experiments, using state-of-the-art MLLMs, achieve an average relative improvement of 21% in Quadratic Weighted Kappa (QWK) against ground truth, especially for grammatical and lexical diversity. Our proposed CAFES framework paves the way for an intelligent multimodal AES system. The code will be available upon acceptance. 
+
+---
+# Toward Effective Reinforcement Learning Fine-Tuning for Medical VQA in Vision-Language Models 
+
+**Authors**: Wenhui Zhu, Xuanzhao Dong, Xin Li, Peijie Qiu, Xiwen Chen, Abolfazl Razi, Aris Sotiras, Yi Su, Yalin Wang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2505.13973)  
+
+**Abstract**: Recently, reinforcement learning (RL)-based tuning has shifted the trajectory of Multimodal Large Language Models (MLLMs), particularly following the introduction of Group Relative Policy Optimization (GRPO). However, directly applying it to medical tasks remains challenging for achieving clinically grounded model behavior. Motivated by the need to align model response with clinical expectations, we investigate four critical dimensions that affect the effectiveness of RL-based tuning in medical visual question answering (VQA): base model initialization strategy, the role of medical semantic alignment, the impact of length-based rewards on long-chain reasoning, and the influence of bias. We conduct extensive experiments to analyze these factors for medical MLLMs, providing new insights into how models are domain-specifically fine-tuned. Additionally, our results also demonstrate that GRPO-based RL tuning consistently outperforms standard supervised fine-tuning (SFT) in both accuracy and reasoning quality. 
+
+---
+# Memory-Centric Embodied Question Answer 
+
+**Authors**: Mingliang Zhai, Zhi Gao, Yuwei Wu, Yunde Jia  
+
+**Link**: [PDF](https://arxiv.org/pdf/2505.13948)  
+
+**Abstract**: Embodied Question Answering (EQA) requires agents to autonomously explore and understand the environment to answer context-dependent questions. Existing frameworks typically center around the planner, which guides the stopping module, memory module, and answering module for reasoning. In this paper, we propose a memory-centric EQA framework named MemoryEQA. Unlike planner-centric EQA models where the memory module cannot fully interact with other modules, MemoryEQA flexible feeds memory information into all modules, thereby enhancing efficiency and accuracy in handling complex tasks, such as those involving multiple targets across different regions. Specifically, we establish a multi-modal hierarchical memory mechanism, which is divided into global memory that stores language-enhanced scene maps, and local memory that retains historical observations and state information. When performing EQA tasks, the multi-modal large language model is leveraged to convert memory information into the required input formats for injection into different modules. To evaluate EQA models' memory capabilities, we constructed the MT-HM3D dataset based on HM3D, comprising 1,587 question-answer pairs involving multiple targets across various regions, which requires agents to maintain memory of exploration-acquired target information. Experimental results on HM-EQA, MT-HM3D, and OpenEQA demonstrate the effectiveness of our framework, where a 19.8% performance gain on MT-HM3D compared to baseline model further underscores memory capability's pivotal role in resolving complex tasks. 
+
+---
+# Simulation Agent: A Framework for Integrating Simulation and Large Language Models for Enhanced Decision-Making 
+
+**Authors**: Jacob Kleiman, Kevin Frank, Sindy Campagna  
+
+**Link**: [PDF](https://arxiv.org/pdf/2505.13761)  
+
+**Abstract**: Simulations, although powerful in accurately replicating real-world systems, often remain inaccessible to non-technical users due to their complexity. Conversely, large language models (LLMs) provide intuitive, language-based interactions but can lack the structured, causal understanding required to reliably model complex real-world dynamics. We introduce our simulation agent framework, a novel approach that integrates the strengths of both simulation models and LLMs. This framework helps empower users by leveraging the conversational capabilities of LLMs to interact seamlessly with sophisticated simulation systems, while simultaneously utilizing the simulations to ground the LLMs in accurate and structured representations of real-world phenomena. This integrated approach helps provide a robust and generalizable foundation for empirical validation and offers broad applicability across diverse domains. 
+
+---
+# ContextAgent: Context-Aware Proactive LLM Agents with Open-World Sensory Perceptions 
+
+**Authors**: Bufang Yang, Lilin Xu, Liekang Zeng, Kaiwei Liu, Siyang Jiang, Wenrui Lu, Hongkai Chen, Xiaofan Jiang, Guoliang Xing, Zhenyu Yan  
+
+**Link**: [PDF](https://arxiv.org/pdf/2505.14668)  
+
+**Abstract**: Recent advances in Large Language Models (LLMs) have propelled intelligent agents from reactive responses to proactive support. While promising, existing proactive agents either rely exclusively on observations from enclosed environments (e.g., desktop UIs) with direct LLM inference or employ rule-based proactive notifications, leading to suboptimal user intent understanding and limited functionality for proactive service. In this paper, we introduce ContextAgent, the first context-aware proactive agent that incorporates extensive sensory contexts to enhance the proactive capabilities of LLM agents. ContextAgent first extracts multi-dimensional contexts from massive sensory perceptions on wearables (e.g., video and audio) to understand user intentions. ContextAgent then leverages the sensory contexts and the persona contexts from historical data to predict the necessity for proactive services. When proactive assistance is needed, ContextAgent further automatically calls the necessary tools to assist users unobtrusively. To evaluate this new task, we curate ContextAgentBench, the first benchmark for evaluating context-aware proactive LLM agents, covering 1,000 samples across nine daily scenarios and twenty tools. Experiments on ContextAgentBench show that ContextAgent outperforms baselines by achieving up to 8.5% and 6.0% higher accuracy in proactive predictions and tool calling, respectively. We hope our research can inspire the development of more advanced, human-centric, proactive AI assistants. 
+
+---
+# Agent Context Protocols Enhance Collective Inference 
+
+**Authors**: Devansh Bhardwaj, Arjun Beniwal, Shreyas Chaudhari, Ashwin Kalyan, Tanmay Rajpurohit, Karthik R. Narasimhan, Ameet Deshpande, Vishvak Murahari  
+
+**Link**: [PDF](https://arxiv.org/pdf/2505.14569)  
+
+**Abstract**: AI agents have become increasingly adept at complex tasks such as coding, reasoning, and multimodal understanding. However, building generalist systems requires moving beyond individual agents to collective inference -- a paradigm where multi-agent systems with diverse, task-specialized agents complement one another through structured communication and collaboration. Today, coordination is usually handled with imprecise, ad-hoc natural language, which limits complex interaction and hinders interoperability with domain-specific agents. We introduce Agent context protocols (ACPs): a domain- and agent-agnostic family of structured protocols for agent-agent communication, coordination, and error handling. ACPs combine (i) persistent execution blueprints -- explicit dependency graphs that store intermediate agent outputs -- with (ii) standardized message schemas, enabling robust and fault-tolerant multi-agent collective inference. ACP-powered generalist systems reach state-of-the-art performance: 28.3 % accuracy on AssistantBench for long-horizon web assistance and best-in-class multimodal technical reports, outperforming commercial AI systems in human evaluation. ACPs are highly modular and extensible, allowing practitioners to build top-tier generalist agents quickly. 
+
+---
+# TinyV: Reducing False Negatives in Verification Improves RL for LLM Reasoning 
+
+**Authors**: Zhangchen Xu, Yuetai Li, Fengqing Jiang, Bhaskar Ramasubramanian, Luyao Niu, Bill Yuchen Lin, Radha Poovendran  
+
+**Link**: [PDF](https://arxiv.org/pdf/2505.14625)  
+
+**Abstract**: Reinforcement Learning (RL) has become a powerful tool for enhancing the reasoning abilities of large language models (LLMs) by optimizing their policies with reward signals. Yet, RL's success relies on the reliability of rewards, which are provided by verifiers. In this paper, we expose and analyze a widespread problem--false negatives--where verifiers wrongly reject correct model outputs. Our in-depth study of the Big-Math-RL-Verified dataset reveals that over 38% of model-generated responses suffer from false negatives, where the verifier fails to recognize correct answers. We show, both empirically and theoretically, that these false negatives severely impair RL training by depriving the model of informative gradient signals and slowing convergence. To mitigate this, we propose tinyV, a lightweight LLM-based verifier that augments existing rule-based methods, which dynamically identifies potential false negatives and recovers valid responses to produce more accurate reward estimates. Across multiple math-reasoning benchmarks, integrating TinyV boosts pass rates by up to 10% and accelerates convergence relative to the baseline. Our findings highlight the critical importance of addressing verifier false negatives and offer a practical approach to improve RL-based fine-tuning of LLMs. Our code is available at this https URL. 
+
+---
+# Causal Cartographer: From Mapping to Reasoning Over Counterfactual Worlds 
+
+**Authors**: Gaël Gendron, Jože M. Rožanec, Michael Witbrock, Gillian Dobbie  
+
+**Link**: [PDF](https://arxiv.org/pdf/2505.14396)  
+
+**Abstract**: Causal world models are systems that can answer counterfactual questions about an environment of interest, i.e. predict how it would have evolved if an arbitrary subset of events had been realized differently. It requires understanding the underlying causes behind chains of events and conducting causal inference for arbitrary unseen distributions. So far, this task eludes foundation models, notably large language models (LLMs), which do not have demonstrated causal reasoning capabilities beyond the memorization of existing causal relationships. Furthermore, evaluating counterfactuals in real-world applications is challenging since only the factual world is observed, limiting evaluation to synthetic datasets. We address these problems by explicitly extracting and modeling causal relationships and propose the Causal Cartographer framework. First, we introduce a graph retrieval-augmented generation agent tasked to retrieve causal relationships from data. This approach allows us to construct a large network of real-world causal relationships that can serve as a repository of causal knowledge and build real-world counterfactuals. In addition, we create a counterfactual reasoning agent constrained by causal relationships to perform reliable step-by-step causal inference. We show that our approach can extract causal knowledge and improve the robustness of LLMs for causal reasoning tasks while reducing inference costs and spurious correlations. 
+
+---
+# s3: You Don't Need That Much Data to Train a Search Agent via RL 
+
+**Authors**: Pengcheng Jiang, Xueqiang Xu, Jiacheng Lin, Jinfeng Xiao, Zifeng Wang, Jimeng Sun, Jiawei Han  
+
+**Link**: [PDF](https://arxiv.org/pdf/2505.14146)  
+
+**Abstract**: Retrieval-augmented generation (RAG) systems empower large language models (LLMs) to access external knowledge during inference. Recent advances have enabled LLMs to act as search agents via reinforcement learning (RL), improving information acquisition through multi-turn interactions with retrieval engines. However, existing approaches either optimize retrieval using search-only metrics (e.g., NDCG) that ignore downstream utility or fine-tune the entire LLM to jointly reason and retrieve-entangling retrieval with generation and limiting the real search utility and compatibility with frozen or proprietary models. In this work, we propose s3, a lightweight, model-agnostic framework that decouples the searcher from the generator and trains the searcher using a Gain Beyond RAG reward: the improvement in generation accuracy over naive RAG. s3 requires only 2.4k training samples to outperform baselines trained on over 70x more data, consistently delivering stronger downstream performance across six general QA and five medical QA benchmarks. 
+
+---
+# Efficient Agent Training for Computer Use 
+
+**Authors**: Yanheng He, Jiahe Jin, Pengfei Liu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2505.13909)  
+
+**Abstract**: Scaling up high-quality trajectory data has long been a critical bottleneck for developing human-like computer use agents. We introduce PC Agent-E, an efficient agent training framework that significantly reduces reliance on large-scale human demonstrations. Starting with just 312 human-annotated computer use trajectories, we further improved data quality by synthesizing diverse action decisions with Claude 3.7 Sonnet. Trained on these enriched trajectories, our PC Agent-E model achieved a remarkable 141% relative improvement, surpassing the strong Claude 3.7 Sonnet with extended thinking on WindowsAgentArena-V2, an improved benchmark we also released. Furthermore, PC Agent-E demonstrates strong generalizability to different operating systems on OSWorld. Our findings suggest that strong computer use capabilities can be stimulated from a small amount of high-quality trajectory data. 
+
+---
+# MLZero: A Multi-Agent System for End-to-end Machine Learning Automation 
+
+**Authors**: Haoyang Fang, Boran Han, Nick Erickson, Xiyuan Zhang, Su Zhou, Anirudh Dagar, Jiani Zhang, Ali Caner Turkmen, Cuixiong Hu, Huzefa Rangwala, Ying Nian Wu, Bernie Wang, George Karypis  
+
+**Link**: [PDF](https://arxiv.org/pdf/2505.13941)  
+
+**Abstract**: Existing AutoML systems have advanced the automation of machine learning (ML); however, they still require substantial manual configuration and expert input, particularly when handling multimodal data. We introduce MLZero, a novel multi-agent framework powered by Large Language Models (LLMs) that enables end-to-end ML automation across diverse data modalities with minimal human intervention. A cognitive perception module is first employed, transforming raw multimodal inputs into perceptual context that effectively guides the subsequent workflow. To address key limitations of LLMs, such as hallucinated code generation and outdated API knowledge, we enhance the iterative code generation process with semantic and episodic memory. MLZero demonstrates superior performance on MLE-Bench Lite, outperforming all competitors in both success rate and solution quality, securing six gold medals. Additionally, when evaluated on our Multimodal AutoML Agent Benchmark, which includes 25 more challenging tasks spanning diverse data modalities, MLZero outperforms the competing methods by a large margin with a success rate of 0.92 (+263.6\%) and an average rank of 2.28. Our approach maintains its robust effectiveness even with a compact 8B LLM, outperforming full-size systems from existing solutions. 
+
+---
+# Structured Agent Distillation for Large Language Model 
+
+**Authors**: Jun Liu, Zhenglun Kong, Peiyan Dong, Changdi Yang, Tianqi Li, Hao Tang, Geng Yuan, Wei Niu, Wenbin Zhang, Pu Zhao, Xue Lin, Dong Huang, Yanzhi Wang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2505.13820)  
+
+**Abstract**: Large language models (LLMs) exhibit strong capabilities as decision-making agents by interleaving reasoning and actions, as seen in ReAct-style frameworks. Yet, their practical deployment is constrained by high inference costs and large model sizes. We propose Structured Agent Distillation, a framework that compresses large LLM-based agents into smaller student models while preserving both reasoning fidelity and action consistency. Unlike standard token-level distillation, our method segments trajectories into {[REASON]} and {[ACT]} spans, applying segment-specific losses to align each component with the teacher's behavior. This structure-aware supervision enables compact agents to better replicate the teacher's decision process. Experiments on ALFWorld, HotPotQA-ReAct, and WebShop show that our approach consistently outperforms token-level and imitation learning baselines, achieving significant compression with minimal performance drop. Scaling and ablation results further highlight the importance of span-level alignment for efficient and deployable agents. 
+
+---
+# Guided Search Strategies in Non-Serializable Environments with Applications to Software Engineering Agents 
+
+**Authors**: Karina Zainullina, Alexander Golubev, Maria Trofimova, Sergei Polezhaev, Ibragim Badertdinov, Daria Litvintseva, Simon Karasik, Filipp Fisin, Sergei Skvortsov, Maksim Nekrashevich, Anton Shevtsov, Boris Yangel  
+
+**Link**: [PDF](https://arxiv.org/pdf/2505.13652)  
+
+**Abstract**: Large language models (LLMs) have recently achieved remarkable results in complex multi-step tasks, such as mathematical reasoning and agentic software engineering. However, they often struggle to maintain consistent performance across multiple solution attempts. One effective approach to narrow the gap between average-case and best-case performance is guided test-time search, which explores multiple solution paths to identify the most promising one. Unfortunately, effective search techniques (e.g. MCTS) are often unsuitable for non-serializable RL environments, such as Docker containers, where intermediate environment states cannot be easily saved and restored. We investigate two complementary search strategies applicable to such environments: 1-step lookahead and trajectory selection, both guided by a learned action-value function estimator. On the SWE-bench Verified benchmark, a key testbed for agentic software engineering, we find these methods to double the average success rate of a fine-tuned Qwen-72B model, achieving 40.8%, the new state-of-the-art for open-weights models. Additionally, we show that these techniques are transferable to more advanced closed models, yielding similar improvements with GPT-4o. 
+
+---
+# Multi-agent Reinforcement Learning vs. Fixed-Time Control for Traffic Signal Optimization: A Simulation Study 
+
+**Authors**: Saahil Mahato  
+
+**Link**: [PDF](https://arxiv.org/pdf/2505.14544)  
+
+**Abstract**: Urban traffic congestion, particularly at intersections, significantly impacts travel time, fuel consumption, and emissions. Traditional fixed-time signal control systems often lack the adaptability to manage dynamic traffic patterns effectively. This study explores the application of multi-agent reinforcement learning (MARL) to optimize traffic signal coordination across multiple intersections within a simulated environment. Utilizing Pygame, a simulation was developed to model a network of interconnected intersections with randomly generated vehicle flows to reflect realistic traffic variability. A decentralized MARL controller was implemented, in which each traffic signal operates as an autonomous agent, making decisions based on local observations and information from neighboring agents. Performance was evaluated against a baseline fixed-time controller using metrics such as average vehicle wait time and overall throughput. The MARL approach demonstrated statistically significant improvements, including reduced average waiting times and improved throughput. These findings suggest that MARL-based dynamic control strategies hold substantial promise for improving urban traffic management efficiency. More research is recommended to address scalability and real-world implementation challenges. 
+
+---
+# Cost-Augmented Monte Carlo Tree Search for LLM-Assisted Planning 
+
+**Authors**: Zihao Zhang, Fei Liu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2505.14656)  
+
+**Abstract**: While LLMs excel at open-ended reasoning, they often struggle with cost-sensitive planning, either treating all actions as having equal cost or failing to stay within strict budgets. In this paper, we introduce Cost-Augmented Monte Carlo Tree Search (CATS), a novel approach that brings explicit cost-awareness into LLM-guided planning. Tight cost constraints push the planner to quickly identify infeasible solutions, while looser constraints encourage optimization for minimal cost. We benchmark top LLMs such as GPT-4.1, Claude-3.7-Sonnet, and DeepSeek-R1, against our CATS planner to evaluate their performance in cost-sensitive scenarios. Our experiments suggest that raw LLMs such as GPT-4.1 often falter under tight budgets, whereas CATS consistently delivers strong performance, achieving higher task success rates and better cost efficiency. CATS provides an effective solution for budget-aware decision-making by combining the reasoning power of LLMs with structured search. 
+
+---
+# EVA: Red-Teaming GUI Agents via Evolving Indirect Prompt Injection 
+
+**Authors**: Yijie Lu, Tianjie Ju, Manman Zhao, Xinbei Ma, Yuan Guo, ZhuoSheng Zhang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2505.14289)  
+
+**Abstract**: As multimodal agents are increasingly trained to operate graphical user interfaces (GUIs) to complete user tasks, they face a growing threat from indirect prompt injection, attacks in which misleading instructions are embedded into the agent's visual environment, such as popups or chat messages, and misinterpreted as part of the intended task. A typical example is environmental injection, in which GUI elements are manipulated to influence agent behavior without directly modifying the user prompt. To address these emerging attacks, we propose EVA, a red teaming framework for indirect prompt injection which transforms the attack into a closed loop optimization by continuously monitoring an agent's attention distribution over the GUI and updating adversarial cues, keywords, phrasing, and layout, in response. Compared with prior one shot methods that generate fixed prompts without regard for how the model allocates visual attention, EVA dynamically adapts to emerging attention hotspots, yielding substantially higher attack success rates and far greater transferability across diverse GUI scenarios. We evaluate EVA on six widely used generalist and specialist GUI agents in realistic settings such as popup manipulation, chat based phishing, payments, and email composition. Experimental results show that EVA substantially improves success rates over static baselines. Under goal agnostic constraints, where the attacker does not know the agent's task intent, EVA still discovers effective patterns. Notably, we find that injection styles transfer well across models, revealing shared behavioral biases in GUI agents. These results suggest that evolving indirect prompt injection is a powerful tool not only for red teaming agents, but also for uncovering common vulnerabilities in their multimodal decision making. 
+
+---
+# Toward Embodied AGI: A Review of Embodied AI and the Road Ahead 
+
+**Authors**: Yequan Wang, Aixin Sun  
+
+**Link**: [PDF](https://arxiv.org/pdf/2505.14235)  
+
+**Abstract**: Artificial General Intelligence (AGI) is often envisioned as inherently embodied. With recent advances in robotics and foundational AI models, we stand at the threshold of a new era-one marked by increasingly generalized embodied AI systems. This paper contributes to the discourse by introducing a systematic taxonomy of Embodied AGI spanning five levels (L1-L5). We review existing research and challenges at the foundational stages (L1-L2) and outline the key components required to achieve higher-level capabilities (L3-L5). Building on these insights and existing technologies, we propose a conceptual framework for an L3+ robotic brain, offering both a technical outlook and a foundation for future exploration. 
+
+---
+# DSMentor: Enhancing Data Science Agents with Curriculum Learning and Online Knowledge Accumulation 
+
+**Authors**: He Wang, Alexander Hanbo Li, Yiqun Hu, Sheng Zhang, Hideo Kobayashi, Jiani Zhang, Henry Zhu, Chung-Wei Hang, Patrick Ng  
+
+**Link**: [PDF](https://arxiv.org/pdf/2505.14163)  
+
+**Abstract**: Large language model (LLM) agents have shown promising performance in generating code for solving complex data science problems. Recent studies primarily focus on enhancing in-context learning through improved search, sampling, and planning techniques, while overlooking the importance of the order in which problems are tackled during inference. In this work, we develop a novel inference-time optimization framework, referred to as DSMentor, which leverages curriculum learning -- a strategy that introduces simpler task first and progressively moves to more complex ones as the learner improves -- to enhance LLM agent performance in challenging data science tasks. Our mentor-guided framework organizes data science tasks in order of increasing difficulty and incorporates a growing long-term memory to retain prior experiences, guiding the agent's learning progression and enabling more effective utilization of accumulated knowledge. We evaluate DSMentor through extensive experiments on DSEval and QRData benchmarks. Experiments show that DSMentor using Claude-3.5-Sonnet improves the pass rate by up to 5.2% on DSEval and QRData compared to baseline agents. Furthermore, DSMentor demonstrates stronger causal reasoning ability, improving the pass rate by 8.8% on the causality problems compared to GPT-4 using Program-of-Thoughts prompts. Our work underscores the importance of developing effective strategies for accumulating and utilizing knowledge during inference, mirroring the human learning process and opening new avenues for improving LLM performance through curriculum-based inference optimization. 
+
+---
+# MM-Agent: LLM as Agents for Real-world Mathematical Modeling Problem 
+
+**Authors**: Fan Liu, Zherui Yang, Cancheng Liu, Tianrui Song, Xiaofeng Gao, Hao Liu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2505.14148)  
+
+**Abstract**: Mathematical modeling is a cornerstone of scientific discovery and engineering practice, enabling the translation of real-world problems into formal systems across domains such as physics, biology, and economics. Unlike mathematical reasoning, which assumes a predefined formulation, modeling requires open-ended problem analysis, abstraction, and principled formalization. While Large Language Models (LLMs) have shown strong reasoning capabilities, they fall short in rigorous model construction, limiting their utility in real-world problem-solving. To this end, we formalize the task of LLM-powered real-world mathematical modeling, where agents must analyze problems, construct domain-appropriate formulations, and generate complete end-to-end solutions. We introduce MM-Bench, a curated benchmark of 111 problems from the Mathematical Contest in Modeling (MCM/ICM), spanning the years 2000 to 2025 and across ten diverse domains such as physics, biology, and economics. To tackle this task, we propose MM-Agent, an expert-inspired framework that decomposes mathematical modeling into four stages: open-ended problem analysis, structured model formulation, computational problem solving, and report generation. Experiments on MM-Bench show that MM-Agent significantly outperforms baseline agents, achieving an 11.88\% improvement over human expert solutions while requiring only 15 minutes and \$0.88 per task using GPT-4o. Furthermore, under official MCM/ICM protocols, MM-Agent assisted two undergraduate teams in winning the Finalist Award (\textbf{top 2.0\% among 27,456 teams}) in MCM/ICM 2025, demonstrating its practical effectiveness as a modeling copilot. Our code is available at this https URL 
+
+---
+# Embedded Mean Field Reinforcement Learning for Perimeter-defense Game 
+
+**Authors**: Li Wang, Xin Yu, Xuxin Lv, Gangzheng Ai, Wenjun Wu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2505.14209)  
+
+**Abstract**: With the rapid advancement of unmanned aerial vehicles (UAVs) and missile technologies, perimeter-defense game between attackers and defenders for the protection of critical regions have become increasingly complex and strategically significant across a wide range of domains. However, existing studies predominantly focus on small-scale, simplified two-dimensional scenarios, often overlooking realistic environmental perturbations, motion dynamics, and inherent heterogeneity--factors that pose substantial challenges to real-world applicability. To bridge this gap, we investigate large-scale heterogeneous perimeter-defense game in a three-dimensional setting, incorporating realistic elements such as motion dynamics and wind fields. We derive the Nash equilibrium strategies for both attackers and defenders, characterize the victory regions, and validate our theoretical findings through extensive simulations. To tackle large-scale heterogeneous control challenges in defense strategies, we propose an Embedded Mean-Field Actor-Critic (EMFAC) framework. EMFAC leverages representation learning to enable high-level action aggregation in a mean-field manner, supporting scalable coordination among defenders. Furthermore, we introduce a lightweight agent-level attention mechanism based on reward representation, which selectively filters observations and mean-field information to enhance decision-making efficiency and accelerate convergence in large-scale tasks. Extensive simulations across varying scales demonstrate the effectiveness and adaptability of EMFAC, which outperforms established baselines in both convergence speed and overall performance. To further validate practicality, we test EMFAC in small-scale real-world experiments and conduct detailed analyses, offering deeper insights into the framework's effectiveness in complex scenarios. 
+
+---
+# RL of Thoughts: Navigating LLM Reasoning with Inference-time Reinforcement Learning 
+
+**Authors**: Qianyue Hao, Sibo Li, Jian Yuan, Yong Li  
+
+**Link**: [PDF](https://arxiv.org/pdf/2505.14140)  
+
+**Abstract**: Despite rapid advancements in large language models (LLMs), the token-level autoregressive nature constrains their complex reasoning capabilities. To enhance LLM reasoning, inference-time techniques, including Chain/Tree/Graph-of-Thought(s), successfully improve the performance, as they are fairly cost-effective by guiding reasoning through sophisticated logical structures without modifying LLMs' parameters. However, these manually predefined, task-agnostic frameworks are applied uniformly across diverse tasks, lacking adaptability. To improve this, we propose RL-of-Thoughts (RLoT), where we train a lightweight navigator model with reinforcement learning (RL) to adaptively enhance LLM reasoning at inference time. Specifically, we design five basic logic blocks from the perspective of human cognition. During the reasoning process, the trained RL navigator dynamically selects the suitable logic blocks and combines them into task-specific logical structures according to problem characteristics. Experiments across multiple reasoning benchmarks (AIME, MATH, GPQA, etc.) with multiple LLMs (GPT, Llama, Qwen, and DeepSeek) illustrate that RLoT outperforms established inference-time techniques by up to 13.4%. Remarkably, with less than 3K parameters, our RL navigator is able to make sub-10B LLMs comparable to 100B-scale counterparts. Moreover, the RL navigator demonstrates strong transferability: a model trained on one specific LLM-task pair can effectively generalize to unseen LLMs and tasks. Our code is open-source at this https URL for reproducibility. 
+
+---
+# Building a Stable Planner: An Extended Finite State Machine Based Planning Module for Mobile GUI Agent 
+
+**Authors**: Fanglin Mo, Junzhe Chen, Haoxuan Zhu, Xuming Hu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2505.14141)  
+
+**Abstract**: Mobile GUI agents execute user commands by directly interacting with the graphical user interface (GUI) of mobile devices, demonstrating significant potential to enhance user convenience. However, these agents face considerable challenges in task planning, as they must continuously analyze the GUI and generate operation instructions step by step. This process often leads to difficulties in making accurate task plans, as GUI agents lack a deep understanding of how to effectively use the target applications, which can cause them to become "lost" during task execution. To address the task planning issue, we propose SPlanner, a plug-and-play planning module to generate execution plans that guide vision language model(VLMs) in executing tasks. The proposed planning module utilizes extended finite state machines (EFSMs) to model the control logits and configurations of mobile applications. It then decomposes a user instruction into a sequence of primary function modeled in EFSMs, and generate the execution path by traversing the EFSMs. We further refine the execution path into a natural language plan using an LLM. The final plan is concise and actionable, and effectively guides VLMs to generate interactive GUI actions to accomplish user tasks. SPlanner demonstrates strong performance on dynamic benchmarks reflecting real-world mobile usage. On the AndroidWorld benchmark, SPlanner achieves a 63.8% task success rate when paired with Qwen2.5-VL-72B as the VLM executor, yielding a 28.8 percentage point improvement compared to using Qwen2.5-VL-72B without planning assistance. 
+
+---
+# DrugPilot: LLM-based Parameterized Reasoning Agent for Drug Discovery 
+
+**Authors**: Kun Li, Zhennan Wu, Shoupeng Wang, Wenbin Hu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2505.13940)  
+
+**Abstract**: In the field of AI4Science, large-scale language models (LLMs) show great potential to parse complex scientific semantics, integrate cross-disciplinary knowledge, and assist critical task research. However, in the field of drug discovery, despite the optimization through professional data pre-training, context window expansion, and internet search, the existing LLMs are still facing challenges such as massive multi-modal and heterogeneous data processing, domain knowledge dynamic updating delay, and insufficient confidence in predicting the results of complex computational tasks. To address these challenges, we propose the DrugPilot, an LLM-based agent with parameterized reasoning for drug discovery. DrugPilot addresses key limitations of traditional end-to-end LLM prediction approaches through its parametric inference architecture. This agent system supports major phases of the drug discovery pipeline, facilitating automated planning and execution of multi-stage research tasks. To address the critical challenge of multi-modal drug data analysis (incorporating both public datasets and user-submitted data), we developed an interactive parameterized memory pool. This innovative component standardizes real-world drug data into parametric representations, simultaneously enabling efficient knowledge retrieval in multi-turn dialogue while mitigating the information loss inherent in text-based data transmission. Additionally, we created a drug instruct dataset across 8 essential drug discovery tasks for model fine-tuning and evaluation. Based on the Berkeley function calling evaluation framework, DrugPilot demonstrated the most advanced tool calling capabilities on our drug discovery tool instruction dataset, outperforming existing agents (e.g., ReAct, LoT). Specifically, it achieves task completion rates of 98.0%, 93.5%, and 64.0% on simple, multiple, and multi-turn tasks, respectively. 
+
+---
+# A Challenge to Build Neuro-Symbolic Video Agents 
+
+**Authors**: Sahil Shah, Harsh Goel, Sai Shankar Narasimhan, Minkyu Choi, S P Sharan, Oguzhan Akcin, Sandeep Chinchali  
+
+**Link**: [PDF](https://arxiv.org/pdf/2505.13851)  
+
+**Abstract**: Modern video understanding systems excel at tasks such as scene classification, object detection, and short video retrieval. However, as video analysis becomes increasingly central to real-world applications, there is a growing need for proactive video agents for the systems that not only interpret video streams but also reason about events and take informed actions. A key obstacle in this direction is temporal reasoning: while deep learning models have made remarkable progress in recognizing patterns within individual frames or short clips, they struggle to understand the sequencing and dependencies of events over time, which is critical for action-driven decision-making. Addressing this limitation demands moving beyond conventional deep learning approaches. We posit that tackling this challenge requires a neuro-symbolic perspective, where video queries are decomposed into atomic events, structured into coherent sequences, and validated against temporal constraints. Such an approach can enhance interpretability, enable structured reasoning, and provide stronger guarantees on system behavior, all key properties for advancing trustworthy video agents. To this end, we present a grand challenge to the research community: developing the next generation of intelligent video agents that integrate three core capabilities: (1) autonomous video search and analysis, (2) seamless real-world interaction, and (3) advanced content generation. By addressing these pillars, we can transition from passive perception to intelligent video agents that reason, predict, and act, pushing the boundaries of video understanding. 
+
+---
+# MAFA: A multi-agent framework for annotation 
+
+**Authors**: Mahmood Hegazy, Aaron Rodrigues, Azzam Naeem  
+
+**Link**: [PDF](https://arxiv.org/pdf/2505.13668)  
+
+**Abstract**: Modern applications require accurate and efficient retrieval of information in response to user queries. Mapping user utterances to the most relevant Frequently Asked Questions (FAQs) is a crucial component of these systems. Traditional approaches often rely on a single model or technique, which may not capture the nuances of diverse user inquiries. In this paper, we introduce a multi-agent framework for FAQ annotation that combines multiple specialized agents with different approaches and a judge agent that reranks candidates to produce optimal results. Our agents utilize a structured reasoning approach inspired by Attentive Reasoning Queries (ARQs), which guides them through systematic reasoning steps using targeted, task-specific JSON queries. Our framework features a specialized few-shot example strategy, where each agent receives different few-shots, enhancing ensemble diversity and coverage of the query space. We evaluate our framework on a real-world banking dataset as well as public benchmark datasets (LCQMC and FiQA), demonstrating significant improvements over single-agent approaches across multiple metrics, including a 14% increase in Top-1 accuracy, an 18% increase in Top-5 accuracy, and a 12% improvement in Mean Reciprocal Rank on our dataset, and similar gains on public benchmarks when compared with traditional single agent annotation techniques. Our framework is particularly effective at handling ambiguous queries, making it well-suited for deployment in production applications while showing strong generalization capabilities across different domains and languages. 
+
+---
+# Model Cards for AI Teammates: Comparing Human-AI Team Familiarization Methods for High-Stakes Environments 
+
+**Authors**: Ryan Bowers, Richard Agbeyibor, Jack Kolb, Karen Feigh  
+
+**Link**: [PDF](https://arxiv.org/pdf/2505.13773)  
+
+**Abstract**: We compare three methods of familiarizing a human with an artificial intelligence (AI) teammate ("agent") prior to operation in a collaborative, fast-paced intelligence, surveillance, and reconnaissance (ISR) environment. In a between-subjects user study (n=60), participants either read documentation about the agent, trained alongside the agent prior to the mission, or were given no familiarization. Results showed that the most valuable information about the agent included details of its decision-making algorithms and its relative strengths and weaknesses compared to the human. This information allowed the familiarization groups to form sophisticated team strategies more quickly than the control group. Documentation-based familiarization led to the fastest adoption of these strategies, but also biased participants towards risk-averse behavior that prevented high scores. Participants familiarized through direct interaction were able to infer much of the same information through observation, and were more willing to take risks and experiment with different control modes, but reported weaker understanding of the agent's internal processes. Significant differences were seen between individual participants' risk tolerance and methods of AI interaction, which should be considered when designing human-AI control interfaces. Based on our findings, we recommend a human-AI team familiarization method that combines AI documentation, structured in-situ training, and exploratory interaction. 
+
+---
+# Counter-Inferential Behavior in Natural and Artificial Cognitive Systems 
+
+**Authors**: Serge Dolgikh  
+
+**Link**: [PDF](https://arxiv.org/pdf/2505.13551)  
+
+**Abstract**: This study explores the emergence of counter-inferential behavior in natural and artificial cognitive systems, that is, patterns in which agents misattribute empirical success or suppress adaptation, leading to epistemic rigidity or maladaptive stability. We analyze archetypal scenarios in which such behavior arises: reinforcement of stability through reward imbalance, meta-cognitive attribution of success to internal superiority, and protective reframing under perceived model fragility. Rather than arising from noise or flawed design, these behaviors emerge through structured interactions between internal information models, empirical feedback, and higher-order evaluation mechanisms. Drawing on evidence from artificial systems, biological cognition, human psychology, and social dynamics, we identify counter-inferential behavior as a general cognitive vulnerability that can manifest even in otherwise well-adapted systems. The findings highlight the importance of preserving minimal adaptive activation under stable conditions and suggest design principles for cognitive architectures that can resist rigidity under informational stress. 
+
+---
+# AgentSGEN: Multi-Agent LLM in the Loop for Semantic Collaboration and GENeration of Synthetic Data 
+
+**Authors**: Vu Dinh Xuan, Hao Vo, David Murphy, Hoang D. Nguyen  
+
+**Link**: [PDF](https://arxiv.org/pdf/2505.13466)  
+
+**Abstract**: The scarcity of data depicting dangerous situations presents a major obstacle to training AI systems for safety-critical applications, such as construction safety, where ethical and logistical barriers hinder real-world data collection. This creates an urgent need for an end-to-end framework to generate synthetic data that can bridge this gap. While existing methods can produce synthetic scenes, they often lack the semantic depth required for scene simulations, limiting their effectiveness. To address this, we propose a novel multi-agent framework that employs an iterative, in-the-loop collaboration between two agents: an Evaluator Agent, acting as an LLM-based judge to enforce semantic consistency and safety-specific constraints, and an Editor Agent, which generates and refines scenes based on this guidance. Powered by LLM's capabilities to reasoning and common-sense knowledge, this collaborative design produces synthetic images tailored to safety-critical scenarios. Our experiments suggest this design can generate useful scenes based on realistic specifications that address the shortcomings of prior approaches, balancing safety requirements with visual semantics. This iterative process holds promise for delivering robust, aesthetically sound simulations, offering a potential solution to the data scarcity challenge in multimedia safety applications. 
+
+---
+# Energy-Efficient Deep Reinforcement Learning with Spiking Transformers 
+
+**Authors**: Mohammad Irfan Uddin, Nishad Tasnim, Md Omor Faruk, Zejian Zhou  
+
+**Link**: [PDF](https://arxiv.org/pdf/2505.14533)  
+
+**Abstract**: Agent-based Transformers have been widely adopted in recent reinforcement learning advances due to their demonstrated ability to solve complex tasks. However, the high computational complexity of Transformers often results in significant energy consumption, limiting their deployment in real-world autonomous systems. Spiking neural networks (SNNs), with their biologically inspired structure, offer an energy-efficient alternative for machine learning. In this paper, a novel Spike-Transformer Reinforcement Learning (STRL) algorithm that combines the energy efficiency of SNNs with the powerful decision-making capabilities of reinforcement learning is developed. Specifically, an SNN using multi-step Leaky Integrate-and-Fire (LIF) neurons and attention mechanisms capable of processing spatio-temporal patterns over multiple time steps is designed. The architecture is further enhanced with state, action, and reward encodings to create a Transformer-like structure optimized for reinforcement learning tasks. Comprehensive numerical experiments conducted on state-of-the-art benchmarks demonstrate that the proposed SNN Transformer achieves significantly improved policy performance compared to conventional agent-based Transformers. With both enhanced energy efficiency and policy optimality, this work highlights a promising direction for deploying bio-inspired, low-cost machine learning models in complex real-world decision-making scenarios. 
+
+---
+# Visual Agentic Reinforcement Fine-Tuning 
+
+**Authors**: Ziyu Liu, Yuhang Zang, Yushan Zou, Zijian Liang, Xiaoyi Dong, Yuhang Cao, Haodong Duan, Dahua Lin, Jiaqi Wang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2505.14246)  
+
+**Abstract**: A key trend in Large Reasoning Models (e.g., OpenAI's o3) is the native agentic ability to use external tools such as web browsers for searching and writing/executing code for image manipulation to think with images. In the open-source research community, while significant progress has been made in language-only agentic abilities such as function calling and tool integration, the development of multi-modal agentic capabilities that involve truly thinking with images, and their corresponding benchmarks, are still less explored. This work highlights the effectiveness of Visual Agentic Reinforcement Fine-Tuning (Visual-ARFT) for enabling flexible and adaptive reasoning abilities for Large Vision-Language Models (LVLMs). With Visual-ARFT, open-source LVLMs gain the ability to browse websites for real-time information updates and write code to manipulate and analyze input images through cropping, rotation, and other image processing techniques. We also present a Multi-modal Agentic Tool Bench (MAT) with two settings (MAT-Search and MAT-Coding) designed to evaluate LVLMs' agentic search and coding abilities. Our experimental results demonstrate that Visual-ARFT outperforms its baseline by +18.6% F1 / +13.0% EM on MAT-Coding and +10.3% F1 / +8.7% EM on MAT-Search, ultimately surpassing GPT-4o. Visual-ARFT also achieves +29.3 F1% / +25.9% EM gains on existing multi-hop QA benchmarks such as 2Wiki and HotpotQA, demonstrating strong generalization capabilities. Our findings suggest that Visual-ARFT offers a promising path toward building robust and generalizable multimodal agents. 
+
+---
+# Enhancing Robot Navigation Policies with Task-Specific Uncertainty Managements 
+
+**Authors**: Gokul Puthumanaillam, Paulo Padrao, Jose Fuentes, Leonardo Bobadilla, Melkior Ornik  
+
+**Link**: [PDF](https://arxiv.org/pdf/2505.13837)  
+
+**Abstract**: Robots navigating complex environments must manage uncertainty from sensor noise, environmental changes, and incomplete information, with different tasks requiring varying levels of precision in different areas. For example, precise localization may be crucial near obstacles but less critical in open spaces. We present GUIDE (Generalized Uncertainty Integration for Decision-Making and Execution), a framework that integrates these task-specific requirements into navigation policies via Task-Specific Uncertainty Maps (TSUMs). By assigning acceptable uncertainty levels to different locations, TSUMs enable robots to adapt uncertainty management based on context. When combined with reinforcement learning, GUIDE learns policies that balance task completion and uncertainty management without extensive reward engineering. Real-world tests show significant performance gains over methods lacking task-specific uncertainty awareness. 
+
+---
+# RAG/LLM Augmented Switching Driven Polymorphic Metaheuristic Framework 
+
+**Authors**: Faramarz Safi Esfahani, Ghassan Beydoun, Morteza Saberi, Brad McCusker, Biswajeet Pradhan  
+
+**Link**: [PDF](https://arxiv.org/pdf/2505.13808)  
+
+**Abstract**: Metaheuristic algorithms are widely used for solving complex optimization problems, yet their effectiveness is often constrained by fixed structures and the need for extensive tuning. The Polymorphic Metaheuristic Framework (PMF) addresses this limitation by introducing a self-adaptive metaheuristic switching mechanism driven by real-time performance feedback and dynamic algorithmic selection. PMF leverages the Polymorphic Metaheuristic Agent (PMA) and the Polymorphic Metaheuristic Selection Agent (PMSA) to dynamically select and transition between metaheuristic algorithms based on key performance indicators, ensuring continuous adaptation. This approach enhances convergence speed, adaptability, and solution quality, outperforming traditional metaheuristics in high-dimensional, dynamic, and multimodal environments. Experimental results on benchmark functions demonstrate that PMF significantly improves optimization efficiency by mitigating stagnation and balancing exploration-exploitation strategies across various problem landscapes. By integrating AI-driven decision-making and self-correcting mechanisms, PMF paves the way for scalable, intelligent, and autonomous optimization frameworks, with promising applications in engineering, logistics, and complex decision-making systems. 
+
+---
+# VocalAgent: Large Language Models for Vocal Health Diagnostics with Safety-Aware Evaluation 
+
+**Authors**: Yubin Kim, Taehan Kim, Wonjune Kang, Eugene Park, Joonsik Yoon, Dongjae Lee, Xin Liu, Daniel McDuff, Hyeonhoon Lee, Cynthia Breazeal, Hae Won Park  
+
+**Link**: [PDF](https://arxiv.org/pdf/2505.13577)  
+
+**Abstract**: Vocal health plays a crucial role in peoples' lives, significantly impacting their communicative abilities and interactions. However, despite the global prevalence of voice disorders, many lack access to convenient diagnosis and treatment. This paper introduces VocalAgent, an audio large language model (LLM) to address these challenges through vocal health diagnosis. We leverage Qwen-Audio-Chat fine-tuned on three datasets collected in-situ from hospital patients, and present a multifaceted evaluation framework encompassing a safety assessment to mitigate diagnostic biases, cross-lingual performance analysis, and modality ablation studies. VocalAgent demonstrates superior accuracy on voice disorder classification compared to state-of-the-art baselines. Its LLM-based method offers a scalable solution for broader adoption of health diagnostics, while underscoring the importance of ethical and technical validation. 
+
+---
+# SayCoNav: Utilizing Large Language Models for Adaptive Collaboration in Decentralized Multi-Robot Navigation 
+
+**Authors**: Abhinav Rajvanshi, Pritish Sahu, Tixiao Shan, Karan Sikka, Han-Pang Chiu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2505.13729)  
+
+**Abstract**: Adaptive collaboration is critical to a team of autonomous robots to perform complicated navigation tasks in large-scale unknown environments. An effective collaboration strategy should be determined and adapted according to each robot's skills and current status to successfully achieve the shared goal. We present SayCoNav, a new approach that leverages large language models (LLMs) for automatically generating this collaboration strategy among a team of robots. Building on the collaboration strategy, each robot uses the LLM to generate its plans and actions in a decentralized way. By sharing information to each other during navigation, each robot also continuously updates its step-by-step plans accordingly. We evaluate SayCoNav on Multi-Object Navigation (MultiON) tasks, that require the team of the robots to utilize their complementary strengths to efficiently search multiple different objects in unknown environments. By validating SayCoNav with varied team compositions and conditions against baseline methods, our experimental results show that SayCoNav can improve search efficiency by at most 44.28% through effective collaboration among heterogeneous robots. It can also dynamically adapt to the changing conditions during task execution. 
+
+---
+# ACPs: Agent Collaboration Protocols for the Internet of Agents 
+
+**Authors**: Jun Liu, Ke Yu, Keliang Chen, Ke Li, Yuxinyue Qian, Xiaolian Guo, Haozhe Song, Yinming Li  
+
+**Link**: [PDF](https://arxiv.org/pdf/2505.13523)  
+
+**Abstract**: With the rapid advancement of artificial intelligence, the proliferation of autonomous agents has introduced new challenges in interoperability, scalability, and coordination. The Internet of Agents (IoA) aims to interconnect heterogeneous agents through standardized communication protocols, enabling seamless collaboration and intelligent task execution. However, existing agent communication protocols such as MCP, A2A, and ANP remain fragmented and scenario-specific. To address this gap, we propose Agent Collaboration Protocols (ACPs), a comprehensive protocol suite for the IoA. ACPs include registration, discovery, interaction, and tooling protocols to support trustable access, capability orchestration, and workflow construction. We present the architecture, key technologies, and application workflows of ACPs, and demonstrate its effectiveness in a collaborative restaurant booking scenario. ACPs lay the foundation for building a secure, open, and scalable agent internet infrastructure. 
+
+---
+# Pel, A Programming Language for Orchestrating AI Agents 
+
+**Authors**: Behnam Mohammadi  
+
+**Link**: [PDF](https://arxiv.org/pdf/2505.13453)  
+
+**Abstract**: The proliferation of Large Language Models (LLMs) has opened new frontiers in computing, yet controlling and orchestrating their capabilities beyond simple text generation remains a challenge. Current methods, such as function/tool calling and direct code generation, suffer from limitations in expressiveness, scalability, cost, security, and the ability to enforce fine-grained control. This paper introduces Pel, a novel programming language specifically designed to bridge this gap. Inspired by the strengths of Lisp, Elixir, Gleam, and Haskell, Pel provides a syntactically simple, homoiconic, and semantically rich platform for LLMs to express complex actions, control flow, and inter-agent communication safely and efficiently. Pel's design emphasizes a minimal, easily modifiable grammar suitable for constrained LLM generation, eliminating the need for complex sandboxing by enabling capability control at the syntax level. Key features include a powerful piping mechanism for linear composition, first-class closures enabling easy partial application and functional patterns, built-in support for natural language conditions evaluated by LLMs, and an advanced Read-Eval-Print-Loop (REPeL) with Common Lisp-style restarts and LLM-powered helper agents for automated error correction. Furthermore, Pel incorporates automatic parallelization of independent operations via static dependency analysis, crucial for performant agentic systems. We argue that Pel offers a more robust, secure, and expressive paradigm for LLM orchestration, paving the way for more sophisticated and reliable AI agentic frameworks. 
+
+---
+# HALO: Hierarchical Autonomous Logic-Oriented Orchestration for Multi-Agent LLM Systems 
+
+**Authors**: Zhipeng Hou, Junyi Tang, Yipeng Wang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2505.13516)  
+
+**Abstract**: Recent advancements in Multi-Agent Systems (MAS) powered by Large Language Models (LLMs) have demonstrated tremendous potential in diverse task scenarios. Nonetheless, existing agentic systems typically rely on predefined agent-role design spaces and static communication structures, limiting their adaptability as well as flexibility in complex interaction environments and leading to subpar performance on highly specialized and expert-level tasks. To address these issues, we introduce HALO, a multi-agent collaboration framework based on a hierarchical reasoning architecture. Specifically, we incorporate a high-level planning agent for task decomposition, mid-level role-design agents for subtask-specific agent instantiation, and low-level inference agents for subtask execution. Particularly, subtask execution is reformulated as a structured workflow search problem, where Monte Carlo Tree Search (MCTS) systematically explores the agentic action space to construct optimal reasoning trajectories. Additionally, as the majority of users lack expertise in prompt engineering, we leverage an Adaptive Prompt Refinement module to transform raw queries into task-specific prompts. Empirical evaluations on Code Generation (HumanEval), General Reasoning (MMLU), and Arithmetic Reasoning (MATH) benchmark datasets highlight the effectiveness of HALO, yielding a 14.4% average improvement over state-of-the-art baselines. Notably, HALO achieves up to 13.3% performance gain on the Moral Scenarios subject in the MMLU benchmark and up to 19.6% performance gain on the Algebra subarea in the MATH benchmark, indicating its advanced proficiency in tackling highly specialized and expert-level tasks. The code repository is available at this https URL. 
+
+---
