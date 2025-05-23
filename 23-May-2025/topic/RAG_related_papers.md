@@ -1,0 +1,99 @@
+# SimpleDeepSearcher: Deep Information Seeking via Web-Powered Reasoning Trajectory Synthesis 
+
+**Authors**: Shuang Sun, Huatong Song, Yuhao Wang, Ruiyang Ren, Jinhao Jiang, Junjie Zhang, Fei Bai, Jia Deng, Wayne Xin Zhao, Zheng Liu, Lei Fang, Zhongyuan Wang, Ji-Rong Wen  
+
+**Link**: [PDF](https://arxiv.org/pdf/2505.16834)  
+
+**Abstract**: Retrieval-augmented generation (RAG) systems have advanced large language models (LLMs) in complex deep search scenarios requiring multi-step reasoning and iterative information retrieval. However, existing approaches face critical limitations that lack high-quality training trajectories or suffer from the distributional mismatches in simulated environments and prohibitive computational costs for real-world deployment. This paper introduces SimpleDeepSearcher, a lightweight yet effective framework that bridges this gap through strategic data engineering rather than complex training paradigms. Our approach synthesizes high-quality training data by simulating realistic user interactions in live web search environments, coupled with a multi-criteria curation strategy that optimizes the diversity and quality of input and output side. Experiments on five benchmarks across diverse domains demonstrate that SFT on only 871 curated samples yields significant improvements over RL-based baselines. Our work establishes SFT as a viable pathway by systematically addressing the data-scarce bottleneck, offering practical insights for efficient deep search systems. Our code is available at this https URL. 
+
+---
+# BR-TaxQA-R: A Dataset for Question Answering with References for Brazilian Personal Income Tax Law, including case law 
+
+**Authors**: Juvenal Domingos Júnior, Augusto Faria, E. Seiti de Oliveira, Erick de Brito, Matheus Teotonio, Andre Assumpção, Diedre Carmo, Roberto Lotufo, Jayr Pereira  
+
+**Link**: [PDF](https://arxiv.org/pdf/2505.15916)  
+
+**Abstract**: This paper presents BR-TaxQA-R, a novel dataset designed to support question answering with references in the context of Brazilian personal income tax law. The dataset contains 715 questions from the 2024 official Q\&A document published by Brazil's Internal Revenue Service, enriched with statutory norms and administrative rulings from the Conselho Administrativo de Recursos Fiscais (CARF). We implement a Retrieval-Augmented Generation (RAG) pipeline using OpenAI embeddings for searching and GPT-4o-mini for answer generation. We compare different text segmentation strategies and benchmark our system against commercial tools such as ChatGPT and this http URL using RAGAS-based metrics. Results show that our custom RAG pipeline outperforms commercial systems in Response Relevancy, indicating stronger alignment with user queries, while commercial models achieve higher scores in Factual Correctness and fluency. These findings highlight a trade-off between legally grounded generation and linguistic fluency. Crucially, we argue that human expert evaluation remains essential to ensure the legal validity of AI-generated answers in high-stakes domains such as taxation. BR-TaxQA-R is publicly available at this https URL. 
+
+---
+# Ask, Retrieve, Summarize: A Modular Pipeline for Scientific Literature Summarization 
+
+**Authors**: Pierre Achkar, Tim Gollub, Martin Potthast  
+
+**Link**: [PDF](https://arxiv.org/pdf/2505.16349)  
+
+**Abstract**: The exponential growth of scientific publications has made it increasingly difficult for researchers to stay updated and synthesize knowledge effectively. This paper presents XSum, a modular pipeline for multi-document summarization (MDS) in the scientific domain using Retrieval-Augmented Generation (RAG). The pipeline includes two core components: a question-generation module and an editor module. The question-generation module dynamically generates questions adapted to the input papers, ensuring the retrieval of relevant and accurate information. The editor module synthesizes the retrieved content into coherent and well-structured summaries that adhere to academic standards for proper citation. Evaluated on the SurveySum dataset, XSum demonstrates strong performance, achieving considerable improvements in metrics such as CheckEval, G-Eval and Ref-F1 compared to existing approaches. This work provides a transparent, adaptable framework for scientific summarization with potential applications in a wide range of domains. Code available at this https URL 
+
+---
+# MuseRAG: Idea Originality Scoring At Scale 
+
+**Authors**: Ali Sarosh Bangash, Krish Veera, Ishfat Abrar Islam, Raiyan Abdul Baten  
+
+**Link**: [PDF](https://arxiv.org/pdf/2505.16232)  
+
+**Abstract**: An objective, face-valid way to assess the originality of creative ideas is to measure how rare each idea is within a population -- an approach long used in creativity research but difficult to automate at scale. Tabulating response frequencies via manual bucketing of idea rephrasings is labor-intensive, error-prone, and brittle under large corpora. We introduce a fully automated, psychometrically validated pipeline for frequency-based originality scoring. Our method, MuseRAG, combines large language models (LLMs) with an externally orchestrated retrieval-augmented generation (RAG) framework. Given a new idea, the system retrieves semantically similar prior idea buckets and zero-shot prompts the LLM to judge whether the new idea belongs to an existing bucket or forms a new one. The resulting buckets enable computation of frequency-based originality metrics. Across five datasets (N=1143, n_ideas=16294), MuseRAG matches human annotators in idea clustering structure and resolution (AMI = 0.59) and in participant-level scoring (r = 0.89) -- while exhibiting strong convergent and external validity. Our work enables intent-sensitive, human-aligned originality scoring at scale to aid creativity research. 
+
+---
+# Align-GRAG: Reasoning-Guided Dual Alignment for Graph Retrieval-Augmented Generation 
+
+**Authors**: Derong Xu, Pengyue Jia, Xiaopeng Li, Yingyi Zhang, Maolin Wang, Qidong Liu, Xiangyu Zhao, Yichao Wang, Huifeng Guo, Ruiming Tang, Enhong Chen, Tong Xu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2505.16237)  
+
+**Abstract**: Large language models (LLMs) have demonstrated remarkable capabilities, but still struggle with issues like hallucinations and outdated information. Retrieval-augmented generation (RAG) addresses these issues by grounding LLM outputs in external knowledge with an Information Retrieval (IR) system. Building on this foundation, graph-based RAG systems go a step further by retrieving subgraphs, which preserve the relationships between knowledge entities and provide more comprehensive context. However, graph RAG faces two challenges: (1) Retrieving relevant information introduces irrelevant nodes (especially in dense graph databases, where retrieval usually extends to adjacent nodes), and leads to overly lengthy inputs that hinder efficiency; (2) The representation gap between graph and language during generation with LLMs limits the ability to fully leverage graph structures for enhanced understanding. To address these limitations, we propose Align-GRAG, a novel reasoning-guided dual alignment framework in post-retrieval phrase. It first formulates a subgraph by retrieving nodes and edges. Then an Aligner is proposed to jointly optimizes a graph encoder with LLM-summarized reasoning. It achieves dual alignment of graph node and representation by leveraging KL divergence loss and contrastive loss, facilitating efficient pruning of irrelevant knowledge and establishing a unified semantic space. The Generator integrates the aligned graph data with LLM to produce coherent and accurate answers. Experiments on GraphQA benchmark across three tasks (including common sense reasoning, scene graph understanding, and knowledge graph reasoning) validate the effectiveness of our method. The code will be available upon accepted. 
+
+---
+# Continually Self-Improving Language Models for Bariatric Surgery Question--Answering 
+
+**Authors**: Yash Kumar Atri, Thomas H Shin, Thomas Hartvigsen  
+
+**Link**: [PDF](https://arxiv.org/pdf/2505.16102)  
+
+**Abstract**: While bariatric and metabolic surgery (MBS) is considered the gold standard treatment for severe and morbid obesity, its therapeutic efficacy hinges upon active and longitudinal engagement with multidisciplinary providers, including surgeons, dietitians/nutritionists, psychologists, and endocrinologists. This engagement spans the entire patient journey, from preoperative preparation to long-term postoperative management. However, this process is often hindered by numerous healthcare disparities, such as logistical and access barriers, which impair easy patient access to timely, evidence-based, clinician-endorsed information. To address these gaps, we introduce bRAGgen, a novel adaptive retrieval-augmented generation (RAG)-based model that autonomously integrates real-time medical evidence when response confidence dips below dynamic thresholds. This self-updating architecture ensures that responses remain current and accurate, reducing the risk of misinformation. Additionally, we present bRAGq, a curated dataset of 1,302 bariatric surgery--related questions, validated by an expert bariatric surgeon. bRAGq constitutes the first large-scale, domain-specific benchmark for comprehensive MBS care. In a two-phase evaluation, bRAGgen is benchmarked against state-of-the-art models using both large language model (LLM)--based metrics and expert surgeon review. Across all evaluation dimensions, bRAGgen demonstrates substantially superior performance in generating clinically accurate and relevant responses. 
+
+---
+# Ranking Free RAG: Replacing Re-ranking with Selection in RAG for Sensitive Domains 
+
+**Authors**: Yash Saxena, Anpur Padia, Mandar S Chaudhary, Kalpa Gunaratna, Srinivasan Parthasarathy, Manas Gaur  
+
+**Link**: [PDF](https://arxiv.org/pdf/2505.16014)  
+
+**Abstract**: Traditional Retrieval-Augmented Generation (RAG) pipelines rely on similarity-based retrieval and re-ranking, which depend on heuristics such as top-k, and lack explainability, interpretability, and robustness against adversarial content. To address this gap, we propose a novel method METEORA that replaces re-ranking in RAG with a rationale-driven selection approach. METEORA operates in two stages. First, a general-purpose LLM is preference-tuned to generate rationales conditioned on the input query using direct preference optimization. These rationales guide the evidence chunk selection engine, which selects relevant chunks in three stages: pairing individual rationales with corresponding retrieved chunks for local relevance, global selection with elbow detection for adaptive cutoff, and context expansion via neighboring chunks. This process eliminates the need for top-k heuristics. The rationales are also used for consistency check using a Verifier LLM to detect and filter poisoned or misleading content for safe generation. The framework provides explainable and interpretable evidence flow by using rationales consistently across both selection and verification. Our evaluation across six datasets spanning legal, financial, and academic research domains shows that METEORA improves generation accuracy by 33.34% while using approximately 50% fewer chunks than state-of-the-art re-ranking methods. In adversarial settings, METEORA significantly improves the F1 score from 0.10 to 0.44 over the state-of-the-art perplexity-based defense baseline, demonstrating strong resilience to poisoning attacks. Code available at: this https URL 
+
+---
+# Benchmarking Retrieval-Augmented Multimomal Generation for Document Question Answering 
+
+**Authors**: Kuicai Dong, Yujing Chang, Shijie Huang, Yasheng Wang, Ruiming Tang, Yong Liu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2505.16470)  
+
+**Abstract**: Document Visual Question Answering (DocVQA) faces dual challenges in processing lengthy multimodal documents (text, images, tables) and performing cross-modal reasoning. Current document retrieval-augmented generation (DocRAG) methods remain limited by their text-centric approaches, frequently missing critical visual information. The field also lacks robust benchmarks for assessing multimodal evidence selection and integration. We introduce MMDocRAG, a comprehensive benchmark featuring 4,055 expert-annotated QA pairs with multi-page, cross-modal evidence chains. Our framework introduces innovative metrics for evaluating multimodal quote selection and enables answers that interleave text with relevant visual elements. Through large-scale experiments with 60 VLM/LLM models and 14 retrieval systems, we identify persistent challenges in multimodal evidence retrieval, selection, and this http URL findings reveal advanced proprietary LVMs show superior performance than open-sourced alternatives. Also, they show moderate advantages using multimodal inputs over text-only inputs, while open-source alternatives show significant performance degradation. Notably, fine-tuned LLMs achieve substantial improvements when using detailed image descriptions. MMDocRAG establishes a rigorous testing ground and provides actionable insights for developing more robust multimodal DocVQA systems. Our benchmark and code are available at this https URL. 
+
+---
+# InfoDeepSeek: Benchmarking Agentic Information Seeking for Retrieval-Augmented Generation 
+
+**Authors**: Yunjia Xi, Jianghao Lin, Menghui Zhu, Yongzhao Xiao, Zhuoying Ou, Jiaqi Liu, Tong Wan, Bo Chen, Weiwen Liu, Yasheng Wang, Ruiming Tang, Weinan Zhang, Yong Yu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2505.15872)  
+
+**Abstract**: Retrieval-Augmented Generation (RAG) enhances large language models (LLMs) by grounding responses with retrieved information. As an emerging paradigm, Agentic RAG further enhances this process by introducing autonomous LLM agents into the information seeking process. However, existing benchmarks fall short in evaluating such systems, as they are confined to a static retrieval environment with a fixed, limited corpus} and simple queries that fail to elicit agentic behavior. Moreover, their evaluation protocols assess information seeking effectiveness by pre-defined gold sets of documents, making them unsuitable for the open-ended and dynamic nature of real-world web environments. To bridge this gap, we present InfoDeepSeek, a new benchmark with challenging questions designed for assessing agentic information seeking in real-world, dynamic web environments. We propose a systematic methodology for constructing challenging queries satisfying the criteria of determinacy, difficulty, and diversity. Based on this, we develop the first evaluation framework tailored to dynamic agentic information seeking, including fine-grained metrics about the accuracy, utility, and compactness of information seeking outcomes. Through extensive experiments across LLMs, search engines, and question types, InfoDeepSeek reveals nuanced agent behaviors and offers actionable insights for future research. 
+
+---
+# Walk&Retrieve: Simple Yet Effective Zero-shot Retrieval-Augmented Generation via Knowledge Graph Walks 
+
+**Authors**: Martin Böckling, Heiko Paulheim, Andreea Iana  
+
+**Link**: [PDF](https://arxiv.org/pdf/2505.16849)  
+
+**Abstract**: Large Language Models (LLMs) have showcased impressive reasoning abilities, but often suffer from hallucinations or outdated knowledge. Knowledge Graph (KG)-based Retrieval-Augmented Generation (RAG) remedies these shortcomings by grounding LLM responses in structured external information from a knowledge base. However, many KG-based RAG approaches struggle with (i) aligning KG and textual representations, (ii) balancing retrieval accuracy and efficiency, and (iii) adapting to dynamically updated KGs. In this work, we introduce Walk&Retrieve, a simple yet effective KG-based framework that leverages walk-based graph traversal and knowledge verbalization for corpus generation for zero-shot RAG. Built around efficient KG walks, our method does not require fine-tuning on domain-specific data, enabling seamless adaptation to KG updates, reducing computational overhead, and allowing integration with any off-the-shelf backbone LLM. Despite its simplicity, Walk&Retrieve performs competitively, often outperforming existing RAG systems in response accuracy and hallucination reduction. Moreover, it demonstrates lower query latency and robust scalability to large KGs, highlighting the potential of lightweight retrieval strategies as strong baselines for future RAG research. 
+
+---
+# HASH-RAG: Bridging Deep Hashing with Retriever for Efficient, Fine Retrieval and Augmented Generation 
+
+**Authors**: Jinyu Guo, Xunlei Chen, Qiyang Xia, Zhaokun Wang, Jie Ou, Libo Qin, Shunyu Yao, Wenhong Tian  
+
+**Link**: [PDF](https://arxiv.org/pdf/2505.16133)  
+
+**Abstract**: Retrieval-Augmented Generation (RAG) encounters efficiency challenges when scaling to massive knowledge bases while preserving contextual relevance. We propose Hash-RAG, a framework that integrates deep hashing techniques with systematic optimizations to address these limitations. Our queries directly learn binary hash codes from knowledgebase code, eliminating intermediate feature extraction steps, and significantly reducing storage and computational overhead. Building upon this hash-based efficient retrieval framework, we establish the foundation for fine-grained chunking. Consequently, we design a Prompt-Guided Chunk-to-Context (PGCC) module that leverages retrieved hash-indexed propositions and their original document segments through prompt engineering to enhance the LLM's contextual awareness. Experimental evaluations on NQ, TriviaQA, and HotpotQA datasets demonstrate that our approach achieves a 90% reduction in retrieval time compared to conventional methods while maintaining considerate recall performance. Additionally, The proposed system outperforms retrieval/non-retrieval baselines by 1.4-4.3% in EM scores. 
+
+---
