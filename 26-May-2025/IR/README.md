@@ -1,0 +1,189 @@
+# Bidirectional Knowledge Distillation for Enhancing Sequential Recommendation with Large Language Models 
+
+**Authors**: Jiongran Wu, Jiahao Liu, Dongsheng Li, Guangping Zhang, Mingzhe Han, Hansu Gu, Peng Zhang, Li Shang, Tun Lu, Ning Gu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2505.18120)  
+
+**Abstract**: Large language models (LLMs) have demonstrated exceptional performance in understanding and generating semantic patterns, making them promising candidates for sequential recommendation tasks. However, when combined with conventional recommendation models (CRMs), LLMs often face challenges related to high inference costs and static knowledge transfer methods. In this paper, we propose a novel mutual distillation framework, LLMD4Rec, that fosters dynamic and bidirectional knowledge exchange between LLM-centric and CRM-based recommendation systems. Unlike traditional unidirectional distillation methods, LLMD4Rec enables iterative optimization by alternately refining both models, enhancing the semantic understanding of CRMs and enriching LLMs with collaborative signals from user-item interactions. By leveraging sample-wise adaptive weighting and aligning output distributions, our approach eliminates the need for additional parameters while ensuring effective knowledge transfer. Extensive experiments on real-world datasets demonstrate that LLMD4Rec significantly improves recommendation accuracy across multiple benchmarks without increasing inference costs. This method provides a scalable and efficient solution for combining the strengths of both LLMs and CRMs in sequential recommendation systems. 
+
+---
+# Assessing the performance of 8 AI chatbots in bibliographic reference retrieval: Grok and DeepSeek outperform ChatGPT, but none are fully accurate 
+
+**Authors**: Álvaro Cabezas-Clavijo, Pavel Sidorenko-Bautista  
+
+**Link**: [PDF](https://arxiv.org/pdf/2505.18059)  
+
+**Abstract**: This study analyzes the performance of eight generative artificial intelligence chatbots -- ChatGPT, Claude, Copilot, DeepSeek, Gemini, Grok, Le Chat, and Perplexity -- in their free versions, in the task of generating academic bibliographic references within the university context. A total of 400 references were evaluated across the five major areas of knowledge (Health, Engineering, Experimental Sciences, Social Sciences, and Humanities), based on a standardized prompt. Each reference was assessed according to five key components (authorship, year, title, source, and location), along with document type, publication age, and error count. The results show that only 26.5% of the references were fully correct, 33.8% partially correct, and 39.8% were either erroneous or entirely fabricated. Grok and DeepSeek stood out as the only chatbots that did not generate false references, while Copilot, Perplexity, and Claude exhibited the highest hallucination rates. Furthermore, the chatbots showed a greater tendency to generate book references over journal articles, although the latter had a significantly higher fabrication rate. A high degree of overlap was also detected among the sources provided by several models, particularly between DeepSeek, Grok, Gemini, and ChatGPT. These findings reveal structural limitations in current AI models, highlight the risks of uncritical use by students, and underscore the need to strengthen information and critical literacy regarding the use of AI tools in higher education. 
+
+---
+# Revisiting Feature Interactions from the Perspective of Quadratic Neural Networks for Click-through Rate Prediction 
+
+**Authors**: Honghao Li, Yiwen Zhang, Yi Zhang, Lei Sang, Jieming Zhu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2505.17999)  
+
+**Abstract**: Hadamard Product (HP) has long been a cornerstone in click-through rate (CTR) prediction tasks due to its simplicity, effectiveness, and ability to capture feature interactions without additional parameters. However, the underlying reasons for its effectiveness remain unclear. In this paper, we revisit HP from the perspective of Quadratic Neural Networks (QNN), which leverage quadratic interaction terms to model complex feature relationships. We further reveal QNN's ability to expand the feature space and provide smooth nonlinear approximations without relying on activation functions. Meanwhile, we find that traditional post-activation does not further improve the performance of the QNN. Instead, mid-activation is a more suitable alternative. Through theoretical analysis and empirical evaluation of 25 QNN neuron formats, we identify a good-performing variant and make further enhancements on it. Specifically, we propose the Multi-Head Khatri-Rao Product as a superior alternative to HP and a Self-Ensemble Loss with dynamic ensemble capability within the same network to enhance computational efficiency and performance. Ultimately, we propose a novel neuron format, QNN-alpha, which is tailored for CTR prediction tasks. Experimental results show that QNN-alpha achieves new state-of-the-art performance on six public datasets while maintaining low inference latency, good scalability, and excellent compatibility. The code, running logs, and detailed hyperparameter configurations are available at: this https URL. 
+
+---
+# Enhancing CTR Prediction with De-correlated Expert Networks 
+
+**Authors**: Jiancheng Wang, Mingjia Yin, Junwei Pan, Ximei Wang, Hao Wang, Enhong Chen  
+
+**Link**: [PDF](https://arxiv.org/pdf/2505.17925)  
+
+**Abstract**: Modeling feature interactions is essential for accurate click-through rate (CTR) prediction in advertising systems. Recent studies have adopted the Mixture-of-Experts (MoE) approach to improve performance by ensembling multiple feature interaction experts. These studies employ various strategies, such as learning independent embedding tables for each expert or utilizing heterogeneous expert architectures, to differentiate the experts, which we refer to expert \emph{de-correlation}. However, it remains unclear whether these strategies effectively achieve de-correlated experts. To address this, we propose a De-Correlated MoE (D-MoE) framework, which introduces a Cross-Expert De-Correlation loss to minimize expert this http URL, we propose a novel metric, termed Cross-Expert Correlation, to quantitatively evaluate the expert de-correlation degree. Based on this metric, we identify a key finding for MoE framework design: \emph{different de-correlation strategies are mutually compatible, and progressively employing them leads to reduced correlation and enhanced performance}.Extensive experiments have been conducted to validate the effectiveness of D-MoE and the de-correlation principle. Moreover, online A/B testing on Tencent's advertising platforms demonstrates that D-MoE achieves a significant 1.19\% Gross Merchandise Volume (GMV) lift compared to the Multi-Embedding MoE baseline. 
+
+---
+# Modeling Ranking Properties with In-Context Learning 
+
+**Authors**: Nilanjan Sinhababu, Andrew Parry, Debasis Ganguly, Pabitra Mitra  
+
+**Link**: [PDF](https://arxiv.org/pdf/2505.17736)  
+
+**Abstract**: While standard IR models are mainly designed to optimize relevance, real-world search often needs to balance additional objectives such as diversity and fairness. These objectives depend on inter-document interactions and are commonly addressed using post-hoc heuristics or supervised learning methods, which require task-specific training for each ranking scenario and dataset. In this work, we propose an in-context learning (ICL) approach that eliminates the need for such training. Instead, our method relies on a small number of example rankings that demonstrate the desired trade-offs between objectives for past queries similar to the current input. We evaluate our approach on four IR test collections to investigate multiple auxiliary objectives: group fairness (TREC Fairness), polarity diversity (Touché), and topical diversity (TREC Deep Learning 2019/2020). We empirically validate that our method enables control over ranking behavior through demonstration engineering, allowing nuanced behavioral adjustments without explicit optimization. 
+
+---
+# BehaveGPT: A Foundation Model for Large-scale User Behavior Modeling 
+
+**Authors**: Jiahui Gong, Jingtao Ding, Fanjin Meng, Chen Yang, Hong Chen, Zuojian Wang, Haisheng Lu, Yong Li  
+
+**Link**: [PDF](https://arxiv.org/pdf/2505.17631)  
+
+**Abstract**: In recent years, foundational models have revolutionized the fields of language and vision, demonstrating remarkable abilities in understanding and generating complex data; however, similar advances in user behavior modeling have been limited, largely due to the complexity of behavioral data and the challenges involved in capturing intricate temporal and contextual relationships in user activities. To address this, we propose BehaveGPT, a foundational model designed specifically for large-scale user behavior prediction. Leveraging transformer-based architecture and a novel pretraining paradigm, BehaveGPT is trained on vast user behavior datasets, allowing it to learn complex behavior patterns and support a range of downstream tasks, including next behavior prediction, long-term generation, and cross-domain adaptation. Our approach introduces the DRO-based pretraining paradigm tailored for user behavior data, which improves model generalization and transferability by equitably modeling both head and tail behaviors. Extensive experiments on real-world datasets demonstrate that BehaveGPT outperforms state-of-the-art baselines, achieving more than a 10% improvement in macro and weighted recall, showcasing its ability to effectively capture and predict user behavior. Furthermore, we measure the scaling law in the user behavior domain for the first time on the Honor dataset, providing insights into how model performance scales with increased data and parameter sizes. 
+
+---
+# EGA: A Unified End-to-End Generative Framework for Industrial Advertising Systems 
+
+**Authors**: Zuowu Zheng, Ze Wang, Fan Yang, Jiangke Fan, Teng Zhang, Xingxing Wang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2505.17549)  
+
+**Abstract**: Online industrial advertising system is fundamentally constrained by the inefficiency of multi-stage cascaded architectures, which filter out high-potential candidates early and fragment business decision logic across independent modules. Although recent advances in generative recommendation offer end-to-end solutions, they fall short of practical advertising requirements, lacking explicit modeling of bidding, creative selection, allocation mechanism, and payment computation that are essential for real-world deployment. To overcome these limitations, we propose End-to-end Generative Advertising (EGA), a first unified generative framework that seamlessly integrates user interests modeling, POI and creative generation, position allocation, and payment optimization within a single model. EGA leverages hierarchical tokenization and multi-token prediction to jointly generate candidate POI and creative contents, while a permutation-aware reward model and token-level bidding strategy ensure alignment with both user experiences and advertiser business objectives. Meanwhile, we decouple allocation from payment via a dedicated POI-level payment network with differentiable ex-post regret minimization, guaranteeing incentive compatibility approximately. Extensive offline and large-scale online experiments on real-world advertising systems demonstrate its effectiveness and practical advantages over traditional cascading architectures, highlighting its potential as one of the industry's pioneering end-to-end generative advertising solutions. 
+
+---
+# Benchmarking Recommendation, Classification, and Tracing Based on Hugging Face Knowledge Graph 
+
+**Authors**: Qiaosheng Chen, Kaijia Huang, Xiao Zhou, Weiqing Luo, Yuanning Cui, Gong Cheng  
+
+**Link**: [PDF](https://arxiv.org/pdf/2505.17507)  
+
+**Abstract**: The rapid growth of open source machine learning (ML) resources, such as models and datasets, has accelerated IR research. However, existing platforms like Hugging Face do not explicitly utilize structured representations, limiting advanced queries and analyses such as tracing model evolution and recommending relevant datasets. To fill the gap, we construct HuggingKG, the first large-scale knowledge graph built from the Hugging Face community for ML resource management. With 2.6 million nodes and 6.2 million edges, HuggingKG captures domain-specific relations and rich textual attributes. It enables us to further present HuggingBench, a multi-task benchmark with three novel test collections for IR tasks including resource recommendation, classification, and tracing. Our experiments reveal unique characteristics of HuggingKG and the derived tasks. Both resources are publicly available, expected to advance research in open source resource sharing and management. 
+
+---
+# VoxRAG: A Step Toward Transcription-Free RAG Systems in Spoken Question Answering 
+
+**Authors**: Zackary Rackauckas, Julia Hirschberg  
+
+**Link**: [PDF](https://arxiv.org/pdf/2505.17326)  
+
+**Abstract**: We introduce VoxRAG, a modular speech-to-speech retrieval-augmented generation system that bypasses transcription to retrieve semantically relevant audio segments directly from spoken queries. VoxRAG employs silence-aware segmentation, speaker diarization, CLAP audio embeddings, and FAISS retrieval using L2-normalized cosine similarity. We construct a 50-query test set recorded as spoken input by a native English speaker. Retrieval quality was evaluated using LLM-as-a-judge annotations. For very relevant segments, cosine similarity achieved a Recall@10 of 0.34. For somewhat relevant segments, Recall@10 rose to 0.60 and nDCG@10 to 0.27, highlighting strong topical alignment. Answer quality was judged on a 0--2 scale across relevance, accuracy, completeness, and precision, with mean scores of 0.84, 0.58, 0.56, and 0.46 respectively. While precision and retrieval quality remain key limitations, VoxRAG shows that transcription-free speech-to-speech retrieval is feasible in RAG systems. 
+
+---
+# Content Moderation in TV Search: Balancing Policy Compliance, Relevance, and User Experience 
+
+**Authors**: Adeep Hande, Kishorekumar Sundararajan, Sardar Hamidian, Ferhan Ture  
+
+**Link**: [PDF](https://arxiv.org/pdf/2505.17207)  
+
+**Abstract**: Millions of people rely on search functionality to find and explore content on entertainment platforms. Modern search systems use a combination of candidate generation and ranking approaches, with advanced methods leveraging deep learning and LLM-based techniques to retrieve, generate, and categorize search results. Despite these advancements, search algorithms can still surface inappropriate or irrelevant content due to factors like model unpredictability, metadata errors, or overlooked design flaws. Such issues can misalign with product goals and user expectations, potentially harming user trust and business outcomes. In this work, we introduce an additional monitoring layer using Large Language Models (LLMs) to enhance content moderation. This additional layer flags content if the user did not intend to search for it. This approach serves as a baseline for product quality assurance, with collected feedback used to refine the initial retrieval mechanisms of the search model, ensuring a safer and more reliable user experience. 
+
+---
+# ViDoRe Benchmark V2: Raising the Bar for Visual Retrieval 
+
+**Authors**: Quentin Macé, António Loison, Manuel Faysse  
+
+**Link**: [PDF](https://arxiv.org/pdf/2505.17166)  
+
+**Abstract**: The ViDoRe Benchmark V1 was approaching saturation with top models exceeding 90% nDCG@5, limiting its ability to discern improvements. ViDoRe Benchmark V2 introduces realistic, challenging retrieval scenarios via blind contextual querying, long and cross-document queries, and a hybrid synthetic and human-in-the-loop query generation process. It comprises four diverse, multilingual datasets and provides clear evaluation instructions. Initial results demonstrate substantial room for advancement and highlight insights on model generalization and multilingual capability. This benchmark is designed as a living resource, inviting community contributions to maintain relevance through future evaluations. 
+
+---
+# DailyQA: A Benchmark to Evaluate Web Retrieval Augmented LLMs Based on Capturing Real-World Changes 
+
+**Authors**: Jiehan Cheng, Zhicheng Dou  
+
+**Link**: [PDF](https://arxiv.org/pdf/2505.17162)  
+
+**Abstract**: We propose DailyQA, an automatically updated dynamic dataset that updates questions weekly and contains answers to questions on any given date. DailyQA utilizes daily updates from Wikipedia revision logs to implement a fully automated pipeline of data filtering, query generation synthesis, quality checking, answer extraction, and query classification. The benchmark requires large language models (LLMs) to process and answer questions involving fast-changing factual data and covering multiple domains. We evaluate several open-source and closed-source LLMs using different RAG pipelines with web search augmentation. We compare the ability of different models to process time-sensitive web information and find that rerank of web retrieval results is critical. Our results indicate that LLMs still face significant challenges in handling frequently updated information, suggesting that DailyQA benchmarking provides valuable insights into the direction of progress for LLMs and RAG systems. 
+
+---
+# AI Literacy for Legal AI Systems: A practical approach 
+
+**Authors**: Gizem Gultekin-Varkonyi  
+
+**Link**: [PDF](https://arxiv.org/pdf/2505.18006)  
+
+**Abstract**: Legal AI systems are increasingly being adopted by judicial and legal system deployers and providers worldwide to support a range of applications. While they offer potential benefits such as reducing bias, increasing efficiency, and improving accountability, they also pose significant risks, requiring a careful balance between opportunities, and legal and ethical development and deployment. AI literacy, as a legal requirement under the EU AI Act and a critical enabler of ethical AI for deployers and providers, could be a tool to achieve this. The article introduces the term "legal AI systems" and then analyzes the concept of AI literacy and the benefits and risks associated with these systems. This analysis is linked to a broader AI-L concept for organizations that deal with legal AI systems. The outcome of the article, a roadmap questionnaire as a practical tool for developers and providers to assess risks, benefits, and stakeholder concerns, could be useful in meeting societal and regulatory expectations for legal AI. 
+
+---
+# Superplatforms Have to Attack AI Agents 
+
+**Authors**: Jianghao Lin, Jiachen Zhu, Zheli Zhou, Yunjia Xi, Weiwen Liu, Yong Yu, Weinan Zhang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2505.17861)  
+
+**Abstract**: Over the past decades, superplatforms, digital companies that integrate a vast range of third-party services and applications into a single, unified ecosystem, have built their fortunes on monopolizing user attention through targeted advertising and algorithmic content curation. Yet the emergence of AI agents driven by large language models (LLMs) threatens to upend this business model. Agents can not only free user attention with autonomy across diverse platforms and therefore bypass the user-attention-based monetization, but might also become the new entrance for digital traffic. Hence, we argue that superplatforms have to attack AI agents to defend their centralized control of digital traffic entrance. Specifically, we analyze the fundamental conflict between user-attention-based monetization and agent-driven autonomy through the lens of our gatekeeping theory. We show how AI agents can disintermediate superplatforms and potentially become the next dominant gatekeepers, thereby forming the urgent necessity for superplatforms to proactively constrain and attack AI agents. Moreover, we go through the potential technologies for superplatform-initiated attacks, covering a brand-new, unexplored technical area with unique challenges. We have to emphasize that, despite our position, this paper does not advocate for adversarial attacks by superplatforms on AI agents, but rather offers an envisioned trend to highlight the emerging tensions between superplatforms and AI agents. Our aim is to raise awareness and encourage critical discussion for collaborative solutions, prioritizing user interests and perserving the openness of digital ecosystems in the age of AI agents. 
+
+---
+# VIBE: Vector Index Benchmark for Embeddings 
+
+**Authors**: Elias Jääsaari, Ville Hyvönen, Matteo Ceccarello, Teemu Roos, Martin Aumüller  
+
+**Link**: [PDF](https://arxiv.org/pdf/2505.17810)  
+
+**Abstract**: Approximate nearest neighbor (ANN) search is a performance-critical component of many machine learning pipelines. Rigorous benchmarking is essential for evaluating the performance of vector indexes for ANN search. However, the datasets of the existing benchmarks are no longer representative of the current applications of ANN search. Hence, there is an urgent need for an up-to-date set of benchmarks. To this end, we introduce Vector Index Benchmark for Embeddings (VIBE), an open source project for benchmarking ANN algorithms. VIBE contains a pipeline for creating benchmark datasets using dense embedding models characteristic of modern applications, such as retrieval-augmented generation (RAG). To replicate real-world workloads, we also include out-of-distribution (OOD) datasets where the queries and the corpus are drawn from different distributions. We use VIBE to conduct a comprehensive evaluation of SOTA vector indexes, benchmarking 21 implementations on 12 in-distribution and 6 out-of-distribution datasets. 
+
+---
+# DetailFusion: A Dual-branch Framework with Detail Enhancement for Composed Image Retrieval 
+
+**Authors**: Yuxin Yang, Yinan Zhou, Yuxin Chen, Ziqi Zhang, Zongyang Ma, Chunfeng Yuan, Bing Li, Lin Song, Jun Gao, Peng Li, Weiming Hu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2505.17796)  
+
+**Abstract**: Composed Image Retrieval (CIR) aims to retrieve target images from a gallery based on a reference image and modification text as a combined query. Recent approaches focus on balancing global information from two modalities and encode the query into a unified feature for retrieval. However, due to insufficient attention to fine-grained details, these coarse fusion methods often struggle with handling subtle visual alterations or intricate textual instructions. In this work, we propose DetailFusion, a novel dual-branch framework that effectively coordinates information across global and detailed granularities, thereby enabling detail-enhanced CIR. Our approach leverages atomic detail variation priors derived from an image editing dataset, supplemented by a detail-oriented optimization strategy to develop a Detail-oriented Inference Branch. Furthermore, we design an Adaptive Feature Compositor that dynamically fuses global and detailed features based on fine-grained information of each unique multimodal query. Extensive experiments and ablation analyses not only demonstrate that our method achieves state-of-the-art performance on both CIRR and FashionIQ datasets but also validate the effectiveness and cross-domain adaptability of detail enhancement for CIR. 
+
+---
+# Resolving Conflicting Evidence in Automated Fact-Checking: A Study on Retrieval-Augmented LLMs 
+
+**Authors**: Ziyu Ge, Yuhao Wu, Daniel Wai Kit Chin, Roy Ka-Wei Lee, Rui Cao  
+
+**Link**: [PDF](https://arxiv.org/pdf/2505.17762)  
+
+**Abstract**: Large Language Models (LLMs) augmented with retrieval mechanisms have demonstrated significant potential in fact-checking tasks by integrating external knowledge. However, their reliability decreases when confronted with conflicting evidence from sources of varying credibility. This paper presents the first systematic evaluation of Retrieval-Augmented Generation (RAG) models for fact-checking in the presence of conflicting evidence. To support this study, we introduce \textbf{CONFACT} (\textbf{Con}flicting Evidence for \textbf{Fact}-Checking) (Dataset available at this https URL), a novel dataset comprising questions paired with conflicting information from various sources. Extensive experiments reveal critical vulnerabilities in state-of-the-art RAG methods, particularly in resolving conflicts stemming from differences in media source credibility. To address these challenges, we investigate strategies to integrate media background information into both the retrieval and generation stages. Our results show that effectively incorporating source credibility significantly enhances the ability of RAG models to resolve conflicting evidence and improve fact-checking performance. 
+
+---
+# Large language model as user daily behavior data generator: balancing population diversity and individual personality 
+
+**Authors**: Haoxin Li, Jingtao Ding, Jiahui Gong, Yong Li  
+
+**Link**: [PDF](https://arxiv.org/pdf/2505.17615)  
+
+**Abstract**: Predicting human daily behavior is challenging due to the complexity of routine patterns and short-term fluctuations. While data-driven models have improved behavior prediction by leveraging empirical data from various platforms and devices, the reliance on sensitive, large-scale user data raises privacy concerns and limits data availability. Synthetic data generation has emerged as a promising solution, though existing methods are often limited to specific applications. In this work, we introduce BehaviorGen, a framework that uses large language models (LLMs) to generate high-quality synthetic behavior data. By simulating user behavior based on profiles and real events, BehaviorGen supports data augmentation and replacement in behavior prediction models. We evaluate its performance in scenarios such as pertaining augmentation, fine-tuning replacement, and fine-tuning augmentation, achieving significant improvements in human mobility and smartphone usage predictions, with gains of up to 18.9%. Our results demonstrate the potential of BehaviorGen to enhance user behavior modeling through flexible and privacy-preserving synthetic data generation. 
+
+---
+# FS-DAG: Few Shot Domain Adapting Graph Networks for Visually Rich Document Understanding 
+
+**Authors**: Amit Agarwal, Srikant Panda, Kulbhushan Pachauri  
+
+**Link**: [PDF](https://arxiv.org/pdf/2505.17330)  
+
+**Abstract**: In this work, we propose Few Shot Domain Adapting Graph (FS-DAG), a scalable and efficient model architecture for visually rich document understanding (VRDU) in few-shot settings. FS-DAG leverages domain-specific and language/vision specific backbones within a modular framework to adapt to diverse document types with minimal data. The model is robust to practical challenges such as handling OCR errors, misspellings, and domain shifts, which are critical in real-world deployments. FS-DAG is highly performant with less than 90M parameters, making it well-suited for complex real-world applications for Information Extraction (IE) tasks where computational resources are limited. We demonstrate FS-DAG's capability through extensive experiments for information extraction task, showing significant improvements in convergence speed and performance compared to state-of-the-art methods. Additionally, this work highlights the ongoing progress in developing smaller, more efficient models that do not compromise on performance. Code : this https URL 
+
+---
+# NEXT-EVAL: Next Evaluation of Traditional and LLM Web Data Record Extraction 
+
+**Authors**: Soyeon Kim, Namhee Kim, Yeonwoo Jeong  
+
+**Link**: [PDF](https://arxiv.org/pdf/2505.17125)  
+
+**Abstract**: Effective evaluation of web data record extraction methods is crucial, yet hampered by static, domain-specific benchmarks and opaque scoring practices. This makes fair comparison between traditional algorithmic techniques, which rely on structural heuristics, and Large Language Model (LLM)-based approaches, offering zero-shot extraction across diverse layouts, particularly challenging. To overcome these limitations, we introduce a concrete evaluation framework. Our framework systematically generates evaluation datasets from arbitrary MHTML snapshots, annotates XPath-based supervision labels, and employs structure-aware metrics for consistent scoring, specifically preventing text hallucination and allowing only for the assessment of positional hallucination. It also incorporates preprocessing strategies to optimize input for LLMs while preserving DOM semantics: HTML slimming, Hierarchical JSON, and Flat JSON. Additionally, we created a publicly available synthetic dataset by transforming DOM structures and modifying content. We benchmark deterministic heuristic algorithms and off-the-shelf LLMs across these multiple input formats. Our benchmarking shows that Flat JSON input enables LLMs to achieve superior extraction accuracy (F1 score of 0.9567) and minimal hallucination compared to other input formats like Slimmed HTML and Hierarchical JSON. We establish a standardized foundation for rigorous benchmarking, paving the way for the next principled advancements in web data record extraction. 
+
+---
+# VLM-KG: Multimodal Radiology Knowledge Graph Generation 
+
+**Authors**: Abdullah Abdullah, Seong Tae Kim  
+
+**Link**: [PDF](https://arxiv.org/pdf/2505.17042)  
+
+**Abstract**: Vision-Language Models (VLMs) have demonstrated remarkable success in natural language generation, excelling at instruction following and structured output generation. Knowledge graphs play a crucial role in radiology, serving as valuable sources of factual information and enhancing various downstream tasks. However, generating radiology-specific knowledge graphs presents significant challenges due to the specialized language of radiology reports and the limited availability of domain-specific data. Existing solutions are predominantly unimodal, meaning they generate knowledge graphs only from radiology reports while excluding radiographic images. Additionally, they struggle with long-form radiology data due to limited context length. To address these limitations, we propose a novel multimodal VLM-based framework for knowledge graph generation in radiology. Our approach outperforms previous methods and introduces the first multimodal solution for radiology knowledge graph generation. 
+
+---
