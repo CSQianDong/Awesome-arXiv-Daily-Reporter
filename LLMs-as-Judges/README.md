@@ -2,6 +2,7 @@
 
 | Date | Link | Number of Papers |
 |:----:|:----:|:----------------:|
+| 27-May-2025 | [Link](https://github.com/Deriq-Qian-Dong/Awesome-arXiv-Daily-Reporter/blob/main/27-May-2025/topic/LLMs-as-Judges_related_papers.md) | 0 |
 | 26-May-2025 | [Link](https://github.com/Deriq-Qian-Dong/Awesome-arXiv-Daily-Reporter/blob/main/26-May-2025/topic/LLMs-as-Judges_related_papers.md) | 0 |
 | 23-May-2025 | [Link](https://github.com/Deriq-Qian-Dong/Awesome-arXiv-Daily-Reporter/blob/main/23-May-2025/topic/LLMs-as-Judges_related_papers.md) | 0 |
 | 22-May-2025 | [Link](https://github.com/Deriq-Qian-Dong/Awesome-arXiv-Daily-Reporter/blob/main/22-May-2025/topic/LLMs-as-Judges_related_papers.md) | 0 |
