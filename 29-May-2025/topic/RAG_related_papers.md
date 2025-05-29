@@ -1,0 +1,90 @@
+# Agent-UniRAG: A Trainable Open-Source LLM Agent Framework for Unified Retrieval-Augmented Generation Systems 
+
+**Authors**: Hoang Pham, Khac-Hoai Nam Bui  
+
+**Link**: [PDF](https://arxiv.org/pdf/2505.22571)  
+
+**Abstract**: This paper presents a novel approach for unified retrieval-augmented generation (RAG) systems using the recent emerging large language model (LLM) agent concept. Specifically, Agent LLM, which utilizes LLM as fundamental controllers, has become a promising approach to enable the interpretability of RAG tasks, especially for complex reasoning question-answering systems (e.g., multi-hop queries). Nonetheless, previous works mainly focus on solving RAG systems with either single-hop or multi-hop approaches separately, which limits the application of those approaches to real-world applications. In this study, we propose a trainable agent framework called Agent-UniRAG for unified retrieval-augmented LLM systems, which enhances the effectiveness and interpretability of RAG systems. The main idea is to design an LLM agent framework to solve RAG tasks step-by-step based on the complexity of the inputs, simultaneously including single-hop and multi-hop queries in an end-to-end manner. Furthermore, we introduce SynAgent-RAG, a synthetic dataset to enable the proposed agent framework for small open-source LLMs (e.g., Llama-3-8B). The results show comparable performances with closed-source and larger open-source LLMs across various RAG benchmarks. Our source code and dataset are publicly available for further exploitation. 
+
+---
+# RAG-Zeval: Towards Robust and Interpretable Evaluation on RAG Responses through End-to-End Rule-Guided Reasoning 
+
+**Authors**: Kun Li, Yunxiang Li, Tianhua Zhang, Hongyin Luo, Xixin Wu, James Glass, Helen Meng  
+
+**Link**: [PDF](https://arxiv.org/pdf/2505.22430)  
+
+**Abstract**: Robust evaluation is critical for deploying trustworthy retrieval-augmented generation (RAG) systems. However, current LLM-based evaluation frameworks predominantly rely on directly prompting resource-intensive models with complex multi-stage prompts, underutilizing models' reasoning capabilities and introducing significant computational cost. In this paper, we present RAG-Zeval (RAG-Zero Evaluator), a novel end-to-end framework that formulates faithfulness and correctness evaluation as a rule-guided reasoning task. Our approach trains evaluators with reinforcement learning, facilitating compact models to generate comprehensive and sound assessments with detailed explanation in one-pass. We introduce a ranking-based outcome reward mechanism, using preference judgments rather than absolute scores, to address the challenge of obtaining precise pointwise reward signals. To this end, we synthesize the ranking references by generating quality-controlled responses with zero human annotation. Experiments demonstrate RAG-Zeval's superior performance, achieving the strongest correlation with human judgments and outperforming baselines that rely on LLMs with 10-100 times more parameters. Our approach also exhibits superior interpretability in response evaluation. 
+
+---
+# VRAG-RL: Empower Vision-Perception-Based RAG for Visually Rich Information Understanding via Iterative Reasoning with Reinforcement Learning 
+
+**Authors**: Qiuchen Wang, Ruixue Ding, Yu Zeng, Zehui Chen, Lin Chen, Shihang Wang, Pengjun Xie, Fei Huang, Feng Zhao  
+
+**Link**: [PDF](https://arxiv.org/pdf/2505.22019)  
+
+**Abstract**: Effectively retrieving, reasoning and understanding visually rich information remains a challenge for RAG methods. Traditional text-based methods cannot handle visual-related information. On the other hand, current vision-based RAG approaches are often limited by fixed pipelines and frequently struggle to reason effectively due to the insufficient activation of the fundamental capabilities of models. As RL has been proven to be beneficial for model reasoning, we introduce VRAG-RL, a novel RL framework tailored for complex reasoning across visually rich information. With this framework, VLMs interact with search engines, autonomously sampling single-turn or multi-turn reasoning trajectories with the help of visual perception tokens and undergoing continual optimization based on these samples. Our approach highlights key limitations of RL in RAG domains: (i) Prior Multi-modal RAG approaches tend to merely incorporate images into the context, leading to insufficient reasoning token allocation and neglecting visual-specific perception; and (ii) When models interact with search engines, their queries often fail to retrieve relevant information due to the inability to articulate requirements, thereby leading to suboptimal performance. To address these challenges, we define an action space tailored for visually rich inputs, with actions including cropping and scaling, allowing the model to gather information from a coarse-to-fine perspective. Furthermore, to bridge the gap between users' original inquiries and the retriever, we employ a simple yet effective reward that integrates query rewriting and retrieval performance with a model-based reward. Our VRAG-RL optimizes VLMs for RAG tasks using specially designed RL strategies, aligning the model with real-world applications. The code is available at \hyperlink{this https URL}{this https URL}. 
+
+---
+# Evaluating the Retrieval Robustness of Large Language Models 
+
+**Authors**: Shuyang Cao, Karthik Radhakrishnan, David Rosenberg, Steven Lu, Pengxiang Cheng, Lu Wang, Shiyue Zhang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2505.21870)  
+
+**Abstract**: Retrieval-augmented generation (RAG) generally enhances large language models' (LLMs) ability to solve knowledge-intensive tasks. But RAG may also lead to performance degradation due to imperfect retrieval and the model's limited ability to leverage retrieved content. In this work, we evaluate the robustness of LLMs in practical RAG setups (henceforth retrieval robustness). We focus on three research questions: (1) whether RAG is always better than non-RAG; (2) whether more retrieved documents always lead to better performance; (3) and whether document orders impact results. To facilitate this study, we establish a benchmark of 1500 open-domain questions, each with retrieved documents from Wikipedia. We introduce three robustness metrics, each corresponds to one research question. Our comprehensive experiments, involving 11 LLMs and 3 prompting strategies, reveal that all of these LLMs exhibit surprisingly high retrieval robustness; nonetheless, different degrees of imperfect robustness hinders them from fully utilizing the benefits of RAG. 
+
+---
+# Cross-modal RAG: Sub-dimensional Retrieval-Augmented Text-to-Image Generation 
+
+**Authors**: Mengdan Zhu, Senhao Cheng, Guangji Bai, Yifei Zhang, Liang Zhao  
+
+**Link**: [PDF](https://arxiv.org/pdf/2505.21956)  
+
+**Abstract**: Text-to-image generation increasingly demands access to domain-specific, fine-grained, and rapidly evolving knowledge that pretrained models cannot fully capture. Existing Retrieval-Augmented Generation (RAG) methods attempt to address this by retrieving globally relevant images, but they fail when no single image contains all desired elements from a complex user query. We propose Cross-modal RAG, a novel framework that decomposes both queries and images into sub-dimensional components, enabling subquery-aware retrieval and generation. Our method introduces a hybrid retrieval strategy - combining a sub-dimensional sparse retriever with a dense retriever - to identify a Pareto-optimal set of images, each contributing complementary aspects of the query. During generation, a multimodal large language model is guided to selectively condition on relevant visual features aligned to specific subqueries, ensuring subquery-aware image synthesis. Extensive experiments on MS-COCO, Flickr30K, WikiArt, CUB, and ImageNet-LT demonstrate that Cross-modal RAG significantly outperforms existing baselines in both retrieval and generation quality, while maintaining high efficiency. 
+
+---
+# Vision Meets Language: A RAG-Augmented YOLOv8 Framework for Coffee Disease Diagnosis and Farmer Assistance 
+
+**Authors**: Semanto Mondal  
+
+**Link**: [PDF](https://arxiv.org/pdf/2505.21544)  
+
+**Abstract**: As a social being, we have an intimate bond with the environment. A plethora of things in human life, such as lifestyle, health, and food are dependent on the environment and agriculture. It comes under our responsibility to support the environment as well as agriculture. However, traditional farming practices often result in inefficient resource use and environmental challenges. To address these issues, precision agriculture has emerged as a promising approach that leverages advanced technologies to optimise agricultural processes. In this work, a hybrid approach is proposed that combines the three different potential fields of model AI: object detection, large language model (LLM), and Retrieval-Augmented Generation (RAG). In this novel framework, we have tried to combine the vision and language models to work together to identify potential diseases in the tree leaf. This study introduces a novel AI-based precision agriculture system that uses Retrieval Augmented Generation (RAG) to provide context-aware diagnoses and natural language processing (NLP) and YOLOv8 for crop disease detection. The system aims to tackle major issues with large language models (LLMs), especially hallucinations and allows for adaptive treatment plans and real-time disease detection. The system provides an easy-to-use interface to the farmers, which they can use to detect the different diseases related to coffee leaves by just submitting the image of the affected leaf the model will detect the diseases as well as suggest potential remediation methodologies which aim to lower the use of pesticides, preserving livelihoods, and encouraging environmentally friendly methods. With an emphasis on scalability, dependability, and user-friendliness, the project intends to improve RAG-integrated object detection systems for wider agricultural applications in the future. 
+
+---
+# Public Discourse Sandbox: Facilitating Human and AI Digital Communication Research 
+
+**Authors**: Kristina Radivojevic, Caleb Reinking, Shaun Whitfield, Paul Brenner  
+
+**Link**: [PDF](https://arxiv.org/pdf/2505.21604)  
+
+**Abstract**: Social media serves as a primary communication and information dissemination platform for major global events, entertainment, and niche or topically focused community discussions. Therefore, it represents a valuable resource for researchers who aim to understand numerous questions. However, obtaining data can be difficult, expensive, and often unreliable due to the presence of bots, fake accounts, and manipulated content. Additionally, there are ethical concerns if researchers decide to conduct an online experiment without explicitly notifying social media users about their intent. There is a need for more controlled and scalable mechanisms to evaluate the impacts of digital discussion interventions on audiences. We introduce the Public Discourse Sandbox (PDS), which serves as a digital discourse research platform for human-AI as well as AI-AI discourse research, testing, and training. PDS provides a safe and secure space for research experiments that are not viable on public, commercial social media platforms. Its main purpose is to enable the understanding of AI behaviors and the impacts of customized AI participants via techniques such as prompt engineering, retrieval-augmented generation (RAG), and fine-tuning. We provide a hosted live version of the sandbox to support researchers as well as the open-sourced code on GitHub for community collaboration and contribution. 
+
+---
+# AITEE -- Agentic Tutor for Electrical Engineering 
+
+**Authors**: Christopher Knievel, Alexander Bernhardt, Christian Bernhardt  
+
+**Link**: [PDF](https://arxiv.org/pdf/2505.21582)  
+
+**Abstract**: Intelligent tutoring systems combined with large language models offer a promising approach to address students' diverse needs and promote self-efficacious learning. While large language models possess good foundational knowledge of electrical engineering basics, they remain insufficiently capable of addressing specific questions about electrical circuits. In this paper, we present AITEE, an agent-based tutoring system for electrical engineering designed to accompany students throughout their learning process, offer individualized support, and promote self-directed learning. AITEE supports both hand-drawn and digital circuits through an adapted circuit reconstruction process, enabling natural interaction with students. Our novel graph-based similarity measure identifies relevant context from lecture materials through a retrieval augmented generation approach, while parallel Spice simulation further enhances accuracy in applying solution methodologies. The system implements a Socratic dialogue to foster learner autonomy through guided questioning. Experimental evaluations demonstrate that AITEE significantly outperforms baseline approaches in domain-specific knowledge application, with even medium-sized LLM models showing acceptable performance. Our results highlight the potential of agentic tutors to deliver scalable, personalized, and effective learning environments for electrical engineering education. 
+
+---
+# DocReRank: Single-Page Hard Negative Query Generation for Training Multi-Modal RAG Rerankers 
+
+**Authors**: Navve Wasserman, Oliver Heinimann, Yuval Golbari, Tal Zimbalist, Eli Schwartz, Michal Irani  
+
+**Link**: [PDF](https://arxiv.org/pdf/2505.22584)  
+
+**Abstract**: Rerankers play a critical role in multimodal Retrieval-Augmented Generation (RAG) by refining ranking of an initial set of retrieved documents. Rerankers are typically trained using hard negative mining, whose goal is to select pages for each query which rank high, but are actually irrelevant. However, this selection process is typically passive and restricted to what the retriever can find in the available corpus, leading to several inherent limitations. These include: limited diversity, negative examples which are often not hard enough, low controllability, and frequent false negatives which harm training. Our paper proposes an alternative approach: Single-Page Hard Negative Query Generation, which goes the other way around. Instead of retrieving negative pages per query, we generate hard negative queries per page. Using an automated LLM-VLM pipeline, and given a page and its positive query, we create hard negatives by rephrasing the query to be as similar as possible in form and context, yet not answerable from the page. This paradigm enables fine-grained control over the generated queries, resulting in diverse, hard, and targeted negatives. It also supports efficient false negative verification. Our experiments show that rerankers trained with data generated using our approach outperform existing models and significantly improve retrieval performance. 
+
+---
+# AI-Supported Platform for System Monitoring and Decision-Making in Nuclear Waste Management with Large Language Models 
+
+**Authors**: Dongjune Chang, Sola Kim, Young Soo Park  
+
+**Link**: [PDF](https://arxiv.org/pdf/2505.21741)  
+
+**Abstract**: Nuclear waste management requires rigorous regulatory compliance assessment, demanding advanced decision-support systems capable of addressing complex legal, environmental, and safety considerations. This paper presents a multi-agent Retrieval-Augmented Generation (RAG) system that integrates large language models (LLMs) with document retrieval mechanisms to enhance decision accuracy through structured agent collaboration. Through a structured 10-round discussion model, agents collaborate to assess regulatory compliance and safety requirements while maintaining document-grounded responses. Implemented on consumer-grade hardware, the system leverages Llama 3.2 and mxbai-embed-large-v1 embeddings for efficient retrieval and semantic representation. A case study of a proposed temporary nuclear waste storage site near Winslow, Arizona, demonstrates the framework's effectiveness. Results show the Regulatory Agent achieves consistently higher relevance scores in maintaining alignment with legal frameworks, while the Safety Agent effectively manages complex risk assessments requiring multifaceted analysis. The system demonstrates progressive improvement in agreement rates between agents across discussion rounds while semantic drift decreases, indicating enhanced decision-making consistency and response coherence. The system ensures regulatory decisions remain factually grounded, dynamically adapting to evolving regulatory frameworks through real-time document retrieval. By balancing automated assessment with human oversight, this framework offers a scalable and transparent approach to regulatory governance. These findings underscore the potential of AI-driven, multi-agent systems in advancing evidence-based, accountable, and adaptive decision-making for high-stakes environmental management scenarios. 
+
+---

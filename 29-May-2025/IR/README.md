@@ -1,0 +1,175 @@
+# Pre-training for Recommendation Unlearning 
+
+**Authors**: Guoxuan Chen, Lianghao Xia, Chao Huang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2505.22649)  
+
+**Abstract**: Modern recommender systems powered by Graph Neural Networks (GNNs) excel at modeling complex user-item interactions, yet increasingly face scenarios requiring selective forgetting of training data. Beyond user requests to remove specific interactions due to privacy concerns or preference changes, regulatory frameworks mandate recommender systems' ability to eliminate the influence of certain user data from models. This recommendation unlearning challenge presents unique difficulties as removing connections within interaction graphs creates ripple effects throughout the model, potentially impacting recommendations for numerous users. Traditional approaches suffer from significant drawbacks: fragmentation methods damage graph structure and diminish performance, while influence function techniques make assumptions that may not hold in complex GNNs, particularly with self-supervised or random architectures. To address these limitations, we propose a novel model-agnostic pre-training paradigm UnlearnRec that prepares systems for efficient unlearning operations. Our Influence Encoder takes unlearning requests together with existing model parameters and directly produces updated parameters of unlearned model with little fine-tuning, avoiding complete retraining while preserving model performance characteristics. Extensive evaluation on public benchmarks demonstrates that our method delivers exceptional unlearning effectiveness while providing more than 10x speedup compared to retraining approaches. We release our method implementation at: this https URL. 
+
+---
+# DocReRank: Single-Page Hard Negative Query Generation for Training Multi-Modal RAG Rerankers 
+
+**Authors**: Navve Wasserman, Oliver Heinimann, Yuval Golbari, Tal Zimbalist, Eli Schwartz, Michal Irani  
+
+**Link**: [PDF](https://arxiv.org/pdf/2505.22584)  
+
+**Abstract**: Rerankers play a critical role in multimodal Retrieval-Augmented Generation (RAG) by refining ranking of an initial set of retrieved documents. Rerankers are typically trained using hard negative mining, whose goal is to select pages for each query which rank high, but are actually irrelevant. However, this selection process is typically passive and restricted to what the retriever can find in the available corpus, leading to several inherent limitations. These include: limited diversity, negative examples which are often not hard enough, low controllability, and frequent false negatives which harm training. Our paper proposes an alternative approach: Single-Page Hard Negative Query Generation, which goes the other way around. Instead of retrieving negative pages per query, we generate hard negative queries per page. Using an automated LLM-VLM pipeline, and given a page and its positive query, we create hard negatives by rephrasing the query to be as similar as possible in form and context, yet not answerable from the page. This paradigm enables fine-grained control over the generated queries, resulting in diverse, hard, and targeted negatives. It also supports efficient false negative verification. Our experiments show that rerankers trained with data generated using our approach outperform existing models and significantly improve retrieval performance. 
+
+---
+# Domain specific ontologies from Linked Open Data (LOD) 
+
+**Authors**: Rosario Uceda-Sosa, Nandana Mihindukulasooriya, Atul Kumar, Sahil Bansal, Seema Nagar  
+
+**Link**: [PDF](https://arxiv.org/pdf/2505.22550)  
+
+**Abstract**: Logical and probabilistic reasoning tasks that require a deeper knowledge of semantics are increasingly relying on general purpose ontologies such as Wikidata and DBpedia. However, tasks such as entity disambiguation and linking may benefit from domain specific knowledge graphs, which make it more efficient to consume the knowledge and easier to extend with proprietary content. We discuss our experience bootstrapping one such ontology for IT with a domain-agnostic pipeline, and extending it using domain-specific glossaries. 
+
+---
+# Logical Consistency is Vital: Neural-Symbolic Information Retrieval for Negative-Constraint Queries 
+
+**Authors**: Ganlin Xu, Zhoujia Zhang, Wangyi Mei, Jiaqing Liang, Weijia Lu, Xiaodong Zhang, Zhifei Yang, Xiaofeng Ma, Yanghua Xiao, Deqing Yang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2505.22299)  
+
+**Abstract**: Information retrieval plays a crucial role in resource localization. Current dense retrievers retrieve the relevant documents within a corpus via embedding similarities, which compute similarities between dense vectors mainly depending on word co-occurrence between queries and documents, but overlook the real query intents.
+Thus, they often retrieve numerous irrelevant documents. Particularly in the scenarios of complex queries such as \emph{negative-constraint queries}, their retrieval performance could be catastrophic. To address the issue, we propose a neuro-symbolic information retrieval method, namely \textbf{NS-IR}, that leverages first-order logic (FOL) to optimize the embeddings of naive natural language by considering the \emph{logical consistency} between queries and documents. Specifically, we introduce two novel techniques, \emph{logic alignment} and \emph{connective constraint}, to rerank candidate documents, thereby enhancing retrieval relevance.
+Furthermore, we construct a new dataset \textbf{NegConstraint} including negative-constraint queries to evaluate our NS-IR's performance on such complex IR scenarios.
+Our extensive experiments demonstrate that NS-IR not only achieves superior zero-shot retrieval performance on web search and low-resource retrieval tasks, but also performs better on negative-constraint queries. Our scource code and dataset are available at this https URL. 
+
+---
+# UDuo: Universal Dual Optimization Framework for Online Matching 
+
+**Authors**: Bin Li, Diwei Liu, Zehong Hu, Jia Jia  
+
+**Link**: [PDF](https://arxiv.org/pdf/2505.22243)  
+
+**Abstract**: Online resource allocation under budget constraints critically depends on proper modeling of user arrival dynamics. Classical approaches employ stochastic user arrival models to derive near-optimal solutions through fractional matching formulations of exposed users for downstream allocation tasks. However, this is no longer a reasonable assumption when the environment changes dynamically. In this work, We propose the Universal Dual optimization framework UDuo, a novel paradigm that fundamentally rethinks online allocation through three key innovations: (i) a temporal user arrival representation vector that explicitly captures distribution shifts in user arrival patterns and resource consumption dynamics, (ii) a resource pacing learner with adaptive allocation policies that generalize to heterogeneous constraint scenarios, and (iii) an online time-series forecasting approach for future user arrival distributions that achieves asymptotically optimal solutions with constraint feasibility guarantees in dynamic environments. Experimental results show that UDuo achieves higher efficiency and faster convergence than the traditional stochastic arrival model in real-world pricing while maintaining rigorous theoretical validity for general online allocation problems. 
+
+---
+# Yambda-5B -- A Large-Scale Multi-modal Dataset for Ranking And Retrieval 
+
+**Authors**: A. Ploshkin, V. Tytskiy, A. Pismenny, V. Baikalov, E. Taychinov, A. Permiakov, D. Burlakov, E. Krofto, N. Savushkin  
+
+**Link**: [PDF](https://arxiv.org/pdf/2505.22238)  
+
+**Abstract**: We present Yambda-5B, a large-scale open dataset sourced from the this http URL streaming platform. Yambda-5B contains 4.79 billion user-item interactions from 1 million users across 9.39 million tracks. The dataset includes two primary types of interactions: implicit feedback (listening events) and explicit feedback (likes, dislikes, unlikes and undislikes). In addition, we provide audio embeddings for most tracks, generated by a convolutional neural network trained on audio spectrograms. A key distinguishing feature of Yambda-5B is the inclusion of the is_organic flag, which separates organic user actions from recommendation-driven events. This distinction is critical for developing and evaluating machine learning algorithms, as this http URL relies on recommender systems to personalize track selection for users. To support rigorous benchmarking, we introduce an evaluation protocol based on a Global Temporal Split, allowing recommendation algorithms to be assessed in conditions that closely mirror real-world use. We report benchmark results for standard baselines (ItemKNN, iALS) and advanced models (SANSA, SASRec) using a variety of evaluation metrics. By releasing Yambda-5B to the community, we aim to provide a readily accessible, industrial-scale resource to advance research, foster innovation, and promote reproducible results in recommender systems. 
+
+---
+# Personalized Tree based progressive regression model for watch-time prediction in short video recommendation 
+
+**Authors**: Xiaokai Chen, Xiao Lin, Changcheng Li, Peng Jiang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2505.22153)  
+
+**Abstract**: In online video platforms, accurate watch time prediction has become a fundamental and challenging problem in video recommendation. Previous research has revealed that the accuracy of watch time prediction highly depends on both the transformation of watch-time labels and the decomposition of the estimation process. TPM (Tree based Progressive Regression Model) achieves State-of-the-Art performance with a carefully designed and effective decomposition paradigm. TPM discretizes the watch time into several ordinal intervals and organizes them into a binary decision tree, where each node corresponds to a specific interval. At each non-leaf node, a binary classifier is used to determine the specific interval in which the watch time variable most likely falls, based on the prediction outcome at its parent node.
+The tree structure serves as the core of TPM, as it defines the decomposition of watch time estimation and determines how the ordinal intervals are discretized. However, in TPM, the tree is predefined as a full binary tree, which may be sub-optimal for the following reasons. First, a full binary tree implies an equal partitioning of the watch time space, which may struggle to capture the complexity of real-world watch time distributions. Second, instead of relying on a globally fixed tree structure, we advocate for a personalized, data-driven tree that can be learned in an end-to-end manner. Therefore, we propose PTPM to enable a highly personalized decomposition of watch estimation with better efficacy and efficiency. Moreover, we reveal that TPM is affected by selection bias due to conditional modeling and devise a simple approach to address it. We conduct extensive experiments on both offline datasets and online environments. PTPM has been fully deployed in core traffic scenarios and serves more than 400 million users per day. 
+
+---
+# ConsRec: Denoising Sequential Recommendation through User-Consistent Preference Modeling 
+
+**Authors**: Haidong Xin, Qiushi Xiong, Zhenghao Liu, Sen Mei, Yukun Yan, Shi Yu, Shuo Wang, Yu Gu, Ge Yu, Chenyan Xiong  
+
+**Link**: [PDF](https://arxiv.org/pdf/2505.22130)  
+
+**Abstract**: User-item interaction histories are pivotal for sequential recommendation systems but often include noise, such as unintended clicks or actions that fail to reflect genuine user preferences. To address this issue, we propose the User-Consistent Preference-based Sequential Recommendation System (ConsRec), designed to capture stable user preferences and filter noisy items from interaction histories. Specifically, ConsRec constructs a user-interacted item graph, learns item similarities from their text representations, and then extracts the maximum connected subgraph from the user-interacted item graph for denoising items. Experimental results on the Yelp and Amazon Product datasets illustrate that ConsRec achieves a 13% improvement over baseline recommendation models, showing its effectiveness in denoising user-interacted items. Further analysis reveals that the denoised interaction histories form semantically tighter clusters of user-preferred items, leading to higher relevance scores for ground-truth targets and more accurate recommendations. All codes are available at this https URL. 
+
+---
+# Shapley Value-driven Data Pruning for Recommender Systems 
+
+**Authors**: Yansen Zhang, Xiaokun Zhang, Ziqiang Cui, Chen Ma  
+
+**Link**: [PDF](https://arxiv.org/pdf/2505.22057)  
+
+**Abstract**: Recommender systems often suffer from noisy interactions like accidental clicks or popularity bias. Existing denoising methods typically identify users' intent in their interactions, and filter out noisy interactions that deviate from the assumed intent. However, they ignore that interactions deemed noisy could still aid model training, while some ``clean'' interactions offer little learning value. To bridge this gap, we propose Shapley Value-driven Valuation (SVV), a framework that evaluates interactions based on their objective impact on model training rather than subjective intent assumptions. In SVV, a real-time Shapley value estimation method is devised to quantify each interaction's value based on its contribution to reducing training loss. Afterward, SVV highlights the interactions with high values while downplaying low ones to achieve effective data pruning for recommender systems. In addition, we develop a simulated noise protocol to examine the performance of various denoising approaches systematically. Experiments on four real-world datasets show that SVV outperforms existing denoising methods in both accuracy and robustness. Further analysis also demonstrates that our SVV can preserve training-critical interactions and offer interpretable noise assessment. This work shifts denoising from heuristic filtering to principled, model-driven interaction valuation. 
+
+---
+# Extracting Research Instruments from Educational Literature Using LLMs 
+
+**Authors**: Jiseung Yoo, Curran Mahowald, Meiyu Li, Wei Ai  
+
+**Link**: [PDF](https://arxiv.org/pdf/2505.21855)  
+
+**Abstract**: Large Language Models (LLMs) are transforming information extraction from academic literature, offering new possibilities for knowledge management. This study presents an LLM-based system designed to extract detailed information about research instruments used in the education field, including their names, types, target respondents, measured constructs, and outcomes. Using multi-step prompting and a domain-specific data schema, it generates structured outputs optimized for educational research. Our evaluation shows that this system significantly outperforms other approaches, particularly in identifying instrument names and detailed information. This demonstrates the potential of LLM-powered information extraction in educational contexts, offering a systematic way to organize research instrument information. The ability to aggregate such information at scale enhances accessibility for researchers and education leaders, facilitating informed decision-making in educational research and policy. 
+
+---
+# Xinyu AI Search: Enhanced Relevance and Comprehensive Results with Rich Answer Presentations 
+
+**Authors**: Bo Tang, Junyi Zhu, Chenyang Xi, Yunhang Ge, Jiahao Wu, Yuchen Feng, Yijun Niu, Wenqiang Wei, Yu Yu, Chunyu Li, Zehao Lin, Hao Wu, Ning Liao, Yebin Yang, Jiajia Wang, Zhiyu Li, Feiyu Xiong, Jingrun Chen  
+
+**Link**: [PDF](https://arxiv.org/pdf/2505.21849)  
+
+**Abstract**: Traditional search engines struggle to synthesize fragmented information for complex queries, while generative AI search engines face challenges in relevance, comprehensiveness, and presentation. To address these limitations, we introduce Xinyu AI Search, a novel system that incorporates a query-decomposition graph to dynamically break down complex queries into sub-queries, enabling stepwise retrieval and generation. Our retrieval pipeline enhances diversity through multi-source aggregation and query expansion, while filtering and re-ranking strategies optimize passage relevance. Additionally, Xinyu AI Search introduces a novel approach for fine-grained, precise built-in citation and innovates in result presentation by integrating timeline visualization and textual-visual choreography. Evaluated on recent real-world queries, Xinyu AI Search outperforms eight existing technologies in human assessments, excelling in relevance, comprehensiveness, and insightfulness. Ablation studies validate the necessity of its key sub-modules. Our work presents the first comprehensive framework for generative AI search engines, bridging retrieval, generation, and user-centric presentation. 
+
+---
+# Scientific Paper Retrieval with LLM-Guided Semantic-Based Ranking 
+
+**Authors**: Yunyi Zhang, Ruozhen Yang, Siqi Jiao, SeongKu Kang, Jiawei Han  
+
+**Link**: [PDF](https://arxiv.org/pdf/2505.21815)  
+
+**Abstract**: Scientific paper retrieval is essential for supporting literature discovery and research. While dense retrieval methods demonstrate effectiveness in general-purpose tasks, they often fail to capture fine-grained scientific concepts that are essential for accurate understanding of scientific queries. Recent studies also use large language models (LLMs) for query understanding; however, these methods often lack grounding in corpus-specific knowledge and may generate unreliable or unfaithful content. To overcome these limitations, we propose SemRank, an effective and efficient paper retrieval framework that combines LLM-guided query understanding with a concept-based semantic index. Each paper is indexed using multi-granular scientific concepts, including general research topics and detailed key phrases. At query time, an LLM identifies core concepts derived from the corpus to explicitly capture the query's information need. These identified concepts enable precise semantic matching, significantly enhancing retrieval accuracy. Experiments show that SemRank consistently improves the performance of various base retrievers, surpasses strong existing LLM-based baselines, and remains highly efficient. 
+
+---
+# Revisiting Self-attention for Cross-domain Sequential Recommendation 
+
+**Authors**: Clark Mingxuan Ju, Leonardo Neves, Bhuvesh Kumar, Liam Collins, Tong Zhao, Yuwei Qiu, Qing Dou, Sohail Nizam, Sen Yang, Neil Shah  
+
+**Link**: [PDF](https://arxiv.org/pdf/2505.21811)  
+
+**Abstract**: Sequential recommendation is a popular paradigm in modern recommender systems. In particular, one challenging problem in this space is cross-domain sequential recommendation (CDSR), which aims to predict future behaviors given user interactions across multiple domains. Existing CDSR frameworks are mostly built on the self-attention transformer and seek to improve by explicitly injecting additional domain-specific components (e.g. domain-aware module blocks). While these additional components help, we argue they overlook the core self-attention module already present in the transformer, a naturally powerful tool to learn correlations among behaviors. In this work, we aim to improve the CDSR performance for simple models from a novel perspective of enhancing the self-attention. Specifically, we introduce a Pareto-optimal self-attention and formulate the cross-domain learning as a multi-objective problem, where we optimize the recommendation task while dynamically minimizing the cross-domain attention scores. Our approach automates knowledge transfer in CDSR (dubbed as AutoCDSR) -- it not only mitigates negative transfer but also encourages complementary knowledge exchange among auxiliary domains. Based on the idea, we further introduce AutoCDSR+, a more performant variant with slight additional cost. Our proposal is easy to implement and works as a plug-and-play module that can be incorporated into existing transformer-based recommenders. Besides flexibility, it is practical to deploy because it brings little extra computational overheads without heavy hyper-parameter tuning. AutoCDSR on average improves Recall@10 for SASRec and Bert4Rec by 9.8% and 16.0% and NDCG@10 by 12.0% and 16.7%, respectively. Code is available at this https URL. 
+
+---
+# Rethinking Chunk Size For Long-Document Retrieval: A Multi-Dataset Analysis 
+
+**Authors**: Sinchana Ramakanth Bhat, Max Rudat, Jannis Spiekermann, Nicolas Flores-Herr  
+
+**Link**: [PDF](https://arxiv.org/pdf/2505.21700)  
+
+**Abstract**: Chunking is a crucial preprocessing step in retrieval-augmented generation (RAG) systems, significantly impacting retrieval effectiveness across diverse datasets. In this study, we systematically evaluate fixed-size chunking strategies and their influence on retrieval performance using multiple embedding models. Our experiments, conducted on both short-form and long-form datasets, reveal that chunk size plays a critical role in retrieval effectiveness -- smaller chunks (64-128 tokens) are optimal for datasets with concise, fact-based answers, whereas larger chunks (512-1024 tokens) improve retrieval in datasets requiring broader contextual understanding. We also analyze the impact of chunking on different embedding models, finding that they exhibit distinct chunking sensitivities. While models like Stella benefit from larger chunks, leveraging global context for long-range retrieval, Snowflake performs better with smaller chunks, excelling at fine-grained, entity-based matching. Our results underscore the trade-offs between chunk size, embedding models, and dataset characteristics, emphasizing the need for improved chunk quality measures, and more comprehensive datasets to advance chunk-based retrieval in long-document Information Retrieval (IR). 
+
+---
+# Agent-UniRAG: A Trainable Open-Source LLM Agent Framework for Unified Retrieval-Augmented Generation Systems 
+
+**Authors**: Hoang Pham, Khac-Hoai Nam Bui  
+
+**Link**: [PDF](https://arxiv.org/pdf/2505.22571)  
+
+**Abstract**: This paper presents a novel approach for unified retrieval-augmented generation (RAG) systems using the recent emerging large language model (LLM) agent concept. Specifically, Agent LLM, which utilizes LLM as fundamental controllers, has become a promising approach to enable the interpretability of RAG tasks, especially for complex reasoning question-answering systems (e.g., multi-hop queries). Nonetheless, previous works mainly focus on solving RAG systems with either single-hop or multi-hop approaches separately, which limits the application of those approaches to real-world applications. In this study, we propose a trainable agent framework called Agent-UniRAG for unified retrieval-augmented LLM systems, which enhances the effectiveness and interpretability of RAG systems. The main idea is to design an LLM agent framework to solve RAG tasks step-by-step based on the complexity of the inputs, simultaneously including single-hop and multi-hop queries in an end-to-end manner. Furthermore, we introduce SynAgent-RAG, a synthetic dataset to enable the proposed agent framework for small open-source LLMs (e.g., Llama-3-8B). The results show comparable performances with closed-source and larger open-source LLMs across various RAG benchmarks. Our source code and dataset are publicly available for further exploitation. 
+
+---
+# ChatPD: An LLM-driven Paper-Dataset Networking System 
+
+**Authors**: Anjie Xu, Ruiqing Ding, Leye Wang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2505.22349)  
+
+**Abstract**: Scientific research heavily depends on suitable datasets for method validation, but existing academic platforms with dataset management like PapersWithCode suffer from inefficiencies in their manual workflow. To overcome this bottleneck, we present a system, called ChatPD, that utilizes Large Language Models (LLMs) to automate dataset information extraction from academic papers and construct a structured paper-dataset network. Our system consists of three key modules: \textit{paper collection}, \textit{dataset information extraction}, and \textit{dataset entity resolution} to construct paper-dataset networks. Specifically, we propose a \textit{Graph Completion and Inference} strategy to map dataset descriptions to their corresponding entities. Through extensive experiments, we demonstrate that ChatPD not only outperforms the existing platform PapersWithCode in dataset usage extraction but also achieves about 90\% precision and recall in entity resolution tasks. Moreover, we have deployed ChatPD to continuously extract which datasets are used in papers, and provide a dataset discovery service, such as task-specific dataset queries and similar dataset recommendations. We open source ChatPD and the current paper-dataset network on this [GitHub repository]{this https URL}. 
+
+---
+# MRT at SemEval-2025 Task 8: Maximizing Recovery from Tables with Multiple Steps 
+
+**Authors**: Maximiliano Hormazábal Lagos, Álvaro Bueno Saez, Héctor Cerezo-Costas, Pedro Alonso Doval, Jorge Alcalde Vesteiro  
+
+**Link**: [PDF](https://arxiv.org/pdf/2505.22264)  
+
+**Abstract**: In this paper we expose our approach to solve the \textit{SemEval 2025 Task 8: Question-Answering over Tabular Data} challenge. Our strategy leverages Python code generation with LLMs to interact with the table and get the answer to the questions. The process is composed of multiple steps: understanding the content of the table, generating natural language instructions in the form of steps to follow in order to get the answer, translating these instructions to code, running it and handling potential errors or exceptions. These steps use open source LLMs and fine grained optimized prompts for each task (step). With this approach, we achieved a score of $70.50\%$ for subtask 1. 
+
+---
+# Beyond path selection: Better LLMs for Scientific Information Extraction with MimicSFT and Relevance and Rule-induced(R$^2$)GRPO 
+
+**Authors**: Ran Li, Shimin Di, Yuchen Liu, Chen Jing, Yu Qiu, Lei Chen  
+
+**Link**: [PDF](https://arxiv.org/pdf/2505.22068)  
+
+**Abstract**: Previous study suggest that powerful Large Language Models (LLMs) trained with Reinforcement Learning with Verifiable Rewards (RLVR) only refines reasoning path without improving the reasoning capacity in math tasks while supervised-finetuning(SFT) with distillation can. We study this from the view of Scientific information extraction (SciIE) where LLMs and reasoning LLMs underperforms small Bert-based models. SciIE require both the reasoning and memorization. We argue that both SFT and RLVR can refine the reasoning path and improve reasoning capacity in a simple way based on SciIE. We propose two-stage training with 1. MimicSFT, using structured reasoning templates without needing high-quality chain-of-thought data, 2. R$^2$GRPO with relevance and rule-induced rewards. Experiments on scientific IE benchmarks show that both methods can improve the reasoning capacity. R$^2$GRPO with mimicSFT surpasses baseline LLMs and specialized supervised models in relation extraction. Our code is available at this https URL. 
+
+---
+# AI-Supported Platform for System Monitoring and Decision-Making in Nuclear Waste Management with Large Language Models 
+
+**Authors**: Dongjune Chang, Sola Kim, Young Soo Park  
+
+**Link**: [PDF](https://arxiv.org/pdf/2505.21741)  
+
+**Abstract**: Nuclear waste management requires rigorous regulatory compliance assessment, demanding advanced decision-support systems capable of addressing complex legal, environmental, and safety considerations. This paper presents a multi-agent Retrieval-Augmented Generation (RAG) system that integrates large language models (LLMs) with document retrieval mechanisms to enhance decision accuracy through structured agent collaboration. Through a structured 10-round discussion model, agents collaborate to assess regulatory compliance and safety requirements while maintaining document-grounded responses. Implemented on consumer-grade hardware, the system leverages Llama 3.2 and mxbai-embed-large-v1 embeddings for efficient retrieval and semantic representation. A case study of a proposed temporary nuclear waste storage site near Winslow, Arizona, demonstrates the framework's effectiveness. Results show the Regulatory Agent achieves consistently higher relevance scores in maintaining alignment with legal frameworks, while the Safety Agent effectively manages complex risk assessments requiring multifaceted analysis. The system demonstrates progressive improvement in agreement rates between agents across discussion rounds while semantic drift decreases, indicating enhanced decision-making consistency and response coherence. The system ensures regulatory decisions remain factually grounded, dynamically adapting to evolving regulatory frameworks through real-time document retrieval. By balancing automated assessment with human oversight, this framework offers a scalable and transparent approach to regulatory governance. These findings underscore the potential of AI-driven, multi-agent systems in advancing evidence-based, accountable, and adaptive decision-making for high-stakes environmental management scenarios. 
+
+---
