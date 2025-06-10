@@ -1,0 +1,225 @@
+# MoE-MLoRA for Multi-Domain CTR Prediction: Efficient Adaptation with Expert Specialization 
+
+**Authors**: Ken Yagel, Eyal German, Aviel Ben Siman Tov  
+
+**Link**: [PDF](https://arxiv.org/pdf/2506.07563)  
+
+**Abstract**: Personalized recommendation systems must adapt to user interactions across different domains. Traditional approaches like MLoRA apply a single adaptation per domain but lack flexibility in handling diverse user behaviors. To address this, we propose MoE-MLoRA, a mixture-of-experts framework where each expert is first trained independently to specialize in its domain before a gating network is trained to weight their contributions dynamically. We evaluate MoE-MLoRA across eight CTR models on Movielens and Taobao, showing that it improves performance in large-scale, dynamic datasets (+1.45 Weighed-AUC in Taobao-20) but offers limited benefits in structured datasets with low domain diversity and sparsity. Further analysis of the number of experts per domain reveals that larger ensembles do not always improve performance, indicating the need for model-aware tuning. Our findings highlight the potential of expert-based architectures for multi-domain recommendation systems, demonstrating that task-aware specialization and adaptive gating can enhance predictive accuracy in complex environments. The implementation and code are available in our GitHub repository. 
+
+---
+# Leveraging Historical and Current Interests for Continual Sequential Recommendation 
+
+**Authors**: Gyuseok Lee, Hyunsik Yoo, Junyoung Hwang, SeongKu Kang, Hwanjo Yu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2506.07466)  
+
+**Abstract**: Sequential recommendation models based on the Transformer architecture show superior performance in harnessing long-range dependencies within user behavior via self-attention. However, naively updating them on continuously arriving non-stationary data streams incurs prohibitive computation costs or leads to catastrophic forgetting. To address this, we propose Continual Sequential Transformer for Recommendation (CSTRec) that effectively leverages well-preserved historical user interests while capturing current interests. At its core is Continual Sequential Attention (CSA), a linear attention mechanism that retains past knowledge without direct access to old data. CSA integrates two key components: (1) Cauchy-Schwarz Normalization that stabilizes training under uneven interaction frequencies, and (2) Collaborative Interest Enrichment that mitigates forgetting through shared, learnable interest pools. We further introduce a technique that facilitates learning for cold-start users by transferring historical knowledge from behaviorally similar existing users. Extensive experiments on three real-world datasets indicate that CSTRec outperforms state-of-the-art baselines in both knowledge retention and acquisition. 
+
+---
+# LlamaRec-LKG-RAG: A Single-Pass, Learnable Knowledge Graph-RAG Framework for LLM-Based Ranking 
+
+**Authors**: Vahid Azizi, Fatemeh Koochaki  
+
+**Link**: [PDF](https://arxiv.org/pdf/2506.07449)  
+
+**Abstract**: Recent advances in Large Language Models (LLMs) have driven their adoption in recommender systems through Retrieval-Augmented Generation (RAG) frameworks. However, existing RAG approaches predominantly rely on flat, similarity-based retrieval that fails to leverage the rich relational structure inherent in user-item interactions. We introduce LlamaRec-LKG-RAG, a novel single-pass, end-to-end trainable framework that integrates personalized knowledge graph context into LLM-based recommendation ranking. Our approach extends the LlamaRec architecture by incorporating a lightweight user preference module that dynamically identifies salient relation paths within a heterogeneous knowledge graph constructed from user behavior and item metadata. These personalized subgraphs are seamlessly integrated into prompts for a fine-tuned Llama-2 model, enabling efficient and interpretable recommendations through a unified inference step. Comprehensive experiments on ML-100K and Amazon Beauty datasets demonstrate consistent and significant improvements over LlamaRec across key ranking metrics (MRR, NDCG, Recall). LlamaRec-LKG-RAG demonstrates the critical value of structured reasoning in LLM-based recommendations and establishes a foundation for scalable, knowledge-aware personalization in next-generation recommender systems. Code is available at~\href{this https URL}{repository}. 
+
+---
+# HotelMatch-LLM: Joint Multi-Task Training of Small and Large Language Models for Efficient Multimodal Hotel Retrieval 
+
+**Authors**: Arian Askari, Emmanouil Stergiadis, Ilya Gusev, Moran Beladev  
+
+**Link**: [PDF](https://arxiv.org/pdf/2506.07296)  
+
+**Abstract**: We present HotelMatch-LLM, a multimodal dense retrieval model for the travel domain that enables natural language property search, addressing the limitations of traditional travel search engines which require users to start with a destination and editing search parameters. HotelMatch-LLM features three key innovations: (1) Domain-specific multi-task optimization with three novel retrieval, visual, and language modeling objectives; (2) Asymmetrical dense retrieval architecture combining a small language model (SLM) for efficient online query processing and a large language model (LLM) for embedding hotel data; and (3) Extensive image processing to handle all property image galleries. Experiments on four diverse test sets show HotelMatch-LLM significantly outperforms state-of-the-art models, including VISTA and MARVEL. Specifically, on the test set -- main query type -- we achieve 0.681 for HotelMatch-LLM compared to 0.603 for the most effective baseline, MARVEL. Our analysis highlights the impact of our multi-task optimization, the generalizability of HotelMatch-LLM across LLM architectures, and its scalability for processing large image galleries. 
+
+---
+# Research Knowledge Graphs: the Shifting Paradigm of Scholarly Information Representation 
+
+**Authors**: Matthäus Zloch, Danilo Dessì, Jennifer D'Souza, Leyla Jael Castro, Benjamin Zapilko, Saurav Karmakar, Brigitte Mathiak, Markus Stocker, Wolfgang Otto, Sören Auer, Stefan Dietze  
+
+**Link**: [PDF](https://arxiv.org/pdf/2506.07285)  
+
+**Abstract**: Sharing and reusing research artifacts, such as datasets, publications, or methods is a fundamental part of scientific activity, where heterogeneity of resources and metadata and the common practice of capturing information in unstructured publications pose crucial challenges. Reproducibility of research and finding state-of-the-art methods or data have become increasingly challenging. In this context, the concept of Research Knowledge Graphs (RKGs) has emerged, aiming at providing an easy to use and machine-actionable representation of research artifacts and their relations. That is facilitated through the use of established principles for data representation, the consistent adoption of globally unique persistent identifiers and the reuse and linking of vocabularies and data. This paper provides the first conceptualisation of the RKG vision, a categorisation of in-use RKGs together with a description of RKG building blocks and principles. We also survey real-world RKG implementations differing with respect to scale, schema, data, used vocabulary, and reliability of the contained data. We also characterise different RKG construction methodologies and provide a forward-looking perspective on the diverse applications, opportunities, and challenges associated with the RKG vision. 
+
+---
+# RADAR: Recall Augmentation through Deferred Asynchronous Retrieval 
+
+**Authors**: Amit Jaspal, Qian Dang, Ajantha Ramineni  
+
+**Link**: [PDF](https://arxiv.org/pdf/2506.07261)  
+
+**Abstract**: Modern large-scale recommender systems employ multi-stage ranking funnel (Retrieval, Pre-ranking, Ranking) to balance engagement and computational constraints (latency, CPU). However, the initial retrieval stage, often relying on efficient but less precise methods like K-Nearest Neighbors (KNN), struggles to effectively surface the most engaging items from billion-scale catalogs, particularly distinguishing highly relevant and engaging candidates from merely relevant ones. We introduce Recall Augmentation through Deferred Asynchronous Retrieval (RADAR), a novel framework that leverages asynchronous, offline computation to pre-rank a significantly larger candidate set for users using the full complexity ranking model. These top-ranked items are stored and utilized as a high-quality retrieval source during online inference, bypassing online retrieval and pre-ranking stages for these candidates. We demonstrate through offline experiments that RADAR significantly boosts recall (2X Recall@200 vs DNN retrieval baseline) by effectively combining a larger retrieved candidate set with a more powerful ranking model. Online A/B tests confirm a +0.8% lift in topline engagement metrics, validating RADAR as a practical and effective method to improve recommendation quality under strict online serving constraints. 
+
+---
+# Correcting for Position Bias in Learning to Rank: A Control Function Approach 
+
+**Authors**: Md Aminul Islam, Kathryn Vasilaky, Elena Zheleva  
+
+**Link**: [PDF](https://arxiv.org/pdf/2506.06989)  
+
+**Abstract**: Implicit feedback data, such as user clicks, is commonly used in learning-to-rank (LTR) systems because it is easy to collect and it often reflects user preferences. However, this data is prone to various biases, and training an LTR system directly on biased data can result in suboptimal ranking performance. One of the most prominent and well-studied biases in implicit feedback data is position bias, which occurs because users are more likely to interact with higher-ranked documents regardless of their true relevance. In this paper, we propose a novel control function-based method that accounts for position bias in a two-stage process. The first stage uses exogenous variation from the residuals of the ranking process to correct for position bias in the second stage click equation. Unlike previous position bias correction methods, our method does not require knowledge of the click or propensity model and allows for nonlinearity in the underlying ranking model. Moreover, our method is general and allows for debiasing any state-of-the-art ranking algorithm by plugging it into the second stage. We also introduce a technique to debias validation clicks for hyperparameter tuning to select the optimal model in the absence of unbiased validation data. Experimental results demonstrate that our method outperforms state-of-the-art approaches in correcting for position bias. 
+
+---
+# OneSug: The Unified End-to-End Generative Framework for E-commerce Query Suggestion 
+
+**Authors**: Xian Guo, Ben Chen, Siyuan Wang, Ying Yang, Chenyi Lei, Yuqing Ding, Han Li  
+
+**Link**: [PDF](https://arxiv.org/pdf/2506.06913)  
+
+**Abstract**: Query suggestion plays a crucial role in enhancing user experience in e-commerce search systems by providing relevant query recommendations that align with users' initial input. This module helps users navigate towards personalized preference needs and reduces typing effort, thereby improving search experience. Traditional query suggestion modules usually adopt multi-stage cascading architectures, for making a well trade-off between system response time and business conversion. But they often suffer from inefficiencies and suboptimal performance due to inconsistent optimization objectives across stages. To address these, we propose OneSug, the first end-to-end generative framework for e-commerce query suggestion. OneSug incorporates a prefix2query representation enhancement module to enrich prefixes using semantically and interactively related queries to bridge content and business characteristics, an encoder-decoder generative model that unifies the query suggestion process, and a reward-weighted ranking strategy with behavior-level weights to capture fine-grained user preferences. Extensive evaluations on large-scale industry datasets demonstrate OneSug's ability for effective and efficient query suggestion. Furthermore, OneSug has been successfully deployed for the entire traffic on the e-commerce search engine in Kuaishou platform for over 1 month, with statistically significant improvements in user top click position (-9.33%), CTR (+2.01%), Order (+2.04%), and Revenue (+1.69%) over the online multi-stage strategy, showing great potential in e-commercial conversion. 
+
+---
+# Infinity Search: Approximate Vector Search with Projections on q-Metric Spaces 
+
+**Authors**: Antonio Pariente, Ignacio Hounie, Santiago Segarra, Alejandro Ribeiro  
+
+**Link**: [PDF](https://arxiv.org/pdf/2506.06557)  
+
+**Abstract**: Despite the ubiquity of vector search applications, prevailing search algorithms overlook the metric structure of vector embeddings, treating it as a constraint rather than exploiting its underlying properties. In this paper, we demonstrate that in $q$-metric spaces, metric trees can leverage a stronger version of the triangle inequality to reduce comparisons for exact search. Notably, as $q$ approaches infinity, the search complexity becomes logarithmic. Therefore, we propose a novel projection method that embeds vector datasets with arbitrary dissimilarity measures into $q$-metric spaces while preserving the nearest neighbor. We propose to learn an approximation of this projection to efficiently transform query points to a space where euclidean distances satisfy the desired properties. Our experimental results with text and image vector embeddings show that learning $q$-metric approximations enables classic metric tree algorithms -- which typically underperform with high-dimensional data -- to achieve competitive performance against state-of-the-art search methods. 
+
+---
+# NR4DER: Neural Re-ranking for Diversified Exercise Recommendation 
+
+**Authors**: Xinghe Cheng, Xufang Zhou, Liangda Fang, Chaobo He, Yuyu Zhou, Weiqi Luo, Zhiguo Gong, Quanlong Guan  
+
+**Link**: [PDF](https://arxiv.org/pdf/2506.06341)  
+
+**Abstract**: With the widespread adoption of online education platforms, an increasing number of students are gaining new knowledge through Massive Open Online Courses (MOOCs). Exercise recommendation have made strides toward improving student learning outcomes. However, existing methods not only struggle with high dropout rates but also fail to match the diverse learning pace of students. They frequently face difficulties in adjusting to inactive students' learning patterns and in accommodating individualized learning paces, resulting in limited accuracy and diversity in recommendations. To tackle these challenges, we propose Neural Re-ranking for Diversified Exercise Recommendation (in short, NR4DER). NR4DER first leverages the mLSTM model to improve the effectiveness of the exercise filter module. It then employs a sequence enhancement method to enhance the representation of inactive students, accurately matches students with exercises of appropriate difficulty. Finally, it utilizes neural re-ranking to generate diverse recommendation lists based on individual students' learning histories. Extensive experimental results indicate that NR4DER significantly outperforms existing methods across multiple real-world datasets and effectively caters to the diverse learning pace of students. 
+
+---
+# Structured Semantics from Unstructured Notes: Language Model Approaches to EHR-Based Decision Support 
+
+**Authors**: Wu Hao Ran, Xi Xi, Furong Li, Jingyi Lu, Jian Jiang, Hui Huang, Yuzhuan Zhang, Shi Li  
+
+**Link**: [PDF](https://arxiv.org/pdf/2506.06340)  
+
+**Abstract**: The advent of large language models (LLMs) has opened new avenues for analyzing complex, unstructured data, particularly within the medical domain. Electronic Health Records (EHRs) contain a wealth of information in various formats, including free text clinical notes, structured lab results, and diagnostic codes. This paper explores the application of advanced language models to leverage these diverse data sources for improved clinical decision support. We will discuss how text-based features, often overlooked in traditional high dimensional EHR analysis, can provide semantically rich representations and aid in harmonizing data across different institutions. Furthermore, we delve into the challenges and opportunities of incorporating medical codes and ensuring the generalizability and fairness of AI models in healthcare. 
+
+---
+# Optimizing RAG Pipelines for Arabic: A Systematic Analysis of Core Components 
+
+**Authors**: Jumana Alsubhi, Mohammad D. Alahmadi, Ahmed Alhusayni, Ibrahim Aldailami, Israa Hamdine, Ahmad Shabana, Yazeed Iskandar, Suhayb Khayyat  
+
+**Link**: [PDF](https://arxiv.org/pdf/2506.06339)  
+
+**Abstract**: Retrieval-Augmented Generation (RAG) has emerged as a powerful architecture for combining the precision of retrieval systems with the fluency of large language models. While several studies have investigated RAG pipelines for high-resource languages, the optimization of RAG components for Arabic remains underexplored. This study presents a comprehensive empirical evaluation of state-of-the-art RAG components-including chunking strategies, embedding models, rerankers, and language models-across a diverse set of Arabic datasets. Using the RAGAS framework, we systematically compare performance across four core metrics: context precision, context recall, answer faithfulness, and answer relevancy. Our experiments demonstrate that sentence-aware chunking outperforms all other segmentation methods, while BGE-M3 and Multilingual-E5-large emerge as the most effective embedding models. The inclusion of a reranker (bge-reranker-v2-m3) significantly boosts faithfulness in complex datasets, and Aya-8B surpasses StableLM in generation quality. These findings provide critical insights for building high-quality Arabic RAG pipelines and offer practical guidelines for selecting optimal components across different document types. 
+
+---
+# Research on E-Commerce Long-Tail Product Recommendation Mechanism Based on Large-Scale Language Models 
+
+**Authors**: Qingyi Lu, Haotian Lyu, Jiayun Zheng, Yang Wang, Li Zhang, Chengrui Zhou  
+
+**Link**: [PDF](https://arxiv.org/pdf/2506.06336)  
+
+**Abstract**: As e-commerce platforms expand their product catalogs, accurately recommending long-tail items becomes increasingly important for enhancing both user experience and platform revenue. A key challenge is the long-tail problem, where extreme data sparsity and cold-start issues limit the performance of traditional recommendation methods. To address this, we propose a novel long-tail product recommendation mechanism that integrates product text descriptions and user behavior sequences using a large-scale language model (LLM). First, we introduce a semantic visor, which leverages a pre-trained LLM to convert multimodal textual content such as product titles, descriptions, and user reviews into meaningful embeddings. These embeddings help represent item-level semantics effectively. We then employ an attention-based user intent encoder that captures users' latent interests, especially toward long-tail items, by modeling collaborative behavior patterns. These components feed into a hybrid ranking model that fuses semantic similarity scores, collaborative filtering outputs, and LLM-generated recommendation candidates. Extensive experiments on a real-world e-commerce dataset show that our method outperforms baseline models in recall (+12%), hit rate (+9%), and user coverage (+15%). These improvements lead to better exposure and purchase rates for long-tail products. Our work highlights the potential of LLMs in interpreting product content and user intent, offering a promising direction for future e-commerce recommendation systems. 
+
+---
+# FinBERT2: A Specialized Bidirectional Encoder for Bridging the Gap in Finance-Specific Deployment of Large Language Models 
+
+**Authors**: Xuan Xu, Fufang Wen, Beilin Chu, Zhibing Fu, Qinhong Lin, Jiaqi Liu, Binjie Fei, Zhongliang Yang, Linna Zhou, Yu Li  
+
+**Link**: [PDF](https://arxiv.org/pdf/2506.06335)  
+
+**Abstract**: In natural language processing (NLP), the focus has shifted from encoder-only tiny language models like BERT to decoder-only large language models(LLMs) such as GPT-3. However, LLMs' practical application in the financial sector has revealed three limitations: (1) LLMs often perform worse than fine-tuned BERT on discriminative tasks despite costing much higher computational resources, such as market sentiment analysis in financial reports; (2) Application on generative tasks heavily relies on retrieval augmented generation (RAG) methods to provide current and specialized information, with general retrievers showing suboptimal performance on domain-specific retrieval tasks; (3) There are additional inadequacies in other feature-based scenarios, such as topic modeling. We introduce FinBERT2, a specialized bidirectional encoder pretrained on a high-quality, financial-specific corpus of 32b tokens. This represents the largest known Chinese financial pretraining corpus for models of this parameter size. As a better backbone, FinBERT2 can bridge the gap in the financial-specific deployment of LLMs through the following achievements: (1) Discriminative fine-tuned models (Fin-Labelers) outperform other (Fin)BERT variants by 0.4%-3.3% and leading LLMs by 9.7%-12.3% on average across five financial classification tasks. (2) Contrastive fine-tuned models (Fin-Retrievers) outperform both open-source (e.g., +6.8\% avg improvement over BGE-base-zh) and proprietary (e.g., +4.2\% avg improvement over OpenAI's text-embedding-3-large) embedders across five financial retrieval tasks; (3) Building on FinBERT2 variants, we construct the Fin-TopicModel, which enables superior clustering and topic representation for financial titles. Our work revisits financial BERT models through comparative analysis with contemporary LLMs and offers practical insights for effectively utilizing FinBERT in the LLMs era. 
+
+---
+# Preference-based learning for news headline recommendation 
+
+**Authors**: Alexandre Bouras, Audrey Durand, Richard Khoury  
+
+**Link**: [PDF](https://arxiv.org/pdf/2506.06334)  
+
+**Abstract**: This study explores strategies for optimizing news headline recommendations through preference-based learning. Using real-world data of user interactions with French-language online news posts, we learn a headline recommender agent under a contextual bandit setting. This allows us to explore the impact of translation on engagement predictions, as well as the benefits of different interactive strategies on user engagement during data collection. Our results show that explicit exploration may not be required in the presence of noisy contexts, opening the door to simpler but efficient strategies in practice. 
+
+---
+# Is BERTopic Better than PLSA for Extracting Key Topics in Aviation Safety Reports? 
+
+**Authors**: Aziida Nanyonga, Joiner Keith, Turhan Ugur, Wild Graham  
+
+**Link**: [PDF](https://arxiv.org/pdf/2506.06328)  
+
+**Abstract**: This study compares the effectiveness of BERTopic and Probabilistic Latent Semantic Analysis (PLSA) in extracting meaningful topics from aviation safety reports aiming to enhance the understanding of patterns in aviation incident data. Using a dataset of over 36,000 National Transportation Safety Board (NTSB) reports from 2000 to 2020, BERTopic employed transformer based embeddings and hierarchical clustering, while PLSA utilized probabilistic modelling through the Expectation-Maximization (EM) algorithm. Results showed that BERTopic outperformed PLSA in topic coherence, achieving a Cv score of 0.41 compared to PLSA 0.37, while also demonstrating superior interpretability as validated by aviation safety experts. These findings underscore the advantages of modern transformer based approaches in analyzing complex aviation datasets, paving the way for enhanced insights and informed decision-making in aviation safety. Future work will explore hybrid models, multilingual datasets, and advanced clustering techniques to further improve topic modelling in this domain. 
+
+---
+# A Reinforcement-Learning-Enhanced LLM Framework for Automated A/B Testing in Personalized Marketing 
+
+**Authors**: Haoyang Feng, Yanjun Dai, Yuan Gao  
+
+**Link**: [PDF](https://arxiv.org/pdf/2506.06316)  
+
+**Abstract**: For personalized marketing, a new challenge of how to effectively algorithm the A/B testing to maximize user response is urgently to be overcome. In this paper, we present a new approach, the RL-LLM-AB test framework, for using reinforcement learning strategy optimization combined with LLM to automate and personalize A/B tests. The RL-LLM-AB test is built upon the pre-trained instruction-tuned language model. It first generates A/B versions of candidate content variants using a Prompt-Conditioned Generator, and then dynamically embeds and fuses the user portrait and the context of the current query with the multi-modal perception module to constitute the current interaction state. The content version is then selected in real-time through the policy optimization module with an Actor-Critic structure, and long-term revenue is estimated according to real-time feedback (such as click-through rate and conversion rate). Furthermore, a Memory-Augmented Reward Estimator is embedded into the framework to capture long-term user preference drift, which helps to generalize policy across multiple users and content contexts. Numerical results demonstrate the superiority of our proposed RL-LLM-ABTest over existing A/B testing methods, including classical A/B testing, Contextual Bandits, and benchmark reinforcement learning approaches on real-world marketing data. 
+
+---
+# DISRetrieval: Harnessing Discourse Structure for Long Document Retrieval 
+
+**Authors**: Huiyao Chen, Yi Yang, Yinghui Li, Meishan Zhang, Min Zhang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2506.06313)  
+
+**Abstract**: Long document understanding has become increasingly crucial in natural language processing, with retrieval-based methods emerging as a promising solution to address the context length limitations of large language models (LLMs). However, existing approaches either treat documents as flat sequences or employ arbitrary chunking strategies, failing to capture the inherent discourse structure that guides human comprehension. We present DISRetrieval, a novel hierarchical retrieval framework that leverages linguistic discourse structure to enhance long document understanding. Our approach introduces three key innovations: (1) a discourse-aware document organization framework that utilizes rhetorical structure theory (RST) to create sentence-level hierarchical representations, preserving both semantic relationships and natural document flow; (2) an LLM-enhanced node representation technique that combines discourse structure with adaptive summarization to enrich tree nodes with contextual information; and (3) a hierarchical evidence retrieval mechanism that effectively selects relevant content while maintaining discourse coherence. Through comprehensive experiments on QASPER and QuALITY datasets, DISRetrieval demonstrates substantial improvements over existing methods in both token-level retrieval metrics and downstream question answering tasks. Our ablation studies confirm that incorporating discourse structure significantly enhances retrieval effectiveness across different document lengths and query types, validating the importance of linguistically-informed document representation in long-text understanding. Our code and datasets are publicly available at github/DreamH1gh/DISRetrieval to facilitate future research. 
+
+---
+# A Temporal FRBR/FRBRoo-Based Model for Component-Level Versioning of Legal Norms 
+
+**Authors**: Hudson de Martim  
+
+**Link**: [PDF](https://arxiv.org/pdf/2506.07853)  
+
+**Abstract**: Effectively representing legal norms for automated processing is a critical challenge, particularly in tracking the diachronic evolution of their hierarchical components (e.g., articles, paragraphs). While foundational frameworks like FRBR/FRBRoo and standards like Akoma Ntoso model legal documents at a macro level, they lack native mechanisms for granular, component-level versioning. This limitation hinders the deterministic point-in-time reconstruction of legal texts, a fundamental capability for reliable Legal Tech and AI applications. This paper proposes a structured, temporal model that extends the FRBRoo framework to address this gap. It introduces specialized subclasses of Expressio - Temporal Version (TV) and Language Version (LV - to represent the state of a legal norm and its linguistic variations at specific points in time. The model applies this same paradigm hierarchically, introducing Component Work (CW), Component Temporal Version (CTV), and Component Language Version (CLV) to track the lifecycle of individual articles, paragraphs, and clauses. Using the Brazilian Federal Constitution as a case study, the paper demonstrates how each amendment creates new Component Temporal Versions for affected provisions, while unaffected components retain their existing versions. This fine-grained, time-aware architecture enables the precise, deterministic retrieval and reconstruction of any part of a legal text as it existed on a specific date. The model provides a robust foundation for developing advanced legal information systems, knowledge graphs, and AI tools capable of accurate historical analysis and impact assessment, overcoming the limitations of current generative models. 
+
+---
+# PolitiSky24: U.S. Political Bluesky Dataset with User Stance Labels 
+
+**Authors**: Peyman Rostami, Vahid Rahimzadeh, Ali Adibi, Azadeh Shakery  
+
+**Link**: [PDF](https://arxiv.org/pdf/2506.07606)  
+
+**Abstract**: Stance detection identifies the viewpoint expressed in text toward a specific target, such as a political figure. While previous datasets have focused primarily on tweet-level stances from established platforms, user-level stance resources, especially on emerging platforms like Bluesky remain scarce. User-level stance detection provides a more holistic view by considering a user's complete posting history rather than isolated posts. We present the first stance detection dataset for the 2024 U.S. presidential election, collected from Bluesky and centered on Kamala Harris and Donald Trump. The dataset comprises 16,044 user-target stance pairs enriched with engagement metadata, interaction graphs, and user posting histories. PolitiSky24 was created using a carefully evaluated pipeline combining advanced information retrieval and large language models, which generates stance labels with supporting rationales and text spans for transparency. The labeling approach achieves 81\% accuracy with scalable LLMs. This resource addresses gaps in political stance analysis through its timeliness, open-data nature, and user-level perspective. The dataset is available at this https URL 
+
+---
+# Addressing Correlated Latent Exogenous Variables in Debiased Recommender Systems 
+
+**Authors**: Shuqiang Zhang, Yuchao Zhang, Jinkun Chen, Haochen Sui  
+
+**Link**: [PDF](https://arxiv.org/pdf/2506.07517)  
+
+**Abstract**: Recommendation systems (RS) aim to provide personalized content, but they face a challenge in unbiased learning due to selection bias, where users only interact with items they prefer. This bias leads to a distorted representation of user preferences, which hinders the accuracy and fairness of recommendations. To address the issue, various methods such as error imputation based, inverse propensity scoring, and doubly robust techniques have been developed. Despite the progress, from the structural causal model perspective, previous debiasing methods in RS assume the independence of the exogenous variables. In this paper, we release this assumption and propose a learning algorithm based on likelihood maximization to learn a prediction model. We first discuss the correlation and difference between unmeasured confounding and our scenario, then we propose a unified method that effectively handles latent exogenous variables. Specifically, our method models the data generation process with latent exogenous variables under mild normality assumptions. We then develop a Monte Carlo algorithm to numerically estimate the likelihood function. Extensive experiments on synthetic datasets and three real-world datasets demonstrate the effectiveness of our proposed method. The code is at this https URL. 
+
+---
+# From Swath to Full-Disc: Advancing Precipitation Retrieval with Multimodal Knowledge Expansion 
+
+**Authors**: Zheng Wang, Kai Ying, Bin Xu, Chunjiao Wang, Cong Bai  
+
+**Link**: [PDF](https://arxiv.org/pdf/2506.07050)  
+
+**Abstract**: Accurate near-real-time precipitation retrieval has been enhanced by satellite-based technologies. However, infrared-based algorithms have low accuracy due to weak relations with surface precipitation, whereas passive microwave and radar-based methods are more accurate but limited in range. This challenge motivates the Precipitation Retrieval Expansion (PRE) task, which aims to enable accurate, infrared-based full-disc precipitation retrievals beyond the scanning swath. We introduce Multimodal Knowledge Expansion, a two-stage pipeline with the proposed PRE-Net model. In the Swath-Distilling stage, PRE-Net transfers knowledge from a multimodal data integration model to an infrared-based model within the scanning swath via Coordinated Masking and Wavelet Enhancement (CoMWE). In the Full-Disc Adaptation stage, Self-MaskTune refines predictions across the full disc by balancing multimodal and full-disc infrared knowledge. Experiments on the introduced PRE benchmark demonstrate that PRE-Net significantly advanced precipitation retrieval performance, outperforming leading products like PERSIANN-CCS, PDIR, and IMERG. The code will be available at this https URL. 
+
+---
+# The State-of-the-Art in Lifelog Retrieval: A Review of Progress at the ACM Lifelog Search Challenge Workshop 2022-24 
+
+**Authors**: Allie Tran, Werner Bailer, Duc-Tien Dang-Nguyen, Graham Healy, Steve Hodges, Björn Þór Jónsson, Luca Rossetto, Klaus Schoeffmann, Minh-Triet Tran, Lucia Vadicamo, Cathal Gurrin  
+
+**Link**: [PDF](https://arxiv.org/pdf/2506.06743)  
+
+**Abstract**: The ACM Lifelog Search Challenge (LSC) is a venue that welcomes and compares systems that support the exploration of lifelog data, and in particular the retrieval of specific information, through an interactive competition format. This paper reviews the recent advances in interactive lifelog retrieval as demonstrated at the ACM LSC from 2022 to 2024. Through a detailed comparative analysis, we highlight key improvements across three main retrieval tasks: known-item search, question answering, and ad-hoc search. Our analysis identifies trends such as the widespread adoption of embedding-based retrieval methods (e.g., CLIP, BLIP), increased integration of large language models (LLMs) for conversational retrieval, and continued innovation in multimodal and collaborative search interfaces. We further discuss how specific retrieval techniques and user interface (UI) designs have impacted system performance, emphasizing the importance of balancing retrieval complexity with usability. Our findings indicate that embedding-driven approaches combined with LLMs show promise for lifelog retrieval systems. Likewise, improving UI design can enhance usability and efficiency. Additionally, we recommend reconsidering multi-instance system evaluations within the expert track to better manage variability in user familiarity and configuration effectiveness. 
+
+---
+# Dynamic and Parametric Retrieval-Augmented Generation 
+
+**Authors**: Weihang Su, Qingyao Ai, Jingtao Zhan, Qian Dong, Yiqun Liu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2506.06704)  
+
+**Abstract**: Retrieval-Augmented Generation (RAG) has become a foundational paradigm for equipping large language models (LLMs) with external knowledge, playing a critical role in information retrieval and knowledge-intensive applications. However, conventional RAG systems typically adopt a static retrieve-then-generate pipeline and rely on in-context knowledge injection, which can be suboptimal for complex tasks that require multihop reasoning, adaptive information access, and deeper integration of external knowledge. Motivated by these limitations, the research community has moved beyond static retrieval and in-context knowledge injection. Among the emerging directions, this tutorial delves into two rapidly growing and complementary research areas on RAG: Dynamic RAG and Parametric RAG. Dynamic RAG adaptively determines when and what to retrieve during the LLM's generation process, enabling real-time adaptation to the LLM's evolving information needs. Parametric RAG rethinks how retrieved knowledge should be injected into LLMs, transitioning from input-level to parameter-level knowledge injection for enhanced efficiency and effectiveness. This tutorial offers a comprehensive overview of recent advances in these emerging research areas. It also shares theoretical foundations and practical insights to support and inspire further research in RAG. 
+
+---
+# How Significant Are the Real Performance Gains? An Unbiased Evaluation Framework for GraphRAG 
+
+**Authors**: Qiming Zeng, Xiao Yan, Hao Luo, Yuhao Lin, Yuxiang Wang, Fangcheng Fu, Bo Du, Quanqing Xu, Jiawei Jiang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2506.06331)  
+
+**Abstract**: By retrieving contexts from knowledge graphs, graph-based retrieval-augmented generation (GraphRAG) enhances large language models (LLMs) to generate quality answers for user questions. Many GraphRAG methods have been proposed and reported inspiring performance in answer quality. However, we observe that the current answer evaluation framework for GraphRAG has two critical flaws, i.e., unrelated questions and evaluation biases, which may lead to biased or even wrong conclusions on performance. To tackle the two flaws, we propose an unbiased evaluation framework that uses graph-text-grounded question generation to produce questions that are more related to the underlying dataset and an unbiased evaluation procedure to eliminate the biases in LLM-based answer assessment. We apply our unbiased framework to evaluate 3 representative GraphRAG methods and find that their performance gains are much more moderate than reported previously. Although our evaluation framework may still have flaws, it calls for scientific evaluations to lay solid foundations for GraphRAG research. 
+
+---
