@@ -1,0 +1,72 @@
+# Discrete Scale-invariant Metric Learning for Efficient Collaborative Filtering 
+
+**Authors**: Yan Zhang, Li Deng, Lixin Duan, Sami Azam  
+
+**Link**: [PDF](https://arxiv.org/pdf/2506.09898)  
+
+**Abstract**: Metric learning has attracted extensive interest for its ability to provide personalized recommendations based on the importance of observed user-item interactions. Current metric learning methods aim to push negative items away from the corresponding users and positive items by an absolute geometrical distance margin. However, items may come from imbalanced categories with different intra-class variations. Thus, the absolute distance margin may not be ideal for estimating the difference between user preferences over imbalanced items. To this end, we propose a new method, named discrete scale-invariant metric learning (DSIML), by adding binary constraints to users and items, which maps users and items into binary codes of a shared Hamming subspace to speed up the online recommendation. Specifically, we firstly propose a scale-invariant margin based on angles at the negative item points in the shared Hamming subspace. Then, we derive a scale-invariant triple hinge loss based on the margin. To capture more preference difference information, we integrate a pairwise ranking loss into the scale-invariant loss in the proposed model. Due to the difficulty of directly optimizing the mixed integer optimization problem formulated with \textit{log-sum-exp} functions, we seek to optimize its variational quadratic upper bound and learn hash codes with an alternating optimization strategy. Experiments on benchmark datasets clearly show that our proposed method is superior to competitive metric learning and hashing-based baselines for recommender systems. The implementation code is available at this https URL. 
+
+---
+# MAGMaR Shared Task System Description: Video Retrieval with OmniEmbed 
+
+**Authors**: Jiaqi Samantha Zhan, Crystina Zhang, Shengyao Zhuang, Xueguang Ma, Jimmy Lin  
+
+**Link**: [PDF](https://arxiv.org/pdf/2506.09409)  
+
+**Abstract**: Effective video retrieval remains challenging due to the complexity of integrating visual, auditory, and textual modalities. In this paper, we explore unified retrieval methods using OmniEmbed, a powerful multimodal embedding model from the Tevatron 2.0 toolkit, in the context of the MAGMaR shared task. Evaluated on the comprehensive MultiVENT 2.0 dataset, OmniEmbed generates unified embeddings for text, images, audio, and video, enabling robust multimodal retrieval. By finetuning OmniEmbed with the combined multimodal data--visual frames, audio tracks, and textual descriptions provided in MultiVENT 2.0, we achieve substantial improvements in complex, multilingual video retrieval tasks. Our submission achieved the highest score on the MAGMaR shared task leaderboard among public submissions as of May 20th, 2025, highlighting the practical effectiveness of our unified multimodal retrieval approach. Model checkpoint in this work is opensourced. 
+
+---
+# ThinkQE: Query Expansion via an Evolving Thinking Process 
+
+**Authors**: Yibin Lei, Tao Shen, Andrew Yates  
+
+**Link**: [PDF](https://arxiv.org/pdf/2506.09260)  
+
+**Abstract**: Effective query expansion for web search benefits from promoting both exploration and result diversity to capture multiple interpretations and facets of a query. While recent LLM-based methods have improved retrieval performance and demonstrate strong domain generalization without additional training, they often generate narrowly focused expansions that overlook these desiderata. We propose ThinkQE, a test-time query expansion framework addressing this limitation through two key components: a thinking-based expansion process that encourages deeper and comprehensive semantic exploration, and a corpus-interaction strategy that iteratively refines expansions using retrieval feedback from the corpus. Experiments on diverse web search benchmarks (DL19, DL20, and BRIGHT) show ThinkQE consistently outperforms prior approaches, including training-intensive dense retrievers and rerankers. 
+
+---
+# In Crowd Veritas: Leveraging Human Intelligence To Fight Misinformation 
+
+**Authors**: Michael Soprano  
+
+**Link**: [PDF](https://arxiv.org/pdf/2506.09221)  
+
+**Abstract**: The spread of online misinformation poses serious threats to democratic societies. Traditionally, expert fact-checkers verify the truthfulness of information through investigative processes. However, the volume and immediacy of online content present major scalability challenges. Crowdsourcing offers a promising alternative by leveraging non-expert judgments, but it introduces concerns about bias, accuracy, and interpretability. This thesis investigates how human intelligence can be harnessed to assess the truthfulness of online information, focusing on three areas: misinformation assessment, cognitive biases, and automated fact-checking systems. Through large-scale crowdsourcing experiments and statistical modeling, it identifies key factors influencing human judgments and introduces a model for the joint prediction and explanation of truthfulness. The findings show that non-expert judgments often align with expert assessments, particularly when factors such as timing and experience are considered. By deepening our understanding of human judgment and bias in truthfulness assessment, this thesis contributes to the development of more transparent, trustworthy, and interpretable systems for combating misinformation. 
+
+---
+# Revisiting Graph Projections for Effective Complementary Product Recommendation 
+
+**Authors**: Leandro Anghinoni, Pablo Zivic, Jorge Adrian Sanchez  
+
+**Link**: [PDF](https://arxiv.org/pdf/2506.09209)  
+
+**Abstract**: Complementary product recommendation is a powerful strategy to improve customer experience and retail sales. However, recommending the right product is not a simple task because of the noisy and sparse nature of user-item interactions. In this work, we propose a simple yet effective method to predict a list of complementary products given a query item, based on the structure of a directed weighted graph projected from the user-item bipartite graph. We revisit bipartite graph projections for recommender systems and propose a novel approach for inferring complementarity relationships from historical user-item interactions. We compare our model with recent methods from the literature and show, despite the simplicity of our approach, an average improvement of +43% and +38% over sequential and graph-based recommenders, respectively, over different benchmarks. 
+
+---
+# Learning Efficient and Generalizable Graph Retriever for Knowledge-Graph Question Answering 
+
+**Authors**: Tianjun Yao, Haoxuan Li, Zhiqiang Shen, Pan Li, Tongliang Liu, Kun Zhang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2506.09645)  
+
+**Abstract**: Large Language Models (LLMs) have shown strong inductive reasoning ability across various domains, but their reliability is hindered by the outdated knowledge and hallucinations. Retrieval-Augmented Generation mitigates these issues by grounding LLMs with external knowledge; however, most existing RAG pipelines rely on unstructured text, limiting interpretability and structured reasoning. Knowledge graphs, which represent facts as relational triples, offer a more structured and compact alternative. Recent studies have explored integrating knowledge graphs with LLMs for knowledge graph question answering (KGQA), with a significant proportion adopting the retrieve-then-reasoning paradigm. In this framework, graph-based retrievers have demonstrated strong empirical performance, yet they still face challenges in generalization ability. In this work, we propose RAPL, a novel framework for efficient and effective graph retrieval in KGQA. RAPL addresses these limitations through three aspects: (1) a two-stage labeling strategy that combines heuristic signals with parametric models to provide causally grounded supervision; (2) a model-agnostic graph transformation approach to capture both intra- and inter-triple interactions, thereby enhancing representational capacity; and (3) a path-based reasoning strategy that facilitates learning from the injected rational knowledge, and supports downstream reasoner through structured inputs. Empirically, RAPL outperforms state-of-the-art methods by $2.66\%-20.34\%$, and significantly reduces the performance gap between smaller and more powerful LLM-based reasoners, as well as the gap under cross-dataset settings, highlighting its superior retrieval capability and generalizability. Codes are available at: this https URL. 
+
+---
+# PGDA-KGQA: A Prompt-Guided Generative Framework with Multiple Data Augmentation Strategies for Knowledge Graph Question Answering 
+
+**Authors**: Xiujun Zhou, Pingjian Zhang, Deyou Tang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2506.09414)  
+
+**Abstract**: Knowledge Graph Question Answering (KGQA) is a crucial task in natural language processing that requires reasoning over knowledge graphs (KGs) to answer natural language questions. Recent methods utilizing large language models (LLMs) have shown remarkable semantic parsing capabilities but are limited by the scarcity of diverse annotated data and multi-hop reasoning samples. Traditional data augmentation approaches are focus mainly on single-hop questions and prone to semantic distortion, while LLM-based methods primarily address semantic distortion but usually neglect multi-hop reasoning, thus limiting data diversity. The scarcity of multi-hop samples further weakens models' generalization. To address these issues, we propose PGDA-KGQA, a prompt-guided generative framework with multiple data augmentation strategies for KGQA. At its core, PGDA-KGQA employs a unified prompt-design paradigm: by crafting meticulously engineered prompts that integrate the provided textual content, it leverages LLMs to generate large-scale (question, logical form) pairs for model training. Specifically, PGDA-KGQA enriches its training set by: (1) generating single-hop pseudo questions to improve the alignment of question semantics with KG relations; (2) applying semantic-preserving question rewriting to improve robustness against linguistic variations; (3) employing answer-guided reverse path exploration to create realistic multi-hop questions. By adopting an augment-generate-retrieve semantic parsing pipeline, PGDA-KGQA utilizes the augmented data to enhance the accuracy of logical form generation and thus improve answer retrieval performance. Experiments demonstrate that outperforms state-of-the-art methods on standard KGQA datasets, achieving improvements on WebQSP by 2.8%, 1.2%, and 3.1% and on ComplexWebQuestions by 1.8%, 1.1%, and 2.4% in F1, Hits@1, and Accuracy, respectively. 
+
+---
+# A Topic Modeling Analysis of Stigma Dimensions, Social, and Related Behavioral Circumstances in Clinical Notes Among Patients with HIV 
+
+**Authors**: Ziyi Chen, Yiyang Liu, Mattia Prosperi, Krishna Vaddiparti, Robert L Cook, Jiang Bian, Yi Guo, Yonghui Wu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2506.09279)  
+
+**Abstract**: Objective: To characterize stigma dimensions, social, and related behavioral circumstances in people living with HIV (PLWHs) seeking care, using natural language processing methods applied to a large collection of electronic health record (EHR) clinical notes from a large integrated health system in the southeast United States. Methods: We identified 9,140 cohort of PLWHs from the UF Health IDR and performed topic modeling analysis using Latent Dirichlet Allocation (LDA) to uncover stigma dimensions, social, and related behavioral circumstances. Domain experts created a seed list of HIV-related stigma keywords, then applied a snowball strategy to iteratively review notes for additional terms until saturation was reached. To identify more target topics, we tested three keyword-based filtering strategies. Domain experts manually reviewed the detected topics using the prevalent terms and key discussion topics. Word frequency analysis was used to highlight the prevalent terms associated with each topic. In addition, we conducted topic variation analysis among subgroups to examine differences across age and sex-specific demographics. Results and Conclusion: Topic modeling on sentences containing at least one keyword uncovered a wide range of topic themes associated with HIV-related stigma, social, and related behaviors circumstances, including "Mental Health Concern and Stigma", "Social Support and Engagement", "Limited Healthcare Access and Severe Illness", "Treatment Refusal and Isolation" and so on. Topic variation analysis across age subgroups revealed differences. Extracting and understanding the HIV-related stigma dimensions, social, and related behavioral circumstances from EHR clinical notes enables scalable, time-efficient assessment, overcoming the limitations of traditional questionnaires and improving patient outcomes. 
+
+---
