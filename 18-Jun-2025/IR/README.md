@@ -1,0 +1,140 @@
+# A Systematic Replicability and Comparative Study of BSARec and SASRec for Sequential Recommendation 
+
+**Authors**: Chiara D'Ercoli, Giulia Di Teodoro, Federico Siciliano  
+
+**Link**: [PDF](https://arxiv.org/pdf/2506.14692)  
+
+**Abstract**: This study aims at comparing two sequential recommender systems: Self-Attention based Sequential Recommendation (SASRec), and Beyond Self-Attention based Sequential Recommendation (BSARec) in order to check the improvement frequency enhancement - the added element in BSARec - has on recommendations. The models in the study, have been re-implemented with a common base-structure from EasyRec, with the aim of obtaining a fair and reproducible comparison. The results obtained displayed how BSARec, by including bias terms for frequency enhancement, does indeed outperform SASRec, although the increases in performance obtained, are not as high as those presented by the authors. This work aims at offering an overview on existing methods, and most importantly at underlying the importance of implementation details for performance comparison. 
+
+---
+# RMIT-ADM+S at the SIGIR 2025 LiveRAG Challenge 
+
+**Authors**: Kun Ran, Shuoqi Sun, Khoi Nguyen Dinh Anh, Damiano Spina, Oleg Zendel  
+
+**Link**: [PDF](https://arxiv.org/pdf/2506.14516)  
+
+**Abstract**: This paper presents the RMIT--ADM+S participation in the SIGIR 2025 LiveRAG Challenge. Our Generation-Retrieval-Augmented Generation (GRAG) approach relies on generating a hypothetical answer that is used in the retrieval phase, alongside the original question. GRAG also incorporates a pointwise large language model (LLM)-based re-ranking step prior to final answer generation. We describe the system architecture and the rationale behind our design choices. In particular, a systematic evaluation using the Grid of Points (GoP) framework and N-way ANOVA enabled comparison across multiple configurations, including query variant generation, question decomposition, rank fusion strategies, and prompting techniques for answer generation. Our system achieved a Relevance score of 1.199 and a Faithfulness score of 0.477 on the private leaderboard, placing among the top four finalists in the LiveRAG 2025 Challenge. 
+
+---
+# Vela: Scalable Embeddings with Voice Large Language Models for Multimodal Retrieval 
+
+**Authors**: Ruofan Hu, Yan Xia, Minjie Hong, Jieming Zhu, Bo Chen, Xiaoda Yang, Minghui Fang, Tao Jin  
+
+**Link**: [PDF](https://arxiv.org/pdf/2506.14445)  
+
+**Abstract**: Multimodal large language models (MLLMs) have seen substantial progress in recent years. However, their ability to represent multimodal information in the acoustic domain remains underexplored. In this work, we introduce Vela, a novel framework designed to adapt MLLMs for the generation of universal multimodal embeddings. By leveraging MLLMs with specially crafted prompts and selected in-context learning examples, Vela effectively bridges the modality gap across various modalities. We then propose a single-modality training approach, where the model is trained exclusively on text pairs. Our experiments show that Vela outperforms traditional CLAP models in standard text-audio retrieval tasks. Furthermore, we introduce new benchmarks that expose CLAP models' limitations in handling long texts and complex retrieval tasks. In contrast, Vela, by harnessing the capabilities of MLLMs, demonstrates robust performance in these scenarios. Our code will soon be available. 
+
+---
+# Similarity = Value? Consultation Value Assessment and Alignment for Personalized Search 
+
+**Authors**: Weicong Qin, Yi Xu, Weijie Yu, Teng Shi, Chenglei Shen, Ming He, Jianping Fan, Xiao Zhang, Jun Xu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2506.14437)  
+
+**Abstract**: Personalized search systems in e-commerce platforms increasingly involve user interactions with AI assistants, where users consult about products, usage scenarios, and more. Leveraging consultation to personalize search services is trending. Existing methods typically rely on semantic similarity to align historical consultations with current queries due to the absence of 'value' labels, but we observe that semantic similarity alone often fails to capture the true value of consultation for personalization. To address this, we propose a consultation value assessment framework that evaluates historical consultations from three novel perspectives: (1) Scenario Scope Value, (2) Posterior Action Value, and (3) Time Decay Value. Based on this, we introduce VAPS, a value-aware personalized search model that selectively incorporates high-value consultations through a consultation-user action interaction module and an explicit objective that aligns consultations with user actions. Experiments on both public and commercial datasets show that VAPS consistently outperforms baselines in both retrieval and ranking tasks. 
+
+---
+# RAGtifier: Evaluating RAG Generation Approaches of State-of-the-Art RAG Systems for the SIGIR LiveRAG Competition 
+
+**Authors**: Tim Cofala, Oleh Astappiev, William Xion, Hailay Teklehaymanot  
+
+**Link**: [PDF](https://arxiv.org/pdf/2506.14412)  
+
+**Abstract**: Retrieval-Augmented Generation (RAG) enriches Large Language Models (LLMs) by combining their internal, parametric knowledge with external, non-parametric sources, with the goal of improving factual correctness and minimizing hallucinations. The LiveRAG 2025 challenge explores RAG solutions to maximize accuracy on DataMorgana's QA pairs, which are composed of single-hop and multi-hop questions. The challenge provides access to sparse OpenSearch and dense Pinecone indices of the Fineweb 10BT dataset. It restricts model use to LLMs with up to 10B parameters and final answer generation with Falcon-3-10B. A judge-LLM assesses the submitted answers along with human evaluators. By exploring distinct retriever combinations and RAG solutions under the challenge conditions, our final solution emerged using InstructRAG in combination with a Pinecone retriever and a BGE reranker. Our solution achieved a correctness score of 1.13 and a faithfulness score of 0.55, placing fourth in the SIGIR 2025 LiveRAG Challenge. 
+
+---
+# InsertRank: LLMs can reason over BM25 scores to Improve Listwise Reranking 
+
+**Authors**: Rahul Seetharaman, Kaustubh D. Dhole, Aman Bansal  
+
+**Link**: [PDF](https://arxiv.org/pdf/2506.14086)  
+
+**Abstract**: Large Language Models (LLMs) have demonstrated significant strides across various information retrieval tasks, particularly as rerankers, owing to their strong generalization and knowledge-transfer capabilities acquired from extensive pretraining. In parallel, the rise of LLM-based chat interfaces has raised user expectations, encouraging users to pose more complex queries that necessitate retrieval by ``reasoning'' over documents rather than through simple keyword matching or semantic similarity. While some recent efforts have exploited reasoning abilities of LLMs for reranking such queries, considerable potential for improvement remains. In that regards, we introduce InsertRank, an LLM-based reranker that leverages lexical signals like BM25 scores during reranking to further improve retrieval performance. InsertRank demonstrates improved retrieval effectiveness on -- BRIGHT, a reasoning benchmark spanning 12 diverse domains, and R2MED, a specialized medical reasoning retrieval benchmark spanning 8 different tasks. We conduct an exhaustive evaluation and several ablation studies and demonstrate that InsertRank consistently improves retrieval effectiveness across multiple families of LLMs, including GPT, Gemini, and Deepseek models. %In addition, we also conduct ablation studies on normalization by varying the scale of the BM25 scores, and positional bias by shuffling the order of the documents. With Deepseek-R1, InsertRank achieves a score of 37.5 on the BRIGHT benchmark. and 51.1 on the R2MED benchmark, surpassing previous methods. 
+
+---
+# Analysis of Anonymous User Interaction Relationships and Prediction of Advertising Feedback Based on Graph Neural Network 
+
+**Authors**: Yanjun Dai, Haoyang Feng, Yuan Gao  
+
+**Link**: [PDF](https://arxiv.org/pdf/2506.13787)  
+
+**Abstract**: While online advertising is highly dependent on implicit interaction networks of anonymous users for engagement inference, and for the selection and optimization of delivery strategies, existing graph models seldom can capture the multi-scale temporal, semantic and higher-order dependency features of these interaction networks, thus it's hard to describe the complicated patterns of the anonymous behavior. In this paper, we propose Decoupled Temporal-Hierarchical Graph Neural Network (DTH-GNN), which achieves three main contributions. Above all, we introduce temporal edge decomposition, which divides each interaction into three types of channels: short-term burst, diurnal cycle and long-range memory, and conducts feature extraction using the convolution kernel of parallel dilated residuals; Furthermore, our model builds a hierarchical heterogeneous aggregation, where user-user, user-advertisement, advertisement-advertisement subgraphs are combined through the meta-path conditional Transformer encoder, where the noise structure is dynamically tamped down via the synergy of cross-channel self-attention and gating relationship selector. Thirdly, the contrast regularity of feedback perception is formulated, the consistency of various time slices is maximized, the entropy of control exposure information with dual-view target is maximized, the global prototype of dual-momentum queue distillation is presented, and the strategy gradient layer with light weight is combined with delaying transformation signal to fine-tune the node representation for benefit-oriented. The AUC of DTH-GNN improved by 8.2% and the logarithmic loss improved by 5.7% in comparison with the best baseline model. 
+
+---
+# AcademicBrowse: Benchmarking Academic Browse Ability of LLMs 
+
+**Authors**: Junting Zhou, Wang Li, Yiyan Liao, Nengyuan Zhang, Tingjia Miaoand Zhihui Qi, Yuhan Wu, Tong Yang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2506.13784)  
+
+**Abstract**: Large Language Models (LLMs)' search capabilities have garnered significant attention. Existing benchmarks, such as OpenAI's BrowseComp, primarily focus on general search scenarios and fail to adequately address the specific demands of academic search. These demands include deeper literature tracing and organization, professional support for academic databases, the ability to navigate long-tail academic knowledge, and ensuring academic rigor. Here, we proposed AcademicBrowse, the first dataset specifically designed to evaluate the complex information retrieval capabilities of Large Language Models (LLMs) in academic research. AcademicBrowse possesses the following key characteristics: Academic Practicality, where question content closely mirrors real academic learning and research environments, avoiding deliberately misleading models; High Difficulty, with answers that are challenging for single models (e.g., Grok DeepSearch or Gemini Deep Research) to provide directly, often requiring at least three deep searches to derive; Concise Evaluation, where limiting conditions ensure answers are as unique as possible, accompanied by clear sources and brief solution explanations, greatly facilitating subsequent audit and verification, surpassing the current lack of analyzed search datasets both domestically and internationally; and Broad Coverage, as the dataset spans at least 15 different academic disciplines. Through AcademicBrowse, we expect to more precisely measure and promote the performance improvement of LLMs in complex academic information retrieval tasks. The data is available at: this https URL 
+
+---
+# XGraphRAG: Interactive Visual Analysis for Graph-based Retrieval-Augmented Generation 
+
+**Authors**: Ke Wang, Bo Pan, Yingchaojie Feng, Yuwei Wu, Jieyi Chen, Minfeng Zhu, Wei Chen  
+
+**Link**: [PDF](https://arxiv.org/pdf/2506.13782)  
+
+**Abstract**: Graph-based Retrieval-Augmented Generation (RAG) has shown great capability in enhancing Large Language Model (LLM)'s answer with an external knowledge base. Compared to traditional RAG, it introduces a graph as an intermediate representation to capture better structured relational knowledge in the corpus, elevating the precision and comprehensiveness of generation results. However, developers usually face challenges in analyzing the effectiveness of GraphRAG on their dataset due to GraphRAG's complex information processing pipeline and the overwhelming amount of LLM invocations involved during graph construction and query, which limits GraphRAG interpretability and accessibility. This research proposes a visual analysis framework that helps RAG developers identify critical recalls of GraphRAG and trace these recalls through the GraphRAG pipeline. Based on this framework, we develop XGraphRAG, a prototype system incorporating a set of interactive visualizations to facilitate users' analysis process, boosting failure cases collection and improvement opportunities identification. Our evaluation demonstrates the effectiveness and usability of our approach. Our work is open-sourced and available at this https URL. 
+
+---
+# Knowledge Compression via Question Generation: Enhancing Multihop Document Retrieval without Fine-tuning 
+
+**Authors**: Anvi Alex Eponon, Moein Shahiki-Tash, Ildar Batyrshin, Christian E. Maldonado-Sifuentes, Grigori Sidorov, Alexander Gelbukh  
+
+**Link**: [PDF](https://arxiv.org/pdf/2506.13778)  
+
+**Abstract**: This study presents a question-based knowledge encoding approach that improves retrieval-augmented generation (RAG) systems without requiring fine-tuning or traditional chunking. We encode textual content using generated questions that span the lexical and semantic space, creating targeted retrieval cues combined with a custom syntactic reranking method.
+In single-hop retrieval over 109 scientific papers, our approach achieves a Recall@3 of 0.84, outperforming traditional chunking methods by 60 percent. We also introduce "paper-cards", concise paper summaries under 300 characters, which enhance BM25 retrieval, increasing MRR@3 from 0.56 to 0.85 on simplified technical queries.
+For multihop tasks, our reranking method reaches an F1 score of 0.52 with LLaMA2-Chat-7B on the LongBench 2WikiMultihopQA dataset, surpassing chunking and fine-tuned baselines which score 0.328 and 0.412 respectively.
+This method eliminates fine-tuning requirements, reduces retrieval latency, enables intuitive question-driven knowledge access, and decreases vector storage demands by 80%, positioning it as a scalable and efficient RAG alternative. 
+
+---
+# Refining music sample identification with a self-supervised graph neural network 
+
+**Authors**: Aditya Bhattacharjee, Ivan Meresman Higgs, Mark Sandler, Emmanouil Benetos  
+
+**Link**: [PDF](https://arxiv.org/pdf/2506.14684)  
+
+**Abstract**: Automatic sample identification (ASID), the detection and identification of portions of audio recordings that have been reused in new musical works, is an essential but challenging task in the field of audio query-based retrieval. While a related task, audio fingerprinting, has made significant progress in accurately retrieving musical content under "real world" (noisy, reverberant) conditions, ASID systems struggle to identify samples that have undergone musical modifications. Thus, a system robust to common music production transformations such as time-stretching, pitch-shifting, effects processing, and underlying or overlaying music is an important open challenge.
+In this work, we propose a lightweight and scalable encoding architecture employing a Graph Neural Network within a contrastive learning framework. Our model uses only 9% of the trainable parameters compared to the current state-of-the-art system while achieving comparable performance, reaching a mean average precision (mAP) of 44.2%.
+To enhance retrieval quality, we introduce a two-stage approach consisting of an initial coarse similarity search for candidate selection, followed by a cross-attention classifier that rejects irrelevant matches and refines the ranking of retrieved candidates - an essential capability absent in prior models. In addition, because queries in real-world applications are often short in duration, we benchmark our system for short queries using new fine-grained annotations for the Sample100 dataset, which we publish as part of this work. 
+
+---
+# hyperFA*IR: A hypergeometric approach to fair rankings with finite candidate pool 
+
+**Authors**: Mauritz N. Cartier van Dissel, Samuel Martin-Gutierrez, Lisette Espín-Noboa, Ana María Jaramillo, Fariba Karimi  
+
+**Link**: [PDF](https://arxiv.org/pdf/2506.14349)  
+
+**Abstract**: Ranking algorithms play a pivotal role in decision-making processes across diverse domains, from search engines to job applications. When rankings directly impact individuals, ensuring fairness becomes essential, particularly for groups that are marginalised or misrepresented in the data. Most of the existing group fairness frameworks often rely on ensuring proportional representation of protected groups. However, these approaches face limitations in accounting for the stochastic nature of ranking processes or the finite size of candidate pools. To this end, we present hyperFA*IR, a framework for assessing and enforcing fairness in rankings drawn from a finite set of candidates. It relies on a generative process based on the hypergeometric distribution, which models real-world scenarios by sampling without replacement from fixed group sizes. This approach improves fairness assessment when top-$k$ selections are large relative to the pool or when protected groups are small. We compare our approach to the widely used binomial model, which treats each draw as independent with fixed probability, and demonstrate$-$both analytically and empirically$-$that our method more accurately reproduces the statistical properties of sampling from a finite population. To operationalise this framework, we propose a Monte Carlo-based algorithm that efficiently detects unfair rankings by avoiding computationally expensive parameter tuning. Finally, we adapt our generative approach to define affirmative action policies by introducing weights into the sampling process. 
+
+---
+# A Vision for Geo-Temporal Deep Research Systems: Towards Comprehensive, Transparent, and Reproducible Geo-Temporal Information Synthesis 
+
+**Authors**: Bruno Martins, Piotr Szymański, Piotr Gramacki  
+
+**Link**: [PDF](https://arxiv.org/pdf/2506.14345)  
+
+**Abstract**: The emergence of Large Language Models (LLMs) has transformed information access, with current LLMs also powering deep research systems that can generate comprehensive report-style answers, through planned iterative search, retrieval, and reasoning. Still, current deep research systems lack the geo-temporal capabilities that are essential for answering context-rich questions involving geographic and/or temporal constraints, frequently occurring in domains like public health, environmental science, or socio-economic analysis. This paper reports our vision towards next generation systems, identifying important technical, infrastructural, and evaluative challenges in integrating geo-temporal reasoning into deep research pipelines. We argue for augmenting retrieval and synthesis processes with the ability to handle geo-temporal constraints, supported by open and reproducible infrastructures and rigorous evaluation protocols. Our vision outlines a path towards more advanced and geo-temporally aware deep research systems, of potential impact to the future of AI-driven information access. 
+
+---
+# ImpReSS: Implicit Recommender System for Support Conversations 
+
+**Authors**: Omri Haller, Yair Meidan, Dudu Mimran, Yuval Elovici, Asaf Shabtai  
+
+**Link**: [PDF](https://arxiv.org/pdf/2506.14231)  
+
+**Abstract**: Following recent advancements in large language models (LLMs), LLM-based chatbots have transformed customer support by automating interactions and providing consistent, scalable service. While LLM-based conversational recommender systems (CRSs) have attracted attention for their ability to enhance the quality of recommendations, limited research has addressed the implicit integration of recommendations within customer support interactions. In this work, we introduce ImpReSS, an implicit recommender system designed for customer support conversations. ImpReSS operates alongside existing support chatbots, where users report issues and chatbots provide solutions. Based on a customer support conversation, ImpReSS identifies opportunities to recommend relevant solution product categories (SPCs) that help resolve the issue or prevent its recurrence -- thereby also supporting business growth. Unlike traditional CRSs, ImpReSS functions entirely implicitly and does not rely on any assumption of a user's purchasing intent. Our empirical evaluation of ImpReSS's ability to recommend relevant SPCs that can help address issues raised in support conversations shows promising results, including an MRR@1 (and recall@3) of 0.72 (0.89) for general problem solving, 0.82 (0.83) for information security support, and 0.85 (0.67) for cybersecurity troubleshooting. To support future research, our data and code will be shared upon request. 
+
+---
+# LLM-Driven Data Generation and a Novel Soft Metric for Evaluating Text-to-SQL in Aviation MRO 
+
+**Authors**: Patrick Sutanto, Jonathan Kenrick, Max Lorenz, Joan Santoso  
+
+**Link**: [PDF](https://arxiv.org/pdf/2506.13785)  
+
+**Abstract**: The application of Large Language Models (LLMs) to text-to-SQL tasks promises to democratize data access, particularly in critical industries like aviation Maintenance, Repair, and Operation (MRO). However, progress is hindered by two key challenges: the rigidity of conventional evaluation metrics such as execution accuracy, which offer coarse, binary feedback, and the scarcity of domain-specific evaluation datasets. This paper addresses these gaps. To enable more nuanced assessment, we introduce a novel F1-score-based 'soft' metric that quantifies the informational overlap between generated and ground-truth SQL results. To address data scarcity, we propose an LLM-driven pipeline that synthesizes realistic question-SQL pairs from database schemas. We demonstrate our contributions through an empirical evaluation on an authentic MRO database. Our experiments show that the proposed soft metric provides more insightful performance analysis than strict accuracy, and our data generation technique is effective in creating a domain-specific benchmark. Together, these contributions offer a robust framework for evaluating and advancing text-to-SQL systems in specialized environments. 
+
+---
