@@ -1,0 +1,100 @@
+# LeanConjecturer: Automatic Generation of Mathematical Conjectures for Theorem Proving 
+
+**Authors**: Naoto Onda, Kazumi Kasaura, Yuta Oriike, Masaya Taniguchi, Akiyoshi Sannai, Sho Sonoda  
+
+**Link**: [PDF](https://arxiv.org/pdf/2506.22005)  
+
+**Abstract**: We introduce LeanConjecturer, a pipeline for automatically generating university-level mathematical conjectures in Lean 4 using Large Language Models (LLMs). Our hybrid approach combines rule-based context extraction with LLM-based theorem statement generation, addressing the data scarcity challenge in formal theorem proving. Through iterative generation and evaluation, LeanConjecturer produced 12,289 conjectures from 40 Mathlib seed files, with 3,776 identified as syntactically valid and non-trivial, that is, cannot be proven by \texttt{aesop} tactic. We demonstrate the utility of these generated conjectures for reinforcement learning through Group Relative Policy Optimization (GRPO), showing that targeted training on domain-specific conjectures can enhance theorem proving capabilities. Our approach generates 103.25 novel conjectures per seed file on average, providing a scalable solution for creating training data for theorem proving systems. Our system successfully verified several non-trivial theorems in topology, including properties of semi-open, alpha-open, and pre-open sets, demonstrating its potential for mathematical discovery beyond simple variations of existing results. 
+
+---
+# SEEA-R1: Tree-Structured Reinforcement Fine-Tuning for Self-Evolving Embodied Agents 
+
+**Authors**: Wanxin Tian, Shijie Zhang, Kevin Zhang, Xiaowei Chi, Yulin Luo, Junyu Lu, Chunkai Fan, Qiang Zhou, Yiming Zhao, Ning Liu Siyu Lin, Zhiyuan Qin, Xiaozhu Ju, Shanghang Zhang, Jian Tang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2506.21669)  
+
+**Abstract**: Self-evolution, the ability of agents to autonomously improve their reasoning and behavior, is essential for the embodied domain with long-horizon, real-world tasks. Despite current advancements in reinforcement fine-tuning (RFT) showing strong performance in enhancing reasoning in LLMs, its potential to enable self-evolving embodied intelligence with multi-modal interactions remains largely unexplored. Specifically, reinforcement fine-tuning faces two fundamental obstacles in embodied settings: (i) the lack of accessible intermediate rewards in multi-step reasoning tasks limits effective learning signals, and (ii) reliance on hand-crafted reward functions restricts generalization to novel tasks and environments. To address these challenges, we present Self-Evolving Embodied Agents-R1, SEEA-R1, the first RFT framework designed for enabling the self-evolving capabilities of embodied agents. Specifically, to convert sparse delayed rewards into denser intermediate signals that improve multi-step reasoning, we propose Tree-based group relative policy optimization (Tree-GRPO), which integrates Monte Carlo Tree Search into GRPO. To generalize reward estimation across tasks and scenes, supporting autonomous adaptation and reward-driven self-evolution, we further introduce Multi-modal Generative Reward Model (MGRM). To holistically evaluate the effectiveness of SEEA-R1, we evaluate on the ALFWorld benchmark, surpassing state-of-the-art methods with scores of 85.07% (textual) and 36.19% (multi-modal), outperforming prior models including GPT-4o. SEEA-R1 also achieves scores of 80.3% without environmental reward, surpassing all open-source baselines and highlighting its scalability as a self-evolving embodied agent. Additional experiments and qualitative analysis further support the potential of SEEA-R1 for future research in scalable embodied intelligence. 
+
+---
+# EFRame: Deeper Reasoning via Exploration-Filtering-Replay Reinforcement Learning Framework 
+
+**Authors**: Chen Wang, Lai Wei, Yanzhi Zhang, Chenyang Shao, Zedong Dan, Weiran Huang, Yue Wang, Yuzhi Zhang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2506.22200)  
+
+**Abstract**: Recent advances in reinforcement learning (RL) have significantly enhanced the reasoning capabilities of large language models (LLMs). Group Relative Policy Optimization (GRPO), an efficient variant of PPO that lowers RL's computational cost, still faces limited exploration, low sample efficiency and instability, constraining its performance on complex reasoning tasks. To address these limitations, we introduce EFRame, an Exploration-Filtering-Replay framework that systematically augments GRPO along three critical dimensions. EFRame performs additional rollouts to explore high-quality trajectories, applies online filtering to eliminate low-quality samples that introduce noise and variance, and leverages experience replay to repeatedly exploit rare but informative samples. EFRame establishes a complete and stable learning cycle, guiding the model through a structured transition from exploration to convergence. Our experiments across a variety of reasoning benchmarks demonstrate that EFRame not only improves the robustness and efficiency of training, but also enables access to deeper reasoning capabilities that remain unattainable under vanilla GRPO. Furthermore, EFRame enables a more fine-grained categorization of training samples, allowing for a deeper analysis of how different types of samples contribute to the learning process in RL. Our code is available at this https URL. 
+
+---
+# APO: Enhancing Reasoning Ability of MLLMs via Asymmetric Policy Optimization 
+
+**Authors**: Minjie Hong, Zirun Guo, Yan Xia, Zehan Wang, Ziang Zhang, Tao Jin, Zhou Zhao  
+
+**Link**: [PDF](https://arxiv.org/pdf/2506.21655)  
+
+**Abstract**: Multimodal Large Language Models (MLLMs) are powerful at integrating diverse data, but they often struggle with complex reasoning. While Reinforcement learning (RL) can boost reasoning in LLMs, applying it to MLLMs is tricky. Common issues include a drop in performance on general tasks and the generation of overly detailed or "overthinking" reasoning. Our work investigates how the KL penalty and overthinking affect RL training in MLLMs. We propose Asymmetric Policy Optimization (APO) to address these issues, which divides the sampled responses into positive and negative groups. For positive samples, Difficulty-Adaptive Divergence Shaping (DADS) is introduced to dynamically adjust the KL divergence weight based on their difficulty. This method prevents policy entropy from dropping sharply, improves training stability, utilizes samples better, and preserves the model's existing knowledge. For negative samples, Suboptimal Trajectory Complexity Regularization (STCR) is proposed to penalize overly long responses. This helps mitigate overthinking and encourages more concise reasoning while preserving the model's explorative capacity. We apply our method to Qwen2.5-VL-3B, creating View-R1-3B. View-R1-3B significantly enhances reasoning capabilities, showing an average 7\% gain over the base model and outperforming larger MLLMs (7-11B) on various reasoning benchmarks. Importantly, unlike other reasoning-tuned MLLMs that often degrade on general tasks, View-R1-3B maintains consistent improvement, demonstrating superior generalization. These results highlight the effectiveness and broad applicability of our DADS and STCR techniques for advancing complex multimodal reasoning in MLLMs. The code will be made available at this https URL. 
+
+---
+# Reinforcement Fine-Tuned Large Language Models for Next POI Recommendation 
+
+**Authors**: Peibo Li, Shuang Ao, Hao Xue, Yang Song, Maarten de Rijke, Johan Barthélemy, Tomasz Bednarz, Flora D. Salim  
+
+**Link**: [PDF](https://arxiv.org/pdf/2506.21599)  
+
+**Abstract**: Large language models (LLMs) have been adopted for next point-of-interest (POI) recommendation tasks. Typical LLM-based recommenders fall into two categories: prompt-based and supervised fine-tuning (SFT)-based models. Prompt-based models generally offer greater output flexibility but deliver lower accuracy, whereas SFT-based models achieve higher performance yet face a fundamental mismatch: next POI recommendation data does not naturally suit supervised fine-tuning. In SFT, the model is trained to reproduce the exact ground truth, but each training example provides only a single target POI, so there is no ground truth for producing a top-k list.
+To address this, we propose Refine-POI, a reinforcement fine-tuning framework for next POI recommendation. We introduce recommendation-driven rewards that enable LLMs to learn to generate top-k recommendation lists using only one ground-truth POI per example. Experiments on real-world datasets demonstrate that Refine-POI achieves state-of-the-art top-k recommendation performance. 
+
+---
+# STRuCT-LLM: Unifying Tabular and Graph Reasoning with Reinforcement Learning for Semantic Parsing 
+
+**Authors**: Josefa Lia Stoisser, Marc Boubnovski Martell, Lawrence Phillips, Casper Hansen, Julien Fauqueur  
+
+**Link**: [PDF](https://arxiv.org/pdf/2506.21575)  
+
+**Abstract**: We propose STRuCT-LLM, a unified framework for training large language models (LLMs) to perform structured reasoning over both relational and graph-structured data. Our approach jointly optimizes Text-to-SQL and Text-to-Cypher tasks using reinforcement learning (RL) combined with Chain-of-Thought (CoT) supervision. To support fine-grained optimization in graph-based parsing, we introduce a topology-aware reward function based on graph edit distance. Unlike prior work that treats relational and graph formalisms in isolation, STRuCT-LLM leverages shared abstractions between SQL and Cypher to induce cross-formalism transfer, enabling SQL training to improve Cypher performance and vice versa - even without shared schemas. Our largest model (QwQ-32B) achieves substantial relative improvements across tasks: on semantic parsing, Spider improves by 13.5\% and Text2Cypher by 73.1\%. The model also demonstrates strong zero-shot generalization, improving performance on downstream tabular QA (TableBench: 8.5\%) and knowledge graph QA (CR-LT-KGQA: 1.7\%) without any QA-specific supervision. These results demonstrate both the effectiveness of executable queries as scaffolds for structured reasoning and the synergistic benefits of jointly training on SQL and Cypher (code available at this https URL). 
+
+---
+# Reinforcement Learning Fine-Tuning of Language Model for Instruction Following and Math Reasoning 
+
+**Authors**: Yifu Han, Geo Zhang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2506.21560)  
+
+**Abstract**: This study investigates the effectiveness of reinforcement learning (RL) fine-tuning techniques on a compact language model (Qwen2.5-0.5B Base) for two challenging tasks: instruction following and mathematical reasoning. We compare supervised fine-tuning (SFT), Direct Preference Optimization (DPO) using preference-labeled data, and Reinforce Leave-One-Out (RLOO) with reward models. Our experiments show that RLOO with DeBERTa reward modeling achieves the best alignment, while DPO provides strong and consistent results. For math reasoing tasks, synthetic data augmentation and best-of-N sampling with an external verifier significantly improve accuracy, showing the potential of combining fine-tuning with inference-time tools. This study highlights key trade-offs and practical strategies for training lightweight, task-aligned small-scale language models. 
+
+---
+# Training Language Model to Critique for Better Refinement 
+
+**Authors**: Tianshu Yu, Chao Xiang, Mingchuan Yang, Pei Ke, Bosi Wen, Cunxiang Wang, Jiale Cheng, Li Zhang, Xinyu Mu, Chuxiong Sun, Minlie Huang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2506.22157)  
+
+**Abstract**: Large language models (LLMs) have demonstrated remarkable evaluation and critique capabilities, providing insightful feedback and identifying flaws in various tasks. However, limited research has explored which types of critiques are most effective for improving model responses or how to generate such critiques. To address this gap, we introduce \textbf{R}efinement-oriented \textbf{C}ritique \textbf{O}ptimization (RCO), a novel framework designed to train critic models using refinement signals. RCO uses a feedback loop where critiques, generated by the critic model, guide the actor model in refining its responses. The critique utility (CU) quantifies the effectiveness of these refinements, serving as the reward signal for training the critic model. By focusing on critiques that lead to better refinements, RCO eliminates the need for direct critique preference assessment, ensuring that critiques driving meaningful improvements are rewarded. We evaluate RCO across five tasks, i.e., dialog generation, summarization, question answering, mathematical reasoning, and code generation, and show that it significantly outperforms traditional methods and open-source models in terms of critique quality and refinement outcomes. Our contributions include the introduction of RCO, a novel supervision scheme based on refined response preferences, and comprehensive experimental results that highlight the method's effectiveness in enhancing LLM critique-refinement loops. 
+
+---
+# Gazal-R1: Achieving State-of-the-Art Medical Reasoning with Parameter-Efficient Two-Stage Training 
+
+**Authors**: Ahmed M. Adly, Mostafa Samy, Amr Fawzy  
+
+**Link**: [PDF](https://arxiv.org/pdf/2506.21594)  
+
+**Abstract**: We present Gazal-R1, a 32-billion-parameter language model that achieves state-of-the-art performance in medical reasoning while providing transparent, step-by-step explanations for clinical decision-making. Built upon Qwen3 32B, our model demonstrates that strategic training can enable mid-sized models to outperform significantly larger counterparts in specialized domains. We developed a novel two-stage training pipeline: first, supervised fine-tuning on a carefully curated dataset of 107,033 synthetic medical reasoning examples that teaches structured clinical thinking, enhanced by advanced parameter-efficient techniques including Weight-Decomposed Low-Rank Adaptation (DoRA) and Rank-Stabilized LoRA (rsLoRA); second, reinforcement learning using Group Relative Policy Optimization (GRPO) with a sophisticated multi-component reward system that refines accuracy, format adherence, and reasoning quality. Gazal-R1 achieves exceptional performance across medical benchmarks, scoring 87.1% on MedQA, 81.6% on MMLU Pro (Medical), and 79.6% on PubMedQA, surpassing models up to 12x larger. Beyond its strong empirical results, this work provides detailed insights into the challenges of training reasoning-capable models in specialized domains, including issues with reward hacking, training instability, and the fundamental tension between factual recall and detailed reasoning. Our methodology offers a reproducible framework for developing high-capability, domain-specific language models that balance performance, efficiency, and explainability. 
+
+---
+# Overview of the ClinIQLink 2025 Shared Task on Medical Question-Answering 
+
+**Authors**: Brandon Colelough, Davis Bartels, Dina Demner-Fushman  
+
+**Link**: [PDF](https://arxiv.org/pdf/2506.21597)  
+
+**Abstract**: In this paper, we present an overview of ClinIQLink, a shared task, collocated with the 24th BioNLP workshop at ACL 2025, designed to stress-test large language models (LLMs) on medically-oriented question answering aimed at the level of a General Practitioner. The challenge supplies 4,978 expert-verified, medical source-grounded question-answer pairs that cover seven formats: true/false, multiple choice, unordered list, short answer, short-inverse, multi-hop, and multi-hop-inverse. Participating systems, bundled in Docker or Apptainer images, are executed on the CodaBench platform or the University of Maryland's Zaratan cluster. An automated harness (Task 1) scores closed-ended items by exact match and open-ended items with a three-tier embedding metric. A subsequent physician panel (Task 2) audits the top model responses. 
+
+---
+# Fine-Grained Preference Optimization Improves Spatial Reasoning in VLMs 
+
+**Authors**: Yifan Shen, Yuanzhe Liu, Jingyuan Zhu, Xu Cao, Xiaofeng Zhang, Yixiao He, Wenming Ye, James Matthew Rehg, Ismini Lourentzou  
+
+**Link**: [PDF](https://arxiv.org/pdf/2506.21656)  
+
+**Abstract**: Current Vision-Language Models (VLMs) struggle with fine-grained spatial reasoning, particularly when multi-step logic and precise spatial alignment are required. In this work, we introduce SpatialReasoner-R1, a vision-language reasoning model designed to address these limitations. To construct high-quality supervision for spatial reasoning, we design a Multi-Model Monte Carlo Tree Search (M3CTS) method that generates diverse, logically consistent Long Chain-of-Thought (LongCoT) reasoning trajectories. In addition, we propose fine-grained Direct Preference Optimization (fDPO), which introduces segment-specific preference granularity for descriptive grounding and logical reasoning, guided by a spatial reward mechanism that evaluates candidate responses based on visual consistency, spatial grounding, and logical coherence. Experimental results demonstrate that fDPO achieves an average improvement of 4.1% over standard DPO across spatial quality tasks, and a 9.0% gain in spatial quantity tasks. SpatialReasoner-R1, trained with fDPO, sets a new SoTA on SPATIALRGPT-Bench, outperforming the strongest baseline by 9.8% in average accuracy, while maintaining competitive performance on general vision-language tasks. 
+
+---
