@@ -1,0 +1,164 @@
+# Act-With-Think: Chunk Auto-Regressive Modeling for Generative Recommendation 
+
+**Authors**: Yifan Wang, Weinan Gan, Longtao Xiao, Jieming Zhu, Heng Chang, Haozhao Wang, Rui Zhang, Zhenhua Dong, Ruiming Tang, Ruixuan Li  
+
+**Link**: [PDF](https://arxiv.org/pdf/2506.23643)  
+
+**Abstract**: Generative recommendation (GR) typically encodes behavioral or semantic aspects of item information into discrete tokens, leveraging the standard autoregressive (AR) generation paradigm to make predictions. However, existing methods tend to overlook their intrinsic relationship, that is, the semantic usually provides some reasonable explainability "$\textbf{why}$" for the behavior "$\textbf{what}$", which may constrain the full potential of GR. To this end, we present Chunk AutoRegressive Modeling (CAR), a new generation paradigm following the decision pattern that users usually think semantic aspects of items (e.g. brand) and then take actions on target items (e.g. purchase). Our CAR, for the $\textit{first time}$, incorporates semantics (SIDs) and behavior (UID) into a single autoregressive transformer from an ``act-with-think'' dual perspective via chunk-level autoregression. Specifically, CAR packs SIDs and UID into a conceptual chunk for item unified representation, allowing each decoding step to make a holistic prediction. Experiments show that our CAR significantly outperforms existing methods based on traditional AR, improving Recall@5 by 7.93% to 22.30%. Furthermore, we verify the scaling effect between model performance and SIDs bit number, demonstrating that CAR preliminary emulates a kind of slow-thinking style mechanism akin to the reasoning processes observed in large language models (LLMs). 
+
+---
+# KiseKloset: Comprehensive System For Outfit Retrieval, Recommendation, And Try-On 
+
+**Authors**: Thanh-Tung Phan-Nguyen, Khoi-Nguyen Nguyen-Ngoc, Tam V. Nguyen, Minh-Triet Tran, Trung-Nghia Le  
+
+**Link**: [PDF](https://arxiv.org/pdf/2506.23471)  
+
+**Abstract**: The global fashion e-commerce industry has become integral to people's daily lives, leveraging technological advancements to offer personalized shopping experiences, primarily through recommendation systems that enhance customer engagement through personalized suggestions. To improve customers' experience in online shopping, we propose a novel comprehensive KiseKloset system for outfit retrieval, recommendation, and try-on. We explore two approaches for outfit retrieval: similar item retrieval and text feedback-guided item retrieval. Notably, we introduce a novel transformer architecture designed to recommend complementary items from diverse categories. Furthermore, we enhance the overall performance of the search pipeline by integrating approximate algorithms to optimize the search process. Additionally, addressing the crucial needs of online shoppers, we employ a lightweight yet efficient virtual try-on framework capable of real-time operation, memory efficiency, and maintaining realistic outputs compared to its predecessors. This virtual try-on module empowers users to visualize specific garments on themselves, enhancing the customers' experience and reducing costs associated with damaged items for retailers. We deployed our end-to-end system for online users to test and provide feedback, enabling us to measure their satisfaction levels. The results of our user study revealed that 84% of participants found our comprehensive system highly useful, significantly improving their online shopping experience. 
+
+---
+# NaviX: A Native Vector Index Design for Graph DBMSs With Robust Predicate-Agnostic Search Performance 
+
+**Authors**: Gaurav Sehgal, Semih Salihoglu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2506.23397)  
+
+**Abstract**: There is an increasing demand for extending existing DBMSs with vector indices so that they become unified systems capable of supporting modern predictive applications, which require joint querying of vector embeddings together with the structured properties and connections of objects. We present NaviX, a native vector index for graph DBMSs (GDBMSs) that has two main design goals. First, we aim to implement a disk-based vector index that leverages the core storage and query-processing capabilities of the underlying GDBMS. To this end, NaviX is built on the Hierarchical Navigable Small-World (HNSW) graph, which itself is a graph-based structure. Second, we aim to support predicate-agnostic filtered vector search queries, in which the k nearest neighbors (kNNs) of a query vector vQ are searched only within an arbitrary subset S of vectors defined by an ad-hoc selection sub-query QS. We adopt a prefiltering approach that evaluates QS first and passes the full description of subset S to the kNN search operator. We study how to design a prefiltering search algorithm that remains robust under varying selectivities and under different correlations between subset S and query vector vQ. We propose an adaptive algorithm that uses the local selectivity of each vector in the HNSW graph to choose an appropriate heuristic at every iteration of the kNN search. Finally, We demonstrate NaviX's robustness and efficiency through extensive experiments against both existing prefiltering- and postfiltering-based baselines. 
+
+---
+# Teaching a Language Model to Speak the Language of Tools 
+
+**Authors**: Simeon Emanuilov  
+
+**Link**: [PDF](https://arxiv.org/pdf/2506.23394)  
+
+**Abstract**: External tool integration through function-calling is essential for practical language model applications, yet most multilingual models lack reliable tool-use capabilities in non-English languages. Even state-of-the-art multilingual models struggle with determining when to use tools and generating the structured outputs required for function calls, often exhibiting language confusion when prompted in lower-resource languages. This work presents a methodology for adapting existing language models to enable robust tool use in any target language, using Bulgarian as a case study. The approach involves continued training of the BgGPT model series (2.6B, 9B, 27B parameters) on a novel bilingual dataset of 10,035 function-calling examples designed to support standardized protocols like MCP (Model Context Protocol). The research introduces TUCAN (Tool-Using Capable Assistant Navigator), which achieves up to 28.75% improvement in function-calling accuracy over base models while preserving core language understanding, as verified on established Bulgarian benchmarks. Beyond accuracy gains, TUCAN models demonstrate production-ready response formatting with clean, parsable function calls, contrasting with the verbose and inconsistent outputs of base models. The models, evaluation framework, and dataset are released to enable replication for other languages. This work demonstrates a practical approach for extending tool-augmented capabilities beyond English-centric systems. 
+
+---
+# Learning to Rank with Variable Result Presentation Lengths 
+
+**Authors**: Norman Knyazev, Harrie Oosterhuis  
+
+**Link**: [PDF](https://arxiv.org/pdf/2506.23319)  
+
+**Abstract**: Learning to Rank (LTR) methods generally assume that each document in a top-K ranking is presented in an equal format. However, previous work has shown that users' perceptions of relevance can be changed by varying presentations, i.e., allocating more vertical space to some documents to provide additional textual or image information. Furthermore, presentation length can also redirect attention, as users are more likely to notice longer presentations when scrolling through results. Deciding on the document presentation lengths in a fixed vertical space ranking is an important problem that has not been addressed by existing LTR methods.
+We address this gap by introducing the variable presentation length ranking task, where simultaneously the ordering of documents and their presentation length is decided. Despite being a generalization of standard ranking, we show that this setting brings significant new challenges: Firstly, the probability ranking principle no longer applies to this setting, and secondly, the problem cannot be divided into separate ordering and length selection tasks.
+We therefore propose VLPL - a new family of Plackett-Luce list-wise gradient estimation methods for the joint optimization of document ordering and lengths. Our semi-synthetic experiments show that VLPL can effectively balance the expected exposure and attractiveness of all documents, achieving the best performance across different ranking settings. Furthermore, we observe that even simple length-aware methods can achieve significant performance improvements over fixed-length models. Altogether, our theoretical and empirical results highlight the importance and difficulties of combining document presentation with LTR. 
+
+---
+# Impact of Shallow vs. Deep Relevance Judgments on BERT-based Reranking Models 
+
+**Authors**: Gabriel Iturra-Bocaz, Danny Vo, Petra Galuscakova  
+
+**Link**: [PDF](https://arxiv.org/pdf/2506.23191)  
+
+**Abstract**: This paper investigates the impact of shallow versus deep relevance judgments on the performance of BERT-based reranking models in neural Information Retrieval. Shallow-judged datasets, characterized by numerous queries each with few relevance judgments, and deep-judged datasets, involving fewer queries with extensive relevance judgments, are compared. The research assesses how these datasets affect the performance of BERT-based reranking models trained on them. The experiments are run on the MS MARCO and LongEval collections. Results indicate that shallow-judged datasets generally enhance generalization and effectiveness of reranking models due to a broader range of available contexts. The disadvantage of the deep-judged datasets might be mitigated by a larger number of negative training examples. 
+
+---
+# Compositions of Variant Experts for Integrating Short-Term and Long-Term Preferences 
+
+**Authors**: Jaime Hieu Do, Trung-Hoang Le, Hady W. Lauw  
+
+**Link**: [PDF](https://arxiv.org/pdf/2506.23170)  
+
+**Abstract**: In the online digital realm, recommendation systems are ubiquitous and play a crucial role in enhancing user experience. These systems leverage user preferences to provide personalized recommendations, thereby helping users navigate through the paradox of choice. This work focuses on personalized sequential recommendation, where the system considers not only a user's immediate, evolving session context, but also their cumulative historical behavior to provide highly relevant and timely recommendations. Through an empirical study conducted on diverse real-world datasets, we have observed and quantified the existence and impact of both short-term (immediate and transient) and long-term (enduring and stable) preferences on users' historical interactions. Building on these insights, we propose a framework that combines short- and long-term preferences to enhance recommendation performance, namely Compositions of Variant Experts (CoVE). This novel framework dynamically integrates short- and long-term preferences through the use of different specialized recommendation models (i.e., experts). Extensive experiments showcase the effectiveness of the proposed methods and ablation studies further investigate the impact of variant expert types. 
+
+---
+# Multi-task Offline Reinforcement Learning for Online Advertising in Recommender Systems 
+
+**Authors**: Langming Liu, Wanyu Wang, Chi Zhang, Bo Li, Hongzhi Yin, Xuetao Wei, Wenbo Su, Bo Zheng, Xiangyu Zhao  
+
+**Link**: [PDF](https://arxiv.org/pdf/2506.23090)  
+
+**Abstract**: Online advertising in recommendation platforms has gained significant attention, with a predominant focus on channel recommendation and budget allocation strategies. However, current offline reinforcement learning (RL) methods face substantial challenges when applied to sparse advertising scenarios, primarily due to severe overestimation, distributional shifts, and overlooking budget constraints. To address these issues, we propose MTORL, a novel multi-task offline RL model that targets two key objectives. First, we establish a Markov Decision Process (MDP) framework specific to the nuances of advertising. Then, we develop a causal state encoder to capture dynamic user interests and temporal dependencies, facilitating offline RL through conditional sequence modeling. Causal attention mechanisms are introduced to enhance user sequence representations by identifying correlations among causal states. We employ multi-task learning to decode actions and rewards, simultaneously addressing channel recommendation and budget allocation. Notably, our framework includes an automated system for integrating these tasks into online advertising. Extensive experiments on offline and online environments demonstrate MTORL's superiority over state-of-the-art methods. 
+
+---
+# Enhancing Live Broadcast Engagement: A Multi-modal Approach to Short Video Recommendations Using MMGCN and User Preferences 
+
+**Authors**: Saeid Aghasoleymani Najafabadi  
+
+**Link**: [PDF](https://arxiv.org/pdf/2506.23085)  
+
+**Abstract**: The purpose of this paper is to explore a multi-modal approach to enhancing live broadcast engagement by developing a short video recommendation system that incorporates Multi-modal Graph Convolutional Networks (MMGCN) with user preferences. In order to provide personalized recommendations tailored to individual interests, the proposed system takes into account user interaction data, video content features, and contextual information. With the aid of a hybrid approach combining collaborative filtering and content-based filtering techniques, the system is able to capture nuanced relationships between users, video attributes, and engagement patterns. Three datasets are used to evaluate the effectiveness of the system: Kwai, TikTok, and MovieLens. Compared to baseline models, such as DeepFM, Wide & Deep, LightGBM, and XGBoost, the proposed MMGCN-based model shows superior performance. A notable feature of the proposed model is that it outperforms all baseline methods in capturing diverse user preferences and making accurate, personalized recommendations, resulting in a Kwai F1 score of 0.574, a Tiktok F1 score of 0.506, and a MovieLens F1 score of 0.197. We emphasize the importance of multi-modal integration and user-centric approaches in advancing recommender systems, emphasizing the role they play in enhancing content discovery and audience interaction on live broadcast platforms. 
+
+---
+# Synergizing Implicit and Explicit User Interests: A Multi-Embedding Retrieval Framework at Pinterest 
+
+**Authors**: Zhibo Fan, Hongtao Lin, Haoyu Chen, Bowen Deng, Hedi Xia, Yuke Yan, James Li  
+
+**Link**: [PDF](https://arxiv.org/pdf/2506.23060)  
+
+**Abstract**: Industrial recommendation systems are typically composed of multiple stages, including retrieval, ranking, and blending. The retrieval stage plays a critical role in generating a high-recall set of candidate items that covers a wide range of diverse user interests. Effectively covering the diverse and long-tail user interests within this stage poses a significant challenge: traditional two-tower models struggle in this regard due to limited user-item feature interaction and often bias towards top use cases. To address these issues, we propose a novel multi-embedding retrieval framework designed to enhance user interest representation by generating multiple user embeddings conditioned on both implicit and explicit user interests. Implicit interests are captured from user history through a Differentiable Clustering Module (DCM), whereas explicit interests, such as topics that the user has followed, are modeled via Conditional Retrieval (CR). These methodologies represent a form of conditioned user representation learning that involves condition representation construction and associating the target item with the relevant conditions. Synergizing implicit and explicit user interests serves as a complementary approach to achieve more effective and comprehensive candidate retrieval as they benefit on different user segments and extract conditions from different but supplementary sources. Extensive experiments and A/B testing reveal significant improvements in user engagements and feed diversity metrics. Our proposed framework has been successfully deployed on Pinterest home feed. 
+
+---
+# Machine Assistant with Reliable Knowledge: Enhancing Student Learning via RAG-based Retrieval 
+
+**Authors**: Yongsheng Lian  
+
+**Link**: [PDF](https://arxiv.org/pdf/2506.23026)  
+
+**Abstract**: We present Machine Assistant with Reliable Knowledge (MARK), a retrieval-augmented question-answering system designed to support student learning through accurate and contextually grounded responses. The system is built on a retrieval-augmented generation (RAG) framework, which integrates a curated knowledge base to ensure factual consistency. To enhance retrieval effectiveness across diverse question types, we implement a hybrid search strategy that combines dense vector similarity with sparse keyword-based retrieval. This dual-retrieval mechanism improves robustness for both general and domain-specific queries. The system includes a feedback loop in which students can rate responses and instructors can review and revise them. Instructor corrections are incorporated into the retrieval corpus, enabling adaptive refinement over time. The system was deployed in a classroom setting as a substitute for traditional office hours, where it successfully addressed a broad range of student queries. It was also used to provide technical support by integrating with a customer-specific knowledge base, demonstrating its ability to handle routine, context-sensitive tasks in applied domains. MARK is publicly accessible at this https URL. 
+
+---
+# Interact2Vec -- An efficient neural network-based model for simultaneously learning users and items embeddings in recommender systems 
+
+**Authors**: Pedro R. Pires, Tiago A. Almeida  
+
+**Link**: [PDF](https://arxiv.org/pdf/2506.22648)  
+
+**Abstract**: Over the past decade, recommender systems have experienced a surge in popularity. Despite notable progress, they grapple with challenging issues, such as high data dimensionality and sparseness. Representing users and items as low-dimensional embeddings learned via neural networks has become a leading solution. However, while recent studies show promising results, many approaches rely on complex architectures or require content data, which may not always be available. This paper presents Interact2Vec, a novel neural network-based model that simultaneously learns distributed embeddings for users and items while demanding only implicit feedback. The model employs state-of-the-art strategies that natural language processing models commonly use to optimize the training phase and enhance the final embeddings. Two types of experiments were conducted regarding the extrinsic and intrinsic quality of the model. In the former, we benchmarked the recommendations generated by Interact2Vec's embeddings in a top-$N$ ranking problem, comparing them with six other recommender algorithms. The model achieved the second or third-best results in 30\% of the datasets, being competitive with other recommenders, and has proven to be very efficient with an average training time reduction of 274\% compared to other embedding-based models. Later, we analyzed the intrinsic quality of the embeddings through similarity tables. Our findings suggest that Interact2Vec can achieve promising results, especially on the extrinsic task, and is an excellent embedding-generator model for scenarios of scarce computing resources, enabling the learning of item and user embeddings simultaneously and efficiently. 
+
+---
+# Emergent musical properties of a transformer under contrastive self-supervised learning 
+
+**Authors**: Yuexuan Kong, Gabriel Meseguer-Brocal, Vincent Lostanlen, Mathieu Lagrange, Romain Hennequin  
+
+**Link**: [PDF](https://arxiv.org/pdf/2506.23873)  
+
+**Abstract**: In music information retrieval (MIR), contrastive self-supervised learning for general-purpose representation models is effective for global tasks such as automatic tagging. However, for local tasks such as chord estimation, it is widely assumed that contrastively trained general-purpose self-supervised models are inadequate and that more sophisticated SSL is necessary; e.g., masked modeling. Our paper challenges this assumption by revealing the potential of contrastive SSL paired with a transformer in local MIR tasks. We consider a lightweight vision transformer with one-dimensional patches in the time--frequency domain (ViT-1D) and train it with simple contrastive SSL through normalized temperature-scaled cross-entropy loss (NT-Xent). Although NT-Xent operates only over the class token, we observe that, potentially thanks to weight sharing, informative musical properties emerge in ViT-1D's sequence tokens. On global tasks, the temporal average of class and sequence tokens offers a performance increase compared to the class token alone, showing useful properties in the sequence tokens. On local tasks, sequence tokens perform unexpectedly well, despite not being specifically trained for. Furthermore, high-level musical features such as onsets emerge from layer-wise attention maps and self-similarity matrices show different layers capture different musical dimensions. Our paper does not focus on improving performance but advances the musical interpretation of transformers and sheds light on some overlooked abilities of contrastive SSL paired with transformers for sequence modeling in MIR. 
+
+---
+# Towards the "Digital Me": A vision of authentic Conversational Agents powered by personal Human Digital Twins 
+
+**Authors**: Lluís C. Coll, Martin W. Lauer-Schmaltz, Philip Cash, John P. Hansen, Anja Maier  
+
+**Link**: [PDF](https://arxiv.org/pdf/2506.23826)  
+
+**Abstract**: Human Digital Twins (HDTs) have traditionally been conceptualized as data-driven models designed to support decision-making across various domains. However, recent advancements in conversational AI open new possibilities for HDTs to function as authentic, interactive digital counterparts of individuals. This paper introduces a novel HDT system architecture that integrates large language models with dynamically updated personal data, enabling it to mirror an individual's conversational style, memories, and behaviors. To achieve this, our approach implements context-aware memory retrieval, neural plasticity-inspired consolidation, and adaptive learning mechanisms, creating a more natural and evolving digital persona. The resulting system does not only replicate an individual's unique conversational style depending on who they are speaking with, but also enriches responses with dynamically captured personal experiences, opinions, and memories. While this marks a significant step toward developing authentic virtual counterparts, it also raises critical ethical concerns regarding privacy, accountability, and the long-term implications of persistent digital identities. This study contributes to the field of HDTs by describing our novel system architecture, demonstrating its capabilities, and discussing future directions and emerging challenges to ensure the responsible and ethical development of HDTs. 
+
+---
+# Zero-Shot Contextual Embeddings via Offline Synthetic Corpus Generation 
+
+**Authors**: Philip Lippmann, Jie Yang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2506.23662)  
+
+**Abstract**: Context-aware embedding methods boost retrieval accuracy by conditioning on corpus statistics (e.g., term co-occurrence and topical patterns) extracted from neighboring documents. However, this context-aware approach requires access to the target corpus or requires domain-specific finetuning, posing practical barriers in privacy-sensitive or resource-constrained settings. We present ZEST, a zero-shot contextual adaptation framework that replaces real corpus access with a one-time offline synthesis of a compact proxy. Given only a handful exemplar documents representative of the general target domain, we use a multi-step hierarchical procedure to generate a synthetic context corpus of several hundred documents that aims to emulate key domain-specific distributions. At inference, the frozen context-aware encoder uses this proxy corpus -- without any finetuning or target corpus access -- to produce domain-adapted embeddings. Across the MTEB benchmark, ZEST's zero-shot synthetic context adaptation using only five example documents performs within 0.5% of models leveraging full target corpus access -- demonstrating remarkable efficacy without any retraining. ZEST thus provides a practical method for deploying high-performance, adaptable embeddings in constrained environments. 
+
+---
+# Thought-Augmented Planning for LLM-Powered Interactive Recommender Agent 
+
+**Authors**: Haocheng Yu, Yaxiong Wu, Hao Wang, Wei Guo, Yong Liu, Yawen Li, Yuyang Ye, Junping Du, Enhong Chen  
+
+**Link**: [PDF](https://arxiv.org/pdf/2506.23485)  
+
+**Abstract**: Interactive recommendation is a typical information-seeking task that allows users to interactively express their needs through natural language and obtain personalized recommendations. Large language model-powered (LLM-powered) agents have become a new paradigm in interactive recommendations, effectively capturing users' real-time needs and enhancing personalized experiences. However, due to limited planning and generalization capabilities, existing formulations of LLM-powered interactive recommender agents struggle to effectively address diverse and complex user intents, such as intuitive, unrefined, or occasionally ambiguous requests. To tackle this challenge, we propose a novel thought-augmented interactive recommender agent system (TAIRA) that addresses complex user intents through distilled thought patterns. Specifically, TAIRA is designed as an LLM-powered multi-agent system featuring a manager agent that orchestrates recommendation tasks by decomposing user needs and planning subtasks, with its planning capacity strengthened through Thought Pattern Distillation (TPD), a thought-augmentation method that extracts high-level thoughts from the agent's and human experts' experiences. Moreover, we designed a set of user simulation schemes to generate personalized queries of different difficulties and evaluate the recommendations based on specific datasets. Through comprehensive experiments conducted across multiple datasets, TAIRA exhibits significantly enhanced performance compared to existing methods. Notably, TAIRA shows a greater advantage on more challenging tasks while generalizing effectively on novel tasks, further validating its superiority in managing complex user intents within interactive recommendation systems. The code is publicly available at:this https URL. 
+
+---
+# GaussMaster: An LLM-based Database Copilot System 
+
+**Authors**: Wei Zhou, Ji Sun, Xuanhe Zhou, Guoliang Li, Luyang Liu, Hao Wu, Tianyuan Wang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2506.23322)  
+
+**Abstract**: In the financial industry, data is the lifeblood of operations, and DBAs shoulder significant responsibilities for SQL tuning, database deployment, diagnosis, and service repair. In recent years, both database vendors and customers have increasingly turned to autonomous database platforms in an effort to alleviate the heavy workload of DBAs. However, existing autonomous database platforms are limited in their capabilities, primarily addressing single-point issues such as NL2SQL, anomaly detection, and SQL tuning. Manual intervention remains a necessity for comprehensive database maintenance. GaussMaster aims to revolutionize this landscape by introducing an LLM-based database copilot system. This innovative solution is designed not only to assist developers in writing efficient SQL queries but also to provide comprehensive care for database services. When database instances exhibit abnormal behavior, GaussMaster is capable of orchestrating the entire maintenance process automatically. It achieves this by analyzing hundreds of metrics and logs, employing a Tree-of-thought approach to identify root causes, and invoking appropriate tools to resolve issues. We have successfully implemented GaussMaster in real-world scenarios, such as the banking industry, where it has achieved zero human intervention for over 34 database maintenance scenarios. In this paper, we present significant improvements in these tasks with code at this https URL. 
+
+---
+# Evaluating Hybrid Retrieval Augmented Generation using Dynamic Test Sets: LiveRAG Challenge 
+
+**Authors**: Chase Fensore, Kaustubh Dhole, Joyce C Ho, Eugene Agichtein  
+
+**Link**: [PDF](https://arxiv.org/pdf/2506.22644)  
+
+**Abstract**: We present our submission to the LiveRAG Challenge 2025, which evaluates retrieval-augmented generation (RAG) systems on dynamic test sets using the FineWeb-10BT corpus. Our final hybrid approach combines sparse (BM25) and dense (E5) retrieval methods and then aims to generate relevant and faithful answers with Falcon3-10B-Instruct. Through systematic evaluation on 200 synthetic questions generated with DataMorgana across 64 unique question-user combinations, we demonstrate that neural re-ranking with RankLLaMA improves MAP from 0.523 to 0.797 (52% relative improvement) but introduces prohibitive computational costs (84s vs 1.74s per question). While DSPy-optimized prompting strategies achieved higher semantic similarity (0.771 vs 0.668), their 0% refusal rates raised concerns about over-confidence and generalizability. Our submitted hybrid system without re-ranking achieved 4th place in faithfulness and 11th place in correctness among 25 teams. Analysis across question categories reveals that vocabulary alignment between questions and documents was the strongest predictor of performance on our development set, with document-similar phrasing improving cosine similarity from 0.562 to 0.762. 
+
+---
