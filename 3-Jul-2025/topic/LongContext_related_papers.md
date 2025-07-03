@@ -1,0 +1,27 @@
+# Long-Sequence Memory with Temporal Kernels and Dense Hopfield Functionals 
+
+**Authors**: Ahmed Farooq  
+
+**Link**: [PDF](https://arxiv.org/pdf/2507.01052)  
+
+**Abstract**: In this study we introduce a novel energy functional for long-sequence memory, building upon the framework of dense Hopfield networks which achieves exponential storage capacity through higher-order interactions. Building upon earlier work on long-sequence Hopfield memory models, we propose a temporal kernal $K(m, k)$ to incorporate temporal dependencies, enabling efficient sequential retrieval of patterns over extended sequences. We demonstrate the successful application of this technique for the storage and sequential retrieval of movies frames which are well suited for this because of the high dimensional vectors that make up each frame creating enough variation between even sequential frames in the high dimensional space. The technique has applications in modern transformer architectures, including efficient long-sequence modeling, memory augmentation, improved attention with temporal bias, and enhanced handling of long-term dependencies in time-series data. Our model offers a promising approach to address the limitations of transformers in long-context tasks, with potential implications for natural language processing, forecasting, and beyond. 
+
+---
+# A Data Science Approach to Calcutta High Court Judgments: An Efficient LLM and RAG-powered Framework for Summarization and Similar Cases Retrieval 
+
+**Authors**: Puspendu Banerjee, Aritra Mazumdar, Wazib Ansar, Saptarsi Goswami, Amlan Chakrabarti  
+
+**Link**: [PDF](https://arxiv.org/pdf/2507.01058)  
+
+**Abstract**: The judiciary, as one of democracy's three pillars, is dealing with a rising amount of legal issues, needing careful use of judicial resources. This research presents a complex framework that leverages Data Science methodologies, notably Large Language Models (LLM) and Retrieval-Augmented Generation (RAG) techniques, to improve the efficiency of analyzing Calcutta High Court verdicts. Our framework focuses on two key aspects: first, the creation of a robust summarization mechanism that distills complex legal texts into concise and coherent summaries; and second, the development of an intelligent system for retrieving similar cases, which will assist legal professionals in research and decision making. By fine-tuning the Pegasus model using case head note summaries, we achieve significant improvements in the summarization of legal cases. Our two-step summarizing technique preserves crucial legal contexts, allowing for the production of a comprehensive vector database for RAG. The RAG-powered framework efficiently retrieves similar cases in response to user queries, offering thorough overviews and summaries. This technique not only improves legal research efficiency, but it also helps legal professionals and students easily acquire and grasp key legal information, benefiting the overall legal scenario. 
+
+---
+# Eka-Eval : A Comprehensive Evaluation Framework for Large Language Models in Indian Languages 
+
+**Authors**: Samridhi Raj Sinha, Rajvee Sheth, Abhishek Upperwal, Mayank Singh  
+
+**Link**: [PDF](https://arxiv.org/pdf/2507.01853)  
+
+**Abstract**: The rapid advancement of Large Language Models (LLMs) has intensified the need for evaluation frameworks that go beyond English centric benchmarks and address the requirements of linguistically diverse regions such as India. We present EKA-EVAL, a unified and production-ready evaluation framework that integrates over 35 benchmarks, including 10 Indic-specific datasets, spanning categories like reasoning, mathematics, tool use, long-context understanding, and reading comprehension. Compared to existing Indian language evaluation tools, EKA-EVAL offers broader benchmark coverage, with built-in support for distributed inference, quantization, and multi-GPU usage. Our systematic comparison positions EKA-EVAL as the first end-to-end, extensible evaluation suite tailored for both global and Indic LLMs, significantly lowering the barrier to multilingual benchmarking. The framework is open-source and publicly available at this https URL eka-eval and a part of ongoing EKA initiative (this https URL), which aims to scale up to over 100 benchmarks and establish a robust, multilingual evaluation ecosystem for LLMs. 
+
+---
