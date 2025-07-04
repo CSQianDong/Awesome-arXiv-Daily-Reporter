@@ -1,0 +1,93 @@
+# Calibrated Recommendations: Survey and Future Directions 
+
+**Authors**: Diego Corrêa da Silva, Dietmar Jannach  
+
+**Link**: [PDF](https://arxiv.org/pdf/2507.02643)  
+
+**Abstract**: The idea of calibrated recommendations is that the properties of the items that are suggested to users should match the distribution of their individual past preferences. Calibration techniques are therefore helpful to ensure that the recommendations provided to a user are not limited to a certain subset of the user's interests. Over the past few years, we have observed an increasing number of research works that use calibration for different purposes, including questions of diversity, biases, and fairness. In this work, we provide a survey on the recent developments in the area of calibrated recommendations. We both review existing technical approaches for calibration and provide an overview on empirical and analytical studies on the effectiveness of calibration for different use cases. Furthermore, we discuss limitations and common challenges when implementing calibration in practice. 
+
+---
+# Content filtering methods for music recommendation: A review 
+
+**Authors**: Terence Zeng, Abhishek K. Umrawal  
+
+**Link**: [PDF](https://arxiv.org/pdf/2507.02282)  
+
+**Abstract**: Recommendation systems have become essential in modern music streaming platforms, shaping how users discover and engage with songs. One common approach in recommendation systems is collaborative filtering, which suggests content based on the preferences of users with similar listening patterns to the target user. However, this method is less effective on media where interactions are sparse. Music is one such medium, since the average user of a music streaming service will never listen to the vast majority of tracks. Due to this sparsity, there are several challenges that have to be addressed with other methods. This review examines the current state of research in addressing these challenges, with an emphasis on the role of content filtering in mitigating biases inherent in collaborative filtering approaches. We explore various methods of song classification for content filtering, including lyrical analysis using Large Language Models (LLMs) and audio signal processing techniques. Additionally, we discuss the potential conflicts between these different analysis methods and propose avenues for resolving such discrepancies. 
+
+---
+# Listwise Preference Alignment Optimization for Tail Item Recommendation 
+
+**Authors**: Zihao Li, Chao Yang, Tong Zhang, Yakun Chen, Xianzhi Wang, Guandong Xu, Daoyi Dong  
+
+**Link**: [PDF](https://arxiv.org/pdf/2507.02255)  
+
+**Abstract**: Preference alignment has achieved greater success on Large Language Models (LLMs) and drawn broad interest in recommendation research. Existing preference alignment methods for recommendation either require explicit reward modeling or only support pairwise preference comparison. The former directly increases substantial computational costs, while the latter hinders training efficiency on negative samples. Moreover, no existing effort has explored preference alignment solutions for tail-item recommendation. To bridge the above gaps, we propose LPO4Rec, which extends the Bradley-Terry model from pairwise comparison to listwise comparison, to improve the efficiency of model training. Specifically, we derive a closed form optimal policy to enable more efficient and effective training without explicit reward modeling. We also present an adaptive negative sampling and reweighting strategy to prioritize tail items during optimization and enhance performance in tail-item recommendations. Besides, we theoretically prove that optimizing the listwise preference optimization (LPO) loss is equivalent to maximizing the upper bound of the optimal reward. Our experiments on three public datasets show that our method outperforms 10 baselines by a large margin, achieving up to 50% performance improvement while reducing 17.9% GPU memory usage when compared with direct preference optimization (DPO) in tail-item recommendation. Our code is available at this https URL. 
+
+---
+# When LLMs Disagree: Diagnosing Relevance Filtering Bias and Retrieval Divergence in SDG Search 
+
+**Authors**: William A. Ingram, Bipasha Banerjee, Edward A. Fox  
+
+**Link**: [PDF](https://arxiv.org/pdf/2507.02139)  
+
+**Abstract**: Large language models (LLMs) are increasingly used to assign document relevance labels in information retrieval pipelines, especially in domains lacking human-labeled data. However, different models often disagree on borderline cases, raising concerns about how such disagreement affects downstream retrieval. This study examines labeling disagreement between two open-weight LLMs, LLaMA and Qwen, on a corpus of scholarly abstracts related to Sustainable Development Goals (SDGs) 1, 3, and 7. We isolate disagreement subsets and examine their lexical properties, rank-order behavior, and classification predictability. Our results show that model disagreement is systematic, not random: disagreement cases exhibit consistent lexical patterns, produce divergent top-ranked outputs under shared scoring functions, and are distinguishable with AUCs above 0.74 using simple classifiers. These findings suggest that LLM-based filtering introduces structured variability in document retrieval, even under controlled prompting and shared ranking logic. We propose using classification disagreement as an object of analysis in retrieval evaluation, particularly in policy-relevant or thematic search tasks. 
+
+---
+# The Future is Agentic: Definitions, Perspectives, and Open Challenges of Multi-Agent Recommender Systems 
+
+**Authors**: Reza Yousefi Maragheh, Yashar Deldjoo  
+
+**Link**: [PDF](https://arxiv.org/pdf/2507.02097)  
+
+**Abstract**: Large language models (LLMs) are rapidly evolving from passive engines of text generation into agentic entities that can plan, remember, invoke external tools, and co-operate with one another. This perspective paper investigates how such LLM agents (and societies thereof) can transform the design space of recommender systems.
+We introduce a unified formalism that (i) models an individual agent as a tuple comprising its language core, tool set, and hierarchical memory, and (ii) captures a multi-agent recommender as a triple of agents, shared environment, and communication protocol. Within this framework, we present four end-to-end use cases-interactive party planning, synthetic user-simulation for offline evaluation, multi-modal furniture recommendation, and brand-aligned explanation generation-each illustrating a distinct capability unlocked by agentic orchestration.
+We then surface five cross-cutting challenge families: protocol complexity, scalability, hallucination and error propagation, emergent misalignment (including covert collusion), and brand compliance.
+For each, we formalize the problem, review nascent mitigation strategies, and outline open research questions. The result is both a blueprint and an agenda: a blueprint that shows how memory-augmented, tool-using LLM agents can be composed into robust recommendation pipelines, and an agenda inviting the RecSys community to develop benchmarks, theoretical guarantees, and governance tools that keep pace with this new degree of autonomy. By unifying agentic abstractions with recommender objectives, the paper lays the groundwork for the next generation of personalized, trustworthy, and context-rich recommendation services. 
+
+---
+# ManifoldMind: Dynamic Hyperbolic Reasoning for Trustworthy Recommendations 
+
+**Authors**: Anoushka Harit, Zhongtian Sun, Suncica Hadzidedic  
+
+**Link**: [PDF](https://arxiv.org/pdf/2507.02014)  
+
+**Abstract**: We introduce ManifoldMind, a probabilistic geometric recommender system for exploratory reasoning over semantic hierarchies in hyperbolic space. Unlike prior methods with fixed curvature and rigid embeddings, ManifoldMind represents users, items, and tags as adaptive-curvature probabilistic spheres, enabling personalised uncertainty modeling and geometry-aware semantic exploration. A curvature-aware semantic kernel supports soft, multi-hop inference, allowing the model to explore diverse conceptual paths instead of overfitting to shallow or direct interactions. Experiments on four public benchmarks show superior NDCG, calibration, and diversity compared to strong baselines. ManifoldMind produces explicit reasoning traces, enabling transparent, trustworthy, and exploration-driven recommendations in sparse or abstract domains. 
+
+---
+# Uncertainty-Aware Complex Scientific Table Data Extraction 
+
+**Authors**: Kehinde Ajayi, Yi He, Jian Wu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2507.02009)  
+
+**Abstract**: Table structure recognition (TSR) and optical character recognition (OCR) play crucial roles in extracting structured data from tables in scientific documents. However, existing extraction frameworks built on top of TSR and OCR methods often fail to quantify the uncertainties of extracted results. To obtain highly accurate data for scientific domains, all extracted data must be manually verified, which can be time-consuming and labor-intensive. We propose a framework that performs uncertainty-aware data extraction for complex scientific tables, built on conformal prediction, a model-agnostic method for uncertainty quantification (UQ). We explored various uncertainty scoring methods to aggregate the uncertainties introduced by TSR and OCR. We rigorously evaluated the framework using a standard benchmark and an in-house dataset consisting of complex scientific tables in six scientific domains. The results demonstrate the effectiveness of using UQ for extraction error detection, and by manually verifying only 47\% of extraction results, the data quality can be improved by 30\%. Our work quantitatively demonstrates the role of UQ with the potential of improving the efficiency in the human-machine cooperation process to obtain scientifically usable data from complex tables in scientific documents. All code and data are available on GitHub at this https URL. 
+
+---
+# Why Multi-Interest Fairness Matters: Hypergraph Contrastive Multi-Interest Learning for Fair Conversational Recommender System 
+
+**Authors**: Yongsen Zheng, Zongxuan Xie, Guohua Wang, Ziyao Liu, Liang Lin, Kwok-Yan Lam  
+
+**Link**: [PDF](https://arxiv.org/pdf/2507.02000)  
+
+**Abstract**: Unfairness is a well-known challenge in Recommender Systems (RSs), often resulting in biased outcomes that disadvantage users or items based on attributes such as gender, race, age, or popularity. Although some approaches have started to improve fairness recommendation in offline or static contexts, the issue of unfairness often exacerbates over time, leading to significant problems like the Matthew effect, filter bubbles, and echo chambers. To address these challenges, we proposed a novel framework, Hypergraph Contrastive Multi-Interest Learning for Fair Conversational Recommender System (HyFairCRS), aiming to promote multi-interest diversity fairness in dynamic and interactive Conversational Recommender Systems (CRSs). HyFairCRS first captures a wide range of user interests by establishing diverse hypergraphs through contrastive learning. These interests are then utilized in conversations to generate informative responses and ensure fair item predictions within the dynamic user-system feedback loop. Experiments on two CRS-based datasets show that HyFairCRS achieves a new state-of-the-art performance while effectively alleviating unfairness. Our code is available at this https URL. 
+
+---
+# Decoupled Planning and Execution: A Hierarchical Reasoning Framework for Deep Search 
+
+**Authors**: Jiajie Jin, Xiaoxi Li, Guanting Dong, Yuyao Zhang, Yutao Zhu, Yang Zhao, Hongjin Qian, Zhicheng Dou  
+
+**Link**: [PDF](https://arxiv.org/pdf/2507.02652)  
+
+**Abstract**: Complex information needs in real-world search scenarios demand deep reasoning and knowledge synthesis across diverse sources, which traditional retrieval-augmented generation (RAG) pipelines struggle to address effectively. Current reasoning-based approaches suffer from a fundamental limitation: they use a single model to handle both high-level planning and detailed execution, leading to inefficient reasoning and limited scalability. In this paper, we introduce HiRA, a hierarchical framework that separates strategic planning from specialized execution. Our approach decomposes complex search tasks into focused subtasks, assigns each subtask to domain-specific agents equipped with external tools and reasoning capabilities, and coordinates the results through a structured integration mechanism. This separation prevents execution details from disrupting high-level reasoning while enabling the system to leverage specialized expertise for different types of information processing. Experiments on four complex, cross-modal deep search benchmarks demonstrate that HiRA significantly outperforms state-of-the-art RAG and agent-based systems. Our results show improvements in both answer quality and system efficiency, highlighting the effectiveness of decoupled planning and execution for multi-step information seeking tasks. Our code is available at this https URL. 
+
+---
+# Resolving CAP Through Automata-Theoretic Economic Design: A Unified Mathematical Framework for Real-Time Partition-Tolerant Systems 
+
+**Authors**: Craig S Wright  
+
+**Link**: [PDF](https://arxiv.org/pdf/2507.02464)  
+
+**Abstract**: The CAP theorem asserts a trilemma between consistency, availability, and partition tolerance. This paper introduces a rigorous automata-theoretic and economically grounded framework that reframes the CAP trade-off as a constraint optimization problem. We model distributed systems as partition-aware state machines and embed economic incentive layers to stabilize consensus behavior across adversarially partitioned networks. By incorporating game-theoretic mechanisms into the global transition semantics, we define provable bounds on convergence, liveness, and correctness. Our results demonstrate that availability and consistency can be simultaneously preserved within bounded epsilon margins, effectively extending the classical CAP limits through formal economic control. 
+
+---
