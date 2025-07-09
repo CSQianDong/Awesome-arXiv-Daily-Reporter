@@ -1,0 +1,198 @@
+# Unconditional Diffusion for Generative Sequential Recommendation 
+
+**Authors**: Yimeng Bai, Yang Zhang, Sihao Ding, Shaohui Ruan, Han Yao, Danhui Guan, Fuli Feng, Tat-Seng Chua  
+
+**Link**: [PDF](https://arxiv.org/pdf/2507.06121)  
+
+**Abstract**: Diffusion models, known for their generative ability to simulate data creation through noise-adding and denoising processes, have emerged as a promising approach for building generative recommenders. To incorporate user history for personalization, existing methods typically adopt a conditional diffusion framework, where the reverse denoising process of reconstructing items from noise is modified to be conditioned on the user history. However, this design may fail to fully utilize historical information, as it gets distracted by the need to model the "item $\leftrightarrow$ noise" translation. This motivates us to reformulate the diffusion process for sequential recommendation in an unconditional manner, treating user history (instead of noise) as the endpoint of the forward diffusion process (i.e., the starting point of the reverse process), rather than as a conditional input. This formulation allows for exclusive focus on modeling the "item $\leftrightarrow$ history" translation. To this end, we introduce Brownian Bridge Diffusion Recommendation (BBDRec). By leveraging a Brownian bridge process, BBDRec enforces a structured noise addition and denoising mechanism, ensuring that the trajectories are constrained towards a specific endpoint -- user history, rather than noise. Extensive experiments demonstrate BBDRec's effectiveness in enhancing sequential recommendation performance. The source code is available at this https URL. 
+
+---
+# Nyay-Darpan: Enhancing Decision Making Through Summarization and Case Retrieval for Consumer Law in India 
+
+**Authors**: Swapnil Bhattacharyya, Shrey Ganatra, Harshvivek Kashid, Spandan Anaokar, Shruti Nair, Reshma Sekhar, Siddharth Manohar, Rahul Hemrajani, Pushpak Bhattacharyya  
+
+**Link**: [PDF](https://arxiv.org/pdf/2507.06090)  
+
+**Abstract**: AI-based judicial assistance and case prediction have been extensively studied in criminal and civil domains, but remain largely unexplored in consumer law, especially in India. In this paper, we present Nyay-Darpan, a novel two-in-one framework that (i) summarizes consumer case files and (ii) retrieves similar case judgements to aid decision-making in consumer dispute resolution. Our methodology not only addresses the gap in consumer law AI tools but also introduces an innovative approach to evaluate the quality of the summary. The term 'Nyay-Darpan' translates into 'Mirror of Justice', symbolizing the ability of our tool to reflect the core of consumer disputes through precise summarization and intelligent case retrieval. Our system achieves over 75 percent accuracy in similar case prediction and approximately 70 percent accuracy across material summary evaluation metrics, demonstrating its practical effectiveness. We will publicly release the Nyay-Darpan framework and dataset to promote reproducibility and facilitate further research in this underexplored yet impactful domain. 
+
+---
+# Hierarchical Interaction Summarization and Contrastive Prompting for Explainable Recommendations 
+
+**Authors**: Yibin Liu, Ang Li, Shijian Li  
+
+**Link**: [PDF](https://arxiv.org/pdf/2507.06044)  
+
+**Abstract**: Explainable recommendations, which use the information of user and item with interaction to generate a explanation for why the user would interact with the item, are crucial for improving user trust and decision transparency to the recommender system. Existing methods primarily rely on encoding features of users and items to embeddings, which often leads to information loss due to dimensionality reduction, sparse interactions, and so on. With the advancements of large language models (LLMs) in language comprehension, some methods use embeddings as LLM inputs for explanation generation. However, since embeddings lack inherent semantics, LLMs must adjust or extend their parameters to interpret them, a process that inevitably incurs information loss. To address this issue, we propose a novel approach combining profile generation via hierarchical interaction summarization (PGHIS), which leverages a pretrained LLM to hierarchically summarize user-item interactions, generating structured textual profiles as explicit representations of user and item characteristics. Additionally, we propose contrastive prompting for explanation generation (CPEG) which employs contrastive learning to guide another reasoning language models in producing high-quality ground truth recommendation explanations. Finally, we use the textual profiles of user and item as input and high-quality explanation as output to fine-tune a LLM for generating explanations. Experimental results on multiple datasets demonstrate that our approach outperforms existing state-of-the-art methods, achieving a great improvement on metrics about explainability (e.g., 5% on GPTScore) and text quality. Furthermore, our generated ground truth explanations achieve a significantly higher win rate compared to user-written reviews and those produced by other methods, demonstrating the effectiveness of CPEG in generating high-quality ground truths. 
+
+---
+# Semantic Certainty Assessment in Vector Retrieval Systems: A Novel Framework for Embedding Quality Evaluation 
+
+**Authors**: Y. Du  
+
+**Link**: [PDF](https://arxiv.org/pdf/2507.05933)  
+
+**Abstract**: Vector retrieval systems exhibit significant performance variance across queries due to heterogeneous embedding quality. We propose a lightweight framework for predicting retrieval performance at the query level by combining quantization robustness and neighborhood density metrics. Our approach is motivated by the observation that high-quality embeddings occupy geometrically stable regions in the embedding space and exhibit consistent neighborhood structures. We evaluate our method on 4 standard retrieval datasets, showing consistent improvements of 9.4$\pm$1.2\% in Recall@10 over competitive baselines. The framework requires minimal computational overhead (less than 5\% of retrieval time) and enables adaptive retrieval strategies. Our analysis reveals systematic patterns in embedding quality across different query types, providing insights for targeted training data augmentation. 
+
+---
+# RecRankerEval: A Flexible and Extensible Framework for Top-k LLM-based Recommendation 
+
+**Authors**: Zeyuan Meng, Zixuan Yi, Iadh Ounis  
+
+**Link**: [PDF](https://arxiv.org/pdf/2507.05880)  
+
+**Abstract**: A recent Large language model (LLM)-based recommendation model, called RecRanker, has demonstrated a superior performance in the top-k recommendation task compared to other models. In particular, RecRanker samples users via clustering, generates an initial ranking list using an initial recommendation model, and fine-tunes an LLM through hybrid instruction tuning to infer user preferences. However, the contribution of each core component remains underexplored. In this work, we inspect the reproducibility of RecRanker, and study the impact and role of its various components. We begin by reproducing the RecRanker pipeline through the implementation of all its key components. Our reproduction shows that the pairwise and listwise methods achieve a performance comparable to that reported in the original paper. For the pointwise method, while we are also able to reproduce the original paper's results, further analysis shows that the performance is abnormally high due to data leakage from the inclusion of ground-truth information in the prompts. To enable a fair and comprehensive evaluation of LLM-based top-k recommendations, we propose RecRankerEval, an extensible framework that covers five key dimensions: user sampling strategy, initial recommendation model, LLM backbone, dataset selection, and instruction tuning method. Using the RecRankerEval framework, we show that the original results of RecRanker can be reproduced on the ML-100K and ML-1M datasets, as well as the additional Amazon-Music dataset, but not on BookCrossing due to the lack of timestamp information in the original RecRanker paper. Furthermore, we demonstrate that RecRanker's performance can be improved by employing alternative user sampling methods, stronger initial recommenders, and more capable LLMs. 
+
+---
+# On the Costs and Benefits of Learned Indexing for Dynamic High-Dimensional Data: Extended Version 
+
+**Authors**: Terézia Slanináková, Jaroslav Olha, David Procházka, Matej Antol, Vlastislav Dohnal  
+
+**Link**: [PDF](https://arxiv.org/pdf/2507.05865)  
+
+**Abstract**: One of the main challenges within the growing research area of learned indexing is the lack of adaptability to dynamically expanding datasets. This paper explores the dynamization of a static learned index for complex data through operations such as node splitting and broadening, enabling efficient adaptation to new data. Furthermore, we evaluate the trade-offs between static and dynamic approaches by introducing an amortized cost model to assess query performance in tandem with the build costs of the index structure, enabling experimental determination of when a dynamic learned index outperforms its static counterpart. We apply the dynamization method to a static learned index and demonstrate that its superior scaling quickly surpasses the static implementation in terms of overall costs as the database grows. This is an extended version of the paper presented at DAWAK 2025. 
+
+---
+# KERAG_R: Knowledge-Enhanced Retrieval-Augmented Generation for Recommendation 
+
+**Authors**: Zeyuan Meng, Zixuan Yi, Iadh Ounis  
+
+**Link**: [PDF](https://arxiv.org/pdf/2507.05863)  
+
+**Abstract**: Large Language Models (LLMs) have shown strong potential in recommender systems due to their contextual learning and generalisation capabilities. Existing LLM-based recommendation approaches typically formulate the recommendation task using specialised prompts designed to leverage their contextual abilities, and aligning their outputs closely with human preferences to yield an improved recommendation performance. However, the use of LLMs for recommendation tasks is limited by the absence of domain-specific knowledge. This lack of relevant relational knowledge about the items to be recommended in the LLM's pre-training corpus can lead to inaccuracies or hallucinations, resulting in incorrect or misleading recommendations. Moreover, directly using information from the knowledge graph introduces redundant and noisy information, which can affect the LLM's reasoning process or exceed its input context length, thereby reducing the performance of LLM-based recommendations. To address the lack of domain-specific knowledge, we propose a novel model called Knowledge-Enhanced Retrieval-Augmented Generation for Recommendation (KERAG_R). Specifically, we leverage a graph retrieval-augmented generation (GraphRAG) component to integrate additional information from a knowledge graph (KG) into instructions, enabling the LLM to collaboratively exploit recommendation signals from both text-based user interactions and the knowledge graph to better estimate the users' preferences in a recommendation context. In particular, we perform graph RAG by pre-training a graph attention network (GAT) to select the most relevant triple for the target users for the used LLM, thereby enhancing the LLM while reducing redundant and noisy information. Our extensive experiments on three public datasets show that our proposed KERAG_R model significantly outperforms ten existing state-of-the-art recommendation methods. 
+
+---
+# Vers un cadre ontologique pour la gestion des comp{é}tences : {à} des fins de formation, de recrutement, de m{é}tier, ou de recherches associ{é}es 
+
+**Authors**: Ngoc Luyen Le, Marie-Hélène Abel, Bertrand Laforge  
+
+**Link**: [PDF](https://arxiv.org/pdf/2507.05767)  
+
+**Abstract**: The rapid transformation of the labor market, driven by technological advancements and the digital economy, requires continuous competence development and constant adaptation. In this context, traditional competence management systems lack interoperability, adaptability, and semantic understanding, making it difficult to align individual competencies with labor market needs and training programs. This paper proposes an ontology-based framework for competence management, enabling a structured representation of competencies, occupations, and training programs. By leveraging ontological models and semantic reasoning, this framework aims to enhance the automation of competence-to-job matching, the personalization of learning recommendations, and career planning. This study discusses the design, implementation, and potential applications of the framework, focusing on competence training programs, job searching, and finding competent individuals. 
+
+---
+# When Transformers Meet Recommenders: Integrating Self-Attentive Sequential Recommendation with Fine-Tuned LLMs 
+
+**Authors**: Kechen Liu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2507.05733)  
+
+**Abstract**: Self-Attentive Sequential Recommendation (SASRec) effectively captures long-term user preferences by applying attention mechanisms to historical interactions. Concurrently, the rise of Large Language Models (LLMs) has motivated research into LLM-based recommendation, which leverages their powerful generalization and language understanding capabilities. However, LLMs often lack the domain-specific knowledge and collaborative signals essential for high-quality recommendations when relying solely on textual prompts. To address this limitation, this study proposes SASRecLLM, a novel framework that integrates SASRec as a collaborative encoder with an LLM fine-tuned using Low-Rank Adaptation (LoRA). The components are connected via a mapping layer to align their dimensional spaces, and three targeted training strategies are designed to optimize the hybrid architecture. Extensive experiments on multiple datasets demonstrate that SASRecLLM achieves robust and consistent improvements over strong baselines in both cold-start and warm-start scenarios. This work advances the field of LLM-based recommendation by presenting a modular and effective paradigm for fusing structured collaborative filtering with the semantic power of fine-tuned LLMs. The implementation is available on GitHub: this https URL 
+
+---
+# From ID-based to ID-free: Rethinking ID Effectiveness in Multimodal Collaborative Filtering Recommendation 
+
+**Authors**: Guohao Li, Li Jing, Jia Wu, Xuefei Li, Kai Zhu, Yue He  
+
+**Link**: [PDF](https://arxiv.org/pdf/2507.05715)  
+
+**Abstract**: Most existing multimodal collaborative filtering recommendation (MCFRec) methods rely heavily on ID features and multimodal content to enhance recommendation performance. However, this paper reveals that ID features are effective but have limited benefits in multimodal collaborative filtering recommendation. Therefore, this paper systematically deconstruct the pros and cons of ID features: (i) they provide initial embedding but lack semantic richness, (ii) they provide a unique identifier for each user and item but hinder generalization to untrained data, and (iii) they assist in aligning and fusing multimodal features but may lead to representation shift. Based on these insights, this paper proposes IDFREE, an ID-free multimodal collaborative Filtering REcommEndation baseline. IDFREE replaces ID features with multimodal features and positional encodings to generate semantically meaningful ID-free embeddings. For ID-free multimodal collaborative filtering, it further proposes an adaptive similarity graph module to construct dynamic user-user and item-item graphs based on multimodal features. Then, an augmented user-item graph encoder is proposed to construct more effective user and item encoding. Finally, IDFREE achieves inter-multimodal alignment based on the contrastive learning and uses Softmax loss as recommendation loss. Basic experiments on three public datasets demonstrate that IDFREE outperforms existing ID-based MCFRec methods, achieving an average performance gain of 72.24% across standard metrics (Recall@5, 10, 20, 50 and NDCG@5, 10, 20, 50). Exploratory and extended experiments further validate our findings on the limitations of ID features in MCFRec. The code is released at this https URL. 
+
+---
+# Beyond Retrieval: Ensembling Cross-Encoders and GPT Rerankers with LLMs for Biomedical QA 
+
+**Authors**: Shashank Verma, Fengyi Jiang, Xiangning Xue  
+
+**Link**: [PDF](https://arxiv.org/pdf/2507.05577)  
+
+**Abstract**: Biomedical semantic question answering rooted in information retrieval can play a crucial role in keeping up to date with vast, rapidly evolving and ever-growing biomedical literature. A robust system can help researchers, healthcare professionals and even layman users access relevant knowledge grounded in evidence. The BioASQ 2025 Task13b Challenge serves as an important benchmark, offering a competitive platform for advancement of this space. This paper presents the methodologies and results from our participation in this challenge where we built a Retrieval-Augmented Generation (RAG) system that can answer biomedical questions by retrieving relevant PubMed documents and snippets to generate answers. For the retrieval task, we generated dense embeddings from biomedical articles for initial retrieval, and applied an ensemble of finetuned cross-encoders and large language models (LLMs) for re-ranking to identify top relevant documents. Our solution achieved an MAP@10 of 0.1581, placing 10th on the leaderboard for the retrieval task. For answer generation, we employed few-shot prompting of instruction-tuned LLMs. Our system achieved macro-F1 score of 0.95 for yes/no questions (rank 12), Mean Reciprocal Rank (MRR) of 0.64 for factoid questions (rank 1), mean-F1 score of 0.63 for list questions (rank 5), and ROUGE-SU4 F1 score of 0.29 for ideal answers (rank 11). 
+
+---
+# PLACE: Prompt Learning for Attributed Community Search 
+
+**Authors**: Shuheng Fang, Kangfei Zhao, Rener Zhang, Yu Rong, Jeffrey Xu Yu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2507.05311)  
+
+**Abstract**: In this paper, we propose PLACE (Prompt Learning for Attributed Community Search), an innovative graph prompt learning framework for ACS. Enlightened by prompt-tuning in Natural Language Processing (NLP), where learnable prompt tokens are inserted to contextualize NLP queries, PLACE integrates structural and learnable prompt tokens into the graph as a query-dependent refinement mechanism, forming a prompt-augmented graph. Within this prompt-augmented graph structure, the learned prompt tokens serve as a bridge that strengthens connections between graph nodes for the query, enabling the GNN to more effectively identify patterns of structural cohesiveness and attribute similarity related to the specific query. We employ an alternating training paradigm to optimize both the prompt parameters and the GNN jointly. Moreover, we design a divide-and-conquer strategy to enhance scalability, supporting the model to handle million-scale graphs. Extensive experiments on 9 real-world graphs demonstrate the effectiveness of PLACE for three types of ACS queries, where PLACE achieves higher F1 scores by 22% compared to the state-of-the-arts on average. 
+
+---
+# News Source Citing Patterns in AI Search Systems 
+
+**Authors**: Kai-Cheng Yang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2507.05301)  
+
+**Abstract**: AI-powered search systems are emerging as new information gatekeepers, fundamentally transforming how users access news and information. Despite their growing influence, the citation patterns of these systems remain poorly understood. We address this gap by analyzing data from the AI Search Arena, a head-to-head evaluation platform for AI search systems. The dataset comprises over 24,000 conversations and 65,000 responses from models across three major providers: OpenAI, Perplexity, and Google. Among the over 366,000 citations embedded in these responses, 9% reference news sources. We find that while models from different providers cite distinct news sources, they exhibit shared patterns in citation behavior. News citations concentrate heavily among a small number of outlets and display a pronounced liberal bias, though low-credibility sources are rarely cited. User preference analysis reveals that neither the political leaning nor the quality of cited news sources significantly influences user satisfaction. These findings reveal significant challenges in current AI search systems and have important implications for their design and governance. 
+
+---
+# Enhancing Learning Path Recommendation via Multi-task Learning 
+
+**Authors**: Afsana Nasrin, Lijun Qian, Pamela Obiomon, Xishuang Dong  
+
+**Link**: [PDF](https://arxiv.org/pdf/2507.05295)  
+
+**Abstract**: Personalized learning is a student-centered educational approach that adapts content, pace, and assessment to meet each learner's unique needs. As the key technique to implement the personalized learning, learning path recommendation sequentially recommends personalized learning items such as lectures and exercises. Advances in deep learning, particularly deep reinforcement learning, have made modeling such recommendations more practical and effective. This paper proposes a multi-task LSTM model that enhances learning path recommendation by leveraging shared information across tasks. The approach reframes learning path recommendation as a sequence-to-sequence (Seq2Seq) prediction problem, generating personalized learning paths from a learner's historical interactions. The model uses a shared LSTM layer to capture common features for both learning path recommendation and deep knowledge tracing, along with task-specific LSTM layers for each objective. To avoid redundant recommendations, a non-repeat loss penalizes repeated items within the recommended learning path. Experiments on the ASSIST09 dataset show that the proposed model significantly outperforms baseline methods for the learning path recommendation. 
+
+---
+# A Survey on Proactive Defense Strategies Against Misinformation in Large Language Models 
+
+**Authors**: Shuliang Liu, Hongyi Liu, Aiwei Liu, Bingchen Duan, Qi Zheng, Yibo Yan, He Geng, Peijie Jiang, Jia Liu, Xuming Hu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2507.05288)  
+
+**Abstract**: The widespread deployment of large language models (LLMs) across critical domains has amplified the societal risks posed by algorithmically generated misinformation. Unlike traditional false content, LLM-generated misinformation can be self-reinforcing, highly plausible, and capable of rapid propagation across multiple languages, which traditional detection methods fail to mitigate effectively. This paper introduces a proactive defense paradigm, shifting from passive post hoc detection to anticipatory mitigation strategies. We propose a Three Pillars framework: (1) Knowledge Credibility, fortifying the integrity of training and deployed data; (2) Inference Reliability, embedding self-corrective mechanisms during reasoning; and (3) Input Robustness, enhancing the resilience of model interfaces against adversarial attacks. Through a comprehensive survey of existing techniques and a comparative meta-analysis, we demonstrate that proactive defense strategies offer up to 63\% improvement over conventional methods in misinformation prevention, despite non-trivial computational overhead and generalization challenges. We argue that future research should focus on co-designing robust knowledge foundations, reasoning certification, and attack-resistant interfaces to ensure LLMs can effectively counter misinformation across varied domains. 
+
+---
+# Exploring LLM Capabilities in Extracting DCAT-Compatible Metadata for Data Cataloging 
+
+**Authors**: Lennart Busch, Daniel Tebernum, Gissel Velarde  
+
+**Link**: [PDF](https://arxiv.org/pdf/2507.05282)  
+
+**Abstract**: Efficient data exploration is crucial as data becomes increasingly important for accelerating processes, improving forecasts and developing new business models. Data consumers often spend 25-98 % of their time searching for suitable data due to the exponential growth, heterogeneity and distribution of data. Data catalogs can support and accelerate data exploration by using metadata to answer user queries. However, as metadata creation and maintenance is often a manual process, it is time-consuming and requires expertise. This study investigates whether LLMs can automate metadata maintenance of text-based data and generate high-quality DCAT-compatible metadata. We tested zero-shot and few-shot prompting strategies with LLMs from different vendors for generating metadata such as titles and keywords, along with a fine-tuned model for classification. Our results show that LLMs can generate metadata comparable to human-created content, particularly on tasks that require advanced semantic understanding. Larger models outperformed smaller ones, and fine-tuning significantly improves classification accuracy, while few-shot prompting yields better results in most cases. Although LLMs offer a faster and reliable way to create metadata, a successful application requires careful consideration of task-specific criteria and domain context. 
+
+---
+# Tile-Based ViT Inference with Visual-Cluster Priors for Zero-Shot Multi-Species Plant Identification 
+
+**Authors**: Murilo Gustineli, Anthony Miyaguchi, Adrian Cheung, Divyansh Khattak  
+
+**Link**: [PDF](https://arxiv.org/pdf/2507.06093)  
+
+**Abstract**: We describe DS@GT's second-place solution to the PlantCLEF 2025 challenge on multi-species plant identification in vegetation quadrat images. Our pipeline combines (i) a fine-tuned Vision Transformer ViTD2PC24All for patch-level inference, (ii) a 4x4 tiling strategy that aligns patch size with the network's 518x518 receptive field, and (iii) domain-prior adaptation through PaCMAP + K-Means visual clustering and geolocation filtering. Tile predictions are aggregated by majority vote and re-weighted with cluster-specific Bayesian priors, yielding a macro-averaged F1 of 0.348 (private leaderboard) while requiring no additional training. All code, configuration files, and reproducibility scripts are publicly available at this https URL. 
+
+---
+# Contrastive and Transfer Learning for Effective Audio Fingerprinting through a Real-World Evaluation Protocol 
+
+**Authors**: Christos Nikou, Theodoros Giannakopoulos  
+
+**Link**: [PDF](https://arxiv.org/pdf/2507.06070)  
+
+**Abstract**: Recent advances in song identification leverage deep neural networks to learn compact audio fingerprints directly from raw waveforms. While these methods perform well under controlled conditions, their accuracy drops significantly in real-world scenarios where the audio is captured via mobile devices in noisy environments. In this paper, we introduce a novel evaluation protocol designed to better reflect such real-world conditions. We generate three recordings of the same audio, each with increasing levels of noise, captured using a mobile device's microphone. Our results reveal a substantial performance drop for two state-of-the-art CNN-based models under this protocol, compared to previously reported benchmarks. Additionally, we highlight the critical role of the augmentation pipeline during training with contrastive loss. By introduction low pass and high pass filters in the augmentation pipeline we significantly increase the performance of both systems in our proposed evaluation. Furthermore, we develop a transformer-based model with a tailored projection module and demonstrate that transferring knowledge from a semantically relevant domain yields a more robust solution. The transformer architecture outperforms CNN-based models across all noise levels, and query durations. In low noise conditions it achieves 47.99% for 1-sec queries, and 97% for 10-sec queries in finding the correct song, surpassing by 14%, and by 18.5% the second-best performing model, respectively, Under heavy noise levels, we achieve a detection rate 56.5% for 15-second query duration. All experiments are conducted on public large-scale dataset of over 100K songs, with queries matched against a database of 56 million vectors. 
+
+---
+# Enhancing the Interpretability of Rule-based Explanations through Information Retrieval 
+
+**Authors**: Alessandro Umbrico, Guido Bologna, Luca Coraci, Francesca Fracasso, Silvia Gola, Gabriella Cortellessa  
+
+**Link**: [PDF](https://arxiv.org/pdf/2507.05976)  
+
+**Abstract**: The lack of transparency of data-driven Artificial Intelligence techniques limits their interpretability and acceptance into healthcare decision-making processes. We propose an attribution-based approach to improve the interpretability of Explainable AI-based predictions in the specific context of arm lymphedema's risk assessment after lymph nodal radiotherapy in breast cancer. The proposed method performs a statistical analysis of the attributes in the rule-based prediction model using standard metrics from Information Retrieval techniques. This analysis computes the relevance of each attribute to the prediction and provides users with interpretable information about the impact of risk factors. The results of a user study that compared the output generated by the proposed approach with the raw output of the Explainable AI model suggested higher levels of interpretability and usefulness in the context of predicting lymphedema risk. 
+
+---
+# SARA: Selective and Adaptive Retrieval-augmented Generation with Context Compression 
+
+**Authors**: Yiqiao Jin, Kartik Sharma, Vineeth Rakesh, Yingtong Dou, Menghai Pan, Mahashweta Das, Srijan Kumar  
+
+**Link**: [PDF](https://arxiv.org/pdf/2507.05633)  
+
+**Abstract**: Retrieval-augmented Generation (RAG) extends large language models (LLMs) with external knowledge but faces key challenges: restricted effective context length and redundancy in retrieved documents. Pure compression-based approaches reduce input size but often discard fine-grained details essential for factual accuracy. We propose SARA, a unified RAG framework that balances local precision and global knowledge coverage under tight context budgets. SARA combines natural-language text snippets with semantic compression vectors to jointly enhance context efficiency and answer correctness. It represents contexts at two complementary levels: 1) fine-grained natural-language spans that preserve critical entities and numerical values, and 2) compact, interpretable vectors that summarize high-level semantics. An iterative evidence-selection module employs the compression vectors for dynamic reranking of contexts. Across 9 datasets and 5 open-source LLMs spanning 3 model families (Mistral, Llama, and Gemma), SARA consistently improves answer relevance (+17.71), answer correctness (+13.72), and semantic similarity (+15.53), demonstrating the importance of integrating textual and compressed representations for robust, context-efficient RAG. 
+
+---
+# Information Needs and Practices Supported by ChatGPT 
+
+**Authors**: Tim Gorichanaz  
+
+**Link**: [PDF](https://arxiv.org/pdf/2507.05537)  
+
+**Abstract**: This study considers ChatGPT as an information source, investigating the information needs that people come to ChatGPT with and the information practices that ChatGPT supports, through a qualitative content analysis of 205 user vignettes. The findings show that ChatGPT is used in a range of life domains (home/family, work, leisure, etc.) and for a range of human needs (writing/editing, learning, simple programming tasks, etc.), constituting the information needs that people use ChatGPT to address. Related to these information needs, the findings show six categories of information practices that ChatGPT supports: Writing, Deciding, Identifying, Ideating, Talking, and Critiquing. This work suggests that, in the AI age, information need should be conceptualized not just as a matter of "getting questions answered" or even "making sense," but as skillfully coping in the world, a notion that includes both understanding and action. This study leads to numerous opportunities for future work at the junction of generative AI and information needs, seeking, use and experience. 
+
+---
+# Beyond classical and contemporary models: a transformative ai framework for student dropout prediction in distance learning using rag, prompt engineering, and cross-modal fusion 
+
+**Authors**: Miloud Mihoubi, Meriem Zerkouk, Belkacem Chikhaoui  
+
+**Link**: [PDF](https://arxiv.org/pdf/2507.05285)  
+
+**Abstract**: Student dropout in distance learning remains a critical challenge, with profound societal and economic consequences. While classical machine learning models leverage structured socio-demographic and behavioral data, they often fail to capture the nuanced emotional and contextual factors embedded in unstructured student interactions. This paper introduces a transformative AI framework that redefines dropout prediction through three synergistic innovations: Retrieval-Augmented Generation (RAG) for domain-specific sentiment analysis, prompt engineering to decode academic stressors, and cross-modal attention fusion to dynamically align textual, behavioral, and socio-demographic insights. By grounding sentiment analysis in a curated knowledge base of pedagogical content, our RAG-enhanced BERT model interprets student comments with unprecedented contextual relevance, while optimized prompts isolate indicators of academic distress (e.g., "isolation," "workload anxiety"). A cross-modal attention layer then fuses these insights with temporal engagement patterns, creating holistic risk profiles. Evaluated on a longitudinal dataset of 4 423 students, the framework achieves 89% accuracy and an F1-score of 0.88, outperforming conventional models by 7% and reducing false negatives by 21%. Beyond prediction, the system generates interpretable interventions by retrieving contextually aligned strategies (e.g., mentorship programs for isolated learners). This work bridges the gap between predictive analytics and actionable pedagogy, offering a scalable solution to mitigate dropout risks in global education systems 
+
+---
