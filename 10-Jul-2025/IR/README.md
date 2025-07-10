@@ -1,0 +1,119 @@
+# Boosting Parameter Efficiency in LLM-Based Recommendation through Sophisticated Pruning 
+
+**Authors**: Shanle Zheng, Keqin Bao, Jizhi Zhang, Yang Zhang, Fuli Feng, Xiangnan He  
+
+**Link**: [PDF](https://arxiv.org/pdf/2507.07064)  
+
+**Abstract**: LLM-based recommender systems have made significant progress; however, the deployment cost associated with the large parameter volume of LLMs still hinders their real-world applications. This work explores parameter pruning to improve parameter efficiency while maintaining recommendation quality, thereby enabling easier deployment. Unlike existing approaches that focus primarily on inter-layer redundancy, we uncover intra-layer redundancy within components such as self-attention and MLP modules. Building on this analysis, we propose a more fine-grained pruning approach that integrates both intra-layer and layer-wise pruning. Specifically, we introduce a three-stage pruning strategy that progressively prunes parameters at different levels and parts of the model, moving from intra-layer to layer-wise pruning, or from width to depth. Each stage also includes a performance restoration step using distillation techniques, helping to strike a balance between performance and parameter efficiency. Empirical results demonstrate the effectiveness of our approach: across three datasets, our models achieve an average of 88% of the original model's performance while pruning more than 95% of the non-embedding parameters. This underscores the potential of our method to significantly reduce resource requirements without greatly compromising recommendation quality. Our code will be available at: this https URL 
+
+---
+# CDC: Causal Domain Clustering for Multi-Domain Recommendation 
+
+**Authors**: Huishi Luo, Yiqing Wu, Yiwen Chen, Fuzhen Zhuang, Deqing Wang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2507.06877)  
+
+**Abstract**: Multi-domain recommendation leverages domain-general knowledge to improve recommendations across several domains. However, as platforms expand to dozens or hundreds of scenarios, training all domains in a unified model leads to performance degradation due to significant inter-domain differences. Existing domain grouping methods, based on business logic or data similarities, often fail to capture the true transfer relationships required for optimal grouping. To effectively cluster domains, we propose Causal Domain Clustering (CDC). CDC models domain transfer patterns within a large number of domains using two distinct effects: the Isolated Domain Affinity Matrix for modeling non-interactive domain transfers, and the Hybrid Domain Affinity Matrix for considering dynamic domain synergy or interference under joint training. To integrate these two transfer effects, we introduce causal discovery to calculate a cohesion-based coefficient that adaptively balances their contributions. A Co-Optimized Dynamic Clustering algorithm iteratively optimizes target domain clustering and source domain selection for training. CDC significantly enhances performance across over 50 domains on public datasets and in industrial settings, achieving a 4.9% increase in online eCPM. Code is available at this https URL 
+
+---
+# Temporal Information Retrieval via Time-Specifier Model Merging 
+
+**Authors**: SeungYoon Han, Taeho Hwang, Sukmin Cho, Soyeong Jeong, Hoyun Song, Huije Lee, Jong C. Park  
+
+**Link**: [PDF](https://arxiv.org/pdf/2507.06782)  
+
+**Abstract**: The rapid expansion of digital information and knowledge across structured and unstructured sources has heightened the importance of Information Retrieval (IR). While dense retrieval methods have substantially improved semantic matching for general queries, they consistently underperform on queries with explicit temporal constraints--often those containing numerical expressions and time specifiers such as ``in 2015.'' Existing approaches to Temporal Information Retrieval (TIR) improve temporal reasoning but often suffer from catastrophic forgetting, leading to reduced performance on non-temporal queries. To address this, we propose Time-Specifier Model Merging (TSM), a novel method that enhances temporal retrieval while preserving accuracy on non-temporal queries. TSM trains specialized retrievers for individual time specifiers and merges them in to a unified model, enabling precise handling of temporal constraints without compromising non-temporal retrieval. Extensive experiments on both temporal and non-temporal datasets demonstrate that TSM significantly improves performance on temporally constrained queries while maintaining strong results on non-temporal queries, consistently outperforming other baseline methods. Our code is available at this https URL . 
+
+---
+# Impacts of Mainstream-Driven Algorithms on Recommendations for Children Across Domains: A Reproducibility Study 
+
+**Authors**: Robin Ungruh, Alejandro Bellogín, Dominik Kowald, Maria Soledad Pera  
+
+**Link**: [PDF](https://arxiv.org/pdf/2507.06596)  
+
+**Abstract**: Children are often exposed to items curated by recommendation algorithms. Yet, research seldom considers children as a user group, and when it does, it is anchored on datasets where children are underrepresented, risking overlooking their interests, favoring those of the majority, i.e., mainstream users. Recently, Ungruh et al. demonstrated that children's consumption patterns and preferences differ from those of mainstream users, resulting in inconsistent recommendation algorithm performance and behavior for this user group. These findings, however, are based on two datasets with a limited child user sample. We reproduce and replicate this study on a wider range of datasets in the movie, music, and book domains, uncovering interaction patterns and aspects of child-recommender interactions consistent across domains, as well as those specific to some user samples in the data. We also extend insights from the original study with popularity bias metrics, given the interpretation of results from the original study. With this reproduction and extension, we uncover consumption patterns and differences between age groups stemming from intrinsic differences between children and others, and those unique to specific datasets or domains. 
+
+---
+# DS@GT at CheckThat! 2025: Exploring Retrieval and Reranking Pipelines for Scientific Claim Source Retrieval on Social Media Discourse 
+
+**Authors**: Jeanette Schofield, Shuyu Tian, Hoang Thanh Thanh Truong, Maximilian Heil  
+
+**Link**: [PDF](https://arxiv.org/pdf/2507.06563)  
+
+**Abstract**: Social media users often make scientific claims without citing where these claims come from, generating a need to verify these claims. This paper details work done by the DS@GT team for CLEF 2025 CheckThat! Lab Task 4b Scientific Claim Source Retrieval which seeks to find relevant scientific papers based on implicit references in tweets. Our team explored 6 different data augmentation techniques, 7 different retrieval and reranking pipelines, and finetuned a bi-encoder. Achieving an MRR@5 of 0.58, our team ranked 16th out of 30 teams for the CLEF 2025 CheckThat! Lab Task 4b, and improvement of 0.15 over the BM25 baseline of 0.43. Our code is available on Github at this https URL. 
+
+---
+# SPEAR: Subset-sampled Performance Evaluation via Automated Ground Truth Generation for RAG 
+
+**Authors**: Zou Yuheng, Wang Yiran, Tian Yuzhu, Zhu Min, Huang Yanhua  
+
+**Link**: [PDF](https://arxiv.org/pdf/2507.06554)  
+
+**Abstract**: Retrieval-Augmented Generation (RAG) is a core approach for enhancing Large Language Models (LLMs), where the effectiveness of the retriever largely determines the overall response quality of RAG systems. Retrievers encompass a multitude of hyperparameters that significantly impact performance outcomes and demonstrate sensitivity to specific applications. Nevertheless, hyperparameter optimization entails prohibitively high computational expenses. Existing evaluation methods suffer from either prohibitive costs or disconnection from domain-specific scenarios. This paper proposes SEARA (Subset sampling Evaluation for Automatic Retriever Assessment), which addresses evaluation data challenges through subset sampling techniques and achieves robust automated retriever evaluation by minimal retrieval facts extraction and comprehensive retrieval metrics. Based on real user queries, this method enables fully automated retriever evaluation at low cost, thereby obtaining optimal retriever for specific business scenarios. We validate our method across classic RAG applications in rednote, including knowledge-based Q&A system and retrieval-based travel assistant, successfully obtaining scenario-specific optimal retrievers. 
+
+---
+# GR-LLMs: Recent Advances in Generative Recommendation Based on Large Language Models 
+
+**Authors**: Zhen Yang, Haitao Lin, Jiawei xue, Ziji Zhang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2507.06507)  
+
+**Abstract**: In the past year, Generative Recommendations (GRs) have undergone substantial advancements, especially in leveraging the powerful sequence modeling and reasoning capabilities of Large Language Models (LLMs) to enhance overall recommendation performance. LLM-based GRs are forming a new paradigm that is distinctly different from discriminative recommendations, showing strong potential to replace traditional recommendation systems heavily dependent on complex hand-crafted features. In this paper, we provide a comprehensive survey aimed at facilitating further research of LLM-based GRs. Initially, we outline the general preliminaries and application cases of LLM-based GRs. Subsequently, we introduce the main considerations when LLM-based GRs are applied in real industrial scenarios. Finally, we explore promising directions for LLM-based GRs. We hope that this survey contributes to the ongoing advancement of the GR domain. 
+
+---
+# USD: A User-Intent-Driven Sampling and Dual-Debiasing Framework for Large-Scale Homepage Recommendations 
+
+**Authors**: Jiaqi Zheng, Cheng Guo, Yi Cao, Chaoqun Hou, Tong Liu, Bo Zheng  
+
+**Link**: [PDF](https://arxiv.org/pdf/2507.06503)  
+
+**Abstract**: Large-scale homepage recommendations face critical challenges from pseudo-negative samples caused by exposure bias, where non-clicks may indicate inattention rather than disinterest. Existing work lacks thorough analysis of invalid exposures and typically addresses isolated aspects (e.g., sampling strategies), overlooking the critical impact of pseudo-positive samples - such as homepage clicks merely to visit marketing portals. We propose a unified framework for large-scale homepage recommendation sampling and debiasing. Our framework consists of two key components: (1) a user intent-aware negative sampling module to filter invalid exposure samples, and (2) an intent-driven dual-debiasing module that jointly corrects exposure bias and click bias. Extensive online experiments on Taobao demonstrate the efficacy of our framework, achieving significant improvements in user click-through rates (UCTR) by 35.4\% and 14.5\% in two variants of the marketing block on the Taobao homepage, Baiyibutie and Taobaomiaosha. 
+
+---
+# SCoRE: Streamlined Corpus-based Relation Extraction using Multi-Label Contrastive Learning and Bayesian kNN 
+
+**Authors**: Luca Mariotti, Veronica Guidetti, Federica Mandreoli  
+
+**Link**: [PDF](https://arxiv.org/pdf/2507.06895)  
+
+**Abstract**: The growing demand for efficient knowledge graph (KG) enrichment leveraging external corpora has intensified interest in relation extraction (RE), particularly under low-supervision settings. To address the need for adaptable and noise-resilient RE solutions that integrate seamlessly with pre-trained large language models (PLMs), we introduce SCoRE, a modular and cost-effective sentence-level RE system. SCoRE enables easy PLM switching, requires no finetuning, and adapts smoothly to diverse corpora and KGs. By combining supervised contrastive learning with a Bayesian k-Nearest Neighbors (kNN) classifier for multi-label classification, it delivers robust performance despite the noisy annotations of distantly supervised corpora. To improve RE evaluation, we propose two novel metrics: Correlation Structure Distance (CSD), measuring the alignment between learned relational patterns and KG structures, and Precision at R (P@R), assessing utility as a recommender system. We also release Wiki20d, a benchmark dataset replicating real-world RE conditions where only KG-derived annotations are available. Experiments on five benchmarks show that SCoRE matches or surpasses state-of-the-art methods while significantly reducing energy consumption. Further analyses reveal that increasing model complexity, as seen in prior work, degrades performance, highlighting the advantages of SCoRE's minimal design. Combining efficiency, modularity, and scalability, SCoRE stands as an optimal choice for real-world RE applications. 
+
+---
+# Shifting from Ranking to Set Selection for Retrieval Augmented Generation 
+
+**Authors**: Dahyun Lee, Yongrae Jo, Haeju Park, Moontae Lee  
+
+**Link**: [PDF](https://arxiv.org/pdf/2507.06838)  
+
+**Abstract**: Retrieval in Retrieval-Augmented Generation(RAG) must ensure that retrieved passages are not only individually relevant but also collectively form a comprehensive set. Existing approaches primarily rerank top-k passages based on their individual relevance, often failing to meet the information needs of complex queries in multi-hop question answering. In this work, we propose a set-wise passage selection approach and introduce SETR, which explicitly identifies the information requirements of a query through Chain-of-Thought reasoning and selects an optimal set of passages that collectively satisfy those requirements. Experiments on multi-hop RAG benchmarks show that SETR outperforms both proprietary LLM-based rerankers and open-source baselines in terms of answer correctness and retrieval quality, providing an effective and efficient alternative to traditional rerankers in RAG systems. The code is available at this https URL 
+
+---
+# CLI-RAG: A Retrieval-Augmented Framework for Clinically Structured and Context Aware Text Generation with LLMs 
+
+**Authors**: Garapati Keerthana, Manik Gupta  
+
+**Link**: [PDF](https://arxiv.org/pdf/2507.06715)  
+
+**Abstract**: Large language models (LLMs), including zero-shot and few-shot paradigms, have shown promising capabilities in clinical text generation. However, real-world applications face two key challenges: (1) patient data is highly unstructured, heterogeneous, and scattered across multiple note types and (2) clinical notes are often long and semantically dense, making naive prompting infeasible due to context length constraints and the risk of omitting clinically relevant information.
+We introduce CLI-RAG (Clinically Informed Retrieval-Augmented Generation), a domain-specific framework for structured and clinically grounded text generation using LLMs. It incorporates a novel hierarchical chunking strategy that respects clinical document structure and introduces a task-specific dual-stage retrieval mechanism. The global stage identifies relevant note types using evidence-based queries, while the local stage extracts high-value content within those notes creating relevance at both document and section levels.
+We apply the system to generate structured progress notes for individual hospital visits using 15 clinical note types from the MIMIC-III dataset. Experiments show that it preserves temporal and semantic alignment across visits, achieving an average alignment score of 87.7%, surpassing the 80.7% baseline from real clinician-authored notes. The generated outputs also demonstrate high consistency across LLMs, reinforcing deterministic behavior essential for reproducibility, reliability, and clinical trust. 
+
+---
+# MS-DPPs: Multi-Source Determinantal Point Processes for Contextual Diversity Refinement of Composite Attributes in Text to Image Retrieval 
+
+**Authors**: Naoya Sogi, Takashi Shibata, Makoto Terao, Masanori Suganuma, Takayuki Okatani  
+
+**Link**: [PDF](https://arxiv.org/pdf/2507.06654)  
+
+**Abstract**: Result diversification (RD) is a crucial technique in Text-to-Image Retrieval for enhancing the efficiency of a practical application. Conventional methods focus solely on increasing the diversity metric of image appearances. However, the diversity metric and its desired value vary depending on the application, which limits the applications of RD. This paper proposes a novel task called CDR-CA (Contextual Diversity Refinement of Composite Attributes). CDR-CA aims to refine the diversities of multiple attributes, according to the application's context. To address this task, we propose Multi-Source DPPs, a simple yet strong baseline that extends the Determinantal Point Process (DPP) to multi-sources. We model MS-DPP as a single DPP model with a unified similarity matrix based on a manifold representation. We also introduce Tangent Normalization to reflect contexts. Extensive experiments demonstrate the effectiveness of the proposed method. Our code is publicly available at this https URL. 
+
+---
+# Phantom Subgroup Poisoning: Stealth Attacks on Federated Recommender Systems 
+
+**Authors**: Bo Yan, Yurong Hao, Dingqi Liu, Huabin Sun, Pengpeng Qiao, Wei Yang Bryan Lim, Yang Cao, Chuan Shi  
+
+**Link**: [PDF](https://arxiv.org/pdf/2507.06258)  
+
+**Abstract**: Federated recommender systems (FedRec) have emerged as a promising solution for delivering personalized recommendations while safeguarding user privacy. However, recent studies have demonstrated their vulnerability to poisoning attacks. Existing attacks typically target the entire user group, which compromises stealth and increases the risk of detection. In contrast, real-world adversaries may prefer to prompt target items to specific user subgroups, such as recommending health supplements to elderly users. Motivated by this gap, we introduce Spattack, the first targeted poisoning attack designed to manipulate recommendations for specific user subgroups in the federated setting. Specifically, Spattack adopts a two-stage approximation-and-promotion strategy, which first simulates user embeddings of target/non-target subgroups and then prompts target items to the target subgroups. To enhance the approximation stage, we push the inter-group embeddings away based on contrastive learning and augment the target group's relevant item set based on clustering. To enhance the promotion stage, we further propose to adaptively tune the optimization weights between target and non-target subgroups. Besides, an embedding alignment strategy is proposed to align the embeddings between the target items and the relevant items. We conduct comprehensive experiments on three real-world datasets, comparing Spattack against seven state-of-the-art poisoning attacks and seven representative defense mechanisms. Experimental results demonstrate that Spattack consistently achieves strong manipulation performance on the specific user subgroup, while incurring minimal impact on non-target users, even when only 0.1\% of users are malicious. Moreover, Spattack maintains competitive overall recommendation performance and exhibits strong resilience against existing mainstream defenses. 
+
+---
