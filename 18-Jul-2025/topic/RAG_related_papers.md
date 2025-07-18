@@ -1,0 +1,9 @@
+# Bridging the Gap: Leveraging Retrieval-Augmented Generation to Better Understand Public Concerns about Vaccines 
+
+**Authors**: Muhammad Javed, Sedigh Khademi Habibabadi, Christopher Palmer, Hazel Clothier, Jim Buttery, Gerardo Luis Dimaguila  
+
+**Link**: [PDF](https://arxiv.org/pdf/2507.12840)  
+
+**Abstract**: Vaccine hesitancy threatens public health, leading to delayed or rejected vaccines. Social media is a vital source for understanding public concerns, and traditional methods like topic modelling often struggle to capture nuanced opinions. Though trained for query answering, large Language Models (LLMs) often miss current events and community concerns. Additionally, hallucinations in LLMs can compromise public health communication. To address these limitations, we developed a tool (VaxPulse Query Corner) using the Retrieval Augmented Generation technique. It addresses complex queries about public vaccine concerns on various online platforms, aiding public health administrators and stakeholders in understanding public concerns and implementing targeted interventions to boost vaccine confidence. Analysing 35,103 Shingrix social media posts, it achieved answer faithfulness (0.96) and relevance (0.94). 
+
+---

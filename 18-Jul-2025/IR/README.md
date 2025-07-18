@@ -1,0 +1,88 @@
+# SGCL: Unifying Self-Supervised and Supervised Learning for Graph Recommendation 
+
+**Authors**: Weizhi Zhang, Liangwei Yang, Zihe Song, Henrry Peng Zou, Ke Xu, Yuanjie Zhu, Philip S. Yu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2507.13336)  
+
+**Abstract**: Recommender systems (RecSys) are essential for online platforms, providing personalized suggestions to users within a vast sea of information. Self-supervised graph learning seeks to harness high-order collaborative filtering signals through unsupervised augmentation on the user-item bipartite graph, primarily leveraging a multi-task learning framework that includes both supervised recommendation loss and self-supervised contrastive loss. However, this separate design introduces additional graph convolution processes and creates inconsistencies in gradient directions due to disparate losses, resulting in prolonged training times and sub-optimal performance. In this study, we introduce a unified framework of Supervised Graph Contrastive Learning for recommendation (SGCL) to address these issues. SGCL uniquely combines the training of recommendation and unsupervised contrastive losses into a cohesive supervised contrastive learning loss, aligning both tasks within a single optimization direction for exceptionally fast training. Extensive experiments on three real-world datasets show that SGCL outperforms state-of-the-art methods, achieving superior accuracy and efficiency. 
+
+---
+# Generative Multi-Target Cross-Domain Recommendation 
+
+**Authors**: Jinqiu Jin, Yang Zhang, Junwei Pan, Fuli Feng, Hua Lu, Haijie Gu, Xiangnan He  
+
+**Link**: [PDF](https://arxiv.org/pdf/2507.12871)  
+
+**Abstract**: Recently, there has been a surge of interest in Multi-Target Cross-Domain Recommendation (MTCDR), which aims to enhance recommendation performance across multiple domains simultaneously. Existing MTCDR methods primarily rely on domain-shared entities (\eg users or items) to fuse and transfer cross-domain knowledge, which may be unavailable in non-overlapped recommendation scenarios. Some studies model user preferences and item features as domain-sharable semantic representations, which can be utilized to tackle the MTCDR task. Nevertheless, they often require extensive auxiliary data for pre-training. Developing more effective solutions for MTCDR remains an important area for further exploration.
+Inspired by recent advancements in generative recommendation, this paper introduces GMC, a generative paradigm-based approach for multi-target cross-domain recommendation. The core idea of GMC is to leverage semantically quantized discrete item identifiers as a medium for integrating multi-domain knowledge within a unified generative model. GMC first employs an item tokenizer to generate domain-shared semantic identifiers for each item, and then formulates item recommendation as a next-token generation task by training a domain-unified sequence-to-sequence model. To further leverage the domain information to enhance performance, we incorporate a domain-aware contrastive loss into the semantic identifier learning, and perform domain-specific fine-tuning on the unified recommender. Extensive experiments on five public datasets demonstrate the effectiveness of GMC compared to a range of baseline methods. 
+
+---
+# Machine-Readable Ads: Accessibility and Trust Patterns for AI Web Agents interacting with Online Advertisements 
+
+**Authors**: Joel Nitu, Heidrun Mühle, Andreas Stöckl  
+
+**Link**: [PDF](https://arxiv.org/pdf/2507.12844)  
+
+**Abstract**: Autonomous multimodal language models are rapidly evolving into web agents that can browse, click, and purchase items on behalf of users, posing a threat to display advertising designed for human eyes. Yet little is known about how these agents interact with ads or which design principles ensure reliable engagement. To address this, we ran a controlled experiment using a faithful clone of the news site this http URL, seeded with diverse ads: static banners, GIFs, carousels, videos, cookie dialogues, and paywalls. We ran 300 initial trials plus follow-ups using the Document Object Model (DOM)-centric Browser Use framework with GPT-4o, Claude 3.7 Sonnet, Gemini 2.0 Flash, and the pixel-based OpenAI Operator, across 10 realistic user tasks. Our results show these agents display severe satisficing: they never scroll beyond two viewports and ignore purely visual calls to action, clicking banners only when semantic button overlays or off-screen text labels are present. Critically, when sweepstake participation required a purchase, GPT-4o and Claude 3.7 Sonnet subscribed in 100% of trials, and Gemini 2.0 Flash in 70%, revealing gaps in cost-benefit analysis. We identified five actionable design principles-semantic overlays, hidden labels, top-left placement, static frames, and dialogue replacement, that make human-centric creatives machine-detectable without harming user experience. We also evaluated agent trustworthiness through "behavior patterns" such as cookie consent handling and subscription choices, highlighting model-specific risk boundaries and the urgent need for robust trust evaluation frameworks in real-world advertising. 
+
+---
+# Bridging the Gap: Leveraging Retrieval-Augmented Generation to Better Understand Public Concerns about Vaccines 
+
+**Authors**: Muhammad Javed, Sedigh Khademi Habibabadi, Christopher Palmer, Hazel Clothier, Jim Buttery, Gerardo Luis Dimaguila  
+
+**Link**: [PDF](https://arxiv.org/pdf/2507.12840)  
+
+**Abstract**: Vaccine hesitancy threatens public health, leading to delayed or rejected vaccines. Social media is a vital source for understanding public concerns, and traditional methods like topic modelling often struggle to capture nuanced opinions. Though trained for query answering, large Language Models (LLMs) often miss current events and community concerns. Additionally, hallucinations in LLMs can compromise public health communication. To address these limitations, we developed a tool (VaxPulse Query Corner) using the Retrieval Augmented Generation technique. It addresses complex queries about public vaccine concerns on various online platforms, aiding public health administrators and stakeholders in understanding public concerns and implementing targeted interventions to boost vaccine confidence. Analysing 35,103 Shingrix social media posts, it achieved answer faithfulness (0.96) and relevance (0.94). 
+
+---
+# Efficiently Constructing Sparse Navigable Graphs 
+
+**Authors**: Alex Conway, Laxman Dhulipala, Martin Farach-Colton, Rob Johnson, Ben Landrum, Christopher Musco, Yarin Shechter, Torsten Suel, Richard Wen  
+
+**Link**: [PDF](https://arxiv.org/pdf/2507.13296)  
+
+**Abstract**: Graph-based nearest neighbor search methods have seen a surge of popularity in recent years, offering state-of-the-art performance across a wide variety of applications. Central to these methods is the task of constructing a sparse navigable search graph for a given dataset endowed with a distance function. Unfortunately, doing so is computationally expensive, so heuristics are universally used in practice.
+In this work, we initiate the study of fast algorithms with provable guarantees for search graph construction. For a dataset with $n$ data points, the problem of constructing an optimally sparse navigable graph can be framed as $n$ separate but highly correlated minimum set cover instances. This yields a naive $O(n^3)$ time greedy algorithm that returns a navigable graph whose sparsity is at most $O(\log n)$ higher than optimal. We improve significantly on this baseline, taking advantage of correlation between the set cover instances to leverage techniques from streaming and sublinear-time set cover algorithms. Combined with problem-specific pre-processing techniques, we present an $\tilde{O}(n^2)$ time algorithm for constructing an $O(\log n)$-approximate sparsest navigable graph under any distance function.
+The runtime of our method is optimal up to logarithmic factors under the Strong Exponential Time Hypothesis via a reduction from Monochromatic Closest Pair. Moreover, we prove that, as with general set cover, obtaining better than an $O(\log n)$-approximation is NP-hard, despite the significant additional structure present in the navigable graph problem. Finally, we show that our techniques can also beat cubic time for the closely related and practically important problems of constructing $\alpha$-shortcut reachable and $\tau$-monotonic graphs, which are also used for nearest neighbor search. For such graphs, we obtain $\tilde{O}(n^{2.5})$ time or better algorithms. 
+
+---
+# Overview of the TalentCLEF 2025: Skill and Job Title Intelligence for Human Capital Management 
+
+**Authors**: Luis Gasco, Hermenegildo Fabregat, Laura García-Sardiña, Paula Estrella, Daniel Deniz, Alvaro Rodrigo, Rabih Zbib  
+
+**Link**: [PDF](https://arxiv.org/pdf/2507.13275)  
+
+**Abstract**: Advances in natural language processing and large language models are driving a major transformation in Human Capital Management, with a growing interest in building smart systems based on language technologies for talent acquisition, upskilling strategies, and workforce planning. However, the adoption and progress of these technologies critically depend on the development of reliable and fair models, properly evaluated on public data and open benchmarks, which have so far been unavailable in this domain.
+To address this gap, we present TalentCLEF 2025, the first evaluation campaign focused on skill and job title intelligence. The lab consists of two tasks: Task A - Multilingual Job Title Matching, covering English, Spanish, German, and Chinese; and Task B - Job Title-Based Skill Prediction, in English. Both corpora were built from real job applications, carefully anonymized, and manually annotated to reflect the complexity and diversity of real-world labor market data, including linguistic variability and gender-marked expressions.
+The evaluations included monolingual and cross-lingual scenarios and covered the evaluation of gender bias.
+TalentCLEF attracted 76 registered teams with more than 280 submissions. Most systems relied on information retrieval techniques built with multilingual encoder-based models fine-tuned with contrastive learning, and several of them incorporated large language models for data augmentation or re-ranking. The results show that the training strategies have a larger effect than the size of the model alone. TalentCLEF provides the first public benchmark in this field and encourages the development of robust, fair, and transferable language technologies for the labor market. 
+
+---
+# Automating Steering for Safe Multimodal Large Language Models 
+
+**Authors**: Lyucheng Wu, Mengru Wang, Ziwen Xu, Tri Cao, Nay Oo, Bryan Hooi, Shumin Deng  
+
+**Link**: [PDF](https://arxiv.org/pdf/2507.13255)  
+
+**Abstract**: Recent progress in Multimodal Large Language Models (MLLMs) has unlocked powerful cross-modal reasoning abilities, but also raised new safety concerns, particularly when faced with adversarial multimodal inputs. To improve the safety of MLLMs during inference, we introduce a modular and adaptive inference-time intervention technology, AutoSteer, without requiring any fine-tuning of the underlying model. AutoSteer incorporates three core components: (1) a novel Safety Awareness Score (SAS) that automatically identifies the most safety-relevant distinctions among the model's internal layers; (2) an adaptive safety prober trained to estimate the likelihood of toxic outputs from intermediate representations; and (3) a lightweight Refusal Head that selectively intervenes to modulate generation when safety risks are detected. Experiments on LLaVA-OV and Chameleon across diverse safety-critical benchmarks demonstrate that AutoSteer significantly reduces the Attack Success Rate (ASR) for textual, visual, and cross-modal threats, while maintaining general abilities. These findings position AutoSteer as a practical, interpretable, and effective framework for safer deployment of multimodal AI systems. 
+
+---
+# SemCSE: Semantic Contrastive Sentence Embeddings Using LLM-Generated Summaries For Scientific Abstracts 
+
+**Authors**: Marc Brinner, Sina Zarriess  
+
+**Link**: [PDF](https://arxiv.org/pdf/2507.13105)  
+
+**Abstract**: We introduce SemCSE, an unsupervised method for learning semantic embeddings of scientific texts. Building on recent advances in contrastive learning for text embeddings, our approach leverages LLM-generated summaries of scientific abstracts to train a model that positions semantically related summaries closer together in the embedding space. This resulting objective ensures that the model captures the true semantic content of a text, in contrast to traditional citation-based approaches that do not necessarily reflect semantic similarity. To validate this, we propose a novel benchmark designed to assess a model's ability to understand and encode the semantic content of scientific texts, demonstrating that our method enforces a stronger semantic separation within the embedding space. Additionally, we evaluate SemCSE on the comprehensive SciRepEval benchmark for scientific text embeddings, where it achieves state-of-the-art performance among models of its size, thus highlighting the benefits of a semantically focused training approach. 
+
+---
+# PinFM: Foundation Model for User Activity Sequences at a Billion-scale Visual Discovery Platform 
+
+**Authors**: Xiangyi Chen, Kousik Rajesh, Matthew Lawhon, Zelun Wang, Hanyu Li, Haomiao Li, Saurabh Vishwas Joshi, Pong Eksombatchai, Jaewon Yang, Yi-Ping Hsu, Jiajing Xu, Charles Rosenberg  
+
+**Link**: [PDF](https://arxiv.org/pdf/2507.12704)  
+
+**Abstract**: User activity sequences have emerged as one of the most important signals in recommender systems. We present a foundational model, PinFM, for understanding user activity sequences across multiple applications at a billion-scale visual discovery platform. We pretrain a transformer model with 20B+ parameters using extensive user activity data, then fine-tune it for specific applications, efficiently coupling it with existing models. While this pretraining-and-fine-tuning approach has been popular in other domains, such as Vision and NLP, its application in industrial recommender systems presents numerous challenges. The foundational model must be scalable enough to score millions of items every second while meeting tight cost and latency constraints imposed by these systems. Additionally, it should capture the interactions between user activities and other features and handle new items that were not present during the pretraining stage.
+We developed innovative techniques to address these challenges. Our infrastructure and algorithmic optimizations, such as the Deduplicated Cross-Attention Transformer (DCAT), improved our throughput by 600% on Pinterest internal data. We demonstrate that PinFM can learn interactions between user sequences and candidate items by altering input sequences, leading to a 20% increase in engagement with new items. PinFM is now deployed to help improve the experience of more than a half billion users across various applications. 
+
+---
