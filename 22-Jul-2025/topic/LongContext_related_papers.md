@@ -1,0 +1,63 @@
+# FastLongSpeech: Enhancing Large Speech-Language Models for Efficient Long-Speech Processing 
+
+**Authors**: Shoutao Guo, Shaolei Zhang, Qingkai Fang, Zhengrui Ma, Min Zhang, Yang Feng  
+
+**Link**: [PDF](https://arxiv.org/pdf/2507.14815)  
+
+**Abstract**: The rapid advancement of Large Language Models (LLMs) has spurred significant progress in Large Speech-Language Models (LSLMs), enhancing their capabilities in both speech understanding and generation. While existing LSLMs often concentrate on augmenting speech generation or tackling a diverse array of short-speech tasks, the efficient processing of long-form speech remains a critical yet underexplored challenge. This gap is primarily attributed to the scarcity of long-speech training datasets and the high computational costs associated with long sequences. To address these limitations, we introduce FastLongSpeech, a novel framework designed to extend LSLM capabilities for efficient long-speech processing without necessitating dedicated long-speech training data. FastLongSpeech incorporates an iterative fusion strategy that can compress excessively long-speech sequences into manageable lengths. To adapt LSLMs for long-speech inputs, it introduces a dynamic compression training approach, which exposes the model to short-speech sequences at varying compression ratios, thereby transferring the capabilities of LSLMs to long-speech tasks. To assess the long-speech capabilities of LSLMs, we develop a long-speech understanding benchmark called LongSpeech-Eval. Experiments show that our method exhibits strong performance in both long-speech and short-speech tasks, while greatly improving inference efficiency. 
+
+---
+# Beyond Isolated Capabilities: Bridging Long CoT Reasoning and Long-Context Understanding 
+
+**Authors**: Yifei Wang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2507.14849)  
+
+**Abstract**: Reasoning distillation has emerged as an effective approach to enhance the reasoning capabilities of smaller language models. However, the impact of large-scale reasoning distillation on other critical abilities, particularly in-context retrieval and reasoning, remains unexplored. This gap in understanding is particularly significant given the increasing importance of Retrieval-Augmented Generation (RAG) systems, where efficient acquisition and utilization of contextual information are paramount for generating reliable responses. Motivated by the need to understand how the extended long-CoT process influences long-context comprehension, we conduct a comprehensive investigation using a series of open-source models distilled from Deepseek-R1, renowned for its exceptional reasoning capabilities. Our study focuses on evaluating these models' performance in extracting and integrating relevant information from extended contexts through multi-document question and answering tasks. Through rigorous experimentation, we demonstrate that distilled reasoning patterns significantly improve long-context understanding. Our analysis reveals that distillation fosters greater long-context awareness by promoting more detailed and explicit reasoning processes during context analysis and information parsing. This advancement effectively mitigates the persistent "lost in the middle" issue that has hindered long-context models. 
+
+---
+# Docopilot: Improving Multimodal Models for Document-Level Understanding 
+
+**Authors**: Yuchen Duan, Zhe Chen, Yusong Hu, Weiyun Wang, Shenglong Ye, Botian Shi, Lewei Lu, Qibin Hou, Tong Lu, Hongsheng Li, Jifeng Dai, Wenhai Wang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2507.14675)  
+
+**Abstract**: Despite significant progress in multimodal large language models (MLLMs), their performance on complex, multi-page document comprehension remains inadequate, largely due to the lack of high-quality, document-level datasets. While current retrieval-augmented generation (RAG) methods offer partial solutions, they suffer from issues, such as fragmented retrieval contexts, multi-stage error accumulation, and extra time costs of retrieval. In this work, we present a high-quality document-level dataset, Doc-750K, designed to support in-depth understanding of multimodal documents. This dataset includes diverse document structures, extensive cross-page dependencies, and real question-answer pairs derived from the original documents. Building on the dataset, we develop a native multimodal model, Docopilot, which can accurately handle document-level dependencies without relying on RAG. Experiments demonstrate that Docopilot achieves superior coherence, accuracy, and efficiency in document understanding tasks and multi-turn interactions, setting a new baseline for document-level multimodal understanding. Data, code, and models are released at this https URL 
+
+---
+# Efficient Whole Slide Pathology VQA via Token Compression 
+
+**Authors**: Weimin Lyu, Qingqiao Hu, Kehan Qi, Zhan Shi, Wentao Huang, Saumya Gupta, Chao Chen  
+
+**Link**: [PDF](https://arxiv.org/pdf/2507.14497)  
+
+**Abstract**: Whole-slide images (WSIs) in pathology can reach up to 10,000 x 10,000 pixels, posing significant challenges for multimodal large language model (MLLM) due to long context length and high computational demands. Previous methods typically focus on patch-level analysis or slide-level classification using CLIP-based models with multi-instance learning, but they lack the generative capabilities needed for visual question answering (VQA). More recent MLLM-based approaches address VQA by feeding thousands of patch tokens directly into the language model, which leads to excessive resource consumption. To address these limitations, we propose Token Compression Pathology LLaVA (TCP-LLaVA), the first MLLM architecture to perform WSI VQA via token compression. TCP-LLaVA introduces a set of trainable compression tokens that aggregate visual and textual information through a modality compression module, inspired by the [CLS] token mechanism in BERT. Only the compressed tokens are forwarded to the LLM for answer generation, significantly reducing input length and computational cost. Experiments on ten TCGA tumor subtypes show that TCP-LLaVA outperforms existing MLLM baselines in VQA accuracy while reducing training resource consumption by a substantial margin. 
+
+---
+# LaCache: Ladder-Shaped KV Caching for Efficient Long-Context Modeling of Large Language Models 
+
+**Authors**: Dachuan Shi, Yonggan Fu, Xiangchi Yuan, Zhongzhi Yu, Haoran You, Sixu Li, Xin Dong, Jan Kautz, Pavlo Molchanov, Yingyan  
+
+**Link**: [PDF](https://arxiv.org/pdf/2507.14204)  
+
+**Abstract**: Recent advancements in Large Language Models (LLMs) have spurred interest in numerous applications requiring robust long-range capabilities, essential for processing extensive input contexts and continuously generating extended outputs. As sequence lengths increase, the number of Key-Value (KV) pairs in LLMs escalates, creating a significant efficiency bottleneck. In this paper, we propose a new KV cache optimization paradigm called LaCache, a training-free method for efficient and accurate generative inference of LLMs. LaCache enables LLMs to simultaneously address both of the critical challenges in long-range modeling: robust long-range capabilities and continuous generation without running out-of-memory (OOM). Specifically, LaCache integrates two key innovations: (1) a ladder-shaped KV cache pattern that stores KV pairs not only sequentially (left-to-right within each layer) but also across layers (from shallow to deep), providing an extended span for capturing long-range dependencies under a fixed storage budget, thereby boosting long-range capabilities; and (2) an iterative compaction mechanism that progressively compresses older caches, freeing up space for new tokens within a fixed cache size. This token distance-based dynamic compression enables more effective continuous generation under constrained cache budgets. Experiments across various tasks, benchmarks, and LLM models consistently validate LaCache's effectiveness in enhancing LLMs' long-range capabilities. Our code is available at this https URL. 
+
+---
+# True Multimodal In-Context Learning Needs Attention to the Visual Context 
+
+**Authors**: Shuo Chen, Jianzhe Liu, Zhen Han, Yan Xia, Daniel Cremers, Philip Torr, Volker Tresp, Jindong Gu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2507.15807)  
+
+**Abstract**: Multimodal Large Language Models (MLLMs), built on powerful language backbones, have enabled Multimodal In-Context Learning (MICL)-adapting to new tasks from a few multimodal demonstrations consisting of images, questions, and answers. Despite showing noticeable improvement on standard vision-language datasets, current MLLMs struggle to leverage visual information in the demonstrations. Specifically, they tend to neglect visual cues and over-rely on textual patterns, leading to mere text imitation rather than genuine multimodal adaptation. This behavior makes MICL still unimodal and largely restricts its practical utility. More importantly, this limitation is often concealed by the improved performance on tasks that do not require understanding the visual context. As a result, how to effectively enhance MICL ability and reliably evaluate the MICL performance remains underexplored. To address these issues, we first introduce Dynamic Attention Reallocation (DARA), an efficient fine-tuning strategy that encourages models to attend to the visual context by rebalancing attention across visual and textual tokens. In addition, we present TrueMICL, an MICL-dedicated dataset with both support and test sets that explicitly requires the integration of multimodal information-particularly visual content-for correct task completion. Extensive experiments demonstrate the effectiveness of our holistic solution, showcasing substantial improvements in the true multimodal in-context learning capabilities. Code and datasets are available at this https URL . 
+
+---
+# U-DREAM: Unsupervised Dereverberation guided by a Reverberation Model 
+
+**Authors**: Louis Bahrman, Mathieu Fontaine, Gaël Richard  
+
+**Link**: [PDF](https://arxiv.org/pdf/2507.14237)  
+
+**Abstract**: This paper explores the outcome of training state-ofthe-art dereverberation models with supervision settings ranging from weakly-supervised to fully unsupervised, relying solely on reverberant signals and an acoustic model for training. Most of the existing deep learning approaches typically require paired dry and reverberant data, which are difficult to obtain in practice. We develop instead a sequential learning strategy motivated by a bayesian formulation of the dereverberation problem, wherein acoustic parameters and dry signals are estimated from reverberant inputs using deep neural networks, guided by a reverberation matching loss. Our most data-efficient variant requires only 100 reverberation-parameter-labelled samples to outperform an unsupervised baseline, demonstrating the effectiveness and practicality of the proposed method in low-resource scenarios. 
+
+---
