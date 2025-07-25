@@ -1,0 +1,90 @@
+# DR.EHR: Dense Retrieval for Electronic Health Record with Knowledge Injection and Synthetic Data 
+
+**Authors**: Zhengyun Zhao, Huaiyuan Ying, Yue Zhong, Sheng Yu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2507.18583)  
+
+**Abstract**: Electronic Health Records (EHRs) are pivotal in clinical practices, yet their retrieval remains a challenge mainly due to semantic gap issues. Recent advancements in dense retrieval offer promising solutions but existing models, both general-domain and biomedical-domain, fall short due to insufficient medical knowledge or mismatched training corpora. This paper introduces \texttt{this http URL}, a series of dense retrieval models specifically tailored for EHR retrieval. We propose a two-stage training pipeline utilizing MIMIC-IV discharge summaries to address the need for extensive medical knowledge and large-scale training data. The first stage involves medical entity extraction and knowledge injection from a biomedical knowledge graph, while the second stage employs large language models to generate diverse training data. We train two variants of \texttt{this http URL}, with 110M and 7B parameters, respectively. Evaluated on the CliniQ benchmark, our models significantly outperforms all existing dense retrievers, achieving state-of-the-art results. Detailed analyses confirm our models' superiority across various match and query types, particularly in challenging semantic matches like implication and abbreviation. Ablation studies validate the effectiveness of each pipeline component, and supplementary experiments on EHR QA datasets demonstrate the models' generalizability on natural language questions, including complex ones with multiple entities. This work significantly advances EHR retrieval, offering a robust solution for clinical applications. 
+
+---
+# Transform Before You Query: A Privacy-Preserving Approach for Vector Retrieval with Embedding Space Alignment 
+
+**Authors**: Ruiqi He, Zekun Fei, Jiaqi Li, Xinyuan Zhu, Biao Yi, Siyi Lv, Weijie Liu, Zheli Liu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2507.18518)  
+
+**Abstract**: Vector Database (VDB) can efficiently index and search high-dimensional vector embeddings from unstructured data, crucially enabling fast semantic similarity search essential for modern AI applications like generative AI and recommendation systems. Since current VDB service providers predominantly use proprietary black-box models, users are forced to expose raw query text to them via API in exchange for the vector retrieval services. Consequently, if query text involves confidential records from finance or healthcare domains, this mechanism inevitably leads to critical leakage of user's sensitive information. To address this issue, we introduce STEER (\textbf{S}ecure \textbf{T}ransformed \textbf{E}mbedding v\textbf{E}ctor\textbf{ R}etrieval), a private vector retrieval framework that leverages the alignment relationship between the semantic spaces of different embedding models to derive approximate embeddings for the query text. STEER performs the retrieval using the approximate embeddings within the original VDB and requires no modifications to the server side. Our theoretical and experimental analyses demonstrate that STEER effectively safeguards query text privacy while maintaining the retrieval accuracy. Even though approximate embeddings are approximations of the embeddings from proprietary models, they still prevent the providers from recovering the query text through Embedding Inversion Attacks (EIAs). Extensive experimental results show that Recall@100 of STEER can basically achieve a decrease of less than 5\%. Furthermore, even when searching within a text corpus of millions of entries, STEER achieves a Recall@20 accuracy 20\% higher than current baselines. 
+
+---
+# The Best is Yet to Come: Graph Convolution in the Testing Phase for Multimodal Recommendation 
+
+**Authors**: Jinfeng Xu, Zheyu Chen, Shuo Yang, Jinze Li, Edith C. H. Ngai  
+
+**Link**: [PDF](https://arxiv.org/pdf/2507.18489)  
+
+**Abstract**: The efficiency and scalability of graph convolution networks (GCNs) in training recommender systems remain critical challenges, hindering their practical deployment in real-world scenarios. In the multimodal recommendation (MMRec) field, training GCNs requires more expensive time and space costs and exacerbates the gap between different modalities, resulting in sub-optimal recommendation accuracy. This paper critically points out the inherent challenges associated with adopting GCNs during the training phase in MMRec, revealing that GCNs inevitably create unhelpful and even harmful pairs during model optimization and isolate different modalities. To this end, we propose FastMMRec, a highly efficient multimodal recommendation framework that deploys graph convolutions exclusively during the testing phase, bypassing their use in training. We demonstrate that adopting GCNs solely in the testing phase significantly improves the model's efficiency and scalability while alleviating the modality isolation problem often caused by using GCNs during the training phase. We conduct extensive experiments on three public datasets, consistently demonstrating the performance superiority of FastMMRec over competitive baselines while achieving efficiency and scalability. 
+
+---
+# How Well Do LLMs Predict Prerequisite Skills? Zero-Shot Comparison to Expert-Defined Concepts 
+
+**Authors**: Ngoc Luyen Le, Marie-Hélène Abel  
+
+**Link**: [PDF](https://arxiv.org/pdf/2507.18479)  
+
+**Abstract**: Prerequisite skills - foundational competencies required before mastering more advanced concepts - are important for supporting effective learning, assessment, and skill-gap analysis. Traditionally curated by domain experts, these relationships are costly to maintain and difficult to scale. This paper investigates whether large language models (LLMs) can predict prerequisite skills in a zero-shot setting, using only natural language descriptions and without task-specific fine-tuning. We introduce ESCO-PrereqSkill, a benchmark dataset constructed from the ESCO taxonomy, comprising 3,196 skills and their expert-defined prerequisite links. Using a standardized prompting strategy, we evaluate 13 state-of-the-art LLMs, including GPT-4, Claude 3, Gemini, LLaMA 4, Qwen2, and DeepSeek, across semantic similarity, BERTScore, and inference latency. Our results show that models such as LLaMA4-Maverick, Claude-3-7-Sonnet, and Qwen2-72B generate predictions that closely align with expert ground truth, demonstrating strong semantic reasoning without supervision. These findings highlight the potential of LLMs to support scalable prerequisite skill modeling for applications in personalized learning, intelligent tutoring, and skill-based recommender systems. 
+
+---
+# LLM-based Embedders for Prior Case Retrieval 
+
+**Authors**: Damith Premasiri, Tharindu Ranasinghe, Ruslan Mitkov  
+
+**Link**: [PDF](https://arxiv.org/pdf/2507.18455)  
+
+**Abstract**: In common law systems, legal professionals such as lawyers and judges rely on precedents to build their arguments. As the volume of cases has grown massively over time, effectively retrieving prior cases has become essential. Prior case retrieval (PCR) is an information retrieval (IR) task that aims to automatically identify the most relevant court cases for a specific query from a large pool of potential candidates. While IR methods have seen several paradigm shifts over the last few years, the vast majority of PCR methods continue to rely on traditional IR methods, such as BM25. The state-of-the-art deep learning IR methods have not been successful in PCR due to two key challenges: i. Lengthy legal text limitation; when using the powerful BERT-based transformer models, there is a limit of input text lengths, which inevitably requires to shorten the input via truncation or division with a loss of legal context information. ii. Lack of legal training data; due to data privacy concerns, available PCR datasets are often limited in size, making it difficult to train deep learning-based models effectively. In this research, we address these challenges by leveraging LLM-based text embedders in PCR. LLM-based embedders support longer input lengths, and since we use them in an unsupervised manner, they do not require training data, addressing both challenges simultaneously. In this paper, we evaluate state-of-the-art LLM-based text embedders in four PCR benchmark datasets and show that they outperform BM25 and supervised transformer-based models. 
+
+---
+# RecPS: Privacy Risk Scoring for Recommender Systems 
+
+**Authors**: Jiajie He, Yuechun Gu, Keke Chen  
+
+**Link**: [PDF](https://arxiv.org/pdf/2507.18365)  
+
+**Abstract**: Recommender systems (RecSys) have become an essential component of many web applications. The core of the system is a recommendation model trained on highly sensitive user-item interaction data. While privacy-enhancing techniques are actively studied in the research community, the real-world model development still depends on minimal privacy protection, e.g., via controlled access. Users of such systems should have the right to choose \emph{not} to share highly sensitive interactions. However, there is no method allowing the user to know which interactions are more sensitive than others. Thus, quantifying the privacy risk of RecSys training data is a critical step to enabling privacy-aware RecSys model development and deployment. We propose a membership-inference attack (MIA)- based privacy scoring method, RecPS, to measure privacy risks at both the interaction and user levels. The RecPS interaction-level score definition is motivated and derived from differential privacy, which is then extended to the user-level scoring method. A critical component is the interaction-level MIA method RecLiRA, which gives high-quality membership estimation. We have conducted extensive experiments on well-known benchmark datasets and RecSys models to show the unique features and benefits of RecPS scoring in risk assessment and RecSys model unlearning. Our code is available at this https URL. 
+
+---
+# Fashion-AlterEval: A Dataset for Improved Evaluation of Conversational Recommendation Systems with Alternative Relevant Items 
+
+**Authors**: Maria Vlachou  
+
+**Link**: [PDF](https://arxiv.org/pdf/2507.18017)  
+
+**Abstract**: In Conversational Recommendation Systems (CRS), a user provides feedback on recommended items at each turn, leading the CRS towards improved recommendations. Due to the need for a large amount of data, a user simulator is employed for both training and evaluation. Such user simulators critique the current retrieved item based on knowledge of a single target item. However, system evaluation in offline settings with simulators is limited by the focus on a single target item and their unlimited patience over a large number of turns. To overcome these limitations of existing simulators, we propose Fashion-AlterEval, a new dataset that contains human judgments for a selection of alternative items by adding new annotations in common fashion CRS datasets. Consequently, we propose two novel meta-user simulators that use the collected judgments and allow simulated users not only to express their preferences about alternative items to their original target, but also to change their mind and level of patience. In our experiments using the Shoes and Fashion IQ as the original datasets and three CRS models, we find that using the knowledge of alternatives by the simulator can have a considerable impact on the evaluation of existing CRS models, specifically that the existing single-target evaluation underestimates their effectiveness, and when simulatedusers are allowed to instead consider alternative relevant items, the system can rapidly respond to more quickly satisfy the user. 
+
+---
+# Failure Prediction in Conversational Recommendation Systems 
+
+**Authors**: Maria Vlachou  
+
+**Link**: [PDF](https://arxiv.org/pdf/2507.17976)  
+
+**Abstract**: In a Conversational Image Recommendation task, users can provide natural language feedback on a recommended image item, which leads to an improved recommendation in the next turn. While typical instantiations of this task assume that the user's target item will (eventually) be returned, this might often not be true, for example, the item the user seeks is not within the item catalogue. Failing to return a user's desired item can lead to user frustration, as the user needs to interact with the system for an increased number of turns. To mitigate this issue, in this paper, we introduce the task of Supervised Conversational Performance Prediction, inspired by Query Performance Prediction (QPP) for predicting effectiveness in response to a search engine query. In this regard, we propose predictors for conversational performance that detect conversation failures using multi-turn semantic information contained in the embedded representations of retrieved image items. Specifically, our AutoEncoder-based predictor learns a compressed representation of top-retrieved items of the train turns and uses the classification labels to predict the evaluation turn. Our evaluation scenario addressed two recommendation scenarios, by differentiating between system failure, where the system is unable to find the target, and catalogue failure, where the target does not exist in the item catalogue. In our experiments using the Shoes and FashionIQ Dresses datasets, we measure the accuracy of predictors for both system and catalogue failures. Our results demonstrate the promise of our proposed predictors for predicting system failures (existing evaluation scenario), while we detect a considerable decrease in predictive performance in the case of catalogue failure prediction (when inducing a missing item scenario) compared to system failures. 
+
+---
+# VERIRAG: Healthcare Claim Verification via Statistical Audit in Retrieval-Augmented Generation 
+
+**Authors**: Shubham Mohole, Hongjun Choi, Shusen Liu, Christine Klymko, Shashank Kushwaha, Derek Shi, Wesam Sakla, Sainyam Galhotra, Ruben Glatt  
+
+**Link**: [PDF](https://arxiv.org/pdf/2507.17948)  
+
+**Abstract**: Retrieval-augmented generation (RAG) systems are increasingly adopted in clinical decision support, yet they remain methodologically blind-they retrieve evidence but cannot vet its scientific quality. A paper claiming "Antioxidant proteins decreased after alloferon treatment" and a rigorous multi-laboratory replication study will be treated as equally credible, even if the former lacked scientific rigor or was even retracted. To address this challenge, we introduce VERIRAG, a framework that makes three notable contributions: (i) the Veritable, an 11-point checklist that evaluates each source for methodological rigor, including data integrity and statistical validity; (ii) a Hard-to-Vary (HV) Score, a quantitative aggregator that weights evidence by its quality and diversity; and (iii) a Dynamic Acceptance Threshold, which calibrates the required evidence based on how extraordinary a claim is. Across four datasets-comprising retracted, conflicting, comprehensive, and settled science corpora-the VERIRAG approach consistently outperforms all baselines, achieving absolute F1 scores ranging from 0.53 to 0.65, representing a 10 to 14 point improvement over the next-best method in each respective dataset. We will release all materials necessary for reproducing our results. 
+
+---
+# Use as Directed? A Comparison of Software Tools Intended to Check Rigor and Transparency of Published Work 
+
+**Authors**: Peter Eckmann, Adrian Barnett, Alexandra Bannach-Brown, Elisa Pilar Bascunan Atria, Guillaume Cabanac, Louise Delwen Owen Franzen, Małgorzata Anna Gazda, Kaitlyn Hair, James Howison, Halil Kilicoglu, Cyril Labbe, Sarah McCann, Vladislav Nachev, Martijn Roelandse, Maia Salholz-Hillel, Robert Schulz, Gerben ter Riet, Colby Vorland, Anita Bandrowski, Tracey Weissgerber  
+
+**Link**: [PDF](https://arxiv.org/pdf/2507.17991)  
+
+**Abstract**: The causes of the reproducibility crisis include lack of standardization and transparency in scientific reporting. Checklists such as ARRIVE and CONSORT seek to improve transparency, but they are not always followed by authors and peer review often fails to identify missing items. To address these issues, there are several automated tools that have been designed to check different rigor criteria. We have conducted a broad comparison of 11 automated tools across 9 different rigor criteria from the ScreenIT group. We found some criteria, including detecting open data, where the combination of tools showed a clear winner, a tool which performed much better than other tools. In other cases, including detection of inclusion and exclusion criteria, the combination of tools exceeded the performance of any one tool. We also identified key areas where tool developers should focus their effort to make their tool maximally useful. We conclude with a set of insights and recommendations for stakeholders in the development of rigor and transparency detection tools. The code and data for the study is available at this https URL. 
+
+---
