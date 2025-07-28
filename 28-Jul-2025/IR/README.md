@@ -1,0 +1,117 @@
+# Let It Go? Not Quite: Addressing Item Cold Start in Sequential Recommendations with Content-Based Initialization 
+
+**Authors**: Anton Pembek, Artem Fatkulin, Anton Klenitskiy, Alexey Vasilev  
+
+**Link**: [PDF](https://arxiv.org/pdf/2507.19473)  
+
+**Abstract**: Many sequential recommender systems suffer from the cold start problem, where items with few or no interactions cannot be effectively used by the model due to the absence of a trained embedding. Content-based approaches, which leverage item metadata, are commonly used in such scenarios. One possible way is to use embeddings derived from content features such as textual descriptions as initialization for the model embeddings. However, directly using frozen content embeddings often results in suboptimal performance, as they may not fully adapt to the recommendation task. On the other hand, fine-tuning these embeddings can degrade performance for cold-start items, as item representations may drift far from their original structure after training. We propose a novel approach to address this limitation. Instead of entirely freezing the content embeddings or fine-tuning them extensively, we introduce a small trainable delta to frozen embeddings that enables the model to adapt item representations without letting them go too far from their original semantic structure. This approach demonstrates consistent improvements across multiple datasets and modalities, including e-commerce datasets with textual descriptions and a music dataset with audio-based representation. 
+
+---
+# Injecting External Knowledge into the Reasoning Process Enhances Retrieval-Augmented Generation 
+
+**Authors**: Minghao Tang, Shiyu Ni, Jiafeng Guo, Keping Bi  
+
+**Link**: [PDF](https://arxiv.org/pdf/2507.19333)  
+
+**Abstract**: Retrieval-augmented generation (RAG) has been widely adopted to augment large language models (LLMs) with external knowledge for knowledge-intensive tasks. However, its effectiveness is often undermined by the presence of noisy (i.e., low-quality) retrieved passages. Enhancing LLMs' robustness to such noise is critical for improving the reliability of RAG systems. Recent advances have equipped LLMs with strong reasoning and self-reflection capabilities, allowing them to identify and correct errors in their reasoning process. Inspired by this ability, we propose Passage Injection-a simple yet effective method that explicitly incorporates retrieved passages into LLMs' reasoning process, aiming to enhance the model's ability to recognize and resist noisy passages. We validate Passage Injection under general RAG settings using BM25 as the retriever. Experiments on four reasoning-enhanced LLMs across four factual QA datasets demonstrate that Passage Injection significantly improves overall RAG performance. Further analysis on two noisy retrieval settings-random noise, where the model is provided irrelevant passages, and counterfactual noise, where it is given misleading passages-shows that Passage Injection consistently improves robustness. Controlled experiments confirm that Passage Injection can also effectively leverage helpful passages. These findings suggest that incorporating passages in LLMs' reasoning process is a promising direction for building more robust RAG systems. The code can be found \href{here}{this https URL}. 
+
+---
+# Towards LLM-Enhanced Group Recommender Systems 
+
+**Authors**: Sebastian Lubos, Alexander Felfernig, Thi Ngoc Trang Tran, Viet-Man Le, Damian Garber, Manuel Henrich, Reinhard Willfort, Jeremias Fuchs  
+
+**Link**: [PDF](https://arxiv.org/pdf/2507.19283)  
+
+**Abstract**: In contrast to single-user recommender systems, group recommender systems are designed to generate and explain recommendations for groups. This group-oriented setting introduces additional complexities, as several factors - absent in individual contexts - must be addressed. These include understanding group dynamics (e.g., social dependencies within the group), defining effective decision-making processes, ensuring that recommendations are suitable for all group members, and providing group-level explanations as well as explanations for individual users. In this paper, we analyze in which way large language models (LLMs) can support these aspects and help to increase the overall decision support quality and applicability of group recommender systems. 
+
+---
+# Distilling a Small Utility-Based Passage Selector to Enhance Retrieval-Augmented Generation 
+
+**Authors**: Hengran Zhang, Keping Bi, Jiafeng Guo, Jiaming Zhang, Shuaiqiang Wang, Dawei Yin, Xueqi Cheng  
+
+**Link**: [PDF](https://arxiv.org/pdf/2507.19102)  
+
+**Abstract**: Retrieval-augmented generation (RAG) enhances large language models (LLMs) by incorporating retrieved information. Standard retrieval process prioritized relevance, focusing on topical alignment between queries and passages. In contrast, in RAG, the emphasis has shifted to utility, which considers the usefulness of passages for generating accurate answers. Despite empirical evidence showing the benefits of utility-based retrieval in RAG, the high computational cost of using LLMs for utility judgments limits the number of passages evaluated. This restriction is problematic for complex queries requiring extensive information. To address this, we propose a method to distill the utility judgment capabilities of LLMs into smaller, more efficient models. Our approach focuses on utility-based selection rather than ranking, enabling dynamic passage selection tailored to specific queries without the need for fixed thresholds. We train student models to learn pseudo-answer generation and utility judgments from teacher LLMs, using a sliding window method that dynamically selects useful passages. Our experiments demonstrate that utility-based selection provides a flexible and cost-effective solution for RAG, significantly reducing computational costs while improving answer quality. We present the distillation results using Qwen3-32B as the teacher model for both relevance ranking and utility-based selection, distilled into RankQwen1.7B and UtilityQwen1.7B. Our findings indicate that for complex questions, utility-based selection is more effective than relevance ranking in enhancing answer generation performance. We will release the relevance ranking and utility-based selection annotations for the MS MARCO dataset, supporting further research in this area. 
+
+---
+# PBiLoss: Popularity-Aware Regularization to Improve Fairness in Graph-Based Recommender Systems 
+
+**Authors**: Mohammad Naeimi, Mostafa Haghir Chehreghani  
+
+**Link**: [PDF](https://arxiv.org/pdf/2507.19067)  
+
+**Abstract**: Recommender systems, especially those based on graph neural networks (GNNs), have achieved remarkable success in capturing user-item interaction patterns. However, they remain susceptible to popularity bias--the tendency to over-recommend popular items--resulting in reduced content diversity and compromised fairness. In this paper, we propose PBiLoss, a novel regularization-based loss function designed to counteract popularity bias in graph-based recommender models explicitly. PBiLoss augments traditional training objectives by penalizing the model's inclination toward popular items, thereby encouraging the recommendation of less popular but potentially more personalized content. We introduce two sampling strategies: Popular Positive (PopPos) and Popular Negative (PopNeg), which respectively modulate the contribution of the positive and negative popular items during training. We further explore two methods to distinguish popular items: one based on a fixed popularity threshold and another without any threshold, making the approach flexible and adaptive. Our proposed method is model-agnostic and can be seamlessly integrated into state-of-the-art graph-based frameworks such as LightGCN and its variants. Comprehensive experiments across multiple real-world datasets demonstrate that PBiLoss significantly improves fairness, as demonstrated by reductions in the Popularity-Rank Correlation for Users (PRU) and Popularity-Rank Correlation for Items (PRI), while maintaining or even enhancing standard recommendation accuracy and ranking metrics. These results highlight the effectiveness of directly embedding fairness objectives into the optimization process, providing a practical and scalable solution for balancing accuracy and equitable content exposure in modern recommender systems. 
+
+---
+# SelfRACG: Enabling LLMs to Self-Express and Retrieve for Code Generation 
+
+**Authors**: Qian Dong, Jia Chen, Qingyao Ai, Hongning Wang, Haitao Li, Yi Wu, Yao Hu, Yiqun Liu, Shaoping Ma  
+
+**Link**: [PDF](https://arxiv.org/pdf/2507.19033)  
+
+**Abstract**: Existing retrieval-augmented code generation (RACG) methods typically use an external retrieval module to fetch semantically similar code snippets used for generating subsequent fragments. However, even for consecutive code fragments, the content often diverges due to logical progression, resulting in a content gap. This gap undermines the performance of current RACG methods, as \textit{external} retrieval modules based on content matching fail to infer the specific information need of LLMs to generate the next code fragment. Therefore, we propose \textbf{SelfRACG}, a novel paradigm that enables large language models (LLMs) to \textbf{Self}-express their information needs to enhance \textbf{RACG}. Specifically, SelfRACG includes an information need expression module and a two-stage information need-guided training strategy, which encourages LLMs to express their information need. Extensive experiments demonstrate that SelfRACG can retrieve external knowledge that better aligns with the LLM's own information needs, resulting in superior generation performance compared to vanilla RACG. 
+
+---
+# Agent0: Leveraging LLM Agents to Discover Multi-value Features from Text for Enhanced Recommendations 
+
+**Authors**: Blaž Škrlj, Benoît Guilleminot, Andraž Tori  
+
+**Link**: [PDF](https://arxiv.org/pdf/2507.18993)  
+
+**Abstract**: Large language models (LLMs) and their associated agent-based frameworks have significantly advanced automated information extraction, a critical component of modern recommender systems. While these multitask frameworks are widely used in code generation, their application in data-centric research is still largely untapped. This paper presents Agent0, an LLM-driven, agent-based system designed to automate information extraction and feature construction from raw, unstructured text. Categorical features are crucial for large-scale recommender systems but are often expensive to acquire. Agent0 coordinates a group of interacting LLM agents to automatically identify the most valuable text aspects for subsequent tasks (such as models or AutoML pipelines). Beyond its feature engineering capabilities, Agent0 also offers an automated prompt-engineering tuning method that utilizes dynamic feedback loops from an oracle. Our findings demonstrate that this closed-loop methodology is both practical and effective for automated feature discovery, which is recognized as one of the most challenging phases in current recommender system development. 
+
+---
+# A Comprehensive Review of AI-based Intelligent Tutoring Systems: Applications and Challenges 
+
+**Authors**: Meriem Zerkouk, Miloud Mihoubi, Belkacem Chikhaoui  
+
+**Link**: [PDF](https://arxiv.org/pdf/2507.18882)  
+
+**Abstract**: AI-based Intelligent Tutoring Systems (ITS) have significant potential to transform teaching and learning. As efforts continue to design, develop, and integrate ITS into educational contexts, mixed results about their effectiveness have emerged. This paper provides a comprehensive review to understand how ITS operate in real educational settings and to identify the associated challenges in their application and evaluation. We use a systematic literature review method to analyze numerous qualified studies published from 2010 to 2025, examining domains such as pedagogical strategies, NLP, adaptive learning, student modeling, and domain-specific applications of ITS. The results reveal a complex landscape regarding the effectiveness of ITS, highlighting both advancements and persistent challenges. The study also identifies a need for greater scientific rigor in experimental design and data analysis. Based on these findings, suggestions for future research and practical implications are proposed. 
+
+---
+# Semantic IDs for Music Recommendation 
+
+**Authors**: M. Jeffrey Mei, Florian Henkel, Samuel E. Sandberg, Oliver Bembom, Andreas F. Ehmann  
+
+**Link**: [PDF](https://arxiv.org/pdf/2507.18800)  
+
+**Abstract**: Training recommender systems for next-item recommendation often requires unique embeddings to be learned for each item, which may take up most of the trainable parameters for a model. Shared embeddings, such as using content information, can reduce the number of distinct embeddings to be stored in memory. This allows for a more lightweight model; correspondingly, model complexity can be increased due to having fewer embeddings to store in memory. We show the benefit of using shared content-based features ('semantic IDs') in improving recommendation accuracy and diversity, while reducing model size, for two music recommendation datasets, including an online A/B test on a music streaming service. 
+
+---
+# CityHood: An Explainable Travel Recommender System for Cities and Neighborhoods 
+
+**Authors**: Gustavo H Santos, Myriam Delgado, Thiago H Silva  
+
+**Link**: [PDF](https://arxiv.org/pdf/2507.18778)  
+
+**Abstract**: We present CityHood, an interactive and explainable recommendation system that suggests cities and neighborhoods based on users' areas of interest. The system models user interests leveraging large-scale Google Places reviews enriched with geographic, socio-demographic, political, and cultural indicators. It provides personalized recommendations at city (Core-Based Statistical Areas - CBSAs) and neighborhood (ZIP code) levels, supported by an explainable technique (LIME) and natural-language explanations. Users can explore recommendations based on their stated preferences and inspect the reasoning behind each suggestion through a visual interface. The demo illustrates how spatial similarity, cultural alignment, and interest understanding can be used to make travel recommendations transparent and engaging. This work bridges gaps in location-based recommendation by combining a kind of interest modeling, multi-scale analysis, and explainability in a user-facing system. 
+
+---
+# On the Security of a Code-Based PIR Scheme 
+
+**Authors**: Svenja Lage, Hannes Bartz  
+
+**Link**: [PDF](https://arxiv.org/pdf/2507.19295)  
+
+**Abstract**: Private Information Retrieval (PIR) schemes allow clients to retrieve files from a database without disclosing the requested file's identity to the server. In the pursuit of post-quantum security, most recent PIR schemes rely on hard lattice problems. In contrast, the so called CB-cPIR scheme stands out as a pioneering effort to base PIR schemes on hard problems in coding theory, thereby contributing significantly to the diversification of security foundations. However, our research reveals a critical vulnerability in CB-cPIR, substantially diminishing its security levels. Moreover, a comparative analysis with state-of-the-art PIR schemes shows that CB-cPIR's advantages are reduced, making it less competitive in terms of the communication cost. Nevertheless, our findings highlight the importance of continued research into code-based PIR schemes, as they have the potential to provide a valuable alternative to lattice-based approaches. 
+
+---
+# Closing the Modality Gap for Mixed Modality Search 
+
+**Authors**: Binxu Li, Yuhui Zhang, Xiaohan Wang, Weixin Liang, Ludwig Schmidt, Serena Yeung-Levy  
+
+**Link**: [PDF](https://arxiv.org/pdf/2507.19054)  
+
+**Abstract**: Mixed modality search -- retrieving information across a heterogeneous corpus composed of images, texts, and multimodal documents -- is an important yet underexplored real-world application. In this work, we investigate how contrastive vision-language models, such as CLIP, perform on the mixed modality search task. Our analysis reveals a critical limitation: these models exhibit a pronounced modality gap in the embedding space, where image and text embeddings form distinct clusters, leading to intra-modal ranking bias and inter-modal fusion failure. To address this issue, we propose GR-CLIP, a lightweight post-hoc calibration method that removes the modality gap in CLIP's embedding space. Evaluated on MixBench -- the first benchmark specifically designed for mixed modality search -- GR-CLIP improves NDCG@10 by up to 26 percentage points over CLIP, surpasses recent vision-language generative embedding models by 4 percentage points, while using 75x less compute. 
+
+---
+# Exploitation Over Exploration: Unmasking the Bias in Linear Bandit Recommender Offline Evaluation 
+
+**Authors**: Pedro R. Pires, Gregorio F. Azevedo, Pietro L. Campos, Rafael T. Sereicikas, Tiago A. Almeida  
+
+**Link**: [PDF](https://arxiv.org/pdf/2507.18756)  
+
+**Abstract**: Multi-Armed Bandit (MAB) algorithms are widely used in recommender systems that require continuous, incremental learning. A core aspect of MABs is the exploration-exploitation trade-off: choosing between exploiting items likely to be enjoyed and exploring new ones to gather information. In contextual linear bandits, this trade-off is particularly central, as many variants share the same linear regression backbone and differ primarily in their exploration strategies. Despite its prevalent use, offline evaluation of MABs is increasingly recognized for its limitations in reliably assessing exploration behavior. This study conducts an extensive offline empirical comparison of several linear MABs. Strikingly, across over 90% of various datasets, a greedy linear model, with no type of exploration, consistently achieves top-tier performance, often outperforming or matching its exploratory counterparts. This observation is further corroborated by hyperparameter optimization, which consistently favors configurations that minimize exploration, suggesting that pure exploitation is the dominant strategy within these evaluation settings. Our results expose significant inadequacies in offline evaluation protocols for bandits, particularly concerning their capacity to reflect true exploratory efficacy. Consequently, this research underscores the urgent necessity for developing more robust assessment methodologies, guiding future investigations into alternative evaluation frameworks for interactive learning in recommender systems. 
+
+---
