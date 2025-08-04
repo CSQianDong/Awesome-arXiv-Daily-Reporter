@@ -1,0 +1,56 @@
+# RL-PLUS: Countering Capability Boundary Collapse of LLMs in Reinforcement Learning with Hybrid-policy Optimization 
+
+**Authors**: Yihong Dong, Xue Jiang, Yongding Tao, Huanyu Liu, Kechi Zhang, Lili Mou, Rongyu Cao, Yingwei Ma, Jue Chen, Binhua Li, Zhi Jin, Fei Huang, Yongbin Li, Ge Li  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.00222)  
+
+**Abstract**: Reinforcement Learning with Verifiable Reward (RLVR) has significantly advanced the complex reasoning abilities of Large Language Models (LLMs). However, it struggles to break through the inherent capability boundaries of the base LLM, due to its inherently on-policy strategy with LLM's immense action space and sparse reward. Further, RLVR can lead to the capability boundary collapse, narrowing the LLM's problem-solving scope. To address this problem, we propose RL-PLUS, a novel approach that synergizes internal exploitation (i.e., Thinking) with external data (i.e., Learning) to achieve stronger reasoning capabilities and surpass the boundaries of base models. RL-PLUS integrates two core components: Multiple Importance Sampling to address for distributional mismatch from external data, and an Exploration-Based Advantage Function to guide the model towards high-value, unexplored reasoning paths. We provide both theoretical analysis and extensive experiments to demonstrate the superiority and generalizability of our approach. The results show that RL-PLUS achieves state-of-the-art performance compared with existing RLVR methods on six math reasoning benchmarks and exhibits superior performance on six out-of-distribution reasoning tasks. It also achieves consistent and significant gains across diverse model families, with average relative improvements ranging from 21.1\% to 69.2\%. Moreover, Pass@k curves across multiple benchmarks indicate that RL-PLUS effectively resolves the capability boundary collapse problem. 
+
+---
+# Rethinking Evidence Hierarchies in Medical Language Benchmarks: A Critical Evaluation of HealthBench 
+
+**Authors**: Fred Mutisya, Shikoh Gitau, Nasubo Ongoma, Keith Mbae, Elizabeth Wamicha  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.00081)  
+
+**Abstract**: HealthBench, a benchmark designed to measure the capabilities of AI systems for health better (Arora et al., 2025), has advanced medical language model evaluation through physician-crafted dialogues and transparent rubrics. However, its reliance on expert opinion, rather than high-tier clinical evidence, risks codifying regional biases and individual clinician idiosyncrasies, further compounded by potential biases in automated grading systems. These limitations are particularly magnified in low- and middle-income settings, where issues like sparse neglected tropical disease coverage and region-specific guideline mismatches are prevalent.
+The unique challenges of the African context, including data scarcity, inadequate infrastructure, and nascent regulatory frameworks, underscore the urgent need for more globally relevant and equitable benchmarks. To address these shortcomings, we propose anchoring reward functions in version-controlled Clinical Practice Guidelines (CPGs) that incorporate systematic reviews and GRADE evidence ratings.
+Our roadmap outlines "evidence-robust" reinforcement learning via rubric-to-guideline linkage, evidence-weighted scoring, and contextual override logic, complemented by a focus on ethical considerations and the integration of delayed outcome feedback. By re-grounding rewards in rigorously vetted CPGs, while preserving HealthBench's transparency and physician engagement, we aim to foster medical language models that are not only linguistically polished but also clinically trustworthy, ethically sound, and globally relevant. 
+
+---
+# SynAdapt: Learning Adaptive Reasoning in Large Language Models via Synthetic Continuous Chain-of-Thought 
+
+**Authors**: Jianwei Wang, Ziming Wu, Fuming Lai, Shaobing Lian, Ziqian Zeng  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.00574)  
+
+**Abstract**: While Chain-of-Thought (CoT) reasoning improves model performance, it incurs significant time costs due to the generation of discrete CoT tokens (DCoT). Continuous CoT (CCoT) offers a more efficient alternative, but existing CCoT methods are hampered by indirect fine-tuning, limited alignment, or inconsistent targets. To overcome these limitations, we propose \textit{SynAdapt}, an innovative efficient reasoning framework. Specifically, \textit{SynAdapt} generates the synthetic CCoT to serve as a precise and effective alignment target for LLMs. This synthetic CCoT explicitly guides the LLM to learn CCoT and derive accurate answers directly. Furthermore, relying solely on CCoT is insufficient for solving hard questions. To address this, \textit{SynAdapt} integrates a difficulty classifier that leverages both question context and CCoT to identify hard questions. CCoT can effectively help identify hard questions after some brief reasoning. We then adaptively prompt the LLM to re-think these hard questions for improved performance. Extensive experimental results across various benchmarks from different difficulty levels strongly demonstrate the effectiveness of our method, achieving the best accuracy-efficiency trade-off. 
+
+---
+# Large AI Model-Enabled Secure Communications in Low-Altitude Wireless Networks: Concepts, Perspectives and Case Study 
+
+**Authors**: Chuang Zhang, Geng Sun, Jiacheng Wang, Yijing Lin, Weijie Yuan, Sinem Coleri, Dusit Niyato, Tony Q. S. Quek  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.00256)  
+
+**Abstract**: Low-altitude wireless networks (LAWNs) have the potential to revolutionize communications by supporting a range of applications, including urban parcel delivery, aerial inspections and air taxis. However, compared with traditional wireless networks, LAWNs face unique security challenges due to low-altitude operations, frequent mobility and reliance on unlicensed spectrum, making it more vulnerable to some malicious attacks. In this paper, we investigate some large artificial intelligence model (LAM)-enabled solutions for secure communications in LAWNs. Specifically, we first explore the amplified security risks and important limitations of traditional AI methods in LAWNs. Then, we introduce the basic concepts of LAMs and delve into the role of LAMs in addressing these challenges. To demonstrate the practical benefits of LAMs for secure communications in LAWNs, we propose a novel LAM-based optimization framework that leverages large language models (LLMs) to generate enhanced state features on top of handcrafted representations, and to design intrinsic rewards accordingly, thereby improving reinforcement learning performance for secure communication tasks. Through a typical case study, simulation results validate the effectiveness of the proposed framework. Finally, we outline future directions for integrating LAMs into secure LAWN applications. 
+
+---
+# Lucy: edgerunning agentic web search on mobile with machine generated task vectors 
+
+**Authors**: Alan Dao, Dinh Bach Vu, Alex Nguyen, Norapat Buppodom  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.00360)  
+
+**Abstract**: Small language models (SLMs) are inherently limited in knowledge-intensive tasks due to their constrained capacity. While test-time computation offers a path to enhanced performance, most approaches treat reasoning as a fixed or heuristic process. In this work, we propose a new paradigm: viewing the model's internal reasoning, delimited by <think> and </think> tags, as a dynamic task vector machine. Rather than treating the content inside these tags as a mere trace of thought, we interpret the generation process itself as a mechanism through which the model \textbf{constructs and refines its own task vectors} on the fly. We developed a method to optimize this dynamic task vector machine through RLVR and successfully trained an agentic web-search model. We present Lucy, a 1.7B-parameter SLM that leverages this dynamic reasoning mechanism with MCP integration to achieve 78.3% accuracy on the SimpleQA benchmark, performing on par with much larger models such as DeepSeek-V3. This demonstrates that small models can rival large ones when equipped with structured, self-constructed task reasoning. 
+
+---
+# PilotRL: Training Language Model Agents via Global Planning-Guided Progressive Reinforcement Learning 
+
+**Authors**: Keer Lu, Chong Chen, Bin Cui, Huang Leng, Wentao Zhang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.00344)  
+
+**Abstract**: Large Language Models (LLMs) have shown remarkable advancements in tackling agent-oriented tasks. Despite their potential, existing work faces challenges when deploying LLMs in agent-based environments. The widely adopted agent paradigm ReAct centers on integrating single-step reasoning with immediate action execution, which limits its effectiveness in complex tasks requiring long-term strategic planning. Furthermore, the coordination between the planner and executor during problem-solving is also a critical factor to consider in agent design. Additionally, current approaches predominantly rely on supervised fine-tuning, which often leads models to memorize established task completion trajectories, thereby restricting their generalization ability when confronted with novel problem contexts. To address these challenges, we introduce an adaptive global plan-based agent paradigm AdaPlan, aiming to synergize high-level explicit guidance with execution to support effective long-horizon decision-making. Based on the proposed paradigm, we further put forward PilotRL, a global planning-guided training framework for LLM agents driven by progressive reinforcement learning. We first develop the model's ability to follow explicit guidance from global plans when addressing agent tasks. Subsequently, based on this foundation, we focus on optimizing the quality of generated plans. Finally, we conduct joint optimization of the model's planning and execution coordination. Experiments indicate that PilotRL could achieve state-of-the-art performances, with LLaMA3.1-8B-Instruct + PilotRL surpassing closed-sourced GPT-4o by 3.60%, while showing a more substantial gain of 55.78% comparing to GPT-4o-mini at a comparable parameter scale. 
+
+---

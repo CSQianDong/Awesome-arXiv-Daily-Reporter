@@ -1,0 +1,108 @@
+# Harnessing the Power of Interleaving and Counterfactual Evaluation for Airbnb Search Ranking 
+
+**Authors**: Qing Zhang, Alex Deng, Michelle Du, Huiji Gao, Liwei He, Sanjeev Katariya  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.00751)  
+
+**Abstract**: Evaluation plays a crucial role in the development of ranking algorithms on search and recommender systems. It enables online platforms to create user-friendly features that drive commercial success in a steady and effective manner. The online environment is particularly conducive to applying causal inference techniques, such as randomized controlled experiments (known as A/B test), which are often more challenging to implement in fields like medicine and public policy. However, businesses face unique challenges when it comes to effective A/B test. Specifically, achieving sufficient statistical power for conversion-based metrics can be time-consuming, especially for significant purchases like booking accommodations. While offline evaluations are quicker and more cost-effective, they often lack accuracy and are inadequate for selecting candidates for A/B test. To address these challenges, we developed interleaving and counterfactual evaluation methods to facilitate rapid online assessments for identifying the most promising candidates for A/B tests. Our approach not only increased the sensitivity of experiments by a factor of up to 100 (depending on the approach and metrics) compared to traditional A/B testing but also streamlined the experimental process. The practical insights gained from usage in production can also benefit organizations with similar interests. 
+
+---
+# Experimental Evaluation of Dynamic Topic Modeling Algorithms 
+
+**Authors**: Ngozichukwuka Onah, Nadine Steinmetz, Hani Al-Sayeh, Kai-Uwe Sattler  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.00710)  
+
+**Abstract**: The amount of text generated daily on social media is gigantic and analyzing this text is useful for many purposes. To understand what lies beneath a huge amount of text, we need dependable and effective computing techniques from self-powered topic models. Nevertheless, there are currently relatively few thorough quantitative comparisons between these models. In this study, we compare these models and propose an assessment metric that documents how the topics change in time. 
+
+---
+# Session-Based Recommendation with Validated and Enriched LLM Intents 
+
+**Authors**: Gyuseok Lee, Yaokun Liu, Yifan Liu, Susik Yoon, Dong Wang, SeongKu Kang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.00570)  
+
+**Abstract**: Session-based recommendation (SBR) aims to predict the next item for an anonymous user in a timely manner. However, SBR suffers from data sparsity due to the short and anonymous nature of sessions. Recently, an emerging line of work has explored inferring the underlying user intents of a session using large language models (LLMs), with the generated intents serving as auxiliary training signals to enhance SBR models. Despite its promise, this approach faces three key challenges: validating intent quality, incorporating session-level multi-intents, and complementing inevitable LLM failure cases. In this paper, we propose VELI4SBR, a two-stage framework that leverages Validated and Enriched LLM-generated Intents for SBR. In the first stage, we generate high-quality intents using a predict-and-correct loop that validates the informativeness of LLM-generated intents with a global intent pool to constrain the LLM's output space and reduce hallucination. In the second stage, we enhance the SBR model using the generated intents through a lightweight multi-intent prediction and fusion mechanism. Furthermore, we introduce a training strategy that compensates for LLM failures by inferring intents from inter-session behavioral similarities. Extensive experiments show that VELI4SBR outperforms state-of-the-art baselines while improving explainability. 
+
+---
+# M^2VAE: Multi-Modal Multi-View Variational Autoencoder for Cold-start Item Recommendation 
+
+**Authors**: Chuan He, Yongchao Liu, Qiang Li, Wenliang Zhong, Chuntao Hong, Xinwei Yao  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.00452)  
+
+**Abstract**: Cold-start item recommendation is a significant challenge in recommendation systems, particularly when new items are introduced without any historical interaction data. While existing methods leverage multi-modal content to alleviate the cold-start issue, they often neglect the inherent multi-view structure of modalities, the distinction between shared and modality-specific features. In this paper, we propose Multi-Modal Multi-View Variational AutoEncoder (M^2VAE), a generative model that addresses the challenges of modeling common and unique views in attribute and multi-modal features, as well as user preferences over single-typed item features. Specifically, we generate type-specific latent variables for item IDs, categorical attributes, and image features, and use Product-of-Experts (PoE) to derive a common representation. A disentangled contrastive loss decouples the common view from unique views while preserving feature informativeness. To model user inclinations, we employ a preference-guided Mixture-of-Experts (MoE) to adaptively fuse representations. We further incorporate co-occurrence signals via contrastive learning, eliminating the need for pretraining. Extensive experiments on real-world datasets validate the effectiveness of our approach. 
+
+---
+# When Relevance Meets Novelty: Dual-Stable Periodic Optimization for Exploratory Recommendation 
+
+**Authors**: Hongxiang Lin, Hao Guo, Zeshun Li, Erpeng Xue, Yongqian He, Xiangyu Hou, Zhaoyu Hu, Lei Wang, Sheng Chen  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.00450)  
+
+**Abstract**: Traditional recommendation systems tend to trap users in strong feedback loops by excessively pushing content aligned with their historical preferences, thereby limiting exploration opportunities and causing content fatigue. Although large language models (LLMs) demonstrate potential with their diverse content generation capabilities, existing LLM-enhanced dual-model frameworks face two major limitations: first, they overlook long-term preferences driven by group identity, leading to biased interest modeling; second, they suffer from static optimization flaws, as a one-time alignment process fails to leverage incremental user data for closed-loop optimization. To address these challenges, we propose the Co-Evolutionary Alignment (CoEA) method. For interest modeling bias, we introduce Dual-Stable Interest Exploration (DSIE) module, jointly modeling long-term group identity and short-term individual interests through parallel processing of behavioral sequences. For static optimization limitations, we design a Periodic Collaborative Optimization (PCO) mechanism. This mechanism regularly conducts preference verification on incremental data using the Relevance LLM, then guides the Novelty LLM to perform fine-tuning based on the verification results, and subsequently feeds back the output of the incrementally fine-tuned Novelty LLM to the Relevance LLM for re-evaluation, thereby achieving a dynamic closed-loop optimization. Extensive online and offline experiments verify the effectiveness of the CoEA model in exploratory recommendation. 
+
+---
+# Audio Prototypical Network For Controllable Music Recommendation 
+
+**Authors**: Fırat Öncel, Emiliano Penaloza, Haolun Wu, Shubham Gupta, Mirco Ravanelli, Laurent Charlin, Cem Subakan  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.00194)  
+
+**Abstract**: Traditional recommendation systems represent user preferences in dense representations obtained through black-box encoder models. While these models often provide strong recommendation performance, they lack interpretability for users, leaving users unable to understand or control the system's modeling of their preferences. This limitation is especially challenging in music recommendation, where user preferences are highly personal and often evolve based on nuanced qualities like mood, genre, tempo, or instrumentation. In this paper, we propose an audio prototypical network for controllable music recommendation. This network expresses user preferences in terms of prototypes representative of semantically meaningful features pertaining to musical qualities. We show that the model obtains competitive recommendation performance compared to popular baseline models while also providing interpretable and controllable user profiles. 
+
+---
+# NyayaRAG: Realistic Legal Judgment Prediction with RAG under the Indian Common Law System 
+
+**Authors**: Shubham Kumar Nigam, Balaramamahanthi Deepak Patnaik, Shivam Mishra, Ajay Varghese Thomas, Noel Shallum, Kripabandhu Ghosh, Arnab Bhattacharya  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.00709)  
+
+**Abstract**: Legal Judgment Prediction (LJP) has emerged as a key area in AI for law, aiming to automate judicial outcome forecasting and enhance interpretability in legal reasoning. While previous approaches in the Indian context have relied on internal case content such as facts, issues, and reasoning, they often overlook a core element of common law systems, which is reliance on statutory provisions and judicial precedents. In this work, we propose NyayaRAG, a Retrieval-Augmented Generation (RAG) framework that simulates realistic courtroom scenarios by providing models with factual case descriptions, relevant legal statutes, and semantically retrieved prior cases. NyayaRAG evaluates the effectiveness of these combined inputs in predicting court decisions and generating legal explanations using a domain-specific pipeline tailored to the Indian legal system. We assess performance across various input configurations using both standard lexical and semantic metrics as well as LLM-based evaluators such as G-Eval. Our results show that augmenting factual inputs with structured legal knowledge significantly improves both predictive accuracy and explanation quality. 
+
+---
+# Segment First, Retrieve Better: Realistic Legal Search via Rhetorical Role-Based Queries 
+
+**Authors**: Shubham Kumar Nigam, Tanmay Dubey, Noel Shallum, Arnab Bhattacharya  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.00679)  
+
+**Abstract**: Legal precedent retrieval is a cornerstone of the common law system, governed by the principle of stare decisis, which demands consistency in judicial decisions. However, the growing complexity and volume of legal documents challenge traditional retrieval methods. TraceRetriever mirrors real-world legal search by operating with limited case information, extracting only rhetorically significant segments instead of requiring complete documents. Our pipeline integrates BM25, Vector Database, and Cross-Encoder models, combining initial results through Reciprocal Rank Fusion before final re-ranking. Rhetorical annotations are generated using a Hierarchical BiLSTM CRF classifier trained on Indian judgments. Evaluated on IL-PCR and COLIEE 2025 datasets, TraceRetriever addresses growing document volume challenges while aligning with practical search constraints, reliable and scalable foundation for precedent retrieval enhancing legal research when only partial case knowledge is available. 
+
+---
+# Context-based Motion Retrieval using Open Vocabulary Methods for Autonomous Driving 
+
+**Authors**: Stefan Englmeier, Max A. Büttner, Katharina Winter, Fabian B. Flohr  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.00589)  
+
+**Abstract**: Autonomous driving systems must operate reliably in safety-critical scenarios, particularly those involving unusual or complex behavior by Vulnerable Road Users (VRUs). Identifying these edge cases in driving datasets is essential for robust evaluation and generalization, but retrieving such rare human behavior scenarios within the long tail of large-scale datasets is challenging. To support targeted evaluation of autonomous driving systems in diverse, human-centered scenarios, we propose a novel context-aware motion retrieval framework. Our method combines Skinned Multi-Person Linear (SMPL)-based motion sequences and corresponding video frames before encoding them into a shared multimodal embedding space aligned with natural language. Our approach enables the scalable retrieval of human behavior and their context through text queries. This work also introduces our dataset WayMoCo, an extension of the Waymo Open Dataset. It contains automatically labeled motion and scene context descriptions derived from generated pseudo-ground-truth SMPL sequences and corresponding image data. Our approach outperforms state-of-the-art models by up to 27.5% accuracy in motion-context retrieval, when evaluated on the WayMoCo dataset. 
+
+---
+# MMRAG-DocQA: A Multi-Modal Retrieval-Augmented Generation Method for Document Question-Answering with Hierarchical Index and Multi-Granularity Retrieval 
+
+**Authors**: Ziyu Gong, Yihua Huang, Chengcheng Mai  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.00579)  
+
+**Abstract**: The multi-modal long-context document question-answering task aims to locate and integrate multi-modal evidences (such as texts, tables, charts, images, and layouts) distributed across multiple pages, for question understanding and answer generation. The existing methods can be categorized into Large Vision-Language Model (LVLM)-based and Retrieval-Augmented Generation (RAG)-based methods. However, the former were susceptible to hallucinations, while the latter struggled for inter-modal disconnection and cross-page fragmentation. To address these challenges, a novel multi-modal RAG model, named MMRAG-DocQA, was proposed, leveraging both textual and visual information across long-range pages to facilitate accurate question answering. A hierarchical indexing method with the integration of flattened in-page chunks and topological cross-page chunks was designed to jointly establish in-page multi-modal associations and long-distance cross-page dependencies. By means of joint similarity evaluation and large language model (LLM)-based re-ranking, a multi-granularity semantic retrieval method, including the page-level parent page retrieval and document-level summary retrieval, was proposed to foster multi-modal evidence connection and long-distance evidence integration and reasoning. Experimental results performed on public datasets, MMLongBench-Doc and LongDocURL, demonstrated the superiority of our MMRAG-DocQA method in understanding and answering modality-rich and multi-page documents. 
+
+---
+# MetaAgent: Toward Self-Evolving Agent via Tool Meta-Learning 
+
+**Authors**: Hongjin Qian, Zheng Liu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.00271)  
+
+**Abstract**: In this work, we propose MetaAgent, an agentic paradigm inspired by the principle of learning-by-doing, where expertise is developed through hands-on practice and continual self-improvement. MetaAgent starts with a minimal workflow, equipped only with basic reasoning and adaptive help-seeking abilities. When a knowledge gap is encountered, MetaAgent generates natural language help requests, which are routed to the most suitable external tool by a dedicated tool router. As MetaAgent solves tasks, it continually conducts self-reflection and answer verification, distilling actionable experience into concise texts that are dynamically incorporated into future task contexts. Besides, MetaAgent autonomously builds in-house tools and a persistent knowledge base by organizing its tool-use history, further enhancing its ability to retrieve and integrate relevant information We term this continual, data-driven process as \textit{meta tool learning}, through which MetaAgent incrementally refines its reasoning and tool-use strategies, without changing model parameters or requiring further post-training. Evaluated on challenging knowledge discovery benchmarks, including GAIA, WebWalkerQA, and BrowseCamp, MetaAgent consistently outperforms workflow-based baselines and matches or exceeds end-to-end trained agents, demonstrating the promise of self-evolving agentic systems for robust, general-purpose knowledge discovery. We provide our source codes in this https URL. 
+
+---
+# Melody-Lyrics Matching with Contrastive Alignment Loss 
+
+**Authors**: Changhong Wang, Michel Olvera, Gaël Richard  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.00123)  
+
+**Abstract**: The connection between music and lyrics is far beyond semantic bonds. Conceptual pairs in the two modalities such as rhythm and rhyme, note duration and syllabic stress, and structure correspondence, raise a compelling yet seldom-explored direction in the field of music information retrieval. In this paper, we present melody-lyrics matching (MLM), a new task which retrieves potential lyrics for a given symbolic melody from text sources. Rather than generating lyrics from scratch, MLM essentially exploits the relationships between melody and lyrics. We propose a self-supervised representation learning framework with contrastive alignment loss for melody and lyrics. This has the potential to leverage the abundance of existing songs with paired melody and lyrics. No alignment annotations are required. Additionally, we introduce sylphone, a novel representation for lyrics at syllable-level activated by phoneme identity and vowel stress. We demonstrate that our method can match melody with coherent and singable lyrics with empirical results and intuitive examples. We open source code and provide matching examples on the companion webpage: this https URL. 
+
+---
