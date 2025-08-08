@@ -1,0 +1,181 @@
+# KuaiLive: A Real-time Interactive Dataset for Live Streaming Recommendation 
+
+**Authors**: Changle Qu, Sunhao Dai, Ke Guo, Liqin Zhao, Yanan Niu, Xiao Zhang, Jun Xu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.05633)  
+
+**Abstract**: Live streaming platforms have become a dominant form of online content consumption, offering dynamically evolving content, real-time interactions, and highly engaging user experiences. These unique characteristics introduce new challenges that differentiate live streaming recommendation from traditional recommendation settings and have garnered increasing attention from industry in recent years. However, research progress in academia has been hindered by the lack of publicly available datasets that accurately reflect the dynamic nature of live streaming environments. To address this gap, we introduce KuaiLive, the first real-time, interactive dataset collected from Kuaishou, a leading live streaming platform in China with over 400 million daily active users. The dataset records the interaction logs of 23,772 users and 452,621 streamers over a 21-day period. Compared to existing datasets, KuaiLive offers several advantages: it includes precise live room start and end timestamps, multiple types of real-time user interactions (click, comment, like, gift), and rich side information features for both users and streamers. These features enable more realistic simulation of dynamic candidate items and better modeling of user and streamer behaviors. We conduct a thorough analysis of KuaiLive from multiple perspectives and evaluate several representative recommendation methods on it, establishing a strong benchmark for future research. KuaiLive can support a wide range of tasks in the live streaming domain, such as top-K recommendation, click-through rate prediction, watch time prediction, and gift price prediction. Moreover, its fine-grained behavioral data also enables research on multi-behavior modeling, multi-task learning, and fairness-aware recommendation. The dataset and related resources are publicly available at this https URL. 
+
+---
+# RankArena: A Unified Platform for Evaluating Retrieval, Reranking and RAG with Human and LLM Feedback 
+
+**Authors**: Abdelrahman Abdallah, Mahmoud Abdalla, Bhawna Piryani, Jamshid Mozafari, Mohammed Ali, Adam Jatowt  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.05512)  
+
+**Abstract**: Evaluating the quality of retrieval-augmented generation (RAG) and document reranking systems remains challenging due to the lack of scalable, user-centric, and multi-perspective evaluation tools. We introduce RankArena, a unified platform for comparing and analysing the performance of retrieval pipelines, rerankers, and RAG systems using structured human and LLM-based feedback as well as for collecting such feedback. RankArena supports multiple evaluation modes: direct reranking visualisation, blind pairwise comparisons with human or LLM voting, supervised manual document annotation, and end-to-end RAG answer quality assessment. It captures fine-grained relevance feedback through both pairwise preferences and full-list annotations, along with auxiliary metadata such as movement metrics, annotation time, and quality ratings. The platform also integrates LLM-as-a-judge evaluation, enabling comparison between model-generated rankings and human ground truth annotations. All interactions are stored as structured evaluation datasets that can be used to train rerankers, reward models, judgment agents, or retrieval strategy selectors. Our platform is publicly available at this https URL, and the Demo video is provided this https URL. 
+
+---
+# On the Reliability of Sampling Strategies in Offline Recommender Evaluation 
+
+**Authors**: Bruno L. Pereira, Alan Said, Rodrygo L. T. Santos  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.05398)  
+
+**Abstract**: Offline evaluation plays a central role in benchmarking recommender systems when online testing is impractical or risky. However, it is susceptible to two key sources of bias: exposure bias, where users only interact with items they are shown, and sampling bias, introduced when evaluation is performed on a subset of logged items rather than the full catalog. While prior work has proposed methods to mitigate sampling bias, these are typically assessed on fixed logged datasets rather than for their ability to support reliable model comparisons under varying exposure conditions or relative to true user preferences. In this paper, we investigate how different combinations of logging and sampling choices affect the reliability of offline evaluation. Using a fully observed dataset as ground truth, we systematically simulate diverse exposure biases and assess the reliability of common sampling strategies along four dimensions: sampling resolution (recommender model separability), fidelity (agreement with full evaluation), robustness (stability under exposure bias), and predictive power (alignment with ground truth). Our findings highlight when and how sampling distorts evaluation outcomes and offer practical guidance for selecting strategies that yield faithful and robust offline comparisons. 
+
+---
+# Does Multimodality Improve Recommender Systems as Expected? A Critical Analysis and Future Directions 
+
+**Authors**: Hongyu Zhou, Yinan Zhang, Aixin Sun, Zhiqi Shen  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.05377)  
+
+**Abstract**: Multimodal recommendation systems are increasingly popular for their potential to improve performance by integrating diverse data types. However, the actual benefits of this integration remain unclear, raising questions about when and how it truly enhances recommendations. In this paper, we propose a structured evaluation framework to systematically assess multimodal recommendations across four dimensions: Comparative Efficiency, Recommendation Tasks, Recommendation Stages, and Multimodal Data Integration. We benchmark a set of reproducible multimodal models against strong traditional baselines and evaluate their performance on different platforms. Our findings show that multimodal data is particularly beneficial in sparse interaction scenarios and during the recall stage of recommendation pipelines. We also observe that the importance of each modality is task-specific, where text features are more useful in e-commerce and visual features are more effective in short-video recommendations. Additionally, we explore different integration strategies and model sizes, finding that Ensemble-Based Learning outperforms Fusion-Based Learning, and that larger models do not necessarily deliver better results. To deepen our understanding, we include case studies and review findings from other recommendation domains. Our work provides practical insights for building efficient and effective multimodal recommendation systems, emphasizing the need for thoughtful modality selection, integration strategies, and model design. 
+
+---
+# Multi-Modal Multi-Behavior Sequential Recommendation with Conditional Diffusion-Based Feature Denoising 
+
+**Authors**: Xiaoxi Cui, Weihai Lu, Yu Tong, Yiheng Li, Zhejun Zhao  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.05352)  
+
+**Abstract**: The sequential recommendation system utilizes historical user interactions to predict preferences. Effectively integrating diverse user behavior patterns with rich multimodal information of items to enhance the accuracy of sequential recommendations is an emerging and challenging research direction. This paper focuses on the problem of multi-modal multi-behavior sequential recommendation, aiming to address the following challenges: (1) the lack of effective characterization of modal preferences across different behaviors, as user attention to different item modalities varies depending on the behavior; (2) the difficulty of effectively mitigating implicit noise in user behavior, such as unintended actions like accidental clicks; (3) the inability to handle modality noise in multi-modal representations, which further impacts the accurate modeling of user preferences. To tackle these issues, we propose a novel Multi-Modal Multi-Behavior Sequential Recommendation model (M$^3$BSR). This model first removes noise in multi-modal representations using a Conditional Diffusion Modality Denoising Layer. Subsequently, it utilizes deep behavioral information to guide the denoising of shallow behavioral data, thereby alleviating the impact of noise in implicit feedback through Conditional Diffusion Behavior Denoising. Finally, by introducing a Multi-Expert Interest Extraction Layer, M$^3$BSR explicitly models the common and specific interests across behaviors and modalities to enhance recommendation performance. Experimental results indicate that M$^3$BSR significantly outperforms existing state-of-the-art methods on benchmark datasets. 
+
+---
+# Difference Views for Visual Graph Query Building 
+
+**Authors**: Benedikt Kantz, Stefan Lengauer, Peter Waldert, Tobias Schreck  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.05314)  
+
+**Abstract**: Knowledge Graphs (KGs) contain vast amounts of linked resources that encode knowledge in various domains, which can be queried and searched for using specialized languages like SPARQL, a query language developed to query KGs. Existing visual query builders enable non-expert users to construct SPARQL queries and utilize the knowledge contained in these graphs. Query building is, however, an iterative and, often, visual process where the question of the user can change and differ throughout the process, especially for explorative search. Our visual querying interface communicates these change between iterative steps in the query building process using graph differences to contrast the changes and the evolution in the graph query. We also enable users to formulate their evolving information needs using a natural language interface directly integrated into the difference query view. We, furthermore, communicate the change in results in the result view by contrasting the differences in both result distribution and individual instances of the prototype graph and demonstrate the system's applicability through case studies on different ontologies and usage scenarios, illustrating how our system fosters, both, data exploration and analysis of domain-specific graphs. 
+
+---
+# FIRE: Faithful Interpretable Recommendation Explanations 
+
+**Authors**: S.M.F. Sani, Asal Meskin, Mohammad Amanlou, Hamid R. Rabiee  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.05225)  
+
+**Abstract**: Natural language explanations in recommender systems are often framed as a review generation task, leveraging user reviews as ground-truth supervision. While convenient, this approach conflates a user's opinion with the system's reasoning, leading to explanations that may be fluent but fail to reflect the true logic behind recommendations. In this work, we revisit the core objective of explainable recommendation: to transparently communicate why an item is recommended by linking user needs to relevant item features. Through a comprehensive analysis of existing methods across multiple benchmark datasets, we identify common limitations-explanations that are weakly aligned with model predictions, vague or inaccurate in identifying user intents, and overly repetitive or generic. To overcome these challenges, we propose FIRE, a lightweight and interpretable framework that combines SHAP-based feature attribution with structured, prompt-driven language generation. FIRE produces faithful, diverse, and user-aligned explanations, grounded in the actual decision-making process of the model. Our results demonstrate that FIRE not only achieves competitive recommendation accuracy but also significantly improves explanation quality along critical dimensions such as alignment, structure, and faithfulness. This work highlights the need to move beyond the review-as-explanation paradigm and toward explanation methods that are both accountable and interpretable. 
+
+---
+# Balancing Accuracy and Novelty with Sub-Item Popularity 
+
+**Authors**: Chiara Mallamaci, Aleksandr Vladimirovich Petrov, Alberto Carlo Maria Mancino, Vito Walter Anelli, Tommaso Di Noia, Craig Macdonald  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.05198)  
+
+**Abstract**: In the realm of music recommendation, sequential recommenders have shown promise in capturing the dynamic nature of music consumption. A key characteristic of this domain is repetitive listening, where users frequently replay familiar tracks. To capture these repetition patterns, recent research has introduced Personalised Popularity Scores (PPS), which quantify user-specific preferences based on historical frequency. While PPS enhances relevance in recommendation, it often reinforces already-known content, limiting the system's ability to surface novel or serendipitous items - key elements for fostering long-term user engagement and satisfaction. To address this limitation, we build upon RecJPQ, a Transformer-based framework initially developed to improve scalability in large-item catalogues through sub-item decomposition. We repurpose RecJPQ's sub-item architecture to model personalised popularity at a finer granularity. This allows us to capture shared repetition patterns across sub-embeddings - latent structures not accessible through item-level popularity alone. We propose a novel integration of sub-ID-level personalised popularity within the RecJPQ framework, enabling explicit control over the trade-off between accuracy and personalised novelty. Our sub-ID-level PPS method (sPPS) consistently outperforms item-level PPS by achieving significantly higher personalised novelty without compromising recommendation accuracy. Code and experiments are publicly available at this https URL. 
+
+---
+# Tool Graph Retriever: Exploring Dependency Graph-based Tool Retrieval for Large Language Models 
+
+**Authors**: Linfeng Gao, Yaoxiang Wang, Minlong Peng, Jialong Tang, Yuzhe Shang, Mingming Sun, Jinsong Su  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.05152)  
+
+**Abstract**: With the remarkable advancement of AI agents, the number of their equipped tools is increasing rapidly. However, integrating all tool information into the limited model context becomes impractical, highlighting the need for efficient tool retrieval methods. In this regard, dominant methods primarily rely on semantic similarities between tool descriptions and user queries to retrieve relevant tools. However, they often consider each tool independently, overlooking dependencies between tools, which may lead to the omission of prerequisite tools for successful task execution. To deal with this defect, in this paper, we propose Tool Graph Retriever (TGR), which exploits the dependencies among tools to learn better tool representations for retrieval. First, we construct a dataset termed TDI300K to train a discriminator for identifying tool dependencies. Then, we represent all candidate tools as a tool dependency graph and use graph convolution to integrate the dependencies into their representations. Finally, these updated tool representations are employed for online retrieval. Experimental results on several commonly used datasets show that our TGR can bring a performance improvement to existing dominant methods, achieving SOTA performance. Moreover, in-depth analyses also verify the importance of tool dependencies and the effectiveness of our TGR. 
+
+---
+# Navigating Through Paper Flood: Advancing LLM-based Paper Evaluation through Domain-Aware Retrieval and Latent Reasoning 
+
+**Authors**: Wuqiang Zheng, Yiyan Xu, Xinyu Lin, Chongming Gao, Wenjie Wang, Fuli Feng  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.05129)  
+
+**Abstract**: With the rapid and continuous increase in academic publications, identifying high-quality research has become an increasingly pressing challenge. While recent methods leveraging Large Language Models (LLMs) for automated paper evaluation have shown great promise, they are often constrained by outdated domain knowledge and limited reasoning capabilities. In this work, we present PaperEval, a novel LLM-based framework for automated paper evaluation that addresses these limitations through two key components: 1) a domain-aware paper retrieval module that retrieves relevant concurrent work to support contextualized assessments of novelty and contributions, and 2) a latent reasoning mechanism that enables deep understanding of complex motivations and methodologies, along with comprehensive comparison against concurrently related work, to support more accurate and reliable evaluation. To guide the reasoning process, we introduce a progressive ranking optimization strategy that encourages the LLM to iteratively refine its predictions with an emphasis on relative comparison. Experiments on two datasets demonstrate that PaperEval consistently outperforms existing methods in both academic impact and paper quality evaluation. In addition, we deploy PaperEval in a real-world paper recommendation system for filtering high-quality papers, which has gained strong engagement on social media -- amassing over 8,000 subscribers and attracting over 10,000 views for many filtered high-quality papers -- demonstrating the practical effectiveness of PaperEval. 
+
+---
+# An End-to-End Multi-objective Ensemble Ranking Framework for Video Recommendation 
+
+**Authors**: Tiantian He, Minzhi Xie, Runtong Li, Xiaoxiao Xu, Jiaqi Yu, Zixiu Wang, Lantao Hu, Han Li, Kun Gai  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.05093)  
+
+**Abstract**: We propose a novel End-to-end Multi-objective Ensemble Ranking framework (EMER) for the multi-objective ensemble ranking module, which is the most critical component of the short video recommendation system. EMER enhances personalization by replacing manually-designed heuristic formulas with an end-to-end modeling paradigm. EMER introduces a meticulously designed loss function to address the fundamental challenge of defining effective supervision for ensemble ranking, where no single ground-truth signal can fully capture user satisfaction. Moreover, EMER introduces novel sample organization method and transformer-based network architecture to capture the comparative relationships among candidates, which are critical for effective ranking. Additionally, we have proposed an offline-online consistent evaluation system to enhance the efficiency of offline model optimization, which is an established yet persistent challenge within the multi-objective ranking domain in industry. Abundant empirical tests are conducted on a real industrial dataset, and the results well demonstrate the effectiveness of our proposed framework. In addition, our framework has been deployed in the primary scenarios of Kuaishou, a short video recommendation platform with hundreds of millions of daily active users, achieving a 1.39% increase in overall App Stay Time and a 0.196% increase in 7-day user Lifetime(LT7), which are substantial improvements. 
+
+---
+# Align-for-Fusion: Harmonizing Triple Preferences via Dual-oriented Diffusion for Cross-domain Sequential Recommendation 
+
+**Authors**: Yongfu Zha, Xinxin Dong, Haokai Ma, Yonghui Yang, Xiaodong Wang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.05074)  
+
+**Abstract**: Personalized sequential recommendation aims to predict appropriate items for users based on their behavioral sequences. To alleviate data sparsity and interest drift issues, conventional approaches typically incorporate auxiliary behaviors from other domains via cross-domain transition. However, existing cross-domain sequential recommendation (CDSR) methods often follow an align-then-fusion paradigm that performs representation-level alignment across multiple domains and combines them mechanically for recommendation, overlooking the fine-grained fusion of domain-specific preferences. Inspired by recent advances in diffusion models (DMs) for distribution matching, we propose an align-for-fusion framework for CDSR to harmonize triple preferences via dual-oriented DMs, termed HorizonRec. Specifically, we investigate the uncertainty injection of DMs and identify stochastic noise as a key source of instability in existing DM-based recommenders. To address this, we introduce a mixed-conditioned distribution retrieval strategy that leverages distributions retrieved from users' authentic behavioral logic as semantic bridges across domains, enabling consistent multi-domain preference modeling. Furthermore, we propose a dual-oriented preference diffusion method to suppress potential noise and emphasize target-relevant interests during multi-domain user representation fusion. Extensive experiments on four CDSR datasets from two distinct platforms demonstrate the effectiveness and robustness of HorizonRec in fine-grained triple-domain preference fusion. 
+
+---
+# A Metric for MLLM Alignment in Large-scale Recommendation 
+
+**Authors**: Yubin Zhang, Yanhua Huang, Haiming Xu, Mingliang Qi, Chang Wang, Jiarui Jin, Xiangyuan Ren, Xiaodan Wang, Ruiwen Xu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.04963)  
+
+**Abstract**: Multimodal recommendation has emerged as a critical technique in modern recommender systems, leveraging content representations from advanced multimodal large language models (MLLMs). To ensure these representations are well-adapted, alignment with the recommender system is essential. However, evaluating the alignment of MLLMs for recommendation presents significant challenges due to three key issues: (1) static benchmarks are inaccurate because of the dynamism in real-world applications, (2) evaluations with online system, while accurate, are prohibitively expensive at scale, and (3) conventional metrics fail to provide actionable insights when learned representations underperform. To address these challenges, we propose the Leakage Impact Score (LIS), a novel metric for multimodal recommendation. Rather than directly assessing MLLMs, LIS efficiently measures the upper bound of preference data. We also share practical insights on deploying MLLMs with LIS in real-world scenarios. Online A/B tests on both Content Feed and Display Ads of Xiaohongshu's Explore Feed production demonstrate the effectiveness of our proposed method, showing significant improvements in user spent time and advertiser value. 
+
+---
+# Scaling Generative Recommendations with Context Parallelism on Hierarchical Sequential Transducers 
+
+**Authors**: Yue Dong, Han Li, Shen Li, Nikhil Patel, Xing Liu, Xiaodong Wang, Chuanhao Zhuge  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.04711)  
+
+**Abstract**: Large-scale recommendation systems are pivotal to process an immense volume of daily user interactions, requiring the effective modeling of high cardinality and heterogeneous features to ensure accurate predictions. In prior work, we introduced Hierarchical Sequential Transducers (HSTU), an attention-based architecture for modeling high cardinality, non-stationary streaming recommendation data, providing good scaling law in the generative recommender framework (GR). Recent studies and experiments demonstrate that attending to longer user history sequences yields significant metric improvements. However, scaling sequence length is activation-heavy, necessitating parallelism solutions to effectively shard activation memory. In transformer-based LLMs, context parallelism (CP) is a commonly used technique that distributes computation along the sequence-length dimension across multiple GPUs, effectively reducing memory usage from attention activations. In contrast, production ranking models typically utilize jagged input tensors to represent user interaction features, introducing unique CP implementation challenges. In this work, we introduce context parallelism with jagged tensor support for HSTU attention, establishing foundational capabilities for scaling up sequence dimensions. Our approach enables a 5.3x increase in supported user interaction sequence length, while achieving a 1.55x scaling factor when combined with Distributed Data Parallelism (DDP). 
+
+---
+# Augmented Question-guided Retrieval (AQgR) of Indian Case Law with LLM, RAG, and Structured Summaries 
+
+**Authors**: Vishnuprabha V, Daleesha M Viswanathan, Rajesh R, Aneesh V Pillai  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.04710)  
+
+**Abstract**: Identifying relevant legal precedents remains challenging, as most retrieval methods emphasize factual similarity over legal issues, and current systems often lack explanations clarifying case relevance. This paper proposes the use of Large Language Models (LLMs) to address this gap by facilitating the retrieval of relevant cases, generating explanations to elucidate relevance, and identifying core legal issues all autonomously, without requiring legal expertise. Our approach combines Retrieval Augmented Generation (RAG) with structured summaries optimized for Indian case law. Leveraging the Augmented Question-guided Retrieval (AQgR) framework, the system generates targeted legal questions based on factual scenarios to identify relevant case law more effectively. The structured summaries were assessed manually by legal experts, given the absence of a suitable structured summary dataset. Case law retrieval was evaluated using the FIRE dataset, and explanations were reviewed by legal experts, as explanation generation alongside case retrieval is an emerging innovation. Experimental evaluation on a subset of the FIRE 2019 dataset yielded promising outcomes, achieving a Mean Average Precision (MAP) score of 0.36 and a Mean Average Recall (MAR) of 0.67 across test queries, significantly surpassing the current MAP benchmark of 0.1573. This work introduces a suite of novel contributions to advance case law retrieval. By transitioning from fact-based to legal-issue-based retrieval, the proposed approach delivers more contextually relevant results that align closely with legal professionals' needs. Integrating legal questions within the retrieval process through the AQgR framework ensures more precise and meaningful retrieval by refining the context of queries. 
+
+---
+# Bidding-Aware Retrieval for Multi-Stage Consistency in Online Advertising 
+
+**Authors**: Bin Liu, Yunfei Liu, Ziru Xu, Zhaoyu Zhou, Zhi Kou, Yeqiu Yang, Han Zhu, Jian Xu, Bo Zheng  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.05206)  
+
+**Abstract**: Online advertising systems typically use a cascaded architecture to manage massive requests and candidate volumes, where the ranking stages allocate traffic based on eCPM (predicted CTR $\times$ Bid). With the increasing popularity of auto-bidding strategies, the inconsistency between the computationally sensitive retrieval stage and the ranking stages becomes more pronounced, as the former cannot access precise, real-time bids for the vast ad corpus. This discrepancy leads to sub-optimal platform revenue and advertiser outcomes. To tackle this problem, we propose Bidding-Aware Retrieval (BAR), a model-based retrieval framework that addresses multi-stage inconsistency by incorporating ad bid value into the retrieval scoring function. The core innovation is Bidding-Aware Modeling, incorporating bid signals through monotonicity-constrained learning and multi-task distillation to ensure economically coherent representations, while Asynchronous Near-Line Inference enables real-time updates to the embedding for market responsiveness. Furthermore, the Task-Attentive Refinement module selectively enhances feature interactions to disentangle user interest and commercial value signals. Extensive offline experiments and full-scale deployment across Alibaba's display advertising platform validated BAR's efficacy: 4.32% platform revenue increase with 22.2% impression lift for positively-operated advertisements. 
+
+---
+# Community-Aware Social Community Recommendation 
+
+**Authors**: Runhao Jiang, Renchi Yang, Wenqing Lin  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.05107)  
+
+**Abstract**: Social recommendation, which seeks to leverage social ties among users to alleviate the sparsity issue of user-item interactions, has emerged as a popular technique for elevating personalized services in recommender systems. Despite being effective, existing social recommendation models are mainly devised for recommending regular items such as blogs, images, and products, and largely fail for community recommendations due to overlooking the unique characteristics of communities. Distinctly, communities are constituted by individuals, who present high dynamicity and relate to rich structural patterns in social networks. To our knowledge, limited research has been devoted to comprehensively exploiting this information for recommending communities.
+To bridge this gap, this paper presents CASO, a novel and effective model specially designed for social community recommendation. Under the hood, CASO harnesses three carefully-crafted encoders for user embedding, wherein two of them extract community-related global and local structures from the social network via social modularity maximization and social closeness aggregation, while the third one captures user preferences using collaborative filtering with observed user-community affiliations. To further eliminate feature redundancy therein, we introduce a mutual exclusion between social and collaborative signals. Finally, CASO includes a community detection loss in the model optimization, thereby producing community-aware embeddings for communities. Our extensive experiments evaluating CASO against nine strong baselines on six real-world social networks demonstrate its consistent and remarkable superiority over the state of the art in terms of community recommendation performance. 
+
+---
+# Data-Aware Socratic Query Refinement in Database Systems 
+
+**Authors**: Ruiyuan Zhang, Chrysanthi Kosyfaki, Xiaofang Zhou  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.05061)  
+
+**Abstract**: In this paper, we propose Data-Aware Socratic Guidance (DASG), a dialogue-based query enhancement framework that embeds \linebreak interactive clarification as a first-class operator within database systems to resolve ambiguity in natural language queries. DASG treats dialogue as an optimization decision, asking clarifying questions only when the expected execution cost reduction exceeds the interaction overhead. The system quantifies ambiguity through linguistic fuzziness, schema grounding confidence, and projected costs across relational and vector backends. Our algorithm selects the optimal clarifications by combining semantic relevance, catalog-based information gain, and potential cost reduction. We evaluate our proposed framework on three datasets. The results show that DASG demonstrates improved query precision while maintaining efficiency, establishing a cooperative analytics paradigm where systems actively participate in query formulation rather than passively translating user requests. 
+
+---
+# Federated Continual Recommendation 
+
+**Authors**: Jaehyung Lim, Wonbin Kweon, Woojoo Kim, Junyoung Kim, Seongjin Choi, Dongha Kim, Hwanjo Yu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.04792)  
+
+**Abstract**: The increasing emphasis on privacy in recommendation systems has led to the adoption of Federated Learning (FL) as a privacy-preserving solution, enabling collaborative training without sharing user data. While Federated Recommendation (FedRec) effectively protects privacy, existing methods struggle with non-stationary data streams, failing to maintain consistent recommendation quality over time. On the other hand, Continual Learning Recommendation (CLRec) methods address evolving user preferences but typically assume centralized data access, making them incompatible with FL constraints. To bridge this gap, we introduce Federated Continual Recommendation (FCRec), a novel task that integrates FedRec and CLRec, requiring models to learn from streaming data while preserving privacy. As a solution, we propose F3CRec, a framework designed to balance knowledge retention and adaptation under the strict constraints of FCRec. F3CRec introduces two key components: Adaptive Replay Memory on the client side, which selectively retains past preferences based on user-specific shifts, and Item-wise Temporal Mean on the server side, which integrates new knowledge while preserving prior information. Extensive experiments demonstrate that F3CRec outperforms existing approaches in maintaining recommendation quality over time in a federated environment. 
+
+---
+# NAEx: A Plug-and-Play Framework for Explaining Network Alignment 
+
+**Authors**: Shruti Saxena, Arijit Khan, Joydeep Chandra  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.04731)  
+
+**Abstract**: Network alignment (NA) identifies corresponding nodes across multiple networks, with applications in domains like social networks, co-authorship, and biology. Despite advances in alignment models, their interpretability remains limited, making it difficult to understand alignment decisions and posing challenges in building trust, particularly in high-stakes domains. To address this, we introduce NAEx, a plug-and-play, model-agnostic framework that explains alignment models by identifying key subgraphs and features influencing predictions. NAEx addresses the key challenge of preserving the joint cross-network dependencies on alignment decisions by: (1) jointly parameterizing graph structures and feature spaces through learnable edge and feature masks, and (2) introducing an optimization objective that ensures explanations are both faithful to the original predictions and enable meaningful comparisons of structural and feature-based similarities between networks. NAEx is an inductive framework that efficiently generates NA explanations for previously unseen data. We introduce evaluation metrics tailored to alignment explainability and demonstrate NAEx's effectiveness and efficiency on benchmark datasets by integrating it with four representative NA models. 
+
+---
