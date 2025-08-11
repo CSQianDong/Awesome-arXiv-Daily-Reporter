@@ -1,0 +1,130 @@
+# Classification is a RAG problem: A case study on hate speech detection 
+
+**Authors**: Richard Willats, Josh Pennington, Aravind Mohan, Bertie Vidgen  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.06204)  
+
+**Abstract**: Robust content moderation requires classification systems that can quickly adapt to evolving policies without costly retraining. We present classification using Retrieval-Augmented Generation (RAG), which shifts traditional classification tasks from determining the correct category in accordance with pre-trained parameters to evaluating content in relation to contextual knowledge retrieved at inference. In hate speech detection, this transforms the task from "is this hate speech?" to "does this violate the hate speech policy?"
+Our Contextual Policy Engine (CPE) - an agentic RAG system - demonstrates this approach and offers three key advantages: (1) robust classification accuracy comparable to leading commercial systems, (2) inherent explainability via retrieved policy segments, and (3) dynamic policy updates without model retraining. Through three experiments, we demonstrate strong baseline performance and show that the system can apply fine-grained policy control by correctly adjusting protection for specific identity groups without requiring retraining or compromising overall performance. These findings establish that RAG can transform classification into a more flexible, transparent, and adaptable process for content moderation and wider classification problems. 
+
+---
+# UR$^2$: Unify RAG and Reasoning through Reinforcement Learning 
+
+**Authors**: Weitao Li, Boran Xiang, Xiaolong Wang, Zhinan Gou, Weizhi Ma, Yang Liu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.06165)  
+
+**Abstract**: Large Language Models (LLMs) have shown remarkable capabilities through two complementary paradigms: Retrieval-Augmented Generation (RAG), which enhances knowledge grounding, and Reinforcement Learning from Verifiable Rewards (RLVR), which optimizes complex reasoning abilities. However, these two capabilities are often developed in isolation, and existing efforts to unify them remain narrow in scope-typically limited to open-domain QA with fixed retrieval settings and task-specific assumptions. This lack of integration constrains generalization and limits the applicability of RAG-RL methods to broader domains. To bridge this gap, we propose UR2 (Unified RAG and Reasoning), a general framework that unifies retrieval and reasoning through reinforcement learning. UR2 introduces two key contributions: a difficulty-aware curriculum training that selectively invokes retrieval only for challenging problems, and a hybrid knowledge access strategy combining domain-specific offline corpora with LLM-generated summaries. These components are designed to enable dynamic coordination between retrieval and reasoning, improving adaptability across a diverse range of tasks. Experiments across open-domain QA, MMLU-Pro, medical, and mathematical reasoning tasks demonstrate that UR2 (built on Qwen2.5-3/7B and LLaMA-3.1-8B) significantly outperforms existing RAG and RL methods, achieving comparable performance to GPT-4o-mini and GPT-4.1-mini on several benchmarks. We have released all code, models, and data at this https URL. 
+
+---
+# Spectrum Projection Score: Aligning Retrieved Summaries with Reader Models in Retrieval-Augmented Generation 
+
+**Authors**: Zhanghao Hu, Qinglin Zhu, Siya Qi, Yulan He, Hanqi Yan, Lin Gui  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.05909)  
+
+**Abstract**: Large Language Models (LLMs) have shown improved generation performance through retrieval-augmented generation (RAG) following the retriever-reader paradigm, which supplements model inputs with externally retrieved knowledge. However, prior work often evaluates RAG holistically, assessing the retriever and reader jointly, making it difficult to isolate the true contribution of retrieval, particularly given the prompt sensitivity of LLMs used as readers. We introduce Spectrum Projection Score (SPS), a lightweight, supervision-free metric that allows the reader to gauge the semantic alignment of a retrieved summary with its hidden representation by comparing the area formed by generated tokens from the summary, and the principal directions of subspace in the reader and to measure the relevance. Building on SPS we present xCompress, an inference time controller framework that dynamically samples, ranks, and compresses retrieval summary candidates. Extensive experiments on five QA benchmarks with four open source LLMs show that SPS not only enhances performance across a range of tasks but also provides a principled perspective on the interaction between retrieval and generation. 
+
+---
+# Enhancing Retrieval-Augmented Generation for Electric Power Industry Customer Support 
+
+**Authors**: Hei Yu Chan, Kuok Tou Ho, Chenglong Ma, Yujing Si, Hok Lai Lin, Sa Lei Lam  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.05664)  
+
+**Abstract**: Many AI customer service systems use standard NLP pipelines or finetuned language models, which often fall short on ambiguous, multi-intent, or detail-specific queries. This case study evaluates recent techniques: query rewriting, RAG Fusion, keyword augmentation, intent recognition, and context reranking, for building a robust customer support system in the electric power domain. We compare vector-store and graph-based RAG frameworks, ultimately selecting the graph-based RAG for its superior performance in handling complex queries. We find that query rewriting improves retrieval for queries using non-standard terminology or requiring precise detail. RAG Fusion boosts performance on vague or multifaceted queries by merging multiple retrievals. Reranking reduces hallucinations by filtering irrelevant contexts. Intent recognition supports the decomposition of complex questions into more targeted sub-queries, increasing both relevance and efficiency. In contrast, keyword augmentation negatively impacts results due to biased keyword selection. Our final system combines intent recognition, RAG Fusion, and reranking to handle disambiguation and multi-source queries. Evaluated on both a GPT-4-generated dataset and a real-world electricity provider FAQ dataset, it achieves 97.9% and 89.6% accuracy respectively, substantially outperforming baseline RAG models. 
+
+---
+# A Systematic Literature Review of Retrieval-Augmented Generation: Techniques, Metrics, and Challenges 
+
+**Authors**: Andrew Brown, Muhammad Roman, Barry Devereux  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.06401)  
+
+**Abstract**: This systematic review of the research literature on retrieval-augmented generation (RAG) provides a focused analysis of the most highly cited studies published between 2020 and May 2025. A total of 128 articles met our inclusion criteria. The records were retrieved from ACM Digital Library, IEEE Xplore, Scopus, ScienceDirect, and the Digital Bibliography and Library Project (DBLP). RAG couples a neural retriever with a generative language model, grounding output in up-to-date, non-parametric memory while retaining the semantic generalisation stored in model weights. Guided by the PRISMA 2020 framework, we (i) specify explicit inclusion and exclusion criteria based on citation count and research questions, (ii) catalogue datasets, architectures, and evaluation practices, and (iii) synthesise empirical evidence on the effectiveness and limitations of RAG. To mitigate citation-lag bias, we applied a lower citation-count threshold to papers published in 2025 so that emerging breakthroughs with naturally fewer citations were still captured. This review clarifies the current research landscape, highlights methodological gaps, and charts priority directions for future research. 
+
+---
+# Retrieval Augmented Large Language Model System for Comprehensive Drug Contraindications 
+
+**Authors**: Byeonghun Bang, Jongsuk Yoon, Dong-Jin Chang, Seho Park, Yong Oh Lee  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.06145)  
+
+**Abstract**: The versatility of large language models (LLMs) has been explored across various sectors, but their application in healthcare poses challenges, particularly in the domain of pharmaceutical contraindications where accurate and reliable information is required. This study enhances the capability of LLMs to address contraindications effectively by implementing a Retrieval Augmented Generation (RAG) pipeline. Utilizing OpenAI's GPT-4o-mini as the base model, and the text-embedding-3-small model for embeddings, our approach integrates Langchain to orchestrate a hybrid retrieval system with re-ranking. This system leverages Drug Utilization Review (DUR) data from public databases, focusing on contraindications for specific age groups, pregnancy, and concomitant drug use. The dataset includes 300 question-answer pairs across three categories, with baseline model accuracy ranging from 0.49 to 0.57. Post-integration of the RAG pipeline, we observed a significant improvement in model accuracy, achieving rates of 0.94, 0.87, and 0.89 for contraindications related to age groups, pregnancy, and concomitant drug use, respectively. The results indicate that augmenting LLMs with a RAG framework can substantially reduce uncertainty in prescription and drug intake decisions by providing more precise and reliable drug contraindication information. 
+
+---
+# LMAR: Language Model Augmented Retriever for Domain-specific Knowledge Indexing 
+
+**Authors**: Yao Zhao, Yantian Ding, Zhiyue Zhang, Dapeng Yao, Yanxun Xu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.05672)  
+
+**Abstract**: Retrieval Augmented Generation (RAG) systems often struggle with domain-specific knowledge due to performance deterioration of pre-trained embeddings and prohibitive computational costs of large language model (LLM)-based retrievers. While fine-tuning data augmentation embedding models offers a promising direction, its effectiveness is limited by the need for high-quality training data and reliable chunking strategies that preserve contextual integrity. We propose LMAR (Language Model Augmented Retriever), a model-agnostic framework that addresses these challenges by combining LLM-guided data synthesis with contrastive embedding adaptation and efficient text clustering. LMAR consists of a two-stage pipeline: (1) Triplet sampling and synthetic data augmentation, where LLMs act as both labeler and validator to ensure high-fidelity supervision throughout the pipeline. Experimental results across multiple domain-specific benchmark datasets demonstrate that LMAR outperforms multiple baseline models, while maintaining moderate hardware requirements and low latency. Its model-agnostic nature further enables seamless integration with emerging RAG architectures and text embedding models, ensuring continual improvements without redesigning the pipeline. These results highlight LMAR as a practical and cost-effective solution for scalable domain-specific adaptation. 
+
+---
+# Open-Source Agentic Hybrid RAG Framework for Scientific Literature Review 
+
+**Authors**: Aditya Nagori, Ricardo Accorsi Casonatto, Ayush Gautam, Abhinav Manikantha Sai Cheruvu, Rishikesan Kamaleswaran  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.05660)  
+
+**Abstract**: The surge in scientific publications challenges traditional review methods, demanding tools that integrate structured metadata with full-text analysis. Hybrid Retrieval Augmented Generation (RAG) systems, combining graph queries with vector search offer promise but are typically static, rely on proprietary tools, and lack uncertainty estimates. We present an agentic approach that encapsulates the hybrid RAG pipeline within an autonomous agent capable of (1) dynamically selecting between GraphRAG and VectorRAG for each query, (2) adapting instruction-tuned generation in real time to researcher needs, and (3) quantifying uncertainty during inference. This dynamic orchestration improves relevance, reduces hallucinations, and promotes reproducibility.
+Our pipeline ingests bibliometric open-access data from PubMed, arXiv, and Google Scholar APIs, builds a Neo4j citation-based knowledge graph (KG), and embeds full-text PDFs into a FAISS vector store (VS) using the all-MiniLM-L6-v2 model. A Llama-3.3-70B agent selects GraphRAG (translating queries to Cypher for KG) or VectorRAG (combining sparse and dense retrieval with re-ranking). Instruction tuning refines domain-specific generation, and bootstrapped evaluation yields standard deviation for evaluation metrics.
+On synthetic benchmarks mimicking real-world queries, the Instruction-Tuned Agent with Direct Preference Optimization (DPO) outperforms the baseline, achieving a gain of 0.63 in VS Context Recall and a 0.56 gain in overall Context Precision. Additional gains include 0.24 in VS Faithfulness, 0.12 in both VS Precision and KG Answer Relevance, 0.11 in overall Faithfulness score, 0.05 in KG Context Recall, and 0.04 in both VS Answer Relevance and overall Precision. These results highlight the system's improved reasoning over heterogeneous sources and establish a scalable framework for autonomous, agentic scientific discovery. 
+
+---
+# Lessons from A Large Language Model-based Outdoor Trail Recommendation Chatbot with Retrieval Augmented Generation 
+
+**Authors**: Julia Ann Mathew, Suining He  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.05652)  
+
+**Abstract**: The increasing popularity of outdoor recreational activities (such as hiking and biking) has boosted the demand for a conversational AI system to provide informative and personalized suggestion on outdoor trails. Challenges arise in response to (1) how to provide accurate outdoor trail information via conversational AI; and (2) how to enable usable and efficient recommendation services. To address above, this paper discusses the preliminary and practical lessons learned from developing Judy, an outdoor trail recommendation chatbot based on the large language model (LLM) with retrieval augmented generation (RAG). To gain concrete system insights, we have performed case studies with the outdoor trails in Connecticut (CT), US. We have conducted web-based data collection, outdoor trail data management, and LLM model performance studies on the RAG-based recommendation. Our experimental results have demonstrated the accuracy, effectiveness, and usability of Judy in recommending outdoor trails based on the LLM with RAG. 
+
+---
+# OmniBench-RAG: A Multi-Domain Evaluation Platform for Retrieval-Augmented Generation Tools 
+
+**Authors**: Jiaxuan Liang, Shide Zhou, Kailong Wang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.05650)  
+
+**Abstract**: While Retrieval Augmented Generation (RAG) is now widely adopted to enhance LLMs, evaluating its true performance benefits in a reproducible and interpretable way remains a major hurdle. Existing methods often fall short: they lack domain coverage, employ coarse metrics that miss sub document precision, and fail to capture computational trade offs. Most critically, they provide no standardized framework for comparing RAG effectiveness across different models and domains.
+We introduce OmniBench RAG, a novel automated platform for multi domain evaluation of RAG systems. The platform quantifies performance gains across accuracy and efficiency dimensions, spanning nine knowledge fields including culture, geography, and health. We introduce two standardized metrics: Improvements (accuracy gains) and Transformation (efficiency differences between pre RAG and post RAG models), enabling reproducible comparisons across models and tasks. The platform features dynamic test generation, modular evaluation pipelines, and automated knowledge base construction. Our evaluation reveals striking variability in RAG effectiveness, from significant gains in culture to declines in mathematics, highlighting the critical importance of systematic, domain aware assessment. A demonstration video is available at: this https URL. Code and datasets: this https URL. 
+
+---
+# AquiLLM: a RAG Tool for Capturing Tacit Knowledge in Research Groups 
+
+**Authors**: Chandler Campbell, Bernie Boscoe, Tuan Do  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.05648)  
+
+**Abstract**: Research groups face persistent challenges in capturing, storing, and retrieving knowledge that is distributed across team members. Although structured data intended for analysis and publication is often well managed, much of a group's collective knowledge remains informal, fragmented, or undocumented--often passed down orally through meetings, mentoring, and day-to-day collaboration. This includes private resources such as emails, meeting notes, training materials, and ad hoc documentation. Together, these reflect the group's tacit knowledge--the informal, experience-based expertise that underlies much of their work. Accessing this knowledge can be difficult, requiring significant time and insider understanding. Retrieval-augmented generation (RAG) systems offer promising solutions by enabling users to query and generate responses grounded in relevant source material. However, most current RAG-LLM systems are oriented toward public documents and overlook the privacy concerns of internal research materials. We introduce AquiLLM (pronounced ah-quill-em), a lightweight, modular RAG system designed to meet the needs of research groups. AquiLLM supports varied document types and configurable privacy settings, enabling more effective access to both formal and informal knowledge within scholarly groups. 
+
+---
+# Query-Aware Graph Neural Networks for Enhanced Retrieval-Augmented Generation 
+
+**Authors**: Vibhor Agrawal, Fay Wang, Rishi Puri  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.05647)  
+
+**Abstract**: We present a novel graph neural network (GNN) architecture for retrieval-augmented generation (RAG) that leverages query-aware attention mechanisms and learned scoring heads to improve retrieval accuracy on complex, multi-hop questions. Unlike traditional dense retrieval methods that treat documents as independent entities, our approach constructs per-episode knowledge graphs that capture both sequential and semantic relationships between text chunks. We introduce an Enhanced Graph Attention Network with query-guided pooling that dynamically focuses on relevant parts of the graph based on user queries. Experimental results demonstrate that our approach significantly outperforms standard dense retrievers on complex question answering tasks, particularly for questions requiring multi-document reasoning. Our implementation leverages PyTorch Geometric for efficient processing of graph-structured data, enabling scalable deployment in production retrieval systems 
+
+---
+# From Static to Dynamic: A Streaming RAG Approach to Real-time Knowledge Base 
+
+**Authors**: Yuzhou Zhu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.05662)  
+
+**Abstract**: Dynamic streams from news feeds, social media, sensor networks, and financial markets challenge static RAG frameworks. Full-scale indices incur high memory costs; periodic rebuilds introduce latency that undermines data freshness; naive sampling sacrifices semantic coverage. We present Streaming RAG, a unified pipeline that combines multi-vector cosine screening, mini-batch clustering, and a counter-based heavy-hitter filter to maintain a compact prototype set. We further prove an approximation bound \$E\[R(K\_t)] \ge R^\* - L \Delta\$ linking retrieval quality to clustering variance. An incremental index upsert mechanism refreshes prototypes without interrupting queries. Experiments on eight real-time streams show statistically significant gains in Recall\@10 (up to 3 points, p < 0.01), end-to-end latency below 15 ms, and throughput above 900 documents per second under a 150 MB budget. Hyperparameter sensitivity analysis over cluster count, admission probability, relevance threshold, and counter capacity validates default settings. In open-domain question answering with GPT-3.5 Turbo, we record 3.2-point gain in Exact Match and 2.8-point gain in F1 on SQuAD; abstractive summarization yields ROUGE-L improvements. Streaming RAG establishes a new Pareto frontier for retrieval augmentation. 
+
+---
+# HySemRAG: A Hybrid Semantic Retrieval-Augmented Generation Framework for Automated Literature Synthesis and Methodological Gap Analysis 
+
+**Authors**: Alejandro Godinez  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.05666)  
+
+**Abstract**: We present HySemRAG, a framework that combines Extract, Transform, Load (ETL) pipelines with Retrieval-Augmented Generation (RAG) to automate large-scale literature synthesis and identify methodological research gaps. The system addresses limitations in existing RAG architectures through a multi-layered approach: hybrid retrieval combining semantic search, keyword filtering, and knowledge graph traversal; an agentic self-correction framework with iterative quality assurance; and post-hoc citation verification ensuring complete traceability. Our implementation processes scholarly literature through eight integrated stages: multi-source metadata acquisition, asynchronous PDF retrieval, custom document layout analysis using modified Docling architecture, bibliographic management, LLM-based field extraction, topic modeling, semantic unification, and knowledge graph construction. The system creates dual data products - a Neo4j knowledge graph enabling complex relationship queries and Qdrant vector collections supporting semantic search - serving as foundational infrastructure for verifiable information synthesis. Evaluation across 643 observations from 60 testing sessions demonstrates structured field extraction achieving 35.1% higher semantic similarity scores (0.655 $\pm$ 0.178) compared to PDF chunking approaches (0.485 $\pm$ 0.204, p < 0.000001). The agentic quality assurance mechanism achieves 68.3% single-pass success rates with 99.0% citation accuracy in validated responses. Applied to geospatial epidemiology literature on ozone exposure and cardiovascular disease, the system identifies methodological trends and research gaps, demonstrating broad applicability across scientific domains for accelerating evidence synthesis and discovery. 
+
+---
