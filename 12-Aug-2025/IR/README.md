@@ -1,0 +1,272 @@
+# HierSearch: A Hierarchical Enterprise Deep Search Framework Integrating Local and Web Searches 
+
+**Authors**: Jiejun Tan, Zhicheng Dou, Yan Yu, Jiehan Cheng, Qiang Ju, Jian Xie, Ji-Rong Wen  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.08088)  
+
+**Abstract**: Recently, large reasoning models have demonstrated strong mathematical and coding abilities, and deep search leverages their reasoning capabilities in challenging information retrieval tasks. Existing deep search works are generally limited to a single knowledge source, either local or the Web. However, enterprises often require private deep search systems that can leverage search tools over both local and the Web corpus. Simply training an agent equipped with multiple search tools using flat reinforcement learning (RL) is a straightforward idea, but it has problems such as low training data efficiency and poor mastery of complex tools. To address the above issue, we propose a hierarchical agentic deep search framework, HierSearch, trained with hierarchical RL. At the low level, a local deep search agent and a Web deep search agent are trained to retrieve evidence from their corresponding domains. At the high level, a planner agent coordinates low-level agents and provides the final answer. Moreover, to prevent direct answer copying and error propagation, we design a knowledge refiner that filters out hallucinations and irrelevant evidence returned by low-level agents. Experiments show that HierSearch achieves better performance compared to flat RL, and outperforms various deep search and multi-source retrieval-augmented generation baselines in six benchmarks across general, finance, and medical domains. 
+
+---
+# Multi-modal Adaptive Mixture of Experts for Cold-start Recommendation 
+
+**Authors**: Van-Khang Nguyen, Duc-Hoang Pham, Huy-Son Nguyen, Cam-Van Thi Nguyen, Hoang-Quynh Le, Duc-Trong Le  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.08042)  
+
+**Abstract**: Recommendation systems have faced significant challenges in cold-start scenarios, where new items with a limited history of interaction need to be effectively recommended to users. Though multimodal data (e.g., images, text, audio, etc.) offer rich information to address this issue, existing approaches often employ simplistic integration methods such as concatenation, average pooling, or fixed weighting schemes, which fail to capture the complex relationships between modalities. Our study proposes a novel Mixture of Experts (MoE) framework for multimodal cold-start recommendation, named MAMEX, which dynamically leverages latent representation from different modalities. MAMEX utilizes modality-specific expert networks and introduces a learnable gating mechanism that adaptively weights the contribution of each modality based on its content characteristics. This approach enables MAMEX to emphasize the most informative modalities for each item while maintaining robustness when certain modalities are less relevant or missing. Extensive experiments on benchmark datasets show that MAMEX outperforms state-of-the-art methods in cold-start scenarios, with superior accuracy and adaptability. For reproducibility, the code has been made available on Github this https URL. 
+
+---
+# DIVER: A Multi-Stage Approach for Reasoning-intensive Information Retrieval 
+
+**Authors**: Meixiu Long, Duolin Sun, Dan Yang, Junjie Wang, Yue Shen, Jian Wang, Peng Wei, Jinjie Gu, Jiahai Wang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.07995)  
+
+**Abstract**: Retrieval-augmented generation has achieved strong performance on knowledge-intensive tasks where query-document relevance can be identified through direct lexical or semantic matches. However, many real-world queries involve abstract reasoning, analogical thinking, or multi-step inference, which existing retrievers often struggle to capture. To address this challenge, we present \textbf{DIVER}, a retrieval pipeline tailored for reasoning-intensive information retrieval. DIVER consists of four components: document processing to improve input quality, LLM-driven query expansion via iterative document interaction, a reasoning-enhanced retriever fine-tuned on synthetic multi-domain data with hard negatives, and a pointwise reranker that combines LLM-assigned helpfulness scores with retrieval scores. On the BRIGHT benchmark, DIVER achieves state-of-the-art nDCG@10 scores of 41.6 and 28.9 on original queries, consistently outperforming competitive reasoning-aware models. These results demonstrate the effectiveness of reasoning-aware retrieval strategies in complex real-world tasks. Our code and retrieval model will be released soon. 
+
+---
+# Improving Document Retrieval Coherence for Semantically Equivalent Queries 
+
+**Authors**: Stefano Campese, Alessandro Moschitti, Ivano Lauriola  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.07975)  
+
+**Abstract**: Dense Retrieval (DR) models have proven to be effective for Document Retrieval and Information Grounding tasks. Usually, these models are trained and optimized for improving the relevance of top-ranked documents for a given query. Previous work has shown that popular DR models are sensitive to the query and document lexicon: small variations of it may lead to a significant difference in the set of retrieved documents. In this paper, we propose a variation of the Multi-Negative Ranking loss for training DR that improves the coherence of models in retrieving the same documents with respect to semantically similar queries. The loss penalizes discrepancies between the top-k ranked documents retrieved for diverse but semantic equivalent queries. We conducted extensive experiments on various datasets, MS-MARCO, Natural Questions, BEIR, and TREC DL 19/20. The results show that (i) models optimizes by our loss are subject to lower sensitivity, and, (ii) interestingly, higher accuracy. 
+
+---
+# Careful Queries, Credible Results: Teaching RAG Models Advanced Web Search Tools with Reinforcement Learning 
+
+**Authors**: Yuqin Dai, Shuo Yang, Guoqing Wang, Yong Deng, Zhanwei Zhang, Jun Yin, Pengyu Zeng, Zhenzhe Ying, Changhua Meng, Can Yi, Yuchen Zhou, Weiqiang Wang, Shuai Lu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.07956)  
+
+**Abstract**: Retrieval-Augmented Generation (RAG) enhances large language models (LLMs) by integrating up-to-date external knowledge, yet real-world web environments present unique challenges. These limitations manifest as two key challenges: pervasive misinformation in the web environment, which introduces unreliable or misleading content that can degrade retrieval accuracy, and the underutilization of web tools, which, if effectively employed, could enhance query precision and help mitigate this noise, ultimately improving the retrieval results in RAG systems. To address these issues, we propose WebFilter, a novel RAG framework that generates source-restricted queries and filters out unreliable content. This approach combines a retrieval filtering mechanism with a behavior- and outcome-driven reward strategy, optimizing both query formulation and retrieval outcomes. Extensive experiments demonstrate that WebFilter improves answer quality and retrieval precision, outperforming existing RAG methods on both in-domain and out-of-domain benchmarks. 
+
+---
+# Recommendation Is a Dish Better Served Warm 
+
+**Authors**: Danil Gusak, Nikita Sukhorukov, Evgeny Frolov  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.07856)  
+
+**Abstract**: In modern recommender systems, experimental settings typically include filtering out cold users and items based on a minimum interaction threshold. However, these thresholds are often chosen arbitrarily and vary widely across studies, leading to inconsistencies that can significantly affect the comparability and reliability of evaluation results. In this paper, we systematically explore the cold-start boundary by examining the criteria used to determine whether a user or an item should be considered cold. Our experiments incrementally vary the number of interactions for different items during training, and gradually update the length of user interaction histories during inference. We investigate the thresholds across several widely used datasets, commonly represented in recent papers from top-tier conferences, and on multiple established recommender baselines. Our findings show that inconsistent selection of cold-start thresholds can either result in the unnecessary removal of valuable data or lead to the misclassification of cold instances as warm, introducing more noise into the system. 
+
+---
+# Encode Me If You Can: Learning Universal User Representations via Event Sequence Autoencoding 
+
+**Authors**: Anton Klenitskiy, Artem Fatkulin, Daria Denisova, Anton Pembek, Alexey Vasilev  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.07748)  
+
+**Abstract**: Building universal user representations that capture the essential aspects of user behavior is a crucial task for modern machine learning systems. In real-world applications, a user's historical interactions often serve as the foundation for solving a wide range of predictive tasks, such as churn prediction, recommendations, or lifetime value estimation. Using a task-independent user representation that is effective across all such tasks can reduce the need for task-specific feature engineering and model retraining, leading to more scalable and efficient machine learning pipelines. The goal of the RecSys Challenge 2025 by Synerise was to develop such Universal Behavioral Profiles from logs of past user behavior, which included various types of events such as product purchases, page views, and search queries. We propose a method that transforms the entire user interaction history into a single chronological sequence and trains a GRU-based autoencoder to reconstruct this sequence from a fixed-size vector. If the model can accurately reconstruct the sequence, the latent vector is expected to capture the key behavioral patterns. In addition to this core model, we explored several alternative methods for generating user embeddings and combined them by concatenating their output vectors into a unified representation. This ensemble strategy further improved generalization across diverse downstream tasks and helped our team, ai_lab_recsys, achieve second place in the RecSys Challenge 2025. 
+
+---
+# UMRE: A Unified Monotonic Transformation for Ranking Ensemble in Recommender Systems 
+
+**Authors**: Zhengrui Xu, Zhe Yang, Zhengxiao Guo, Shukai Liu, Luocheng Lin, Xiaoyan Liu, Yongqi Liu, Han Li  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.07613)  
+
+**Abstract**: Industrial recommender systems commonly rely on ensemble sorting (ES) to combine predictions from multiple behavioral objectives. Traditionally, this process depends on manually designed nonlinear transformations (e.g., polynomial or exponential functions) and hand-tuned fusion weights to balance competing goals -- an approach that is labor-intensive and frequently suboptimal in achieving Pareto efficiency. In this paper, we propose a novel Unified Monotonic Ranking Ensemble (UMRE) framework to address the limitations of traditional methods in ensemble sorting. UMRE replaces handcrafted transformations with Unconstrained Monotonic Neural Networks (UMNN), which learn expressive, strictly monotonic functions through the integration of positive neural integrals. Subsequently, a lightweight ranking model is employed to fuse the prediction scores, assigning personalized weights to each prediction objective. To balance competing goals, we further introduce a Pareto optimality strategy that adaptively coordinates task weights during training. UMRE eliminates manual tuning, maintains ranking consistency, and achieves fine-grained personalization. Experimental results on two public recommendation datasets (Kuairand and Tenrec) and online A/B tests demonstrate impressive performance and generalization capabilities. 
+
+---
+# Towards Comprehensible Recommendation with Large Language Model Fine-tuning 
+
+**Authors**: Yunze Luo, Yinjie Jiang, Gaode Chen, Xinghua Zhang, Jun Zhang, Jian Liang, Kaigui Bian  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.07595)  
+
+**Abstract**: Recommender systems have become increasingly ubiquitous in daily life. While traditional recommendation approaches primarily rely on ID-based representations or item-side content features, they often fall short in capturing the underlying semantics aligned with user preferences (e.g., recommendation reasons for items), leading to a semantic-collaborative gap. Recently emerged LLM-based feature extraction approaches also face a key challenge: how to ensure that LLMs possess recommendation-aligned reasoning capabilities and can generate accurate, personalized reasons to mitigate the semantic-collaborative gap. To address these issues, we propose a novel Content Understanding from a Collaborative Perspective framework (CURec), which generates collaborative-aligned content features for more comprehensive recommendations. \method first aligns the LLM with recommendation objectives through pretraining, equipping it with instruction-following and chain-of-thought reasoning capabilities. Next, we design a reward model inspired by traditional recommendation architectures to evaluate the quality of the recommendation reasons generated by the LLM. Finally, using the reward signals, CURec fine-tunes the LLM through RL and corrects the generated reasons to ensure their accuracy. The corrected reasons are then integrated into a downstream recommender model to enhance comprehensibility and recommendation performance. Extensive experiments on public benchmarks demonstrate the superiority of CURec over existing methods. 
+
+---
+# Orthogonal Low Rank Embedding Stabilization 
+
+**Authors**: Kevin Zielnicki, Ko-Jen Hsiao  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.07574)  
+
+**Abstract**: The instability of embedding spaces across model retraining cycles presents significant challenges to downstream applications using user or item embeddings derived from recommendation systems as input features. This paper introduces a novel orthogonal low-rank transformation methodology designed to stabilize the user/item embedding space, ensuring consistent embedding dimensions across retraining sessions. Our approach leverages a combination of efficient low-rank singular value decomposition and orthogonal Procrustes transformation to map embeddings into a standardized space. This transformation is computationally efficient, lossless, and lightweight, preserving the dot product and inference quality while reducing operational burdens. Unlike existing methods that modify training objectives or embedding structures, our approach maintains the integrity of the primary model application and can be seamlessly integrated with other stabilization techniques. 
+
+---
+# Are Multimodal Embeddings Truly Beneficial for Recommendation? A Deep Dive into Whole vs. Individual Modalities 
+
+**Authors**: Yu Ye, Junchen Fu, Yu Song, Kaiwen Zheng, Joemon M. Jose  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.07399)  
+
+**Abstract**: Multimodal recommendation (MMRec) has emerged as a mainstream paradigm, typically leveraging text and visual embeddings extracted from pre-trained models such as Sentence-BERT, Vision Transformers, and ResNet. This approach is founded on the intuitive assumption that incorporating multimodal embeddings can enhance recommendation performance. However, despite its popularity, this assumption lacks comprehensive empirical verification. This presents a critical research gap. To address it, we pose the central research question of this paper: Are multimodal embeddings truly beneficial for recommendation? To answer this question, we conduct a large-scale empirical study examining the role of text and visual embeddings in modern MMRec models, both as a whole and individually. Specifically, we pose two key research questions: (1) Do multimodal embeddings as a whole improve recommendation performance? (2) Is each individual modality - text and image - useful when used alone? To isolate the effect of individual modalities - text or visual - we employ a modality knockout strategy by setting the corresponding embeddings to either constant values or random noise. To ensure the scale and comprehensiveness of our study, we evaluate 14 widely used state-of-the-art MMRec models. Our findings reveal that: (1) multimodal embeddings generally enhance recommendation performance - particularly when integrated through more sophisticated graph-based fusion models. Surprisingly, commonly adopted baseline models with simple fusion schemes, such as VBPR and BM3, show only limited gains. (2) The text modality alone achieves performance comparable to the full multimodal setting in most cases, whereas the image modality alone does not. These results offer foundational insights and practical guidance for the MMRec community. We will release our code and datasets to facilitate future research. 
+
+---
+# PrLM: Learning Explicit Reasoning for Personalized RAG via Contrastive Reward Optimization 
+
+**Authors**: Kepu Zhang, Teng Shi, Weijie Yu, Jun Xu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.07342)  
+
+**Abstract**: Personalized retrieval-augmented generation (RAG) aims to produce user-tailored responses by incorporating retrieved user profiles alongside the input query. Existing methods primarily focus on improving retrieval and rely on large language models (LLMs) to implicitly integrate the retrieved context with the query. However, such models are often sensitive to retrieval quality and may generate responses that are misaligned with user preferences. To address this limitation, we propose PrLM, a reinforcement learning framework that trains LLMs to explicitly reason over retrieved user profiles. Guided by a contrastively trained personalization reward model, PrLM effectively learns from user responses without requiring annotated reasoning paths. Experiments on three personalized text generation datasets show that PrLM outperforms existing methods and remains robust across varying numbers of retrieved profiles and different retrievers. 
+
+---
+# SocRipple: A Two-Stage Framework for Cold-Start Video Recommendations 
+
+**Authors**: Amit Jaspal, Kapil Dalwani, Ajantha Ramineni  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.07241)  
+
+**Abstract**: Most industry scale recommender systems face critical cold start challenges new items lack interaction history, making it difficult to distribute them in a personalized manner. Standard collaborative filtering models underperform due to sparse engagement signals, while content only approaches lack user specific relevance. We propose SocRipple, a novel two stage retrieval framework tailored for coldstart item distribution in social graph based platforms. Stage 1 leverages the creators social connections for targeted initial exposure. Stage 2 builds on early engagement signals and stable user embeddings learned from historical interactions to "ripple" outwards via K Nearest Neighbor (KNN) search. Large scale experiments on a major video platform show that SocRipple boosts cold start item distribution by +36% while maintaining user engagement rate on cold start items, effectively balancing new item exposure with personalized recommendations. 
+
+---
+# Selection and Exploitation of High-Quality Knowledge from Large Language Models for Recommendation 
+
+**Authors**: Guanchen Wang, Mingming Ha, Tianbao Ma, Linxun Chen, Zhaojie Liu, Guorui Zhou, Kun Gai  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.07223)  
+
+**Abstract**: In recent years, there has been growing interest in leveraging the impressive generalization capabilities and reasoning ability of large language models (LLMs) to improve the performance of recommenders. With this operation, recommenders can access and learn the additional world knowledge and reasoning information via LLMs. However, in general, for different users and items, the world knowledge derived from LLMs suffers from issues of hallucination, content redundant, and information homogenization. Directly feeding the generated response embeddings into the recommendation model can lead to unavoidable performance deterioration. To address these challenges, we propose a Knowledge Selection \& Exploitation Recommendation (KSER) framework, which effectively select and extracts the high-quality knowledge from LLMs. The framework consists of two key components: a knowledge filtering module and a embedding spaces alignment module. In the knowledge filtering module, a Embedding Selection Filter Network (ESFNet) is designed to assign adaptive weights to different knowledge chunks in different knowledge fields. In the space alignment module, an attention-based architecture is proposed to align the semantic embeddings from LLMs with the feature space used to train the recommendation models. In addition, two training strategies--\textbf{all-parameters training} and \textbf{extractor-only training}--are proposed to flexibly adapt to different downstream tasks and application scenarios, where the extractor-only training strategy offers a novel perspective on knowledge-augmented recommendation. Experimental results validate the necessity and effectiveness of both the knowledge filtering and alignment modules, and further demonstrate the efficiency and effectiveness of the extractor-only training strategy. 
+
+---
+# Uncertainty-Aware Semantic Decoding for LLM-Based Sequential Recommendation 
+
+**Authors**: Chenke Yin, Li Fan, Jia Wang, Dongxiao Hu, Haichao Zhang, Chong Zhang, Yang Xiang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.07210)  
+
+**Abstract**: Large language models have been widely applied to sequential recommendation tasks, yet during inference, they continue to rely on decoding strategies developed for natural language processing. This creates a mismatch between text-generation objectives and recommendation next item selection objectives. This paper addresses this limitation by proposing an Uncertainty-aware Semantic Decoding (USD) framework that combines logit-based clustering with adaptive scoring to improve next-item predictions. Our approach clusters items with similar logit vectors into semantic equivalence groups, then redistributes probability mass within these clusters and computes entropy across them to control item scoring and sampling temperature during recommendation inference. Experiments on Amazon Product datasets (six domains) gains of 18.5\% in HR@3, 11.9\% in NDCG@3, and 10.8\% in MRR@3 compared to state-of-the-art baselines. Hyperparameter analysis confirms the optimal parameters among various settings, and experiments on H\&M, and Netflix datasets indicate that the framework can adapt to differing recommendation domains. The experimental results confirm that integrating semantic clustering and uncertainty assessment yields more reliable and accurate recommendations. 
+
+---
+# ReasonRank: Empowering Passage Ranking with Strong Reasoning Ability 
+
+**Authors**: Wenhan Liu, Xinyu Ma, Weiwei Sun, Yutao Zhu, Yuchen Li, Dawei Yin, Zhicheng Dou  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.07050)  
+
+**Abstract**: Large Language Model (LLM) based listwise ranking has shown superior performance in many passage ranking tasks. With the development of Large Reasoning Models, many studies have demonstrated that step-by-step reasoning during test-time helps improve listwise ranking performance. However, due to the scarcity of reasoning-intensive training data, existing rerankers perform poorly in many complex ranking scenarios and the ranking ability of reasoning-intensive rerankers remains largely underdeveloped. In this paper, we first propose an automated reasoning-intensive training data synthesis framework, which sources training queries and passages from diverse domains and applies DeepSeek-R1 to generate high-quality training labels. A self-consistency data filtering mechanism is designed to ensure the data quality. To empower the listwise reranker with strong reasoning ability, we further propose a two-stage post-training approach, which includes a cold-start supervised fine-tuning (SFT) stage for reasoning pattern learning and a reinforcement learning (RL) stage for further ranking ability enhancement. During the RL stage, based on the nature of listwise ranking, we design a multi-view ranking reward, which is more effective than a ranking metric-based reward. Extensive experiments demonstrate that our trained reasoning-intensive reranker \textbf{ReasonRank} outperforms existing baselines significantly and also achieves much lower latency than pointwise reranker Rank1. \textbf{Through further experiments, our ReasonRank has achieved state-of-the-art (SOTA) performance 40.6 on the BRIGHT leaderboard\footnote{this https URL}.} Our codes are available at this https URL. 
+
+---
+# Blending Sequential Embeddings, Graphs, and Engineered Features: 4th Place Solution in RecSys Challenge 2025 
+
+**Authors**: Sergei Makeev, Alexandr Andreev, Vladimir Baikalov, Vladislav Tytskiy, Aleksei Krasilnikov, Kirill Khrylchenko  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.06970)  
+
+**Abstract**: This paper describes the 4th-place solution by team ambitious for the RecSys Challenge 2025, organized by Synerise and ACM RecSys, which focused on universal behavioral modeling. The challenge objective was to generate user embeddings effective across six diverse downstream tasks. Our solution integrates (1) a sequential encoder to capture the temporal evolution of user interests, (2) a graph neural network to enhance generalization, (3) a deep cross network to model high-order feature interactions, and (4) performance-critical feature engineering. 
+
+---
+# CLAP: Coreference-Linked Augmentation for Passage Retrieval 
+
+**Authors**: Huanwei Xu, Lin Xu, Liang Yuan  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.06941)  
+
+**Abstract**: Large Language Model (LLM)-based passage expansion has shown promise for enhancing first-stage retrieval, but often underperforms with dense retrievers due to semantic drift and misalignment with their pretrained semantic space. Beyond this, only a portion of a passage is typically relevant to a query, while the rest introduces noise--an issue compounded by chunking techniques that break coreference continuity. We propose Coreference-Linked Augmentation for Passage Retrieval (CLAP), a lightweight LLM-based expansion framework that segments passages into coherent chunks, resolves coreference chains, and generates localized pseudo-queries aligned with dense retriever representations. A simple fusion of global topical signals and fine-grained subtopic signals achieves robust performance across domains. CLAP yields consistent gains even as retriever strength increases, enabling dense retrievers to match or surpass second-stage rankers such as BM25 + MonoT5-3B, with up to 20.68% absolute nDCG@10 improvement. These improvements are especially notable in out-of-domain settings, where conventional LLM-based expansion methods relying on domain knowledge often falter. CLAP instead adopts a logic-centric pipeline that enables robust, domain-agnostic generalization. 
+
+---
+# BiXSE: Improving Dense Retrieval via Probabilistic Graded Relevance Distillation 
+
+**Authors**: Christos Tsirigotis, Vaibhav Adlakha, Joao Monteiro, Aaron Courville, Perouz Taslakian  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.06781)  
+
+**Abstract**: Neural sentence embedding models for dense retrieval typically rely on binary relevance labels, treating query-document pairs as either relevant or irrelevant. However, real-world relevance often exists on a continuum, and recent advances in large language models (LLMs) have made it feasible to scale the generation of fine-grained graded relevance labels. In this work, we propose BiXSE, a simple and effective pointwise training method that optimizes binary cross-entropy (BCE) over LLM-generated graded relevance scores. BiXSE interprets these scores as probabilistic targets, enabling granular supervision from a single labeled query-document pair per query. Unlike pairwise or listwise losses that require multiple annotated comparisons per query, BiXSE achieves strong performance with reduced annotation and compute costs by leveraging in-batch negatives. Extensive experiments across sentence embedding (MMTEB) and retrieval benchmarks (BEIR, TREC-DL) show that BiXSE consistently outperforms softmax-based contrastive learning (InfoNCE), and matches or exceeds strong pairwise ranking baselines when trained on LLM-supervised data. BiXSE offers a robust, scalable alternative for training dense retrieval models as graded relevance supervision becomes increasingly accessible. 
+
+---
+# Early Explorations of Recommender Systems for Physical Activity and Well-being 
+
+**Authors**: Alan Said  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.07980)  
+
+**Abstract**: As recommender systems increasingly guide physical actions, often through wearables and coaching tools, new challenges arise around how users interpret, trust, and respond to this advice. This paper introduces a conceptual framework for tangible recommendations that influence users' bodies, routines, and well-being. We describe three design dimensions: trust and interpretation, intent alignment, and consequence awareness. These highlight key limitations in applying conventional recommender logic to embodied settings. Through examples and design reflections, we outline how future systems can support long-term well-being, behavioral alignment, and socially responsible personalization. 
+
+---
+# Meta Off-Policy Estimation 
+
+**Authors**: Olivier Jeunen  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.07914)  
+
+**Abstract**: Off-policy estimation (OPE) methods enable unbiased offline evaluation of recommender systems, directly estimating the online reward some target policy would have obtained, from offline data and with statistical guarantees. The theoretical elegance of the framework combined with practical successes have led to a surge of interest, with many competing estimators now available to practitioners and researchers. Among these, Doubly Robust methods provide a prominent strategy to combine value- and policy-based estimators.
+In this work, we take an alternative perspective to combine a set of OPE estimators and their associated confidence intervals into a single, more accurate estimate. Our approach leverages a correlated fixed-effects meta-analysis framework, explicitly accounting for dependencies among estimators that arise due to shared data. This yields a best linear unbiased estimate (BLUE) of the target policy's value, along with an appropriately conservative confidence interval that reflects inter-estimator correlation. We validate our method on both simulated and real-world data, demonstrating improved statistical efficiency over existing individual estimators. 
+
+---
+# MLego: Interactive and Scalable Topic Exploration Through Model Reuse 
+
+**Authors**: Fei Ye, Jiapan Liu, Yinan Jing, Zhenying He, Weirao Wang, X. Sean Wang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.07654)  
+
+**Abstract**: With massive texts on social media, users and analysts often rely on topic modeling techniques to quickly extract key themes and gain insights. Traditional topic modeling techniques, such as Latent Dirichlet Allocation (LDA), provide valuable insights but are computationally expensive, making them impractical for real-time data analysis. Although recent advances in distributed training and fast sampling methods have improved efficiency, real-time topic exploration remains a significant challenge. In this paper, we present MLego, an interactive query framework designed to support real-time topic modeling analysis by leveraging model materialization and reuse. Instead of retraining models from scratch, MLego efficiently merges materialized topic models to construct approximate results at interactive speeds. To further enhance efficiency, we introduce a hierarchical plan search strategy for single queries and an optimized query reordering technique for batch queries. We integrate MLego into a visual analytics prototype system, enabling users to explore large-scale textual datasets through interactive queries. Extensive experiments demonstrate that MLego significantly reduces computation costs while maintaining high-quality topic modeling results. MLego enhances existing visual analytics approaches, which primarily focus on user-driven topic modeling, by enabling real-time, query-driven exploration. This complements traditional methods and bridges the gap between scalable topic modeling and interactive data analysis. 
+
+---
+# HealthBranches: Synthesizing Clinically-Grounded Question Answering Datasets via Decision Pathways 
+
+**Authors**: Cristian Cosentino, Annamaria Defilippo, Marco Dossena, Christopher Irwin, Sara Joubbi, Pietro Liò  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.07308)  
+
+**Abstract**: HealthBranches is a novel benchmark dataset for medical Question-Answering (Q&A), specifically designed to evaluate complex reasoning in Large Language Models (LLMs). This dataset is generated through a semi-automated pipeline that transforms explicit decision pathways from medical source into realistic patient cases with associated questions and answers. Covering 4,063 case studies across 17 healthcare topics, each data point is based on clinically validated reasoning chains. HealthBranches supports both open-ended and multiple-choice question formats and uniquely includes the full reasoning path for each Q&A. Its structured design enables robust evaluation of LLMs' multi-step inference capabilities, including their performance in structured Retrieval-Augmented Generation (RAG) contexts. HealthBranches establishes a foundation for the development of more trustworthy, interpretable, and clinically reliable LLMs in high-stakes domains while also serving as a valuable resource for educational purposes. 
+
+---
+# Arce: Augmented Roberta with Contextualized Elucidations for Ner in Automated Rule Checking 
+
+**Authors**: Jian Chen, Jinbao Tian, Yankui Li, Zhou Li  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.07286)  
+
+**Abstract**: Accurate information extraction from specialized texts is a critical challenge, particularly for named entity recognition (NER) in the architecture, engineering, and construction (AEC) domain to support automated rule checking (ARC). The performance of standard pre-trained models is often constrained by the domain gap, as they struggle to interpret the specialized terminology and complex relational contexts inherent in AEC texts. Although this issue can be mitigated by further pre-training on large, human-curated domain corpora, as exemplified by methods like ARCBERT, this approach is both labor-intensive and cost-prohibitive. Consequently, leveraging large language models (LLMs) for automated knowledge generation has emerged as a promising alternative. However, the optimal strategy for generating knowledge that can genuinely enhance smaller, efficient models remains an open question. To address this, we propose ARCE (augmented RoBERTa with contextualized elucidations), a novel approach that systematically explores and optimizes this generation process. ARCE employs an LLM to first generate a corpus of simple, direct explanations, which we term Cote, and then uses this corpus to incrementally pre-train a RoBERTa model prior to its fine-tuning on the downstream task. Our extensive experiments show that ARCE establishes a new state-of-the-art on a benchmark AEC dataset, achieving a Macro-F1 score of 77.20%. This result also reveals a key finding: simple, explanation-based knowledge proves surprisingly more effective than complex, role-based rationales for this task. The code is publicly available at:this https URL. 
+
+---
+# TLCCSP: A Scalable Framework for Enhancing Time Series Forecasting with Time-Lagged Cross-Correlations 
+
+**Authors**: Jianfei Wu, Wenmian Yang, Bingning Liu, Weijia Jia  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.07016)  
+
+**Abstract**: Time series forecasting is critical across various domains, such as weather, finance and real estate forecasting, as accurate forecasts support informed decision-making and risk mitigation. While recent deep learning models have improved predictive capabilities, they often overlook time-lagged cross-correlations between related sequences, which are crucial for capturing complex temporal relationships. To address this, we propose the Time-Lagged Cross-Correlations-based Sequence Prediction framework (TLCCSP), which enhances forecasting accuracy by effectively integrating time-lagged cross-correlated sequences. TLCCSP employs the Sequence Shifted Dynamic Time Warping (SSDTW) algorithm to capture lagged correlations and a contrastive learning-based encoder to efficiently approximate SSDTW distances.
+Experimental results on weather, finance and real estate time series datasets demonstrate the effectiveness of our framework. On the weather dataset, SSDTW reduces mean squared error (MSE) by 16.01% compared with single-sequence methods, while the contrastive learning encoder (CLE) further decreases MSE by 17.88%. On the stock dataset, SSDTW achieves a 9.95% MSE reduction, and CLE reduces it by 6.13%. For the real estate dataset, SSDTW and CLE reduce MSE by 21.29% and 8.62%, respectively. Additionally, the contrastive learning approach decreases SSDTW computational time by approximately 99%, ensuring scalability and real-time applicability across multiple time series forecasting tasks. 
+
+---
+# Two-Stage Quranic QA via Ensemble Retrieval and Instruction-Tuned Answer Extraction 
+
+**Authors**: Mohamed Basem, Islam Oshallah, Ali Hamdi, Khaled Shaban, Hozaifa Kassab  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.06971)  
+
+**Abstract**: Quranic Question Answering presents unique challenges due to the linguistic complexity of Classical Arabic and the semantic richness of religious texts. In this paper, we propose a novel two-stage framework that addresses both passage retrieval and answer extraction. For passage retrieval, we ensemble fine-tuned Arabic language models to achieve superior ranking performance. For answer extraction, we employ instruction-tuned large language models with few-shot prompting to overcome the limitations of fine-tuning on small datasets. Our approach achieves state-of-the-art results on the Quran QA 2023 Shared Task, with a MAP@10 of 0.3128 and MRR@10 of 0.5763 for retrieval, and a pAP@10 of 0.669 for extraction, substantially outperforming previous methods. These results demonstrate that combining model ensembling and instruction-tuned language models effectively addresses the challenges of low-resource question answering in specialized domains. 
+
+---
+# The ReQAP System for Question Answering over Personal Information 
+
+**Authors**: Philipp Christmann, Gerhard Weikum  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.06880)  
+
+**Abstract**: Personal information is abundant on users' devices, from structured data in calendar, shopping records or fitness tools, to unstructured contents in mail and social media posts. This works presents the ReQAP system that supports users with answers for complex questions that involve filters, joins and aggregation over heterogeneous sources. The unique trait of ReQAP is that it recursively decomposes questions and incrementally builds an operator tree for execution. Both the question interpretation and the individual operators make smart use of light-weight language models, with judicious fine-tuning. The demo showcases the rich functionality for advanced user questions, and also offers detailed tracking of how the answers are computed by the operators in the execution tree. Being able to trace answers back to the underlying sources is vital for human comprehensibility and user trust in the system. 
+
+---
+# Formal Concept Analysis: a Structural Framework for Variability Extraction and Analysis 
+
+**Authors**: Jessie Galasso  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.06668)  
+
+**Abstract**: Formal Concept Analysis (FCA) is a mathematical framework for knowledge representation and discovery. It performs a hierarchical clustering over a set of objects described by attributes, resulting in conceptual structures in which objects are organized depending on the attributes they share. These conceptual structures naturally highlight commonalities and variabilities among similar objects by categorizing them into groups which are then arranged by similarity, making it particularly appropriate for variability extraction and analysis. Despite the potential of FCA, determining which of its properties can be leveraged for variability-related tasks (and how) is not always straightforward, partly due to the mathematical orientation of its foundational literature. This paper attempts to bridge part of this gap by gathering a selection of properties of the framework which are essential to variability analysis, and how they can be used to interpret diverse variability information within the resulting conceptual structures. 
+
+---
+# BrowseComp-Plus: A More Fair and Transparent Evaluation Benchmark of Deep-Research Agent 
+
+**Authors**: Zijian Chen, Xueguang Ma, Shengyao Zhuang, Ping Nie, Kai Zou, Andrew Liu, Joshua Green, Kshama Patel, Ruoxi Meng, Mingyi Su, Sahel Sharifymoghaddam, Yanxi Li, Haoran Hong, Xinyu Shi, Xuye Liu, Nandan Thakur, Crystina Zhang, Luyu Gao, Wenhu Chen, Jimmy Lin  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.06600)  
+
+**Abstract**: Deep-Research agents, which integrate large language models (LLMs) with search tools, have shown success in improving the effectiveness of handling complex queries that require iterative search planning and reasoning over search results. Evaluations on current benchmarks like BrowseComp relies on black-box live web search APIs, have notable limitations in (1) fairness: dynamic and opaque web APIs hinder fair comparisons and reproducibility of deep research methods; (2) transparency: lack of control over the document corpus makes it difficult to isolate retriever contributions. In other words, the current evaluations may compare a complete deep research system at a given time, but they do not foster well-controlled experiments to provide insights into the capability of underlying deep research LLMs. To address these challenges, we introduce BrowseComp-Plus, a benchmark derived from BrowseComp, employing a fixed, carefully curated corpus. Each query in BrowseComp-Plus includes human-verified supporting documents and mined challenging negatives, enabling controlled experimentation. The benchmark is shown to be effective in distinguishing the performance of deep research systems. For instance, the open-source model Search-R1, when paired with the BM25 retriever, achieves 3.86% accuracy, whereas the GPT-5 achieves 55.9%. Integrating the GPT-5 with the Qwen3-Embedding-8B retriever further enhances its accuracy to 70.1% with fewer search calls. This benchmark allows comprehensive evaluation and disentangled analysis of deep research agents and retrieval methods, fostering insights into retrieval effectiveness, citation accuracy, and context engineering in Deep-Research system. 
+
+---
+# Semi-automated Fact-checking in Portuguese: Corpora Enrichment using Retrieval with Claim extraction 
+
+**Authors**: Juliana Resplande Sant'anna Gomes, Arlindo Rodrigues Galvão Filho  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.06495)  
+
+**Abstract**: The accelerated dissemination of disinformation often outpaces the capacity for manual fact-checking, highlighting the urgent need for Semi-Automated Fact-Checking (SAFC) systems. Within the Portuguese language context, there is a noted scarcity of publicly available datasets that integrate external evidence, an essential component for developing robust AFC systems, as many existing resources focus solely on classification based on intrinsic text features. This dissertation addresses this gap by developing, applying, and analyzing a methodology to enrich Portuguese news corpora (this http URL, this http URL, MuMiN-PT) with external evidence. The approach simulates a user's verification process, employing Large Language Models (LLMs, specifically Gemini 1.5 Flash) to extract the main claim from texts and search engine APIs (Google Search API, Google FactCheck Claims Search API) to retrieve relevant external documents (evidence). Additionally, a data validation and preprocessing framework, including near-duplicate detection, is introduced to enhance the quality of the base corpora. 
+
+---
