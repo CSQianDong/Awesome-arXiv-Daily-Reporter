@@ -1,0 +1,64 @@
+# What Breaks Knowledge Graph based RAG? Empirical Insights into Reasoning under Incomplete Knowledge 
+
+**Authors**: Dongzhuoran Zhou, Yuqicheng Zhu, Xiaxia Wang, Hongkuan Zhou, Yuan He, Jiaoyan Chen, Evgeny Kharlamov, Steffen Staab  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.08344)  
+
+**Abstract**: Knowledge Graph-based Retrieval-Augmented Generation (KG-RAG) is an increasingly explored approach for combining the reasoning capabilities of large language models with the structured evidence of knowledge graphs. However, current evaluation practices fall short: existing benchmarks often include questions that can be directly answered using existing triples in KG, making it unclear whether models perform reasoning or simply retrieve answers directly. Moreover, inconsistent evaluation metrics and lenient answer matching criteria further obscure meaningful comparisons. In this work, we introduce a general method for constructing benchmarks, together with an evaluation protocol, to systematically assess KG-RAG methods under knowledge incompleteness. Our empirical results show that current KG-RAG methods have limited reasoning ability under missing knowledge, often rely on internal memorization, and exhibit varying degrees of generalization depending on their design. 
+
+---
+# AgriGPT: a Large Language Model Ecosystem for Agriculture 
+
+**Authors**: Bo Yang, Yu Zhang, Lanfei Feng, Yunkui Chen, Jianyu Zhang, Xiao Xu, Nueraili Aierken, Yurui Li, Yuxuan Chen, Guijun Yang, Yong He, Runhe Huang, Shijian Li  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.08632)  
+
+**Abstract**: Despite the rapid progress of Large Language Models (LLMs), their application in agriculture remains limited due to the lack of domain-specific models, curated datasets, and robust evaluation frameworks. To address these challenges, we propose AgriGPT, a domain-specialized LLM ecosystem for agricultural usage. At its core, we design a multi-agent scalable data engine that systematically compiles credible data sources into Agri-342K, a high-quality, standardized question-answer (QA) dataset. Trained on this dataset, AgriGPT supports a broad range of agricultural stakeholders, from practitioners to policy-makers. To enhance factual grounding, we employ Tri-RAG, a three-channel Retrieval-Augmented Generation framework combining dense retrieval, sparse retrieval, and multi-hop knowledge graph reasoning, thereby improving the LLM's reasoning reliability. For comprehensive evaluation, we introduce AgriBench-13K, a benchmark suite comprising 13 tasks with varying types and complexities. Experiments demonstrate that AgriGPT significantly outperforms general-purpose LLMs on both domain adaptation and reasoning. Beyond the model itself, AgriGPT represents a modular and extensible LLM ecosystem for agriculture, comprising structured data construction, retrieval-enhanced generation, and domain-specific evaluation. This work provides a generalizable framework for developing scientific and industry-specialized LLMs. All models, datasets, and code will be released to empower agricultural communities, especially in underserved regions, and to promote open, impactful research. 
+
+---
+# SciRerankBench: Benchmarking Rerankers Towards Scientific Retrieval-Augmented Generated LLMs 
+
+**Authors**: Haotian Chen, Qingqing Long, Meng Xiao, Xiao Luo, Wei Ju, Chengrui Wang, Xuezhi Wang, Yuanchun Zhou, Hengshu Zhu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.08742)  
+
+**Abstract**: Scientific literature question answering is a pivotal step towards new scientific discoveries. Recently, \textit{two-stage} retrieval-augmented generated large language models (RAG-LLMs) have shown impressive advancements in this domain. Such a two-stage framework, especially the second stage (reranker), is particularly essential in the scientific domain, where subtle differences in terminology may have a greatly negative impact on the final factual-oriented or knowledge-intensive answers. Despite this significant progress, the potential and limitations of these works remain unexplored. In this work, we present a Scientific Rerank-oriented RAG Benchmark (SciRerankBench), for evaluating rerankers within RAG-LLMs systems, spanning five scientific subjects. To rigorously assess the reranker performance in terms of noise resilience, relevance disambiguation, and factual consistency, we develop three types of question-context-answer (Q-C-A) pairs, i.e., Noisy Contexts (NC), Semantically Similar but Logically Irrelevant Contexts (SSLI), and Counterfactual Contexts (CC). Through systematic evaluation of 13 widely used rerankers on five families of LLMs, we provide detailed insights into their relative strengths and limitations. To the best of our knowledge, SciRerankBench is the first benchmark specifically developed to evaluate rerankers within RAG-LLMs, which provides valuable observations and guidance for their future development. 
+
+---
+# SMA: Who Said That? Auditing Membership Leakage in Semi-Black-box RAG Controlling 
+
+**Authors**: Shixuan Sun, Siyuan Liang, Ruoyu Chen, Jianjie Huang, Jingzhi Li, Xiaochun Cao  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.09105)  
+
+**Abstract**: Retrieval-Augmented Generation (RAG) and its Multimodal Retrieval-Augmented Generation (MRAG) significantly improve the knowledge coverage and contextual understanding of Large Language Models (LLMs) by introducing external knowledge sources. However, retrieval and multimodal fusion obscure content provenance, rendering existing membership inference methods unable to reliably attribute generated outputs to pre-training, external retrieval, or user input, thus undermining privacy leakage accountability
+To address these challenges, we propose the first Source-aware Membership Audit (SMA) that enables fine-grained source attribution of generated content in a semi-black-box setting with retrieval control this http URL address the environmental constraints of semi-black-box auditing, we further design an attribution estimation mechanism based on zero-order optimization, which robustly approximates the true influence of input tokens on the output through large-scale perturbation sampling and ridge regression modeling. In addition, SMA introduces a cross-modal attribution technique that projects image inputs into textual descriptions via MLLMs, enabling token-level attribution in the text modality, which for the first time facilitates membership inference on image retrieval traces in MRAG systems. This work shifts the focus of membership inference from 'whether the data has been memorized' to 'where the content is sourced from', offering a novel perspective for auditing data provenance in complex generative systems. 
+
+---
+# READER: Retrieval-Assisted Drafter for Efficient LLM Inference 
+
+**Authors**: Maxim Divilkovskiy, Vitaly Malygin, Sergey Zlobin, Sultan Isali, Vasily Kalugin, Stanislav Ilyushin, Nuriza Aitassova, Yi Fei, Zeng Weidi  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.09072)  
+
+**Abstract**: Large Language Models (LLMs) generate tokens autoregressively, with each token depending on the preceding context. This sequential nature makes the inference process inherently difficult to accelerate, posing a significant challenge for efficient deployment. In recent years, various methods have been proposed to address this issue, with the most effective approaches often involving the training of additional draft models. In this paper, we introduce READER (Retrieval-Assisted Drafter for Efficient LLM Inference), a novel lossless speculative decoding method that enhances model-based approaches by leveraging self-repetitions in the text. Our algorithm expands the speculative decoding tree using tokens obtained through statistical search. This work focuses on large batch sizes (>= 8), an underexplored yet important area for industrial applications. We also analyze the key-value (KV) cache size during speculative decoding and propose an optimization to improve performance for large batches. As a result, READER outperforms existing speculative decoding methods. Notably, READER requires no additional training and can reuse pre-trained speculator models, increasing the speedup by over 40\%. Our method demonstrates particularly strong performance on search-based tasks, such as retrieval-augmented generation, where we achieve more than 10x speedup. 
+
+---
+# Optimizing Retrieval-Augmented Generation (RAG) for Colloquial Cantonese: A LoRA-Based Systematic Review 
+
+**Authors**: David Santandreu Calonge, Linda Smail  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.08610)  
+
+**Abstract**: This review examines recent advances in Parameter-Efficient Fine-Tuning (PEFT), with a focus on Low-Rank Adaptation (LoRA), to optimize Retrieval-Augmented Generation (RAG) systems like Qwen3, DeepSeek, and Kimi. These systems face challenges in understanding and generating authentic Cantonese colloquial expressions due to limited annotated data and linguistic variability. The review evaluates the integration of LoRA within RAG frameworks, benchmarks PEFT methods for retrieval and generation accuracy, identify domain adaptation strategies under limited data, and compares fine-tuning techniques aimed at improving semantic fidelity under data-scarce conditions. A systematic analysis of recent studies employing diverse LoRA variants, synthetic data generation, user feedback integration, and adaptive parameter allocation was conducted to assess their impact on computational efficiency, retrieval precision, linguistic authenticity, and scalability. Findings reveal that dynamic and ensemble LoRA adaptations significantly reduce trainable parameters without sacrificing retrieval accuracy and generation quality in dialectal contexts. However, limitations remain in fully preserving fine-grained linguistic nuances, especially for low-resource settings like Cantonese. The integration of real-time user feedback and domain-specific data remains underdeveloped, limiting model adaptability and personalization. While selective parameter freezing and nonlinear adaptation methods offer better trade-offs between efficiency and accuracy, their robustness at scale remains an open challenge. This review highlights the promise of PEFT-enhanced RAG systems for domain-specific language tasks and calls for future work targeting dialectal authenticity, dynamic adaptation, and scalable fine-tuning pipelines. 
+
+---
+# Privacy-protected Retrieval-Augmented Generation for Knowledge Graph Question Answering 
+
+**Authors**: Yunfeng Ning, Mayi Xu, Jintao Wen, Qiankun Pi, Yuanyuan Zhu, Ming Zhong, Jiawei Jiang, Tieyun Qian  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.08785)  
+
+**Abstract**: LLMs often suffer from hallucinations and outdated or incomplete knowledge. RAG is proposed to address these issues by integrating external knowledge like that in KGs into LLMs. However, leveraging private KGs in RAG systems poses significant privacy risks due to the black-box nature of LLMs and potential insecure data transmission, especially when using third-party LLM APIs lacking transparency and control. In this paper, we investigate the privacy-protected RAG scenario for the first time, where entities in KGs are anonymous for LLMs, thus preventing them from accessing entity semantics. Due to the loss of semantics of entities, previous RAG systems cannot retrieve question-relevant knowledge from KGs by matching questions with the meaningless identifiers of anonymous entities. To realize an effective RAG system in this scenario, two key challenges must be addressed: (1) How can anonymous entities be converted into retrievable information. (2) How to retrieve question-relevant anonymous entities. Hence, we propose a novel ARoG framework including relation-centric abstraction and structure-oriented abstraction strategies. For challenge (1), the first strategy abstracts entities into high-level concepts by dynamically capturing the semantics of their adjacent relations. It supplements meaningful semantics which can further support the retrieval process. For challenge (2), the second strategy transforms unstructured natural language questions into structured abstract concept paths. These paths can be more effectively aligned with the abstracted concepts in KGs, thereby improving retrieval performance. To guide LLMs to effectively retrieve knowledge from KGs, the two strategies strictly protect privacy from being exposed to LLMs. Experiments on three datasets demonstrate that ARoG achieves strong performance and privacy-robustness. 
+
+---
