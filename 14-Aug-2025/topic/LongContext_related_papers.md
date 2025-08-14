@@ -1,0 +1,54 @@
+# PRELUDE: A Benchmark Designed to Require Global Comprehension and Reasoning over Long Contexts 
+
+**Authors**: Mo Yu, Tsz Ting Chung, Chulun Zhou, Tong Li, Rui Lu, Jiangnan Li, Liyan Xu, Haoshu Lu, Ning Zhang, Jing Li, Jie Zhou  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.09848)  
+
+**Abstract**: We introduce PRELUDE, a benchmark for evaluating long-context understanding through the task of determining whether a character's prequel story is consistent with the canonical narrative of the original book. Our task poses a stronger demand for global comprehension and deep reasoning than existing benchmarks -- as the prequels are not part of the original story, assessing their plausibility typically requires searching and integrating information that is only indirectly related. Empirically, 88% of instances require evidence from multiple parts of the narrative. Experimental results highlight the challenge of our task: in-context learning, RAG and in-domain training with state-of-the-art LLMs, and commercial DeepResearch services, lag behind humans by >15%. A further human study reveals that models often produce correct answers with flawed reasoning, leading to an over 30% gap in reasoning accuracy compared to humans. These findings underscore the substantial room for improvement in long-context understanding and reasoning. 
+
+---
+# AI Blob! LLM-Driven Recontextualization of Italian Television Archives 
+
+**Authors**: Roberto Balestri  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.09535)  
+
+**Abstract**: This paper introduces AI Blob!, an experimental system designed to explore the potential of semantic cataloging and Large Language Models (LLMs) for the retrieval and recontextualization of archival television footage. Drawing methodological inspiration from Italian television programs such as Blob (RAI Tre, 1989-), AI Blob! integrates automatic speech recognition (ASR), semantic embeddings, and retrieval-augmented generation (RAG) to organize and reinterpret archival content. The system processes a curated dataset of 1,547 Italian television videos by transcribing audio, segmenting it into sentence-level units, and embedding these segments into a vector database for semantic querying. Upon user input of a thematic prompt, the LLM generates a range of linguistically and conceptually related queries, guiding the retrieval and recombination of audiovisual fragments. These fragments are algorithmically selected and structured into narrative sequences producing montages that emulate editorial practices of ironic juxtaposition and thematic coherence. By foregrounding dynamic, content-aware retrieval over static metadata schemas, AI Blob! demonstrates how semantic technologies can facilitate new approaches to archival engagement, enabling novel forms of automated narrative construction and cultural analysis. The project contributes to ongoing debates in media historiography and AI-driven archival research, offering both a conceptual framework and a publicly available dataset to support further interdisciplinary experimentation. 
+
+---
+# Episodic Memory Representation for Long-form Video Understanding 
+
+**Authors**: Yun Wang, Long Zhang, Jingren Liu, Jiaqi Yan, Zhanjie Zhang, Jiahao Zheng, Xun Yang, Dapeng Wu, Xiangyu Chen, Xuelong Li  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.09486)  
+
+**Abstract**: Video Large Language Models (Video-LLMs) excel at general video understanding but struggle with long-form videos due to context window limits. Consequently, recent approaches focus on keyframe retrieval, condensing lengthy videos into a small set of informative frames. Despite their practicality, these methods simplify the problem to static text image matching, overlooking spatio temporal relationships crucial for capturing scene transitions and contextual continuity, and may yield redundant keyframes with limited information, diluting salient cues essential for accurate video question answering. To address these limitations, we introduce Video-EM, a training free framework inspired by the principles of human episodic memory, designed to facilitate robust and contextually grounded reasoning. Rather than treating keyframes as isolated visual entities, Video-EM explicitly models them as temporally ordered episodic events, capturing both spatial relationships and temporal dynamics necessary for accurately reconstructing the underlying narrative. Furthermore, the framework leverages chain of thought (CoT) thinking with LLMs to iteratively identify a minimal yet highly informative subset of episodic memories, enabling efficient and accurate question answering by Video-LLMs. Extensive evaluations on the Video-MME, EgoSchema, HourVideo, and LVBench benchmarks confirm the superiority of Video-EM, which achieves highly competitive results with performance gains of 4-9 percent over respective baselines while utilizing fewer frames. 
+
+---
+# Motif 2.6B Technical Report 
+
+**Authors**: Junghwan Lim, Sungmin Lee, Dongseok Kim, Eunhwan Park, Hyunbyung Park, Junhyeok Lee, Wai Ting Cheung, Dahye Choi, Jaeheui Her, Jaeyeon Huh, Hanbin Jung, Changjin Kang, Beomgyu Kim, Jihwan Kim, Minjae Kim, Taehwan Kim, Youngrok Kim, Haesol Lee, Jeesoo Lee, Kungyu Lee, Dongpin Oh, Yeongjae Park, Bokki Ryu, Daewon Suh, Dongjoo Weon  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.09148)  
+
+**Abstract**: Recent advancements in Large Language Models (LLMs) have revolutionized artificial intelligence, yet developing an effective foundational LLM that balances high performance with computational efficiency remains challenging, especially for emerging research groups. To address this gap, we introduce Motif-2.6B, a 2.6-billion-parameter foundation model designed to democratize advanced LLM capabilities. Motif-2.6B incorporates several innovative architectural enhancements, including Differential Attention and PolyNorm activation functions, which improve long-context comprehension, reduce hallucination, and enhance in-context learning capabilities. We rigorously tested multiple novel architectural components through extensive experimentation to determine the optimal architecture for Motif-2.6B. Comprehensive evaluations demonstrate that Motif-2.6B consistently meets or exceeds the performance of similarly sized state-of-the-art models across diverse benchmarks, showcasing its effectiveness, scalability, and real-world applicability. Through detailed experiments and tailored techniques, Motif-2.6B significantly advances the landscape of efficient, scalable, and powerful foundational LLMs, offering valuable insights and a robust foundation for future research and deployment. 
+
+---
+# Multimodal Fusion And Sparse Attention-based Alignment Model for Long Sequential Recommendation 
+
+**Authors**: Yongrui Fu, Jian Liu, Tao Li, Zonggang Wu, Shouke Qin, Hanmeng Liu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.09664)  
+
+**Abstract**: Recent advances in multimodal recommendation enable richer item understanding, while modeling users' multi-scale interests across temporal horizons has attracted growing attention. However, effectively exploiting multimodal item sequences and mining multi-grained user interests to substantially bridge the gap between content comprehension and recommendation remain challenging. To address these issues, we propose MUFASA, a MUltimodal Fusion And Sparse Attention-based Alignment model for long sequential recommendation. Our model comprises two core components. First, the Multimodal Fusion Layer (MFL) leverages item titles as a cross-genre semantic anchor and is trained with a joint objective of four tailored losses that promote: (i) cross-genre semantic alignment, (ii) alignment to the collaborative space for recommendation, (iii) preserving the similarity structure defined by titles and preventing modality representation collapse, and (iv) distributional regularization of the fusion space. This yields high-quality fused item representations for further preference alignment. Second, the Sparse Attention-guided Alignment Layer (SAL) scales to long user-behavior sequences via a multi-granularity sparse attention mechanism, which incorporates windowed attention, block-level attention, and selective attention, to capture user interests hierarchically and across temporal horizons. SAL explicitly models both the evolution of coherent interest blocks and fine-grained intra-block variations, producing robust user and item representations. Extensive experiments on real-world benchmarks show that MUFASA consistently surpasses state-of-the-art baselines. Moreover, online A/B tests demonstrate significant gains in production, confirming MUFASA's effectiveness in leveraging multimodal cues and accurately capturing diverse user preferences. 
+
+---
+# Transforming Questions and Documents for Semantically Aligned Retrieval-Augmented Generation 
+
+**Authors**: Seokgi Lee  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.09755)  
+
+**Abstract**: We introduce a novel retrieval-augmented generation (RAG) framework tailored for multihop question answering. First, our system uses large language model (LLM) to decompose complex multihop questions into a sequence of single-hop subquestions that guide document retrieval. This decomposition mitigates the ambiguity inherent in multi-hop queries by clearly targeting distinct knowledge facets. Second, instead of embedding raw or chunked documents directly, we generate answerable questions from each document chunk using Qwen3-8B, embed these generated questions, and retrieve relevant chunks via question-question embedding similarity. During inference, the retrieved chunks are then fed along with the original question into the RAG pipeline. We evaluate on three multihop question datasets (MuSiQue, 2WikiMultiHopQa, HotpotQA) from LongBench. Our method improves RAG performacne compared to baseline systems. Our contributions highlight the benefits of using answerable-question embeddings for RAG, and the effectiveness of LLM-based query decomposition for multihop scenarios. 
+
+---
