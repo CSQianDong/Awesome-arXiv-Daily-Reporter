@@ -1,0 +1,165 @@
+# CrossDenoise: Denoising Implicit Feedback via a Lightweight Entity-Aware Synergistic Framework 
+
+**Authors**: Ze Liu, Xianquan Wang, Shuochen Liu, Jie Ma, Huibo Xu, Yupeng Han, Zhe Yang, Kai Zhang, Longfei Li, Jun Zhou  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.10851)  
+
+**Abstract**: Recommender systems heavily rely on implicit feedback, which is inherently noisy due to false positives and negatives, severely degrading recommendation accuracy. Existing denoising strategies often overlook entity-aware modeling, suffer from high computational overhead, or demand excessive hyperparameter tuning, limiting their real-world applicability. We propose CrossDenoise, a novel and lightweight framework that addresses these challenges by disentangling noise estimation into user-, item-, and interaction-specific factors. Leveraging empirical observations that show significant heterogeneity in user and item noise propensities, CrossDenoise computes entity reputation factors (user/item reliability) via a rank-based linear mapping of average training losses. These are fused with interaction-level weights derived from an empirical cumulative distribution function (ECDF) of individual losses. This design is model-agnostic, computationally efficient, and requires only two intuitive hyperparameters. Extensive experiments on ML-1M, Yelp, and Amazon-book datasets, across GMF, NeuMF, and CDAE backbones, demonstrate that CrossDenoise consistently and significantly outperforms state-of-the-art baselines. For instance, it achieves up to 27.01% NDCG@50 gain on Yelp with NeuMF, while incurring negligible computational and memory overhead. Our analysis confirms that CrossDenoise effectively separates clean from noisy samples and remains robust under varied hyperparameter settings. It offers a practical and scalable solution for denoising implicit feedback. 
+
+---
+# Hypercomplex Prompt-aware Multimodal Recommendation 
+
+**Authors**: Zheyu Chen, Jinfeng Xu, Hewei Wang, Shuo Yang, Zitong Wan, Haibo Hu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.10753)  
+
+**Abstract**: Modern recommender systems face critical challenges in handling information overload while addressing the inherent limitations of multimodal representation learning. Existing methods suffer from three fundamental limitations: (1) restricted ability to represent rich multimodal features through a single representation, (2) existing linear modality fusion strategies ignore the deep nonlinear correlations between modalities, and (3) static optimization methods failing to dynamically mitigate the over-smoothing problem in graph convolutional network (GCN). To overcome these limitations, we propose HPMRec, a novel Hypercomplex Prompt-aware Multimodal Recommendation framework, which utilizes hypercomplex embeddings in the form of multi-components to enhance the representation diversity of multimodal features. HPMRec adopts the hypercomplex multiplication to naturally establish nonlinear cross-modality interactions to bridge semantic gaps, which is beneficial to explore the cross-modality features. HPMRec also introduces the prompt-aware compensation mechanism to aid the misalignment between components and modality-specific features loss, and this mechanism fundamentally alleviates the over-smoothing problem. It further designs self-supervised learning tasks that enhance representation diversity and align different modalities. Extensive experiments on four public datasets show that HPMRec achieves state-of-the-art recommendation performance. 
+
+---
+# FuXi-β: Towards a Lightweight and Fast Large-Scale Generative Recommendation Model 
+
+**Authors**: Yufei Ye, Wei Guo, Hao Wang, Hong Zhu, Yuyang Ye, Yong Liu, Huifeng Guo, Ruiming Tang, Defu Lian, Enhong Chen  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.10615)  
+
+**Abstract**: Scaling laws for autoregressive generative recommenders reveal potential for larger, more versatile systems but mean greater latency and training costs. To accelerate training and inference, we investigated the recent generative recommendation models HSTU and FuXi-$\alpha$, identifying two efficiency bottlenecks: the indexing operations in relative temporal attention bias and the computation of the query-key attention map. Additionally, we observed that relative attention bias in self-attention mechanisms can also serve as attention maps. Previous works like Synthesizer have shown that alternative forms of attention maps can achieve similar performance, naturally raising the question of whether some attention maps are redundant. Through empirical experiments, we discovered that using the query-key attention map might degrade the model's performance in recommendation tasks. To address these bottlenecks, we propose a new framework applicable to Transformer-like recommendation models. On one hand, we introduce Functional Relative Attention Bias, which avoids the time-consuming operations of the original relative attention bias, thereby accelerating the process. On the other hand, we remove the query-key attention map from the original self-attention layer and design a new Attention-Free Token Mixer module. Furthermore, by applying this framework to FuXi-$\alpha$, we introduce a new model, FuXi-$\beta$. Experiments across multiple datasets demonstrate that FuXi-$\beta$ outperforms previous state-of-the-art models and achieves significant acceleration compared to FuXi-$\alpha$, while also adhering to the scaling law. Notably, FuXi-$\beta$ shows an improvement of 27% to 47% in the NDCG@10 metric on large-scale industrial datasets compared to FuXi-$\alpha$. Our code is available in a public repository: this https URL 
+
+---
+# DAS: Dual-Aligned Semantic IDs Empowered Industrial Recommender System 
+
+**Authors**: Wencai Ye, Mingjie Sun, Shaoyun Shi, Peng Wang, Wenjin Wu, Peng Jiang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.10584)  
+
+**Abstract**: Semantic IDs are discrete identifiers generated by quantizing the Multi-modal Large Language Models (MLLMs) embeddings, enabling efficient multi-modal content integration in recommendation systems. However, their lack of collaborative signals results in a misalignment with downstream discriminative and generative recommendation objectives. Recent studies have introduced various alignment mechanisms to address this problem, but their two-stage framework design still leads to two main limitations: (1) inevitable information loss during alignment, and (2) inflexibility in applying adaptive alignment strategies, consequently constraining the mutual information maximization during the alignment process. To address these limitations, we propose a novel and flexible one-stage Dual-Aligned Semantic IDs (DAS) method that simultaneously optimizes quantization and alignment, preserving semantic integrity and alignment quality while avoiding the information loss typically associated with two-stage methods. Meanwhile, DAS achieves more efficient alignment between the semantic IDs and collaborative signals, with the following two innovative and effective approaches: (1) Multi-view Constrative Alignment: To maximize mutual information between semantic IDs and collaborative signals, we first incorporate an ID-based CF debias module, and then design three effective contrastive alignment methods: dual user-to-item (u2i), dual item-to-item/user-to-user (i2i/u2u), and dual co-occurrence item-to-item/user-to-user (i2i/u2u). (2) Dual Learning: By aligning the dual quantizations of users and ads, the constructed semantic IDs for users and ads achieve stronger alignment. Finally, we conduct extensive offline experiments and online A/B tests to evaluate DAS's effectiveness, which is now successfully deployed across various advertising scenarios at Kuaishou App, serving over 400 million users daily. 
+
+---
+# Efficient Patent Searching Using Graph Transformers 
+
+**Authors**: Krzysztof Daniell, Igor Buzhinsky, Sebastian Björkqvist  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.10496)  
+
+**Abstract**: Finding relevant prior art is crucial when deciding whether to file a new patent application or invalidate an existing patent. However, searching for prior art is challenging due to the large number of patent documents and the need for nuanced comparisons to determine novelty. An accurate search engine is therefore invaluable for speeding up the process. We present a Graph Transformer-based dense retrieval method for patent searching where each invention is represented by a graph describing its features and their relationships. Our model processes these invention graphs and is trained using prior art citations from patent office examiners as relevance signals. Using graphs as input significantly improves the computational efficiency of processing long documents, while leveraging examiner citations allows the model to learn domain-specific similarities beyond simple text-based matching. The result is a search engine that emulates how professional patent examiners identify relevant documents. We compare our approach against publicly available text embedding models and show substantial improvements in both prior art retrieval quality and computational efficiency. 
+
+---
+# Semantic IDs for Joint Generative Search and Recommendation 
+
+**Authors**: Gustavo Penha, Edoardo D'Amico, Marco De Nadai, Enrico Palumbo, Alexandre Tamborrino, Ali Vardasbi, Max Lefarov, Shawn Lin, Timothy Heath, Francesco Fabbri, Hugues Bouchard  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.10478)  
+
+**Abstract**: Generative models powered by Large Language Models (LLMs) are emerging as a unified solution for powering both recommendation and search tasks. A key design choice in these models is how to represent items, traditionally through unique identifiers (IDs) and more recently with Semantic IDs composed of discrete codes, obtained from embeddings. While task-specific embedding models can improve performance for individual tasks, they may not generalize well in a joint setting. In this paper, we explore how to construct Semantic IDs that perform well both in search and recommendation when using a unified model. We compare a range of strategies to construct Semantic IDs, looking into task-specific and cross-tasks approaches, and also whether each task should have its own semantic ID tokens in a joint search and recommendation generative model. Our results show that using a bi-encoder model fine-tuned on both search and recommendation tasks to obtain item embeddings, followed by the construction of a unified Semantic ID space provides an effective trade-off, enabling strong performance in both tasks. We hope these findings spark follow-up work on generalisable, semantically grounded ID schemes and inform the next wave of unified generative recommender architectures. 
+
+---
+# Proxy Model-Guided Reinforcement Learning for Client Selection in Federated Recommendation 
+
+**Authors**: Liang Qu, Jianxin Li, Wei Yuan, Penghui Ruan, Yuhui Shi, Hongzhi Yin  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.10401)  
+
+**Abstract**: Federated recommender systems have emerged as a promising privacy-preserving paradigm, enabling personalized recommendation services without exposing users' raw data. By keeping data local and relying on a central server to coordinate training across distributed clients, FedRSs protect user privacy while collaboratively learning global models. However, most existing FedRS frameworks adopt fully random client selection strategy in each training round, overlooking the statistical heterogeneity of user data arising from diverse preferences and behavior patterns, thereby resulting in suboptimal model performance. While some client selection strategies have been proposed in the broader federated learning literature, these methods are typically designed for generic tasks and fail to address the unique challenges of recommendation scenarios, such as expensive contribution evaluation due to the large number of clients, and sparse updates resulting from long-tail item distributions. To bridge this gap, we propose ProxyRL-FRS, a proxy model-guided reinforcement learning framework tailored for client selection in federated recommendation. Specifically, we first introduce ProxyNCF, a dual-branch model deployed on each client, which augments standard Neural Collaborative Filtering with an additional proxy model branch that provides lightweight contribution estimation, thus eliminating the need for expensive per-round local training traditionally required to evaluate a client's contribution. Furthermore, we design a staleness-aware SA reinforcement learning agent that selects clients based on the proxy-estimated contribution, and is guided by a reward function balancing recommendation accuracy and embedding staleness, thereby enriching the update coverage of item embeddings. Experiments conducted on public recommendation datasets demonstrate the effectiveness of ProxyRL-FRS. 
+
+---
+# Clicks Versus Conversion: Choosing a Recommender's Training Objective in E-Commerce 
+
+**Authors**: Michael Weiss, Robert Rosenbach, Christian Eggenberger  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.10377)  
+
+**Abstract**: Ranking product recommendations to optimize for a high click-through rate (CTR) or for high conversion, such as add-to-cart rate (ACR) and Order-Submit-Rate (OSR, view-to-purchase conversion) are standard practices in e-commerce. Optimizing for CTR appears like a straightforward choice: Training data (i.e., click data) are simple to collect and often available in large quantities. Additionally, CTR is used far beyond e-commerce, making it a generalist, easily implemented option. ACR and OSR, on the other hand, are more directly linked to a shop's business goals, such as the Gross Merchandise Value (GMV). In this paper, we compare the effects of using either of these objectives using an online A/B test. Among our key findings, we demonstrate that in our shops, optimizing for OSR produces a GMV uplift more than five times larger than when optimizing for CTR, without sacrificing new product discovery. Our results also provide insights into the different feature importances for each of the objectives. 
+
+---
+# DS4RS: Community-Driven and Explainable Dataset Search Engine for Recommender System Research 
+
+**Authors**: Xinyang Shao, Tri Kurniawan Wijaya  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.10238)  
+
+**Abstract**: Accessing suitable datasets is critical for research and development in recommender systems. However, finding datasets that match specific recommendation task or domains remains a challenge due to scattered sources and inconsistent metadata. To address this gap, we propose a community-driven and explainable dataset search engine tailored for recommender system research. Our system supports semantic search across multiple dataset attributes, such as dataset names, descriptions, and recommendation domain, and provides explanations of search relevance to enhance transparency. The system encourages community participation by allowing users to contribute standardized dataset metadata in public repository. By improving dataset discoverability and search interpretability, the system facilitates more efficient research reproduction. The platform is publicly available at: this https URL. 
+
+---
+# Bridging Modality Gaps in e-Commerce Products via Vision-Language Alignment 
+
+**Authors**: Yipeng Zhang, Hongju Yu, Aritra Mandal, Canran Xu, Qunzhi Zhou, Zhe Wu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.10116)  
+
+**Abstract**: Item information, such as titles and attributes, is essential for effective user engagement in e-commerce. However, manual or semi-manual entry of structured item specifics often produces inconsistent quality, errors, and slow turnaround, especially for Customer-to-Customer sellers. Generating accurate descriptions directly from item images offers a promising alternative. Existing retrieval-based solutions address some of these issues but often miss fine-grained visual details and struggle with niche or specialized categories.
+We propose Optimized Preference-Based AI for Listings (OPAL), a framework for generating schema-compliant, high-quality item descriptions from images using a fine-tuned multimodal large language model (MLLM). OPAL addresses key challenges in multimodal e-commerce applications, including bridging modality gaps and capturing detailed contextual information. It introduces two data refinement methods: MLLM-Assisted Conformity Enhancement, which ensures alignment with structured schema requirements, and LLM-Assisted Contextual Understanding, which improves the capture of nuanced and fine-grained information from visual inputs.
+OPAL uses visual instruction tuning combined with direct preference optimization to fine-tune the MLLM, reducing hallucinations and improving robustness across different backbone architectures. We evaluate OPAL on real-world e-commerce datasets, showing that it consistently outperforms baseline methods in both description quality and schema completion rates. These results demonstrate that OPAL effectively bridges the gap between visual and textual modalities, delivering richer, more accurate, and more consistent item descriptions. This work advances automated listing optimization and supports scalable, high-quality content generation in e-commerce platforms. 
+
+---
+# Learning from Natural Language Feedback for Personalized Question Answering 
+
+**Authors**: Alireza Salemi, Hamed Zamani  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.10695)  
+
+**Abstract**: Personalization is crucial for enhancing both the effectiveness and user satisfaction of language technologies, particularly in information-seeking tasks like question answering. Current approaches for personalizing large language models (LLMs) often rely on retrieval-augmented generation (RAG), followed by reinforcement learning with scalar reward signals to teach models how to use retrieved personal context. We believe that these scalar rewards sometimes provide weak, non-instructive feedback, limiting learning efficiency and personalization quality. We introduce VAC, a novel framework for personalized response generation that replaces scalar rewards with natural language feedback (NLF) that are generated conditioned on the user profiles and the question narratives. NLF serves as a rich and actionable supervision signal, allowing the policy model to iteratively refine its outputs and internalize effective personalization strategies. Training alternates between optimizing the feedback model and fine-tuning the policy model on the improved responses, resulting in a policy model that no longer requires feedback at inference. Evaluation on the LaMP-QA benchmark that consists of three diverse domains demonstrates consistent and significant improvements over the state-of-the-art results. Human evaluations further confirm the superior quality of the generated responses. These results demonstrate that NLF provides more effective signals for optimizing personalized question answering. 
+
+---
+# STEP: Stepwise Curriculum Learning for Context-Knowledge Fusion in Conversational Recommendation 
+
+**Authors**: Zhenye Yang, Jinpeng Chen, Huan Li, Xiongnan Jin, Xuanyang Li, Junwei Zhang, Hongbo Gao, Kaimin Wei, Senzhang Wang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.10669)  
+
+**Abstract**: Conversational recommender systems (CRSs) aim to proactively capture user preferences through natural language dialogue and recommend high-quality items. To achieve this, CRS gathers user preferences via a dialog module and builds user profiles through a recommendation module to generate appropriate recommendations. However, existing CRS faces challenges in capturing the deep semantics of user preferences and dialogue context. In particular, the efficient integration of external knowledge graph (KG) information into dialogue generation and recommendation remains a pressing issue. Traditional approaches typically combine KG information directly with dialogue content, which often struggles with complex semantic relationships, resulting in recommendations that may not align with user expectations.
+To address these challenges, we introduce STEP, a conversational recommender centered on pre-trained language models that combines curriculum-guided context-knowledge fusion with lightweight task-specific prompt tuning. At its heart, an F-Former progressively aligns the dialogue context with knowledge-graph entities through a three-stage curriculum, thus resolving fine-grained semantic mismatches. The fused representation is then injected into the frozen language model via two minimal yet adaptive prefix prompts: a conversation prefix that steers response generation toward user intent and a recommendation prefix that biases item ranking toward knowledge-consistent candidates. This dual-prompt scheme allows the model to share cross-task semantics while respecting the distinct objectives of dialogue and recommendation. Experimental results show that STEP outperforms mainstream methods in the precision of recommendation and dialogue quality in two public datasets. 
+
+---
+# Confounding is a Pervasive Problem in Real World Recommender Systems 
+
+**Authors**: Alexander Merkov, David Rohde, Alexandre Gilotte, Benjamin Heymann  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.10479)  
+
+**Abstract**: Unobserved confounding arises when an unmeasured feature influences both the treatment and the outcome, leading to biased causal effect estimates. This issue undermines observational studies in fields like economics, medicine, ecology or epidemiology. Recommender systems leveraging fully observed data seem not to be vulnerable to this problem. However many standard practices in recommender systems result in observed features being ignored, resulting in effectively the same problem. This paper will show that numerous common practices such as feature engineering, A/B testing and modularization can in fact introduce confounding into recommendation systems and hamper their performance. Several illustrations of the phenomena are provided, supported by simulation studies with practical suggestions about how practitioners may reduce or avoid the affects of confounding in real systems. 
+
+---
+# Multi-Label Plant Species Prediction with Metadata-Enhanced Multi-Head Vision Transformers 
+
+**Authors**: Hanna Herasimchyk, Robin Labryga, Tomislav Prusina  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.10457)  
+
+**Abstract**: We present a multi-head vision transformer approach for multi-label plant species prediction in vegetation plot images, addressing the PlantCLEF 2025 challenge. The task involves training models on single-species plant images while testing on multi-species quadrat images, creating a drastic domain shift. Our methodology leverages a pre-trained DINOv2 Vision Transformer Base (ViT-B/14) backbone with multiple classification heads for species, genus, and family prediction, utilizing taxonomic hierarchies. Key contributions include multi-scale tiling to capture plants at different scales, dynamic threshold optimization based on mean prediction length, and ensemble strategies through bagging and Hydra model architectures. The approach incorporates various inference techniques including image cropping to remove non-plant artifacts, top-n filtering for prediction constraints, and logit thresholding strategies. Experiments were conducted on approximately 1.4 million training images covering 7,806 plant species. Results demonstrate strong performance, making our submission 3rd best on the private leaderboard. Our code is available at this https URL. 
+
+---
+# SaraCoder: Orchestrating Semantic and Structural Cues for Profit-Oriented Repository-Level Code Completion 
+
+**Authors**: Xiaohan Chen, Zhongying Pan, Quan Feng, Yu Tian, Shuqun Yang, Mengru Wang, Lina Gong, Yuxia Geng, Piji Li, Xiang Chen  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.10068)  
+
+**Abstract**: Retrieval-augmented generation (RAG) for repository-level code completion commonly relies on superficial text similarity, leading to results plagued by semantic misguidance, redundancy, and homogeneity, while also failing to resolve external symbol ambiguity. To address these challenges, we introduce Saracoder, a Hierarchical Feature-Optimized retrieval framework. Its core Hierarchical Feature Optimization module systematically refines candidates by distilling deep semantic relationships, pruning exact duplicates, assessing structural similarity with a novel graph-based metric that weighs edits by their topological importance, and reranking results to maximize both relevance and diversity. Furthermore, an External-Aware Identifier Disambiguator module accurately resolves cross-file symbol ambiguity via dependency analysis. Extensive experiments on the challenging CrossCodeEval and RepoEval-Updated benchmarks demonstrate that Saracoder significantly outperforms existing baselines across multiple programming languages and models. Our work proves that systematically refining retrieval results across multiple dimensions provides a new paradigm for building more accurate and robust repository-level code completion systems. 
+
+---
+# Reflect then Learn: Active Prompting for Information Extraction Guided by Introspective Confusion 
+
+**Authors**: Dong Zhao, Yadong Wang, Xiang Chen, Chenxi Wang, Hongliang Dai, Chuanxing Geng, Shengzhong Zhang, Shaoyuan Li, Sheng-Jun Huang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.10036)  
+
+**Abstract**: Large Language Models (LLMs) show remarkable potential for few-shot information extraction (IE), yet their performance is highly sensitive to the choice of in-context examples. Conventional selection strategies often fail to provide informative guidance, as they overlook a key source of model fallibility: confusion stemming not just from semantic content, but also from the generation of well-structured formats required by IE tasks. To address this, we introduce Active Prompting for Information Extraction (APIE), a novel active prompting framework guided by a principle we term introspective confusion. Our method empowers an LLM to assess its own confusion through a dual-component uncertainty metric that uniquely quantifies both Format Uncertainty (difficulty in generating correct syntax) and Content Uncertainty (inconsistency in extracted semantics). By ranking unlabeled data with this comprehensive score, our framework actively selects the most challenging and informative samples to serve as few-shot exemplars. Extensive experiments on four benchmarks show that our approach consistently outperforms strong baselines, yielding significant improvements in both extraction accuracy and robustness. Our work highlights the critical importance of a fine-grained, dual-level view of model uncertainty when it comes to building effective and reliable structured generation systems. 
+
+---
+# RTTC: Reward-Guided Collaborative Test-Time Compute 
+
+**Authors**: J. Pablo Muñoz, Jinjie Yuan  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.10024)  
+
+**Abstract**: Test-Time Compute (TTC) has emerged as a powerful paradigm for enhancing the performance of Large Language Models (LLMs) at inference, leveraging strategies such as Test-Time Training (TTT) and Retrieval-Augmented Generation (RAG). However, the optimal adaptation strategy varies across queries, and indiscriminate application of TTC strategy incurs substantial computational overhead. In this work, we introduce Reward-Guided Test-Time Compute (RTTC), a novel framework that adaptively selects the most effective TTC strategy for each query via a pretrained reward model, maximizing downstream accuracy across diverse domains and tasks. RTTC operates in a distributed server-client architecture, retrieving relevant samples from a remote knowledge base and applying RAG or lightweight fine-tuning on client devices only when necessary. To further mitigate redundant computation, we propose Query-State Caching, which enables the efficient reuse of historical query states at both retrieval and adaptation levels. Extensive experiments across multiple LLMs and benchmarks demonstrate that RTTC consistently achieves superior accuracy compared to vanilla RAG or TTT, validating the necessity of adaptive, reward-guided TTC selection and the potential of RTTC for scalable, high-performance language model adaptation. 
+
+---
+# User Perception of Attention Visualizations: Effects on Interpretability Across Evidence-Based Medical Documents 
+
+**Authors**: Andrés Carvallo, Denis Parra, Peter Brusilovsky, Hernan Valdivieso, Gabriel Rada, Ivania Donoso, Vladimir Araujo  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.10004)  
+
+**Abstract**: The attention mechanism is a core component of the Transformer architecture. Beyond improving performance, attention has been proposed as a mechanism for explainability via attention weights, which are associated with input features (e.g., tokens in a document). In this context, larger attention weights may imply more relevant features for the model's prediction. In evidence-based medicine, such explanations could support physicians' understanding and interaction with AI systems used to categorize biomedical literature. However, there is still no consensus on whether attention weights provide helpful explanations. Moreover, little research has explored how visualizing attention affects its usefulness as an explanation aid. To bridge this gap, we conducted a user study to evaluate whether attention-based explanations support users in biomedical document classification and whether there is a preferred way to visualize them. The study involved medical experts from various disciplines who classified articles based on study design (e.g., systematic reviews, broad synthesis, randomized and non-randomized trials). Our findings show that the Transformer model (XLNet) classified documents accurately; however, the attention weights were not perceived as particularly helpful for explaining the predictions. However, this perception varied significantly depending on how attention was visualized. Contrary to Munzner's principle of visual effectiveness, which favors precise encodings like bar length, users preferred more intuitive formats, such as text brightness or background color. While our results do not confirm the overall utility of attention weights for explanation, they suggest that their perceived helpfulness is influenced by how they are visually presented. 
+
+---
