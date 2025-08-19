@@ -1,0 +1,90 @@
+# A Question Answering Dataset for Temporal-Sensitive Retrieval-Augmented Generation 
+
+**Authors**: Ziyang Chen, Erxue Min, Xiang Zhao, Yunxin Li, Xin Jia, Jinzhi Liao, Jichao Li, Shuaiqiang Wang, Baotian Hu, Dawei Yin  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.12282)  
+
+**Abstract**: We introduce ChronoQA, a large-scale benchmark dataset for Chinese question answering, specifically designed to evaluate temporal reasoning in Retrieval-Augmented Generation (RAG) systems. ChronoQA is constructed from over 300,000 news articles published between 2019 and 2024, and contains 5,176 high-quality questions covering absolute, aggregate, and relative temporal types with both explicit and implicit time expressions. The dataset supports both single- and multi-document scenarios, reflecting the real-world requirements for temporal alignment and logical consistency. ChronoQA features comprehensive structural annotations and has undergone multi-stage validation, including rule-based, LLM-based, and human evaluation, to ensure data quality. By providing a dynamic, reliable, and scalable resource, ChronoQA enables structured evaluation across a wide range of temporal tasks, and serves as a robust benchmark for advancing time-sensitive retrieval-augmented question answering systems. 
+
+---
+# All for law and law for all: Adaptive RAG Pipeline for Legal Research 
+
+**Authors**: Figarri Keisha, Prince Singh, Pallavi, Dion Fernandes, Aravindh Manivannan, Ilham Wicaksono, Faisal Ahmad  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.13107)  
+
+**Abstract**: Retrieval-Augmented Generation (RAG) mitigates hallucinations by grounding large language model outputs in cited sources, a capability that is especially critical in the legal domain. We present an end-to-end RAG pipeline that revisits and extends the LegalBenchRAG baseline with three targeted enhancements: (i) a context-aware query translator that disentangles document references from natural-language questions and adapts retrieval depth and response style based on expertise and specificity, (ii) open-source retrieval strategies using SBERT and GTE embeddings that achieve substantial performance gains (improving Recall@K by 30-95\% and Precision@K by $\sim$2.5$\times$ for $K>4$) while remaining cost-efficient, and (iii) a comprehensive evaluation and generation framework that combines RAGAS, BERTScore-F1, and ROUGE-Recall to assess semantic alignment and faithfulness across models and prompt designs. Our results show that carefully designed open-source pipelines can rival or outperform proprietary approaches in retrieval quality, while a custom legal-grounded prompt consistently produces more faithful and contextually relevant answers than baseline prompting. Taken together, these contributions demonstrate the potential of task-aware, component-level tuning to deliver legally grounded, reproducible, and cost-effective RAG systems for legal research assistance. 
+
+---
+# AutoBnB-RAG: Enhancing Multi-Agent Incident Response with Retrieval-Augmented Generation 
+
+**Authors**: Zefang Liu, Arman Anwar  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.13118)  
+
+**Abstract**: Incident response (IR) requires fast, coordinated, and well-informed decision-making to contain and mitigate cyber threats. While large language models (LLMs) have shown promise as autonomous agents in simulated IR settings, their reasoning is often limited by a lack of access to external knowledge. In this work, we present AutoBnB-RAG, an extension of the AutoBnB framework that incorporates retrieval-augmented generation (RAG) into multi-agent incident response simulations. Built on the Backdoors & Breaches (B&B) tabletop game environment, AutoBnB-RAG enables agents to issue retrieval queries and incorporate external evidence during collaborative investigations. We introduce two retrieval settings: one grounded in curated technical documentation (RAG-Wiki), and another using narrative-style incident reports (RAG-News). We evaluate performance across eight team structures, including newly introduced argumentative configurations designed to promote critical reasoning. To validate practical utility, we also simulate real-world cyber incidents based on public breach reports, demonstrating AutoBnB-RAG's ability to reconstruct complex multi-stage attacks. Our results show that retrieval augmentation improves decision quality and success rates across diverse organizational models. This work demonstrates the value of integrating retrieval mechanisms into LLM-based multi-agent systems for cybersecurity decision-making. 
+
+---
+# HeteroRAG: A Heterogeneous Retrieval-Augmented Generation Framework for Medical Vision Language Tasks 
+
+**Authors**: Zhe Chen, Yusheng Liao, Shuyang Jiang, Zhiyuan Zhu, Haolin Li, Yanfeng Wang, Yu Wang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.12778)  
+
+**Abstract**: Medical large vision-language Models (Med-LVLMs) have shown promise in clinical applications but suffer from factual inaccuracies and unreliable outputs, posing risks in real-world diagnostics. While retrieval-augmented generation has emerged as a potential solution, current medical multimodal RAG systems are unable to perform effective retrieval across heterogeneous sources. The irrelevance of retrieved reports affects the factuality of analysis, while insufficient knowledge affects the credibility of clinical decision-making. To bridge the gap, we construct MedAtlas, which includes extensive multimodal report repositories and diverse text corpora. Based on it, we present HeteroRAG, a novel framework that enhances Med-LVLMs through heterogeneous knowledge sources. The framework introduces Modality-specific CLIPs for effective report retrieval and a Multi-corpora Query Generator for dynamically constructing queries for diverse corpora. Incorporating knowledge from such multifaceted sources, Med-LVLM is then trained with Heterogeneous Knowledge Preference Tuning to achieve cross-modality and multi-source knowledge alignment. Extensive experiments across 12 datasets and 3 modalities demonstrate that the proposed HeteroRAG achieves state-of-the-art performance in most medical vision language benchmarks, significantly improving factual accuracy and reliability of Med-LVLMs. 
+
+---
+# Can we Evaluate RAGs with Synthetic Data? 
+
+**Authors**: Jonas van Elburg, Peter van der Putten, Maarten Marx  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.11758)  
+
+**Abstract**: We investigate whether synthetic question-answer (QA) data generated by large language models (LLMs) can serve as an effective proxy for human-labeled benchmarks when such data is unavailable. We assess the reliability of synthetic benchmarks across two experiments: one varying retriever parameters while keeping the generator fixed, and another varying the generator with fixed retriever parameters. Across four datasets, of which two open-domain and two proprietary, we find that synthetic benchmarks reliably rank the RAGs varying in terms of retriever configuration, aligning well with human-labeled benchmark baselines. However, they fail to produce consistent RAG rankings when comparing generator architectures. The breakdown possibly arises from a combination of task mismatch between the synthetic and human benchmarks, and stylistic bias favoring certain generators. 
+
+---
+# VimoRAG: Video-based Retrieval-augmented 3D Motion Generation for Motion Language Models 
+
+**Authors**: Haidong Xu, Guangwei Xu, Zhedong Zheng, Xiatian Zhu, Wei Ji, Xiangtai Li, Ruijie Guo, Meishan Zhang, Min zhang, Hao Fei  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.12081)  
+
+**Abstract**: This paper introduces VimoRAG, a novel video-based retrieval-augmented motion generation framework for motion large language models (LLMs). As motion LLMs face severe out-of-domain/out-of-vocabulary issues due to limited annotated data, VimoRAG leverages large-scale in-the-wild video databases to enhance 3D motion generation by retrieving relevant 2D human motion signals. While video-based motion RAG is nontrivial, we address two key bottlenecks: (1) developing an effective motion-centered video retrieval model that distinguishes human poses and actions, and (2) mitigating the issue of error propagation caused by suboptimal retrieval results. We design the Gemini Motion Video Retriever mechanism and the Motion-centric Dual-alignment DPO Trainer, enabling effective retrieval and generation processes. Experimental results show that VimoRAG significantly boosts the performance of motion LLMs constrained to text-only input. 
+
+---
+# GridCodex: A RAG-Driven AI Framework for Power Grid Code Reasoning and Compliance 
+
+**Authors**: Jinquan Shi, Yingying Cheng, Fan Zhang, Miao Jiang, Jun Lin, Yanbai Shen  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.12682)  
+
+**Abstract**: The global shift towards renewable energy presents unprecedented challenges for the electricity industry, making regulatory reasoning and compliance increasingly vital. Grid codes, the regulations governing grid operations, are complex and often lack automated interpretation solutions, which hinders industry expansion and undermines profitability for electricity companies. We introduce GridCodex, an end to end framework for grid code reasoning and compliance that leverages large language models and retrieval-augmented generation (RAG). Our framework advances conventional RAG workflows through multi stage query refinement and enhanced retrieval with RAPTOR. We validate the effectiveness of GridCodex with comprehensive benchmarks, including automated answer assessment across multiple dimensions and regulatory agencies. Experimental results showcase a 26.4% improvement in answer quality and more than a 10 fold increase in recall rate. An ablation study further examines the impact of base model selection. 
+
+---
+# QuarkMed Medical Foundation Model Technical Report 
+
+**Authors**: Ao Li, Bin Yan, Bingfeng Cai, Chenxi Li, Cunzhong Zhao, Fugen Yao, Gaoqiang Liu, Guanjun Jiang, Jian Xu, Liang Dong, Liansheng Sun, Rongshen Zhang, Xiaolei Gui, Xin Liu, Xin Shang, Yao Wu, Yu Cao, Zhenxin Ma, Zhuang Jia  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.11894)  
+
+**Abstract**: Recent advancements in large language models have significantly accelerated their adoption in healthcare applications, including AI-powered medical consultations, diagnostic report assistance, and medical search tools. However, medical tasks often demand highly specialized knowledge, professional accuracy, and customization capabilities, necessitating a robust and reliable foundation model. QuarkMed addresses these needs by leveraging curated medical data processing, medical-content Retrieval-Augmented Generation (RAG), and a large-scale, verifiable reinforcement learning pipeline to develop a high-performance medical foundation model. The model achieved 70% accuracy on the Chinese Medical Licensing Examination, demonstrating strong generalization across diverse medical benchmarks. QuarkMed offers a powerful yet versatile personal medical AI solution, already serving over millions of users at this http URL. 
+
+---
+# Q-FSRU: Quantum-Augmented Frequency-Spectral Fusion for Medical Visual Question Answering 
+
+**Authors**: Rakesh Thakur, Yusra Tariq  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.12036)  
+
+**Abstract**: Solving tough clinical questions that require both image and text understanding is still a major challenge in healthcare AI. In this work, we propose Q-FSRU, a new model that combines Frequency Spectrum Representation and Fusion (FSRU) with a method called Quantum Retrieval-Augmented Generation (Quantum RAG) for medical Visual Question Answering (VQA). The model takes in features from medical images and related text, then shifts them into the frequency domain using Fast Fourier Transform (FFT). This helps it focus on more meaningful data and filter out noise or less useful information. To improve accuracy and ensure that answers are based on real knowledge, we add a quantum-inspired retrieval system. It fetches useful medical facts from external sources using quantum-based similarity techniques. These details are then merged with the frequency-based features for stronger reasoning. We evaluated our model using the VQA-RAD dataset, which includes real radiology images and questions. The results showed that Q-FSRU outperforms earlier models, especially on complex cases needing image-text reasoning. The mix of frequency and quantum information improves both performance and explainability. Overall, this approach offers a promising way to build smart, clear, and helpful AI tools for doctors. 
+
+---
+# SimInterview: Transforming Business Education through Large Language Model-Based Simulated Multilingual Interview Training System 
+
+**Authors**: Truong Thanh Hung Nguyen, Tran Diem Quynh Nguyen, Hoang Loc Cao, Thi Cam Thanh Tran, Thi Cam Mai Truong, Hung Cao  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.11873)  
+
+**Abstract**: Business interview preparation demands both solid theoretical grounding and refined soft skills, yet conventional classroom methods rarely deliver the individualized, culturally aware practice employers currently expect. This paper introduces SimInterview, a large language model (LLM)-based simulated multilingual interview training system designed for business professionals entering the AI-transformed labor market. Our system leverages an LLM agent and synthetic AI technologies to create realistic virtual recruiters capable of conducting personalized, real-time conversational interviews. The framework dynamically adapts interview scenarios using retrieval-augmented generation (RAG) to match individual resumes with specific job requirements across multiple languages. Built on LLMs (OpenAI o3, Llama 4 Maverick, Gemma 3), integrated with Whisper speech recognition, GPT-SoVITS voice synthesis, Ditto diffusion-based talking head generation model, and ChromaDB vector databases, our system significantly improves interview readiness across English and Japanese markets. Experiments with university-level candidates show that the system consistently aligns its assessments with job requirements, faithfully preserves resume content, and earns high satisfaction ratings, with the lightweight Gemma 3 model producing the most engaging conversations. Qualitative findings revealed that the standardized Japanese resume format improved document retrieval while diverse English resumes introduced additional variability, and they highlighted how cultural norms shape follow-up questioning strategies. Finally, we also outlined a contestable AI design that can explain, detect bias, and preserve human-in-the-loop to meet emerging regulatory expectations. 
+
+---
