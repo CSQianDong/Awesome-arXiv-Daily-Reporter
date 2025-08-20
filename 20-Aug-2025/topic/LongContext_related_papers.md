@@ -1,0 +1,36 @@
+# Cognitive Workspace: Active Memory Management for LLMs -- An Empirical Study of Functional Infinite Context 
+
+**Authors**: Tao An  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.13171)  
+
+**Abstract**: Large Language Models (LLMs) face fundamental limitations in context management despite recent advances extending context windows to millions of tokens. We propose Cognitive Workspace, a novel paradigm that transcends traditional Retrieval-Augmented Generation (RAG) by emulating human cognitive mechanisms of external memory use. Drawing from cognitive science foundations including Baddeley's working memory model, Clark's extended mind thesis, and Hutchins' distributed cognition framework, we demonstrate that current passive retrieval systems fail to capture the dynamic, task-driven nature of human memory management. Our analysis of 2024-2025 developments reveals that while techniques like Infini-attention and StreamingLLM achieve impressive context lengths, they lack the metacognitive awareness and active planning capabilities essential for true cognitive extension. Cognitive Workspace addresses these limitations through three core innovations: (1) active memory management with deliberate information curation, (2) hierarchical cognitive buffers enabling persistent working states, and (3) task-driven context optimization that dynamically adapts to cognitive demands. Empirical validation demonstrates Cognitive Workspace achieves an average 58.6% memory reuse rate (ranging from 54-60% across different tasks) compared to 0% for traditional RAG, with 17-18% net efficiency gain despite 3.3x higher operation counts. Statistical analysis confirms these advantages with p < 0.001 and Cohen's d > 23 across multiple task types, establishing the first quantitative evidence for active memory superiority in LLM systems. We present a comprehensive theoretical framework synthesizing insights from 50+ recent papers, positioning Cognitive Workspace as a fundamental shift from information retrieval to genuine cognitive augmentation. 
+
+---
+# Chunks as Arms: Multi-Armed Bandit-Guided Sampling for Long-Context LLM Preference Optimization 
+
+**Authors**: Shaohua Duan, Xinze Li, Zhenghao Liu, Xiaoyuan Yi, Yukun Yan, Shuo Wang, Yu Gu, Ge Yu, Maosong Sun  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.13993)  
+
+**Abstract**: Long-context modeling is critical for a wide range of real-world tasks, including long-context question answering, summarization, and complex reasoning tasks. Recent studies have explored fine-tuning Large Language Models (LLMs) with synthetic data to enhance their long-context capabilities. However, the effectiveness of such approaches is often limited by the low diversity and factual inconsistencies in the generated data. To address these challenges, we propose LongMab-PO, a novel framework that leverages a Multi-Armed Bandit (MAB) rollout strategy to identify the most informative chunks from the given long context for sampling high-quality and diverse responses and constructing preference data pairs for Direct Preference Optimization (DPO) training. Specifically, we treat context chunks as arms of MAB, select chunks based on their expected reward scores to input into LLMs to generate responses, and iteratively update these scores based on reward feedback. This exploration and exploitation process enables the model to focus on the most relevant context segments, thereby generating and collecting high-quality and diverse responses. Finally, we collect these generated responses from the rollout process and apply the DPO method to further optimize the LLM. Experimental results show that LongMab-PO significantly improves the diversity and quality of preference data pairs, achieving state-of-the-art performance on long-context reasoning benchmarks. All code and data will be released on this https URL. 
+
+---
+# Whispering Context: Distilling Syntax and Semantics for Long Speech Transcripts 
+
+**Authors**: Duygu Altinok  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.13376)  
+
+**Abstract**: ASR systems often struggle with maintaining syntactic and semantic accuracy in long audio transcripts, impacting tasks like Named Entity Recognition (NER), capitalization, and punctuation. We propose a novel approach that enhances ASR by distilling contextual knowledge from LLaMA models into Whisper. Our method uses two strategies: (1) token level distillation with optimal transport to align dimensions and sequence lengths, and (2) representation loss minimization between sentence embeddings of Whisper and LLaMA, blending syntax and semantics. Evaluations on the Spoken Wikipedia dataset, a benchmark with long audios and rich entities demonstrate significant improvements in Word Error Rate (WER), NER, capitalization, and punctuation success. By introducing novel NER metrics and exploring semantics aware ASR, our work highlights the value of integrating linguistic context into transcription, setting a foundation for robust, context-aware ASR in longform speech. 
+
+---
+# AdaDocVQA: Adaptive Framework for Long Document Visual Question Answering in Low-Resource Settings 
+
+**Authors**: Haoxuan Li, Wei Song, Aofan Liu, Peiwu Qin  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.13606)  
+
+**Abstract**: Document Visual Question Answering (Document VQA) faces significant challenges when processing long documents in low-resource environments due to context limitations and insufficient training data. This paper presents AdaDocVQA, a unified adaptive framework addressing these challenges through three core innovations: a hybrid text retrieval architecture for effective document segmentation, an intelligent data augmentation pipeline that automatically generates high-quality reasoning question-answer pairs with multi-level verification, and adaptive ensemble inference with dynamic configuration generation and early stopping mechanisms. Experiments on Japanese document VQA benchmarks demonstrate substantial improvements with 83.04\% accuracy on Yes/No questions, 52.66\% on factual questions, and 44.12\% on numerical questions in JDocQA, and 59\% accuracy on LAVA dataset. Ablation studies confirm meaningful contributions from each component, and our framework establishes new state-of-the-art results for Japanese document VQA while providing a scalable foundation for other low-resource languages and specialized domains. Our code available at: this https URL. 
+
+---
