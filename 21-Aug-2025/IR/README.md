@@ -1,0 +1,162 @@
+# Benefiting from Negative yet Informative Feedback by Contrasting Opposing Sequential Patterns 
+
+**Authors**: Veronika Ivanova, Evgeny Frolov, Alexey Vasilev  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.14786)  
+
+**Abstract**: We consider the task of learning from both positive and negative feedback in a sequential recommendation scenario, as both types of feedback are often present in user interactions. Meanwhile, conventional sequential learning models usually focus on considering and predicting positive interactions, ignoring that reducing items with negative feedback in recommendations improves user satisfaction with the service. Moreover, the negative feedback can potentially provide a useful signal for more accurate identification of true user interests. In this work, we propose to train two transformer encoders on separate positive and negative interaction sequences. We incorporate both types of feedback into the training objective of the sequential recommender using a composite loss function that includes positive and negative cross-entropy as well as a cleverly crafted contrastive term, that helps better modeling opposing patterns. We demonstrate the effectiveness of this approach in terms of increasing true-positive metrics compared to state-of-the-art sequential recommendation methods while reducing the number of wrongly promoted negative items. 
+
+---
+# OneLoc: Geo-Aware Generative Recommender Systems for Local Life Service 
+
+**Authors**: Zhipeng Wei, Kuo Cai, Junda She, Jie Chen, Minghao Chen, Yang Zeng, Qiang Luo, Wencong Zeng, Ruiming Tang, Kun Gai, Guorui Zhou  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.14646)  
+
+**Abstract**: Local life service is a vital scenario in Kuaishou App, where video recommendation is intrinsically linked with store's location information. Thus, recommendation in our scenario is challenging because we should take into account user's interest and real-time location at the same time. In the face of such complex scenarios, end-to-end generative recommendation has emerged as a new paradigm, such as OneRec in the short video scenario, OneSug in the search scenario, and EGA in the advertising scenario. However, in local life service, an end-to-end generative recommendation model has not yet been developed as there are some key challenges to be solved. The first challenge is how to make full use of geographic information. The second challenge is how to balance multiple objectives, including user interests, the distance between user and stores, and some other business objectives. To address the challenges, we propose OneLoc. Specifically, we leverage geographic information from different perspectives: (1) geo-aware semantic ID incorporates both video and geographic information for tokenization, (2) geo-aware self-attention in the encoder leverages both video location similarity and user's real-time location, and (3) neighbor-aware prompt captures rich context information surrounding users for generation. To balance multiple objectives, we use reinforcement learning and propose two reward functions, i.e., geographic reward and GMV reward. With the above design, OneLoc achieves outstanding offline and online performance. In fact, OneLoc has been deployed in local life service of Kuaishou App. It serves 400 million active users daily, achieving 21.016% and 17.891% improvements in terms of gross merchandise value (GMV) and orders numbers. 
+
+---
+# MISS: Multi-Modal Tree Indexing and Searching with Lifelong Sequential Behavior for Retrieval Recommendation 
+
+**Authors**: Chengcheng Guo, Junda She, Kuo Cai, Shiyao Wang, Qigen Hu, Qiang Luo, Kun Gai, Guorui Zhou  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.14515)  
+
+**Abstract**: Large-scale industrial recommendation systems typically employ a two-stage paradigm of retrieval and ranking to handle huge amounts of information. Recent research focuses on improving the performance of retrieval model. A promising way is to introduce extensive information about users and items. On one hand, lifelong sequential behavior is valuable. Existing lifelong behavior modeling methods in ranking stage focus on the interaction of lifelong behavior and candidate items from retrieval stage. In retrieval stage, it is difficult to utilize lifelong behavior because of a large corpus of candidate items. On the other hand, existing retrieval methods mostly relay on interaction information, potentially disregarding valuable multi-modal information. To solve these problems, we represent the pioneering exploration of leveraging multi-modal information and lifelong sequence model within the advanced tree-based retrieval model. We propose Multi-modal Indexing and Searching with lifelong Sequence (MISS), which contains a multi-modal index tree and a multi-modal lifelong sequence modeling module. Specifically, for better index structure, we propose multi-modal index tree, which is built using the multi-modal embedding to precisely represent item similarity. To precisely capture diverse user interests in user lifelong sequence, we propose collaborative general search unit (Co-GSU) and multi-modal general search unit (MM-GSU) for multi-perspective interests searching. 
+
+---
+# DGenCTR: Towards a Universal Generative Paradigm for Click-Through Rate Prediction via Discrete Diffusion 
+
+**Authors**: Moyu Zhang, Yun Chen, Yujun Jin, Jinxin Hu, Yu Zhang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.14500)  
+
+**Abstract**: Recent advances in generative models have inspired the field of recommender systems to explore generative approaches, but most existing research focuses on sequence generation, a paradigm ill-suited for click-through rate (CTR) prediction. CTR models critically depend on a large number of cross-features between the target item and the user to estimate the probability of clicking on the item, and discarding these cross-features will significantly impair model performance. Therefore, to harness the ability of generative models to understand data distributions and thereby alleviate the constraints of traditional discriminative models in label-scarce space, diverging from the item-generation paradigm of sequence generation methods, we propose a novel sample-level generation paradigm specifically designed for the CTR task: a two-stage Discrete Diffusion-Based Generative CTR training framework (DGenCTR). This two-stage framework comprises a diffusion-based generative pre-training stage and a CTR-targeted supervised fine-tuning stage for CTR. Finally, extensive offline experiments and online A/B testing conclusively validate the effectiveness of our framework. 
+
+---
+# Global-Distribution Aware Scenario-Specific Variational Representation Learning Framework 
+
+**Authors**: Moyu Zhang, Yujun Jin, Jinxin Hu, Yu Zhang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.14493)  
+
+**Abstract**: With the emergence of e-commerce, the recommendations provided by commercial platforms must adapt to diverse scenarios to accommodate users' varying shopping preferences. Current methods typically use a unified framework to offer personalized recommendations for different scenarios. However, they often employ shared bottom representations, which partially hinders the model's capacity to capture scenario uniqueness. Ideally, users and items should exhibit specific characteristics in different scenarios, prompting the need to learn scenario-specific representations to differentiate scenarios. Yet, variations in user and item interactions across scenarios lead to data sparsity issues, impeding the acquisition of scenario-specific representations. To learn robust scenario-specific representations, we introduce a Global-Distribution Aware Scenario-Specific Variational Representation Learning Framework (GSVR) that can be directly applied to existing multi-scenario methods. Specifically, considering the uncertainty stemming from limited samples, our approach employs a probabilistic model to generate scenario-specific distributions for each user and item in each scenario, estimated through variational inference (VI). Additionally, we introduce the global knowledge-aware multinomial distributions as prior knowledge to regulate the learning of the posterior user and item distributions, ensuring similarities among distributions for users with akin interests and items with similar side information. This mitigates the risk of users or items with fewer records being overwhelmed in sparse scenarios. Extensive experimental results affirm the efficacy of GSVR in assisting existing multi-scenario recommendation methods in learning more robust representations. 
+
+---
+# Distribution-Guided Auto-Encoder for User Multimodal Interest Cross Fusion 
+
+**Authors**: Moyu Zhang, Yongxiang Tang, Yujun Jin, Jinxin Hu, Yu Zhang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.14485)  
+
+**Abstract**: Traditional recommendation methods rely on correlating the embedding vectors of item IDs to capture implicit collaborative filtering signals to model the user's interest in the target item. Consequently, traditional ID-based methods often encounter data sparsity problems stemming from the sparse nature of ID features. To alleviate the problem of item ID sparsity, recommendation models incorporate multimodal item information to enhance recommendation accuracy. However, existing multimodal recommendation methods typically employ early fusion approaches, which focus primarily on combining text and image features, while neglecting the contextual influence of user behavior sequences. This oversight prevents dynamic adaptation of multimodal interest representations based on behavioral patterns, consequently restricting the model's capacity to effectively capture user multimodal interests. Therefore, this paper proposes the Distribution-Guided Multimodal-Interest Auto-Encoder (DMAE), which achieves the cross fusion of user multimodal interest at the behavioral this http URL, extensive experiments demonstrate the superiority of DMAE. 
+
+---
+# Diverse Negative Sampling for Implicit Collaborative Filtering 
+
+**Authors**: Yueqing Xuan, Kacper Sokol, Mark Sanderson, Jeffrey Chan  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.14468)  
+
+**Abstract**: Implicit collaborative filtering recommenders are usually trained to learn user positive preferences. Negative sampling, which selects informative negative items to form negative training data, plays a crucial role in this process. Since items are often clustered in the latent space, existing negative sampling strategies normally oversample negative items from the dense regions. This leads to homogeneous negative data and limited model expressiveness. In this paper, we propose Diverse Negative Sampling (DivNS), a novel approach that explicitly accounts for diversity in negative training data during the negative sampling process. DivNS first finds hard negative items with large preference scores and constructs user-specific caches that store unused but highly informative negative samples. Then, its diversity-augmented sampler selects a diverse subset of negative items from the cache while ensuring dissimilarity from the user's hard negatives. Finally, a synthetic negatives generator combines the selected diverse negatives with hard negatives to form more effective training data. The resulting synthetic negatives are both informative and diverse, enabling recommenders to learn a broader item space and improve their generalisability. Extensive experiments on four public datasets demonstrate the effectiveness of DivNS in improving recommendation quality while maintaining computational efficiency. 
+
+---
+# You Only Evaluate Once: A Tree-based Rerank Method at Meituan 
+
+**Authors**: Shuli Wang, Yinqiu Huang, Changhao Li, Yuan Zhou, Yonggang Liu, Yongqiang Zhang, Yinhua Zhu, Haitao Wang, Xingxing Wang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.14420)  
+
+**Abstract**: Reranking plays a crucial role in modern recommender systems by capturing the mutual influences within the list. Due to the inherent challenges of combinatorial search spaces, most methods adopt a two-stage search paradigm: a simple General Search Unit (GSU) efficiently reduces the candidate space, and an Exact Search Unit (ESU) effectively selects the optimal sequence. These methods essentially involve making trade-offs between effectiveness and efficiency, while suffering from a severe \textbf{inconsistency problem}, that is, the GSU often misses high-value lists from ESU. To address this problem, we propose YOLOR, a one-stage reranking method that removes the GSU while retaining only the ESU. Specifically, YOLOR includes: (1) a Tree-based Context Extraction Module (TCEM) that hierarchically aggregates multi-scale contextual features to achieve "list-level effectiveness", and (2) a Context Cache Module (CCM) that enables efficient feature reuse across candidate permutations to achieve "permutation-level efficiency". Extensive experiments across public and industry datasets validate YOLOR's performance, and we have successfully deployed YOLOR on the Meituan food delivery platform. 
+
+---
+# RewardRank: Optimizing True Learning-to-Rank Utility 
+
+**Authors**: Gaurav Bhatt, Kiran Koshy Thekumparampil, Tanmay Gangwani, Tesi Xiao, Leonid Sigal  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.14180)  
+
+**Abstract**: Traditional ranking systems rely on proxy loss functions that assume simplistic user behavior, such as users preferring a rank list where items are sorted by hand-crafted relevance. However, real-world user interactions are influenced by complex behavioral biases, including position bias, brand affinity, decoy effects, and similarity aversion, which these objectives fail to capture. As a result, models trained on such losses often misalign with actual user utility, such as the probability of any click or purchase across the ranked list. In this work, we propose a data-driven framework for modeling user behavior through counterfactual reward learning. Our method, RewardRank, first trains a deep utility model to estimate user engagement for entire item permutations using logged data. Then, a ranking policy is optimized to maximize predicted utility via differentiable soft permutation operators, enabling end-to-end training over the space of factual and counterfactual rankings. To address the challenge of evaluation without ground-truth for unseen permutations, we introduce two automated protocols: (i) $\textit{KD-Eval}$, using a position-aware oracle for counterfactual reward estimation, and (ii) $\textit{LLM-Eval}$, which simulates user preferences via large language models. Experiments on large-scale benchmarks, including Baidu-ULTR and the Amazon KDD Cup datasets, demonstrate that our approach consistently outperforms strong baselines, highlighting the effectiveness of modeling user behavior dynamics for utility-optimized ranking. Our code is available at: this https URL 
+
+---
+# Retrieval-Augmented Generation in Industry: An Interview Study on Use Cases, Requirements, Challenges, and Evaluation 
+
+**Authors**: Lorenz Brehme, Benedikt Dornauer, Thomas Ströhle, Maximilian Ehrhart, Ruth Breu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.14066)  
+
+**Abstract**: Retrieval-Augmented Generation (RAG) is a well-established and rapidly evolving field within AI that enhances the outputs of large language models by integrating relevant information retrieved from external knowledge sources. While industry adoption of RAG is now beginning, there is a significant lack of research on its practical application in industrial contexts. To address this gap, we conducted a semistructured interview study with 13 industry practitioners to explore the current state of RAG adoption in real-world settings. Our study investigates how companies apply RAG in practice, providing (1) an overview of industry use cases, (2) a consolidated list of system requirements, (3) key challenges and lessons learned from practical experiences, and (4) an analysis of current industry evaluation methods. Our main findings show that current RAG applications are mostly limited to domain-specific QA tasks, with systems still in prototype stages; industry requirements focus primarily on data protection, security, and quality, while issues such as ethics, bias, and scalability receive less attention; data preprocessing remains a key challenge, and system evaluation is predominantly conducted by humans rather than automated methods. 
+
+---
+# Personalized Contest Recommendation in Fantasy Sports 
+
+**Authors**: Madiraju Srilakshmi, Kartavya Kothari, Kamlesh Marathe, Vedavyas Chigurupati, Hitesh Kapoor  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.14065)  
+
+**Abstract**: In daily fantasy sports, players enter into "contests" where they compete against each other by building teams of athletes that score fantasy points based on what actually occurs in a real-life sports match. For any given sports match, there are a multitude of contests available to players, with substantial variation across 3 main dimensions: entry fee, number of spots, and the prize pool distribution. As player preferences are also quite heterogeneous, contest personalization is an important tool to match players with contests. This paper presents a scalable contest recommendation system, powered by a Wide and Deep Interaction Ranker (WiDIR) at its core. We productionized this system at our company, one of the large fantasy sports platforms with millions of daily contests and millions of players, where online experiments show a marked improvement over other candidate models in terms of recall and other critical business metrics. 
+
+---
+# An automatic patent literature retrieval system based on LLM-RAG 
+
+**Authors**: Yao Ding, Yuqing Wu, Ziyang Ding  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.14064)  
+
+**Abstract**: With the acceleration of technological innovation efficient retrieval and classification of patent literature have become essential for intellectual property management and enterprise RD Traditional keyword and rulebased retrieval methods often fail to address complex query intents or capture semantic associations across technical domains resulting in incomplete and lowrelevance results This study presents an automated patent retrieval framework integrating Large Language Models LLMs with RetrievalAugmented Generation RAG technology The system comprises three components: 1) a preprocessing module for patent data standardization, 2) a highefficiency vector retrieval engine leveraging LLMgenerated embeddings, and 3) a RAGenhanced query module that combines external document retrieval with contextaware response generation Evaluations were conducted on the Google Patents dataset 20062024 containing millions of global patent records with metadata such as filing date domain and status The proposed gpt35turbo0125RAG configuration achieved 805 semantic matching accuracy and 92.1% recall surpassing baseline LLM methods by 28 percentage points The framework also demonstrated strong generalization in crossdomain classification and semantic clustering tasks These results validate the effectiveness of LLMRAG integration for intelligent patent retrieval providing a foundation for nextgeneration AIdriven intellectual property analysis platforms 
+
+---
+# A Multi-Agent Approach to Neurological Clinical Reasoning 
+
+**Authors**: Moran Sorka, Alon Gorenshtein, Dvir Aran, Shahar Shelly  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.14063)  
+
+**Abstract**: Large language models (LLMs) have shown promise in medical domains, but their ability to handle specialized neurological reasoning requires systematic evaluation. We developed a comprehensive benchmark using 305 questions from Israeli Board Certification Exams in Neurology, classified along three complexity dimensions: factual knowledge depth, clinical concept integration, and reasoning complexity. We evaluated ten LLMs using base models, retrieval-augmented generation (RAG), and a novel multi-agent system. Results showed significant performance variation. OpenAI-o1 achieved the highest base performance (90.9% accuracy), while specialized medical models performed poorly (52.9% for Meditron-70B). RAG provided modest benefits but limited effectiveness on complex reasoning questions. In contrast, our multi-agent framework, decomposing neurological reasoning into specialized cognitive functions including question analysis, knowledge retrieval, answer synthesis, and validation, achieved dramatic improvements, especially for mid-range models. The LLaMA 3.3-70B-based agentic system reached 89.2% accuracy versus 69.5% for its base model, with substantial gains on level 3 complexity questions. The multi-agent approach transformed inconsistent subspecialty performance into uniform excellence, addressing neurological reasoning challenges that persisted with RAG enhancement. We validated our approach using an independent dataset of 155 neurological cases from MedQA. Results confirm that structured multi-agent approaches designed to emulate specialized cognitive processes significantly enhance complex medical reasoning, offering promising directions for AI assistance in challenging clinical contexts. 
+
+---
+# GPT-2 as a Compression Preprocessor: Improving Gzip for Structured Text Domains 
+
+**Authors**: Anurag Kumar Ojha  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.14061)  
+
+**Abstract**: In the modern era, large volumes of data are being produced continuously, especially in domain-specific fields such as medical records and clinical files, defence logs and HTML-based web traffic. Data with such volume and complexity needs to be compressed before storing and transmitting efficiently. Data compression has gained significant attention from modern researchers, resulting in the development of fast and efficient compression algorithms such as Gzip. However, since gzip works on the principle of repetition of binary patterns, one of the limitations of gzip is that domain-specific formats like JSON, XML, HTML, and log files, while structured, may have semantic repetition but not syntactic repetition, which gzip finds difficult to compress. In this article, we propose a GPT-based preprocessor for such domain-specific files. We propose a pipeline made up of GPT-2 taking domain-specific files as input, which pattern-based compressors like gzip find difficult to work on. The preprocessor results are output in a file that is designed for compressors like gzip. After preprocessing, the gzip works on the other end of the pipeline and compresses the data as usual. We used different types of both real-world and synthetically generated data, such as logs and HTML files, for the experiment of the proposed model. We found promising results and an improvement of the Defence logs by 0.34 per cent and HTML files by 5.8 per cent. 
+
+---
+# Graph Neural Network for Product Recommendation on the Amazon Co-purchase Graph 
+
+**Authors**: Mengyang Cao, Frank F. Yang, Yi Jin, Yijun Yan  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.14059)  
+
+**Abstract**: Identifying relevant information among massive volumes of data is a challenge for modern recommendation systems. Graph Neural Networks (GNNs) have demonstrated significant potential by utilizing structural and semantic relationships through graph-based learning. This study assessed the abilities of four GNN architectures, LightGCN, GraphSAGE, GAT, and PinSAGE, on the Amazon Product Co-purchase Network under link prediction settings. We examined practical trade-offs between architectures, model performance, scalability, training complexity and generalization. The outcomes demonstrated each model's performance characteristics for deploying GNN in real-world recommendation scenarios. 
+
+---
+# Dual-Phase Playtime-guided Recommendation: Interest Intensity Exploration and Multimodal Random Walks 
+
+**Authors**: Jingmao Zhang, Zhiting Zhao, Yunqi Lin, Jianghong Ma, Tianjun Wei, Haijun Zhang, Xiaofeng Zhang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.14058)  
+
+**Abstract**: The explosive growth of the video game industry has created an urgent need for recommendation systems that can scale with expanding catalogs and maintain user engagement. While prior work has explored accuracy and diversity in recommendations, existing models underutilize playtime, a rich behavioral signal unique to gaming platforms, and overlook the potential of multimodal information to enhance diversity. In this paper, we propose DP2Rec, a novel Dual-Phase Playtime-guided Recommendation model designed to jointly optimize accuracy and diversity. First, we introduce a playtime-guided interest intensity exploration module that separates strong and weak preferences via dual-beta modeling, enabling fine-grained user profiling and more accurate recommendations. Second, we present a playtime-guided multimodal random walks module that simulates player exploration using transitions guided by both playtime-derived interest similarity and multimodal semantic similarity. This mechanism preserves core preferences while promoting cross-category discovery through latent semantic associations and adaptive category balancing. Extensive experiments on a real-world game dataset show that DP2Rec outperforms existing methods in both recommendation accuracy and diversity. 
+
+---
+# FinAgentBench: A Benchmark Dataset for Agentic Retrieval in Financial Question Answering 
+
+**Authors**: Chanyeol Choi, Jihoon Kwon, Alejandro Lopez-Lira, Chaewoon Kim, Minjae Kim, Juneha Hwang, Jaeseon Ha, Hojun Choi, Suyeol Yun, Yongjin Kim, Yongjae Lee  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.14052)  
+
+**Abstract**: Accurate information retrieval (IR) is critical in the financial domain, where investors must identify relevant information from large collections of documents. Traditional IR methods-whether sparse or dense-often fall short in retrieval accuracy, as it requires not only capturing semantic similarity but also performing fine-grained reasoning over document structure and domain-specific knowledge. Recent advances in large language models (LLMs) have opened up new opportunities for retrieval with multi-step reasoning, where the model ranks passages through iterative reasoning about which information is most relevant to a given query. However, there exists no benchmark to evaluate such capabilities in the financial domain. To address this gap, we introduce FinAgentBench, the first large-scale benchmark for evaluating retrieval with multi-step reasoning in finance -- a setting we term agentic retrieval. The benchmark consists of 3,429 expert-annotated examples on S&P-100 listed firms and assesses whether LLM agents can (1) identify the most relevant document type among candidates, and (2) pinpoint the key passage within the selected document. Our evaluation framework explicitly separates these two reasoning steps to address context limitations. This design enables to provide a quantitative basis for understanding retrieval-centric LLM behavior in finance. We evaluate a suite of state-of-the-art models and further demonstrated how targeted fine-tuning can significantly improve agentic retrieval performance. Our benchmark provides a foundation for studying retrieval-centric LLM behavior in complex, domain-specific tasks for finance. We will release the dataset publicly upon acceptance of the paper and plan to expand and share dataset for the full S&P 500 and beyond. 
+
+---
+# SurveyGen-I: Consistent Scientific Survey Generation with Evolving Plans and Memory-Guided Writing 
+
+**Authors**: Jing Chen, Zhiheng Yang, Yixian Shen, Jie Liu, Adam Belloum, Chrysa Papagainni, Paola Grosso  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.14317)  
+
+**Abstract**: Survey papers play a critical role in scientific communication by consolidating progress across a field. Recent advances in Large Language Models (LLMs) offer a promising solution by automating key steps in the survey-generation pipeline, such as retrieval, structuring, and summarization. However, existing LLM-based approaches often struggle with maintaining coherence across long, multi-section surveys and providing comprehensive citation coverage. To address these limitations, we introduce SurveyGen-I, an automatic survey generation framework that combines coarse-to-fine retrieval, adaptive planning, and memory-guided generation. SurveyGen-I first performs survey-level retrieval to construct the initial outline and writing plan, and then dynamically refines both during generation through a memory mechanism that stores previously written content and terminology, ensuring coherence across subsections. When the system detects insufficient context, it triggers fine-grained subsection-level retrieval. During generation, SurveyGen-I leverages this memory mechanism to maintain coherence across subsections. Experiments across four scientific domains demonstrate that SurveyGen-I consistently outperforms previous works in content quality, consistency, and citation coverage. 
+
+---
