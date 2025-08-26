@@ -1,0 +1,117 @@
+# Evaluating Retrieval-Augmented Generation Strategies for Large Language Models in Travel Mode Choice Prediction 
+
+**Authors**: Yiming Xu, Junfeng Jiao  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.17527)  
+
+**Abstract**: Accurately predicting travel mode choice is essential for effective transportation planning, yet traditional statistical and machine learning models are constrained by rigid assumptions, limited contextual reasoning, and reduced generalizability. This study explores the potential of Large Language Models (LLMs) as a more flexible and context-aware approach to travel mode choice prediction, enhanced by Retrieval-Augmented Generation (RAG) to ground predictions in empirical data. We develop a modular framework for integrating RAG into LLM-based travel mode choice prediction and evaluate four retrieval strategies: basic RAG, RAG with balanced retrieval, RAG with a cross-encoder for re-ranking, and RAG with balanced retrieval and cross-encoder for re-ranking. These strategies are tested across three LLM architectures (OpenAI GPT-4o, o4-mini, and o3) to examine the interaction between model reasoning capabilities and retrieval methods. Using the 2023 Puget Sound Regional Household Travel Survey data, we conduct a series of experiments to evaluate model performance. The results demonstrate that RAG substantially enhances predictive accuracy across a range of models. Notably, the GPT-4o model combined with balanced retrieval and cross-encoder re-ranking achieves the highest accuracy of 80.8%, exceeding that of conventional statistical and machine learning baselines. Furthermore, LLM-based models exhibit superior generalization abilities relative to these baselines. Findings highlight the critical interplay between LLM reasoning capabilities and retrieval strategies, demonstrating the importance of aligning retrieval strategies with model capabilities to maximize the potential of LLM-based travel behavior modeling. 
+
+---
+# Scalable Engine and the Performance of Different LLM Models in a SLURM based HPC architecture 
+
+**Authors**: Anderson de Lima Luiz, Shubham Vijay Kurlekar, Munir Georges  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.17814)  
+
+**Abstract**: This work elaborates on a High performance computing (HPC) architecture based on Simple Linux Utility for Resource Management (SLURM) [1] for deploying heterogeneous Large Language Models (LLMs) into a scalable inference engine. Dynamic resource scheduling and seamless integration of containerized microservices have been leveraged herein to manage CPU, GPU, and memory allocations efficiently in multi-node clusters. Extensive experiments, using Llama 3.2 (1B and 3B parameters) [2] and Llama 3.1 (8B and 70B) [3], probe throughput, latency, and concurrency and show that small models can handle up to 128 concurrent requests at sub-50 ms latency, while for larger models, saturation happens with as few as two concurrent users, with a latency of more than 2 seconds. This architecture includes Representational State Transfer Application Programming Interfaces (REST APIs) [4] endpoints for single and bulk inferences, as well as advanced workflows such as multi-step "tribunal" refinement. Experimental results confirm minimal overhead from container and scheduling activities and show that the approach scales reliably both for batch and interactive settings. We further illustrate real-world scenarios, including the deployment of chatbots with retrievalaugmented generation, which helps to demonstrate the flexibility and robustness of the architecture. The obtained results pave ways for significantly more efficient, responsive, and fault-tolerant LLM inference on large-scale HPC infrastructures. 
+
+---
+# Exposing Privacy Risks in Graph Retrieval-Augmented Generation 
+
+**Authors**: Jiale Liu, Jiahao Zhang, Suhang Wang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.17222)  
+
+**Abstract**: Retrieval-Augmented Generation (RAG) is a powerful technique for enhancing Large Language Models (LLMs) with external, up-to-date knowledge. Graph RAG has emerged as an advanced paradigm that leverages graph-based knowledge structures to provide more coherent and contextually rich answers. However, the move from plain document retrieval to structured graph traversal introduces new, under-explored privacy risks. This paper investigates the data extraction vulnerabilities of the Graph RAG systems. We design and execute tailored data extraction attacks to probe their susceptibility to leaking both raw text and structured data, such as entities and their relationships. Our findings reveal a critical trade-off: while Graph RAG systems may reduce raw text leakage, they are significantly more vulnerable to the extraction of structured entity and relationship information. We also explore potential defense mechanisms to mitigate these novel attack surfaces. This work provides a foundational analysis of the unique privacy challenges in Graph RAG and offers insights for building more secure systems. 
+
+---
+# SSFO: Self-Supervised Faithfulness Optimization for Retrieval-Augmented Generation 
+
+**Authors**: Xiaqiang Tang, Yi Wang, Keyu Hu, Rui Xu, Chuang Li, Weigao Sun, Jian Li, Sihong Xie  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.17225)  
+
+**Abstract**: Retrieval-Augmented Generation (RAG) systems require Large Language Models (LLMs) to generate responses that are faithful to the retrieved context. However, faithfulness hallucination remains a critical challenge, as existing methods often require costly supervision and post-training or significant inference burdens. To overcome these limitations, we introduce Self-Supervised Faithfulness Optimization (SSFO), the first self-supervised alignment approach for enhancing RAG faithfulness. SSFO constructs preference data pairs by contrasting the model's outputs generated with and without the context. Leveraging Direct Preference Optimization (DPO), SSFO aligns model faithfulness without incurring labeling costs or additional inference burden. We theoretically and empirically demonstrate that SSFO leverages a benign form of \emph{likelihood displacement}, transferring probability mass from parametric-based tokens to context-aligned tokens. Based on this insight, we propose a modified DPO loss function to encourage likelihood displacement. Comprehensive evaluations show that SSFO significantly outperforms existing methods, achieving state-of-the-art faithfulness on multiple context-based question-answering datasets. Notably, SSFO exhibits strong generalization, improving cross-lingual faithfulness and preserving general instruction-following capabilities. We release our code and model at the anonymous link: this https URL 
+
+---
+# How to make Medical AI Systems safer? Simulating Vulnerabilities, and Threats in Multimodal Medical RAG System 
+
+**Authors**: Kaiwen Zuo, Zelin Liu, Raman Dutt, Ziyang Wang, Zhongtian Sun, Yeming Wang, Fan Mo, Pietro Liò  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.17215)  
+
+**Abstract**: Large Vision-Language Models (LVLMs) augmented with Retrieval-Augmented Generation (RAG) are increasingly employed in medical AI to enhance factual grounding through external clinical image-text retrieval. However, this reliance creates a significant attack surface. We propose MedThreatRAG, a novel multimodal poisoning framework that systematically probes vulnerabilities in medical RAG systems by injecting adversarial image-text pairs. A key innovation of our approach is the construction of a simulated semi-open attack environment, mimicking real-world medical systems that permit periodic knowledge base updates via user or pipeline contributions. Within this setting, we introduce and emphasize Cross-Modal Conflict Injection (CMCI), which embeds subtle semantic contradictions between medical images and their paired reports. These mismatches degrade retrieval and generation by disrupting cross-modal alignment while remaining sufficiently plausible to evade conventional filters. While basic textual and visual attacks are included for completeness, CMCI demonstrates the most severe degradation. Evaluations on IU-Xray and MIMIC-CXR QA tasks show that MedThreatRAG reduces answer F1 scores by up to 27.66% and lowers LLaVA-Med-1.5 F1 rates to as low as 51.36%. Our findings expose fundamental security gaps in clinical RAG systems and highlight the urgent need for threat-aware design and robust multimodal consistency checks. Finally, we conclude with a concise set of guidelines to inform the safe development of future multimodal medical RAG systems. 
+
+---
+# GRADE: Generating multi-hop QA and fine-gRAined Difficulty matrix for RAG Evaluation 
+
+**Authors**: Jeongsoo Lee, Daeyong Kwon, Kyohoon Jin  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.16994)  
+
+**Abstract**: Retrieval-Augmented Generation (RAG) systems are widely adopted in knowledge-intensive NLP tasks, but current evaluations often overlook the structural complexity and multi-step reasoning required in real-world scenarios. These benchmarks overlook key factors such as the interaction between retrieval difficulty and reasoning depth. To address this gap, we propose \textsc{GRADE}, a novel evaluation framework that models task difficulty along two orthogonal dimensions: (1) reasoning depth, defined by the number of inference steps (hops), and (2) semantic distance between the query and its supporting evidence. We construct a synthetic multi-hop QA dataset from factual news articles by extracting knowledge graphs and augmenting them through semantic clustering to recover missing links, allowing us to generate diverse and difficulty-controlled queries. Central to our framework is a 2D difficulty matrix that combines generator-side and retriever-side difficulty. Experiments across multiple domains and models show that error rates strongly correlate with our difficulty measures, validating their diagnostic utility. \textsc{GRADE} enables fine-grained analysis of RAG performance and provides a scalable foundation for evaluating and improving multi-hop reasoning in real-world applications. 
+
+---
+# CelloAI: Leveraging Large Language Models for HPC Software Development in High Energy Physics 
+
+**Authors**: Mohammad Atif, Kriti Chopra, Ozgur Kilic, Tianle Wang, Zhihua Dong, Charles Leggett, Meifeng Lin, Paolo Calafiura, Salman Habib  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.16713)  
+
+**Abstract**: Next-generation High Energy Physics (HEP) experiments will generate unprecedented data volumes, necessitating High Performance Computing (HPC) integration alongside traditional high-throughput computing. However, HPC adoption in HEP is hindered by the challenge of porting legacy software to heterogeneous architectures and the sparse documentation of these complex scientific codebases. We present CelloAI, a locally hosted coding assistant that leverages Large Language Models (LLMs) with retrieval-augmented generation (RAG) to support HEP code documentation and generation. This local deployment ensures data privacy, eliminates recurring costs and provides access to large context windows without external dependencies. CelloAI addresses two primary use cases, code documentation and code generation, through specialized components. For code documentation, the assistant provides: (a) Doxygen style comment generation for all functions and classes by retrieving relevant information from RAG sources (papers, posters, presentations), (b) file-level summary generation, and (c) an interactive chatbot for code comprehension queries. For code generation, CelloAI employs syntax-aware chunking strategies that preserve syntactic boundaries during embedding, improving retrieval accuracy in large codebases. The system integrates callgraph knowledge to maintain dependency awareness during code modifications and provides AI-generated suggestions for performance optimization and accurate refactoring. We evaluate CelloAI using real-world HEP applications from ATLAS, CMS, and DUNE experiments, comparing different embedding models for code retrieval effectiveness. Our results demonstrate the AI assistant's capability to enhance code understanding and support reliable code generation while maintaining the transparency and safety requirements essential for scientific computing environments. 
+
+---
+# A Retrieval Augmented Spatio-Temporal Framework for Traffic Prediction 
+
+**Authors**: Weilin Ruan, Xilin Dang, Ziyu Zhou, Sisuo Lyu, Yuxuan Liang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.16623)  
+
+**Abstract**: Traffic prediction is a cornerstone of modern intelligent transportation systems and a critical task in spatio-temporal forecasting. Although advanced Spatio-temporal Graph Neural Networks (STGNNs) and pre-trained models have achieved significant progress in traffic prediction, two key challenges remain: (i) limited contextual capacity when modeling complex spatio-temporal dependencies, and (ii) low predictability at fine-grained spatio-temporal points due to heterogeneous patterns. Inspired by Retrieval-Augmented Generation (RAG), we propose RAST, a universal framework that integrates retrieval-augmented mechanisms with spatio-temporal modeling to address these challenges. Our framework consists of three key designs: 1) Decoupled Encoder and Query Generator to capture decoupled spatial and temporal features and construct a fusion query via residual fusion; 2) Spatio-temporal Retrieval Store and Retrievers to maintain and retrieve vectorized fine-grained patterns; and 3) Universal Backbone Predictor that flexibly accommodates pre-trained STGNNs or simple MLP predictors. Extensive experiments on six real-world traffic networks, including large-scale datasets, demonstrate that RAST achieves superior performance while maintaining computational efficiency. 
+
+---
+# An Embodied AR Navigation Agent: Integrating BIM with Retrieval-Augmented Generation for Language Guidance 
+
+**Authors**: Hsuan-Kung Yang, Tsu-Ching Hsiao, Ryoichiro Oka, Ryuya Nishino, Satoko Tofukuji, Norimasa Kobori  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.16602)  
+
+**Abstract**: Delivering intelligent and adaptive navigation assistance in augmented reality (AR) requires more than visual cues, as it demands systems capable of interpreting flexible user intent and reasoning over both spatial and semantic context. Prior AR navigation systems often rely on rigid input schemes or predefined commands, which limit the utility of rich building data and hinder natural interaction. In this work, we propose an embodied AR navigation system that integrates Building Information Modeling (BIM) with a multi-agent retrieval-augmented generation (RAG) framework to support flexible, language-driven goal retrieval and route planning. The system orchestrates three language agents, Triage, Search, and Response, built on large language models (LLMs), which enables robust interpretation of open-ended queries and spatial reasoning using BIM data. Navigation guidance is delivered through an embodied AR agent, equipped with voice interaction and locomotion, to enhance user experience. A real-world user study yields a System Usability Scale (SUS) score of 80.5, indicating excellent usability, and comparative evaluations show that the embodied interface can significantly improves users' perception of system intelligence. These results underscore the importance and potential of language-grounded reasoning and embodiment in the design of user-centered AR navigation systems. 
+
+---
+# Retrieval Feedback Memory Enhancement Large Model Retrieval Generation Method 
+
+**Authors**: Leqian Li, Dianxi Shi, Jialu Zhou, Xinyu Wei, Mingyue Yang, Songchang Jin, Shaowu Yang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.17862)  
+
+**Abstract**: Large Language Models (LLMs) have shown remarkable capabilities across diverse tasks, yet they face inherent limitations such as constrained parametric knowledge and high retraining costs. Retrieval-Augmented Generation (RAG) augments the generation process by retrieving externally stored knowledge absent from the models internal parameters. However, RAG methods face challenges such as information loss and redundant retrievals during multi-round queries, accompanying the difficulties in precisely characterizing knowledge gaps for complex tasks. To address these problems, we propose Retrieval Feedback and Memory Retrieval Augmented Generation(RFM-RAG), which transforms the stateless retrieval of previous methods into stateful continuous knowledge management by constructing a dynamic evidence pool. Specifically, our method generates refined queries describing the models knowledge gaps using relational triples from questions and evidence from the dynamic evidence pool; Retrieves critical external knowledge to iteratively update this evidence pool; Employs a R-Feedback Model to evaluate evidence completeness until convergence. Compared to traditional RAG methods, our approach enables persistent storage of retrieved passages and effectively distills key information from passages to construct clearly new queries. Experiments on three public QA benchmarks demonstrate that RFM-RAG outperforms previous methods and improves overall system accuracy. 
+
+---
+# Agri-Query: A Case Study on RAG vs. Long-Context LLMs for Cross-Lingual Technical Question Answering 
+
+**Authors**: Julius Gun, Timo Oksanen  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.18093)  
+
+**Abstract**: We present a case study evaluating large language models (LLMs) with 128K-token context windows on a technical question answering (QA) task. Our benchmark is built on a user manual for an agricultural machine, available in English, French, and German. It simulates a cross-lingual information retrieval scenario where questions are posed in English against all three language versions of the manual. The evaluation focuses on realistic "needle-in-a-haystack" challenges and includes unanswerable questions to test for hallucinations. We compare nine long-context LLMs using direct prompting against three Retrieval-Augmented Generation (RAG) strategies (keyword, semantic, hybrid), with an LLM-as-a-judge for evaluation. Our findings for this specific manual show that Hybrid RAG consistently outperforms direct long-context prompting. Models like Gemini 2.5 Flash and the smaller Qwen 2.5 7B achieve high accuracy (over 85%) across all languages with RAG. This paper contributes a detailed analysis of LLM performance in a specialized industrial domain and an open framework for similar evaluations, highlighting practical trade-offs and challenges. 
+
+---
+# MIRAGE: Scaling Test-Time Inference with Parallel Graph-Retrieval-Augmented Reasoning Chains 
+
+**Authors**: Kaiwen Wei, Rui Shan, Dongsheng Zou, Jianzhong Yang, Bi Zhao, Junnan Zhu, Jiang Zhong  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.18260)  
+
+**Abstract**: Large reasoning models (LRMs) have shown significant progress in test-time scaling through chain-of-thought prompting. Current approaches like search-o1 integrate retrieval augmented generation (RAG) into multi-step reasoning processes but rely on a single, linear reasoning chain while incorporating unstructured textual information in a flat, context-agnostic manner. As a result, these approaches can lead to error accumulation throughout the reasoning chain, which significantly limits its effectiveness in medical question-answering (QA) tasks where both accuracy and traceability are critical requirements. To address these challenges, we propose MIRAGE (Multi-chain Inference with Retrieval-Augmented Graph Exploration), a novel test-time scalable reasoning framework that performs dynamic multi-chain inference over structured medical knowledge graphs. Specifically, MIRAGE 1) decomposes complex queries into entity-grounded sub-questions, 2) executes parallel inference chains, 3) retrieves evidence adaptively via neighbor expansion and multi-hop traversal, and 4) integrates answers using cross-chain verification to resolve contradictions. Experiments on three medical QA benchmarks (GenMedGPT-5k, CMCQA, and ExplainCPE) show that MIRAGE consistently outperforms GPT-4o, Tree-of-Thought variants, and other retrieval-augmented baselines in both automatic and human evaluations. Additionally, MIRAGE improves interpretability by generating explicit reasoning chains that trace each factual claim to concrete chains within the knowledge graph, making it well-suited for complex medical reasoning scenarios. The code will be available for further research. 
+
+---
+# ISACL: Internal State Analyzer for Copyrighted Training Data Leakage 
+
+**Authors**: Guangwei Zhang, Qisheng Su, Jiateng Liu, Cheng Qian, Yanzhou Pan, Yanjie Fu, Denghui Zhang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.17767)  
+
+**Abstract**: Large Language Models (LLMs) have revolutionized Natural Language Processing (NLP) but pose risks of inadvertently exposing copyrighted or proprietary data, especially when such data is used for training but not intended for distribution. Traditional methods address these leaks only after content is generated, which can lead to the exposure of sensitive information. This study introduces a proactive approach: examining LLMs' internal states before text generation to detect potential leaks. By using a curated dataset of copyrighted materials, we trained a neural network classifier to identify risks, allowing for early intervention by stopping the generation process or altering outputs to prevent disclosure. Integrated with a Retrieval-Augmented Generation (RAG) system, this framework ensures adherence to copyright and licensing requirements while enhancing data privacy and ethical standards. Our results show that analyzing internal states effectively mitigates the risk of copyrighted data leakage, offering a scalable solution that fits smoothly into AI workflows, ensuring compliance with copyright regulations while maintaining high-quality text generation. The implementation is available on GitHub.\footnote{this https URL} 
+
+---
