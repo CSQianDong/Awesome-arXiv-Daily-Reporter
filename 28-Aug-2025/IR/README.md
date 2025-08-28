@@ -1,0 +1,120 @@
+# Refining Text Generation for Realistic Conversational Recommendation via Direct Preference Optimization 
+
+**Authors**: Manato Tajiri, Michimasa Inaba  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.19918)  
+
+**Abstract**: Conversational Recommender Systems (CRSs) aim to elicit user preferences via natural dialogue to provide suitable item recommendations. However, current CRSs often deviate from realistic human interactions by rapidly recommending items in brief sessions. This work addresses this gap by leveraging Large Language Models (LLMs) to generate dialogue summaries from dialogue history and item recommendation information from item description. This approach enables the extraction of both explicit user statements and implicit preferences inferred from the dialogue context. We introduce a method using Direct Preference Optimization (DPO) to ensure dialogue summary and item recommendation information are rich in information crucial for effective recommendations. Experiments on two public datasets validate our method's effectiveness in fostering more natural and realistic conversational recommendation this http URL implementation is publicly available at:this https URL 
+
+---
+# Youtu-GraphRAG: Vertically Unified Agents for Graph Retrieval-Augmented Complex Reasoning 
+
+**Authors**: Junnan Dong, Siyu An, Yifei Yu, Qian-Wen Zhang, Linhao Luo, Xiao Huang, Yunsheng Wu, Di Yin, Xing Sun  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.19855)  
+
+**Abstract**: Graph retrieval-augmented generation (GraphRAG) has effectively enhanced large language models in complex reasoning by organizing fragmented knowledge into explicitly structured graphs. Prior efforts have been made to improve either graph construction or graph retrieval in isolation, yielding suboptimal performance, especially when domain shifts occur. In this paper, we propose a vertically unified agentic paradigm, Youtu-GraphRAG, to jointly connect the entire framework as an intricate integration. Specifically, (i) a seed graph schema is introduced to bound the automatic extraction agent with targeted entity types, relations and attribute types, also continuously expanded for scalability over unseen domains; (ii) To obtain higher-level knowledge upon the schema, we develop novel dually-perceived community detection, fusing structural topology with subgraph semantics for comprehensive knowledge organization. This naturally yields a hierarchical knowledge tree that supports both top-down filtering and bottom-up reasoning with community summaries; (iii) An agentic retriever is designed to interpret the same graph schema to transform complex queries into tractable and parallel sub-queries. It iteratively performs reflection for more advanced reasoning; (iv) To alleviate the knowledge leaking problem in pre-trained LLM, we propose a tailored anonymous dataset and a novel 'Anonymity Reversion' task that deeply measures the real performance of the GraphRAG frameworks. Extensive experiments across six challenging benchmarks demonstrate the robustness of Youtu-GraphRAG, remarkably moving the Pareto frontier with up to 90.71% saving of token costs and 16.62% higher accuracy over state-of-the-art baselines. The results indicate our adaptability, allowing seamless domain transfer with minimal intervention on schema. 
+
+---
+# A Scenario-Oriented Survey of Federated Recommender Systems: Techniques, Challenges, and Future Directions 
+
+**Authors**: Yunqi Mi, Jiakui Shen, Guoshuai Zhao, Jialie Shen, Xueming Qian  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.19620)  
+
+**Abstract**: Extending recommender systems to federated learning (FL) frameworks to protect the privacy of users or platforms while making recommendations has recently gained widespread attention in academia. This is due to the natural coupling of recommender systems and federated learning architectures: the data originates from distributed clients (mostly mobile devices held by users), which are highly related to privacy. In a centralized recommender system (CenRec), the central server collects clients' data, trains the model, and provides the service. Whereas in federated recommender systems (FedRec), the step of data collecting is omitted, and the step of model training is offloaded to each client. The server only aggregates the model and other knowledge, thus avoiding client privacy leakage. Some surveys of federated recommender systems discuss and analyze related work from the perspective of designing FL systems. However, their utility drops by ignoring specific recommendation scenarios' unique characteristics and practical challenges. For example, the statistical heterogeneity issue in cross-domain FedRec originates from the label drift of the data held by different platforms, which is mainly caused by the recommender itself, but not the federated architecture. Therefore, it should focus more on solving specific problems in real-world recommendation scenarios to encourage the deployment FedRec. To this end, this review comprehensively analyzes the coupling of recommender systems and federated learning from the perspective of recommendation researchers and practitioners. We establish a clear link between recommendation scenarios and FL frameworks, systematically analyzing scenario-specific approaches, practical challenges, and potential opportunities. We aim to develop guidance for the real-world deployment of FedRec, bridging the gap between existing research and applications. 
+
+---
+# A Model-agnostic Strategy to Mitigate Embedding Degradation in Personalized Federated Recommendation 
+
+**Authors**: Jiakui Shen, Yunqi Mi, Guoshuai Zhao, Jialie Shen, Xueming Qian  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.19591)  
+
+**Abstract**: Centralized recommender systems encounter privacy leakage due to the need to collect user behavior and other private data. Hence, federated recommender systems (FedRec) have become a promising approach with an aggregated global model on the server. However, this distributed training paradigm suffers from embedding degradation caused by suboptimal personalization and dimensional collapse, due to the existence of sparse interactions and heterogeneous preferences. To this end, we propose a novel model-agnostic strategy for FedRec to strengthen the personalized embedding utility, which is called Personalized Local-Global Collaboration (PLGC). It is the first research in federated recommendation to alleviate the dimensional collapse issue. Particularly, we incorporate the frozen global item embedding table into local devices. Based on a Neural Tangent Kernel strategy that dynamically balances local and global information, PLGC optimizes personalized representations during forward inference, ultimately converging to user-specific preferences. Additionally, PLGC carries on a contrastive objective function to reduce embedding redundancy by dissolving dependencies between dimensions, thereby improving the backward representation learning process. We introduce PLGC as a model-agnostic personalized training strategy for federated recommendations that can be applied to existing baselines to alleviate embedding degradation. Extensive experiments on five real-world datasets have demonstrated the effectiveness and adaptability of PLGC, which outperforms various baseline algorithms. 
+
+---
+# Improving Recommendation Fairness via Graph Structure and Representation Augmentation 
+
+**Authors**: Tongxin Xu, Wenqiang Liu, Chenzhong Bin, Cihan Xiao, Zhixin Zeng, Tianlong Gu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.19547)  
+
+**Abstract**: Graph Convolutional Networks (GCNs) have become increasingly popular in recommendation systems. However, recent studies have shown that GCN-based models will cause sensitive information to disseminate widely in the graph structure, amplifying data bias and raising fairness concerns. While various fairness methods have been proposed, most of them neglect the impact of biased data on representation learning, which results in limited fairness improvement. Moreover, some studies have focused on constructing fair and balanced data distributions through data augmentation, but these methods significantly reduce utility due to disruption of user preferences. In this paper, we aim to design a fair recommendation method from the perspective of data augmentation to improve fairness while preserving recommendation utility. To achieve fairness-aware data augmentation with minimal disruption to user preferences, we propose two prior hypotheses. The first hypothesis identifies sensitive interactions by comparing outcomes of performance-oriented and fairness-aware recommendations, while the second one focuses on detecting sensitive features by analyzing feature similarities between biased and debiased representations. Then, we propose a dual data augmentation framework for fair recommendation, which includes two data augmentation strategies to generate fair augmented graphs and feature representations. Furthermore, we introduce a debiasing learning method that minimizes the dependence between the learned representations and sensitive information to eliminate bias. Extensive experiments on two real-world datasets demonstrate the superiority of our proposed framework. 
+
+---
+# A Hybrid Recommendation Framework for Enhancing User Engagement in Local News 
+
+**Authors**: Payam Pourashraf, Bamshad Mobasher  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.19539)  
+
+**Abstract**: Local news organizations face an urgent need to boost reader engagement amid declining circulation and competition from global media. Personalized news recommender systems offer a promising solution by tailoring content to user interests. Yet, conventional approaches often emphasize general preferences and may overlook nuanced or eclectic interests in local news.
+We propose a hybrid news recommender that integrates local and global preference models to improve engagement. Building on evidence of the value of localized models, our method unifies local and non-local predictors in one framework. The system adaptively combines recommendations from a local model, specialized in region-specific content, and a global model that captures broader preferences. Ensemble strategies and multiphase training balance the two.
+We evaluated the model on two datasets: a synthetic set based on Syracuse newspaper distributions and a Danish dataset (EB-NeRD) labeled for local and non-local content with an LLM. Results show our integrated approach outperforms single-model baselines in accuracy and coverage, suggesting improved personalization that can drive user engagement.
+The findings have practical implications for publishers, especially local outlets. By leveraging both community-specific and general user interests, the hybrid recommender can deliver more relevant content, increasing retention and subscriptions. In sum, this work introduces a new direction for recommender systems, bridging local and global models to revitalize local news consumption through scalable, personalized user experiences. 
+
+---
+# A Self-Supervised Mixture-of-Experts Framework for Multi-behavior Recommendation 
+
+**Authors**: Kyungho Kim, Sunwoo Kim, Geon Lee, Kijung Shin  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.19507)  
+
+**Abstract**: In e-commerce, where users face a vast array of possible item choices, recommender systems are vital for helping them discover suitable items they might otherwise overlook. While many recommender systems primarily rely on a user's purchase history, recent multi-behavior recommender systems incorporate various auxiliary user behaviors, such as item clicks and cart additions, to enhance recommendations. Despite their overall performance gains, their effectiveness varies considerably between visited items (i.e., those a user has interacted with through auxiliary behaviors) and unvisited items (i.e., those with which the user has had no such interactions). Specifically, our analysis reveals that (1) existing multi-behavior recommender systems exhibit a significant gap in recommendation quality between the two item types (visited and unvisited items) and (2) achieving strong performance on both types with a single model architecture remains challenging. To tackle these issues, we propose a novel multi-behavior recommender system, MEMBER. It employs a mixture-of-experts framework, with experts designed to recommend the two item types, respectively. Each expert is trained using a self-supervised method specialized for its design goal. In our comprehensive experiments, we show the effectiveness of MEMBER across both item types, achieving up to 65.46\% performance gain over the best competitor in terms of Hit Ratio@20. 
+
+---
+# APS Explorer: Navigating Algorithm Performance Spaces for Informed Dataset Selection 
+
+**Authors**: Tobias Vente, Michael Heep, Abdullah Abbas, Theodor Sperle, Joeran Beel, Bart Goethals  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.19399)  
+
+**Abstract**: Dataset selection is crucial for offline recommender system experiments, as mismatched data (e.g., sparse interaction scenarios require datasets with low user-item density) can lead to unreliable results. Yet, 86\% of ACM RecSys 2024 papers provide no justification for their dataset choices, with most relying on just four datasets: Amazon (38\%), MovieLens (34\%), Yelp (15\%), and Gowalla (12\%). While Algorithm Performance Spaces (APS) were proposed to guide dataset selection, their adoption has been limited due to the absence of an intuitive, interactive tool for APS exploration. Therefore, we introduce the APS Explorer, a web-based visualization tool for interactive APS exploration, enabling data-driven dataset selection. The APS Explorer provides three interactive features: (1) an interactive PCA plot showing dataset similarity via performance patterns, (2) a dynamic meta-feature table for dataset comparisons, and (3) a specialized visualization for pairwise algorithm performance. 
+
+---
+# AI for Statutory Simplification: A Comprehensive State Legal Corpus and Labor Benchmark 
+
+**Authors**: Emaan Hariri, Daniel E. Ho  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.19365)  
+
+**Abstract**: One of the emerging use cases of AI in law is for code simplification: streamlining, distilling, and simplifying complex statutory or regulatory language. One U.S. state has claimed to eliminate one third of its state code using AI. Yet we lack systematic evaluations of the accuracy, reliability, and risks of such approaches. We introduce LaborBench, a question-and-answer benchmark dataset designed to evaluate AI capabilities in this domain. We leverage a unique data source to create LaborBench: a dataset updated annually by teams of lawyers at the U.S. Department of Labor, who compile differences in unemployment insurance laws across 50 states for over 101 dimensions in a six-month process, culminating in a 200-page publication of tables. Inspired by our collaboration with one U.S. state to explore using large language models (LLMs) to simplify codes in this domain, where complexity is particularly acute, we transform the DOL publication into LaborBench. This provides a unique benchmark for AI capacity to conduct, distill, and extract realistic statutory and regulatory information. To assess the performance of retrieval augmented generation (RAG) approaches, we also compile StateCodes, a novel and comprehensive state statute and regulatory corpus of 8.7 GB, enabling much more systematic research into state codes. We then benchmark the performance of information retrieval and state-of-the-art large LLMs on this data and show that while these models are helpful as preliminary research for code simplification, the overall accuracy is far below the touted promises for LLMs as end-to-end pipelines for regulatory simplification. 
+
+---
+# Cross-Platform E-Commerce Product Categorization and Recategorization: A Multimodal Hierarchical Classification Approach 
+
+**Authors**: Lotte Gross, Rebecca Walter, Nicole Zoppi, Adrien Justus, Alessandro Gambetti, Qiwei Han, Maximilian Kaiser  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.20013)  
+
+**Abstract**: This study addresses critical industrial challenges in e-commerce product categorization, namely platform heterogeneity and the structural limitations of existing taxonomies, by developing and deploying a multimodal hierarchical classification framework. Using a dataset of 271,700 products from 40 international fashion e-commerce platforms, we integrate textual features (RoBERTa), visual features (ViT), and joint vision--language representations (CLIP). We investigate fusion strategies, including early, late, and attention-based fusion within a hierarchical architecture enhanced by dynamic masking to ensure taxonomic consistency. Results show that CLIP embeddings combined via an MLP-based late-fusion strategy achieve the highest hierarchical F1 (98.59\%), outperforming unimodal baselines. To address shallow or inconsistent categories, we further introduce a self-supervised ``product recategorization'' pipeline using SimCLR, UMAP, and cascade clustering, which discovered new, fine-grained categories (e.g., subtypes of ``Shoes'') with cluster purities above 86\%. Cross-platform experiments reveal a deployment-relevant trade-off: complex late-fusion methods maximize accuracy with diverse training data, while simpler early-fusion methods generalize more effectively to unseen platforms. Finally, we demonstrate the framework's industrial scalability through deployment in EURWEB's commercial transaction intelligence platform via a two-stage inference pipeline, combining a lightweight RoBERTa stage with a GPU--accelerated multimodal stage to balance cost and accuracy. 
+
+---
+# Selective Retrieval-Augmentation for Long-Tail Legal Text Classification 
+
+**Authors**: Boheng Mao  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.19997)  
+
+**Abstract**: Legal text classification is a fundamental NLP task in the legal domain. Benchmark datasets in this area often exhibit a long-tail label distribution, where many labels are underrepresented, leading to poor model performance on rare classes. This paper proposes Selective Retrieval-Augmentation (SRA) as a solution to this problem. SRA focuses on augmenting samples belonging to low-frequency labels in the training set, preventing the introduction of noise for well-represented classes, and requires no changes to the model architecture. Retrieval is performed only from the training data to ensure there is no potential information leakage, removing the need for external corpora simultaneously. The proposed SRA method is tested on two legal text classification benchmark datasets with long-tail distributions: LEDGAR (single-label) and UNFAIR-ToS (multi-label). The results indicate that SRA attains higher micro-F1 and macro-F1 scores compared to all current LexGLUE baselines across both datasets, illustrating consistent improvements in long-tail legal text classification. The code repository is available at: this https URL 
+
+---
+# Uncovering the Bigger Picture: Comprehensive Event Understanding Via Diverse News Retrieval 
+
+**Authors**: Yixuan Tang, Yuanyuan Shi, Yiqun Sun, Anthony Kum Hoe Tung  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.19758)  
+
+**Abstract**: Access to diverse perspectives is essential for understanding real-world events, yet most news retrieval systems prioritize textual relevance, leading to redundant results and limited viewpoint exposure. We propose NEWSCOPE, a two-stage framework for diverse news retrieval that enhances event coverage by explicitly modeling semantic variation at the sentence level. The first stage retrieves topically relevant content using dense retrieval, while the second stage applies sentence-level clustering and diversity-aware re-ranking to surface complementary information. To evaluate retrieval diversity, we introduce three interpretable metrics, namely Average Pairwise Distance, Positive Cluster Coverage, and Information Density Ratio, and construct two paragraph-level benchmarks: LocalNews and DSGlobal. Experiments show that NEWSCOPE consistently outperforms strong baselines, achieving significantly higher diversity without compromising relevance. Our results demonstrate the effectiveness of fine-grained, interpretable modeling in mitigating redundancy and promoting comprehensive event understanding. The data and code are available at this https URL. 
+
+---
+# Inference Gap in Domain Expertise and Machine Intelligence in Named Entity Recognition: Creation of and Insights from a Substance Use-related Dataset 
+
+**Authors**: Sumon Kanti Dey, Jeanne M. Powell, Azra Ismail, Jeanmarie Perrone, Abeed Sarker  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.19467)  
+
+**Abstract**: Nonmedical opioid use is an urgent public health challenge, with far-reaching clinical and social consequences that are often underreported in traditional healthcare settings. Social media platforms, where individuals candidly share first-person experiences, offer a valuable yet underutilized source of insight into these impacts. In this study, we present a named entity recognition (NER) framework to extract two categories of self-reported consequences from social media narratives related to opioid use: ClinicalImpacts (e.g., withdrawal, depression) and SocialImpacts (e.g., job loss). To support this task, we introduce RedditImpacts 2.0, a high-quality dataset with refined annotation guidelines and a focus on first-person disclosures, addressing key limitations of prior work. We evaluate both fine-tuned encoder-based models and state-of-the-art large language models (LLMs) under zero- and few-shot in-context learning settings. Our fine-tuned DeBERTa-large model achieves a relaxed token-level F1 of 0.61 [95% CI: 0.43-0.62], consistently outperforming LLMs in precision, span accuracy, and adherence to task-specific guidelines. Furthermore, we show that strong NER performance can be achieved with substantially less labeled data, emphasizing the feasibility of deploying robust models in resource-limited settings. Our findings underscore the value of domain-specific fine-tuning for clinical NLP tasks and contribute to the responsible development of AI tools that may enhance addiction surveillance, improve interpretability, and support real-world healthcare decision-making. The best performing model, however, still significantly underperforms compared to inter-expert agreement (Cohen's kappa: 0.81), demonstrating that a gap persists between expert intelligence and current state-of-the-art NER/AI capabilities for tasks requiring deep domain knowledge. 
+
+---
