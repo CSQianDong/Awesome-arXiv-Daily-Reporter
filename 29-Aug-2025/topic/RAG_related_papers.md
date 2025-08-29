@@ -1,0 +1,54 @@
+# An Agile Method for Implementing Retrieval Augmented Generation Tools in Industrial SMEs 
+
+**Authors**: Mathieu Bourdin, Anas Neumann, Thomas Paviot, Robert Pellerin, Samir Lamouri  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.21024)  
+
+**Abstract**: Retrieval-Augmented Generation (RAG) has emerged as a powerful solution to mitigate the limitations of Large Language Models (LLMs), such as hallucinations and outdated knowledge. However, deploying RAG-based tools in Small and Medium Enterprises (SMEs) remains a challenge due to their limited resources and lack of expertise in natural language processing (NLP). This paper introduces EASI-RAG, Enterprise Application Support for Industrial RAG, a structured, agile method designed to facilitate the deployment of RAG systems in industrial SME contexts. EASI-RAG is based on method engineering principles and comprises well-defined roles, activities, and techniques. The method was validated through a real-world case study in an environmental testing laboratory, where a RAG tool was implemented to answer operators queries using data extracted from operational procedures. The system was deployed in under a month by a team with no prior RAG experience and was later iteratively improved based on user feedback. Results demonstrate that EASI-RAG supports fast implementation, high user adoption, delivers accurate answers, and enhances the reliability of underlying data. This work highlights the potential of RAG deployment in industrial SMEs. Future works include the need for generalization across diverse use cases and further integration with fine-tuned models. 
+
+---
+# MSRS: Evaluating Multi-Source Retrieval-Augmented Generation 
+
+**Authors**: Rohan Phanse, Yijie Zhou, Kejian Shi, Wencai Zhang, Yixin Liu, Yilun Zhao, Arman Cohan  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.20867)  
+
+**Abstract**: Retrieval-augmented systems are typically evaluated in settings where information required to answer the query can be found within a single source or the answer is short-form or factoid-based. However, many real-world applications demand the ability to integrate and summarize information scattered across multiple sources, where no single source is sufficient to respond to the user's question. In such settings, the retrieval component of a RAG pipeline must recognize a variety of relevance signals, and the generation component must connect and synthesize information across multiple sources. We present a scalable framework for constructing evaluation benchmarks that challenge RAG systems to integrate information across distinct sources and generate long-form responses. Using our framework, we build two new benchmarks on Multi-Source Retrieval and Synthesis: MSRS-Story and MSRS-Meet, representing narrative synthesis and summarization tasks, respectively, that require retrieval from large collections. Our extensive experiments with various RAG pipelines -- including sparse and dense retrievers combined with frontier LLMs -- reveal that generation quality is highly dependent on retrieval effectiveness, which varies greatly by task. While multi-source synthesis proves challenging even in an oracle retrieval setting, we find that reasoning models significantly outperform standard LLMs at this distinct step. 
+
+---
+# DentalBench: Benchmarking and Advancing LLMs Capability for Bilingual Dentistry Understanding 
+
+**Authors**: Hengchuan Zhu, Yihuan Xu, Yichen Li, Zijie Meng, Zuozhu Liu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.20416)  
+
+**Abstract**: Recent advances in large language models (LLMs) and medical LLMs (Med-LLMs) have demonstrated strong performance on general medical benchmarks. However, their capabilities in specialized medical fields, such as dentistry which require deeper domain-specific knowledge, remain underexplored due to the lack of targeted evaluation resources. In this paper, we introduce DentalBench, the first comprehensive bilingual benchmark designed to evaluate and advance LLMs in the dental domain. DentalBench consists of two main components: DentalQA, an English-Chinese question-answering (QA) benchmark with 36,597 questions spanning 4 tasks and 16 dental subfields; and DentalCorpus, a large-scale, high-quality corpus with 337.35 million tokens curated for dental domain adaptation, supporting both supervised fine-tuning (SFT) and retrieval-augmented generation (RAG). We evaluate 14 LLMs, covering proprietary, open-source, and medical-specific models, and reveal significant performance gaps across task types and languages. Further experiments with Qwen-2.5-3B demonstrate that domain adaptation substantially improves model performance, particularly on knowledge-intensive and terminology-focused tasks, and highlight the importance of domain-specific benchmarks for developing trustworthy and effective LLMs tailored to healthcare applications. 
+
+---
+# Can Compact Language Models Search Like Agents? Distillation-Guided Policy Optimization for Preserving Agentic RAG Capabilities 
+
+**Authors**: Rikuto Kotoge, Mai Nishimura, Jiaxin Ma  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.20324)  
+
+**Abstract**: Reinforcement Learning has emerged as a post-training approach to elicit agentic RAG behaviors such as search and planning from language models. However, compact language models (e.g., 0.5B parameters) struggle due to poor reasoning ability, resulting in sparse rewards and unstable training. To overcome these difficulties, we propose Distillation-Guided Policy Optimization (DGPO), which addresses the challenges through cold-start initialization from teacher demonstrations and continuous teacher guidance during policy optimization. To systematically evaluate our approach, we introduce Agentic RAG Capabilities (ARC), a fine-grained metric analyzing reasoning, search coordination, and response synthesis. Comprehensive experiments demonstrate that DGPO enables compact models to achieve sophisticated agentic search behaviors, even outperforming the larger teacher model in some cases. DGPO makes agentic RAG feasible in computing resource-constrained environments. 
+
+---
+# ArgRAG: Explainable Retrieval Augmented Generation using Quantitative Bipolar Argumentation 
+
+**Authors**: Yuqicheng Zhu, Nico Potyka, Daniel Hernández, Yuan He, Zifeng Ding, Bo Xiong, Dongzhuoran Zhou, Evgeny Kharlamov, Steffen Staab  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.20131)  
+
+**Abstract**: Retrieval-Augmented Generation (RAG) enhances large language models by incorporating external knowledge, yet suffers from critical limitations in high-stakes domains -- namely, sensitivity to noisy or contradictory evidence and opaque, stochastic decision-making. We propose ArgRAG, an explainable, and contestable alternative that replaces black-box reasoning with structured inference using a Quantitative Bipolar Argumentation Framework (QBAF). ArgRAG constructs a QBAF from retrieved documents and performs deterministic reasoning under gradual semantics. This allows faithfully explaining and contesting decisions. Evaluated on two fact verification benchmarks, PubHealth and RAGuard, ArgRAG achieves strong accuracy while significantly improving transparency. 
+
+---
+# AI Agentic Vulnerability Injection And Transformation with Optimized Reasoning 
+
+**Authors**: Amine Lbath, Massih-Reza Amini, Aurelien Delaitre, Vadim Okun  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.20866)  
+
+**Abstract**: The increasing complexity of software systems and the sophistication of cyber-attacks have underscored the critical need for effective automated vulnerability detection and repair systems. Traditional methods, such as static program analysis, face significant challenges related to scalability, adaptability, and high false-positive and false-negative rates. AI-driven approaches, particularly those using machine learning and deep learning models, show promise but are heavily reliant on the quality and quantity of training data. This paper introduces a novel framework designed to automatically introduce realistic, category-specific vulnerabilities into secure C/C++ codebases to generate datasets. The proposed approach coordinates multiple AI agents that simulate expert reasoning, along with function agents and traditional code analysis tools. It leverages Retrieval-Augmented Generation for contextual grounding and employs Low-Rank approximation of weights for efficient model fine-tuning. Our experimental study on 116 code samples from three different benchmarks suggests that our approach outperforms other techniques with regard to dataset accuracy, achieving between 89\% and 95\% success rates in injecting vulnerabilities at function level. 
+
+---

@@ -1,0 +1,211 @@
+# On the Theoretical Limitations of Embedding-Based Retrieval 
+
+**Authors**: Orion Weller, Michael Boratko, Iftekhar Naim, Jinhyuk Lee  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.21038)  
+
+**Abstract**: Vector embeddings have been tasked with an ever-increasing set of retrieval tasks over the years, with a nascent rise in using them for reasoning, instruction-following, coding, and more. These new benchmarks push embeddings to work for any query and any notion of relevance that could be given. While prior works have pointed out theoretical limitations of vector embeddings, there is a common assumption that these difficulties are exclusively due to unrealistic queries, and those that are not can be overcome with better training data and larger models. In this work, we demonstrate that we may encounter these theoretical limitations in realistic settings with extremely simple queries. We connect known results in learning theory, showing that the number of top-k subsets of documents capable of being returned as the result of some query is limited by the dimension of the embedding. We empirically show that this holds true even if we restrict to k=2, and directly optimize on the test set with free parameterized embeddings. We then create a realistic dataset called LIMIT that stress tests models based on these theoretical results, and observe that even state-of-the-art models fail on this dataset despite the simple nature of the task. Our work shows the limits of embedding models under the existing single vector paradigm and calls for future research to develop methods that can resolve this fundamental limitation. 
+
+---
+# Efficient Large-Scale Cross-Domain Sequential Recommendation with Dynamic State Representations 
+
+**Authors**: Manuel V. Loureiro, Steven Derby, Aleksei Medvedev, Alejandro Ariza-Casabona, Gonzalo Fiz Pontiveros, Tri Kurniawan Wijaya  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.20945)  
+
+**Abstract**: Recently, autoregressive recommendation models (ARMs), such as Meta's HSTU model, have emerged as a major breakthrough over traditional Deep Learning Recommendation Models (DLRMs), exhibiting the highly sought-after scaling law behaviour. However, when applied to multi-domain scenarios, the transformer architecture's attention maps become a computational bottleneck, as they attend to all items across every domain. To tackle this challenge, systems must efficiently balance inter and intra-domain knowledge transfer. In this work, we introduce a novel approach for scalable multi-domain recommendation systems by replacing full inter-domain attention with two innovative mechanisms: 1) Transition-Aware Positional Embeddings (TAPE): We propose novel positional embeddings that account for domain-transition specific information. This allows attention to be focused solely on intra-domain items, effectively reducing the unnecessary computational cost associated with attending to irrelevant domains. 2) Dynamic Domain State Representation (DDSR): We introduce a dynamic state representation for each domain, which is stored and accessed during subsequent token predictions. This enables the efficient transfer of relevant domain information without relying on full attention maps. Our method offers a scalable solution to the challenges posed by large-scale, multi-domain recommendation systems and demonstrates significant improvements in retrieval tasks by separately modelling and combining inter- and intra-domain representations. 
+
+---
+# OneRec-V2 Technical Report 
+
+**Authors**: Guorui Zhou, Hengrui Hu, Hongtao Cheng, Huanjie Wang, Jiaxin Deng, Jinghao Zhang, Kuo Cai, Lejian Ren, Lu Ren, Liao Yu, Pengfei Zheng, Qiang Luo, Qianqian Wang, Qigen Hu, Rui Huang, Ruiming Tang, Shiyao Wang, Shujie Yang, Tao Wu, Wuchao Li, Xinchen Luo, Xingmei Wang, Yi Su, Yunfan Wu, Zexuan Cheng, Zhanyu Liu, Zixing Zhang, Bin Zhang, Boxuan Wang, Chaoyi Ma, Chengru Song, Chenhui Wang, Chenglong Chu, Di Wang, Dongxue Meng, Dunju Zang, Fan Yang, Fangyu Zhang, Feng Jiang, Fuxing Zhang, Gang Wang, Guowang Zhang, Han Li, Honghui Bao, Hongyang Cao, Jiaming Huang, Jiapeng Chen, Jiaqiang Liu, Jinghui Jia, Kun Gai, Lantao Hu, Liang Zeng, Qiang Wang, Qidong Zhou, Rongzhou Zhang, Shengzhe Wang, Shihui He, Shuang Yang, Siyang Mao, Sui Huang, Tiantian He, Tingting Gao, Wei Yuan, Xiao Liang, Xiaoxiao Xu, Xugang Liu, Yan Wang, Yang Zhou, Yi Wang, Yiwu Liu, Yue Song, Yufei Zhang, Yunfeng Zhao, Zhixin Ling, Ziming Li  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.20900)  
+
+**Abstract**: Recent breakthroughs in generative AI have transformed recommender systems through end-to-end generation. OneRec reformulates recommendation as an autoregressive generation task, achieving high Model FLOPs Utilization. While OneRec-V1 has shown significant empirical success in real-world deployment, two critical challenges hinder its scalability and performance: (1) inefficient computational allocation where 97.66% of resources are consumed by sequence encoding rather than generation, and (2) limitations in reinforcement learning relying solely on reward models.
+To address these challenges, we propose OneRec-V2, featuring: (1) Lazy Decoder-Only Architecture: Eliminates encoder bottlenecks, reducing total computation by 94% and training resources by 90%, enabling successful scaling to 8B parameters. (2) Preference Alignment with Real-World User Interactions: Incorporates Duration-Aware Reward Shaping and Adaptive Ratio Clipping to better align with user preferences using real-world feedback.
+Extensive A/B tests on Kuaishou demonstrate OneRec-V2's effectiveness, improving App Stay Time by 0.467%/0.741% while balancing multi-objective recommendations. This work advances generative recommendation scalability and alignment with real-world feedback, representing a step forward in the development of end-to-end recommender systems. 
+
+---
+# Deep Multiple Quantization Network on Long Behavior Sequence for Click-Through Rate Prediction 
+
+**Authors**: Zhuoxing Wei, Qi Liu, Qingchen Xie  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.20865)  
+
+**Abstract**: In Click-Through Rate (CTR) prediction, the long behavior sequence, comprising the user's long period of historical interactions with items has a vital influence on assessing the user's interest in the candidate item. Existing approaches strike efficiency and effectiveness through a two-stage paradigm: first retrieving hundreds of candidate-related items and then extracting interest intensity vector through target attention. However, we argue that the discrepancy in target attention's relevance distribution between the retrieved items and the full long behavior sequence inevitably leads to a performance decline. To alleviate the discrepancy, we propose the Deep Multiple Quantization Network (DMQN) to process long behavior sequence end-to-end through compressing the long behavior sequence. Firstly, the entire spectrum of long behavior sequence will be quantized into multiple codeword sequences based on multiple independent codebooks. Hierarchical Sequential Transduction Unit is incorporated to facilitate the interaction of reduced codeword sequences. Then, attention between the candidate and multiple codeword sequences will output the interest vector. To enable online serving, intermediate representations of the codeword sequences are cached, significantly reducing latency. Our extensive experiments on both industrial and public datasets confirm the effectiveness and efficiency of DMQN. The A/B test in our advertising system shows that DMQN improves CTR by 3.5% and RPM by 2.0%. 
+
+---
+# Addressing Personalized Bias for Unbiased Learning to Rank 
+
+**Authors**: Zechun Niu, Lang Mei, Liu Yang, Ziyuan Zhao, Qiang Yan, Jiaxin Mao, Ji-Rong Wen  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.20798)  
+
+**Abstract**: Unbiased learning to rank (ULTR), which aims to learn unbiased ranking models from biased user behavior logs, plays an important role in Web search. Previous research on ULTR has studied a variety of biases in users' clicks, such as position bias, presentation bias, and outlier bias. However, existing work often assumes that the behavior logs are collected from an ``average'' user, neglecting the differences between different users in their search and browsing behaviors. In this paper, we introduce personalized factors into the ULTR framework, which we term the user-aware ULTR problem. Through a formal causal analysis of this problem, we demonstrate that existing user-oblivious methods are biased when different users have different preferences over queries and personalized propensities of examining documents. To address such a personalized bias, we propose a novel user-aware inverse-propensity-score estimator for learning-to-rank objectives. Specifically, our approach models the distribution of user browsing behaviors for each query and aggregates user-weighted examination probabilities to determine propensities. We theoretically prove that the user-aware estimator is unbiased under some mild assumptions and shows lower variance compared to the straightforward way of calculating a user-dependent propensity for each impression. Finally, we empirically verify the effectiveness of our user-aware estimator by conducting extensive experiments on two semi-synthetic datasets and a real-world dataset. 
+
+---
+# SEAL: Structure and Element Aware Learning to Improve Long Structured Document Retrieval 
+
+**Authors**: Xinhao Huang, Zhibo Ren, Yipeng Yu, Ying Zhou, Zulong Chen, Zeyi Wen  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.20778)  
+
+**Abstract**: In long structured document retrieval, existing methods typically fine-tune pre-trained language models (PLMs) using contrastive learning on datasets lacking explicit structural information. This practice suffers from two critical issues: 1) current methods fail to leverage structural features and element-level semantics effectively, and 2) the lack of datasets containing structural metadata. To bridge these gaps, we propose \our, a novel contrastive learning framework. It leverages structure-aware learning to preserve semantic hierarchies and masked element alignment for fine-grained semantic discrimination. Furthermore, we release \dataset, a long structured document retrieval dataset with rich structural annotations. Extensive experiments on both released and industrial datasets across various modern PLMs, along with online A/B testing, demonstrate consistent performance improvements, boosting NDCG@10 from 73.96\% to 77.84\% on BGE-M3. The resources are available at this https URL. 
+
+---
+# SemSR: Semantics aware robust Session-based Recommendations 
+
+**Authors**: Jyoti Narwariya, Priyanka Gupta, Muskan Gupta, Jyotsana Khatri, Lovekesh Vig  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.20587)  
+
+**Abstract**: Session-based recommendation (SR) models aim to recommend items to anonymous users based on their behavior during the current session. While various SR models in the literature utilize item sequences to predict the next item, they often fail to leverage semantic information from item titles or descriptions impeding session intent identification and interpretability. Recent research has explored Large Language Models (LLMs) as promising approaches to enhance session-based recommendations, with both prompt-based and fine-tuning based methods being widely investigated. However, prompt-based methods struggle to identify optimal prompts that elicit correct reasoning and lack task-specific feedback at test time, resulting in sub-optimal recommendations. Fine-tuning methods incorporate domain-specific knowledge but incur significant computational costs for implementation and maintenance. In this paper, we present multiple approaches to utilize LLMs for session-based recommendation: (i) in-context LLMs as recommendation agents, (ii) LLM-generated representations for semantic initialization of deep learning SR models, and (iii) integration of LLMs with data-driven SR models. Through comprehensive experiments on two real-world publicly available datasets, we demonstrate that LLM-based methods excel at coarse-level retrieval (high recall values), while traditional data-driven techniques perform well at fine-grained ranking (high Mean Reciprocal Rank values). Furthermore, the integration of LLMs with data-driven SR models significantly out performs both standalone LLM approaches and data-driven deep learning models, as well as baseline SR models, in terms of both Recall and MRR metrics. 
+
+---
+# SUMMA: A Multimodal Large Language Model for Advertisement Summarization 
+
+**Authors**: Weitao Jia, Shuo Yin, Zhoufutu Wen, Han Wang, Zehui Dai, Kun Zhang, Zhenyu Li, Tao Zeng, Xiaohui Lv  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.20582)  
+
+**Abstract**: Understanding multimodal video ads is crucial for improving query-ad matching and relevance ranking on short video platforms, enhancing advertising effectiveness and user experience. However, the effective utilization of multimodal information with high commercial value still largely constrained by reliance on highly compressed video embeddings-has long been inadequate. To address this, we propose SUMMA (the abbreviation of Summarizing MultiModal Ads), a multimodal model that automatically processes video ads into summaries highlighting the content of highest commercial value, thus improving their comprehension and ranking in Douyin search-advertising systems. SUMMA is developed via a two-stage training strategy-multimodal supervised fine-tuning followed by reinforcement learning with a mixed reward mechanism-on domain-specific data containing video frames and ASR/OCR transcripts, generating commercially valuable and explainable summaries. We integrate SUMMA-generated summaries into our production pipeline, directly enhancing the candidate retrieval and relevance ranking stages in real search-advertising systems. Both offline and online experiments show substantial improvements over baselines, with online results indicating a statistically significant 1.5% increase in advertising revenue. Our work establishes a novel paradigm for condensing multimodal information into representative texts, effectively aligning visual ad content with user query intent in retrieval and recommendation scenarios. 
+
+---
+# Enhancing Semantic Document Retrieval- Employing Group Steiner Tree Algorithm with Domain Knowledge Enrichment 
+
+**Authors**: Apurva Kulkarni, Chandrashekar Ramanathan, Vinu E Venugopal  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.20543)  
+
+**Abstract**: Retrieving pertinent documents from various data sources with diverse characteristics poses a significant challenge for Document Retrieval Systems. The complexity of this challenge is further compounded when accounting for the semantic relationship between data and domain knowledge. While existing retrieval systems using semantics (usually represented as Knowledge Graphs created from open-access resources and generic domain knowledge) hold promise in delivering relevant outcomes, their precision may be compromised due to the absence of domain-specific information and reliance on outdated knowledge sources. In this research, the primary focus is on two key contributions- a) the development of a versatile algorithm- 'Semantic-based Concept Retrieval using Group Steiner Tree' that incorporates domain information to enhance semantic-aware knowledge representation and data access, and b) the practical implementation of the proposed algorithm within a document retrieval system using real-world data. To assess the effectiveness of the SemDR system, research work conducts performance evaluations using a benchmark consisting of 170 real-world search queries. Rigorous evaluation and verification by domain experts are conducted to ensure the validity and accuracy of the results. The experimental findings demonstrate substantial advancements when compared to the baseline systems, with precision and accuracy achieving levels of 90% and 82% respectively, signifying promising improvements. 
+
+---
+# Multistakeholder Fairness in Tourism: What can Algorithms learn from Tourism Management? 
+
+**Authors**: Peter Muellner, Anna Schreuer, Simone Kopeinik, Bernhard Wieser, Dominik Kowald  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.20496)  
+
+**Abstract**: Algorithmic decision-support systems, i.e., recommender systems, are popular digital tools that help tourists decide which places and attractions to explore. However, algorithms often unintentionally direct tourist streams in a way that negatively affects the environment, local communities, or other stakeholders. This issue can be partly attributed to the computer science community's limited understanding of the complex relationships and trade-offs among stakeholders in the real world.
+In this work, we draw on the practical findings and methods from tourism management to inform research on multistakeholder fairness in algorithmic decision-support. Leveraging a semi-systematic literature review, we synthesize literature from tourism management as well as literature from computer science. Our findings suggest that tourism management actively tries to identify the specific needs of stakeholders and utilizes qualitative, inclusive and participatory methods to study fairness from a normative and holistic research perspective. In contrast, computer science lacks sufficient understanding of the stakeholder needs and primarily considers fairness through descriptive factors, such as measureable discrimination, while heavily relying on few mathematically formalized fairness criteria that fail to capture the multidimensional nature of fairness in tourism.
+With the results of this work, we aim to illustrate the shortcomings of purely algorithmic research and stress the potential and particular need for future interdisciplinary collaboration. We believe such a collaboration is a fundamental and necessary step to enhance algorithmic decision-support systems towards understanding and supporting true multistakeholder fairness in tourism. 
+
+---
+# Rethinking Purity and Diversity in Multi-Behavior Sequential Recommendation from the Frequency Perspective 
+
+**Authors**: Yongqiang Han, Kai Cheng, Kefan Wang, Enhong Chen  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.20427)  
+
+**Abstract**: In recommendation systems, users often exhibit multiple behaviors, such as browsing, clicking, and purchasing. Multi-behavior sequential recommendation (MBSR) aims to consider these different behaviors in an integrated manner to improve the recommendation performance of the target behavior. However, some behavior data will also bring inevitable noise to the modeling of user interests. Some research efforts focus on data denoising from the frequency domain perspective to improve the accuracy of user preference prediction. These studies indicate that low-frequency information tends to be valuable and reliable, while high-frequency information is often associated with noise. In this paper, we argue that high-frequency information is by no means insignificant. Further experimental results highlight that low frequency corresponds to the purity of user interests, while high frequency corresponds to the diversity of user interests. Building upon this finding, we proposed our model PDB4Rec, which efficiently extracts information across various frequency bands and their relationships, and introduces Boostrapping Balancer mechanism to balance their contributions for improved recommendation performance. Sufficient experiments on real-world datasets demonstrate the effectiveness and efficiency of our model. 
+
+---
+# Fact or Facsimile? Evaluating the Factual Robustness of Modern Retrievers 
+
+**Authors**: Haoyu Wu, Qingcheng Zeng, Kaize Ding  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.20408)  
+
+**Abstract**: Dense retrievers and rerankers are central to retrieval-augmented generation (RAG) pipelines, where accurately retrieving factual information is crucial for maintaining system trustworthiness and defending against RAG poisoning. However, little is known about how much factual competence these components inherit or lose from the large language models (LLMs) they are based on. We pair 12 publicly released embedding checkpoints with their original base LLMs and evaluate both sets on a factuality benchmark. Across every model evaluated, the embedding variants achieve markedly lower accuracy than their bases, with absolute drops ranging from 12 to 43 percentage points (median 28 pts) and typical retriever accuracies collapsing into the 25-35 % band versus the 60-70 % attained by the generative models. This degradation intensifies under a more demanding condition: when the candidate pool per question is expanded from four options to one thousand, the strongest retriever's top-1 accuracy falls from 33 % to 26 %, revealing acute sensitivity to distractor volume. Statistical tests further show that, for every embedding model, cosine-similarity scores between queries and correct completions are significantly higher than those for incorrect ones (p < 0.01), indicating decisions driven largely by surface-level semantic proximity rather than factual reasoning. To probe this weakness, we employed GPT-4.1 to paraphrase each correct completion, creating a rewritten test set that preserved factual truth while masking lexical cues, and observed that over two-thirds of previously correct predictions flipped to wrong, reducing overall accuracy to roughly one-third of its original level. Taken together, these findings reveal a systematic trade-off introduced by contrastive learning for retrievers: gains in semantic retrieval are paid for with losses in parametric factual knowledge...... 
+
+---
+# Revealing Potential Biases in LLM-Based Recommender Systems in the Cold Start Setting 
+
+**Authors**: Alexandre Andre, Gauthier Roy, Eva Dyer, Kai Wang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.20401)  
+
+**Abstract**: Large Language Models (LLMs) are increasingly used for recommendation tasks due to their general-purpose capabilities. While LLMs perform well in rich-context settings, their behavior in cold-start scenarios, where only limited signals such as age, gender, or language are available, raises fairness concerns because they may rely on societal biases encoded during pretraining. We introduce a benchmark specifically designed to evaluate fairness in zero-context recommendation. Our modular pipeline supports configurable recommendation domains and sensitive attributes, enabling systematic and flexible audits of any open-source LLM. Through evaluations of state-of-the-art models (Gemma 3 and Llama 3.2), we uncover consistent biases across recommendation domains (music, movies, and colleges) including gendered and cultural stereotypes. We also reveal a non-linear relationship between model size and fairness, highlighting the need for nuanced analysis. 
+
+---
+# MPFormer: Adaptive Framework for Industrial Multi-Task Personalized Sequential Retriever 
+
+**Authors**: Yijia Sun, Shanshan Huang, Linxiao Che, Haitao Lu, Qiang Luo, Kun Gai, Guorui Zhou  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.20400)  
+
+**Abstract**: Modern industrial recommendation systems encounter a core challenge of multi-stage optimization misalignment: a significant semantic gap exists between the multi-objective optimization paradigm widely used in the ranking phase and the single-objective modeling in the retrieve phase. Although the mainstream industry solution achieves multi-objective coverage through parallel multi-path single-objective retrieval, this approach leads to linear growth of training and serving resources with the number of objectives and has inherent limitations in handling loosely coupled objectives. This paper proposes the MPFormer, a dynamic multi-task Transformer framework, which systematically addresses the aforementioned issues through three innovative mechanisms. First, an objective-conditioned transformer that jointly encodes user behavior sequences and multi-task semantics through learnable attention modulation; second, personalized target weights are introduced to achieve dynamic adjustment of retrieval results; finally, user personalization information is incorporated into token representations and the Transformer structure to further enhance the model's representation ability. This framework has been successfully integrated into Kuaishou short video recommendation system, stably serving over 400 million daily active users. It significantly improves user daily engagement and system operational efficiency. Practical deployment verification shows that, compared with traditional solutions, it effectively optimizes the iterative paradigm of multi-objective retrieval while maintaining service response speed, providing a scalable multi-objective solution for industrial recommendation systems. 
+
+---
+# A Case Study of Balanced Query Recommendation on Wikipedia 
+
+**Authors**: Harshit Mishra, Sucheta Soundarajan  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.20399)  
+
+**Abstract**: Modern IR systems are an extremely important tool for seeking information. In addition to search, such systems include a number of query reformulation methods, such as query expansion and query recommendations, to provide high quality results. However, results returned by such methods sometimes exhibit undesirable or wrongful bias with respect to protected categories such as gender or race. Our earlier work considered the problem of balanced query recommendation, where instead of re-ranking a list of results based on fairness measures, the goal was to suggest queries that are relevant to a user's search query but exhibit less bias than the original query. In this work, we present a case study of BalancedQR using an extension of BalancedQR that handles biases in multiple dimensions. It employs a Pareto front approach that finds balanced queries, optimizing for multiple objectives such as gender bias and regional bias, along with the relevance of returned results. We evaluate the extended version of BalancedQR on a Wikipedia this http URL results demonstrate the effectiveness of our extension to BalancedQR framework and highlight the significant impact of subtle query wording,linguistic choice on retrieval. 
+
+---
+# Progressive Semantic Residual Quantization for Multimodal-Joint Interest Modeling in Music Recommendation 
+
+**Authors**: Shijia Wang, Tianpei Ouyang, Qiang Xiao, Dongjing Wang, Yintao Ren, Songpei Xu, Da Guo, Chuanjiang Luo  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.20359)  
+
+**Abstract**: In music recommendation systems, multimodal interest learning is pivotal, which allows the model to capture nuanced preferences, including textual elements such as lyrics and various musical attributes such as different instruments and melodies. Recently, methods that incorporate multimodal content features through semantic IDs have achieved promising results. However, existing methods suffer from two critical limitations: 1) intra-modal semantic degradation, where residual-based quantization processes gradually decouple discrete IDs from original content semantics, leading to semantic drift; and 2) inter-modal modeling gaps, where traditional fusion strategies either overlook modal-specific details or fail to capture cross-modal correlations, hindering comprehensive user interest modeling. To address these challenges, we propose a novel multimodal recommendation framework with two stages. In the first stage, our Progressive Semantic Residual Quantization (PSRQ) method generates modal-specific and modal-joint semantic IDs by explicitly preserving the prefix semantic feature. In the second stage, to model multimodal interest of users, a Multi-Codebook Cross-Attention (MCCA) network is designed to enable the model to simultaneously capture modal-specific interests and perceive cross-modal correlations. Extensive experiments on multiple real-world datasets demonstrate that our framework outperforms state-of-the-art baselines. This framework has been deployed on one of China's largest music streaming platforms, and online A/B tests confirm significant improvements in commercial metrics, underscoring its practical value for industrial-scale recommendation systems. 
+
+---
+# ELIXIR: Efficient and LIghtweight model for eXplaIning Recommendations 
+
+**Authors**: Ben Kabongo, Vincent Guigue, Pirmin Lemberger  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.20312)  
+
+**Abstract**: Collaborative filtering drives many successful recommender systems but struggles with fine-grained user-item interactions and explainability. As users increasingly seek transparent recommendations, generating textual explanations through language models has become a critical research area. Existing methods employ either RNNs or Transformers. However, RNN-based approaches fail to leverage the capabilities of pre-trained Transformer models, whereas Transformer-based methods often suffer from suboptimal adaptation and neglect aspect modeling, which is crucial for personalized explanations. We propose ELIXIR (Efficient and LIghtweight model for eXplaIning Recommendations), a multi-task model combining rating prediction with personalized review generation. ELIXIR jointly learns global and aspect-specific representations of users and items, optimizing overall rating, aspect-level ratings, and review generation, with personalized attention to emphasize aspect importance. Based on a T5-small (60M) model, we demonstrate the effectiveness of our aspect-based architecture in guiding text generation in a personalized context, where state-of-the-art approaches exploit much larger models but fail to match user preferences as well. Experimental results on TripAdvisor and RateBeer demonstrate that ELIXIR significantly outperforms strong baseline models, especially in review generation. 
+
+---
+# A Survey of Affective Recommender Systems: Modeling Attitudes, Emotions, and Moods for Personalization 
+
+**Authors**: Tonmoy Hasan, Razvan Bunescu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.20289)  
+
+**Abstract**: Affective Recommender Systems are an emerging class of intelligent systems that aim to enhance personalization by aligning recommendations with users' affective states. Reflecting a growing interest, a number of surveys have been published in this area, however they lack an organizing taxonomy grounded in psychology and they often study only specific types of affective states or application domains. This survey addresses these limitations by providing a comprehensive, systematic review of affective recommender systems across diverse domains. Drawing from Scherer's typology of affective states, we introduce a classification scheme that organizes systems into four main categories: attitude aware, emotion aware, mood aware, and hybrid. We further document affective signal extraction techniques, system architectures, and application areas, highlighting key trends, limitations, and open challenges. As future research directions, we emphasize hybrid models that leverage multiple types of affective states across different modalities, the development of large-scale affect-aware datasets, and the need to replace the folk vocabulary of affective states with a more precise terminology grounded in cognitive and social psychology. Through its systematic review of existing research and challenges, this survey aims to serve as a comprehensive reference and a useful guide for advancing academic research and industry applications in affect-driven personalization. 
+
+---
+# An Agile Method for Implementing Retrieval Augmented Generation Tools in Industrial SMEs 
+
+**Authors**: Mathieu Bourdin, Anas Neumann, Thomas Paviot, Robert Pellerin, Samir Lamouri  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.21024)  
+
+**Abstract**: Retrieval-Augmented Generation (RAG) has emerged as a powerful solution to mitigate the limitations of Large Language Models (LLMs), such as hallucinations and outdated knowledge. However, deploying RAG-based tools in Small and Medium Enterprises (SMEs) remains a challenge due to their limited resources and lack of expertise in natural language processing (NLP). This paper introduces EASI-RAG, Enterprise Application Support for Industrial RAG, a structured, agile method designed to facilitate the deployment of RAG systems in industrial SME contexts. EASI-RAG is based on method engineering principles and comprises well-defined roles, activities, and techniques. The method was validated through a real-world case study in an environmental testing laboratory, where a RAG tool was implemented to answer operators queries using data extracted from operational procedures. The system was deployed in under a month by a team with no prior RAG experience and was later iteratively improved based on user feedback. Results demonstrate that EASI-RAG supports fast implementation, high user adoption, delivers accurate answers, and enhances the reliability of underlying data. This work highlights the potential of RAG deployment in industrial SMEs. Future works include the need for generalization across diverse use cases and further integration with fine-tuned models. 
+
+---
+# GDLLM: A Global Distance-aware Modeling Approach Based on Large Language Models for Event Temporal Relation Extraction 
+
+**Authors**: Jie Zhao, Wanting Ning, Yuxiao Fei, Yubo Feng, Lishuang Li  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.20828)  
+
+**Abstract**: In Natural Language Processing(NLP), Event Temporal Relation Extraction (ETRE) is to recognize the temporal relations of two events. Prior studies have noted the importance of language models for ETRE. However, the restricted pre-trained knowledge of Small Language Models(SLMs) limits their capability to handle minority class relations in imbalanced classification datasets. For Large Language Models(LLMs), researchers adopt manually designed prompts or instructions, which may introduce extra noise, leading to interference with the model's judgment of the long-distance dependencies between events. To address these issues, we propose GDLLM, a Global Distance-aware modeling approach based on LLMs. We first present a distance-aware graph structure utilizing Graph Attention Network(GAT) to assist the LLMs in capturing long-distance dependency features. Additionally, we design a temporal feature learning paradigm based on soft inference to augment the identification of relations with a short-distance proximity band, which supplements the probabilistic information generated by LLMs into the multi-head attention mechanism. Since the global feature can be captured effectively, our framework substantially enhances the performance of minority relation classes and improves the overall learning ability. Experiments on two publicly available datasets, TB-Dense and MATRES, demonstrate that our approach achieves state-of-the-art (SOTA) performance. 
+
+---
+# Leveraging Generative Models for Real-Time Query-Driven Text Summarization in Large-Scale Web Search 
+
+**Authors**: Zeyu Xiong, Yixuan Nan, Li Gao, Hengzhu Tang, Shuaiqiang Wang, Junfeng Wang, Dawei Yin  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.20559)  
+
+**Abstract**: In the dynamic landscape of large-scale web search, Query-Driven Text Summarization (QDTS) aims to generate concise and informative summaries from textual documents based on a given query, which is essential for improving user engagement and facilitating rapid decision-making. Traditional extractive summarization models, based primarily on ranking candidate summary segments, have been the dominant approach in industrial applications. However, these approaches suffer from two key limitations: 1) The multi-stage pipeline often introduces cumulative information loss and architectural bottlenecks due to its weakest component; 2) Traditional models lack sufficient semantic understanding of both user queries and documents, particularly when dealing with complex search intents. In this study, we propose a novel framework to pioneer the application of generative models to address real-time QDTS in industrial web search. Our approach integrates large model distillation, supervised fine-tuning, direct preference optimization, and lookahead decoding to transform a lightweight model with only 0.1B parameters into a domain-specialized QDTS expert. Evaluated on multiple industry-relevant metrics, our model outperforms the production baseline and achieves a new state of the art. Furthermore, it demonstrates excellent deployment efficiency, requiring only 334 NVIDIA L20 GPUs to handle \textasciitilde50,000 queries per second under 55~ms average latency per query. 
+
+---
+# Overview of BioASQ 2025: The Thirteenth BioASQ Challenge on Large-Scale Biomedical Semantic Indexing and Question Answering 
+
+**Authors**: Anastasios Nentidis, Georgios Katsimpras, Anastasia Krithara, Martin Krallinger, Miguel Rodríguez-Ortega, Eduard Rodriguez-López, Natalia Loukachevitch, Andrey Sakhovskiy, Elena Tutubalina, Dimitris Dimitriadis, Grigorios Tsoumakas, George Giannakoulas, Alexandra Bekiaridou, Athanasios Samaras, Giorgio Maria Di Nunzio, Nicola Ferro, Stefano Marchesin, Marco Martinelli, Gianmaria Silvello, Georgios Paliouras  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.20554)  
+
+**Abstract**: This is an overview of the thirteenth edition of the BioASQ challenge in the context of the Conference and Labs of the Evaluation Forum (CLEF) 2025. BioASQ is a series of international challenges promoting advances in large-scale biomedical semantic indexing and question answering. This year, BioASQ consisted of new editions of the two established tasks, b and Synergy, and four new tasks: a) Task MultiClinSum on multilingual clinical summarization. b) Task BioNNE-L on nested named entity linking in Russian and English. c) Task ELCardioCC on clinical coding in cardiology. d) Task GutBrainIE on gut-brain interplay information extraction. In this edition of BioASQ, 83 competing teams participated with more than 1000 distinct submissions in total for the six different shared tasks of the challenge. Similar to previous editions, several participating systems achieved competitive performance, indicating the continuous advancement of the state-of-the-art in the field. 
+
+---
+# Overview of BioASQ 2024: The twelfth BioASQ challenge on Large-Scale Biomedical Semantic Indexing and Question Answering 
+
+**Authors**: Anastasios Nentidis, Georgios Katsimpras, Anastasia Krithara, Salvador Lima-López, Eulàlia Farré-Maduell, Martin Krallinger, Natalia Loukachevitch, Vera Davydova, Elena Tutubalina, Georgios Paliouras  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.20532)  
+
+**Abstract**: This is an overview of the twelfth edition of the BioASQ challenge in the context of the Conference and Labs of the Evaluation Forum (CLEF) 2024. BioASQ is a series of international challenges promoting advances in large-scale biomedical semantic indexing and question answering. This year, BioASQ consisted of new editions of the two established tasks b and Synergy, and two new tasks: a) MultiCardioNER on the adaptation of clinical entity detection to the cardiology domain in a multilingual setting, and b) BIONNE on nested NER in Russian and English. In this edition of BioASQ, 37 competing teams participated with more than 700 distinct submissions in total for the four different shared tasks of the challenge. Similarly to previous editions, most of the participating systems achieved competitive performance, suggesting the continuous advancement of the state-of-the-art in the field. 
+
+---
