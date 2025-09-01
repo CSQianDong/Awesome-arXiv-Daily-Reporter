@@ -1,0 +1,9 @@
+# Granite Embedding R2 Models 
+
+**Authors**: Parul Awasthy, Aashka Trivedi, Yulong Li, Meet Doshi, Riyaz Bhat, Vignesh P, Vishwajeet Kumar, Yushu Yang, Bhavani Iyer, Abraham Daniels, Rudra Murthy, Ken Barker, Martin Franz, Madison Lee, Todd Ward, Salim Roukos, David Cox, Luis Lastras, Jaydeep Sen, Radu Florian  
+
+**Link**: [PDF](https://arxiv.org/pdf/2508.21085)  
+
+**Abstract**: We introduce the Granite Embedding R2 models, a comprehensive family of high-performance English encoder-based embedding models engineered for enterprise-scale dense retrieval applications. Building upon our first-generation release, these models deliver substantial improvements, including 16x expanded context length (8,192 tokens), state-of-the-art performance across diverse retrieval domains - text, code, long-document search, multi-turn conversational, and tabular data - and measurable speed advantages of 19-44\% over leading competitors while maintaining superior accuracy. Our release encompasses both bi-encoder and cross-encoder architectures, featuring a highly effective 22-layer retriever model and its efficient 12-layer counterpart, alongside a high-quality reranker model, all trained exclusively on enterprise-appropriate data with comprehensive governance oversight. The models demonstrate exceptional versatility across standard benchmarks, IBM-developed evaluation suites, and real-world enterprise use cases, establishing new performance standards for open-source embedding models. In an era where retrieval speed and accuracy are paramount for competitive advantage, the Granite R2 models deliver a compelling combination of cutting-edge performance, enterprise-ready licensing, and transparent data provenance that organizations require for mission-critical deployments. All models are publicly available under the Apache 2.0 license at this https URL, enabling unrestricted research and commercial use. 
+
+---
