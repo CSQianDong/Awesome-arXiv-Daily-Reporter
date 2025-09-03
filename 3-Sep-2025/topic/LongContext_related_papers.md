@@ -1,0 +1,117 @@
+# Modular Techniques for Synthetic Long-Context Data Generation in Language Model Training and Evaluation 
+
+**Authors**: Seganrasan Subramanian, Abhigya Verma  
+
+**Link**: [PDF](https://arxiv.org/pdf/2509.01185)  
+
+**Abstract**: The ability of large language models (LLMs) to process and reason over long textual inputs is critical for a wide range of real-world applications. However, progress in this area is significantly constrained by the absence of high-quality, diverse, and verifiable long-context datasets suitable for both training and evaluation. This work introduces a modular, extensible framework for synthetic long-context data generation via prompt-based interaction with LLMs. The framework supports multiple training and alignment objectives, including Supervised Fine-Tuning (SFT), Direct Preference Optimization (DPO), and Group Relative Policy Optimization (GRPO). It encompasses four core generation paradigms: multi-turn conversational dialogues, document-grounded input-output pairs, verifiable instruction-response tasks, and long-context reasoning examples. Through templated prompting, a model-agnostic architecture, and metadata-enriched outputs, the proposed approach facilitates scalable, controllable, and purpose-aligned dataset creation for advancing long-context capabilities in LLMs. 
+
+---
+# REFRAG: Rethinking RAG based Decoding 
+
+**Authors**: Xiaoqiang Lin, Aritra Ghosh, Bryan Kian Hsiang Low, Anshumali Shrivastava, Vijai Mohan  
+
+**Link**: [PDF](https://arxiv.org/pdf/2509.01092)  
+
+**Abstract**: Large Language Models (LLMs) have demonstrated remarkable capabilities in leveraging extensive external knowledge to enhance responses in multi-turn and agentic applications, such as retrieval-augmented generation (RAG). However, processing long-context inputs introduces significant system latency and demands substantial memory for the key-value cache, resulting in reduced throughput and a fundamental trade-off between knowledge enrichment and system efficiency. While minimizing latency for long-context inputs is a primary objective for LLMs, we contend that RAG require specialized consideration. In RAG, much of the LLM context consists of concatenated passages from retrieval, with only a small subset directly relevant to the query. These passages often exhibit low semantic similarity due to diversity or deduplication during re-ranking, leading to block-diagonal attention patterns that differ from those in standard LLM generation tasks. Based on this observation, we argue that most computations over the RAG context during decoding are unnecessary and can be eliminated with minimal impact on performance. To this end, we propose REFRAG, an efficient decoding framework that compresses, senses, and expands to improve latency in RAG applications. By exploiting the sparsity structure, we demonstrate a 30.85 the time-to-first-token acceleration (3.75 improvement to previous work) without loss in perplexity. In addition, our optimization framework for large context enables REFRAG to extend the context size of LLMs by 16. We provide rigorous validation of REFRAG across diverse long-context tasks, including RAG, multi-turn conversations, and long document summarization, spanning a wide range of datasets. Experimental results confirm that REFRAG delivers substantial speedup with no loss in accuracy compared to LLaMA models and other state-of-the-art baselines across various context sizes. 
+
+---
+# Learning to Shop Like Humans: A Review-driven Retrieval-Augmented Recommendation Framework with LLMs 
+
+**Authors**: Kaiwen Wei, Jinpeng Gao, Jiang Zhong, Yuming Yang, Fengmao Lv, Zhenyang Li  
+
+**Link**: [PDF](https://arxiv.org/pdf/2509.00698)  
+
+**Abstract**: Large language models (LLMs) have shown strong potential in recommendation tasks due to their strengths in language understanding, reasoning and knowledge integration. These capabilities are especially beneficial for review-based recommendation, which relies on semantically rich user-generated texts to reveal fine-grained user preferences and item attributes. However, effectively incorporating reviews into LLM-based recommendation remains challenging due to (1) inefficient to dynamically utilize user reviews under LLMs' constrained context windows, and (2) lacking effective mechanisms to prioritize reviews most relevant to the user's current decision context. To address these challenges, we propose RevBrowse, a review-driven recommendation framework inspired by the "browse-then-decide" decision process commonly observed in online user behavior. RevBrowse integrates user reviews into the LLM-based reranking process to enhance its ability to distinguish between candidate items. To improve the relevance and efficiency of review usage, we introduce PrefRAG, a retrieval-augmented module that disentangles user and item representations into structured forms and adaptively retrieves preference-relevant content conditioned on the target item. Extensive experiments on four Amazon review datasets demonstrate that RevBrowse achieves consistent and significant improvements over strong baselines, highlighting its generalizability and effectiveness in modeling dynamic user preferences. Furthermore, since the retrieval-augmented process is transparent, RevBrowse offers a certain level of interpretability by making visible which reviews influence the final recommendation. 
+
+---
+# Gated Associative Memory: A Parallel O(N) Architecture for Efficient Sequence Modeling 
+
+**Authors**: Rishiraj Acharya  
+
+**Link**: [PDF](https://arxiv.org/pdf/2509.00605)  
+
+**Abstract**: The Transformer architecture, underpinned by the self-attention mechanism, has become the de facto standard for sequence modeling tasks. However, its core computational primitive scales quadratically with sequence length (O(N^2)), creating a significant bottleneck for processing long contexts. In this paper, we propose the Gated Associative Memory (GAM) network, a novel, fully parallel architecture for sequence modeling that exhibits linear complexity (O(N)) with respect to sequence length. The GAM block replaces the self-attention layer with two parallel pathways: a causal convolution to efficiently capture local, position-dependent context, and a parallel associative memory retrieval mechanism to model global, content-based patterns. These pathways are dynamically fused using a gating mechanism, allowing the model to flexibly combine local and global information for each token. We implement GAM from scratch and conduct a rigorous comparative analysis against a standard Transformer model and a modern linear-time baseline (Mamba) on the WikiText-2 benchmark, as well as against the Transformer on the TinyStories dataset. Our experiments demonstrate that GAM is consistently faster, outperforming both baselines on training speed, and achieves a superior or competitive final validation perplexity across all datasets, establishing it as a promising and efficient alternative for sequence modeling. 
+
+---
+# GOSU: Retrieval-Augmented Generation with Global-Level Optimized Semantic Unit-Centric Framework 
+
+**Authors**: Xuecheng Zou, Ke Liu, Bingbing Wang, Huafei Deng, Li Zhang, Yu Tang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2509.00449)  
+
+**Abstract**: Building upon the standard graph-based Retrieval-Augmented Generation (RAG), the introduction of heterogeneous graphs and hypergraphs aims to enrich retrieval and generation by leveraging the relationships between multiple entities through the concept of semantic units (SUs). But this also raises a key issue: The extraction of high-level SUs limited to local text chunks is prone to ambiguity, complex coupling, and increased retrieval overhead due to the lack of global knowledge or the neglect of fine-grained relationships. To address these issues, we propose GOSU, a semantic unit-centric RAG framework that efficiently performs global disambiguation and utilizes SUs to capture interconnections between different nodes across the global context. In the graph construction phase, GOSU performs global merging on the pre-extracted SUs from local text chunks and guides entity and relationship extraction, reducing the difficulty of coreference resolution while uncovering global semantic objects across text chunks. In the retrieval and generation phase, we introduce hierarchical keyword extraction and semantic unit completion. The former uncovers the fine-grained binary relationships overlooked by the latter, while the latter compensates for the coarse-grained n-ary relationships missing from the former. Evaluation across multiple tasks demonstrates that GOSU outperforms the baseline RAG methods in terms of generation quality. 
+
+---
+# DTRNet: Dynamic Token Routing Network to Reduce Quadratic Costs in Transformers 
+
+**Authors**: Aman Sharma, Saeed Najafi, Parsa Farinneya, Benyamin Jamialahmadi, Marzieh S. Tahaei, Yuhe Fan, Mehdi Rezagholizadeh, Boxing Chen, Aref Jafari  
+
+**Link**: [PDF](https://arxiv.org/pdf/2509.00925)  
+
+**Abstract**: Transformers achieve state-of-the-art results across many tasks, but their uniform application of quadratic self-attention to every token at every layer makes them computationally expensive. We introduce DTRNet (Dynamic Token Routing Network), an improved Transformer architecture that allows tokens to dynamically skip the quadratic cost of cross-token mixing while still receiving lightweight linear updates. By preserving the MLP module and reducing the attention cost for most tokens to linear, DTRNet ensures that every token is explicitly updated while significantly lowering overall computation. This design offers an efficient and effective alternative to standard dense attention. Once trained, DTRNet blocks routes only ~10% of tokens through attention at each layer while maintaining performance comparable to a full Transformer. It consistently outperforms routing-based layer skipping methods such as MoD and D-LLM in both accuracy and memory at matched FLOPs, while routing fewer tokens to full attention. Its efficiency gains, scales with sequence length, offering significant reduction in FLOPs for long-context inputs. By decoupling token updates from attention mixing, DTRNet substantially reduces the quadratic share of computation, providing a simple, efficient, and scalable alternative to Transformers. 
+
+---
+# LLMs for LLMs: A Structured Prompting Methodology for Long Legal Documents 
+
+**Authors**: Strahinja Klem, Noura Al Moubayed  
+
+**Link**: [PDF](https://arxiv.org/pdf/2509.02241)  
+
+**Abstract**: The rise of Large Language Models (LLMs) has had a profoundly transformative effect on a number of fields and domains. However, their uptake in Law has proven more challenging due to the important issues of reliability and transparency. In this study, we present a structured prompting methodology as a viable alternative to the often expensive fine-tuning, with the capability of tacking long legal documents from the CUAD dataset on the task of information retrieval. Each document is first split into chunks via a system of chunking and augmentation, addressing the long document problem. Then, alongside an engineered prompt, the input is fed into QWEN-2 to produce a set of answers for each question. Finally, we tackle the resulting candidate selection problem with the introduction of the Distribution-based Localisation and Inverse Cardinality Weighting heuristics. This approach leverages a general purpose model to promote long term scalability, prompt engineering to increase reliability and the two heuristic strategies to reduce the impact of the black box effect. Whilst our model performs up to 9\% better than the previously presented method, reaching state-of-the-art performance, it also highlights the limiting factor of current automatic evaluation metrics for question answering, serving as a call to action for future research. However, the chief aim of this work is to underscore the potential of structured prompt engineering as a useful, yet under-explored, tool in ensuring accountability and responsibility of AI in the legal domain, and beyond. 
+
+---
+# CoreThink: A Symbolic Reasoning Layer to reason over Long Horizon Tasks with LLMs 
+
+**Authors**: Jay Vaghasiya, Omkar Ghugarkar, Vishvesh Bhat, Vipul Dholaria, Julian McAuley  
+
+**Link**: [PDF](https://arxiv.org/pdf/2509.00971)  
+
+**Abstract**: We introduce CoreThink, a state-of-the-art Reasoning Layer built upon a novel reasoning method called General Symbolics. This approach diverges from reasoning paradigms such as test-time scaling, Supervised Fine-Tuning (SFT), and Reinforcement Learning with Verifiable Rewards (RLVR). CoreThink General Symbolic Reasoner (GSR) is specifically structured around three key use cases: tool-calling, code generation, and planning, demonstrating exemplary performance across a total of seven benchmarks in their respective areas. Notably, we are achieving SOTA scores of 66.66\% on Livecodebench v6, 89\% on Instruction-Following Evals, and 24.4\% on ARC-AGI-2. We also present an agentic coding IDE, developed using the principles of General Symbolics, which achieves a state-of-the-art accuracy of 62.3\% on \texttt{SWE-Bench Lite}. We are able to achieve these improvements without any finetuning or training costs. Our Reasoning Layer is designed to provide a pure performance uplift, ensuring that a model's accuracy on reasoning tasks is never negatively impacted. We argue that incumbent methods will eventually lead to diminishing returns in LLM performance, necessitating the development of new reasoning techniques. This technical report details our approach at a high level and the availability of the CoreThink models for reasoning-intensive use cases. 
+
+---
+# HiVA: Self-organized Hierarchical Variable Agent via Goal-driven Semantic-Topological Evolution 
+
+**Authors**: Jinzhou Tang, Jusheng Zhang, Qinhan Lv, Sidi Liu, Jing Yang, Chengpei Tang, Keze Wang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2509.00189)  
+
+**Abstract**: Autonomous agents play a crucial role in advancing Artificial General Intelligence, enabling problem decomposition and tool orchestration through Large Language Models (LLMs). However, existing paradigms face a critical trade-off. On one hand, reusable fixed workflows require manual reconfiguration upon environmental changes; on the other hand, flexible reactive loops fail to distill reasoning progress into transferable structures. We introduce Hierarchical Variable Agent (HiVA), a novel framework modeling agentic workflows as self-organized graphs with the Semantic-Topological Evolution (STEV) algorithm, which optimizes hybrid semantic-topological spaces using textual gradients as discrete-domain surrogates for backpropagation. The iterative process comprises Multi-Armed Bandit-infused forward routing, diagnostic gradient generation from environmental feedback, and coordinated updates that co-evolve individual semantics and topology for collective optimization in unknown environments. Experiments on dialogue, coding, Long-context Q&A, mathematical, and agentic benchmarks demonstrate improvements of 5-10% in task accuracy and enhanced resource efficiency over existing baselines, establishing HiVA's effectiveness in autonomous task execution. 
+
+---
+# Draw-In-Mind: Learning Precise Image Editing via Chain-of-Thought Imagination 
+
+**Authors**: Ziyun Zeng, Junhao Zhang, Wei Li, Mike Zheng Shou  
+
+**Link**: [PDF](https://arxiv.org/pdf/2509.01986)  
+
+**Abstract**: In recent years, integrating multimodal understanding and generation into a single unified model has emerged as a promising paradigm. While this approach achieves strong results in text-to-image (T2I) generation, it still struggles with precise image editing. We attribute this limitation to an imbalanced division of responsibilities. The understanding module primarily functions as a translator that encodes user instructions into semantic conditions, while the generation module must simultaneously act as designer and painter, inferring the original layout, identifying the target editing region, and rendering the new content. This imbalance is counterintuitive because the understanding module is typically trained with several times more data on complex reasoning tasks than the generation module. To address this issue, we introduce Draw-In-Mind (DIM), a dataset comprising two complementary subsets: (i) DIM-T2I, containing 14M long-context image-text pairs to enhance complex instruction comprehension; and (ii) DIM-Edit, consisting of 233K chain-of-thought imaginations generated by GPT-4o, serving as explicit design blueprints for image edits. We connect a frozen Qwen2.5-VL-3B with a trainable SANA1.5-1.6B via a lightweight two-layer MLP, and train it on the proposed DIM dataset, resulting in DIM-4.6B-T2I/Edit. Despite its modest parameter scale, DIM-4.6B-Edit achieves SOTA or competitive performance on the ImgEdit and GEdit-Bench benchmarks, outperforming much larger models such as UniWorld-V1 and Step1X-Edit. These findings demonstrate that explicitly assigning the design responsibility to the understanding module provides significant benefits for image editing. Our dataset and models will be available at this https URL. 
+
+---
+# SCOUT: Toward Sub-Quadratic Attention via Segment Compression for Optimized Utility in Transformers 
+
+**Authors**: Aref Jafari, Yuhe Fan, Benyamin Jamialahmadi, Parsa Farinneya, Boxing Chen, Marzieh S. Tahaei  
+
+**Link**: [PDF](https://arxiv.org/pdf/2509.00935)  
+
+**Abstract**: Transformers have demonstrated strong performance across a wide range of sequence modeling tasks, but their quadratic attention complexity limits scalability to long sequences. Linear models such as Mamba and sliding-window attention (SWA) address this by mixing tokens through recurrent or localized operations with fixed-size memory, achieving efficient inference. However, these methods risk degrading performance on long sequences due to their inability to retain detailed information from distant tokens. We propose SCOUT (Segment Compression for Optimized Utility in Transformers), a hybrid architecture that compresses tokens locally within fixed-size segments and applies attention only over these compressed representations. Each token embedding is first enriched via a linear local mixer, Mamba or SWA, that integrates recent context. Then, instead of attending to all previous tokens, each token sparsely attends to a small number of compressed checkpoint tokens that summarize the input history. This design retains much of the expressivity of full attention while substantially reducing the computational and memory cost. By attending to compressed history rather than all previous tokens, SCOUT incurs slightly higher memory than purely linear models, but its growth rate remains sub-quadratic and far more scalable than that of full Transformers. We analyze SCOUT's computational and memory efficiency and evaluate it empirically on long-context language modeling and reasoning tasks. SCOUT with both Mamba and SWA mixers outperforms strong long-sequence baselines under the same computational budget, matches full-attention Transformers on language modeling and common-sense reasoning tasks at 400M and 1.3B scales. Moreover, our SCOUT achieves higher end-to-end throughput than SOTA models, while delivering comparable results on long sequence benchmarks. 
+
+---
+# KVComp: A High-Performance, LLM-Aware, Lossy Compression Framework for KV Cache 
+
+**Authors**: Bo Jiang, Taolue Yang, Youyuan Liu, Chengming Zhang, Xubin He, Sian Jin  
+
+**Link**: [PDF](https://arxiv.org/pdf/2509.00579)  
+
+**Abstract**: Transformer-based large language models (LLMs) demonstrate impressive potential in various practical applications. However, long context inference poses a significant challenge due to the enormous memory requirements of the key-value (KV) cache, which can scale to multiple gigabytes as sequence length and batch size increase. In this paper, we present KVComp, a generic and efficient KV cache management framework optimized for long-text generation that synergistically works with both latency-critical and throughput-critical inference systems. KVComp employs novel lossy compression techniques specifically designed for KV cache data characteristics, featuring careful co-design of compression algorithms and system architecture. Our approach maintains compatibility with the growing nature of KV cache while preserving high computational efficiency. Experimental results show that KVComp achieves on average 47\% and up to 83\% higher memory reduction rate compared to existing methods with little/no model accuracy degradation. Furthermore, KVComp achieves extremely high execution throughput, effectively reducing decompression overhead and, in some cases, even accelerating the matrix-vector multiplication operation and outperform cuBLAS-based attention kernels with less data movement. 
+
+---
+# Scaling Legal AI: Benchmarking Mamba and Transformers for Statutory Classification and Case Law Retrieval 
+
+**Authors**: Anuraj Maurya  
+
+**Link**: [PDF](https://arxiv.org/pdf/2509.00141)  
+
+**Abstract**: The rapid growth of statutory corpora and judicial decisions requires scalable legal AI systems capable of classification and retrieval over extremely long contexts. Transformer-based architectures (e.g., Longformer, DeBERTa) dominate current legal NLP benchmarks but struggle with quadratic attention costs, limiting efficiency and scalability. In this work, we present the first comprehensive benchmarking of Mamba, a state-space model (SSM) with linear-time selective mechanisms, against leading transformer models for statutory classification and case law retrieval. We evaluate models on open-source legal corpora including LexGLUE, EUR-Lex, and ILDC, covering statutory tagging, judicial outcome prediction, and case retrieval tasks. Metrics include accuracy, recall at k, mean reciprocal rank (MRR), and normalized discounted cumulative gain (nDCG), alongside throughput measured in tokens per second and maximum context length. Results show that Mamba's linear scaling enables processing of legal documents several times longer than transformers, while maintaining or surpassing retrieval and classification performance. This study introduces a new legal NLP benchmark suite for long-context modeling, along with open-source code and datasets to support reproducibility. Our findings highlight trade-offs between state-space models and transformers, providing guidance for deploying scalable legal AI in statutory analysis, judicial decision support, and policy research. 
+
+---
