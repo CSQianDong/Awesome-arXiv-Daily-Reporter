@@ -1,0 +1,82 @@
+# HyFedRAG: A Federated Retrieval-Augmented Generation Framework for Heterogeneous and Privacy-Sensitive Data 
+
+**Authors**: Cheng Qian, Hainan Zhang, Yongxin Tong, Hong-Wei Zheng, Zhiming Zheng  
+
+**Link**: [PDF](https://arxiv.org/pdf/2509.06444)  
+
+**Abstract**: Centralized RAG pipelines struggle with heterogeneous and privacy-sensitive data, especially in distributed healthcare settings where patient data spans SQL, knowledge graphs, and clinical notes. Clinicians face difficulties retrieving rare disease cases due to privacy constraints and the limitations of traditional cloud-based RAG systems in handling diverse formats and edge devices. To address this, we introduce HyFedRAG, a unified and efficient Federated RAG framework tailored for Hybrid data modalities. By leveraging an edge-cloud collaborative mechanism, HyFedRAG enables RAG to operate across diverse data sources while preserving data privacy. Our key contributions are: (1) We design an edge-cloud collaborative RAG framework built on Flower, which supports querying structured SQL data, semi-structured knowledge graphs, and unstructured documents. The edge-side LLMs convert diverse data into standardized privacy-preserving representations, and the server-side LLMs integrates them for global reasoning and generation. (2) We integrate lightweight local retrievers with privacy-aware LLMs and provide three anonymization tools that enable each client to produce semantically rich, de-identified summaries for global inference across devices. (3) To optimize response latency and reduce redundant computation, we design a three-tier caching strategy consisting of local cache, intermediate representation cache, and cloud inference cache. Experimental results on PMC-Patients demonstrate that HyFedRAG outperforms existing baselines in terms of retrieval quality, generation consistency, and system efficiency. Our framework offers a scalable and privacy-compliant solution for RAG over structural-heterogeneous data, unlocking the potential of LLMs in sensitive and diverse data environments. 
+
+---
+# SasAgent: Multi-Agent AI System for Small-Angle Scattering Data Analysis 
+
+**Authors**: Lijie Ding, Changwoo Do  
+
+**Link**: [PDF](https://arxiv.org/pdf/2509.05363)  
+
+**Abstract**: We introduce SasAgent, a multi-agent AI system powered by large language models (LLMs) that automates small-angle scattering (SAS) data analysis by leveraging tools from the SasView software and enables user interaction via text input. SasAgent features a coordinator agent that interprets user prompts and delegates tasks to three specialized agents for scattering length density (SLD) calculation, synthetic data generation, and experimental data fitting. These agents utilize LLM-friendly tools to execute tasks efficiently. These tools, including the model data tool, Retrieval-Augmented Generation (RAG) documentation tool, bump fitting tool, and SLD calculator tool, are derived from the SasView Python library. A user-friendly Gradio-based interface enhances user accessibility. Through diverse examples, we demonstrate SasAgent's ability to interpret complex prompts, calculate SLDs, generate accurate scattering data, and fit experimental datasets with high precision. This work showcases the potential of LLM-driven AI systems to streamline scientific workflows and enhance automation in SAS research. 
+
+---
+# Language Native Lightly Structured Databases for Large Language Model Driven Composite Materials Research 
+
+**Authors**: Yuze Liu, Zhaoyuan Zhang, Xiangsheng Zeng, Yihe Zhang, Leping Yu, Lejia Wang, Xi Yu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2509.06093)  
+
+**Abstract**: Chemical and materials research has traditionally relied heavily on knowledge narrative, with progress often driven by language-based descriptions of principles, mechanisms, and experimental experiences, rather than tables, limiting what conventional databases and ML can exploit. We present a language-native database for boron nitride nanosheet (BNNS) polymer thermally conductive composites that captures lightly structured information from papers across preparation, characterization, theory-computation, and mechanistic reasoning, with evidence-linked snippets. Records are organized in a heterogeneous database and queried via composite retrieval with semantics, key words and value filters. The system can synthesizes literature into accurate, verifiable, and expert style guidance. This substrate enables high fidelity efficient Retrieval Augmented Generation (RAG) and tool augmented agents to interleave retrieval with reasoning and deliver actionable SOP. The framework supplies the language rich foundation required for LLM-driven materials discovery. 
+
+---
+# PL-CA: A Parametric Legal Case Augmentation Framework 
+
+**Authors**: Ao Chang, Yubo Chen, Jun Zhao  
+
+**Link**: [PDF](https://arxiv.org/pdf/2509.06356)  
+
+**Abstract**: Conventional RAG is considered one of the most effective methods for addressing model knowledge insufficiency and hallucination, particularly in the judicial domain that requires high levels of knowledge rigor, logical consistency, and content integrity. However, the conventional RAG method only injects retrieved documents directly into the model's context, which severely constrains models due to their limited context windows and introduces additional computational overhead through excessively long contexts, thereby disrupting models' attention and degrading performance on downstream tasks. Moreover, many existing benchmarks lack expert annotation and focus solely on individual downstream tasks while real-world legal scenarios consist of multiple mixed legal tasks, indicating conventional benchmarks' inadequacy for reflecting models' true capabilities. To address these limitations, we propose PL-CA, which introduces a parametric RAG (P-RAG) framework to perform data augmentation on corpus knowledge and encode this legal knowledge into parametric vectors, and then integrates this parametric knowledge into the LLM's feed-forward networks (FFN) via LoRA, thereby alleviating models' context pressure. Additionally, we also construct a multi-task legal dataset comprising more than 2000 training and test instances, which are all expert-annotated and manually verified. We conduct our experiments on our dataset, and the experimental results demonstrate that our method reduces the overhead associated with excessively long contexts while maintaining competitive performance on downstream tasks compared to conventional RAG. Our code and dataset are provided in the appendix. 
+
+---
+# ZhiFangDanTai: Fine-tuning Graph-based Retrieval-Augmented Generation Model for Traditional Chinese Medicine Formula 
+
+**Authors**: ZiXuan Zhang, Bowen Hao, Yingjie Li, Hongzhi Yin  
+
+**Link**: [PDF](https://arxiv.org/pdf/2509.05867)  
+
+**Abstract**: Traditional Chinese Medicine (TCM) formulas play a significant role in treating epidemics and complex diseases. Existing models for TCM utilize traditional algorithms or deep learning techniques to analyze formula relationships, yet lack comprehensive results, such as complete formula compositions and detailed explanations. Although recent efforts have used TCM instruction datasets to fine-tune Large Language Models (LLMs) for explainable formula generation, existing datasets lack sufficient details, such as the roles of the formula's sovereign, minister, assistant, courier; efficacy; contraindications; tongue and pulse diagnosis-limiting the depth of model outputs. To address these challenges, we propose ZhiFangDanTai, a framework combining Graph-based Retrieval-Augmented Generation (GraphRAG) with LLM fine-tuning. ZhiFangDanTai uses GraphRAG to retrieve and synthesize structured TCM knowledge into concise summaries, while also constructing an enhanced instruction dataset to improve LLMs' ability to integrate retrieved information. Furthermore, we provide novel theoretical proofs demonstrating that integrating GraphRAG with fine-tuning techniques can reduce generalization error and hallucination rates in the TCM formula task. Experimental results on both collected and clinical datasets demonstrate that ZhiFangDanTai achieves significant improvements over state-of-the-art models. Our model is open-sourced at this https URL. 
+
+---
+# Domain-Aware RAG: MoL-Enhanced RL for Efficient Training and Scalable Retrieval 
+
+**Authors**: Hao Lin, Peitong Xie, Jingxue Chen, Jie Lin, Qingkun Tang, Qianchun Lu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2509.06650)  
+
+**Abstract**: Retrieval-Augmented Generation (RAG) systems rely heavily on the retrieval stage, particularly the coarse-ranking process. Existing coarse-ranking optimization approaches often struggle to balance domain-specific knowledge learning with query enhencement, resulting in suboptimal retrieval performance. To address this challenge, we propose MoLER, a domain-aware RAG method that uses MoL-Enhanced Reinforcement Learning to optimize retrieval. MoLER has a two-stage pipeline: a continual pre-training (CPT) phase using a Mixture of Losses (MoL) to balance domain-specific knowledge with general language capabilities, and a reinforcement learning (RL) phase leveraging Group Relative Policy Optimization (GRPO) to optimize query and passage generation for maximizing document recall. A key innovation is our Multi-query Single-passage Late Fusion (MSLF) strategy, which reduces computational overhead during RL training while maintaining scalable inference via Multi-query Multi-passage Late Fusion (MMLF). Extensive experiments on benchmark datasets show that MoLER achieves state-of-the-art performance, significantly outperforming baseline methods. MoLER bridges the knowledge gap in RAG systems, enabling robust and scalable retrieval in specialized domains. 
+
+---
+# Guided Decoding and Its Critical Role in Retrieval-Augmented Generation 
+
+**Authors**: Özgür Uğur, Musa Yılmaz, Esra Şavirdi, Özay Ezerceli, Mahmut El Huseyni, Selva Taş, Reyhan Bayraktar  
+
+**Link**: [PDF](https://arxiv.org/pdf/2509.06631)  
+
+**Abstract**: The integration of Large Language Models (LLMs) into various applications has driven the need for structured and reliable responses. A key challenge in Retrieval-Augmented Generation (RAG) systems is ensuring that outputs align with expected formats while minimizing hallucinations. This study examines the role of guided decoding in RAG systems, comparing three methods, Outlines, XGrammar, and LM Format Enforcer, across different multi-turn prompting setups (0-turn, 1-turn, and 2-turn). By evaluating success rates, hallucination rates, and output quality, we provide insights into their performance and applicability. Our findings reveal how multi-turn interactions influence guided decoding, uncovering unexpected performance variations that can inform method selection for specific use cases. This work advances the understanding of structured output generation in RAG systems, offering both theoretical insights and practical guidance for LLM deployment. 
+
+---
+# Biomedical Literature Q&A System Using Retrieval-Augmented Generation (RAG) 
+
+**Authors**: Mansi Garg, Lee-Chi Wang, Bhavesh Ghanchi, Sanjana Dumpala, Shreyash Kakde, Yen Chih Chen  
+
+**Link**: [PDF](https://arxiv.org/pdf/2509.05505)  
+
+**Abstract**: This work presents a Biomedical Literature Question Answering (Q&A) system based on a Retrieval-Augmented Generation (RAG) architecture, designed to improve access to accurate, evidence-based medical information. Addressing the shortcomings of conventional health search engines and the lag in public access to biomedical research, the system integrates diverse sources, including PubMed articles, curated Q&A datasets, and medical encyclopedias ,to retrieve relevant information and generate concise, context-aware responses. The retrieval pipeline uses MiniLM-based semantic embeddings and FAISS vector search, while answer generation is performed by a fine-tuned Mistral-7B-v0.3 language model optimized using QLoRA for efficient, low-resource training. The system supports both general medical queries and domain-specific tasks, with a focused evaluation on breast cancer literature demonstrating the value of domain-aligned retrieval. Empirical results, measured using BERTScore (F1), show substantial improvements in factual consistency and semantic relevance compared to baseline models. The findings underscore the potential of RAG-enhanced language models to bridge the gap between complex biomedical literature and accessible public health knowledge, paving the way for future work on multilingual adaptation, privacy-preserving inference, and personalized medical AI systems. 
+
+---
+# Compare: A Framework for Scientific Comparisons 
+
+**Authors**: Moritz Staudinger, Wojciech Kusa, Matteo Cancellieri, David Pride, Petr Knoth, Allan Hanbury  
+
+**Link**: [PDF](https://arxiv.org/pdf/2509.06412)  
+
+**Abstract**: Navigating the vast and rapidly increasing sea of academic publications to identify institutional synergies, benchmark research contributions and pinpoint key research contributions has become an increasingly daunting task, especially with the current exponential increase in new publications. Existing tools provide useful overviews or single-document insights, but none supports structured, qualitative comparisons across institutions or publications.
+To address this, we demonstrate Compare, a novel framework that tackles this challenge by enabling sophisticated long-context comparisons of scientific contributions. Compare empowers users to explore and analyze research overlaps and differences at both the institutional and publication granularity, all driven by user-defined questions and automatic retrieval over online resources. For this we leverage on Retrieval-Augmented Generation over evolving data sources to foster long context knowledge synthesis. Unlike traditional scientometric tools, Compare goes beyond quantitative indicators by providing qualitative, citation-supported comparisons. 
+
+---

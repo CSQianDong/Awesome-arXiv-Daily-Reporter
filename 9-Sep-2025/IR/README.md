@@ -1,0 +1,199 @@
+# UniSearch: Rethinking Search System with a Unified Generative Architecture 
+
+**Authors**: Jiahui Chen, Xiaoze Jiang, Zhibo Wang, Quanzhi Zhu, Junyao Zhao, Feng Hu, Kang Pan, Ao Xie, Maohua Pei, Zhiheng Qin, Hongjing Zhang, Zhixin Zhai, Xiaobo Guo, Runbin Zhou, Kefeng Wang, Mingyang Geng, Cheng Chen, Jingshan Lv, Yupeng Huang, Xiao Liang, Han Li  
+
+**Link**: [PDF](https://arxiv.org/pdf/2509.06887)  
+
+**Abstract**: Modern search systems play a crucial role in facilitating information acquisition. Traditional search engines typically rely on a cascaded architecture, where results are retrieved through recall, pre-ranking, and ranking stages. The complexity of designing and maintaining multiple modules makes it difficult to achieve holistic performance gains. Recent advances in generative recommendation have motivated the exploration of unified generative search as an alternative. However, existing approaches are not genuinely end-to-end: they typically train an item encoder to tokenize candidates first and then optimize a generator separately, leading to objective inconsistency and limited generalization. To address these limitations, we propose UniSearch, a unified generative search framework for Kuaishou Search. UniSearch replaces the cascaded pipeline with an end-to-end architecture that integrates a Search Generator and a Video Encoder. The Generator produces semantic identifiers of relevant items given a user query, while the Video Encoder learns latent item embeddings and provides their tokenized representations. A unified training framework jointly optimizes both components, enabling mutual enhancement and improving representation quality and generation accuracy. Furthermore, we introduce Search Preference Optimization (SPO), which leverages a reward model and real user feedback to better align generation with user preferences. Extensive experiments on industrial-scale datasets, together with online A/B testing in both short-video and live search scenarios, demonstrate the strong effectiveness and deployment potential of UniSearch. Notably, its deployment in live search yields the largest single-experiment improvement in recent years of our product's history, highlighting its practical value for real-world applications. 
+
+---
+# Reasoning-enhanced Query Understanding through Decomposition and Interpretation 
+
+**Authors**: Yunfei Zhong, Jun Yang, Yixing Fan, Jiafeng Guo, Lixin Su, Maarten de Rijke, Ruqing Zhang, Dawei Yin, Xueqi Cheng  
+
+**Link**: [PDF](https://arxiv.org/pdf/2509.06544)  
+
+**Abstract**: Accurate inference of user intent is crucial for enhancing document retrieval in modern search engines. While large language models (LLMs) have made significant strides in this area, their effectiveness has predominantly been assessed with short, keyword-based queries. As AI-driven search evolves, long-form queries with intricate intents are becoming more prevalent, yet they remain underexplored in the context of LLM-based query understanding (QU). To bridge this gap, we introduce ReDI: a Reasoning-enhanced approach for query understanding through Decomposition and Interpretation. ReDI leverages the reasoning and comprehension capabilities of LLMs in a three-stage pipeline: (i) it breaks down complex queries into targeted sub-queries to accurately capture user intent; (ii) it enriches each sub-query with detailed semantic interpretations to improve the query-document matching; and (iii) it independently retrieves documents for each sub-query and employs a fusion strategy to aggregate the results for the final ranking. We compiled a large-scale dataset of real-world complex queries from a major search engine and distilled the query understanding capabilities of teacher models into smaller models for practical application. Experiments on BRIGHT and BEIR demonstrate that ReDI consistently surpasses strong baselines in both sparse and dense retrieval paradigms, affirming its effectiveness. 
+
+---
+# Rethinking LLM Parametric Knowledge as Post-retrieval Confidence for Dynamic Retrieval and Reranking 
+
+**Authors**: Haoxiang Jin, Ronghan Li, Qiguang Miao, Zixiang Lu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2509.06472)  
+
+**Abstract**: Large Language Models (LLMs) often generate inaccurate responses (hallucinations) when faced with questions beyond their knowledge scope. Retrieval-Augmented Generation (RAG) addresses this by leveraging external knowledge, but a critical challenge remains: determining whether retrieved contexts effectively enhance the model`s ability to answer specific queries. This challenge underscores the importance of knowledge boundary awareness, which current methods-relying on discrete labels or limited signals-fail to address adequately, as they overlook the rich information in LLMs` continuous internal hidden states. To tackle this, we propose a novel post-retrieval knowledge filtering approach. First, we construct a confidence detection model based on LLMs` internal hidden states to quantify how retrieved contexts enhance the model`s confidence. Using this model, we build a preference dataset (NQ_Rerank) to fine-tune a reranker, enabling it to prioritize contexts preferred by the downstream LLM during reranking. Additionally, we introduce Confidence-Based Dynamic Retrieval (CBDR), which adaptively triggers retrieval based on the LLM`s initial confidence in the original question, reducing knowledge conflicts and improving efficiency. Experimental results demonstrate significant improvements in accuracy for context screening and end-to-end RAG performance, along with a notable reduction in retrieval costs while maintaining competitive accuracy. 
+
+---
+# AudioBoost: Increasing Audiobook Retrievability in Spotify Search with Synthetic Query Generation 
+
+**Authors**: Enrico Palumbo, Gustavo Penha, Alva Liu, Marcus Eltscheminov, Jefferson Carvalho dos Santos, Alice Wang, Hugues Bouchard, Humberto Jesús Corona Pampin, Michelle Tran Luu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2509.06452)  
+
+**Abstract**: Spotify has recently introduced audiobooks as part of its catalog, complementing its music and podcast offering. Search is often the first entry point for users to access new items, and an important goal for Spotify is to support users in the exploration of the audiobook catalog. More specifically, we would like to enable users without a specific item in mind to broadly search by topic, genre, story tropes, decade, and discover audiobooks, authors and publishers they may like. To do this, we need to 1) inspire users to type more exploratory queries for audiobooks and 2) augment our retrieval systems to better deal with exploratory audiobook queries. This is challenging in a cold-start scenario, where we have a retrievabiliy bias due to the little amount of user interactions with audiobooks compared to previously available items such as music and podcast content. To address this, we propose AudioBoost, a system to boost audiobook retrievability in Spotify's Search via synthetic query generation. AudioBoost leverages Large Language Models (LLMs) to generate synthetic queries conditioned on audiobook metadata. The synthetic queries are indexed both in the Query AutoComplete (QAC) and in the Search Retrieval engine to improve query formulation and retrieval at the same time. We show through offline evaluation that synthetic queries increase retrievability and are of high quality. Moreover, results from an online A/B test show that AudioBoost leads to a +0.7% in audiobook impressions, +1.22% in audiobook clicks, and +1.82% in audiobook exploratory query completions. 
+
+---
+# Language Bias in Information Retrieval: The Nature of the Beast and Mitigation Methods 
+
+**Authors**: Jinrui Yang, Fan Jiang, Timothy Baldwin  
+
+**Link**: [PDF](https://arxiv.org/pdf/2509.06195)  
+
+**Abstract**: Language fairness in multilingual information retrieval (MLIR) systems is crucial for ensuring equitable access to information across diverse languages. This paper sheds light on the issue, based on the assumption that queries in different languages, but with identical semantics, should yield equivalent ranking lists when retrieving on the same multilingual documents. We evaluate the degree of fairness using both traditional retrieval methods, and a DPR neural ranker based on mBERT and XLM-R. Additionally, we introduce `LaKDA', a novel loss designed to mitigate language biases in neural MLIR approaches. Our analysis exposes intrinsic language biases in current MLIR technologies, with notable disparities across the retrieval methods, and the effectiveness of LaKDA in enhancing language fairness. 
+
+---
+# Modeling shopper interest broadness with entropy-driven dialogue policy in the context of arbitrarily large product catalogs 
+
+**Authors**: Firas Jarboui, Issa Memari  
+
+**Link**: [PDF](https://arxiv.org/pdf/2509.06185)  
+
+**Abstract**: Conversational recommender systems promise rich interactions for e-commerce, but balancing exploration (clarifying user needs) and exploitation (making recommendations) remains challenging, especially when deploying large language models (LLMs) with vast product catalogs. We address this challenge by modeling the breadth of user interest via the entropy of retrieval score distributions. Our method uses a neural retriever to fetch relevant items for a user query and computes the entropy of the re-ranked scores to dynamically route the dialogue policy: low-entropy (specific) queries trigger direct recommendations, whereas high-entropy (ambiguous) queries prompt exploratory questions. This simple yet effective strategy allows an LLM-driven agent to remain aware of an arbitrarily large catalog in real-time without bloating its context window. 
+
+---
+# A Survey of Real-World Recommender Systems: Challenges, Constraints, and Industrial Perspectives 
+
+**Authors**: Kuan Zou, Aixin Sun  
+
+**Link**: [PDF](https://arxiv.org/pdf/2509.06002)  
+
+**Abstract**: Recommender systems have generated tremendous value for both users and businesses, drawing significant attention from academia and industry alike. However, due to practical constraints, academic research remains largely confined to offline dataset optimizations, lacking access to real user data and large-scale recommendation platforms. This limitation reduces practical relevance, slows technological progress, and hampers a full understanding of the key challenges in recommender systems. In this survey, we provide a systematic review of industrial recommender systems and contrast them with their academic counterparts. We highlight key differences in data scale, real-time requirements, and evaluation methodologies, and we summarize major real-world recommendation scenarios along with their associated challenges. We then examine how industry practitioners address these challenges in Transaction-Oriented Recommender Systems and Content-Oriented Recommender Systems, a new classification grounded in item characteristics and recommendation objectives. Finally, we outline promising research directions, including the often-overlooked role of user decision-making, the integration of economic and psychological theories, and concrete suggestions for advancing academic research. Our goal is to enhance academia's understanding of practical recommender systems, bridge the growing development gap, and foster stronger collaboration between industry and academia. 
+
+---
+# Toward Efficient and Scalable Design of In-Memory Graph-Based Vector Search 
+
+**Authors**: Ilias Azizi, Karima Echihab, Themis Palpanas, Vassilis Christophides  
+
+**Link**: [PDF](https://arxiv.org/pdf/2509.05750)  
+
+**Abstract**: Vector data is prevalent across business and scientific applications, and its popularity is growing with the proliferation of learned embeddings. Vector data collections often reach billions of vectors with thousands of dimensions, thus, increasing the complexity of their analysis. Vector search is the backbone of many critical analytical tasks, and graph-based methods have become the best choice for analytical tasks that do not require guarantees on the quality of the answers. Although several paradigms (seed selection, incremental insertion, neighborhood propagation, neighborhood diversification, and divide-and-conquer) have been employed to design in-memory graph-based vector search algorithms, a systematic comparison of the key algorithmic advances is still missing. We conduct an exhaustive experimental evaluation of twelve state-of-the-art methods on seven real data collections, with sizes up to 1 billion vectors. We share key insights about the strengths and limitations of these methods; e.g., the best approaches are typically based on incremental insertion and neighborhood diversification, and the choice of the base graph can hurt scalability. Finally, we discuss open research directions, such as the importance of devising more sophisticated data adaptive seed selection and diversification strategies. 
+
+---
+# LESER: Learning to Expand via Search Engine-feedback Reinforcement in e-Commerce 
+
+**Authors**: Yipeng Zhang, Bowen Liu, Xiaoshuang Zhang, Aritra Mandal, Zhe Wu, Canran Xu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2509.05570)  
+
+**Abstract**: User queries in e-commerce search are often vague, short, and underspecified, making it difficult for retrieval systems to match them accurately against structured product catalogs. This challenge is amplified by the one-to-many nature of user intent, where a single query can imply diverse and competing needs. Existing methods, including neural query expansion and prompting-based LLM approaches, fall short in real-world settings: they struggle to capture nuanced user intent, often generate outputs that violate platform constraints, and rely on workflows that are difficult to scale in production. We propose Learning to Expand via Search Engine-feedback Reinforcement (LESER), a novel framework that fine-tunes a context-aware LLM using real-time search engine feedback as supervision. LESER formulates query expansion as a retrieval optimization task and leverages Group Relative Policy Optimization to learn directly from relevance and coverage metrics. LESER is trained to reason over search results and produce high quality query expansions that align with platform rules and retrieval objectives. We evaluate LESER on large-scale, real-world e-commerce datasets, demonstrating substantial improvements in both offline and online settings. Our results show that LESER not only enhances semantic coverage and retrieval relevance but also delivers measurable gains in user engagement, making it a practical and scalable solution for modern search systems. 
+
+---
+# Knowledge-Augmented Relation Learning for Complementary Recommendation with Large Language Models 
+
+**Authors**: Chihiro Yamasaki, Kai Sugahara, Kazushi Okamoto  
+
+**Link**: [PDF](https://arxiv.org/pdf/2509.05564)  
+
+**Abstract**: Complementary recommendations play a crucial role in e-commerce by enhancing user experience through suggestions of compatible items. Accurate classification of complementary item relationships requires reliable labels, but their creation presents a dilemma. Behavior-based labels are widely used because they can be easily generated from interaction logs; however, they often contain significant noise and lack reliability. While function-based labels (FBLs) provide high-quality definitions of complementary relationships by carefully articulating them based on item functions, their reliance on costly manual annotation severely limits a model's ability to generalize to diverse items. To resolve this trade-off, we propose Knowledge-Augmented Relation Learning (KARL), a framework that strategically fuses active learning with large language models (LLMs). KARL efficiently expands a high-quality FBL dataset at a low cost by selectively sampling data points that the classifier finds the most difficult and uses the label extension of the LLM. Our experiments showed that in out-of-distribution (OOD) settings, an unexplored item feature space, KARL improved the baseline accuracy by up to 37%. In contrast, in in-distribution (ID) settings, the learned item feature space, the improvement was less than 0.5%, with prolonged learning could degrade accuracy. These contrasting results are due to the data diversity driven by KARL's knowledge expansion, suggesting the need for a dynamic sampling strategy that adjusts diversity based on the prediction context (ID or OOD). 
+
+---
+# mmBERT: A Modern Multilingual Encoder with Annealed Language Learning 
+
+**Authors**: Marc Marone, Orion Weller, William Fleshman, Eugene Yang, Dawn Lawrie, Benjamin Van Durme  
+
+**Link**: [PDF](https://arxiv.org/pdf/2509.06888)  
+
+**Abstract**: Encoder-only languages models are frequently used for a variety of standard machine learning tasks, including classification and retrieval. However, there has been a lack of recent research for encoder models, especially with respect to multilingual models. We introduce mmBERT, an encoder-only language model pretrained on 3T tokens of multilingual text in over 1800 languages. To build mmBERT we introduce several novel elements, including an inverse mask ratio schedule and an inverse temperature sampling ratio. We add over 1700 low-resource languages to the data mix only during the decay phase, showing that it boosts performance dramatically and maximizes the gains from the relatively small amount of training data. Despite only including these low-resource languages in the short decay phase we achieve similar classification performance to models like OpenAI's o3 and Google's Gemini 2.5 Pro. Overall, we show that mmBERT significantly outperforms the previous generation of models on classification and retrieval tasks -- on both high and low-resource languages. 
+
+---
+# UNH at CheckThat! 2025: Fine-tuning Vs Prompting in Claim Extraction 
+
+**Authors**: Joe Wilder, Nikhil Kadapala, Benji Xu, Mohammed Alsaadi, Aiden Parsons, Mitchell Rogers, Palash Agarwal, Adam Hassick, Laura Dietz  
+
+**Link**: [PDF](https://arxiv.org/pdf/2509.06883)  
+
+**Abstract**: We participate in CheckThat! Task 2 English and explore various methods of prompting and in-context learning, including few-shot prompting and fine-tuning with different LLM families, with the goal of extracting check-worthy claims from social media passages. Our best METEOR score is achieved by fine-tuning a FLAN-T5 model. However, we observe that higher-quality claims can sometimes be extracted using other methods, even when their METEOR scores are lower. 
+
+---
+# Domain-Aware RAG: MoL-Enhanced RL for Efficient Training and Scalable Retrieval 
+
+**Authors**: Hao Lin, Peitong Xie, Jingxue Chen, Jie Lin, Qingkun Tang, Qianchun Lu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2509.06650)  
+
+**Abstract**: Retrieval-Augmented Generation (RAG) systems rely heavily on the retrieval stage, particularly the coarse-ranking process. Existing coarse-ranking optimization approaches often struggle to balance domain-specific knowledge learning with query enhencement, resulting in suboptimal retrieval performance. To address this challenge, we propose MoLER, a domain-aware RAG method that uses MoL-Enhanced Reinforcement Learning to optimize retrieval. MoLER has a two-stage pipeline: a continual pre-training (CPT) phase using a Mixture of Losses (MoL) to balance domain-specific knowledge with general language capabilities, and a reinforcement learning (RL) phase leveraging Group Relative Policy Optimization (GRPO) to optimize query and passage generation for maximizing document recall. A key innovation is our Multi-query Single-passage Late Fusion (MSLF) strategy, which reduces computational overhead during RL training while maintaining scalable inference via Multi-query Multi-passage Late Fusion (MMLF). Extensive experiments on benchmark datasets show that MoLER achieves state-of-the-art performance, significantly outperforming baseline methods. MoLER bridges the knowledge gap in RAG systems, enabling robust and scalable retrieval in specialized domains. 
+
+---
+# Unveiling the Listener Structure Underlying K-pop's Global Success: A Large-Scale Listening Data Analysis 
+
+**Authors**: Ryota Nakamura, Keita Nishimoto, Ichiro Sakata, Kimitaka Asatani  
+
+**Link**: [PDF](https://arxiv.org/pdf/2509.06606)  
+
+**Abstract**: From the mid-2000s to the 2010s, K-pop moved beyond its status as a regionally popular genre in Asia and established itself as a global music genre with enthusiastic fans around the world. However, little is known about how the vast number of music listeners across the globe have listened to and perceived K-pop. This study addresses this question by analyzing a large-scale listening dataset from this http URL. An analysis of the distribution of play counts reveals that K-pop experienced a significant increase in plays between 2005 and 2019, largely supported by a small group of heavy listeners. The Gini coefficient in play counts is notably greater than that of existing mainstream genres and other growing niche genres. Furthermore, an analysis based on user-assigned genre tags quantitatively demonstrates that between 2005 and 2010, K-pop shed its status as a local Asian genre and established itself as a distinct music genre in its own right. 
+
+---
+# Tackling Device Data Distribution Real-time Shift via Prototype-based Parameter Editing 
+
+**Authors**: Zheqi Lv, Wenqiao Zhang, Kairui Fu, Qi Tian, Shengyu Zhang, Jiajie Su, Jingyuan Chen, Kun Kuang, Fei Wu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2509.06552)  
+
+**Abstract**: The on-device real-time data distribution shift on devices challenges the generalization of lightweight on-device models. This critical issue is often overlooked in current research, which predominantly relies on data-intensive and computationally expensive fine-tuning approaches. To tackle this, we introduce Persona, a novel personalized method using a prototype-based, backpropagation-free parameter editing framework to enhance model generalization without post-deployment retraining. Persona employs a neural adapter in the cloud to generate a parameter editing matrix based on real-time device data. This matrix adeptly adapts on-device models to the prevailing data distributions, efficiently clustering them into prototype models. The prototypes are dynamically refined via the parameter editing matrix, facilitating efficient evolution. Furthermore, the integration of cross-layer knowledge transfer ensures consistent and context-aware multi-layer parameter changes and prototype assignment. Extensive experiments on vision task and recommendation task on multiple datasets confirm Persona's effectiveness and generality. 
+
+---
+# Compare: A Framework for Scientific Comparisons 
+
+**Authors**: Moritz Staudinger, Wojciech Kusa, Matteo Cancellieri, David Pride, Petr Knoth, Allan Hanbury  
+
+**Link**: [PDF](https://arxiv.org/pdf/2509.06412)  
+
+**Abstract**: Navigating the vast and rapidly increasing sea of academic publications to identify institutional synergies, benchmark research contributions and pinpoint key research contributions has become an increasingly daunting task, especially with the current exponential increase in new publications. Existing tools provide useful overviews or single-document insights, but none supports structured, qualitative comparisons across institutions or publications.
+To address this, we demonstrate Compare, a novel framework that tackles this challenge by enabling sophisticated long-context comparisons of scientific contributions. Compare empowers users to explore and analyze research overlaps and differences at both the institutional and publication granularity, all driven by user-defined questions and automatic retrieval over online resources. For this we leverage on Retrieval-Augmented Generation over evolving data sources to foster long context knowledge synthesis. Unlike traditional scientometric tools, Compare goes beyond quantitative indicators by providing qualitative, citation-supported comparisons. 
+
+---
+# DISTRIBUTEDANN: Efficient Scaling of a Single DISKANN Graph Across Thousands of Computers 
+
+**Authors**: Philip Adams, Menghao Li, Shi Zhang, Li Tan, Qi Chen, Mingqin Li, Zengzhong Li, Knut Risvik, Harsha Vardhan Simhadri  
+
+**Link**: [PDF](https://arxiv.org/pdf/2509.06046)  
+
+**Abstract**: We present DISTRIBUTEDANN, a distributed vector search service that makes it possible to search over a single 50 billion vector graph index spread across over a thousand machines that offers 26ms median query latency and processes over 100,000 queries per second. This is 6x more efficient than existing partitioning and routing strategies that route the vector query to a subset of partitions in a scale out vector search system. DISTRIBUTEDANN is built using two well-understood components: a distributed key-value store and an in-memory ANN index. DISTRIBUTEDANN has replaced conventional scale-out architectures for serving the Bing search engine, and we share our experience from making this transition. 
+
+---
+# Learning to Construct Knowledge through Sparse Reference Selection with Reinforcement Learning 
+
+**Authors**: Shao-An Yin  
+
+**Link**: [PDF](https://arxiv.org/pdf/2509.05874)  
+
+**Abstract**: The rapid expansion of scientific literature makes it increasingly difficult to acquire new knowledge, particularly in specialized domains where reasoning is complex, full-text access is restricted, and target references are sparse among a large set of candidates. We present a Deep Reinforcement Learning framework for sparse reference selection that emulates human knowledge construction, prioritizing which papers to read under limited time and cost. Evaluated on drug--gene relation discovery with access restricted to titles and abstracts, our approach demonstrates that both humans and machines can construct knowledge effectively from partial information. 
+
+---
+# Knowledge-Augmented Vision Language Models for Underwater Bioacoustic Spectrogram Analysis 
+
+**Authors**: Ragib Amin Nihal, Benjamin Yen, Takeshi Ashizawa, Kazuhiro Nakadai  
+
+**Link**: [PDF](https://arxiv.org/pdf/2509.05703)  
+
+**Abstract**: Marine mammal vocalization analysis depends on interpreting bioacoustic spectrograms. Vision Language Models (VLMs) are not trained on these domain-specific visualizations. We investigate whether VLMs can extract meaningful patterns from spectrograms visually. Our framework integrates VLM interpretation with LLM-based validation to build domain knowledge. This enables adaptation to acoustic data without manual annotation or model retraining. 
+
+---
+# Few-Shot Query Intent Detection via Relation-Aware Prompt Learning 
+
+**Authors**: Liang Zhang, Yuan Li, Shijie Zhang, Zheng Zhang, Xitong Li  
+
+**Link**: [PDF](https://arxiv.org/pdf/2509.05635)  
+
+**Abstract**: Intent detection is a crucial component of modern conversational systems, since accurately identifying user intent at the beginning of a conversation is essential for generating effective responses. Recent efforts have focused on studying this problem under a challenging few-shot scenario. These approaches primarily leverage large-scale unlabeled dialogue text corpora to pretrain language models through various pretext tasks, followed by fine-tuning for intent detection with very limited annotations. Despite the improvements achieved, existing methods have predominantly focused on textual data, neglecting to effectively capture the crucial structural information inherent in conversational systems, such as the query-query relation and query-answer relation. To address this gap, we propose SAID, a novel framework that integrates both textual and relational structure information in a unified manner for model pretraining for the first time. Building on this framework, we further propose a novel mechanism, the query-adaptive attention network (QueryAdapt), which operates at the relation token level by generating intent-specific relation tokens from well-learned query-query and query-answer relations explicitly, enabling more fine-grained knowledge transfer. Extensive experimental results on two real-world datasets demonstrate that SAID significantly outperforms state-of-the-art methods. 
+
+---
+# RED: Robust Event-Guided Motion Deblurring with Modality-Specific Disentangled Representation 
+
+**Authors**: Yihong Leng, Siming Zheng, Jinwei Chen, Bo Li, Jiaojiao Li, Peng-Tao Jiang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2509.05554)  
+
+**Abstract**: Event cameras provide sparse yet temporally high-temporal-resolution motion information, demonstrating great potential for motion deblurring. Existing methods focus on cross-modal interaction, overlooking the inherent incompleteness of event streams, which arises from the trade-off between sensitivity and noise introduced by the thresholding mechanism of Dynamic Vision Sensors (DVS). Such degradation compromises the integrity of motion priors and limits the effectiveness of event-guided deblurring. To tackle these challenges, we propose a Robust Event-guided Deblurring (RED) network with modality-specific disentangled representation. First, we introduce a Robustness-Oriented Perturbation Strategy (RPS) that applies random masking to events, which exposes RED to incomplete patterns and then foster robustness against various unknown scenario this http URL, a disentangled OmniAttention is presented to explicitly model intra-motion, inter-motion, and cross-modality correlations from two inherently distinct but complementary sources: blurry images and partially disrupted events. Building on these reliable features, two interactive modules are designed to enhance motion-sensitive areas in blurry images and inject semantic context into incomplete event representations. Extensive experiments on synthetic and real-world datasets demonstrate RED consistently achieves state-of-the-art performance in both accuracy and robustness. 
+
+---
+# Calibrated Recommendations with Contextual Bandits 
+
+**Authors**: Diego Feijer, Himan Abdollahpouri, Sanket Gupta, Alexander Clare, Yuxiao Wen, Todd Wasson, Maria Dimakopoulou, Zahra Nazari, Kyle Kretschman, Mounia Lalmas  
+
+**Link**: [PDF](https://arxiv.org/pdf/2509.05460)  
+
+**Abstract**: Spotify's Home page features a variety of content types, including music, podcasts, and audiobooks. However, historical data is heavily skewed toward music, making it challenging to deliver a balanced and personalized content mix. Moreover, users' preference towards different content types may vary depending on the time of day, the day of week, or even the device they use. We propose a calibration method that leverages contextual bandits to dynamically learn each user's optimal content type distribution based on their context and preferences. Unlike traditional calibration methods that rely on historical averages, our approach boosts engagement by adapting to how users interests in different content types varies across contexts. Both offline and online results demonstrate improved precision and user engagement with the Spotify Home page, in particular with under-represented content types such as podcasts. 
+
+---
