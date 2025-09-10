@@ -1,0 +1,145 @@
+# KLIPA: A Knowledge Graph and LLM-Driven QA Framework for IP Analysis 
+
+**Authors**: Guanzhi Deng, Yi Xie, Yu-Keung Ng, Mingyang Liu, Peijun Zheng, Jie Liu, Dapeng Wu, Yinqiao Li, Linqi Song  
+
+**Link**: [PDF](https://arxiv.org/pdf/2509.07860)  
+
+**Abstract**: Effectively managing intellectual property is a significant challenge. Traditional methods for patent analysis depend on labor-intensive manual searches and rigid keyword matching. These approaches are often inefficient and struggle to reveal the complex relationships hidden within large patent datasets, hindering strategic decision-making. To overcome these limitations, we introduce KLIPA, a novel framework that leverages a knowledge graph and a large language model (LLM) to significantly advance patent analysis. Our approach integrates three key components: a structured knowledge graph to map explicit relationships between patents, a retrieval-augmented generation(RAG) system to uncover contextual connections, and an intelligent agent that dynamically determines the optimal strategy for resolving user queries. We validated KLIPA on a comprehensive, real-world patent database, where it demonstrated substantial improvements in knowledge extraction, discovery of novel connections, and overall operational efficiency. This combination of technologies enhances retrieval accuracy, reduces reliance on domain experts, and provides a scalable, automated solution for any organization managing intellectual property, including technology corporations and legal firms, allowing them to better navigate the complexities of strategic innovation and competitive intelligence. 
+
+---
+# Query Expansion in the Age of Pre-trained and Large Language Models: A Comprehensive Survey 
+
+**Authors**: Minghan Li, Xinxuan Lv, Junjie Zou, Tongna Chen, Chao Zhang, Suchao An, Ercong Nie, Guodong Zhou  
+
+**Link**: [PDF](https://arxiv.org/pdf/2509.07794)  
+
+**Abstract**: Modern information retrieval (IR) must bridge short, ambiguous queries and ever more diverse, rapidly evolving corpora. Query Expansion (QE) remains a key mechanism for mitigating vocabulary mismatch, but the design space has shifted markedly with pre-trained language models (PLMs) and large language models (LLMs). This survey synthesizes the field from three angles: (i) a four-dimensional framework of query expansion - from the point of injection (explicit vs. implicit QE), through grounding and interaction (knowledge bases, model-internal capabilities, multi-turn retrieval) and learning alignment, to knowledge graph-based argumentation; (ii) a model-centric taxonomy spanning encoder-only, encoder-decoder, decoder-only, instruction-tuned, and domain/multilingual variants, highlighting their characteristic affordances for QE (contextual disambiguation, controllable generation, zero-/few-shot reasoning); and (iii) practice-oriented guidance on where and how neural QE helps in first-stage retrieval, multi-query fusion, re-ranking, and retrieval-augmented generation (RAG). We compare traditional query expansion with PLM/LLM-based methods across seven key aspects, and we map applications across web search, biomedicine, e-commerce, open-domain QA/RAG, conversational and code search, and cross-lingual settings. The review distills design grounding and interaction, alignment/distillation (SFT/PEFT/DPO), and KG constraints - as robust remedies to topic drift and hallucination. We conclude with an agenda on quality control, cost-aware invocation, domain/temporal adaptation, evaluation beyond end-task metrics, and fairness/privacy. Collectively, these insights provide a principled blueprint for selecting and combining QE techniques under real-world constraints. 
+
+---
+# A Survey of Long-Document Retrieval in the PLM and LLM Era 
+
+**Authors**: Minghan Li, Miyang Luo, Tianrui Lv, Yishuai Zhang, Siqi Zhao, Ercong Nie, Guodong Zhou  
+
+**Link**: [PDF](https://arxiv.org/pdf/2509.07759)  
+
+**Abstract**: The proliferation of long-form documents presents a fundamental challenge to information retrieval (IR), as their length, dispersed evidence, and complex structures demand specialized methods beyond standard passage-level techniques. This survey provides the first comprehensive treatment of long-document retrieval (LDR), consolidating methods, challenges, and applications across three major eras. We systematize the evolution from classical lexical and early neural models to modern pre-trained (PLM) and large language models (LLMs), covering key paradigms like passage aggregation, hierarchical encoding, efficient attention, and the latest LLM-driven re-ranking and retrieval techniques. Beyond the models, we review domain-specific applications, specialized evaluation resources, and outline critical open challenges such as efficiency trade-offs, multimodal alignment, and faithfulness. This survey aims to provide both a consolidated reference and a forward-looking agenda for advancing long-document retrieval in the era of foundation models. 
+
+---
+# Towards End-to-End Model-Agnostic Explanations for RAG Systems 
+
+**Authors**: Viju Sudhi, Sinchana Ramakanth Bhat, Max Rudat, Roman Teucher, Nicolas Flores-Herr  
+
+**Link**: [PDF](https://arxiv.org/pdf/2509.07620)  
+
+**Abstract**: Retrieval Augmented Generation (RAG) systems, despite their growing popularity for enhancing model response reliability, often struggle with trustworthiness and explainability. In this work, we present a novel, holistic, model-agnostic, post-hoc explanation framework leveraging perturbation-based techniques to explain the retrieval and generation processes in a RAG system. We propose different strategies to evaluate these explanations and discuss the sufficiency of model-agnostic explanations in RAG systems. With this work, we further aim to catalyze a collaborative effort to build reliable and explainable RAG systems. 
+
+---
+# ELEC: Efficient Large Language Model-Empowered Click-Through Rate Prediction 
+
+**Authors**: Rui Dong, Wentao Ouyang, Xiangzheng Liu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2509.07594)  
+
+**Abstract**: Click-through rate (CTR) prediction plays an important role in online advertising systems. On the one hand, traditional CTR prediction models capture the collaborative signals in tabular data via feature interaction modeling, but they lose semantics in text. On the other hand, Large Language Models (LLMs) excel in understanding the context and meaning behind text, but they face challenges in capturing collaborative signals and they have long inference latency. In this paper, we aim to leverage the benefits of both types of models and pursue collaboration, semantics and efficiency. We present ELEC, which is an Efficient LLM-Empowered CTR prediction framework. We first adapt an LLM for the CTR prediction task. In order to leverage the ability of the LLM but simultaneously keep efficiency, we utilize the pseudo-siamese network which contains a gain network and a vanilla network. We inject the high-level representation vector generated by the LLM into a collaborative CTR model to form the gain network such that it can take advantage of both tabular modeling and textual modeling. However, its reliance on the LLM limits its efficiency. We then distill the knowledge from the gain network to the vanilla network on both the score level and the representation level, such that the vanilla network takes only tabular data as input, but can still generate comparable performance as the gain network. Our approach is model-agnostic. It allows for the integration with various existing LLMs and collaborative CTR models. Experiments on real-world datasets demonstrate the effectiveness and efficiency of ELEC for CTR prediction. 
+
+---
+# FLeW: Facet-Level and Adaptive Weighted Representation Learning of Scientific Documents 
+
+**Authors**: Zheng Dou, Deqing Wang, Fuzhen Zhuang, Jian Ren, Yanlin Hu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2509.07531)  
+
+**Abstract**: Scientific document representation learning provides powerful embeddings for various tasks, while current methods face challenges across three approaches. 1) Contrastive training with citation-structural signals underutilizes citation information and still generates single-vector representations. 2) Fine-grained representation learning, which generates multiple vectors at the sentence or aspect level, requires costly integration and lacks domain generalization. 3) Task-aware learning depends on manually predefined task categorization, overlooking nuanced task distinctions and requiring extra training data for task-specific modules. To address these problems, we propose a new method that unifies the three approaches for better representations, namely FLeW. Specifically, we introduce a novel triplet sampling method that leverages citation intent and frequency to enhance citation-structural signals for training. Citation intents (background, method, result), aligned with the general structure of scientific writing, facilitate a domain-generalized facet partition for fine-grained representation learning. Then, we adopt a simple weight search to adaptively integrate three facet-level embeddings into a task-specific document embedding without task-aware fine-tuning. Experiments show the applicability and robustness of FLeW across multiple scientific tasks and fields, compared to prior models. 
+
+---
+# Multi-view-guided Passage Reranking with Large Language Models 
+
+**Authors**: Jeongwoo Na, Jun Kwon, Eunseong Choi, Jongwuk Lee  
+
+**Link**: [PDF](https://arxiv.org/pdf/2509.07485)  
+
+**Abstract**: Recent advances in large language models (LLMs) have shown impressive performance in passage reranking tasks. Despite their success, LLM-based methods still face challenges in efficiency and sensitivity to external biases. (1) Existing models rely mostly on autoregressive generation and sliding window strategies to rank passages, which incur heavy computational overhead as the number of passages increases. (2) External biases, such as position or selection bias, hinder the model's ability to accurately represent passages and increase input-order sensitivity. To address these limitations, we introduce a novel passage reranking model, called Multi-View-guided Passage Reranking (MVP). MVP is a non-generative LLM-based reranking method that encodes query-passage information into diverse view embeddings without being influenced by external biases. For each view, it combines query-aware passage embeddings to produce a distinct anchor vector, which is then used to directly compute relevance scores in a single decoding step. In addition, it employs an orthogonal loss to make the views more distinctive. Extensive experiments demonstrate that MVP, with just 220M parameters, matches the performance of much larger 7B-scale fine-tuned models while achieving a 100x reduction in inference latency. Notably, the 3B-parameter variant of MVP achieves state-of-the-art performance on both in-domain and out-of-domain benchmarks. The source code is available at: this https URL 
+
+---
+# MEGG: Replay via Maximally Extreme GGscore in Incremental Learning for Neural Recommendation Models 
+
+**Authors**: Yunxiao Shi, Shuo Yang, Haimin Zhang, Li Wang, Yongze Wang, Qiang Wu, Min Xu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2509.07319)  
+
+**Abstract**: Neural Collaborative Filtering models are widely used in recommender systems but are typically trained under static settings, assuming fixed data distributions. This limits their applicability in dynamic environments where user preferences evolve. Incremental learning offers a promising solution, yet conventional methods from computer vision or NLP face challenges in recommendation tasks due to data sparsity and distinct task paradigms. Existing approaches for neural recommenders remain limited and often lack generalizability. To address this, we propose MEGG, Replay Samples with Maximally Extreme GGscore, an experience replay based incremental learning framework. MEGG introduces GGscore, a novel metric that quantifies sample influence, enabling the selective replay of highly influential samples to mitigate catastrophic forgetting. Being model-agnostic, MEGG integrates seamlessly across architectures and frameworks. Experiments on three neural models and four benchmark datasets show superior performance over state-of-the-art baselines, with strong scalability, efficiency, and robustness. Implementation will be released publicly upon acceptance. 
+
+---
+# Datasets for Navigating Sensitive Topics in Recommendation Systems 
+
+**Authors**: Amelia Kovacs, Jerry Chee, Kimia Kazemian, Sarah Dean  
+
+**Link**: [PDF](https://arxiv.org/pdf/2509.07269)  
+
+**Abstract**: Personalized AI systems, from recommendation systems to chatbots, are a prevalent method for distributing content to users based on their learned preferences. However, there is growing concern about the adverse effects of these systems, including their potential tendency to expose users to sensitive or harmful material, negatively impacting overall well-being. To address this concern quantitatively, it is necessary to create datasets with relevant sensitivity labels for content, enabling researchers to evaluate personalized systems beyond mere engagement metrics. To this end, we introduce two novel datasets that include a taxonomy of sensitivity labels alongside user-content ratings: one that integrates MovieLens rating data with content warnings from the Does the Dog Die? community ratings website, and another that combines fan-fiction interaction data and user-generated warnings from Archive of Our Own. 
+
+---
+# Benchmarking Information Retrieval Models on Complex Retrieval Tasks 
+
+**Authors**: Julian Killingback, Hamed Zamani  
+
+**Link**: [PDF](https://arxiv.org/pdf/2509.07253)  
+
+**Abstract**: Large language models (LLMs) are incredible and versatile tools for text-based tasks that have enabled countless, previously unimaginable, applications. Retrieval models, in contrast, have not yet seen such capable general-purpose models emerge. To achieve this goal, retrieval models must be able to perform complex retrieval tasks, where queries contain multiple parts, constraints, or requirements in natural language. These tasks represent a natural progression from the simple, single-aspect queries that are used in the vast majority of existing, commonly used evaluation sets. Complex queries naturally arise as people expect search systems to handle more specific and often ambitious information requests, as is demonstrated by how people use LLM-based information systems. Despite the growing desire for retrieval models to expand their capabilities in complex retrieval tasks, there exist limited resources to assess the ability of retrieval models on a comprehensive set of diverse complex tasks. The few resources that do exist feature a limited scope and often lack realistic settings making it hard to know the true capabilities of retrieval models on complex real-world retrieval tasks. To address this shortcoming and spur innovation in next-generation retrieval models, we construct a diverse and realistic set of complex retrieval tasks and benchmark a representative set of state-of-the-art retrieval models. Additionally, we explore the impact of LLM-based query expansion and rewriting on retrieval quality. Our results show that even the best models struggle to produce high-quality retrieval results with the highest average nDCG@10 of only 0.346 and R@100 of only 0.587 across all tasks. Although LLM augmentation can help weaker models, the strongest model has decreased performance across all metrics with all rewriting techniques. 
+
+---
+# Beyond Sequential Reranking: Reranker-Guided Search Improves Reasoning Intensive Retrieval 
+
+**Authors**: Haike Xu, Tong Chen  
+
+**Link**: [PDF](https://arxiv.org/pdf/2509.07163)  
+
+**Abstract**: The widely used retrieve-and-rerank pipeline faces two critical limitations: they are constrained by the initial retrieval quality of the top-k documents, and the growing computational demands of LLM-based rerankers restrict the number of documents that can be effectively processed. We introduce Reranker-Guided-Search (RGS), a novel approach that bypasses these limitations by directly retrieving documents according to reranker preferences rather than following the traditional sequential reranking method. Our method uses a greedy search on proximity graphs generated by approximate nearest neighbor algorithms, strategically prioritizing promising documents for reranking based on document similarity. Experimental results demonstrate substantial performance improvements across multiple benchmarks: 3.5 points on BRIGHT, 2.9 on FollowIR, and 5.1 on M-BEIR, all within a constrained reranker budget of 100 documents. Our analysis suggests that, given a fixed pair of embedding and reranker models, strategically selecting documents to rerank can significantly improve retrieval accuracy under limited reranker budget. 
+
+---
+# Avoiding Over-Personalization with Rule-Guided Knowledge Graph Adaptation for LLM Recommendations 
+
+**Authors**: Fernando Spadea, Oshani Seneviratne  
+
+**Link**: [PDF](https://arxiv.org/pdf/2509.07133)  
+
+**Abstract**: We present a lightweight neuro-symbolic framework to mitigate over-personalization in LLM-based recommender systems by adapting user-side Knowledge Graphs (KGs) at inference time. Instead of retraining models or relying on opaque heuristics, our method restructures a user's Personalized Knowledge Graph (PKG) to suppress feature co-occurrence patterns that reinforce Personalized Information Environments (PIEs), i.e., algorithmically induced filter bubbles that constrain content diversity. These adapted PKGs are used to construct structured prompts that steer the language model toward more diverse, Out-PIE recommendations while preserving topical relevance. We introduce a family of symbolic adaptation strategies, including soft reweighting, hard inversion, and targeted removal of biased triples, and a client-side learning algorithm that optimizes their application per user. Experiments on a recipe recommendation benchmark show that personalized PKG adaptations significantly increase content novelty while maintaining recommendation quality, outperforming global adaptation and naive prompt-based methods. 
+
+---
+# Smart Fast Finish: Preventing Overdelivery via Daily Budget Pacing at DoorDash 
+
+**Authors**: Rohan Garg, Yongjin Xiao, Jason, Yang, Mandar Rahurkar  
+
+**Link**: [PDF](https://arxiv.org/pdf/2509.07929)  
+
+**Abstract**: We present a budget pacing feature called Smart Fast Finish (SFF). SFF builds upon the industry standard Fast Finish (FF) feature in budget pacing systems that depletes remaining advertising budget as quickly as possible towards the end of some fixed time period. SFF dynamically updates system parameters such as start time and throttle rate depending on historical ad-campaign data. SFF is currently in use at DoorDash, one of the largest delivery platforms in the US, and is part of its budget pacing system. We show via online budget-split experimentation data and offline simulations that SFF is a robust solution for overdelivery mitigation when pacing budget. 
+
+---
+# SciNLP: A Domain-Specific Benchmark for Full-Text Scientific Entity and Relation Extraction in NLP 
+
+**Authors**: Decheng Duan, Yingyi Zhang, Jitong Peng, Chengzhi Zhang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2509.07801)  
+
+**Abstract**: Structured information extraction from scientific literature is crucial for capturing core concepts and emerging trends in specialized fields. While existing datasets aid model development, most focus on specific publication sections due to domain complexity and the high cost of annotating scientific texts. To address this limitation, we introduce SciNLP - a specialized benchmark for full-text entity and relation extraction in the Natural Language Processing (NLP) domain. The dataset comprises 60 manually annotated full-text NLP publications, covering 7,072 entities and 1,826 relations. Compared to existing research, SciNLP is the first dataset providing full-text annotations of entities and their relationships in the NLP domain. To validate the effectiveness of SciNLP, we conducted comparative experiments with similar datasets and evaluated the performance of state-of-the-art supervised models on this dataset. Results reveal varying extraction capabilities of existing models across academic texts of different lengths. Cross-comparisons with existing datasets show that SciNLP achieves significant performance improvements on certain baseline models. Using models trained on SciNLP, we implemented automatic construction of a fine-grained knowledge graph for the NLP domain. Our KG has an average node degree of 3.2 per entity, indicating rich semantic topological information that enhances downstream applications. The dataset is publicly available at this https URL. 
+
+---
+# MoLoRAG: Bootstrapping Document Understanding via Multi-modal Logic-aware Retrieval 
+
+**Authors**: Xixi Wu, Yanchao Tan, Nan Hou, Ruiyang Zhang, Hong Cheng  
+
+**Link**: [PDF](https://arxiv.org/pdf/2509.07666)  
+
+**Abstract**: Document Understanding is a foundational AI capability with broad applications, and Document Question Answering (DocQA) is a key evaluation task. Traditional methods convert the document into text for processing by Large Language Models (LLMs), but this process strips away critical multi-modal information like figures. While Large Vision-Language Models (LVLMs) address this limitation, their constrained input size makes multi-page document comprehension infeasible. Retrieval-augmented generation (RAG) methods mitigate this by selecting relevant pages, but they rely solely on semantic relevance, ignoring logical connections between pages and the query, which is essential for reasoning.
+To this end, we propose MoLoRAG, a logic-aware retrieval framework for multi-modal, multi-page document understanding. By constructing a page graph that captures contextual relationships between pages, a lightweight VLM performs graph traversal to retrieve relevant pages, including those with logical connections often overlooked. This approach combines semantic and logical relevance to deliver more accurate retrieval. After retrieval, the top-$K$ pages are fed into arbitrary LVLMs for question answering. To enhance flexibility, MoLoRAG offers two variants: a training-free solution for easy deployment and a fine-tuned version to improve logical relevance checking. Experiments on four DocQA datasets demonstrate average improvements of 9.68% in accuracy over LVLM direct inference and 7.44% in retrieval precision over baselines. Codes and datasets are released at this https URL. 
+
+---
+# ALLabel: Three-stage Active Learning for LLM-based Entity Recognition using Demonstration Retrieval 
+
+**Authors**: Zihan Chen, Lei Shi, Weize Wu, Qiji Zhou, Yue Zhang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2509.07512)  
+
+**Abstract**: Many contemporary data-driven research efforts in the natural sciences, such as chemistry and materials science, require large-scale, high-performance entity recognition from scientific datasets. Large language models (LLMs) have increasingly been adopted to solve the entity recognition task, with the same trend being observed on all-spectrum NLP tasks. The prevailing entity recognition LLMs rely on fine-tuned technology, yet the fine-tuning process often incurs significant cost. To achieve a best performance-cost trade-off, we propose ALLabel, a three-stage framework designed to select the most informative and representative samples in preparing the demonstrations for LLM modeling. The annotated examples are used to construct a ground-truth retrieval corpus for LLM in-context learning. By sequentially employing three distinct active learning strategies, ALLabel consistently outperforms all baselines under the same annotation budget across three specialized domain datasets. Experimental results also demonstrate that selectively annotating only 5\%-10\% of the dataset with ALLabel can achieve performance comparable to the method annotating the entire dataset. Further analyses and ablation studies verify the effectiveness and generalizability of our proposal. 
+
+---
