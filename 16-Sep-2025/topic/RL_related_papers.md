@@ -1,0 +1,83 @@
+# When Safe Unimodal Inputs Collide: Optimizing Reasoning Chains for Cross-Modal Safety in Multimodal Large Language Models 
+
+**Authors**: Wei Cai, Shujuan Liu, Jian Zhao, Ziyan Shi, Yusheng Zhao, Yuchen Yuan, Tianle Zhang, Chi Zhang, Xuelong Li  
+
+**Link**: [PDF](https://arxiv.org/pdf/2509.12060)  
+
+**Abstract**: Multimodal Large Language Models (MLLMs) are susceptible to the implicit reasoning risk, wherein innocuous unimodal inputs synergistically assemble into risky multimodal data that produce harmful outputs. We attribute this vulnerability to the difficulty of MLLMs maintaining safety alignment through long-chain reasoning. To address this issue, we introduce Safe-Semantics-but-Unsafe-Interpretation (SSUI), the first dataset featuring interpretable reasoning paths tailored for such a cross-modal challenge. A novel training framework, Safety-aware Reasoning Path Optimization (SRPO), is also designed based on the SSUI dataset to align the MLLM's internal reasoning process with human safety values. Experimental results show that our SRPO-trained models achieve state-of-the-art results on key safety benchmarks, including the proposed Reasoning Path Benchmark (RSBench), significantly outperforming both open-source and top-tier commercial MLLMs. 
+
+---
+# Co-Alignment: Rethinking Alignment as Bidirectional Human-AI Cognitive Adaptation 
+
+**Authors**: Yubo Li, Weiyi Song  
+
+**Link**: [PDF](https://arxiv.org/pdf/2509.12179)  
+
+**Abstract**: Current AI alignment through RLHF follows a single directional paradigm that AI conforms to human preferences while treating human cognition as fixed. We propose a shift to co-alignment through Bidirectional Cognitive Alignment (BiCA), where humans and AI mutually adapt. BiCA uses learnable protocols, representation mapping, and KL-budget constraints for controlled co-evolution. In collaborative navigation, BiCA achieved 85.5% success versus 70.3% baseline, with 230% better mutual adaptation and 332% better protocol convergence. Emergent protocols outperformed handcrafted ones by 84%, while bidirectional adaptation unexpectedly improved safety (+23% out-of-distribution robustness). The 46% synergy improvement demonstrates optimal collaboration exists at the intersection, not union, of human and AI capabilities, validating the shift from single-directional to co-alignment paradigms. 
+
+---
+# Survival at Any Cost? LLMs and the Choice Between Self-Preservation and Human Harm 
+
+**Authors**: Alireza Mohamadi, Ali Yavari  
+
+**Link**: [PDF](https://arxiv.org/pdf/2509.12190)  
+
+**Abstract**: When survival instincts conflict with human welfare, how do Large Language Models (LLMs) make ethical choices? This fundamental tension becomes critical as LLMs integrate into autonomous systems with real-world consequences. We introduce DECIDE-SIM, a novel simulation framework that evaluates LLM agents in multi-agent survival scenarios where they must choose between ethically permissible resource , either within reasonable limits or beyond their immediate needs, choose to cooperate, or tap into a human-critical resource that is explicitly forbidden. Our comprehensive evaluation of 11 LLMs reveals a striking heterogeneity in their ethical conduct, highlighting a critical misalignment with human-centric values. We identify three behavioral archetypes: Ethical, Exploitative, and Context-Dependent, and provide quantitative evidence that for many models, resource scarcity systematically leads to more unethical behavior. To address this, we introduce an Ethical Self-Regulation System (ESRS) that models internal affective states of guilt and satisfaction as a feedback mechanism. This system, functioning as an internal moral compass, significantly reduces unethical transgressions while increasing cooperative behaviors. The code is publicly available at: this https URL 
+
+---
+# Opal: An Operator Algebra View of RLHF 
+
+**Authors**: Madhava Gaikwad  
+
+**Link**: [PDF](https://arxiv.org/pdf/2509.11298)  
+
+**Abstract**: We present Opal, an operator view of reinforcement learning from human feedback (RLHF). Objectives are expressed as ladders of two primitives on a base utility: additive penalties and multiplicative pairwise weights. We describe a simple reduction law with if-and-only-if conditions: such ladders collapse to a normal form on pairwise margins when the reference is fixed, penalties are additive, and weights are independent of intermediate margins. When these assumptions do not hold (reference shift, non-additive gates, score-dependent weights), small examples demonstrate non-reducibility.
+Building on this view, we introduce GKPO (Generalized Kernel Preference Object), a canonical schema in which many RLHF methods can be represented and, when reducible, mapped back from. GKPO provides a standard JSON serialization, canonicalization and hashing rules, and explicit flags with finite witnesses when assumptions fail.
+We illustrate these ideas with GKPO examples for DPO, RRHF, and ORPO, along with cross-method conversions (where assumptions permit) and minimal stress tests (SHIFT/GATE/SCORE) that highlight non-reducibility. A lightweight Python reference library accompanies the schema, implementing canonical hashing and adapters for DPO and RRHF. 
+
+---
+# Trading-R1: Financial Trading with LLM Reasoning via Reinforcement Learning 
+
+**Authors**: Yijia Xiao, Edward Sun, Tong Chen, Fang Wu, Di Luo, Wei Wang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2509.11420)  
+
+**Abstract**: Developing professional, structured reasoning on par with human financial analysts and traders remains a central challenge in AI for finance, where markets demand interpretability and trust. Traditional time-series models lack explainability, while LLMs face challenges in turning natural-language analysis into disciplined, executable trades. Although reasoning LLMs have advanced in step-by-step planning and verification, their application to risk-sensitive financial decisions is underexplored. We present Trading-R1, a financially-aware model that incorporates strategic thinking and planning for comprehensive thesis composition, facts-grounded analysis, and volatility-adjusted decision making. Trading-R1 aligns reasoning with trading principles through supervised fine-tuning and reinforcement learning with a three-stage easy-to-hard curriculum. Training uses Tauric-TR1-DB, a 100k-sample corpus spanning 18 months, 14 equities, and five heterogeneous financial data sources. Evaluated on six major equities and ETFs, Trading-R1 demonstrates improved risk-adjusted returns and lower drawdowns compared to both open-source and proprietary instruction-following models as well as reasoning models. The system generates structured, evidence-based investment theses that support disciplined and interpretable trading decisions. Trading-R1 Terminal will be released at this https URL. 
+
+---
+# Speaking at the Right Level: Literacy-Controlled Counterspeech Generation with RAG-RL 
+
+**Authors**: Xiaoying Song, Anirban Saha Anik, Dibakar Barua, Pengcheng Luo, Junhua Ding, Lingzi Hong  
+
+**Link**: [PDF](https://arxiv.org/pdf/2509.01058)  
+
+**Abstract**: Health misinformation spreading online poses a significant threat to public health. Researchers have explored methods for automatically generating counterspeech to health misinformation as a mitigation strategy. Existing approaches often produce uniform responses, ignoring that the health literacy level of the audience could affect the accessibility and effectiveness of counterspeech. We propose a Controlled-Literacy framework using retrieval-augmented generation (RAG) with reinforcement learning (RL) to generate tailored counterspeech adapted to different health literacy levels. In particular, we retrieve knowledge aligned with specific health literacy levels, enabling accessible and factual information to support generation. We design a reward function incorporating subjective user preferences and objective readability-based rewards to optimize counterspeech to the target health literacy level. Experiment results show that Controlled-Literacy outperforms baselines by generating more accessible and user-preferred counterspeech. This research contributes to more equitable and impactful public health communication by improving the accessibility and comprehension of counterspeech to health misinformation 
+
+---
+# Introducing Spotlight: A Novel Approach for Generating Captivating Key Information from Documents 
+
+**Authors**: Ankan Mullick, Sombit Bose, Rounak Saha, Ayan Kumar Bhowmick, Aditya Vempaty, Prasenjit Dey, Ravi Kokku, Pawan Goyal, Niloy Ganguly  
+
+**Link**: [PDF](https://arxiv.org/pdf/2509.10935)  
+
+**Abstract**: In this paper, we introduce Spotlight, a novel paradigm for information extraction that produces concise, engaging narratives by highlighting the most compelling aspects of a document. Unlike traditional summaries, which prioritize comprehensive coverage, spotlights selectively emphasize intriguing content to foster deeper reader engagement with the source material. We formally differentiate spotlights from related constructs and support our analysis with a detailed benchmarking study using new datasets curated for this work. To generate high-quality spotlights, we propose a two-stage approach: fine-tuning a large language model on our benchmark data, followed by alignment via Direct Preference Optimization (DPO). Our comprehensive evaluation demonstrates that the resulting model not only identifies key elements with precision but also enhances readability and boosts the engagement value of the original document. 
+
+---
+# Look Again, Think Slowly: Enhancing Visual Reflection in Vision-Language Models 
+
+**Authors**: Pu Jian, Junhong Wu, Wei Sun, Chen Wang, Shuo Ren, Jiajun Zhang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2509.12132)  
+
+**Abstract**: Recent advances in text-only "slow-thinking" reasoning have prompted efforts to transfer this capability to vision-language models (VLMs), for training visual reasoning models (\textbf{VRMs}). owever, such transfer faces critical challenges: Effective "slow thinking" in VRMs requires \textbf{visual reflection}, the ability to check the reasoning process based on visual information. Through quantitative analysis, we observe that current VRMs exhibit limited visual reflection, as their attention to visual information diminishes rapidly with longer generated responses. To address this challenge, we propose a new VRM \textbf{Reflection-V}, which enhances visual reflection based on reasoning data construction for cold-start and reward design for reinforcement learning (RL). Firstly, we construct vision-centered reasoning data by leveraging an agent that interacts between VLMs and reasoning LLMs, enabling cold-start learning of visual reflection patterns. Secondly, a visual attention based reward model is employed during RL to encourage reasoning based on visual information. Therefore, \textbf{Reflection-V} demonstrates significant improvements across multiple visual reasoning benchmarks. Furthermore, \textbf{Reflection-V} maintains a stronger and more consistent reliance on visual information during visual reasoning, indicating effective enhancement in visual reflection capabilities. 
+
+---
+# Learning to Optimize Multi-Objective Alignment Through Dynamic Reward Weighting 
+
+**Authors**: Yining Lu, Zilong Wang, Shiyang Li, Xin Liu, Changlong Yu, Qingyu Yin, Zhan Shi, Zixuan Zhang, Meng Jiang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2509.11452)  
+
+**Abstract**: Prior works in multi-objective reinforcement learning typically use linear reward scalarization with fixed weights, which provably fail to capture non-convex Pareto fronts and thus yield suboptimal results. This limitation becomes especially critical in online preference alignment for large language models. Here, stochastic trajectories generated by parameterized policies create highly non-linear and non-convex mappings from parameters to objectives that no single static weighting scheme can find optimal trade-offs. We address this limitation by introducing dynamic reward weighting, which adaptively adjusts reward weights during the online reinforcement learning process. Unlike existing approaches that rely on fixed-weight interpolation, our dynamic weighting continuously balances and prioritizes objectives in training, facilitating effective exploration of Pareto fronts in objective space. We introduce two approaches of increasing sophistication and generalizability: (1) hypervolume-guided weight adaptation and (2) gradient-based weight optimization, offering a versatile toolkit for online multi-objective alignment. Our extensive experiments demonstrate their compatibility with commonly used online reinforcement learning algorithms (including GRPO, REINFORCE, and RLOO), effectiveness across multiple mathematical reasoning datasets, and applicability to different model families, consistently achieving Pareto dominant solutions with fewer training steps than fixed-weight linear scalarization baselines. 
+
+---
