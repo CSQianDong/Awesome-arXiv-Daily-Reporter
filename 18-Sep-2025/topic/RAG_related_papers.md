@@ -1,0 +1,46 @@
+# Improving Context Fidelity via Native Retrieval-Augmented Reasoning 
+
+**Authors**: Suyuchen Wang, Jinlin Wang, Xinyu Wang, Shiqi Li, Xiangru Tang, Sirui Hong, Xiao-Wen Chang, Chenglin Wu, Bang Liu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2509.13683)  
+
+**Abstract**: Large language models (LLMs) often struggle with context fidelity, producing inconsistent answers when responding to questions based on provided information. Existing approaches either rely on expensive supervised fine-tuning to generate evidence post-answer or train models to perform web searches without necessarily improving utilization of the given context. We propose CARE, a novel native retrieval-augmented reasoning framework that teaches LLMs to explicitly integrate in-context evidence within their reasoning process with the model's own retrieval capabilities. Our method requires limited labeled evidence data while significantly enhancing both retrieval accuracy and answer generation performance through strategically retrieved in-context tokens in the reasoning chain. Extensive experiments on multiple real-world and counterfactual QA benchmarks demonstrate that our approach substantially outperforms supervised fine-tuning, traditional retrieval-augmented generation methods, and external retrieval solutions. This work represents a fundamental advancement in making LLMs more accurate, reliable, and efficient for knowledge-intensive tasks. 
+
+---
+# A TRRIP Down Memory Lane: Temperature-Based Re-Reference Interval Prediction For Instruction Caching 
+
+**Authors**: Henry Kao, Nikhil Sreekumar, Prabhdeep Singh Soni, Ali Sedaghati, Fang Su, Bryan Chan, Maziar Goudarzi, Reza Azimi  
+
+**Link**: [PDF](https://arxiv.org/pdf/2509.14041)  
+
+**Abstract**: Modern mobile CPU software pose challenges for conventional instruction cache replacement policies due to their complex runtime behavior causing high reuse distance between executions of the same instruction. Mobile code commonly suffers from large amounts of stalls in the CPU frontend and thus starvation of the rest of the CPU resources. Complexity of these applications and their code footprint are projected to grow at a rate faster than available on-chip memory due to power and area constraints, making conventional hardware-centric methods for managing instruction caches to be inadequate. We present a novel software-hardware co-design approach called TRRIP (Temperature-based Re-Reference Interval Prediction) that enables the compiler to analyze, classify, and transform code based on "temperature" (hot/cold), and to provide the hardware with a summary of code temperature information through a well-defined OS interface based on using code page attributes. TRRIP's lightweight hardware extension employs code temperature attributes to optimize the instruction cache replacement policy resulting in the eviction rate reduction of hot code. TRRIP is designed to be practical and adoptable in real mobile systems that have strict feature requirements on both the software and hardware components. TRRIP can reduce the L2 MPKI for instructions by 26.5% resulting in geomean speedup of 3.9%, on top of RRIP cache replacement running mobile code already optimized using PGO. 
+
+---
+# LLM Agents for Interactive Workflow Provenance: Reference Architecture and Evaluation Methodology 
+
+**Authors**: Renan Souza, Timothy Poteet, Brian Etz, Daniel Rosendo, Amal Gueroudji, Woong Shin, Prasanna Balaprakash, Rafael Ferreira da Silva  
+
+**Link**: [PDF](https://arxiv.org/pdf/2509.13978)  
+
+**Abstract**: Modern scientific discovery increasingly relies on workflows that process data across the Edge, Cloud, and High Performance Computing (HPC) continuum. Comprehensive and in-depth analyses of these data are critical for hypothesis validation, anomaly detection, reproducibility, and impactful findings. Although workflow provenance techniques support such analyses, at large scale, the provenance data become complex and difficult to analyze. Existing systems depend on custom scripts, structured queries, or static dashboards, limiting data interaction. In this work, we introduce an evaluation methodology, reference architecture, and open-source implementation that leverages interactive Large Language Model (LLM) agents for runtime data analysis. Our approach uses a lightweight, metadata-driven design that translates natural language into structured provenance queries. Evaluations across LLaMA, GPT, Gemini, and Claude, covering diverse query classes and a real-world chemistry workflow, show that modular design, prompt tuning, and Retrieval-Augmented Generation (RAG) enable accurate and insightful LLM agent responses beyond recorded provenance. 
+
+---
+# Who Taught the Lie? Responsibility Attribution for Poisoned Knowledge in Retrieval-Augmented Generation 
+
+**Authors**: Baolei Zhang, Haoran Xin, Yuxi Chen, Zhuqing Liu, Biao Yi, Tong Li, Lihai Nie, Zheli Liu, Minghong Fang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2509.13772)  
+
+**Abstract**: Retrieval-Augmented Generation (RAG) integrates external knowledge into large language models to improve response quality. However, recent work has shown that RAG systems are highly vulnerable to poisoning attacks, where malicious texts are inserted into the knowledge database to influence model outputs. While several defenses have been proposed, they are often circumvented by more adaptive or sophisticated attacks.
+This paper presents RAGOrigin, a black-box responsibility attribution framework designed to identify which texts in the knowledge database are responsible for misleading or incorrect generations. Our method constructs a focused attribution scope tailored to each misgeneration event and assigns a responsibility score to each candidate text by evaluating its retrieval ranking, semantic relevance, and influence on the generated response. The system then isolates poisoned texts using an unsupervised clustering method. We evaluate RAGOrigin across seven datasets and fifteen poisoning attacks, including newly developed adaptive poisoning strategies and multi-attacker scenarios. Our approach outperforms existing baselines in identifying poisoned content and remains robust under dynamic and noisy conditions. These results suggest that RAGOrigin provides a practical and effective solution for tracing the origins of corrupted knowledge in RAG systems. 
+
+---
+# Mind the Gap: Aligning Knowledge Bases with User Needs to Enhance Mental Health Retrieval 
+
+**Authors**: Amanda Chan, James Jiayu Liu, He Kai, Onno P. Kampman  
+
+**Link**: [PDF](https://arxiv.org/pdf/2509.13626)  
+
+**Abstract**: Access to reliable mental health information is vital for early help-seeking, yet expanding knowledge bases is resource-intensive and often misaligned with user needs. This results in poor performance of retrieval systems when presented concerns are not covered or expressed in informal or contextualized language. We present an AI-based gap-informed framework for corpus augmentation that authentically identifies underrepresented topics (gaps) by overlaying naturalistic user data such as forum posts in order to prioritize expansions based on coverage and usefulness. In a case study, we compare Directed (gap-informed augmentations) with Non-Directed augmentation (random additions), evaluating the relevance and usefulness of retrieved information across four retrieval-augmented generation (RAG) pipelines. Directed augmentation achieved near-optimal performance with modest expansions--requiring only a 42% increase for Query Transformation, 74% for Reranking and Hierarchical, and 318% for Baseline--to reach ~95% of the performance of an exhaustive reference corpus. In contrast, Non-Directed augmentation required substantially larger and thus practically infeasible expansions to achieve comparable performance (232%, 318%, 403%, and 763%, respectively). These results show that strategically targeted corpus growth can reduce content creation demands while sustaining high retrieval and provision quality, offering a scalable approach for building trusted health information repositories and supporting generative AI applications in high-stakes domains. 
+
+---
