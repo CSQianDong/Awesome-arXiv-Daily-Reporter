@@ -1,0 +1,54 @@
+# Enhancing Retrieval Augmentation via Adversarial Collaboration 
+
+**Authors**: Letian Zhang, Guanghao Meng, Xudong Ren, Yiming Wang, Shu-Tao Xia  
+
+**Link**: [PDF](https://arxiv.org/pdf/2509.14750)  
+
+**Abstract**: Retrieval-augmented Generation (RAG) is a prevalent approach for domain-specific LLMs, yet it is often plagued by "Retrieval Hallucinations"--a phenomenon where fine-tuned models fail to recognize and act upon poor-quality retrieved documents, thus undermining performance. To address this, we propose the Adversarial Collaboration RAG (AC-RAG) framework. AC-RAG employs two heterogeneous agents: a generalist Detector that identifies knowledge gaps, and a domain-specialized Resolver that provides precise solutions. Guided by a moderator, these agents engage in an adversarial collaboration, where the Detector's persistent questioning challenges the Resolver's expertise. This dynamic process allows for iterative problem dissection and refined knowledge retrieval. Extensive experiments show that AC-RAG significantly improves retrieval accuracy and outperforms state-of-the-art RAG methods across various vertical domains. 
+
+---
+# When Content is Goliath and Algorithm is David: The Style and Semantic Effects of Generative Search Engine 
+
+**Authors**: Lijia Ma, Juan Qin, Xingchen Xu, Yong Tan  
+
+**Link**: [PDF](https://arxiv.org/pdf/2509.14436)  
+
+**Abstract**: Generative search engines (GEs) leverage large language models (LLMs) to deliver AI-generated summaries with website citations, establishing novel traffic acquisition channels while fundamentally altering the search engine optimization landscape. To investigate the distinctive characteristics of GEs, we collect data through interactions with Google's generative and conventional search platforms, compiling a dataset of approximately ten thousand websites across both channels. Our empirical analysis reveals that GEs exhibit preferences for citing content characterized by significantly higher predictability for underlying LLMs and greater semantic similarity among selected sources. Through controlled experiments utilizing retrieval augmented generation (RAG) APIs, we demonstrate that these citation preferences emerge from intrinsic LLM tendencies to favor content aligned with their generative expression patterns. Motivated by applications of LLMs to optimize website content, we conduct additional experimentation to explore how LLM-based content polishing by website proprietors alters AI summaries, finding that such polishing paradoxically enhances information diversity within AI summaries. Finally, to assess the user-end impact of LLM-induced information increases, we design a generative search engine and recruit Prolific participants to conduct a randomized controlled experiment involving an information-seeking and writing task. We find that higher-educated users exhibit minimal changes in their final outputs' information diversity but demonstrate significantly reduced task completion time when original sites undergo polishing. Conversely, lower-educated users primarily benefit through enhanced information density in their task outputs while maintaining similar completion times across experimental groups. 
+
+---
+# Advancing Conversational AI with Shona Slang: A Dataset and Hybrid Model for Digital Inclusion 
+
+**Authors**: Happymore Masoka  
+
+**Link**: [PDF](https://arxiv.org/pdf/2509.14249)  
+
+**Abstract**: African languages remain underrepresented in natural language processing (NLP), with most corpora limited to formal registers that fail to capture the vibrancy of everyday communication. This work addresses this gap for Shona, a Bantu language spoken in Zimbabwe and Zambia, by introducing a novel Shona--English slang dataset curated from anonymized social media conversations. The dataset is annotated for intent, sentiment, dialogue acts, code-mixing, and tone, and is publicly available at this https URL. We fine-tuned a multilingual DistilBERT classifier for intent recognition, achieving 96.4\% accuracy and 96.3\% F1-score, hosted at this https URL. This classifier is integrated into a hybrid chatbot that combines rule-based responses with retrieval-augmented generation (RAG) to handle domain-specific queries, demonstrated through a use case assisting prospective students with graduate program information at Pace University. Qualitative evaluation shows the hybrid system outperforms a RAG-only baseline in cultural relevance and user engagement. By releasing the dataset, model, and methodology, this work advances NLP resources for African languages, promoting inclusive and culturally resonant conversational AI. 
+
+---
+# Graph-Enhanced Retrieval-Augmented Question Answering for E-Commerce Customer Support 
+
+**Authors**: Piyushkumar Patel  
+
+**Link**: [PDF](https://arxiv.org/pdf/2509.14267)  
+
+**Abstract**: E-Commerce customer support requires quick and accurate answers grounded in product data and past support cases. This paper develops a novel retrieval-augmented generation (RAG) framework that uses knowledge graphs (KGs) to improve the relevance of the answer and the factual grounding. We examine recent advances in knowledge-augmented RAG and chatbots based on large language models (LLM) in customer support, including Microsoft's GraphRAG and hybrid retrieval architectures. We then propose a new answer synthesis algorithm that combines structured subgraphs from a domain-specific KG with text documents retrieved from support archives, producing more coherent and grounded responses. We detail the architecture and knowledge flow of our system, provide comprehensive experimental evaluation, and justify its design in real-time support settings. Our implementation demonstrates 23\% improvement in factual accuracy and 89\% user satisfaction in e-Commerce QA scenarios. 
+
+---
+# Evolution of Kernels: Automated RISC-V Kernel Optimization with Large Language Models 
+
+**Authors**: Siyuan Chen, Zhichao Lu, Qingfu Zhang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2509.14265)  
+
+**Abstract**: Automated kernel design is critical for overcoming software ecosystem barriers in emerging hardware platforms like RISC-V. While large language models (LLMs) have shown promise for automated kernel optimization, demonstrating success in CUDA domains with comprehensive technical documents and mature codebases, their effectiveness remains unproven for reference-scarce domains like RISC-V. We present Evolution of Kernels (EoK), a novel LLM-based evolutionary program search framework that automates kernel design for domains with limited reference material. EoK mitigates reference scarcity by mining and formalizing reusable optimization ideas (general design principles + actionable thoughts) from established kernel libraries' development histories; it then guides parallel LLM explorations using these ideas, enriched via Retrieval-Augmented Generation (RAG) with RISC-V-specific context, prioritizing historically effective techniques. Empirically, EoK achieves a median 1.27x speedup, surpassing human experts on all 80 evaluated kernel design tasks and improving upon prior LLM-based automated kernel design methods by 20%. These results underscore the viability of incorporating human experience into emerging domains and highlight the immense potential of LLM-based automated kernel optimization. 
+
+---
+# Causal-Counterfactual RAG: The Integration of Causal-Counterfactual Reasoning into RAG 
+
+**Authors**: Harshad Khadilkar, Abhay Gupta  
+
+**Link**: [PDF](https://arxiv.org/pdf/2509.14435)  
+
+**Abstract**: Large language models (LLMs) have transformed natural language processing (NLP), enabling diverse applications by integrating large-scale pre-trained knowledge. However, their static knowledge limits dynamic reasoning over external information, especially in knowledge-intensive domains. Retrieval-Augmented Generation (RAG) addresses this challenge by combining retrieval mechanisms with generative modeling to improve contextual understanding. Traditional RAG systems suffer from disrupted contextual integrity due to text chunking and over-reliance on semantic similarity for retrieval, often resulting in shallow and less accurate responses. We propose Causal-Counterfactual RAG, a novel framework that integrates explicit causal graphs representing cause-effect relationships into the retrieval process and incorporates counterfactual reasoning grounded on the causal structure. Unlike conventional methods, our framework evaluates not only direct causal evidence but also the counterfactuality of associated causes, combining results from both to generate more robust, accurate, and interpretable answers. By leveraging causal pathways and associated hypothetical scenarios, Causal-Counterfactual RAG preserves contextual coherence, reduces hallucination, and enhances reasoning fidelity. 
+
+---
