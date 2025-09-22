@@ -2,6 +2,7 @@
 
 | Date | Link | Number of Papers |
 |:----:|:----:|:----------------:|
+| 22-Sep-2025 | [Link](https://github.com/Deriq-Qian-Dong/Awesome-arXiv-Daily-Reporter/blob/main/22-Sep-2025/topic/LLM_related_papers.md) | 0 |
 | 19-Sep-2025 | [Link](https://github.com/Deriq-Qian-Dong/Awesome-arXiv-Daily-Reporter/blob/main/19-Sep-2025/topic/LLM_related_papers.md) | 0 |
 | 18-Sep-2025 | [Link](https://github.com/Deriq-Qian-Dong/Awesome-arXiv-Daily-Reporter/blob/main/18-Sep-2025/topic/LLM_related_papers.md) | 0 |
 | 17-Sep-2025 | [Link](https://github.com/Deriq-Qian-Dong/Awesome-arXiv-Daily-Reporter/blob/main/17-Sep-2025/topic/LLM_related_papers.md) | 0 |

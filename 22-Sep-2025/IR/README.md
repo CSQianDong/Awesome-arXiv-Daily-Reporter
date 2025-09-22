@@ -1,0 +1,94 @@
+# Optimizing Product Deduplication in E-Commerce with Multimodal Embeddings 
+
+**Authors**: Aysenur Kulunk, Berk Taskin, M. Furkan Eseoglu, H. Bahadir Sahin  
+
+**Link**: [PDF](https://arxiv.org/pdf/2509.15858)  
+
+**Abstract**: In large scale e-commerce marketplaces, duplicate product listings frequently cause consumer confusion and operational inefficiencies, degrading trust on the platform and increasing costs. Traditional keyword-based search methodologies falter in accurately identifying duplicates due to their reliance on exact textual matches, neglecting semantic similarities inherent in product titles. To address these challenges, we introduce a scalable, multimodal product deduplication designed specifically for the e-commerce domain. Our approach employs a domain-specific text model grounded in BERT architecture in conjunction with MaskedAutoEncoders for image representations. Both of these architectures are augmented with dimensionality reduction techniques to produce compact 128-dimensional embeddings without significant information loss. Complementing this, we also developed a novel decider model that leverages both text and image vectors. By integrating these feature extraction mechanisms with Milvus, an optimized vector database, our system can facilitate efficient and high-precision similarity searches across extensive product catalogs exceeding 200 million items with just 100GB of system RAM consumption. Empirical evaluations demonstrate that our matching system achieves a macro-average F1 score of 0.90, outperforming third-party solutions which attain an F1 score of 0.83. Our findings show the potential of combining domain-specific adaptations with state-of-the-art machine learning techniques to mitigate duplicate listings in large-scale e-commerce environments. 
+
+---
+# Understanding Embedding Scaling in Collaborative Filtering 
+
+**Authors**: Zhuangzhuang He, Zhou Kaiyu, Haoyue Bai, Fengbin Zhu, Yonghui Yang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2509.15709)  
+
+**Abstract**: Scaling recommendation models into large recommendation models has become one of the most widely discussed topics. Recent efforts focus on components beyond the scaling embedding dimension, as it is believed that scaling embedding may lead to performance degradation. Although there have been some initial observations on embedding, the root cause of their non-scalability remains unclear. Moreover, whether performance degradation occurs across different types of models and datasets is still an unexplored area. Regarding the effect of embedding dimensions on performance, we conduct large-scale experiments across 10 datasets with varying sparsity levels and scales, using 4 representative classical architectures. We surprisingly observe two novel phenomenon: double-peak and logarithmic. For the former, as the embedding dimension increases, performance first improves, then declines, rises again, and eventually drops. For the latter, it exhibits a perfect logarithmic curve. Our contributions are threefold. First, we discover two novel phenomena when scaling collaborative filtering models. Second, we gain an understanding of the underlying causes of the double-peak phenomenon. Lastly, we theoretically analyze the noise robustness of collaborative filtering models, with results matching empirical observations. 
+
+---
+# Chunk Knowledge Generation Model for Enhanced Information Retrieval: A Multi-task Learning Approach 
+
+**Authors**: Jisu Kim, Jinhee Park, Changhyun Jeon, Jungwoo Choi, Keonwoo Kim, Minji Hong, Sehyun Kim  
+
+**Link**: [PDF](https://arxiv.org/pdf/2509.15658)  
+
+**Abstract**: Traditional query expansion techniques for addressing vocabulary mismatch problems in information retrieval are context-sensitive and may lead to performance degradation. As an alternative, document expansion research has gained attention, but existing methods such as Doc2Query have limitations including excessive preprocessing costs, increased index size, and reliability issues with generated content. To mitigate these problems and seek more structured and efficient alternatives, this study proposes a method that divides documents into chunk units and generates textual data for each chunk to simultaneously improve retrieval efficiency and accuracy. The proposed "Chunk Knowledge Generation Model" adopts a T5-based multi-task learning structure that simultaneously generates titles and candidate questions from each document chunk while extracting keywords from user queries. This approach maximizes computational efficiency by generating and extracting three types of semantic information in parallel through a single encoding and two decoding processes. The generated data is utilized as additional information in the retrieval system. GPT-based evaluation on 305 query-document pairs showed that retrieval using the proposed model achieved 95.41% accuracy at Top@10, demonstrating superior performance compared to document chunk-level retrieval. This study contributes by proposing an approach that simultaneously generates titles and candidate questions from document chunks for application in retrieval pipelines, and provides empirical evidence applicable to large-scale information retrieval systems by demonstrating improved retrieval accuracy through qualitative evaluation. 
+
+---
+# CFDA & CLIP at TREC iKAT 2025: Enhancing Personalized Conversational Search via Query Reformulation and Rank Fusion 
+
+**Authors**: Yu-Cheng Chang, Guan-Wei Yeo, Quah Eugene, Fan-Jie Shih, Yuan-Ching Kuo, Tsung-En Yu, Hung-Chun Hsu, Ming-Feng Tsai, Chuan-Ju Wang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2509.15588)  
+
+**Abstract**: The 2025 TREC Interactive Knowledge Assistance Track (iKAT) featured both interactive and offline submission tasks. The former requires systems to operate under real-time constraints, making robustness and efficiency as important as accuracy, while the latter enables controlled evaluation of passage ranking and response generation with pre-defined datasets. To address this, we explored query rewriting and retrieval fusion as core strategies. We built our pipelines around Best-of-$N$ selection and Reciprocal Rank Fusion (RRF) strategies to handle different submission tasks. Results show that reranking and fusion improve robustness while revealing trade-offs between effectiveness and efficiency across both tasks. 
+
+---
+# Dual-Mode Visual System for Brain-Computer Interfaces: Integrating SSVEP and P300 Responses 
+
+**Authors**: Ekgari Kasawala, Surej Mouli  
+
+**Link**: [PDF](https://arxiv.org/pdf/2509.15439)  
+
+**Abstract**: In brain-computer interface (BCI) systems, steady-state visual evoked potentials (SSVEP) and P300 responses have achieved widespread implementation owing to their superior information transfer rates (ITR) and minimal training requirements. These neurophysiological signals have exhibited robust efficacy and versatility in external device control, demonstrating enhanced precision and scalability. However, conventional implementations predominantly utilise liquid crystal display (LCD)-based visual stimulation paradigms, which present limitations in practical deployment scenarios. This investigation presents the development and evaluation of a novel light-emitting diode (LED)-based dual stimulation apparatus designed to enhance SSVEP classification accuracy through the integration of both SSVEP and P300 paradigms. The system employs four distinct frequencies, 7 Hz, 8 Hz, 9 Hz, and 10 Hz, corresponding to forward, backward, right, and left directional controls, respectively. Oscilloscopic verification confirmed the precision of these stimulation frequencies. Real-time feature extraction was accomplished through the concurrent analysis of maximum Fast Fourier Transform (FFT) amplitude and P300 peak detection to ascertain user intent. Directional control was determined by the frequency exhibiting maximal amplitude characteristics. The visual stimulation hardware demonstrated minimal frequency deviation, with error differentials ranging from 0.15%to 0.20%across all frequencies. The implemented signal processing algorithm successfully discriminated all four stimulus frequencies whilst correlating them with their respective P300 event markers. Classification accuracy was evaluated based on correct task intention recognition. The proposed hybrid system achieved a mean classification accuracy of 86.25%, coupled with an average ITR of 42.08 bits per minute (bpm). 
+
+---
+# SERVAL: Surprisingly Effective Zero-Shot Visual Document Retrieval Powered by Large Vision and Language Models 
+
+**Authors**: Thong Nguyen, Yibin Lei, Jia-Huei Ju, Andrew Yates  
+
+**Link**: [PDF](https://arxiv.org/pdf/2509.15432)  
+
+**Abstract**: Visual Document Retrieval (VDR) typically operates as text-to-image retrieval using specialized bi-encoders trained to directly embed document images. We revisit a zero-shot generate-and-encode pipeline: a vision-language model first produces a detailed textual description of each document image, which is then embedded by a standard text encoder. On the ViDoRe-v2 benchmark, the method reaches 63.4% nDCG@5, surpassing the strongest specialised multi-vector visual document encoder. It also scales better to large collections and offers broader multilingual coverage. Analysis shows that modern vision-language models capture complex textual and visual cues with sufficient granularity to act as a reusable semantic proxy. By offloading modality alignment to pretrained vision-language models, our approach removes the need for computationally intensive text-image contrastive training and establishes a strong zero-shot baseline for future VDR systems. 
+
+---
+# Efficient and Versatile Model for Multilingual Information Retrieval of Islamic Text: Development and Deployment in Real-World Scenarios 
+
+**Authors**: Vera Pavlova, Mohammed Makhlouf  
+
+**Link**: [PDF](https://arxiv.org/pdf/2509.15380)  
+
+**Abstract**: Despite recent advancements in Multilingual Information Retrieval (MLIR), a significant gap remains between research and practical deployment. Many studies assess MLIR performance in isolated settings, limiting their applicability to real-world scenarios. In this work, we leverage the unique characteristics of the Quranic multilingual corpus to examine the optimal strategies to develop an ad-hoc IR system for the Islamic domain that is designed to satisfy users' information needs in multiple languages. We prepared eleven retrieval models employing four training approaches: monolingual, cross-lingual, translate-train-all, and a novel mixed method combining cross-lingual and monolingual techniques. Evaluation on an in-domain dataset demonstrates that the mixed approach achieves promising results across diverse retrieval scenarios. Furthermore, we provide a detailed analysis of how different training configurations affect the embedding space and their implications for multilingual retrieval effectiveness. Finally, we discuss deployment considerations, emphasizing the cost-efficiency of deploying a single versatile, lightweight model for real-world MLIR applications. 
+
+---
+# CodeRAG: Finding Relevant and Necessary Knowledge for Retrieval-Augmented Repository-Level Code Completion 
+
+**Authors**: Sheng Zhang, Yifan Ding, Shuquan Lian, Shun Song, Hui Li  
+
+**Link**: [PDF](https://arxiv.org/pdf/2509.16112)  
+
+**Abstract**: Repository-level code completion automatically predicts the unfinished code based on the broader information from the repository. Recent strides in Code Large Language Models (code LLMs) have spurred the development of repository-level code completion methods, yielding promising results. Nevertheless, they suffer from issues such as inappropriate query construction, single-path code retrieval, and misalignment between code retriever and code LLM. To address these problems, we introduce CodeRAG, a framework tailored to identify relevant and necessary knowledge for retrieval-augmented repository-level code completion. Its core components include log probability guided query construction, multi-path code retrieval, and preference-aligned BestFit reranking. Extensive experiments on benchmarks ReccEval and CCEval demonstrate that CodeRAG significantly and consistently outperforms state-of-the-art methods. The implementation of CodeRAG is available at this https URL. 
+
+---
+# EHR-MCP: Real-world Evaluation of Clinical Information Retrieval by Large Language Models via Model Context Protocol 
+
+**Authors**: Kanato Masayoshi, Masahiro Hashimoto, Ryoichi Yokoyama, Naoki Toda, Yoshifumi Uwamino, Shogo Fukuda, Ho Namkoong, Masahiro Jinzaki  
+
+**Link**: [PDF](https://arxiv.org/pdf/2509.15957)  
+
+**Abstract**: Background: Large language models (LLMs) show promise in medicine, but their deployment in hospitals is limited by restricted access to electronic health record (EHR) systems. The Model Context Protocol (MCP) enables integration between LLMs and external tools.
+Objective: To evaluate whether an LLM connected to an EHR database via MCP can autonomously retrieve clinically relevant information in a real hospital setting.
+Methods: We developed EHR-MCP, a framework of custom MCP tools integrated with the hospital EHR database, and used GPT-4.1 through a LangGraph ReAct agent to interact with it. Six tasks were tested, derived from use cases of the infection control team (ICT). Eight patients discussed at ICT conferences were retrospectively analyzed. Agreement with physician-generated gold standards was measured.
+Results: The LLM consistently selected and executed the correct MCP tools. Except for two tasks, all tasks achieved near-perfect accuracy. Performance was lower in the complex task requiring time-dependent calculations. Most errors arose from incorrect arguments or misinterpretation of tool results. Responses from EHR-MCP were reliable, though long and repetitive data risked exceeding the context window.
+Conclusions: LLMs can retrieve clinical data from an EHR via MCP tools in a real hospital setting, achieving near-perfect performance in simple tasks while highlighting challenges in complex ones. EHR-MCP provides an infrastructure for secure, consistent data access and may serve as a foundation for hospital AI agents. Future work should extend beyond retrieval to reasoning, generation, and clinical impact assessment, paving the way for effective integration of generative AI into clinical practice. 
+
+---
+# Building Data-Driven Occupation Taxonomies: A Bottom-Up Multi-Stage Approach via Semantic Clustering and Multi-Agent Collaboration 
+
+**Authors**: Nan Li, Bo Kang, Tijl De Bie  
+
+**Link**: [PDF](https://arxiv.org/pdf/2509.15786)  
+
+**Abstract**: Creating robust occupation taxonomies, vital for applications ranging from job recommendation to labor market intelligence, is challenging. Manual curation is slow, while existing automated methods are either not adaptive to dynamic regional markets (top-down) or struggle to build coherent hierarchies from noisy data (bottom-up). We introduce CLIMB (CLusterIng-based Multi-agent taxonomy Builder), a framework that fully automates the creation of high-quality, data-driven taxonomies from raw job postings. CLIMB uses global semantic clustering to distill core occupations, then employs a reflection-based multi-agent system to iteratively build a coherent hierarchy. On three diverse, real-world datasets, we show that CLIMB produces taxonomies that are more coherent and scalable than existing methods and successfully capture unique regional characteristics. We release our code and datasets at this https URL. 
+
+---
