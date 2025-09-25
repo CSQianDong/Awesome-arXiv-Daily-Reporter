@@ -1,0 +1,36 @@
+# AutoSpec: An Agentic Framework for Automatically Drafting Patent Specification 
+
+**Authors**: Ryan Shea, Zhou Yu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2509.19640)  
+
+**Abstract**: Patents play a critical role in driving technological innovation by granting inventors exclusive rights to their inventions. However the process of drafting a patent application is often expensive and time-consuming, making it a prime candidate for automation. Despite recent advancements in language models, several challenges hinder the development of robust automated patent drafting systems. First, the information within a patent application is highly confidential, which often prevents the use of closed-source LLMs for automating this task. Second, the process of drafting a patent application is difficult for even the most advanced language models due to their long context, technical writing style, and specialized domain knowledge. To address these challenges, we introduce AutoSpec, a secure, agentic framework for Automatically drafting patent Specification. Our approach decomposes the drafting process into a sequence of manageable subtasks, each solvable by smaller, open-source language models enhanced with custom tools tailored for drafting patent specification. To assess our system, we design a novel evaluation protocol in collaboration with experienced patent attorneys. Our automatic and expert evaluations show that AutoSpec outperforms existing baselines on a patent drafting task. 
+
+---
+# ExPe: Exact Positional Encodings for Generative Transformer Models with Extrapolating Capabilities 
+
+**Authors**: Aleksis Datseris, Sylvia Vassileva, Ivan Koychev, Svetla Boytcheva  
+
+**Link**: [PDF](https://arxiv.org/pdf/2509.19569)  
+
+**Abstract**: This paper introduces a novel approach to position embeddings in transformer models, named "Exact Positional Embeddings" (ExPE). An absolute positional embedding method that can extrapolate to sequences of lengths longer than the ones it was trained on. Traditional transformer models rely on absolute or relative position embeddings to incorporate positional information into token embeddings, which often struggle with extrapolation to sequences longer than those seen during training. Our proposed method utilizes a novel embedding strategy that encodes exact positional information by overriding specific dimensions of the embedding vectors, thereby enabling a more precise representation of token positions. The proposed approach not only maintains the integrity of the original embeddings but also enhances the model's ability to generalize to more extended sequences. In causal language modeling, our ExPE embeddings significantly reduce perplexity compared to rotary and sinusoidal embeddings, when tested on sequences longer than those used in training. 
+
+---
+# Mamba Modulation: On the Length Generalization of Mamba 
+
+**Authors**: Peng Lu, Jerry Huang, Qiuhao Zeng, Xinyu Wang, Boxing Wang, Philippe Langlais, Yufei Cui  
+
+**Link**: [PDF](https://arxiv.org/pdf/2509.19633)  
+
+**Abstract**: The quadratic complexity of the attention mechanism in Transformer models has motivated the development of alternative architectures with sub-quadratic scaling, such as state-space models. Among these, Mamba has emerged as a leading architecture, achieving state-of-the-art results across a range of language modeling tasks. However, Mamba's performance significantly deteriorates when applied to contexts longer than those seen during pre-training, revealing a sharp sensitivity to context length extension. Through detailed analysis, we attribute this limitation to the out-of-distribution behaviour of its state-space dynamics, particularly within the parameterization of the state transition matrix $\mathbf{A}$. Unlike recent works which attribute this sensitivity to the vanished accumulation of discretization time steps, $\exp(-\sum_{t=1}^N\Delta_t)$, we establish a connection between state convergence behavior as the input length approaches infinity and the spectrum of the transition matrix $\mathbf{A}$, offering a well-founded explanation of its role in length extension. Next, to overcome this challenge, we propose an approach that applies spectrum scaling to pre-trained Mamba models to enable robust long-context generalization by selectively modulating the spectrum of $\mathbf{A}$ matrices in each layer. We show that this can significantly improve performance in settings where simply modulating $\Delta_t$ fails, validating our insights and providing avenues for better length generalization of state-space models with structured transition matrices. 
+
+---
+# Cognitive-Level Adaptive Generation via Capability-Aware Retrieval and Style Adaptation 
+
+**Authors**: Qingsong Wang, Tao Wu, Wang Lin, Yueying Feng, Gongsheng Yuan, Chang Yao, Jingyuan Chen  
+
+**Link**: [PDF](https://arxiv.org/pdf/2509.19336)  
+
+**Abstract**: Large Language Models (LLMs) have demonstrated strong performance in open-ended generation tasks. However, they often struggle to adapt content to users with differing cognitive capacities, leading to a phenomenon we term cognitive misalignment. This issue arises in two forms: knowledge-level misalignment, where content is too complex or too simplistic relative to user understanding, and presentation-style misalignment, where the structure or tone hinders effective comprehension. To address these challenges, we propose the Cognitive-Level Alignment Framework (CLAF), a general-purpose generation framework that aligns both knowledge complexity and presentation style with user cognition. CLAF integrates a capability-aware retrieval module based on a hierarchical knowledge graph and a style optimization module guided by Bloom's taxonomy and preference learning. Additionally, a knowledge-controllable generation component ensures consistency and relevance throughout the output. To support training and evaluation, we construct SCALE, a cognitively annotated dataset containing responses at multiple comprehension levels per query. Empirical results show that CLAF enhances the adaptability and informativeness of LLM outputs across a range of user profiles, offering a robust solution to cognitive-level alignment in real-world applications. 
+
+---
