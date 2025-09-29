@@ -1,0 +1,138 @@
+# TrueGradeAI: Retrieval-Augmented and Bias-Resistant AI for Transparent and Explainable Digital Assessments 
+
+**Authors**: Rakesh Thakur, Shivaansh Kaushik, Gauri Chopra, Harsh Rohilla  
+
+**Link**: [PDF](https://arxiv.org/pdf/2509.22516)  
+
+**Abstract**: This paper introduces TrueGradeAI, an AI-driven digital examination framework designed to overcome the shortcomings of traditional paper-based assessments, including excessive paper usage, logistical complexity, grading delays, and evaluator bias. The system preserves natural handwriting by capturing stylus input on secure tablets and applying transformer-based optical character recognition for transcription. Evaluation is conducted through a retrieval-augmented pipeline that integrates faculty solutions, cache layers, and external references, enabling a large language model to assign scores with explicit, evidence-linked reasoning. Unlike prior tablet-based exam systems that primarily digitize responses, TrueGradeAI advances the field by incorporating explainable automation, bias mitigation, and auditable grading trails. By uniting handwriting preservation with scalable and transparent evaluation, the framework reduces environmental costs, accelerates feedback cycles, and progressively builds a reusable knowledge base, while actively working to mitigate grading bias and ensure fairness in assessment. 
+
+---
+# MobiLLM: An Agentic AI Framework for Closed-Loop Threat Mitigation in 6G Open RANs 
+
+**Authors**: Prakhar Sharma, Haohuang Wen, Vinod Yegneswaran, Ashish Gehani, Phillip Porras, Zhiqiang Lin  
+
+**Link**: [PDF](https://arxiv.org/pdf/2509.21634)  
+
+**Abstract**: The evolution toward 6G networks is being accelerated by the Open Radio Access Network (O-RAN) paradigm -- an open, interoperable architecture that enables intelligent, modular applications across public telecom and private enterprise domains. While this openness creates unprecedented opportunities for innovation, it also expands the attack surface, demanding resilient, low-cost, and autonomous security solutions. Legacy defenses remain largely reactive, labor-intensive, and inadequate for the scale and complexity of next-generation systems. Current O-RAN applications focus mainly on network optimization or passive threat detection, with limited capability for closed-loop, automated response.
+To address this critical gap, we present an agentic AI framework for fully automated, end-to-end threat mitigation in 6G O-RAN environments. MobiLLM orchestrates security workflows through a modular multi-agent system powered by Large Language Models (LLMs). The framework features a Threat Analysis Agent for real-time data triage, a Threat Classification Agent that uses Retrieval-Augmented Generation (RAG) to map anomalies to specific countermeasures, and a Threat Response Agent that safely operationalizes mitigation actions via O-RAN control interfaces. Grounded in trusted knowledge bases such as the MITRE FiGHT framework and 3GPP specifications, and equipped with robust safety guardrails, MobiLLM provides a blueprint for trustworthy AI-driven network security. Initial evaluations demonstrate that MobiLLM can effectively identify and orchestrate complex mitigation strategies, significantly reducing response latency and showcasing the feasibility of autonomous security operations in 6G. 
+
+---
+# MIXRAG : Mixture-of-Experts Retrieval-Augmented Generation for Textual Graph Understanding and Question Answering 
+
+**Authors**: Lihui Liu, Carl J. Yang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2509.21391)  
+
+**Abstract**: Large Language Models (LLMs) have achieved impressive performance across a wide range of applications. However, they often suffer from hallucinations in knowledge-intensive domains due to their reliance on static pretraining corpora. To address this limitation, Retrieval-Augmented Generation (RAG) enhances LLMs by incorporating external knowledge sources during inference. Among these sources, textual graphs provide structured and semantically rich information that supports more precise and interpretable reasoning. This has led to growing interest in graph-based RAG systems. Despite their potential, most existing approaches rely on a single retriever to identify relevant subgraphs, which limits their ability to capture the diverse aspects of complex queries. Moreover, these systems often struggle to accurately judge the relevance of retrieved content, making them prone to distraction by irrelevant noise. To address these challenges, in this paper, we propose MIXRAG, a Mixture-of-Experts Graph-RAG framework that introduces multiple specialized graph retrievers and a dynamic routing controller to better handle diverse query intents. Each retriever is trained to focus on a specific aspect of graph semantics, such as entities, relations, or subgraph topology. A Mixture-of-Experts module adaptively selects and fuses relevant retrievers based on the input query. To reduce noise in the retrieved information, we introduce a query-aware GraphEncoder that carefully analyzes relationships within the retrieved subgraphs, highlighting the most relevant parts while down-weighting unnecessary noise. Empirical results demonstrate that our method achieves state-of-the-art performance and consistently outperforms various baselines. MIXRAG is effective across a wide range of graph-based tasks in different domains. The code will be released upon paper acceptance. 
+
+---
+# ReGeS: Reciprocal Retrieval-Generation Synergy for Conversational Recommender Systems 
+
+**Authors**: Dayu Yang, Hui Fang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2509.21371)  
+
+**Abstract**: Connecting conversation with external domain knowledge is vital for conversational recommender systems (CRS) to correctly understand user preferences. However, existing solutions either require domain-specific engineering, which limits flexibility, or rely solely on large language models, which increases the risk of hallucination. While Retrieval-Augmented Generation (RAG) holds promise, its naive use in CRS is hindered by noisy dialogues that weaken retrieval and by overlooked nuances among similar items. We propose ReGeS, a reciprocal Retrieval-Generation Synergy framework that unifies generation-augmented retrieval to distill informative user intent from conversations and retrieval-augmented generation to differentiate subtle item features. This synergy obviates the need for extra annotations, reduces hallucinations, and simplifies continuous updates. Experiments on multiple CRS benchmarks show that ReGeS achieves state-of-the-art performance in recommendation accuracy, demonstrating the effectiveness of reciprocal synergy for knowledge-intensive CRS tasks. 
+
+---
+# Design and Implementation of a Secure RAG-Enhanced AI Chatbot for Smart Tourism Customer Service: Defending Against Prompt Injection Attacks -- A Case Study of Hsinchu, Taiwan 
+
+**Authors**: Yu-Kai Shih, You-Kai Kang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2509.21367)  
+
+**Abstract**: As smart tourism evolves, AI-powered chatbots have become indispensable for delivering personalized, real-time assistance to travelers while promoting sustainability and efficiency. However, these systems are increasingly vulnerable to prompt injection attacks, where adversaries manipulate inputs to elicit unintended behaviors such as leaking sensitive information or generating harmful content. This paper presents a case study on the design and implementation of a secure retrieval-augmented generation (RAG) chatbot for Hsinchu smart tourism services. The system integrates RAG with API function calls, multi-layered linguistic analysis, and guardrails against injections, achieving high contextual awareness and security. Key features include a tiered response strategy, RAG-driven knowledge grounding, and intent decomposition across lexical, semantic, and pragmatic levels. Defense mechanisms include system norms, gatekeepers for intent judgment, and reverse RAG text to prioritize verified data. We also benchmark a GPT-5 variant (released 2025-08-07) to assess inherent robustness. Evaluations with 674 adversarial prompts and 223 benign queries show over 95% accuracy on benign tasks and substantial detection of injection attacks. GPT-5 blocked about 85% of attacks, showing progress yet highlighting the need for layered defenses. Findings emphasize contributions to sustainable tourism, multilingual accessibility, and ethical AI deployment. This work offers a practical framework for deploying secure chatbots in smart tourism and contributes to resilient, trustworthy AI applications. 
+
+---
+# Influence Guided Context Selection for Effective Retrieval-Augmented Generation 
+
+**Authors**: Jiale Deng, Yanyan Shen, Ziyuan Pei, Youmin Chen, Linpeng Huang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2509.21359)  
+
+**Abstract**: Retrieval-Augmented Generation (RAG) addresses large language model (LLM) hallucinations by grounding responses in external knowledge, but its effectiveness is compromised by poor-quality retrieved contexts containing irrelevant or noisy information. While existing approaches attempt to improve performance through context selection based on predefined context quality assessment metrics, they show limited gains over standard RAG. We attribute this limitation to their failure in holistically utilizing available information (query, context list, and generator) for comprehensive quality assessment. Inspired by recent advances in data selection, we reconceptualize context quality assessment as an inference-time data valuation problem and introduce the Contextual Influence Value (CI value). This novel metric quantifies context quality by measuring the performance degradation when removing each context from the list, effectively integrating query-aware relevance, list-aware uniqueness, and generator-aware alignment. Moreover, CI value eliminates complex selection hyperparameter tuning by simply retaining contexts with positive CI values. To address practical challenges of label dependency and computational overhead, we develop a parameterized surrogate model for CI value prediction during inference. The model employs a hierarchical architecture that captures both local query-context relevance and global inter-context interactions, trained through oracle CI value supervision and end-to-end generator feedback. Extensive experiments across 8 NLP tasks and multiple LLMs demonstrate that our context selection method significantly outperforms state-of-the-art baselines, effectively filtering poor-quality contexts while preserving critical information. Code is available at this https URL. 
+
+---
+# PIR-RAG: A System for Private Information Retrieval in Retrieval-Augmented Generation 
+
+**Authors**: Baiqiang Wang, Qian Lou, Mengxin Zheng, Dongfang Zhao  
+
+**Link**: [PDF](https://arxiv.org/pdf/2509.21325)  
+
+**Abstract**: Retrieval-Augmented Generation (RAG) has become a foundational component of modern AI systems, yet it introduces significant privacy risks by exposing user queries to service providers. To address this, we introduce PIR-RAG, a practical system for privacy-preserving RAG. PIR-RAG employs a novel architecture that uses coarse-grained semantic clustering to prune the search space, combined with a fast, lattice-based Private Information Retrieval (PIR) protocol. This design allows for the efficient retrieval of entire document clusters, uniquely optimizing for the end-to-end RAG workflow where full document content is required. Our comprehensive evaluation against strong baseline architectures, including graph-based PIR and Tiptoe-style private scoring, demonstrates PIR-RAG's scalability and its superior performance in terms of "RAG-Ready Latency"-the true end-to-end time required to securely fetch content for an LLM. Our work establishes PIR-RAG as a viable and highly efficient solution for privacy in large-scale AI systems. 
+
+---
+# From Search to Reasoning: A Five-Level RAG Capability Framework for Enterprise Data 
+
+**Authors**: Gurbinder Gill, Ritvik Gupta, Denis Lusson, Anand Chandrashekar, Donald Nguyen  
+
+**Link**: [PDF](https://arxiv.org/pdf/2509.21324)  
+
+**Abstract**: Retrieval-Augmented Generation (RAG) has emerged as the standard paradigm for answering questions on enterprise data. Traditionally, RAG has centered on text-based semantic search and re-ranking. However, this approach falls short when dealing with questions beyond data summarization or non-text data. This has led to various attempts to supplement RAG to bridge the gap between RAG, the implementation paradigm, and the question answering problem that enterprise users expect it to solve. Given that contemporary RAG is a collection of techniques rather than a defined implementation, discussion of RAG and related question-answering systems benefits from a problem-oriented understanding.
+We propose a new classification framework (L1-L5) to categorize systems based on data modalities and task complexity of the underlying question answering problems: L1 (Surface Knowledge of Unstructured Data) through L4 (Reflective and Reasoned Knowledge) and the aspirational L5 (General Intelligence). We also introduce benchmarks aligned with these levels and evaluate four state-of-the-art platforms: LangChain, Azure AI Search, OpenAI, and Corvic AI. Our experiments highlight the value of multi-space retrieval and dynamic orchestration for enabling L1-L4 capabilities. We empirically validate our findings using diverse datasets indicative of enterprise use cases. 
+
+---
+# JGU Mainz's Submission to the WMT25 Shared Task on LLMs with Limited Resources for Slavic Languages: MT and QA 
+
+**Authors**: Hossain Shaikh Saadi, Minh Duc Bui, Mario Sanz-Guerrero, Katharina von der Wense  
+
+**Link**: [PDF](https://arxiv.org/pdf/2509.22490)  
+
+**Abstract**: This paper presents the JGU Mainz submission to the WMT25 Shared Task on LLMs with Limited Resources for Slavic Languages: Machine Translation and Question Answering, focusing on Ukrainian, Upper Sorbian, and Lower Sorbian. For each language, we jointly fine-tune a Qwen2.5-3B-Instruct model for both tasks with parameter-efficient finetuning. Our pipeline integrates additional translation and multiple-choice question answering (QA) data. For Ukrainian QA, we further use retrieval-augmented generation. We also apply ensembling for QA in Upper and Lower Sorbian. Experiments show that our models outperform the baseline on both tasks. 
+
+---
+# GraphSearch: An Agentic Deep Searching Workflow for Graph Retrieval-Augmented Generation 
+
+**Authors**: Cehao Yang, Xiaojun Wu, Xueyuan Lin, Chengjin Xu, Xuhui Jiang, Yuanliang Sun, Jia Li, Hui Xiong, Jian Guo  
+
+**Link**: [PDF](https://arxiv.org/pdf/2509.22009)  
+
+**Abstract**: Graph Retrieval-Augmented Generation (GraphRAG) enhances factual reasoning in LLMs by structurally modeling knowledge through graph-based representations. However, existing GraphRAG approaches face two core limitations: shallow retrieval that fails to surface all critical evidence, and inefficient utilization of pre-constructed structural graph data, which hinders effective reasoning from complex queries. To address these challenges, we propose \textsc{GraphSearch}, a novel agentic deep searching workflow with dual-channel retrieval for GraphRAG. \textsc{GraphSearch} organizes the retrieval process into a modular framework comprising six modules, enabling multi-turn interactions and iterative reasoning. Furthermore, \textsc{GraphSearch} adopts a dual-channel retrieval strategy that issues semantic queries over chunk-based text data and relational queries over structural graph data, enabling comprehensive utilization of both modalities and their complementary strengths. Experimental results across six multi-hop RAG benchmarks demonstrate that \textsc{GraphSearch} consistently improves answer accuracy and generation quality over the traditional strategy, confirming \textsc{GraphSearch} as a promising direction for advancing graph retrieval-augmented generation. 
+
+---
+# LUMINA: Detecting Hallucinations in RAG System with Context-Knowledge Signals 
+
+**Authors**: Min-Hsuan Yeh, Yixuan Li, Tanwi Mallick  
+
+**Link**: [PDF](https://arxiv.org/pdf/2509.21875)  
+
+**Abstract**: Retrieval-Augmented Generation (RAG) aims to mitigate hallucinations in large language models (LLMs) by grounding responses in retrieved documents. Yet, RAG-based LLMs still hallucinate even when provided with correct and sufficient context. A growing line of work suggests that this stems from an imbalance between how models use external context and their internal knowledge, and several approaches have attempted to quantify these signals for hallucination detection. However, existing methods require extensive hyperparameter tuning, limiting their generalizability. We propose LUMINA, a novel framework that detects hallucinations in RAG systems through context-knowledge signals: external context utilization is quantified via distributional distance, while internal knowledge utilization is measured by tracking how predicted tokens evolve across transformer layers. We further introduce a framework for statistically validating these measurements. Experiments on common RAG hallucination benchmarks and four open-source LLMs show that LUMINA achieves consistently high AUROC and AUPRC scores, outperforming prior utilization-based methods by up to +13% AUROC on HalluRAG. Moreover, LUMINA remains robust under relaxed assumptions about retrieval quality and model matching, offering both effectiveness and practicality. 
+
+---
+# HetaRAG: Hybrid Deep Retrieval-Augmented Generation across Heterogeneous Data Stores 
+
+**Authors**: Guohang Yan, Yue Zhang, Pinlong Cai, Ding Wang, Song Mao, Hongwei Zhang, Yaoze Zhang, Hairong Zhang, Xinyu Cai, Botian Shi  
+
+**Link**: [PDF](https://arxiv.org/pdf/2509.21336)  
+
+**Abstract**: Retrieval-augmented generation (RAG) has become a dominant paradigm for mitigating knowledge hallucination and staleness in large language models (LLMs) while preserving data security. By retrieving relevant evidence from private, domain-specific corpora and injecting it into carefully engineered prompts, RAG delivers trustworthy responses without the prohibitive cost of fine-tuning. Traditional retrieval-augmented generation (RAG) systems are text-only and often rely on a single storage backend, most commonly a vector database. In practice, this monolithic design suffers from unavoidable trade-offs: vector search captures semantic similarity yet loses global context; knowledge graphs excel at relational precision but struggle with recall; full-text indexes are fast and exact yet semantically blind; and relational engines such as MySQL provide strong transactional guarantees but no semantic understanding. We argue that these heterogeneous retrieval paradigms are complementary, and propose a principled fusion scheme to orchestrate them synergistically, mitigating the weaknesses of any single modality. In this work we introduce HetaRAG, a hybrid, deep-retrieval augmented generation framework that orchestrates cross-modal evidence from heterogeneous data stores. We plan to design a system that unifies vector indices, knowledge graphs, full-text engines, and structured databases into a single retrieval plane, dynamically routing and fusing evidence to maximize recall, precision, and contextual fidelity. To achieve this design goal, we carried out preliminary explorations and constructed an initial RAG pipeline; this technical report provides a brief overview. The partial code is available at this https URL. 
+
+---
+# Your RAG is Unfair: Exposing Fairness Vulnerabilities in Retrieval-Augmented Generation via Backdoor Attacks 
+
+**Authors**: Gaurav Bagwe, Saket S. Chaturvedi, Xiaolong Ma, Xiaoyong Yuan, Kuang-Ching Wang, Lan Zhang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2509.22486)  
+
+**Abstract**: Retrieval-augmented generation (RAG) enhances factual grounding by integrating retrieval mechanisms with generative models but introduces new attack surfaces, particularly through backdoor attacks. While prior research has largely focused on disinformation threats, fairness vulnerabilities remain underexplored. Unlike conventional backdoors that rely on direct trigger-to-target mappings, fairness-driven attacks exploit the interaction between retrieval and generation models, manipulating semantic relationships between target groups and social biases to establish a persistent and covert influence on content generation.
+This paper introduces BiasRAG, a systematic framework that exposes fairness vulnerabilities in RAG through a two-phase backdoor attack. During the pre-training phase, the query encoder is compromised to align the target group with the intended social bias, ensuring long-term persistence. In the post-deployment phase, adversarial documents are injected into knowledge bases to reinforce the backdoor, subtly influencing retrieved content while remaining undetectable under standard fairness evaluations. Together, BiasRAG ensures precise target alignment over sensitive attributes, stealthy execution, and resilience. Empirical evaluations demonstrate that BiasRAG achieves high attack success rates while preserving contextual relevance and utility, establishing a persistent and evolving threat to fairness in RAG. 
+
+---
+# Can Synthetic Query Rewrites Capture User Intent Better than Humans in Retrieval-Augmented Generation? 
+
+**Authors**: JiaYing Zheng, HaiNan Zhang, Liang Pang, YongXin Tong, ZhiMing Zheng  
+
+**Link**: [PDF](https://arxiv.org/pdf/2509.22325)  
+
+**Abstract**: Multi-turn RAG systems often face queries with colloquial omissions and ambiguous references, posing significant challenges for effective retrieval and generation. Traditional query rewriting relies on human annotators to clarify queries, but due to limitations in annotators' expressive ability and depth of understanding, manually rewritten queries often diverge from those needed in real-world RAG systems, resulting in a gap between user intent and system response. We observe that high-quality synthetic queries can better bridge this gap, achieving superior performance in both retrieval and generation compared to human rewrites. This raises an interesting question: Can rewriting models trained on synthetic queries better capture user intent than human annotators? In this paper, we propose SynRewrite, a synthetic data-driven query rewriting model to generate high-quality synthetic rewrites more aligned with user intent. To construct training data, we prompt GPT-4o with dialogue history, current queries, positive documents, and answers to synthesize high-quality rewrites. A Flan-T5 model is then finetuned on this dataset to map dialogue history and queries to synthetic rewrites. Finally, we further enhance the rewriter using the generator's feedback through the DPO algorithm to boost end-task performance. Experiments on TopiOCQA and QRECC datasets show that SynRewrite consistently outperforms human rewrites in both retrieval and generation tasks. Our results demonstrate that synthetic rewrites can serve as a scalable and effective alternative to human annotations. 
+
+---
+# Retrieval-Augmented Guardrails for AI-Drafted Patient-Portal Messages: Error Taxonomy Construction and Large-Scale Evaluation 
+
+**Authors**: Wenyuan Chen, Fateme Nateghi Haredasht, Kameron C. Black, Francois Grolleau, Emily Alsentzer, Jonathan H. Chen, Stephen P. Ma  
+
+**Link**: [PDF](https://arxiv.org/pdf/2509.22565)  
+
+**Abstract**: Asynchronous patient-clinician messaging via EHR portals is a growing source of clinician workload, prompting interest in large language models (LLMs) to assist with draft responses. However, LLM outputs may contain clinical inaccuracies, omissions, or tone mismatches, making robust evaluation essential. Our contributions are threefold: (1) we introduce a clinically grounded error ontology comprising 5 domains and 59 granular error codes, developed through inductive coding and expert adjudication; (2) we develop a retrieval-augmented evaluation pipeline (RAEC) that leverages semantically similar historical message-response pairs to improve judgment quality; and (3) we provide a two-stage prompting architecture using DSPy to enable scalable, interpretable, and hierarchical error detection. Our approach assesses the quality of drafts both in isolation and with reference to similar past message-response pairs retrieved from institutional archives. Using a two-stage DSPy pipeline, we compared baseline and reference-enhanced evaluations on over 1,500 patient messages. Retrieval context improved error identification in domains such as clinical completeness and workflow appropriateness. Human validation on 100 messages demonstrated superior agreement (concordance = 50% vs. 33%) and performance (F1 = 0.500 vs. 0.256) of context-enhanced labels vs. baseline, supporting the use of our RAEC pipeline as AI guardrails for patient messaging. 
+
+---

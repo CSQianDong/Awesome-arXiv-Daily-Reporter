@@ -1,0 +1,164 @@
+# Your RAG is Unfair: Exposing Fairness Vulnerabilities in Retrieval-Augmented Generation via Backdoor Attacks 
+
+**Authors**: Gaurav Bagwe, Saket S. Chaturvedi, Xiaolong Ma, Xiaoyong Yuan, Kuang-Ching Wang, Lan Zhang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2509.22486)  
+
+**Abstract**: Retrieval-augmented generation (RAG) enhances factual grounding by integrating retrieval mechanisms with generative models but introduces new attack surfaces, particularly through backdoor attacks. While prior research has largely focused on disinformation threats, fairness vulnerabilities remain underexplored. Unlike conventional backdoors that rely on direct trigger-to-target mappings, fairness-driven attacks exploit the interaction between retrieval and generation models, manipulating semantic relationships between target groups and social biases to establish a persistent and covert influence on content generation.
+This paper introduces BiasRAG, a systematic framework that exposes fairness vulnerabilities in RAG through a two-phase backdoor attack. During the pre-training phase, the query encoder is compromised to align the target group with the intended social bias, ensuring long-term persistence. In the post-deployment phase, adversarial documents are injected into knowledge bases to reinforce the backdoor, subtly influencing retrieved content while remaining undetectable under standard fairness evaluations. Together, BiasRAG ensures precise target alignment over sensitive attributes, stealthy execution, and resilience. Empirical evaluations demonstrate that BiasRAG achieves high attack success rates while preserving contextual relevance and utility, establishing a persistent and evolving threat to fairness in RAG. 
+
+---
+# Can Synthetic Query Rewrites Capture User Intent Better than Humans in Retrieval-Augmented Generation? 
+
+**Authors**: JiaYing Zheng, HaiNan Zhang, Liang Pang, YongXin Tong, ZhiMing Zheng  
+
+**Link**: [PDF](https://arxiv.org/pdf/2509.22325)  
+
+**Abstract**: Multi-turn RAG systems often face queries with colloquial omissions and ambiguous references, posing significant challenges for effective retrieval and generation. Traditional query rewriting relies on human annotators to clarify queries, but due to limitations in annotators' expressive ability and depth of understanding, manually rewritten queries often diverge from those needed in real-world RAG systems, resulting in a gap between user intent and system response. We observe that high-quality synthetic queries can better bridge this gap, achieving superior performance in both retrieval and generation compared to human rewrites. This raises an interesting question: Can rewriting models trained on synthetic queries better capture user intent than human annotators? In this paper, we propose SynRewrite, a synthetic data-driven query rewriting model to generate high-quality synthetic rewrites more aligned with user intent. To construct training data, we prompt GPT-4o with dialogue history, current queries, positive documents, and answers to synthesize high-quality rewrites. A Flan-T5 model is then finetuned on this dataset to map dialogue history and queries to synthetic rewrites. Finally, we further enhance the rewriter using the generator's feedback through the DPO algorithm to boost end-task performance. Experiments on TopiOCQA and QRECC datasets show that SynRewrite consistently outperforms human rewrites in both retrieval and generation tasks. Our results demonstrate that synthetic rewrites can serve as a scalable and effective alternative to human annotations. 
+
+---
+# Does Generative Retrieval Overcome the Limitations of Dense Retrieval? 
+
+**Authors**: Yingchen Zhang, Ruqing Zhang, Jiafeng Guo, Maarten de Rijke, Yixing Fan, Xueqi Cheng  
+
+**Link**: [PDF](https://arxiv.org/pdf/2509.22116)  
+
+**Abstract**: Generative retrieval (GR) has emerged as a new paradigm in neural information retrieval, offering an alternative to dense retrieval (DR) by directly generating identifiers of relevant documents. In this paper, we theoretically and empirically investigate how GR fundamentally diverges from DR in both learning objectives and representational capacity. GR performs globally normalized maximum-likelihood optimization and encodes corpus and relevance information directly in the model parameters, whereas DR adopts locally normalized objectives and represents the corpus with external embeddings before computing similarity via a bilinear interaction. Our analysis suggests that, under scaling, GR can overcome the inherent limitations of DR, yielding two major benefits. First, with larger corpora, GR avoids the sharp performance degradation caused by the optimization drift induced by DR's local normalization. Second, with larger models, GR's representational capacity scales with parameter size, unconstrained by the global low-rank structure that limits DR. We validate these theoretical insights through controlled experiments on the Natural Questions and MS MARCO datasets, across varying negative sampling strategies, embedding dimensions, and model scales. But despite its theoretical advantages, GR does not universally outperform DR in practice. We outline directions to bridge the gap between GR's theoretical potential and practical performance, providing guidance for future research in scalable and robust generative retrieval. 
+
+---
+# GoalRank: Group-Relative Optimization for a Large Ranking Model 
+
+**Authors**: Kaike Zhang, Xiaobei Wang, Shuchang Liu, Hailan Yang, Xiang Li, Lantao Hu, Han Li, Qi Cao, Fei Sun, Kun Gai  
+
+**Link**: [PDF](https://arxiv.org/pdf/2509.22046)  
+
+**Abstract**: Mainstream ranking approaches typically follow a Generator-Evaluator two-stage paradigm, where a generator produces candidate lists and an evaluator selects the best one. Recent work has attempted to enhance performance by expanding the number of candidate lists, for example, through multi-generator settings. However, ranking involves selecting a recommendation list from a combinatorially large space. Simply enlarging the candidate set remains ineffective, and performance gains quickly saturate. At the same time, recent advances in large recommendation models have shown that end-to-end one-stage models can achieve promising performance with the expectation of scaling laws. Motivated by this, we revisit ranking from a generator-only one-stage perspective. We theoretically prove that, for any (finite Multi-)Generator-Evaluator model, there always exists a generator-only model that achieves strictly smaller approximation error to the optimal ranking policy, while also enjoying scaling laws as its size increases. Building on this result, we derive an evidence upper bound of the one-stage optimization objective, from which we find that one can leverage a reward model trained on real user feedback to construct a reference policy in a group-relative manner. This reference policy serves as a practical surrogate of the optimal policy, enabling effective training of a large generator-only ranker. Based on these insights, we propose GoalRank, a generator-only ranking framework. Extensive offline experiments on public benchmarks and large-scale online A/B tests demonstrate that GoalRank consistently outperforms state-of-the-art methods. 
+
+---
+# Effect of Model Merging in Domain-Specific Ad-hoc Retrieval 
+
+**Authors**: Taiga Sasaki, Takehiro Yamamoto, Hiroaki Ohshima, Sumio Fujita  
+
+**Link**: [PDF](https://arxiv.org/pdf/2509.21966)  
+
+**Abstract**: In this study, we evaluate the effect of model merging in ad-hoc retrieval tasks. Model merging is a technique that combines the diverse characteristics of multiple models. We hypothesized that applying model merging to domain-specific ad-hoc retrieval tasks could improve retrieval effectiveness. To verify this hypothesis, we merged the weights of a source retrieval model and a domain-specific (non-retrieval) model using a linear interpolation approach. A key advantage of our approach is that it requires no additional fine-tuning of the models. We conducted two experiments each in the medical and Japanese domains. The first compared the merged model with the source retrieval model, and the second compared it with a LoRA fine-tuned model under both full and limited data settings for model construction. The experimental results indicate that model merging has the potential to produce more effective domain-specific retrieval models than the source retrieval model, and may serve as a practical alternative to LoRA fine-tuning, particularly when only a limited amount of data is available. 
+
+---
+# MIXRAG : Mixture-of-Experts Retrieval-Augmented Generation for Textual Graph Understanding and Question Answering 
+
+**Authors**: Lihui Liu, Carl J. Yang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2509.21391)  
+
+**Abstract**: Large Language Models (LLMs) have achieved impressive performance across a wide range of applications. However, they often suffer from hallucinations in knowledge-intensive domains due to their reliance on static pretraining corpora. To address this limitation, Retrieval-Augmented Generation (RAG) enhances LLMs by incorporating external knowledge sources during inference. Among these sources, textual graphs provide structured and semantically rich information that supports more precise and interpretable reasoning. This has led to growing interest in graph-based RAG systems. Despite their potential, most existing approaches rely on a single retriever to identify relevant subgraphs, which limits their ability to capture the diverse aspects of complex queries. Moreover, these systems often struggle to accurately judge the relevance of retrieved content, making them prone to distraction by irrelevant noise. To address these challenges, in this paper, we propose MIXRAG, a Mixture-of-Experts Graph-RAG framework that introduces multiple specialized graph retrievers and a dynamic routing controller to better handle diverse query intents. Each retriever is trained to focus on a specific aspect of graph semantics, such as entities, relations, or subgraph topology. A Mixture-of-Experts module adaptively selects and fuses relevant retrievers based on the input query. To reduce noise in the retrieved information, we introduce a query-aware GraphEncoder that carefully analyzes relationships within the retrieved subgraphs, highlighting the most relevant parts while down-weighting unnecessary noise. Empirical results demonstrate that our method achieves state-of-the-art performance and consistently outperforms various baselines. MIXRAG is effective across a wide range of graph-based tasks in different domains. The code will be released upon paper acceptance. 
+
+---
+# ReGeS: Reciprocal Retrieval-Generation Synergy for Conversational Recommender Systems 
+
+**Authors**: Dayu Yang, Hui Fang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2509.21371)  
+
+**Abstract**: Connecting conversation with external domain knowledge is vital for conversational recommender systems (CRS) to correctly understand user preferences. However, existing solutions either require domain-specific engineering, which limits flexibility, or rely solely on large language models, which increases the risk of hallucination. While Retrieval-Augmented Generation (RAG) holds promise, its naive use in CRS is hindered by noisy dialogues that weaken retrieval and by overlooked nuances among similar items. We propose ReGeS, a reciprocal Retrieval-Generation Synergy framework that unifies generation-augmented retrieval to distill informative user intent from conversations and retrieval-augmented generation to differentiate subtle item features. This synergy obviates the need for extra annotations, reduces hallucinations, and simplifies continuous updates. Experiments on multiple CRS benchmarks show that ReGeS achieves state-of-the-art performance in recommendation accuracy, demonstrating the effectiveness of reciprocal synergy for knowledge-intensive CRS tasks. 
+
+---
+# Cross-Modal Retrieval with Cauchy-Schwarz Divergence 
+
+**Authors**: Jiahao Zhang, Wenzhe Yin, Shujian Yu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2509.21339)  
+
+**Abstract**: Effective cross-modal retrieval requires robust alignment of heterogeneous data types. Most existing methods focus on bi-modal retrieval tasks and rely on distributional alignment techniques such as Kullback-Leibler divergence, Maximum Mean Discrepancy, and correlation alignment. However, these methods often suffer from critical limitations, including numerical instability, sensitivity to hyperparameters, and their inability to capture the full structure of the underlying distributions. In this paper, we introduce the Cauchy-Schwarz (CS) divergence, a hyperparameter-free measure that improves both training stability and retrieval performance. We further propose a novel Generalized CS (GCS) divergence inspired by Hölder's inequality. This extension enables direct alignment of three or more modalities within a unified mathematical framework through a bidirectional circular comparison scheme, eliminating the need for exhaustive pairwise comparisons. Extensive experiments on six benchmark datasets demonstrate the effectiveness of our method in both bi-modal and tri-modal retrieval tasks. The code of our CS/GCS divergence is publicly available at this https URL. 
+
+---
+# HetaRAG: Hybrid Deep Retrieval-Augmented Generation across Heterogeneous Data Stores 
+
+**Authors**: Guohang Yan, Yue Zhang, Pinlong Cai, Ding Wang, Song Mao, Hongwei Zhang, Yaoze Zhang, Hairong Zhang, Xinyu Cai, Botian Shi  
+
+**Link**: [PDF](https://arxiv.org/pdf/2509.21336)  
+
+**Abstract**: Retrieval-augmented generation (RAG) has become a dominant paradigm for mitigating knowledge hallucination and staleness in large language models (LLMs) while preserving data security. By retrieving relevant evidence from private, domain-specific corpora and injecting it into carefully engineered prompts, RAG delivers trustworthy responses without the prohibitive cost of fine-tuning. Traditional retrieval-augmented generation (RAG) systems are text-only and often rely on a single storage backend, most commonly a vector database. In practice, this monolithic design suffers from unavoidable trade-offs: vector search captures semantic similarity yet loses global context; knowledge graphs excel at relational precision but struggle with recall; full-text indexes are fast and exact yet semantically blind; and relational engines such as MySQL provide strong transactional guarantees but no semantic understanding. We argue that these heterogeneous retrieval paradigms are complementary, and propose a principled fusion scheme to orchestrate them synergistically, mitigating the weaknesses of any single modality. In this work we introduce HetaRAG, a hybrid, deep-retrieval augmented generation framework that orchestrates cross-modal evidence from heterogeneous data stores. We plan to design a system that unifies vector indices, knowledge graphs, full-text engines, and structured databases into a single retrieval plane, dynamically routing and fusing evidence to maximize recall, precision, and contextual fidelity. To achieve this design goal, we carried out preliminary explorations and constructed an initial RAG pipeline; this technical report provides a brief overview. The partial code is available at this https URL. 
+
+---
+# PIR-RAG: A System for Private Information Retrieval in Retrieval-Augmented Generation 
+
+**Authors**: Baiqiang Wang, Qian Lou, Mengxin Zheng, Dongfang Zhao  
+
+**Link**: [PDF](https://arxiv.org/pdf/2509.21325)  
+
+**Abstract**: Retrieval-Augmented Generation (RAG) has become a foundational component of modern AI systems, yet it introduces significant privacy risks by exposing user queries to service providers. To address this, we introduce PIR-RAG, a practical system for privacy-preserving RAG. PIR-RAG employs a novel architecture that uses coarse-grained semantic clustering to prune the search space, combined with a fast, lattice-based Private Information Retrieval (PIR) protocol. This design allows for the efficient retrieval of entire document clusters, uniquely optimizing for the end-to-end RAG workflow where full document content is required. Our comprehensive evaluation against strong baseline architectures, including graph-based PIR and Tiptoe-style private scoring, demonstrates PIR-RAG's scalability and its superior performance in terms of "RAG-Ready Latency"-the true end-to-end time required to securely fetch content for an LLM. Our work establishes PIR-RAG as a viable and highly efficient solution for privacy in large-scale AI systems. 
+
+---
+# From Search to Reasoning: A Five-Level RAG Capability Framework for Enterprise Data 
+
+**Authors**: Gurbinder Gill, Ritvik Gupta, Denis Lusson, Anand Chandrashekar, Donald Nguyen  
+
+**Link**: [PDF](https://arxiv.org/pdf/2509.21324)  
+
+**Abstract**: Retrieval-Augmented Generation (RAG) has emerged as the standard paradigm for answering questions on enterprise data. Traditionally, RAG has centered on text-based semantic search and re-ranking. However, this approach falls short when dealing with questions beyond data summarization or non-text data. This has led to various attempts to supplement RAG to bridge the gap between RAG, the implementation paradigm, and the question answering problem that enterprise users expect it to solve. Given that contemporary RAG is a collection of techniques rather than a defined implementation, discussion of RAG and related question-answering systems benefits from a problem-oriented understanding.
+We propose a new classification framework (L1-L5) to categorize systems based on data modalities and task complexity of the underlying question answering problems: L1 (Surface Knowledge of Unstructured Data) through L4 (Reflective and Reasoned Knowledge) and the aspirational L5 (General Intelligence). We also introduce benchmarks aligned with these levels and evaluate four state-of-the-art platforms: LangChain, Azure AI Search, OpenAI, and Corvic AI. Our experiments highlight the value of multi-space retrieval and dynamic orchestration for enabling L1-L4 capabilities. We empirically validate our findings using diverse datasets indicative of enterprise use cases. 
+
+---
+# SPELUNKER: Item Similarity Search Using Large Language Models and Custom K-Nearest Neighbors 
+
+**Authors**: Ana Rodrigues, João Mata, Rui Rego  
+
+**Link**: [PDF](https://arxiv.org/pdf/2509.21323)  
+
+**Abstract**: This paper presents a hybrid system for intuitive item similarity search that combines a Large Language Model (LLM) with a custom K-Nearest Neighbors (KNN) algorithm. Unlike black-box dense vector systems, this architecture provides superior interpretability by first using an LLM to convert natural language queries into structured, attribute-based searches. This structured query then serves as input to a custom KNN algorithm with a BallTree search strategy, which uses a heterogeneous distance metric to preserve distinct data types. Our evaluation, conducted on a dataset of 500 wine reviews, demonstrates the system's effectiveness. The LLM achieved an F1-score of 0.9779 in information extraction, while also demonstrating high fidelity with a Jaro string similarity of 0.9321. When we augmented the KNN algorithm with LLM-based re-ranking, we observed a statistically significant improvement in recall (p=0.013), indicating the LLM's ability to identify and promote relevant items that align with nuanced user intent. This approach effectively bridges the gap between human language and machine-understandable item representations, offering a transparent and nuanced search capability. 
+
+---
+# Retrieval-Augmented Guardrails for AI-Drafted Patient-Portal Messages: Error Taxonomy Construction and Large-Scale Evaluation 
+
+**Authors**: Wenyuan Chen, Fateme Nateghi Haredasht, Kameron C. Black, Francois Grolleau, Emily Alsentzer, Jonathan H. Chen, Stephen P. Ma  
+
+**Link**: [PDF](https://arxiv.org/pdf/2509.22565)  
+
+**Abstract**: Asynchronous patient-clinician messaging via EHR portals is a growing source of clinician workload, prompting interest in large language models (LLMs) to assist with draft responses. However, LLM outputs may contain clinical inaccuracies, omissions, or tone mismatches, making robust evaluation essential. Our contributions are threefold: (1) we introduce a clinically grounded error ontology comprising 5 domains and 59 granular error codes, developed through inductive coding and expert adjudication; (2) we develop a retrieval-augmented evaluation pipeline (RAEC) that leverages semantically similar historical message-response pairs to improve judgment quality; and (3) we provide a two-stage prompting architecture using DSPy to enable scalable, interpretable, and hierarchical error detection. Our approach assesses the quality of drafts both in isolation and with reference to similar past message-response pairs retrieved from institutional archives. Using a two-stage DSPy pipeline, we compared baseline and reference-enhanced evaluations on over 1,500 patient messages. Retrieval context improved error identification in domains such as clinical completeness and workflow appropriateness. Human validation on 100 messages demonstrated superior agreement (concordance = 50% vs. 33%) and performance (F1 = 0.500 vs. 0.256) of context-enhanced labels vs. baseline, supporting the use of our RAEC pipeline as AI guardrails for patient messaging. 
+
+---
+# Ontological foundations for contrastive explanatory narration of robot plans 
+
+**Authors**: Alberto Olivares-Alarcos, Sergi Foix, Júlia Borràs, Gerard Canal, Guillem Alenyà  
+
+**Link**: [PDF](https://arxiv.org/pdf/2509.22493)  
+
+**Abstract**: Mutual understanding of artificial agents' decisions is key to ensuring a trustworthy and successful human-robot interaction. Hence, robots are expected to make reasonable decisions and communicate them to humans when needed. In this article, the focus is on an approach to modeling and reasoning about the comparison of two competing plans, so that robots can later explain the divergent result. First, a novel ontological model is proposed to formalize and reason about the differences between competing plans, enabling the classification of the most appropriate one (e.g., the shortest, the safest, the closest to human preferences, etc.). This work also investigates the limitations of a baseline algorithm for ontology-based explanatory narration. To address these limitations, a novel algorithm is presented, leveraging divergent knowledge between plans and facilitating the construction of contrastive narratives. Through empirical evaluation, it is observed that the explanations excel beyond the baseline method. 
+
+---
+# Chronic Stress, Immune Suppression, and Cancer Occurrence: Unveiling the Connection using Survey Data and Predictive Models 
+
+**Authors**: Teddy Lazebnik, Vered Aharonson  
+
+**Link**: [PDF](https://arxiv.org/pdf/2509.22275)  
+
+**Abstract**: Chronic stress was implicated in cancer occurrence, but a direct causal connection has not been consistently established. Machine learning and causal modeling offer opportunities to explore complex causal interactions between psychological chronic stress and cancer occurrences. We developed predictive models employing variables from stress indicators, cancer history, and demographic data from self-reported surveys, unveiling the direct and immune suppression mitigated connection between chronic stress and cancer occurrence. The models were corroborated by traditional statistical methods. Our findings indicated significant causal correlations between stress frequency, stress level and perceived health impact, and cancer incidence. Although stress alone showed limited predictive power, integrating socio-demographic and familial cancer history data significantly enhanced model accuracy. These results highlight the multidimensional nature of cancer risk, with stress emerging as a notable factor alongside genetic predisposition. These findings strengthen the case for addressing chronic stress as a modifiable cancer risk factor, supporting its integration into personalized prevention strategies and public health interventions to reduce cancer incidence. 
+
+---
+# The system of processing and analysis of customer tracking data for customer journey research on the base of RFID technology 
+
+**Authors**: Marina Kholod  
+
+**Link**: [PDF](https://arxiv.org/pdf/2509.22162)  
+
+**Abstract**: The article focuses on researching a system for processing and analyzing tracking data based on RFID technology to study the customer journey in retail. It examines the evolution of RFID technology, its key operating principles, and modern applications in retail that extend beyond logistics to include precise inventory management, loss prevention, and customer experience improvement. Particular attention is paid to the architecture for data collection, processing, and integration, specifically the ETL (extract, transform, load) methodology for transforming raw RFID and POS data into a structured analytical data warehouse. A detailed logical database model is proposed, designed for comprehensive analysis that combines financial sales metrics with behavioral patterns of customer movement. The article also analyzes the expected business benefits of RFID implementation through the lens of the Balanced Scorecard (BSC), which evaluates financial performance, customer satisfaction, and internal process optimization. It is concluded that the integration of tracking and transactional data creates a foundation for transforming retail into a precise, data-driven science, providing unprecedented visibility into physical product flows and consumer behavior. 
+
+---
+# Joint graph entropy knowledge distillation for point cloud classification and robustness against corruptions 
+
+**Authors**: Zhiqiang Tian, Weigang Li, Junwei Hu, Chunhua Deng  
+
+**Link**: [PDF](https://arxiv.org/pdf/2509.22150)  
+
+**Abstract**: Classification tasks in 3D point clouds often assume that class events \replaced{are }{follow }independent and identically distributed (IID), although this assumption destroys the correlation between classes. This \replaced{study }{paper }proposes a classification strategy, \textbf{J}oint \textbf{G}raph \textbf{E}ntropy \textbf{K}nowledge \textbf{D}istillation (JGEKD), suitable for non-independent and identically distributed 3D point cloud data, \replaced{which }{the strategy } achieves knowledge transfer of class correlations through knowledge distillation by constructing a loss function based on joint graph entropy. First\deleted{ly}, we employ joint graphs to capture add{the }hidden relationships between classes\replaced{ and}{,} implement knowledge distillation to train our model by calculating the entropy of add{add }graph.\replaced{ Subsequently}{ Then}, to handle 3D point clouds \deleted{that is }invariant to spatial transformations, we construct \replaced{S}{s}iamese structures and develop two frameworks, self-knowledge distillation and teacher-knowledge distillation, to facilitate information transfer between different transformation forms of the same data. \replaced{In addition}{ Additionally}, we use the above framework to achieve knowledge transfer between point clouds and their corrupted forms, and increase the robustness against corruption of model. Extensive experiments on ScanObject, ModelNet40, ScanntV2\_cls and ModelNet-C demonstrate that the proposed strategy can achieve competitive results. 
+
+---
+# FoodSEM: Large Language Model Specialized in Food Named-Entity Linking 
+
+**Authors**: Ana Gjorgjevikj, Matej Martinc, Gjorgjina Cenikj, Sašo Džeroski, Barbara Koroušić Seljak, Tome Eftimov  
+
+**Link**: [PDF](https://arxiv.org/pdf/2509.22125)  
+
+**Abstract**: This paper introduces FoodSEM, a state-of-the-art fine-tuned open-source large language model (LLM) for named-entity linking (NEL) to food-related ontologies. To the best of our knowledge, food NEL is a task that cannot be accurately solved by state-of-the-art general-purpose (large) language models or custom domain-specific models/systems. Through an instruction-response (IR) scenario, FoodSEM links food-related entities mentioned in a text to several ontologies, including FoodOn, SNOMED-CT, and the Hansard taxonomy. The FoodSEM model achieves state-of-the-art performance compared to related models/systems, with F1 scores even reaching 98% on some ontologies and datasets. The presented comparative analyses against zero-shot, one-shot, and few-shot LLM prompting baselines further highlight FoodSEM's superior performance over its non-fine-tuned version. By making FoodSEM and its related resources publicly available, the main contributions of this article include (1) publishing a food-annotated corpora into an IR format suitable for LLM fine-tuning/evaluation, (2) publishing a robust model to advance the semantic understanding of text in the food domain, and (3) providing a strong baseline on food NEL for future benchmarking. 
+
+---
