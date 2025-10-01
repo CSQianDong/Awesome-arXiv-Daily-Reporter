@@ -1,0 +1,199 @@
+# Informed Dataset Selection 
+
+**Authors**: Abdullah Abbas, Michael Heep, Theodor Sperle  
+
+**Link**: [PDF](https://arxiv.org/pdf/2509.26448)  
+
+**Abstract**: The selection of datasets in recommender systems research lacks a systematic methodology. Researchers often select datasets based on popularity rather than empirical suitability. We developed the APS Explorer, a web application that im- plements the Algorithm Performance Space (APS) framework for informed dataset selection. The system analyzes 96 datasets using 28 algorithms across three metrics (nDCG, Hit Ratio, Recall) at five K-values. We extend the APS framework with a statistical based classification system that categorizes datasets into five difficulty levels based on quintiles. We also introduce a variance-normalized distance metric based on Mahalanobis distance to measure similarity. The APS Explorer was successfully developed with three interactive modules for visualizing algorithm performance, direct comparing algorithms, and analyzing dataset metadata. This tool shifts the process of selecting datasets from intuition-based to evidence-based practices, and it is publicly available at this http URL. 
+
+---
+# MR$^2$-Bench: Going Beyond Matching to Reasoning in Multimodal Retrieval 
+
+**Authors**: Junjie Zhou, Ze Liu, Lei Xiong, Jin-Ge Yao, Yueze Wang, Shitao Xiao, Fenfen Lin, Miguel Hu Chen, Zhicheng Dou, Siqi Bao, Defu Lian, Yongping Xiong, Zheng Liu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2509.26378)  
+
+**Abstract**: Multimodal retrieval is becoming a crucial component of modern AI applications, yet its evaluation lags behind the demands of more realistic and challenging scenarios. Existing benchmarks primarily probe surface-level semantic correspondence (e.g., object-text matching) while failing to assess the deeper reasoning required to capture complex relationships between visual and textual information. To address this gap, we introduce MR$^2$-Bench, a reasoning-intensive benchmark for multimodal retrieval. MR$^2$-Bench presents the following critical values: 1) all tasks are reasoning-driven, going beyond shallow matching to effectively assess models' capacity for logical, spatial, and causal inference; 2) it features diverse multimodal data, such as natural images, diagrams, and visual puzzles, enabling comprehensive evaluation across content types; 3) it supports complex queries and documents containing multiple images and covers diverse retrieval scenarios, more accurately reflecting real-world applications. Our benchmark contains 1,309 curated queries, derived either from manual collection and annotation or from selective consolidation of public datasets. Despite achieving strong results on existing benchmarks, current state-of-the-art models still struggle on MR$^2$-Bench: for example, the leading Seed1.6-Embedding model attains a Recall@1 of 77.78 on MMEB, but only 9.91 on MR$^2$-Bench. This substantial performance gap highlights both the increased challenge posed by our benchmark and the pressing need for further advances in reasoning-intensive multimodal retrieval. The dataset and evaluation code will be made publicly available at this https URL. 
+
+---
+# Analyzing BEV Suitability and Charging Strategies Using Italian Driving Data 
+
+**Authors**: Homa Jamalof, Luca Vassio, Danilo Giordano, Marco Mellia, Claudio De Tommasi  
+
+**Link**: [PDF](https://arxiv.org/pdf/2509.26262)  
+
+**Abstract**: Battery Electric Vehicles (BEVs) are rapidly evolving from a niche alternative to an established option for private transportation, often replacing Internal Combustion Engine (ICE) vehicles. Despite growing interest, significant barriers remain, including range anxiety, the inconvenience associated with public charging stations, and higher costs. This study analyses extensive telemetry data collected from 10,441 users using ICE vehicles in an Italian province to assess the potential for switching to BEVs without changing current travel behaviour. We evaluate to what extent the BEV models can fulfil their mobility needs under different charging scenarios. To do so, we replicate trips and parking events, simulating and monitoring the battery state of charge. The analysis reveals the compromises between charging behaviours and limited BEV autonomy. Assuming access to overnight charging, at least 35% of the users could already adopt even low-capacity BEVs. 
+
+---
+# Self-supervised learning for phase retrieval 
+
+**Authors**: Victor Sechaud, Patrice Abry, Laurent Jacques, Julián Tachella  
+
+**Link**: [PDF](https://arxiv.org/pdf/2509.26203)  
+
+**Abstract**: In recent years, deep neural networks have emerged as a solution for inverse imaging problems. These networks are generally trained using pairs of images: one degraded and the other of high quality, the latter being called 'ground truth'. However, in medical and scientific imaging, the lack of fully sampled data limits supervised learning. Recent advances have made it possible to reconstruct images from measurement data alone, eliminating the need for references. However, these methods remain limited to linear problems, excluding non-linear problems such as phase retrieval. We propose a self-supervised method that overcomes this limitation in the case of phase retrieval by using the natural invariance of images to translations. 
+
+---
+# Auto-ARGUE: LLM-Based Report Generation Evaluation 
+
+**Authors**: William Walden, Marc Mason, Orion Weller, Laura Dietz, Hannah Recknor, Bryan Li, Gabrielle Kaili-May Liu, Yu Hou, James Mayfield, Eugene Yang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2509.26184)  
+
+**Abstract**: Generation of long-form, citation-backed reports is a primary use case for retrieval augmented generation (RAG) systems. While open-source evaluation tools exist for various RAG tasks, ones tailored to report generation are lacking. Accordingly, we introduce Auto-ARGUE, a robust LLM-based implementation of the recent ARGUE framework for report generation evaluation. We present analysis of Auto-ARGUE on the report generation pilot task from the TREC 2024 NeuCLIR track, showing good system-level correlations with human judgments. We further release a web app for visualization of Auto-ARGUE outputs. 
+
+---
+# Leveraging Scene Context with Dual Networks for Sequential User Behavior Modeling 
+
+**Authors**: Xu Chen, Yunmeng Shu, Yuangang Pan, Jinsong Lan, Xiaoyong Zhu, Shuai Xiao, Haojin Zhu, Ivor W. Tsang, Bo Zheng  
+
+**Link**: [PDF](https://arxiv.org/pdf/2509.26172)  
+
+**Abstract**: Modeling sequential user behaviors for future behavior prediction is crucial in improving user's information retrieval experience. Recent studies highlight the importance of incorporating contextual information to enhance prediction performance. One crucial but usually neglected contextual information is the scene feature which we define as sub-interfaces within an app, created by developers to provide specific functionalities, such as ``text2product search" and ``live" modules in e-commence apps. Different scenes exhibit distinct functionalities and usage habits, leading to significant distribution gap in user engagement across them. Popular sequential behavior models either ignore the scene feature or merely use it as attribute embeddings, which cannot effectively capture the dynamic interests and interplay between scenes and items when modeling user sequences. In this work, we propose a novel Dual Sequence Prediction networks (DSPnet) to effectively capture the dynamic interests and interplay between scenes and items for future behavior prediction. DSPnet consists of two parallel networks dedicated to learn users' dynamic interests over items and scenes, and a sequence feature enhancement module to capture the interplay for enhanced future behavior prediction. Further, we introduce a Conditional Contrastive Regularization (CCR) loss to capture the invariance of similar historical sequences. Theoretical analysis suggests that DSPnet is a principled way to learn the joint relationships between scene and item sequences. Extensive experiments are conducted on one public benchmark and two collected industrial datasets. The method has been deployed online in our system, bringing a 0.04 point increase in CTR, 0.78\% growth in deals, and 0.64\% rise in GMV. The codes are available at this anonymous github: \textcolor{blue}{this https URL}. 
+
+---
+# Items Proxy Bridging: Enabling Frictionless Critiquing in Knowledge Graph Recommendations 
+
+**Authors**: Huanyu Zhang, Xiaoxuan Shen, Yu Lei, Baolin Yi, Jianfang Liu, Yinao xie  
+
+**Link**: [PDF](https://arxiv.org/pdf/2509.26107)  
+
+**Abstract**: Modern recommender systems place great inclination towards facilitating user experience, as more applications enabling users to critique and then refine recommendations immediately. Considering the real-time requirements, critique-able recommender systems typically straight modify the model parameters and update the recommend list through analyzing the user critiquing keyphrases in the inference phase. Current critiquing methods require first constructing a specially designated model which establish direct correlations between users and keyphrases during the training phase allowing for innovative recommendations upon the critiquing,restricting the applicable scenarios. Additionally, all these approaches ignore the catastrophic forgetting problem, where the cumulative changes in parameters during continuous multi-step critiquing may lead to a collapse in model performance. Thus, We conceptualize a proxy bridging users and keyphrases, proposing a streamlined yet potent Items Proxy Generic Critiquing Framework (IPGC) framework, which can serve as a universal plugin for most knowledge graph recommender models based on collaborative filtering (CF) strategies. IPGC provides a new paradigm for frictionless integration of critique mechanisms to enable iterative recommendation refinement in mainstream recommendation scenarios. IPGC describes the items proxy mechanism for transforming the critiquing optimization objective of user-keyphrase pairs into user-item pairs, adapting it for general CF recommender models without the necessity of specifically designed user-keyphrase correlation module. Furthermore, an anti-forgetting regularizer is introduced in order to efficiently mitigate the catastrophic forgetting problem of the model as a prior for critiquing optimization. 
+
+---
+# Fading to Grow: Growing Preference Ratios via Preference Fading Discrete Diffusion for Recommendation 
+
+**Authors**: Guoqing Hu, An Zhang. Shuchang Liu, Wenyu Mao, Jiancan Wu, Xun Yang, Xiang Li, Lantao Hu, Han Li, Kun Gai, Xiang Wang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2509.26063)  
+
+**Abstract**: Recommenders aim to rank items from a discrete item corpus in line with user interests, yet suffer from extremely sparse user preference data. Recent advances in diffusion models have inspired diffusion-based recommenders, which alleviate sparsity by injecting noise during a forward process to prevent the collapse of perturbed preference distributions. However, current diffusion-based recommenders predominantly rely on continuous Gaussian noise, which is intrinsically mismatched with the discrete nature of user preference data in recommendation. In this paper, building upon recent advances in discrete diffusion, we propose PreferGrow, a discrete diffusion-based recommender system that models preference ratios by fading and growing user preferences over the discrete item corpus. PreferGrow differs from existing diffusion-based recommenders in three core aspects: (1) Discrete modeling of preference ratios: PreferGrow models relative preference ratios between item pairs, rather than operating in the item representation or raw score simplex. This formulation aligns naturally with the discrete and ranking-oriented nature of recommendation tasks. (2) Perturbing via preference fading: Instead of injecting continuous noise, PreferGrow fades user preferences by replacing the preferred item with alternatives -- physically akin to negative sampling -- thereby eliminating the need for any prior noise assumption. (3) Preference reconstruction via growing: PreferGrow reconstructs user preferences by iteratively growing the preference signals from the estimated ratios. PreferGrow offers a well-defined matrix-based formulation with theoretical guarantees on Markovianity and reversibility, and it demonstrates consistent performance gains over state-of-the-art diffusion-based recommenders across five benchmark datasets, highlighting both its theoretical soundness and empirical effectiveness. 
+
+---
+# RAE: A Neural Network Dimensionality Reduction Method for Nearest Neighbors Preservation in Vector Search 
+
+**Authors**: Han Zhang, Dongfang Zhao  
+
+**Link**: [PDF](https://arxiv.org/pdf/2509.25839)  
+
+**Abstract**: While high-dimensional embedding vectors are being increasingly employed in various tasks like Retrieval-Augmented Generation and Recommendation Systems, popular dimensionality reduction (DR) methods such as PCA and UMAP have rarely been adopted for accelerating the retrieval process due to their inability of preserving the nearest neighbor (NN) relationship among vectors. Empowered by neural networks' optimization capability and the bounding effect of Rayleigh quotient, we propose a Regularized Auto-Encoder (RAE) for k-NN preserving dimensionality reduction. RAE constrains the network parameter variation through regularization terms, adjusting singular values to control embedding magnitude changes during reduction, thus preserving k-NN relationships. We provide a rigorous mathematical analysis demonstrating that regularization establishes an upper bound on the norm distortion rate of transformed vectors, thereby offering provable guarantees for k-NN preservation. With modest training overhead, RAE achieves superior k-NN recall compared to existing DR approaches while maintaining fast retrieval efficiency. 
+
+---
+# Better with Less: Small Proprietary Models Surpass Large Language Models in Financial Transaction Understanding 
+
+**Authors**: Wanying Ding, Savinay Narendra, Xiran Shi, Adwait Ratnaparkhi, Chengrui Yang, Nikoo Sabzevar, Ziyan Yin  
+
+**Link**: [PDF](https://arxiv.org/pdf/2509.25803)  
+
+**Abstract**: Analyzing financial transactions is crucial for ensuring regulatory compliance, detecting fraud, and supporting decisions. The complexity of financial transaction data necessitates advanced techniques to extract meaningful insights and ensure accurate analysis. Since Transformer-based models have shown outstanding performance across multiple domains, this paper seeks to explore their potential in understanding financial transactions. This paper conducts extensive experiments to evaluate three types of Transformer models: Encoder-Only, Decoder-Only, and Encoder-Decoder models. For each type, we explore three options: pretrained LLMs, fine-tuned LLMs, and small proprietary models developed from scratch. Our analysis reveals that while LLMs, such as LLaMA3-8b, Flan-T5, and SBERT, demonstrate impressive capabilities in various natural language processing tasks, they do not significantly outperform small proprietary models in the specific context of financial transaction understanding. This phenomenon is particularly evident in terms of speed and cost efficiency. Proprietary models, tailored to the unique requirements of transaction data, exhibit faster processing times and lower operational costs, making them more suitable for real-time applications in the financial sector. Our findings highlight the importance of model selection based on domain-specific needs and underscore the potential advantages of customized proprietary models over general-purpose LLMs in specialized applications. Ultimately, we chose to implement a proprietary decoder-only model to handle the complex transactions that we previously couldn't manage. This model can help us to improve 14% transaction coverage, and save more than \$13 million annual cost. 
+
+---
+# HiFIRec: Towards High-Frequency yet Low-Intention Behaviors for Multi-Behavior Recommendation 
+
+**Authors**: Ruiqi Luo, Ran Jin, Zhenglong Li, Kaixi Hu, Xiaohui Tao, Lin Li  
+
+**Link**: [PDF](https://arxiv.org/pdf/2509.25755)  
+
+**Abstract**: Multi-behavior recommendation leverages multiple types of user-item interactions to address data sparsity and cold-start issues, providing personalized services in domains such as healthcare and e-commerce. Most existing methods utilize graph neural networks to model user intention in a unified manner, which inadequately considers the heterogeneity across different behaviors. Especially, high-frequency yet low-intention behaviors may implicitly contain noisy signals, and frequent patterns that are plausible while misleading, thereby hindering the learning of user intentions. To this end, this paper proposes a novel multi-behavior recommendation method, HiFIRec, that corrects the effect of high-frequency yet low-intention behaviors by differential behavior modeling. To revise the noisy signals, we hierarchically suppress it across layers by extracting neighborhood information through layer-wise neighborhood aggregation and further capturing user intentions through adaptive cross-layer feature fusion. To correct plausible frequent patterns, we propose an intensity-aware non-sampling strategy that dynamically adjusts the weights of negative samples. Extensive experiments on two benchmarks show that HiFIRec relatively improves HR@10 by 4.21%-6.81% over several state-of-the-art methods. 
+
+---
+# TRUE: A Reproducible Framework for LLM-Driven Relevance Judgment in Information Retrieval 
+
+**Authors**: Mouly Dewan, Jiqun Liu, Chirag Shah  
+
+**Link**: [PDF](https://arxiv.org/pdf/2509.25602)  
+
+**Abstract**: LLM-based relevance judgment generation has become a crucial approach in advancing evaluation methodologies in Information Retrieval (IR). It has progressed significantly, often showing high correlation with human judgments as reflected in LLMJudge leaderboards \cite{rahmani2025judging}. However, existing methods for relevance judgments, rely heavily on sensitive prompting strategies, lacking standardized workflows for generating reliable labels. To fill this gap, we reintroduce our method, \textit{Task-aware Rubric-based Evaluation} (TRUE), for relevance judgment generation. Originally developed for usefulness evaluation in search sessions, we extend TRUE to mitigate the gap in relevance judgment due to its demonstrated effectiveness and reproducible workflow. This framework leverages iterative data sampling and reasoning to evaluate relevance judgments across multiple factors including intent, coverage, specificity, accuracy and usefulness. In this paper, we evaluate TRUE on the TREC DL 2019, 2020 and LLMJudge datasets and our results show that TRUE achieves strong performance on the system-ranking LLM leaderboards. The primary focus of this work is to provide a reproducible framework for LLM-based relevance judgments, and we further analyze the effectiveness of TRUE across multiple dimensions. 
+
+---
+# On-Premise AI for the Newsroom: Evaluating Small Language Models for Investigative Document Search 
+
+**Authors**: Nick Hagar, Nicholas Diakopoulos, Jeremy Gilbert  
+
+**Link**: [PDF](https://arxiv.org/pdf/2509.25494)  
+
+**Abstract**: Investigative journalists routinely confront large document collections. Large language models (LLMs) with retrieval-augmented generation (RAG) capabilities promise to accelerate the process of document discovery, but newsroom adoption remains limited due to hallucination risks, verification burden, and data privacy concerns. We present a journalist-centered approach to LLM-powered document search that prioritizes transparency and editorial control through a five-stage pipeline -- corpus summarization, search planning, parallel thread execution, quality evaluation, and synthesis -- using small, locally-deployable language models that preserve data security and maintain complete auditability through explicit citation chains. Evaluating three quantized models (Gemma 3 12B, Qwen 3 14B, and GPT-OSS 20B) on two corpora, we find substantial variation in reliability. All models achieved high citation validity and ran effectively on standard desktop hardware (e.g., 24 GB of memory), demonstrating feasibility for resource-constrained newsrooms. However, systematic challenges emerged, including error propagation through multi-stage synthesis and dramatic performance variation based on training data overlap with corpus content. These findings suggest that effective newsroom AI deployment requires careful model selection and system design, alongside human oversight for maintaining standards of accuracy and accountability. 
+
+---
+# Fairness Testing in Retrieval-Augmented Generation: How Small Perturbations Reveal Bias in Small Language Models 
+
+**Authors**: Matheus Vinicius da Silva de Oliveira, Jonathan de Andrade Silva, Awdren de Lima Fontao  
+
+**Link**: [PDF](https://arxiv.org/pdf/2509.26584)  
+
+**Abstract**: Large Language Models (LLMs) are widely used across multiple domains but continue to raise concerns regarding security and fairness. Beyond known attack vectors such as data poisoning and prompt injection, LLMs are also vulnerable to fairness bugs. These refer to unintended behaviors influenced by sensitive demographic cues (e.g., race or sexual orientation) that should not affect outcomes. Another key issue is hallucination, where models generate plausible yet false information. Retrieval-Augmented Generation (RAG) has emerged as a strategy to mitigate hallucinations by combining external retrieval with text generation. However, its adoption raises new fairness concerns, as the retrieved content itself may surface or amplify bias. This study conducts fairness testing through metamorphic testing (MT), introducing controlled demographic perturbations in prompts to assess fairness in sentiment analysis performed by three Small Language Models (SLMs) hosted on HuggingFace (Llama-3.2-3B-Instruct, Mistral-7B-Instruct-v0.3, and Llama-3.1-Nemotron-8B), each integrated into a RAG pipeline. Results show that minor demographic variations can break up to one third of metamorphic relations (MRs). A detailed analysis of these failures reveals a consistent bias hierarchy, with perturbations involving racial cues being the predominant cause of the violations. In addition to offering a comparative evaluation, this work reinforces that the retrieval component in RAG must be carefully curated to prevent bias amplification. The findings serve as a practical alert for developers, testers and small organizations aiming to adopt accessible SLMs without compromising fairness or reliability. 
+
+---
+# SQUARE: Semantic Query-Augmented Fusion and Efficient Batch Reranking for Training-free Zero-Shot Composed Image Retrieval 
+
+**Authors**: Ren-Di Wu, Yu-Yen Lin, Huei-Fang Yang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2509.26330)  
+
+**Abstract**: Composed Image Retrieval (CIR) aims to retrieve target images that preserve the visual content of a reference image while incorporating user-specified textual modifications. Training-free zero-shot CIR (ZS-CIR) approaches, which require no task-specific training or labeled data, are highly desirable, yet accurately capturing user intent remains challenging. In this paper, we present SQUARE, a novel two-stage training-free framework that leverages Multimodal Large Language Models (MLLMs) to enhance ZS-CIR. In the Semantic Query-Augmented Fusion (SQAF) stage, we enrich the query embedding derived from a vision-language model (VLM) such as CLIP with MLLM-generated captions of the target image. These captions provide high-level semantic guidance, enabling the query to better capture the user's intent and improve global retrieval quality. In the Efficient Batch Reranking (EBR) stage, top-ranked candidates are presented as an image grid with visual marks to the MLLM, which performs joint visual-semantic reasoning across all candidates. Our reranking strategy operates in a single pass and yields more accurate rankings. Experiments show that SQUARE, with its simplicity and effectiveness, delivers strong performance on four standard CIR benchmarks. Notably, it maintains high performance even with lightweight pre-trained, demonstrating its potential applicability. 
+
+---
+# On Computing Top-$k$ Simple Shortest Paths from a Single Source 
+
+**Authors**: Mattia D'Emidio, Gabriele Di Stefano  
+
+**Link**: [PDF](https://arxiv.org/pdf/2509.26094)  
+
+**Abstract**: We investigate the problem of computing the top-$k$ simple shortest paths in weighted digraphs. While the single-pair variant -- finding the top-$k$ simple shortest paths between two specified vertices -- has been extensively studied over the past decades, with Yen's algorithm and its heuristic improvements emerging as the most effective solving strategies, relatively little attention has been devoted to the more general single-source version, where the goal is determining top-$k$ simple shortest paths from a source vertex to all other vertices. Motivated by the numerous practical applications of ranked shortest paths, in this paper we provide new insights and algorithmic contributions to this problem. In particular, we first present a theoretical characterization of the structural properties of its solutions. Then, we introduce the first polynomial-time algorithm specifically designed to handle it. On the one hand, we prove our new algorithm is on par, in terms of time complexity, with the best (and only) polynomial-time approach known in the literature to solve the problem, that is applying the fastest single-pair algorithm independently to each vertex pair formed by the source and the remaining vertices. On the other hand, through an extensive experimental evaluation on both real-world and synthetic graphs, we demonstrate that our algorithm consistently and significantly outperforms the latter baseline in terms of running time, achieving speed-ups of up to several orders of magnitude. These results establish our new algorithm as the solution to be preferred for computing $k$ simple shortest paths from a single source in practical settings. 
+
+---
+# Using GPT to build a Project Management assistant for Jira environments 
+
+**Authors**: Joel Garcia-Escribano, Arkaitz Carbajo, Mikel Egaña Aranguren, Unai Lopez-Novoa  
+
+**Link**: [PDF](https://arxiv.org/pdf/2509.26014)  
+
+**Abstract**: In the domain of Project Management, the sheer volume of data is a challenge that project managers continually have to deal with. Effectively steering projects from inception to completion requires handling of diverse information streams, including timelines, budgetary considerations, and task dependencies. To navigate this data-driven landscape with precision and agility, project managers must rely on efficient and sophisticated tools. These tools have become essential, as they enable project managers to streamline communication, optimize resource allocation, and make informed decisions in real-time. However, many of these tools have steep learning curves and require using complex programming languages to retrieve the exact data that project managers need. In this work we present JiraGPT Next, a software that uses the GPT Large Language Model to ease the process by which project managers deal with large amounts of data. It is conceived as an add-on for Jira, one of the most popular Project Management tools, and provides a natural language interface to retrieve information. This work presents the design decisions behind JiraGPT Next and an evaluation of the accuracy of GPT in this context, including the effects of providing different prompts to complete a particular task. 
+
+---
+# MHINDR - a DSM5 based mental health diagnosis and recommendation framework using LLM 
+
+**Authors**: Vaishali Agarwal, Sachin Thukral, Arnab Chatterjee  
+
+**Link**: [PDF](https://arxiv.org/pdf/2509.25992)  
+
+**Abstract**: Mental health forums offer valuable insights into psychological issues, stressors, and potential solutions. We propose MHINDR, a large language model (LLM) based framework integrated with DSM-5 criteria to analyze user-generated text, dignose mental health conditions, and generate personalized interventions and insights for mental health practitioners. Our approach emphasizes on the extraction of temporal information for accurate diagnosis and symptom progression tracking, together with psychological features to create comprehensive mental health summaries of users. The framework delivers scalable, customizable, and data-driven therapeutic recommendations, adaptable to diverse clinical contexts, patient needs, and workplace well-being programs. 
+
+---
+# DeepCodeSeek: Real-Time API Retrieval for Context-Aware Code Generation 
+
+**Authors**: Esakkivel Esakkiraja, Denis Akhiyarov, Aditya Shanmugham, Chitra Ganapathy  
+
+**Link**: [PDF](https://arxiv.org/pdf/2509.25716)  
+
+**Abstract**: Current search techniques are limited to standard RAG query-document applications. In this paper, we propose a novel technique to expand the code and index for predicting the required APIs, directly enabling high-quality, end-to-end code generation for auto-completion and agentic AI applications. We address the problem of API leaks in current code-to-code benchmark datasets by introducing a new dataset built from real-world ServiceNow Script Includes that capture the challenge of unclear API usage intent in the code. Our evaluation metrics show that this method achieves 87.86% top-40 retrieval accuracy, allowing the critical context with APIs needed for successful downstream code generation. To enable real-time predictions, we develop a comprehensive post-training pipeline that optimizes a compact 0.6B reranker through synthetic dataset generation, supervised fine-tuning, and reinforcement learning. This approach enables our compact reranker to outperform a much larger 8B model while maintaining 2.5x reduced latency, effectively addressing the nuances of enterprise-specific code without the computational overhead of larger models. 
+
+---
+# Causal Autoencoder-like Generation of Feedback Fuzzy Cognitive Maps with an LLM Agent 
+
+**Authors**: Akash Kumar Panda, Olaoluwa Adigun, Bart Kosko  
+
+**Link**: [PDF](https://arxiv.org/pdf/2509.25593)  
+
+**Abstract**: A large language model (LLM) can map a feedback causal fuzzy cognitive map (FCM) into text and then reconstruct the FCM from the text. This explainable AI system approximates an identity map from the FCM to itself and resembles the operation of an autoencoder (AE). Both the encoder and the decoder explain their decisions in contrast to black-box AEs. Humans can read and interpret the encoded text in contrast to the hidden variables and synaptic webs in AEs. The LLM agent approximates the identity map through a sequence of system instructions that does not compare the output to the input. The reconstruction is lossy because it removes weak causal edges or rules while it preserves strong causal edges. The encoder preserves the strong causal edges even when it trades off some details about the FCM to make the text sound more natural. 
+
+---
+# Scalable Disk-Based Approximate Nearest Neighbor Search with Page-Aligned Graph 
+
+**Authors**: Dingyi Kang, Dongming Jiang, Hanshen Yang, Hang Liu, Bingzhe Li  
+
+**Link**: [PDF](https://arxiv.org/pdf/2509.25487)  
+
+**Abstract**: Approximate Nearest Neighbor Search (ANNS), as the core of vector databases (VectorDBs), has become widely used in modern AI and ML systems, powering applications from information retrieval to bio-informatics. While graph-based ANNS methods achieve high query efficiency, their scalability is constrained by the available host memory. Recent disk-based ANNS approaches mitigate memory usage by offloading data to Solid-State Drives (SSDs). However, they still suffer from issues such as long I/O traversal path, misalignment with storage I/O granularity, and high in-memory indexing overhead, leading to significant I/O latency and ultimately limiting scalability for large-scale vector search.
+In this paper, we propose PageANN, a disk-based approximate nearest neighbor search (ANNS) framework designed for high performance and scalability. PageANN introduces a page-node graph structure that aligns logical graph nodes with physical SSD pages, thereby shortening I/O traversal paths and reducing I/O operations. Specifically, similar vectors are clustered into page nodes, and a co-designed disk data layout leverages this structure with a merging technique to store only representative vectors and topology information, avoiding unnecessary reads. To further improve efficiency, we design a memory management strategy that combines lightweight indexing with coordinated memory-disk data allocation, maximizing host memory utilization while minimizing query latency and storage overhead. Experimental results show that PageANN significantly outperforms state-of-the-art (SOTA) disk-based ANNS methods, achieving 1.85x-10.83x higher throughput and 51.7%-91.9% lower latency across different datasets and memory budgets, while maintaining comparable high recall accuracy. 
+
+---
+# RANGER -- Repository-Level Agent for Graph-Enhanced Retrieval 
+
+**Authors**: Pratik Shah, Rajat Ghosh, Aryan Singhal, Debojyoti Dutta  
+
+**Link**: [PDF](https://arxiv.org/pdf/2509.25257)  
+
+**Abstract**: General-purpose automated software engineering (ASE) includes tasks such as code completion, retrieval, repair, QA, and summarization. These tasks require a code retrieval system that can handle specific queries about code entities, or code entity queries (for example, locating a specific class or retrieving the dependencies of a function), as well as general queries without explicit code entities, or natural language queries (for example, describing a task and retrieving the corresponding code). We present RANGER, a repository-level code retrieval agent designed to address both query types, filling a gap in recent works that have focused primarily on code-entity queries. We first present a tool that constructs a comprehensive knowledge graph of the entire repository, capturing hierarchical and cross-file dependencies down to the variable level, and augments graph nodes with textual descriptions and embeddings to bridge the gap between code and natural language. RANGER then operates on this graph through a dual-stage retrieval pipeline. Entity-based queries are answered through fast Cypher lookups, while natural language queries are handled by MCTS-guided graph exploration. We evaluate RANGER across four diverse benchmarks that represent core ASE tasks including code search, question answering, cross-file dependency retrieval, and repository-level code completion. On CodeSearchNet and RepoQA it outperforms retrieval baselines that use embeddings from strong models such as Qwen3-8B. On RepoBench, it achieves superior cross-file dependency retrieval over baselines, and on CrossCodeEval, pairing RANGER with BM25 delivers the highest exact match rate in code completion compared to other RAG methods. 
+
+---
