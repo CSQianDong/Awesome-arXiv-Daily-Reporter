@@ -1,0 +1,119 @@
+# ModernVBERT: Towards Smaller Visual Document Retrievers 
+
+**Authors**: Paul Teiletche, Quentin Macé, Max Conti, Antonio Loison, Gautier Viaud, Pierre Colombo, Manuel Faysse  
+
+**Link**: [PDF](https://arxiv.org/pdf/2510.01149)  
+
+**Abstract**: Multimodal embedding models are gaining prevalence, notably for document retrieval as efficient alternatives to text-only pipelines. These models are typically built by finetuning large vision-language decoders (VLMs) with contrastive losses on text-image pairs. In this work, we show that, while cost-efficient, this repurposing approach often bottlenecks retrieval performance. Through controlled experiments, we establish a principled recipe for improving visual document retrieval models. We notably measure the impact of attention masking, image resolution, modality alignment data regimes, and late interaction centered contrastive objectives which emerge as central performance factors. Building on these insights, we release ModernVBERT, a compact 250M-parameter vision-language encoder that outperforms models up to 10 times larger when finetuned on document retrieval tasks. Models and code are made available at this https URL. 
+
+---
+# Deep Learning-Based Approach for Improving Relational Aggregated Search 
+
+**Authors**: Sara Saad Soliman, Ahmed Younes, Islam Elkabani, Ashraf Elsayed  
+
+**Link**: [PDF](https://arxiv.org/pdf/2510.00966)  
+
+**Abstract**: Due to an information explosion on the internet, there is a need for the development of aggregated search systems that can boost the retrieval and management of content in various formats. To further improve the clustering of Arabic text data in aggregated search environments, this research investigates the application of advanced natural language processing techniques, namely stacked autoencoders and AraBERT embeddings. By transcending the limitations of traditional search engines, which are imprecise, not contextually relevant, and not personalized, we offer more enriched, context-aware characterizations of search results, so we used a K-means clustering algorithm to discover distinctive features and relationships in these results, we then used our approach on different Arabic queries to evaluate its effectiveness. Our model illustrates that using stacked autoencoders in representation learning suits clustering tasks and can significantly improve clustering search results. It also demonstrates improved accuracy and relevance of search results. 
+
+---
+# Bridging Language Gaps: Advances in Cross-Lingual Information Retrieval with Multilingual LLMs 
+
+**Authors**: Roksana Goworek, Olivia Macmillan-Scott, Eda B. Özyiğit  
+
+**Link**: [PDF](https://arxiv.org/pdf/2510.00908)  
+
+**Abstract**: Cross-lingual information retrieval (CLIR) addresses the challenge of retrieving relevant documents written in languages different from that of the original query. Research in this area has typically framed the task as monolingual retrieval augmented by translation, treating retrieval methods and cross-lingual capabilities in isolation. Both monolingual and cross-lingual retrieval usually follow a pipeline of query expansion, ranking, re-ranking and, increasingly, question answering. Recent advances, however, have shifted from translation-based methods toward embedding-based approaches and leverage multilingual large language models (LLMs), for which aligning representations across languages remains a central challenge. The emergence of cross-lingual embeddings and multilingual LLMs has introduced a new paradigm, offering improved retrieval performance and enabling answer generation. This survey provides a comprehensive overview of developments from early translation-based methods to state-of-the-art embedding-driven and generative techniques. It presents a structured account of core CLIR components, evaluation practices, and available resources. Persistent challenges such as data imbalance and linguistic variation are identified, while promising directions are suggested for advancing equitable and effective cross-lingual information retrieval. By situating CLIR within the broader landscape of information retrieval and multilingual language processing, this work not only reviews current capabilities but also outlines future directions for building retrieval systems that are robust, inclusive, and adaptable. 
+
+---
+# On Listwise Reranking for Corpus Feedback 
+
+**Authors**: Soyoung Yoon, Jongho Kim, Daeyong Kwon, Avishek Anand, Seung-won Hwang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2510.00887)  
+
+**Abstract**: Reranker improves retrieval performance by capturing document interactions. At one extreme, graph-aware adaptive retrieval (GAR) represents an information-rich regime, requiring a pre-computed document similarity graph in reranking. However, as such graphs are often unavailable, or incur quadratic memory costs even when available, graph-free rerankers leverage large language model (LLM) calls to achieve competitive performance. We introduce L2G, a novel framework that implicitly induces document graphs from listwise reranker logs. By converting reranker signals into a graph structure, L2G enables scalable graph-based retrieval without the overhead of explicit graph computation. Results on the TREC-DL and BEIR subset show that L2G matches the effectiveness of oracle-based graph methods, while incurring zero additional LLM calls. 
+
+---
+# Milco: Learned Sparse Retrieval Across Languages via a Multilingual Connector 
+
+**Authors**: Thong Nguyen, Yibin Lei, Jia-Huei Ju, Eugene Yang, Andrew Yates  
+
+**Link**: [PDF](https://arxiv.org/pdf/2510.00671)  
+
+**Abstract**: Learned Sparse Retrieval (LSR) combines the efficiency of bi-encoders with the transparency of lexical matching, but existing approaches struggle to scale beyond English. We introduce MILCO, an LSR architecture that maps queries and documents from different languages into a shared English lexical space via a multilingual connector. MILCO is trained with a specialized two-stage regime that combines Sparse Alignment Pretraining with contrastive training to provide representation transparency and effectiveness while mitigating semantic collapse. Motivated by the observation that uncommon entities are often lost when projected into English, we propose a new LexEcho head, which enhances robustness by augmenting the English lexical representation with a source-language view obtained through a special [ECHO] token. MILCO achieves state-of-the-art multilingual and cross-lingual LSR performance, outperforming leading dense, sparse, and multi-vector baselines such as BGE-M3 and Qwen3-Embed on standard multilingual benchmarks, while supporting dynamic efficiency through post-hoc pruning. Notably, when using mass-based pruning to reduce document representations to only 30 active dimensions on average, MILCO 560M outperforms the similarly-sized Qwen3-Embed 0.6B with 1024 dimensions. 
+
+---
+# Privacy-Preserving Learning-Augmented Data Structures 
+
+**Authors**: Prabhav Goyal, Vinesh Sridhar, Wilson Zheng  
+
+**Link**: [PDF](https://arxiv.org/pdf/2510.00165)  
+
+**Abstract**: Learning-augmented data structures use predicted frequency estimates to retrieve frequently occurring database elements faster than standard data structures. Recent work has developed data structures that optimally exploit these frequency estimates while maintaining robustness to adversarial prediction errors. However, the privacy and security implications of this setting remain largely unexplored.
+In the event of a security breach, data structures should reveal minimal information beyond their current contents. This is even more crucial for learning-augmented data structures, whose layout adapts to the data. A data structure is history independent if its memory representation reveals no information about past operations except what is inferred from its current contents. In this work, we take the first step towards privacy and security guarantees in this setting by proposing the first learning-augmented data structure that is strongly history independent, robust, and supports dynamic updates.
+To achieve this, we introduce two techniques: thresholding, which automatically makes any learning-augmented data structure robust, and pairing, a simple technique that provides strong history independence in the dynamic setting. Our experimental results demonstrate a tradeoff between security and efficiency but are still competitive with the state of the art. 
+
+---
+# HLTCOE at TREC 2024 NeuCLIR Track 
+
+**Authors**: Eugene Yang, Dawn Lawrie, Orion Weller, James Mayfield  
+
+**Link**: [PDF](https://arxiv.org/pdf/2510.00143)  
+
+**Abstract**: The HLTCOE team applied PLAID, an mT5 reranker, GPT-4 reranker, score fusion, and document translation to the TREC 2024 NeuCLIR track. For PLAID we included a variety of models and training techniques -- Translate Distill (TD), Generate Distill (GD) and multi-lingual translate-distill (MTD). TD uses scores from the mT5 model over English MS MARCO query-document pairs to learn how to score query-document pairs where the documents are translated to match the CLIR setting. GD follows TD but uses passages from the collection and queries generated by an LLM for training examples. MTD uses MS MARCO translated into multiple languages, allowing experiments on how to batch the data during training. Finally, for report generation we experimented with system combination over different runs. One family of systems used either GPT-4o or Claude-3.5-Sonnet to summarize the retrieved results from a series of decomposed sub-questions. Another system took the output from those two models and verified/combined them with Claude-3.5-Sonnet. The other family used GPT4o and GPT3.5Turbo to extract and group relevant facts from the retrieved documents based on the decomposed queries. The resulting submissions directly concatenate the grouped facts to form the report and their documents of origin as the citations. The team submitted runs to all NeuCLIR tasks: CLIR and MLIR news tasks as well as the technical documents task and the report generation task. 
+
+---
+# Optimizing What Matters: AUC-Driven Learning for Robust Neural Retrieval 
+
+**Authors**: Nima Sheikholeslami, Erfan Hosseini, Patrice Bechard, Srivatsava Daruru, Sai Rajeswar  
+
+**Link**: [PDF](https://arxiv.org/pdf/2510.00137)  
+
+**Abstract**: Dual-encoder retrievers depend on the principle that relevant documents should score higher than irrelevant ones for a given query. Yet the dominant Noise Contrastive Estimation (NCE) objective, which underpins Contrastive Loss, optimizes a softened ranking surrogate that we rigorously prove is fundamentally oblivious to score separation quality and unrelated to AUC. This mismatch leads to poor calibration and suboptimal performance in downstream tasks like retrieval-augmented generation (RAG). To address this fundamental limitation, we introduce the MW loss, a new training objective that maximizes the Mann-Whitney U statistic, which is mathematically equivalent to the Area under the ROC Curve (AUC). MW loss encourages each positive-negative pair to be correctly ranked by minimizing binary cross entropy over score differences. We provide theoretical guarantees that MW loss directly upper-bounds the AoC, better aligning optimization with retrieval goals. We further promote ROC curves and AUC as natural threshold free diagnostics for evaluating retriever calibration and ranking quality. Empirically, retrievers trained with MW loss consistently outperform contrastive counterparts in AUC and standard retrieval metrics. Our experiments show that MW loss is an empirically superior alternative to Contrastive Loss, yielding better-calibrated and more discriminative retrievers for high-stakes applications like RAG. 
+
+---
+# Erase to Improve: Erasable Reinforcement Learning for Search-Augmented LLMs 
+
+**Authors**: Ziliang Wang, Kang An, Xuhui Zheng, Faqiang Qian, Weikun Zhang, Cijun Ouyang, Jialu Cai, Yuhang Wang, Yichao Wu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2510.00861)  
+
+**Abstract**: While search-augmented large language models (LLMs) exhibit impressive capabilities, their reliability in complex multi-hop reasoning remains limited. This limitation arises from three fundamental challenges: decomposition errors, where tasks are incorrectly broken down; retrieval missing, where key evidence fails to be retrieved; and reasoning errors, where flawed logic propagates through the reasoning chain. A single failure in any of these stages can derail the final answer. We propose Erasable Reinforcement Learning (ERL), a novel framework that transforms fragile reasoning into a robust process. ERL explicitly identifies faulty steps, erases them, and regenerates reasoning in place, preventing defective logic from propagating through the reasoning chain. This targeted correction mechanism turns brittle reasoning into a more resilient process. Models trained with ERL, termed ESearch, achieve substantial improvements on HotpotQA, MuSiQue, 2Wiki, and Bamboogle, with the 3B model achieving +8.48% EM and +11.56% F1, and the 7B model achieving +5.38% EM and +7.22% F1 over previous state-of-the-art(SOTA) results. These findings suggest that erasable reinforcement learning provides a powerful paradigm shift for robust multi-step reasoning in LLMs. 
+
+---
+# AttentionDep: Domain-Aware Attention for Explainable Depression Severity Assessment 
+
+**Authors**: Yusif Ibrahimov, Tarique Anwar, Tommy Yuan, Turan Mutallimov, Elgun Hasanov  
+
+**Link**: [PDF](https://arxiv.org/pdf/2510.00706)  
+
+**Abstract**: In today's interconnected society, social media platforms provide a window into individuals' thoughts, emotions, and mental states. This paper explores the use of platforms like Facebook, X (formerly Twitter), and Reddit for depression severity detection. We propose AttentionDep, a domain-aware attention model that drives explainable depression severity estimation by fusing contextual and domain knowledge. Posts are encoded hierarchically using unigrams and bigrams, with attention mechanisms highlighting clinically relevant tokens. Domain knowledge from a curated mental health knowledge graph is incorporated through a cross-attention mechanism, enriching the contextual features. Finally, depression severity is predicted using an ordinal regression framework that respects the clinical-relevance and natural ordering of severity levels. Our experiments demonstrate that AttentionDep outperforms state-of-the-art baselines by over 5% in graded F1 score across datasets, while providing interpretable insights into its predictions. This work advances the development of trustworthy and transparent AI systems for mental health assessment from social media. 
+
+---
+# ALARB: An Arabic Legal Argument Reasoning Benchmark 
+
+**Authors**: Harethah Abu Shairah, Somayah AlHarbi, Abdulaziz AlHussein, Sameer Alsabea, Omar Shaqaqi, Hebah AlShamlan, Omar Knio, George Turkiyyah  
+
+**Link**: [PDF](https://arxiv.org/pdf/2510.00694)  
+
+**Abstract**: We introduce ALARB, a dataset and suite of tasks designed to evaluate the reasoning capabilities of large language models (LLMs) within the Arabic legal domain. While existing Arabic benchmarks cover some knowledge-intensive tasks such as retrieval and understanding, substantial datasets focusing specifically on multistep reasoning for Arabic LLMs, especially in open-ended contexts, are lacking. The dataset comprises over 13K commercial court cases from Saudi Arabia, with each case including the facts presented, the reasoning of the court, the verdict, as well as the cited clauses extracted from the regulatory documents. We define a set of challenging tasks leveraging this dataset and reflecting the complexity of real-world legal reasoning, including verdict prediction, completion of reasoning chains in multistep legal arguments, and identification of relevant regulations based on case facts. We benchmark a representative selection of current open and closed Arabic LLMs on these tasks and demonstrate the dataset's utility for instruction tuning. Notably, we show that instruction-tuning a modest 12B parameter model using ALARB significantly enhances its performance in verdict prediction and Arabic verdict generation, reaching a level comparable to that of GPT-4o. 
+
+---
+# Which Programming Language and Model Work Best With LLM-as-a-Judge For Code Retrieval? 
+
+**Authors**: Lucas Roberts, Denisa Roberts  
+
+**Link**: [PDF](https://arxiv.org/pdf/2510.00324)  
+
+**Abstract**: Code search is an important information retrieval application. Benefits of better code search include faster new developer on-boarding, reduced software maintenance, and ease of understanding for large repositories. Despite improvements in search algorithms and search benchmarks, the domain of code search has lagged behind. One reason is the high cost of human annotation for code queries and answers. While humans may annotate search results in general text QA systems, code annotations require specialized knowledge of a programming language (PL), as well as domain specific software engineering knowledge. In this work we study the use of Large Language Models (LLMs) to retrieve code at the level of functions and to generate annotations for code search results. We compare the impact of the retriever representation (sparse vs. semantic), programming language, and LLM by comparing human annotations across several popular languages (C, Java, Javascript, Go, and Python). We focus on repositories that implement common data structures likely to be implemented in any PLs. For the same human annotations, we compare several LLM-as-a-Judge models to evaluate programming language and other affinities between LLMs. We find that the chosen retriever and PL exhibit affinities that can be leveraged to improve alignment of human and AI relevance determinations, with significant performance implications. We also find differences in representation (sparse vs. semantic) across PLs that impact alignment of human and AI relevance determinations. We propose using transpilers to bootstrap scalable code search benchmark datasets in other PLs and in a case study demonstrate that human-AI relevance agreement rates largely match the (worst case) human-human agreement under study. The application code used in this work is available at \href{this https URL}{this github repo}. 
+
+---
+# AutoPK: Leveraging LLMs and a Hybrid Similarity Metric for Advanced Retrieval of Pharmacokinetic Data from Complex Tables and Documents 
+
+**Authors**: Hossein Sholehrasa, Amirhossein Ghanaatian, Doina Caragea, Lisa A. Tell, Jim E. Riviere, Majid Jaberi-Douraki  
+
+**Link**: [PDF](https://arxiv.org/pdf/2510.00039)  
+
+**Abstract**: Pharmacokinetics (PK) plays a critical role in drug development and regulatory decision-making for human and veterinary medicine, directly affecting public health through drug safety and efficacy assessments. However, PK data are often embedded in complex, heterogeneous tables with variable structures and inconsistent terminologies, posing significant challenges for automated PK data retrieval and standardization. AutoPK, a novel two-stage framework for accurate and scalable extraction of PK data from complex scientific tables. In the first stage, AutoPK identifies and extracts PK parameter variants using large language models (LLMs), a hybrid similarity metric, and LLM-based validation. The second stage filters relevant rows, converts the table into a key-value text format, and uses an LLM to reconstruct a standardized table. Evaluated on a real-world dataset of 605 PK tables, including captions and footnotes, AutoPK shows significant improvements in precision and recall over direct LLM baselines. For instance, AutoPK with LLaMA 3.1-70B achieved an F1-score of 0.92 on half-life and 0.91 on clearance parameters, outperforming direct use of LLaMA 3.1-70B by margins of 0.10 and 0.21, respectively. Smaller models such as Gemma 3-27B and Phi 3-12B with AutoPK achieved 2-7 fold F1 gains over their direct use, with Gemma's hallucination rates reduced from 60-95% down to 8-14%. Notably, AutoPK enabled open-source models like Gemma 3-27B to outperform commercial systems such as GPT-4o Mini on several PK parameters. AutoPK enables scalable and high-confidence PK data extraction, making it well-suited for critical applications in veterinary pharmacology, drug safety monitoring, and public health decision-making, while addressing heterogeneous table structures and terminology and demonstrating generalizability across key PK parameters. Code and data: this https URL 
+
+---
