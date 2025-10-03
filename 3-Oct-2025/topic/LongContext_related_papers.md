@@ -1,0 +1,45 @@
+# RAG-BioQA Retrieval-Augmented Generation for Long-Form Biomedical Question Answering 
+
+**Authors**: Lovely Yeswanth Panchumarthi, Sai Prasad Gudari, Atharva Negi, Praveen Raj Budime, Harsit Upadhya  
+
+**Link**: [PDF](https://arxiv.org/pdf/2510.01612)  
+
+**Abstract**: The exponential growth of biomedical literature creates significant challenges for accessing precise medical information. Current biomedical question-answering systems primarily focus on short-form answers, failing to provide the comprehensive explanations necessary for clinical decision-making. We present RAG-BioQA, a novel framework combining retrieval-augmented generation with domain-specific fine-tuning to produce evidence-based, long-form biomedical answers. Our approach integrates BioBERT embeddings with FAISS indexing and compares various re-ranking strategies (BM25, ColBERT, MonoT5) to optimize context selection before synthesizing evidence through a fine-tuned T5 model. Experimental results on the PubMedQA dataset show significant improvements over baselines, with our best model achieving substantial gains across BLEU, ROUGE, and METEOR metrics, advancing the state of accessible, evidence-based biomedical knowledge retrieval. 
+
+---
+# ReSSFormer: A Recursive Sparse Structured Transformer for Scalable and Long-Context Reasoning 
+
+**Authors**: Haochen You, Baojing Liu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2510.01585)  
+
+**Abstract**: While Transformer architectures have demonstrated impressive scalability across domains, they continue to face challenges in long-context reasoning, computational efficiency, and structural generalization - largely due to rigid layer stacking, dense attention, and reliance on positional encodings. We present ReSSFormer, a Recursive Sparse Structured Transformer that integrates three complementary innovations: Recurrent Reasoning & Memory Unit (R2MU) for iterative reasoning with bounded depth, Adaptive Sparse Attention Module (ASAM) for efficient and focused context selection, and Self-Organizing Encoder Structure (SOES) for position-free structure induction. ReSSFormer replaces conventional depth stacking with recurrent inference, substitutes full attention with token- and expert-level sparsity, and models latent token topology directly from content. Across language modeling, multi-hop QA, and structure-sensitive tasks, ReSSFormer consistently outperforms strong baselines under comparable FLOPs and parameter budgets, highlighting its scalability, efficiency, and structural flexibility. 
+
+---
+# Sparse Query Attention (SQA): A Computationally Efficient Attention Mechanism with Query Heads Reduction 
+
+**Authors**: Adam Filipek  
+
+**Link**: [PDF](https://arxiv.org/pdf/2510.01817)  
+
+**Abstract**: The Transformer architecture, underpinned by the Multi-Head Attention (MHA) mechanism, has become the de facto standard for state-of-the-art models in artificial intelligence. However, the quadratic computational complexity of MHA with respect to sequence length presents a significant barrier to scaling, particularly for applications involving long contexts. Prevailing solutions, such as Multi-Query Attention (MQA) and Grouped-Query Attention (GQA), have effectively addressed the memory bandwidth bottleneck that dominates autoregressive inference latency by sharing Key and Value projections. While highly successful, these methods do not reduce the fundamental number of floating-point operations (FLOPs) required for the attention score computation, which remains a critical bottleneck for training and full-sequence processing. This paper introduces Sparse Query Attention (SQA), a novel attention architecture that pursues an alternative and complementary optimization path. Instead of reducing Key/Value heads, SQA reduces the number of Query heads. This architectural modification directly decreases the computational complexity of the attention mechanism by a factor proportional to the reduction in query heads, thereby lowering the overall FLOPs. This work presents the theoretical foundation of SQA, its mathematical formulation, and a family of architectural variants. Empirical benchmarks on long sequences (32k-200k tokens) demonstrate that SQA can achieve significant throughput improvements of up to 3x in computation-bound scenarios such as model pre-training, fine-tuning, and encoder-based tasks, with only a minimal impact on model quality in preliminary smallscale experiments. SQA was discovered serendipitously during the development of the upcoming Reactive Transformer architecture, suggesting its potential as a powerful tool for building more efficient and scalable models 
+
+---
+# Pack and Force Your Memory: Long-form and Consistent Video Generation 
+
+**Authors**: Xiaofei Wu, Guozhen Zhang, Zhiyong Xu, Yuan Zhou, Qinglin Lu, Xuming He  
+
+**Link**: [PDF](https://arxiv.org/pdf/2510.01784)  
+
+**Abstract**: Long-form video generation presents a dual challenge: models must capture long-range dependencies while preventing the error accumulation inherent in autoregressive decoding. To address these challenges, we make two contributions. First, for dynamic context modeling, we propose MemoryPack, a learnable context-retrieval mechanism that leverages both textual and image information as global guidance to jointly model short- and long-term dependencies, achieving minute-level temporal consistency. This design scales gracefully with video length, preserves computational efficiency, and maintains linear complexity. Second, to mitigate error accumulation, we introduce Direct Forcing, an efficient single-step approximating strategy that improves training-inference alignment and thereby curtails error propagation during inference. Together, MemoryPack and Direct Forcing substantially enhance the context consistency and reliability of long-form video generation, advancing the practical usability of autoregressive video models. 
+
+---
+# Think Right: Learning to Mitigate Under-Over Thinking via Adaptive, Attentive Compression 
+
+**Authors**: Joykirat Singh, Justin Chih-Yao Chen, Archiki Prasad, Elias Stengel-Eskin, Akshay Nambi, Mohit Bansal  
+
+**Link**: [PDF](https://arxiv.org/pdf/2510.01581)  
+
+**Abstract**: Recent thinking models solve complex reasoning tasks by scaling test-time compute, but this scaling must be allocated in line with task difficulty. On one hand, short reasoning (underthinking) leads to errors on harder problems that require extended reasoning steps; but, excessively long reasoning (overthinking) can be token-inefficient, generating unnecessary steps even after reaching a correct intermediate solution. We refer to this as under-adaptivity, where the model fails to modulate its response length appropriately given problems of varying difficulty. To address under-adaptivity and strike a balance between under- and overthinking, we propose TRAAC (Think Right with Adaptive, Attentive Compression), an online post-training RL method that leverages the model's self-attention over a long reasoning trajectory to identify important steps and prune redundant ones. TRAAC also estimates difficulty and incorporates it into training rewards, thereby learning to allocate reasoning budget commensurate with example difficulty. Our approach improves accuracy, reduces reasoning steps, and enables adaptive thinking compared to base models and other RL baselines. Across a variety of tasks (AIME, AMC, GPQA-D, BBEH), TRAAC (Qwen3-4B) achieves an average absolute accuracy gain of 8.4% with a relative reduction in reasoning length of 36.8% compared to the base model, and a 7.9% accuracy gain paired with a 29.4% length drop compared to the best RL baseline. TRAAC also shows strong generalization: although our models are trained on math datasets, they show accuracy and efficiency gains on out-of-distribution non-math datasets like GPQA-D, BBEH, and OptimalThinkingBench. Our analysis further verifies that TRAAC provides fine-grained adjustments to thinking budget based on difficulty and that a combination of task-difficulty calibration and attention-based compression yields gains across diverse tasks. 
+
+---
