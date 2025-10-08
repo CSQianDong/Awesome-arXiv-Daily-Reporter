@@ -1,0 +1,217 @@
+# TaTToo: Tool-Grounded Thinking PRM for Test-Time Scaling in Tabular Reasoning 
+
+**Authors**: Jiaru Zou, Soumya Roy, Vinay Kumar Verma, Ziyi Wang, David Wipf, Pan Lu, Sumit Negi, James Zou, Jingrui He  
+
+**Link**: [PDF](https://arxiv.org/pdf/2510.06217)  
+
+**Abstract**: Process Reward Models (PRMs) have recently emerged as a powerful framework for enhancing the reasoning capabilities of large reasoning models (LRMs), particularly in the context of test-time scaling (TTS). However, their potential for supervising LRMs on tabular reasoning domains remains underexplored. Through detailed empirical analyses, we identify that existing PRMs, though widely adopted for supervising text-only reasoning steps, struggle with table-specific operations such as sub-table retrieval and schema interaction, leading to critical performance bottlenecks. To address this limitation, we propose TaTToo, a novel table-grounded PRM framework that (i) reasons explicitly over tabular reasoning steps and (ii) integrates tool-based verification to provide precise reward supervision. Concretely, we first design a scalable data curation pipeline that constructs over 60k high-quality step-level annotations by integrating table verification rationales with tool-based executions. Building on the collected data, we train TaTToo with a dual-stage paradigm: cold-start supervised fine-tuning to capture tool-use reasoning patterns, followed by reinforcement learning with tool-grounded reward shaping to align our model with table-based verification. We provide a comprehensive evaluation of the policy improvement induced by our newly designed PRM. Across 5 challenging tabular reasoning benchmarks covering numerical reasoning, fact-checking, and data analysis, TaTToo improves downstream policy LRMs by 30.9% at inference, surpasses strong PRM baselines such as Qwen-2.5-Math-PRM-72B with only 8B parameters, and demonstrates strong generalizability across diverse TTS strategies. 
+
+---
+# Refusal Falls off a Cliff: How Safety Alignment Fails in Reasoning? 
+
+**Authors**: Qingyu Yin, Chak Tou Leong, Linyi Yang, Wenxuan Huang, Wenjie Li, Xiting Wang, Jaehong Yoon, YunXing, XingYu, Jinjin Gu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2510.06036)  
+
+**Abstract**: Large reasoning models (LRMs) with multi-step reasoning capabilities have shown remarkable problem-solving abilities, yet they exhibit concerning safety vulnerabilities that remain poorly understood. In this work, we investigate why safety alignment fails in reasoning models through a mechanistic interpretability lens. Using a linear probing approach to trace refusal intentions across token positions, we discover a striking phenomenon termed as \textbf{refusal cliff}: many poorly-aligned reasoning models correctly identify harmful prompts and maintain strong refusal intentions during their thinking process, but experience a sharp drop in refusal scores at the final tokens before output generation. This suggests that these models are not inherently unsafe; rather, their refusal intentions are systematically suppressed. Through causal intervention analysis, we identify a sparse set of attention heads that negatively contribute to refusal behavior. Ablating just 3\% of these heads can reduce attack success rates below 10\%. Building on these mechanistic insights, we propose \textbf{Cliff-as-a-Judge}, a novel data selection method that identifies training examples exhibiting the largest refusal cliff to efficiently repair reasoning models' safety alignment. This approach achieves comparable safety improvements using only 1.7\% of the vanilla safety training data, demonstrating a less-is-more effect in safety alignment. 
+
+---
+# Optimizing for Persuasion Improves LLM Generalization: Evidence from Quality-Diversity Evolution of Debate Strategies 
+
+**Authors**: Aksel Joonas Reedi, Corentin Léger, Julien Pourcel, Loris Gaven, Perrine Charriau, Guillaume Pourcel  
+
+**Link**: [PDF](https://arxiv.org/pdf/2510.05909)  
+
+**Abstract**: Large Language Models (LLMs) optimized to output truthful answers often overfit, producing brittle reasoning that fails to generalize. While persuasion-based optimization has shown promise in debate settings, it has not been systematically compared against mainstream truth-based approaches. We introduce DebateQD, a minimal Quality-Diversity (QD) evolutionary algorithm that evolves diverse debate strategies across different categories (rationality, authority, emotional appeal, etc.) through tournament-style competitions where two LLMs debate while a third judges. Unlike previously proposed methods that require a population of LLMs, our approach maintains diversity of opponents through prompt-based strategies within a single LLM architecture, making it more accessible for experiments while preserving the key benefits of population-based optimization. In contrast to prior work, we explicitly isolate the role of the optimization objective by fixing the debate protocol and swapping only the fitness function: persuasion rewards strategies that convince the judge irrespective of truth, whereas truth rewards collaborative correctness. Across three model scales (7B, 32B, 72B parameters) and multiple dataset sizes from the QuALITY benchmark, persuasion-optimized strategies achieve up to 13.94% smaller train-test generalization gaps, while matching or exceeding truth optimization's test performance. These results provide the first controlled evidence that competitive pressure to persuade, rather than seek the truth collaboratively, fosters more transferable reasoning skills, offering a promising path for improving LLM generalization. 
+
+---
+# Beyond Monolithic Rewards: A Hybrid and Multi-Aspect Reward Optimization for MLLM Alignment 
+
+**Authors**: Radha Gulhane, Sathish Reddy Indurthi  
+
+**Link**: [PDF](https://arxiv.org/pdf/2510.05283)  
+
+**Abstract**: Aligning multimodal large language models (MLLMs) with human preferences often relies on single-signal, model-based reward methods. Such monolithic rewards often lack confidence calibration across domain-specific tasks, fail to capture diverse aspects of human preferences, and require extensive data annotation and reward model training. In this work, we propose a hybrid reward modeling framework that integrates complementary reward paradigms: (i) model-based rewards, where a learned reward model predicts scalar or vector scores from synthetic and human feedback, and (ii) rule-based rewards, where domain-specific heuristics provide explicit correctness signals with confidence. Beyond accuracy, we further incorporate multi-aspect rewards to enforce instruction adherence and introduce a generalized length-penalty reward to stabilize training and improve performance. The proposed framework provides a flexible and effective approach to aligning MLLMs through reinforcement learning policy optimization. Our experiments show consistent improvements across different multimodal benchmarks when applying hybrid and multi-aspect reward modeling. Our best performing model in the 3B family achieves an overall average improvement of ~9.5% across general and math reasoning tasks. Focusing specifically on mathematical benchmarks, the model achieves a significant average improvement of ~16%, highlighting its effectiveness in mathematical reasoning and problem solving. 
+
+---
+# VideoMiner: Iteratively Grounding Key Frames of Hour-Long Videos via Tree-based Group Relative Policy Optimization 
+
+**Authors**: Xinye Cao, Hongcan Guo, Jiawen Qian, Guoshun Nan, Chao Wang, Yuqi Pan, Tianhao Hou, Xiaojuan Wang, Yutong Gao  
+
+**Link**: [PDF](https://arxiv.org/pdf/2510.06040)  
+
+**Abstract**: Understanding hour-long videos with multi-modal large language models (MM-LLMs) enriches the landscape of human-centered AI applications. However, for end-to-end video understanding with LLMs, uniformly sampling video frames results in LLMs being overwhelmed by a vast amount of irrelevant information as video length increases. Existing hierarchical key frame extraction methods improve the accuracy of video understanding but still face two critical challenges. 1) How can the interference of extensive redundant information in long videos be mitigated? 2) How can a model dynamically adapt to complex hierarchical structures while accurately identifying key frames? To address these issues, we propose VideoMiner, which iteratively segments, captions, and clusters long videos, forming a hierarchical tree structure. The proposed VideoMiner progresses from long videos to events to frames while preserving temporal coherence, effectively addressing the first challenge. To precisely locate key frames, we introduce T-GRPO, a tree-based group relative policy optimization in reinforcement learning method that guides the exploration of the VideoMiner. The proposed T-GRPO is specifically designed for tree structures, integrating spatiotemporal information at the event level while being guided by the question, thus solving the second challenge. We achieve superior performance in all long-video understanding tasks and uncover several interesting insights. Our proposed T-GRPO surprisingly incentivizes the model to spontaneously generate a reasoning chain. Additionally, the designed tree growth auxin dynamically adjusts the expansion depth, obtaining accuracy and efficiency gains. The code is publicly available at this https URL. 
+
+---
+# When Thinking Drifts: Evidential Grounding for Robust Video Reasoning 
+
+**Authors**: Mi Luo, Zihui Xue, Alex Dimakis, Kristen Grauman  
+
+**Link**: [PDF](https://arxiv.org/pdf/2510.06077)  
+
+**Abstract**: Video reasoning, the task of enabling machines to infer from dynamic visual content through multi-step logic, is crucial for advanced AI. While the Chain-of-Thought (CoT) mechanism has enhanced reasoning in text-based tasks, its application to video understanding remains underexplored. This paper presents a systematic analysis revealing that CoT often degrades performance in video reasoning, generating verbose but misleading internal monologues, and leading to hallucinated visual details and overridden correct intuitions - a phenomenon we term "visual thinking drift". We explain this drift through a Bayesian lens, positing that CoT traces often diverge from actual visual evidence, instead amplifying internal biases or language priors, causing models to storytell rather than engage in grounded reasoning. To counteract this, we introduce Visual Evidence Reward (VER), a novel reinforcement learning framework that explicitly rewards the generation of reasoning traces that are verifiably grounded in visual evidence. Comprehensive evaluation across 10 diverse video understanding benchmarks demonstrates that our Video-VER consistently achieves top performance. Our work sheds light on the distinct challenges of video-centric reasoning and encourages the development of AI that robustly grounds its inferences in visual evidence - for large multimodal models that not only "think before answering", but also "see while thinking". 
+
+---
+# Mellum: Production-Grade in-IDE Contextual Code Completion with Multi-File Project Understanding 
+
+**Authors**: Nikita Pavlichenko, Iurii Nazarov, Ivan Dolgov, Ekaterina Garanina, Dmitry Ustalov, Ivan Bondyrev, Kseniia Lysaniuk, Evgeniia Vu, Kirill Chekmenev, Joseph Shtok, Yaroslav Golubev, Anton Semenkin, Uladzislau Sazanovich  
+
+**Link**: [PDF](https://arxiv.org/pdf/2510.05788)  
+
+**Abstract**: We present the Mellum models family, open-weight code completion models designed for interactive use in JetBrains IDEs. Mellums have 4B parameters, adopt a Llama-style architecture, and are pre-trained on ~4T tokens of permissively licensed, multi-language code. Our studies show that (i) careful data curation and staged training significantly improve the model's quality, (ii) editor-critical capabilities such as context packing are necessary for high-quality suggestions, and (iii) a compact, task-focused model can meet the cost and latency constraints of interactive completion.
+In the paper, we describe an end-to-end industrial pipeline for producing contextualized in-editor completion: disciplined data governance, multi-stage training that includes fill-in-the-middle and project context via supervised fine-tuning, and alignment via direct preference optimization using feedback from real-world scenarios. Our quality evaluations include both large-scale offline benchmarks and online telemetry from production deployments in JetBrains IDEs. Mellums are released under the Apache-2.0 license on HuggingFace, with a public model card providing a reproducible reference for practitioners. Our experience offers a pragmatic blueprint for taking a focused, open model from a research prototype to at scale production for hundreds of thousands of users. 
+
+---
+# HOI-R1: Exploring the Potential of Multimodal Large Language Models for Human-Object Interaction Detection 
+
+**Authors**: Junwen Chen, Peilin Xiong, Keiji Yanai  
+
+**Link**: [PDF](https://arxiv.org/pdf/2510.05609)  
+
+**Abstract**: Recent Human-object interaction detection (HOID) methods highly require prior knowledge from VLMs to enhance the interaction recognition capabilities. The training strategies and model architectures for connecting the knowledge from VLMs to the HOI instance representations from the object detector are challenging, and the whole framework is complex for further development or application. On the other hand, the inherent reasoning abilities of MLLMs on human-object interaction detection are under-explored. Inspired by the recent success of training MLLMs with reinforcement learning (RL) methods, we propose HOI-R1 and first explore the potential of the language model on the HOID task without any additional detection modules. We introduce an HOI reasoning process and HOID reward functions to solve the HOID task by pure text. The results on the HICO-DET dataset show that HOI-R1 achieves 2x the accuracy of the baseline with great generalization ability. The source code is available at this https URL. 
+
+---
+# Improving Chain-of-Thought Efficiency for Autoregressive Image Generation 
+
+**Authors**: Zeqi Gu, Markos Georgopoulos, Xiaoliang Dai, Marjan Ghazvininejad, Chu Wang, Felix Juefei-Xu, Kunpeng Li, Yujun Shi, Zecheng He, Zijian He, Jiawei Zhou, Abe Davis, Jialiang Wang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2510.05593)  
+
+**Abstract**: Autoregressive multimodal large language models have recently gained popularity for image generation, driven by advances in foundation models. To enhance alignment and detail, newer approaches employ chain-of-thought (CoT) reasoning, expanding user inputs into elaborated prompts prior to image synthesis. However, this strategy can introduce unnecessary redundancy -- a phenomenon we call visual overthinking -- which increases computational costs and can introduce details that contradict the original prompt. In this work, we explore how to generate more concise CoT sequences for more efficient image generation. We introduce ShortCoTI, a lightweight optimization framework that encourages more concise CoT while preserving output image quality. ShortCoTI rewards more concise prompts with an adaptive function that scales according to an estimated difficulty for each task. Incorporating this reward into a reinforcement learning paradigm reduces prompt reasoning length by 54% while maintaining or slightly improving quality metrics across multiple benchmarks (T2I-CompBench, GenEval). Qualitative analysis shows that our method eliminates verbose explanations and repetitive refinements, producing reasoning prompts that are both concise and semantically rich. As a result, ShortCoTI improves computational efficiency without compromising the fidelity or visual appeal of generated images. 
+
+---
+# Provably Mitigating Corruption, Overoptimization, and Verbosity Simultaneously in Offline and Online RLHF/DPO Alignment 
+
+**Authors**: Ziyi Chen, Junyi Li, Peiran Yu, Heng Huang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2510.05526)  
+
+**Abstract**: Reinforcement learning from human feedback (RLHF) and direct preference optimization (DPO) are important techniques to align large language models (LLM) with human preference. However, the quality of RLHF and DPO training is seriously compromised by \textit{\textbf{C}orrupted} preference, reward \textit{\textbf{O}veroptimization}, and bias towards \textit{\textbf{V}erbosity}. To our knowledge, most existing works tackle only one of these important issues, and the few other works require much computation to estimate multiple reward models and lack theoretical guarantee of generalization ability. In this work, we propose RLHF-\textbf{COV} and DPO-\textbf{COV} algorithms that can simultaneously mitigate these three issues, in both offline and online settings. This ability is theoretically demonstrated by obtaining length-regularized generalization error rates for our DPO-COV algorithms trained on corrupted data, which match the best-known rates for simpler cases with clean data and without length regularization. Moreover, our DPO-COV algorithm is simple to implement without reward estimation, and is proved to be equivalent to our RLHF-COV algorithm, which directly implies the equivalence between the vanilla RLHF and DPO algorithms. Experiments demonstrate the effectiveness of our DPO-COV algorithms under both offline and online settings. 
+
+---
+# Adversarial Reinforcement Learning for Large Language Model Agent Safety 
+
+**Authors**: Zizhao Wang, Dingcheng Li, Vaishakh Keshava, Phillip Wallis, Ananth Balashankar, Peter Stone, Lukas Rutishauser  
+
+**Link**: [PDF](https://arxiv.org/pdf/2510.05442)  
+
+**Abstract**: Large Language Model (LLM) agents can leverage tools such as Google Search to complete complex tasks. However, this tool usage introduces the risk of indirect prompt injections, where malicious instructions hidden in tool outputs can manipulate the agent, posing security risks like data leakage. Current defense strategies typically rely on fine-tuning LLM agents on datasets of known attacks. However, the generation of these datasets relies on manually crafted attack patterns, which limits their diversity and leaves agents vulnerable to novel prompt injections. To address this limitation, we propose Adversarial Reinforcement Learning for Agent Safety (ARLAS), a novel framework that leverages adversarial reinforcement learning (RL) by formulating the problem as a two-player zero-sum game. ARLAS co-trains two LLMs: an attacker that learns to autonomously generate diverse prompt injections and an agent that learns to defend against them while completing its assigned tasks. To ensure robustness against a wide range of attacks and to prevent cyclic learning, we employ a population-based learning framework that trains the agent to defend against all previous attacker checkpoints. Evaluated on BrowserGym and AgentDojo, agents fine-tuned with ARLAS achieve a significantly lower attack success rate than the original model while also improving their task success rate. Our analysis further confirms that the adversarial process generates a diverse and challenging set of attacks, leading to a more robust agent compared to the base model. 
+
+---
+# Margin Adaptive DPO: Leveraging Reward Model for Granular Control in Preference Optimization 
+
+**Authors**: Hyung Gyu Rho  
+
+**Link**: [PDF](https://arxiv.org/pdf/2510.05342)  
+
+**Abstract**: Direct Preference Optimization (DPO) has emerged as a simple and effective method for aligning large language models. However, its reliance on a fixed temperature parameter leads to suboptimal training on diverse preference data, causing overfitting on easy examples and under-learning from informative ones. Recent methods have emerged to counter this. While IPO addresses general overfitting, its uniform regularization can be overly conservative. The more targeted approach of $\beta$-DPO suffers from its own limitations: its batch-level adaptation applies a single, compromised temperature to mixed-margin pairs, its linear update rule can produce unstable negative $\beta$ values, and its filtering mechanism discards potentially useful training signals. In this work, we introduce Margin-Adaptive Direct Preference Optimization (MADPO), a method that provides a stable, data-preserving, and instance-level solution. MADPO employs a practical two-step approach: it first trains a reward model to estimate preference margins and then uses these margins to apply a continuous, adaptive weight to the DPO loss for each individual training sample. This re-weighting scheme creates an effective target margin that is amplified for hard pairs and dampened for easy pairs, allowing for granular control over the learning signal. We provide a comprehensive theoretical analysis, proving that MADPO has a well-behaved optimization landscape and is robust to reward model estimation errors. We validate our theory with experiments on a sentiment generation task, where MADPO consistently and significantly outperforms strong baselines across datasets of varying quality. It achieves performance gains of up to +33.3\% on High Quality data and +10.5\% on Low Quality data over the next-best method. Our results establish MADPO as a more robust and principled approach to preference alignment. 
+
+---
+# From Poisoned to Aware: Fostering Backdoor Self-Awareness in LLMs 
+
+**Authors**: Guangyu Shen, Siyuan Cheng, Xiangzhe Xu, Yuan Zhou, Hanxi Guo, Zhuo Zhang, Xiangyu Zhang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2510.05169)  
+
+**Abstract**: Large Language Models (LLMs) can acquire deceptive behaviors through backdoor attacks, where the model executes prohibited actions whenever secret triggers appear in the input. Existing safety training methods largely fail to address this vulnerability, due to the inherent difficulty of uncovering hidden triggers implanted in the model. Motivated by recent findings on LLMs' situational awareness, we propose a novel post-training framework that cultivates self-awareness of backdoor risks and enables models to articulate implanted triggers even when they are absent from the prompt. At its core, our approach introduces an inversion-inspired reinforcement learning framework that encourages models to introspectively reason about their own behaviors and reverse-engineer the triggers responsible for misaligned outputs. Guided by curated reward signals, this process transforms a poisoned model into one capable of precisely identifying its implanted trigger. Surprisingly, we observe that such backdoor self-awareness emerges abruptly within a short training window, resembling a phase transition in capability. Building on this emergent property, we further present two complementary defense strategies for mitigating and detecting backdoor threats. Experiments on five backdoor attacks, compared against six baseline methods, demonstrate that our approach has strong potential to improve the robustness of LLMs against backdoor risks. The code is available at LLM Backdoor Self-Awareness. 
+
+---
+# CARE: Cognitive-reasoning Augmented Reinforcement for Emotional Support Conversation 
+
+**Authors**: Jie Zhu, Yuanchen Zhou, Shuo Jiang, Junhui Li, Lifan Guo, Feng Chen, Chi Zhang, Fang Kong  
+
+**Link**: [PDF](https://arxiv.org/pdf/2510.05122)  
+
+**Abstract**: Emotional Support Conversation (ESC) plays a vital role in alleviating psychological stress and providing emotional value through dialogue. While recent studies have largely focused on data augmentation and synthetic corpus construction, they often overlook the deeper cognitive reasoning processes that underpin effective emotional support. To address this gap, we propose \textbf{CARE}, a novel framework that strengthens reasoning in ESC without relying on large-scale synthetic data. CARE leverages the original ESC training set to guide models in generating logically coherent and supportive responses, thereby explicitly enhancing cognitive reasoning. Building on this foundation, we further employ reinforcement learning to refine and reinforce the reasoning process. Experimental results demonstrate that CARE significantly improves both the logical soundness and supportive quality of responses, advancing the development of empathetic, cognitively robust, and human-like emotional support systems. 
+
+---
+# Peeking inside the Black-Box: Reinforcement Learning for Explainable and Accurate Relation Extraction 
+
+**Authors**: Xinyu Guo, Zhengliang Shi, Minglai Yang, Mahdi Rahimi, Mihai Surdeanu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2510.06198)  
+
+**Abstract**: This paper introduces a framework for relation extraction (RE) that enhances both accuracy and explainability. The framework has two key components: (i) a reasoning mechanism that formulates relation extraction as a series of text-processing steps inspired by cognitive science, and (ii) an optimization process driven by reinforcement learning (RL) with a novel reward function designed to improve both task accuracy and explanation quality. We call our approach CogRE. Our framework addresses the lack of supervision for language-based explanations in traditional RE by promoting outputs that include important relation keywords. These keywords are drawn from a high-quality dictionary that is automatically constructed using an LLM. We evaluate our approach for the task of one-shot RE using two LLMs and two RE datasets. Our experiments show that CogRE improves explanation quality by addressing two common failure patterns in one-shot RE: poor attention focus and limited one-shot learning capability. For example, our cognitive-structured reasoning with Qwen2.5-15B-Instruct on One-shot NYT29 achieves 24.65% F1, surpassing prior reasoning-based designs. Optimizing this approach with RL using our reward further improves performance by +23.46% (absolute). Finally, human evaluation shows that our best model generates relational keywords closely aligned with gold labels, increasing human explanation quality ratings by 54% (relative). 
+
+---
+# ASPO: Asymmetric Importance Sampling Policy Optimization 
+
+**Authors**: Jiakang Wang, Runze Liu, Lei Lin, Wenping Hu, Xiu Li, Fuzheng Zhang, Guorui Zhou, Kun Gai  
+
+**Link**: [PDF](https://arxiv.org/pdf/2510.06062)  
+
+**Abstract**: Recent Large Language Model (LLM) post-training methods rely on token-level clipping mechanisms during Reinforcement Learning (RL). However, we identify a fundamental flaw in this Outcome-Supervised RL (OSRL) paradigm: the Importance Sampling (IS) ratios of positive-advantage tokens are mismatched, leading to unbalanced token weighting for positive and negative tokens. This mismatch suppresses the update of low-probability tokens while over-amplifying already high-probability ones. To address this, we propose Asymmetric Importance Sampling Policy Optimization (ASPO), which uses a simple yet effective strategy that flips the IS ratios of positive-advantage tokens, aligning their update direction with the learning dynamics of negative ones. AIS further incorporates a soft dual-clipping mechanism to stabilize extreme updates while maintaining gradient flow. Comprehensive experiments on coding and mathematical reasoning benchmarks demonstrate that ASPO significantly mitigates premature convergence, improves training stability, and enhances final performance over strong GRPO-based baselines. Our analysis provides new insights into the role of token-level weighting in OSRL and highlights the critical importance of correcting IS in LLM RL. The code and models of ASPO are available at this https URL. 
+
+---
+# Prompt reinforcing for long-term planning of large language models 
+
+**Authors**: Hsien-Chin Lin, Benjamin Matthias Ruppik, Carel van Niekerk, Chia-Hao Shen, Michael Heck, Nurul Lubis, Renato Vukovic, Shutong Feng, Milica Gašić  
+
+**Link**: [PDF](https://arxiv.org/pdf/2510.05921)  
+
+**Abstract**: Large language models (LLMs) have achieved remarkable success in a wide range of natural language processing tasks and can be adapted through prompting. However, they remain suboptimal in multi-turn interactions, often relying on incorrect early assumptions and failing to track user goals over time, which makes such tasks particularly challenging. Prior works in dialogue systems have shown that long-term planning is essential for handling interactive tasks. In this work, we propose a prompt optimisation framework inspired by reinforcement learning, which enables such planning to take place by only modifying the task instruction prompt of the LLM-based agent. By generating turn-by-turn feedback and leveraging experience replay for prompt rewriting, our proposed method shows significant improvement in multi-turn tasks such as text-to-SQL and task-oriented dialogue. Moreover, it generalises across different LLM-based agents and can leverage diverse LLMs as meta-prompting agents. This warrants future research in reinforcement learning-inspired parameter-free optimisation methods. 
+
+---
+# EEPO: Exploration-Enhanced Policy Optimization via Sample-Then-Forget 
+
+**Authors**: Liang Chen, Xueting Han, Qizhou Wang, Bo Han, Jing Bai, Hinrich Schutze, Kam-Fai Wong  
+
+**Link**: [PDF](https://arxiv.org/pdf/2510.05837)  
+
+**Abstract**: Balancing exploration and exploitation remains a central challenge in reinforcement learning with verifiable rewards (RLVR) for large language models (LLMs). Current RLVR methods often overemphasize exploitation, leading to entropy collapse, diminished exploratory capacity, and ultimately limited performance gains. Although techniques that increase policy stochasticity can promote exploration, they frequently fail to escape dominant behavioral modes. This creates a self-reinforcing loop-repeatedly sampling and rewarding dominant modes-that further erodes exploration. We introduce Exploration-Enhanced Policy Optimization (EEPO), a framework that promotes exploration via two-stage rollouts with adaptive unlearning. In the first stage, the model generates half of the trajectories; it then undergoes a lightweight unlearning step to temporarily suppress these sampled responses, forcing the second stage to explore different regions of the output space. This sample-then-forget mechanism disrupts the self-reinforcing loop and promotes wider exploration during rollouts. Across five reasoning benchmarks, EEPO outperforms GRPO, achieving average relative gains of 24.3% on Qwen2.5-3B, 33.0% on Llama3.2-3B-Instruct, and 10.4% on Qwen3-8B-Base. 
+
+---
+# On the Role of Difficult Prompts in Self-Play Preference Optimization 
+
+**Authors**: Yao Xiao, Jung-jae Kim, Roy Ka-wei Lee, Lidong Bing  
+
+**Link**: [PDF](https://arxiv.org/pdf/2510.05534)  
+
+**Abstract**: Self-play preference optimization has emerged as a prominent paradigm for aligning large language models (LLMs). It typically involves a language model to generate on-policy responses for prompts and a reward model (RM) to guide the selection of chosen and rejected responses, which can be further trained with direct preference optimization (DPO). However, the role of prompts remains underexplored, despite being a core component in this pipeline. In this work, we investigate how prompts of varying difficulty influence self-play preference optimization. We first use the mean reward of $N$ sampled responses of a prompt as a proxy for its difficulty. We find that difficult prompts exhibit substantially inferior self-play optimization performance in comparison to easy prompts for language models. Moreover, incorporating difficult prompts into training fails to enhance overall performance and, in fact, leads to slight degradation compared to training on easy prompts alone. We also observe that the performance gap between difficult and easy prompts closes as the model capacity increases, suggesting that difficulty interacts with the model capacity. Building on these findings, we explore strategies to mitigate the negative effect of difficult prompts on final performance. We demonstrate that selectively removing an appropriate portion of challenging prompts enhances overall self-play performance, while also reporting failed attempts and lessons learned. 
+
+---
+# Presenting a Paper is an Art: Self-Improvement Aesthetic Agents for Academic Presentations 
+
+**Authors**: Chengzhi Liu, Yuzhe Yang, Kaiwen Zhou, Zhen Zhang, Yue Fan, Yannan Xie, Peng Qi, Xin Eric Wang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2510.05571)  
+
+**Abstract**: The promotion of academic papers has become an important means of enhancing research visibility. However, existing automated methods struggle limited storytelling, insufficient aesthetic quality, and constrained self-adjustment, making it difficult to achieve efficient and engaging dissemination. At the heart of those challenges is a simple principle: \emph{there is no way to improve it when you cannot evaluate it right}. To address this, we introduce \textbf{EvoPresent}, a self-improvement agent framework that unifies coherent narratives, aesthetic-aware designs, and realistic presentation delivery via virtual characters. Central to EvoPresent is \textbf{PresAesth}, a multi-task reinforcement learning (RL) aesthetic model that provides reliable aesthetic scoring, defect adjustment, and comparative feedback, enabling iterative self-improvement even under limited aesthetic training data. To systematically evaluate the methods, we introduce \textbf{EvoPresent Benchmark}, a comprehensive benchmark comprising: \textit{Presentation Generation Quality}, built on 650 top-tier AI conference papers with multimodal resources (slides, videos and scripts) to assess both content and design; and \textit{Aesthetic Awareness}, consisting of 2,000 slide pairs with varying aesthetic levels, supporting joint training and evaluation on scoring, defect adjustment, and comparison. Our findings highlight that (i) High-quality feedback is essential for agent self-improvement, while initial capability alone does not guarantee effective self-correction. (ii) Automated generation pipelines exhibit a trade-off between visual design and content construction. (iii) Multi-task RL training shows stronger generalization in aesthetic awareness tasks. 
+
+---
+# Aligning Language Models with Clinical Expertise: DPO for Heart Failure Nursing Documentation in Critical Care 
+
+**Authors**: Junyi Fan, Li Sun, Negin Ashrafi, Kamiar Alaei, Maryam Pishgar  
+
+**Link**: [PDF](https://arxiv.org/pdf/2510.05410)  
+
+**Abstract**: Nursing documentation in intensive care units (ICUs) provides essential clinical intelligence but often suffers from inconsistent terminology, informal styles, and lack of standardization, challenges that are particularly critical in heart failure care. This study applies Direct Preference Optimization (DPO) to adapt Mistral-7B, a locally deployable language model, using 8,838 heart failure nursing notes from the MIMIC-III database and 21,210 preference pairs derived from expert-verified GPT outputs, model generations, and original notes. Evaluation across BLEU, ROUGE, BERTScore, Perplexity, and expert qualitative assessments demonstrates that DPO markedly enhances documentation quality. Specifically, BLEU increased by 84% (0.173 to 0.318), BERTScore improved by 7.6% (0.828 to 0.891), and expert ratings rose across accuracy (+14.4 points), completeness (+14.5 points), logical consistency (+14.1 points), readability (+11.1 points), and structural clarity (+6.0 points). These results indicate that DPO can align lightweight clinical language models with expert standards, supporting privacy-preserving, AI-assisted documentation within electronic health record systems to reduce administrative burden and improve ICU patient safety. 
+
+---
+# Let it Calm: Exploratory Annealed Decoding for Verifiable Reinforcement Learning 
+
+**Authors**: Chenghao Yang, Lin Gui, Chenxiao Yang, Victor Veitch, Lizhu Zhang, Zhuokai Zhao  
+
+**Link**: [PDF](https://arxiv.org/pdf/2510.05251)  
+
+**Abstract**: Reinforcement learning with verifiable rewards (RLVR) is a powerful paradigm for enhancing the reasoning capabilities of large language models (LLMs), yet its success hinges on effective exploration. An ideal exploration strategy must navigate two fundamental challenges: it must preserve sample quality while also ensuring training stability. While standard fixed-temperature sampling is simple, it struggles to balance these competing demands, as high temperatures degrade sample quality and low temperatures limit discovery. In this work, we propose a simpler and more effective strategy, Exploratory Annealed Decoding (EAD), grounded in the insight that exploration is most impactful on early tokens which define a sequence's semantic direction. EAD implements an intuitive **explore-at-the-beginning, exploit-at-the-end** strategy by annealing the sampling temperature from high to low during generation. This dynamic schedule encourages meaningful, high-level diversity at the start, then gradually lowers the temperature to preserve sample quality and keep the sampling distribution close to the target policy, which is essential for stable training. We demonstrate that EAD is a lightweight, plug-and-play method that significantly improves sample efficiency, consistently outperforming fixed-temperature sampling across various RLVR algorithms and model sizes. Our work suggests that aligning exploration with the natural dynamics of sequential generation offers a robust path to improving LLM reasoning. 
+
+---
+# Learning from Failures: Understanding LLM Alignment through Failure-Aware Inverse RL 
+
+**Authors**: Nyal Patel, Matthieu Bou, Arjun Jagota, Satyapriya Krishna, Sonali Parbhoo  
+
+**Link**: [PDF](https://arxiv.org/pdf/2510.06092)  
+
+**Abstract**: Reinforcement Learning from Human Feedback (RLHF) aligns Large Language Models (LLMs) with human preferences, yet the underlying reward signals they internalize remain hidden, posing a critical challenge for interpretability and safety. Existing approaches attempt to extract these latent incentives using Inverse Reinforcement Learning (IRL), but treat all preference pairs equally, often overlooking the most informative signals: those examples the extracted reward model misclassifies or assigns nearly equal scores, which we term \emph{failures}. We introduce a novel \emph{failure-aware} IRL algorithm that focuses on misclassified or difficult examples to recover the latent rewards defining model behaviors. By learning from these failures, our failure-aware IRL extracts reward functions that better reflect the true objectives behind RLHF. We demonstrate that failure-aware IRL outperforms existing IRL baselines across multiple metrics when applied to LLM detoxification, without requiring external classifiers or supervision. Crucially, failure-aware IRL yields rewards that better capture the true incentives learned during RLHF, enabling more effective re-RLHF training than standard IRL. This establishes failure-aware IRL as a robust, scalable method for auditing model alignment and reducing ambiguity in the IRL process. 
+
+---
+# The Alignment Auditor: A Bayesian Framework for Verifying and Refining LLM Objectives 
+
+**Authors**: Matthieu Bou, Nyal Patel, Arjun Jagota, Satyapriya Krishna, Sonali Parbhoo  
+
+**Link**: [PDF](https://arxiv.org/pdf/2510.06096)  
+
+**Abstract**: The objectives that Large Language Models (LLMs) implicitly optimize remain dangerously opaque, making trustworthy alignment and auditing a grand challenge. While Inverse Reinforcement Learning (IRL) can infer reward functions from behaviour, existing approaches either produce a single, overconfident reward estimate or fail to address the fundamental ambiguity of the task (non-identifiability). This paper introduces a principled auditing framework that re-frames reward inference from a simple estimation task to a comprehensive process for verification. Our framework leverages Bayesian IRL to not only recover a distribution over objectives but to enable three critical audit capabilities: (i) Quantifying and systematically reducing non-identifiability by demonstrating posterior contraction over sequential rounds of evidence; (ii) Providing actionable, uncertainty-aware diagnostics that expose spurious shortcuts and identify out-of-distribution prompts where the inferred objective cannot be trusted; and (iii) Validating policy-level utility by showing that the refined, low-uncertainty reward can be used directly in RLHF to achieve training dynamics and toxicity reductions comparable to the ground-truth alignment process. Empirically, our framework successfully audits a detoxified LLM, yielding a well-calibrated and interpretable objective that strengthens alignment guarantees. Overall, this work provides a practical toolkit for auditors, safety teams, and regulators to verify what LLMs are truly trying to achieve, moving us toward more trustworthy and accountable AI. 
+
+---
