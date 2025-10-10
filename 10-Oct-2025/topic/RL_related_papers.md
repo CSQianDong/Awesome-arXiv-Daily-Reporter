@@ -1,0 +1,172 @@
+# Which Heads Matter for Reasoning? RL-Guided KV Cache Compression 
+
+**Authors**: Wenjie Du, Li Jiang, Keda Tao, Xue Liu, Huan Wang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2510.08525)  
+
+**Abstract**: Reasoning large language models exhibit complex reasoning behaviors through the extended chain-of-thought generation, creating unprecedented Key-Value (KV) cache overhead during the decoding phase. Existing KV cache compression methods underperform on reasoning models: token-dropping methods break reasoning integrity by discarding critical information, while head-reallocating methods mistakenly compress reasoning-critical heads since they are designed for retrieval tasks, resulting in significant performance degradation as compression rates increase. We hypothesize that KV heads exhibit functional heterogeneity in reasoning models-some heads are critical for chain-of-thought consistency while others are compressible. To validate and exploit this insight, we propose RLKV, a novel reasoning-critical head identification framework, which uses reinforcement learning to directly optimize the relationship between each head's cache usage and reasoning quality. As RLKV produces rewards from actual generated samples during training, it naturally identifies heads relevant to reasoning behaviors. We then allocate full KV cache to these heads while applying compressed constant KV cache to others for efficient inference. Our experiments reveal that only a small fraction of attention heads is essential for reasoning, enabling our KV compression approach to outperform baseline methods while achieving 20-50% cache reduction with near lossless performance compared to uncompressed results. 
+
+---
+# The Alignment Waltz: Jointly Training Agents to Collaborate for Safety 
+
+**Authors**: Jingyu Zhang, Haozhu Wang, Eric Michael Smith, Sid Wang, Amr Sharaf, Mahesh Pasupuleti, Benjamin Van Durme, Daniel Khashabi, Jason Weston, Hongyuan Zhan  
+
+**Link**: [PDF](https://arxiv.org/pdf/2510.08240)  
+
+**Abstract**: Harnessing the power of LLMs requires a delicate dance between being helpful and harmless. This creates a fundamental tension between two competing challenges: vulnerability to adversarial attacks that elicit unsafe content, and a tendency for overrefusal on benign but sensitive prompts. Current approaches often navigate this dance with safeguard models that completely reject any content that contains unsafe portions. This approach cuts the music entirely-it may exacerbate overrefusals and fails to provide nuanced guidance for queries it refuses. To teach models a more coordinated choreography, we propose WaltzRL, a novel multi-agent reinforcement learning framework that formulates safety alignment as a collaborative, positive-sum game. WaltzRL jointly trains a conversation agent and a feedback agent, where the latter is incentivized to provide useful suggestions that improve the safety and helpfulness of the conversation agent's responses. At the core of WaltzRL is a Dynamic Improvement Reward (DIR) that evolves over time based on how well the conversation agent incorporates the feedback. At inference time, unsafe or overrefusing responses from the conversation agent are improved rather than discarded. The feedback agent is deployed together with the conversation agent and only engages adaptively when needed, preserving helpfulness and low latency on safe queries. Our experiments, conducted across five diverse datasets, demonstrate that WaltzRL significantly reduces both unsafe responses (e.g., from 39.0% to 4.6% on WildJailbreak) and overrefusals (from 45.3% to 9.9% on OR-Bench) compared to various baselines. By enabling the conversation and feedback agents to co-evolve and adaptively apply feedback, WaltzRL enhances LLM safety without degrading general capabilities, thereby advancing the Pareto front between helpfulness and harmlessness. 
+
+---
+# ARM2: Adaptive Reasoning Model with Vision Understanding and Executable Code 
+
+**Authors**: Jian Xie, Zhendong Chu, Aoxiao Zhong, Kai Zhang, Mingzhe Han, Xin Fang, Jialie Shen, Qingsong Wen  
+
+**Link**: [PDF](https://arxiv.org/pdf/2510.08163)  
+
+**Abstract**: Large Reasoning Models (LRMs) often suffer from the ``over-thinking'' problem, generating unnecessarily long reasoning on simple tasks. Some strategies have been proposed to mitigate this issue, such as length penalties or routing mechanisms, but they are typically heuristic and task-specific, lacking a general framework for adaptive reasoning. In this paper, we present ARM2, a unified model that adaptively balances reasoning performance and efficiency across multiple formats through a reinforcement learning framework augmented with length-aware optimization. Beyond conventional natural language inference, ARM2 integrates vision understanding, extending its applicability to multimodal. Moreover, ARM2 integrates executable code into reasoning, enabling substantial reductions in token cost while preserving task performance compared to long CoT. Experiments demonstrate that ARM2 achieves performance on par with traditional reasoning models trained with GRPO, while reducing token usage by over 70% on average. We further conduct extensive analyses to validate the effectiveness of ARM2 and the soundness of its design. 
+
+---
+# A Survey of Process Reward Models: From Outcome Signals to Process Supervisions for Large Language Models 
+
+**Authors**: Congming Zheng, Jiachen Zhu, Zhuoying Ou, Yuxiang Chen, Kangning Zhang, Rong Shan, Zeyu Zheng, Mengyue Yang, Jianghao Lin, Yong Yu, Weinan Zhang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2510.08049)  
+
+**Abstract**: Although Large Language Models (LLMs) exhibit advanced reasoning ability, conventional alignment remains largely dominated by outcome reward models (ORMs) that judge only final answers. Process Reward Models(PRMs) address this gap by evaluating and guiding reasoning at the step or trajectory level. This survey provides a systematic overview of PRMs through the full loop: how to generate process data, build PRMs, and use PRMs for test-time scaling and reinforcement learning. We summarize applications across math, code, text, multimodal reasoning, robotics, and agents, and review emerging benchmarks. Our goal is to clarify design spaces, reveal open challenges, and guide future research toward fine-grained, robust reasoning alignment. 
+
+---
+# HiPRAG: Hierarchical Process Rewards for Efficient Agentic Retrieval Augmented Generation 
+
+**Authors**: Peilin Wu, Mian Zhang, Kun Wan, Wentian Zhao, Kaiyu He, Xinya Du, Zhiyu Chen  
+
+**Link**: [PDF](https://arxiv.org/pdf/2510.07794)  
+
+**Abstract**: Agentic RAG is a powerful technique for incorporating external information that LLMs lack, enabling better problem solving and question answering. However, suboptimal search behaviors exist widely, such as over-search (retrieving information already known) and under-search (failing to search when necessary), which leads to unnecessary overhead and unreliable outputs. Current training methods, which typically rely on outcome-based rewards in a RL framework, lack the fine-grained control needed to address these inefficiencies. To overcome this, we introduce Hierarchical Process Rewards for Efficient agentic RAG (HiPRAG), a training methodology that incorporates a fine-grained, knowledge-grounded process reward into the RL training. Our approach evaluates the necessity of each search decision on-the-fly by decomposing the agent's reasoning trajectory into discrete, parsable steps. We then apply a hierarchical reward function that provides an additional bonus based on the proportion of optimal search and non-search steps, on top of commonly used outcome and format rewards. Experiments on the Qwen2.5 and Llama-3.2 models across seven diverse QA benchmarks show that our method achieves average accuracies of 65.4% (3B) and 67.2% (7B). This is accomplished while improving search efficiency, reducing the over-search rate to just 2.3% and concurrently lowering the under-search rate. These results demonstrate the efficacy of optimizing the reasoning process itself, not just the final outcome. Further experiments and analysis demonstrate that HiPRAG shows good generalizability across a wide range of RL algorithms, model families, sizes, and types. This work demonstrates the importance and potential of fine-grained control through RL, for improving the efficiency and optimality of reasoning for search agents. 
+
+---
+# Curing Miracle Steps in LLM Mathematical Reasoning with Rubric Rewards 
+
+**Authors**: Youliang Yuan, Qiuyang Mang, Jingbang Chen, Hong Wan, Xiaoyuan Liu, Junjielong Xu, Jen-tse Huang, Wenxuan Wang, Wenxiang Jiao, Pinjia He  
+
+**Link**: [PDF](https://arxiv.org/pdf/2510.07774)  
+
+**Abstract**: Large language models for mathematical reasoning are typically trained with outcome-based rewards, which credit only the final answer. In our experiments, we observe that this paradigm is highly susceptible to reward hacking, leading to a substantial overestimation of a model's reasoning ability. This is evidenced by a high incidence of false positives - solutions that reach the correct final answer through an unsound reasoning process. Through a systematic analysis with human verification, we establish a taxonomy of these failure modes, identifying patterns like Miracle Steps - abrupt jumps to a correct output without a valid preceding derivation. Probing experiments suggest a strong association between these Miracle Steps and memorization, where the model appears to recall the answer directly rather than deriving it. To mitigate this systemic issue, we introduce the Rubric Reward Model (RRM), a process-oriented reward function that evaluates the entire reasoning trajectory against problem-specific rubrics. The generative RRM provides fine-grained, calibrated rewards (0-1) that explicitly penalize logical flaws and encourage rigorous deduction. When integrated into a reinforcement learning pipeline, RRM-based training consistently outperforms outcome-only supervision across four math benchmarks. Notably, it boosts Verified Pass@1024 on AIME2024 from 26.7% to 62.6% and reduces the incidence of Miracle Steps by 71%. Our work demonstrates that rewarding the solution process is crucial for building models that are not only more accurate but also more reliable. 
+
+---
+# OpenRubrics: Towards Scalable Synthetic Rubric Generation for Reward Modeling and LLM Alignment 
+
+**Authors**: Tianci Liu, Ran Xu, Tony Yu, Ilgee Hong, Carl Yang, Tuo Zhao, Haoyu Wang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2510.07743)  
+
+**Abstract**: Reward modeling lies at the core of reinforcement learning from human feedback (RLHF), yet most existing reward models rely on scalar or pairwise judgments that fail to capture the multifaceted nature of human preferences. Recent studies have explored rubrics-as-rewards (RaR) that uses structured natural language criteria that capture multiple dimensions of response quality. However, producing rubrics that are both reliable and scalable remains a key challenge. In this work, we introduce OpenRubrics, a diverse, large-scale collection of (prompt, rubric) pairs for training rubric-generation and rubric-based reward models. To elicit discriminative and comprehensive evaluation signals, we introduce Contrastive Rubric Generation (CRG), which derives both hard rules (explicit constraints) and principles (implicit qualities) by contrasting preferred and rejected responses. We further improve reliability by enforcing preference-label consistency via rejection sampling to remove noisy rubrics. Across multiple reward-modeling benchmarks, our rubric-based reward model, Rubric-RM, surpasses strong size-matched baselines by 6.8%. These gains transfer to policy models on instruction-following and biomedical benchmarks. Our results show that rubrics provide scalable alignment signals that narrow the gap between costly human evaluation and automated reward modeling, enabling a new principle-driven paradigm for LLM alignment. 
+
+---
+# Can Speech LLMs Think while Listening? 
+
+**Authors**: Yi-Jen Shih, Desh Raj, Chunyang Wu, Wei Zhou, SK Bong, Yashesh Gaur, Jay Mahadeokar, Ozlem Kalinli, Mike Seltzer  
+
+**Link**: [PDF](https://arxiv.org/pdf/2510.07497)  
+
+**Abstract**: Recent advances in speech large language models (speech LLMs) have enabled seamless spoken interactions, but these systems still struggle with complex reasoning tasks. Previously, chain-of-thought (CoT) prompting or fine-tuning has been to shown to significantly improve the reasoning abilities of text-based LLMs. In this work, we investigate the effect of CoT fine-tuning for multi-stream speech LLMs, demonstrating that reasoning in text space improves the accuracy of speech LLMs by 2.4x, on average, over a suite of spoken reasoning tasks. Beyond accuracy, the latency of the spoken response is a crucial factor for interacting with voice-based agents. Inspired by the human behavior of "thinking while listening," we propose methods to reduce the additional latency from reasoning by allowing the model to start reasoning before the user query has ended. To achieve this, we introduce an entropy-based metric, "question completeness," which acts as an indicator to guide the model on the optimal time to start reasoning. This method provides greater control over the accuracy-latency trade-off compared with heuristic-based approaches and, under equivalent latency conditions, yields a 4% accuracy gain on ARC-Easy. Finally, we use Direct Preference Optimization (DPO) on preference data created using rejection sampling to push the accuracy-latency pareto frontier further, resulting in a 70% reduction in latency without loss in accuracy. 
+
+---
+# SpatialLadder: Progressive Training for Spatial Reasoning in Vision-Language Models 
+
+**Authors**: Hongxing Li, Dingming Li, Zixuan Wang, Yuchen Yan, Hang Wu, Wenqi Zhang, Yongliang Shen, Weiming Lu, Jun Xiao, Yueting Zhuang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2510.08531)  
+
+**Abstract**: Spatial reasoning remains a fundamental challenge for Vision-Language Models (VLMs), with current approaches struggling to achieve robust performance despite recent advances. We identify that this limitation stems from a critical gap: existing methods attempt to learn spatial reasoning directly without establishing the hierarchical foundations of perception and understanding. To address this challenge, we present a comprehensive methodology for building spatial intelligence progressively. We introduce SpatialLadder-26k, a multimodal dataset containing 26,610 samples spanning object localization, single image, multi-view, and video spatial reasoning tasks, constructed through a standardized pipeline that ensures systematic coverage across modalities. Building on this dataset, we design a three-stage progressive training framework that (1) establishes spatial perception through object localization, (2) develops spatial understanding through multi-dimensional spatial tasks, and (3) strengthens complex reasoning via reinforcement learning with verifiable rewards. This approach yields SpatialLadder, a 3B-parameter model that achieves state-of-the-art performance on spatial reasoning benchmarks, with 23.4% average improvement over the base model, surpassing GPT-4o by 20.8% and Gemini-2.0-Flash by 10.1%. Notably, SpatialLadder maintains strong generalization with 7.2% improvement on out-of-domain benchmarks, demonstrating that progressive training from perception to reasoning is essential for robust spatial intelligence. 
+
+---
+# Mix- and MoE-DPO: A Variational Inference Approach to Direct Preference Optimization 
+
+**Authors**: Jason Bohne, Pawel Polak, David Rosenberg, Brian Bloniarz, Gary Kazantsev  
+
+**Link**: [PDF](https://arxiv.org/pdf/2510.08256)  
+
+**Abstract**: Direct Preference Optimization (DPO) has recently emerged as a simple and effective alternative to reinforcement learning from human feedback (RLHF) for aligning large language models (LLMs) with user preferences. However, existing DPO formulations rely on a single monolithic model, which limits their expressivity in multi-task settings and their adaptability to heterogeneous or diverse preference distributions. In this work, we propose Mix- and MoE-DPO, a framework that extends DPO with both soft mixture models and mixture-of-experts (MoE) architectures, using a stochastic variational inference approach. Our method introduces a latent-variable model over expert assignments and optimizes a variational evidence lower bound (ELBO), enabling stable and efficient learning of specialized expert policies from preference data. Mix- and MoE-DPO provides three key advantages over standard DPO: (i) generalization via universal function approximation through mixtures; (ii) reward and policy specialization through expert components tailored to distinct preference modes; and (iii) contextual alignment through input-dependent soft gating that enables user-specific mixture policies. Our framework supports both shared base architectures with expert-specific policy heads and fully independent expert models, allowing flexible trade-offs between parameter efficiency and specialization. We validate our approach on a variety of model sizes and multi-preference datasets, demonstrating that Mix- and MoE-DPO offers a powerful and scalable method for preference-based LLM alignment. 
+
+---
+# TaoSR-AGRL: Adaptive Guided Reinforcement Learning Framework for E-commerce Search Relevance 
+
+**Authors**: Jianhui Yang, Yiming Jin, Pengkun Jiao, Chenhe Dong, Zerui Huang, Shaowei Yao, Xiaojiang Zhou, Dan Ou, Haihong Tang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2510.08048)  
+
+**Abstract**: Query-product relevance prediction is fundamental to e-commerce search and has become even more critical in the era of AI-powered shopping, where semantic understanding and complex reasoning directly shape the user experience and business conversion. Large Language Models (LLMs) enable generative, reasoning-based approaches, typically aligned via supervised fine-tuning (SFT) or preference optimization methods like Direct Preference Optimization (DPO). However, the increasing complexity of business rules and user queries exposes the inability of existing methods to endow models with robust reasoning capacity for long-tail and challenging cases. Efforts to address this via reinforcement learning strategies like Group Relative Policy Optimization (GRPO) often suffer from sparse terminal rewards, offering insufficient guidance for multi-step reasoning and slowing convergence. To address these challenges, we propose TaoSR-AGRL, an Adaptive Guided Reinforcement Learning framework for LLM-based relevance prediction in Taobao Search Relevance. TaoSR-AGRL introduces two key innovations: (1) Rule-aware Reward Shaping, which decomposes the final relevance judgment into dense, structured rewards aligned with domain-specific relevance criteria; and (2) Adaptive Guided Replay, which identifies low-accuracy rollouts during training and injects targeted ground-truth guidance to steer the policy away from stagnant, rule-violating reasoning patterns toward compliant trajectories. TaoSR-AGRL was evaluated on large-scale real-world datasets and through online side-by-side human evaluations on Taobao Search. It consistently outperforms DPO and standard GRPO baselines in offline experiments, improving relevance accuracy, rule adherence, and training stability. The model trained with TaoSR-AGRL has been successfully deployed in the main search scenario on Taobao, serving hundreds of millions of users. 
+
+---
+# LiveThinking: Enabling Real-Time Efficient Reasoning for AI-Powered Livestreaming via Reinforcement Learning 
+
+**Authors**: Yuhan Sun, Zhiwei Huang, Wanqing Cui, Shaopan Xiong, Yazhi Guo, Meiguang Jin, Junfeng Ma  
+
+**Link**: [PDF](https://arxiv.org/pdf/2510.07685)  
+
+**Abstract**: In AI-powered e-commerce livestreaming, digital avatars require real-time responses to drive engagement, a task for which high-latency Large Reasoning Models (LRMs) are ill-suited. We introduce LiveThinking, a practical two-stage optimization framework to bridge this gap. First, we address computational cost by distilling a 670B teacher LRM into a lightweight 30B Mixture-of-Experts (MoE) model (3B active) using Rejection Sampling Fine-Tuning (RFT). This reduces deployment overhead but preserves the teacher's verbose reasoning, causing latency. To solve this, our second stage employs reinforcement learning with Group Relative Policy Optimization (GRPO) to compress the model's reasoning path, guided by a multi-objective reward function balancing correctness, helpfulness, and brevity. LiveThinking achieves a 30-fold reduction in computational cost, enabling sub-second latency. In real-world application on Taobao Live, it improved response correctness by 3.3% and helpfulness by 21.8%. Tested by hundreds of thousands of viewers, our system led to a statistically significant increase in Gross Merchandise Volume (GMV), demonstrating its effectiveness in enhancing user experience and commercial performance in live, interactive settings. 
+
+---
+# QAgent: A modular Search Agent with Interactive Query Understanding 
+
+**Authors**: Yi Jiang, Lei Shen, Lujie Niu, Sendong Zhao, Wenbo Su, Bo Zheng  
+
+**Link**: [PDF](https://arxiv.org/pdf/2510.08383)  
+
+**Abstract**: Large language models (LLMs) excel at natural language tasks but are limited by their static parametric knowledge, especially in knowledge-intensive task. Retrieval-augmented generation (RAG) mitigates this by integrating external information. However, (1) traditional RAG struggles with complex query understanding, and (2) even search agents trained with reinforcement learning (RL), despite their promise, still face generalization and deployment challenges. To address these limitations, we propose QAgent, a unified agentic RAG framework that employs a search agent for adaptive retrieval. This agent optimizes its understanding of the query through interactive reasoning and retrieval. To facilitate real-world application, we focus on modular search agent for query understanding that are plug-and-play in complex systems. Secifically, the agent follows a multi-step decision process trained with RL to maximize retrieval quality and support accurate downstream answers. We further analyze the strengths and weaknesses of end-to-end RL and propose a strategy that focuses on effective retrieval, thereby enhancing generalization in LLM applications. Experiments show QAgent excels at QA and serves as a plug-and-play module for real-world deployment. 
+
+---
+# TaoSR-SHE: Stepwise Hybrid Examination Reinforcement Learning Framework for E-commerce Search Relevance 
+
+**Authors**: Pengkun Jiao, Yiming Jin, Jianhui Yang, Chenhe Dong, Zerui Huang, Shaowei Yao, Xiaojiang Zhou, Dan Ou, Haihong Tang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2510.07972)  
+
+**Abstract**: Query-product relevance analysis is a foundational technology in e-commerce search engines and has become increasingly important in AI-driven e-commerce. The recent emergence of large language models (LLMs), particularly their chain-of-thought (CoT) reasoning capabilities, offers promising opportunities for developing relevance systems that are both more interpretable and more robust. However, existing training paradigms have notable limitations: SFT and DPO suffer from poor generalization on long-tail queries and from a lack of fine-grained, stepwise supervision to enforce rule-aligned reasoning. In contrast, reinforcement learning with verification rewards (RLVR) suffers from sparse feedback, which provides insufficient signal to correct erroneous intermediate steps, thereby undermining logical consistency and limiting performance in complex inference scenarios.
+To address these challenges, we introduce the Stepwise Hybrid Examination Reinforcement Learning framework for Taobao Search Relevance (TaoSR-SHE). At its core is Stepwise Reward Policy Optimization (SRPO), a reinforcement learning algorithm that leverages step-level rewards generated by a hybrid of a high-quality generative stepwise reward model and a human-annotated offline verifier, prioritizing learning from critical correct and incorrect reasoning steps. TaoSR-SHE further incorporates two key techniques: diversified data filtering to encourage exploration across varied reasoning paths and mitigate policy entropy collapse, and multi-stage curriculum learning to foster progressive capability growth. Extensive experiments on real-world search benchmarks show that TaoSR-SHE improves both reasoning quality and relevance-prediction accuracy in large-scale e-commerce settings, outperforming SFT, DPO, GRPO, and other baselines, while also enhancing interpretability and robustness. 
+
+---
+# From Noisy to Native: LLM-driven Graph Restoration for Test-Time Graph Domain Adaptation 
+
+**Authors**: Xiangwei Lv, JinLuan Yang, Wang Lin, Jingyuan Chen, Beishui Liao  
+
+**Link**: [PDF](https://arxiv.org/pdf/2510.07762)  
+
+**Abstract**: Graph domain adaptation (GDA) has achieved great attention due to its effectiveness in addressing the domain shift between train and test data. A significant bottleneck in existing graph domain adaptation methods is their reliance on source-domain data, which is often unavailable due to privacy or security concerns. This limitation has driven the development of Test-Time Graph Domain Adaptation (TT-GDA), which aims to transfer knowledge without accessing the source examples. Inspired by the generative power of large language models (LLMs), we introduce a novel framework that reframes TT-GDA as a generative graph restoration problem, "restoring the target graph to its pristine, source-domain-like state". There are two key challenges: (1) We need to construct a reasonable graph restoration process and design an effective encoding scheme that an LLM can understand, bridging the modality gap. (2) We need to devise a mechanism to ensure the restored graph acquires the intrinsic features of the source domain, even without access to the source data. To ensure the effectiveness of graph restoration, we propose GRAIL, that restores the target graph into a state that is well-aligned with the source domain. Specifically, we first compress the node representations into compact latent features and then use a graph diffusion process to model the graph restoration process. Then a quantization module encodes the restored features into discrete tokens. Building on this, an LLM is fine-tuned as a generative restorer to transform a "noisy" target graph into a "native" one. To further improve restoration quality, we introduce a reinforcement learning process guided by specialized alignment and confidence rewards. Extensive experiments demonstrate the effectiveness of our approach across various datasets. 
+
+---
+# GCPO: When Contrast Fails, Go Gold 
+
+**Authors**: Hao Wu, Wei Liu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2510.07790)  
+
+**Abstract**: Reinforcement learning has been widely applied to enhance the reasoning capabilities of large language models. Extending the inference limits of smaller models has become a prominent research focus. However, algorithms such as Group Relative Policy Optimization (GRPO) suffer from a clear drawback: the upper bound of a model's rollout responses is entirely determined by the model itself, preventing the acquisition of knowledge from samples that are either all incorrect or all correct. In this paper, we introduce Group Contrastive Policy Optimization (GCPO), a method that incorporates external standard reference answers. When the model cannot solve a problem, the reference answer supplies the correct response, steering the model toward an unequivocally accurate update direction. This approach offers two main advantages: (1) it improves training efficiency by fully utilizing every sample; (2) it enables the model to emulate the problem solving strategy of the reference answer during training, thereby enhancing generalization in reasoning. GCPO achieves outstanding results across multiple benchmark datasets, yielding substantial improvements over the baseline model. Our code is available at: this https URL. 
+
+---
+# L2M-AID: Autonomous Cyber-Physical Defense by Fusing Semantic Reasoning of Large Language Models with Multi-Agent Reinforcement Learning (Preprint) 
+
+**Authors**: Tianxiang Xu, Zhichao Wen, Xinyu Zhao, Jun Wang, Yan Li, Chang Liu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2510.07363)  
+
+**Abstract**: The increasing integration of Industrial IoT (IIoT) exposes critical cyber-physical systems to sophisticated, multi-stage attacks that elude traditional defenses lacking contextual awareness. This paper introduces L2M-AID, a novel framework for Autonomous Industrial Defense using LLM-empowered, Multi-agent reinforcement learning. L2M-AID orchestrates a team of collaborative agents, each driven by a Large Language Model (LLM), to achieve adaptive and resilient security. The core innovation lies in the deep fusion of two AI paradigms: we leverage an LLM as a semantic bridge to translate vast, unstructured telemetry into a rich, contextual state representation, enabling agents to reason about adversary intent rather than merely matching patterns. This semantically-aware state empowers a Multi-Agent Reinforcement Learning (MARL) algorithm, MAPPO, to learn complex cooperative strategies. The MARL reward function is uniquely engineered to balance security objectives (threat neutralization) with operational imperatives, explicitly penalizing actions that disrupt physical process stability. To validate our approach, we conduct extensive experiments on the benchmark SWaT dataset and a novel synthetic dataset generated based on the MITRE ATT&CK for ICS framework. Results demonstrate that L2M-AID significantly outperforms traditional IDS, deep learning anomaly detectors, and single-agent RL baselines across key metrics, achieving a 97.2% detection rate while reducing false positives by over 80% and improving response times by a factor of four. Crucially, it demonstrates superior performance in maintaining physical process stability, presenting a robust new paradigm for securing critical national infrastructure. 
+
+---
+# xRouter: Training Cost-Aware LLMs Orchestration System via Reinforcement Learning 
+
+**Authors**: Cheng Qian, Zuxin Liu, Shirley Kokane, Akshara Prabhakar, Jielin Qiu, Haolin Chen, Zhiwei Liu, Heng Ji, Weiran Yao, Shelby Heinecke, Silvio Savarese, Caiming Xiong, Huan Wang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2510.08439)  
+
+**Abstract**: Modern LLM deployments confront a widening cost-performance spectrum: premium models deliver strong reasoning but are expensive, while lightweight models are economical yet brittle on complex tasks. Static escalation rules and keyword heuristics under-utilize this spectrum and fail to adapt across task types. We present xRouter, a tool-calling-based routing system in which a learned router can either answer directly or invoke one or more external models. The router is trained end-to-end with reinforcement learning using an explicit, cost-aware reward that encodes cost-performance trade-offs, eliminating the need for hand-engineered routing rules. Our implementation encompasses the full reinforcement learning framework, including reward and cost accounting, as well as the deployment and evaluation pipelines. Across diverse benchmarks, xRouter achieves strong cost-performance trade-offs (e.g., substantial cost reductions at comparable task completion rates), and provides empirical insights into what reliably helps learned routing and what does not, ranging from model trainability to the difficulty of eliciting sophisticated orchestration behaviors in small open models. We hope these findings and our open implementation will serve as a practical substrate for advancing learned, cost-aware LLM orchestration. 
+
+---
+# Reasoning by Exploration: A Unified Approach to Retrieval and Generation over Graphs 
+
+**Authors**: Haoyu Han, Kai Guo, Harry Shomer, Yu Wang, Yucheng Chu, Hang Li, Li Ma, Jiliang Tang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2510.07484)  
+
+**Abstract**: Reasoning over structured graphs remains a fundamental challenge for Large Language Models (LLMs), particularly when scaling to large graphs. Existing approaches typically follow the retrieval-augmented generation (RAG) paradigm: first retrieving subgraphs relevant to the query and then generating answers conditioned on the retrieved subgraphs. However, such two-phase pipelines often struggle to faithfully incorporate graph structure, since the generation process is ultimately constrained by the quality and completeness of the retrieved subgraph. Although many advanced retrievers have been proposed recently to mitigate this issue, they are usually tailored to the training graphs and generalize poorly to unseen graphs, which limits their practical applicability. In this work, we propose Reasoning by Exploration (RoE), a novel approach that unifies retrieval and generation by framing reasoning over graphs as a process of graph exploration. At each step, the LLM selects candidate nodes and edges to explore, gradually constructing reasoning paths and generating answers along the way. To enable effective exploration, RoE is trained in two stages: supervised fine-tuning (SFT) on gold reasoning paths, followed by reinforcement learning (RL) to enhance exploration effectiveness and generalization. Experiments on benchmark datasets demonstrate that RoE achieves substantial overall improvements over baselines, while also generalizing effectively to unseen graphs. 
+
+---

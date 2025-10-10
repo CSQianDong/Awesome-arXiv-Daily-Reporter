@@ -1,0 +1,63 @@
+# Beyond Turn Limits: Training Deep Search Agents with Dynamic Context Window 
+
+**Authors**: Qiaoyu Tang, Hao Xiang, Le Yu, Bowen Yu, Yaojie Lu, Xianpei Han, Le Sun, WenJuan Zhang, Pengbo Wang, Shixuan Liu, Zhenru Zhang, Jianhong Tu, Hongyu Lin, Junyang Lin  
+
+**Link**: [PDF](https://arxiv.org/pdf/2510.08276)  
+
+**Abstract**: While recent advances in reasoning models have demonstrated cognitive behaviors through reinforcement learning, existing approaches struggle to invoke deep reasoning capabilities in multi-turn agents with long-horizon interactions. We propose DeepMiner, a novel framework that elicits such abilities by introducing high-difficulty training tasks and dynamic context window. DeepMiner presents a reverse construction method to generate complex but verifiable question-answer pairs from authentic web sources, which ensures the challenge and reliability of training data while injecting cognitive capabilities into multi-turn reasoning scenarios. We further design an elegant yet effective dynamic context management strategy for both training and inference, utilizing sliding window mechanisms while eliminating the dependency on external summarization models, thereby efficiently empowering the model to handle continuously expanding long-horizon contexts. Through reinforcement learning on Qwen3-32B, we develop DeepMiner-32B, which achieves substantial performance improvements across multiple search agent benchmarks. DeepMiner attains 33.5% accuracy on BrowseComp-en, surpassing the previous best open-source agent by almost 20 percentage points, and demonstrates consistent improvements on BrowseComp-zh, XBench-DeepSearch, and GAIA. Notably, our dynamic context management enables sustained interactions of nearly 100 turns within standard 32k context length, effectively addressing the context limitations that constrain existing multi-turn interaction systems. 
+
+---
+# OBCache: Optimal Brain KV Cache Pruning for Efficient Long-Context LLM Inference 
+
+**Authors**: Yuzhe Gu, Xiyu Liang, Jiaojiao Zhao, Enmao Diao  
+
+**Link**: [PDF](https://arxiv.org/pdf/2510.07651)  
+
+**Abstract**: Large language models (LLMs) with extended context windows enable powerful downstream applications but impose significant memory overhead, as caching all key-value (KV) states scales linearly with sequence length and batch size. Existing cache eviction methods address this by exploiting attention sparsity, yet they typically rank tokens heuristically using accumulated attention weights without considering their true impact on attention outputs. We propose Optimal Brain Cache (OBCache), a principled framework that formulates cache eviction as a layer-wise structured pruning problem. Building upon the Optimal Brain Damage (OBD) theory, OBCache quantifies token saliency by measuring the perturbation in attention outputs induced by pruning tokens, with closed-form scores derived for isolated keys, isolated values, and joint key-value pairs. Our scores account not only for attention weights but also for information from value states and attention outputs, thereby enhancing existing eviction strategies with output-aware signals. Experiments on LLaMA and Qwen models demonstrate that replacing the heuristic scores in existing works, which estimate token saliency across different query positions, with OBCache's output-aware scores consistently improves long-context accuracy. 
+
+---
+# When Thoughts Meet Facts: Reusable Reasoning for Long-Context LMs 
+
+**Authors**: Soyeong Jeong, Taehee Jung, Sung Ju Hwang, Joo-Kyung Kim, Dongyeop Kang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2510.07499)  
+
+**Abstract**: Recent Long-Context Language Models (LCLMs) can process hundreds of thousands of tokens in a single prompt, enabling new opportunities for knowledge-intensive multi-hop reasoning by integrating large sets of retrieved documents or, in some cases, directly all necessary information. However, simply feeding more documents into the context window fails to capture how evidence should be connected. We address this gap with thought templates, which recast reasoning as reusable thought caches, derived from prior problem solving traces, structuring how evidence is combined and guiding multi-hop inference with factual documents. To keep these templates effective, we propose an update strategy that iteratively refines templates derived from training data through natural-language feedback. Across diverse benchmarks and LCLM families, our approach delivers consistent gains over strong baselines in both retrieval-based and retrieval-free settings. Furthermore, we show that optimized templates can be distilled into smaller open-source models, demonstrating its broad applicability and transparent reasoning reuse. We refer to our framework as Thought Template Augmented LCLMs (ToTAL). 
+
+---
+# OWL: Overcoming Window Length-Dependence in Speculative Decoding for Long-Context Inputs 
+
+**Authors**: Jaeseong Lee, seung-won hwang, Aurick Qiao, Gabriele Oliaro, Ye Wang, Samyam Rajbhandari  
+
+**Link**: [PDF](https://arxiv.org/pdf/2510.07535)  
+
+**Abstract**: Speculative decoding promises faster inference for large language models (LLMs), yet existing methods fail to generalize to real-world settings. Benchmarks typically assume short contexts (e.g., 2K tokens), whereas practical workloads involve long contexts. We find current approaches degrade severely with long contexts; for instance, EAGLE3 even slows down the generation speed by 0.81x. We address these limitations by releasing a new long-context benchmark (LongSpecBench) and introducing a novel model (OWL). OWL achieves about 5x higher acceptance length than EAGLE3 on long-context inputs through three innovations: (1) an LSTM-based drafter conditioned only on the last-token state, making it generalize to various lengths, (2) a special token [SPEC] in the verifier that produces richer representation for drafter, and (3) a hybrid algorithm combining both tree and non-tree decoding methods. We release all code and datasets to advance future research. 
+
+---
+# Haystack Engineering: Context Engineering for Heterogeneous and Agentic Long-Context Evaluation 
+
+**Authors**: Mufei Li, Dongqi Fu, Limei Wang, Si Zhang, Hanqing Zeng, Kaan Sancak, Ruizhong Qiu, Haoyu Wang, Xiaoxin He, Xavier Bresson, Yinglong Xia, Chonglin Sun, Pan Li  
+
+**Link**: [PDF](https://arxiv.org/pdf/2510.07414)  
+
+**Abstract**: Modern long-context large language models (LLMs) perform well on synthetic "needle-in-a-haystack" (NIAH) benchmarks, but such tests overlook how noisy contexts arise from biased retrieval and agentic workflows. We argue that haystack engineering is necessary to construct noisy long contexts that faithfully capture key real-world factors -- distraction from heterogeneous biased retrievers and cascading errors in agentic workflows -- to test models' long-context robustness. We instantiate it through HaystackCraft, a new NIAH benchmark built on the full English Wikipedia hyperlink network with multi-hop questions. HaystackCraft evaluates how heterogeneous retrieval strategies (e.g., sparse, dense, hybrid, and graph-based) affect distractor composition, haystack ordering, and downstream LLM performance. HaystackCraft further extends NIAH to dynamic, LLM-dependent settings that simulate agentic operations, where models refine queries, reflect on their past reasonings, and decide when to stop. Experiments with 15 long-context models show that (1) while stronger dense retrievers can introduce more challenging distractors, graph-based reranking simultaneously improves retrieval effectiveness and mitigates more harmful distractors; (2) in agentic tests, even advanced models like Gemini 2.5 Pro and GPT-5 suffer cascading failures from self-generated distractors or struggle to perform early stops. These results highlight persistent challenges in agentic long-context reasoning and establish HaystackCraft as a valuable testbed for future progress. 
+
+---
+# VersionRAG: Version-Aware Retrieval-Augmented Generation for Evolving Documents 
+
+**Authors**: Daniel Huwiler, Kurt Stockinger, Jonathan Fürst  
+
+**Link**: [PDF](https://arxiv.org/pdf/2510.08109)  
+
+**Abstract**: Retrieval-Augmented Generation (RAG) systems fail when documents evolve through versioning-a ubiquitous characteristic of technical documentation. Existing approaches achieve only 58-64% accuracy on version-sensitive questions, retrieving semantically similar content without temporal validity checks. We present VersionRAG, a version-aware RAG framework that explicitly models document evolution through a hierarchical graph structure capturing version sequences, content boundaries, and changes between document states. During retrieval, VersionRAG routes queries through specialized paths based on intent classification, enabling precise version-aware filtering and change tracking. On our VersionQA benchmark-100 manually curated questions across 34 versioned technical documents-VersionRAG achieves 90% accuracy, outperforming naive RAG (58%) and GraphRAG (64%). VersionRAG reaches 60% accuracy on implicit change detection where baselines fail (0-10%), demonstrating its ability to track undocumented modifications. Additionally, VersionRAG requires 97% fewer tokens during indexing than GraphRAG, making it practical for large-scale deployment. Our work establishes versioned document QA as a distinct task and provides both a solution and benchmark for future research. 
+
+---
+# Learning What's Missing: Attention Dispersion and EMA Stabilization in Length Generalization 
+
+**Authors**: Pál Zsámboki, Benjamin Levi, David Ansel Josef Smith, Mitansh Kagalwala, Arlington Kell, Samuel Liechty, Cong Wang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2510.08341)  
+
+**Abstract**: We study length generalization in transformers through the set complement task, where a model must predict a uniform distribution over tokens absent from an input sequence -- an ability central to board-game style reasoning. Our main theoretical result establishes two statements. First, we prove tight bounds on embedding and value dimensions for single-layer attention-only transformers. Second, we show that if such a model achieves balanced logit displacement at lengths 1 and 2, then it must generalize to longer sequences, though with reduced precision. A mechanistic reading of the proof explains this limitation: as more tokens are attended to, softmax compresses logit displacements, eroding separation between valid and invalid outputs. Training dynamics also suggest a second obstacle: when many next tokens are possible, updates become noisy. We hypothesize that dropout can counteract the first effect and Exponential Moving Average (EMA) the second. We validate these hypotheses through random hyperparameter search on the set complement task, which confirms both mechanisms. We then test OthelloGPT, a GPT-1 style model trained on random Othello moves, and find that EMA again improves length generalization in this more complex setting. 
+
+---

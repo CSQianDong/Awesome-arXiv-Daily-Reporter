@@ -1,0 +1,63 @@
+# HiPRAG: Hierarchical Process Rewards for Efficient Agentic Retrieval Augmented Generation 
+
+**Authors**: Peilin Wu, Mian Zhang, Kun Wan, Wentian Zhao, Kaiyu He, Xinya Du, Zhiyu Chen  
+
+**Link**: [PDF](https://arxiv.org/pdf/2510.07794)  
+
+**Abstract**: Agentic RAG is a powerful technique for incorporating external information that LLMs lack, enabling better problem solving and question answering. However, suboptimal search behaviors exist widely, such as over-search (retrieving information already known) and under-search (failing to search when necessary), which leads to unnecessary overhead and unreliable outputs. Current training methods, which typically rely on outcome-based rewards in a RL framework, lack the fine-grained control needed to address these inefficiencies. To overcome this, we introduce Hierarchical Process Rewards for Efficient agentic RAG (HiPRAG), a training methodology that incorporates a fine-grained, knowledge-grounded process reward into the RL training. Our approach evaluates the necessity of each search decision on-the-fly by decomposing the agent's reasoning trajectory into discrete, parsable steps. We then apply a hierarchical reward function that provides an additional bonus based on the proportion of optimal search and non-search steps, on top of commonly used outcome and format rewards. Experiments on the Qwen2.5 and Llama-3.2 models across seven diverse QA benchmarks show that our method achieves average accuracies of 65.4% (3B) and 67.2% (7B). This is accomplished while improving search efficiency, reducing the over-search rate to just 2.3% and concurrently lowering the under-search rate. These results demonstrate the efficacy of optimizing the reasoning process itself, not just the final outcome. Further experiments and analysis demonstrate that HiPRAG shows good generalizability across a wide range of RL algorithms, model families, sizes, and types. This work demonstrates the importance and potential of fine-grained control through RL, for improving the efficiency and optimality of reasoning for search agents. 
+
+---
+# SUBQRAG: sub-question driven dynamic graph rag 
+
+**Authors**: Jiaoyang Li, Junhao Ruan, Shengwei Tang, Saihan Chen, Kaiyan Chang, Yuan Ge, Tong Xiao, Jingbo Zhu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2510.07718)  
+
+**Abstract**: Graph Retrieval-Augmented Generation (Graph RAG) effectively builds a knowledge graph (KG) to connect disparate facts across a large document corpus. However, this broad-view approach often lacks the deep structured reasoning needed for complex multi-hop question answering (QA), leading to incomplete evidence and error accumulation. To address these limitations, we propose SubQRAG, a sub-question-driven framework that enhances reasoning depth. SubQRAG decomposes a complex question into an ordered chain of verifiable sub-questions. For each sub-question, it retrieves relevant triples from the graph. When the existing graph is insufficient, the system dynamically expands it by extracting new triples from source documents in real time. All triples used in the reasoning process are aggregated into a "graph memory," forming a structured and traceable evidence path for final answer generation. Experiments on three multi-hop QA benchmarks demonstrate that SubQRAG achieves consistent and significant improvements, especially in Exact Match scores. 
+
+---
+# VersionRAG: Version-Aware Retrieval-Augmented Generation for Evolving Documents 
+
+**Authors**: Daniel Huwiler, Kurt Stockinger, Jonathan Fürst  
+
+**Link**: [PDF](https://arxiv.org/pdf/2510.08109)  
+
+**Abstract**: Retrieval-Augmented Generation (RAG) systems fail when documents evolve through versioning-a ubiquitous characteristic of technical documentation. Existing approaches achieve only 58-64% accuracy on version-sensitive questions, retrieving semantically similar content without temporal validity checks. We present VersionRAG, a version-aware RAG framework that explicitly models document evolution through a hierarchical graph structure capturing version sequences, content boundaries, and changes between document states. During retrieval, VersionRAG routes queries through specialized paths based on intent classification, enabling precise version-aware filtering and change tracking. On our VersionQA benchmark-100 manually curated questions across 34 versioned technical documents-VersionRAG achieves 90% accuracy, outperforming naive RAG (58%) and GraphRAG (64%). VersionRAG reaches 60% accuracy on implicit change detection where baselines fail (0-10%), demonstrating its ability to track undocumented modifications. Additionally, VersionRAG requires 97% fewer tokens during indexing than GraphRAG, making it practical for large-scale deployment. Our work establishes versioned document QA as a distinct task and provides both a solution and benchmark for future research. 
+
+---
+# Who Stole Your Data? A Method for Detecting Unauthorized RAG Theft 
+
+**Authors**: Peiyang Liu, Ziqiang Cui, Di Liang, Wei Ye  
+
+**Link**: [PDF](https://arxiv.org/pdf/2510.07728)  
+
+**Abstract**: Retrieval-augmented generation (RAG) enhances Large Language Models (LLMs) by mitigating hallucinations and outdated information issues, yet simultaneously facilitates unauthorized data appropriation at scale. This paper addresses this challenge through two key contributions. First, we introduce RPD, a novel dataset specifically designed for RAG plagiarism detection that encompasses diverse professional domains and writing styles, overcoming limitations in existing resources. Second, we develop a dual-layered watermarking system that embeds protection at both semantic and lexical levels, complemented by an interrogator-detective framework that employs statistical hypothesis testing on accumulated evidence. Extensive experimentation demonstrates our approach's effectiveness across varying query volumes, defense prompts, and retrieval parameters, while maintaining resilience against adversarial evasion techniques. This work establishes a foundational framework for intellectual property protection in retrieval-augmented AI systems. 
+
+---
+# QAgent: A modular Search Agent with Interactive Query Understanding 
+
+**Authors**: Yi Jiang, Lei Shen, Lujie Niu, Sendong Zhao, Wenbo Su, Bo Zheng  
+
+**Link**: [PDF](https://arxiv.org/pdf/2510.08383)  
+
+**Abstract**: Large language models (LLMs) excel at natural language tasks but are limited by their static parametric knowledge, especially in knowledge-intensive task. Retrieval-augmented generation (RAG) mitigates this by integrating external information. However, (1) traditional RAG struggles with complex query understanding, and (2) even search agents trained with reinforcement learning (RL), despite their promise, still face generalization and deployment challenges. To address these limitations, we propose QAgent, a unified agentic RAG framework that employs a search agent for adaptive retrieval. This agent optimizes its understanding of the query through interactive reasoning and retrieval. To facilitate real-world application, we focus on modular search agent for query understanding that are plug-and-play in complex systems. Secifically, the agent follows a multi-step decision process trained with RL to maximize retrieval quality and support accurate downstream answers. We further analyze the strengths and weaknesses of end-to-end RL and propose a strategy that focuses on effective retrieval, thereby enhancing generalization in LLM applications. Experiments show QAgent excels at QA and serves as a plug-and-play module for real-world deployment. 
+
+---
+# Profit Mirage: Revisiting Information Leakage in LLM-based Financial Agents 
+
+**Authors**: Xiangyu Li, Yawen Zeng, Xiaofen Xing, Jin Xu, Xiangmin Xu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2510.07920)  
+
+**Abstract**: LLM-based financial agents have attracted widespread excitement for their ability to trade like human experts. However, most systems exhibit a "profit mirage": dazzling back-tested returns evaporate once the model's knowledge window ends, because of the inherent information leakage in LLMs. In this paper, we systematically quantify this leakage issue across four dimensions and release FinLake-Bench, a leakage-robust evaluation benchmark. Furthermore, to mitigate this issue, we introduce FactFin, a framework that applies counterfactual perturbations to compel LLM-based agents to learn causal drivers instead of memorized outcomes. FactFin integrates four core components: Strategy Code Generator, Retrieval-Augmented Generation, Monte Carlo Tree Search, and Counterfactual Simulator. Extensive experiments show that our method surpasses all baselines in out-of-sample generalization, delivering superior risk-adjusted performance. 
+
+---
+# Haibu Mathematical-Medical Intelligent Agent:Enhancing Large Language Model Reliability in Medical Tasks via Verifiable Reasoning Chains 
+
+**Authors**: Yilun Zhang, Dexing Kong  
+
+**Link**: [PDF](https://arxiv.org/pdf/2510.07748)  
+
+**Abstract**: Large Language Models (LLMs) show promise in medicine but are prone to factual and logical errors, which is unacceptable in this high-stakes field. To address this, we introduce the "Haibu Mathematical-Medical Intelligent Agent" (MMIA), an LLM-driven architecture that ensures reliability through a formally verifiable reasoning process. MMIA recursively breaks down complex medical tasks into atomic, evidence-based steps. This entire reasoning chain is then automatically audited for logical coherence and evidence traceability, similar to theorem proving. A key innovation is MMIA's "bootstrapping" mode, which stores validated reasoning chains as "theorems." Subsequent tasks can then be efficiently solved using Retrieval-Augmented Generation (RAG), shifting from costly first-principles reasoning to a low-cost verification model. We validated MMIA across four healthcare administration domains, including DRG/DIP audits and medical insurance adjudication, using expert-validated benchmarks. Results showed MMIA achieved an error detection rate exceeding 98% with a false positive rate below 1%, significantly outperforming baseline LLMs. Furthermore, the RAG matching mode is projected to reduce average processing costs by approximately 85% as the knowledge base matures. In conclusion, MMIA's verifiable reasoning framework is a significant step toward creating trustworthy, transparent, and cost-effective AI systems, making LLM technology viable for critical applications in medicine. 
+
+---

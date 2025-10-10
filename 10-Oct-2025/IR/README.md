@@ -1,0 +1,144 @@
+# Mobile Gamer Lifetime Value Prediction via Objective Decomposition and Reconstruction 
+
+**Authors**: Tianwei Li, Yu Zhao, Yunze Li, Sheng Li  
+
+**Link**: [PDF](https://arxiv.org/pdf/2510.08281)  
+
+**Abstract**: For Internet platforms operating real-time bidding (RTB) advertising service, a comprehensive understanding of user lifetime value (LTV) plays a pivotal role in optimizing advertisement allocation efficiency and maximizing the return on investment (ROI) for advertisement sponsors, thereby facilitating growth of commercialization revenue for the platform. However, the inherent complexity of user LTV distributions induces significant challenges in accurate LTV prediction. Existing state-of-the-art works, which primarily focus on directly learning the LTV distributions through well-designed loss functions, achieve limited success due to their vulnerability to outliers. In this paper, we proposed a novel LTV prediction method to address distribution challenges through an objective decomposition and reconstruction framework. Briefly speaking, based on the in-app purchase characteristics of mobile gamers, our model was designed to first predict the number of transactions at specific prices and then calculate the total payment amount from these intermediate predictions. Our proposed model was evaluated through experiments on real-world industrial dataset, and deployed on the TapTap RTB advertising system for online A/B testing along with the state-of-the-art ZILN model. 
+
+---
+# ReasonEmbed: Enhanced Text Embeddings for Reasoning-Intensive Document Retrieval 
+
+**Authors**: Jianlyu Chen, Junwei Lan, Chaofan Li, Defu Lian, Zheng Liu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2510.08252)  
+
+**Abstract**: In this paper, we introduce ReasonEmbed, a novel text embedding model developed for reasoning-intensive document retrieval. Our work includes three key technical contributions. First, we propose ReMixer, a new data synthesis method that overcomes the triviality problem prevalent in previous synthetic datasets, enabling large-scale production of 82K high-quality training samples. Second, we design Redapter, a self-adaptive learning algorithm that dynamically adjusts training each sample's weight based on its reasoning intensity. This allows the model to effectively capture the complex semantic relationships between queries and documents. Third, we implement ReasonEmbed across multiple backbones of varying sizes, all of which achieve superior performance on reasoning-intensive retrieval tasks. Notably, our ReasonEmbed-Qwen3-8B model offers a record-high nDCG@10 score of 38.1 on the BRIGHT benchmark, which significantly outperforms existing text embedding models. We will fully open-source our created resources in ReasonEmbed to push forward the research advancement in this field. 
+
+---
+# VersionRAG: Version-Aware Retrieval-Augmented Generation for Evolving Documents 
+
+**Authors**: Daniel Huwiler, Kurt Stockinger, Jonathan Fürst  
+
+**Link**: [PDF](https://arxiv.org/pdf/2510.08109)  
+
+**Abstract**: Retrieval-Augmented Generation (RAG) systems fail when documents evolve through versioning-a ubiquitous characteristic of technical documentation. Existing approaches achieve only 58-64% accuracy on version-sensitive questions, retrieving semantically similar content without temporal validity checks. We present VersionRAG, a version-aware RAG framework that explicitly models document evolution through a hierarchical graph structure capturing version sequences, content boundaries, and changes between document states. During retrieval, VersionRAG routes queries through specialized paths based on intent classification, enabling precise version-aware filtering and change tracking. On our VersionQA benchmark-100 manually curated questions across 34 versioned technical documents-VersionRAG achieves 90% accuracy, outperforming naive RAG (58%) and GraphRAG (64%). VersionRAG reaches 60% accuracy on implicit change detection where baselines fail (0-10%), demonstrating its ability to track undocumented modifications. Additionally, VersionRAG requires 97% fewer tokens during indexing than GraphRAG, making it practical for large-scale deployment. Our work establishes versioned document QA as a distinct task and provides both a solution and benchmark for future research. 
+
+---
+# TaoSR-AGRL: Adaptive Guided Reinforcement Learning Framework for E-commerce Search Relevance 
+
+**Authors**: Jianhui Yang, Yiming Jin, Pengkun Jiao, Chenhe Dong, Zerui Huang, Shaowei Yao, Xiaojiang Zhou, Dan Ou, Haihong Tang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2510.08048)  
+
+**Abstract**: Query-product relevance prediction is fundamental to e-commerce search and has become even more critical in the era of AI-powered shopping, where semantic understanding and complex reasoning directly shape the user experience and business conversion. Large Language Models (LLMs) enable generative, reasoning-based approaches, typically aligned via supervised fine-tuning (SFT) or preference optimization methods like Direct Preference Optimization (DPO). However, the increasing complexity of business rules and user queries exposes the inability of existing methods to endow models with robust reasoning capacity for long-tail and challenging cases. Efforts to address this via reinforcement learning strategies like Group Relative Policy Optimization (GRPO) often suffer from sparse terminal rewards, offering insufficient guidance for multi-step reasoning and slowing convergence. To address these challenges, we propose TaoSR-AGRL, an Adaptive Guided Reinforcement Learning framework for LLM-based relevance prediction in Taobao Search Relevance. TaoSR-AGRL introduces two key innovations: (1) Rule-aware Reward Shaping, which decomposes the final relevance judgment into dense, structured rewards aligned with domain-specific relevance criteria; and (2) Adaptive Guided Replay, which identifies low-accuracy rollouts during training and injects targeted ground-truth guidance to steer the policy away from stagnant, rule-violating reasoning patterns toward compliant trajectories. TaoSR-AGRL was evaluated on large-scale real-world datasets and through online side-by-side human evaluations on Taobao Search. It consistently outperforms DPO and standard GRPO baselines in offline experiments, improving relevance accuracy, rule adherence, and training stability. The model trained with TaoSR-AGRL has been successfully deployed in the main search scenario on Taobao, serving hundreds of millions of users. 
+
+---
+# Generation and annotation of item usage scenarios in e-commerce using large language models 
+
+**Authors**: Madoka Hagiri, Kazushi Okamoto, Koki Karube, Kei Harada, Atsushi Shibata  
+
+**Link**: [PDF](https://arxiv.org/pdf/2510.07885)  
+
+**Abstract**: Complementary recommendations suggest combinations of useful items that play important roles in e-commerce. However, complementary relationships are often subjective and vary among individuals, making them difficult to infer from historical data. Unlike conventional history-based methods that rely on statistical co-occurrence, we focus on the underlying usage context that motivates item combinations. We hypothesized that people select complementary items by imagining specific usage scenarios and identifying the needs in such situations. Based on this idea, we explored the use of large language models (LLMs) to generate item usage scenarios as a starting point for constructing complementary recommendation systems. First, we evaluated the plausibility of LLM-generated scenarios through manual annotation. The results demonstrated that approximately 85% of the generated scenarios were determined to be plausible, suggesting that LLMs can effectively generate realistic item usage scenarios. 
+
+---
+# PLUM: Adapting Pre-trained Language Models for Industrial-scale Generative Recommendations 
+
+**Authors**: Ruining He, Lukasz Heldt, Lichan Hong, Raghunandan Keshavan, Shifan Mao, Nikhil Mehta, Zhengyang Su, Alicia Tsai, Yueqi Wang, Shao-Chuan Wang, Xinyang Yi, Lexi Baugher, Baykal Cakici, Ed Chi, Cristos Goodrow, Ningren Han, He Ma, Romer Rosales, Abby Van Soest, Devansh Tandon, Su-Lin Wu, Weilong Yang, Yilin Zheng  
+
+**Link**: [PDF](https://arxiv.org/pdf/2510.07784)  
+
+**Abstract**: Large Language Models (LLMs) pose a new paradigm of modeling and computation for information tasks. Recommendation systems are a critical application domain poised to benefit significantly from the sequence modeling capabilities and world knowledge inherent in these large models. In this paper, we introduce PLUM, a framework designed to adapt pre-trained LLMs for industry-scale recommendation tasks. PLUM consists of item tokenization using Semantic IDs, continued pre-training (CPT) on domain-specific data, and task-specific fine-tuning for recommendation objectives. For fine-tuning, we focus particularly on generative retrieval, where the model is directly trained to generate Semantic IDs of recommended items based on user context. We conduct comprehensive experiments on large-scale internal video recommendation datasets. Our results demonstrate that PLUM achieves substantial improvements for retrieval compared to a heavily-optimized production model built with large embedding tables. We also present a scaling study for the model's retrieval performance, our learnings about CPT, a few enhancements to Semantic IDs, along with an overview of the training and inference methods that enable launching this framework to billions of users in YouTube. 
+
+---
+# Who Stole Your Data? A Method for Detecting Unauthorized RAG Theft 
+
+**Authors**: Peiyang Liu, Ziqiang Cui, Di Liang, Wei Ye  
+
+**Link**: [PDF](https://arxiv.org/pdf/2510.07728)  
+
+**Abstract**: Retrieval-augmented generation (RAG) enhances Large Language Models (LLMs) by mitigating hallucinations and outdated information issues, yet simultaneously facilitates unauthorized data appropriation at scale. This paper addresses this challenge through two key contributions. First, we introduce RPD, a novel dataset specifically designed for RAG plagiarism detection that encompasses diverse professional domains and writing styles, overcoming limitations in existing resources. Second, we develop a dual-layered watermarking system that embeds protection at both semantic and lexical levels, complemented by an interrogator-detective framework that employs statistical hypothesis testing on accumulated evidence. Extensive experimentation demonstrates our approach's effectiveness across varying query volumes, defense prompts, and retrieval parameters, while maintaining resilience against adversarial evasion techniques. This work establishes a foundational framework for intellectual property protection in retrieval-augmented AI systems. 
+
+---
+# Queries Are Not Alone: Clustering Text Embeddings for Video Search 
+
+**Authors**: Peyang Liu, Xi Wang, Ziqiang Cui, Wei Ye  
+
+**Link**: [PDF](https://arxiv.org/pdf/2510.07720)  
+
+**Abstract**: The rapid proliferation of video content across various platforms has highlighted the urgent need for advanced video retrieval systems. Traditional methods, which primarily depend on directly matching textual queries with video metadata, often fail to bridge the semantic gap between text descriptions and the multifaceted nature of video content. This paper introduces a novel framework, the Video-Text Cluster (VTC), which enhances video retrieval by clustering text queries to capture a broader semantic scope. We propose a unique clustering mechanism that groups related queries, enabling our system to consider multiple interpretations and nuances of each query. This clustering is further refined by our innovative Sweeper module, which identifies and mitigates noise within these clusters. Additionally, we introduce the Video-Text Cluster-Attention (VTC-Att) mechanism, which dynamically adjusts focus within the clusters based on the video content, ensuring that the retrieval process emphasizes the most relevant textual features. Further experiments have demonstrated that our proposed model surpasses existing state-of-the-art models on five public datasets. 
+
+---
+# ISMIE: A Framework to Characterize Information Seeking in Modern Information Environments 
+
+**Authors**: Shuoqi Sun, Danula Hettiachchi, Damiano Spina  
+
+**Link**: [PDF](https://arxiv.org/pdf/2510.07644)  
+
+**Abstract**: The modern information environment (MIE) is increasingly complex, shaped by a wide range of techniques designed to satisfy users' information needs. Information seeking (IS) models are effective mechanisms for characterizing user-system interactions. However, conceptualizing a model that fully captures the MIE landscape poses a challenge. We argue: Does such a model exist? To address this, we propose the Information Seeking in Modern Information Environments (ISMIE) framework as a fundamental step. ISMIE conceptualizes the information seeking process (ISP) via three key concepts: Components (e.g., Information Seeker), Intervening Variables (e.g., Interactive Variables), and Activities (e.g., Acquiring). Using ISMIE's concepts and employing a case study based on a common scenario - misinformation dissemination - we analyze six existing IS and information retrieval (IR) models to illustrate their limitations and the necessity of ISMIE. We then show how ISMIE serves as an actionable framework for both characterization and experimental design. We characterize three pressing issues and then outline two research blueprints: a user-centric, industry-driven experimental design for the authenticity and trust crisis to AI-generated content and a system-oriented, academic-driven design for tackling dopamine-driven content consumption. Our framework offers a foundation for developing IS and IR models to advance knowledge on understanding human interactions and system design in MIEs. 
+
+---
+# Retentive Relevance: Capturing Long-Term User Value in Recommendation Systems 
+
+**Authors**: Saeideh Bakhshi, Phuong Mai Nguyen, Robert Schiller, Tiantian Xu, Pawan Kodandapani, Andrew Levine, Cayman Simpson, Qifan Wang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2510.07621)  
+
+**Abstract**: Recommendation systems have traditionally relied on short-term engagement signals, such as clicks and likes, to personalize content. However, these signals are often noisy, sparse, and insufficient for capturing long-term user satisfaction and retention. We introduce Retentive Relevance, a novel content-level survey-based feedback measure that directly assesses users' intent to return to the platform for similar content. Unlike other survey measures that focus on immediate satisfaction, Retentive Relevance targets forward-looking behavioral intentions, capturing longer term user intentions and providing a stronger predictor of retention. We validate Retentive Relevance using psychometric methods, establishing its convergent, discriminant, and behavioral validity. Through large-scale offline modeling, we show that Retentive Relevance significantly outperforms both engagement signals and other survey measures in predicting next-day retention, especially for users with limited historical engagement. We develop a production-ready proxy model that integrates Retentive Relevance into the final stage of a multi-stage ranking system on a social media platform. Calibrated score adjustments based on this model yield substantial improvements in engagement, and retention, while reducing exposure to low-quality content, as demonstrated by large-scale A/B experiments. This work provides the first empirically validated framework linking content-level user perceptions to retention outcomes in production systems. We offer a scalable, user-centered solution that advances both platform growth and user experience. Our work has broad implications for responsible AI development. 
+
+---
+# Reasoning by Exploration: A Unified Approach to Retrieval and Generation over Graphs 
+
+**Authors**: Haoyu Han, Kai Guo, Harry Shomer, Yu Wang, Yucheng Chu, Hang Li, Li Ma, Jiliang Tang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2510.07484)  
+
+**Abstract**: Reasoning over structured graphs remains a fundamental challenge for Large Language Models (LLMs), particularly when scaling to large graphs. Existing approaches typically follow the retrieval-augmented generation (RAG) paradigm: first retrieving subgraphs relevant to the query and then generating answers conditioned on the retrieved subgraphs. However, such two-phase pipelines often struggle to faithfully incorporate graph structure, since the generation process is ultimately constrained by the quality and completeness of the retrieved subgraph. Although many advanced retrievers have been proposed recently to mitigate this issue, they are usually tailored to the training graphs and generalize poorly to unseen graphs, which limits their practical applicability. In this work, we propose Reasoning by Exploration (RoE), a novel approach that unifies retrieval and generation by framing reasoning over graphs as a process of graph exploration. At each step, the LLM selects candidate nodes and edges to explore, gradually constructing reasoning paths and generating answers along the way. To enable effective exploration, RoE is trained in two stages: supervised fine-tuning (SFT) on gold reasoning paths, followed by reinforcement learning (RL) to enhance exploration effectiveness and generalization. Experiments on benchmark datasets demonstrate that RoE achieves substantial overall improvements over baselines, while also generalizing effectively to unseen graphs. 
+
+---
+# Agent Learning via Early Experience 
+
+**Authors**: Kai Zhang, Xiangchao Chen, Bo Liu, Tianci Xue, Zeyi Liao, Zhihan Liu, Xiyao Wang, Yuting Ning, Zhaorun Chen, Xiaohan Fu, Jian Xie, Yuxuan Sun, Boyu Gou, Qi Qi, Zihang Meng, Jianwei Yang, Ning Zhang, Xian Li, Ashish Shah, Dat Huynh, Hengduo Li, Zi Yang, Sara Cao, Lawrence Jang, Shuyan Zhou, Jiacheng Zhu, Huan Sun, Jason Weston, Yu Su, Yifan Wu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2510.08558)  
+
+**Abstract**: A long-term goal of language agents is to learn and improve through their own experience, ultimately outperforming humans in complex, real-world tasks. However, training agents from experience data with reinforcement learning remains difficult in many environments, which either lack verifiable rewards (e.g., websites) or require inefficient long-horizon rollouts (e.g., multi-turn tool use). As a result, most current agents rely on supervised fine-tuning on expert data, which is challenging to scale and generalizes poorly. This limitation stems from the nature of expert demonstrations: they capture only a narrow range of scenarios and expose the agent to limited environment diversity. We address this limitation with a middle-ground paradigm we call early experience: interaction data generated by the agent's own actions, where the resulting future states serve as supervision without reward signals. Within this paradigm we study two strategies of using such data: (1) Implicit world modeling, which uses collected states to ground the policy in environment dynamics; and (2) Self-reflection, where the agent learns from its suboptimal actions to improve reasoning and decision-making. We evaluate across eight diverse environments and multiple model families. Our approaches consistently improve effectiveness and out-of-domain generalization, highlighting the value of early experience. Moreover, in environments with verifiable rewards, our results provide promising signals that early experience offers a strong foundation for subsequent reinforcement learning, positioning it as a practical bridge between imitation learning and fully experience-driven agents. 
+
+---
+# Detecting Legend Items on Historical Maps Using GPT-4o with In-Context Learning 
+
+**Authors**: Sofia Kirsanova, Yao-Yi Chiang, Weiwei Duan  
+
+**Link**: [PDF](https://arxiv.org/pdf/2510.08385)  
+
+**Abstract**: Historical map legends are critical for interpreting cartographic symbols. However, their inconsistent layouts and unstructured formats make automatic extraction challenging. Prior work focuses primarily on segmentation or general optical character recognition (OCR), with few methods effectively matching legend symbols to their corresponding descriptions in a structured manner. We present a method that combines LayoutLMv3 for layout detection with GPT-4o using in-context learning to detect and link legend items and their descriptions via bounding box predictions. Our experiments show that GPT-4 with structured JSON prompts outperforms the baseline, achieving 88% F-1 and 85% IoU, and reveal how prompt design, example counts, and layout alignment affect performance. This approach supports scalable, layout-aware legend parsing and improves the indexing and searchability of historical maps across various visual styles. 
+
+---
+# HySim-LLM: Embedding-Weighted Fine-Tuning Bounds and Manifold Denoising for Domain-Adapted LLMs 
+
+**Authors**: Majid Jaberi-Douraki, Hossein Sholehrasa, Xuan Xu, Remya Ampadi Ramachandran  
+
+**Link**: [PDF](https://arxiv.org/pdf/2510.07796)  
+
+**Abstract**: The extraction and standardization of pharmacokinetic (PK) information from scientific literature remain significant challenges in computational pharmacology, which limits the reliability of data-driven models in drug development. Large language models (LLMs) have achieved remarkable progress in text understanding and reasoning, yet their adaptation to structured biomedical data, such as PK tables, remains constrained by heterogeneity, noise, and domain shift. To address these limitations, we propose HySim-LLM, a unified mathematical and computational framework that integrates embedding-weighted fine-tuning and manifold-aware denoising to enhance the robustness and interpretability of LLMs. We establish two theoretical results: (1) a similarity-weighted generalization bound that quantifies adaptation performance under embedding divergence, and (2) a manifold-based denoising guarantee that bounds loss contributions from noisy or off-manifold samples. These theorems provide a principled foundation for fine-tuning LLMs in structured biomedical settings. The framework offers a mathematically grounded pathway toward reliable and interpretable LLM adaptation for biomedical and data-intensive scientific domains. 
+
+---
+# Evaluation of LLMs for Process Model Analysis and Optimization 
+
+**Authors**: Akhil Kumar, Jianliang Leon Zhao, Om Dobariya  
+
+**Link**: [PDF](https://arxiv.org/pdf/2510.07489)  
+
+**Abstract**: In this paper, we report our experience with several LLMs for their ability to understand a process model in an interactive, conversational style, find syntactical and logical errors in it, and reason with it in depth through a natural language (NL) interface. Our findings show that a vanilla, untrained LLM like ChatGPT (model o3) in a zero-shot setting is effective in understanding BPMN process models from images and answering queries about them intelligently at syntactic, logic, and semantic levels of depth. Further, different LLMs vary in performance in terms of their accuracy and effectiveness. Nevertheless, our empirical analysis shows that LLMs can play a valuable role as assistants for business process designers and users. We also study the LLM's "thought process" and ability to perform deeper reasoning in the context of process analysis and optimization. We find that the LLMs seem to exhibit anthropomorphic properties. 
+
+---
+# Haystack Engineering: Context Engineering for Heterogeneous and Agentic Long-Context Evaluation 
+
+**Authors**: Mufei Li, Dongqi Fu, Limei Wang, Si Zhang, Hanqing Zeng, Kaan Sancak, Ruizhong Qiu, Haoyu Wang, Xiaoxin He, Xavier Bresson, Yinglong Xia, Chonglin Sun, Pan Li  
+
+**Link**: [PDF](https://arxiv.org/pdf/2510.07414)  
+
+**Abstract**: Modern long-context large language models (LLMs) perform well on synthetic "needle-in-a-haystack" (NIAH) benchmarks, but such tests overlook how noisy contexts arise from biased retrieval and agentic workflows. We argue that haystack engineering is necessary to construct noisy long contexts that faithfully capture key real-world factors -- distraction from heterogeneous biased retrievers and cascading errors in agentic workflows -- to test models' long-context robustness. We instantiate it through HaystackCraft, a new NIAH benchmark built on the full English Wikipedia hyperlink network with multi-hop questions. HaystackCraft evaluates how heterogeneous retrieval strategies (e.g., sparse, dense, hybrid, and graph-based) affect distractor composition, haystack ordering, and downstream LLM performance. HaystackCraft further extends NIAH to dynamic, LLM-dependent settings that simulate agentic operations, where models refine queries, reflect on their past reasonings, and decide when to stop. Experiments with 15 long-context models show that (1) while stronger dense retrievers can introduce more challenging distractors, graph-based reranking simultaneously improves retrieval effectiveness and mitigates more harmful distractors; (2) in agentic tests, even advanced models like Gemini 2.5 Pro and GPT-5 suffer cascading failures from self-generated distractors or struggle to perform early stops. These results highlight persistent challenges in agentic long-context reasoning and establish HaystackCraft as a valuable testbed for future progress. 
+
+---
