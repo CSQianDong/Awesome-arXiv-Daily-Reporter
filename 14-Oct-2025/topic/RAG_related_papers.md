@@ -1,0 +1,171 @@
+# Uncertainty Quantification for Retrieval-Augmented Reasoning 
+
+**Authors**: Heydar Soudani, Hamed Zamani, Faegheh Hasibi  
+
+**Link**: [PDF](https://arxiv.org/pdf/2510.11483)  
+
+**Abstract**: Retrieval-augmented reasoning (RAR) is a recent evolution of retrieval-augmented generation (RAG) that employs multiple reasoning steps for retrieval and generation. While effective for some complex queries, RAR remains vulnerable to errors and misleading outputs. Uncertainty quantification (UQ) offers methods to estimate the confidence of systems' outputs. These methods, however, often handle simple queries with no retrieval or single-step retrieval, without properly handling RAR setup. Accurate estimation of UQ for RAR requires accounting for all sources of uncertainty, including those arising from retrieval and generation. In this paper, we account for all these sources and introduce Retrieval-Augmented Reasoning Consistency (R2C)--a novel UQ method for RAR. The core idea of R2C is to perturb the multi-step reasoning process by applying various actions to reasoning steps. These perturbations alter the retriever's input, which shifts its output and consequently modifies the generator's input at the next step. Through this iterative feedback loop, the retriever and generator continuously reshape one another's inputs, enabling us to capture uncertainty arising from both components. Experiments on five popular RAR systems across diverse QA datasets show that R2C improves AUROC by over 5% on average compared to the state-of-the-art UQ baselines. Extrinsic evaluations using R2C as an external signal further confirm its effectiveness for two downstream tasks: in Abstention, it achieves ~5% gains in both F1Abstain and AccAbstain; in Model Selection, it improves the exact match by ~7% over single models and ~3% over selection methods. 
+
+---
+# FinVet: A Collaborative Framework of RAG and External Fact-Checking Agents for Financial Misinformation Detection 
+
+**Authors**: Daniel Berhane Araya, Duoduo Liao  
+
+**Link**: [PDF](https://arxiv.org/pdf/2510.11654)  
+
+**Abstract**: Financial markets face growing threats from misinformation that can trigger billions in losses in minutes. Most existing approaches lack transparency in their decision-making and provide limited attribution to credible sources. We introduce FinVet, a novel multi-agent framework that integrates two Retrieval-Augmented Generation (RAG) pipelines with external fact-checking through a confidence-weighted voting mechanism. FinVet employs adaptive three-tier processing that dynamically adjusts verification strategies based on retrieval confidence, from direct metadata extraction to hybrid reasoning to full model-based analysis. Unlike existing methods, FinVet provides evidence-backed verdicts, source attribution, confidence scores, and explicit uncertainty flags when evidence is insufficient. Experimental evaluation on the FinFact dataset shows that FinVet achieves an F1 score of 0.85, which is a 10.4% improvement over the best individual pipeline (fact-check pipeline) and 37% improvement over standalone RAG approaches. 
+
+---
+# VeritasFi: An Adaptable, Multi-tiered RAG Framework for Multi-modal Financial Question Answering 
+
+**Authors**: Zhenghan Tai, Hanwei Wu, Qingchen Hu, Jijun Chi, Hailin He, Lei Ding, Tung Sum Thomas Kwok, Bohuai Xiao, Yuchen Hua, Suyuchen Wang, Peng Lu, Muzhi Li, Yihong Wu, Liheng Ma, Jerry Huang, Jiayi Zhang, Gonghao Zhang, Chaolong Jiang, Jingrui Tian, Sicheng Lyu, Zeyu Li, Boyu Han, Fengran Mo, Xinyue Yu, Yufei Cui, Ling Zhou, Xinyu Wang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2510.10828)  
+
+**Abstract**: Retrieval-Augmented Generation (RAG) is becoming increasingly essential for Question Answering (QA) in the financial sector, where accurate and contextually grounded insights from complex public disclosures are crucial. However, existing financial RAG systems face two significant challenges: (1) they struggle to process heterogeneous data formats, such as text, tables, and figures; and (2) they encounter difficulties in balancing general-domain applicability with company-specific adaptation. To overcome these challenges, we present VeritasFi, an innovative hybrid RAG framework that incorporates a multi-modal preprocessing pipeline alongside a cutting-edge two-stage training strategy for its re-ranking component. VeritasFi enhances financial QA through three key innovations: (1) A multi-modal preprocessing pipeline that seamlessly transforms heterogeneous data into a coherent, machine-readable format. (2) A tripartite hybrid retrieval engine that operates in parallel, combining deep multi-path retrieval over a semantically indexed document corpus, real-time data acquisition through tool utilization, and an expert-curated memory bank for high-frequency questions, ensuring comprehensive scope, accuracy, and efficiency. (3) A two-stage training strategy for the document re-ranker, which initially constructs a general, domain-specific model using anonymized data, followed by rapid fine-tuning on company-specific data for targeted applications. By integrating our proposed designs, VeritasFi presents a groundbreaking framework that greatly enhances the adaptability and robustness of financial RAG systems, providing a scalable solution for both general-domain and company-specific QA tasks. Code accompanying this work is available at this https URL. 
+
+---
+# DyKnow-RAG: Dynamic Knowledge Utilization Reinforcement Framework for Noisy Retrieval-Augmented Generation in E-commerce Search Relevance 
+
+**Authors**: Tingqiao Xu, Shaowei Yao, Chenhe Dong, Yiming Jin, Zerui Huang, Dan Ou, Haihong Tang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2510.11122)  
+
+**Abstract**: Accurately modeling query-item relevance drives e-commerce ranking, yet long-tail, knowledge-heavy, and fast-evolving queries exceed parametric LLM coverage. External context (reviews, attribute encyclopedias, UGC) can help but is noisy, and single-pass latency and cost forbid any clean-then-summarize step. The model must, per query, judge relevance and decide whether to use, partially use, or ignore the context. DyKnow-RAG is a dynamic noisy-RAG framework built on Group Relative Policy Optimization. It trains two rollout groups (no external context vs a single retrieved chunk) and applies posterior-driven inter-group advantage scaling that adaptively reweights their contributions by the per-query correctness gap. This teaches when to trust retrieval versus fall back to parametric knowledge, without process labels, value networks, or extra inference passes, preserving single-pass, single-chunk deployment under production latency. Training combines: (1) supervised initialization with a structured rationale that explicitly records the context-usage decision; (2) an RL pool prioritized by SFT uncertainty to focus where context choice is most consequential; and (3) an optional lightweight DPO warm start to stabilize with-context calibration. Under a unified retrieval/index and fixed latency budget, DyKnow-RAG outperforms SFT, DPO, and vanilla GRPO in offline tests, and delivers consistent lifts on GSB, Query Goodrate, and Item Goodrate in Taobao A/B testing. It is deployed in Taobao's production relevance system, serving live traffic. To our knowledge, it is among the first single-pass RAG solutions for e-commerce relevance, turning noisy external signals into reliable gains without added online complexity. 
+
+---
+# LLM-Specific Utility: A New Perspective for Retrieval-Augmented Generation 
+
+**Authors**: Hengran Zhang, Keping Bi, Jiafeng Guo, Jiaming Zhang, Shuaiqiang Wang, Dawei Yin, Xueqi Cheng  
+
+**Link**: [PDF](https://arxiv.org/pdf/2510.11358)  
+
+**Abstract**: Retrieval-augmented generation (RAG) enhances large language models (LLMs) by incorporating external knowledge. While traditional retrieval focuses on relevance, RAG's effectiveness depends on the utility of retrieved passages, i.e., the usefulness in facilitating the generation of an accurate and comprehensive answer. Existing studies often treat utility as a generic attribute, ignoring the fact that different LLMs may benefit differently from the same passage due to variations in internal knowledge and comprehension ability. In this work, we introduce and systematically investigate the notion of LLM-specific utility. Through large-scale experiments across multiple datasets and LLMs, we demonstrate that human-annotated passages are not optimal for LLMs and that ground-truth utilitarian passages are not transferable across different LLMs. These findings highlight the necessity of adopting the LLM-specific utility in RAG research. Our findings indicate that some human-annotated passages are not ground-truth utilitarian passages for specific LLMs, partially due to the varying readability of queries and passages for LLMs, a tendency for which perplexity is a key metric. Based on these findings, we propose a benchmarking procedure for LLM-specific utility judgments. We evaluate existing utility judgment methods on six datasets and find that while verbalized methods using pseudo-answers perform robustly, LLMs struggle to assess utility effectively-failing to reject all passages for known queries and to select truly useful ones for unknown queries. 
+
+---
+# Is Implicit Knowledge Enough for LLMs? A RAG Approach for Tree-based Structures 
+
+**Authors**: Mihir Gupte, Paolo Giusto, Ramesh S  
+
+**Link**: [PDF](https://arxiv.org/pdf/2510.10806)  
+
+**Abstract**: Large Language Models (LLMs) are adept at generating responses based on information within their context. While this ability is useful for interacting with structured data like code files, another popular method, Retrieval-Augmented Generation (RAG), retrieves relevant documents to augment the model's in-context learning. However, it is not well-explored how to best represent this retrieved knowledge for generating responses on structured data, particularly hierarchical structures like trees. In this work, we propose a novel bottom-up method to linearize knowledge from tree-like structures (like a GitHub repository) by generating implicit, aggregated summaries at each hierarchical level. This approach enables the knowledge to be stored in a knowledge base and used directly with RAG. We then compare our method to using RAG on raw, unstructured code, evaluating the accuracy and quality of the generated responses. Our results show that while response quality is comparable across both methods, our approach generates over 68% fewer documents in the retriever, a significant gain in efficiency. This finding suggests that leveraging implicit, linearized knowledge may be a highly effective and scalable strategy for handling complex, hierarchical data structures. 
+
+---
+# Domain-Specific Data Generation Framework for RAG Adaptation 
+
+**Authors**: Chris Xing Tian, Weihao Xie, Zhen Chen, Zhengyuan Yi, Hui Liu, Haoliang Li, Shiqi Wang, Siwei Ma  
+
+**Link**: [PDF](https://arxiv.org/pdf/2510.11217)  
+
+**Abstract**: Retrieval-Augmented Generation (RAG) combines the language understanding and reasoning power of large language models (LLMs) with external retrieval to enable domain-grounded responses. Effectively adapting RAG systems to domain-specific settings requires specialized, context-rich training data beyond general-purpose question-answering. Here, we propose RAGen, a scalable and modular framework for generating domain-grounded question-answer-context (QAC) triples tailored to diverse RAG adaptation approaches. RAGen produces these QAC triples by identifying key concepts in documents, generating diverse questions guided by Bloom's Taxonomy-inspired principles, and pairing them with precise answers extracted from relevant contexts. RAGen supports multiple RAG adaptation strategies, including the optimization of key components such as the LLM, retriever, and embedding model, etc. Its modular pipeline features semantic chunking, hierarchical concept extraction, and multi-chunk retrieval, along with the introduction of curated distractor contexts to promote robust reasoning. Designed for scalability, RAGen efficiently handles large and evolving document corpora without redundant processing, making it especially suitable for dynamic evolving domains such as scientific research and enterprise knowledge bases. 
+
+---
+# Review of Inference-Time Scaling Strategies: Reasoning, Search and RAG 
+
+**Authors**: Zhichao Wang, Cheng Wan, Dong Nie  
+
+**Link**: [PDF](https://arxiv.org/pdf/2510.10787)  
+
+**Abstract**: The performance gains of LLMs have historically been driven by scaling up model size and training data. However, the rapidly diminishing availability of high-quality training data is introducing a fundamental bottleneck, shifting the focus of research toward inference-time scaling. This paradigm uses additional computation at the time of deployment to substantially improve LLM performance on downstream tasks without costly model re-training. This review systematically surveys the diverse techniques contributing to this new era of inference-time scaling, organizing the rapidly evolving field into two comprehensive perspectives: Output-focused and Input-focused methods. Output-focused techniques encompass complex, multi-step generation strategies, including reasoning (e.g., CoT, ToT, ReAct), various search and decoding methods (e.g., MCTS, beam search), training for long CoT (e.g., RLVR, GRPO), and model ensemble methods. Input-focused techniques are primarily categorized by few-shot and RAG, with RAG as the central focus. The RAG section is further detailed through a structured examination of query expansion, data, retrieval and reranker, LLM generation methods, and multi-modal RAG. 
+
+---
+# RECON: Reasoning with Condensation for Efficient Retrieval-Augmented Generation 
+
+**Authors**: Zhichao Xu, Minheng Wang, Yawei Wang, Wenqian Ye, Yuntao Du, Yunpu Ma, Yijun Tian  
+
+**Link**: [PDF](https://arxiv.org/pdf/2510.10448)  
+
+**Abstract**: Retrieval-augmented generation (RAG) systems trained using reinforcement learning (RL) with reasoning are hampered by inefficient context management, where long, noisy retrieved documents increase costs and degrade performance. We introduce RECON (REasoning with CONdensation), a framework that integrates an explicit summarization module to compress evidence within the reasoning loop. Our summarizer is trained via a two-stage process: relevance pretraining on QA datasets, followed by multi-aspect distillation from proprietary LLMs to ensure factuality and clarity. Integrated into the Search-R1 pipeline, RECON reduces total context length by 35\%, leading to improved training speed and inference latency, while simultaneously improving RAG performance on downstream QA benchmarks. Notably, it boosts the average EM score of the 3B model by 14.5\% and the 7B model by 3.0\%, showing particular strength in multi-hop QA. RECON demonstrates that learned context compression is essential for building practical, scalable, and performant RAG systems. Our code implementation is made available at this https URL. 
+
+---
+# Steering Over-refusals Towards Safety in Retrieval Augmented Generation 
+
+**Authors**: Utsav Maskey, Mark Dras, Usman Naseem  
+
+**Link**: [PDF](https://arxiv.org/pdf/2510.10452)  
+
+**Abstract**: Safety alignment in large language models (LLMs) induces over-refusals -- where LLMs decline benign requests due to aggressive safety filters. We analyze this phenomenon in retrieval-augmented generation (RAG), where both the query intent and retrieved context properties influence refusal behavior. We construct RagRefuse, a domain-stratified benchmark spanning medical, chemical, and open domains, pairing benign and harmful queries with controlled context contamination patterns and sizes. Our analysis shows that context arrangement / contamination, domain of query and context, and harmful-text density trigger refusals even on benign queries, with effects depending on model-specific alignment choices. To mitigate over-refusals, we introduce \textsc{SafeRAG-Steering}, a model-centric embedding intervention that steers the embedding regions towards the confirmed safe, non-refusing output regions at inference time. This reduces over-refusals in contaminated RAG pipelines while preserving legitimate refusals. 
+
+---
+# LinearRAG: Linear Graph Retrieval Augmented Generation on Large-scale Corpora 
+
+**Authors**: Luyao Zhuang, Shengyuan Chen, Yilin Xiao, Huachi Zhou, Yujing Zhang, Hao Chen, Qinggang Zhang, Xiao Huang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2510.10114)  
+
+**Abstract**: Retrieval-Augmented Generation (RAG) is widely used to mitigate hallucinations of Large Language Models (LLMs) by leveraging external knowledge. While effective for simple queries, traditional RAG systems struggle with large-scale, unstructured corpora where information is fragmented. Recent advances incorporate knowledge graphs to capture relational structures, enabling more comprehensive retrieval for complex, multi-hop reasoning tasks. However, existing graph-based RAG (GraphRAG) methods rely on unstable and costly relation extraction for graph construction, often producing noisy graphs with incorrect or inconsistent relations that degrade retrieval quality. In this paper, we revisit the pipeline of existing GraphRAG systems and propose LinearRAG (Linear Graph-based Retrieval-Augmented Generation), an efficient framework that enables reliable graph construction and precise passage retrieval. Specifically, LinearRAG constructs a relation-free hierarchical graph, termed Tri-Graph, using only lightweight entity extraction and semantic linking, avoiding unstable relation modeling. This new paradigm of graph construction scales linearly with corpus size and incurs no extra token consumption, providing an economical and reliable indexing of the original passages. For retrieval, LinearRAG adopts a two-stage strategy: (i) relevant entity activation via local semantic bridging, followed by (ii) passage retrieval through global importance aggregation. Extensive experiments on four datasets demonstrate that LinearRAG significantly outperforms baseline models. 
+
+---
+# SeCon-RAG: A Two-Stage Semantic Filtering and Conflict-Free Framework for Trustworthy RAG 
+
+**Authors**: Xiaonan Si, Meilin Zhu, Simeng Qin, Lijia Yu, Lijun Zhang, Shuaitong Liu, Xinfeng Li, Ranjie Duan, Yang Liu, Xiaojun Jia  
+
+**Link**: [PDF](https://arxiv.org/pdf/2510.09710)  
+
+**Abstract**: Retrieval-augmented generation (RAG) systems enhance large language models (LLMs) with external knowledge but are vulnerable to corpus poisoning and contamination attacks, which can compromise output integrity. Existing defenses often apply aggressive filtering, leading to unnecessary loss of valuable information and reduced reliability in generation. To address this problem, we propose a two-stage semantic filtering and conflict-free framework for trustworthy RAG. In the first stage, we perform a joint filter with semantic and cluster-based filtering which is guided by the Entity-intent-relation extractor (EIRE). EIRE extracts entities, latent objectives, and entity relations from both the user query and filtered documents, scores their semantic relevance, and selectively adds valuable documents into the clean retrieval database. In the second stage, we proposed an EIRE-guided conflict-aware filtering module, which analyzes semantic consistency between the query, candidate answers, and retrieved knowledge before final answer generation, filtering out internal and external contradictions that could mislead the model. Through this two-stage process, SeCon-RAG effectively preserves useful knowledge while mitigating conflict contamination, achieving significant improvements in both generation robustness and output trustworthiness. Extensive experiments across various LLMs and datasets demonstrate that the proposed SeCon-RAG markedly outperforms state-of-the-art defense methods. 
+
+---
+# RIPRAG: Hack a Black-box Retrieval-Augmented Generation Question-Answering System with Reinforcement Learning 
+
+**Authors**: Meng Xi, Sihan Lv, Yechen Jin, Guanjie Cheng, Naibo Wang, Ying Li, Jianwei Yin  
+
+**Link**: [PDF](https://arxiv.org/pdf/2510.10008)  
+
+**Abstract**: Retrieval-Augmented Generation (RAG) systems based on Large Language Models (LLMs) have become a core technology for tasks such as question-answering (QA) and content generation. However, by injecting poisoned documents into the database of RAG systems, attackers can manipulate LLMs to generate text that aligns with their intended preferences. Existing research has primarily focused on white-box attacks against simplified RAG architectures. In this paper, we investigate a more complex and realistic scenario: the attacker lacks knowledge of the RAG system's internal composition and implementation details, and the RAG system comprises components beyond a mere retriever. Specifically, we propose the RIPRAG attack framework, an end-to-end attack pipeline that treats the target RAG system as a black box, where the only information accessible to the attacker is whether the poisoning succeeds. Our method leverages Reinforcement Learning (RL) to optimize the generation model for poisoned documents, ensuring that the generated poisoned document aligns with the target RAG system's preferences. Experimental results demonstrate that this method can effectively execute poisoning attacks against most complex RAG systems, achieving an attack success rate (ASR) improvement of up to 0.72 compared to baseline methods. This highlights prevalent deficiencies in current defensive methods and provides critical insights for LLM security research. 
+
+---
+# Query-Specific GNN: A Comprehensive Graph Representation Learning Method for Retrieval Augmented Generation 
+
+**Authors**: Yuchen Yan, Zhihua Liu, Hao Wang, Weiming Li, Xiaoshuai Hao  
+
+**Link**: [PDF](https://arxiv.org/pdf/2510.11541)  
+
+**Abstract**: Retrieval-augmented generation (RAG) has demonstrated its ability to enhance Large Language Models (LLMs) by integrating external knowledge sources. However, multi-hop questions, which require the identification of multiple knowledge targets to form a synthesized answer, raise new challenges for RAG systems. Under the multi-hop settings, existing methods often struggle to fully understand the questions with complex semantic structures and are susceptible to irrelevant noise during the retrieval of multiple information targets. To address these limitations, we propose a novel graph representation learning framework for multi-hop question retrieval. We first introduce a Multi-information Level Knowledge Graph (Multi-L KG) to model various information levels for a more comprehensive understanding of multi-hop questions. Based on this, we design a Query-Specific Graph Neural Network (QSGNN) for representation learning on the Multi-L KG. QSGNN employs intra/inter-level message passing mechanisms, and in each message passing the information aggregation is guided by the query, which not only facilitates multi-granular information aggregation but also significantly reduces the impact of noise. To enhance its ability to learn robust representations, we further propose two synthesized data generation strategies for pre-training the QSGNN. Extensive experimental results demonstrate the effectiveness of our framework in multi-hop scenarios, especially in high-hop questions the improvement can reach 33.8\%. The code is available at: this https URL. 
+
+---
+# RAG-Pull: Imperceptible Attacks on RAG Systems for Code Generation 
+
+**Authors**: Vasilije Stambolic, Aritra Dhar, Lukas Cavigelli  
+
+**Link**: [PDF](https://arxiv.org/pdf/2510.11195)  
+
+**Abstract**: Retrieval-Augmented Generation (RAG) increases the reliability and trustworthiness of the LLM response and reduces hallucination by eliminating the need for model retraining. It does so by adding external data into the LLM's context. We develop a new class of black-box attack, RAG-Pull, that inserts hidden UTF characters into queries or external code repositories, redirecting retrieval toward malicious code, thereby breaking the models' safety alignment. We observe that query and code perturbations alone can shift retrieval toward attacker-controlled snippets, while combined query-and-target perturbations achieve near-perfect success. Once retrieved, these snippets introduce exploitable vulnerabilities such as remote code execution and SQL injection. RAG-Pull's minimal perturbations can alter the model's safety alignment and increase preference towards unsafe code, therefore opening up a new class of attacks on LLMs. 
+
+---
+# Agentic RAG for Software Testing with Hybrid Vector-Graph and Multi-Agent Orchestration 
+
+**Authors**: Mohanakrishnan Hariharan, Satish Arvapalli, Seshu Barma, Evangeline Sheela  
+
+**Link**: [PDF](https://arxiv.org/pdf/2510.10824)  
+
+**Abstract**: We present an approach to software testing automation using Agentic Retrieval-Augmented Generation (RAG) systems for Quality Engineering (QE) artifact creation. We combine autonomous AI agents with hybrid vector-graph knowledge systems to automate test plan, case, and QE metric generation. Our approach addresses traditional software testing limitations by leveraging LLMs such as Gemini and Mistral, multi-agent orchestration, and enhanced contextualization. The system achieves remarkable accuracy improvements from 65% to 94.8% while ensuring comprehensive document traceability throughout the quality engineering lifecycle. Experimental validation of enterprise Corporate Systems Engineering and SAP migration projects demonstrates an 85% reduction in testing timeline, an 85% improvement in test suite efficiency, and projected 35% cost savings, resulting in a 2-month acceleration of go-live. 
+
+---
+# Taming a Retrieval Framework to Read Images in Humanlike Manner for Augmenting Generation of MLLMs 
+
+**Authors**: Suyang Xi, Chenxi Yang, Hong Ding, Yiqing Ni, Catherine C. Liu, Yunhao Liu, Chengqi Zhang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2510.10426)  
+
+**Abstract**: Multimodal large language models (MLLMs) often fail in fine-grained visual question answering, producing hallucinations about object identities, positions, and relations because textual queries are not explicitly anchored to visual referents. Retrieval-augmented generation (RAG) alleviates some errors, but it fails to align with human-like processing at both the retrieval and augmentation levels. Specifically, it focuses only on global-level image information but lacks local detail and limits reasoning about fine-grained interactions. To overcome this limitation, we present Human-Like Retrieval-Augmented Generation (HuLiRAG), a framework that stages multimodal reasoning as a ``what--where--reweight'' cascade. Queries are first anchored to candidate referents via open-vocabulary detection (what), then spatially resolved with SAM-derived masks to recover fine-grained precision (where), and adaptively prioritized through the trade-off between local and global alignment (reweight). Mask-guided fine-tuning further injects spatial evidence into the generation process, transforming grounding from a passive bias into an explicit constraint on answer formulation. Extensive experiments demonstrate that this human-like cascade improves grounding fidelity and factual consistency while reducing hallucinations, advancing multimodal question answering toward trustworthy reasoning. 
+
+---
+# UF-RNN: Real-Time Adaptive Motion Generation Using Uncertainty-Driven Foresight Prediction 
+
+**Authors**: Hyogo Hiruma, Hiroshi Ito, Tetsuya Ogata  
+
+**Link**: [PDF](https://arxiv.org/pdf/2510.10217)  
+
+**Abstract**: Training robots to operate effectively in environments with uncertain states, such as ambiguous object properties or unpredictable interactions, remains a longstanding challenge in robotics. Imitation learning methods typically rely on successful examples and often neglect failure scenarios where uncertainty is most pronounced. To address this limitation, we propose the Uncertainty-driven Foresight Recurrent Neural Network (UF-RNN), a model that combines standard time-series prediction with an active "Foresight" module. This module performs internal simulations of multiple future trajectories and refines the hidden state to minimize predicted variance, enabling the model to selectively explore actions under high uncertainty. We evaluate UF-RNN on a door-opening task in both simulation and a real-robot setting, demonstrating that, despite the absence of explicit failure demonstrations, the model exhibits robust adaptation by leveraging self-induced chaotic dynamics in its latent space. When guided by the Foresight module, these chaotic properties stimulate exploratory behaviors precisely when the environment is ambiguous, yielding improved success rates compared to conventional stochastic RNN baselines. These findings suggest that integrating uncertainty-driven foresight into imitation learning pipelines can significantly enhance a robot's ability to handle unpredictable real-world conditions. 
+
+---
+# CacheClip: Accelerating RAG with Effective KV Cache Reuse 
+
+**Authors**: Bin Yang, Qiuyu Leng, Jun Zeng, Zhenhua Wu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2510.10129)  
+
+**Abstract**: Retrieval-Augmented Generation (RAG) systems suffer from severe time-to-first-token (TTFT) bottlenecks due to long input sequences. Existing KV cache reuse methods face a fundamental trade-off: prefix caching requires identical prefixes that rarely occur in RAG scenarios, while direct precomputation sacrifices quality due to missing inter-chunk attention and repeated attention sinks. Recent methods like APE and CacheBlend partially address these issues but remain inadequate for robust RAG applications. This paper presents CacheClip, a novel framework that achieves both fast TTFT and high generation quality. Our key insight is that small auxiliary LLMs exhibit similar last-layer attention distributions to primary LLMs (the target model for generation), enabling efficient identification of tokens critical for restoring inter-chunk attention, thereby significantly improving response quality on cross-chunk reasoning tasks. CacheClip integrates three techniques: (1) auxiliary-model-guided token selection for selective KV cache recomputation, where the auxiliary model is finetuned to improve selection accuracy, (2) shared prefixes to eliminate redundant attention sinks, and (3) grouping strategy to maintain local coherence during partial KV cache updates. Experiments show CacheClip retains up to 94.8% and 85.0% of full-attention performance on NIAH and LongBench, outperforming APE and CacheBlend by 25.2% and 35.1% on NIAH (with reomp% = 20%). Meanwhile, CacheClip accelerates LLM inference by up to 1.92x in prefill time, providing a practical solution to the efficiency-quality trade-off in RAG systems. 
+
+---
