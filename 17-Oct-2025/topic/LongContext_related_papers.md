@@ -1,0 +1,36 @@
+# Fantastic (small) Retrievers and How to Train Them: mxbai-edge-colbert-v0 Tech Report 
+
+**Authors**: Rikiya Takehi, Benjamin Clavié, Sean Lee, Aamir Shakir  
+
+**Link**: [PDF](https://arxiv.org/pdf/2510.14880)  
+
+**Abstract**: In this work, we introduce mxbai-edge-colbert-v0 models, at two different parameter counts: 17M and 32M. As part of our research, we conduct numerous experiments to improve retrieval and late-interaction models, which we intend to distill into smaller models as proof-of-concepts. Our ultimate aim is to support retrieval at all scales, from large-scale retrieval which lives in the cloud to models that can run locally, on any device. mxbai-edge-colbert-v0 is a model that we hope will serve as a solid foundation backbone for all future experiments, representing the first version of a long series of small proof-of-concepts. As part of the development of mxbai-edge-colbert-v0, we conducted multiple ablation studies, of which we report the results. In terms of downstream performance, mxbai-edge-colbert-v0 is a particularly capable small model, outperforming ColBERTv2 on common short-text benchmarks (BEIR) and representing a large step forward in long-context tasks, with unprecedented efficiency. 
+
+---
+# MR.Rec: Synergizing Memory and Reasoning for Personalized Recommendation Assistant with LLMs 
+
+**Authors**: Jiani Huang, Xingchen Zou, Lianghao Xia, Qing Li  
+
+**Link**: [PDF](https://arxiv.org/pdf/2510.14629)  
+
+**Abstract**: The application of Large Language Models (LLMs) in recommender systems faces key challenges in delivering deep personalization and intelligent reasoning, especially for interactive scenarios. Current methods are often constrained by limited context windows and single-turn reasoning, hindering their ability to capture dynamic user preferences and proactively reason over recommendation contexts. To address these limitations, we propose this http URL, a novel framework that synergizes memory and reasoning for LLM-based recommendations. To achieve personalization, we develop a comprehensive Retrieval-Augmented Generation (RAG) system that efficiently indexes and retrieves relevant external memory to enhance LLM personalization capabilities. Furthermore, to enable the synergy between memory and reasoning, our RAG system goes beyond conventional query-based retrieval by integrating reasoning enhanced memory retrieval. Finally, we design a reinforcement learning framework that trains the LLM to autonomously learn effective strategies for both memory utilization and reasoning refinement. By combining dynamic memory retrieval with adaptive reasoning, this approach ensures more accurate, context-aware, and highly personalized recommendations. Extensive experiments demonstrate that this http URL significantly outperforms state-of-the-art baselines across multiple metrics, validating its efficacy in delivering intelligent and personalized recommendations. We will release code and data upon paper notification. 
+
+---
+# Predicting Task Performance with Context-aware Scaling Laws 
+
+**Authors**: Kyle Montgomery, David Park, Jianhong Tu, Michael Bendersky, Beliz Gunel, Dawn Song, Chenguang Wang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2510.14919)  
+
+**Abstract**: Scaling laws have transformed our understanding of large language models by linking upstream metrics like cross-entropy loss to design factors such as model size, training data, and compute. However, these conventional laws fail to capture downstream task performance, where context plays a critical role. In this work, we propose a straightforward, interpretable framework that jointly models downstream performance as a function of the training compute and the provided context. We empirically validate our framework by fitting it on the observed downstream performance of extended-context variants of Llama-2-7B and Llama-2-13B across 65,500 unique instances spanning three tasks: arithmetic reasoning, common sense reasoning, and machine translation. Our results demonstrate that our framework accurately models in-distribution downstream performance, generalizes across three orders of magnitude in training compute, and reliably extrapolates performance as the amount of context increases. These findings offer valuable insights into the interplay between training compute and context utilization, providing guidance for designing more efficient long-context LLMs for diverse downstream tasks. Our code is available at this https URL. 
+
+---
+# MoM: Mixtures of Scenario-Aware Document Memories for Retrieval-Augmented Generation Systems 
+
+**Authors**: Jihao Zhao, Zhiyuan Ji, Simin Niu, Hanyu Wang, Feiyu Xiong, Zhiyu Li  
+
+**Link**: [PDF](https://arxiv.org/pdf/2510.14252)  
+
+**Abstract**: The traditional RAG paradigm, which typically engages in the comprehension of relevant text chunks in response to received queries, inherently restricts both the depth of knowledge internalization and reasoning capabilities. To address this limitation, our research transforms the text processing in RAG from passive chunking to proactive understanding, defining this process as document memory extraction with the objective of simulating human cognitive processes during reading. Building upon this, we propose the Mixtures of scenario-aware document Memories (MoM) framework, engineered to efficiently handle documents from multiple domains and train small language models (SLMs) to acquire the ability to proactively explore and construct document memories. The MoM initially instructs large language models (LLMs) to simulate domain experts in generating document logical outlines, thereby directing structured chunking and core content extraction. It employs a multi-path sampling and multi-perspective evaluation mechanism, specifically designing comprehensive metrics that represent chunk clarity and extraction completeness to select the optimal document memories. Additionally, to infuse deeper human-like reading abilities during the training of SLMs, we incorporate a reverse reasoning strategy, which deduces refined expert thinking paths from high-quality outcomes. Finally, leveraging diverse forms of content generated by MoM, we develop a three-layer document memory retrieval mechanism, which is grounded in our theoretical proof from the perspective of probabilistic modeling. Extensive experimental results across three distinct domains demonstrate that the MoM framework not only resolves text chunking challenges in existing RAG systems, providing LLMs with semantically complete document memories, but also paves the way for SLMs to achieve human-centric intelligent text processing. 
+
+---
