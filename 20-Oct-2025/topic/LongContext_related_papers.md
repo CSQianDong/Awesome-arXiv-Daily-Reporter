@@ -1,0 +1,46 @@
+# Fault Cause Identification across Manufacturing Lines through Ontology-Guided and Process-Aware FMEA Graph Learning with LLMs 
+
+**Authors**: Sho Okazaki, Kohei Kaminishi, Takuma Fujiu, Yusheng Wang, Jun Ota  
+
+**Link**: [PDF](https://arxiv.org/pdf/2510.15428)  
+
+**Abstract**: Fault cause identification in automated manufacturing lines is challenging due to the system's complexity, frequent reconfigurations, and the limited reusability of existing Failure Mode and Effects Analysis (FMEA) knowledge. Although FMEA worksheets contain valuable expert insights, their reuse across heterogeneous lines is hindered by natural language variability, inconsistent terminology, and process differences. To address these limitations, this study proposes a process-aware framework that enhances FMEA reusability by combining manufacturing-domain conceptualization with graph neural network (GNN) reasoning. First, FMEA worksheets from multiple manufacturing lines are transformed into a unified knowledge graph through ontology-guided large language model (LLM) extraction, capturing domain concepts such as actions, states, components, and parameters. Second, a Relational Graph Convolutional Network (RGCN) with the process-aware scoring function learns embeddings that respect both semantic relationships and sequential process flows. Finally, link prediction is employed to infer and rank candidate fault causes consistent with the target line's process flow.
+A case study on automotive pressure sensor assembly lines demonstrates that the proposed method outperforms a state-of-the-art retrieval-augmented generation (RAG) baseline (F1@20 = 0.267) and an RGCN approach (0.400), achieving the best performance (0.523) in fault cause identification. Ablation studies confirm the contributions of both LLM-driven domain conceptualization and process-aware learning. These results indicate that the proposed framework significantly improves the transferability of FMEA knowledge across heterogeneous lines, thereby supporting operators in diagnosing failures more reliably and paving the way for future domain-adaptive LLM applications in smart manufacturing. 
+
+---
+# The Elephant in the Coreference Room: Resolving Coreference in Full-Length French Fiction Works 
+
+**Authors**: Antoine Bourgois, Thierry Poibeau  
+
+**Link**: [PDF](https://arxiv.org/pdf/2510.15594)  
+
+**Abstract**: While coreference resolution is attracting more interest than ever from computational literature researchers, representative datasets of fully annotated long documents remain surprisingly scarce. In this paper, we introduce a new annotated corpus of three full-length French novels, totaling over 285,000 tokens. Unlike previous datasets focused on shorter texts, our corpus addresses the challenges posed by long, complex literary works, enabling evaluation of coreference models in the context of long reference chains. We present a modular coreference resolution pipeline that allows for fine-grained error analysis. We show that our approach is competitive and scales effectively to long documents. Finally, we demonstrate its usefulness to infer the gender of fictional characters, showcasing its relevance for both literary analysis and downstream NLP tasks. 
+
+---
+# Scaling Beyond Context: A Survey of Multimodal Retrieval-Augmented Generation for Document Understanding 
+
+**Authors**: Sensen Gao, Shanshan Zhao, Xu Jiang, Lunhao Duan, Yong Xien Chng, Qing-Guo Chen, Weihua Luo, Kaifu Zhang, Jia-Wang Bian, Mingming Gong  
+
+**Link**: [PDF](https://arxiv.org/pdf/2510.15253)  
+
+**Abstract**: Document understanding is critical for applications from financial analysis to scientific discovery. Current approaches, whether OCR-based pipelines feeding Large Language Models (LLMs) or native Multimodal LLMs (MLLMs), face key limitations: the former loses structural detail, while the latter struggles with context modeling. Retrieval-Augmented Generation (RAG) helps ground models in external data, but documents' multimodal nature, i.e., combining text, tables, charts, and layout, demands a more advanced paradigm: Multimodal RAG. This approach enables holistic retrieval and reasoning across all modalities, unlocking comprehensive document intelligence. Recognizing its importance, this paper presents a systematic survey of Multimodal RAG for document understanding. We propose a taxonomy based on domain, retrieval modality, and granularity, and review advances involving graph structures and agentic frameworks. We also summarize key datasets, benchmarks, and applications, and highlight open challenges in efficiency, fine-grained representation, and robustness, providing a roadmap for future progress in document AI. 
+
+---
+# Extending Audio Context for Long-Form Understanding in Large Audio-Language Models 
+
+**Authors**: Yuatyong Chaichana, Pittawat Taveekitworachai, Warit Sirichotedumrong, Potsawee Manakul, Kunat Pipatanakul  
+
+**Link**: [PDF](https://arxiv.org/pdf/2510.15231)  
+
+**Abstract**: Large Audio-Language Models (LALMs) are often constrained by short audio context windows, even when their text backbones support long contexts, limiting long-form audio understanding. Prior work has introduced context-extension methods (e.g. YaRN) on unimodal LLMs, yet their application to LALMs remains unexplored. First, building on RoPE-based context extension, we introduce Partial YaRN, a training-free, audio-only extension method that modifies only audio token positions, leaving text positions intact to preserve the base LLM's text capabilities. Second, we propose Virtual Longform Audio Training (VLAT), a training strategy that extends Partial YaRN into a training-time positional augmentation. VLAT simulates diverse audio lengths during training, enabling generalization to inputs far longer than those seen in training and improving robustness for long-context audio understanding. Our experiments on SALMONN and Qwen2-Audio show that Partial YaRN outperforms the original models across wide range of settings, and VLAT training strategy provides substantial improvement, achieving strong performance on long audio of unseen lengths. 
+
+---
+# Demo: Guide-RAG: Evidence-Driven Corpus Curation for Retrieval-Augmented Generation in Long COVID 
+
+**Authors**: Philip DiGiacomo, Haoyang Wang, Jinrui Fang, Yan Leng, W Michael Brode, Ying Ding  
+
+**Link**: [PDF](https://arxiv.org/pdf/2510.15782)  
+
+**Abstract**: As AI chatbots gain adoption in clinical medicine, developing effective frameworks for complex, emerging diseases presents significant challenges. We developed and evaluated six Retrieval-Augmented Generation (RAG) corpus configurations for Long COVID (LC) clinical question answering, ranging from expert-curated sources to large-scale literature databases. Our evaluation employed an LLM-as-a-judge framework across faithfulness, relevance, and comprehensiveness metrics using LongCOVID-CQ, a novel dataset of expert-generated clinical questions. Our RAG corpus configuration combining clinical guidelines with high-quality systematic reviews consistently outperformed both narrow single-guideline approaches and large-scale literature databases. Our findings suggest that for emerging diseases, retrieval grounded in curated secondary reviews provides an optimal balance between narrow consensus documents and unfiltered primary literature, supporting clinical decision-making while avoiding information overload and oversimplified guidance. We propose Guide-RAG, a chatbot system and accompanying evaluation framework that integrates both curated expert knowledge and comprehensive literature databases to effectively answer LC clinical questions. 
+
+---

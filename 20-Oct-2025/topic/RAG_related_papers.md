@@ -1,0 +1,63 @@
+# The 3rd Place Solution of CCIR CUP 2025: A Framework for Retrieval-Augmented Generation in Multi-Turn Legal Conversation 
+
+**Authors**: Da Li, Zecheng Fang, Qiang Yan, Wei Huang, Xuanpu Luo  
+
+**Link**: [PDF](https://arxiv.org/pdf/2510.15722)  
+
+**Abstract**: Retrieval-Augmented Generation has made significant progress in the field of natural language processing. By combining the advantages of information retrieval and large language models, RAG can generate relevant and contextually appropriate responses based on items retrieved from reliable sources. This technology has demonstrated outstanding performance across multiple domains, but its application in the legal field remains in its exploratory phase. In this paper, we introduce our approach for "Legal Knowledge Retrieval and Generation" in CCIR CUP 2025, which leverages large language models and information retrieval systems to provide responses based on laws in response to user questions. 
+
+---
+# SQuAI: Scientific Question-Answering with Multi-Agent Retrieval-Augmented Generation 
+
+**Authors**: Ines Besrour, Jingbo He, Tobias Schreieder, Michael Färber  
+
+**Link**: [PDF](https://arxiv.org/pdf/2510.15682)  
+
+**Abstract**: We present SQuAI (this https URL), a scalable and trustworthy multi-agent retrieval-augmented generation (RAG) framework for scientific question answering (QA) with large language models (LLMs). SQuAI addresses key limitations of existing RAG systems in the scholarly domain, where complex, open-domain questions demand accurate answers, explicit claims with citations, and retrieval across millions of scientific documents. Built on over 2.3 million full-text papers from arXiv.org, SQuAI employs four collaborative agents to decompose complex questions into sub-questions, retrieve targeted evidence via hybrid sparse-dense retrieval, and adaptively filter documents to improve contextual relevance. To ensure faithfulness and traceability, SQuAI integrates in-line citations for each generated claim and provides supporting sentences from the source documents. Our system improves faithfulness, answer relevance, and contextual relevance by up to +0.088 (12%) over a strong RAG baseline. We further release a benchmark of 1,000 scientific question-answer-evidence triplets to support reproducibility. With transparent reasoning, verifiable citations, and domain-wide scalability, SQuAI demonstrates how multi-agent RAG enables more trustworthy scientific QA with LLMs. 
+
+---
+# Think Parallax: Solving Multi-Hop Problems via Multi-View Knowledge-Graph-Based Retrieval-Augmented Generation 
+
+**Authors**: Jinliang Liu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2510.15552)  
+
+**Abstract**: Large language models (LLMs) excel at language understanding but often hallucinate and struggle with multi-hop reasoning. Knowledge-graph-based retrieval-augmented generation (KG-RAG) offers grounding, yet most methods rely on flat embeddings and noisy path exploration. We propose ParallaxRAG, a framework that symmetrically decouples queries and graph triples into multi-view spaces, enabling a robust retrieval architecture that explicitly enforces head diversity while constraining weakly related paths. Central to our approach is the observation that different attention heads specialize in semantic relations at distinct reasoning stages, contributing to different hops of the reasoning chain. This specialization allows ParallaxRAG to construct cleaner subgraphs and guide LLMs through grounded, step-wise reasoning. Experiments on WebQSP and CWQ, under our unified, reproducible setup (BGE-M3 + Llama3.1-8B), demonstrate competitive retrieval and QA performance, alongside reduced hallucination and good generalization. Our results highlight multi-view head specialization as a principled direction for knowledge-grounded multi-hop reasoning. Our implementation will be released as soon as the paper is accepted. 
+
+---
+# Scaling Beyond Context: A Survey of Multimodal Retrieval-Augmented Generation for Document Understanding 
+
+**Authors**: Sensen Gao, Shanshan Zhao, Xu Jiang, Lunhao Duan, Yong Xien Chng, Qing-Guo Chen, Weihua Luo, Kaifu Zhang, Jia-Wang Bian, Mingming Gong  
+
+**Link**: [PDF](https://arxiv.org/pdf/2510.15253)  
+
+**Abstract**: Document understanding is critical for applications from financial analysis to scientific discovery. Current approaches, whether OCR-based pipelines feeding Large Language Models (LLMs) or native Multimodal LLMs (MLLMs), face key limitations: the former loses structural detail, while the latter struggles with context modeling. Retrieval-Augmented Generation (RAG) helps ground models in external data, but documents' multimodal nature, i.e., combining text, tables, charts, and layout, demands a more advanced paradigm: Multimodal RAG. This approach enables holistic retrieval and reasoning across all modalities, unlocking comprehensive document intelligence. Recognizing its importance, this paper presents a systematic survey of Multimodal RAG for document understanding. We propose a taxonomy based on domain, retrieval modality, and granularity, and review advances involving graph structures and agentic frameworks. We also summarize key datasets, benchmarks, and applications, and highlight open challenges in efficiency, fine-grained representation, and robustness, providing a roadmap for future progress in document AI. 
+
+---
+# Fine-Tuning MedGemma for Clinical Captioning to Enhance Multimodal RAG over Malaysia CPGs 
+
+**Authors**: Lee Qi Zun, Mohamad Zulhilmi Bin Abdul Halim, Goh Man Fye  
+
+**Link**: [PDF](https://arxiv.org/pdf/2510.15418)  
+
+**Abstract**: Retrieval-Augmented Generation systems are essential for providing fact-based guidance from Malaysian Clinical Practice Guidelines. However, their effectiveness with image-based queries is limited, as general Vision-Language Model captions often lack clinical specificity and factual grounding. This study proposes and validates a framework to specialize the MedGemma model for generating high-fidelity captions that serve as superior queries. To overcome data scarcity, we employ a knowledge distillation pipeline to create a synthetic dataset across dermatology, fundus, and chest radiography domains, and fine-tune MedGemma using the parameter-efficient QLoRA method. Performance was rigorously assessed through a dual framework measuring both classification accuracy and, via a novel application of the RAGAS framework, caption faithfulness, relevancy, and correctness. The fine-tuned model demonstrated substantial improvements in classification performance, while RAGAS evaluation confirmed significant gains in caption faithfulness and correctness, validating the models ability to produce reliable, factually grounded descriptions. This work establishes a robust pipeline for specializing medical VLMs and validates the resulting model as a high-quality query generator, laying the groundwork for enhancing multimodal RAG systems in evidence-based clinical decision support. 
+
+---
+# Rethinking Toxicity Evaluation in Large Language Models: A Multi-Label Perspective 
+
+**Authors**: Zhiqiang Kou, Junyang Chen, Xin-Qiang Cai, Ming-Kun Xie, Biao Liu, Changwei Wang, Lei Feng, Yuheng Jia, Gang Niu, Masashi Sugiyama, Xin Geng  
+
+**Link**: [PDF](https://arxiv.org/pdf/2510.15007)  
+
+**Abstract**: Large language models (LLMs) have achieved impressive results across a range of natural language processing tasks, but their potential to generate harmful content has raised serious safety concerns. Current toxicity detectors primarily rely on single-label benchmarks, which cannot adequately capture the inherently ambiguous and multi-dimensional nature of real-world toxic prompts. This limitation results in biased evaluations, including missed toxic detections and false positives, undermining the reliability of existing detectors. Additionally, gathering comprehensive multi-label annotations across fine-grained toxicity categories is prohibitively costly, further hindering effective evaluation and development. To tackle these issues, we introduce three novel multi-label benchmarks for toxicity detection: \textbf{Q-A-MLL}, \textbf{R-A-MLL}, and \textbf{H-X-MLL}, derived from public toxicity datasets and annotated according to a detailed 15-category taxonomy. We further provide a theoretical proof that, on our released datasets, training with pseudo-labels yields better performance than directly learning from single-label supervision. In addition, we develop a pseudo-label-based toxicity detection method. Extensive experimental results show that our approach significantly surpasses advanced baselines, including GPT-4o and DeepSeek, thus enabling more accurate and reliable evaluation of multi-label toxicity in LLM-generated content. 
+
+---
+# Demo: Guide-RAG: Evidence-Driven Corpus Curation for Retrieval-Augmented Generation in Long COVID 
+
+**Authors**: Philip DiGiacomo, Haoyang Wang, Jinrui Fang, Yan Leng, W Michael Brode, Ying Ding  
+
+**Link**: [PDF](https://arxiv.org/pdf/2510.15782)  
+
+**Abstract**: As AI chatbots gain adoption in clinical medicine, developing effective frameworks for complex, emerging diseases presents significant challenges. We developed and evaluated six Retrieval-Augmented Generation (RAG) corpus configurations for Long COVID (LC) clinical question answering, ranging from expert-curated sources to large-scale literature databases. Our evaluation employed an LLM-as-a-judge framework across faithfulness, relevance, and comprehensiveness metrics using LongCOVID-CQ, a novel dataset of expert-generated clinical questions. Our RAG corpus configuration combining clinical guidelines with high-quality systematic reviews consistently outperformed both narrow single-guideline approaches and large-scale literature databases. Our findings suggest that for emerging diseases, retrieval grounded in curated secondary reviews provides an optimal balance between narrow consensus documents and unfiltered primary literature, supporting clinical decision-making while avoiding information overload and oversimplified guidance. We propose Guide-RAG, a chatbot system and accompanying evaluation framework that integrates both curated expert knowledge and comprehensive literature databases to effectively answer LC clinical questions. 
+
+---
