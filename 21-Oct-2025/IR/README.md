@@ -1,0 +1,202 @@
+# How role-play shapes relevance judgment in zero-shot LLM rankers 
+
+**Authors**: Yumeng Wang, Jirui Qi, Catherine Chen, Panagiotis Eustratiadis, Suzan Verberne  
+
+**Link**: [PDF](https://arxiv.org/pdf/2510.17535)  
+
+**Abstract**: Large Language Models (LLMs) have emerged as promising zero-shot rankers, but their performance is highly sensitive to prompt formulation. In particular, role-play prompts, where the model is assigned a functional role or identity, often give more robust and accurate relevance rankings. However, the mechanisms and diversity of role-play effects remain underexplored, limiting both effective use and interpretability. In this work, we systematically examine how role-play variations influence zero-shot LLM rankers. We employ causal intervention techniques from mechanistic interpretability to trace how role-play information shapes relevance judgments in LLMs. Our analysis reveals that (1) careful formulation of role descriptions have a large effect on the ranking quality of the LLM; (2) role-play signals are predominantly encoded in early layers and communicate with task instructions in middle layers, while receiving limited interaction with query or document representations. Specifically, we identify a group of attention heads that encode information critical for role-conditioned relevance. These findings not only shed light on the inner workings of role-play in LLM ranking but also offer guidance for designing more effective prompts in IR and beyond, pointing toward broader opportunities for leveraging role-play in zero-shot applications. 
+
+---
+# On Efficiency-Effectiveness Trade-off of Diffusion-based Recommenders 
+
+**Authors**: Wenyu Mao, Jiancan Wu, Guoqing Hu, Wei Ji, Xiang Wang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2510.17245)  
+
+**Abstract**: Diffusion models have emerged as a powerful paradigm for generative sequential recommendation, which typically generate next items to recommend guided by user interaction histories with a multi-step denoising process. However, the multi-step process relies on discrete approximations, introducing discretization error that creates a trade-off between computational efficiency and recommendation effectiveness. To address this trade-off, we propose TA-Rec, a two-stage framework that achieves one-step generation by smoothing the denoising function during pretraining while alleviating trajectory deviation by aligning with user preferences during fine-tuning. Specifically, to improve the efficiency without sacrificing the recommendation performance, TA-Rec pretrains the denoising model with Temporal Consistency Regularization (TCR), enforcing the consistency between the denoising results across adjacent steps. Thus, we can smooth the denoising function to map the noise as oracle items in one step with bounded error. To further enhance effectiveness, TA-Rec introduces Adaptive Preference Alignment (APA) that aligns the denoising process with user preference adaptively based on preference pair similarity and timesteps. Extensive experiments prove that TA-Rec's two-stage objective effectively mitigates the discretization errors-induced trade-off, enhancing both efficiency and effectiveness of diffusion-based recommenders. 
+
+---
+# DSEBench: A Test Collection for Explainable Dataset Search with Examples 
+
+**Authors**: Qing Shi, Jing He, Qiaosheng Chen, Gong Cheng  
+
+**Link**: [PDF](https://arxiv.org/pdf/2510.17228)  
+
+**Abstract**: Dataset search has been an established information retrieval task. Current paradigms either retrieve datasets that are relevant to a keyword query or find datasets that are similar to an input target dataset. To allow for their combined specification of information needs, in this article, we investigate the more generalized task of Dataset Search with Examples (DSE) and further extend it to Explainable DSE that requires identifying the metadata and content fields of a dataset that indicate its relevance to the query and similarity to the target datasets. To facilitate this research, we construct DSEBench, a test collection that provides high-quality dataset- and field-level annotations to enable the evaluation of explainable DSE. We also employ a large language model to generate numerous annotations to be used for training. We establish extensive baselines on DSEBench by adapting and evaluating a variety of sparse, dense, and LLM-based retrieval, reranking, and explanation methods. 
+
+---
+# Towards Context-aware Reasoning-enhanced Generative Searching in E-commerce 
+
+**Authors**: Zhiding Liu, Ben Chen, Mingyue Cheng, Enchong Chen, Li Li, Chenyi Lei, Wenwu Ou, Han Li, Kun Gai  
+
+**Link**: [PDF](https://arxiv.org/pdf/2510.16925)  
+
+**Abstract**: Search-based recommendation is one of the most critical application scenarios in e-commerce platforms. Users' complex search contexts--such as spatiotemporal factors, historical interactions, and current query's information--constitute an essential part of their decision-making, reflecting implicit preferences that complement explicit query terms. Modeling such rich contextual signals and their intricate associations with candidate items remains a key challenge. Although numerous efforts have been devoted to building more effective search methods, existing approaches still show limitations in integrating contextual information, which hinders their ability to fully capture user intent.
+To address these challenges, we propose a context-aware reasoning-enhanced generative search framework for better \textbf{understanding the complicated context}. Specifically, the framework first unifies heterogeneous user and item contexts into textual representations or text-based semantic identifiers and aligns them. To overcome the lack of explicit reasoning trajectories, we introduce a self-evolving post-training paradigm that iteratively combines supervised fine-tuning and reinforcement learning to progressively enhance the model's reasoning capability. In addition, we identify potential biases in existing RL algorithms when applied to search scenarios and present a debiased variant of GRPO to improve ranking performance. Extensive experiments on search log data collected from a real-world e-commerce platform demonstrate that our approach achieves superior performance compared with strong baselines, validating its effectiveness for search-based recommendation. 
+
+---
+# The Layout Is the Model: On Action-Item Coupling in Generative Recommendation 
+
+**Authors**: Xiaokai Wei, Jiajun Wu, Daiyao Yi, Reza Shirkavand, Michelle Gong  
+
+**Link**: [PDF](https://arxiv.org/pdf/2510.16804)  
+
+**Abstract**: Generative Recommendation (GR) models treat a user's interaction history as a sequence to be autoregressively predicted. When both items and actions (e.g., watch time, purchase, comment) are modeled, the layout-the ordering and visibility of item/action tokens-critically determines what information the model can use and how it generalizes. We present a unified study of token layouts for GR grounded in first principles: (P1) maximize item/action signal in both input/output space, (P2) preserve the conditioning relationship "action given item" and (P3) no information leakage.
+While interleaved layout (where item and action occupy separate tokens) naturally satisfies these principles, it also bloats sequence length with larger training/inference cost. On the non-interleaved front, we design a novel and effective approach, Lagged Action Conditioning (LAC), which appears strange on the surface but aligns well with the design principles to yield strong accuracy. Comprehensive experiments on public datasets and large-scale production logs evaluate different layout options and empirically verifies the design principles. Our proposed non-interleaved method, LAC, achieves competitive or superior quality at substantially lower FLOPs than interleaving. Our findings offer actionable guidance for assembling GR systems that are both accurate and efficient. 
+
+---
+# An Efficient Framework for Whole-Page Reranking via Single-Modal Supervision 
+
+**Authors**: Zishuai Zhang, Sihao Yu, Wenyi Xie, Ying Nie, Junfeng Wang, Zhiming Zheng, Dawei Yin, Hainan Zhang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2510.16803)  
+
+**Abstract**: The whole-page reranking plays a critical role in shaping the user experience of search engines, which integrates retrieval results from multiple modalities, such as documents, images, videos, and LLM outputs. Existing methods mainly rely on large-scale human-annotated data, which is costly to obtain and time-consuming. This is because whole-page annotation is far more complex than single-modal: it requires assessing the entire result page while accounting for cross-modal relevance differences. Thus, how to improve whole-page reranking performance while reducing annotation costs is still a key challenge in optimizing search engine result pages(SERP). In this paper, we propose SMAR, a novel whole-page reranking framework that leverages strong Single-modal rankers to guide Modal-wise relevance Alignment for effective Reranking, using only limited whole-page annotation to outperform fully-annotated reranking models. Specifically, high-quality single-modal rankers are first trained on data specific to their respective modalities. Then, for each query, we select a subset of their outputs to construct candidate pages and perform human annotation at the page level. Finally, we train the whole-page reranker using these limited annotations and enforcing consistency with single-modal preferences to maintain ranking quality within each modality. Experiments on the Qilin and Baidu datasets demonstrate that SMAR reduces annotation costs by about 70-90\% while achieving significant ranking improvements compared to baselines. Further offline and online A/B testing on Baidu APPs also shows notable gains in standard ranking metrics as well as user experience indicators, fully validating the effectiveness and practical value of our approach in real-world search scenarios. 
+
+---
+# Exact Nearest-Neighbor Search on Energy-Efficient FPGA Devices 
+
+**Authors**: Patrizio Dazzi, William Guglielmo, Franco Maria Nardini, Raffaele Perego, Salvatore Trani  
+
+**Link**: [PDF](https://arxiv.org/pdf/2510.16736)  
+
+**Abstract**: This paper investigates the usage of FPGA devices for energy-efficient exact kNN search in high-dimension latent spaces. This work intercepts a relevant trend that tries to support the increasing popularity of learned representations based on neural encoder models by making their large-scale adoption greener and more inclusive. The paper proposes two different energy-efficient solutions adopting the same FPGA low-level configuration. The first solution maximizes system throughput by processing the queries of a batch in parallel over a streamed dataset not fitting into the FPGA memory. The second minimizes latency by processing each kNN incoming query in parallel over an in-memory dataset. Reproducible experiments on publicly available image and text datasets show that our solution outperforms state-of-the-art CPU-based competitors regarding throughput, latency, and energy consumption. Specifically, experiments show that the proposed FPGA solutions achieve the best throughput in terms of queries per second and the best-observed latency with scale-up factors of up to 16.6X. Similar considerations can be made regarding energy efficiency, where results show that our solutions can achieve up to 11.9X energy saving w.r.t. strong CPU-based competitors. 
+
+---
+# Right Answer at the Right Time - Temporal Retrieval-Augmented Generation via Graph Summarization 
+
+**Authors**: Zulun Zhu, Haoyu Liu, Mengke He, Siqiang Luo  
+
+**Link**: [PDF](https://arxiv.org/pdf/2510.16715)  
+
+**Abstract**: Question answering in temporal knowledge graphs requires retrieval that is both time-consistent and efficient. Existing RAG methods are largely semantic and typically neglect explicit temporal constraints, which leads to time-inconsistent answers and inflated token usage. We propose STAR-RAG, a temporal GraphRAG framework that relies on two key ideas: building a time-aligned rule graph and conducting propagation on this graph to narrow the search space and prioritize semantically relevant, time-consistent evidence. This design enforces temporal proximity during retrieval, reduces the candidate set of retrieval results, and lowers token consumption without sacrificing accuracy. Compared with existing temporal RAG approaches, STAR-RAG eliminates the need for heavy model training and fine-tuning, thereby reducing computational cost and significantly simplifying this http URL experiments on real-world temporal KG datasets show that our method achieves improved answer accuracy while consuming fewer tokens than strong GraphRAG baselines. 
+
+---
+# FRONTIER-RevRec: A Large-scale Dataset for Reviewer Recommendation 
+
+**Authors**: Qiyao Peng, Chen Wang, Yinghui Wang, Hongtao Liu, Xuan Guo, Wenjun Wang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2510.16597)  
+
+**Abstract**: Reviewer recommendation is a critical task for enhancing the efficiency of academic publishing workflows. However, research in this area has been persistently hindered by the lack of high-quality benchmark datasets, which are often limited in scale, disciplinary scope, and comparative analyses of different methodologies. To address this gap, we introduce FRONTIER-RevRec, a large-scale dataset constructed from authentic peer review records (2007-2025) from the Frontiers open-access publishing platform this https URL. The dataset contains 177941 distinct reviewers and 478379 papers across 209 journals spanning multiple disciplines including clinical medicine, biology, psychology, engineering, and social sciences. Our comprehensive evaluation on this dataset reveals that content-based methods significantly outperform collaborative filtering. This finding is explained by our structural analysis, which uncovers fundamental differences between academic recommendation and commercial domains. Notably, approaches leveraging language models are particularly effective at capturing the semantic alignment between a paper's content and a reviewer's expertise. Furthermore, our experiments identify optimal aggregation strategies to enhance the recommendation pipeline. FRONTIER-RevRec is intended to serve as a comprehensive benchmark to advance research in reviewer recommendation and facilitate the development of more effective academic peer review systems. The FRONTIER-RevRec dataset is available at: this https URL. 
+
+---
+# Blending Learning to Rank and Dense Representations for Efficient and Effective Cascades 
+
+**Authors**: Franco Maria Nardini, Raffaele Perego, Nicola Tonellotto, Salvatore Trani  
+
+**Link**: [PDF](https://arxiv.org/pdf/2510.16393)  
+
+**Abstract**: We investigate the exploitation of both lexical and neural relevance signals for ad-hoc passage retrieval. Our exploration involves a large-scale training dataset in which dense neural representations of MS-MARCO queries and passages are complemented and integrated with 253 hand-crafted lexical features extracted from the same corpus. Blending of the relevance signals from the two different groups of features is learned by a classical Learning-to-Rank (LTR) model based on a forest of decision trees. To evaluate our solution, we employ a pipelined architecture where a dense neural retriever serves as the first stage and performs a nearest-neighbor search over the neural representations of the documents. Our LTR model acts instead as the second stage that re-ranks the set of candidates retrieved by the first stage to enhance effectiveness. The results of reproducible experiments conducted with state-of-the-art dense retrievers on publicly available resources show that the proposed solution significantly enhances the end-to-end ranking performance while relatively minimally impacting efficiency. Specifically, we achieve a boost in nDCG@10 of up to 11% with an increase in average query latency of only 4.3%. This confirms the advantage of seamlessly combining two distinct families of signals that mutually contribute to retrieval effectiveness. 
+
+---
+# Investigating the Association Between Text-Based Indications of Foodborne Illness from Yelp Reviews and New York City Health Inspection Outcomes (2023) 
+
+**Authors**: Eden Shaveet, Crystal Su, Daniel Hsu, Luis Gravano  
+
+**Link**: [PDF](https://arxiv.org/pdf/2510.16334)  
+
+**Abstract**: Foodborne illnesses are gastrointestinal conditions caused by consuming contaminated food. Restaurants are critical venues to investigate outbreaks because they share sourcing, preparation, and distribution of foods. Public reporting of illness via formal channels is limited, whereas social media platforms host abundant user-generated content that can provide timely public health signals. This paper analyzes signals from Yelp reviews produced by a Hierarchical Sigmoid Attention Network (HSAN) classifier and compares them with official restaurant inspection outcomes issued by the New York City Department of Health and Mental Hygiene (NYC DOHMH) in 2023. We evaluate correlations at the Census tract level, compare distributions of HSAN scores by prevalence of C-graded restaurants, and map spatial patterns across NYC. We find minimal correlation between HSAN signals and inspection scores at the tract level and no significant differences by number of C-graded restaurants. We discuss implications and outline next steps toward address-level analyses. 
+
+---
+# On-the-Fly OVD Adaptation with FLAME: Few-shot Localization via Active Marginal-Samples Exploration 
+
+**Authors**: Yehonathan Refael, Amit Aides, Aviad Barzilai, George Leifman, Genady Beryozkin, Vered Silverman, Bolous Jaber, Tomer Shekel  
+
+**Link**: [PDF](https://arxiv.org/pdf/2510.17670)  
+
+**Abstract**: Open-vocabulary object detection (OVD) models offer remarkable flexibility by detecting objects from arbitrary text queries. However, their zero-shot performance in specialized domains like Remote Sensing (RS) is often compromised by the inherent ambiguity of natural language, limiting critical downstream applications. For instance, an OVD model may struggle to distinguish between fine-grained classes such as "fishing boat" and "yacht" since their embeddings are similar and often inseparable. This can hamper specific user goals, such as monitoring illegal fishing, by producing irrelevant detections. To address this, we propose a cascaded approach that couples the broad generalization of a large pre-trained OVD model with a lightweight few-shot classifier. Our method first employs the zero-shot model to generate high-recall object proposals. These proposals are then refined for high precision by a compact classifier trained in real-time on only a handful of user-annotated examples - drastically reducing the high costs of RS imagery this http URL core of our framework is FLAME, a one-step active learning strategy that selects the most informative samples for training. FLAME identifies, on the fly, uncertain marginal candidates near the decision boundary using density estimation, followed by clustering to ensure sample diversity. This efficient sampling technique achieves high accuracy without costly full-model fine-tuning and enables instant adaptation, within less then a minute, which is significantly faster than state-of-the-art this http URL method consistently surpasses state-of-the-art performance on RS benchmarks, establishing a practical and resource-efficient framework for adapting foundation models to specific user needs. 
+
+---
+# OG-Rank: Learning to Rank Fast and Slow with Uncertainty and Reward-Trend Guided Adaptive Exploration 
+
+**Authors**: Praphul Singh, Corey Barrett, Sumana Srivasta, Irfan Bulu, Sri Gadde, Krishnaram Kenthapadi  
+
+**Link**: [PDF](https://arxiv.org/pdf/2510.17614)  
+
+**Abstract**: Clinicians need ranking systems that work in real time and still justify their choices. Motivated by the need for a low-latency, decoder-based reranker, we present OG-Rank, a single-decoder approach that pairs a pooled first-token scoring signal with an uncertainty-gated explanation step. The model scores all candidates in one pass and generates a brief, structured rationale only when the list is genuinely ambiguous, keeping latency predictable. Trained with a curriculum that concentrates effort on hard cases, OG-Rank delivers strong effectiveness on encounter-scoped order selection (fast path: Recall@1~0.45, nDCG@20~0.625) and improves further when the gate activates (Recall@1~0.56, nDCG@20~0.699 at a 45\% gate rate), while compact backbones show similar gains under the same policy. Encoder baselines trail in both effectiveness and flexibility. The result is a practical recipe: rank fast by default and explain when it helps, a pattern that applies broadly to decision tasks where selective generation buys accuracy at acceptable cost. The single-policy design simplifies deployment and budget planning, and the curriculum principle (spend more on the hard cases, less on the easy ones) readily transfers beyond clinical order selection. 
+
+---
+# Towards Mixed-Modal Retrieval for Universal Retrieval-Augmented Generation 
+
+**Authors**: Chenghao Zhang, Guanting Dong, Xinyu Yang, Zhicheng Dou  
+
+**Link**: [PDF](https://arxiv.org/pdf/2510.17354)  
+
+**Abstract**: Retrieval-Augmented Generation (RAG) has emerged as a powerful paradigm for enhancing large language models (LLMs) by retrieving relevant documents from an external corpus. However, existing RAG systems primarily focus on unimodal text documents, and often fall short in real-world scenarios where both queries and documents may contain mixed modalities (such as text and images). In this paper, we address the challenge of Universal Retrieval-Augmented Generation (URAG), which involves retrieving and reasoning over mixed-modal information to improve vision-language generation. To this end, we propose Nyx, a unified mixed-modal to mixed-modal retriever tailored for URAG scenarios. To mitigate the scarcity of realistic mixed-modal data, we introduce a four-stage automated pipeline for generation and filtering, leveraging web documents to construct NyxQA, a dataset comprising diverse mixed-modal question-answer pairs that better reflect real-world information needs. Building on this high-quality dataset, we adopt a two-stage training framework for Nyx: we first perform pre-training on NyxQA along with a variety of open-source retrieval datasets, followed by supervised fine-tuning using feedback from downstream vision-language models (VLMs) to align retrieval outputs with generative preferences. Experimental results demonstrate that Nyx not only performs competitively on standard text-only RAG benchmarks, but also excels in the more general and realistic URAG setting, significantly improving generation quality in vision-language tasks. 
+
+---
+# MemoryBench: A Benchmark for Memory and Continual Learning in LLM Systems 
+
+**Authors**: Qingyao Ai, Yichen Tang, Changyue Wang, Jianming Long, Weihang Su, Yiqun Liu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2510.17281)  
+
+**Abstract**: Scaling up data, parameters, and test-time computation has been the mainstream methods to improve LLM systems (LLMsys), but their upper bounds are almost reached due to the gradual depletion of high-quality data and marginal gains obtained from larger computational resource consumption. Inspired by the abilities of human and traditional AI systems in learning from practice, constructing memory and continual learning frameworks for LLMsys has become an important and popular research direction in recent literature. Yet, existing benchmarks for LLM memory often focus on evaluating the system on homogeneous reading comprehension tasks with long-form inputs rather than testing their abilities to learn from accumulated user feedback in service time. Therefore, we propose a user feedback simulation framework and a comprehensive benchmark covering multiple domains, languages, and types of tasks to evaluate the continual learning abilities of LLMsys. Experiments show that the effectiveness and efficiency of state-of-the-art baselines are far from satisfying, and we hope this benchmark could pave the way for future studies on LLM memory and optimization algorithms. 
+
+---
+# Rethinking On-policy Optimization for Query Augmentation 
+
+**Authors**: Zhichao Xu, Shengyao Zhuang, Xueguang Ma, Bingsen Chen, Yijun Tian, Fengran Mo, Jie Cao, Vivek Srikumar  
+
+**Link**: [PDF](https://arxiv.org/pdf/2510.17139)  
+
+**Abstract**: Recent advances in large language models (LLMs) have led to a surge of interest in query augmentation for information retrieval (IR). Two main approaches have emerged. The first prompts LLMs to generate answers or pseudo-documents that serve as new queries, relying purely on the model's parametric knowledge or contextual information. The second applies reinforcement learning (RL) to fine-tune LLMs for query rewriting, directly optimizing retrieval metrics. While having respective advantages and limitations, the two approaches have not been compared under consistent experimental conditions. In this work, we present the first systematic comparison of prompting-based and RL-based query augmentation across diverse benchmarks, including evidence-seeking, ad hoc, and tool retrieval. Our key finding is that simple, training-free query augmentation often performs on par with, or even surpasses, more expensive RL-based counterparts, especially when using powerful LLMs. Motivated by this discovery, we introduce a novel hybrid method, On-policy Pseudo-document Query Expansion (OPQE), which, instead of rewriting a query, the LLM policy learns to generate a pseudo-document that maximizes retrieval performance, thus merging the flexibility and generative structure of prompting with the targeted optimization of RL. We show OPQE outperforms both standalone prompting and RL-based rewriting, demonstrating that a synergistic approach yields the best results. Our implementation is made available to facilitate reproducibility. 
+
+---
+# Resolution-Aware Retrieval Augmented Zero-Shot Forecasting 
+
+**Authors**: Iman Deznabi, Peeyush Kumar, Madalina Fiterau  
+
+**Link**: [PDF](https://arxiv.org/pdf/2510.16695)  
+
+**Abstract**: Zero-shot forecasting aims to predict outcomes for previously unseen conditions without direct historical data, posing a significant challenge for traditional forecasting methods. We introduce a Resolution-Aware Retrieval-Augmented Forecasting model that enhances predictive accuracy by leveraging spatial correlations and temporal frequency characteristics. By decomposing signals into different frequency components, our model employs resolution-aware retrieval, where lower-frequency components rely on broader spatial context, while higher-frequency components focus on local influences. This allows the model to dynamically retrieve relevant data and adapt to new locations with minimal historical context.
+Applied to microclimate forecasting, our model significantly outperforms traditional forecasting methods, numerical weather prediction models, and modern foundation time series models, achieving 71% lower MSE than HRRR and 34% lower MSE than Chronos on the ERA5 dataset.
+Our results highlight the effectiveness of retrieval-augmented and resolution-aware strategies, offering a scalable and data-efficient solution for zero-shot forecasting in microclimate modeling and beyond. 
+
+---
+# Safire: Similarity Framework for Visualization Retrieval 
+
+**Authors**: Huyen N. Nguyen, Nils Gehlenborg  
+
+**Link**: [PDF](https://arxiv.org/pdf/2510.16662)  
+
+**Abstract**: Effective visualization retrieval necessitates a clear definition of similarity. Despite the growing body of work in specialized visualization retrieval systems, a systematic approach to understanding visualization similarity remains absent. We introduce the Similarity Framework for Visualization Retrieval (Safire), a conceptual model that frames visualization similarity along two dimensions: comparison criteria and representation modalities. Comparison criteria identify the aspects that make visualizations similar, which we divide into primary facets (data, visual encoding, interaction, style, metadata) and derived properties (data-centric and human-centric measures). Safire connects what to compare with how comparisons are executed through representation modalities. We categorize existing representation approaches into four groups based on their levels of information content and visualization determinism: raster image, vector image, specification, and natural language description, together guiding what is computable and comparable. We analyze several visualization retrieval systems using Safire to demonstrate its practical value in clarifying similarity considerations. Our findings reveal how particular criteria and modalities align across different use cases. Notably, the choice of representation modality is not only an implementation detail but also an important decision that shapes retrieval capabilities and limitations. Based on our analysis, we provide recommendations and discuss broader implications for multimodal learning, AI applications, and visualization reproducibility. 
+
+---
+# Prompt Optimization via Retrieved Reasoning Assets and Multi-Agent Analysis 
+
+**Authors**: Wonduk Seo, Juhyeon Lee, Junseo Koh, Hyunjin An, Jian Park, Seunghyun Lee, Haihua Chen, Yi Bu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2510.16635)  
+
+**Abstract**: Prompt optimization has emerged as an effective alternative to retraining for improving the performance of Large Language Models (LLMs). However, most existing approaches treat evaluation as a black box, relying solely on numerical scores while offering limited insight into why a prompt succeeds or fails. They also depend heavily on trial-and-error refinements, which are difficult to interpret and control. In this paper, we introduce MA-SAPO, a Multi-Agent framework for Score-Aware Prompt Optimization. Compared to prior methods, MA-SAPO explicitly couples evaluation outcomes with structured reasoning to guide systematic edits. The framework specifically consists of two stages: during the Reasoning Phase, agents collaboratively explain metric scores, diagnose weaknesses, and synthesize targeted refinements that are stored as reusable reasoning assets; during the Test Phase, agents retrieve these assets to analyze optimized prompts and apply only evidence-grounded edits. By turning evaluation signals into interpretable reasoning chains, MA-SAPO produces prompt refinements that are more transparent, auditable, and controllable. Experiments on the HelpSteer1/2 benchmarks demonstrate consistent improvements over single-pass prompting, retrieval-augmented baselines, and prior multi-agent strategies, validating the effectiveness of our approach. 
+
+---
+# Enhancing Channel Estimation in RIS-aided Systems via Observation Matrix Design 
+
+**Authors**: Zijian Zhang, Mingyao Cui  
+
+**Link**: [PDF](https://arxiv.org/pdf/2510.16576)  
+
+**Abstract**: Reconfigurable intelligent surfaces (RISs) have emerged as a promising technology for enhancing wireless communications through dense antenna arrays. Accurate channel estimation is critical to unlocking their full performance potential. To enhance RIS channel estimators, this paper proposes a novel observation matrix design scheme. Bayesian optimization framework is adopted to generate observation matrices that maximize the mutual information between received pilot signals and RIS channels. To solve the formulated problem efficiently, we develop an alternating Riemannian manifold optimization (ARMO) algorithm to alternately update the receiver combiners and RIS phase-shift matrices. An adaptive kernel training strategy is further introduced to iteratively refine the channel covariance matrix without requiring additional pilot resources. Simulation results demonstrate that the proposed ARMO-enhanced estimator achieves substantial gains in estimation accuracy over state-of-the-art methods. 
+
+---
+# DTKG: Dual-Track Knowledge Graph-Verified Reasoning Framework for Multi-Hop QA 
+
+**Authors**: Changhao Wang, Yanfang Liu, Xinxin Fan, Anzhi Zhou, Lao Tian, Yunfeng Lu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2510.16302)  
+
+**Abstract**: Multi-hop reasoning for question answering (QA) plays a critical role in retrieval-augmented generation (RAG) for modern large language models (LLMs). The accurate answer can be obtained through retrieving relational structure of entities from knowledge graph (KG). Regarding the inherent relation-dependency and reasoning pattern, multi-hop reasoning can be in general classified into two categories: i) parallel fact-verification multi-hop reasoning question, i.e., requiring simultaneous verifications of multiple independent sub-questions; and ii) chained multi-hop reasoning questions, i.e., demanding sequential multi-step inference with intermediate conclusions serving as essential premises for subsequent reasoning. Currently, the multi-hop reasoning approaches singly employ one of two techniques: LLM response-based fact verification and KG path-based chain construction. Nevertheless, the former excels at parallel fact-verification but underperforms on chained reasoning tasks, while the latter demonstrates proficiency in chained multi-hop reasoning but suffers from redundant path retrieval when handling parallel fact-verification reasoning. These limitations deteriorate the efficiency and accuracy for multi-hop QA tasks. To address this challenge, we propose a novel dual-track KG verification and reasoning framework DTKG, which is inspired by the Dual Process Theory in cognitive science. Specifically, DTKG comprises two main stages: the Classification Stage and the Branch Processing Stage. 
+
+---
+# BPL: Bias-adaptive Preference Distillation Learning for Recommender System 
+
+**Authors**: SeongKu Kang, Jianxun Lian, Dongha Lee, Wonbin Kweon, Sanghwan Jang, Jaehyun Lee, Jindong Wang, Xing Xie, Hwanjo Yu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2510.16076)  
+
+**Abstract**: Recommender systems suffer from biases that cause the collected feedback to incompletely reveal user preference. While debiasing learning has been extensively studied, they mostly focused on the specialized (called counterfactual) test environment simulated by random exposure of items, significantly degrading accuracy in the typical (called factual) test environment based on actual user-item interactions. In fact, each test environment highlights the benefit of a different aspect: the counterfactual test emphasizes user satisfaction in the long-terms, while the factual test focuses on predicting subsequent user behaviors on platforms. Therefore, it is desirable to have a model that performs well on both tests rather than only one. In this work, we introduce a new learning framework, called Bias-adaptive Preference distillation Learning (BPL), to gradually uncover user preferences with dual distillation strategies. These distillation strategies are designed to drive high performance in both factual and counterfactual test environments. Employing a specialized form of teacher-student distillation from a biased model, BPL retains accurate preference knowledge aligned with the collected feedback, leading to high performance in the factual test. Furthermore, through self-distillation with reliability filtering, BPL iteratively refines its knowledge throughout the training process. This enables the model to produce more accurate predictions across a broader range of user-item combinations, thereby improving performance in the counterfactual test. Comprehensive experiments validate the effectiveness of BPL in both factual and counterfactual tests. Our implementation is accessible via: this https URL. 
+
+---
