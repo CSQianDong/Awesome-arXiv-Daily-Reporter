@@ -1,0 +1,72 @@
+# Beyond More Context: Retrieval Diversity Boosts Multi-Turn Intent Understanding 
+
+**Authors**: Zhiming Lin  
+
+**Link**: [PDF](https://arxiv.org/pdf/2510.17940)  
+
+**Abstract**: Multi turn intent understanding is central to task oriented chatbots, yet real deployments face tight token budgets and noisy contexts, and most retrieval pipelines emphasize relevance while overlooking set level diversity and confounds such as more context or exemplar order. We ask whether retrieval diversity, rather than longer prompts, systematically improves LLM intent understanding under fixed budgets. We present a diversity aware retrieval framework that selects in context exemplars to balance intent coverage and linguistic variety, and integrates this selection with standard LLM decoders; the evaluation enforces budget matched prompts and randomized positions, and includes sensitivity analyses over exemplar count, diversity strength, and backbone size. On MultiWOZ 2.4 and SGD, the approach achieves strong gains in Joint Goal Accuracy under equal token budgets, surpassing strong LLM/DST baselines, with consistent improvements across K from 4 to 7 and moderate latency. Overall, the study isolates and validates the impact of content diversity in retrieval and offers a simple, deployable selection principle for building accurate, budget constrained multi turn intent systems. 
+
+---
+# Text or Pixels? It Takes Half: On the Token Efficiency of Visual Text Inputs in Multimodal LLMs 
+
+**Authors**: Yanhong Li, Zixuan Lan, Jiawei Zhou  
+
+**Link**: [PDF](https://arxiv.org/pdf/2510.18279)  
+
+**Abstract**: Large language models (LLMs) and their multimodal variants can now process visual inputs, including images of text. This raises an intriguing question: can we compress textual inputs by feeding them as images to reduce token usage while preserving performance? In this paper, we show that visual text representations are a practical and surprisingly effective form of input compression for decoder LLMs. We exploit the idea of rendering long text inputs as a single image and provide it directly to the model. This leads to dramatically reduced number of decoder tokens required, offering a new form of input compression. Through experiments on two distinct benchmarks RULER (long-context retrieval) and CNN/DailyMail (document summarization) we demonstrate that this text-as-image method yields substantial token savings (often nearly half) without degrading task performance. 
+
+---
+# Long-Context Attention Benchmark: From Kernel Efficiency to Distributed Context Parallelism 
+
+**Authors**: Tao Bu, Qiangang Wang, Bowen Zeng, Hanwen Sun, Yunpeng Huang, Chun Cao, Jingwei Xu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2510.17896)  
+
+**Abstract**: Transformer-based large language models (LLMs) have achieved remarkable success, yet their standard attention mechanism incurs quadratic computation and memory costs with respect to sequence length, posing a major bottleneck for long-context training. Prior work tackles this challenge along two directions: (1) kernel-level optimizations, which accelerate dense and sparse attention operators; and (2) module-level strategies, often referred to as distributed attention or context parallel training, which scale attention across multiple devices. However, systematic evaluation still remains limited: operator-level comparisons are often incomplete, while context parallel strategies are typically framework-specific, with unclear performance analysis across contexts. To address these gaps, we propose a unified benchmark that integrates representative attention kernels and context parallel mechanisms with a modular and extensible interface for evaluation. The benchmark evaluates methods along two critical dimensions: (1) attention mask patterns, which strongly affect efficiency, scalability, and usability, and (2) sequence length and distributed scale, which determine performance under extreme long-context training. Through comprehensive experiments on the cluster of up to 96 GPUs, our benchmark enables reproducible comparisons, highlights method-specific trade-offs, and provides practical guidance for designing and deploying attention mechanisms in long-context LLM training. 
+
+---
+# MTraining: Distributed Dynamic Sparse Attention for Efficient Ultra-Long Context Training 
+
+**Authors**: Wenxuan Li, Chengruidong Zhang, Huiqiang Jiang, Yucheng Li, Yuqing Yang, Lili Qiu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2510.18830)  
+
+**Abstract**: The adoption of long context windows has become a standard feature in Large Language Models (LLMs), as extended contexts significantly enhance their capacity for complex reasoning and broaden their applicability across diverse scenarios. Dynamic sparse attention is a promising approach for reducing the computational cost of long-context. However, efficiently training LLMs with dynamic sparse attention on ultra-long contexts-especially in distributed settings-remains a significant challenge, due in large part to worker- and step-level imbalance. This paper introduces MTraining, a novel distributed methodology leveraging dynamic sparse attention to enable efficient training for LLMs with ultra-long contexts. Specifically, MTraining integrates three key components: a dynamic sparse training pattern, balanced sparse ring attention, and hierarchical sparse ring attention. These components are designed to synergistically address the computational imbalance and communication overheads inherent in dynamic sparse attention mechanisms during the training of models with extensive context lengths. We demonstrate the efficacy of MTraining by training Qwen2.5-3B, successfully expanding its context window from 32K to 512K tokens on a cluster of 32 A100 GPUs. Our evaluations on a comprehensive suite of downstream tasks, including RULER, PG-19, InfiniteBench, and Needle In A Haystack, reveal that MTraining achieves up to a 6x higher training throughput while preserving model accuracy. Our code is available at this https URL. 
+
+---
+# Investigating LLM Capabilities on Long Context Comprehension for Medical Question Answering 
+
+**Authors**: Feras AlMannaa, Talia Tseriotou, Jenny Chim, Maria Liakata  
+
+**Link**: [PDF](https://arxiv.org/pdf/2510.18691)  
+
+**Abstract**: This study is the first to investigate LLM comprehension capabilities over long-context (LC) medical QA of clinical relevance. Our comprehensive assessment spans a range of content-inclusion settings based on their relevance, LLM models of varying capabilities and datasets across task formulations, revealing insights on model size effects, limitations, underlying memorization issues and the benefits of reasoning models. Importantly, we examine the effect of RAG on medical LC comprehension, uncover best settings in single versus multi-document reasoning datasets and showcase RAG strategies for improvements over LC. We shed light into some of the evaluation aspects using a multi-faceted approach. Our qualitative and error analyses address open questions on when RAG is beneficial over LC, revealing common failure cases. 
+
+---
+# MLMA: Towards Multilingual with Mamba Based Architectures 
+
+**Authors**: Mohamed Nabih Ali, Daniele Falavigna, Alessio Brutti  
+
+**Link**: [PDF](https://arxiv.org/pdf/2510.18684)  
+
+**Abstract**: Multilingual automatic speech recognition (ASR) remains a challenging task, especially when balancing performance across high- and low-resource languages. Recent advances in sequence modeling suggest that architectures beyond Transformers may offer better scalability and efficiency. In this work, we introduce MLMA (Multilingual Language Modeling with Mamba for ASR), a new approach that leverages the Mamba architecture--an efficient state-space model optimized for long-context sequence processing--for multilingual ASR. Using Mamba, MLMA implicitly incorporates language-aware conditioning and shared representations to support robust recognition across diverse languages. Experiments on standard multilingual benchmarks show that MLMA achieves competitive performance compared to Transformer-based architectures. These results highlight Mamba's potential as a strong backbone for scalable, efficient, and accurate multilingual speech recognition. 
+
+---
+# Adamas: Hadamard Sparse Attention for Efficient Long-Context Inference 
+
+**Authors**: Siyuan Yan, Guo-Qing Jiang, Yuchen Zhang, Xiaoxing Ma, Ran Zhu, Chun Cao, Jingwei Xu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2510.18413)  
+
+**Abstract**: Large language models (LLMs) now support context windows of hundreds of thousands to millions of tokens, enabling applications such as long-document summarization, large-scale code synthesis, multi-document question answering and persistent multi-turn dialogue. However, such extended contexts exacerbate the quadratic cost of self-attention, leading to severe latency in autoregressive decoding. Existing sparse attention methods alleviate these costs but rely on heuristic patterns that struggle to recall critical key-value (KV) pairs for each query, resulting in accuracy degradation. We introduce Adamas, a lightweight yet highly accurate sparse attention mechanism designed for long-context inference. Adamas applies the Hadamard transform, bucketization and 2-bit compression to produce compact representations, and leverages Manhattan-distance estimation for efficient top-k selections. Experiments show that Adamas matches the accuracy of full attention with only a 64-token budget, achieves near-lossless performance at 128, and supports up to 8x higher sparsity than prior state-of-the-art (SOTA) methods while delivering up to 4.4x self-attention and 1.5x end-to-end speedups on 32K-length sequences. Remarkably, Adamas attains comparable or even lower perplexity than full attention, underscoring its effectiveness in maintaining accuracy under aggressive sparsity. 
+
+---
+# CMT-Bench: Cricket Multi-Table Generation Benchmark for Probing Robustness in Large Language Models 
+
+**Authors**: Ritam Upadhyay, Naman Ahuja, Rishabh Baral, Aparna Garimella, Vivek Gupta  
+
+**Link**: [PDF](https://arxiv.org/pdf/2510.18173)  
+
+**Abstract**: LLM Driven text-to-table (T2T) systems often rely on extensive prompt-engineering or iterative event extraction in code-parsable formats, which boosts scores but are computationally expensive and obscure how models actually reason over temporal evolving narratives to summarise key information. We present CMT-Bench, a diagnostic benchmark built from live cricket commentary that requires dynamic table generation across two evolving schemas under a dense, rule-governed policy. CMT-Bench is designed to probe robustness via three semantics-preserving dimensions: (i) extractive-cue ablation to separate extractive shortcuts from state tracking, (ii) temporal prefixing to test long-context stability, and (iii) entity-form perturbations (anonymization, outof-distribution substitutions, role-entangling paraphrases) to assess sensitivity to surface variation. Across diverse long-context stateof-the-art LLMs, we find large drops without extractive summaries, monotonic degradation with input length, and consistent accuracy drop under entity-form changes. Complementary distributional tests confirm significant shifts in numeric error patterns, indicating drift in reasoning rather than mere noise. Our results show that current LLMs are brittle in dynamic Textto-table generation, motivating robustness-first evaluation as a prerequisite for developing efficient and scalable approaches for this task. 
+
+---
