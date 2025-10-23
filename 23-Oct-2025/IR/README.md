@@ -1,0 +1,90 @@
+# Top-P Masking for Cross Language Information Retrieval 
+
+**Authors**: Joseph Casale, Andrew Silverschotz, Joseph DeSimone  
+
+**Link**: [PDF](https://arxiv.org/pdf/2510.19758)  
+
+**Abstract**: Top-K masking schemes have been proposed as a method to promote sparse representations in Information Retrieval (IR) tasks, as a simple alternative to Floating Point Operations per Second (FLOPS) regularization. Algorithms such as Bilingual Lexical and Document Expansion Model (BLADE), adopt this approach as a post-processing stage. We propose using Top-P Dynamic Masking similar to Nucleus Sampling in Large Language Models, and demonstrate better performance than Top-K masking. Specifically, we evaluate our methods in the domain of Cross Language Information Retrieval (CLIR) 
+
+---
+# CoRECT: A Framework for Evaluating Embedding Compression Techniques at Scale 
+
+**Authors**: L. Caspari, M. Dinzinger, K. Gosh Dastidar, C. Fellicious, J. Mitrović, M. Granitzer  
+
+**Link**: [PDF](https://arxiv.org/pdf/2510.19340)  
+
+**Abstract**: Dense retrieval systems have proven to be effective across various benchmarks, but require substantial memory to store large search indices. Recent advances in embedding compression show that index sizes can be greatly reduced with minimal loss in ranking quality. However, existing studies often overlook the role of corpus complexity -- a critical factor, as recent work shows that both corpus size and document length strongly affect dense retrieval performance. In this paper, we introduce CoRECT (Controlled Retrieval Evaluation of Compression Techniques), a framework for large-scale evaluation of embedding compression methods, supported by a newly curated dataset collection. To demonstrate its utility, we benchmark eight representative types of compression methods. Notably, we show that non-learned compression achieves substantial index size reduction, even on up to 100M passages, with statistically insignificant performance loss. However, selecting the optimal compression method remains challenging, as performance varies across models. Such variability highlights the necessity of CoRECT to enable consistent comparison and informed selection of compression methods. All code, data, and results are available on GitHub and HuggingFace. 
+
+---
+# C2T-ID: Converting Semantic Codebooks to Textual Document Identifiers for Generative Search 
+
+**Authors**: Yingchen Zhang, Ruqing Zhang, Jiafeng Guo, Wenjun Peng, Sen Li, Fuyu Lv, Xueqi Cheng  
+
+**Link**: [PDF](https://arxiv.org/pdf/2510.19221)  
+
+**Abstract**: Designing document identifiers (docids) that carry rich semantic information while maintaining tractable search spaces is a important challenge in generative retrieval (GR). Popular codebook methods address this by building a hierarchical semantic tree and constraining generation to its child nodes, yet their numeric identifiers cannot leverage the large language model's pretrained natural language understanding. Conversely, using text as docid provides more semantic expressivity but inflates the decoding space, making the system brittle to early-step errors. To resolve this trade-off, we propose C2T-ID: (i) first construct semantic numerical docid via hierarchical clustering; (ii) then extract high-frequency metadata keywords and iteratively replace each numeric label with its cluster's top-K keywords; and (iii) an optional two-level semantic smoothing step further enhances the fluency of C2T-ID. Experiments on Natural Questions and Taobao's product search demonstrate that C2T-ID significantly outperforms atomic, semantic codebook, and pure-text docid baselines, demonstrating its effectiveness in balancing semantic expressiveness with search space constraints. 
+
+---
+# XGen-Q: An Explainable Domain-Adaptive LLM Framework with Retrieval-Augmented Generation for Software Security 
+
+**Authors**: Hamed Jelodar, Mohammad Meymani, Roozbeh Razavi-Far, Ali A. Ghorbani  
+
+**Link**: [PDF](https://arxiv.org/pdf/2510.19006)  
+
+**Abstract**: Generative AI and large language models (LLMs) have shown strong capabilities in code understanding, but their use in cybersecurity, particularly for malware detection and analysis, remains limited. Existing detection systems often fail to generalize to obfuscated or previously unseen threats, underscoring the need for more adaptable and explainable models. To address this challenge, we introduce XGen-Q, a domain-adapted LLM built on the Qwen-Coder architecture and pretrained on a large-scale corpus of over one million malware samples, spanning both source and assembly code. XGen-Q uses a multi-stage prompt strategy combined with retrieval-augmented generation (RAG) to deliver reliable malware identification and detailed forensic reporting, even in the presence of complex code obfuscation. To further enhance generalization, we design a training pipeline that systematically exposes the model to diverse obfuscation patterns. Experimental results show that XGen-Q achieves significantly lower perplexity than competitive baselines and exhibits strong performance on novel malware samples, demonstrating the promise of LLM-based approaches for interpretable and robust malware analysis. 
+
+---
+# SBAN: A Framework \& Multi-Dimensional Dataset for Large Language Model Pre-Training and Software Code Mining 
+
+**Authors**: Hamed Jelodar, Mohammad Meymani, Samita Bai, Roozbeh Razavi-Far, Ali A. Ghorbani  
+
+**Link**: [PDF](https://arxiv.org/pdf/2510.18936)  
+
+**Abstract**: This paper introduces SBAN (Source code, Binary, Assembly, and Natural Language Description), a large-scale, multi-dimensional dataset designed to advance the pre-training and evaluation of large language models (LLMs) for software code analysis. SBAN comprises more than 3 million samples, including 2.9 million benign and 672,000 malware respectively, each represented across four complementary layers: binary code, assembly instructions, natural language descriptions, and source code. This unique multimodal structure enables research on cross-representation learning, semantic understanding of software, and automated malware detection. Beyond security applications, SBAN supports broader tasks such as code translation, code explanation, and other software mining tasks involving heterogeneous data. It is particularly suited for scalable training of deep models, including transformers and other LLM architectures. By bridging low-level machine representations and high-level human semantics, SBAN provides a robust foundation for building intelligent systems that reason about code. We believe that this dataset opens new opportunities for mining software behavior, improving security analytics, and enhancing LLM capabilities in pre-training and fine-tuning tasks for software code mining. 
+
+---
+# ToolDreamer: Instilling LLM Reasoning Into Tool Retrievers 
+
+**Authors**: Saptarshi Sengupta, Zhengyu Zhou, Jun Araki, Xingbo Wang, Bingqing Wang, Suhang Wang, Zhe Feng  
+
+**Link**: [PDF](https://arxiv.org/pdf/2510.19791)  
+
+**Abstract**: Tool calling has become increasingly popular for Large Language Models (LLMs). However, for large tool sets, the resulting tokens would exceed the LLM's context window limit, making it impossible to include every tool. Hence, an external retriever is used to provide LLMs with the most relevant tools for a query. Existing retrieval models rank tools based on the similarity between a user query and a tool description (TD). This leads to suboptimal retrieval as user requests are often poorly aligned with the language of TD. To remedy the issue, we propose ToolDreamer, a framework to condition retriever models to fetch tools based on hypothetical (synthetic) TD generated using an LLM, i.e., description of tools that the LLM feels will be potentially useful for the query. The framework enables a more natural alignment between queries and tools within the language space of TD's. We apply ToolDreamer on the ToolRet dataset and show that our method improves the performance of sparse and dense retrievers with and without training, thus showcasing its flexibility. Through our proposed framework, our aim is to offload a portion of the reasoning burden to the retriever so that the LLM may effectively handle a large collection of tools without inundating its context window. 
+
+---
+# A Matter of Time: Revealing the Structure of Time in Vision-Language Models 
+
+**Authors**: Nidham Tekaya, Manuela Waldner, Matthias Zeppelzauer  
+
+**Link**: [PDF](https://arxiv.org/pdf/2510.19559)  
+
+**Abstract**: Large-scale vision-language models (VLMs) such as CLIP have gained popularity for their generalizable and expressive multimodal representations. By leveraging large-scale training data with diverse textual metadata, VLMs acquire open-vocabulary capabilities, solving tasks beyond their training scope. This paper investigates the temporal awareness of VLMs, assessing their ability to position visual content in time. We introduce TIME10k, a benchmark dataset of over 10,000 images with temporal ground truth, and evaluate the time-awareness of 37 VLMs by a novel methodology. Our investigation reveals that temporal information is structured along a low-dimensional, non-linear manifold in the VLM embedding space. Based on this insight, we propose methods to derive an explicit ``timeline'' representation from the embedding space. These representations model time and its chronological progression and thereby facilitate temporal reasoning tasks. Our timeline approaches achieve competitive to superior accuracy compared to a prompt-based baseline while being computationally efficient. All code and data are available at this https URL. 
+
+---
+# The Massive Legal Embedding Benchmark (MLEB) 
+
+**Authors**: Umar Butler, Abdur-Rahman Butler, Adrian Lucas Malec  
+
+**Link**: [PDF](https://arxiv.org/pdf/2510.19365)  
+
+**Abstract**: We present the Massive Legal Embedding Benchmark (MLEB), the largest, most diverse, and most comprehensive open-source benchmark for legal information retrieval to date. MLEB consists of ten expert-annotated datasets spanning multiple jurisdictions (the US, UK, EU, Australia, Ireland, and Singapore), document types (cases, legislation, regulatory guidance, contracts, and literature), and task types (search, zero-shot classification, and question answering). Seven of the datasets in MLEB were newly constructed in order to fill domain and jurisdictional gaps in the open-source legal information retrieval landscape. We document our methodology in building MLEB and creating the new constituent datasets, and release our code, results, and data openly to assist with reproducible evaluations. 
+
+---
+# Metadata Extraction Leveraging Large Language Models 
+
+**Authors**: Cuize Han, Sesh Jalagam  
+
+**Link**: [PDF](https://arxiv.org/pdf/2510.19334)  
+
+**Abstract**: The advent of Large Language Models has revolutionized tasks across domains, including the automation of legal document analysis, a critical component of modern contract management systems. This paper presents a comprehensive implementation of LLM-enhanced metadata extraction for contract review, focusing on the automatic detection and annotation of salient legal clauses. Leveraging both the publicly available Contract Understanding Atticus Dataset (CUAD) and proprietary contract datasets, our work demonstrates the integration of advanced LLM methodologies with practical applications. We identify three pivotal elements for optimizing metadata extraction: robust text conversion, strategic chunk selection, and advanced LLM-specific techniques, including Chain of Thought (CoT) prompting and structured tool calling. The results from our experiments highlight the substantial improvements in clause identification accuracy and efficiency. Our approach shows promise in reducing the time and cost associated with contract review while maintaining high accuracy in legal clause identification. The results suggest that carefully optimized LLM systems could serve as valuable tools for legal professionals, potentially increasing access to efficient contract review services for organizations of all sizes. 
+
+---
+# DuoLens: A Framework for Robust Detection of Machine-Generated Multilingual Text and Code 
+
+**Authors**: Shriyansh Agrawal, Aidan Lau, Sanyam Shah, Ahan M R, Kevin Zhu, Sunishchal Dev, Vasu Sharma  
+
+**Link**: [PDF](https://arxiv.org/pdf/2510.18904)  
+
+**Abstract**: The prevalence of Large Language Models (LLMs) for generating multilingual text and source code has only increased the imperative for machine-generated content detectors to be accurate and efficient across domains. Current detectors, predominantly utilizing zero-shot methods, such as Fast DetectGPT or GPTZero, either incur high computational cost or lack sufficient accuracy, often with a trade-off between the two, leaving room for further improvement. To address these gaps, we propose the fine-tuning of encoder-only Small Language Models (SLMs), in particular, the pre-trained models of RoBERTA and CodeBERTa using specialized datasets on source code and other natural language to prove that for the task of binary classification, SLMs outperform LLMs by a huge margin whilst using a fraction of compute. Our encoders achieve AUROC $= 0.97$ to $0.99$ and macro-F1 $0.89$ to $0.94$ while reducing latency by $8$-$12\times$ and peak VRAM by $3$-$5\times$ at $512$-token inputs. Under cross-generator shifts and adversarial transformations (paraphrase, back-translation; code formatting/renaming), performance retains $\geq 92%$ of clean AUROC. We release training and evaluation scripts with seeds and configs; a reproducibility checklist is also included. 
+
+---
