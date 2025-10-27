@@ -1,0 +1,72 @@
+# Boosting Accuracy and Efficiency of Budget Forcing in LLMs via Reinforcement Learning for Mathematical Reasoning 
+
+**Authors**: Ravindra Aribowo Tarunokusumo, Rafael Fernandes Cunha  
+
+**Link**: [PDF](https://arxiv.org/pdf/2510.21398)  
+
+**Abstract**: Test-time scaling methods have seen a rapid increase in popularity for its computational efficiency and parameter-independent training to improve reasoning performance on Large Language Models. One such method is called budget forcing, a decoding intervention strategy which allocates extra compute budget for thinking and elicits the inherent self-correcting behavior of the model. However, this relies on supervised fine-tuning (SFT) on long-context reasoning traces which causes performance degradation on smaller models due to verbose responses. For this reason, we offer a framework integrating reinforcement learning (RL) to improve token efficiency and boost the performance of a 1.5B model for mathematical reasoning. We demonstrate this using only 1.5K training samples and found that our SFT+RL model performed better on the GSM8K dataset with varying compute budgets. Our main findings showed an overall higher accuracy while significantly reducing its token usage by over 40% compared to the SFT model, revealing how RL can recover the losses due to long-context training and altogether improving performance in mathematical reasoning. 
+
+---
+# MedAlign: A Synergistic Framework of Multimodal Preference Optimization and Federated Meta-Cognitive Reasoning 
+
+**Authors**: Siyong Chen, Jinbo Wen, Jiawen Kang, Tenghui Huang, Xumin Huang, Yuanjia Su, Hudan Pan, Zishao Zhong, Dusit Niyato, Shengli Xie, Dong In Kim  
+
+**Link**: [PDF](https://arxiv.org/pdf/2510.21093)  
+
+**Abstract**: Recently, large models have shown significant potential for smart healthcare. However, the deployment of Large Vision-Language Models (LVLMs) for clinical services is currently hindered by three critical challenges: a tendency to hallucinate answers not grounded in visual evidence, the inefficiency of fixed-depth reasoning, and the difficulty of multi-institutional collaboration. To address these challenges, in this paper, we develop MedAlign, a novel framework to ensure visually accurate LVLM responses for Medical Visual Question Answering (Med-VQA). Specifically, we first propose a multimodal Direct Preference Optimization (mDPO) objective to explicitly align preference learning with visual context. We then design a Retrieval-Aware Mixture-of-Experts (RA-MoE) architecture that utilizes image and text similarity to route queries to a specialized and context-augmented LVLM (i.e., an expert), thereby mitigating hallucinations in LVLMs. To achieve adaptive reasoning and facilitate multi-institutional collaboration, we propose a federated governance mechanism, where the selected expert, fine-tuned on clinical datasets based on mDPO, locally performs iterative Chain-of-Thought (CoT) reasoning via the local meta-cognitive uncertainty estimator. Extensive experiments on three representative Med-VQA datasets demonstrate that MedAlign achieves state-of-the-art performance, outperforming strong retrieval-augmented baselines by up to $11.85\%$ in F1-score, and simultaneously reducing the average reasoning length by $51.60\%$ compared with fixed-depth CoT approaches. 
+
+---
+# Reducing the Probability of Undesirable Outputs in Language Models Using Probabilistic Inference 
+
+**Authors**: Stephen Zhao, Aidan Li, Rob Brekelmans, Roger Grosse  
+
+**Link**: [PDF](https://arxiv.org/pdf/2510.21184)  
+
+**Abstract**: Reinforcement learning (RL) has become a predominant technique to align language models (LMs) with human preferences or promote outputs which are deemed to be desirable by a given reward function. Standard RL approaches optimize average reward, while methods explicitly focused on reducing the probability of undesired outputs typically come at a cost to average-case performance. To improve this tradeoff, we introduce RePULSe, a new training method that augments the standard RL loss with an additional loss that uses learned proposals to guide sampling low-reward outputs, and then reduces those outputs' probability. We run experiments demonstrating that RePULSe produces a better tradeoff of expected reward versus the probability of undesired outputs and is more adversarially robust, compared to standard RL alignment approaches and alternatives. 
+
+---
+# Self-Rewarding PPO: Aligning Large Language Models with Demonstrations Only 
+
+**Authors**: Qingru Zhang, Liang Qiu, Ilgee Hong, Zhenghao Xu, Tianyi Liu, Shiyang Li, Rongzhi Zhang, Zheng Li, Lihong Li, Bing Yin, Chao Zhang, Jianshu Chen, Haoming Jiang, Tuo Zhao  
+
+**Link**: [PDF](https://arxiv.org/pdf/2510.21090)  
+
+**Abstract**: Supervised fine-tuning (SFT) has emerged as a crucial method for aligning large language models (LLMs) with human-annotated demonstrations. However, SFT, being an off-policy approach similar to behavior cloning, often struggles with overfitting and poor out-of-domain generalization, especially in limited-data scenarios. To address these limitations, we propose Self-Rewarding PPO, a novel fine-tuning method that leverages on-policy techniques to enhance generalization performance. Our approach combines the strengths of SFT and proximal policy optimization (PPO) to achieve more effective alignment from demonstration data. At its core is a reward function designed as the log policy ratio between the SFT model and the pretrained base model. This function serves as an implicit reward signal, using the pretrained policy as a baseline and the SFT policy as a target. By doing so, it enables on-policy fine-tuning without relying on human preference annotations. The integration of this self-rewarding mechanism with PPO addresses key limitations of SFT, improving generalization, data efficiency, and robustness. Our empirical evaluation across a range of natural language processing tasks demonstrates that Self-Rewarding PPO consistently outperforms traditional SFT methods. The results highlight the effectiveness of our approach in aligning LLMs using demonstration data, particularly in scenarios where high-quality annotated data is scarce. 
+
+---
+# Incentivizing Consistent, Effective and Scalable Reasoning Capability in Audio LLMs via Reasoning Process Rewards 
+
+**Authors**: Jiajun Fan, Roger Ren, Jingyuan Li, Rahul Pandey, Prashanth Gurunath Shivakumar, Ivan Bulyko, Ankur Gandhe, Ge Liu, Yile Gu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2510.20867)  
+
+**Abstract**: The role of reasoning in Audio Large Language Models remains widely underexplored, as introducing a reasoning process often degrades rather than improves performance during inference, a phenomenon we term test-time inverse scaling, where longer reasoning chains yield progressively worse results. We demonstrate that this stems not from fundamental limitations of reasoning itself, but from inadequate training: models without proper guidance for the reasoning process produce hallucinatory, inconsistent reasoning that accumulates errors over longer chains. To address these challenges, we introduce CESAR (Consistent, Effective, and Scalable Audio Reasoners), shifting from outcome verification to rewarding the reasoning process. Our online reinforcement learning framework employs Group Relative Policy Optimization with a multi-faceted reward suite that incentivizes not only correctness and format but also consistency, structured analytical patterns, causal reasoning, domain-knowledge integration, and calibrated reasoning depth. CESAR resolves test-time inverse scaling, transforming reasoning from detriments into gains while revealing model-specific ``reasoning sweet spots", where performance peaks during test-time scaling. We achieve state-of-the-art results on MMAU Test-mini, substantially outperforming Gemini 2.5 Pro and GPT-4o Audio, and near-human-level performance on MMSU reasoning tasks. Through AI-as-judge evaluations and qualitative comparisons, we provide both quantitative and qualitative validation of our improved reasoning quality. Importantly, enhanced reasoning creates synergistic effects, simultaneously improving multimodal reasoning and perception capabilities. Overall, CESAR establishes a principled method for developing robust and scalable reasoning in Audio LLMs. 
+
+---
+# MRO: Enhancing Reasoning in Diffusion Language Models via Multi-Reward Optimization 
+
+**Authors**: Chenglong Wang, Yang Gan, Hang Zhou, Chi Hu, Yongyu Mu, Kai Song, Murun Yang, Bei Li, Chunliang Zhang, Tongran Liu, Jingbo Zhu, Zhengtao Yu, Tong Xiao  
+
+**Link**: [PDF](https://arxiv.org/pdf/2510.21473)  
+
+**Abstract**: Recent advances in diffusion language models (DLMs) have presented a promising alternative to traditional autoregressive large language models (LLMs). However, DLMs still lag behind LLMs in reasoning performance, especially as the number of denoising steps decreases. Our analysis reveals that this shortcoming arises primarily from the independent generation of masked tokens across denoising steps, which fails to capture the token correlation. In this paper, we define two types of token correlation: intra-sequence correlation and inter-sequence correlation, and demonstrate that enhancing these correlations improves reasoning performance. To this end, we propose a Multi-Reward Optimization (MRO) approach, which encourages DLMs to consider the token correlation during the denoising process. More specifically, our MRO approach leverages test-time scaling, reject sampling, and reinforcement learning to directly optimize the token correlation with multiple elaborate rewards. Additionally, we introduce group step and importance sampling strategies to mitigate reward variance and enhance sampling efficiency. Through extensive experiments, we demonstrate that MRO not only improves reasoning performance but also achieves significant sampling speedups while maintaining high performance on reasoning benchmarks. 
+
+---
+# RETuning: Upgrading Inference-Time Scaling for Stock Movement Prediction with Large Language Models 
+
+**Authors**: Xueyuan Lin, Cehao Yang, Ye Ma, Ming Li, Rongjunchen Zhang, Yang Ni, Xiaojun Wu, Chengjin Xu, Jian Guo, Hui Xiong  
+
+**Link**: [PDF](https://arxiv.org/pdf/2510.21604)  
+
+**Abstract**: Recently, large language models (LLMs) have demonstrated outstanding reasoning capabilities on mathematical and coding tasks. However, their application to financial tasks-especially the most fundamental task of stock movement prediction-remains underexplored. We study a three-class classification problem (up, hold, down) and, by analyzing existing reasoning responses, observe that: (1) LLMs follow analysts' opinions rather than exhibit a systematic, independent analytical logic (CoTs). (2) LLMs list summaries from different sources without weighing adversarial evidence, yet such counterevidence is crucial for reliable prediction. It shows that the model does not make good use of its reasoning ability to complete the task. To address this, we propose Reflective Evidence Tuning (RETuning), a cold-start method prior to reinforcement learning, to enhance prediction ability. While generating CoT, RETuning encourages dynamically constructing an analytical framework from diverse information sources, organizing and scoring evidence for price up or down based on that framework-rather than on contextual viewpoints-and finally reflecting to derive the prediction. This approach maximally aligns the model with its learned analytical framework, ensuring independent logical reasoning and reducing undue influence from context. We also build a large-scale dataset spanning all of 2024 for 5,123 A-share stocks, with long contexts (32K tokens) and over 200K samples. In addition to price and news, it incorporates analysts' opinions, quantitative reports, fundamental data, macroeconomic indicators, and similar stocks. Experiments show that RETuning successfully unlocks the model's reasoning ability in the financial domain. Inference-time scaling still works even after 6 months or on out-of-distribution stocks, since the models gain valuable insights about stock movement prediction. 
+
+---
+# Dynamic Retriever for In-Context Knowledge Editing via Policy Optimization 
+
+**Authors**: Mahmud Wasif Nafee, Maiqi Jiang, Haipeng Chen, Yanfu Zhang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2510.21059)  
+
+**Abstract**: Large language models (LLMs) excel at factual recall yet still propagate stale or incorrect knowledge. In-context knowledge editing offers a gradient-free remedy suitable for black-box APIs, but current editors rely on static demonstration sets chosen by surface-level similarity, leading to two persistent obstacles: (i) a quantity-quality trade-off, and (ii) lack of adaptivity to task difficulty. We address these issues by dynamically selecting supporting demonstrations according to their utility for the edit. We propose Dynamic Retriever for In-Context Knowledge Editing (DR-IKE), a lightweight framework that (1) trains a BERT retriever with REINFORCE to rank demonstrations by editing reward, and (2) employs a learnable threshold to prune low-value examples, shortening the prompt when the edit is easy and expanding it when the task is hard. DR-IKE performs editing without modifying model weights, relying solely on forward passes for compatibility with black-box LLMs. On the COUNTERFACT benchmark, it improves edit success by up to 17.1%, reduces latency by 41.6%, and preserves accuracy on unrelated queries, demonstrating scalable and adaptive knowledge editing. The code is available at this https URL . 
+
+---
