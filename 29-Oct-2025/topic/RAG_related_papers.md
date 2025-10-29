@@ -1,0 +1,81 @@
+# Retrieval and Argumentation Enhanced Multi-Agent LLMs for Judgmental Forecasting 
+
+**Authors**: Deniz Gorur, Antoni Rago, Francesca Toni  
+
+**Link**: [PDF](https://arxiv.org/pdf/2510.24303)  
+
+**Abstract**: Judgmental forecasting is the task of making predictions about future events based on human judgment. This task can be seen as a form of claim verification, where the claim corresponds to a future event and the task is to assess the plausibility of that event. In this paper, we propose a novel multi-agent framework for claim verification, whereby different agents may disagree on claim veracity and bring specific evidence for and against the claims, represented as quantitative bipolar argumentation frameworks (QBAFs). We then instantiate the framework for supporting claim verification, with a variety of agents realised with Large Language Models (LLMs): (1) ArgLLM agents, an existing approach for claim verification that generates and evaluates QBAFs; (2) RbAM agents, whereby LLM-empowered Relation-based Argument Mining (RbAM) from external sources is used to generate QBAFs; (3) RAG-ArgLLM agents, extending ArgLLM agents with a form of Retrieval-Augmented Generation (RAG) of arguments from external sources. Finally, we conduct experiments with two standard judgmental forecasting datasets, with instances of our framework with two or three agents, empowered by six different base LLMs. We observe that combining evidence from agents can improve forecasting accuracy, especially in the case of three agents, while providing an explainable combination of evidence for claim verification. 
+
+---
+# Mitigating Hallucination in Large Language Models (LLMs): An Application-Oriented Survey on RAG, Reasoning, and Agentic Systems 
+
+**Authors**: Yihan Li, Xiyuan Fu, Ghanshyam Verma, Paul Buitelaar, Mingming Liu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2510.24476)  
+
+**Abstract**: Hallucination remains one of the key obstacles to the reliable deployment of large language models (LLMs), particularly in real-world applications. Among various mitigation strategies, Retrieval-Augmented Generation (RAG) and reasoning enhancement have emerged as two of the most effective and widely adopted approaches, marking a shift from merely suppressing hallucinations to balancing creativity and reliability. However, their synergistic potential and underlying mechanisms for hallucination mitigation have not yet been systematically examined. This survey adopts an application-oriented perspective of capability enhancement to analyze how RAG, reasoning enhancement, and their integration in Agentic Systems mitigate hallucinations. We propose a taxonomy distinguishing knowledge-based and logic-based hallucinations, systematically examine how RAG and reasoning address each, and present a unified framework supported by real-world applications, evaluations, and benchmarks. 
+
+---
+# Metadata-Driven Retrieval-Augmented Generation for Financial Question Answering 
+
+**Authors**: Michail Dadopoulos, Anestis Ladas, Stratos Moschidis, Ioannis Negkakis  
+
+**Link**: [PDF](https://arxiv.org/pdf/2510.24402)  
+
+**Abstract**: Retrieval-Augmented Generation (RAG) struggles on long, structured financial filings where relevant evidence is sparse and cross-referenced. This paper presents a systematic investigation of advanced metadata-driven Retrieval-Augmented Generation (RAG) techniques, proposing and evaluating a novel, multi-stage RAG architecture that leverages LLM-generated metadata. We introduce a sophisticated indexing pipeline to create contextually rich document chunks and benchmark a spectrum of enhancements, including pre-retrieval filtering, post-retrieval reranking, and enriched embeddings, benchmarked on the FinanceBench dataset. Our results reveal that while a powerful reranker is essential for precision, the most significant performance gains come from embedding chunk metadata directly with text ("contextual chunks"). Our proposed optimal architecture combines LLM-driven pre-retrieval optimizations with these contextual embeddings to achieve superior performance. Additionally, we present a custom metadata reranker that offers a compelling, cost-effective alternative to commercial solutions, highlighting a practical trade-off between peak performance and operational efficiency. This study provides a blueprint for building robust, metadata-aware RAG systems for financial document analysis. 
+
+---
+# Enabling Near-realtime Remote Sensing via Satellite-Ground Collaboration of Large Vision-Language Models 
+
+**Authors**: Zihan Li, Jiahao Yang, Yuxin Zhang, Zhe Chen, Yue Gao  
+
+**Link**: [PDF](https://arxiv.org/pdf/2510.24242)  
+
+**Abstract**: Large vision-language models (LVLMs) have recently demonstrated great potential in remote sensing (RS) tasks (e.g., disaster monitoring) conducted by low Earth orbit (LEO) satellites. However, their deployment in real-world LEO satellite systems remains largely unexplored, hindered by limited onboard computing resources and brief satellite-ground contacts. We propose Grace, a satellite-ground collaborative system designed for near-realtime LVLM inference in RS tasks. Accordingly, we deploy compact LVLM on satellites for realtime inference, but larger ones on ground stations (GSs) to guarantee end-to-end performance. Grace is comprised of two main phases that are asynchronous satellite-GS Retrieval-Augmented Generation (RAG), and a task dispatch algorithm. Firstly, we still the knowledge archive of GS RAG to satellite archive with tailored adaptive update algorithm during limited satellite-ground data exchange period. Secondly, propose a confidence-based test algorithm that either processes the task onboard the satellite or offloads it to the GS. Extensive experiments based on real-world satellite orbital data show that Grace reduces the average latency by 76-95% compared to state-of-the-art methods, without compromising inference accuracy. 
+
+---
+# RefleXGen:The unexamined code is not worth using 
+
+**Authors**: Bin Wang, Hui Li, AoFan Liu, BoTao Yang, Ao Yang, YiLu Zhong, Weixiang Huang, Yanping Zhang, Runhuai Huang, Weimin Zeng  
+
+**Link**: [PDF](https://arxiv.org/pdf/2510.23674)  
+
+**Abstract**: Security in code generation remains a pivotal challenge when applying large language models (LLMs). This paper introduces RefleXGen, an innovative method that significantly enhances code security by integrating Retrieval-Augmented Generation (RAG) techniques with guided self-reflection mechanisms inherent in LLMs. Unlike traditional approaches that rely on fine-tuning LLMs or developing specialized secure code datasets - processes that can be resource-intensive - RefleXGen iteratively optimizes the code generation process through self-assessment and reflection without the need for extensive resources. Within this framework, the model continuously accumulates and refines its knowledge base, thereby progressively improving the security of the generated code. Experimental results demonstrate that RefleXGen substantially enhances code security across multiple models, achieving a 13.6% improvement with GPT-3.5 Turbo, a 6.7% improvement with GPT-4o, a 4.5% improvement with CodeQwen, and a 5.8% improvement with Gemini. Our findings highlight that improving the quality of model self-reflection constitutes an effective and practical strategy for strengthening the security of AI-generated code. 
+
+---
+# Optimizing Retrieval for RAG via Reinforced Contrastive Learning 
+
+**Authors**: Jiawei Zhou, Lei Chen  
+
+**Link**: [PDF](https://arxiv.org/pdf/2510.24652)  
+
+**Abstract**: As retrieval-augmented generation (RAG) becomes increasingly widespread, the role of information retrieval (IR) is shifting from retrieving information for human users to retrieving contextual knowledge for artificial intelligence (AI) systems, where relevance becomes difficult to define or annotate beforehand. To address this challenge, we propose R3, a Retrieval framework optimized for RAG through trialand-feedback Reinforced contrastive learning. Unlike prior approaches that rely on annotated or synthetic data for supervised fine-tuning, R3 enables the retriever to dynamically explore and optimize relevance within the RAG environment. During training, the retrieved results interact with the environment to produce contrastive signals that automatically guide the retriever's self-improvement. Extensive experiments across diverse tasks demonstrate that R3 improves RAG performance by 5.2% over the original retriever and surpasses state-of-the-art retrievers by 4.9%, while achieving comparable results to LLM-augmented retrieval and RAG systems built on post-trained or instruction-tuned LLMs. It is both efficient and practical, requiring only 4 GPUs and completing training within a single day. 
+
+---
+# META-RAG: Meta-Analysis-Inspired Evidence-Re-Ranking Method for Retrieval-Augmented Generation in Evidence-Based Medicine 
+
+**Authors**: Mengzhou Sun, Sendong Zhao, Jianyu Chen, Haochun Wang, Bin Qin  
+
+**Link**: [PDF](https://arxiv.org/pdf/2510.24003)  
+
+**Abstract**: Evidence-based medicine (EBM) holds a crucial role in clinical application. Given suitable medical articles, doctors effectively reduce the incidence of misdiagnoses. Researchers find it efficient to use large language models (LLMs) techniques like RAG for EBM tasks. However, the EBM maintains stringent requirements for evidence, and RAG applications in EBM struggle to efficiently distinguish high-quality evidence. Therefore, inspired by the meta-analysis used in EBM, we provide a new method to re-rank and filter the medical evidence. This method presents multiple principles to filter the best evidence for LLMs to diagnose. We employ a combination of several EBM methods to emulate the meta-analysis, which includes reliability analysis, heterogeneity analysis, and extrapolation analysis. These processes allow the users to retrieve the best medical evidence for the LLMs. Ultimately, we evaluate these high-quality articles and show an accuracy improvement of up to 11.4% in our experiments and results. Our method successfully enables RAG to extract higher-quality and more reliable evidence from the PubMed dataset. This work can reduce the infusion of incorrect knowledge into responses and help users receive more effective replies. 
+
+---
+# PICOs-RAG: PICO-supported Query Rewriting for Retrieval-Augmented Generation in Evidence-Based Medicine 
+
+**Authors**: Mengzhou Sun, Sendong Zhao, Jianyu Chen, Bin Qin  
+
+**Link**: [PDF](https://arxiv.org/pdf/2510.23998)  
+
+**Abstract**: Evidence-based medicine (EBM) research has always been of paramount importance. It is important to find appropriate medical theoretical support for the needs from physicians or patients to reduce the occurrence of medical accidents. This process is often carried out by human querying relevant literature databases, which lacks objectivity and efficiency. Therefore, researchers utilize retrieval-augmented generation (RAG) to search for evidence and generate responses automatically. However, current RAG methods struggle to handle complex queries in real-world clinical scenarios. For example, when queries lack certain information or use imprecise language, the model may retrieve irrelevant evidence and generate unhelpful answers. To address this issue, we present the PICOs-RAG to expand the user queries into a better format. Our method can expand and normalize the queries into professional ones and use the PICO format, a search strategy tool present in EBM, to extract the most important information used for retrieval. This approach significantly enhances retrieval efficiency and relevance, resulting in up to an 8.8\% improvement compared to the baseline evaluated by our method. Thereby the PICOs-RAG improves the performance of the large language models into a helpful and reliable medical assistant in EBM. 
+
+---
+# M-Eval: A Heterogeneity-Based Framework for Multi-evidence Validation in Medical RAG Systems 
+
+**Authors**: Mengzhou Sun, Sendong Zhao, Jianyu Chen, Haochun Wang, Bin Qin  
+
+**Link**: [PDF](https://arxiv.org/pdf/2510.23995)  
+
+**Abstract**: Retrieval-augmented Generation (RAG) has demonstrated potential in enhancing medical question-answering systems through the integration of large language models (LLMs) with external medical literature. LLMs can retrieve relevant medical articles to generate more professional responses efficiently. However, current RAG applications still face problems. They generate incorrect information, such as hallucinations, and they fail to use external knowledge correctly. To solve these issues, we propose a new method named M-Eval. This method is inspired by the heterogeneity analysis approach used in Evidence-Based Medicine (EBM). Our approach can check for factual errors in RAG responses using evidence from multiple sources. First, we extract additional medical literature from external knowledge bases. Then, we retrieve the evidence documents generated by the RAG system. We use heterogeneity analysis to check whether the evidence supports different viewpoints in the response. In addition to verifying the accuracy of the response, we also assess the reliability of the evidence provided by the RAG system. Our method shows an improvement of up to 23.31% accuracy across various LLMs. This work can help detect errors in current RAG-based medical systems. It also makes the applications of LLMs more reliable and reduces diagnostic errors. 
+
+---
