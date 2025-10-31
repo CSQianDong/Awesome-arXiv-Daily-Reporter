@@ -1,0 +1,47 @@
+# Kimi Linear: An Expressive, Efficient Attention Architecture 
+
+**Authors**: Kimi Team, Yu Zhang, Zongyu Lin, Xingcheng Yao, Jiaxi Hu, Fanqing Meng, Chengyin Liu, Xin Men, Songlin Yang, Zhiyuan Li, Wentao Li, Enzhe Lu, Weizhou Liu, Yanru Chen, Weixin Xu, Longhui Yu, Yejie Wang, Yu Fan, Longguang Zhong, Enming Yuan, Dehao Zhang, Yizhi Zhang, T.Y. Liu, Haiming Wang, Shengjun Fang, Weiran He, Shaowei Liu, Yiwei Li, Jianlin Su, Jiezhong Qiu, Bo Pang, Junjie Yan, Zhejun Jiang, Weixiao Huang, Bohong Yin, Jiacheng You, Chu Wei, Zhengtao Wang, Chao Hong, Yutian Chen, Guanduo Chen, Yucheng Wang, Huabin Zheng, Feng Wang, Yibo Liu, Mengnan Dong, Zheng Zhang, Siyuan Pan, Wenhao Wu, Yuhao Wu, Longyu Guan, Jiawen Tao, Guohong Fu, Xinran Xu, Yuzhi Wang, Guokun Lai, Yuxin Wu, Xinyu Zhou, Zhilin Yang, Yulun Du  
+
+**Link**: [PDF](https://arxiv.org/pdf/2510.26692)  
+
+**Abstract**: We introduce Kimi Linear, a hybrid linear attention architecture that, for the first time, outperforms full attention under fair comparisons across various scenarios -- including short-context, long-context, and reinforcement learning (RL) scaling regimes. At its core lies Kimi Delta Attention (KDA), an expressive linear attention module that extends Gated DeltaNet with a finer-grained gating mechanism, enabling more effective use of limited finite-state RNN memory. Our bespoke chunkwise algorithm achieves high hardware efficiency through a specialized variant of the Diagonal-Plus-Low-Rank (DPLR) transition matrices, which substantially reduces computation compared to the general DPLR formulation while remaining more consistent with the classical delta rule.
+We pretrain a Kimi Linear model with 3B activated parameters and 48B total parameters, based on a layerwise hybrid of KDA and Multi-Head Latent Attention (MLA). Our experiments show that with an identical training recipe, Kimi Linear outperforms full MLA with a sizeable margin across all evaluated tasks, while reducing KV cache usage by up to 75% and achieving up to 6 times decoding throughput for a 1M context. These results demonstrate that Kimi Linear can be a drop-in replacement for full attention architectures with superior performance and efficiency, including tasks with longer input and output lengths.
+To support further research, we open-source the KDA kernel and vLLM implementations, and release the pre-trained and instruction-tuned model checkpoints. 
+
+---
+# Towards Global Retrieval Augmented Generation: A Benchmark for Corpus-Level Reasoning 
+
+**Authors**: Qi Luo, Xiaonan Li, Tingshuo Fan, Xinchi Chen, Xipeng Qiu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2510.26205)  
+
+**Abstract**: Retrieval-augmented generation (RAG) has emerged as a leading approach to reducing hallucinations in large language models (LLMs). Current RAG evaluation benchmarks primarily focus on what we call local RAG: retrieving relevant chunks from a small subset of documents to answer queries that require only localized understanding within specific text chunks. However, many real-world applications require a fundamentally different capability -- global RAG -- which involves aggregating and analyzing information across entire document collections to derive corpus-level insights (for example, "What are the top 10 most cited papers in 2023?"). In this paper, we introduce GlobalQA -- the first benchmark specifically designed to evaluate global RAG capabilities, covering four core task types: counting, extremum queries, sorting, and top-k extraction. Through systematic evaluation across different models and baselines, we find that existing RAG methods perform poorly on global tasks, with the strongest baseline achieving only 1.51 F1 score. To address these challenges, we propose GlobalRAG, a multi-tool collaborative framework that preserves structural coherence through chunk-level retrieval, incorporates LLM-driven intelligent filters to eliminate noisy documents, and integrates aggregation modules for precise symbolic computation. On the Qwen2.5-14B model, GlobalRAG achieves 6.63 F1 compared to the strongest baseline's 1.51 F1, validating the effectiveness of our method. 
+
+---
+# Beyond Long Context: When Semantics Matter More than Tokens 
+
+**Authors**: Tarun Kumar Chawdhury, Jon D. Duke  
+
+**Link**: [PDF](https://arxiv.org/pdf/2510.25816)  
+
+**Abstract**: Electronic Health Records (EHR) store clinical documentation as base64 encoded attachments in FHIR DocumentReference resources, which makes semantic question answering difficult. Traditional vector database methods often miss nuanced clinical relationships. The Clinical Entity Augmented Retrieval (CLEAR) method, introduced by Lopez et al. 2025, uses entity aware retrieval and achieved improved performance with an F1 score of 0.90 versus 0.86 for embedding based retrieval, while using over 70 percent fewer tokens. We developed a Clinical Notes QA Evaluation Platform to validate CLEAR against zero shot large context inference and traditional chunk based retrieval augmented generation. The platform was tested on 12 clinical notes ranging from 10,000 to 65,000 tokens representing realistic EHR content. CLEAR achieved a 58.3 percent win rate, an average semantic similarity of 0.878, and used 78 percent fewer tokens than wide context processing. The largest performance gains occurred on long notes, with a 75 percent win rate for documents exceeding 65,000 tokens. These findings confirm that entity aware retrieval improves both efficiency and accuracy in clinical natural language processing. The evaluation framework provides a reusable and transparent benchmark for assessing clinical question answering systems where semantic precision and computational efficiency are critical. 
+
+---
+# Beyond Length: Quantifying Long-Range Information for Long-Context LLM Pretraining Data 
+
+**Authors**: Haoran Deng, Yingyu Lin, Zhenghao Lin, Xiao Liu, Yizhou Sun, Yi-An Ma, Yeyun Gong  
+
+**Link**: [PDF](https://arxiv.org/pdf/2510.25804)  
+
+**Abstract**: Long-context language models unlock advanced capabilities in reasoning, code generation, and document summarization by leveraging dependencies across extended spans of text. However, a significant portion of readily available long-text data lacks meaningful long-distance dependencies; most spans can be predicted using only local context. Training on such data is inefficient, making careful data selection crucial. Therefore, we introduce LongFilter, a framework for curating training data tailored to long-context pretraining. LongFilter measures the information gain provided by extended context by contrasting model predictions under long-context versus short-context settings, thereby identifying samples where long-range dependencies are essential. Experiments with LLaMA-3-8B, extending its context length from 8K to 64K, show that LongFilter efficiently selects high-quality data and yields substantial improvements on benchmarks such as HELMET, LongBench, and RULER. 
+
+---
+# LINK-KG: LLM-Driven Coreference-Resolved Knowledge Graphs for Human Smuggling Networks 
+
+**Authors**: Dipak Meher, Carlotta Domeniconi, Guadalupe Correa-Cabrera  
+
+**Link**: [PDF](https://arxiv.org/pdf/2510.26486)  
+
+**Abstract**: Human smuggling networks are complex and constantly evolving, making them difficult to analyze comprehensively. Legal case documents offer rich factual and procedural insights into these networks but are often long, unstructured, and filled with ambiguous or shifting references, posing significant challenges for automated knowledge graph (KG) construction. Existing methods either overlook coreference resolution or fail to scale beyond short text spans, leading to fragmented graphs and inconsistent entity linking. We propose LINK-KG, a modular framework that integrates a three-stage, LLM-guided coreference resolution pipeline with downstream KG extraction. At the core of our approach is a type-specific Prompt Cache, which consistently tracks and resolves references across document chunks, enabling clean and disambiguated narratives for structured knowledge graph construction from both short and long legal texts. LINK-KG reduces average node duplication by 45.21% and noisy nodes by 32.22% compared to baseline methods, resulting in cleaner and more coherent graph structures. These improvements establish LINK-KG as a strong foundation for analyzing complex criminal networks. 
+
+---
