@@ -1,0 +1,27 @@
+# BudgetMem: Learning Selective Memory Policies for Cost-Efficient Long-Context Processing in Language Models 
+
+**Authors**: Chandra Vamsi Krishna Alla, Harish Naidu Gaddam, Manohar Kommi  
+
+**Link**: [PDF](https://arxiv.org/pdf/2511.04919)  
+
+**Abstract**: Large Language Models (LLMs) face significant computational and memory constraints when processing long contexts, despite growing demand for applications requiring reasoning over extensive documents, multi-session dialogues, and book length texts. While recent advances have extended context windows to 100K-1M tokens, such approaches incur prohibitive costs for resource constrained deployments. We propose BudgetMem, a novel memory augmented architecture that learns what to remember rather than remembering everything. Our system combines selective memory policies with feature based salience scoring (entity density, TF-IDF, discourse markers, position bias) to decide which information merits storage under strict budget constraints. Unlike existing retrieval augmented generation (RAG) systems that store all chunks, BudgetMem employs learned gating mechanisms coupled with BM25 sparse retrieval for efficient information access. Through comprehensive experiments on 700 question answer pairs across short (237 tokens) and long (5K-10K tokens) documents with Llama-3.2-3B-Instruct, we demonstrate that BudgetMem achieves remarkable results on long documents: only 1.0% F1 score degradation while saving 72.4% memory compared to baseline RAG. We validate our approach through budget sensitivity analysis (testing 7 budget ratios), naive baseline comparisons, and document length analysis, showing that BudgetMem's benefits increase with document length. Our work provides a practical pathway for deploying capable long context systems on modest hardware, democratizing access to advanced language understanding capabilities. 
+
+---
+# Jailbreaking in the Haystack 
+
+**Authors**: Rishi Rajesh Shah, Chen Henry Wu, Shashwat Saxena, Ziqian Zhong, Alexander Robey, Aditi Raghunathan  
+
+**Link**: [PDF](https://arxiv.org/pdf/2511.04707)  
+
+**Abstract**: Recent advances in long-context language models (LMs) have enabled million-token inputs, expanding their capabilities across complex tasks like computer-use agents. Yet, the safety implications of these extended contexts remain unclear. To bridge this gap, we introduce NINJA (short for Needle-in-haystack jailbreak attack), a method that jailbreaks aligned LMs by appending benign, model-generated content to harmful user goals. Critical to our method is the observation that the position of harmful goals play an important role in safety. Experiments on standard safety benchmark, HarmBench, show that NINJA significantly increases attack success rates across state-of-the-art open and proprietary models, including LLaMA, Qwen, Mistral, and Gemini. Unlike prior jailbreaking methods, our approach is low-resource, transferable, and less detectable. Moreover, we show that NINJA is compute-optimal -- under a fixed compute budget, increasing context length can outperform increasing the number of trials in best-of-N jailbreak. These findings reveal that even benign long contexts -- when crafted with careful goal positioning -- introduce fundamental vulnerabilities in modern LMs. 
+
+---
+# Stateful KV Cache Management for LLMs: Balancing Space, Time, Accuracy, and Positional Fidelity 
+
+**Authors**: Pratik Poudel  
+
+**Link**: [PDF](https://arxiv.org/pdf/2511.04686)  
+
+**Abstract**: The Key-Value (KV) cache is integral to efficient autoregressive inference in large language models (LLMs), yet its unbounded growth in stateful multi-turn scenarios presents major challenges. This paper examines the interplay between KV cache management strategies, the architectural context limits of models like meta-llama/Meta-Llama-3-8b-instruct, and the often-overlooked integrity of positional encodings. Through empirical analysis using a stateful benchmarking framework, we show that LLM generation quality degrades sharply when the accumulated KV cache approaches or exceeds the model's trained context window (e.g., 8192 tokens for Llama 3), a failure mode distinct from GPU memory exhaustion. Common eviction strategies, even high-retention ones (e.g., 99% via AttentionTop), can worsen performance if they disrupt positional coherence. Because LLMs rely on consistent positional signals (e.g., RoPE), compacting a cache by removing non-contiguous tokens can scramble these signals and lead to degenerative outputs. We further show that simple strategies preserving contiguous context blocks (e.g., keeping an initial "gist") can yield more coherent generations than complex or positionally disruptive ones. We advocate for eviction techniques that respect architectural limits, preserve positional structure, and view "cache health" holistically beyond mere size. 
+
+---
