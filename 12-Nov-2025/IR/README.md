@@ -1,0 +1,117 @@
+# Advancing Scientific Knowledge Retrieval and Reuse with a Novel Digital Library for Machine-Readable Knowledge 
+
+**Authors**: Hadi Ghaemi, Lauren Snyder, Markus Stocker  
+
+**Link**: [PDF](https://arxiv.org/pdf/2511.08476)  
+
+**Abstract**: Digital libraries for research, such as the ACM Digital Library or Semantic Scholar, do not enable the machine-supported, efficient reuse of scientific knowledge (e.g., in synthesis research). This is because these libraries are based on document-centric models with narrative text knowledge expressions that require manual or semi-automated knowledge extraction, structuring, and organization. We present ORKG reborn, an emerging digital library that supports finding, accessing, and reusing accurate, fine-grained, and reproducible machine-readable expressions of scientific knowledge that relate scientific statements and their supporting evidence in terms of data and code. The rich expressions of scientific knowledge are published as reborn (born-reusable) articles and provide novel possibilities for scientific knowledge retrieval, for instance by statistical methods, software packages, variables, or data matching specific constraints. We describe the proposed system and demonstrate its practical viability and potential for information retrieval in contrast to state-of-the-art digital libraries and document-centric scholarly communication using several published articles in research fields ranging from computer science to soil science. Our work underscores the enormous potential of scientific knowledge databases and a viable approach to their construction. 
+
+---
+# Bid Farewell to Seesaw: Towards Accurate Long-tail Session-based Recommendation via Dual Constraints of Hybrid Intents 
+
+**Authors**: Xiao Wang, Ke Qin, Dongyang Zhang, Xiurui Xie, Shuang Liang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2511.08378)  
+
+**Abstract**: Session-based recommendation (SBR) aims to predict anonymous users' next interaction based on their interaction sessions. In the practical recommendation scenario, low-exposure items constitute the majority of interactions, creating a long-tail distribution that severely compromises recommendation diversity. Existing approaches attempt to address this issue by promoting tail items but incur accuracy degradation, exhibiting a "see-saw" effect between long-tail and accuracy performance. We attribute such conflict to session-irrelevant noise within the tail items, which existing long-tail approaches fail to identify and constrain effectively. To resolve this fundamental conflict, we propose \textbf{HID} (\textbf{H}ybrid \textbf{I}ntent-based \textbf{D}ual Constraint Framework), a plug-and-play framework that transforms the conventional "see-saw" into "win-win" through introducing the hybrid intent-based dual constraints for both long-tail and accuracy. Two key innovations are incorporated in this framework: (i) \textit{Hybrid Intent Learning}, where we reformulate the intent extraction strategies by employing attribute-aware spectral clustering to reconstruct the item-to-intent mapping. Furthermore, discrimination of session-irrelevant noise is achieved through the assignment of the target and noise intents to each session. (ii) \textit{Intent Constraint Loss}, which incorporates two novel constraint paradigms regarding the \textit{diversity} and \textit{accuracy} to regulate the representation learning process of both items and sessions. These two objectives are unified into a single training loss through rigorous theoretical derivation. Extensive experiments across multiple SBR models and datasets demonstrate that HID can enhance both long-tail performance and recommendation accuracy, establishing new state-of-the-art performance in long-tail recommender systems. 
+
+---
+# MARC: Multimodal and Multi-Task Agentic Retrieval-Augmented Generation for Cold-Start Recommender System 
+
+**Authors**: Seung Hwan Cho, Yujin Yang, Danik Baeck, Minjoo Kim, Young-Min Kim, Heejung Lee, Sangjin Park  
+
+**Link**: [PDF](https://arxiv.org/pdf/2511.08181)  
+
+**Abstract**: Recommender systems (RS) are currently being studied to mitigate limitations during cold-start conditions by leveraging modality information or introducing Agent concepts based on the exceptional reasoning capabilities of Large Language Models (LLMs). Meanwhile, food and beverage recommender systems have traditionally used knowledge graph and ontology concepts due to the domain's unique data attributes and relationship characteristics. On this background, we propose MARC, a multimodal and multi-task cocktail recommender system based on Agentic Retrieval-Augmented Generation (RAG) utilizing graph database under cold-start conditions. The proposed system generates high-quality, contextually appropriate answers through two core processes: a task recognition router and a reflection process. The graph database was constructed by processing cocktail data from Kaggle, and its effectiveness was evaluated using 200 manually crafted questions. The evaluation used both LLM-as-a-judge and human evaluation to demonstrate that answers generated via the graph database outperformed those from a simple vector database in terms of quality. The code is available at this https URL 
+
+---
+# DiffuGR: Generative Document Retrieval with Diffusion Language Models 
+
+**Authors**: Xinpeng Zhao, Yukun Zhao, Zhenyang Li, Mengqi Zhang, Jun Feng, Ran Chen, Ying Zhou, Zhumin Chen, Shuaiqiang Wang, Zhaochun Ren, Dawei Yin, Xin Xin  
+
+**Link**: [PDF](https://arxiv.org/pdf/2511.08150)  
+
+**Abstract**: Generative retrieval (GR) re-frames document retrieval as a sequence-based document identifier (DocID) generation task, memorizing documents with model parameters and enabling end-to-end retrieval without explicit indexing. Existing GR methods are based on auto-regressive generative models, i.e., the token generation is performed from left to right. However, such auto-regressive methods suffer from: (1) mismatch between DocID generation and natural language generation, e.g., an incorrect DocID token generated in early left steps would lead to totally erroneous retrieval; and (2) failure to balance the trade-off between retrieval efficiency and accuracy dynamically, which is crucial for practical applications. To address these limitations, we propose generative document retrieval with diffusion language models, dubbed DiffuGR. It models DocID generation as a discrete diffusion process: during training, DocIDs are corrupted through a stochastic masking process, and a diffusion language model is learned to recover them under a retrieval-aware objective. For inference, DiffuGR attempts to generate DocID tokens in parallel and refines them through a controllable number of denoising steps. In contrast to conventional left-to-right auto-regressive decoding, DiffuGR provides a novel mechanism to first generate more confident DocID tokens and refine the generation through diffusion-based denoising. Moreover, DiffuGR also offers explicit runtime control over the qualitylatency tradeoff. Extensive experiments on benchmark retrieval datasets show that DiffuGR is competitive with strong auto-regressive generative retrievers, while offering flexible speed and accuracy tradeoffs through variable denoising budgets. Overall, our results indicate that non-autoregressive diffusion models are a practical and effective alternative for generative document retrieval. 
+
+---
+# BiCA: Effective Biomedical Dense Retrieval with Citation-Aware Hard Negatives 
+
+**Authors**: Aarush Sinha, Pavan Kumar S, Roshan Balaji, Nirav Pravinbhai Bhatt  
+
+**Link**: [PDF](https://arxiv.org/pdf/2511.08029)  
+
+**Abstract**: Hard negatives are essential for training effective retrieval models. Hard-negative mining typically relies on ranking documents using cross-encoders or static embedding models based on similarity metrics such as cosine distance. Hard negative mining becomes challenging for biomedical and scientific domains due to the difficulty in distinguishing between source and hard negative documents. However, referenced documents naturally share contextual relevance with the source document but are not duplicates, making them well-suited as hard negatives. In this work, we propose BiCA: Biomedical Dense Retrieval with Citation-Aware Hard Negatives, an approach for hard-negative mining by utilizing citation links in 20,000 PubMed articles for improving a domain-specific small dense retriever. We fine-tune the GTE_small and GTE_Base models using these citation-informed negatives and observe consistent improvements in zero-shot dense retrieval using nDCG@10 for both in-domain and out-of-domain tasks on BEIR and outperform baselines on long-tailed topics in LoTTE using Success@5. Our findings highlight the potential of leveraging document link structure to generate highly informative negatives, enabling state-of-the-art performance with minimal fine-tuning and demonstrating a path towards highly data-efficient domain adaptation. 
+
+---
+# From IDs to Semantics: A Generative Framework for Cross-Domain Recommendation with Adaptive Semantic Tokenization 
+
+**Authors**: Peiyu Hu, Wayne Lu, Jia Wang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2511.08006)  
+
+**Abstract**: Cross-domain recommendation (CDR) is crucial for improving recommendation accuracy and generalization, yet traditional methods are often hindered by the reliance on shared user/item IDs, which are unavailable in most real-world scenarios. Consequently, many efforts have focused on learning disentangled representations through multi-domain joint training to bridge the domain gaps. Recent Large Language Model (LLM)-based approaches show promise, they still face critical challenges, including: (1) the \textbf{item ID tokenization dilemma}, which leads to vocabulary explosion and fails to capture high-order collaborative knowledge; and (2) \textbf{insufficient domain-specific modeling} for the complex evolution of user interests and item semantics. To address these limitations, we propose \textbf{GenCDR}, a novel \textbf{Gen}erative \textbf{C}ross-\textbf{D}omain \textbf{R}ecommendation framework. GenCDR first employs a \textbf{Domain-adaptive Tokenization} module, which generates disentangled semantic IDs for items by dynamically routing between a universal encoder and domain-specific adapters. Symmetrically, a \textbf{Cross-domain Autoregressive Recommendation} module models user preferences by fusing universal and domain-specific interests. Finally, a \textbf{Domain-aware Prefix-tree} enables efficient and accurate generation. Extensive experiments on multiple real-world datasets demonstrate that GenCDR significantly outperforms state-of-the-art baselines. Our code is available in the supplementary materials. 
+
+---
+# TurkEmbed4Retrieval: Turkish Embedding Model for Retrieval Task 
+
+**Authors**: Özay Ezerceli, Gizem Gümüşçekiçci, Tuğba Erkoç, Berke Özenç  
+
+**Link**: [PDF](https://arxiv.org/pdf/2511.07595)  
+
+**Abstract**: In this work, we introduce TurkEmbed4Retrieval, a retrieval specialized variant of the TurkEmbed model originally designed for Natural Language Inference (NLI) and Semantic Textual Similarity (STS) tasks. By fine-tuning the base model on the MS MARCO TR dataset using advanced training techniques, including Matryoshka representation learning and a tailored multiple negatives ranking loss, we achieve SOTA performance for Turkish retrieval tasks. Extensive experiments demonstrate that our model outperforms Turkish colBERT by 19,26% on key retrieval metrics for the Scifact TR dataset, thereby establishing a new benchmark for Turkish information retrieval. 
+
+---
+# A Hybrid Multimodal Deep Learning Framework for Intelligent Fashion Recommendation 
+
+**Authors**: Kamand Kalashi, Babak Teimourpour  
+
+**Link**: [PDF](https://arxiv.org/pdf/2511.07573)  
+
+**Abstract**: The rapid expansion of online fashion platforms has created an increasing demand for intelligent recommender systems capable of understanding both visual and textual cues. This paper proposes a hybrid multimodal deep learning framework for fashion recommendation that jointly addresses two key tasks: outfit compatibility prediction and complementary item retrieval. The model leverages the visual and textual encoders of the CLIP architecture to obtain joint latent representations of fashion items, which are then integrated into a unified feature vector and processed by a transformer encoder. For compatibility prediction, an "outfit token" is introduced to model the holistic relationships among items, achieving an AUC of 0.95 on the Polyvore dataset. For complementary item retrieval, a "target item token" representing the desired item description is used to retrieve compatible items, reaching an accuracy of 69.24% under the Fill-in-the-Blank (FITB) metric. The proposed approach demonstrates strong performance across both tasks, highlighting the effectiveness of multimodal learning for fashion recommendation. 
+
+---
+# Compression then Matching: An Efficient Pre-training Paradigm for Multimodal Embedding 
+
+**Authors**: Da Li, Yuxiao Luo, Keping Bi, Jiafeng Guo, Wei Yuan, Biao Yang, Yan Wang, Fan Yang, Tingting Gao, Guorui Zhou  
+
+**Link**: [PDF](https://arxiv.org/pdf/2511.08480)  
+
+**Abstract**: Vision-language models advance multimodal representation learning by acquiring transferable semantic embeddings, thereby substantially enhancing performance across a range of vision-language tasks, including cross-modal retrieval, clustering, and classification. An effective embedding is expected to comprehensively preserve the semantic content of the input while simultaneously emphasizing features that are discriminative for downstream tasks. Recent approaches demonstrate that VLMs can be adapted into competitive embedding models via large-scale contrastive learning, enabling the simultaneous optimization of two complementary objectives. We argue that the two aforementioned objectives can be decoupled: a comprehensive understanding of the input facilitates the embedding model in achieving superior performance in downstream tasks via contrastive learning. In this paper, we propose CoMa, a compressed pre-training phase, which serves as a warm-up stage for contrastive learning. Experiments demonstrate that with only a small amount of pre-training data, we can transform a VLM into a competitive embedding model. CoMa achieves new state-of-the-art results among VLMs of comparable size on the MMEB, realizing optimization in both efficiency and effectiveness. 
+
+---
+# TurkEmbed: Turkish Embedding Model on NLI & STS Tasks 
+
+**Authors**: Özay Ezerceli, Gizem Gümüşçekiçci, Tuğba Erkoç, Berke Özenç  
+
+**Link**: [PDF](https://arxiv.org/pdf/2511.08376)  
+
+**Abstract**: This paper introduces TurkEmbed, a novel Turkish language embedding model designed to outperform existing models, particularly in Natural Language Inference (NLI) and Semantic Textual Similarity (STS) tasks. Current Turkish embedding models often rely on machine-translated datasets, potentially limiting their accuracy and semantic understanding. TurkEmbed utilizes a combination of diverse datasets and advanced training techniques, including matryoshka representation learning, to achieve more robust and accurate embeddings. This approach enables the model to adapt to various resource-constrained environments, offering faster encoding capabilities. Our evaluation on the Turkish STS-b-TR dataset, using Pearson and Spearman correlation metrics, demonstrates significant improvements in semantic similarity tasks. Furthermore, TurkEmbed surpasses the current state-of-the-art model, Emrecan, on All-NLI-TR and STS-b-TR benchmarks, achieving a 1-4\% improvement. TurkEmbed promises to enhance the Turkish NLP ecosystem by providing a more nuanced understanding of language and facilitating advancements in downstream applications. 
+
+---
+# AgentPRM: Process Reward Models for LLM Agents via Step-Wise Promise and Progress 
+
+**Authors**: Zhiheng Xi, Chenyang Liao, Guanyu Li, Yajie Yang, Wenxiang Chen, Zhihao Zhang, Binghai Wang, Senjie Jin, Yuhao Zhou, Jian Guan, Wei Wu, Tao Ji, Tao Gui, Qi Zhang, Xuanjing Huang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2511.08325)  
+
+**Abstract**: Despite rapid development, large language models (LLMs) still encounter challenges in multi-turn decision-making tasks (i.e., agent tasks) like web shopping and browser navigation, which require making a sequence of intelligent decisions based on environmental feedback. Previous work for LLM agents typically relies on elaborate prompt engineering or fine-tuning with expert trajectories to improve performance. In this work, we take a different perspective: we explore constructing process reward models (PRMs) to evaluate each decision and guide the agent's decision-making process. Unlike LLM reasoning, where each step is scored based on correctness, actions in agent tasks do not have a clear-cut correctness. Instead, they should be evaluated based on their proximity to the goal and the progress they have made. Building on this insight, we propose a re-defined PRM for agent tasks, named AgentPRM, to capture both the interdependence between sequential decisions and their contribution to the final goal. This enables better progress tracking and exploration-exploitation balance. To scalably obtain labeled data for training AgentPRM, we employ a Temporal Difference-based (TD-based) estimation method combined with Generalized Advantage Estimation (GAE), which proves more sample-efficient than prior methods. Extensive experiments across different agentic tasks show that AgentPRM is over $8\times$ more compute-efficient than baselines, and it demonstrates robust improvement when scaling up test-time compute. Moreover, we perform detailed analyses to show how our method works and offer more insights, e.g., applying AgentPRM to the reinforcement learning of LLM agents. 
+
+---
+# Think Before You Retrieve: Learning Test-Time Adaptive Search with Small Language Models 
+
+**Authors**: Supriti Vijay, Aman Priyanshu, Anu Vellore, Baturay Saglam, Amin Karbasi  
+
+**Link**: [PDF](https://arxiv.org/pdf/2511.07581)  
+
+**Abstract**: Effective information retrieval requires reasoning over partial evidence and refining strategies as information emerges. Yet current approaches fall short: neural retrievers lack reasoning capabilities, large language models (LLMs) provide semantic depth but at prohibitive cost, and query rewriting or decomposition limits improvement to static transformations. As a result, existing methods fail to capture the iterative dynamics of exploration, feedback, and revision that complex user queries demand. We introduce Orion, a training framework that enables compact models (350M-1.2B parameters) to perform iterative retrieval through learned search strategies. Orion combines: (1) synthetic trajectory generation and supervised fine-tuning to encourage diverse exploration patterns in models, (2) reinforcement learning (RL) that rewards effective query refinement and backtracking behaviors, and (3) inference-time beam search algorithms that exploit the self-reflection capabilities learned during RL. Despite using only 3% of the training data available, our 1.2B model achieves 77.6% success on SciFact (vs. 72.6% for prior retrievers), 25.2% on BRIGHT (vs. 22.1%), 63.2% on NFCorpus (vs. 57.8%), and remains competitive on FEVER, HotpotQA, and MSMarco. It outperforms retrievers up to 200-400x larger on five of six benchmarks. These findings suggest that retrieval performance can emerge from learned strategies, not just model scale, when models are trained to search, reflect, and revise. 
+
+---
+# A Decentralized Retrieval Augmented Generation System with Source Reliabilities Secured on Blockchain 
+
+**Authors**: Yining Lu, Wenyi Tang, Max Johnson, Taeho Jung, Meng Jiang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2511.07577)  
+
+**Abstract**: Existing retrieval-augmented generation (RAG) systems typically use a centralized architecture, causing a high cost of data collection, integration, and management, as well as privacy concerns. There is a great need for a decentralized RAG system that enables foundation models to utilize information directly from data owners who maintain full control over their sources. However, decentralization brings a challenge: the numerous independent data sources vary significantly in reliability, which can diminish retrieval accuracy and response quality. To address this, our decentralized RAG system has a novel reliability scoring mechanism that dynamically evaluates each source based on the quality of responses it contributes to generate and prioritizes high-quality sources during retrieval. To ensure transparency and trust, the scoring process is securely managed through blockchain-based smart contracts, creating verifiable and tamper-proof reliability records without relying on a central authority. We evaluate our decentralized system with two Llama models (3B and 8B) in two simulated environments where six data sources have different levels of reliability. Our system achieves a +10.7\% performance improvement over its centralized counterpart in the real world-like unreliable data environments. Notably, it approaches the upper-bound performance of centralized systems under ideally reliable data environments. The decentralized infrastructure enables secure and trustworthy scoring management, achieving approximately 56\% marginal cost savings through batched update operations. Our code and system are open-sourced at this http URL. 
+
+---

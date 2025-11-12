@@ -1,0 +1,72 @@
+# MARC: Multimodal and Multi-Task Agentic Retrieval-Augmented Generation for Cold-Start Recommender System 
+
+**Authors**: Seung Hwan Cho, Yujin Yang, Danik Baeck, Minjoo Kim, Young-Min Kim, Heejung Lee, Sangjin Park  
+
+**Link**: [PDF](https://arxiv.org/pdf/2511.08181)  
+
+**Abstract**: Recommender systems (RS) are currently being studied to mitigate limitations during cold-start conditions by leveraging modality information or introducing Agent concepts based on the exceptional reasoning capabilities of Large Language Models (LLMs). Meanwhile, food and beverage recommender systems have traditionally used knowledge graph and ontology concepts due to the domain's unique data attributes and relationship characteristics. On this background, we propose MARC, a multimodal and multi-task cocktail recommender system based on Agentic Retrieval-Augmented Generation (RAG) utilizing graph database under cold-start conditions. The proposed system generates high-quality, contextually appropriate answers through two core processes: a task recognition router and a reflection process. The graph database was constructed by processing cocktail data from Kaggle, and its effectiveness was evaluated using 200 manually crafted questions. The evaluation used both LLM-as-a-judge and human evaluation to demonstrate that answers generated via the graph database outperformed those from a simple vector database in terms of quality. The code is available at this https URL 
+
+---
+# A Decentralized Retrieval Augmented Generation System with Source Reliabilities Secured on Blockchain 
+
+**Authors**: Yining Lu, Wenyi Tang, Max Johnson, Taeho Jung, Meng Jiang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2511.07577)  
+
+**Abstract**: Existing retrieval-augmented generation (RAG) systems typically use a centralized architecture, causing a high cost of data collection, integration, and management, as well as privacy concerns. There is a great need for a decentralized RAG system that enables foundation models to utilize information directly from data owners who maintain full control over their sources. However, decentralization brings a challenge: the numerous independent data sources vary significantly in reliability, which can diminish retrieval accuracy and response quality. To address this, our decentralized RAG system has a novel reliability scoring mechanism that dynamically evaluates each source based on the quality of responses it contributes to generate and prioritizes high-quality sources during retrieval. To ensure transparency and trust, the scoring process is securely managed through blockchain-based smart contracts, creating verifiable and tamper-proof reliability records without relying on a central authority. We evaluate our decentralized system with two Llama models (3B and 8B) in two simulated environments where six data sources have different levels of reliability. Our system achieves a +10.7\% performance improvement over its centralized counterpart in the real world-like unreliable data environments. Notably, it approaches the upper-bound performance of centralized systems under ideally reliable data environments. The decentralized infrastructure enables secure and trustworthy scoring management, achieving approximately 56\% marginal cost savings through batched update operations. Our code and system are open-sourced at this http URL. 
+
+---
+# Structured RAG for Answering Aggregative Questions 
+
+**Authors**: Omri Koshorek, Niv Granot, Aviv Alloni, Shahar Admati, Roee Hendel, Ido Weiss, Alan Arazi, Shay-Nitzan Cohen, Yonatan Belinkov  
+
+**Link**: [PDF](https://arxiv.org/pdf/2511.08505)  
+
+**Abstract**: Retrieval-Augmented Generation (RAG) has become the dominant approach for answering questions over large corpora. However, current datasets and methods are highly focused on cases where only a small part of the corpus (usually a few paragraphs) is relevant per query, and fail to capture the rich world of aggregative queries. These require gathering information from a large set of documents and reasoning over them. To address this gap, we propose S-RAG, an approach specifically designed for such queries. At ingestion time, S-RAG constructs a structured representation of the corpus; at inference time, it translates natural-language queries into formal queries over said representation. To validate our approach and promote further research in this area, we introduce two new datasets of aggregative queries: HOTELS and WORLD CUP. Experiments with S-RAG on the newly introduced datasets, as well as on a public benchmark, demonstrate that it substantially outperforms both common RAG systems and long-context LLMs. 
+
+---
+# Introducing A Bangla Sentence - Gloss Pair Dataset for Bangla Sign Language Translation and Research 
+
+**Authors**: Neelavro Saha, Rafi Shahriyar, Nafis Ashraf Roudra, Saadman Sakib, Annajiat Alim Rasel  
+
+**Link**: [PDF](https://arxiv.org/pdf/2511.08507)  
+
+**Abstract**: Bangla Sign Language (BdSL) translation represents a low-resource NLP task due to the lack of large-scale datasets that address sentence-level translation. Correspondingly, existing research in this field has been limited to word and alphabet level detection. In this work, we introduce Bangla-SGP, a novel parallel dataset consisting of 1,000 human-annotated sentence-gloss pairs which was augmented with around 3,000 synthetically generated pairs using syntactic and morphological rules through a rule-based Retrieval-Augmented Generation (RAG) pipeline. The gloss sequences of the spoken Bangla sentences are made up of individual glosses which are Bangla sign supported words and serve as an intermediate representation for a continuous sign. Our dataset consists of 1000 high quality Bangla sentences that are manually annotated into a gloss sequence by a professional signer. The augmentation process incorporates rule-based linguistic strategies and prompt engineering techniques that we have adopted by critically analyzing our human annotated sentence-gloss pairs and by working closely with our professional signer. Furthermore, we fine-tune several transformer-based models such as mBart50, Google mT5, GPT4.1-nano and evaluate their sentence-to-gloss translation performance using BLEU scores, based on these evaluation metrics we compare the model's gloss-translation consistency across our dataset and the RWTH-PHOENIX-2014T benchmark. 
+
+---
+# Prompt Tuning for Natural Language to SQL with Embedding Fine-Tuning and RAG 
+
+**Authors**: Jisoo Jang, Tien-Cuong Bui, Yunjun Choi, Wen-Syan Li  
+
+**Link**: [PDF](https://arxiv.org/pdf/2511.08245)  
+
+**Abstract**: This paper introduces an Error Correction through Prompt Tuning for NL-to-SQL, leveraging the latest advancements in generative pre-training-based LLMs and RAG. Our work addresses the crucial need for efficient and accurate translation of natural language queries into SQL expressions in various settings with the growing use of natural language interfaces. We explore the evolution of NLIDBs from early rule-based systems to advanced neural network-driven approaches. Drawing inspiration from the medical diagnostic process, we propose a novel framework integrating an error correction mechanism that diagnoses error types, identifies their causes, provides fixing instructions, and applies these corrections to SQL queries. This approach is further enriched by embedding fine-tuning and RAG, which harnesses external knowledge bases for improved accuracy and transparency. Through comprehensive experiments, we demonstrate that our framework achieves a significant 12 percent accuracy improvement over existing baselines, highlighting its potential to revolutionize data access and handling in contemporary data-driven environments. 
+
+---
+# A Preliminary Study of RAG for Taiwanese Historical Archives 
+
+**Authors**: Claire Lin, Bo-Han Feng, Xuanjun Chen, Te-Lun Yang, Hung-yi Lee, Jyh-Shing Roger Jang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2511.07445)  
+
+**Abstract**: Retrieval-Augmented Generation (RAG) has emerged as a promising approach for knowledge-intensive tasks. However, few studies have examined RAG for Taiwanese Historical Archives. In this paper, we present an initial study of a RAG pipeline applied to two historical Traditional Chinese datasets, Fort Zeelandia and the Taiwan Provincial Council Gazette, along with their corresponding open-ended query sets. We systematically investigate the effects of query characteristics and metadata integration strategies on retrieval quality, answer generation, and the performance of the overall system. The results show that early-stage metadata integration enhances both retrieval and answer accuracy while also revealing persistent challenges for RAG systems, including hallucinations during generation and difficulties in handling temporal or multi-hop historical queries. 
+
+---
+# JobSphere: An AI-Powered Multilingual Career Copilot for Government Employment Platforms 
+
+**Authors**: Srihari R, Adarsha B V, Mohammed Usman Hussain, Shweta Singh  
+
+**Link**: [PDF](https://arxiv.org/pdf/2511.08343)  
+
+**Abstract**: Users of government employment websites commonly face engagement and accessibility challenges linked to navigational complexity, a dearth of language options, and a lack of personalized support. This paper introduces JobSphere, an AI-powered career assistant that is redefining the employment platform in Punjab called PGRKAM. JobSphere employs Retrieval-Augmented Generation (RAG) architecture, and it is multilingual, available in English, Hindi and Punjabi. JobSphere technique uses 4-bit quantization, allowing the platform to deploy on consumer-grade GPUs (i.e., NVIDIA RTX 3050 4GB), making the implementation 89% cheaper than that of cloud-based systems. Key innovations include voice-enabled interaction with the assistant, automated mock tests, resume parsing with skills recognition, and embed-based job recommendation that achieves a precision@10 score of 68%. An evaluation of JobSphere's implementation reveals 94% factual accuracy, a median response time of 1.8 seconds, and a System Usability Scale score of 78.5/100, a 50% improvement compared to the baseline PGRKAM platform context. In conclusion, JobSphere effectively fills significant accessibility gaps for Punjab/Hindi-speaking users in rural locations, while also affirming the users access to trusted job content provided by government agencies. 
+
+---
+# Private-RAG: Answering Multiple Queries with LLMs while Keeping Your Data Private 
+
+**Authors**: Ruihan Wu, Erchi Wang, Zhiyuan Zhang, Yu-Xiang Wang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2511.07637)  
+
+**Abstract**: Retrieval-augmented generation (RAG) enhances large language models (LLMs) by retrieving documents from an external corpus at inference time. When this corpus contains sensitive information, however, unprotected RAG systems are at risk of leaking private information. Prior work has introduced differential privacy (DP) guarantees for RAG, but only in single-query settings, which fall short of realistic usage. In this paper, we study the more practical multi-query setting and propose two DP-RAG algorithms. The first, MURAG, leverages an individual privacy filter so that the accumulated privacy loss only depends on how frequently each document is retrieved rather than the total number of queries. The second, MURAG-ADA, further improves utility by privately releasing query-specific thresholds, enabling more precise selection of relevant documents. Our experiments across multiple LLMs and datasets demonstrate that the proposed methods scale to hundreds of queries within a practical DP budget ($\varepsilon\approx10$), while preserving meaningful utility. 
+
+---
