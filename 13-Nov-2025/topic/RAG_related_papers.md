@@ -1,0 +1,72 @@
+# Mina: A Multilingual LLM-Powered Legal Assistant Agent for Bangladesh for Empowering Access to Justice 
+
+**Authors**: Azmine Toushik Wasi, Wahid Faisal, Mst Rafia Islam  
+
+**Link**: [PDF](https://arxiv.org/pdf/2511.08605)  
+
+**Abstract**: Bangladesh's low-income population faces major barriers to affordable legal advice due to complex legal language, procedural opacity, and high costs. Existing AI legal assistants lack Bengali-language support and jurisdiction-specific adaptation, limiting their effectiveness. To address this, we developed Mina, a multilingual LLM-based legal assistant tailored for the Bangladeshi context. It employs multilingual embeddings and a RAG-based chain-of-tools framework for retrieval, reasoning, translation, and document generation, delivering context-aware legal drafts, citations, and plain-language explanations via an interactive chat interface. Evaluated by law faculty from leading Bangladeshi universities across all stages of the 2022 and 2023 Bangladesh Bar Council Exams, Mina scored 75-80% in Preliminary MCQs, Written, and simulated Viva Voce exams, matching or surpassing average human performance and demonstrating clarity, contextual understanding, and sound legal reasoning. These results confirm its potential as a low-cost, multilingual AI assistant that automates key legal tasks and scales access to justice, offering a real-world case study on building domain-specific, low-resource systems and addressing challenges of multilingual adaptation, efficiency, and sustainable public-service AI deployment. 
+
+---
+# Knowledge Graph Analysis of Legal Understanding and Violations in LLMs 
+
+**Authors**: Abha Jha, Abel Salinas, Fred Morstatter  
+
+**Link**: [PDF](https://arxiv.org/pdf/2511.08593)  
+
+**Abstract**: The rise of Large Language Models (LLMs) offers transformative potential for interpreting complex legal frameworks, such as Title 18 Section 175 of the US Code, which governs biological weapons. These systems hold promise for advancing legal analysis and compliance monitoring in sensitive domains. However, this capability comes with a troubling contradiction: while LLMs can analyze and interpret laws, they also demonstrate alarming vulnerabilities in generating unsafe outputs, such as actionable steps for bioweapon creation, despite their safeguards. To address this challenge, we propose a methodology that integrates knowledge graph construction with Retrieval-Augmented Generation (RAG) to systematically evaluate LLMs' understanding of this law, their capacity to assess legal intent (mens rea), and their potential for unsafe applications. Through structured experiments, we assess their accuracy in identifying legal violations, generating prohibited instructions, and detecting unlawful intent in bioweapons-related scenarios. Our findings reveal significant limitations in LLMs' reasoning and safety mechanisms, but they also point the way forward. By combining enhanced safety protocols with more robust legal reasoning frameworks, this research lays the groundwork for developing LLMs that can ethically and securely assist in sensitive legal domains - ensuring they act as protectors of the law rather than inadvertent enablers of its violation. 
+
+---
+# Retrieval-Augmented Generation of Pediatric Speech-Language Pathology vignettes: A Proof-of-Concept Study 
+
+**Authors**: Yilan Liu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2511.08600)  
+
+**Abstract**: Clinical vignettes are essential educational tools in speech-language pathology (SLP), but manual creation is time-intensive. While general-purpose large language models (LLMs) can generate text, they lack domain-specific knowledge, leading to hallucinations and requiring extensive expert revision. This study presents a proof-of-concept system integrating retrieval-augmented generation (RAG) with curated knowledge bases to generate pediatric SLP case materials. A multi-model RAG-based system was prototyped integrating curated domain knowledge with engineered prompt templates, supporting five commercial (GPT-4o, Claude 3.5 Sonnet, Gemini 2.5 Pro) and open-source (Llama 3.2, Qwen 2.5-7B) LLMs. Seven test scenarios spanning diverse disorder types and grade levels were systematically designed. Generated cases underwent automated quality assessment using a multi-dimensional rubric evaluating structural completeness, internal consistency, clinical appropriateness, and IEP goal/session note quality. This proof-of-concept demonstrates technical feasibility for RAG-augmented generation of pediatric SLP vignettes. Commercial models showed marginal quality advantages, but open-source alternatives achieved acceptable performance, suggesting potential for privacy-preserving institutional deployment. Integration of curated knowledge bases enabled content generation aligned with professional guidelines. Extensive validation through expert review, student pilot testing, and psychometric evaluation is required before educational or research implementation. Future applications may extend to clinical decision support, automated IEP goal generation, and clinical reflection training. 
+
+---
+# AI Founding Fathers: A Case Study of GIS Search in Multi-Agent Pipelines 
+
+**Authors**: Alvin Chauhan  
+
+**Link**: [PDF](https://arxiv.org/pdf/2511.09005)  
+
+**Abstract**: Although Large Language Models (LLMs) show exceptional fluency, efforts persist to extract stronger reasoning capabilities from them. Drawing on search-based interpretations of LLM computation, this paper advances a systematic framework for understanding LLM reasoning and optimization. Namely, that enhancing reasoning is best achieved by structuring a multi-agent pipeline to ensure a traversal of the search space in a gradual, incremental, and sequential (GIS) manner. Stated succinctly, high-quality reasoning is a controlled, incremental search. To test this framework, we investigate the efficacy of recursive refinement (RR)--an iterative process of self-criticism, adversarial stress-testing, and integrating critical feedback--as a practical method for implementing GIS search. We designed an experiment comparing a simple, linear pipeline against a complex, explicitly structured pipeline leveraging a recursive refinement layer. The multi-agent models were constructed to reflect the historical personas of three US Founding Fathers (Hamilton, Jefferson, and Madison) using RAG-powered corpora and were prompted to generate responses to three contemporary political issues. Model performance was evaluated using a two-tiered approach: a quantitative score from an LLM arbiter agent and qualitative human judgment. Our results revealed that the complex model consistently outperformed the simple model across all nine test cases with an average arbiter-outputted score of 88.3 versus 71.7. The complex model's arguments were superior in analytical depth, structural nuance, and strategic framing. We conclude that recursive refinement is a robust architectural feature for enhancing LLM reasoning via GIS search. 
+
+---
+# Conversational Agents for Building Energy Efficiency -- Advising Housing Cooperatives in Stockholm on Reducing Energy Consumption 
+
+**Authors**: Shadaab Ghani, Anne Håkansson, Oleksii Pasichnyi, Hossein Shahrokni  
+
+**Link**: [PDF](https://arxiv.org/pdf/2511.08587)  
+
+**Abstract**: Housing cooperative is a common type of multifamily building ownership in Sweden. Although this ownership structure grants decision-making autonomy, it places a burden of responsibility on cooperative's board members. Most board members lack the resources or expertise to manage properties and their energy consumption. This ignorance presents a unique challenge, especially given the EU directives that prohibit buildings rated as energy classes F and G by 2033. Conversational agents (CAs) enable human-like interactions with computer systems, facilitating human-computer interaction across various domains. In our case, CAs can be implemented to support cooperative members in making informed energy retrofitting and usage decisions. This paper introduces a Conversational agent system, called SPARA, designed to advise cooperatives on energy efficiency. SPARA functions as an energy efficiency advisor by leveraging the Retrieval-Augmented Generation (RAG) framework with a Language Model(LM). The LM generates targeted recommendations based on a knowledge base composed of email communications between professional energy advisors and cooperatives' representatives in Stockholm. The preliminary results indicate that SPARA can provide energy efficiency advice with precision 80\%, comparable to that of municipal energy efficiency (EE) experts. A pilot implementation is currently underway, where municipal EE experts are evaluating SPARA performance based on questions posed to EE experts by BRF members. Our findings suggest that LMs can significantly improve outreach by supporting stakeholders in their energy transition. For future work, more research is needed to evaluate this technology, particularly limitations to the stability and trustworthiness of its energy efficiency advice. 
+
+---
+# Vendor-Aware Industrial Agents: RAG-Enhanced LLMs for Secure On-Premise PLC Code Generation 
+
+**Authors**: Joschka Kersting, Michael Rummel, Gesa Benndorf  
+
+**Link**: [PDF](https://arxiv.org/pdf/2511.09122)  
+
+**Abstract**: Programmable Logic Controllers are operated by proprietary code dialects; this makes it challenging to train coding assistants. Current LLMs are trained on large code datasets and are capable of writing IEC 61131-3 compatible code out of the box, but they neither know specific function blocks, nor related project code. Moreover, companies like Mitsubishi Electric and their customers do not trust cloud providers. Hence, an own coding agent is the desired solution to cope with this. In this study, we present our work on a low-data domain coding assistant solution for industrial use. We show how we achieved high quality code generation without fine-tuning large models and by fine-tuning small local models for edge device usage. Our tool lets several AI models compete with each other, uses reasoning, corrects bugs automatically and checks code validity by compiling it directly in the chat interface. We support our approach with an extensive evaluation that comes with code compilation statistics and user ratings. We found that a Retrieval-Augmented Generation (RAG) supported coding assistant can work in low-data domains by using extensive prompt engineering and directed retrieval. 
+
+---
+# Thinking Forward and Backward: Multi-Objective Reinforcement Learning for Retrieval-Augmented Reasoning 
+
+**Authors**: Wenda Wei, Yu-An Liu, Ruqing Zhang, Jiafeng Guo, Lixin Su, Shuaiqiang Wang, Dawei Yin, Maarten de Rijke, Xueqi Cheng  
+
+**Link**: [PDF](https://arxiv.org/pdf/2511.09109)  
+
+**Abstract**: Retrieval-augmented generation (RAG) has proven to be effective in mitigating hallucinations in large language models, yet its effectiveness remains limited in complex, multi-step reasoning this http URL efforts have incorporated search-based interactions into RAG, enabling iterative reasoning with real-time retrieval. Most approaches rely on outcome-based supervision, offering no explicit guidance for intermediate steps. This often leads to reward hacking and degraded response quality. We propose Bi-RAR, a novel retrieval-augmented reasoning framework that evaluates each intermediate step jointly in both forward and backward directions. To assess the information completeness of each step, we introduce a bidirectional information distance grounded in Kolmogorov complexity, approximated via language model generation probabilities. This quantification measures both how far the current reasoning is from the answer and how well it addresses the question. To optimize reasoning under these bidirectional signals, we adopt a multi-objective reinforcement learning framework with a cascading reward structure that emphasizes early trajectory alignment. Empirical results on seven question answering benchmarks demonstrate that Bi-RAR surpasses previous methods and enables efficient interaction and reasoning with the search engine during training and inference. 
+
+---
+# Practical RAG Evaluation: A Rarity-Aware Set-Based Metric and Cost-Latency-Quality Trade-offs 
+
+**Authors**: Etienne Dallaire  
+
+**Link**: [PDF](https://arxiv.org/pdf/2511.09545)  
+
+**Abstract**: This paper addresses the guessing game in building production RAG. Classical rank-centric IR metrics (nDCG/MAP/MRR) are a poor fit for RAG, where LLMs consume a set of passages rather than a browsed list; position discounts and prevalence-blind aggregation miss what matters: whether the prompt at cutoff K contains the decisive evidence. Second, there is no standardized, reproducible way to build and audit golden sets. Third, leaderboards exist but lack end-to-end, on-corpus benchmarking that reflects production trade-offs. Fourth, how state-of-the-art embedding models handle proper-name identity signals and conversational noise remains opaque. To address these, we contribute: (1) RA-nWG@K, a rarity-aware, per-query-normalized set score, and operational ceilings via the pool-restricted oracle ceiling (PROC) and the percentage of PROC (%PROC) to separate retrieval from ordering headroom within a Cost-Latency-Quality (CLQ) lens; (2) rag-gs (MIT), a lean golden-set pipeline with Plackett-Luce listwise refinement whose iterative updates outperform single-shot LLM ranking; (3) a comprehensive benchmark on a production RAG (scientific-papers corpus) spanning dense retrieval, hybrid dense+BM25, embedding models and dimensions, cross-encoder rerankers, ANN (HNSW), and quantization; and (4) targeted diagnostics that quantify proper-name identity signal and conversational-noise sensitivity via identity-destroying and formatting ablations. Together, these components provide practitioner Pareto guidance and auditable guardrails to support reproducible, budget/SLA-aware decisions. 
+
+---
