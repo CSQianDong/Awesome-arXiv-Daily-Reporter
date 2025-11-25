@@ -1,0 +1,82 @@
+# HyperbolicRAG: Enhancing Retrieval-Augmented Generation with Hyperbolic Representations 
+
+**Authors**: Cao Linxiao, Wang Ruitao, Li Jindong, Zhou Zhipeng, Yang Menglin  
+
+**Link**: [PDF](https://arxiv.org/pdf/2511.18808)  
+
+**Abstract**: Retrieval-augmented generation (RAG) enables large language models (LLMs) to access external knowledge, helping mitigate hallucinations and enhance domain-specific expertise. Graph-based RAG enhances structural reasoning by introducing explicit relational organization that enables information propagation across semantically connected text units. However, these methods typically rely on Euclidean embeddings that capture semantic similarity but lack a geometric notion of hierarchical depth, limiting their ability to represent abstraction relationships inherent in complex knowledge graphs. To capture both fine-grained semantics and global hierarchy, we propose HyperbolicRAG, a retrieval framework that integrates hyperbolic geometry into graph-based RAG. HyperbolicRAG introduces three key designs: (1) a depth-aware representation learner that embeds nodes within a shared Poincare manifold to align semantic similarity with hierarchical containment, (2) an unsupervised contrastive regularization that enforces geometric consistency across abstraction levels, and (3) a mutual-ranking fusion mechanism that jointly exploits retrieval signals from Euclidean and hyperbolic spaces, emphasizing cross-space agreement during inference. Extensive experiments across multiple QA benchmarks demonstrate that HyperbolicRAG outperforms competitive baselines, including both standard RAG and graph-augmented baselines. 
+
+---
+# Large Language Models Require Curated Context for Reliable Political Fact-Checking -- Even with Reasoning and Web Search 
+
+**Authors**: Matthew R. DeVerna, Kai-Cheng Yang, Harry Yaojun Yan, Filippo Menczer  
+
+**Link**: [PDF](https://arxiv.org/pdf/2511.18749)  
+
+**Abstract**: Large language models (LLMs) have raised hopes for automated end-to-end fact-checking, but prior studies report mixed results. As mainstream chatbots increasingly ship with reasoning capabilities and web search tools -- and millions of users already rely on them for verification -- rigorous evaluation is urgent. We evaluate 15 recent LLMs from OpenAI, Google, Meta, and DeepSeek on more than 6,000 claims fact-checked by PolitiFact, comparing standard models with reasoning- and web-search variants. Standard models perform poorly, reasoning offers minimal benefits, and web search provides only moderate gains, despite fact-checks being available on the web. In contrast, a curated RAG system using PolitiFact summaries improved macro F1 by 233% on average across model variants. These findings suggest that giving models access to curated high-quality context is a promising path for automated fact-checking. 
+
+---
+# Rethinking Retrieval: From Traditional Retrieval Augmented Generation to Agentic and Non-Vector Reasoning Systems in the Financial Domain for Large Language Models 
+
+**Authors**: Elias Lumer, Matt Melich, Olivia Zino, Elena Kim, Sara Dieter, Pradeep Honaganahalli Basavaraju, Vamse Kumar Subbiah, James A. Burke, Roberto Hernandez  
+
+**Link**: [PDF](https://arxiv.org/pdf/2511.18177)  
+
+**Abstract**: Recent advancements in Retrieval-Augmented Generation (RAG) have enabled Large Language Models to answer financial questions using external knowledge bases of U.S. SEC filings, earnings reports, and regulatory documents. However, existing work lacks systematic comparison of vector-based and non-vector RAG architectures for financial documents, and the empirical impact of advanced RAG techniques on retrieval accuracy, answer quality, latency, and cost remain unclear. We present the first systematic evaluation comparing vector-based agentic RAG using hybrid search and metadata filtering against hierarchical node-based systems that traverse document structure without embeddings. We evaluate two enhancement techniques applied to the vector-based architecture, i) cross-encoder reranking for retrieval precision, and ii) small-to-big chunk retrieval for context completeness. Across 1,200 SEC 10-K, 10-Q, and 8-K filings on a 150-question benchmark, we measure retrieval metrics (MRR, Recall@5), answer quality through LLM-as-a-judge pairwise comparisons, latency, and preprocessing costs. Vector-based agentic RAG achieves a 68% win rate over hierarchical node-based systems with comparable latency (5.2 compared to 5.98 seconds). Cross-encoder reranking achieves a 59% absolute improvement at optimal parameters (10, 5) for MRR@5. Small-to-big retrieval achieves a 65% win rate over baseline chunking with only 0.2 seconds additional latency. Our findings reveal that applying advanced RAG techniques to financial Q&A systems improves retrieval accuracy, answer quality, and has cost-performance tradeoffs to be considered in production. 
+
+---
+# Principled Context Engineering for RAG: Statistical Guarantees via Conformal Prediction 
+
+**Authors**: Debashish Chakraborty, Eugene Yang, Daniel Khashabi, Dawn Lawrie, Kevin Duh  
+
+**Link**: [PDF](https://arxiv.org/pdf/2511.17908)  
+
+**Abstract**: Retrieval-Augmented Generation (RAG) enhances factual grounding in large language models (LLMs) by incorporating retrieved evidence, but LLM accuracy declines when long or noisy contexts exceed the model's effective attention span. Existing pre-generation filters rely on heuristics or uncalibrated LLM confidence scores, offering no statistical control over retained evidence. We evaluate and demonstrate context engineering through conformal prediction, a coverage-controlled filtering framework that removes irrelevant content while preserving recall of supporting evidence. Using both embedding- and LLM-based scoring functions, we test this approach on the NeuCLIR and RAGTIME collections. Conformal filtering consistently meets its target coverage, ensuring that a specified fraction of relevant snippets are retained, and reduces retained context by 2-3x relative to unfiltered retrieval. On NeuCLIR, downstream factual accuracy measured by ARGUE F1 improves under strict filtering and remains stable at moderate coverage, indicating that most discarded material is redundant or irrelevant. These results demonstrate that conformal prediction enables reliable, coverage-controlled context reduction in RAG, offering a model-agnostic and principled approach to context engineering. 
+
+---
+# From Pixels to Posts: Retrieval-Augmented Fashion Captioning and Hashtag Generation 
+
+**Authors**: Moazzam Umer Gondal, Hamad Ul Qudous, Daniya Siddiqui, Asma Ahmad Farhan  
+
+**Link**: [PDF](https://arxiv.org/pdf/2511.19149)  
+
+**Abstract**: This paper introduces the retrieval-augmented framework for automatic fashion caption and hashtag generation, combining multi-garment detection, attribute reasoning, and Large Language Model (LLM) prompting. The system aims to produce visually grounded, descriptive, and stylistically interesting text for fashion imagery, overcoming the limitations of end-to-end captioners that have problems with attribute fidelity and domain generalization. The pipeline combines a YOLO-based detector for multi-garment localization, k-means clustering for dominant color extraction, and a CLIP-FAISS retrieval module for fabric and gender attribute inference based on a structured product index. These attributes, together with retrieved style examples, create a factual evidence pack that is used to guide an LLM to generate human-like captions and contextually rich hashtags. A fine-tuned BLIP model is used as a supervised baseline model for comparison. Experimental results show that the YOLO detector is able to obtain a mean Average Precision (mAP@0.5) of 0.71 for nine categories of garments. The RAG-LLM pipeline generates expressive attribute-aligned captions and achieves mean attribute coverage of 0.80 with full coverage at the 50% threshold in hashtag generation, whereas BLIP gives higher lexical overlap and lower generalization. The retrieval-augmented approach exhibits better factual grounding, less hallucination, and great potential for scalable deployment in various clothing domains. These results demonstrate the use of retrieval-augmented generation as an effective and interpretable paradigm for automated and visually grounded fashion content generation. 
+
+---
+# Cross-Disciplinary Knowledge Retrieval and Synthesis: A Compound AI Architecture for Scientific Discovery 
+
+**Authors**: Svitlana Volkova, Peter Bautista, Avinash Hiriyanna, Gabriel Ganberg, Isabel Erickson, Zachary Klinefelter, Nick Abele, Hsien-Te Kao, Grant Engberson  
+
+**Link**: [PDF](https://arxiv.org/pdf/2511.18298)  
+
+**Abstract**: The exponential growth of scientific knowledge has created significant barriers to cross-disciplinary knowledge discovery, synthesis and research collaboration. In response to this challenge, we present BioSage, a novel compound AI architecture that integrates LLMs with RAG, orchestrated specialized agents and tools to enable discoveries across AI, data science, biomedical, and biosecurity domains. Our system features several specialized agents including the retrieval agent with query planning and response synthesis that enable knowledge retrieval across domains with citation-backed responses, cross-disciplinary translation agents that align specialized terminology and methodologies, and reasoning agents that synthesize domain-specific insights with transparency, traceability and usability. We demonstrate the effectiveness of our BioSage system through a rigorous evaluation on scientific benchmarks (LitQA2, GPQA, WMDP, HLE-Bio) and introduce a new cross-modal benchmark for biology and AI, showing that our BioSage agents outperform vanilla and RAG approaches by 13\%-21\% powered by Llama 3.1. 70B and GPT-4o models. We perform causal investigations into compound AI system behavior and report significant performance improvements by adding RAG and agents over the vanilla models. Unlike other systems, our solution is driven by user-centric design principles and orchestrates specialized user-agent interaction workflows supporting scientific activities including but not limited to summarization, research debate and brainstorming. Our ongoing work focuses on multimodal retrieval and reasoning over charts, tables, and structured scientific data, along with developing comprehensive multimodal benchmarks for cross-disciplinary discovery. Our compound AI solution demonstrates significant potential for accelerating scientific advancement by reducing barriers between traditionally siloed domains. 
+
+---
+# Beyond Protein Language Models: An Agentic LLM Framework for Mechanistic Enzyme Design 
+
+**Authors**: Bruno Jacob, Khushbu Agarwal, Marcel Baer, Peter Rice, Simone Raugei  
+
+**Link**: [PDF](https://arxiv.org/pdf/2511.19423)  
+
+**Abstract**: We present Genie-CAT, a tool-augmented large-language-model (LLM) system designed to accelerate scientific hypothesis generation in protein design. Using metalloproteins (e.g., ferredoxins) as a case study, Genie-CAT integrates four capabilities -- literature-grounded reasoning through retrieval-augmented generation (RAG), structural parsing of Protein Data Bank files, electrostatic potential calculations, and machine-learning prediction of redox properties -- into a unified agentic workflow. By coupling natural-language reasoning with data-driven and physics-based computation, the system generates mechanistically interpretable, testable hypotheses linking sequence, structure, and function. In proof-of-concept demonstrations, Genie-CAT autonomously identifies residue-level modifications near [Fe--S] clusters that affect redox tuning, reproducing expert-derived hypotheses in a fraction of the time. The framework highlights how AI agents combining language models with domain-specific tools can bridge symbolic reasoning and numerical simulation, transforming LLMs from conversational assistants into partners for computational discovery. 
+
+---
+# Escaping Optimization Stagnation: Taking Steps Beyond Task Arithmetic via Difference Vectors 
+
+**Authors**: Jinping Wang, Zhiqiang Gao, Dinggen Zhang, Zhiwu Xie  
+
+**Link**: [PDF](https://arxiv.org/pdf/2511.17987)  
+
+**Abstract**: Current methods for editing pre-trained models face significant challenges, primarily high computational costs and limited scalability. Task arithmetic has recently emerged as a promising solution, using simple arithmetic operations-addition and negation-based on task vectors which are the differences between fine-tuned and pre-trained model weights, to efficiently modify model behavior. However, the full potential of task arithmetic remains underexplored, primarily due to limited mechanisms for overcoming optimization stagnation. To address this challenge, we introduce the notion of difference vector, a generalized form of task vectors derived from the historical movements during optimization. Using difference vectors as directed perturbations, we propose the Difference Vector-based Anisotropic Scaling Iterative algorithm (DV-BASI) to enable a continuous optimization process for task arithmetic methods without relying on any additional modules or components. Notably, by leveraging escapability and directional advantages of difference vectors, the average performance on different tasks of the multi-task model merged by DV-BASI may even outperform models individually fine-tuned. Based on this observation, we extend the application of difference vectors to a feasible fine-tuning method for single-task models. On the practical side, DV-BASI allows expressive searching directions with few learnable parameters and forms a scalable framework. We also integrate DV-BASI with task arithmetic methods and advanced optimization techniques to achieve state-of-the-art performance on both supervised and unsupervised evaluation protocols. 
+
+---
+# LLM-Powered Text-Attributed Graph Anomaly Detection via Retrieval-Augmented Reasoning 
+
+**Authors**: Haoyan Xu, Ruizhi Qian, Zhengtao Yao, Ziyi Liu, Li Li, Yuqi Li, Yanshu Li, Wenqing Zheng, Daniele Rosa, Daniel Barcklow, Senthil Kumar, Jieyu Zhao, Yue Zhao  
+
+**Link**: [PDF](https://arxiv.org/pdf/2511.17584)  
+
+**Abstract**: Anomaly detection on attributed graphs plays an essential role in applications such as fraud detection, intrusion monitoring, and misinformation analysis. However, text-attributed graphs (TAGs), in which node information is expressed in natural language, remain underexplored, largely due to the absence of standardized benchmark datasets. In this work, we introduce TAG-AD, a comprehensive benchmark for anomaly node detection on TAGs. TAG-AD leverages large language models (LLMs) to generate realistic anomalous node texts directly in the raw text space, producing anomalies that are semantically coherent yet contextually inconsistent and thus more reflective of real-world irregularities. In addition, TAG-AD incorporates multiple other anomaly types, enabling thorough and reproducible evaluation of graph anomaly detection (GAD) methods. With these datasets, we further benchmark existing unsupervised GNN-based GAD methods as well as zero-shot LLMs for GAD.
+As part of our zero-shot detection setup, we propose a retrieval-augmented generation (RAG)-assisted, LLM-based zero-shot anomaly detection framework. The framework mitigates reliance on brittle, hand-crafted prompts by constructing a global anomaly knowledge base and distilling it into reusable analysis frameworks. Our experimental results reveal a clear division of strengths: LLMs are particularly effective at detecting contextual anomalies, whereas GNN-based methods remain superior for structural anomaly detection. Moreover, RAG-assisted prompting achieves performance comparable to human-designed prompts while eliminating manual prompt engineering, underscoring the practical value of our RAG-assisted zero-shot LLM anomaly detection framework. 
+
+---
