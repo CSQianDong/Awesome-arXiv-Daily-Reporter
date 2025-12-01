@@ -1,0 +1,36 @@
+# Every Token Counts: Generalizing 16M Ultra-Long Context in Large Language Models 
+
+**Authors**: Xiang Hu, Zhanchao Zhou, Ruiqi Liang, Zehuan Li, Wei Wu, Jianguo Li  
+
+**Link**: [PDF](https://arxiv.org/pdf/2511.23319)  
+
+**Abstract**: This work explores the challenge of building ``Machines that Can Remember'', framing long-term memory as the problem of efficient ultra-long context modeling. We argue that this requires three key properties: \textbf{sparsity}, \textbf{random-access flexibility}, and \textbf{length generalization}. To address ultra-long-context modeling, we leverage Hierarchical Sparse Attention (HSA), a novel attention mechanism that satisfies all three properties. We integrate HSA into Transformers to build HSA-UltraLong, which is an 8B-parameter MoE model trained on over 8 trillion tokens and is rigorously evaluated on different tasks with in-domain and out-of-domain context lengths to demonstrate its capability in handling ultra-long contexts. Results show that our model performs comparably to full-attention baselines on in-domain lengths while achieving over 90\% accuracy on most in-context retrieval tasks with contexts up to 16M. This report outlines our experimental insights and open problems, contributing a foundation for future research in ultra-long context modeling. 
+
+---
+# PULSE-ICU: A Pretrained Unified Long-Sequence Encoder for Multi-task Prediction in Intensive Care Units 
+
+**Authors**: Sejeong Jang, Joo Heung Yoon, Hyo Kyung Lee  
+
+**Link**: [PDF](https://arxiv.org/pdf/2511.22199)  
+
+**Abstract**: Intensive care unit (ICU) data are highly irregular, heterogeneous, and temporally fragmented, posing challenges for generalizable clinical prediction. We present PULSE-ICU, a self-supervised foundation model that learns event-level ICU representations from large-scale EHR sequences without resampling or manual feature engineering. A unified embedding module encodes event identity, continuous values, units, and temporal attributes, while a Longformer-based encoder enables efficient modeling of long trajectories. PULSE-ICU was fine-tuned across 18 prediction tasks, including mortality, intervention forecasting, and phenotype identification, achieving strong performance across task types. External validation on eICU, HiRID, and P12 showed substantial improvements with minimal fine-tuning, demonstrating robustness to domain shift and variable constraints. These findings suggest that foundation-style modeling can improve data efficiency and adaptability, providing a scalable framework for ICU decision support across diverse clinical environments. 
+
+---
+# Goal-Directed Search Outperforms Goal-Agnostic Memory Compression in Long-Context Memory Tasks 
+
+**Authors**: Yicong Zheng, Kevin L. McKee, Thomas Miconi, Zacharie Bugaud, Mick van Gelderen, Jed McCaleb  
+
+**Link**: [PDF](https://arxiv.org/pdf/2511.21726)  
+
+**Abstract**: How to enable human-like long-term memory in large language models (LLMs) has been a central question for unlocking more general capabilities such as few-shot generalization. Existing memory frameworks and benchmarks focus on finding the optimal memory compression algorithm for higher performance in tasks that require recollection and sometimes further reasoning. However, such efforts have ended up building more human bias into the compression algorithm, through the search for the best prompts and memory architectures that suit specific benchmarks, rather than finding a general solution that would work on other data distributions. On the other hand, goal-directed search on uncompressed information could potentially exhibit superior performance because compression is lossy, and a predefined compression algorithm will not fit all raw data distributions. Here we present SUMER (Search in Uncompressed Memory via Experience Replay), an end-to-end reinforcement learning agent with verifiable reward (RLVR) that learns to use search tools to gather information and answer a target question. On the LoCoMo dataset for long-context conversation understanding, SUMER with Qwen2.5-7B-Instruct learned to use search tools and outperformed all other biased memory compression approaches and also the full-context baseline, reaching SOTA performance (43% gain over the prior best). We demonstrate that a simple search method applied to raw data outperforms goal-agnostic and biased compression algorithms in current long-context memory tasks, arguing for new paradigms and benchmarks that are more dynamic and autonomously scalable. Code for SUMER and all implemented baselines is publicly available at this https URL. 
+
+---
+# Behavior-Equivalent Token: Single-Token Replacement for Long Prompts in LLMs 
+
+**Authors**: Jiancheng Dong, Pengyue Jia, Jingyu Peng, Maolin Wang, Yuhao Wang, Lixin Su, Xin Sun, Shuaiqiang Wang, Dawei Yin, Xiangyu Zhao  
+
+**Link**: [PDF](https://arxiv.org/pdf/2511.23271)  
+
+**Abstract**: Carefully engineered system prompts play a critical role in guiding the behavior of LLM agents, but their considerable length introduces significant drawbacks, including increased inference latency, higher computational cost, and reduced effective context length. This raises the question of whether such lengthy prompts can be replaced by a drastically reduced number of tokens while preserving their behavioral effect on downstream tasks. To enable this, we propose a lightweight three-stage training framework that learns a single prompt-specific Behavior-Equivalent token ([BE]). The framework first trains [BE] to encode the natural-language content of the original system prompt via reconstruction, and then distills the prompt 's downstream behavior into this single token. Importantly, our method requires no access to model internals, no auxiliary compression models, and no labeled responses. Empirical evaluations on three datasets show that a single [BE] token achieves up to a 3000x reduction in prompt length, while retaining about 98% of the downstream performance of the original system prompts. This substantially reduces inference cost and leaves almost the entire context window available for user inputs. 
+
+---
