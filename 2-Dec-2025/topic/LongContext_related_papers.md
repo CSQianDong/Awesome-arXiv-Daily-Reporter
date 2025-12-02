@@ -1,0 +1,36 @@
+# Use of Retrieval-Augmented Large Language Model Agent for Long-Form COVID-19 Fact-Checking 
+
+**Authors**: Jingyi Huang, Yuyi Yang, Mengmeng Ji, Charles Alba, Sheng Zhang, Ruopeng An  
+
+**Link**: [PDF](https://arxiv.org/pdf/2512.00007)  
+
+**Abstract**: The COVID-19 infodemic calls for scalable fact-checking solutions that handle long-form misinformation with accuracy and reliability. This study presents SAFE (system for accurate fact extraction and evaluation), an agent system that combines large language models with retrieval-augmented generation (RAG) to improve automated fact-checking of long-form COVID-19 misinformation. SAFE includes two agents - one for claim extraction and another for claim verification using LOTR-RAG, which leverages a 130,000-document COVID-19 research corpus. An enhanced variant, SAFE (LOTR-RAG + SRAG), incorporates Self-RAG to refine retrieval via query rewriting. We evaluated both systems on 50 fake news articles (2-17 pages) containing 246 annotated claims (M = 4.922, SD = 3.186), labeled as true (14.1%), partly true (14.4%), false (27.0%), partly false (2.2%), and misleading (21.0%) by public health professionals. SAFE systems significantly outperformed baseline LLMs in all metrics (p < 0.001). For consistency (0-1 scale), SAFE (LOTR-RAG) scored 0.629, exceeding both SAFE (+SRAG) (0.577) and the baseline (0.279). In subjective evaluations (0-4 Likert scale), SAFE (LOTR-RAG) also achieved the highest average ratings in usefulness (3.640), clearness (3.800), and authenticity (3.526). Adding SRAG slightly reduced overall performance, except for a minor gain in clearness. SAFE demonstrates robust improvements in long-form COVID-19 fact-checking by addressing LLM limitations in consistency and explainability. The core LOTR-RAG design proved more effective than its SRAG-augmented variant, offering a strong foundation for scalable misinformation mitigation. 
+
+---
+# SpeContext: Enabling Efficient Long-context Reasoning with Speculative Context Sparsity in LLMs 
+
+**Authors**: Jiaming Xu, Jiayi Pan, Hanzhen Wang, Yongkang Zhou, Jiancai Ye, Yu Wang, Guohao Dai  
+
+**Link**: [PDF](https://arxiv.org/pdf/2512.00722)  
+
+**Abstract**: In this paper, we point out that the objective of the retrieval algorithms is to align with the LLM, which is similar to the objective of knowledge distillation in LLMs. We analyze the similarity in information focus between the distilled language model(DLM) and the original LLM from the perspective of information theory, and thus propose a novel paradigm that leverages a DLM as the retrieval algorithm. Based on the insight, we present SpeContext, an algorithm and system co-design for long-context reasoning. (1) At the algorithm level, SpeContext proposes lightweight retrieval head based on the head-level attention weights of DLM, achieving > 90% parameters reduction by pruning the redundancy. (2) At the system level, SpeContext designs an asynchronous prefetch dataflow via the elastic loading strategy, effectively overlapping KV cache retrieval with the LLM computation. (3) At the compilation level, SpeContext constructs the theoretical memory model and implements an adaptive memory management system to achieve acceleration by maximizing GPU memory utilization. We deploy and evaluate SpeContext in two resourceconstrained environments, cloud and edge. Extensive experiments show that, compared with the Huggingface framework, SpeContext achieves up to 24.89x throughput improvement in cloud and 10.06x speedup in edge with negligible accuracy loss, pushing the Pareto frontier of accuracy and throughput. 
+
+---
+# G-KV: Decoding-Time KV Cache Eviction with Global Attention 
+
+**Authors**: Mengqi Liao, Lu Wang, Chaoyun Zhang, Zekai Shen, Xiaowei Mao, Si Qin, Qingwei Lin, Saravan Rajmohan, Dongmei Zhang, Huaiyu Wan  
+
+**Link**: [PDF](https://arxiv.org/pdf/2512.00504)  
+
+**Abstract**: Recent reasoning large language models (LLMs) excel in complex tasks but encounter significant computational and memory challenges due to long sequence lengths. KV cache compression has emerged as an effective approach to greatly enhance the efficiency of reasoning. However, existing methods often focus on prompt compression or token eviction with local attention score, overlooking the long-term importance of tokens. We propose G-KV, a KV cache eviction method that employs a global scoring mechanism, combining local and historical attention scores to more accurately assess token importance. Additionally, we introduce post-training techniques, including reinforcement learning and distillation, to optimize models for compressed KV cache settings. The code of this paper is available on: this https URL. 
+
+---
+# Progressive Code Integration for Abstractive Bug Report Summarization 
+
+**Authors**: Shaira Sadia Karim, Abrar Mahmud Rahim, Lamia Alam, Ishmam Tashdeed, Lutfun Nahar Lota, Md. Abu Raihan M. Kamal, Md. Azam Hossain  
+
+**Link**: [PDF](https://arxiv.org/pdf/2512.00325)  
+
+**Abstract**: Bug reports are often unstructured and verbose, making it challenging for developers to efficiently comprehend software issues. Existing summarization approaches typically rely on surface-level textual cues, resulting in incomplete or redundant summaries, and they frequently ignore associated code snippets, which are essential for accurate defect diagnosis. To address these limitations, we propose a progressive code-integration framework for LLM-based abstractive bug report summarization. Our approach incrementally incorporates long code snippets alongside textual content, overcoming standard LLM context window constraints and producing semantically rich summaries. Evaluated on four benchmark datasets using eight LLMs, our pipeline outperforms extractive baselines by 7.5%-58.2% and achieves performance comparable to state-of-the-art abstractive methods, highlighting the benefits of jointly leveraging textual and code information for enhanced bug comprehension. 
+
+---

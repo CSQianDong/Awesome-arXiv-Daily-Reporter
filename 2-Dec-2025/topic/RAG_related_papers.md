@@ -1,0 +1,96 @@
+# SHRAG: AFrameworkfor Combining Human-Inspired Search with RAG 
+
+**Authors**: Hyunseok Ryu, Wonjune Shin, Hyun Park  
+
+**Link**: [PDF](https://arxiv.org/pdf/2512.00772)  
+
+**Abstract**: Retrieval-Augmented Generation (RAG) is gaining recognition as one of the key technological axes for next generation information retrieval, owing to its ability to mitigate the hallucination phenomenon in Large Language
+Models (LLMs)and effectively incorporate up-to-date information. However, specialized expertise is necessary to
+construct ahigh-quality retrieval system independently; moreover, RAGdemonstratesrelativelyslowerprocessing
+speeds compared to conventional pure retrieval systems because it involves both retrieval and generation stages.
+Accordingly, this study proposes SHRAG, a novel framework designed to facilitate the seamless integration of
+Information Retrieval and RAG while simultaneously securing precise retrieval performance. SHRAG utilizes a
+Large Language Model as a Query Strategist to automatically transform unstructured natural language queries
+into logically structured search queries, subsequently performing Boolean retrieval to emulate the search process
+of an expert human searcher. Furthermore, it incorporates multilingual query expansion and a multilingual
+embedding model, enabling it to perform efficient cross-lingual question answering within the multilingual
+dataset environment of the ScienceON Challenge. Experimental results demonstrate that the proposed method,
+combining logical retrieval capabilities and generative reasoning, can significantly enhance the accuracy and
+reliability of RAG systems. Furthermore, SHRAG movesbeyondconventionaldocument-centric retrieval methods,
+presenting the potential for a new search paradigm capable of providing direct and reliable responses to queries. 
+
+---
+# Use of Retrieval-Augmented Large Language Model Agent for Long-Form COVID-19 Fact-Checking 
+
+**Authors**: Jingyi Huang, Yuyi Yang, Mengmeng Ji, Charles Alba, Sheng Zhang, Ruopeng An  
+
+**Link**: [PDF](https://arxiv.org/pdf/2512.00007)  
+
+**Abstract**: The COVID-19 infodemic calls for scalable fact-checking solutions that handle long-form misinformation with accuracy and reliability. This study presents SAFE (system for accurate fact extraction and evaluation), an agent system that combines large language models with retrieval-augmented generation (RAG) to improve automated fact-checking of long-form COVID-19 misinformation. SAFE includes two agents - one for claim extraction and another for claim verification using LOTR-RAG, which leverages a 130,000-document COVID-19 research corpus. An enhanced variant, SAFE (LOTR-RAG + SRAG), incorporates Self-RAG to refine retrieval via query rewriting. We evaluated both systems on 50 fake news articles (2-17 pages) containing 246 annotated claims (M = 4.922, SD = 3.186), labeled as true (14.1%), partly true (14.4%), false (27.0%), partly false (2.2%), and misleading (21.0%) by public health professionals. SAFE systems significantly outperformed baseline LLMs in all metrics (p < 0.001). For consistency (0-1 scale), SAFE (LOTR-RAG) scored 0.629, exceeding both SAFE (+SRAG) (0.577) and the baseline (0.279). In subjective evaluations (0-4 Likert scale), SAFE (LOTR-RAG) also achieved the highest average ratings in usefulness (3.640), clearness (3.800), and authenticity (3.526). Adding SRAG slightly reduced overall performance, except for a minor gain in clearness. SAFE demonstrates robust improvements in long-form COVID-19 fact-checking by addressing LLM limitations in consistency and explainability. The core LOTR-RAG design proved more effective than its SRAG-augmented variant, offering a strong foundation for scalable misinformation mitigation. 
+
+---
+# Breaking It Down: Domain-Aware Semantic Segmentation for Retrieval Augmented Generation 
+
+**Authors**: Aparajitha Allamraju, Maitreya Prafulla Chitale, Hiranmai Sri Adibhatla, Rahul Mishra, Manish Shrivastava  
+
+**Link**: [PDF](https://arxiv.org/pdf/2512.00367)  
+
+**Abstract**: Document chunking is a crucial component of Retrieval-Augmented Generation (RAG), as it directly affects the retrieval of relevant and precise context. Conventional fixed-length and recursive splitters often produce arbitrary, incoherent segments that fail to preserve semantic structure. Although semantic chunking has gained traction, its influence on generation quality remains underexplored. This paper introduces two efficient semantic chunking methods, Projected Similarity Chunking (PSC) and Metric Fusion Chunking (MFC), trained on PubMed data using three different embedding models. We further present an evaluation framework that measures the effect of chunking on both retrieval and generation by augmenting PubMedQA with full-text PubMed Central articles. Our results show substantial retrieval improvements (24x with PSC) in MRR and higher Hits@k on PubMedQA. We provide a comprehensive analysis, including statistical significance and response-time comparisons with common chunking libraries. Despite being trained on a single domain, PSC and MFC also generalize well, achieving strong out-of-domain generation performance across multiple datasets. Overall, our findings confirm that our semantic chunkers, especially PSC, consistently deliver superior performance. 
+
+---
+# TempPerturb-Eval: On the Joint Effects of Internal Temperature and External Perturbations in RAG Robustness 
+
+**Authors**: Yongxin Zhou, Philippe Mulhem, Didier Schwab  
+
+**Link**: [PDF](https://arxiv.org/pdf/2512.01183)  
+
+**Abstract**: The evaluation of Retrieval-Augmented Generation (RAG) systems typically examines retrieval quality and generation parameters like temperature in isolation, overlooking their interaction. This work presents a systematic investigation of how text perturbations (simulating noisy retrieval) interact with temperature settings across multiple LLM runs. We propose a comprehensive RAG Perturbation-Temperature Analysis Framework that subjects retrieved documents to three distinct perturbation types across varying temperature settings. Through extensive experiments on HotpotQA with both open-source and proprietary LLMs, we demonstrate that performance degradation follows distinct patterns: high-temperature settings consistently amplify vulnerability to perturbations, while certain perturbation types exhibit non-linear sensitivity across the temperature range. Our work yields three key contributions: (1) a diagnostic benchmark for assessing RAG robustness, (2) an analytical framework for quantifying perturbation-temperature interactions, and (3) practical guidelines for model selection and parameter tuning under noisy retrieval conditions. 
+
+---
+# HalluGraph: Auditable Hallucination Detection for Legal RAG Systems via Knowledge Graph Alignment 
+
+**Authors**: Valentin Noël, Elimane Yassine Seidou, Charly Ken Capo-Chichi, Ghanem Amari  
+
+**Link**: [PDF](https://arxiv.org/pdf/2512.01659)  
+
+**Abstract**: Legal AI systems powered by retrieval-augmented generation (RAG) face a critical accountability challenge: when an AI assistant cites case law, statutes, or contractual clauses, practitioners need verifiable guarantees that generated text faithfully represents source documents. Existing hallucination detectors rely on semantic similarity metrics that tolerate entity substitutions, a dangerous failure mode when confusing parties, dates, or legal provisions can have material consequences. We introduce HalluGraph, a graph-theoretic framework that quantifies hallucinations through structural alignment between knowledge graphs extracted from context, query, and response. Our approach produces bounded, interpretable metrics decomposed into \textit{Entity Grounding} (EG), measuring whether entities in the response appear in source documents, and \textit{Relation Preservation} (RP), verifying that asserted relationships are supported by context. On structured control documents, HalluGraph achieves near-perfect discrimination ($>$400 words, $>$20 entities), HalluGraph achieves $AUC = 0.979$, while maintaining robust performance ($AUC \approx 0.89$) on challenging generative legal task, consistently outperforming semantic similarity baselines. The framework provides the transparency and traceability required for high-stakes legal applications, enabling full audit trails from generated assertions back to source passages. 
+
+---
+# EmoRAG: Evaluating RAG Robustness to Symbolic Perturbations 
+
+**Authors**: Xinyun Zhou, Xinfeng Li, Yinan Peng, Ming Xu, Xuanwang Zhang, Miao Yu, Yidong Wang, Xiaojun Jia, Kun Wang, Qingsong Wen, XiaoFeng Wang, Wei Dong  
+
+**Link**: [PDF](https://arxiv.org/pdf/2512.01335)  
+
+**Abstract**: Retrieval-Augmented Generation (RAG) systems are increasingly central to robust AI, enhancing large language model (LLM) faithfulness by incorporating external knowledge. However, our study unveils a critical, overlooked vulnerability: their profound susceptibility to subtle symbolic perturbations, particularly through near-imperceptible emoticon tokens such as "(@_@)" that can catastrophically mislead retrieval, termed EmoRAG. We demonstrate that injecting a single emoticon into a query makes it nearly 100% likely to retrieve semantically unrelated texts that contain a matching emoticon. Our extensive experiment across general question-answering and code domains, using a range of state-of-the-art retrievers and generators, reveals three key findings: (I) Single-Emoticon Disaster: Minimal emoticon injections cause maximal disruptions, with a single emoticon almost 100% dominating RAG output. (II) Positional Sensitivity: Placing an emoticon at the beginning of a query can cause severe perturbation, with F1-Scores exceeding 0.92 across all datasets. (III) Parameter-Scale Vulnerability: Counterintuitively, models with larger parameters exhibit greater vulnerability to the interference. We provide an in-depth analysis to uncover the underlying mechanisms of these phenomena. Furthermore, we raise a critical concern regarding the robustness assumption of current RAG systems, envisioning a threat scenario where an adversary exploits this vulnerability to manipulate the RAG system. We evaluate standard defenses and find them insufficient against EmoRAG. To address this, we propose targeted defenses, analyzing their strengths and limitations in mitigating emoticon-based perturbations. Finally, we outline future directions for building robust RAG systems. 
+
+---
+# Evaluating Legal Reasoning Traces with Legal Issue Tree Rubrics 
+
+**Authors**: Jinu Lee, Kyoung-Woon On, Simeng Han, Arman Cohan, Julia Hockenmaier  
+
+**Link**: [PDF](https://arxiv.org/pdf/2512.01020)  
+
+**Abstract**: Evaluating the quality of LLM-generated reasoning traces in expert domains (e.g., law) is essential for ensuring credibility and explainability, yet remains challenging due to the inherent complexity of such reasoning tasks. We introduce LEGIT (LEGal Issue Trees), a novel large-scale (24K instances) expert-level legal reasoning dataset with an emphasis on reasoning trace evaluation. We convert court judgments into hierarchical trees of opposing parties' arguments and the court's conclusions, which serve as rubrics for evaluating the issue coverage and correctness of the reasoning traces. We verify the reliability of these rubrics via human expert annotations and comparison with coarse, less informative rubrics. Using the LEGIT dataset, we show that (1) LLMs' legal reasoning ability is seriously affected by both legal issue coverage and correctness, and that (2) retrieval-augmented generation (RAG) and RL with rubrics bring complementary benefits for legal reasoning abilities, where RAG improves overall reasoning capability, whereas RL improves correctness albeit with reduced coverage. 
+
+---
+# BackportBench: A Multilingual Benchmark for Automated Backporting of Patches 
+
+**Authors**: Zhiqing Zhong, Jiaming Huang, Pinjia He  
+
+**Link**: [PDF](https://arxiv.org/pdf/2512.01396)  
+
+**Abstract**: Many modern software projects evolve rapidly to incorporate new features and security patches. It is important for users to update their dependencies to safer versions, but many still use older, vulnerable package versions because upgrading can be difficult and may break their existing codebase. Software developers can mitigate this problem by backporting security patches to older releases. However, manually backporting is time-consuming and error-prone. The effectiveness of existing automated backporting techniques on general software remains unclear since they typically target only code-hunk or function-level patch porting scenarios and are evaluated with imperfect metrics.
+To facilitate the development and evaluation of automated backporting techniques, we introduce BackportBench, the first comprehensive benchmark suite for patch backporting problem. BackportBench is a multilingual benchmark that contains 202 patch backporting problems from PyPI, Maven, and npm, each with executable Docker environments and relevant test cases. We evaluated existing patch porting methods and LLM-based techniques that have the potential to adapt to this task using BackportBench. The results show that the agentic method has outperformed traditional patch porting methods, especially on cases that require logical and structural changes. However, the performance varies across different programming languages. Based on the findings, we draw several implications for researchers and software practitioners in future work on automated backporting. 
+
+---
+# Bias Injection Attacks on RAG Databases and Sanitization Defenses 
+
+**Authors**: Hao Wu, Prateek Saxena  
+
+**Link**: [PDF](https://arxiv.org/pdf/2512.00804)  
+
+**Abstract**: This paper explores attacks and defenses on vector databases in retrieval-augmented generation (RAG) systems. Prior work on knowledge poisoning attacks primarily inject false or toxic content, which fact-checking or linguistic analysis easily detects. We reveal a new and subtle threat: bias injection attacks, which insert factually correct yet semantically biased passages into the knowledge base to covertly influence the ideological framing of answers generated by large language models (LLMs). We demonstrate that these adversarial passages, though linguistically coherent and truthful, can systematically crowd out opposing views from the retrieved context and steer LLM answers toward the attacker's intended perspective.
+We precisely characterize this class of attacks and then develop a post-retrieval filtering defense, BiasDef. We construct a comprehensive benchmark based on public question answering datasets to evaluate them. Our results show that: (1) the proposed attack induces significant perspective shifts in LLM answers, effectively evading existing retrieval-based sanitization defenses; and (2) BiasDef outperforms existing methods by reducing adversarial passages retrieved by 15\% which mitigates perspective shift by 6.2\times in answers, while enabling the retrieval of 62\% more benign passages. 
+
+---

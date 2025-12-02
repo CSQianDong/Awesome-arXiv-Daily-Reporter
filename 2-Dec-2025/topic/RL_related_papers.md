@@ -1,0 +1,171 @@
+# Optimizing Generative Ranking Relevance via Reinforcement Learning in Xiaohongshu Search 
+
+**Authors**: Ziyang Zeng, Heming Jing, Jindong Chen, Xiangli Li, Hongyu Liu, Yixuan He, Zhengyu Li, Yige Sun, Zheyong Xie, Yuqing Yang, Shaosheng Cao, Jun Fan, Yi Wu, Yao Hu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2512.00968)  
+
+**Abstract**: Ranking relevance is a fundamental task in search engines, aiming to identify the items most relevant to a given user query. Traditional relevance models typically produce scalar scores or directly predict relevance labels, limiting both interpretability and the modeling of complex relevance signals. Inspired by recent advances in Chain-of-Thought (CoT) reasoning for complex tasks, we investigate whether explicit reasoning can enhance both interpretability and performance in relevance modeling. However, existing reasoning-based Generative Relevance Models (GRMs) primarily rely on supervised fine-tuning on large amounts of human-annotated or synthetic CoT data, which often leads to limited generalization. Moreover, domain-agnostic, free-form reasoning tends to be overly generic and insufficiently grounded, limiting its potential to handle the diverse and ambiguous cases prevalent in open-domain search. In this work, we formulate relevance modeling in Xiaohongshu search as a reasoning task and introduce a Reinforcement Learning (RL)-based training framework to enhance the grounded reasoning capabilities of GRMs. Specifically, we incorporate practical business-specific relevance criteria into the multi-step reasoning prompt design and propose Stepwise Advantage Masking (SAM), a lightweight process-supervision strategy which facilitates effective learning of these criteria through improved credit assignment. To enable industrial deployment, we further distill the large-scale RL-tuned model to a lightweight version suitable for real-world search systems. Extensive experiments on industrial datasets, along with online A/B tests, demonstrate the effectiveness of our approach. 
+
+---
+# Upcycled and Merged MoE Reward Model for Mitigating Reward Hacking 
+
+**Authors**: Lingling Fu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2512.00724)  
+
+**Abstract**: Reward models play a critical role in Reinforcement Learning from Human Feedback (RLHF) by assessing the consistency between generated outputs and human preferences. However, conventional reward models are prone to reward hacking or over-optimization, where the policy exploits shortcut patterns to obtain high reward scores that do not reflect true human preference. Although Mixture-of-Experts (MoE)-based reward models can enhance discriminative capability, they typically introduce substantial computational overhead. To address these challenges, we propose an upcycle and merge MoE reward modeling approach. We first upcycle a dense reward model into a MoE architecture, where a shared expert captures general knowledge, while normal experts specialize in instruction-specific patterns. We then apply routing-weight normalization and merge experts back into a dense model through a learnable weight-averaging mechanism, preserving performance gains while significantly reducing inference cost. Experimental results demonstrate that our method effectively mitigates reward hacking across various model scales. Our work highlights the potential of upcycle and merge MoE structures for improving both robustness and efficiency of RLHF reward models. 
+
+---
+# Rectifying LLM Thought from Lens of Optimization 
+
+**Authors**: Junnan Liu, Hongwei Liu, Songyang Zhang, Kai Chen  
+
+**Link**: [PDF](https://arxiv.org/pdf/2512.01925)  
+
+**Abstract**: Recent advancements in large language models (LLMs) have been driven by their emergent reasoning capabilities, particularly through long chain-of-thought (CoT) prompting, which enables thorough exploration and deliberation. Despite these advances, long-CoT LLMs often exhibit suboptimal reasoning behaviors, such as overthinking and excessively protracted reasoning chains, which can impair performance. In this paper, we analyze reasoning processes through an optimization lens, framing CoT as a gradient descent procedure where each reasoning step constitutes an update toward problem resolution. Building on this perspective, we introduce RePro (Rectifying Process-level Reward), a novel approach to refine LLM reasoning during post-training. RePro defines a surrogate objective function to assess the optimization process underlying CoT, utilizing a dual scoring mechanism to quantify its intensity and stability. These scores are aggregated into a composite process-level reward, seamlessly integrated into reinforcement learning with verifiable rewards (RLVR) pipelines to optimize LLMs. Extensive experiments across multiple reinforcement learning algorithms and diverse LLMs, evaluated on benchmarks spanning mathematics, science, and coding, demonstrate that RePro consistently enhances reasoning performance and mitigates suboptimal reasoning behaviors. 
+
+---
+# Beyond SFT: Reinforcement Learning for Safer Large Reasoning Models with Better Reasoning Ability 
+
+**Authors**: Jinghan Jia, Nathalie Baracaldo, Sijia Liu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2512.01848)  
+
+**Abstract**: Large reasoning models (LRMs) extend large language models by generating explicit chain-of-thought (CoT) reasoning, significantly improving mathematical and logical problem solving. However, this explicit reasoning process also introduces new safety risks, as unsafe behaviors often emerge within intermediate reasoning trajectories, even when final answers appear harmless. Existing safety alignment approaches primarily rely on supervised fine-tuning (SFT) over safety-oriented long CoT datasets. While intuitive, we find that SFT produces inconsistent safety improvements, degrades reasoning ability, and generalizes poorly across model families. These limitations suggest that purely supervised approaches are insufficient for robust safety alignment in LRMs. To address this, we investigate reinforcement learning (RL) as a complementary optimization framework for LRM safety training. Unlike SFT, RL directly optimizes model policies with reward feedback, enabling more adaptive and stable alignment. Extensive experiments across multiple model families and benchmarks show that RL achieves stronger and more consistent safety gains while maintaining reasoning competence. Further analysis of reflection dynamics and token-level entropy reveals that RL suppresses unsafe exploratory reasoning while preserving reflective depth, leading to safer and more reliable reasoning processes. 
+
+---
+# Learning the Boundary of Solvability: Aligning LLMs to Detect Unsolvable Problems 
+
+**Authors**: Dengyun Peng, Qiguang Chen, Bofei Liu, Jiannan Guan, Libo Qin, Zheng Yan, Jinhao Liu, Jianshu Zhang, Wanxiang Che  
+
+**Link**: [PDF](https://arxiv.org/pdf/2512.01661)  
+
+**Abstract**: Ensuring LLM reliability requires not only solving complex problems but also recognizing when a problem is unsolvable. Current models often struggle to distinguish objective unsolvability (inherent contradictions in the problem) from subjective capability limitations (problems beyond the model's competence), which leads to hallucinations and overconfidence. To address this, we propose UnsolvableQA and UnsolvableRL to solve feasible problems, detect inherent contradictions, and prudently refuse tasks beyond capability. Specifically, we construct UnsolvableQA, a dataset of paired solvable and unsolvable instances derived via a dual-track methodology: programmatic generation for logic puzzles and a novel "Reverse Construction" method that injects contradictions into valid reasoning chains for mathematics. Building on this dataset, we introduce UnsolvableRL, a reinforcement learning framework with three reward components jointly accounting for accuracy, unsolvability, and difficulty. Empirical results show that our approach achieves near-perfect unsolvability detection while also improving accuracy on solvable tasks. Crucially, we identify Capability Collapse, demonstrating that explicit exposure to unsolvable data is indispensable for preventing models from becoming systematically overconfident. Our code and data are available at this https URL. 
+
+---
+# Kardia-R1: Unleashing LLMs to Reason toward Understanding and Empathy for Emotional Support via Rubric-as-Judge Reinforcement Learning 
+
+**Authors**: Jiahao Yuan, Zhiqing Cui, Hanqing Wang, Yuansheng Gao, Yucheng Zhou, Usman Naseem  
+
+**Link**: [PDF](https://arxiv.org/pdf/2512.01282)  
+
+**Abstract**: As web platforms evolve towards greater personalization and emotional complexity, conversational agents must transcend superficial empathy to demonstrate identity-aware emotional reasoning. However, existing systems face two limitations: (1) reliance on situation-centric datasets lacking persistent user identity, which hampers the capture of personalized affective nuances; and (2) dependence on opaque, coarse reward signals that hinder development of verifiable empathetic reasoning. To address these gaps, we introduce KardiaBench, a large-scale user-grounded benchmark comprising 178,080 QA pairs across 22,080 multi-turn conversations anchored to 671 real-world profiles. The dataset is constructed via a model-in-the-loop pipeline with iterative rubric-guided refinement to ensure psychological plausibility and persona consistency. This progressive empathy pipeline that integrates user comprehension, contextual reasoning, and emotion perception into conversations, followed by iterative critique and rubric-based refinement to ensure psychological plausibility, emotional fidelity, and persona consistency. Building on this, we propose Kardia-R1, a framework that trains models for interpretable, stepwise empathetic cognition. Kardia-R1 leverages Rubric-as-Judge Empathetic Reinforcement Learning (Rubric-ERL), a GRPO-based method that uses explainable, human-aligned rubric rewards to tightly couple user understanding, emotional inference, and supportive response generation. Extensive experiments across four LLM backbones demonstrate that Kardia-R1 consistently outperforms othet methods in emotion accuracy, empathy, relevance, persona consistency, and safety. Our dataset and model will be released at this https URL. 
+
+---
+# OmniFusion: Simultaneous Multilingual Multimodal Translations via Modular Fusion 
+
+**Authors**: Sai Koneru, Matthias Huck, Jan Niehues  
+
+**Link**: [PDF](https://arxiv.org/pdf/2512.00234)  
+
+**Abstract**: There has been significant progress in open-source text-only translation large language models (LLMs) with better language coverage and quality. However, these models can be only used in cascaded pipelines for speech translation (ST), performing automatic speech recognition first followed by translation. This introduces additional latency, which is particularly critical in simultaneous ST (SimulST), and prevents the model from exploiting multimodal context, such as images, which can aid disambiguation. Pretrained multimodal foundation models (MMFMs) already possess strong perception and reasoning capabilities across multiple modalities, but generally lack the multilingual coverage and specialized translation performance of dedicated translation LLMs. To build an effective multimodal translation system, we propose an end-to-end approach that fuses MMFMs with translation LLMs. We introduce a novel fusion strategy that connects hidden states from multiple layers of a pretrained MMFM to a translation LLM, enabling joint end-to-end training. The resulting model, OmniFusion, built on Omni 2.5-7B as the MMFM and SeedX PPO-7B as the translation LLM, can perform speech-to-text, speech-and-image-to-text, and text-and-image-to-text translation. Experiments demonstrate that OmniFusion effectively leverages both audio and visual inputs, achieves a 1-second latency reduction in SimulST compared to cascaded pipelines and also improves the overall translation quality\footnote{Code is available at this https URL}. 
+
+---
+# Agentic Policy Optimization via Instruction-Policy Co-Evolution 
+
+**Authors**: Han Zhou, Xingchen Wan, Ivan Vulić, Anna Korhonen  
+
+**Link**: [PDF](https://arxiv.org/pdf/2512.01945)  
+
+**Abstract**: Reinforcement Learning with Verifiable Rewards (RLVR) has advanced the reasoning capability of large language models (LLMs), enabling autonomous agents that can conduct effective multi-turn and tool-integrated reasoning. While instructions serve as the primary protocol for defining agents, RLVR typically relies on static and manually designed instructions. However, those instructions may be suboptimal for the base model, and the optimal instruction may change as the agent's policy improves and explores the interaction with the environment. To bridge the gap, we introduce INSPO, a novel Instruction-Policy co-evolution framework that integrates instruction optimization as a dynamic component of the reinforcement learning (RL) loop. INSPO maintains a dynamic population of instruction candidates that are sampled with questions, where reward signals in RL loops are automatically attributed to each instruction, and low performers are periodically pruned. New instructions are generated and verified through an on-policy reflection mechanism, where an LLM-based optimizer analyzes past experience from a replay buffer and evolves more effective strategies given the current policy. We conduct extensive experiments on multi-turn retrieval and reasoning tasks, demonstrating that INSPO substantially outperforms strong baselines relying on static instructions. INSPO discovers innovative instructions that guide the agent toward more strategic reasoning paths, achieving substantial performance gains with only a marginal increase in computational overhead. 
+
+---
+# Mode-Conditioning Unlocks Superior Test-Time Scaling 
+
+**Authors**: Chen Henry Wu, Sachin Goyal, Aditi Raghunathan  
+
+**Link**: [PDF](https://arxiv.org/pdf/2512.01127)  
+
+**Abstract**: Parallel sampling promises substantial gains in test-time scaling, but its effectiveness is sharply limited by diversity collapse, where models concentrate on a few modes and repeated samples produce the same mistakes. We propose the mode-conditioning (ModC) framework, which explicitly allocates test-time compute across reasoning modes using either specialist models or mode-specific prefixes. ModC consistently improves scaling across controlled graph-search tasks and large-scale reasoning benchmarks, spanning model families and sizes from 0.5B to 7B. On OpenThoughts, fine-tuning Qwen2.5-7B with ModC achieves a 4x efficiency gain over standard training while also improving the maximum attainable Pass@k. We further show that gradient clustering enables ModC without explicit mode labels, yielding up to 10% gains on datasets such as NuminaMath. Finally, we show that ModC improves reinforcement learning (RL) and can further boost diversity-inducing RL methods. These results demonstrate that standard training underutilizes the diversity in data, and that ModC provides a simple, effective remedy for unlocking the full benefits of diversity in test-time scaling. 
+
+---
+# From Atomic to Composite: Reinforcement Learning Enables Generalization in Complementary Reasoning 
+
+**Authors**: Sitao Cheng, Xunjian Yin, Ruiwen Zhou, Yuxuan Li, Xinyi Wang, Liangming Pan, William Yang Wang, Victor Zhong  
+
+**Link**: [PDF](https://arxiv.org/pdf/2512.01970)  
+
+**Abstract**: The mechanism by which RL contributes to reasoning capabilities-whether it incentivizes the synthesis of new skills or merely amplifies existing behaviors-remains a subject of intense debate. In this work, we investigate this question through the lens of Complementary Reasoning, a complex task that requires integrating internal parametric knowledge with external contextual information. Using a controlled synthetic dataset of human biographies, we strictly decouple this ability into two atomic skills: Parametric Reasoning (relying on internal knowledge) and Contextual Reasoning (depending on external information). To rigorously assess capability boundaries, we evaluate generalization across three distinct levels of difficulty: I.I.D., Composition, and Zero-shot settings. We find that while SFT is sufficient for in-distribution performance, it struggles with O.O.D. generalization, particularly in Zero-shot settings where relational combinations are novel. Crucially, we identify the SFT Generalization Paradox: Models supervised solely on the composite task achieve near-perfect in-distribution accuracy but collapse on out-of-distribution generalization, indicating their reliance on rote memorization of path shortcuts. In contrast, we find that RL acts as a reasoning synthesizer rather than a probability amplifier. However, we uncover a strict atomic prerequisite: RL can only synthesize these complex strategies if the base model has first mastered the independent atomic skills (Parametric and Contextual) via SFT. These findings challenge the view of RL as a mere amplifier, suggesting that given sufficient atomic foundations, RL can actively synthesize complex reasoning strategies from learned primitives without explicit supervision on such complex strategies. This indicates that decoupled atomic training followed by RL offers a scalable path to generalization for complex reasoning tasks. 
+
+---
+# Learned-Rule-Augmented Large Language Model Evaluators 
+
+**Authors**: Jie Meng, Jin Mao  
+
+**Link**: [PDF](https://arxiv.org/pdf/2512.01958)  
+
+**Abstract**: Large language models (LLMs) are predominantly used as evaluators for natural language generation (NLG) tasks, but their application to broader evaluation scenarios remains limited. In this work, we explore the potential of LLMs as general evaluators across diverse tasks. Although LLM-based evaluators have made progress in different areas, existing methods struggle to generalize due to their reliance on costly, human-designed evaluation principles, which are often misaligned with both annotated data and LLMs' this http URL address these challenges, we propose a rule-augmented evaluation paradigm. First, we introduce a rule distillation method that automatically extracts scoring rules from data using an LLM-assisted Monte Carlo Tree Search (MCTS), alleviating scalability issues and improving alignment with data. Second, to enable LLMs to effectively apply the learned rules, we propose two strategies: (1) Chain-of-Rule (CoR), which guides LLM to follow distilled rules, and (2) training a rule-augmented LLM evaluator (RuAE) via reinforcement learning, further bridging the gap between rules and LLMs' reasoning. Extensive experiments on diverse tasks demonstrate the effectiveness and generalizability of our approach across various evaluation scenarios. 
+
+---
+# Multi-Path Collaborative Reasoning via Reinforcement Learning 
+
+**Authors**: Jindi Lv, Yuhao Zhou, Zheng Zhu, Xiaofeng Wang, Guan Huang, Jiancheng Lv  
+
+**Link**: [PDF](https://arxiv.org/pdf/2512.01485)  
+
+**Abstract**: Chain-of-Thought (CoT) reasoning has significantly advanced the problem-solving capabilities of Large Language Models (LLMs), yet conventional CoT often exhibits internal determinism during decoding, limiting exploration of plausible alternatives. Recent methods attempt to address this by generating soft abstract tokens to enable reasoning in a continuous semantic space. However, we find that such approaches remain constrained by the greedy nature of autoregressive decoding, which fundamentally isolates the model from alternative reasoning possibilities. In this work, we propose Multi-Path Perception Policy Optimization (M3PO), a novel reinforcement learning framework that explicitly injects collective insights into the reasoning process. M3PO leverages parallel policy rollouts as naturally diverse reasoning sources and integrates cross-path interactions into policy updates through a lightweight collaborative mechanism. This design allows each trajectory to refine its reasoning with peer feedback, thereby cultivating more reliable multi-step reasoning patterns. Empirical results show that M3PO achieves state-of-the-art performance on both knowledge- and reasoning-intensive benchmarks. Models trained with M3PO maintain interpretability and inference efficiency, underscoring the promise of multi-path collaborative learning for robust reasoning. 
+
+---
+# Clinical-R1: Empowering Large Language Models for Faithful and Comprehensive Reasoning with Clinical Objective Relative Policy Optimization 
+
+**Authors**: Boyang Gu, Hongjian Zhou, Bradley Max Segal, Jinge Wu, Zeyu Cao, Hantao Zhong, Lei Clifton, Fenglin Liu, David A. Clifton  
+
+**Link**: [PDF](https://arxiv.org/pdf/2512.00601)  
+
+**Abstract**: Recent advances in large language models (LLMs) have shown strong reasoning capabilities through large-scale pretraining and post-training reinforcement learning, demonstrated by DeepSeek-R1. However, current post-training methods, such as Grouped Relative Policy Optimization (GRPO), mainly reward correctness, which is not aligned with the multi-dimensional objectives required in high-stakes fields such as medicine, where reasoning must also be faithful and comprehensive. We introduce Clinical-Objective Relative Policy Optimization (CRPO), a scalable, multi-objective, verifiable reinforcement learning method designed to align LLM post-training with clinical reasoning principles. CRPO integrates rule-based and verifiable reward signals that jointly optimize accuracy, faithfulness, and comprehensiveness without relying on human annotation. To demonstrate its effectiveness, we train Clinical-R1-3B, a 3B-parameter model for clinical reasoning. The experiments on three benchmarks demonstrate that our CRPO substantially improves reasoning on truthfulness and completeness over standard GRPO while maintaining comfortable accuracy enhancements. This framework provides a scalable pathway to align LLM reasoning with clinical objectives, enabling safer and more collaborative AI systems for healthcare while also highlighting the potential of multi-objective, verifiable RL methods in post-training scaling of LLMs for medical domains. 
+
+---
+# When Human Preferences Flip: An Instance-Dependent Robust Loss for RLHF 
+
+**Authors**: Yifan Xu, Xichen Ye, Yifan Chen, Qiaosheng Zhang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2512.00709)  
+
+**Abstract**: Quality of datasets plays an important role in large language model (LLM) alignment. In collecting human feedback, however, preference flipping is ubiquitous and causes corruption in data annotation; the issue necessitates the alignment algorithms with improved robustness against potential flipped pairs. To this end, this paper introduces a Flipping-Aware Direct Preference Optimization (FA-DPO) algorithm tailored to preference flipping from a reinforcement learning with human feedback (RLHF) perspective. We dissect the inherent human intention model and the preference flipping mechanism introduced by external factors as two distinct stages; in the latter, we introduce an instance-dependent flipping probability on the basis of the Bradley-Terry (BT) model. Further, by leveraging features relevant to preference annotation, we capture uncertainty in judgments and model preference flipping patterns. In practice, we design a simple yet efficient iterative optimization algorithm compatible with the original RLHF and DPO algorithms. In our experiments, we investigate the instance-dependent preference flipping model under multiple circumstances for evaluation of our proposed method, as well as other baseline methods. 
+
+---
+# RL-Struct: A Lightweight Reinforcement Learning Framework for Reliable Structured Output in LLMs 
+
+**Authors**: Ruike Hu, Shulei Wu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2512.00319)  
+
+**Abstract**: Large Language Models (LLMs) have demonstrated remarkable capabilities in natural language generation and reasoning. However, their integration into automated software ecosystems is often hindered by the "Structure Gap" - the inherent tension between the probabilistic nature of token generation and the deterministic requirements of structured data formats (e.g., JSON, XML). Traditional Supervised Fine-Tuning (SFT) often fails to enforce strict syntactic constraints, leading to "hallucinated" keys or malformed structures, while constrained decoding methods impose significant inference latency. In this paper, we propose a lightweight, efficient Reinforcement Learning (RL) framework to bridge this gap. We introduce a novel Multi-dimensional Reward Function that decomposes the structured output task into a hierarchy of constraints: structural integrity, format correctness, content accuracy, and validity. Leveraging Gradient Regularized Policy Optimization (GRPO), we enable the model to internalize these constraints without the need for a separate critic network, reducing peak VRAM usage by 40% compared to PPO. We validate our approach on multiple tasks, including complex recipe generation and structured math reasoning (GSM8K-JSON). Experimental results demonstrate that our method achieves 89.7% structural accuracy and 92.1% JSON validity, significantly outperforming both zero-shot baselines (e.g., GPT-3.5) and SFT on larger models like LLaMA-3-8B. Furthermore, we provide a detailed analysis of training dynamics, revealing a distinct self-paced curriculum where the model sequentially acquires syntactic proficiency before semantic accuracy. Our model is publicly available at this https URL. 
+
+---
+# GrndCtrl: Grounding World Models via Self-Supervised Reward Alignment 
+
+**Authors**: Haoyang He, Jay Patrikar, Dong-Ki Kim, Max Smith, Daniel McGann, Ali-akbar Agha-mohammadi, Shayegan Omidshafiei, Sebastian Scherer  
+
+**Link**: [PDF](https://arxiv.org/pdf/2512.01952)  
+
+**Abstract**: Recent advances in video world modeling have enabled large-scale generative models to simulate embodied environments with high visual fidelity, providing strong priors for prediction, planning, and control. Yet, despite their realism, these models often lack geometric grounding, limiting their use in navigation tasks that require spatial coherence and long-horizon stability. We introduce Reinforcement Learning with World Grounding (RLWG), a self-supervised post-training framework that aligns pretrained world models with a physically verifiable structure through geometric and perceptual rewards. Analogous to reinforcement learning from verifiable feedback (RLVR) in language models, RLWG can use multiple rewards that measure pose cycle-consistency, depth reprojection, and temporal coherence. We instantiate this framework with GrndCtrl, a reward-aligned adaptation method based on Group Relative Policy Optimization (GRPO), yielding world models that maintain stable trajectories, consistent geometry, and reliable rollouts for embodied navigation. Like post-training alignment in large language models, GrndCtrl leverages verifiable rewards to bridge generative pretraining and grounded behavior, achieving superior spatial coherence and navigation stability over supervised fine-tuning in outdoor environments. 
+
+---
+# Beyond High-Entropy Exploration: Correctness-Aware Low-Entropy Segment-Based Advantage Shaping for Reasoning LLMs 
+
+**Authors**: Xinzhu Chen, Xuesheng Li, Zhongxiang Sun, Weijie Yu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2512.00908)  
+
+**Abstract**: Reinforcement Learning with Verifiable Rewards (RLVR) has become a central approach for improving the reasoning ability of large language models. Recent work studies RLVR through token entropy, arguing that high-entropy tokens drive exploration and should receive stronger updates. However, they overlook the fact that most of a reasoning trajectory consists of low-entropy segments that encode stable and reusable structural patterns. Through qualitative and quantitative analyses, we find that the overlap of low-entropy segments across correct responses strongly correlates with model accuracy, while overlaps involving incorrect responses exhibit stable but unproductive patterns. Motivated by these findings, we propose LESS, a correctness-aware reinforcement framework that performs fine-grained advantage modulation over low-entropy segments. LESS amplifies segments unique to correct responses, suppresses those unique to incorrect ones, and neutralizes segments shared by both, while preserving high-entropy exploration in the underlying RL algorithm. Instantiated on top of the popular GRPO, LESS consistently improves accuracy over strong RL baselines across three backbones and six math benchmarks, achieves stronger robustness of the performance floor. 
+
+---
+# Optimizing LVLMs with On-Policy Data for Effective Hallucination Mitigation 
+
+**Authors**: Chengzhi Yu, Yifan Xu, Yifan Chen, Wenyi Zhang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2512.00706)  
+
+**Abstract**: Recently, large vision-language models (LVLMs) have risen to be a promising approach for multimodal tasks. However, principled hallucination mitigation remains a critical this http URL this work, we first analyze the data generation process in LVLM hallucination mitigation and affirm that on-policy data significantly outperforms off-policy data, which thus calls for efficient and reliable preference annotation of on-policy data. We then point out that, existing annotation methods introduce additional hallucination in training samples, which may enhance the model's hallucination patterns, to address this problem, we propose training a hallucination classifier giving binary annotations, which guarantee clean chosen samples for the subsequent alignment. To further harness of the power of on-policy data, we design a robust iterative direct preference optimization (DPO) algorithm adopting a dynamic sample reweighting scheme. We conduct comprehensive experiments on three benchmarks with comparison to 8 state-of-the-art baselines. In particular, our approach reduces the hallucination rate of LLaVA-1.5-7B on MMHalBench by 50.8% and the average hallucination rate on Object HalBench by 79.5%; more significantly, our method fully taps into the potential of open-source models, enabling LLaVA-1.5-13B to even surpass the performance of GPT-4V. 
+
+---
+# ESPO: Entropy Importance Sampling Policy Optimization 
+
+**Authors**: Yuepeng Sheng, Yuwei Huang, Shuman Liu, Haibo Zhang, Anxiang Zeng  
+
+**Link**: [PDF](https://arxiv.org/pdf/2512.00499)  
+
+**Abstract**: Large language model (LLM) reinforcement learning has increasingly relied on group-based policy optimization frameworks, such as GRPO and GSPO, to achieve stable fine-tuning at scale. However, a fundamental trade-off persists between optimization granularity and training stability. While GSPO improves robustness via sequence-level optimization, its monolithic treatment of sequences introduces severe inefficiencies: its conservative clipping mechanism indiscriminately discards valid training samples-a phenomenon we term gradient underutilization-and its uniform credit assignment fails to capture the heterogeneous contributions of critical reasoning steps. In this work, we propose Entropy Importance Sampling Policy Optimization (ESPO), a novel framework that reconciles fine-grained control with training stability. ESPO decomposes sequences into groups based on predictive entropy, enabling (1) Entropy-driven Importance Sampling to capture intra-sequence heterogeneity, and (2) Entropy-adaptive Clipping to dynamically allocate trust regions based on model uncertainty. Extensive experiments on mathematical reasoning benchmarks demonstrate that ESPO not only accelerates convergence but also achieves state-of-the-art performance, notably improving accuracy on the challenging HMMT benchmark from 4.4% to 13.13%. 
+
+---
