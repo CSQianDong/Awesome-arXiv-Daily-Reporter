@@ -1,0 +1,181 @@
+# Exploring Test-time Scaling via Prediction Merging on Large-Scale Recommendation 
+
+**Authors**: Fuyuan Lyu, Zhentai Chen, Jingyan Jiang, Lingjie Li, Xing Tang, Xiuqiang He, Xue Liu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2512.07650)  
+
+**Abstract**: Inspired by the success of language models (LM), scaling up deep learning recommendation systems (DLRS) has become a recent trend in the community. All previous methods tend to scale up the model parameters during training time. However, how to efficiently utilize and scale up computational resources during test time remains underexplored, which can prove to be a scaling-efficient approach and bring orthogonal improvements in LM domains. The key point in applying test-time scaling to DLRS lies in effectively generating diverse yet meaningful outputs for the same instance. We propose two ways: One is to explore the heterogeneity of different model architectures. The other is to utilize the randomness of model initialization under a homogeneous architecture. The evaluation is conducted across eight models, including both classic and SOTA models, on three benchmarks. Sufficient evidence proves the effectiveness of both solutions. We further prove that under the same inference budget, test-time scaling can outperform parameter scaling. Our test-time scaling can also be seamlessly accelerated with the increase in parallel servers when deployed online, without affecting the inference time on the user side. Code is available. 
+
+---
+# From Show Programmes to Data: Designing a Workflow to Make Performing Arts Ephemera Accessible Through Language Models 
+
+**Authors**: Clarisse Bardiot, Pierre-Carl Langlais, Bernard Jacquemin, Jacob Hart, Antonios Lagarias, Nicolas Foucault, Aurélie Lemaître-Legargeant, Jeanne Fras  
+
+**Link**: [PDF](https://arxiv.org/pdf/2512.07452)  
+
+**Abstract**: Many heritage institutions hold extensive collections of theatre programmes, which remain largely underused due to their complex layouts and lack of structured metadata. In this paper, we present a workflow for transforming such documents into structured data using a combination of multimodal large language models (LLMs), an ontology-based reasoning model, and a custom extension of the Linked Art framework. We show how vision-language models can accurately parse and transcribe born-digital and digitised programmes, achieving over 98% of correct extraction. To overcome the challenges of semantic annotation, we train a reasoning model (POntAvignon) using reinforcement learning with both formal and semantic rewards. This approach enables automated RDF triple generation and supports alignment with existing knowledge graphs. Through a case study based on the Festival d'Avignon corpus, we demonstrate the potential for large-scale, ontology-driven analysis of performing arts data. Our results open new possibilities for interoperable, explainable, and sustainable computational theatre historiography. 
+
+---
+# OnePiece: The Great Route to Generative Recommendation -- A Case Study from Tencent Algorithm Competition 
+
+**Authors**: Jiangxia Cao, Shuo Yang, Zijun Wang, Qinghai Tan  
+
+**Link**: [PDF](https://arxiv.org/pdf/2512.07424)  
+
+**Abstract**: In past years, the OpenAI's Scaling-Laws shows the amazing intelligence with the next-token prediction paradigm in neural language modeling, which pointing out a free-lunch way to enhance the model performance by scaling the model parameters. In RecSys, the retrieval stage is also follows a 'next-token prediction' paradigm, to recall the hunderds of items from the global item set, thus the generative recommendation usually refers specifically to the retrieval stage (without Tree-based methods). This raises a philosophical question: without a ground-truth next item, does the generative recommendation also holds a potential scaling law? In retrospect, the generative recommendation has two different technique paradigms: (1) ANN-based framework, utilizing the compressed user embedding to retrieve nearest other items in embedding space, e.g, Kuaiformer. (2) Auto-regressive-based framework, employing the beam search to decode the item from whole space, e.g, OneRec. In this paper, we devise a unified encoder-decoder framework to validate their scaling-laws at same time. Our empirical finding is that both of their losses strictly adhere to power-law Scaling Laws ($R^2$>0.9) within our unified architecture. 
+
+---
+# On the Impact of Graph Neural Networks in Recommender Systems: A Topological Perspective 
+
+**Authors**: Daniele Malitesta, Claudio Pomo, Vito Walter Anelli, Alberto Carlo Maria Mancino, Alejandro Bellogín, Tommaso Di Noia  
+
+**Link**: [PDF](https://arxiv.org/pdf/2512.07384)  
+
+**Abstract**: In recommender systems, user-item interactions can be modeled as a bipartite graph, where user and item nodes are connected by undirected edges. This graph-based view has motivated the rapid adoption of graph neural networks (GNNs), which often outperform collaborative filtering (CF) methods such as latent factor models, deep neural networks, and generative strategies. Yet, despite their empirical success, the reasons why GNNs offer systematic advantages over other CF approaches remain only partially understood. This monograph advances a topology-centered perspective on GNN-based recommendation. We argue that a comprehensive understanding of these models' performance should consider the structural properties of user-item graphs and their interaction with GNN architectural design. To support this view, we introduce a formal taxonomy that distills common modeling patterns across eleven representative GNN-based recommendation approaches and consolidates them into a unified conceptual pipeline. We further formalize thirteen classical and topological characteristics of recommendation datasets and reinterpret them through the lens of graph machine learning. Using these definitions, we analyze the considered GNN-based recommender architectures to assess how and to what extent they encode such properties. Building on this analysis, we derive an explanatory framework that links measurable dataset characteristics to model behavior and performance. Taken together, this monograph re-frames GNN-based recommendation through its topological underpinnings and outlines open theoretical, data-centric, and evaluation challenges for the next generation of topology-aware recommender systems. 
+
+---
+# MUSE: A Simple Yet Effective Multimodal Search-Based Framework for Lifelong User Interest Modeling 
+
+**Authors**: Bin Wu, Feifan Yang, Zhangming Chan, Yu-Ran Gu, Jiawei Feng, Chao Yi, Xiang-Rong Sheng, Han Zhu, Jian Xu, Mang Ye, Bo Zheng  
+
+**Link**: [PDF](https://arxiv.org/pdf/2512.07216)  
+
+**Abstract**: Lifelong user interest modeling is crucial for industrial recommender systems, yet existing approaches rely predominantly on ID-based features, suffering from poor generalization on long-tail items and limited semantic expressiveness. While recent work explores multimodal representations for behavior retrieval in the General Search Unit (GSU), they often neglect multimodal integration in the fine-grained modeling stage -- the Exact Search Unit (ESU). In this work, we present a systematic analysis of how to effectively leverage multimodal signals across both stages of the two-stage lifelong modeling framework. Our key insight is that simplicity suffices in the GSU: lightweight cosine similarity with high-quality multimodal embeddings outperforms complex retrieval mechanisms. In contrast, the ESU demands richer multimodal sequence modeling and effective ID-multimodal fusion to unlock its full potential. Guided by these principles, we propose MUSE, a simple yet effective multimodal search-based framework. MUSE has been deployed in Taobao display advertising system, enabling 100K-length user behavior sequence modeling and delivering significant gains in top-line metrics with negligible online latency overhead. To foster community research, we share industrial deployment practices and open-source the first large-scale dataset featuring ultra-long behavior sequences paired with high-quality multimodal embeddings. Our code and data is available at this https URL. 
+
+---
+# Benchmarking Deep Neural Networks for Modern Recommendation Systems 
+
+**Authors**: Abderaouf Bahi, Ibtissem Gasmi  
+
+**Link**: [PDF](https://arxiv.org/pdf/2512.07000)  
+
+**Abstract**: This paper examines the deployment of seven different neural network architectures CNN, RNN, GNN, Autoencoder, Transformer, NCF, and Siamese Networks on three distinct datasets: Retail E-commerce, Amazon Products, and Netflix Prize. It evaluates their effectiveness through metrics such as accuracy, recall, F1-score, and diversity in recommendations. The results demonstrate that GNNs are particularly adept at managing complex item relationships in e-commerce environments, whereas RNNs are effective in capturing the temporal dynamics that are essential for platforms such as Netflix.. Siamese Networks are emphasized for their contribution to the diversification of recommendations, particularly in retail settings. Despite their benefits, issues like computational demands, reliance on extensive data, and the challenge of balancing accurate and diverse recommendations are addressed. The study seeks to inform the advancement of recommendation systems by suggesting hybrid methods that merge the strengths of various models to better satisfy user preferences and accommodate the evolving demands of contemporary digital platforms. 
+
+---
+# Structural and Disentangled Adaptation of Large Vision Language Models for Multimodal Recommendation 
+
+**Authors**: Zhongtao Rao, Peilin Zhou, Dading Chong, Zhiwei Chen, Shoujin Wang, Nan Tang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2512.06883)  
+
+**Abstract**: Multimodal recommendation enhances accuracy by leveraging visual and textual signals, and its success largely depends on learning high-quality cross-modal representations. Recent advances in Large Vision-Language Models (LVLMs) offer unified multimodal representation learning, making them a promising backbone. However, applying LVLMs to recommendation remains challenging due to (i) representation misalignment, where domain gaps between item data and general pre-training lead to unaligned embedding spaces, and (ii) gradient conflicts during fine-tuning, where shared adapters cause interference and a lack of discriminative power. To address this, we propose SDA, a lightweight framework for Structural and Disentangled Adaptation, which integrates two components: Cross-Modal Structural Alignment (CMSA) and Modality-Disentangled Adaptation. CMSA aligns embeddings using intra-modal structures as a soft teacher, while MoDA mitigates gradient conflicts via expertized, gated low-rank paths to disentangle gradient flows. Experiments on three public Amazon datasets show SDA integrates seamlessly with existing multimodal and sequential recommenders, yielding average gains of 6.15% in Hit@10 and 8.64% in NDCG@10. It also achieves up to 12.83% and 18.70% gains on long-tail items with minimal inference overhead. Our code and full experimental results are available at this https URL. 
+
+---
+# WisPaper: Your AI Scholar Search Engine 
+
+**Authors**: Li Ju, Jun Zhao, Mingxu Chai, Ziyu Shen, Xiangyang Wang, Yage Geng, Chunchun Ma, Hao Peng, Guangbin Li, Tao Li, Chengyong Liao, Fu Wang, Xiaolong Wang, Junshen Chen, Rui Gong, Shijia Liang, Feiyan Li, Ming Zhang, Kexin Tan, Jujie Ye, Zhiheng Xi, Shihan Dou, Tao Gui, Yuankai Ying, Yang Shi, Yue Zhang, Qi Zhang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2512.06879)  
+
+**Abstract**: Researchers struggle to efficiently locate and manage relevant literature within the exponentially growing body of scientific publications. We present \textsc{WisPaper}, an intelligent academic retrieval and literature management platform that addresses this challenge through three integrated capabilities: (1) \textit{Scholar Search}, featuring both quick keyword-based and deep agentic search modes for efficient paper discovery; (2) \textit{Library}, a customizable knowledge base for systematic literature organization; and (3) \textit{AI Feeds}, an intelligent recommendation system that automatically delivers relevant new publications based on user interests. Unlike existing academic tools, \textsc{WisPaper} provides a closed-loop workflow that seamlessly connects literature discovery, management, and continuous tracking of research frontiers. Our multilingual and multidisciplinary system significantly reduces the time researchers from diverse backgrounds spend on paper screening and management, enabling them to focus on their core research activities. The platform is publicly accessible and serves researchers across academia and industry. 
+
+---
+# Foresight Prediction Enhanced Live-Streaming Recommendation 
+
+**Authors**: Jiangxia Cao, Ruochen Yang, Xiang Chen, Changxin Lao, Yueyang Liu, Yusheng Huang, Yuanhao Tian, Xiangyu Wu, Shuang Yang, Zhaojie Liu, Guorui Zhou  
+
+**Link**: [PDF](https://arxiv.org/pdf/2512.06700)  
+
+**Abstract**: Live-streaming, as an emerging media enabling real-time interaction between authors and users, has attracted significant attention. Unlike the stable playback time of traditional TV live or the fixed content of short video, live-streaming, due to the dynamics of content and time, poses higher requirements for the recommendation algorithm of the platform - understanding the ever-changing content in real time and push it to users at the appropriate moment. Through analysis, we find that users have a better experience and express more positive behaviors during highlight moments of the live-streaming. Furthermore, since the model lacks access to future content during recommendation, yet user engagement depends on how well subsequent content aligns with their interests, an intuitive solution is to predict future live-streaming content. Therefore, we perform semantic quantization on live-streaming segments to obtain Semantic ids (Sid), encode the historical Sid sequence to capture the author's characteristics, and model Sid evolution trend to enable foresight prediction of future content. This foresight enhances the ranking model through refined features. Extensive offline and online experiments demonstrate the effectiveness of our method. 
+
+---
+# An Index-based Approach for Efficient and Effective Web Content Extraction 
+
+**Authors**: Yihan Chen, Benfeng Xu, Xiaorui Wang, Zhendong Mao  
+
+**Link**: [PDF](https://arxiv.org/pdf/2512.06641)  
+
+**Abstract**: As web agents (e.g., Deep Research) routinely consume massive volumes of web pages to gather and analyze information, LLM context management -- under large token budgets and low signal density -- emerges as a foundational, high-importance, and technically challenging problem for agentic and RAG pipelines. Existing solutions for extracting relevant content are inadequate: generative extraction models suffer from high latency, rule-based heuristics lack adaptability, and chunk-and-rerank methods are blind to webpage structure. To overcome these issues, we introduce Index-based Web Content Extraction to reframe the extraction process from slow, token-by-token generation into a highly efficient, discriminative task of index prediction, achieving both effectiveness and efficiency. We partition HTML into structure-aware, addressable segments, and extract only the positional indices of content relevant to a given query. This method decouples extraction latency from content length, enabling rapid, query-relevant extraction. We first evaluate our method as a post-retrieval processing component within an RAG QA system and find that it improves QA accuracy. Then we directly measure its match rate with the target content in two scenarios: main content extraction (ME) and query-relevant extraction (QE). Experimental results show that our method outperforms existing works in both accuracy and speed, effectively bridging the gap between LLMs and the vast webpages. 
+
+---
+# Towards Efficient Hypergraph and Multi-LLM Agent Recommender Systems 
+
+**Authors**: Tendai Mukande, Esraa Ali, Annalina Caputo, Ruihai Dong, Noel OConnor  
+
+**Link**: [PDF](https://arxiv.org/pdf/2512.06590)  
+
+**Abstract**: Recommender Systems (RSs) have become the cornerstone of various applications such as e-commerce and social media platforms. The evolution of RSs is paramount in the digital era, in which personalised user experience is tailored to the user's preferences. Large Language Models (LLMs) have sparked a new paradigm - generative retrieval and recommendation. Despite their potential, generative RS methods face issues such as hallucination, which degrades the recommendation performance, and high computational cost in practical scenarios. To address these issues, we introduce HGLMRec, a novel Multi-LLM agent-based RS that incorporates a hypergraph encoder designed to capture complex, multi-behaviour relationships between users and items. The HGLMRec model retrieves only the relevant tokens during inference, reducing computational overhead while enriching the retrieval context. Experimental results show performance improvement by HGLMRec against state-of-the-art baselines at lower computational cost. 
+
+---
+# Enhancing Medical Cross-Modal Hashing Retrieval using Dropout-Voting Mixture-of-Experts Fusion 
+
+**Authors**: Jaewon Ahn, Woosung Jang, Beakcheol Jang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2512.06449)  
+
+**Abstract**: In recent years, cross-modal retrieval using images and text has become an active area of research, especially in the medical domain. The abundance of data in various modalities in this field has led to a growing importance of cross-modal retrieval for efficient image interpretation, data-driven diagnostic support, and medical education. In the context of the increasing integration of distributed medical data across healthcare facilities with the objective of enhancing interoperability, it is imperative to optimize the performance of retrieval systems in terms of the speed, memory efficiency, and accuracy of the retrieved data. This necessity arises in response to the substantial surge in data volume that characterizes contemporary medical practices. In this study, we propose a novel framework that incorporates dropout voting and mixture-of-experts (MoE) based contrastive fusion modules into a CLIP-based cross-modal hashing retrieval structure. We also propose the application of hybrid loss. So we now call our model MCMFH which is a medical cross-modal fusion hashing retrieval. Our method enables the simultaneous achievement of high accuracy and fast retrieval speed in low-memory environments. The model is demonstrated through experiments on radiological and non-radiological medical datasets. 
+
+---
+# Beyond Existing Retrievals: Cross-Scenario Incremental Sample Learning Framework 
+
+**Authors**: Tao Wang, Xun Luo, Jinlong Guo, Yuliang Yan, Jian Wu, Yuning Jiang, Bo Zheng  
+
+**Link**: [PDF](https://arxiv.org/pdf/2512.06381)  
+
+**Abstract**: The parallelized multi-retrieval architecture has been widely adopted in large-scale recommender systems for its computational efficiency and comprehensive coverage of user interests. Many retrieval methods typically integrate additional cross-scenario samples to enhance the overall performance ceiling. However, those model designs neglect the fact that a part of the cross-scenario samples have already been retrieved by existing models within a system, leading to diminishing marginal utility in delivering incremental performance gains. In this paper, we propose a novel retrieval framework IncRec, specifically for cross-scenario incremental sample learning. The innovations of IncRec can be highlighted as two aspects. Firstly, we construct extreme cross-scenario incremental samples that are not retrieved by any existing model. And we design an incremental sample learning framework which focuses on capturing incremental representation to improve the overall retrieval performance. Secondly, we introduce a consistency-aware alignment module to further make the model prefer incremental samples with high exposure probability. Extensive offline and online A/B tests validate the superiority of our framework over state-of-the-art retrieval methods. In particular, we deploy IncRec in the Taobao homepage recommendation, achieving a 1% increase in online transaction count, demonstrating its practical applicability. 
+
+---
+# Enhanced Multimodal Video Retrieval System: Integrating Query Expansion and Cross-modal Temporal Event Retrieval 
+
+**Authors**: Van-Thinh Vo, Minh-Khoi Nguyen, Minh-Huy Tran, Anh-Quan Nguyen-Tran, Duy-Tan Nguyen, Khanh-Loi Nguyen, Anh-Minh Phan  
+
+**Link**: [PDF](https://arxiv.org/pdf/2512.06334)  
+
+**Abstract**: Multimedia information retrieval from videos remains a challenging problem. While recent systems have advanced multimodal search through semantic, object, and OCR queries - and can retrieve temporally consecutive scenes - they often rely on a single query modality for an entire sequence, limiting robustness in complex temporal contexts. To overcome this, we propose a cross-modal temporal event retrieval framework that enables different query modalities to describe distinct scenes within a sequence. To determine decision thresholds for scene transition and slide change adaptively, we build Kernel Density Gaussian Mixture Thresholding (KDE-GMM) algorithm, ensuring optimal keyframe selection. These extracted keyframes act as compact, high-quality visual exemplars that retain each segment's semantic essence, improving retrieval precision and efficiency. Additionally, the system incorporates a large language model (LLM) to refine and expand user queries, enhancing overall retrieval performance. The proposed system's effectiveness and robustness were demonstrated through its strong results in the Ho Chi Minh AI Challenge 2025. 
+
+---
+# Reformulate, Retrieve, Localize: Agents for Repository-Level Bug Localization 
+
+**Authors**: Genevieve Caumartin, Glaucia Melo  
+
+**Link**: [PDF](https://arxiv.org/pdf/2512.07022)  
+
+**Abstract**: Bug localization remains a critical yet time-consuming challenge in large-scale software repositories. Traditional information retrieval-based bug localization (IRBL) methods rely on unchanged bug descriptions, which often contain noisy information, leading to poor retrieval accuracy. Recent advances in large language models (LLMs) have improved bug localization through query reformulation, yet the effect on agent performance remains unexplored. In this study, we investigate how an LLM-powered agent can improve file-level bug localization via lightweight query reformulation and summarization. We first employ an open-source, non-fine-tuned LLM to extract key information from bug reports, such as identifiers and code snippets, and reformulate queries pre-retrieval. Our agent then orchestrates BM25 retrieval using these preprocessed queries, automating localization workflow at scale. Using the best-performing query reformulation technique, our agent achieves 35% better ranking in first-file retrieval than our BM25 baseline and up to +22% file retrieval performance over SWE-agent. 
+
+---
+# FVA-RAG: Falsification-Verification Alignment for Mitigating Sycophantic Hallucinations 
+
+**Authors**: Mayank Ravishankara  
+
+**Link**: [PDF](https://arxiv.org/pdf/2512.07015)  
+
+**Abstract**: Retrieval-Augmented Generation (RAG) systems have significantly reduced hallucinations in Large Language Models (LLMs) by grounding responses in external context. However, standard RAG architectures suffer from a critical vulnerability: Retrieval Sycophancy. When presented with a query based on a false premise or a common misconception, vector-based retrievers tend to fetch documents that align with the user's bias rather than objective truth, leading the model to "hallucinate with citations."
+In this work, we introduce Falsification-Verification Alignment RAG (FVA-RAG), a framework that shifts the retrieval paradigm from Inductive Verification (seeking support) to Deductive Falsification (seeking disproof). Unlike existing "Self-Correction" methods that rely on internal consistency, FVA-RAG deploys a distinct Adversarial Retrieval Policy that actively generates "Kill Queries"-targeted search terms designed to surface contradictory evidence. We introduce a dual-verification mechanism that explicitly weighs the draft answer against this "Anti-Context." Preliminary experiments on a dataset of common misconceptions demonstrate that FVA-RAG significantly improves robustness against sycophantic hallucinations compared to standard RAG baselines, effectively acting as an inference-time "Red Team" for factual generation. 
+
+---
+# Space efficient implementation of hypergraph dualization in the D-basis algorithm 
+
+**Authors**: Skylar Homan, Anoop Krishnadas, Kira Adaricheva  
+
+**Link**: [PDF](https://arxiv.org/pdf/2512.06988)  
+
+**Abstract**: We present a new implementation of the $D$-basis algorithm called the Small Space which considerably reduces the algorithm's memory usage for data analysis applications. The previous implementation delivers the complete set of implications that hold on the set of attributes of an input binary table. In the new version, the only output is the frequencies of attributes that appear in the antecedents of implications from the $D$-basis, with a fixed consequent attribute. Such frequencies, rather than the implications themselves, became the primary focus in analysis of datasets where the $D$-basis has been applied over the last decade. The $D$-basis employs a hypergraph dualization algorithm, and a dualization implementation known as Reverse Search allows for the gradual computation of frequencies without the need for storing all discovered implications. We demonstrate the effectiveness of the Small Space implementation by comparing the runtimes and maximum memory usage of this new version with the current implementation. 
+
+---
+# Enhancing Information Retrieval in Digital Libraries through Unit Harmonisation in Scholarly Knowledge Graphs 
+
+**Authors**: Golsa Heidari, Markus Stocker, Sören Auer  
+
+**Link**: [PDF](https://arxiv.org/pdf/2512.06395)  
+
+**Abstract**: Scientists have always used the studies and research of other researchers to achieve new objectives and perspectives. In particular, employing and operating the measured data in previous studies is so practical. Searching the content of other scientists' articles is a challenge that researchers have always struggled with. Nowadays, the use of knowledge graphs as a semantic database has helped a lot in saving and retrieving scholarly knowledge. Such technologies are crucial to upgrading traditional search systems to smart knowledge retrieval, which is crucial to getting the most relevant answers for a user query, especially in information and knowledge management. However, in most cases, only the metadata of a paper is searchable, and it is still cumbersome for scientists to have access to the content of the papers. In this paper, we present a novel method of faceted search \emph{structured content} for comparing and filtering measured data in scholarly knowledge graphs while different units of measurement are used in different studies. This search system proposes applicable units as facets to the user and would dynamically integrate content from further remote knowledge graphs to materialize the scholarly knowledge graph and achieve a higher order of exploration usability on scholarly content, which can be filtered to better satisfy the user's information needs. The state of the art is that, by using our faceted search system, users can not only search the contents of scientific articles, but also compare and filter heterogeneous data. 
+
+---
+# Interpretive Efficiency: Information-Geometric Foundations of Data Usefulness 
+
+**Authors**: Ronald Katende  
+
+**Link**: [PDF](https://arxiv.org/pdf/2512.06341)  
+
+**Abstract**: Interpretability is central to trustworthy machine learning, yet existing metrics rarely quantify how effectively data support an interpretive representation. We propose Interpretive Efficiency, a normalized, task-aware functional that measures the fraction of task-relevant information transmitted through an interpretive channel. The definition is grounded in five axioms ensuring boundedness, Blackwell-style monotonicity, data-processing stability, admissible invariance, and asymptotic consistency. We relate the functional to mutual information and derive a local Fisher-geometric expansion, then establish asymptotic and finite-sample estimation guarantees using standard empirical-process tools. Experiments on controlled image and signal tasks demonstrate that the measure recovers theoretical orderings, exposes representational redundancy masked by accuracy, and correlates with robustness, making it a practical, theory-backed diagnostic for representation design. 
+
+---
+# Sift or Get Off the PoC: Applying Information Retrieval to Vulnerability Research with SiftRank 
+
+**Authors**: Caleb Gross  
+
+**Link**: [PDF](https://arxiv.org/pdf/2512.06155)  
+
+**Abstract**: Security research is fundamentally a problem of resource constraint and consequent prioritization. There is simply too much attack surface and too little time and energy to spend analyzing it all. The most effective security researchers are often those who are most skilled at intuitively deciding which part of an expansive attack surface to investigate. We demonstrate that this problem of selecting the most promising option from among many possibilities can be reframed as an information retrieval problem, and solved using document ranking techniques with LLMs performing the heavy lifting as general-purpose rankers. We present SiftRank, a ranking algorithm achieving O(n) complexity through three key mechanisms: listwise ranking using an LLM to order documents in small batches of approximately 10 items at a time; inflection-based convergence detection that adaptively terminates ranking when score distributions have stabilized; and iterative refinement that progressively focuses ranking effort on the most relevant documents. Unlike existing reranking approaches that require a separate first-stage retrieval step to narrow datasets to approximately 100 candidates, SiftRank operates directly on thousands of items, with each document evaluated across multiple randomized batches to mitigate inconsistent judgments by an LLM. We demonstrate practical effectiveness on N-day vulnerability analysis, successfully identifying a vulnerability-fixing function among 2,197 changed functions in a stripped binary firmware patch within 99 seconds at an inference cost of $0.82. Our approach enables scalable security prioritization for problems that are generally constrained by manual analysis, requiring only standard LLM API access without specialized infrastructure, embedding, or domain-specific fine-tuning. An open-source implementation of SiftRank may be found at this https URL. 
+
+---
