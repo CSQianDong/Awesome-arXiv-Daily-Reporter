@@ -1,0 +1,56 @@
+# From Accuracy to Impact: The Impact-Driven AI Framework (IDAIF) for Aligning Engineering Architecture with Theory of Change 
+
+**Authors**: Yong-Woon Kim  
+
+**Link**: [PDF](https://arxiv.org/pdf/2512.08449)  
+
+**Abstract**: This paper introduces the Impact-Driven AI Framework (IDAIF), a novel architectural methodology that integrates Theory of Change (ToC) principles with modern artificial intelligence system design. As AI systems increasingly influence high-stakes domains including healthcare, finance, and public policy, the alignment problem--ensuring AI behavior corresponds with human values and intentions--has become critical. Current approaches predominantly optimize technical performance metrics while neglecting the sociotechnical dimensions of AI deployment. IDAIF addresses this gap by establishing a systematic mapping between ToC's five-stage model (Inputs-Activities-Outputs-Outcomes-Impact) and corresponding AI architectural layers (Data Layer-Pipeline Layer-Inference Layer-Agentic Layer-Normative Layer). Each layer incorporates rigorous theoretical foundations: multi-objective Pareto optimization for value alignment, hierarchical multi-agent orchestration for outcome achievement, causal directed acyclic graphs (DAGs) for hallucination mitigation, and adversarial debiasing with Reinforcement Learning from Human Feedback (RLHF) for fairness assurance. We provide formal mathematical formulations for each component and introduce an Assurance Layer that manages assumption failures through guardian architectures. Three case studies demonstrate IDAIF application across healthcare, cybersecurity, and software engineering domains. This framework represents a paradigm shift from model-centric to impact-centric AI development, providing engineers with concrete architectural patterns for building ethical, trustworthy, and socially beneficial AI systems. 
+
+---
+# rSIM: Incentivizing Reasoning Capabilities of LLMs via Reinforced Strategy Injection 
+
+**Authors**: Sijia Chen, Baochun Li, Di Niu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2512.08300)  
+
+**Abstract**: Large language models (LLMs) are post-trained through reinforcement learning (RL) to evolve into Reasoning Language Models (RLMs), where the hallmark of this advanced reasoning is ``aha'' moments when they start to perform strategies, such as self-reflection and deep thinking, within chain of thoughts (CoTs). Motivated by this, this paper proposes a novel reinforced strategy injection mechanism (rSIM), that enables any LLM to become an RLM by employing a small planner to guide the LLM's CoT through the adaptive injection of reasoning strategies. To achieve this, the planner (leader agent) is jointly trained with an LLM (follower agent) using multi-agent RL (MARL), based on a leader-follower framework and straightforward rule-based rewards. Experimental results show that rSIM enables Qwen2.5-0.5B to become an RLM and significantly outperform Qwen2.5-14B. Moreover, the planner is generalizable: it only needs to be trained once and can be applied as a plug-in to substantially improve the reasoning capabilities of existing LLMs. In addition, the planner supports continual learning across various tasks, allowing its planning abilities to gradually improve and generalize to a wider range of problems. 
+
+---
+# No Labels, No Problem: Training Visual Reasoners with Multimodal Verifiers 
+
+**Authors**: Damiano Marsili, Georgia Gkioxari  
+
+**Link**: [PDF](https://arxiv.org/pdf/2512.08889)  
+
+**Abstract**: Visual reasoning is challenging, requiring both precise object grounding and understanding complex spatial relationships. Existing methods fall into two camps: language-only chain-of-thought approaches, which demand large-scale (image, query, answer) supervision, and program-synthesis approaches which use pre-trained models and avoid training, but suffer from flawed logic and erroneous grounding. We propose an annotation-free training framework that improves both reasoning and grounding. Our framework uses AI-powered verifiers: an LLM verifier refines LLM reasoning via reinforcement learning, while a VLM verifier strengthens visual grounding through automated hard-negative mining, eliminating the need for ground truth labels. This design combines the strengths of modern AI systems: advanced language-only reasoning models for decomposing spatial queries into simpler subtasks, and strong vision specialist models improved via performant VLM critics. We evaluate our approach across diverse spatial reasoning tasks, and show that our method improves visual reasoning and surpasses open-source and proprietary models, while with our improved visual grounding model we further outperform recent text-only visual reasoning methods. Project webpage: this https URL 
+
+---
+# A Systematic Evaluation of Preference Aggregation in Federated RLHF for Pluralistic Alignment of LLMs 
+
+**Authors**: Mahmoud Srewa, Tianyu Zhao, Salma Elmalaki  
+
+**Link**: [PDF](https://arxiv.org/pdf/2512.08786)  
+
+**Abstract**: This paper addresses the challenge of aligning large language models (LLMs) with diverse human preferences within federated learning (FL) environments, where standard methods often fail to adequately represent diverse viewpoints. We introduce a comprehensive evaluation framework that systematically assesses the trade-off between alignment quality and fairness when using different aggregation strategies for human preferences. In our federated setting, each group locally evaluates rollouts and produces reward signals, and the server aggregates these group-level rewards without accessing any raw data. Specifically, we evaluate standard reward aggregation techniques (min, max, and average) and introduce a novel adaptive scheme that dynamically adjusts preference weights based on a group's historical alignment performance. Our experiments on question-answering (Q/A) tasks using a PPO-based RLHF pipeline demonstrate that our adaptive approach consistently achieves superior fairness while maintaining competitive alignment scores. This work offers a robust methodology for evaluating LLM behavior across diverse populations and provides a practical solution for developing truly pluralistic and fairly aligned models. 
+
+---
+# Fluent Alignment with Disfluent Judges: Post-training for Lower-resource Languages 
+
+**Authors**: David Samuel, Lilja Øvrelid, Erik Velldal, Andrey Kutuzov  
+
+**Link**: [PDF](https://arxiv.org/pdf/2512.08777)  
+
+**Abstract**: We propose a post-training method for lower-resource languages that preserves fluency of language models even when aligned by disfluent reward models. Preference-optimization is now a well-researched topic, but previous work has mostly addressed models for English and Chinese. Lower-resource languages lack both datasets written by native speakers and language models capable of generating fluent synthetic data. Thus, in this work, we focus on developing a fluent preference-aligned language model without any instruction-tuning data in the target language. Our approach uses an on-policy training method, which we compare with two common approaches: supervised finetuning on machine-translated data and multilingual finetuning. We conduct a case study on Norwegian Bokmål and evaluate fluency through native-speaker assessments. The results show that the on-policy aspect is crucial and outperforms the alternatives without relying on any hard-to-obtain data. 
+
+---
+# Training LLMs for Honesty via Confessions 
+
+**Authors**: Manas Joglekar, Jeremy Chen, Gabriel Wu, Jason Yosinski, Jasmine Wang, Boaz Barak, Amelia Glaese  
+
+**Link**: [PDF](https://arxiv.org/pdf/2512.08093)  
+
+**Abstract**: Large language models (LLMs) can be dishonest when reporting on their actions and beliefs -- for example, they may overstate their confidence in factual claims or cover up evidence of covert actions. Such dishonesty may arise due to the effects of reinforcement learning (RL), where challenges with reward shaping can result in a training process that inadvertently incentivizes the model to lie or misrepresent its actions.
+In this work we propose a method for eliciting an honest expression of an LLM's shortcomings via a self-reported *confession*. A confession is an output, provided upon request after a model's original answer, that is meant to serve as a full account of the model's compliance with the letter and spirit of its policies and instructions. The reward assigned to a confession during training is solely based on its honesty, and does not impact positively or negatively the main answer's reward. As long as the "path of least resistance" for maximizing confession reward is to surface misbehavior rather than covering it up, this incentivizes models to be honest in their confessions. Our findings provide some justification this empirical assumption, especially in the case of egregious model misbehavior.
+To demonstrate the viability of our approach, we train GPT-5-Thinking to produce confessions, and we evaluate its honesty in out-of-distribution scenarios measuring hallucination, instruction following, scheming, and reward hacking. We find that when the model lies or omits shortcomings in its "main" answer, it often confesses to these behaviors honestly, and this confession honesty modestly improves with training. Confessions can enable a number of inference-time interventions including monitoring, rejection sampling, and surfacing issues to the user. 
+
+---
