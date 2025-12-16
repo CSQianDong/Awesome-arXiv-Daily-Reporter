@@ -1,0 +1,36 @@
+# SignRAG: A Retrieval-Augmented System for Scalable Zero-Shot Road Sign Recognition 
+
+**Authors**: Minghao Zhu, Zhihao Zhang, Anmol Sidhu, Keith Redmill  
+
+**Link**: [PDF](https://arxiv.org/pdf/2512.12885)  
+
+**Abstract**: Automated road sign recognition is a critical task for intelligent transportation systems, but traditional deep learning methods struggle with the sheer number of sign classes and the impracticality of creating exhaustive labeled datasets. This paper introduces a novel zero-shot recognition framework that adapts the Retrieval-Augmented Generation (RAG) paradigm to address this challenge. Our method first uses a Vision Language Model (VLM) to generate a textual description of a sign from an input image. This description is used to retrieve a small set of the most relevant sign candidates from a vector database of reference designs. Subsequently, a Large Language Model (LLM) reasons over the retrieved candidates to make a final, fine-grained recognition. We validate this approach on a comprehensive set of 303 regulatory signs from the Ohio MUTCD. Experimental results demonstrate the framework's effectiveness, achieving 95.58% accuracy on ideal reference images and 82.45% on challenging real-world road data. This work demonstrates the viability of RAG-based architectures for creating scalable and accurate systems for road sign recognition without task-specific training. 
+
+---
+# Liquid Reasoning Transformers: A Sudoku-Based Prototype for Chess-Scale Algorithmic Tasks 
+
+**Authors**: Shivansh Sahni, Wenzhi Zhang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2512.12792)  
+
+**Abstract**: The Liquid Reasoning Transformer (LRT) is a transformer architecture designed for inference with adaptive depths using iterative changes, discard-based correction, and a learned stopping mechanism. Instead of relying on a single feedforward pass, the model updates a recurrent reasoning token across multiple internal steps, allowing it to correct early errors and allocate computation based on input difficulty. We evaluate the LRT on Sudoku as a controlled testbed for structured reasoning and show that it achieves strong performance, reaching 98.68% digit accuracy and 36.30% full-puzzle accuracy without using symbolic rules or search. Analyzing internal patterns shows that the discard and stop gates play different, important roles in stabilizing inferences and adjusting computational depth. We discuss how these mechanisms extend naturally to chess-scale reasoning tasks and outline extensions for multi-token reasoning and larger domains. 
+
+---
+# Understanding Structured Financial Data with LLMs: A Case Study on Fraud Detection 
+
+**Authors**: Xuwei Tan, Yao Ma, Xueru Zhang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2512.13040)  
+
+**Abstract**: Detecting fraud in financial transactions typically relies on tabular models that demand heavy feature engineering to handle high-dimensional data and offer limited interpretability, making it difficult for humans to understand predictions. Large Language Models (LLMs), in contrast, can produce human-readable explanations and facilitate feature analysis, potentially reducing the manual workload of fraud analysts and informing system refinements. However, they perform poorly when applied directly to tabular fraud detection due to the difficulty of reasoning over many features, the extreme class imbalance, and the absence of contextual information. To bridge this gap, we introduce FinFRE-RAG, a two-stage approach that applies importance-guided feature reduction to serialize a compact subset of numeric/categorical attributes into natural language and performs retrieval-augmented in-context learning over label-aware, instance-level exemplars. Across four public fraud datasets and three families of open-weight LLMs, FinFRE-RAG substantially improves F1/MCC over direct prompting and is competitive with strong tabular baselines in several settings. Although these LLMs still lag behind specialized classifiers, they narrow the performance gap and provide interpretable rationales, highlighting their value as assistive tools in fraud analysis. 
+
+---
+# SPAR: Session-based Pipeline for Adaptive Retrieval on Legacy File Systems 
+
+**Authors**: Duy A. Nguyen, Hai H. Do, Minh Doan, Minh N. Do  
+
+**Link**: [PDF](https://arxiv.org/pdf/2512.12938)  
+
+**Abstract**: The ability to extract value from historical data is essential for enterprise decision-making. However, much of this information remains inaccessible within large legacy file systems that lack structured organization and semantic indexing, making retrieval and analysis inefficient and error-prone. We introduce SPAR (Session-based Pipeline for Adaptive Retrieval), a conceptual framework that integrates Large Language Models (LLMs) into a Retrieval-Augmented Generation (RAG) architecture specifically designed for legacy enterprise environments. Unlike conventional RAG pipelines, which require costly construction and maintenance of full-scale vector databases that mirror the entire file system, SPAR employs a lightweight two-stage process: a semantic Metadata Index is first created, after which session-specific vector databases are dynamically generated on demand. This design reduces computational overhead while improving transparency, controllability, and relevance in retrieval. We provide a theoretical complexity analysis comparing SPAR with standard LLM-based RAG pipelines, demonstrating its computational advantages. To validate the framework, we apply SPAR to a synthesized enterprise-scale file system containing a large corpus of biomedical literature, showing improvements in both retrieval effectiveness and downstream model accuracy. Finally, we discuss design trade-offs and outline open challenges for deploying SPAR across diverse enterprise settings. 
+
+---
