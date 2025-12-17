@@ -1,0 +1,110 @@
+# Pairwise Comparison for Bias Identification and Quantification 
+
+**Authors**: Fabian Haak, Philipp Schaer  
+
+**Link**: [PDF](https://arxiv.org/pdf/2512.14565)  
+
+**Abstract**: Linguistic bias in online news and social media is widespread but difficult to measure. Yet, its identification and quantification remain difficult due to subjectivity, context dependence, and the scarcity of high-quality gold-label datasets. We aim to reduce annotation effort by leveraging pairwise comparison for bias annotation. To overcome the costliness of the approach, we evaluate more efficient implementations of pairwise comparison-based rating. We achieve this by investigating the effects of various rating techniques and the parameters of three cost-aware alternatives in a simulation environment. Since the approach can in principle be applied to both human and large language model annotation, our work provides a basis for creating high-quality benchmark datasets and for quantifying biases and other subjective linguistic aspects.
+The controlled simulations include latent severity distributions, distance-calibrated noise, and synthetic annotator bias to probe robustness and cost-quality trade-offs. In applying the approach to human-labeled bias benchmark datasets, we then evaluate the most promising setups and compare them to direct assessment by large language models and unmodified pairwise comparison labels as baselines. Our findings support the use of pairwise comparison as a practical foundation for quantifying subjective linguistic aspects, enabling reproducible bias analysis. We contribute an optimization of comparison and matchmaking components, an end-to-end evaluation including simulation and real-data application, and an implementation blueprint for cost-aware large-scale annotation 
+
+---
+# RecGPT-V2 Technical Report 
+
+**Authors**: Chao Yi, Dian Chen, Gaoyang Guo, Jiakai Tang, Jian Wu, Jing Yu, Mao Zhang, Wen Chen, Wenjun Yang, Yujie Luo, Yuning Jiang, Zhujin Gao, Bo Zheng, Binbin Cao, Changfa Wu, Dixuan Wang, Han Wu, Haoyi Hu, Kewei Zhu, Lang Tian, Lin Yang, Qiqi Huang, Siqi Yang, Wenbo Su, Xiaoxiao He, Xin Tong, Xu Chen, Xunke Xi, Xiaowei Huang, Yaxuan Wu, Yeqiu Yang, Yi Hu, Yujin Yuan, Yuliang Yan, Zile Zhou  
+
+**Link**: [PDF](https://arxiv.org/pdf/2512.14503)  
+
+**Abstract**: Large language models (LLMs) have demonstrated remarkable potential in transforming recommender systems from implicit behavioral pattern matching to explicit intent reasoning. While RecGPT-V1 successfully pioneered this paradigm by integrating LLM-based reasoning into user interest mining and item tag prediction, it suffers from four fundamental limitations: (1) computational inefficiency and cognitive redundancy across multiple reasoning routes; (2) insufficient explanation diversity in fixed-template generation; (3) limited generalization under supervised learning paradigms; and (4) simplistic outcome-focused evaluation that fails to match human standards.
+To address these challenges, we present RecGPT-V2 with four key innovations. First, a Hierarchical Multi-Agent System restructures intent reasoning through coordinated collaboration, eliminating cognitive duplication while enabling diverse intent coverage. Combined with Hybrid Representation Inference that compresses user-behavior contexts, our framework reduces GPU consumption by 60% and improves exclusive recall from 9.39% to 10.99%. Second, a Meta-Prompting framework dynamically generates contextually adaptive prompts, improving explanation diversity by +7.3%. Third, constrained reinforcement learning mitigates multi-reward conflicts, achieving +24.1% improvement in tag prediction and +13.0% in explanation acceptance. Fourth, an Agent-as-a-Judge framework decomposes assessment into multi-step reasoning, improving human preference alignment. Online A/B tests on Taobao demonstrate significant improvements: +2.98% CTR, +3.71% IPV, +2.19% TV, and +11.46% NER. RecGPT-V2 establishes both the technical feasibility and commercial viability of deploying LLM-powered intent reasoning at scale, bridging the gap between cognitive exploration and industrial utility. 
+
+---
+# PushGen: Push Notifications Generation with LLM 
+
+**Authors**: Shifu Bie, Jiangxia Cao, Zixiao Luo, Yichuan Zou, Lei Liang, Lu Zhang, Linxun Chen, Zhaojie Liu, Xuanping Li, Guorui Zhou, Kaiqiao Zhan, Kun Gai  
+
+**Link**: [PDF](https://arxiv.org/pdf/2512.14490)  
+
+**Abstract**: We present PushGen, an automated framework for generating high-quality push notifications comparable to human-crafted content. With the rise of generative models, there is growing interest in leveraging LLMs for push content generation. Although LLMs make content generation straightforward and cost-effective, maintaining stylistic control and reliable quality assessment remains challenging, as both directly impact user engagement. To address these issues, PushGen combines two key components: (1) a controllable category prompt technique to guide LLM outputs toward desired styles, and (2) a reward model that ranks and selects generated candidates. Extensive offline and online experiments demonstrate its effectiveness, which has been deployed in large-scale industrial applications, serving hundreds of millions of users daily. 
+
+---
+# Dynamic Context Selection for Retrieval-Augmented Generation: Mitigating Distractors and Positional Bias 
+
+**Authors**: Malika Iratni, Mohand Boughanem, Taoufiq Dkaki  
+
+**Link**: [PDF](https://arxiv.org/pdf/2512.14313)  
+
+**Abstract**: Retrieval Augmented Generation (RAG) enhances language model performance by incorporating external knowledge retrieved from large corpora, which makes it highly suitable for tasks such as open domain question answering. Standard RAG systems typically rely on a fixed top k retrieval strategy, which can either miss relevant information or introduce semantically irrelevant passages, known as distractors, that degrade output quality. Additionally, the positioning of retrieved passages within the input context can influence the model attention and generation outcomes. Context placed in the middle tends to be overlooked, which is an issue known as the "lost in the middle" phenomenon. In this work, we systematically analyze the impact of distractors on generation quality, and quantify their effects under varying conditions. We also investigate how the position of relevant passages within the context window affects their influence on generation. Building on these insights, we propose a context-size classifier that dynamically predicts the optimal number of documents to retrieve based on query-specific informational needs. We integrate this approach into a full RAG pipeline, and demonstrate improved performance over fixed k baselines. 
+
+---
+# SPARQL-LLM: Real-Time SPARQL Query Generation from Natural Language Questions 
+
+**Authors**: Panayiotis Smeros, Vincent Emonet, Ruijie Wang, Ana-Claudia Sima, Tarcisio Mendes de Farias  
+
+**Link**: [PDF](https://arxiv.org/pdf/2512.14277)  
+
+**Abstract**: The advent of large language models is contributing to the emergence of novel approaches that promise to better tackle the challenge of generating structured queries, such as SPARQL queries, from natural language. However, these new approaches mostly focus on response accuracy over a single source while ignoring other evaluation criteria, such as federated query capability over distributed data stores, as well as runtime and cost to generate SPARQL queries. Consequently, they are often not production-ready or easy to deploy over (potentially federated) knowledge graphs with good accuracy. To mitigate these issues, in this paper, we extend our previous work and describe and systematically evaluate SPARQL-LLM, an open-source and triplestore-agnostic approach, powered by lightweight metadata, that generates SPARQL queries from natural language text. First, we describe its architecture, which consists of dedicated components for metadata indexing, prompt building, and query generation and execution. Then, we evaluate it based on a state-of-the-art challenge with multilingual questions, and a collection of questions from three of the most prevalent knowledge graphs within the field of bioinformatics. Our results demonstrate a substantial increase of 24% in the F1 Score on the state-of-the-art challenge, adaptability to high-resource languages such as English and Spanish, as well as ability to form complex and federated bioinformatics queries. Furthermore, we show that SPARQL-LLM is up to 36x faster than other systems participating in the challenge, while costing a maximum of $0.01 per question, making it suitable for real-time, low-cost text-to-SPARQL applications. One such application deployed over real-world decentralized knowledge graphs can be found at this https URL. 
+
+---
+# AsarRec: Adaptive Sequential Augmentation for Robust Self-supervised Sequential Recommendation 
+
+**Authors**: Kaike Zhang, Qi Cao, Fei Sun, Xinran Liu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2512.14047)  
+
+**Abstract**: Sequential recommender systems have demonstrated strong capabilities in modeling users' dynamic preferences and capturing item transition patterns. However, real-world user behaviors are often noisy due to factors such as human errors, uncertainty, and behavioral ambiguity, which can lead to degraded recommendation performance. To address this issue, recent approaches widely adopt self-supervised learning (SSL), particularly contrastive learning, by generating perturbed views of user interaction sequences and maximizing their mutual information to improve model robustness. However, these methods heavily rely on their pre-defined static augmentation strategies~(where the augmentation type remains fixed once chosen) to construct augmented views, leading to two critical challenges: (1) the optimal augmentation type can vary significantly across different scenarios; (2) inappropriate augmentations may even degrade recommendation performance, limiting the effectiveness of SSL. To overcome these limitations, we propose an adaptive augmentation framework. We first unify existing basic augmentation operations into a unified formulation via structured transformation matrices. Building on this, we introduce AsarRec (Adaptive Sequential Augmentation for Robust Sequential Recommendation), which learns to generate transformation matrices by encoding user sequences into probabilistic transition matrices and projecting them into hard semi-doubly stochastic matrices via a differentiable Semi-Sinkhorn algorithm. To ensure that the learned augmentations benefit downstream performance, we jointly optimize three objectives: diversity, semantic invariance, and informativeness. Extensive experiments on three benchmark datasets under varying noise levels validate the effectiveness of AsarRec, demonstrating its superior robustness and consistent improvements. 
+
+---
+# From Feature Interaction to Feature Generation: A Generative Paradigm of CTR Prediction Models 
+
+**Authors**: Mingjia Yin, Junwei Pan, Hao Wang, Ximei Wang, Shangyu Zhang, Jie Jiang, Defu Lian, Enhong Chen  
+
+**Link**: [PDF](https://arxiv.org/pdf/2512.14041)  
+
+**Abstract**: Click-Through Rate (CTR) prediction, a core task in recommendation systems, aims to estimate the probability of users clicking on items. Existing models predominantly follow a discriminative paradigm, which relies heavily on explicit interactions between raw ID embeddings. However, this paradigm inherently renders them susceptible to two critical issues: embedding dimensional collapse and information redundancy, stemming from the over-reliance on feature interactions \emph{over raw ID embeddings}. To address these limitations, we propose a novel \emph{Supervised Feature Generation (SFG)} framework, \emph{shifting the paradigm from discriminative ``feature interaction" to generative ``feature generation"}. Specifically, SFG comprises two key components: an \emph{Encoder} that constructs hidden embeddings for each feature, and a \emph{Decoder} tasked with regenerating the feature embeddings of all features from these hidden representations. Unlike existing generative approaches that adopt self-supervised losses, we introduce a supervised loss to utilize the supervised signal, \ie, click or not, in the CTR prediction task. This framework exhibits strong generalizability: it can be seamlessly integrated with most existing CTR models, reformulating them under the generative paradigm. Extensive experiments demonstrate that SFG consistently mitigates embedding collapse and reduces information redundancy, while yielding substantial performance gains across various datasets and base models. The code is available at this https URL. 
+
+---
+# DTRec: Learning Dynamic Reasoning Trajectories for Sequential Recommendation 
+
+**Authors**: Yifan Shao, Peilin Zhou, Shoujin Wang, Weizhi Zhang, Xu Cai, Sunghun Kim  
+
+**Link**: [PDF](https://arxiv.org/pdf/2512.14036)  
+
+**Abstract**: Inspired by advances in LLMs, reasoning-enhanced sequential recommendation performs multi-step deliberation before making final predictions, unlocking greater potential for capturing user preferences. However, current methods are constrained by static reasoning trajectories that are ill-suited for the diverse complexity of user behaviors. They suffer from two key limitations: (1) a static reasoning direction, which uses flat supervision signals misaligned with human-like hierarchical reasoning, and (2) a fixed reasoning depth, which inefficiently applies the same computational effort to all users, regardless of pattern complexity. These rigidity lead to suboptimal performance and significant computational waste. To overcome these challenges, we propose DTRec, a novel and effective framework that explores the Dynamic reasoning Trajectory for Sequential Recommendation along both direction and depth. To guide the direction, we develop Hierarchical Process Supervision (HPS), which provides coarse-to-fine supervisory signals to emulate the natural, progressive refinement of human cognitive processes. To optimize the depth, we introduce the Adaptive Reasoning Halting (ARH) mechanism that dynamically adjusts the number of reasoning steps by jointly monitoring three indicators. Extensive experiments on three real-world datasets demonstrate the superiority of our approach, achieving up to a 24.5% performance improvement over strong baselines while simultaneously reducing computational cost by up to 41.6%. 
+
+---
+# Intent-Guided Reasoning for Sequential Recommendation 
+
+**Authors**: Yifan Shao, Peilin Zhou  
+
+**Link**: [PDF](https://arxiv.org/pdf/2512.14034)  
+
+**Abstract**: Sequential recommendation systems aim to capture users' evolving preferences from their interaction histories. Recent reasoningenhanced methods have shown promise by introducing deliberate, chain-of-thought-like processes with intermediate reasoning steps. However, these methods rely solely on the next target item as supervision, leading to two critical issues: (1) reasoning instability--the process becomes overly sensitive to recent behaviors and spurious interactions like accidental clicks, and (2) surface-level reasoning--the model memorizes item-to-item transitions rather than understanding intrinsic behavior patterns. To address these challenges, we propose IGR-SR, an Intent-Guided Reasoning framework for Sequential Recommendation that anchors the reasoning process to explicitly extracted high-level intents. Our framework comprises three key components: (1) a Latent Intent Distiller (LID) that efficiently extracts multi-faceted intents using a frozen encoder with learnable tokens, (2) an Intent-aware Deliberative Reasoner (IDR) that decouples reasoning into intent deliberation and decision-making via a dual-attention architecture, and (3) an Intent Consistency Regularization (ICR) that ensures robustness by enforcing consistent representations across different intent views. Extensive experiments on three public datasets demonstrate that IGR-SR achieves an average 7.13% improvement over state-of-the-art baselines. Critically, under 20% behavioral noise, IGR-SR degrades only 10.4% compared to 16.2% and 18.6% for competing methods, validating the effectiveness and robustness of intent-guided reasoning. 
+
+---
+# BiCoRec: Bias-Mitigated Context-Aware Sequential Recommendation Model 
+
+**Authors**: Mufhumudzi Muthivhi, Terence L van Zyl, Hairong Wang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2512.13848)  
+
+**Abstract**: Sequential recommendation models aim to learn from users evolving preferences. However, current state-of-the-art models suffer from an inherent popularity bias. This study developed a novel framework, BiCoRec, that adaptively accommodates users changing preferences for popular and niche items. Our approach leverages a co-attention mechanism to obtain a popularity-weighted user sequence representation, facilitating more accurate predictions. We then present a new training scheme that learns from future preferences using a consistency loss function. BiCoRec aimed to improve the recommendation performance of users who preferred niche items. For these users, BiCoRec achieves a 26.00% average improvement in NDCG@10 over state-of-the-art baselines. When ranking the relevant item against the entire collection, BiCoRec achieves NDCG@10 scores of 0.0102, 0.0047, 0.0021, and 0.0005 for the Movies, Fashion, Games and Music datasets. 
+
+---
+# A Comparative Analysis of Retrieval-Augmented Generation Techniques for Bengali Standard-to-Dialect Machine Translation Using LLMs 
+
+**Authors**: K. M. Jubair Sami, Dipto Sumit, Ariyan Hossain, Farig Sadeque  
+
+**Link**: [PDF](https://arxiv.org/pdf/2512.14179)  
+
+**Abstract**: Translating from a standard language to its regional dialects is a significant NLP challenge due to scarce data and linguistic variation, a problem prominent in the Bengali language. This paper proposes and compares two novel RAG pipelines for standard-to-dialectal Bengali translation. The first, a Transcript-Based Pipeline, uses large dialect sentence contexts from audio transcripts. The second, a more effective Standardized Sentence-Pairs Pipeline, utilizes structured local\_dialect:standard\_bengali sentence pairs. We evaluated both pipelines across six Bengali dialects and multiple LLMs using BLEU, ChrF, WER, and BERTScore. Our findings show that the sentence-pair pipeline consistently outperforms the transcript-based one, reducing Word Error Rate (WER) from 76\% to 55\% for the Chittagong dialect. Critically, this RAG approach enables smaller models (e.g., Llama-3.1-8B) to outperform much larger models (e.g., GPT-OSS-120B), demonstrating that a well-designed retrieval strategy can be more crucial than model size. This work contributes an effective, fine-tuning-free solution for low-resource dialect translation, offering a practical blueprint for preserving linguistic diversity. 
+
+---
+# Neurosymbolic Inference On Foundation Models For Remote Sensing Text-to-image Retrieval With Complex Queries 
+
+**Authors**: Emanuele Mezzi, Gertjan Burghouts, Maarten Kruithof  
+
+**Link**: [PDF](https://arxiv.org/pdf/2512.14102)  
+
+**Abstract**: Text-to-image retrieval in remote sensing (RS) has advanced rapidly with the rise of large vision-language models (LVLMs) tailored for aerial and satellite imagery, culminating in remote sensing large vision-language models (RS-LVLMS). However, limited explainability and poor handling of complex spatial relations remain key challenges for real-world use. To address these issues, we introduce RUNE (Reasoning Using Neurosymbolic Entities), an approach that combines Large Language Models (LLMs) with neurosymbolic AI to retrieve images by reasoning over the compatibility between detected entities and First-Order Logic (FOL) expressions derived from text queries. Unlike RS-LVLMs that rely on implicit joint embeddings, RUNE performs explicit reasoning, enhancing performance and interpretability. For scalability, we propose a logic decomposition strategy that operates on conditioned subsets of detected entities, guaranteeing shorter execution time compared to neural approaches. Rather than using foundation models for end-to-end retrieval, we leverage them only to generate FOL expressions, delegating reasoning to a neurosymbolic inference module. For evaluation we repurpose the DOTA dataset, originally designed for object detection, by augmenting it with more complex queries than in existing benchmarks. We show the LLM's effectiveness in text-to-logic translation and compare RUNE with state-of-the-art RS-LVLMs, demonstrating superior performance. We introduce two metrics, Retrieval Robustness to Query Complexity (RRQC) and Retrieval Robustness to Image Uncertainty (RRIU), which evaluate performance relative to query complexity and image uncertainty. RUNE outperforms joint-embedding models in complex RS retrieval tasks, offering gains in performance, robustness, and explainability. We show RUNE's potential for real-world RS applications through a use case on post-flood satellite image retrieval. 
+
+---
