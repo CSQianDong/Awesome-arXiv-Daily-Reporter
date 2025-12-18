@@ -1,0 +1,72 @@
+# BERT and CNN integrated Neural Collaborative Filtering for Recommender Systems 
+
+**Authors**: Abdullah Al Munem, Sumona Yeasmin, Mohammad Rezwanul Huq  
+
+**Link**: [PDF](https://arxiv.org/pdf/2512.15526)  
+
+**Abstract**: Every day, a significant number of users visit the internet for different needs. The owners of a website generate profits from the user interaction with the contents or items of the website. A robust recommendation system can increase user interaction with a website by recommending items according to the user's unique preferences. BERT and CNN-integrated neural collaborative filtering (NCF) have been proposed for the recommendation system in this experiment. The proposed model takes inputs from the user and item profile and finds the user's interest. This model can handle numeric, categorical, and image data to extract the latent features from the inputs. The model is trained and validated on a small sample of the MovieLens dataset for 25 epochs. The same dataset has been used to train and validate a simple NCF and a BERT-based NCF model and compared with the proposed model. The proposed model outperformed those two baseline models. The obtained result for the proposed model is 0.72 recall and 0.486 Hit Ratio @ 10 for 799 users on the MovieLens dataset. This experiment concludes that considering both categorical and image data can improve the performance of a recommendation system. 
+
+---
+# MedNuggetizer: Confidence-Based Information Nugget Extraction from Medical Documents 
+
+**Authors**: Gregor Donabauer, Samy Ateia, Udo Kruschwitz, Maximilian Burger, Matthias May, Christian Gilfrich, Maximilian Haas, Julio Ruben Rodas Garzaro, Christoph Eckl  
+
+**Link**: [PDF](https://arxiv.org/pdf/2512.15384)  
+
+**Abstract**: We present MedNuggetizer, this https URL access is available upon request.}, a tool for query-driven extraction and clustering of information nuggets from medical documents to support clinicians in exploring underlying medical evidence. Backed by a large language model (LLM), \textit{MedNuggetizer} performs repeated extractions of information nuggets that are then grouped to generate reliable evidence within and across multiple documents. We demonstrate its utility on the clinical use case of \textit{antibiotic prophylaxis before prostate biopsy} by using major urological guidelines and recent PubMed studies as sources of information. Evaluation by domain experts shows that \textit{MedNuggetizer} provides clinicians and researchers with an efficient way to explore long documents and easily extract reliable, query-focused medical evidence. 
+
+---
+# Image Complexity-Aware Adaptive Retrieval for Efficient Vision-Language Models 
+
+**Authors**: Mikel Williams-Lekuona, Georgina Cosma  
+
+**Link**: [PDF](https://arxiv.org/pdf/2512.15372)  
+
+**Abstract**: Vision transformers in vision-language models apply uniform computational effort across all images, expending 175.33 GFLOPs (ViT-L/14) whether analysing a straightforward product photograph or a complex street scene. We propose ICAR (Image Complexity-Aware Retrieval), which enables vision transformers to use less compute for simple images whilst processing complex images through their full network depth. The key challenge is maintaining cross-modal alignment: embeddings from different processing depths must remain compatible for text matching. ICAR solves this through dual-path training that produces compatible embeddings from both reduced-compute and full-compute processing. This maintains compatibility between image representations and text embeddings in the same semantic space, whether an image exits early or processes fully. Unlike existing two-stage approaches that require expensive reranking, ICAR enables direct image-text matching without additional overhead. To determine how much compute to use, we develop ConvNeXt-IC, which treats image complexity assessment as a classification task. By applying modern classifier backbones rather than specialised architectures, ConvNeXt-IC achieves state-of-the-art performance with 0.959 correlation with human judgement (Pearson) and 4.4x speedup. Evaluated on standard benchmarks augmented with real-world web data, ICAR achieves 20% practical speedup while maintaining category-level performance and 95% of instance-level performance, enabling sustainable scaling of vision-language systems. 
+
+---
+# Where to Explore: A Reach and Cost-Aware Approach for Unbiased Data Collection in Recommender Systems 
+
+**Authors**: Qiang Chen, Venkatesh Ganapati Hegde  
+
+**Link**: [PDF](https://arxiv.org/pdf/2512.14733)  
+
+**Abstract**: Exploration is essential to improve long-term recommendation quality, but it often degrades short-term business performance, especially in remote-first TV environments where users engage passively, expect instant relevance, and offer few chances for correction. This paper introduces an approach for delivering content-level exploration safely and efficiently by optimizing its placement based on reach and opportunity cost. Deployed on a large-scale streaming platform with over 100 million monthly active users, our approach identifies scroll-depth regions with lower engagement and strategically introduces a dedicated container, the "Something Completely Different" row containing randomized content. Rather than enforcing exploration uniformly across the user interface (UI), we condition its appearance on empirically low-cost, high-reach positions to ensure minimal tradeoff against platform-level watch time goals. Extensive A/B testing shows that this strategy preserves business metrics while collecting unbiased interaction data. Our method complements existing intra-row diversification and bandit-based exploration techniques by introducing a deployable, behaviorally informed mechanism for surfacing exploratory content at scale. Moreover, we demonstrate that the collected unbiased data, integrated into downstream candidate generation, significantly improves user engagement, validating its value for recommender systems. 
+
+---
+# ArcBERT: An LLM-based Search Engine for Exploring Integrated Multi-Omics Metadata 
+
+**Authors**: Gajendra Doniparthi, Shashank Balu Pandhare, Stefan Deßloch, Timo Mühlhaus  
+
+**Link**: [PDF](https://arxiv.org/pdf/2512.15365)  
+
+**Abstract**: Traditional search applications within Research Data Management (RDM) ecosystems are crucial in helping users discover and explore the structured metadata from the research datasets. Typically, text search engines require users to submit keyword-based queries rather than using natural language. However, using Large Language Models (LLMs) trained on domain-specific content for specialized natural language processing (NLP) tasks is becoming increasingly common. We present ArcBERT, an LLM-based system designed for integrated metadata exploration. ArcBERT understands natural language queries and relies on semantic matching, unlike traditional search applications. Notably, ArcBERT also understands the structure and hierarchies within the metadata, enabling it to handle diverse user querying patterns effectively. 
+
+---
+# Topological Metric for Unsupervised Embedding Quality Evaluation 
+
+**Authors**: Aleksei Shestov, Anton Klenitskiy, Daria Denisova, Amurkhan Dzagkoev, Daniil Petrovich, Andrey Savchenko, Maksim Makarenko  
+
+**Link**: [PDF](https://arxiv.org/pdf/2512.15285)  
+
+**Abstract**: Modern representation learning increasingly relies on unsupervised and self-supervised methods trained on large-scale unlabeled data. While these approaches achieve impressive generalization across tasks and domains, evaluating embedding quality without labels remains an open challenge. In this work, we propose Persistence, a topology-aware metric based on persistent homology that quantifies the geometric structure and topological richness of embedding spaces in a fully unsupervised manner. Unlike metrics that assume linear separability or rely on covariance structure, Persistence captures global and multi-scale organization. Empirical results across diverse domains show that Persistence consistently achieves top-tier correlations with downstream performance, outperforming existing unsupervised metrics and enabling reliable model and hyperparameter selection. 
+
+---
+# DASH: Dialogue-Aware Similarity and Handshake Recognition for Topic Segmentation in Public-Channel Conversations 
+
+**Authors**: Sijin Sun, Liangbin Zhao, Ming Deng, Xiuju Fu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2512.15042)  
+
+**Abstract**: Dialogue Topic Segmentation (DTS) is crucial for understanding task-oriented public-channel communications, such as maritime VHF dialogues, which feature informal speech and implicit transitions. To address the limitations of traditional methods, we propose DASH-DTS, a novel LLM-based framework. Its core contributions are: (1) topic shift detection via dialogue handshake recognition; (2) contextual enhancement through similarity-guided example selection; and (3) the generation of selective positive and negative samples to improve model discrimination and robustness. Additionally, we release VHF-Dial, the first public dataset of real-world maritime VHF communications, to advance research in this domain. DASH-DTS provides interpretable reasoning and confidence scores for each segment. Experimental results demonstrate that our framework achieves several sota segmentation trusted accuracy on both VHF-Dial and standard benchmarks, establishing a strong foundation for stable monitoring and decision support in operational dialogues. 
+
+---
+# Integrating Large Language Models and Knowledge Graphs to Capture Political Viewpoints in News Media 
+
+**Authors**: Massimiliano Fadda, Enrico Motta, Francesco Osborne, Diego Reforgiato Recupero, Angelo Salatino  
+
+**Link**: [PDF](https://arxiv.org/pdf/2512.14887)  
+
+**Abstract**: News sources play a central role in democratic societies by shaping political and social discourse through specific topics, viewpoints and voices. Understanding these dynamics is essential for assessing whether the media landscape offers a balanced and fair account of public debate. In earlier work, we introduced a pipeline that, given a news corpus, i) uses a hybrid human-machine approach to identify the range of viewpoints expressed about a given topic, and ii) classifies relevant claims with respect to the identified viewpoints, defined as sets of semantically and ideologically congruent claims (e.g., positions arguing that immigration positively impacts the UK economy). In this paper, we improve this pipeline by i) fine-tuning Large Language Models (LLMs) for viewpoint classification and ii) enriching claim representations with semantic descriptions of relevant actors drawn from Wikidata. We evaluate our approach against alternative solutions on a benchmark centred on the UK immigration debate. Results show that while both mechanisms independently improve classification performance, their integration yields the best results, particularly when using LLMs capable of processing long inputs. 
+
+---
