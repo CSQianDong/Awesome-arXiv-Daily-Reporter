@@ -1,0 +1,101 @@
+# Diversity Recommendation via Causal Deconfounding of Co-purchase Relations and Counterfactual Exposure 
+
+**Authors**: Jingmao Zhang, Zhiting Zhao, Yunqi Lin, Jianghong Ma, Tianjun Wei, Haijun Zhang, Xiaofeng Zhang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2512.17733)  
+
+**Abstract**: Beyond user-item modeling, item-to-item relationships are increasingly used to enhance recommendation. However, common methods largely rely on co-occurrence, making them prone to item popularity bias and user attributes, which degrades embedding quality and performance. Meanwhile, although diversity is acknowledged as a key aspect of recommendation quality, existing research offers limited attention to it, with a notable lack of causal perspectives and theoretical grounding. To address these challenges, we propose Cadence: Diversity Recommendation via Causal Deconfounding of Co-purchase Relations and Counterfactual Exposure - a plug-and-play framework built upon LightGCN as the backbone, primarily designed to enhance recommendation diversity while preserving accuracy. First, we compute the Unbiased Asymmetric Co-purchase Relationship (UACR) between items - excluding item popularity and user attributes - to construct a deconfounded directed item graph, with an aggregation mechanism to refine embeddings. Second, we leverage UACR to identify diverse categories of items that exhibit strong causal relevance to a user's interacted items but have not yet been engaged with. We then simulate their behavior under high-exposure scenarios, thereby significantly enhancing recommendation diversity while preserving relevance. Extensive experiments on real-world datasets demonstrate that our method consistently outperforms state-of-the-art diversity models in both diversity and accuracy, and further validates its effectiveness, transferability, and efficiency over baselines. 
+
+---
+# Behavioural Effects of Agentic Messaging: A Case Study on a Financial Service Application 
+
+**Authors**: Olivier Jeunen, Schaun Wheeler  
+
+**Link**: [PDF](https://arxiv.org/pdf/2512.17462)  
+
+**Abstract**: Marketing and product personalisation provide a prominent and visible use-case for the application of Information Retrieval methods across several business domains. Recently, agentic approaches to these problems have been gaining traction. This work evaluates the behavioural and retention effects of agentic personalisation on a financial service application's customer communication system during a 2025 national tax filing period. Through a two month-long randomised controlled trial, we compare an agentic messaging approach against a business-as-usual (BAU) rule-based campaign system, focusing on two primary outcomes: unsubscribe behaviour and conversion timing. Empirical results show that agent-led messaging reduced unsubscribe events by 21\% ($\pm 0.01$) relative to BAU and increased early filing behaviour in the weeks preceding the national deadline. These findings demonstrate how adaptive, user-level decision-making systems can modulate engagement intensity whilst improving long-term retention indicators. 
+
+---
+# A Systematic Reproducibility Study of BSARec for Sequential Recommendation 
+
+**Authors**: Jan Hutter, Hua Chang Bakker, Stan Fris, Madelon Bernardy, Yuanna Liu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2512.17442)  
+
+**Abstract**: In sequential recommendation (SR), the self-attention mechanism of Transformer-based models acts as a low-pass filter, limiting their ability to capture high-frequency signals that reflect short-term user interests. To overcome this, BSARec augments the Transformer encoder with a frequency layer that rescales high-frequency components using the Fourier transform. However, the overall effectiveness of BSARec and the roles of its individual components have yet to be systematically validated. We reproduce BSARec and show that it outperforms other SR methods on some datasets. To empirically assess whether BSARec improves performance on high-frequency signals, we propose a metric to quantify user history frequency and evaluate SR methods across different user groups. We compare digital signal processing (DSP) techniques and find that the discrete wavelet transform (DWT) offer only slight improvements over Fourier transforms, and DSP methods provide no clear advantage over simple residual connections. Finally, we explore padding strategies and find that non-constant padding significantly improves recommendation performance, whereas constant padding hinders the frequency rescaler's ability to capture high-frequency signals. 
+
+---
+# The Mental World of Large Language Models in Recommendation: A Benchmark on Association, Personalization, and Knowledgeability 
+
+**Authors**: Guangneng Hu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2512.17389)  
+
+**Abstract**: Large language models (LLMs) have shown potential in recommendation systems (RecSys) by using them as either knowledge enhancer or zero-shot ranker. A key challenge lies in the large semantic gap between LLMs and RecSys where the former internalizes language world knowledge while the latter captures personalized world of behaviors. Unfortunately, the research community lacks a comprehensive benchmark that evaluates the LLMs over their limitations and boundaries in RecSys so that we can draw a confident conclusion. To investigate this, we propose a benchmark named LRWorld containing over 38K high-quality samples and 23M tokens carefully compiled and generated from widely used public recommendation datasets. LRWorld categorizes the mental world of LLMs in RecSys as three main scales (association, personalization, and knowledgeability) spanned by ten factors with 31 measures (tasks). Based on LRWorld, comprehensive experiments on dozens of LLMs show that they are still not well capturing the deep neural personalized embeddings but can achieve good results on shallow memory-based item-item similarity. They are also good at perceiving item entity relations, entity hierarchical taxonomies, and item-item association rules when inferring user interests. Furthermore, LLMs show a promising ability in multimodal knowledge reasoning (movie poster and product image) and robustness to noisy profiles. None of them show consistently good performance over the ten factors. Model sizes, position bias, and more are ablated. 
+
+---
+# Warmer for Less: A Cost-Efficient Strategy for Cold-Start Recommendations at Pinterest 
+
+**Authors**: Saeed Ebrahimi, Weijie Jiang, Jaewon Yang, Olafur Gudmundsson, Yucheng Tu, Huizhong Duan  
+
+**Link**: [PDF](https://arxiv.org/pdf/2512.17277)  
+
+**Abstract**: Pinterest is a leading visual discovery platform where recommender systems (RecSys) are key to delivering relevant, engaging, and fresh content to our users. In this paper, we study the problem of improving RecSys model predictions for cold-start (CS) items, which appear infrequently in the training data. Although this problem is well-studied in academia, few studies have addressed its root causes effectively at the scale of a platform like Pinterest. By investigating live traffic data, we identified several challenges of the CS problem and developed a corresponding solution for each: First, industrial-scale RecSys models must operate under tight computational constraints. Since CS items are a minority, any related improvements must be highly cost-efficient. To address this, our solutions were designed to be lightweight, collectively increasing the total parameters by only 5%. Second, CS items are represented only by non-historical (e.g., content or attribute) features, which models often treat as less important. To elevate their significance, we introduce a residual connection for the non-historical features. Third, CS items tend to receive lower prediction scores compared to non-CS items, reducing their likelihood of being surfaced. We mitigate this by incorporating a score regularization term into the model. Fourth, the labels associated with CS items are sparse, making it difficult for the model to learn from them. We apply the manifold mixup technique to address this data sparsity. Implemented together, our methods increased fresh content engagement at Pinterest by 10% without negatively impacting overall engagement and cost, and have been deployed to serve over 570 million users on Pinterest. 
+
+---
+# TCDE: Topic-Centric Dual Expansion of Queries and Documents with Large Language Models for Information Retrieval 
+
+**Authors**: Yu Yang, Feng Tian, Ping Chen  
+
+**Link**: [PDF](https://arxiv.org/pdf/2512.17164)  
+
+**Abstract**: Query Expansion (QE) enriches queries and Document Expansion (DE) enriches documents, and these two techniques are often applied separately. However, such separate application may lead to semantic misalignment between the expanded queries (or documents) and their relevant documents (or queries). To address this serious issue, we propose TCDE, a dual expansion strategy that leverages large language models (LLMs) for topic-centric enrichment on both queries and documents. In TCDE, we design two distinct prompt templates for processing each query and document. On the query side, an LLM is guided to identify distinct sub-topics within each query and generate a focused pseudo-document for each sub-topic. On the document side, an LLM is guided to distill each document into a set of core topic sentences. The resulting outputs are used to expand the original query and document. This topic-centric dual expansion process establishes semantic bridges between queries and their relevant documents, enabling better alignment for downstream retrieval models. Experiments on two challenging benchmarks, TREC Deep Learning and BEIR, demonstrate that TCDE achieves substantial improvements over strong state-of-the-art expansion baselines. In particular, on dense retrieval tasks, it outperforms several state-of-the-art methods, with a relative improvement of 2.8\% in NDCG@10 on the SciFact dataset. Experimental results validate the effectiveness of our topic-centric and dual expansion strategy. 
+
+---
+# Unexpected Knowledge: Auditing Wikipedia and Grokipedia Search Recommendations 
+
+**Authors**: Erica Coppolillo, Simone Mungari  
+
+**Link**: [PDF](https://arxiv.org/pdf/2512.17027)  
+
+**Abstract**: Encyclopedic knowledge platforms are key gateways through which users explore information online. The recent release of Grokipedia, a fully AI-generated encyclopedia, introduces a new alternative to traditional, well-established platforms like Wikipedia. In this context, search engine mechanisms play an important role in guiding users exploratory paths, yet their behavior across different encyclopedic systems remains underexplored. In this work, we address this gap by providing the first comparative analysis of search engine in Wikipedia and Grokipedia.
+Using nearly 10,000 neutral English words and their substrings as queries, we collect over 70,000 search engine results and examine their semantic alignment, overlap, and topical structure. We find that both platforms frequently generate results that are weakly related to the original query and, in many cases, surface unexpected content starting from innocuous queries. Despite these shared properties, the two systems often produce substantially different recommendation sets for the same query. Through topical annotation and trajectory analysis, we further identify systematic differences in how content categories are surfaced and how search engine results evolve over multiple stages of exploration.
+Overall, our findings show that unexpected search engine outcomes are a common feature of both the platforms, even though they exhibit discrepancies in terms of topical distribution and query suggestions. 
+
+---
+# A Reproducible and Fair Evaluation of Partition-aware Collaborative Filtering 
+
+**Authors**: Domenico De Gioia, Claudio Pomo, Ludovico Boratto, Tommaso Di Noia  
+
+**Link**: [PDF](https://arxiv.org/pdf/2512.17015)  
+
+**Abstract**: Similarity-based collaborative filtering (CF) models have long demonstrated strong offline performance and conceptual simplicity. However, their scalability is limited by the quadratic cost of maintaining dense item-item similarity matrices. Partitioning-based paradigms have recently emerged as an effective strategy for balancing effectiveness and efficiency, enabling models to learn local similarities within coherent subgraphs while maintaining a limited global context. In this work, we focus on the Fine-tuning Partition-aware Similarity Refinement (FPSR) framework, a prominent representative of this family, as well as its extension, FPSR+. Reproducible evaluation of partition-aware collaborative filtering remains challenging, as prior FPSR/FPSR+ reports often rely on splits of unclear provenance and omit some similarity-based baselines, thereby complicating fair comparison. We present a transparent, fully reproducible benchmark of FPSR and FPSR+. Based on our results, the family of FPSR models does not consistently perform at the highest level. Overall, it remains competitive, validates its design choices, and shows significant advantages in long-tail scenarios. This highlights the accuracy-coverage trade-offs resulting from partitioning, global components, and hub design. Our investigation clarifies when partition-aware similarity modeling is most beneficial and offers actionable guidance for scalable recommender system design under reproducible protocols. 
+
+---
+# Intelligent Knowledge Mining Framework: Bridging AI Analysis and Trustworthy Preservation 
+
+**Authors**: Binh Vu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2512.17795)  
+
+**Abstract**: The unprecedented proliferation of digital data presents significant challenges in access, integration, and value creation across all data-intensive sectors. Valuable information is frequently encapsulated within disparate systems, unstructured documents, and heterogeneous formats, creating silos that impede efficient utilization and collaborative decision-making. This paper introduces the Intelligent Knowledge Mining Framework (IKMF), a comprehensive conceptual model designed to bridge the critical gap between dynamic AI-driven analysis and trustworthy long-term preservation. The framework proposes a dual-stream architecture: a horizontal Mining Process that systematically transforms raw data into semantically rich, machine-actionable knowledge, and a parallel Trustworthy Archiving Stream that ensures the integrity, provenance, and computational reproducibility of these assets. By defining a blueprint for this symbiotic relationship, the paper provides a foundational model for transforming static repositories into living ecosystems that facilitate the flow of actionable intelligence from producers to consumers. This paper outlines the motivation, problem statement, and key research questions guiding the research and development of the framework, presents the underlying scientific methodology, and details its conceptual design and modeling. 
+
+---
+# ABE-CLIP: Training-Free Attribute Binding Enhancement for Compositional Image-Text Matching 
+
+**Authors**: Qi Zhang, Yuxu Chen, Lei Deng, Lili Shen  
+
+**Link**: [PDF](https://arxiv.org/pdf/2512.17178)  
+
+**Abstract**: Contrastive Language-Image Pretraining (CLIP) has achieved remarkable performance in various multimodal tasks. However, it still struggles with compositional image-text matching, particularly in accurately associating objects with their corresponding attributes, because its inherent global representation often overlooks fine-grained semantics for attribute binding. Existing methods often require additional training or extensive hard negative sampling, yet they frequently show limited generalization to novel compositional concepts and fail to fundamentally address the drawbacks of global representations. In this paper, we propose ABE-CLIP, a novel training-free Attribute Binding Enhancement method designed to strengthen attribute-object binding in CLIP-like models. Specifically, we employ a Semantic Refinement Mechanism to refine token embeddings for both object and attribute phrases in the text, thereby mitigating attribute confusion and improving semantic precision. We further introduce a Local Token-Patch Alignment strategy that computes similarity scores between refined textual tokens and their most relevant image patches. By aggregating localized similarity scores, ABE-CLIP computes the final image-text similarity. Experiments on multiple datasets demonstrate that ABE-CLIP significantly improves attribute-object binding performance, even surpassing methods that require extensive training. 
+
+---
+# V-Agent: An Interactive Video Search System Using Vision-Language Models 
+
+**Authors**: SunYoung Park, Jong-Hyeon Lee, Youngjune Kim, Daegyu Sung, Younghyun Yu, Young-rok Cha, Jeongho Ju  
+
+**Link**: [PDF](https://arxiv.org/pdf/2512.16925)  
+
+**Abstract**: We introduce V-Agent, a novel multi-agent platform designed for advanced video search and interactive user-system conversations. By fine-tuning a vision-language model (VLM) with a small video preference dataset and enhancing it with a retrieval vector from an image-text retrieval model, we overcome the limitations of traditional text-based retrieval systems in multimodal scenarios. The VLM-based retrieval model independently embeds video frames and audio transcriptions from an automatic speech recognition (ASR) module into a shared multimodal representation space, enabling V-Agent to interpret both visual and spoken content for context-aware video search. This system consists of three agents-a routing agent, a search agent, and a chat agent-that work collaboratively to address user intents by refining search outputs and communicating with users. The search agent utilizes the VLM-based retrieval model together with an additional re-ranking module to further enhance video retrieval quality. Our proposed framework demonstrates state-of-the-art zero-shot performance on the MultiVENT 2.0 benchmark, highlighting its potential for both academic research and real-world applications. 
+
+---
