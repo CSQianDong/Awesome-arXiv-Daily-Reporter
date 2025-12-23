@@ -1,0 +1,72 @@
+# Generative vector search to improve pathology foundation models across multimodal vision-language tasks 
+
+**Authors**: Markus Ekvall, Ludvig Bergenstråhle, Patrick Truong, Ben Murrell, Joakim Lundeberg  
+
+**Link**: [PDF](https://arxiv.org/pdf/2512.19360)  
+
+**Abstract**: Retrieval-augmented generation improves large language models by grounding outputs in external knowledge sources, reducing hallucinations and addressing knowledge cutoffs. However, standard embedding-based retrieval fails to capture the complexity of multi-concept queries, particularly in domains like biomedicine, where biological data are inherently high-dimensional. For example,omics datasets, and clinical reports simultaneously exhibit numerous molecular, cellular, and physiological features. We present Stochastic Latent Matching (STHLM), a generative vector search method that samples query-conditioned embeddings from text or image inputs to enhance retrieval performance. Analogous to how Chain-of-Thought reasoning enables language models to "think longer" on complex problems, STHLM allows retrieval systems to "search wider" through iterative sampling. STHLM demonstrates critical improvements over classical vector retrieval across diverse benchmarks, including scientific literature, clinical notes, and tissue images, boosting retrieval performance by 10-30% through test-time compute (trading latency for accuracy), while enabling up to a 10-fold compression of embedding dimensions. 
+
+---
+# Modular Layout Synthesis (MLS): Front-end Code via Structure Normalization and Constrained Generation 
+
+**Authors**: Chong Liu, Ming Zhang, Fei Li, Hao Zhou, Xiaoshuang Chen, Ye Yuan  
+
+**Link**: [PDF](https://arxiv.org/pdf/2512.18996)  
+
+**Abstract**: Automated front-end engineering drastically reduces development cycles and minimizes manual coding overhead. While Generative AI has shown promise in translating designs to code, current solutions often produce monolithic scripts, failing to natively support modern ecosystems like React, Vue, or Angular. Furthermore, the generated code frequently suffers from poor modularity, making it difficult to maintain. To bridge this gap, we introduce Modular Layout Synthesis (MLS), a hierarchical framework that merges visual understanding with structural normalization. Initially, a visual-semantic encoder maps the screen capture into a serialized tree topology, capturing the essential layout hierarchy. Instead of simple parsing, we apply heuristic deduplication and pattern recognition to isolate reusable blocks, creating a framework-agnostic schema. Finally, a constraint-based generation protocol guides the LLM to synthesize production-ready code with strict typing and component props. Evaluations show that MLS significantly outperforms existing baselines, ensuring superior code reusability and structural integrity across multiple frameworks 
+
+---
+# CIRR: Causal-Invariant Retrieval-Augmented Recommendation with Faithful Explanations under Distribution Shift 
+
+**Authors**: Sebastian Sun  
+
+**Link**: [PDF](https://arxiv.org/pdf/2512.18683)  
+
+**Abstract**: Recent advances in retrieval-augmented generation (RAG) have shown promise in enhancing recommendation systems with external knowledge. However, existing RAG-based recommenders face two critical challenges: (1) vulnerability to distribution shifts across different environments (e.g., time periods, user segments), leading to performance degradation in out-of-distribution (OOD) scenarios, and (2) lack of faithful explanations that can be verified against retrieved evidence. In this paper, we propose CIRR, a Causal-Invariant Retrieval-Augmented Recommendation framework that addresses both challenges simultaneously. CIRR learns environment-invariant user preference representations through causal inference, which guide a debiased retrieval process to select relevant evidence from multiple sources. Furthermore, we introduce consistency constraints that enforce faithfulness between retrieved evidence, generated explanations, and recommendation outputs. Extensive experiments on two real-world datasets demonstrate that CIRR achieves robust performance under distribution shifts, reducing performance degradation from 15.4% (baseline) to only 5.6% in OOD scenarios, while providing more faithful and interpretable explanations (26% improvement in faithfulness score) compared to state-of-the-art baselines. 
+
+---
+# Efficient Optimization of Hierarchical Identifiers for Generative Recommendation 
+
+**Authors**: Federica Valeau, Odysseas Boufalis, Polytimi Gkotsi, Joshua Rosenthal, David Vos  
+
+**Link**: [PDF](https://arxiv.org/pdf/2512.18434)  
+
+**Abstract**: SEATER is a generative retrieval model that improves recommendation inference efficiency and retrieval quality by utilizing balanced tree-structured item identifiers and contrastive training objectives. We reproduce and validate SEATER's reported improvements in retrieval quality over strong baselines across all datasets from the original work, and extend the evaluation to Yambda, a large-scale music recommendation dataset. Our experiments verify SEATER's strong performance, but show that its tree construction step during training becomes a major bottleneck as the number of items grows. To address this, we implement and evaluate two alternative construction algorithms: a greedy method optimized for minimal build time, and a hybrid method that combines greedy clustering at high levels with more precise grouping at lower levels. The greedy method reduces tree construction time to less than 2% of the original with only a minor drop in quality on the dataset with the largest item collection. The hybrid method achieves retrieval quality on par with the original, and even improves on the largest dataset, while cutting construction time to just 5-8%. All data and code are publicly available for full reproducibility at this https URL. 
+
+---
+# Datasets for machine learning and for assessing the intelligence level of automatic patent search systems 
+
+**Authors**: Boris Genin, Alexander Gorbunov, Dmitry Zolkin, Igor Nekrasov  
+
+**Link**: [PDF](https://arxiv.org/pdf/2512.18384)  
+
+**Abstract**: The key to success in automating prior art search in patent research using artificial intelligence lies in developing large datasets for machine learning and ensuring their availability. This work is dedicated to providing a comprehensive solution to the problem of creating infrastructure for research in this field, including datasets and tools for calculating search quality criteria. The paper discusses the concept of semantic clusters of patent documents that determine the state of the art in a given subject, as proposed by the authors. A definition of such semantic clusters is also provided. Prior art search is presented as the task of identifying elements within a semantic cluster of patent documents in the subject area specified by the document under consideration. A generator of user-configurable datasets for machine learning, based on collections of U.S. and Russian patent documents, is described. The dataset generator creates a database of links to documents in semantic clusters. Then, based on user-defined parameters, it forms a dataset of semantic clusters in JSON format for machine learning. To evaluate machine learning outcomes, it is proposed to calculate search quality scores that account for semantic clusters of the documents being searched. To automate the evaluation process, the paper describes a utility developed by the authors for assessing the quality of prior art document search. 
+
+---
+# Improving Data Reusability in Interactive Information Retrieval: Insights from the Community 
+
+**Authors**: Tianji Jiang, Wenqi Li, Jiqun Liu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2512.18283)  
+
+**Abstract**: In this study, we conducted semi-structured interviews with 21 IIR researchers to investigate their data reuse practices. This study aims to expand upon current findings by exploring IIR researchers' information-obtaining behaviors regarding data reuse. We identified the information about shared data characteristics that IIR researchers need when evaluating data reusability, as well as the sources they typically consult to obtain this information. We consider this work to be an initial step toward revealing IIR researchers' data reuse practices and identifying what the community needs to do to promote data reuse. We hope that this study, as well as future research, will inspire more individuals to contribute to ongoing efforts aimed at designing standards, infrastructures, and policies, as well as fostering a sustainable culture of data sharing and reuse in this field. 
+
+---
+# Factorized Transport Alignment for Multimodal and Multiview E-commerce Representation Learning 
+
+**Authors**: Xiwen Chen, Yen-Chieh Lien, Susan Liu, María Castaños, Abolfazl Razi, Xiaoting Zhao, Congzhe Su  
+
+**Link**: [PDF](https://arxiv.org/pdf/2512.18117)  
+
+**Abstract**: The rapid growth of e-commerce requires robust multimodal representations that capture diverse signals from user-generated listings. Existing vision-language models (VLMs) typically align titles with primary images, i.e., single-view, but overlook non-primary images and auxiliary textual views that provide critical semantics in open marketplaces such as Etsy or Poshmark. To this end, we propose a framework that unifies multimodal and multi-view learning through Factorized Transport, a lightweight approximation of optimal transport, designed for scalability and deployment efficiency. During training, the method emphasizes primary views while stochastically sampling auxiliary ones, reducing training cost from quadratic in the number of views to constant per item. At inference, all views are fused into a single cached embedding, preserving the efficiency of two-tower retrieval with no additional online overhead. On an industrial dataset of 1M product listings and 0.3M interactions, our approach delivers consistent improvements in cross-view and query-to-item retrieval, achieving up to +7.9% Recall@500 over strong multimodal baselines. Overall, our framework bridges scalability with optimal transport-based learning, making multi-view pretraining practical for large-scale e-commerce search. 
+
+---
+# QuCo-RAG: Quantifying Uncertainty from the Pre-training Corpus for Dynamic Retrieval-Augmented Generation 
+
+**Authors**: Dehai Min, Kailin Zhang, Tongtong Wu, Lu Cheng  
+
+**Link**: [PDF](https://arxiv.org/pdf/2512.19134)  
+
+**Abstract**: Dynamic Retrieval-Augmented Generation adaptively determines when to retrieve during generation to mitigate hallucinations in large language models (LLMs). However, existing methods rely on model-internal signals (e.g., logits, entropy), which are fundamentally unreliable because LLMs are typically ill-calibrated and often exhibit high confidence in erroneous outputs. We propose QuCo-RAG, which shifts from subjective confidence to objective statistics computed from pre-training data. Our method quantifies uncertainty through two stages: (1) before generation, we identify low-frequency entities indicating long-tail knowledge gaps; (2) during generation, we verify entity co-occurrence in the pre-training corpus, where zero co-occurrence often signals hallucination risk. Both stages leverage Infini-gram for millisecond-latency queries over 4 trillion tokens, triggering retrieval when uncertainty is high. Experiments on multi-hop QA benchmarks show QuCo-RAG achieves EM gains of 5--12 points over state-of-the-art baselines with OLMo-2 models, and transfers effectively to models with undisclosed pre-training data (Llama, Qwen, GPT), improving EM by up to 14 points. Domain generalization on biomedical QA further validates the robustness of our paradigm. These results establish corpus-grounded verification as a principled, practically model-agnostic paradigm for dynamic RAG. Our code is publicly available at this https URL. 
+
+---
