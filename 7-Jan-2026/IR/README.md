@@ -1,0 +1,249 @@
+# Fine-tuning Small Language Models as Efficient Enterprise Search Relevance Labelers 
+
+**Authors**: Yue Kang, Zhuoyi Huang, Benji Schussheim, Diana Licon, Dina Atia, Shixing Cao, Jacob Danovitch, Kunho Kim, Billy Norcilien, Jonah Karpman, Mahmound Sayed, Mike Taylor, Tao Sun, Pavel Metrikov, Vipul Agarwal, Chris Quirk, Ye-Yi Wang, Nick Craswell, Irene Shaffer, Tianwei Chen, Sulaiman Vesal, Soundar Srinivasan  
+
+**Link**: [PDF](https://arxiv.org/pdf/2601.03211)  
+
+**Abstract**: In enterprise search, building high-quality datasets at scale remains a central challenge due to the difficulty of acquiring labeled data. To resolve this challenge, we propose an efficient approach to fine-tune small language models (SLMs) for accurate relevance labeling, enabling high-throughput, domain-specific labeling comparable or even better in quality to that of state-of-the-art large language models (LLMs). To overcome the lack of high-quality and accessible datasets in the enterprise domain, our method leverages on synthetic data generation. Specifically, we employ an LLM to synthesize realistic enterprise queries from a seed document, apply BM25 to retrieve hard negatives, and use a teacher LLM to assign relevance scores. The resulting dataset is then distilled into an SLM, producing a compact relevance labeler. We evaluate our approach on a high-quality benchmark consisting of 923 enterprise query-document pairs annotated by trained human annotators, and show that the distilled SLM achieves agreement with human judgments on par with or better than the teacher LLM. Furthermore, our fine-tuned labeler substantially improves throughput, achieving 17 times increase while also being 19 times more cost-effective. This approach enables scalable and cost-effective relevance labeling for enterprise-scale retrieval applications, supporting rapid offline evaluation and iteration in real-world settings. 
+
+---
+# Parallel Latent Reasoning for Sequential Recommendation 
+
+**Authors**: Jiakai Tang, Xu Chen, Wen Chen, Jian Wu, Yuning Jiang, Bo Zheng  
+
+**Link**: [PDF](https://arxiv.org/pdf/2601.03153)  
+
+**Abstract**: Capturing complex user preferences from sparse behavioral sequences remains a fundamental challenge in sequential recommendation. Recent latent reasoning methods have shown promise by extending test-time computation through multi-step reasoning, yet they exclusively rely on depth-level scaling along a single trajectory, suffering from diminishing returns as reasoning depth increases. To address this limitation, we propose \textbf{Parallel Latent Reasoning (PLR)}, a novel framework that pioneers width-level computational scaling by exploring multiple diverse reasoning trajectories simultaneously. PLR constructs parallel reasoning streams through learnable trigger tokens in continuous latent space, preserves diversity across streams via global reasoning regularization, and adaptively synthesizes multi-stream outputs through mixture-of-reasoning-streams aggregation. Extensive experiments on three real-world datasets demonstrate that PLR substantially outperforms state-of-the-art baselines while maintaining real-time inference efficiency. Theoretical analysis further validates the effectiveness of parallel reasoning in improving generalization capability. Our work opens new avenues for enhancing reasoning capacity in sequential recommendation beyond existing depth scaling. 
+
+---
+# Auditing Search Query Suggestion Bias Through Recursive Algorithm Interrogation 
+
+**Authors**: Fabian Haak, Philipp Schaer  
+
+**Link**: [PDF](https://arxiv.org/pdf/2601.02962)  
+
+**Abstract**: Despite their important role in online information search, search query suggestions have not been researched as much as most other aspects of search engines. Although reasons for this are multi-faceted, the sparseness of context and the limited data basis of up to ten suggestions per search query pose the most significant problem in identifying bias in search query suggestions. The most proven method to reduce sparseness and improve the validity of bias identification of search query suggestions so far is to consider suggestions from subsequent searches over time for the same query. This work presents a new, alternative approach to search query bias identification that includes less high-level suggestions to deepen the data basis of bias analyses. We employ recursive algorithm interrogation techniques and create suggestion trees that enable access to more subliminal search query suggestions. Based on these suggestions, we investigate topical group bias in person-related searches in the political domain. 
+
+---
+# HarmonRank: Ranking-aligned Multi-objective Ensemble for Live-streaming E-commerce Recommendation 
+
+**Authors**: Boyang Xia, Zhou Yu, Zhiliang Zhu, Hanxiao Sun, Biyun Han, Jun Wang, Runnan Liu, Wenwu Ou  
+
+**Link**: [PDF](https://arxiv.org/pdf/2601.02955)  
+
+**Abstract**: Recommendation for live-streaming e-commerce is gaining increasing attention due to the explosive growth of the live streaming economy. Different from traditional e-commerce, live-streaming e-commerce shifts the focus from products to streamers, which requires ranking mechanism to balance both purchases and user-streamer interactions for long-term ecology. To trade off multiple objectives, a popular solution is to build an ensemble model to integrate multi-objective scores into a unified score. The ensemble model is usually supervised by multiple independent binary classification losses of all objectives. However, this paradigm suffers from two inherent limitations. First, the optimization direction of the binary classification task is misaligned with the ranking task (evaluated by AUC). Second, this paradigm overlooks the alignment between objectives, e.g., comment and buy behaviors are partially dependent which can be revealed in labels correlations. The model can achieve better trade-offs if it learns the aligned parts of ranking abilities among different objectives.
+To mitigate these limitations, we propose a novel multi-objective ensemble framework HarmonRank to fulfill both alignment to the ranking task and alignment among objectives. For alignment to ranking, we formulate ranking metric AUC as a rank-sum problem and utilize differentiable ranking techniques for ranking-oriented optimization. For inter-objective alignment, we change the original one-step ensemble paradigm to a two-step relation-aware ensemble scheme.
+Extensive offline experiments results on two industrial datasets and online experiments demonstrate that our approach significantly outperforms existing state-of-the-art methods. The proposed method has been fully deployed in Kuaishou's live-streaming e-commerce recommendation platform with 400 million DAUs, contributing over 2% purchase gain. 
+
+---
+# COFFEE: COdesign Framework for Feature Enriched Embeddings in Ads-Ranking Systems 
+
+**Authors**: Sohini Roychowdhury, Doris Wang, Qian Ge, Joy Mu, Srihari Reddy  
+
+**Link**: [PDF](https://arxiv.org/pdf/2601.02807)  
+
+**Abstract**: Diverse and enriched data sources are essential for commercial ads-recommendation models to accurately assess user interest both before and after engagement with content. While extended user-engagement histories can improve the prediction of user interests, it is equally important to embed activity sequences from multiple sources to ensure freshness of user and ad-representations, following scaling law principles. In this paper, we present a novel three-dimensional framework for enhancing user-ad representations without increasing model inference or serving complexity. The first dimension examines the impact of incorporating diverse event sources, the second considers the benefits of longer user histories, and the third focuses on enriching data with additional event attributes and multi-modal embeddings. We assess the return on investment (ROI) of our source enrichment framework by comparing organic user engagement sources, such as content viewing, with ad-impression sources. The proposed method can boost the area under curve (AUC) and the slope of scaling curves for ad-impression sources by 1.56 to 2 times compared to organic usage sources even for short online-sequence lengths of 100 to 10K. Additionally, click-through rate (CTR) prediction improves by 0.56% AUC over the baseline production ad-recommendation system when using enriched ad-impression event sources, leading to improved sequence scaling resolutions for longer and offline user-ad representations. 
+
+---
+# Netflix Artwork Personalization via LLM Post-training 
+
+**Authors**: Hyunji Nam, Sejoon Oh, Emma Kong, Yesu Feng, Moumita Bhattacharya  
+
+**Link**: [PDF](https://arxiv.org/pdf/2601.02764)  
+
+**Abstract**: Large language models (LLMs) have demonstrated success in various applications of user recommendation and personalization across e-commerce and entertainment. On many entertainment platforms such as Netflix, users typically interact with a wide range of titles, each represented by an artwork. Since users have diverse preferences, an artwork that appeals to one type of user may not resonate with another with different preferences. Given this user heterogeneity, our work explores the novel problem of personalized artwork recommendations according to diverse user preferences. Similar to the multi-dimensional nature of users' tastes, titles contain different themes and tones that may appeal to different viewers. For example, the same title might feature both heartfelt family drama and intense action scenes. Users who prefer romantic content may like the artwork emphasizing emotional warmth between the characters, while those who prefer action thrillers may find high-intensity action scenes more intriguing. Rather than a one-size-fits-all approach, we conduct post-training of pre-trained LLMs to make personalized artwork recommendations, selecting the most preferred visual representation of a title for each user and thereby improving user satisfaction and engagement. Our experimental results with Llama 3.1 8B models (trained on a dataset of 110K data points and evaluated on 5K held-out user-title pairs) show that the post-trained LLMs achieve 3-5\% improvements over the Netflix production model, suggesting a promising direction for granular personalized recommendations using LLMs. 
+
+---
+# Ahead of the Spread: Agent-Driven Virtual Propagation for Early Fake News Detection 
+
+**Authors**: Bincheng Gu, Min Gao, Junliang Yu, Zongwei Wang, Zhiyi Liu, Kai Shu, Hongyu Zhang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2601.02750)  
+
+**Abstract**: Early detection of fake news is critical for mitigating its rapid dissemination on social media, which can severely undermine public trust and social stability. Recent advancements show that incorporating propagation dynamics can significantly enhance detection performance compared to previous content-only approaches. However, this remains challenging at early stages due to the absence of observable propagation signals. To address this limitation, we propose AVOID, an \underline{a}gent-driven \underline{v}irtual pr\underline{o}pagat\underline{i}on for early fake news \underline{d}etection. AVOID reformulates early detection as a new paradigm of evidence generation, where propagation signals are actively simulated rather than passively observed. Leveraging LLM-powered agents with differentiated roles and data-driven personas, AVOID realistically constructs early-stage diffusion behaviors without requiring real propagation data. The resulting virtual trajectories provide complementary social evidence that enriches content-based detection, while a denoising-guided fusion strategy aligns simulated propagation with content semantics. Extensive experiments on benchmark datasets demonstrate that AVOID consistently outperforms state-of-the-art baselines, highlighting the effectiveness and practical value of virtual propagation augmentation for early fake news detection. The code and data are available at this https URL. 
+
+---
+# CREAM: Continual Retrieval on Dynamic Streaming Corpora with Adaptive Soft Memory 
+
+**Authors**: HuiJeong Son, Hyeongu Kang, Sunho Kim, Subeen Ho, SeongKu Kang, Dongha Lee, Susik Yoon  
+
+**Link**: [PDF](https://arxiv.org/pdf/2601.02708)  
+
+**Abstract**: Information retrieval (IR) in dynamic data streams is emerging as a challenging task, as shifts in data distribution degrade the performance of AI-powered IR systems. To mitigate this issue, memory-based continual learning has been widely adopted for IR. However, existing methods rely on a fixed set of queries with ground-truth relevant documents, which limits generalization to unseen queries and documents, making them impractical for real-world applications. To enable more effective learning with unseen topics of a new corpus without ground-truth labels, we propose CREAM, a self-supervised framework for memory-based continual retrieval. CREAM captures the evolving semantics of streaming queries and documents into dynamically structured soft memory and leverages it to adapt to both seen and unseen topics in an unsupervised setting. We realize this through three key techniques: fine-grained similarity estimation, regularized cluster prototyping, and stratified coreset sampling. Experiments on two benchmark datasets demonstrate that CREAM exhibits superior adaptability and retrieval accuracy, outperforming the strongest method in a label-free setting by 27.79\% in Success@5 and 44.5\% in Recall@10 on average, and achieving performance comparable to or even exceeding that of supervised methods. 
+
+---
+# A Dynamic Retrieval-Augmented Generation System with Selective Memory and Remembrance 
+
+**Authors**: Okan Bursa  
+
+**Link**: [PDF](https://arxiv.org/pdf/2601.02428)  
+
+**Abstract**: We introduce \emph{Adaptive RAG Memory} (ARM), a retrieval-augmented generation (RAG) framework that replaces a static vector index with a \emph{dynamic} memory substrate governed by selective remembrance and decay. Frequently retrieved items are consolidated and protected from forgetting, while rarely used items gradually decay, inspired by cognitive consolidation and forgetting principles. On a lightweight retrieval benchmark, ARM reaches near state-of-the-art performance (e.g., NDCG@5 $\approx$ 0.940, Recall@5 $=1.000$) with only $\sim$22M parameters in the embedding layer, achieving the best efficiency among ultra-efficient models ($<$25M parameters). In addition, we compare static vs. dynamic RAG combinations across Llama 3.1 and GPT-4o. Llama 3.1 with static RAG achieves the highest key-term coverage (67.2\%) at moderate latency, while GPT-4o with a dynamic selective retrieval policy attains the fastest responses (8.2s on average) with competitive coverage (58.7\%). We further present an engineering optimization of the DynamicRAG implementation, making embedding weights configurable, adjustable at runtime, and robust to invalid settings.
+ARM yields competitive accuracy, self-regularizing memory growth, and interpretable retention dynamics without retraining the generator\color{black} and provides practical trade-off between quality, latency and memory efficiency for production and research RAG system. 
+
+---
+# Socially-Aware Recommender Systems Mitigate Opinion Clusterization 
+
+**Authors**: Lukas Schüepp, Carmen Amo Alonso, Florian Dörfler, Giulia De Pasquale  
+
+**Link**: [PDF](https://arxiv.org/pdf/2601.02412)  
+
+**Abstract**: Recommender systems shape online interactions by matching users with creators content to maximize engagement. Creators, in turn, adapt their content to align with users preferences and enhance their popularity. At the same time, users preferences evolve under the influence of both suggested content from the recommender system and content shared within their social circles. This feedback loop generates a complex interplay between users, creators, and recommender algorithms, which is the key cause of filter bubbles and opinion polarization. We develop a social network-aware recommender system that explicitly accounts for this user-creators feedback interaction and strategically exploits the topology of the user's own social network to promote diversification. Our approach highlights how accounting for and exploiting user's social network in the recommender system design is crucial to mediate filter bubble effects while balancing content diversity with personalization. Provably, opinion clusterization is positively correlated with the influence of recommended content on user opinions. Ultimately, the proposed approach shows the power of socially-aware recommender systems in combating opinion polarization and clusterization phenomena. 
+
+---
+# Tree of Preferences for Diversified Recommendation 
+
+**Authors**: Hanyang Yuan, Ning Tang, Tongya Zheng, Jiarong Xu, Xintong Hu, Renhong Huang, Shunyu Liu, Jiacong Hu, Jiawei Chen, Mingli Song  
+
+**Link**: [PDF](https://arxiv.org/pdf/2601.02386)  
+
+**Abstract**: Diversified recommendation has attracted increasing attention from both researchers and practitioners, which can effectively address the homogeneity of recommended items. Existing approaches predominantly aim to infer the diversity of user preferences from observed user feedback. Nonetheless, due to inherent data biases, the observed data may not fully reflect user interests, where underexplored preferences can be overwhelmed or remain unmanifested. Failing to capture these preferences can lead to suboptimal diversity in recommendations. To fill this gap, this work aims to study diversified recommendation from a data-bias perspective. Inspired by the outstanding performance of large language models (LLMs) in zero-shot inference leveraging world knowledge, we propose a novel approach that utilizes LLMs' expertise to uncover underexplored user preferences from observed behavior, ultimately providing diverse and relevant recommendations. To achieve this, we first introduce Tree of Preferences (ToP), an innovative structure constructed to model user preferences from coarse to fine. ToP enables LLMs to systematically reason over the user's rationale behind their behavior, thereby uncovering their underexplored preferences. To guide diversified recommendations using uncovered preferences, we adopt a data-centric approach, identifying candidate items that match user preferences and generating synthetic interactions that reflect underexplored preferences. These interactions are integrated to train a general recommender for diversification. Moreover, we scale up overall efficiency by dynamically selecting influential users during optimization. Extensive evaluations of both diversity and relevance show that our approach outperforms existing methods in most cases and achieves near-optimal performance in others, with reasonable inference latency. 
+
+---
+# TAG-HGT: A Scalable and Cost-Effective Framework for Inductive Cold-Start Academic Recommendation 
+
+**Authors**: Zhexiang Li  
+
+**Link**: [PDF](https://arxiv.org/pdf/2601.02381)  
+
+**Abstract**: Inductive cold-start recommendation remains the "Achilles' Heel" of industrial academic platforms, where thousands of new scholars join daily without historical interaction records. While recent Generative Graph Models (e.g., HiGPT, OFA) demonstrate promising semantic capabilities, their prohibitive inference latency (often exceeding 13 minutes per 1,000 requests) and massive computational costs render them practically undeployable for real-time, million-scale applications. To bridge this gap between generative quality and industrial scalability, we propose TAG-HGT, a cost-effective neuro-symbolic framework. Adopting a decoupled "Semantics-First, Structure-Refined" paradigm, TAG-HGT utilizes a frozen Large Language Model (DeepSeek-V3) as an offline semantic factory and distills its knowledge into a lightweight Heterogeneous Graph Transformer (HGT) via Cross-View Contrastive Learning (CVCL). We present a key insight: while LLM semantics provide necessary global recall, structural signals offer the critical local discrimination needed to distinguish valid collaborators from semantically similar but socially unreachable strangers in dense embedding spaces. Validated under a strict Time-Machine Protocol on the massive OpenAlex dataset, TAG-HGT achieves a SOTA System Recall@10 of 91.97%, outperforming structure-only baselines by 20.7%. Most significantly, from an industrial perspective, TAG-HGT reduces inference latency by five orders of magnitude ($4.5 \times 10^{5}\times$) compared to generative baselines (from 780s down to 1.73 ms), and slashes inference costs from $\sim$$1.50 to $<$$0.001 per 1k queries. This 99.9% cost reduction democratizes high-precision academic recommendation. 
+
+---
+# A Lay User Explainable Food Recommendation System Based on Hybrid Feature Importance Extraction and Large Language Models 
+
+**Authors**: Melissa Tessa, Diderot D. Cidjeu, Rachele Carli, Sarah Abchiche, Ahmad Aldarwishd, Igor Tchappi, Amro Najjar  
+
+**Link**: [PDF](https://arxiv.org/pdf/2601.02374)  
+
+**Abstract**: Large Language Models (LLM) have experienced strong development in recent years, with varied applications. This paper uses LLMs to develop a post-hoc process that provides more elaborated explanations of the results of food recommendation systems. By combining LLM with a hybrid extraction of key variables using SHAP, we obtain dynamic, convincing and more comprehensive explanations to lay user, compared to those in the literature. This approach enhances user trust and transparency by making complex recommendation outcomes easier to understand for a lay user. 
+
+---
+# Improving News Recommendations through Hybrid Sentiment Modelling and Reinforcement Learning 
+
+**Authors**: Eunice Kingenga, Mike Wa Nkongolo  
+
+**Link**: [PDF](https://arxiv.org/pdf/2601.02372)  
+
+**Abstract**: News recommendation systems rely on automated sentiment analysis to personalise content and enhance user engagement. Conventional approaches often struggle with ambiguity, lexicon inconsistencies, and limited contextual understanding, particularly in multi-source news environments. Existing models typically treat sentiment as a secondary feature, reducing their ability to adapt to users' affective preferences. To address these limitations, this study develops an adaptive, sentiment-aware news recommendation framework by integrating hybrid sentiment analysis with reinforcement learning. Using the BBC News dataset, a hybrid sentiment model combines VADER, AFINN, TextBlob, and SentiWordNet scores to generate robust article-level sentiment estimates. Articles are categorised as positive, negative, or neutral, and these sentiment states are embedded within a Q-learning architecture to guide the agent in learning optimal recommendation policies. The proposed system effectively identifies and recommends articles with aligned emotional profiles while continuously improving personalisation through iterative Q-learning updates. The results demonstrate that coupling hybrid sentiment modelling with reinforcement learning provides a feasible, interpretable, and adaptive approach for user-centred news recommendation. 
+
+---
+# Distillation-based Scenario-Adaptive Mixture-of-Experts for the Matching Stage of Multi-scenario Recommendation 
+
+**Authors**: Ruibing Wang, Shuhan Guo, Haotong Du, Quanming Yao  
+
+**Link**: [PDF](https://arxiv.org/pdf/2601.02368)  
+
+**Abstract**: Multi-scenario recommendation is pivotal for optimizing user experience across diverse contexts. While Multi-gate Mixture-of-Experts (MMOE) thrives in ranking, its transfer to the matching stage is hindered by the blind optimization inherent to independent two-tower architectures and the parameter dominance of head scenarios. To address these structural and distributional bottlenecks, we propose Distillation-based Scenario-Adaptive Mixture-of-Experts (DSMOE). Specially, we devise a Scenario-Adaptive Projection (SAP) module to generate lightweight, context-specific parameters, effectively preventing expert collapse in long-tail scenarios. Concurrently, we introduce a cross-architecture knowledge distillation framework, where an interaction-aware teacher guides the two-tower student to capture complex matching patterns. Extensive experiments on real-world datasets demonstrate DSMOE's superiority, particularly in significantly improving retrieval quality for under-represented, data-sparse scenarios. 
+
+---
+# TextBridgeGNN: Pre-training Graph Neural Network for Cross-Domain Recommendation via Text-Guided Transfer 
+
+**Authors**: Yiwen Chen, Yiqing Wu, Huishi Luo, Fuzhen Zhuang, Deqing Wang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2601.02366)  
+
+**Abstract**: Graph-based recommendation has achieved great success in recent years. The classical graph recommendation model utilizes ID embedding to store essential collaborative information. However, this ID-based paradigm faces challenges in transferring to a new domain, making it hard to build a pre-trained graph recommendation model. This phenomenon primarily stems from two inherent challenges: (1) the non-transferability of ID embeddings due to isolated domain-specific ID spaces, and (2) structural incompatibility between heterogeneous interaction graphs across domains.
+To address these issues, we propose TextBridgeGNN, a pre-training and fine-tuning framework that can effectively transfer knowledge from a pre-trained GNN to downstream tasks. We believe the key lies in how to build the relationship between domains. Specifically, TextBridgeGNN uses text as a semantic bridge to connect domains through multi-level graph propagation. During the pre-training stage, textual information is utilized to break the data islands formed by multiple domains, and hierarchical GNNs are designed to learn both domain-specific and domain-global knowledge with text features, ensuring the retention of collaborative signals and the enhancement of semantics. During the fine-tuning stage, a similarity transfer mechanism is proposed. This mechanism initializes ID embeddings in the target domain by transferring from semantically related nodes, successfully transferring the ID embeddings and graph pattern.
+Experiments demonstrate that TextBridgeGNN outperforms existing methods in cross-domain, multi-domain, and training-free settings, highlighting its ability to integrate Pre-trained Language Model (PLM)-driven semantics with graph-based collaborative filtering without costly language model fine-tuning or real-time inference overhead. 
+
+---
+# FUSE : Failure-aware Usage of Subagent Evidence for MultiModal Search and Recommendation 
+
+**Authors**: Tushar Vatsa, Vibha Belavadi, Priya Shanmugasundaram, Suhas Suresha, Dewang Sultania  
+
+**Link**: [PDF](https://arxiv.org/pdf/2601.02365)  
+
+**Abstract**: Multimodal creative assistants decompose user goals and route tasks to subagents for layout, styling, retrieval, and generation. Retrieval quality is pivotal, yet failures can arise at several stages: understanding user intent, choosing content types, finding candidates (recall), or ranking results. Meanwhile, sending and processing images is costly, making naive multimodal approaches impractical. We present FUSE: Failure-aware Usage of Subagent Evidence for MultiModal Search and Recommendation. FUSE replaces most raw-image prompting with a compact Grounded Design Representation (GDR): a selection aware JSON of canvas elements (image, text, shape, icon, video, logo), structure, styles, salient colors, and user selection provided by the Planner team. FUSE implements seven context budgeting strategies: comprehensive baseline prompting, context compression, chain-of-thought reasoning, mini-shot optimization, retrieval-augmented context, two-stage processing, and zero-shot minimalism. Finally, a pipeline attribution layer monitors system performance by converting subagent signals into simple checks: intent alignment, content-type/routing sanity, recall health (e.g., zero-hit and top-match strength), and ranking displacement analysis. We evaluate the seven context budgeting variants across 788 evaluation queries from diverse users and design templates (refer Figure 3). Our systematic evaluation reveals that Context Compression achieves optimal performance across all pipeline stages, with 93.3% intent accuracy, 86.8% routing success(with fallbacks), 99.4% recall, and 88.5% NDCG@5. This approach demonstrates that strategic context summarization outperforms both comprehensive and minimal contextualization strategies. 
+
+---
+# Towards Trustworthy LLM-Based Recommendation via Rationale Integration 
+
+**Authors**: Chung Park, Taesan Kim, Hyeongjun Yun, Dongjoon Hong, Junui Hong, Kijung Park, MinCheol Cho, Mira Myong, Jihoon Oh, Min sung Choi  
+
+**Link**: [PDF](https://arxiv.org/pdf/2601.02364)  
+
+**Abstract**: Traditional recommender systems (RS) have been primarily optimized for accuracy and short-term engagement, often overlooking transparency and trustworthiness. Recently, platforms such as Amazon and Instagram have begun providing recommendation rationales to users, acknowledging their critical role in fostering trust and enhancing engagement; however, most existing systems still treat them as post-hoc artifacts. We propose an LLM-based recommender (LLM-Rec) that not only predicts items but also generates logically grounded rationales. Our approach leverages a self-annotated rationale dataset and instruction tuning in a rationale-first format, where the model generates an explanation before outputting the recommended item. By adopting this strategy and representing rationales in a chain-of-thought (CoT) style, LLM-Rec strengthens both interpretability and recommendation performance. Experiments on the Fashion and Scientific domains of the Amazon Review dataset demonstrate significant improvements over well-established baselines. To encourage reproducibility and future research, we publicly release a rationale-augmented recommendation dataset containing user histories, rationales, and recommended items. 
+
+---
+# The Impact of LLM-Generated Reviews on Recommender Systems: Textual Shifts, Performance Effects, and Strategic Platform Control 
+
+**Authors**: Itzhak Ziv, Moshe Unger, Hilah Geva  
+
+**Link**: [PDF](https://arxiv.org/pdf/2601.02362)  
+
+**Abstract**: The rise of generative AI technologies is reshaping content-based recommender systems (RSes), which increasingly encounter AI-generated content alongside human-authored content. This study examines how the introduction of AI-generated reviews influences RS performance and business outcomes. We analyze two distinct pathways through which AI content can enter RSes: user-centric, in which individuals use AI tools to refine their reviews, and platform-centric, in which platforms generate synthetic reviews directly from structured metadata. Using a large-scale dataset of hotel reviews from TripAdvisor, we generate synthetic reviews using LLMs and evaluate their impact across the training and deployment phases of RSes. We find that AI-generated reviews differ systematically from human-authored reviews across multiple textual dimensions. Although both user- and platform-centric AI reviews enhance RS performance relative to models without textual data, models trained on human reviews consistently achieve superior performance, underscoring the quality of authentic human data. Human-trained models generalize robustly to AI content, whereas AI-trained models underperform on both content types. Furthermore, tone-based framing strategies (encouraging, constructive, or critical) substantially enhance platform-generated review effectiveness. Our findings highlight the strategic importance of platform control in governing the generation and integration of AI-generated reviews, ensuring that synthetic content complements recommendation robustness and sustainable business value. 
+
+---
+# GCRank: A Generative Contextual Comprehension Paradigm for Takeout Ranking Model 
+
+**Authors**: Ziheng Ni, Congcong Liu, Cai Shang, Yiming Sun, Junjie Li, Zhiwei Fang, Guangpeng Chen, Jian Li, Zehua Zhang, Changping Peng, Zhangang Lin, Ching Law, Jingping Shao  
+
+**Link**: [PDF](https://arxiv.org/pdf/2601.02361)  
+
+**Abstract**: The ranking stage serves as the central optimization and allocation hub in advertising systems, governing economic value distribution through eCPM and orchestrating the user-centric blending of organic and advertising content. Prevailing ranking models often rely on fragmented modules and hand-crafted features, limiting their ability to interpret complex user intent. This challenge is further amplified in location-based services such as food delivery, where user decisions are shaped by dynamic spatial, temporal, and individual contexts. To address these limitations, we propose a novel generative framework that reframes ranking as a context comprehension task, modeling heterogeneous signals in a unified architecture. Our architecture consists of two core components: the Generative Contextual Encoder (GCE) and the Generative Contextual Fusion (GCF). The GCE comprises three specialized modules: a Personalized Context Enhancer (PCE) for user-specific modeling, a Collective Context Enhancer (CCE) for group-level patterns, and a Dynamic Context Enhancer (DCE) for real-time situational adaptation. The GCF module then seamlessly integrates these contextual representations through low-rank adaptation. Extensive experiments confirm that our method achieves significant gains in critical business metrics, including click-through rate and platform revenue. We have successfully deployed our method on a large-scale food delivery advertising platform, demonstrating its substantial practical impact. This work pioneers a new perspective on generative recommendation and highlights its practical potential in industrial advertising systems. 
+
+---
+# Q-Regularized Generative Auto-Bidding: From Suboptimal Trajectories to Optimal Policies 
+
+**Authors**: Mingming Zhang, Na Li, Zhuang Feiqing, Hongyang Zheng, Jiangbing Zhou, Wang Wuyin, Sheng-jie Sun, XiaoWei Chen, Junxiong Zhu, Lixin Zou, Chenliang Li  
+
+**Link**: [PDF](https://arxiv.org/pdf/2601.02754)  
+
+**Abstract**: With the rapid development of e-commerce, auto-bidding has become a key asset in optimizing advertising performance under diverse advertiser environments. The current approaches focus on reinforcement learning (RL) and generative models. These efforts imitate offline historical behaviors by utilizing a complex structure with expensive hyperparameter tuning. The suboptimal trajectories further exacerbate the difficulty of policy learning.
+To address these challenges, we proposes QGA, a novel Q-value regularized Generative Auto-bidding method. In QGA, we propose to plug a Q-value regularization with double Q-learning strategy into the Decision Transformer backbone. This design enables joint optimization of policy imitation and action-value maximization, allowing the learned bidding policy to both leverage experience from the dataset and alleviate the adverse impact of the suboptimal trajectories. Furthermore, to safely explore the policy space beyond the data distribution, we propose a Q-value guided dual-exploration mechanism, in which the DT model is conditioned on multiple return-to-go targets and locally perturbed actions. This entire exploration process is dynamically guided by the aforementioned Q-value module, which provides principled evaluation for each candidate action. Experiments on public benchmarks and simulation environments demonstrate that QGA consistently achieves superior or highly competitive results compared to existing alternatives. Notably, in large-scale real-world A/B testing, QGA achieves a 3.27% increase in Ad GMV and a 2.49% improvement in Ad ROI. 
+
+---
+# A Music Information Retrieval Approach to Classify Sub-Genres in Role Playing Games 
+
+**Authors**: Daeun Hwang, Xuyuan Cai, Edward F. Melcer, Elin Carstensdottir  
+
+**Link**: [PDF](https://arxiv.org/pdf/2601.02591)  
+
+**Abstract**: Video game music (VGM) is often studied under the same lens as film music, which largely focuses on its theoretical functionality with relation to the identified genres of the media. However, till date, we are unaware of any systematic approach that analyzes the quantifiable musical features in VGM across several identified game genres. Therefore, we extracted musical features from VGM in games from three sub-genres of Role-Playing Games (RPG), and then hypothesized how different musical features are correlated to the perceptions and portrayals of each genre. This observed correlation may be used to further suggest such features are relevant to the expected storytelling elements or play mechanics associated with the sub-genre. 
+
+---
+# Understanding Human Perception of Music Plagiarism Through a Computational Approach 
+
+**Authors**: Daeun Hwang, Hyeonbin Hwang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2601.02586)  
+
+**Abstract**: There is a wide variety of music similarity detection algorithms, while discussions about music plagiarism in the real world are often based on audience perceptions. Therefore, we aim to conduct a study to examine the key criteria of human perception of music plagiarism, focusing on the three commonly used musical features in similarity analysis: melody, rhythm, and chord progression. After identifying the key features and levels of variation humans use in perceiving musical similarity, we propose a LLM-as-a-judge framework that applies a systematic, step-by-step approach, drawing on modules that extract such high-level attributes. 
+
+---
+# DataParasite Enables Scalable and Repurposable Online Data Curation 
+
+**Authors**: Mengyi Sun  
+
+**Link**: [PDF](https://arxiv.org/pdf/2601.02578)  
+
+**Abstract**: Many questions in computational social science rely on datasets assembled from heterogeneous online sources, a process that is often labor-intensive, costly, and difficult to reproduce. Recent advances in large language models enable agentic search and structured extraction from the web, but existing systems are frequently opaque, inflexible, or poorly suited to scientific data curation. Here we introduce DataParasite, an open-source, modular pipeline for scalable online data collection. DataParasite decomposes tabular curation tasks into independent, entity-level searches defined through lightweight configuration files and executed through a shared, task-agnostic python script. Crucially, the same pipeline can be repurposed to new tasks, including those without predefined entity lists, using only natural-language instructions. We evaluate the pipeline on multiple canonical tasks in computational social science, including faculty hiring histories, elite death events, and political career trajectories. Across tasks, DataParasite achieves high accuracy while reducing data-collection costs by an order of magnitude relative to manual curation. By lowering the technical and labor barriers to online data assembly, DataParasite provides a practical foundation for scalable, transparent, and reusable data curation in computational social science and beyond. 
+
+---
+# Comparative Analysis of Binarization Methods For Medical Image Hashing On Odir Dataset 
+
+**Authors**: Nedim Muzoglu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2601.02564)  
+
+**Abstract**: In this study, we evaluated four binarization methods. Locality-Sensitive Hashing (LSH), Iterative Quantization (ITQ), Kernel-based Supervised Hashing (KSH), and Supervised Discrete Hashing (SDH) on the ODIR dataset using deep feature embeddings. Experimental results show that SDH achieved the best performance, with an mAP@100 of 0.9184 using only 32-bit codes, outperforming LSH, ITQ, and KSH. Compared with prior studies, our method proved highly competitive: Fang et al. reported 0.7528 (Fundus-iSee, 48 bits) and 0.8856 (ASOCT-Cataract, 48 bits), while Wijesinghe et al. achieved 94.01 (KVASIR, 256 bits). Despite using significantly fewer bits, our SDH-based framework reached retrieval accuracy close to the state-of-the-art. These findings demonstrate that SDH is the most effective approach among those tested, offering a practical balance of accuracy, storage, and efficiency for medical image retrieval and device inventory management. 
+
+---
+# How to Discover Knowledge for FutureG: Contextual RAG and LLM Prompting for O-RAN 
+
+**Authors**: Nathan Conger, Nathan Scollar, Kemal Davaslioglu, Yalin E. Sagduyu, Sastry Kompella  
+
+**Link**: [PDF](https://arxiv.org/pdf/2601.02382)  
+
+**Abstract**: We present a retrieval-augmented question answering framework for 5G/6G networks, where the Open Radio Access Network (O-RAN) has become central to disaggregated, virtualized, and AI-driven wireless systems. While O-RAN enables multi-vendor interoperability and cloud-native deployments, its fast-changing specifications and interfaces pose major challenges for researchers and practitioners. Manual navigation of these complex documents is labor-intensive and error-prone, slowing system design, integration, and deployment. To address this challenge, we adopt Contextual Retrieval-Augmented Generation (Contextual RAG), a strategy in which candidate answer choices guide document retrieval and chunk-specific context to improve large language model (LLM) performance. This improvement over traditional RAG achieves more targeted and context-aware retrieval, which improves the relevance of documents passed to the LLM, particularly when the query alone lacks sufficient context for accurate grounding. Our framework is designed for dynamic domains where data evolves rapidly and models must be continuously updated or redeployed, all without requiring LLM fine-tuning. We evaluate this framework using the ORANBenchmark-13K dataset, and compare three LLMs, namely, Llama3.2, Qwen2.5-7B, and Qwen3.0-4B, across both Direct Question Answering (Direct Q&A) and Chain-of-Thought (CoT) prompting strategies. We show that Contextual RAG consistently improves accuracy over standard RAG and base prompting, while maintaining competitive runtime and CO2 emissions. These results highlight the potential of Contextual RAG to serve as a scalable and effective solution for domain-specific Q&A in ORAN and broader 5G/6G environments, enabling more accurate interpretation of evolving standards while preserving efficiency and sustainability. 
+
+---
+# Cross-Platform Digital Discourse Analysis of the Israel-Hamas Conflict: Sentiment, Topics, and Event Dynamics 
+
+**Authors**: Despoina Antonakaki, Sotiris Ioannidis  
+
+**Link**: [PDF](https://arxiv.org/pdf/2601.02367)  
+
+**Abstract**: The Israeli-Palestinian conflict remains one of the most polarizing geopolitical issues, with the October 2023 escalation intensifying online debate. Social media platforms, particularly Telegram, have become central to real-time news sharing, advocacy, and propaganda. In this study, we analyze Telegram, Twitter/X, and Reddit to examine how conflict narratives are produced, amplified, and contested across different digital spheres. Building on our previous work on Telegram discourse during the 2023 escalation, we extend the analysis longitudinally and cross-platform using an updated dataset spanning October 2023 to mid-2025. The corpus includes more than 187,000 Telegram messages, 2.1 million Reddit comments, and curated Twitter/X posts. We combine Latent Dirichlet Allocation (LDA), BERTopic, and transformer-based sentiment and emotion models to identify dominant themes, emotional dynamics, and propaganda strategies. Telegram channels provide unfiltered, high-intensity documentation of events; Twitter/X amplifies frames to global audiences; and Reddit hosts more reflective and deliberative discussions. Our findings reveal persistent negative sentiment, strong coupling between humanitarian framing and solidarity expressions, and platform-specific pathways for the diffusion of pro-Palestinian and pro-Israeli narratives. This paper offers three contributions: (1) a multi-platform, FAIR-compliant dataset on the Israel-Hamas war, (2) an integrated pipeline combining topic modeling, sentiment and emotion analysis, and spam filtering for large-scale conflict discourse, and (3) empirical insights into how platform affordances and affective publics shape the evolution of digital conflict communication. 
+
+---
