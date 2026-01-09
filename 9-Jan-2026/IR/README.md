@@ -1,0 +1,182 @@
+# Multivector Reranking in the Era of Strong First-Stage Retrievers 
+
+**Authors**: Silvio Martinico, Franco Maria Nardini, Cosimo Rulli, Rossano Venturini  
+
+**Link**: [PDF](https://arxiv.org/pdf/2601.05200)  
+
+**Abstract**: Learned multivector representations power modern search systems with strong retrieval effectiveness, but their real-world use is limited by the high cost of exhaustive token-level retrieval. Therefore, most systems adopt a \emph{gather-and-refine} strategy, where a lightweight gather phase selects candidates for full scoring. However, this approach requires expensive searches over large token-level indexes and often misses the documents that would rank highest under full similarity. In this paper, we reproduce several state-of-the-art multivector retrieval methods on two publicly available datasets, providing a clear picture of the current multivector retrieval field and observing the inefficiency of token-level gathering. Building on top of that, we show that replacing the token-level gather phase with a single-vector document retriever -- specifically, a learned sparse retriever (LSR) -- produces a smaller and more semantically coherent candidate set. This recasts the gather-and-refine pipeline into the well-established two-stage retrieval architecture. As retrieval latency decreases, query encoding with two neural encoders becomes the dominant computational bottleneck. To mitigate this, we integrate recent inference-free LSR methods, demonstrating that they preserve the retrieval effectiveness of the dual-encoder pipeline while substantially reducing query encoding time. Finally, we investigate multiple reranking configurations that balance efficiency, memory, and effectiveness, and we introduce two optimization techniques that prune low-quality candidates early. Empirical results show that these techniques improve retrieval efficiency by up to 1.8$\times$ with no loss in quality. Overall, our two-stage approach achieves over $24\times$ speedup over the state-of-the-art multivector retrieval systems, while maintaining comparable or superior retrieval quality. 
+
+---
+# Dynamics in Search Engine Query Suggestions for European Politicians 
+
+**Authors**: Franziska Pradel, Fabian Haak  
+
+**Link**: [PDF](https://arxiv.org/pdf/2601.05081)  
+
+**Abstract**: Search engines are commonly used for online political information seeking. Yet, it remains unclear how search query suggestions for political searches that reflect the latent interest of internet users vary across countries and over time. We provide a systematic analysis of Google search engine query suggestions for European and national politicians. Using an original dataset of search query suggestions for European politicians collected in ten countries, we find that query suggestions are less stable over time in politicians' countries of origin, when the politicians hold a supranational role, and for female politicians. Moreover, query suggestions for political leaders and male politicians are more similar across countries. We conclude by discussing possible future directions for studying information search about European politicians in online search. 
+
+---
+# Breaking Robustness Barriers in Cognitive Diagnosis: A One-Shot Neural Architecture Search Perspective 
+
+**Authors**: Ziwen Wang, Shangshang Yang, Xiaoshan Yu, Haiping Ma, Xingyi Zhang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2601.04918)  
+
+**Abstract**: With the advancement of network technologies, intelligent tutoring systems (ITS) have emerged to deliver increasingly precise and tailored personalized learning services. Cognitive diagnosis (CD) has emerged as a core research task in ITS, aiming to infer learners' mastery of specific knowledge concepts by modeling the mapping between learning behavior data and knowledge states. However, existing research prioritizes model performance enhancement while neglecting the pervasive noise contamination in observed response data, significantly hindering practical deployment. Furthermore, current cognitive diagnosis models (CDMs) rely heavily on researchers' domain expertise for structural design, which fails to exhaustively explore architectural possibilities, thus leaving model architectures' full potential untapped. To address this issue, we propose OSCD, an evolutionary multi-objective One-Shot neural architecture search method for Cognitive Diagnosis, designed to efficiently and robustly improve the model's capability in assessing learner proficiency. Specifically, OSCD operates through two distinct stages: training and searching. During the training stage, we construct a search space encompassing diverse architectural combinations and train a weight-sharing supernet represented via the complete binary tree topology, enabling comprehensive exploration of potential architectures beyond manual design priors. In the searching stage, we formulate the optimal architecture search under heterogeneous noise scenarios as a multi-objective optimization problem (MOP), and develop an optimization framework integrating a Pareto-optimal solution search strategy with cross-scenario performance evaluation for resolution. Extensive experiments on real-world educational datasets validate the effectiveness and robustness of the optimal architectures discovered by our OSCD model for CD tasks. 
+
+---
+# PROMISE: Process Reward Models Unlock Test-Time Scaling Laws in Generative Recommendations 
+
+**Authors**: Chengcheng Guo, Kuo Cai, Yu Zhou, Qiang Luo, Ruiming Tang, Han Li, Kun Gai, Guorui Zhou  
+
+**Link**: [PDF](https://arxiv.org/pdf/2601.04674)  
+
+**Abstract**: Generative Recommendation has emerged as a promising paradigm, reformulating recommendation as a sequence-to-sequence generation task over hierarchical Semantic IDs. However, existing methods suffer from a critical issue we term Semantic Drift, where errors in early, high-level tokens irreversibly divert the generation trajectory into irrelevant semantic subspaces. Inspired by Process Reward Models (PRMs) that enhance reasoning in Large Language Models, we propose Promise, a novel framework that integrates dense, step-by-step verification into generative models. Promise features a lightweight PRM to assess the quality of intermediate inference steps, coupled with a PRM-guided Beam Search strategy that leverages dense feedback to dynamically prune erroneous branches. Crucially, our approach unlocks Test-Time Scaling Laws for recommender systems: by increasing inference compute, smaller models can match or surpass larger models. Extensive offline experiments and online A/B tests on a large-scale platform demonstrate that Promise effectively mitigates Semantic Drift, significantly improving recommendation accuracy while enabling efficient deployment. 
+
+---
+# Succeeding at Scale: Automated Multi-Retriever Fusion and Query-Side Adaptation for Multi-Tenant Search 
+
+**Authors**: Prateek Jain, Shabari S Nair, Ritesh Goru, Prakhar Agarwal, Ajay Yadav, Yoga Sri Varshan Varadharajan, Constantine Caramanis  
+
+**Link**: [PDF](https://arxiv.org/pdf/2601.04646)  
+
+**Abstract**: Large-scale multi-tenant retrieval systems amass vast user query logs yet critically lack the curated relevance labels required for effective domain adaptation. This "dark data" problem is exacerbated by the operational cost of model updates: jointly fine-tuning query and document encoders requires re-indexing the entire corpus, which is prohibitive in multi-tenant environments with thousands of isolated indices. To address these dual challenges, we introduce \textbf{DevRev Search}, a passage retrieval benchmark for technical customer support constructed through a fully automatic pipeline. We employ a \textbf{fusion-based candidate generation} strategy, pooling results from diverse sparse and dense retrievers, and utilize an LLM-as-a-Judge to perform rigorous \textbf{consistency filtering} and relevance assignment. We further propose a practical \textbf{Index-Preserving Adaptation} strategy: by fine-tuning only the query encoder via Low-Rank Adaptation (LoRA), we achieve competitive performance improvements while keeping the document index frozen. Our experiments on DevRev Search and SciFact demonstrate that targeting specific transformer layers in the query encoder yields optimal quality-efficiency trade-offs, offering a scalable path for personalized enterprise search. 
+
+---
+# Adaptive Retrieval for Reasoning-Intensive Retrieval 
+
+**Authors**: Jongho Kim, Jaeyoung Kim, Seung-won Hwang, Jihyuk Kim, Yu Jin Kim, Moontae Lee  
+
+**Link**: [PDF](https://arxiv.org/pdf/2601.04618)  
+
+**Abstract**: We study leveraging adaptive retrieval to ensure sufficient "bridge" documents are retrieved for reasoning-intensive retrieval. Bridge documents are those that contribute to the reasoning process yet are not directly relevant to the initial query. While existing reasoning-based reranker pipelines attempt to surface these documents in ranking, they suffer from bounded recall. Naive solution with adaptive retrieval into these pipelines often leads to planning error propagation. To address this, we propose REPAIR, a framework that bridges this gap by repurposing reasoning plans as dense feedback signals for adaptive retrieval. Our key distinction is enabling mid-course correction during reranking through selective adaptive retrieval, retrieving documents that support the pivotal plan. Experimental results on reasoning-intensive retrieval and complex QA tasks demonstrate that our method outperforms existing baselines by 5.6%pt. 
+
+---
+# Exploring Recommender System Evaluation: A Multi-Modal User Agent Framework for A/B Testing 
+
+**Authors**: Wenlin Zhang, Xiangyang Li, Qiyuan Ge, Kuicai Dong, Pengyue Jia, Xiaopeng Li, Zijian Zhang, Maolin Wang, Yichao Wang, Huifeng Guo, Ruiming Tang, Xiangyu Zhao  
+
+**Link**: [PDF](https://arxiv.org/pdf/2601.04554)  
+
+**Abstract**: In recommender systems, online A/B testing is a crucial method for evaluating the performance of different models. However, conducting online A/B testing often presents significant challenges, including substantial economic costs, user experience degradation, and considerable time requirements. With the Large Language Models' powerful capacity, LLM-based agent shows great potential to replace traditional online A/B testing. Nonetheless, current agents fail to simulate the perception process and interaction patterns, due to the lack of real environments and visual perception capability. To address these challenges, we introduce a multi-modal user agent for A/B testing (A/B Agent). Specifically, we construct a recommendation sandbox environment for A/B testing, enabling multimodal and multi-page interactions that align with real user behavior on online platforms. The designed agent leverages multimodal information perception, fine-grained user preferences, and integrates profiles, action memory retrieval, and a fatigue system to simulate complex human decision-making. We validated the potential of the agent as an alternative to traditional A/B testing from three perspectives: model, data, and features. Furthermore, we found that the data generated by A/B Agent can effectively enhance the capabilities of recommendation models. Our code is publicly available at this https URL. 
+
+---
+# Self-MedRAG: a Self-Reflective Hybrid Retrieval-Augmented Generation Framework for Reliable Medical Question Answering 
+
+**Authors**: Jessica Ryan, Alexander I. Gumilang, Robert Wiliam, Derwin Suhartono  
+
+**Link**: [PDF](https://arxiv.org/pdf/2601.04531)  
+
+**Abstract**: Large Language Models (LLMs) have demonstrated significant potential in medical Question Answering (QA), yet they remain prone to hallucinations and ungrounded reasoning, limiting their reliability in high-stakes clinical scenarios. While Retrieval-Augmented Generation (RAG) mitigates these issues by incorporating external knowledge, conventional single-shot retrieval often fails to resolve complex biomedical queries requiring multi-step inference. To address this, we propose Self-MedRAG, a self-reflective hybrid framework designed to mimic the iterative hypothesis-verification process of clinical reasoning. Self-MedRAG integrates a hybrid retrieval strategy, combining sparse (BM25) and dense (Contriever) retrievers via Reciprocal Rank Fusion (RRF) to maximize evidence coverage. It employs a generator to produce answers with supporting rationales, which are then assessed by a lightweight self-reflection module using Natural Language Inference (NLI) or LLM-based verification. If the rationale lacks sufficient evidentiary support, the system autonomously reformulates the query and iterates to refine the context. We evaluated Self-MedRAG on the MedQA and PubMedQA benchmarks. The results demonstrate that our hybrid retrieval approach significantly outperforms single-retriever baselines. Furthermore, the inclusion of the self-reflective loop yielded substantial gains, increasing accuracy on MedQA from 80.00% to 83.33% and on PubMedQA from 69.10% to 79.82%. These findings confirm that integrating hybrid retrieval with iterative, evidence-based self-reflection effectively reduces unsupported claims and enhances the clinical reliability of LLM-based systems. 
+
+---
+# Re-Rankers as Relevance Judges 
+
+**Authors**: Chuan Meng, Jiqun Liu, Mohammad Aliannejadi, Fengran Mo, Jeff Dalton, Maarten de Rijke  
+
+**Link**: [PDF](https://arxiv.org/pdf/2601.04455)  
+
+**Abstract**: Using large language models (LLMs) to predict relevance judgments has shown promising results. Most studies treat this task as a distinct research line, e.g., focusing on prompt design for predicting relevance labels given a query and passage. However, predicting relevance judgments is essentially a form of relevance prediction, a problem extensively studied in tasks such as re-ranking. Despite this potential overlap, little research has explored reusing or adapting established re-ranking methods to predict relevance judgments, leading to potential resource waste and redundant development. To bridge this gap, we reproduce re-rankers in a re-ranker-as-relevance-judge setup. We design two adaptation strategies: (i) using binary tokens (e.g., "true" and "false") generated by a re-ranker as direct judgments, and (ii) converting continuous re-ranking scores into binary labels via thresholding. We perform extensive experiments on TREC-DL 2019 to 2023 with 8 re-rankers from 3 families, ranging from 220M to 32B, and analyse the evaluation bias exhibited by re-ranker-based judges. Results show that re-ranker-based relevance judges, under both strategies, can outperform UMBRELA, a state-of-the-art LLM-based relevance judge, in around 40% to 50% of the cases; they also exhibit strong self-preference towards their own and same-family re-rankers, as well as cross-family bias. 
+
+---
+# The Overlooked Role of Graded Relevance Thresholds in Multilingual Dense Retrieval 
+
+**Authors**: Tomer Wullach, Ori Shapira, Amir DN Cohen  
+
+**Link**: [PDF](https://arxiv.org/pdf/2601.04395)  
+
+**Abstract**: Dense retrieval models are typically fine-tuned with contrastive learning objectives that require binary relevance judgments, even though relevance is inherently graded. We analyze how graded relevance scores and the threshold used to convert them into binary labels affect multilingual dense retrieval. Using a multilingual dataset with LLM-annotated relevance scores, we examine monolingual, multilingual mixture, and cross-lingual retrieval scenarios. Our findings show that the optimal threshold varies systematically across languages and tasks, often reflecting differences in resource level. A well-chosen threshold can improve effectiveness, reduce the amount of fine-tuning data required, and mitigate annotation noise, whereas a poorly chosen one can degrade performance. We argue that graded relevance is a valuable but underutilized signal for dense retrieval, and that threshold calibration should be treated as a principled component of the fine-tuning pipeline. 
+
+---
+# Correct and Weight: A Simple Yet Effective Loss for Implicit Feedback Recommendation 
+
+**Authors**: Minglei Yin, Chuanbo Hu, Bin Liu, Neil Zhenqiang Gong, Yanfang, Xin Li  
+
+**Link**: [PDF](https://arxiv.org/pdf/2601.04291)  
+
+**Abstract**: Learning from implicit feedback has become the standard paradigm for modern recommender systems. However, this setting is fraught with the persistent challenge of false negatives, where unobserved user-item interactions are not necessarily indicative of negative preference. To address this issue, this paper introduces a novel and principled loss function, named Corrected and Weighted (CW) loss, that systematically corrects for the impact of false negatives within the training objective. Our approach integrates two key techniques. First, inspired by Positive-Unlabeled learning, we debias the negative sampling process by re-calibrating the assumed negative distribution. By theoretically approximating the true negative distribution (p-) using the observable general data distribution (p) and the positive interaction distribution (p^+), our method provides a more accurate estimate of the likelihood that a sampled unlabeled item is truly negative. Second, we introduce a dynamic re-weighting mechanism that modulates the importance of each negative instance based on the model's current prediction. This scheme encourages the model to enforce a larger ranking margin between positive items and confidently predicted (i.e., easy) negative items, while simultaneously down-weighting the penalty on uncertain negatives that have a higher probability of being false negatives. A key advantage of our approach is its elegance and efficiency; it requires no complex modifications to the data sampling process or significant computational overhead, making it readily applicable to a wide array of existing recommendation models. Extensive experiments conducted on four large-scale, sparse benchmark datasets demonstrate the superiority of our proposed loss. The results show that our method consistently and significantly outperforms a suite of state-of-the-art loss functions across multiple ranking-oriented metrics. 
+
+---
+# Multi-Disciplinary Dataset Discovery from Citation-Verified Literature Contexts 
+
+**Authors**: Zhiyin Tan, Changxu Duan  
+
+**Link**: [PDF](https://arxiv.org/pdf/2601.05099)  
+
+**Abstract**: Identifying suitable datasets for a research question remains challenging because existing dataset search engines rely heavily on metadata quality and keyword overlap, which often fail to capture the semantic intent of scientific investigation. We introduce a literature-driven framework that discovers datasets from citation contexts in scientific papers, enabling retrieval grounded in actual research use rather than metadata availability. Our approach combines large-scale citation-context extraction, schema-guided dataset recognition with Large Language Models, and provenance-preserving entity resolution. We evaluate the system on eight survey-derived computer science queries and find that it achieves substantially higher recall than Google Dataset Search and DataCite Commons, with normalized recall ranging from an average of 47.47% to a highest value of 81.82%. Beyond recovering gold-standard datasets, the method also surfaces additional datasets not documented in the surveys. Expert assessments across five top-level Fields of Science indicate that a substantial portion of the additional datasets are considered high utility, and some are regarded as novel for the specific topics chosen by the experts. These findings establish citation-context mining as an effective and generalizable paradigm for dataset discovery, particularly in settings where datasets lack sufficient or reliable metadata. To support reproducibility and future extensions, we release our code, evaluation datasets, and results on GitHub (this https URL). 
+
+---
+# LANGSAE EDITING: Improving Multilingual Information Retrieval via Post-hoc Language Identity Removal 
+
+**Authors**: Dongjun Kim, Jeongho Yoon, Chanjun Park, Heuiseok Lim  
+
+**Link**: [PDF](https://arxiv.org/pdf/2601.04768)  
+
+**Abstract**: Dense retrieval in multilingual settings often searches over mixed-language collections, yet multilingual embeddings encode language identity alongside semantics. This language signal can inflate similarity for same-language pairs and crowd out relevant evidence written in other languages. We propose LANGSAE EDITING, a post-hoc sparse autoencoder trained on pooled embeddings that enables controllable removal of language-identity signal directly in vector space. The method identifies language-associated latent units using cross-language activation statistics, suppresses these units at inference time, and reconstructs embeddings in the original dimensionality, making it compatible with existing vector databases without retraining the base encoder or re-encoding raw text. Experiments across multiple languages show consistent improvements in ranking quality and cross-language coverage, with especially strong gains for script-distinct languages. 
+
+---
+# KnowMe-Bench: Benchmarking Person Understanding for Lifelong Digital Companions 
+
+**Authors**: Tingyu Wu, Zhisheng Chen, Ziyan Weng, Shuhe Wang, Chenglong Li, Shuo Zhang, Sen Hu, Silin Wu, Qizhen Lan, Huacan Wang, Ronghao Chen  
+
+**Link**: [PDF](https://arxiv.org/pdf/2601.04745)  
+
+**Abstract**: Existing long-horizon memory benchmarks mostly use multi-turn dialogues or synthetic user histories, which makes retrieval performance an imperfect proxy for person understanding. We present \BenchName, a publicly releasable benchmark built from long-form autobiographical narratives, where actions, context, and inner thoughts provide dense evidence for inferring stable motivations and decision principles. \BenchName~reconstructs each narrative into a flashback-aware, time-anchored stream and evaluates models with evidence-linked questions spanning factual recall, subjective state attribution, and principle-level reasoning. Across diverse narrative sources, retrieval-augmented systems mainly improve factual accuracy, while errors persist on temporally grounded explanations and higher-level inferences, highlighting the need for memory mechanisms beyond retrieval. Our data is in \href{KnowMeBench}{this https URL}. 
+
+---
+# Adversarial Yet Cooperative: Multi-Perspective Reasoning in Retrieved-Augmented Language Models 
+
+**Authors**: Can Xu, Lingyong Yan, Jiayi Wu, Haosen Wang, Shuaiqiang Wang, Yuchen Li, Jizhou Huang, Dawei Yin, Xiang Li  
+
+**Link**: [PDF](https://arxiv.org/pdf/2601.04651)  
+
+**Abstract**: Recent advances in synergizing large reasoning models (LRMs) with retrieval-augmented generation (RAG) have shown promising results, yet two critical challenges remain: (1) reasoning models typically operate from a single, unchallenged perspective, limiting their ability to conduct deep, self-correcting reasoning over external documents, and (2) existing training paradigms rely excessively on outcome-oriented rewards, which provide insufficient signal for shaping the complex, multi-step reasoning process. To address these issues, we propose an Reasoner-Verifier framework named Adversarial Reasoning RAG (ARR). The Reasoner and Verifier engage in reasoning on retrieved evidence and critiquing each other's logic while being guided by process-aware advantage that requires no external scoring model. This reward combines explicit observational signals with internal model uncertainty to jointly optimize reasoning fidelity and verification rigor. Experiments on multiple benchmarks demonstrate the effectiveness of our method. 
+
+---
+# Neurosymbolic Retrievers for Retrieval-augmented Generation 
+
+**Authors**: Yash Saxena, Manas Gaur  
+
+**Link**: [PDF](https://arxiv.org/pdf/2601.04568)  
+
+**Abstract**: Retrieval Augmented Generation (RAG) has made significant strides in overcoming key limitations of large language models, such as hallucination, lack of contextual grounding, and issues with transparency. However, traditional RAG systems consist of three interconnected neural components - the retriever, re-ranker, and generator - whose internal reasoning processes remain opaque. This lack of transparency complicates interpretability, hinders debugging efforts, and erodes trust, especially in high-stakes domains where clear decision-making is essential. To address these challenges, we introduce the concept of Neurosymbolic RAG, which integrates symbolic reasoning using a knowledge graph with neural retrieval techniques. This new framework aims to answer two primary questions: (a) Can retrievers provide a clear and interpretable basis for document selection? (b) Can symbolic knowledge enhance the clarity of the retrieval process? We propose three methods to improve this integration. First is MAR (Knowledge Modulation Aligned Retrieval) that employs modulation networks to refine query embeddings using interpretable symbolic features, thereby making document matching more explicit. Second, KG-Path RAG enhances queries by traversing knowledge graphs to improve overall retrieval quality and interpretability. Lastly, Process Knowledge-infused RAG utilizes domain-specific tools to reorder retrieved content based on validated workflows. Preliminary results from mental health risk assessment tasks indicate that this neurosymbolic approach enhances both transparency and overall performance 
+
+---
+# SampoNLP: A Self-Referential Toolkit for Morphological Analysis of Subword Tokenizers 
+
+**Authors**: Iaroslav Chelombitko, Ekaterina Chelombitko, Aleksey Komissarov  
+
+**Link**: [PDF](https://arxiv.org/pdf/2601.04469)  
+
+**Abstract**: The quality of subword tokenization is critical for Large Language Models, yet evaluating tokenizers for morphologically rich Uralic languages is hampered by the lack of clean morpheme lexicons.
+We introduce SampoNLP, a corpus-free toolkit for morphological lexicon creation using MDL-inspired Self-Referential Atomicity Scoring, which filters composite forms through internal structural cues - suited for low-resource settings.
+Using the high-purity lexicons generated by SampoNLP for Finnish, Hungarian, and Estonian, we conduct a systematic evaluation of BPE tokenizers across a range of vocabulary sizes (8k-256k). We propose a unified metric, the Integrated Performance Score (IPS), to navigate the trade-off between morpheme coverage and over-splitting. By analyzing the IPS curves, we identify the "elbow points" of diminishing returns and provide the first empirically grounded recommendations for optimal vocabulary sizes (k) in these languages. Our study not only offers practical guidance but also quantitatively demonstrates the limitations of standard BPE for highly agglutinative languages. The SampoNLP library and all generated resources are made publicly available: this https URL 
+
+---
+# ArtCognition: A Multimodal AI Framework for Affective State Sensing from Visual and Kinematic Drawing Cues 
+
+**Authors**: Behrad Binaei-Haghighi, Nafiseh Sadat Sajadi, Mehrad Liviyan, Reyhane Akhavan Kharazi, Fatemeh Amirkhani, Behnam Bahrak  
+
+**Link**: [PDF](https://arxiv.org/pdf/2601.04297)  
+
+**Abstract**: The objective assessment of human affective and psychological states presents a significant challenge, particularly through non-verbal channels. This paper introduces digital drawing as a rich and underexplored modality for affective sensing. We present a novel multimodal framework, named ArtCognition, for the automated analysis of the House-Tree-Person (HTP) test, a widely used psychological instrument. ArtCognition uniquely fuses two distinct data streams: static visual features from the final artwork, captured by computer vision models, and dynamic behavioral kinematic cues derived from the drawing process itself, such as stroke speed, pauses, and smoothness. To bridge the gap between low-level features and high-level psychological interpretation, we employ a Retrieval-Augmented Generation (RAG) architecture. This grounds the analysis in established psychological knowledge, enhancing explainability and reducing the potential for model hallucination. Our results demonstrate that the fusion of visual and behavioral kinematic cues provides a more nuanced assessment than either modality alone. We show significant correlations between the extracted multimodal features and standardized psychological metrics, validating the framework's potential as a scalable tool to support clinicians. This work contributes a new methodology for non-intrusive affective state assessment and opens new avenues for technology-assisted mental healthcare. 
+
+---
+# Paper Skygest: Personalized Academic Recommendations on Bluesky 
+
+**Authors**: Sophie Greenwood, Nikhil Garg  
+
+**Link**: [PDF](https://arxiv.org/pdf/2601.04253)  
+
+**Abstract**: We build, deploy, and evaluate Paper Skygest, a custom personalized social feed for scientific content posted by a user's network on Bluesky and the AT Protocol. We leverage a new capability on emerging decentralized social media platforms: the ability for anyone to build and deploy feeds for other users, to use just as they would a native platform-built feed. To our knowledge, Paper Skygest is the first and largest such continuously deployed personalized social media feed by academics, with over 50,000 weekly uses by over 1,000 daily active users, all organically acquired. First, we quantitatively and qualitatively evaluate Paper Skygest usage, showing that it has sustained usage and satisfies users; we further show adoption of Paper Skygest increases a user's interactions with posts about research, and how interaction rates change as a function of post order. Second, we share our full code and describe our system architecture, to support other academics in building and deploying such feeds sustainably. Third, we overview the potential of custom feeds such as Paper Skygest for studying algorithm designs, building for user agency, and running recommender system experiments with organic users without partnering with a centralized platform. 
+
+---
+# RAGVUE: A Diagnostic View for Explainable and Automated Evaluation of Retrieval-Augmented Generation 
+
+**Authors**: Keerthana Murugaraj, Salima Lamsiyah, Martin Theobald  
+
+**Link**: [PDF](https://arxiv.org/pdf/2601.04196)  
+
+**Abstract**: Evaluating Retrieval-Augmented Generation (RAG) systems remains a challenging task: existing metrics often collapse heterogeneous behaviors into single scores and provide little insight into whether errors arise from retrieval,reasoning, or grounding. In this paper, we introduce RAGVUE, a diagnostic and explainable framework for automated, reference-free evaluation of RAG pipelines. RAGVUE decomposes RAG behavior into retrieval quality, answer relevance and completeness, strict claim-level faithfulness, and judge calibration. Each metric includes a structured explanation, making the evaluation process transparent. Our framework supports both manual metric selection and fully automated agentic evaluation. It also provides a Python API, CLI, and a local Streamlit interface for interactive usage. In comparative experiments, RAGVUE surfaces fine-grained failures that existing tools such as RAGAS often overlook. We showcase the full RAGVUE workflow and illustrate how it can be integrated into research pipelines and practical RAG development. The source code and detailed instructions on usage are publicly available on GitHub 
+
+---
