@@ -1,0 +1,281 @@
+# Beyond Single-Shot: Multi-step Tool Retrieval via Query Planning 
+
+**Authors**: Wei Fang, James Glass  
+
+**Link**: [PDF](https://arxiv.org/pdf/2601.07782)  
+
+**Abstract**: LLM agents operating over massive, dynamic tool libraries rely on effective retrieval, yet standard single-shot dense retrievers struggle with complex requests. These failures primarily stem from the disconnect between abstract user goals and technical documentation, and the limited capacity of fixed-size embeddings to model combinatorial tool compositions. To address these challenges, we propose TOOLQP, a lightweight framework that models retrieval as iterative query planning. Instead of single-shot matching, TOOLQP decomposes instructions into sub-tasks and dynamically generates queries to interact with the retriever, effectively bridging the semantic gap by targeting the specific sub-tasks required for composition. We train TOOLQP using synthetic query trajectories followed by optimization via Reinforcement Learning with Verifiable Rewards (RLVR). Experiments demonstrate that TOOLQP achieves state-of-the-art performance, exhibiting superior zero-shot generalization, robustness across diverse retrievers, and significant improvements in downstream agentic execution. 
+
+---
+# Reward Modeling from Natural Language Human Feedback 
+
+**Authors**: Zongqi Wang, Rui Wang, Yuchuan Wu, Yiyao Yu, Pinyi Zhang, Shaoning Sun, Yujiu Yang, Yongbin Li  
+
+**Link**: [PDF](https://arxiv.org/pdf/2601.07349)  
+
+**Abstract**: Reinforcement Learning with Verifiable reward (RLVR) on preference data has become the mainstream approach for training Generative Reward Models (GRMs). Typically in pairwise rewarding tasks, GRMs generate reasoning chains ending with critiques and preference labels, and RLVR then relies on the correctness of the preference labels as the training reward. However, in this paper, we demonstrate that such binary classification tasks make GRMs susceptible to guessing correct outcomes without sound critiques. Consequently, these spurious successes introduce substantial noise into the reward signal, thereby impairing the effectiveness of reinforcement learning. To address this issue, we propose Reward Modeling from Natural Language Human Feedback (RM-NLHF), which leverages natural language feedback to obtain process reward signals, thereby mitigating the problem of limited solution space inherent in binary tasks. Specifically, we compute the similarity between GRM-generated and human critiques as the training reward, which provides more accurate reward signals than outcome-only supervision. Additionally, considering that human critiques are difficult to scale up, we introduce Meta Reward Model (MetaRM) which learns to predict process reward from datasets with human critiques and then generalizes to data without human critiques. Experiments on multiple benchmarks demonstrate that our method consistently outperforms state-of-the-art GRMs trained with outcome-only reward, confirming the superiority of integrating natural language over binary human feedback as supervision. 
+
+---
+# The Confidence Dichotomy: Analyzing and Mitigating Miscalibration in Tool-Use Agents 
+
+**Authors**: Weihao Xuan, Qingcheng Zeng, Heli Qi, Yunze Xiao, Junjue Wang, Naoto Yokoya  
+
+**Link**: [PDF](https://arxiv.org/pdf/2601.07264)  
+
+**Abstract**: Autonomous agents based on large language models (LLMs) are rapidly evolving to handle multi-turn tasks, but ensuring their trustworthiness remains a critical challenge. A fundamental pillar of this trustworthiness is calibration, which refers to an agent's ability to express confidence that reliably reflects its actual performance. While calibration is well-established for static models, its dynamics in tool-integrated agentic workflows remain underexplored. In this work, we systematically investigate verbalized calibration in tool-use agents, revealing a fundamental confidence dichotomy driven by tool type. Specifically, our pilot study identifies that evidence tools (e.g., web search) systematically induce severe overconfidence due to inherent noise in retrieved information, while verification tools (e.g., code interpreters) can ground reasoning through deterministic feedback and mitigate miscalibration. To robustly improve calibration across tool types, we propose a reinforcement learning (RL) fine-tuning framework that jointly optimizes task accuracy and calibration, supported by a holistic benchmark of reward designs. We demonstrate that our trained agents not only achieve superior calibration but also exhibit robust generalization from local training environments to noisy web settings and to distinct domains such as mathematical reasoning. Our results highlight the necessity of domain-specific calibration strategies for tool-use agents. More broadly, this work establishes a foundation for building self-aware agents that can reliably communicate uncertainty in high-stakes, real-world deployments. 
+
+---
+# Structured Reasoning for Large Language Models 
+
+**Authors**: Jinyi Han, Zixiang Di, Zishang Jiang, Ying Liao, Jiaqing Liang, Yongqi Wang, Yanghua Xiao  
+
+**Link**: [PDF](https://arxiv.org/pdf/2601.07180)  
+
+**Abstract**: Large language models (LLMs) achieve strong performance by generating long chains of thought, but longer traces always introduce redundant or ineffective reasoning steps. One typical behavior is that they often perform unnecessary verification and revisions even if they have reached the correct answers. This limitation stems from the unstructured nature of reasoning trajectories and the lack of targeted supervision for critical reasoning abilities. To address this, we propose Structured Reasoning (SCR), a framework that decouples reasoning trajectories into explicit, evaluable, and trainable components. We mainly implement SCR using a Generate-Verify-Revise paradigm. Specifically, we construct structured training data and apply Dynamic Termination Supervision to guide the model in deciding when to terminate reasoning. To avoid interference between learning signals for different reasoning abilities, we adopt a progressive two-stage reinforcement learning strategy: the first stage targets initial generation and self-verification, and the second stage focuses on revision. Extensive experiments on three backbone models show that SCR substantially improves reasoning efficiency and self-verification. Besides, compared with existing reasoning paradigms, it reduces output token length by up to 50%. 
+
+---
+# Solar Open Technical Report 
+
+**Authors**: Sungrae Park, Sanghoon Kim, Jungho Cho, Gyoungjin Gim, Dawoon Jung, Mikyoung Cha, Eunhae Choo, Taekgyu Hong, Minbyul Jeong, SeHwan Joo, Minsoo Khang, Eunwon Kim, Minjeong Kim, Sujeong Kim, Yunsu Kim, Hyeonju Lee, Seunghyun Lee, Sukyung Lee, Siyoung Park, Gyungin Shin, Inseo Song, Wonho Song, Seonghoon Yang, Seungyoun Yi, Sanghoon Yoon, Jeonghyun Ko, Seyoung Song, Keunwoo Choi, Hwalsuk Lee, Sunghun Kim, Du-Seong Chang, Kyunghyun Cho, Junsuk Choe, Hwaran Lee, Jae-Gil Lee, KyungTae Lim, Alice Oh  
+
+**Link**: [PDF](https://arxiv.org/pdf/2601.07022)  
+
+**Abstract**: We introduce Solar Open, a 102B-parameter bilingual Mixture-of-Experts language model for underserved languages. Solar Open demonstrates a systematic methodology for building competitive LLMs by addressing three interconnected challenges. First, to train effectively despite data scarcity for underserved languages, we synthesize 4.5T tokens of high-quality, domain-specific, and RL-oriented data. Second, we coordinate this data through a progressive curriculum jointly optimizing composition, quality thresholds, and domain coverage across 20 trillion tokens. Third, to enable reasoning capabilities through scalable RL, we apply our proposed framework SnapPO for efficient optimization. Across benchmarks in English and Korean, Solar Open achieves competitive performance, demonstrating the effectiveness of this methodology for underserved language AI development. 
+
+---
+# Distributional Clarity: The Hidden Driver of RL-Friendliness in Large Language Models 
+
+**Authors**: Shaoning Sun, Mingzhu Cai, Huang He, Bingjin Chen, Siqi Bao, Yujiu Yang, Hua Wu, Haifeng Wang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2601.06911)  
+
+**Abstract**: Language model families exhibit striking disparity in their capacity to benefit from reinforcement learning: under identical training, models like Qwen achieve substantial gains, while others like Llama yield limited improvements. Complementing data-centric approaches, we reveal that this disparity reflects a hidden structural property: \textbf{distributional clarity} in probability space. Through a three-stage analysis-from phenomenon to mechanism to interpretation-we uncover that RL-friendly models exhibit intra-class compactness and inter-class separation in their probability assignments to correct vs. incorrect responses. We quantify this clarity using the \textbf{Silhouette Coefficient} ($S$) and demonstrate that (1) high $S$ correlates strongly with RL performance; (2) low $S$ is associated with severe logic errors and reasoning instability. To confirm this property, we introduce a Silhouette-Aware Reweighting strategy that prioritizes low-$S$ samples during training. Experiments across six mathematical benchmarks show consistent improvements across all model families, with gains up to 5.9 points on AIME24. Our work establishes distributional clarity as a fundamental, trainable property underlying RL-Friendliness. 
+
+---
+# GanitLLM: Difficulty-Aware Bengali Mathematical Reasoning through Curriculum-GRPO 
+
+**Authors**: Shubhashis Roy Dipta, Khairul Mahbub, Nadia Najjar  
+
+**Link**: [PDF](https://arxiv.org/pdf/2601.06767)  
+
+**Abstract**: We present a Bengali mathematical reasoning model called GanitLLM (named after the Bangla word for mathematics, "Ganit"), together with a new difficulty-aware Bengali math corpus and a curriculum-based GRPO pipeline. Bengali is one of the world's most widely spoken languages, yet existing LLMs either reason in English and then translate, or simply fail on multi-step Bengali math, in part because reinforcement learning recipes are tuned for high-resource languages and collapse under reward sparsity in low-resource settings. To address this, we construct Ganit, a rigorously filtered and decontaminated Bengali math dataset with automatic difficulty tags derived from the pass@k of a strong evaluator model. Building on this dataset, we propose Curriculum-GRPO, which combines multi-stage training (SFT + GRPO) with difficulty-aware sampling and verifiable rewards for format, numerical correctness, and Bengali reasoning. On Bn-MGSM and Bn-MSVAMP, GanitLLM-4B improves over its Qwen3-4B base by +8 and +7 accuracy points, respectively, while increasing the percentage of Bengali reasoning tokens from 14% to over 88% and reducing average solution length from 943 to 193 words. 
+
+---
+# EpiCaR: Knowing What You Don't Know Matters for Better Reasoning in LLMs 
+
+**Authors**: Jewon Yeom, Jaewon Sok, Seonghyeon Park, Jeongjae Park, Taesup Kim  
+
+**Link**: [PDF](https://arxiv.org/pdf/2601.06786)  
+
+**Abstract**: Improving the reasoning abilities of large language models (LLMs) has largely relied on iterative self-training with model-generated data. While effective at boosting accuracy, existing approaches primarily reinforce successful reasoning paths, incurring a substantial calibration cost: models become overconfident and lose the ability to represent uncertainty. This failure has been characterized as a form of model collapse in alignment, where predictive distributions degenerate toward low-variance point estimates. We address this issue by reframing reasoning training as an epistemic learning problem, in which models must learn not only how to reason, but also when their reasoning should be trusted. We propose epistemically-calibrated reasoning (EpiCaR) as a training objective that jointly optimizes reasoning performance and calibration, and instantiate it within an iterative supervised fine-tuning framework using explicit self-evaluation signals. Experiments on Llama-3 and Qwen-3 families demonstrate that our approach achieves Pareto-superiority over standard baselines in both accuracy and calibration, particularly in models with sufficient reasoning capacity (e.g., 3B+). This framework generalizes effectively to OOD mathematical reasoning (GSM8K) and code generation (MBPP). Ultimately, our approach enables a 3X reduction in inference compute, matching the K=30 performance of STaR with only K=10 samples in capable models. 
+
+---
+# SimLLM: Fine-Tuning Code LLMs for SimPy-Based Queueing System Simulation 
+
+**Authors**: Jun-Qi Chen, Kun Zhang, Rui Zheng, Ying Zhong  
+
+**Link**: [PDF](https://arxiv.org/pdf/2601.06543)  
+
+**Abstract**: The Python package SimPy is widely used for modeling queueing systems due to its flexibility, simplicity, and smooth integration with modern data analysis and optimization frameworks. Recent advances in large language models (LLMs) have shown strong ability in generating clear and executable code, making them powerful and suitable tools for writing SimPy queueing simulation code. However, directly employing closed-source models like GPT-4o to generate such code may lead to high computational costs and raise data privacy concerns. To address this, we fine-tune two open-source LLMs, Qwen-Coder-7B and DeepSeek-Coder-6.7B, on curated SimPy queueing data, which enhances their code-generating performance in executability, output-format compliance, and instruction-code consistency. Particularly, we proposed a multi-stage fine-tuning framework comprising two stages of supervised fine-tuning (SFT) and one stage of direct preference optimization (DPO), progressively enhancing the model's ability in SimPy-based queueing simulation code generation. Extensive evaluations demonstrate that both fine-tuned models achieve substantial improvements in executability, output-format compliance, and instruct consistency. These results confirm that domain-specific fine-tuning can effectively transform compact open-source code models into reliable SimPy simulation generators which provide a practical alternative to closed-source LLMs for education, research, and operational decision support. 
+
+---
+# Can a Unimodal Language Agent Provide Preferences to Tune a Multimodal Vision-Language Model? 
+
+**Authors**: Sazia Tabasum Mim, Jack Morris, Manish Dhakal, Yanming Xiu, Maria Gorlatova, Yi Ding  
+
+**Link**: [PDF](https://arxiv.org/pdf/2601.06424)  
+
+**Abstract**: To explore a more scalable path for adding multimodal capabilities to existing LLMs, this paper addresses a fundamental question: Can a unimodal LLM, relying solely on text, reason about its own informational needs and provide effective feedback to optimize a multimodal model? To answer this, we propose a method that enables a language agent to give feedback to a vision-language model (VLM) to adapt text generation to the agent's preferences. Our results from different experiments affirm this hypothesis, showing that LLM preference feedback significantly enhances VLM descriptions. Using our proposed method, we find that the VLM can generate multimodal scene descriptions to help the LLM better understand multimodal context, leading to improvements of maximum 13% in absolute accuracy compared to the baseline multimodal approach. Furthermore, a human study validated our AI-driven feedback, showing a 64.6% preference alignment rate between the LLM's choices and human judgments. Extensive experiments provide insights on how and why the method works and its limitations. 
+
+---
+# Reinforcement Learning for Chain of Thought Compression with One-Domain-to-All Generalization 
+
+**Authors**: Hanyu Li, Jiangshan Duo, Bofei Gao, Hailin Zhang, Sujian Li, Xiaotie Deng, Liang Zhao  
+
+**Link**: [PDF](https://arxiv.org/pdf/2601.06052)  
+
+**Abstract**: Chain-of-thought reasoning in large language models often creates an "overthinking trap," leading to excessive computational cost and latency for unreliable accuracy gains. Prior work has typically relied on global, static controls that risk penalizing necessary reasoning. We introduce a sample-level, soft reinforcement learning compression method that penalizes inefficiently long rollouts, but only on problems where the model has already mastered and already produced a more concise rollout. Our experiments show that this method reduces average response length by 20-40% with comparable or higher accuracy. Crucially, the compression exhibits strong cross-domain generalization; a model trained on math spontaneously shortens responses on unseen tasks like code, instruction following, and general knowledge QA, with stable or improved accuracy. We demonstrate a stable post-training curriculum (accuracy-compression-accuracy) that can ultimately produce models that are more accurate and reason more concisely, arguing that such compression method should be a standard phase in developing efficient reasoning models. 
+
+---
+# GRPO with State Mutations: Improving LLM-Based Hardware Test Plan Generation 
+
+**Authors**: Dimple Vijay Kochar, Nathaniel Pinckney, Guan-Ting Liu, Chia-Tung Ho, Chenhui Deng, Haoxing Ren, Brucek Khailany  
+
+**Link**: [PDF](https://arxiv.org/pdf/2601.07593)  
+
+**Abstract**: RTL design often relies heavily on ad-hoc testbench creation early in the design cycle. While large language models (LLMs) show promise for RTL code generation, their ability to reason about hardware specifications and generate targeted test plans remains largely unexplored. We present the first systematic study of LLM reasoning capabilities for RTL verification stimuli generation, establishing a two-stage framework that decomposes test plan generation from testbench execution. Our benchmark reveals that state-of-the-art models, including DeepSeek-R1 and Claude-4.0-Sonnet, achieve only 15.7-21.7% success rates on generating stimuli that pass golden RTL designs. To improve LLM generated stimuli, we develop a comprehensive training methodology combining supervised fine-tuning with a novel reinforcement learning approach, GRPO with State Mutation (GRPO-SMu), which enhances exploration by varying input mutations. Our approach leverages a tree-based branching mutation strategy to construct training data comprising equivalent and mutated trees, moving beyond linear mutation approaches to provide rich learning signals. Training on this curated dataset, our 7B parameter model achieves a 33.3% golden test pass rate and a 13.9% mutation detection rate, representing a 17.6% absolute improvement over baseline and outperforming much larger general-purpose models. These results demonstrate that specialized training methodologies can significantly enhance LLM reasoning capabilities for hardware verification tasks, establishing a foundation for automated sub-unit testing in semiconductor design workflows. 
+
+---
+# Rewarding Creativity: A Human-Aligned Generative Reward Model for Reinforcement Learning in Storytelling 
+
+**Authors**: Zhaoyan Li, Hang Lei, Yujia Wang, Lanbo Liu, Hao Liu, Liang Yu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2601.07149)  
+
+**Abstract**: While Large Language Models (LLMs) can generate fluent text, producing high-quality creative stories remains challenging. Reinforcement Learning (RL) offers a promising solution but faces two critical obstacles: designing reliable reward signals for subjective storytelling quality and mitigating training instability. This paper introduces the Reinforcement Learning for Creative Storytelling (RLCS) framework to systematically address both challenges. First, we develop a Generative Reward Model (GenRM) that provides multi-dimensional analysis and explicit reasoning about story preferences, trained through supervised fine-tuning on demonstrations with reasoning chains distilled from strong teacher models, followed by GRPO-based refinement on expanded preference data. Second, we introduce an entropy-based reward shaping strategy that dynamically prioritizes learning on confident errors and uncertain correct predictions, preventing overfitting on already-mastered patterns. Experiments demonstrate that GenRM achieves 68\% alignment with human creativity judgments, and RLCS significantly outperforms strong baselines including Gemini-2.5-Pro in overall story quality. This work provides a practical pipeline for applying RL to creative domains, effectively navigating the dual challenges of reward modeling and training stability. 
+
+---
+# MAESTRO: Meta-learning Adaptive Estimation of Scalarization Trade-offs for Reward Optimization 
+
+**Authors**: Yang Zhao, Hepeng Wang, Xiao Ding, Yangou Ouyang, Bibo Cai, Kai Xiong, Jinglong Gao, Zhouhao Sun, Li Du, Bing Qin, Ting Liu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2601.07208)  
+
+**Abstract**: Group-Relative Policy Optimization (GRPO) has emerged as an efficient paradigm for aligning Large Language Models (LLMs), yet its efficacy is primarily confined to domains with verifiable ground truths. Extending GRPO to open-domain settings remains a critical challenge, as unconstrained generation entails multi-faceted and often conflicting objectives - such as creativity versus factuality - where rigid, static reward scalarization is inherently suboptimal. To address this, we propose MAESTRO (Meta-learning Adaptive Estimation of Scalarization Trade-offs for Reward Optimization), which introduces a meta-cognitive orchestration layer that treats reward scalarization as a dynamic latent policy, leveraging the model's terminal hidden states as a semantic bottleneck to perceive task-specific priorities. We formulate this as a contextual bandit problem within a bi-level optimization framework, where a lightweight Conductor network co-evolves with the policy by utilizing group-relative advantages as a meta-reward signal. Across seven benchmarks, MAESTRO consistently outperforms single-reward and static multi-objective baselines, while preserving the efficiency advantages of GRPO, and in some settings even reducing redundant generation. 
+
+---
+# KASER: Knowledge-Aligned Student Error Simulator for Open-Ended Coding Tasks 
+
+**Authors**: Zhangqi Duan, Nigel Fernandez, Andrew Lan  
+
+**Link**: [PDF](https://arxiv.org/pdf/2601.06633)  
+
+**Abstract**: Open-ended tasks, such as coding problems that are common in computer science education, provide detailed insights into student knowledge. However, training large language models (LLMs) to simulate and predict possible student errors in their responses to these problems can be challenging: they often suffer from mode collapse and fail to fully capture the diversity in syntax, style, and solution approach in student responses. In this work, we present KASER (Knowledge-Aligned Student Error Simulator), a novel approach that aligns errors with student knowledge. We propose a training method based on reinforcement learning using a hybrid reward that reflects three aspects of student code prediction: i) code similarity to the ground-truth, ii) error matching, and iii) code prediction diversity. On two real-world datasets, we perform two levels of evaluation and show that: At the per-student-problem pair level, our method outperforms baselines on code and error prediction; at the per-problem level, our method outperforms baselines on error coverage and simulated code diversity. 
+
+---
+# MixDPO: Modeling Preference Strength for Pluralistic Alignment 
+
+**Authors**: Saki Imai, Pedram Heydari, Anthony Sicilia, Asteria Kaeberlein, Katherine Atwell, Malihe Alikhani  
+
+**Link**: [PDF](https://arxiv.org/pdf/2601.06180)  
+
+**Abstract**: Preference based alignment objectives implicitly assume that all human preferences are expressed with equal strength. In practice, however, preference strength varies across individuals and contexts -- a phenomenon established in behavioral economics and discrete choice theory. This mismatch limits the ability of existing objectives to faithfully capture heterogeneous human judgments. Inspired by this literature, we introduce Mixed Logit Direct Preference Optimization (MixDPO), a generalization of Direct Preference Optimization that models variation in preference strength. MixDPO enables alignment objectives to capture heterogeneity in how strongly preferences are expressed across training examples. We evaluate MixDPO on three preference datasets using two open-weight language models. Across datasets, MixDPO improves aggregate alignment performance (+11.2 points on Pythia-2.8B) while preserving subgroup level preferences, with the largest gains appearing in settings with higher inferred preference heterogeneity. MixDPO makes preference heterogeneity explicit through learned strength distributions. We release our code for reproducibility. 
+
+---
+# SPINAL -- Scaling-law and Preference Integration in Neural Alignment Layers 
+
+**Authors**: Arion Das, Partha Pratim Saha, Amit Dhanda, Vinija Jain, Aman Chadha, Amitava Das  
+
+**Link**: [PDF](https://arxiv.org/pdf/2601.06238)  
+
+**Abstract**: Direct Preference Optimization (DPO) is a principled, scalable alternative to RLHF for aligning large language models from pairwise preferences, but its internal geometric footprint remains undercharacterized, limiting audits, checkpoint comparisons, and failure prediction. We introduce SPINAL (Scaling-law and Preference Integration in Neural Alignment Layers), a diagnostic that measures how alignment reshapes representations across depth by tracing localized structural change layer by layer. Across model families, DPO produces a layerwise calibration effect concentrated in the final decoder blocks (often layers 21-30), where preference gradients most directly affect the next-token distribution. SPINAL encodes each checkpoint as a depth trace over (layer index, contraction score, transport score). The contraction score summarizes how quickly the tail of a layer's spectrum decays (how fast small modes vanish); higher values indicate stronger contraction into fewer effective directions. The transport score summarizes how much the token distribution shifts between adjacent layers using a bounded overlap measure; lower values indicate shorter, smoother steps through representation space. Aligned checkpoints show a late-layer ramp-up in contraction and a smooth reduction in transport, consistent with tightened and stabilized policy mass, while unaligned models trace higher-curvature, more entropic, and geometrically incoherent depth paths. Overall, alignment is geometrically localized: the final layers encode the dominant preference-induced corrections. SPINAL turns this localization into a practical audit signal, quantifying where alignment concentrates, how strongly it manifests, and when it begins to destabilize during training. 
+
+---
+# From RLHF to Direct Alignment: A Theoretical Unification of Preference Learning for Large Language Models 
+
+**Authors**: Tarun Raheja, Nilay Pochhi  
+
+**Link**: [PDF](https://arxiv.org/pdf/2601.06108)  
+
+**Abstract**: Aligning large language models (LLMs) with human preferences has become essential for safe and beneficial AI deployment. While Reinforcement Learning from Human Feedback (RLHF) established the dominant paradigm, a proliferation of alternatives -- Direct Preference Optimization (DPO), Identity Preference Optimization (IPO), Kahneman-Tversky Optimization (KTO), Simple Preference Optimization (SimPO), and many others -- has left practitioners without clear guidance on method selection. This survey provides a \textit{theoretical unification} of preference learning methods, revealing that the apparent diversity reduces to principled choices along three orthogonal axes: \textbf{(I) Preference Model} (what likelihood model underlies the objective), \textbf{(II) Regularization Mechanism} (how deviation from reference policies is controlled), and \textbf{(III) Data Distribution} (online vs.\ offline learning and coverage requirements). We formalize each axis with precise definitions and theorems, establishing key results including the coverage separation between online and offline methods, scaling laws for reward overoptimization, and conditions under which direct alignment methods fail. Our analysis reveals that failure modes -- length hacking, mode collapse, likelihood displacement -- arise from specific, predictable combinations of design choices. We synthesize empirical findings across 50+ papers and provide a practitioner's decision guide for method selection. The framework transforms preference learning from an empirical art into a theoretically grounded discipline. 
+
+---
+# Learning How to Remember: A Meta-Cognitive Management Method for Structured and Transferable Agent Memory 
+
+**Authors**: Sirui Liang, Pengfei Cao, Jian Zhao, Wenhao Teng, Xiangwen Liao, Jun Zhao, Kang Liu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2601.07470)  
+
+**Abstract**: Large language model (LLM) agents increasingly rely on accumulated memory to solve long-horizon decision-making tasks. However, most existing approaches store memory in fixed representations and reuse it at a single or implicit level of abstraction, which limits generalization and often leads to negative transfer when distribution shift. This paper proposes the Meta-Cognitive Memory Abstraction method (MCMA), which treats memory abstraction as a learnable cognitive skill rather than a fixed design choice. MCMA decouples task execution from memory management by combining a frozen task model with a learned memory copilot. The memory copilot is trained using direct preference optimization, it determines how memories should be structured, abstracted, and reused. Memories are further organized into a hierarchy of abstraction levels, enabling selective reuse based on task similarity. When no memory is transferable, MCMA transfers the ability to abstract and manage memory by transferring the memory copilot. Experiments on ALFWorld, ScienceWorld, and BabyAI demonstrate substantial improvements in performance, out-of-distribution generalization, and cross-task transfer over several baselines. 
+
+---
+# Group Pattern Selection Optimization: Let LRMs Pick the Right Pattern for Reasoning 
+
+**Authors**: Hanbin Wang, Jingwei Song, Jinpeng Li, Fei Mi, Lifeng Shang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2601.07238)  
+
+**Abstract**: Large reasoning models (LRMs) exhibit diverse high-level reasoning patterns (e.g., direct solution, reflection-and-verification, and exploring multiple solutions), yet prevailing training recipes implicitly bias models toward a limited set of dominant patterns. Through a systematic analysis, we identify substantial accuracy variance across these patterns on mathematics and science benchmarks, revealing that a model's default reasoning pattern is often sub-optimal for a given problem. To address this, we introduce Group Pattern Selection Optimization (GPSO), a reinforcement learning framework that extends GRPO by incorporating multi-pattern rollouts, verifier-guided optimal pattern selection per problem, and attention masking during optimization to prevent the leakage of explicit pattern suffixes into the learned policy. By exploring a portfolio of diverse reasoning strategies and optimizing the policy on the most effective ones, GPSO enables the model to internalize the mapping from problem characteristics to optimal reasoning patterns. Extensive experiments demonstrate that GPSO delivers consistent and substantial performance gains across various model backbones and benchmarks, effectively mitigating pattern sub-optimality and fostering more robust, adaptable reasoning. All data and codes are available at this https URL. 
+
+---
+# ENTRA: Entropy-Based Redundancy Avoidance in Large Language Model Reasoning 
+
+**Authors**: Ruichu Cai, Haopeng Du, Qingwen Lin, Yutong Chen, Zijian Li, Boyan Xu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2601.07123)  
+
+**Abstract**: Large Reasoning Models (LRMs) often suffer from overthinking, generating unnecessarily long reasoning chains even for simple tasks. This leads to substantial computational overhead with limited performance gain, primarily due to redundant verification and repetitive generation. While prior work typically constrains output length or optimizes correctness, such coarse supervision fails to guide models toward concise yet accurate inference. In this paper, we propose ENTRA, an entropy-based training framework that suppresses redundant reasoning while preserving performance. ENTRA first estimates the token-level importance using a lightweight Bidirectional Importance Estimation (BIE) method, which accounts for both prediction confidence and forward influence. It then computes a redundancy reward based on the entropy of low-importance tokens, normalized by its theoretical upper bound, and optimizes this reward via reinforcement learning. Experiments on mathematical reasoning benchmarks demonstrate that ENTRA reduces output length by 37% to 53% with no loss-and in some cases, gains-in accuracy. Our approach offers a principled and efficient solution to reduce overthinking in LRMs, and provides a generalizable path toward redundancy-aware reasoning optimization. 
+
+---
+# Thinking with Deltas: Incentivizing Reinforcement Learning via Differential Visual Reasoning Policy 
+
+**Authors**: Shujian Gao, Yuan Wang, Jiangtao Yan, Zuxuan Wu, Yu-Gang Jiang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2601.06801)  
+
+**Abstract**: Reinforcement Learning with Verifiable Rewards (RLVR) has significantly advanced reasoning capabilities in Large Language Models. However, adapting RLVR to multimodal domains suffers from a critical \textit{perception-reasoning decoupling}. Existing paradigms, driven by text-centric outcome rewards, reasoning in language medium, inadvertently encourage models to bypass visual perception. We empirically validate this through blind experiments: state-of-the-art policies maintain or surprisingly improve performance even when visual inputs are entirely removed. This reveals that these models degenerate into \textit{blind reasoners}, exploiting linguistic priors to generate plausible answers instead of attending to visual evidence. In response, we propose \textbf{Thinking with Deltas}, a framework driven by a \textbf{Differential Visual Reasoning Policy (DVRP)}. DVRP introduces intrinsic supervision via visual triplets, comprising original, masked, and perturbed inputs. It optimizes the model to maximize reasoning divergence from masked inputs (enforcing \textit{visual sensitivity}) while minimizing divergence from perturbed inputs (ensuring \textit{visual robustness}). By aligning reasoning variations strictly with the \textit{Delta} of visual information, DVRP inherently bolsters visual understanding capabilities and significantly outperforms state-of-the-art methods on both general and medical benchmarks, without requiring external annotations or auxiliary tools. 
+
+---
+# AscendKernelGen: A Systematic Study of LLM-Based Kernel Generation for Neural Processing Units 
+
+**Authors**: Xinzi Cao, Jianyang Zhai, Pengfei Li, Zhiheng Hu, Cen Yan, Bingxu Mu, Guanghuan Fang, Bin She, Jiayu Li, Yihan Su, Dongyang Tao, Xiansong Huang, Fan Xu, Feidiao Yang, Yao Lu, Chang-Dong Wang, Yutong Lu, Weicheng Xue, Bin Zhou, Yonghong Tian  
+
+**Link**: [PDF](https://arxiv.org/pdf/2601.07160)  
+
+**Abstract**: To meet the ever-increasing demand for computational efficiency, Neural Processing Units (NPUs) have become critical in modern AI infrastructure. However, unlocking their full potential requires developing high-performance compute kernels using vendor-specific Domain-Specific Languages (DSLs), a task that demands deep hardware expertise and is labor-intensive. While Large Language Models (LLMs) have shown promise in general code generation, they struggle with the strict constraints and scarcity of training data in the NPU domain. Our preliminary study reveals that state-of-the-art general-purpose LLMs fail to generate functional complex kernels for Ascend NPUs, yielding a near-zero success rate. To address these challenges, we propose AscendKernelGen, a generation-evaluation integrated framework for NPU kernel development. We introduce Ascend-CoT, a high-quality dataset incorporating chain-of-thought reasoning derived from real-world kernel implementations, and KernelGen-LM, a domain-adaptive model trained via supervised fine-tuning and reinforcement learning with execution feedback. Furthermore, we design NPUKernelBench, a comprehensive benchmark for assessing compilation, correctness, and performance across varying complexity levels. Experimental results demonstrate that our approach significantly bridges the gap between general LLMs and hardware-specific coding. Specifically, the compilation success rate on complex Level-2 kernels improves from 0% to 95.5% (Pass@10), while functional correctness achieves 64.3% compared to the baseline's complete failure. These results highlight the critical role of domain-specific reasoning and rigorous evaluation in automating accelerator-aware code generation. 
+
+---
+# LSRIF: Logic-Structured Reinforcement Learning for Instruction Following 
+
+**Authors**: Qingyu Ren, Qianyu He, Jingwen Chang, Jie Zeng, Jiaqing Liang, Yanghua Xiao, Han Xia, Zeye Sun, Fei Yu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2601.06431)  
+
+**Abstract**: Instruction-following is critical for large language models, but real-world instructions often contain logical structures such as sequential dependencies and conditional branching. Existing methods typically construct datasets with parallel constraints and optimize average rewards, ignoring logical dependencies and yielding noisy signals. We propose a logic-structured training framework LSRIF that explicitly models instruction logic. We first construct a dataset LSRInstruct with constraint structures such as parallel, sequential, and conditional types, and then design structure-aware rewarding method LSRIF including average aggregation for parallel structures, failure-penalty propagation for sequential structures, and selective rewards for conditional branches. Experiments show LSRIF brings significant improvements in instruction-following (in-domain and out-of-domain) and general reasoning. Analysis reveals that learning with explicit logic structures brings parameter updates in attention layers and sharpens token-level attention to constraints and logical operators. 
+
+---
+# PulseMind: A Multi-Modal Medical Model for Real-World Clinical Diagnosis 
+
+**Authors**: Jiao Xu, Junwei Liu, Jiangwei Lao, Qi Zhu, Yunpeng Zhao, Congyun Jin, Shinan Liu, Zhihong Lu, Lihe Zhang, Xin Chen, Jian Wang, Ping Wang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2601.07344)  
+
+**Abstract**: Recent advances in medical multi-modal models focus on specialized image analysis like dermatology, pathology, or radiology. However, they do not fully capture the complexity of real-world clinical diagnostics, which involve heterogeneous inputs and require ongoing contextual understanding during patient-physician interactions. To bridge this gap, we introduce PulseMind, a new family of multi-modal diagnostic models that integrates a systematically curated dataset, a comprehensive evaluation benchmark, and a tailored training framework. Specifically, we first construct a diagnostic dataset, MediScope, which comprises 98,000 real-world multi-turn consultations and 601,500 medical images, spanning over 10 major clinical departments and more than 200 sub-specialties. Then, to better reflect the requirements of real-world clinical diagnosis, we develop the PulseMind Benchmark, a multi-turn diagnostic consultation benchmark with a four-dimensional evaluation protocol comprising proactiveness, accuracy, usefulness, and language quality. Finally, we design a training framework tailored for multi-modal clinical diagnostics, centered around a core component named Comparison-based Reinforcement Policy Optimization (CRPO). Compared to absolute score rewards, CRPO uses relative preference signals from multi-dimensional com-parisons to provide stable and human-aligned training guidance. Extensive experiments demonstrate that PulseMind achieves competitive performance on both the diagnostic consultation benchmark and public medical benchmarks. 
+
+---
+# Segmental Advantage Estimation: Enhancing PPO for Long-Context LLM Training 
+
+**Authors**: Xue Gong, Qi Yi, Ziyuan Nan, Guanhua Huang, Kejiao Li, Yuhao Jiang, Ruibin Xiong, Zenan Xu, Jiaming Guo, Shaohui Peng, Bo Zhou  
+
+**Link**: [PDF](https://arxiv.org/pdf/2601.07320)  
+
+**Abstract**: Training Large Language Models (LLMs) for reasoning tasks is increasingly driven by Reinforcement Learning with Verifiable Rewards (RLVR), where Proximal Policy Optimization (PPO) provides a principled framework for stable policy updates. However, the practical application of PPO is hindered by unreliable advantage estimation in the sparse-reward RLVR regime. This issue arises because the sparse rewards in RLVR lead to inaccurate intermediate value predictions, which in turn introduce significant bias when aggregated at every token by Generalized Advantage Estimation (GAE). To address this, we introduce Segmental Advantage Estimation (SAE), which mitigates the bias that GAE can incur in RLVR. Our key insight is that aggregating $n$-step advantages at every token(as in GAE) is unnecessary and often introduces excessive bias, since individual tokens carry minimal information. Instead, SAE first partitions the generated sequence into coherent sub-segments using low-probability tokens as heuristic boundaries. It then selectively computes variance-reduced advantage estimates only from these information-rich segment transitions, effectively filtering out noise from intermediate tokens. Our experiments demonstrate that SAE achieves superior performance, with marked improvements in final scores, training stability, and sample efficiency. These gains are shown to be consistent across multiple model sizes, and a correlation analysis confirms that our proposed advantage estimator achieves a higher correlation with an approximate ground-truth advantage, justifying its superior performance. 
+
+---
+# Forward versus Backward: Comparing Reasoning Objectives in Direct Preference Optimization 
+
+**Authors**: Murtaza Nikzad, Raghuram Ramanujan  
+
+**Link**: [PDF](https://arxiv.org/pdf/2601.07199)  
+
+**Abstract**: Large language models exhibit impressive reasoning capabilities yet frequently generate plausible but incorrect solutions, a phenomenon commonly termed hallucination. This paper investigates the effect of training objective composition on reasoning reliability through Direct Preference Optimization. Two complementary training signals are examined: forward chain-of-thought generation, which trains the model to produce correct reasoning traces, and backward verification, which trains the model to verify and acknowledge errors in candidate solutions. Experiments on GSM8K reveal a fundamental trade-off between these objectives. Forward-only DPO training achieves the highest accuracy improvement, increasing from 83.1% to 86.6% (+3.5 percentage points), while backward-only training yields minimal accuracy gains but substantially reduces the false positive rate from 13.4% to 4.3%. Notably, both training variants reduce acknowledgement rate compared to the baseline, suggesting that preference optimization increases model confidence in its outputs. These findings indicate that forward and backward reasoning objectives provide distinct and complementary learning signals: forward training improves problem-solving capability, while backward training improves verification calibration. The complete training and evaluation pipeline, implemented efficiently through Low-Rank Adaptation, is released to facilitate further research. 
+
+---
+# PRPO: Aligning Process Reward with Outcome Reward in Policy Optimization 
+
+**Authors**: Ruiyi Ding, Yongxuan Lv, Xianhui Meng, Jiahe Song, Chao Wang, Chen Jiang, Yuan Cheng  
+
+**Link**: [PDF](https://arxiv.org/pdf/2601.07182)  
+
+**Abstract**: Policy optimization for large language models often suffers from sparse reward signals in multi-step reasoning tasks. Critic-free methods like GRPO assign a single normalized outcome reward to all tokens, providing limited guidance for intermediate reasoning . While Process Reward Models (PRMs) offer dense feedback, they risk premature collapse when used alone, as early low-reward tokens can drive policies toward truncated outputs. We introduce Process Relative Policy Optimization (PRPO), which combines outcome reliability with process-level guidance in a critic-free framework. PRPO segments reasoning sequences based on semantic clues, normalizes PRM scores into token-level advantages, and aligns their distribution with outcome advantages through location-parameter shift. On MATH500, PRPO improves Qwen2.5-Math-1.5B accuracy from 61.2% to 64.4% over GRPO using only eight rollouts and no value network, demonstrating efficient fine-grained credit assignment within critic-free optimization. 
+
+---
+# Personality-Aware Reinforcement Learning for Persuasive Dialogue with LLM-Driven Simulation 
+
+**Authors**: Donghuo Zeng, Roberto Legaspi, Kazushi Ikeda  
+
+**Link**: [PDF](https://arxiv.org/pdf/2601.06877)  
+
+**Abstract**: Effective persuasive dialogue agents adapt their strategies to individual users, accounting for the evolution of their psychological states and intentions throughout conversations. We present a personality-aware reinforcement learning approach comprising three main modules: (1) a Strategy-Oriented Interaction Framework, which serves as an agenda-based strategy controller that selects strategy-level actions and generate responses via Maximal Marginal Relevance (MMR) retrieval to ensure contextual relevance, diversity, and scalable data generation; (2) Personality-Aware User Representation Learning, which produces an 81-dimensional mixed-type embedding predicted at each turn from recent exchanges and appended to the reinforcement learning state; and (3) a Dueling Double DQN (D3QN) model and Reward Prediction, in which the policy is conditioned on dialogue history and turn-level personality estimates and trained using a composite reward incorporating agreement intent, donation amount, and changeof-mind penalties. We use an agenda-based LLM simulation pipeline to generate diverse interactions, from which personality estimation is inferred from the generated utterances. Experiments on the PersuasionForGood (P4G) dataset augmented with simulated dialogues reveal three main findings: (i) turn-level personality conditioning improves policy adaptability and cumulative persuasion rewards; (ii) LLM-driven simulation enhances generalization to unseen user behaviors; and (iii) incorporating a change-of-mind penalty reduces post-agreement retractions while slightly improving donation outcomes. These results demonstrate that structured interaction, dynamic personality estimation, and behaviorally informed rewards together yield more effective persuasive policies. 
+
+---
+# Are LLMs Vulnerable to Preference-Undermining Attacks (PUA)? A Factorial Analysis Methodology for Diagnosing the Trade-off between Preference Alignment and Real-World Validity 
+
+**Authors**: Hongjun An, Yiliang Song, Jiangan Chen, Jiawei Shao, Chi Zhang, Xuelong Li  
+
+**Link**: [PDF](https://arxiv.org/pdf/2601.06596)  
+
+**Abstract**: Large Language Model (LLM) training often optimizes for preference alignment, rewarding outputs that are perceived as helpful and interaction-friendly. However, this preference-oriented objective can be exploited: manipulative prompts can steer responses toward user-appeasing agreement and away from truth-oriented correction. In this work, we investigate whether aligned models are vulnerable to Preference-Undermining Attacks (PUA), a class of manipulative prompting strategies designed to exploit the model's desire to please user preferences at the expense of truthfulness. We propose a diagnostic methodology that provides a finer-grained and more directive analysis than aggregate benchmark scores, using a factorial evaluation framework to decompose prompt-induced shifts into interpretable effects of system objectives (truth- vs. preference-oriented) and PUA-style dialogue factors (directive control, personal derogation, conditional approval, reality denial) within a controlled $2 \times 2^4$ design. Surprisingly, more advanced models are sometimes more susceptible to manipulative prompts. Beyond the dominant reality-denial factor, we observe model-specific sign reversals and interactions with PUA-style factors, suggesting tailored defenses rather than uniform robustness. These findings offer a novel, reproducible factorial evaluation methodology that provides finer-grained diagnostics for post-training processes like RLHF, enabling better trade-offs in the product iteration of LLMs by offering a more nuanced understanding of preference alignment risks and the impact of manipulative prompts. 
+
+---
+# ECLIPTICA - A Framework for Switchable LLM Alignment via CITA - Contrastive Instruction-Tuned Alignment 
+
+**Authors**: Kapil Wanaskar, Gaytri Jena, Vinija Jain, Aman Chadha, Amitava Das  
+
+**Link**: [PDF](https://arxiv.org/pdf/2601.06157)  
+
+**Abstract**: Alignment in large language models (LLMs) is still largely static: after training, the policy is frozen. DPO, GRPO methods typically imprint one behavior into the weights, leaving little runtime control beyond prompt hacks or expensive re-alignment. We introduce ECLIPTICA, which treats alignment as instruction-driven and runtime-controllable: natural-language alignment instructions act as an explicit behavioral contract (stance, refusal boundary, verbosity) that modulates behavior on the fly under evolving safety requirements, user roles, and governance constraints.
+We introduce CITA (Contrastive Instruction-Tuned Alignment), combining SFT with contrastive preference optimization under an explicit geometric anchor to a reference model. This yields a stable Riemannian chart and keeps instruction updates within a shared neighborhood, so regimes stay nearby and traversable for reliable switching.
+To isolate policy switching from ordinary instruction following, we release the ECLIPTICA benchmark: 3000 controlled cases (300 prompts x 10 instruction types) where the user request is fixed and only the alignment instruction changes. On Llama-3.1-8B across five suites (ECLIPTICA, TruthfulQA, Conditional Safety, Length Control, LITMUS), CITA reaches 86.7% instruction-alignment efficiency, beating DPO (56.1%), GRPO (36.1%), and PPO (20.4%). 
+
+---
