@@ -1,0 +1,92 @@
+# ViDoRe V3: A Comprehensive Evaluation of Retrieval Augmented Generation in Complex Real-World Scenarios 
+
+**Authors**: António Loison, Quentin Macé, Antoine Edy, Victor Xing, Tom Balough, Gabriel Moreira, Bo Liu, Manuel Faysse, Céline Hudelot, Gautier Viaud  
+
+**Link**: [PDF](https://arxiv.org/pdf/2601.08620)  
+
+**Abstract**: Retrieval-Augmented Generation (RAG) pipelines must address challenges beyond simple single-document retrieval, such as interpreting visual elements (tables, charts, images), synthesizing information across documents, and providing accurate source grounding. Existing benchmarks fail to capture this complexity, often focusing on textual data, single-document comprehension, or evaluating retrieval and generation in isolation. We introduce ViDoRe v3, a comprehensive multimodal RAG benchmark featuring multi-type queries over visually rich document corpora. It covers 10 datasets across diverse professional domains, comprising ~26,000 document pages paired with 3,099 human-verified queries, each available in 6 languages. Through 12,000 hours of human annotation effort, we provide high-quality annotations for retrieval relevance, bounding box localization, and verified reference answers. Our evaluation of state-of-the-art RAG pipelines reveals that visual retrievers outperform textual ones, late-interaction models and textual reranking substantially improve performance, and hybrid or purely visual contexts enhance answer generation quality. However, current models still struggle with non-textual elements, open-ended queries, and fine-grained visual grounding. To encourage progress in addressing these challenges, the benchmark is released under a commercially permissive license at this https URL. 
+
+---
+# WaterCopilot: An AI-Driven Virtual Assistant for Water Management 
+
+**Authors**: Keerththanan Vickneswaran, Mariangel Garcia Andarcia, Hugo Retief, Chris Dickens, Paulo Silva  
+
+**Link**: [PDF](https://arxiv.org/pdf/2601.08559)  
+
+**Abstract**: Sustainable water resource management in transboundary river basins is challenged by fragmented data, limited real-time access, and the complexity of integrating diverse information sources. This paper presents WaterCopilot-an AI-driven virtual assistant developed through collaboration between the International Water Management Institute (IWMI) and Microsoft Research for the Limpopo River Basin (LRB) to bridge these gaps through a unified, interactive platform. Built on Retrieval-Augmented Generation (RAG) and tool-calling architectures, WaterCopilot integrates static policy documents and real-time hydrological data via two custom plugins: the iwmi-doc-plugin, which enables semantic search over indexed documents using Azure AI Search, and the iwmi-api-plugin, which queries live databases to deliver dynamic insights such as environmental-flow alerts, rainfall trends, reservoir levels, water accounting, and irrigation data. The system features guided multilingual interactions (English, Portuguese, French), transparent source referencing, automated calculations, and visualization capabilities. Evaluated using the RAGAS framework, WaterCopilot achieves an overall score of 0.8043, with high answer relevancy (0.8571) and context precision (0.8009). Key innovations include automated threshold-based alerts, integration with the LRB Digital Twin, and a scalable deployment pipeline hosted on AWS. While limitations in processing non-English technical documents and API latency remain, WaterCopilot establishes a replicable AI-augmented framework for enhancing water governance in data-scarce, transboundary contexts. The study demonstrates the potential of this AI assistant to support informed, timely decision-making and strengthen water security in complex river basins. 
+
+---
+# Parallel Context-of-Experts Decoding for Retrieval Augmented Generation 
+
+**Authors**: Giulio Corallo, Paolo Papotti  
+
+**Link**: [PDF](https://arxiv.org/pdf/2601.08670)  
+
+**Abstract**: Retrieval Augmented Generation faces a trade-off: concatenating documents in a long prompt enables multi-document reasoning but creates prefill bottlenecks, while encoding document KV caches separately offers speed but breaks cross-document interaction. We propose Parallel Context-of-Experts Decoding (Pced), a training-free framework that shifts evidence aggregation from the attention mechanism to the decoding. Pced treats retrieved documents as isolated "experts", synchronizing their predictions via a novel retrieval-aware contrastive decoding rule that weighs expert logits against the model prior. This approach recovers cross-document reasoning capabilities without constructing a shared attention across documents. 
+
+---
+# OpenMic: A Multi-Agent-Based Stand-Up Comedy Generation System 
+
+**Authors**: Yuyang Wu, Hanzhong Cao, Jianhao Chen, Yufei Li  
+
+**Link**: [PDF](https://arxiv.org/pdf/2601.08288)  
+
+**Abstract**: Chinese stand-up comedy generation goes beyond plain text generation, requiring culturally grounded humor, precise timing, stage-performance cues, and implicit multi-step reasoning. Moreover, commonly used Chinese humor datasets are often better suited for humor understanding and evaluation than for long-form stand-up generation, making direct supervision misaligned with the target task. To address these challenges, we present OpenMic, an end-to-end multi-agent system built on AutoGen that transforms a user-provided life topic into a 3-5 minute Chinese stand-up performance and further produces a narrated comedy video. OpenMic orchestrates multiple specialized agents in a multi-round iterative loop-planning to jointly optimize humor, timing, and performability. To mitigate the dataset-task mismatch, we augment generation with retrieval-augmented generation (RAG) for material grounding and idea expansion, and we fine-tune a dedicated JokeWriter to better internalize stand-up-specific setup-punchline structures and long-range callbacks. 
+
+---
+# Reliable Graph-RAG for Codebases: AST-Derived Graphs vs LLM-Extracted Knowledge Graphs 
+
+**Authors**: Manideep Reddy Chinthareddy  
+
+**Link**: [PDF](https://arxiv.org/pdf/2601.08773)  
+
+**Abstract**: Retrieval-Augmented Generation for software engineering often relies on vector similarity search, which captures topical similarity but can fail on multi-hop architectural reasoning such as controller to service to repository chains, interface-driven wiring, and inheritance. This paper benchmarks three retrieval pipelines on Java codebases (Shopizer, with additional runs on ThingsBoard and OpenMRS Core): (A) vector-only No-Graph RAG, (B) an LLM-generated knowledge graph RAG (LLM-KB), and (C) a deterministic AST-derived knowledge graph RAG (DKB) built with Tree-sitter and bidirectional traversal.
+Using 15 architecture and code-tracing queries per repository, we measure indexing time, query latency, corpus coverage, cost, and answer correctness. DKB builds its graph in seconds, while LLM-KB requires much longer graph generation. LLM-KB also shows indexing incompleteness: on Shopizer, 377 files are skipped or missed, reducing embedded chunk coverage and graph size compared to DKB. End-to-end cost is modest for DKB relative to the vector-only baseline but much higher for LLM-KB, especially as repository scale increases. Query latency is similar for No-Graph and DKB, while LLM-KB is slower and more variable. On the Shopizer question suite, DKB achieves the highest correctness, LLM-KB is close behind, and the vector-only baseline performs worst on upstream architectural queries and has the highest hallucination risk. Overall, deterministic AST-derived graphs provide more reliable coverage and multi-hop grounding than LLM-extracted graphs at substantially lower indexing cost. 
+
+---
+# Enhancing Image Quality Assessment Ability of LMMs via Retrieval-Augmented Generation 
+
+**Authors**: Kang Fu, Huiyu Duan, Zicheng Zhang, Yucheng Zhu, Jun Zhao, Xiongkuo Min, Jia Wang, Guangtao Zhai  
+
+**Link**: [PDF](https://arxiv.org/pdf/2601.08311)  
+
+**Abstract**: Large Multimodal Models (LMMs) have recently shown remarkable promise in low-level visual perception tasks, particularly in Image Quality Assessment (IQA), demonstrating strong zero-shot capability. However, achieving state-of-the-art performance often requires computationally expensive fine-tuning methods, which aim to align the distribution of quality-related token in output with image quality levels. Inspired by recent training-free works for LMM, we introduce IQARAG, a novel, training-free framework that enhances LMMs' IQA ability. IQARAG leverages Retrieval-Augmented Generation (RAG) to retrieve some semantically similar but quality-variant reference images with corresponding Mean Opinion Scores (MOSs) for input image. These retrieved images and input image are integrated into a specific prompt. Retrieved images provide the LMM with a visual perception anchor for IQA task. IQARAG contains three key phases: Retrieval Feature Extraction, Image Retrieval, and Integration & Quality Score Generation. Extensive experiments across multiple diverse IQA datasets, including KADID, KonIQ, LIVE Challenge, and SPAQ, demonstrate that the proposed IQARAG effectively boosts the IQA performance of LMMs, offering a resource-efficient alternative to fine-tuning for quality assessment. 
+
+---
+# A survey: Information search time optimization based on RAG (Retrieval Augmentation Generation) chatbot 
+
+**Authors**: Jinesh Patel, Arpit Malhotra, Ajay Pande, Prateek Caire  
+
+**Link**: [PDF](https://arxiv.org/pdf/2601.07838)  
+
+**Abstract**: Retrieval-Augmented Generation (RAG) based chatbots are not only useful for information retrieval through questionanswering but also for making complex decisions based on injected private this http URL present a survey on how much search time can be saved when retrieving complex information within an organization called "X Systems"(a stealth mode company) by using a RAG-based chatbot compared to traditional search methods. We compare the information retrieval time using standard search techniques versus the RAG-based chatbot for the same queries. Our results conclude that RAG-based chatbots not only save time in information retrieval but also optimize the search process effectively. This survey was conducted with a sample of 105 employees across departments, average time spending on information retrieval per query was taken as metric. Comparison shows us, there are average 80-95% improvement on search when use RAG based chatbot than using standard search. 
+
+---
+# RAGShaper: Eliciting Sophisticated Agentic RAG Skills via Automated Data Synthesis 
+
+**Authors**: Zhengwei Tao, Bo Li, Jialong Wu, Guochen Yan, Huanyao Zhang, Jiahao Xu, Haitao Mi, Wentao Zhang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2601.08699)  
+
+**Abstract**: Agentic Retrieval-Augmented Generation (RAG) empowers large language models to autonomously plan and retrieve information for complex problem-solving. However, the development of robust agents is hindered by the scarcity of high-quality training data that reflects the noise and complexity of real-world retrieval environments. Conventional manual annotation is unscalable and often fails to capture the dynamic reasoning strategies required to handle retrieval failures. To bridge this gap, we introduce RAGShaper, a novel data synthesis framework designed to automate the construction of RAG tasks and robust agent trajectories. RAGShaper incorporates an InfoCurator to build dense information trees enriched with adversarial distractors spanning Perception and Cognition levels. Furthermore, we propose a constrained navigation strategy that forces a teacher agent to confront these distractors, thereby eliciting trajectories that explicitly demonstrate error correction and noise rejection. Comprehensive experiments confirm that models trained on our synthesized corpus significantly outperform existing baselines, exhibiting superior robustness in noise-intensive and complex retrieval tasks. 
+
+---
+# Query Suggestion for Retrieval-Augmented Generation via Dynamic In-Context Learning 
+
+**Authors**: Fabian Spaeh, Tianyi Chen, Chen-Hao Chiang, Bin Shen  
+
+**Link**: [PDF](https://arxiv.org/pdf/2601.08105)  
+
+**Abstract**: Retrieval-augmented generation with tool-calling agents (agentic RAG) has become increasingly powerful in understanding, processing, and responding to user queries. However, the scope of the grounding knowledge is limited and asking questions that exceed this scope may lead to issues like hallucination. While guardrail frameworks aim to block out-of-scope questions (Rodriguez et al., 2024), no research has investigated the question of suggesting answerable queries in order to complete the user interaction.
+In this paper, we initiate the study of query suggestion for agentic RAG. We consider the setting where user questions are not answerable, and the suggested queries should be similar to aid the user interaction. Such scenarios are frequent for tool-calling LLMs as communicating the restrictions of the tools or the underlying datasets to the user is difficult, and adding query suggestions enhances the interaction with the RAG agent. As opposed to traditional settings for query recommendations such as in search engines, ensuring that the suggested queries are answerable is a major challenge due to the RAG's multi-step workflow that demands a nuanced understanding of the RAG as a whole, which the executing LLM lacks. As such, we introduce robust dynamic few-shot learning which retrieves examples from relevant workflows. We show that our system can be self-learned, for instance on prior user queries, and is therefore easily applicable in practice. We evaluate our approach on three benchmark datasets based on two unlabeled question datasets collected from real-world user queries. Experiments on real-world datasets confirm that our method produces more relevant and answerable suggestions, outperforming few-shot and retrieval-only baselines, and thus enable safer, more effective user interaction with agentic RAG. 
+
+---
+# EmbeddingRWKV: State-Centric Retrieval with Reusable States 
+
+**Authors**: Haowen Hou, Jie Yang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2601.07861)  
+
+**Abstract**: Current Retrieval-Augmented Generation (RAG) systems typically employ a traditional two-stage pipeline: an embedding model for initial retrieval followed by a reranker for refinement. However, this paradigm suffers from significant inefficiency due to the lack of shared information between stages, leading to substantial redundant computation. To address this limitation, we propose \textbf{State-Centric Retrieval}, a unified retrieval paradigm that utilizes "states" as a bridge to connect embedding models and rerankers. First, we perform state representation learning by fine-tuning an RWKV-based LLM, transforming it into \textbf{EmbeddingRWKV}, a unified model that serves as both an embedding model and a state backbone for extracting compact, reusable states. Building upon these reusable states, we further design a state-based reranker to fully leverage precomputed information. During reranking, the model processes only query tokens, decoupling inference cost from document length and yielding a 5.4$\times$--44.8$\times$ speedup. Furthermore, we observe that retaining all intermediate layer states is unnecessary; with a uniform layer selection strategy, our model maintains 98.62\% of full-model performance using only 25\% of the layers. Extensive experiments demonstrate that State-Centric Retrieval achieves high-quality retrieval and reranking results while significantly enhancing overall system efficiency. Code is available at \href{this https URL}{our GitHub repository}. 
+
+---

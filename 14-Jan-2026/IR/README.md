@@ -1,0 +1,165 @@
+# MemRec: Collaborative Memory-Augmented Agentic Recommender System 
+
+**Authors**: Weixin Chen, Yuhan Zhao, Jingyuan Huang, Zihe Ye, Clark Mingxuan Ju, Tong Zhao, Neil Shah, Li Chen, Yongfeng Zhang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2601.08816)  
+
+**Abstract**: The evolution of recommender systems has shifted preference storage from rating matrices and dense embeddings to semantic memory in the agentic era. Yet existing agents rely on isolated memory, overlooking crucial collaborative signals. Bridging this gap is hindered by the dual challenges of distilling vast graph contexts without overwhelming reasoning agents with cognitive load, and evolving the collaborative memory efficiently without incurring prohibitive computational costs. To address this, we propose MemRec, a framework that architecturally decouples reasoning from memory management to enable efficient collaborative augmentation. MemRec introduces a dedicated, cost-effective LM_Mem to manage a dynamic collaborative memory graph, serving synthesized, high-signal context to a downstream LLM_Rec. The framework operates via a practical pipeline featuring efficient retrieval and cost-effective asynchronous graph propagation that evolves memory in the background. Extensive experiments on four benchmarks demonstrate that MemRec achieves state-of-the-art performance. Furthermore, architectural analysis confirms its flexibility, establishing a new Pareto frontier that balances reasoning quality, cost, and privacy through support for diverse deployments, including local open-source models. Code:this https URL and Homepage: this https URL 
+
+---
+# FusID: Modality-Fused Semantic IDs for Generative Music Recommendation 
+
+**Authors**: Haven Kim, Yupeng Hou, Julian McAuley  
+
+**Link**: [PDF](https://arxiv.org/pdf/2601.08764)  
+
+**Abstract**: Generative recommendation systems have achieved significant advances by leveraging semantic IDs to represent items. However, existing approaches that tokenize each modality independently face two critical limitations: (1) redundancy across modalities that reduces efficiency, and (2) failure to capture inter-modal interactions that limits item representation. We introduce FusID, a modality-fused semantic ID framework that addresses these limitations through three key components: (i) multimodal fusion that learns unified representations by jointly encoding information across modalities, (ii) representation learning that brings frequently co-occurring item embeddings closer while maintaining distinctiveness and preventing feature redundancy, and (iii) product quantization that converts the fused continuous embeddings into multiple discrete tokens to mitigate ID conflict. Evaluated on a multimodal next-song recommendation (i.e., playlist continuation) benchmark, FusID achieves zero ID conflicts, ensuring that each token sequence maps to exactly one song, mitigates codebook underutilization, and outperforms baselines in terms of MRR and Recall@k (k = 1, 5, 10, 20). 
+
+---
+# RMBRec: Robust Multi-Behavior Recommendation towards Target Behaviors 
+
+**Authors**: Miaomiao Cai, Zhijie Zhang, Junfeng Fang, Zhiyong Cheng, Xiang Wang, Meng Wang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2601.08705)  
+
+**Abstract**: Multi-behavior recommendation faces a critical challenge in practice: auxiliary behaviors (e.g., clicks, carts) are often noisy, weakly correlated, or semantically misaligned with the target behavior (e.g., purchase), which leads to biased preference learning and suboptimal performance. While existing methods attempt to fuse these heterogeneous signals, they inherently lack a principled mechanism to ensure robustness against such behavioral inconsistency.
+In this work, we propose Robust Multi-Behavior Recommendation towards Target Behaviors (RMBRec), a robust multi-behavior recommendation framework grounded in an information-theoretic robustness principle. We interpret robustness as a joint process of maximizing predictive information while minimizing its variance across heterogeneous behavioral environments. Under this perspective, the Representation Robustness Module (RRM) enhances local semantic consistency by maximizing the mutual information between users' auxiliary and target representations, whereas the Optimization Robustness Module (ORM) enforces global stability by minimizing the variance of predictive risks across behaviors, which is an efficient approximation to invariant risk minimization. This local-global collaboration bridges representation purification and optimization invariance in a theoretically coherent way. Extensive experiments on three real-world datasets demonstrate that RMBRec not only outperforms state-of-the-art methods in accuracy but also maintains remarkable stability under various noise perturbations. For reproducibility, our code is available at this https URL. 
+
+---
+# VeriTaS: The First Dynamic Benchmark for Multimodal Automated Fact-Checking 
+
+**Authors**: Mark Rothermel, Marcus Kornmann, Marcus Rohrbach, Anna Rohrbach  
+
+**Link**: [PDF](https://arxiv.org/pdf/2601.08611)  
+
+**Abstract**: The growing scale of online misinformation urgently demands Automated Fact-Checking (AFC). Existing benchmarks for evaluating AFC systems, however, are largely limited in terms of task scope, modalities, domain, language diversity, realism, or coverage of misinformation types. Critically, they are static, thus subject to data leakage as their claims enter the pretraining corpora of LLMs. As a result, benchmark performance no longer reliably reflects the actual ability to verify claims. We introduce Verified Theses and Statements (VeriTaS), the first dynamic benchmark for multimodal AFC, designed to remain robust under ongoing large-scale pretraining of foundation models. VeriTaS currently comprises 24,000 real-world claims from 108 professional fact-checking organizations across 54 languages, covering textual and audiovisual content. Claims are added quarterly via a fully automated seven-stage pipeline that normalizes claim formulation, retrieves original media, and maps heterogeneous expert verdicts to a novel, standardized, and disentangled scoring scheme with textual justifications. Through human evaluation, we demonstrate that the automated annotations closely match human judgments. We commit to update VeriTaS in the future, establishing a leakage-resistant benchmark, supporting meaningful AFC evaluation in the era of rapidly evolving foundation models. We will make the code and data publicly available. 
+
+---
+# GraphFusionSBR: Denoising Multi-Channel Graphs for Session-Based Recommendation 
+
+**Authors**: Jia-Xin He, Hung-Hsuan Chen  
+
+**Link**: [PDF](https://arxiv.org/pdf/2601.08497)  
+
+**Abstract**: Session-based recommendation systems must capture implicit user intents from sessions. However, existing models suffer from issues such as item interaction dominance and noisy sessions. We propose a multi-channel recommendation model, including a knowledge graph channel, a session hypergraph channel, and a session line graph channel, to capture information from multiple sources. Our model adaptively removes redundant edges in the knowledge graph channel to reduce noise. Knowledge graph representations cooperate with hypergraph representations for prediction to alleviate item dominance. We also generate in-session attention for denoising. Finally, we maximize mutual information between the hypergraph and line graph channels as an auxiliary task. Experiments demonstrate that our method enhances the accuracy of various recommendations, including e-commerce and multimedia recommendations. We release the code on GitHub for reproducibility.\footnote{this https URL} 
+
+---
+# PosIR: Position-Aware Heterogeneous Information Retrieval Benchmark 
+
+**Authors**: Ziyang Zeng, Dun Zhang, Yu Yan, Xu Sun, Yudong Zhou, Yuqing Yang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2601.08363)  
+
+**Abstract**: While dense retrieval models have achieved remarkable success, rigorous evaluation of their sensitivity to the position of relevant information (i.e., position bias) remains largely unexplored. Existing benchmarks typically employ position-agnostic relevance labels, conflating the challenge of processing long contexts with the bias against specific evidence locations. To address this challenge, we introduce PosIR (Position-Aware Information Retrieval), a comprehensive benchmark designed to diagnose position bias in diverse retrieval scenarios. PosIR comprises 310 datasets spanning 10 languages and 31 domains, constructed through a rigorous pipeline that ties relevance to precise reference spans, enabling the strict disentanglement of document length from information position. Extensive experiments with 10 state-of-the-art embedding models reveal that: (1) Performance on PosIR in long-context settings correlates poorly with the MMTEB benchmark, exposing limitations in current short-text benchmarks; (2) Position bias is pervasive and intensifies with document length, with most models exhibiting primacy bias while certain models show unexpected recency bias; (3) Gradient-based saliency analysis further uncovers the distinct internal attention mechanisms driving these positional preferences. In summary, PosIR serves as a valuable diagnostic framework to foster the development of position-robust retrieval systems. 
+
+---
+# Scalable Sequential Recommendation under Latency and Memory Constraints 
+
+**Authors**: Adithya Parthasarathy, Aswathnarayan Muthukrishnan Kirubakaran, Vinoth Punniyamoorthy, Nachiappan Chockalingam, Lokesh Butra, Kabilan Kannan, Abhirup Mazumder, Sumit Saha  
+
+**Link**: [PDF](https://arxiv.org/pdf/2601.08360)  
+
+**Abstract**: Sequential recommender systems must model long-range user behavior while operating under strict memory and latency constraints. Transformer-based approaches achieve strong accuracy but suffer from quadratic attention complexity, forcing aggressive truncation of user histories and limiting their practicality for long-horizon modeling. This paper presents HoloMambaRec, a lightweight sequential recommendation architecture that combines holographic reduced representations for attribute-aware embedding with a selective state space encoder for linear-time sequence processing. Item and attribute information are bound using circular convolution, preserving embedding dimensionality while encoding structured metadata. A shallow selective state space backbone, inspired by recent Mamba-style models, enables efficient training and constant-time recurrent inference. Experiments on Amazon Beauty and MovieLens-1M datasets demonstrate that HoloMambaRec consistently outperforms SASRec and achieves competitive performance with GRU4Rec under a constrained 10-epoch training budget, while maintaining substantially lower memory complexity. The design further incorporates forward-compatible mechanisms for temporal bundling and inference-time compression, positioning HoloMambaRec as a practical and extensible alternative for scalable, metadata-aware sequential recommendation. 
+
+---
+# MLPlatt: Simple Calibration Framework for Ranking Models 
+
+**Authors**: Piotr Bajger, Roman Dusek, Krzysztof Galias, Paweł Młyniec, Aleksander Wawer, Paweł Zawistowski  
+
+**Link**: [PDF](https://arxiv.org/pdf/2601.08345)  
+
+**Abstract**: Ranking models are extensively used in e-commerce for relevance estimation. These models often suffer from poor interpretability and no scale calibration, particularly when trained with typical ranking loss functions. This paper addresses the problem of post-hoc calibration of ranking models. We introduce MLPlatt: a simple yet effective ranking model calibration method that preserves the item ordering and converts ranker outputs to interpretable click-through rate (CTR) probabilities usable in downstream tasks. The method is context-aware by design and achieves good calibration metrics globally, and within strata corresponding to different values of a selected categorical field (such as user country or device), which is often important from a business perspective of an E-commerce platform. We demonstrate the superiority of MLPlatt over existing approaches on two datasets, achieving an improvement of over 10\% in F-ECE (Field Expected Calibration Error) compared to other methods. Most importantly, we show that high-quality calibration can be achieved without compromising the ranking quality. 
+
+---
+# AgriLens: Semantic Retrieval in Agricultural Texts Using Topic Modeling and Language Models 
+
+**Authors**: Heba Shakeel, Tanvir Ahmad, Tanya Liyaqat, Chandni Saxena  
+
+**Link**: [PDF](https://arxiv.org/pdf/2601.08283)  
+
+**Abstract**: As the volume of unstructured text continues to grow across domains, there is an urgent need for scalable methods that enable interpretable organization, summarization, and retrieval of information. This work presents a unified framework for interpretable topic modeling, zero-shot topic labeling, and topic-guided semantic retrieval over large agricultural text corpora. Leveraging BERTopic, we extract semantically coherent topics. Each topic is converted into a structured prompt, enabling a language model to generate meaningful topic labels and summaries in a zero-shot manner. Querying and document exploration are supported via dense embeddings and vector search, while a dedicated evaluation module assesses topical coherence and bias. This framework supports scalable and interpretable information access in specialized domains where labeled data is limited. 
+
+---
+# Markovian Pre-Trained Transformer for Next-Item Recommendation 
+
+**Authors**: Cong Xu, Guoliang Li, Jun Wang, Wei Zhang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2601.08275)  
+
+**Abstract**: We introduce the Markovian Pre-trained Transformer (MPT) for next-item recommendation, a transferable model fully pre-trained on synthetic Markov chains, yet capable of achieving state-of-the-art performance by fine-tuning a lightweight adaptor. This counterintuitive success stems from the observation of the `Markovian' nature: advanced sequential recommenders coincidentally rely on the latest interaction to make predictions, while the historical interactions serve mainly as auxiliary cues for inferring the user's general, non-sequential identity. This characteristic necessitates the capabilities of a universal recommendation model to effectively summarize the user sequence, with particular emphasis on the latest interaction. MPT inherently has the potential to be universal and transferable. On the one hand, when trained to predict the next state of Markov chains, it acquires the capabilities to estimate transition probabilities from the context (one adaptive manner for summarizing sequences) and attend to the last state to ensure accurate state transitions. On the other hand, unlike the heterogeneous interaction data, an unlimited amount of controllable Markov chains is available to boost the model capacity. We conduct extensive experiments on five public datasets from three distinct platforms to validate the superiority of Markovian pre-training over traditional recommendation pre-training and recent language pre-training paradigms. 
+
+---
+# Enriching Semantic Profiles into Knowledge Graph for Recommender Systems Using Large Language Models 
+
+**Authors**: Seokho Ahn, Sungbok Shin, Young-Duk Seo  
+
+**Link**: [PDF](https://arxiv.org/pdf/2601.08148)  
+
+**Abstract**: Rich and informative profiling to capture user preferences is essential for improving recommendation quality. However, there is still no consensus on how best to construct and utilize such profiles. To address this, we revisit recent profiling-based approaches in recommender systems along four dimensions: 1) knowledge base, 2) preference indicator, 3) impact range, and 4) subject. We argue that large language models (LLMs) are effective at extracting compressed rationales from diverse knowledge sources, while knowledge graphs (KGs) are better suited for propagating these profiles to extend their reach. Building on this insight, we propose a new recommendation model, called SPiKE. SPiKE consists of three core components: i) Entity profile generation, which uses LLMs to generate semantic profiles for all KG entities; ii) Profile-aware KG aggregation, which integrates these profiles into the KG; and iii) Pairwise profile preference matching, which aligns LLM- and KG-based representations during training. In experiments, we demonstrate that SPiKE consistently outperforms state-of-the-art KG- and LLM-based recommenders in real-world settings. 
+
+---
+# Cost and accuracy of long-term graph memory in distributed LLM-based multi-agent systems 
+
+**Authors**: Benedict Wolff, Jacopo Bennati  
+
+**Link**: [PDF](https://arxiv.org/pdf/2601.07978)  
+
+**Abstract**: Distributed multi-agent systems use large language models to enable collaborative intelligence while preserving privacy, yet systematic evaluations of long-term memory under network constraints remain limited. This study presents a flexible testbed comparing mem0, a vector-based memory framework, and Graphiti, a graph-based knowledge graph, using the LOCOMO long-context benchmark. Experiments were conducted under unconstrained and constrained network conditions, measuring computational, financial, and accuracy metrics. Results indicate that mem0 significantly outperforms Graphiti in efficiency, with faster loading times, lower resource consumption, and minimal network overhead, while accuracy differences are not statistically significant. Applying a statistical pareto efficiency framework, mem0 is identified as the optimal choice that balances cost and accuracy in DMAS. 
+
+---
+# A survey: Information search time optimization based on RAG (Retrieval Augmentation Generation) chatbot 
+
+**Authors**: Jinesh Patel, Arpit Malhotra, Ajay Pande, Prateek Caire  
+
+**Link**: [PDF](https://arxiv.org/pdf/2601.07838)  
+
+**Abstract**: Retrieval-Augmented Generation (RAG) based chatbots are not only useful for information retrieval through questionanswering but also for making complex decisions based on injected private this http URL present a survey on how much search time can be saved when retrieving complex information within an organization called "X Systems"(a stealth mode company) by using a RAG-based chatbot compared to traditional search methods. We compare the information retrieval time using standard search techniques versus the RAG-based chatbot for the same queries. Our results conclude that RAG-based chatbots not only save time in information retrieval but also optimize the search process effectively. This survey was conducted with a sample of 105 employees across departments, average time spending on information retrieval per query was taken as metric. Comparison shows us, there are average 80-95% improvement on search when use RAG based chatbot than using standard search. 
+
+---
+# Characterizing Personality from Eye-Tracking: The Role of Gaze and Its Absence in Interactive Search Environments 
+
+**Authors**: Jiaman He, Marta Micheli, Damiano Spina, Dana McKay, Johanne R. Trippas, Noriko Kando  
+
+**Link**: [PDF](https://arxiv.org/pdf/2601.08287)  
+
+**Abstract**: Personality traits influence how individuals engage, behave, and make decisions during the information-seeking process. However, few studies have linked personality to observable search behaviors. This study aims to characterize personality traits through a multimodal time-series model that integrates eye-tracking data and gaze missingness-periods when the user's gaze is not captured. This approach is based on the idea that people often look away when they think, signaling disengagement or reflection. We conducted a user study with 25 participants, who used an interactive application on an iPad, allowing them to engage with digital artifacts from a museum. We rely on raw gaze data from an eye tracker, minimizing preprocessing so that behavioral patterns can be preserved without substantial data cleaning. From this perspective, we trained models to predict personality traits using gaze signals. Our results from a five-fold cross-validation study demonstrate strong predictive performance across all five dimensions: Neuroticism (Macro F1 = 77.69%), Conscientiousness (74.52%), Openness (77.52%), Agreeableness (73.09%), and Extraversion (76.69%). The ablation study examines whether the absence of gaze information affects the model performance, demonstrating that incorporating missingness improves multimodal time-series modeling. The full model, which integrates both time-series signals and missingness information, achieves 10-15% higher accuracy and macro F1 scores across all Big Five traits compared to the model without time-series signals and missingness. These findings provide evidence that personality can be inferred from search-related gaze behavior and demonstrate the value of incorporating missing gaze data into time-series multimodal modeling. 
+
+---
+# CSQL: Mapping Documents into Causal Databases 
+
+**Authors**: Sridhar Mahadevan  
+
+**Link**: [PDF](https://arxiv.org/pdf/2601.08109)  
+
+**Abstract**: We describe a novel system, CSQL, which automatically converts a collection of unstructured text documents into an SQL-queryable causal database (CDB). A CDB differs from a traditional DB: it is designed to answer "why'' questions via causal interventions and structured causal queries. CSQL builds on our earlier system, DEMOCRITUS, which converts documents into thousands of local causal models derived from causal discourse. Unlike RAG-based systems or knowledge-graph based approaches, CSQL supports causal analysis over document collections rather than purely associative retrieval. For example, given an article on the origins of human bipedal walking, CSQL enables queries such as: "What are the strongest causal influences on bipedalism?'' or "Which variables act as causal hubs with the largest downstream influence?'' Beyond single-document case studies, we show that CSQL can also ingest RAG/IE-compiled causal corpora at scale by compiling the Testing Causal Claims (TCC) dataset of economics papers into a causal database containing 265,656 claim instances spanning 45,319 papers, 44 years, and 1,575 reported method strings, thereby enabling corpus-level causal queries and longitudinal analyses in CSQL. Viewed abstractly, CSQL functions as a compiler from unstructured documents into a causal database equipped with a principled algebra of queries, and can be applied broadly across many domains ranging from business, humanities, and science. 
+
+---
+# MemoBrain: Executive Memory as an Agentic Brain for Reasoning 
+
+**Authors**: Hongjin Qian, Zhao Cao, Zheng Liu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2601.08079)  
+
+**Abstract**: Complex reasoning in tool-augmented agent frameworks is inherently long-horizon, causing reasoning traces and transient tool artifacts to accumulate and strain the bounded working context of large language models. Without explicit memory mechanisms, such accumulation disrupts logical continuity and undermines task alignment. This positions memory not as an auxiliary efficiency concern, but as a core component for sustaining coherent, goal-directed reasoning over long horizons.
+We propose MemoBrain, an executive memory model for tool-augmented agents that constructs a dependency-aware memory over reasoning steps, capturing salient intermediate states and their logical relations. Operating as a co-pilot alongside the reasoning agent, MemoBrain organizes reasoning progress without blocking execution and actively manages the working context. Specifically, it prunes invalid steps, folds completed sub-trajectories, and preserves a compact, high-salience reasoning backbone under a fixed context budget. Together, these mechanisms enable explicit cognitive control over reasoning trajectories rather than passive context accumulation.
+We evaluate MemoBrain on challenging long-horizon benchmarks, including GAIA, WebWalker, and BrowseComp-Plus, demonstrating consistent improvements over strong baselines. 
+
+---
+# From Tool to Teacher: Rethinking Search Systems as Instructive Interfaces 
+
+**Authors**: David Elsweiler  
+
+**Link**: [PDF](https://arxiv.org/pdf/2601.08035)  
+
+**Abstract**: Information access systems such as search engines and generative AI are central to how people seek, evaluate, and interpret information. Yet most systems are designed to optimise retrieval rather than to help users develop better search strategies or critical awareness. This paper introduces a pedagogical perspective on information access, conceptualising search and conversational systems as instructive interfaces that can teach, guide, and scaffold users' learning. We draw on seven didactic frameworks from education and behavioural science to analyse how existing and emerging system features, including query suggestions, source labels, and conversational or agentic AI, support or limit user learning. Using two illustrative search tasks, we demonstrate how different design choices promote skills such as critical evaluation, metacognitive reflection, and strategy transfer. The paper contributes a conceptual lens for evaluating the instructional value of information access systems and outlines design implications for technologies that foster more effective, reflective, and resilient information seekers. 
+
+---
+# EmbeddingRWKV: State-Centric Retrieval with Reusable States 
+
+**Authors**: Haowen Hou, Jie Yang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2601.07861)  
+
+**Abstract**: Current Retrieval-Augmented Generation (RAG) systems typically employ a traditional two-stage pipeline: an embedding model for initial retrieval followed by a reranker for refinement. However, this paradigm suffers from significant inefficiency due to the lack of shared information between stages, leading to substantial redundant computation. To address this limitation, we propose \textbf{State-Centric Retrieval}, a unified retrieval paradigm that utilizes "states" as a bridge to connect embedding models and rerankers. First, we perform state representation learning by fine-tuning an RWKV-based LLM, transforming it into \textbf{EmbeddingRWKV}, a unified model that serves as both an embedding model and a state backbone for extracting compact, reusable states. Building upon these reusable states, we further design a state-based reranker to fully leverage precomputed information. During reranking, the model processes only query tokens, decoupling inference cost from document length and yielding a 5.4$\times$--44.8$\times$ speedup. Furthermore, we observe that retaining all intermediate layer states is unnecessary; with a uniform layer selection strategy, our model maintains 98.62\% of full-model performance using only 25\% of the layers. Extensive experiments demonstrate that State-Centric Retrieval achieves high-quality retrieval and reranking results while significantly enhancing overall system efficiency. Code is available at \href{this https URL}{our GitHub repository}. 
+
+---

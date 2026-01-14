@@ -1,0 +1,65 @@
+# AtomMem : Learnable Dynamic Agentic Memory with Atomic Memory Operation 
+
+**Authors**: Yupeng Huo, Yaxi Lu, Zhong Zhang, Haotian Chen, Yankai Lin  
+
+**Link**: [PDF](https://arxiv.org/pdf/2601.08323)  
+
+**Abstract**: Equipping agents with memory is essential for solving real-world long-horizon problems. However, most existing agent memory mechanisms rely on static and hand-crafted workflows. This limits the performance and generalization ability of these memory designs, which highlights the need for a more flexible, learning-based memory framework. In this paper, we propose AtomMem, which reframes memory management as a dynamic decision-making problem. We deconstruct high-level memory processes into fundamental atomic CRUD (Create, Read, Update, Delete) operations, transforming the memory workflow into a learnable decision process. By combining supervised fine-tuning with reinforcement learning, AtomMem learns an autonomous, task-aligned policy to orchestrate memory behaviors tailored to specific task demands. Experimental results across 3 long-context benchmarks demonstrate that the trained AtomMem-8B consistently outperforms prior static-workflow memory methods. Further analysis of training dynamics shows that our learning-based formulation enables the agent to discover structured, task-aligned memory management strategies, highlighting a key advantage over predefined routines. 
+
+---
+# Improving LLM Reasoning with Homophily-aware Structural and Semantic Text-Attributed Graph Compression 
+
+**Authors**: Zijun Di, Bin Lu, Huquan Kang, Luoyi Fu, Jiaxin Ding, Xiaoying Gan, Lei Zhou, Xinbing Wang, Chenghu Zhou  
+
+**Link**: [PDF](https://arxiv.org/pdf/2601.08187)  
+
+**Abstract**: Large language models (LLMs) have demonstrated promising capabilities in Text-Attributed Graph (TAG) understanding. Recent studies typically focus on verbalizing the graph structures via handcrafted prompts, feeding the target node and its neighborhood context into LLMs. However, constrained by the context window, existing methods mainly resort to random sampling, often implemented via dropping node/edge randomly, which inevitably introduces noise and cause reasoning instability. We argue that graphs inherently contain rich structural and semantic information, and that their effective exploitation can unlock potential gains in LLMs reasoning performance. To this end, we propose Homophily-aware Structural and Semantic Compression for LLMs (HS2C), a framework centered on exploiting graph homophily. Structurally, guided by the principle of Structural Entropy minimization, we perform a global hierarchical partition that decodes the graph's essential topology. This partition identifies naturally cohesive, homophilic communities, while discarding stochastic connectivity noise. Semantically, we deliver the detected structural homophily to the LLM, empowering it to perform differentiated semantic aggregation based on predefined community type. This process compresses redundant background contexts into concise community-level consensus, selectively preserving semantically homophilic information aligned with the target nodes. Extensive experiments on 10 node-level benchmarks across LLMs of varying sizes and families demonstrate that, by feeding LLMs with structurally and semantically compressed inputs, HS2C simultaneously enhances the compression rate and downstream inference accuracy, validating its superiority and scalability. Extensions to 7 diverse graph-level benchmarks further consolidate HS2C's task generalizability. 
+
+---
+# To Retrieve or To Think? An Agentic Approach for Context Evolution 
+
+**Authors**: Rubing Chen, Jian Wang, Wenjie Li, Xiao-Yong Wei, Qing Li  
+
+**Link**: [PDF](https://arxiv.org/pdf/2601.08747)  
+
+**Abstract**: Current context augmentation methods, such as retrieval-augmented generation, are essential for solving knowledge-intensive reasoning this http URL, they typically adhere to a rigid, brute-force strategy that executes retrieval at every step. This indiscriminate approach not only incurs unnecessary computational costs but also degrades performance by saturating the context with irrelevant noise. To address these limitations, we introduce Agentic Context Evolution (ACE), a framework inspired by human metacognition that dynamically determines whether to seek new evidence or reason with existing knowledge. ACE employs a central orchestrator agent to make decisions strategically via majority this http URL aims to alternate between activating a retriever agent for external retrieval and a reasoner agent for internal analysis and refinement. By eliminating redundant retrieval steps, ACE maintains a concise and evolved context. Extensive experiments on challenging multi-hop QA benchmarks demonstrate that ACE significantly outperforms competitive baselines in accuracy while achieving efficient token this http URL work provides valuable insights into advancing context-evolved generation for complex, knowledge-intensive tasks. 
+
+---
+# STAGE: A Benchmark for Knowledge Graph Construction, Question Answering, and In-Script Role-Playing over Movie Screenplays 
+
+**Authors**: Qiuyu Tian, Yiding Li, Fengyi Chen, Zequn Liu, Youyong Kong, Fan Guo, Yuyao Li, Jinjing Shen, Zhijing Xie, Yiyun Luo, Xin Zhang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2601.08510)  
+
+**Abstract**: Movie screenplays are rich long-form narratives that interleave complex character relationships, temporally ordered events, and dialogue-driven interactions. While prior benchmarks target individual subtasks such as question answering or dialogue generation, they rarely evaluate whether models can construct a coherent story world and use it consistently across multiple forms of reasoning and generation. We introduce STAGE (Screenplay Text, Agents, Graphs and Evaluation), a unified benchmark for narrative understanding over full-length movie screenplays. STAGE defines four tasks: knowledge graph construction, scene-level event summarization, long-context screenplay question answering, and in-script character role-playing, all grounded in a shared narrative world representation. The benchmark provides cleaned scripts, curated knowledge graphs, and event- and character-centric annotations for 150 films across English and Chinese, enabling holistic evaluation of models' abilities to build world representations, abstract and verify narrative events, reason over long narratives, and generate character-consistent responses. 
+
+---
+# DYCP: Dynamic Context Pruning for Long-Form Dialogue with LLMs 
+
+**Authors**: Nayoung Choi, Jonathan Zhang, Jinho D. Choi  
+
+**Link**: [PDF](https://arxiv.org/pdf/2601.07994)  
+
+**Abstract**: Large Language Models (LLMs) often exhibit increased response latency and degraded answer quality as dialogue length grows, making effective context management essential. However, existing methods rely on extra LLM calls to build memory or perform offline memory construction without considering the current user utterance, which can introduce inefficiencies or disrupt conversational continuity. We introduce DyCP, a lightweight context management method that dynamically segment and retrieve relevant memory at query time. It preserves the sequential structure of dialogue without predefined topic boundaries and supports efficient, adaptive context retrieval. Across three long-form dialogue benchmarks, LoCoMo, MT-Bench+, and SCM4LLMs, and multiple LLMs, DyCP consistently improves answer quality while reducing response latency. We also examine the gap between modern LLMs' expanded context windows and their actual long-context processing capacity, highlighting the continued importance of effective context management. 
+
+---
+# From Rows to Reasoning: A Retrieval-Augmented Multimodal Framework for Spreadsheet Understanding 
+
+**Authors**: Anmol Gulati, Sahil Sen, Waqar Sarguroh, Kevin Paul  
+
+**Link**: [PDF](https://arxiv.org/pdf/2601.08741)  
+
+**Abstract**: Large Language Models (LLMs) struggle to reason over large-scale enterprise spreadsheets containing thousands of numeric rows, multiple linked sheets, and embedded visual content such as charts and receipts. Prior state-of-the-art spreadsheet reasoning approaches typically rely on single-sheet compression or full-context encoding, which limits scalability and fails to reflect how real users interact with complex, multimodal workbooks. We introduce FRTR-Bench, the first large-scale benchmark for multimodal spreadsheet reasoning, comprising 30 enterprise-grade Excel workbooks spanning nearly four million cells and more than 50 embedded images. To address these challenges, we present From Rows to Reasoning (FRTR), an advanced, multimodal retrieval-augmented generation framework that decomposes Excel workbooks into granular row, column, and block embeddings, employs hybrid lexical-dense retrieval with Reciprocal Rank Fusion (RRF), and integrates multimodal embeddings to reason over both numerical and visual information. We tested FRTR on six LLMs, achieving 74% answer accuracy on FRTR-Bench with Claude Sonnet 4.5, a substantial improvement over prior state-of-the-art approaches that reached only 24%. On the SpreadsheetLLM benchmark, FRTR achieved 87% accuracy with GPT-5 while reducing token usage by roughly 50% compared to context-compression methods. 
+
+---
+# MemoBrain: Executive Memory as an Agentic Brain for Reasoning 
+
+**Authors**: Hongjin Qian, Zhao Cao, Zheng Liu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2601.08079)  
+
+**Abstract**: Complex reasoning in tool-augmented agent frameworks is inherently long-horizon, causing reasoning traces and transient tool artifacts to accumulate and strain the bounded working context of large language models. Without explicit memory mechanisms, such accumulation disrupts logical continuity and undermines task alignment. This positions memory not as an auxiliary efficiency concern, but as a core component for sustaining coherent, goal-directed reasoning over long horizons.
+We propose MemoBrain, an executive memory model for tool-augmented agents that constructs a dependency-aware memory over reasoning steps, capturing salient intermediate states and their logical relations. Operating as a co-pilot alongside the reasoning agent, MemoBrain organizes reasoning progress without blocking execution and actively manages the working context. Specifically, it prunes invalid steps, folds completed sub-trajectories, and preserves a compact, high-salience reasoning backbone under a fixed context budget. Together, these mechanisms enable explicit cognitive control over reasoning trajectories rather than passive context accumulation.
+We evaluate MemoBrain on challenging long-horizon benchmarks, including GAIA, WebWalker, and BrowseComp-Plus, demonstrating consistent improvements over strong baselines. 
+
+---
