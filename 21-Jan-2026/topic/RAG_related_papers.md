@@ -1,0 +1,117 @@
+# STEP-LLM: Generating CAD STEP Models from Natural Language with Large Language Models 
+
+**Authors**: Xiangyu Shi, Junyang Ding, Xu Zhao, Sinong Zhan, Payal Mohapatra, Daniel Quispe, Kojo Welbeck, Jian Cao, Wei Chen, Ping Guo, Qi Zhu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2601.12641)  
+
+**Abstract**: Computer-aided design (CAD) is vital to modern manufacturing, yet model creation remains labor-intensive and expertise-heavy. To enable non-experts to translate intuitive design intent into manufacturable artifacts, recent large language models-based text-to-CAD efforts focus on command sequences or script-based formats like CadQuery. However, these formats are kernel-dependent and lack universality for manufacturing. In contrast, the Standard for the Exchange of Product Data (STEP, ISO 10303) file is a widely adopted, neutral boundary representation (B-rep) format directly compatible with manufacturing, but its graph-structured, cross-referenced nature poses unique challenges for auto-regressive LLMs. To address this, we curate a dataset of ~40K STEP-caption pairs and introduce novel preprocessing tailored for the graph-structured format of STEP, including a depth-first search-based reserialization that linearizes cross-references while preserving locality and chain-of-thought(CoT)-style structural annotations that guide global coherence. We integrate retrieval-augmented generation to ground predictions in relevant examples for supervised fine-tuning, and refine generation quality through reinforcement learning with a specific Chamfer Distance-based geometric reward. Experiments demonstrate consistent gains of our STEP-LLM in geometric fidelity over the Text2CAD baseline, with improvements arising from multiple stages of our framework: the RAG module substantially enhances completeness and renderability, the DFS-based reserialization strengthens overall accuracy, and the RL further reduces geometric discrepancy. Both metrics and visual comparisons confirm that STEP-LLM generates shapes with higher fidelity than Text2CAD. These results show the feasibility of LLM-driven STEP model generation from natural language, showing its potential to democratize CAD design for manufacturing. 
+
+---
+# AI Co-Scientist for Knowledge Synthesis in Medical Contexts: A Proof of Concept 
+
+**Authors**: Arya Rahgozar, Pouria Mortezaagha  
+
+**Link**: [PDF](https://arxiv.org/pdf/2601.11825)  
+
+**Abstract**: Research waste in biomedical science is driven by redundant studies, incomplete reporting, and the limited scalability of traditional evidence synthesis workflows. We present an AI co-scientist for scalable and transparent knowledge synthesis based on explicit formalization of Population, Intervention, Comparator, Outcome, and Study design (PICOS). The platform integrates relational storage, vector-based semantic retrieval, and a Neo4j knowledge graph. Evaluation was conducted on dementia-sport and non-communicable disease corpora. Automated PICOS compliance and study design classification from titles and abstracts were performed using a Bidirectional Long Short-Term Memory baseline and a transformer-based multi-task classifier fine-tuned from PubMedBERT. Full-text synthesis employed retrieval-augmented generation with hybrid vector and graph retrieval, while BERTopic was used to identify thematic structure, redundancy, and evidence gaps. The transformer model achieved 95.7% accuracy for study design classification with strong agreement against expert annotations, while the Bi-LSTM achieved 87% accuracy for PICOS compliance detection. Retrieval-augmented generation outperformed non-retrieval generation for queries requiring structured constraints, cross-study integration, and graph-based reasoning, whereas non-retrieval approaches remained competitive for high-level summaries. Topic modeling revealed substantial thematic redundancy and identified underexplored research areas. These results demonstrate that PICOS-aware and explainable natural language processing can improve the scalability, transparency, and efficiency of evidence synthesis. The proposed architecture is domain-agnostic and offers a practical framework for reducing research waste across biomedical disciplines. 
+
+---
+# Incorporating Q&A Nuggets into Retrieval-Augmented Generation 
+
+**Authors**: Laura Dietz, Bryan Li, Gabrielle Liu, Jia-Huei Ju, Eugene Yang, Dawn Lawrie, William Walden, James Mayfield  
+
+**Link**: [PDF](https://arxiv.org/pdf/2601.13222)  
+
+**Abstract**: RAGE systems integrate ideas from automatic evaluation (E) into Retrieval-augmented Generation (RAG). As one such example, we present Crucible, a Nugget-Augmented Generation System that preserves explicit citation provenance by constructing a bank of Q&A nuggets from retrieved documents and uses them to guide extraction, selection, and report generation. Reasoning on nuggets avoids repeated information through clear and interpretable Q&A semantics - instead of opaque cluster abstractions - while maintaining citation provenance throughout the entire generation process. Evaluated on the TREC NeuCLIR 2024 collection, our Crucible system substantially outperforms Ginger, a recent nugget-based RAG system, in nugget recall, density, and citation grounding. 
+
+---
+# Augmenting Question Answering with A Hybrid RAG Approach 
+
+**Authors**: Tianyi Yang, Nashrah Haque, Vaishnave Jonnalagadda, Yuya Jeremy Ong, Zhehui Chen, Yanzhao Wu, Lei Yu, Divyesh Jadav, Wenqi Wei  
+
+**Link**: [PDF](https://arxiv.org/pdf/2601.12658)  
+
+**Abstract**: Retrieval-Augmented Generation (RAG) has emerged as a powerful technique for enhancing the quality of responses in Question-Answering (QA) tasks. However, existing approaches often struggle with retrieving contextually relevant information, leading to incomplete or suboptimal answers. In this paper, we introduce Structured-Semantic RAG (SSRAG), a hybrid architecture that enhances QA quality by integrating query augmentation, agentic routing, and a structured retrieval mechanism combining vector and graph based techniques with context unification. By refining retrieval processes and improving contextual grounding, our approach improves both answer accuracy and informativeness. We conduct extensive evaluations on three popular QA datasets, TruthfulQA, SQuAD and WikiQA, across five Large Language Models (LLMs), demonstrating that our proposed approach consistently improves response quality over standard RAG implementations. 
+
+---
+# Predictive Prototyping: Evaluating Design Concepts with ChatGPT 
+
+**Authors**: Hilsann Yong, Bradley A. Camburn  
+
+**Link**: [PDF](https://arxiv.org/pdf/2601.12276)  
+
+**Abstract**: The design-build-test cycle is essential for innovation, but physical prototyping is often slow and expensive. Although physics-based simulation and strategic prototyping can reduce cost, meaningful evaluation is frequently constrained until an integrated prototype is built. This paper investigates whether a generative pretrained transformer (GPT) can predict information typically obtained through prototyping, including cost, performance, and perceived usability. We introduce a retrieval-augmented generation (RAG) method to emulate design feedback using OpenAI GPT-4o, grounded in prototyping data scraped from this http URL to increase access to relevant precedent. Two studies are reported. First, a controlled experiment compares GPT-RAG and human designers, who receive design sketches and predict cost, performance, and usability; predictions are evaluated against ground-truth results from physical prototypes. Second, we report an applied demonstration in which a physical prototype is produced from GPT-RAG recommendations and compared with a commercial baseline and a topology-optimized design. Results show that GPT-RAG provides more accurate cost and performance estimates than individual or crowd human estimates, while yielding comparable usability insights; the GPT-RAG-informed prototype also outperforms both comparison prototypes. Repeated querying with response averaging significantly improves accuracy, suggesting that LLMs can emulate crowd aggregation effects consistent with the law of large numbers. 
+
+---
+# Utilizing Metadata for Better Retrieval-Augmented Generation 
+
+**Authors**: Raquib Bin Yousuf, Shengzhe Xu, Mandar Sharma, Andrew Neeser, Chris Latimer, Naren Ramakrishnan  
+
+**Link**: [PDF](https://arxiv.org/pdf/2601.11863)  
+
+**Abstract**: Retrieval-Augmented Generation systems depend on retrieving semantically relevant document chunks to support accurate, grounded outputs from large language models. In structured and repetitive corpora such as regulatory filings, chunk similarity alone often fails to distinguish between documents with overlapping language. Practitioners often flatten metadata into input text as a heuristic, but the impact and trade-offs of this practice remain poorly understood. We present a systematic study of metadata-aware retrieval strategies, comparing plain-text baselines with approaches that embed metadata directly. Our evaluation spans metadata-as-text (prefix and suffix), a dual-encoder unified embedding that fuses metadata and content in a single index, dual-encoder late-fusion retrieval, and metadata-aware query reformulation. Across multiple retrieval metrics and question types, we find that prefixing and unified embeddings consistently outperform plain-text baselines, with the unified at times exceeding prefixing while being easier to maintain. Beyond empirical comparisons, we analyze embedding space, showing that metadata integration improves effectiveness by increasing intra-document cohesion, reducing inter-document confusion, and widening the separation between relevant and irrelevant chunks. Field-level ablations show that structural cues provide strong disambiguating signals. Our code, evaluation framework, and the RAGMATE-10K dataset are publicly hosted. 
+
+---
+# A Systematic Analysis of Chunking Strategies for Reliable Question Answering 
+
+**Authors**: Sofia Bennani, Charles Moslonka  
+
+**Link**: [PDF](https://arxiv.org/pdf/2601.14123)  
+
+**Abstract**: We study how document chunking choices impact the reliability of Retrieval-Augmented Generation (RAG) systems in industry. While practice often relies on heuristics, our end-to-end evaluation on Natural Questions systematically varies chunking method (token, sentence, semantic, code), chunk size, overlap, and context length. We use a standard industrial setup: SPLADE retrieval and a Mistral-8B generator. We derive actionable lessons for cost-efficient deployment: (i) overlap provides no measurable benefit and increases indexing cost; (ii) sentence chunking is the most cost-effective method, matching semantic chunking up to ~5k tokens; (iii) a "context cliff" reduces quality beyond ~2.5k tokens; and (iv) optimal context depends on the goal (semantic quality peaks at small contexts; exact match at larger ones). 
+
+---
+# Leveraging Lora Fine-Tuning and Knowledge Bases for Construction Identification 
+
+**Authors**: Liu Kaipeng, Wu Ling  
+
+**Link**: [PDF](https://arxiv.org/pdf/2601.13105)  
+
+**Abstract**: This study investigates the automatic identification of the English ditransitive construction by integrating LoRA-based fine-tuning of a large language model with a Retrieval-Augmented Generation (RAG) framework.A binary classification task was conducted on annotated data from the British National Corpus. Results demonstrate that a LoRA-fine-tuned Qwen3-8B model significantly outperformed both a native Qwen3-MAX model and a theory-only RAG system. Detailed error analysis reveals that fine-tuning shifts the model's judgment from a surface-form pattern matching towards a more semantically grounded understanding based. 
+
+---
+# Bridging the Knowledge-Action Gap by Evaluating LLMs in Dynamic Dental Clinical Scenarios 
+
+**Authors**: Hongyang Ma, Tiantian Gu, Huaiyuan Sun, Huilin Zhu, Yongxin Wang, Jie Li, Wubin Sun, Zeliang Lian, Yinghong Zhou, Yi Gao, Shirui Wang, Zhihui Tang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2601.12974)  
+
+**Abstract**: The transition of Large Language Models (LLMs) from passive knowledge retrievers to autonomous clinical agents demands a shift in evaluation-from static accuracy to dynamic behavioral reliability. To explore this boundary in dentistry, a domain where high-quality AI advice uniquely empowers patient-participatory decision-making, we present the Standardized Clinical Management & Performance Evaluation (SCMPE) benchmark, which comprehensively assesses performance from knowledge-oriented evaluations (static objective tasks) to workflow-based simulations (multi-turn simulated patient interactions). Our analysis reveals that while models demonstrate high proficiency in static objective tasks, their performance precipitates in dynamic clinical dialogues, identifying that the primary bottleneck lies not in knowledge retention, but in the critical challenges of active information gathering and dynamic state tracking. Mapping "Guideline Adherence" versus "Decision Quality" reveals a prevalent "High Efficacy, Low Safety" risk in general models. Furthermore, we quantify the impact of Retrieval-Augmented Generation (RAG). While RAG mitigates hallucinations in static tasks, its efficacy in dynamic workflows is limited and heterogeneous, sometimes causing degradation. This underscores that external knowledge alone cannot bridge the reasoning gap without domain-adaptive pre-training. This study empirically charts the capability boundaries of dental LLMs, providing a roadmap for bridging the gap between standardized knowledge and safe, autonomous clinical practice. 
+
+---
+# Injecting Knowledge from Social Science Journals to Improve Indonesian Cultural Understanding by LLMs 
+
+**Authors**: Adimulya Kartiyasa, Bao Gia Cao, Boyang Li  
+
+**Link**: [PDF](https://arxiv.org/pdf/2601.12921)  
+
+**Abstract**: Recently there have been intensifying efforts to improve the understanding of Indonesian cultures by large language models (LLMs). An attractive source of cultural knowledge that has been largely overlooked is local journals of social science, which likely contain substantial cultural studies from a native perspective. We present a novel text dataset of journal article passages, created from 151 open-source Indonesian social science journals, called IndoSoSci. We demonstrate an effective recipe for injecting Indonesian cultural knowledge therein into LLMs: extracting the facts related to Indonesian culture, and apply retrieval-augmented generation (RAG) with LLM-generated hypothetical documents as queries during retrieval. The proposed recipe yields strong performance gains over several strong baselines on the IndoCulture benchmark. Additionally, by combining IndoSoSci with Indonesian Wikipedia, we set a new state-of-the-art accuracy on the IndoCulture benchmark. 
+
+---
+# A Component-Based Survey of Interactions between Large Language Models and Multi-Armed Bandits 
+
+**Authors**: Miao Xie, Siguang Chen, Chunli Lv  
+
+**Link**: [PDF](https://arxiv.org/pdf/2601.12945)  
+
+**Abstract**: Large language models (LLMs) have become powerful and widely used systems for language understanding and generation, while multi-armed bandit (MAB) algorithms provide a principled framework for adaptive decision-making under uncertainty. This survey explores the potential at the intersection of these two fields. As we know, it is the first survey to systematically review the bidirectional interaction between large language models and multi-armed bandits at the component level. We highlight the bidirectional benefits: MAB algorithms address critical LLM challenges, spanning from pre-training to retrieval-augmented generation (RAG) and personalization. Conversely, LLMs enhance MAB systems by redefining core components such as arm definition and environment modeling, thereby improving decision-making in sequential tasks. We analyze existing LLM-enhanced bandit systems and bandit-enhanced LLM systems, providing insights into their design, methodologies, and performance. Key challenges and representative findings are identified to help guide future research. An accompanying GitHub repository that indexes relevant literature is available at this https URL. 
+
+---
+# RAC: Retrieval-Augmented Clarification for Faithful Conversational Search 
+
+**Authors**: Ahmed Rayane Kebir, Vincent Guigue, Lynda Said Lhadj, Laure Soulier  
+
+**Link**: [PDF](https://arxiv.org/pdf/2601.11722)  
+
+**Abstract**: Clarification questions help conversational search systems resolve ambiguous or underspecified user queries. While prior work has focused on fluency and alignment with user intent, especially through facet extraction, much less attention has been paid to grounding clarifications in the underlying corpus. Without such grounding, systems risk asking questions that cannot be answered from the available documents. We introduce RAC (Retrieval-Augmented Clarification), a framework for generating corpus-faithful clarification questions. After comparing several indexing strategies for retrieval, we fine-tune a large language model to make optimal use of research context and to encourage the generation of evidence-based question. We then apply contrastive preference optimization to favor questions supported by retrieved passages over ungrounded alternatives. Evaluated on four benchmarks, RAC demonstrate significant improvements over baselines. In addition to LLM-as-Judge assessments, we introduce novel metrics derived from NLI and data-to-text to assess how well questions are anchored in the context, and we demonstrate that our approach consistently enhances faithfulness. 
+
+---
+# RAGExplorer: A Visual Analytics System for the Comparative Diagnosis of RAG Systems 
+
+**Authors**: Haoyu Tian, Yingchaojie Feng, Zhen Wen, Haoxuan Li, Minfeng Zhu, Wei Chen  
+
+**Link**: [PDF](https://arxiv.org/pdf/2601.12991)  
+
+**Abstract**: The advent of Retrieval-Augmented Generation (RAG) has significantly enhanced the ability of Large Language Models (LLMs) to produce factually accurate and up-to-date responses. However, the performance of a RAG system is not determined by a single component but emerges from a complex interplay of modular choices, such as embedding models and retrieval algorithms. This creates a vast and often opaque configuration space, making it challenging for developers to understand performance trade-offs and identify optimal designs. To address this challenge, we present RAGExplorer, a visual analytics system for the systematic comparison and diagnosis of RAG configurations. RAGExplorer guides users through a seamless macro-to-micro analytical workflow. Initially, it empowers developers to survey the performance landscape across numerous configurations, allowing for a high-level understanding of which design choices are most effective. For a deeper analysis, the system enables users to drill down into individual failure cases, investigate how differences in retrieved information contribute to errors, and interactively test hypotheses by manipulating the provided context to observe the resulting impact on the generated answer. We demonstrate the effectiveness of RAGExplorer through detailed case studies and user studies, validating its ability to empower developers in navigating the complex RAG design space. Our code and user guide are publicly available at this https URL. 
+
+---
