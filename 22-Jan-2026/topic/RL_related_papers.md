@@ -1,0 +1,72 @@
+# AdaTIR: Adaptive Tool-Integrated Reasoning via Difficulty-Aware Policy Optimization 
+
+**Authors**: Zhaiyu Fang, Ruipeng Sun  
+
+**Link**: [PDF](https://arxiv.org/pdf/2601.14696)  
+
+**Abstract**: Tool-Integrated Reasoning (TIR) has significantly enhanced the capabilities of Large Language Models (LLMs), yet current agents tend to exhibit cognitive offloading, redundantly invoking external tools even for simple tasks. In this paper, we suggest that true agentic intelligence requires not just tool invocation, but the adaptive wisdom to discern when to use them. We propose AdaTIR, a framework that shifts the paradigm from static tool invocation to difficulty-aware reasoning internalization. By introducing a difficulty-aware efficiency reward, AdaTIR dynamically adjusts tool budgets based on task complexity--internalizing reasoning for simple tasks while selectively invoking tools for complex tasks. Furthermore, we identify a sign reversal problem where tool penalties outweigh correctness rewards, mistakenly penalizing correct rollouts with negative advantages. To resolve this, we propose Clipped Advantage Shaping (CAS), which ensures that correctness remains the primary objective while using efficiency as a secondary constraint. Empirical results demonstrate that AdaTIR reduces tool calls by up to 97.6% on simple tasks and 28.2% on complex challenges while maintaining or enhancing accuracy. Notably, AdaTIR successfully internalizes reasoning, outperforming baselines by 4.8% on AIME 2024 even when tool access is strictly disabled. 
+
+---
+# DARL: Encouraging Diverse Answers for General Reasoning without Verifiers 
+
+**Authors**: Chongxuan Huang, Lei Lin, Xiaodong Shi, Wenping Hu, Ruiming Tang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2601.14700)  
+
+**Abstract**: Reinforcement Learning with Verifiable Rewards (RLVR) has demonstrated promising gains in enhancing the reasoning capabilities of large language models. However, its dependence on domain-specific verifiers significantly restricts its applicability to open and general domains. Recent efforts such as RLPR have extended RLVR to general domains, enabling training on broader datasets and achieving improvements over RLVR. However, a notable limitation of these methods is their tendency to overfit to reference answers, which constrains the model's ability to generate diverse outputs. This limitation is particularly pronounced in open-ended tasks such as writing, where multiple plausible answers exist. To address this, we propose DARL, a simple yet effective reinforcement learning framework that encourages the generation of diverse answers within a controlled deviation range from the reference while preserving alignment with it. Our framework is fully compatible with existing general reinforcement learning methods and can be seamlessly integrated without additional verifiers. Extensive experiments on thirteen benchmarks demonstrate consistent improvements in reasoning performance. Notably, DARL surpasses RLPR, achieving average gains of 1.3 points on six reasoning benchmarks and 9.5 points on seven general benchmarks, highlighting its effectiveness in improving both reasoning accuracy and output diversity. 
+
+---
+# Rewarding How Models Think Pedagogically: Integrating Pedagogical Reasoning and Thinking Rewards for LLMs in Education 
+
+**Authors**: Unggi Lee, Jiyeong Bae, Jaehyeon Park, Haeun Park, Taejun Park, Younghoon Jeon, Sungmin Cho, Junbo Koh, Yeil Jeong, Gyeonggeon Lee  
+
+**Link**: [PDF](https://arxiv.org/pdf/2601.14560)  
+
+**Abstract**: Large language models (LLMs) are increasingly deployed as intelligent tutoring systems, yet research on optimizing LLMs specifically for educational contexts remains limited. Recent works have proposed reinforcement learning approaches for training LLM tutors, but these methods focus solely on optimizing visible responses while neglecting the model's internal thinking process. We introduce PedagogicalRL-Thinking, a framework that extends pedagogical alignment to reasoning LLMs in education through two novel approaches: (1) Pedagogical Reasoning Prompting, which guides internal reasoning using domain-specific educational theory rather than generic instructions; and (2) Thinking Reward, which explicitly evaluates and reinforces the pedagogical quality of the model's reasoning traces. Our experiments reveal that domain-specific, theory-grounded prompting outperforms generic prompting, and that Thinking Reward is most effective when combined with pedagogical prompting. Furthermore, models trained only on mathematics tutoring dialogues show improved performance on educational benchmarks not seen during training, while preserving the base model's factual knowledge. Our quantitative and qualitative analyses reveal that pedagogical thinking reward produces systematic reasoning trace changes, with increased pedagogical reasoning and more structured instructional decision-making in the tutor's thinking process. 
+
+---
+# PCL-Reasoner-V1.5: Advancing Math Reasoning with Offline Reinforcement Learning 
+
+**Authors**: Yao Lu, Dengdong Fan, Jianzheng Nie, Fan Xu, Jie Chen, Bin Zhou, Yonghong Tian  
+
+**Link**: [PDF](https://arxiv.org/pdf/2601.14716)  
+
+**Abstract**: We present PCL-Reasoner-V1.5, a 32-billion-parameter large language model (LLM) for mathematical reasoning. The model is built upon Qwen2.5-32B and refined via supervised fine-tuning (SFT) followed by reinforcement learning (RL). A central innovation is our proposed offline RL method, which provides superior training stability and efficiency over standard online RL methods such as GRPO. Our model achieves state-of-the-art performance among models post-trained on Qwen2.5-32B, attaining average accuracies of 90.9% on AIME 2024 and 85.6% on AIME 2025. Our work demonstrates offline RL as a stable and efficient paradigm for advancing reasoning in LLMs. All experiments were conducted on Huawei Ascend 910C NPUs. 
+
+---
+# Knowledge Graphs are Implicit Reward Models: Path-Derived Signals Enable Compositional Reasoning 
+
+**Authors**: Yuval Kansal, Niraj K. Jha  
+
+**Link**: [PDF](https://arxiv.org/pdf/2601.15160)  
+
+**Abstract**: Large language models have achieved near-expert performance in structured reasoning domains like mathematics and programming, yet their ability to perform compositional multi-hop reasoning in specialized scientific fields remains limited. We propose a bottom-up learning paradigm in which models are grounded in axiomatic domain facts and compose them to solve complex, unseen tasks. To this end, we present a post-training pipeline, based on a combination of supervised fine-tuning and reinforcement learning (RL), in which knowledge graphs act as implicit reward models. By deriving novel reward signals from knowledge graph paths, we provide verifiable, scalable, and grounded supervision that encourages models to compose intermediate axioms rather than optimize only final answers during RL. We validate this approach in the medical domain, training a 14B model on short-hop reasoning paths (1-3 hops) and evaluating its zero-shot generalization to complex multi-hop queries (4-5 hops). Our experiments show that path-derived rewards act as a "compositional bridge", enabling our model to significantly outperform much larger models and frontier systems like GPT-5.2 and Gemini 3 Pro, on the most difficult reasoning tasks. Furthermore, we demonstrate the robustness of our approach to adversarial perturbations against option-shuffling stress tests. This work suggests that grounding the reasoning process in structured knowledge is a scalable and efficient path toward intelligent reasoning. 
+
+---
+# IB-GRPO: Aligning LLM-based Learning Path Recommendation with Educational Objectives via Indicator-Based Group Relative Policy Optimization 
+
+**Authors**: Shuai Wang, Yaoming Yang, Bingdong Li, Hao Hao, Aimin Zhou  
+
+**Link**: [PDF](https://arxiv.org/pdf/2601.14686)  
+
+**Abstract**: Learning Path Recommendation (LPR) aims to generate personalized sequences of learning items that maximize long-term learning effect while respecting pedagogical principles and operational constraints. Although large language models (LLMs) offer rich semantic understanding for free-form recommendation, applying them to long-horizon LPR is challenging due to (i) misalignment with pedagogical objectives such as the Zone of Proximal Development (ZPD) under sparse, delayed feedback, (ii) scarce and costly expert demonstrations, and (iii) multi-objective interactions among learning effect, difficulty scheduling, length controllability, and trajectory diversity. To address these issues, we propose IB-GRPO (Indicator-Based Group Relative Policy Optimization), an indicator-guided alignment approach for LLM-based LPR. To mitigate data scarcity, we construct hybrid expert demonstrations via Genetic Algorithm search and teacher RL agents and warm-start the LLM with supervised fine-tuning. Building on this warm-start, we design a within-session ZPD alignment score for difficulty scheduling. IB-GRPO then uses the $I_{\epsilon+}$ dominance indicator to compute group-relative advantages over multiple objectives, avoiding manual scalarization and improving Pareto trade-offs. Experiments on ASSIST09 and Junyi using the KES simulator with a Qwen2.5-7B backbone show consistent improvements over representative RL and LLM baselines. 
+
+---
+# On the Generalization Gap in LLM Planning: Tests and Verifier-Reward RL 
+
+**Authors**: Valerio Belcamino, Nicholas Attolino, Alessio Capitanelli, Fulvio Mastrogiovanni  
+
+**Link**: [PDF](https://arxiv.org/pdf/2601.14456)  
+
+**Abstract**: Recent work shows that fine-tuned Large Language Models (LLMs) can achieve high valid plan rates on PDDL planning tasks. However, it remains unclear whether this reflects transferable planning competence or domain-specific memorization. In this work, we fine-tune a 1.7B-parameter LLM on 40,000 domain-problem-plan tuples from 10 IPC 2023 domains, and evaluate both in-domain and cross-domain generalization. While the model reaches 82.9% valid plan rate in in-domain conditions, it achieves 0% on two unseen domains. To analyze this failure, we introduce three diagnostic interventions, namely (i) instance-wise symbol anonymization, (ii) compact plan serialization, and (iii) verifier-reward fine-tuning using the VAL validator as a success-focused reinforcement signal. Symbol anonymization and compact serialization cause significant performance drops despite preserving plan semantics, thus revealing strong sensitivity to surface representations. Verifier-reward fine-tuning reaches performance saturation in half the supervised training epochs, but does not improve cross-domain generalization. For the explored configurations, in-domain performance plateaus around 80%, while cross-domain performance collapses, suggesting that our fine-tuned model relies heavily on domain-specific patterns rather than transferable planning competence in this setting. Our results highlight a persistent generalization gap in LLM-based planning and provide diagnostic tools for studying its causes. 
+
+---
+# Outcome-Based RL Provably Leads Transformers to Reason, but Only With the Right Data 
+
+**Authors**: Yuval Ran-Milo, Yotam Alexander, Shahar Mendel, Nadav Cohen  
+
+**Link**: [PDF](https://arxiv.org/pdf/2601.15158)  
+
+**Abstract**: Transformers trained via Reinforcement Learning (RL) with outcome-based supervision can spontaneously develop the ability to generate intermediate reasoning steps (Chain-of-Thought). Yet the mechanism by which sparse rewards drive gradient descent to discover such systematic reasoning remains poorly understood. We address this by analyzing the gradient flow dynamics of single-layer Transformers on a synthetic graph traversal task that cannot be solved without Chain-of-Thought (CoT) but admits a simple iterative solution. We prove that despite training solely on final-answer correctness, gradient flow drives the model to converge to a structured, interpretable algorithm that iteratively traverses the graph vertex-by-vertex. We characterize the distributional properties required for this emergence, identifying the critical role of "simple examples": instances requiring fewer reasoning steps. When the training distribution places sufficient mass on these simpler instances, the model learns a generalizable traversal strategy that extrapolates to longer chains; when this mass vanishes, gradient-based learning becomes infeasible. We corroborate our theoretical results through experiments on synthetic data and with real-world language models on mathematical reasoning tasks, validating that our theoretical findings carry over to practical settings. 
+
+---

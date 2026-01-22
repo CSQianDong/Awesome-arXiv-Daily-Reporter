@@ -1,0 +1,27 @@
+# CorpusQA: A 10 Million Token Benchmark for Corpus-Level Analysis and Reasoning 
+
+**Authors**: Zhiyuan Lu, Chenliang Li, Yingcheng Shi, Weizhou Shen, Ming Yan, Fei Huang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2601.14952)  
+
+**Abstract**: While large language models now handle million-token contexts, their capacity for reasoning across entire document repositories remains largely untested. Existing benchmarks are inadequate, as they are mostly limited to single long texts or rely on a "sparse retrieval" assumption-that answers can be derived from a few relevant chunks. This assumption fails for true corpus-level analysis, where evidence is highly dispersed across hundreds of documents and answers require global integration, comparison, and statistical aggregation. To address this critical gap, we introduce CorpusQA, a new benchmark scaling up to 10 million tokens, generated via a novel data synthesis framework. By decoupling reasoning from textual representation, this framework creates complex, computation-intensive queries with programmatically guaranteed ground-truth answers, challenging systems to perform holistic reasoning over vast, unstructured text without relying on fallible human annotation. We further demonstrate the utility of our framework beyond evaluation, showing that fine-tuning on our synthesized data effectively enhances an LLM's general long-context reasoning capabilities. Extensive experiments reveal that even state-of-the-art long-context LLMs struggle as input length increases, and standard retrieval-augmented generation systems collapse entirely. Our findings indicate that memory-augmented agentic architectures offer a more robust alternative, suggesting a critical shift is needed from simply extending context windows to developing advanced architectures for global information synthesis. 
+
+---
+# From Chaos to Clarity: Schema-Constrained AI for Auditable Biomedical Evidence Extraction from Full-Text PDFs 
+
+**Authors**: Pouria Mortezaagha, Joseph Shaw, Bowen Sun, Arya Rahgozar  
+
+**Link**: [PDF](https://arxiv.org/pdf/2601.14267)  
+
+**Abstract**: Biomedical evidence synthesis relies on accurate extraction of methodological, laboratory, and outcome variables from full-text research articles, yet these variables are embedded in complex scientific PDFs that make manual abstraction time-consuming and difficult to scale. Existing document AI systems remain limited by OCR errors, long-document fragmentation, constrained throughput, and insufficient auditability for high-stakes synthesis. We present a schema-constrained AI extraction system that transforms full-text biomedical PDFs into structured, analysis-ready records by explicitly restricting model inference through typed schemas, controlled vocabularies, and evidence-gated decisions. Documents are ingested using resume-aware hashing, partitioned into caption-aware page-level chunks, and processed asynchronously under explicit concurrency controls. Chunk-level outputs are deterministically merged into study-level records using conflict-aware consolidation, set-based aggregation, and sentence-level provenance to support traceability and post-hoc audit. Evaluated on a corpus of studies on direct oral anticoagulant level measurement, the pipeline processed all documents without manual intervention, maintained stable throughput under service constraints, and exhibited strong internal consistency across document chunks. Iterative schema refinement substantially improved extraction fidelity for synthesis-critical variables, including assay classification, outcome definitions, follow-up duration, and timing of measurement. These results demonstrate that schema-constrained, provenance-aware extraction enables scalable and auditable transformation of heterogeneous scientific PDFs into structured evidence, aligning modern document AI with the transparency and reliability requirements of biomedical evidence synthesis. 
+
+---
+# Generative Artificial Intelligence, Musical Heritage and the Construction of Peace Narratives: A Case Study in Mali 
+
+**Authors**: Nouhoum Coulibaly, Ousmane Ly, Michael Leventhal, Ousmane Goro  
+
+**Link**: [PDF](https://arxiv.org/pdf/2601.14931)  
+
+**Abstract**: This study explores the capacity of generative artificial intelligence (Gen AI) to contribute to the construction of peace narratives and the revitalization of musical heritage in Mali. The study has been made in a political and social context where inter-community tensions and social fractures motivate a search for new symbolic frameworks for reconciliation. The study empirically explores three questions: (1) how Gen AI can be used as a tool for musical creation rooted in national languages and traditions; (2) to what extent Gen AI systems enable a balanced hybridization between technological innovation and cultural authenticity; and (3) how AI-assisted musical co-creation can strengthen social cohesion and cultural sovereignty. The experimental results suggest that Gen AI, embedded in a culturally conscious participatory framework, can act as a catalyst for symbolic diplomacy, amplifying local voices instead of standardizing them. However, challenges persist regarding the availability of linguistic corpora, algorithmic censorship, and the ethics of generating compositions derived from copyrighted sources. 
+
+---
