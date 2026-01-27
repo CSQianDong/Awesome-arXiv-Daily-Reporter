@@ -1,0 +1,366 @@
+# Capturing P: On the Expressive Power and Efficient Evaluation of Boolean Retrieval 
+
+**Authors**: Amir Aavani  
+
+**Link**: [PDF](https://arxiv.org/pdf/2601.18747)  
+
+**Abstract**: Modern information retrieval is transitioning from simple document filtering to complex, neuro-symbolic reasoning workflows. However, current retrieval architectures face a fundamental efficiency dilemma when handling the rigorous logical and arithmetic constraints required by this new paradigm. Standard iterator-based engines (Document-at-a-Time) do not natively support complex, nested logic graphs; forcing them to execute such queries typically results in intractable runtime performance. Conversely, naive recursive approaches (Term-at-a-Time), while capable of supporting these structures, suffer from prohibitive memory consumption when enforcing broad logical exclusions.
+In this paper, we propose that a retrieval engine must be capable of ``Capturing $\mathbf{P}$'' -- evaluating any polynomial-time property directly over its index in a computationally efficient manner. We define a formal Retrieval Language ($\mathcal{L}_R$) based on Directed Acyclic Graphs (DAGs) and prove it precisely captures the complexity class $\mathbf{P}$. We introduce \texttt{ComputePN}, a novel evaluation algorithm that makes $\mathcal{L}_R$ tractable. By combining native DAG traversal with a memory-efficient ``Positive-Negative'' response mechanism, \texttt{ComputePN} ensures the efficient evaluation of any query in $\mathcal{L}_R$. This work establishes the theoretical foundation for turning the search index into a general-purpose computational engine. 
+
+---
+# S$^2$GR: Stepwise Semantic-Guided Reasoning in Latent Space for Generative Recommendation 
+
+**Authors**: Zihao Guo, Jian Wang, Ruxin Zhou, Youhua Liu, Jiawei Guo, Jun Zhao, Xiaoxiao Xu, Yongqi Liu, Kaiqiao Zhan  
+
+**Link**: [PDF](https://arxiv.org/pdf/2601.18664)  
+
+**Abstract**: Generative Recommendation (GR) has emerged as a transformative paradigm with its end-to-end generation advantages. However, existing GR methods primarily focus on direct Semantic ID (SID) generation from interaction sequences, failing to activate deeper reasoning capabilities analogous to those in large language models and thus limiting performance potential. We identify two critical limitations in current reasoning-enhanced GR approaches: (1) Strict sequential separation between reasoning and generation steps creates imbalanced computational focus across hierarchical SID codes, degrading quality for SID codes; (2) Generated reasoning vectors lack interpretable semantics, while reasoning paths suffer from unverifiable supervision. In this paper, we propose stepwise semantic-guided reasoning in latent space (S$^2$GR), a novel reasoning enhanced GR framework. First, we establish a robust semantic foundation via codebook optimization, integrating item co-occurrence relationship to capture behavioral patterns, and load balancing and uniformity objectives that maximize codebook utilization while reinforcing coarse-to-fine semantic hierarchies. Our core innovation introduces the stepwise reasoning mechanism inserting thinking tokens before each SID generation step, where each token explicitly represents coarse-grained semantics supervised via contrastive learning against ground-truth codebook cluster distributions ensuring physically grounded reasoning paths and balanced computational focus across all SID codes. Extensive experiments demonstrate the superiority of S$^2$GR, and online A/B test confirms efficacy on large-scale industrial short video platform. 
+
+---
+# FastInsight: Fast and Insightful Retrieval via Fusion Operators for Graph RAG 
+
+**Authors**: Seonho An, Chaejeong Hyun, Min-Soo Kim  
+
+**Link**: [PDF](https://arxiv.org/pdf/2601.18579)  
+
+**Abstract**: Existing Graph RAG methods aiming for insightful retrieval on corpus graphs typically rely on time-intensive processes that interleave Large Language Model (LLM) reasoning. To enable time-efficient insightful retrieval, we propose FastInsight. We first introduce a graph retrieval taxonomy that categorizes existing methods into three fundamental operations: vector search, graph search, and model-based search. Through this taxonomy, we identify two critical limitations in current approaches: the topology-blindness of model-based search and the semantics-blindness of graph search. FastInsight overcomes these limitations by interleaving two novel fusion operators: the Graph-based Reranker (GRanker), which functions as a graph model-based search, and Semantic-Topological eXpansion (STeX), which operates as a vector-graph search. Extensive experiments on broad retrieval and generation datasets demonstrate that FastInsight significantly improves both retrieval accuracy and generation quality compared to state-of-the-art baselines, achieving a substantial Pareto improvement in the trade-off between effectiveness and efficiency. 
+
+---
+# Feature-Indexed Federated Recommendation with Residual-Quantized Codebooks 
+
+**Authors**: Mingzhe Han, Jiahao Liu, Dongsheng Li, Hansu Gu, Peng Zhang, Ning Gu, Tun Lu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2601.18570)  
+
+**Abstract**: Federated recommendation provides a privacy-preserving solution for training recommender systems without centralizing user interactions. However, existing methods follow an ID-indexed communication paradigm that transmit whole item embeddings between clients and the server, which has three major limitations: 1) consumes uncontrollable communication resources, 2) the uploaded item information cannot generalize to related non-interacted items, and 3) is sensitive to client noisy feedback. To solve these problems, it is necessary to fundamentally change the existing ID-indexed communication paradigm. Therefore, we propose a feature-indexed communication paradigm that transmits feature code embeddings as codebooks rather than raw item embeddings. Building on this paradigm, we present RQFedRec, which assigns each item a list of discrete code IDs via Residual Quantization (RQ)-Kmeans. Each client generates and trains code embeddings as codebooks based on discrete code IDs provided by the server, and the server collects and aggregates these codebooks rather than item embeddings. This design makes communication controllable since the codebooks could cover all items, enabling updates to propagate across related items in same code ID. In addition, since code embedding represents many items, which is more robust to a single noisy item. To jointly capture semantic and collaborative information, RQFedRec further adopts a collaborative-semantic dual-channel aggregation with a curriculum strategy that emphasizes semantic codes early and gradually increases the contribution of collaborative codes over training. Extensive experiments on real-world datasets demonstrate that RQFedRec consistently outperforms state-of-the-art federated recommendation baselines while significantly reducing communication overhead. 
+
+---
+# Token-level Collaborative Alignment for LLM-based Generative Recommendation 
+
+**Authors**: Fake Lin, Binbin Hu, Zhi Zheng, Xi Zhu, Ziqi Liu, Zhiqiang Zhang, Jun Zhou, Tong Xu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2601.18457)  
+
+**Abstract**: Large Language Models (LLMs) have demonstrated strong potential for generative recommendation by leveraging rich semantic knowledge. However, existing LLM-based recommender systems struggle to effectively incorporate collaborative filtering (CF) signals, due to a fundamental mismatch between item-level preference modeling in CF and token-level next-token prediction (NTP) optimization in LLMs. Prior approaches typically treat CF as contextual hints or representation bias, and resort to multi-stage training to reduce behavioral semantic space discrepancies, leaving CF unable to explicitly regulate LLM generation. In this work, we propose Token-level Collaborative Alignment for Recommendation (TCA4Rec), a model-agnostic and plug-and-play framework that establishes an explicit optimization-level interface between CF supervision and LLM generation. TCA4Rec consists of (i) Collaborative Tokenizer, which projects raw item-level CF logits into token-level distributions aligned with the LLM token space, and (ii) Soft Label Alignment, which integrates these CF-informed distributions with one-hot supervision to optimize a soft NTP objective. This design preserves the generative nature of LLM training while enabling collaborative alignment with essential user preference of CF models. We highlight TCA4Rec is compatible with arbitrary traditional CF models and generalizes across a wide range of decoder-based LLM recommender architectures. Moreover, it provides an explicit mechanism to balance behavioral alignment and semantic fluency, yielding generative recommendations that are both accurate and controllable. Extensive experiments demonstrate that TCA4Rec consistently improves recommendation performance across a broad spectrum of CF models and LLM-based recommender systems. 
+
+---
+# TopKGAT: A Top-K Objective-Driven Architecture for Recommendation 
+
+**Authors**: Sirui Chen, Jiawei Chen, Canghong Jin, Sheng Zhou, Jingbang Chen, Wujie Sun, Can Wang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2601.18432)  
+
+**Abstract**: Recommendation systems (RS) aim to retrieve the top-K items most relevant to users, with metrics such as Precision@K and Recall@K commonly used to assess effectiveness. The architecture of an RS model acts as an inductive bias, shaping the patterns the model is inclined to learn. In recent years, numerous recommendation architectures have emerged, spanning traditional matrix factorization, deep neural networks, and graph neural networks. However, their designs are often not explicitly aligned with the top-K objective, thereby limiting their effectiveness.
+To address this limitation, we propose TopKGAT, a novel recommendation architecture directly derived from a differentiable approximation of top-K metrics. The forward computation of a single TopKGAT layer is intrinsically aligned with the gradient ascent dynamics of the Precision@K metric, enabling the model to naturally improve top-K recommendation accuracy. Structurally, TopKGAT resembles a graph attention network and can be implemented efficiently. Extensive experiments on four benchmark datasets demonstrate that TopKGAT consistently outperforms state-of-the-art baselines. The code is available at this https URL. 
+
+---
+# Orchestrating Specialized Agents for Trustworthy Enterprise RAG 
+
+**Authors**: Xincheng You, Qi Sun, Neha Bora, Huayi Li, Shubham Goel, Kang Li, Sean Culatana  
+
+**Link**: [PDF](https://arxiv.org/pdf/2601.18267)  
+
+**Abstract**: Retrieval-Augmented Generation (RAG) shows promise for enterprise knowledge work, yet it often underperforms in high-stakes decision settings that require deep synthesis, strict traceability, and recovery from underspecified prompts. One-pass retrieval-and-write pipelines frequently yield shallow summaries, inconsistent grounding, and weak mechanisms for completeness verification. We introduce ADORE (Adaptive Deep Orchestration for Research in Enterprise), an agentic framework that replaces linear retrieval with iterative, user-steered investigation coordinated by a central orchestrator and a set of specialized agents. ADORE's key insight is that a structured Memory Bank (a curated evidence store with explicit claim-evidence linkage and section-level admissible evidence) enables traceable report generation and systematic checks for evidence completeness. Our contributions are threefold: (1) Memory-locked synthesis - report generation is constrained to a structured Memory Bank (Claim-Evidence Graph) with section-level admissible evidence, enabling traceable claims and grounded citations; (2) Evidence-coverage-guided execution - a retrieval-reflection loop audits section-level evidence coverage to trigger targeted follow-up retrieval and terminates via an evidence-driven stopping criterion; (3) Section-packed long-context grounding - section-level packing, pruning, and citation-preserving compression make long-form synthesis feasible under context limits. Across our evaluation suite, ADORE ranks first on DeepResearch Bench (52.65) and achieves the highest head-to-head preference win rate on DeepConsult (77.2%) against commercial systems. 
+
+---
+# GenCI: Generative Modeling of User Interest Shift via Cohort-based Intent Learning for CTR Prediction 
+
+**Authors**: Kesha Ou, Zhen Tian, Wayne Xin Zhao, Hongyu Lu, Ji-Rong Wen  
+
+**Link**: [PDF](https://arxiv.org/pdf/2601.18251)  
+
+**Abstract**: Click-through rate (CTR) prediction plays a pivotal role in online advertising and recommender systems. Despite notable progress in modeling user preferences from historical behaviors, two key challenges persist. First, exsiting discriminative paradigms focus on matching candidates to user history, often overfitting to historically dominant features and failing to adapt to rapid interest shifts. Second, a critical information chasm emerges from the point-wise ranking paradigm. By scoring each candidate in isolation, CTR models discard the rich contextual signal implied by the recalled set as a whole, leading to a misalignment where long-term preferences often override the user's immediate, evolving intent. To address these issues, we propose GenCI, a generative user intent framework that leverages semantic interest cohorts to model dynamic user preferences for CTR prediction. The framework first employs a generative model, trained with a next-item prediction (NTP) objective, to proactively produce candidate interest cohorts. These cohorts serve as explicit, candidate-agnostic representations of a user's immediate intent. A hierarchical candidate-aware network then injects this rich contextual signal into the ranking stage, refining them with cross-attention to align with both user history and the target item. The entire model is trained end-to-end, creating a more aligned and effective CTR prediction pipeline. Extensive experiments on three widely used datasets demonstrate the effectiveness of our approach. 
+
+---
+# Generative Chain of Behavior for User Trajectory Prediction 
+
+**Authors**: Chengkai Huang, Xiaodi Chen, Hongtao Huang, Quan Z. Sheng, Lina Yao  
+
+**Link**: [PDF](https://arxiv.org/pdf/2601.18213)  
+
+**Abstract**: Modeling long-term user behavior trajectories is essential for understanding evolving preferences and enabling proactive recommendations. However, most sequential recommenders focus on next-item prediction, overlooking dependencies across multiple future actions. We propose Generative Chain of Behavior (GCB), a generative framework that models user interactions as an autoregressive chain of semantic behaviors over multiple future steps. GCB first encodes items into semantic IDs via RQ-VAE with k-means refinement, forming a discrete latent space that preserves semantic proximity. On top of this space, a transformer-based autoregressive generator predicts multi-step future behaviors conditioned on user history, capturing long-horizon intent transitions and generating coherent trajectories. Experiments on benchmark datasets show that GCB consistently outperforms state-of-the-art sequential recommenders in multi-step accuracy and trajectory consistency. Beyond these gains, GCB offers a unified generative formulation for capturing user preference evolution. 
+
+---
+# DMAP: Human-Aligned Structural Document Map for Multimodal Document Understanding 
+
+**Authors**: ShunLiang Fu, Yanxin Zhang, Yixin Xiang, Xiaoyu Du, Jinhui Tang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2601.18203)  
+
+**Abstract**: Existing multimodal document question-answering (QA) systems predominantly rely on flat semantic retrieval, representing documents as a set of disconnected text chunks and largely neglecting their intrinsic hierarchical and relational structures. Such flattening disrupts logical and spatial dependencies - such as section organization, figure-text correspondence, and cross-reference relations, that humans naturally exploit for comprehension. To address this limitation, we introduce a document-level structural Document MAP (DMAP), which explicitly encodes both hierarchical organization and inter-element relationships within multimodal documents. Specifically, we design a Structured-Semantic Understanding Agent to construct DMAP by organizing textual content together with figures, tables, charts, etc. into a human-aligned hierarchical schema that captures both semantic and layout dependencies. Building upon this representation, a Reflective Reasoning Agent performs structure-aware and evidence-driven reasoning, dynamically assessing the sufficiency of retrieved context and iteratively refining answers through targeted interactions with DMAP. Extensive experiments on MMDocQA benchmarks demonstrate that DMAP yields document-specific structural representations aligned with human interpretive patterns, substantially enhancing retrieval precision, reasoning consistency, and multimodal comprehension over conventional RAG-based approaches. Code is available at this https URL 
+
+---
+# Think When Needed: Model-Aware Reasoning Routing for LLM-based Ranking 
+
+**Authors**: Huizhong Guo, Tianjun Wei, Dongxia Wang, Yingpeng Du, Ziyan Wang, Jie Zhang, Zhu Sun  
+
+**Link**: [PDF](https://arxiv.org/pdf/2601.18146)  
+
+**Abstract**: Large language models (LLMs) are increasingly applied to ranking tasks in retrieval and recommendation. Although reasoning prompting can enhance ranking utility, our preliminary exploration reveals that its benefits are inconsistent and come at a substantial computational cost, suggesting that when to reason is as crucial as how to reason. To address this issue, we propose a reasoning routing framework that employs a lightweight, plug-and-play router head to decide whether to use direct inference (Non-Think) or reasoning (Think) for each instance before generation. The router head relies solely on pre-generation signals: i) compact ranking-aware features (e.g., candidate dispersion) and ii) model-aware difficulty signals derived from a diagnostic checklist reflecting the model's estimated need for reasoning. By leveraging these features before generation, the router outputs a controllable token that determines whether to apply the Think mode. Furthermore, the router can adaptively select its operating policy along the validation Pareto frontier during deployment, enabling dynamic allocation of computational resources toward instances most likely to benefit from Think under varying system constraints. Experiments on three public ranking datasets with different scales of open-source LLMs show consistent improvements in ranking utility with reduced token consumption (e.g., +6.3\% NDCG@10 with -49.5\% tokens on MovieLens with Qwen3-4B), demonstrating reasoning routing as a practical solution to the accuracy-efficiency trade-off. 
+
+---
+# Enhancing LLM-based Recommendation with Preference Hint Discovery from Knowledge Graph 
+
+**Authors**: Yuting Zhang, Ziliang Pei, Chao Wang, Ying Sun, Fuzhen Zhuang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2601.18096)  
+
+**Abstract**: LLMs have garnered substantial attention in recommendation systems. Yet they fall short of traditional recommenders when capturing complex preference patterns. Recent works have tried integrating traditional recommendation embeddings into LLMs to resolve this issue, yet a core gap persists between their continuous embedding and discrete semantic spaces. Intuitively, textual attributes derived from interactions can serve as critical preference rationales for LLMs' recommendation logic. However, directly inputting such attribute knowledge presents two core challenges: (1) Deficiency of sparse interactions in reflecting preference hints for unseen items; (2) Substantial noise introduction from treating all attributes as hints. To this end, we propose a preference hint discovery model based on the interaction-integrated knowledge graph, enhancing LLM-based recommendation. It utilizes traditional recommendation principles to selectively extract crucial attributes as hints. Specifically, we design a collaborative preference hint extraction schema, which utilizes semantic knowledge from similar users' explicit interactions as hints for unseen items. Furthermore, we develop an instance-wise dual-attention mechanism to quantify the preference credibility of candidate attributes, identifying hints specific to each unseen item. Using these item- and user-based hints, we adopt a flattened hint organization method to shorten input length and feed the textual hint information to the LLM for commonsense reasoning. Extensive experiments on both pair-wise and list-wise recommendation tasks verify the effectiveness of our proposed framework, indicating an average relative improvement of over 3.02% against baselines. 
+
+---
+# Post-Training Denoising of User Profiles with LLMs in Collaborative Filtering Recommendation 
+
+**Authors**: Ervin Dervishaj, Maria Maistro, Tuukka Ruotsalo, Christina Lioma  
+
+**Link**: [PDF](https://arxiv.org/pdf/2601.18009)  
+
+**Abstract**: Implicit feedback -- the main data source for training Recommender Systems (RSs) -- is inherently noisy and has been shown to negatively affect recommendation effectiveness. Denoising has been proposed as a method for removing noisy implicit feedback and improving recommendations. Prior work has focused on in-training denoising, however this requires additional data, changes to the model architecture and training procedure or fine-tuning, all of which can be costly and data hungry. In this work, we focus on post-training denoising. Different from in-training denoising, post-training denoising does not involve changing the architecture of the model nor its training procedure, and does not require additional data. Specifically, we present a method for post-training denoising user profiles using Large Language Models (LLMs) for Collaborative Filtering (CF) recommendations. Our approach prompts LLMs with (i) a user profile (user interactions), (ii) a candidate item, and (iii) its rank as given by the CF recommender, and asks the LLM to remove items from the user profile to improve the rank of the candidate item. Experiments with a state-of-the-art CF recommender and 4 open and closed source LLMs in 3 datasets show that our denoising yields improvements up to 13% in effectiveness over the original user profiles. Our code is available at this https URL. 
+
+---
+# Unleashing the Potential of Sparse Attention on Long-term Behaviors for CTR Prediction 
+
+**Authors**: Weijiang Lai, Beihong Jin, Di Zhang, Siru Chen, Jiongyan Zhang, Yuhang Gou, Jian Dong, Xingxing Wang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2601.17836)  
+
+**Abstract**: In recent years, the success of large language models (LLMs) has driven the exploration of scaling laws in recommender systems. However, models that demonstrate scaling laws are actually challenging to deploy in industrial settings for modeling long sequences of user behaviors, due to the high computational complexity of the standard self-attention mechanism. Despite various sparse self-attention mechanisms proposed in other fields, they are not fully suited for recommendation scenarios. This is because user behaviors exhibit personalization and temporal characteristics: different users have distinct behavior patterns, and these patterns change over time, with data from these users differing significantly from data in other fields in terms of distribution. To address these challenges, we propose SparseCTR, an efficient and effective model specifically designed for long-term behaviors of users. To be precise, we first segment behavior sequences into chunks in a personalized manner to avoid separating continuous behaviors and enable parallel processing of sequences. Based on these chunks, we propose a three-branch sparse self-attention mechanism to jointly identify users' global interests, interest transitions, and short-term interests. Furthermore, we design a composite relative temporal encoding via learnable, head-specific bias coefficients, better capturing sequential and periodic relationships among user behaviors. Extensive experimental results show that SparseCTR not only improves efficiency but also outperforms state-of-the-art methods. More importantly, it exhibits an obvious scaling law phenomenon, maintaining performance improvements across three orders of magnitude in FLOPs. In online A/B testing, SparseCTR increased CTR by 1.72\% and CPM by 1.41\%. Our source code is available at this https URL. 
+
+---
+# Token-Weighted Multi-Target Learning for Generative Recommenders with Curriculum Learning 
+
+**Authors**: Wei-Ning Chiu, Chuan-Ju Wang, Pu-Jen Cheng  
+
+**Link**: [PDF](https://arxiv.org/pdf/2601.17787)  
+
+**Abstract**: Generative recommender systems have recently attracted attention by formulating next-item prediction as an autoregressive sequence generation task. However, most existing methods optimize standard next-token likelihood and implicitly treat all tokens as equally informative, which is misaligned with semantic-ID-based generation. Accordingly, we propose two complementary information-gain-based token-weighting strategies tailored to generative recommendation with semantic IDs. Front-Greater Weighting captures conditional semantic information gain by prioritizing early tokens that most effectively reduce candidate-item uncertainty given their prefixes and encode coarse semantics. Frequency Weighting models marginal information gain under long-tailed item and token distributions, upweighting rare tokens to counteract popularity bias. Beyond individual strategies, we introduce a multi-target learning framework with curriculum learning that jointly optimizes the two token-weighted objectives alongside standard likelihood, enabling stable optimization and adaptive emphasis across training stages. Extensive experiments on benchmark datasets show that our method consistently outperforms strong baselines and existing token-weighting approaches, with improved robustness, strong generalization across different semantic-ID constructions, and substantial gains on both head and tail items. Code is available at this https URL. 
+
+---
+# LegalMALR:Multi-Agent Query Understanding and LLM-Based Reranking for Chinese Statute Retrieval 
+
+**Authors**: Yunhan Li, Mingjie Xie, Gaoli Kang, Zihan Gong, Gengshen Wu, Min Yang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2601.17692)  
+
+**Abstract**: Statute retrieval is essential for legal assistance and judicial decision support, yet real-world legal queries are often implicit, multi-issue, and expressed in colloquial or underspecified forms. These characteristics make it difficult for conventional retrieval-augmented generation pipelines to recover the statutory elements required for accurate retrieval. Dense retrievers focus primarily on the literal surface form of the query, whereas lightweight rerankers lack the legal-reasoning capacity needed to assess statutory applicability. We present LegalMALR, a retrieval framework that integrates a Multi-Agent Query Understanding System (MAS) with a zero-shot large-language-model-based reranking module (LLM Reranker). MAS generates diverse, legally grounded reformulations and conducts iterative dense retrieval to broaden candidate coverage. To stabilise the stochastic behaviour of LLM-generated rewrites, we optimise a unified MAS policy using Generalized Reinforcement Policy Optimization(GRPO). The accumulated candidate set is subsequently evaluated by the LLM Reranker, which performs natural-language legal reasoning to produce the final ranking. We further construct CSAID, a dataset of 118 difficult Chinese legal queries annotated with multiple statutory labels, and evaluate LegalMALR on both CSAID and the public STARD benchmark. Experiments show that LegalMALR substantially outperforms strong Retrieval-augmented generation(RAG) baselines in both in-distribution and out-of-distribution settings, demonstrating the effectiveness of combining multi-perspective query interpretation, reinforcement-based policy optimisation, and large-model reranking for statute retrieval. 
+
+---
+# Agentic Search in the Wild: Intents and Trajectory Dynamics from 14M+ Real Search Requests 
+
+**Authors**: Jingjie Ning, João Coelho, Yibo Kong, Yunfan Long, Bruno Martins, João Magalhães, Jamie Callan, Chenyan Xiong  
+
+**Link**: [PDF](https://arxiv.org/pdf/2601.17617)  
+
+**Abstract**: LLM-powered search agents are increasingly being used for multi-step information seeking tasks, yet the IR community lacks empirical understanding of how agentic search sessions unfold and how retrieved evidence is used. This paper presents a large-scale log analysis of agentic search based on 14.44M search requests (3.97M sessions) collected from DeepResearchGym, i.e. an open-source search API accessed by external agentic clients. We sessionize the logs, assign session-level intents and step-wise query-reformulation labels using LLM-based annotation, and propose Context-driven Term Adoption Rate (CTAR) to quantify whether newly introduced query terms are traceable to previously retrieved evidence. Our analyses reveal distinctive behavioral patterns. First, over 90% of multi-turn sessions contain at most ten steps, and 89% of inter-step intervals fall under one minute. Second, behavior varies by intent. Fact-seeking sessions exhibit high repetition that increases over time, while sessions requiring reasoning sustain broader exploration. Third, agents reuse evidence across steps. On average, 54% of newly introduced query terms appear in the accumulated evidence context, with contributions from earlier steps beyond the most recent retrieval. The findings suggest that agentic search may benefit from repetition-aware early stopping, intent-adaptive retrieval budgets, and explicit cross-step context tracking. We plan to release the anonymized logs to support future research. 
+
+---
+# Why They Link: An Intent Taxonomy for Including Hyperlinks in Social Posts 
+
+**Authors**: Fangping Lan, Abdullah Aljebreen, Eduard C. Dragut  
+
+**Link**: [PDF](https://arxiv.org/pdf/2601.17601)  
+
+**Abstract**: URLs serve as bridges between social media platforms and the broader web, linking user-generated content to external information resources. On Twitter (X), approximately one in five tweets contains at least one URL, underscoring their central role in information dissemination. While prior studies have examined the motivations of authors who share URLs, such author-centered intentions are difficult to observe in practice. To enable broader downstream use, this work investigates reader-centered interpretations, i.e., how users perceive the intentions behind hyperlinks included in posts. We develop an intent taxonomy for including hyperlinks in social posts through a hybrid approach that begins with a bottom-up, data-driven process using large-scale crowdsourced annotations, and is then refined using large language model assistance to generate descriptive category names and precise definitions. The final taxonomy comprises 6 top-level categories and 26 fine-grained intention classes, capturing diverse communicative purposes. Applying this taxonomy, we annotate and analyze 1000 user posts, revealing that advertising, arguing, and sharing are the most prevalent intentions. This resulting taxonomy provides a foundation for intent-aware information retrieval and NLP applications, enabling more accurate retrieval, recommendation, and understanding of social media content. 
+
+---
+# Real-Time Trend Prediction via Continually-Aligned LLM Query Generation 
+
+**Authors**: Zijing Hui, Wenhan Lyu, Shusen Wang, Li Chen, Chu Wang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2601.17567)  
+
+**Abstract**: Trending news detection in low-traffic search environments faces a fundamental cold-start problem, where a lack of query volume prevents systems from identifying emerging or long-tail trends. Existing methods relying on keyword frequency or query spikes are inherently slow and ineffective in these sparse settings, lagging behind real-world shifts in attention. We introduce RTTP, a novel Real-Time Trending Prediction framework that generates search queries directly from news content instead of waiting for users to issue them. RTTP leverages a continual learning LLM (CL-LLM) that converts posts into search-style queries and scores them using engagement strength + creator authority, enabling early trend surfacing before search volume forms. To ensure adaptation without degrading reasoning, we propose Mix-Policy DPO, a new preference-based continual learning approach that combines on-policy stability with off-policy novelty to mitigate catastrophic forgetting during model upgrades. Deployed at production scale on Facebook and Meta AI products, RTTP delivers +91.4% improvement in tail-trend detection precision@500 and +19% query generation accuracy over industry baselines, while sustaining stable performance after multi-week online training. This work demonstrates that LLM-generated synthetic search signals, when aligned and continually updated, unlock timely trend understanding in low-traffic search environments. 
+
+---
+# Pipeline Inspection, Visualization, and Interoperability in PyTerrier 
+
+**Authors**: Emmanouil Georgios Lionis, Craig Macdonald, Sean MacAvaney  
+
+**Link**: [PDF](https://arxiv.org/pdf/2601.17502)  
+
+**Abstract**: PyTerrier provides a declarative framework for building and experimenting with Information Retrieval (IR) pipelines. In this demonstration, we highlight several recent pipeline operations that improve their ability to be programmatically inspected, visualized, and integrated with other tools (via the Model Context Protocol, MCP). These capabilities aim to make it easier for researchers, students, and AI agents to understand and use a wide array of IR pipelines. 
+
+---
+# To Case or Not to Case: An Empirical Study in Learned Sparse Retrieval 
+
+**Authors**: Emmanouil Georgios Lionis, Jia-Huei Ju, Angelos Nalmpantis, Casper Thuis, Sean MacAvaney, Andrew Yates  
+
+**Link**: [PDF](https://arxiv.org/pdf/2601.17500)  
+
+**Abstract**: Learned Sparse Retrieval (LSR) methods construct sparse lexical representations of queries and documents that can be efficiently searched using inverted indexes. Existing LSR approaches have relied almost exclusively on uncased backbone models, whose vocabularies exclude case-sensitive distinctions, thereby reducing vocabulary mismatch. However, the most recent state-of-the-art language models are only available in cased versions. Despite this shift, the impact of backbone model casing on LSR has not been studied, potentially posing a risk to the viability of the method going forward. To fill this gap, we systematically evaluate paired cased and uncased versions of the same backbone models across multiple datasets to assess their suitability for LSR. Our findings show that LSR models with cased backbone models by default perform substantially worse than their uncased counterparts; however, this gap can be eliminated by pre-processing the text to lowercase. Moreover, our token-level analysis reveals that, under lowercasing, cased models almost entirely suppress cased vocabulary items and behave effectively as uncased models, explaining their restored performance. This result broadens the applicability of recent cased models to the LSR setting and facilitates the integration of stronger backbone architectures into sparse retrieval. The complete code and implementation for this project are available at: this https URL 
+
+---
+# Towards Fair Large Language Model-based Recommender Systems without Costly Retraining 
+
+**Authors**: Jin Li, Huilin Gu, Shoujin Wang, Qi Zhang, Shui Yu, Chen Wang, Xiwei Xu, Fang Chen  
+
+**Link**: [PDF](https://arxiv.org/pdf/2601.17492)  
+
+**Abstract**: Large Language Models (LLMs) have revolutionized Recommender Systems (RS) through advanced generative user modeling. However, LLM-based RS (LLM-RS) often inadvertently perpetuates bias present in the training data, leading to severe fairness issues. Addressing these fairness problems in LLM-RS faces two significant challenges. 1) Existing debiasing methods, designed for specific bias types, lack the generality to handle diverse or emerging biases in real-world applications. 2) Debiasing methods relying on retraining are computationally infeasible given the massive parameter scale of LLMs. To overcome these challenges, we propose FUDLR (Fast Unified Debiasing for LLM-RS). The core idea is to reformulate the debiasing problem as an efficient machine unlearning task with two stages. First, FUDLR identifies bias-inducing samples to unlearn through a novel bias-agnostic mask, optimized to balance fairness improvement with accuracy preservation. Its bias-agnostic design allows adaptability to various or co-existing biases simply by incorporating different fairness metrics. Second, FUDLR performs efficient debiasing by estimating and removing the influence of identified samples on model parameters. Extensive experiments demonstrate that FUDLR effectively and efficiently improves fairness while preserving recommendation accuracy, offering a practical path toward socially responsible LLM-RS. The code and data are available at this https URL. 
+
+---
+# Adversarial Alignment and Disentanglement for Cross-Domain CTR Prediction with Domain-Encompassing Features 
+
+**Authors**: Junyou He, Lixi Deng, Huichao Guo, Ye Tang, Yong Li, Sulong Xu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2601.17472)  
+
+**Abstract**: Cross-domain recommendation (CDR) has been increasingly explored to address data sparsity and cold-start issues. However, recent approaches typically disentangle domain-invariant features shared between source and target domains, as well as domain-specific features for each domain. However, they often rely solely on domain-invariant features combined with target domain-specific features, which can lead to suboptimal performance. To overcome the limitations, this paper presents the Adversarial Alignment and Disentanglement Cross-Domain Recommendation ($A^2DCDR$ ) model, an innovative approach designed to capture a comprehensive range of cross-domain information, including both domain-invariant and valuable non-aligned features. The $A^2DCDR$ model enhances cross-domain recommendation through three key components: refining MMD with adversarial training for better generalization, employing a feature disentangler and reconstruction mechanism for intra-domain disentanglement, and introducing a novel fused representation combining domain-invariant, non-aligned features with original contextual data. Experiments on real-world datasets and online A/B testing show that $A^2DCDR$ outperforms existing methods, confirming its effectiveness and practical applicability. The code is provided at this https URL. 
+
+---
+# UniGRec: Unified Generative Recommendation with Soft Identifiers for End-to-End Optimization 
+
+**Authors**: Jialei Li, Yang Zhang, Yimeng Bai, Shuai Zhu, Ziqi Xue, Xiaoyan Zhao, Dingxian Wang, Frank Yang, Andrew Rabinovich, Xiangnan He  
+
+**Link**: [PDF](https://arxiv.org/pdf/2601.17438)  
+
+**Abstract**: Generative recommendation has recently emerged as a transformative paradigm that directly generates target items, surpassing traditional cascaded approaches. It typically involves two components: a tokenizer that learns item identifiers and a recommender trained on them. Existing methods often decouple tokenization from recommendation or rely on asynchronous alternating optimization, limiting full end-to-end alignment. To address this, we unify the tokenizer and recommender under the ultimate recommendation objective via differentiable soft item identifiers, enabling joint end-to-end training. However, this introduces three challenges: training-inference discrepancy due to soft-to-hard mismatch, item identifier collapse from codeword usage imbalance, and collaborative signal deficiency due to an overemphasis on fine-grained token-level semantics.
+To tackle these challenges, we propose UniGRec, a unified generative recommendation framework that addresses them from three perspectives. UniGRec employs Annealed Inference Alignment during tokenization to smoothly bridge soft training and hard inference, a Codeword Uniformity Regularization to prevent identifier collapse and encourage codebook diversity, and a Dual Collaborative Distillation mechanism that distills collaborative priors from a lightweight teacher model to jointly guide both the tokenizer and the recommender. Extensive experiments on real-world datasets demonstrate that UniGRec consistently outperforms state-of-the-art baseline methods. Our codes are available at this https URL. 
+
+---
+# Breaking Flat: A Generalised Query Performance Prediction Evaluation Framework 
+
+**Authors**: Payel Santra, Partha Basuchowdhuri, Debasis Ganguly  
+
+**Link**: [PDF](https://arxiv.org/pdf/2601.17359)  
+
+**Abstract**: The traditional use-case of query performance prediction (QPP) is to identify which queries perform well and which perform poorly for a given ranking model. A more fine-grained and arguably more challenging extension of this task is to determine which ranking models are most effective for a given query. In this work, we generalize the QPP task and its evaluation into three settings: (i) SingleRanker MultiQuery (SRMQ-PP), corresponding to the standard use case; (ii) MultiRanker SingleQuery (MRSQ-PP), which evaluates a QPP model's ability to select the most effective ranker for a query; and (iii) MultiRanker MultiQuery (MRMQ-PP), which considers predictions jointly across all query ranker pairs. Our results show that (a) the relative effectiveness of QPP models varies substantially across tasks (SRMQ-PP vs. MRSQ-PP), and (b) predicting the best ranker for a query is considerably more difficult than predicting the relative difficulty of queries for a given ranker. 
+
+---
+# Beyond Correlations: A Downstream Evaluation Framework for Query Performance Prediction 
+
+**Authors**: Payel Santra, Partha Basuchowdhuri, Debasis Ganguly  
+
+**Link**: [PDF](https://arxiv.org/pdf/2601.17339)  
+
+**Abstract**: The standard practice of query performance prediction (QPP) evaluation is to measure a set-level correlation between the estimated retrieval qualities and the true ones. However, neither this correlation-based evaluation measure quantifies QPP effectiveness at the level of individual queries, nor does this connect to a downstream application, meaning that QPP methods yielding high correlation values may not find a practical application in query-specific decisions in an IR pipeline. In this paper, we propose a downstream-focussed evaluation framework where a distribution of QPP estimates across a list of top-documents retrieved with several rankers is used as priors for IR fusion. While on the one hand, a distribution of these estimates closely matching that of the true retrieval qualities indicates the quality of the predictor, their usage as priors on the other hand indicates a predictor's ability to make informed choices in an IR pipeline. Our experiments firstly establish the importance of QPP estimates in weighted IR fusion, yielding substantial improvements of over 4.5% over unweighted CombSUM and RRF fusion strategies, and secondly, reveal new insights that the downstream effectiveness of QPP does not correlate well with the standard correlation-based QPP evaluation. 
+
+---
+# FinMetaMind: A Tech Blueprint on NLQ Systems for Financial Knowledge Search 
+
+**Authors**: Lalit Pant, Shivang Nagar  
+
+**Link**: [PDF](https://arxiv.org/pdf/2601.17333)  
+
+**Abstract**: Natural Language Query (NLQ) allows users to search and interact with information systems using plain, human language instead of structured query syntax. This paper presents a technical blueprint on the design of a modern NLQ system tailored to financial knowledge search. The introduction of NLQ not only enhances the precision and recall of the knowledge search compared to traditional methods, but also facilitates deeper insights by efficiently linking disparate financial objects, events, and relationships. Using core constructs from natural language processing, search engineering, and vector data models, the proposed system aims to address key challenges in discovering, relevance ranking, data freshness, and entity recognition intrinsic to financial data retrieval. In this work, we detail the unique requirements of NLQ for financial datasets and documents, outline the architectural components for offline indexing and online retrieval, and discuss the real-world use cases of enhanced knowledge search in financial services. We delve into the theoretical underpinnings and experimental evidence supporting our proposed architecture, ultimately providing a comprehensive analysis on the subject matter. We also provide a detailed elaboration of our experimental methodology, the data used, the results and future optimizations in this study. 
+
+---
+# Evaluation on Entity Matching in Recommender Systems 
+
+**Authors**: Zihan Huang, Rohan Surana, Zhouhang Xie, Junda Wu, Yu Xia, Julian McAuley  
+
+**Link**: [PDF](https://arxiv.org/pdf/2601.17218)  
+
+**Abstract**: Entity matching is a crucial component in various recommender systems, including conversational recommender systems (CRS) and knowledge-based recommender systems. However, the lack of rigorous evaluation frameworks for cross-dataset entity matching impedes progress in areas such as LLM-driven conversational recommendations and knowledge-grounded dataset construction.
+In this paper, we introduce Reddit-Amazon-EM, a novel dataset comprising naturally occurring items from Reddit and the Amazon '23 dataset. Through careful manual annotation, we identify corresponding movies across Reddit-Movies and Amazon'23, two existing recommender system datasets with inherently overlapping catalogs. Leveraging Reddit-Amazon-EM, we conduct a comprehensive evaluation of state-of-the-art entity matching methods, including rule-based, graph-based, lexical-based, embedding-based, and LLM-based approaches.
+For reproducible research, we release our manually annotated entity matching gold set and provide the mapping between the two datasets using the best-performing method from our experiments. This serves as a valuable resource for advancing future work on entity matching in recommender systems. 
+
+---
+# Frequency-aware Adaptive Contrastive Learning for Sequential Recommendation 
+
+**Authors**: Zhikai Wang, Weihua Zhang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2601.17057)  
+
+**Abstract**: In this paper, we revisited the role of data augmentation in contrastive learning for sequential recommendation, revealing its inherent bias against low-frequency items and sparse user behaviors. To address this limitation, we proposed FACL, a frequency-aware adaptive contrastive learning framework that introduces micro-level adaptive perturbation to protect the integrity of rare items, as well as macro-level reweighting to amplify the influence of sparse and rare-interaction sequences during training. Comprehensive experiments on five public benchmark datasets demonstrated that FACL consistently outperforms state-of-the-art data augmentation and model augmentation-based methods, achieving up to 3.8% improvement in recommendation accuracy. Moreover, fine-grained analyses confirm that FACL significantly alleviates the performance drop on low-frequency items and users, highlighting its robust intent-preserving ability and its superior applicability to real-world, long-tail recommendation scenarios. 
+
+---
+# Dep-Search: Learning Dependency-Aware Reasoning Traces with Persistent Memory 
+
+**Authors**: Yanming Liu, Xinyue Peng, Zixuan Yan, Yanxin Shen, Wenjie Xu, Yuefeng Huang, Xinyi Wang, Jiannan Cao, Jianwei Yin, Xuhong Zhang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2601.18771)  
+
+**Abstract**: Large Language Models (LLMs) have demonstrated remarkable capabilities in complex reasoning tasks, particularly when augmented with search mechanisms that enable systematic exploration of external knowledge bases. The field has evolved from traditional retrieval-augmented generation (RAG) frameworks to more sophisticated search-based frameworks that orchestrate multi-step reasoning through explicit search strategies. However, existing search frameworks still rely heavily on implicit natural language reasoning to determine search strategies and how to leverage retrieved information across reasoning steps. This reliance on implicit reasoning creates fundamental challenges for managing dependencies between sub-questions, efficiently reusing previously retrieved knowledge, and learning optimal search strategies through reinforcement learning. To address these limitations, we propose Dep-Search, a dependency-aware search framework that advances beyond existing search frameworks by integrating structured reasoning, retrieval, and persistent memory through GRPO. Dep-Search introduces explicit control mechanisms that enable the model to decompose questions with dependency relationships, retrieve information when needed, access previously stored knowledge from memory, and summarize long reasoning contexts into reusable memory entries. Through extensive experiments on seven diverse question answering datasets, we demonstrate that Dep-Search significantly enhances LLMs' ability to tackle complex multi-hop reasoning tasks, achieving substantial improvements over strong baselines across different model scales. 
+
+---
+# Beyond the Checkbox: Strengthening DSA Compliance Through Social Media Algorithmic Auditing 
+
+**Authors**: Sara Solarova, Matúš Mesarčík, Branislav Pecher, Ivan Srba  
+
+**Link**: [PDF](https://arxiv.org/pdf/2601.18405)  
+
+**Abstract**: Algorithms of online platforms are required under the Digital Services Act (DSA) to comply with specific obligations concerning algorithmic transparency, user protection and privacy. To verify compliance with these requirements, DSA mandates platforms to undergo independent audits. Little is known about current auditing practices and their effectiveness in ensuring such compliance. To this end, we bridge regulatory and technical perspectives by critically examining selected audit reports across three critical algorithmic-related provisions: restrictions on profiling minors, transparency in recommender systems, and limitations on targeted advertising using sensitive data. Our analysis shows significant inconsistencies in methodologies and lack of technical depth when evaluating AI-powered systems. To enhance the depth, scale, and independence of compliance assessments, we propose to employ algorithmic auditing -- a process of behavioural assessment of AI algorithms by means of simulating user behaviour, observing algorithm responses and analysing them for audited phenomena. 
+
+---
+# Corpus-Based Approaches to Igbo Diacritic Restoration 
+
+**Authors**: Ignatius Ezeani  
+
+**Link**: [PDF](https://arxiv.org/pdf/2601.18380)  
+
+**Abstract**: With natural language processing (NLP), researchers aim to enable computers to identify and understand patterns in human languages. This is often difficult because a language embeds many dynamic and varied properties in its syntax, pragmatics and phonology, which need to be captured and processed. The capacity of computers to process natural languages is increasing because NLP researchers are pushing its boundaries. But these research works focus more on well-resourced languages such as English, Japanese, German, French, Russian, Mandarin Chinese, etc. Over 95% of the world's 7000 languages are low-resourced for NLP, i.e. they have little or no data, tools, and techniques for NLP work.
+In this thesis, we present an overview of diacritic ambiguity and a review of previous diacritic disambiguation approaches on other languages. Focusing on the Igbo language, we report the steps taken to develop a flexible framework for generating datasets for diacritic restoration. Three main approaches, the standard n-gram model, the classification models and the embedding models were proposed. The standard n-gram models use a sequence of previous words to the target stripped word as key predictors of the correct variants. For the classification models, a window of words on both sides of the target stripped word was used. The embedding models compare the similarity scores of the combined context word embeddings and the embeddings of each of the candidate variant vectors. 
+
+---
+# PaperSearchQA: Learning to Search and Reason over Scientific Papers with RLVR 
+
+**Authors**: James Burgess, Jan N. Hansen, Duo Peng, Yuhui Zhang, Alejandro Lozano, Min Woo Sun, Emma Lundberg, Serena Yeung-Levy  
+
+**Link**: [PDF](https://arxiv.org/pdf/2601.18207)  
+
+**Abstract**: Search agents are language models (LMs) that reason and search knowledge bases (or the web) to answer questions; recent methods supervise only the final answer accuracy using reinforcement learning with verifiable rewards (RLVR). Most RLVR search agents tackle general-domain QA, which limits their relevance to technical AI systems in science, engineering, and medicine. In this work we propose training agents to search and reason over scientific papers -- this tests technical question-answering, it is directly relevant to real scientists, and the capabilities will be crucial to future AI Scientist systems. Concretely, we release a search corpus of 16 million biomedical paper abstracts and construct a challenging factoid QA dataset called PaperSearchQA with 60k samples answerable from the corpus, along with benchmarks. We train search agents in this environment to outperform non-RL retrieval baselines; we also perform further quantitative analysis and observe interesting agent behaviors like planning, reasoning, and self-verification. Our corpus, datasets, and benchmarks are usable with the popular Search-R1 codebase for RLVR training and released on this https URL. Finally, our data creation methods are scalable and easily extendable to other scientific domains. 
+
+---
+# Self-Manager: Parallel Agent Loop for Long-form Deep Research 
+
+**Authors**: Yilong Xu, Zhi Zheng, Xiang Long, Yujun Cai, Yiwei Wang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2601.17879)  
+
+**Abstract**: Long-form deep research requires multi-faceted investigations over extended horizons to get a comprehensive report. When handling such complex tasks, existing agents manage context at the subtask level to overcome linear context accumulation and information loss. However, they still adhere to a single context window and sequential execution paradigm, which results in mutual interference and blocking behavior, restricting scalability and adaptability. To address this issue, this paper introduces Self-Manager, a parallel agent loop that enables asynchronous and concurrent execution. The main thread can create multiple subthreads, each with its own isolated context, and manage them iteratively through Thread Control Blocks, allowing for more focused and flexible parallel agent execution. To assess its effectiveness, we benchmark Self-Manager on DeepResearch Bench, where it consistently outperforms existing single-agent loop baselines across all metrics. Furthermore, we conduct extensive analytical experiments to demonstrate the necessity of Self-Manager's design choices, as well as its advantages in contextual capacity, efficiency, and generalization. 
+
+---
+# OwlerLite: Scope- and Freshness-Aware Web Retrieval for LLM Assistants 
+
+**Authors**: Saber Zerhoudi, Michael Dinzinger, Michael Granitzer, Jelena Mitrovic  
+
+**Link**: [PDF](https://arxiv.org/pdf/2601.17824)  
+
+**Abstract**: Browser-based language models often use retrieval-augmented generation (RAG) but typically rely on fixed, outdated indices that give users no control over which sources are consulted. This can lead to answers that mix trusted and untrusted content or draw on stale information. We present OwlerLite, a browser-based RAG system that makes user-defined scopes and data freshness central to retrieval. Users define reusable scopes-sets of web pages or sources-and select them when querying. A freshness-aware crawler monitors live pages, uses a semantic change detector to identify meaningful updates, and selectively re-indexes changed content. OwlerLite integrates text relevance, scope choice, and recency into a unified retrieval model. Implemented as a browser extension, it represents a step toward more controllable and trustworthy web assistants. 
+
+---
+# Segment Length Matters: A Study of Segment Lengths on Audio Fingerprinting Performance 
+
+**Authors**: Ziling Gong, Yunyan Ouyang, Iram Kamdar, Melody Ma, Hongjie Chen, Franck Dernoncourt, Ryan A. Rossi, Nesreen K. Ahmed  
+
+**Link**: [PDF](https://arxiv.org/pdf/2601.17690)  
+
+**Abstract**: Audio fingerprinting provides an identifiable representation of acoustic signals, which can be later used for identification and retrieval systems. To obtain a discriminative representation, the input audio is usually segmented into shorter time intervals, allowing local acoustic features to be extracted and analyzed. Modern neural approaches typically operate on short, fixed-duration audio segments, yet the choice of segment duration is often made heuristically and rarely examined in depth. In this paper, we study how segment length affects audio fingerprinting performance. We extend an existing neural fingerprinting architecture to adopt various segment lengths and evaluate retrieval accuracy across different segment lengths and query durations. Our results show that short segment lengths (0.5-second) generally achieve better performance. Moreover, we evaluate LLM capacity in recommending the best segment length, which shows that GPT-5-mini consistently gives the best suggestions across five considerations among three studied LLMs. Our findings provide practical guidance for selecting segment duration in large-scale neural audio retrieval systems. 
+
+---
+# Memento: Towards Proactive Visualization of Everyday Memories with Personal Wearable AR Assistant 
+
+**Authors**: Yoonsang Kim, Yalong Yang, Arie E. Kaufman  
+
+**Link**: [PDF](https://arxiv.org/pdf/2601.17622)  
+
+**Abstract**: We introduce Memento, a conversational AR assistant that permanently captures and memorizes user's verbal queries alongside their spatiotemporal and activity contexts. By storing these "memories," Memento discovers connections between users' recurring interests and the contexts that trigger them. Upon detection of similar or identical spatiotemporal activity, Memento proactively recalls user interests and delivers up-to-date responses through AR, seamlessly integrating AR experience into their daily routine. Unlike prior work, each interaction in Memento is not a transient event, but a connected series of interactions with coherent long--term perspective, tailored to the user's broader multimodal (visual, spatial, temporal, and embodied) context. We conduct preliminary evaluation through user feedbacks with participants of diverse expertise in immersive apps, and explore the value of proactive context-aware AR assistant in everyday settings. We share our findings and challenges in designing a proactive, context-aware AR system. 
+
+---
+# Improving User Privacy in Personalized Generation: Client-Side Retrieval-Augmented Modification of Server-Side Generated Speculations 
+
+**Authors**: Alireza Salemi, Hamed Zamani  
+
+**Link**: [PDF](https://arxiv.org/pdf/2601.17569)  
+
+**Abstract**: Personalization is crucial for aligning Large Language Model (LLM) outputs with individual user preferences and background knowledge. State-of-the-art solutions are based on retrieval augmentation, where relevant context from a user profile is retrieved for LLM consumption. These methods deal with a trade-off between exposing retrieved private data to cloud providers and relying on less capable local models. We introduce $P^3$, an interactive framework for high-quality personalization without revealing private profiles to server-side LLMs. In $P^3$, a large server-side model generates a sequence of $k$ draft tokens based solely on the user query, while a small client-side model, with retrieval access to the user's private profile, evaluates and modifies these drafts to better reflect user preferences. This process repeats until an end token is generated. Experiments on LaMP-QA, a recent benchmark consisting of three personalized question answering datasets, show that $P^3$ consistently outperforms both non-personalized server-side and personalized client-side baselines, achieving statistically significant improvements of $7.4%$ to $9%$ on average. Importantly, $P^3$ recovers $90.3%$ to $95.7%$ of the utility of a ``leaky'' upper-bound scenario in which the full profile is exposed to the large server-side model. Privacy analyses, including linkability and attribute inference attacks, indicate that $P^3$ preserves the privacy of a non-personalized server-side model, introducing only marginal additional leakage ($1.5%$--$3.5%$) compared to submitting a query without any personal context. Additionally, the framework is efficient for edge deployment, with the client-side model generating only $9.2%$ of the total tokens. These results demonstrate that $P^3$ provides a practical, effective solution for personalized generation with improved privacy. 
+
+---
+# PEARL: Prototype-Enhanced Alignment for Label-Efficient Representation Learning with Deployment-Driven Insights from Digital Governance Communication Systems 
+
+**Authors**: Ruiyu Zhang, Lin Nie, Wai-Fung Lam, Qihao Wang, Xin Zhao  
+
+**Link**: [PDF](https://arxiv.org/pdf/2601.17495)  
+
+**Abstract**: In many deployed systems, new text inputs are handled by retrieving similar past cases, for example when routing and responding to citizen messages in digital governance platforms. When these systems fail, the problem is often not the language model itself, but that the nearest neighbors in the embedding space correspond to the wrong cases. Modern machine learning systems increasingly rely on fixed, high-dimensional embeddings produced by large pretrained models and sentence encoders. In real-world deployments, labels are scarce, domains shift over time, and retraining the base encoder is expensive or infeasible. As a result, downstream performance depends heavily on embedding geometry. Yet raw embeddings are often poorly aligned with the local neighborhood structure required by nearest-neighbor retrieval, similarity search, and lightweight classifiers that operate directly on embeddings. We propose PEARL (Prototype-Enhanced Aligned Representation Learning), a label-efficient approach that uses limited supervision to softly align embeddings toward class prototypes. The method reshapes local neighborhood geometry while preserving dimensionality and avoiding aggressive projection or collapse. Its aim is to bridge the gap between purely unsupervised post-processing, which offers limited and inconsistent gains, and fully supervised projections that require substantial labeled data. We evaluate PEARL under controlled label regimes ranging from extreme label scarcity to higher-label settings. In the label-scarce condition, PEARL substantially improves local neighborhood quality, yielding 25.7% gains over raw embeddings and more than 21.1% gains relative to strong unsupervised post-processing, precisely in the regime where similarity-based systems are most brittle. 
+
+---
+# TelcoAI: Advancing 3GPP Technical Specification Search through Agentic Multi-Modal Retrieval-Augmented Generation 
+
+**Authors**: Rahul Ghosh, Chun-Hao Liu, Gaurav Rele, Vidya Sagar Ravipati, Hazar Aouad  
+
+**Link**: [PDF](https://arxiv.org/pdf/2601.16984)  
+
+**Abstract**: The 3rd Generation Partnership Project (3GPP) produces complex technical specifications essential to global telecommunications, yet their hierarchical structure, dense formatting, and multi-modal content make them difficult to process. While Large Language Models (LLMs) show promise, existing approaches fall short in handling complex queries, visual information, and document interdependencies. We present TelcoAI, an agentic, multi-modal Retrieval-Augmented Generation (RAG) system tailored for 3GPP documentation. TelcoAI introduces section-aware chunking, structured query planning, metadata-guided retrieval, and multi-modal fusion of text and diagrams. Evaluated on multiple benchmarks-including expert-curated queries-our system achieves $87\%$ recall, $83\%$ claim recall, and $92\%$ faithfulness, representing a $16\%$ improvement over state-of-the-art baselines. These results demonstrate the effectiveness of agentic and multi-modal reasoning in technical document understanding, advancing practical solutions for real-world telecommunications research and engineering. 
+
+---
