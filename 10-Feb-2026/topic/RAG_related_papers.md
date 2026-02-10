@@ -1,0 +1,74 @@
+# Whose Name Comes Up? Benchmarking and Intervention-Based Auditing of LLM-Based Scholar Recommendation 
+
+**Authors**: Lisette Espin-Noboa, Gonzalo Gabriel Mendez  
+
+**Link**: [PDF](https://arxiv.org/pdf/2602.08873)  
+
+**Abstract**: Large language models (LLMs) are increasingly used for academic expert recommendation. Existing audits typically evaluate model outputs in isolation, largely ignoring end-user inference-time interventions. As a result, it remains unclear whether failures such as refusals, hallucinations, and uneven coverage stem from model choice or deployment decisions. We introduce LLMScholarBench, a benchmark for auditing LLM-based scholar recommendation that jointly evaluates model infrastructure and end-user interventions across multiple tasks. LLMScholarBench measures both technical quality and social representation using nine metrics. We instantiate the benchmark in physics expert recommendation and audit 22 LLMs under temperature variation, representation-constrained prompting, and retrieval-augmented generation (RAG) via web search. Our results show that end-user interventions do not yield uniform improvements but instead redistribute error across dimensions. Higher temperature degrades validity, consistency, and factuality. Representation-constrained prompting improves diversity at the expense of factuality, while RAG primarily improves technical quality while reducing diversity and parity. Overall, end-user interventions reshape trade-offs rather than providing a general fix. We release code and data that can be adapted to other disciplines by replacing domain-specific ground truth and metrics. 
+
+---
+# HypRAG: Hyperbolic Dense Retrieval for Retrieval Augmented Generation 
+
+**Authors**: Hiren Madhu, Ngoc Bui, Ali Maatouk, Leandros Tassiulas, Smita Krishnaswamy, Menglin Yang, Sukanta Ganguly, Kiran Srinivasan, Rex Ying  
+
+**Link**: [PDF](https://arxiv.org/pdf/2602.07739)  
+
+**Abstract**: Embedding geometry plays a fundamental role in retrieval quality, yet dense retrievers for retrieval-augmented generation (RAG) remain largely confined to Euclidean space. However, natural language exhibits hierarchical structure from broad topics to specific entities that Euclidean embeddings fail to preserve, causing semantically distant documents to appear spuriously similar and increasing hallucination risk. To address these limitations, we introduce hyperbolic dense retrieval, developing two model variants in the Lorentz model of hyperbolic space: HyTE-FH, a fully hyperbolic transformer, and HyTE-H, a hybrid architecture projecting pre-trained Euclidean embeddings into hyperbolic space. To prevent representational collapse during sequence aggregation, we introduce the Outward Einstein Midpoint, a geometry-aware pooling operator that provably preserves hierarchical structure. On MTEB, HyTE-FH outperforms equivalent Euclidean baselines, while on RAGBench, HyTE-H achieves up to 29% gains over Euclidean baselines in context relevance and answer relevance using substantially smaller models than current state-of-the-art retrievers. Our analysis also reveals that hyperbolic representations encode document specificity through norm-based separation, with over 20% radial increase from general to specific concepts, a property absent in Euclidean embeddings, underscoring the critical role of geometric inductive bias in faithful RAG systems. 
+
+---
+# Progressive Searching for Retrieval in RAG 
+
+**Authors**: Taehee Jeong, Xingzhe Zhao, Peizu Li, Markus Valvur, Weihua Zhao  
+
+**Link**: [PDF](https://arxiv.org/pdf/2602.07297)  
+
+**Abstract**: Retrieval Augmented Generation (RAG) is a promising technique for mitigating two key limitations of large language models (LLMs): outdated information and hallucinations. RAG system stores documents as embedding vectors in a database. Given a query, search is executed to find the most related documents. Then, the topmost matching documents are inserted into LLMs' prompt to generate a response. Efficient and accurate searching is critical for RAG to get relevant information. We propose a cost-effective searching algorithm for retrieval process. Our progressive searching algorithm incrementally refines the candidate set through a hierarchy of searches, starting from low-dimensional embeddings and progressing into a higher, target-dimensionality. This multi-stage approach reduces retrieval time while preserving the desired accuracy. Our findings demonstrate that progressive search in RAG systems achieves a balance between dimensionality, speed, and accuracy, enabling scalable and high-performance retrieval even for large databases. 
+
+---
+# Evaluating Retrieval-Augmented Generation Variants for Natural Language-Based SQL and API Call Generation 
+
+**Authors**: Michael Marketsmüller, Simon Martin, Tim Schlippe  
+
+**Link**: [PDF](https://arxiv.org/pdf/2602.07086)  
+
+**Abstract**: Enterprise systems increasingly require natural language interfaces that can translate user requests into structured operations such as SQL queries and REST API calls. While large language models (LLMs) show promise for code generation [Chen et al., 2021; Huynh and Lin, 2025], their effectiveness in domain-specific enterprise contexts remains underexplored, particularly when both retrieval and modification tasks must be handled jointly. This paper presents a comprehensive evaluation of three retrieval-augmented generation (RAG) variants [Lewis et al., 2021] -- standard RAG, Self-RAG [Asai et al., 2024], and CoRAG [Wang et al., 2025] -- across SQL query generation, REST API call generation, and a combined task requiring dynamic task classification. Using SAP Transactional Banking as a realistic enterprise use case, we construct a novel test dataset covering both modalities and evaluate 18 experimental configurations under database-only, API-only, and hybrid documentation contexts. Results demonstrate that RAG is essential: Without retrieval, exact match accuracy is 0% across all tasks, whereas retrieval yields substantial gains in execution accuracy (up to 79.30%) and component match accuracy (up to 78.86%). Critically, CoRAG proves most robust in hybrid documentation settings, achieving statistically significant improvements in the combined task (10.29% exact match vs. 7.45% for standard RAG), driven primarily by superior SQL generation performance (15.32% vs. 11.56%). Our findings establish retrieval-policy design as a key determinant of production-grade natural language interfaces, showing that iterative query decomposition outperforms both top-k retrieval and binary relevance filtering under documentation heterogeneity. 
+
+---
+# DA-RAG: Dynamic Attributed Community Search for Retrieval-Augmented Generation 
+
+**Authors**: Xingyuan Zeng, Zuohan Wu, Yue Wang, Chen Zhang, Quanming Yao, Libin Zheng, Jian Yin  
+
+**Link**: [PDF](https://arxiv.org/pdf/2602.08545)  
+
+**Abstract**: Owing to their unprecedented comprehension capabilities, large language models (LLMs) have become indispensable components of modern web search engines. From a technical perspective, this integration represents retrieval-augmented generation (RAG), which enhances LLMs by grounding them in external knowledge bases. A prevalent technical approach in this context is graph-based RAG (G-RAG). However, current G-RAG methodologies frequently underutilize graph topology, predominantly focusing on low-order structures or pre-computed static communities. This limitation affects their effectiveness in addressing dynamic and complex queries. Thus, we propose DA-RAG, which leverages attributed community search (ACS) to extract relevant subgraphs based on the queried question dynamically. DA-RAG captures high-order graph structures, allowing for the retrieval of self-complementary knowledge. Furthermore, DA-RAG is equipped with a chunk-layer oriented graph index, which facilitates efficient multi-granularity retrieval while significantly reducing both computational and economic costs. We evaluate DA-RAG on multiple datasets, demonstrating that it outperforms existing RAG methods by up to 40% in head-to-head comparisons across four metrics while reducing index construction time and token overhead by up to 37% and 41%, respectively. 
+
+---
+# IRB: Automated Generation of Robust Factuality Benchmarks 
+
+**Authors**: Lam Thanh Do, Bhagyashree Taleka, Hozaifa Ammar Bhutta, Vikram Sharma Mailthody, Kevin Chen-Chuan Chang, Wen-mei Hwu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2602.08070)  
+
+**Abstract**: Static benchmarks for RAG systems often suffer from rapid saturation and require significant manual effort to maintain robustness. To address this, we present IRB, a framework for automatically generating benchmarks to evaluate the factuality of RAG systems. IRB employs a structured generation pipeline utilizing \textit{factual scaffold} and \textit{algorithmic scaffold}. We utilize IRB to construct a benchmark and evaluate frontier LLMs and retrievers. Our results demonstrate that IRB poses a significant challenge for frontier LLMs in the closed-book setting. Furthermore, our evaluation suggests that reasoning LLMs are more reliable, and that improving the retrieval component may yield more cost-effective gains in RAG system correctness than scaling the generator. 
+
+---
+# IGMiRAG: Intuition-Guided Retrieval-Augmented Generation with Adaptive Mining of In-Depth Memory 
+
+**Authors**: Xingliang Hou, Yuyan Liu, Qi Sun, haoxiu wang, Hao Hu, Shaoyi Du, Zhiqiang Tian  
+
+**Link**: [PDF](https://arxiv.org/pdf/2602.07525)  
+
+**Abstract**: Retrieval-augmented generation (RAG) equips large language models (LLMs) with reliable knowledge memory. To strengthen cross-text associations, recent research integrates graphs and hypergraphs into RAG to capture pairwise and multi-entity relations as structured links. However, their misaligned memory organization necessitates costly, disjointed retrieval. To address these limitations, we propose IGMiRAG, a framework inspired by human intuition-guided reasoning. It constructs a hierarchical heterogeneous hypergraph to align multi-granular knowledge, incorporating deductive pathways to simulate realistic memory structures. During querying, IGMiRAG distills intuitive strategies via a question parser to control mining depth and memory window, and activates instantaneous memories as anchors using dual-focus retrieval. Mirroring human intuition, the framework guides retrieval resource allocation dynamically. Furthermore, we design a bidirectional diffusion algorithm that navigates deductive paths to mine in-depth memories, emulating human reasoning processes. Extensive evaluations indicate IGMiRAG outperforms the state-of-the-art baseline by 4.8% EM and 5.0% F1 overall, with token costs adapting to task complexity (average 6.3k+, minimum 3.0k+). This work presents a cost-effective RAG paradigm that improves both efficiency and effectiveness. 
+
+---
+# Retrieval Pivot Attacks in Hybrid RAG: Measuring and Mitigating Amplified Leakage from Vector Seeds to Graph Expansion 
+
+**Authors**: Scott Thornton  
+
+**Link**: [PDF](https://arxiv.org/pdf/2602.08668)  
+
+**Abstract**: Hybrid Retrieval-Augmented Generation (RAG) pipelines combine vector similarity search with knowledge graph expansion for multi-hop reasoning. We show that this composition introduces a distinct security failure mode: a vector-retrieved "seed" chunk can pivot via entity links into sensitive graph neighborhoods, causing cross-tenant data leakage that does not occur in vector-only retrieval. We formalize this risk as Retrieval Pivot Risk (RPR) and introduce companion metrics Leakage@k, Amplification Factor, and Pivot Depth (PD) to quantify leakage magnitude and traversal structure.
+We present seven Retrieval Pivot Attacks that exploit the vector-to-graph boundary and show that adversarial injection is not required: naturally shared entities create cross-tenant pivot paths organically. Across a synthetic multi-tenant enterprise corpus and the Enron email corpus, the undefended hybrid pipeline exhibits high pivot risk (RPR up to 0.95) with multiple unauthorized items returned per query. Leakage consistently appears at PD=2, which we attribute to the bipartite chunk-entity topology and formalize as a proposition.
+We then show that enforcing authorization at a single location, the graph expansion boundary, eliminates measured leakage (RPR near 0) across both corpora, all attack variants, and label forgery rates up to 10 percent, with minimal overhead. Our results indicate the root cause is boundary enforcement, not inherently complex defenses: two individually secure retrieval components can compose into an insecure system unless authorization is re-checked at the transition point. 
+
+---
