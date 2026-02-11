@@ -1,0 +1,54 @@
+# Comprehensive Comparison of RAG Methods Across Multi-Domain Conversational QA 
+
+**Authors**: Klejda Alushi, Jan Strich, Chris Biemann, Martin Semmann  
+
+**Link**: [PDF](https://arxiv.org/pdf/2602.09552)  
+
+**Abstract**: Conversational question answering increasingly relies on retrieval-augmented generation (RAG) to ground large language models (LLMs) in external knowledge. Yet, most existing studies evaluate RAG methods in isolation and primarily focus on single-turn settings. This paper addresses the lack of a systematic comparison of RAG methods for multi-turn conversational QA, where dialogue history, coreference, and shifting user intent substantially complicate retrieval. We present a comprehensive empirical study of vanilla and advanced RAG methods across eight diverse conversational QA datasets spanning multiple domains. Using a unified experimental setup, we evaluate retrieval quality and answer generation using generator and retrieval metrics, and analyze how performance evolves across conversation turns. Our results show that robust yet straightforward methods, such as reranking, hybrid BM25, and HyDE, consistently outperform vanilla RAG. In contrast, several advanced techniques fail to yield gains and can even degrade performance below the No-RAG baseline. We further demonstrate that dataset characteristics and dialogue length strongly influence retrieval effectiveness, explaining why no single RAG strategy dominates across settings. Overall, our findings indicate that effective conversational RAG depends less on method complexity than on alignment between the retrieval strategy and the dataset structure. We publish the code used.\footnote{\href{this https URL}{GitHub Repository}} 
+
+---
+# Evaluating Social Bias in RAG Systems: When External Context Helps and Reasoning Hurts 
+
+**Authors**: Shweta Parihar, Lu Cheng  
+
+**Link**: [PDF](https://arxiv.org/pdf/2602.09442)  
+
+**Abstract**: Social biases inherent in large language models (LLMs) raise significant fairness concerns. Retrieval-Augmented Generation (RAG) architectures, which retrieve external knowledge sources to enhance the generative capabilities of LLMs, remain susceptible to the same bias-related challenges. This work focuses on evaluating and understanding the social bias implications of RAG. Through extensive experiments across various retrieval corpora, LLMs, and bias evaluation datasets, encompassing more than 13 different bias types, we surprisingly observe a reduction in bias in RAG. This suggests that the inclusion of external context can help counteract stereotype-driven predictions, potentially improving fairness by diversifying the contextual grounding of the model's outputs. To better understand this phenomenon, we then explore the model's reasoning process by integrating Chain-of-Thought (CoT) prompting into RAG while assessing the faithfulness of the model's CoT. Our experiments reveal that the model's bias inclinations shift between stereotype and anti-stereotype responses as more contextual information is incorporated from the retrieved documents. Interestingly, we find that while CoT enhances accuracy, contrary to the bias reduction observed with RAG, it increases overall bias across datasets, highlighting the need for bias-aware reasoning frameworks that can mitigate this trade-off. 
+
+---
+# With Argus Eyes: Assessing Retrieval Gaps via Uncertainty Scoring to Detect and Remedy Retrieval Blind Spots 
+
+**Authors**: Zeinab Sadat Taghavi, Ali Modarressi, Hinrich Schutze, Andreas Marfurt  
+
+**Link**: [PDF](https://arxiv.org/pdf/2602.09616)  
+
+**Abstract**: Reliable retrieval-augmented generation (RAG) systems depend fundamentally on the retriever's ability to find relevant information. We show that neural retrievers used in RAG systems have blind spots, which we define as the failure to retrieve entities that are relevant to the query, but have low similarity to the query embedding. We investigate the training-induced biases that cause such blind spot entities to be mapped to inaccessible parts of the embedding space, resulting in low retrievability. Using a large-scale dataset constructed from Wikidata relations and first paragraphs of Wikipedia, and our proposed Retrieval Probability Score (RPS), we show that blind spot risk in standard retrievers (e.g., CONTRIEVER, REASONIR) can be predicted pre-index from entity embedding geometry, avoiding expensive retrieval evaluations. To address these blind spots, we introduce ARGUS, a pipeline that enables the retrievability of high-risk (low-RPS) entities through targeted document augmentation from a knowledge base (KB), first paragraphs of Wikipedia, in our case. Extensive experiments on BRIGHT, IMPLIRET, and RAR-B show that ARGUS achieves consistent improvements across all evaluated retrievers (averaging +3.4 nDCG@5 and +4.5 nDCG@10 absolute points), with substantially larger gains in challenging subsets. These results establish that preemptively remedying blind spots is critical for building robust and trustworthy RAG systems (Code and Data). 
+
+---
+# Beyond the Unit Hypersphere: Embedding Magnitude in Contrastive Learning 
+
+**Authors**: Xincan Feng, Taro Watanabe  
+
+**Link**: [PDF](https://arxiv.org/pdf/2602.09229)  
+
+**Abstract**: Cosine similarity is prevalent in contrastive learning, yet it makes an implicit assumption: embedding magnitude is noise. Prior work occasionally found dot product and cosine similarity comparable, but left unanswered WHAT information magnitude carries, WHEN it helps, and HOW to leverage it. We conduct a systematic study through a $2 \times 2$ ablation that independently controls input-side and output-side normalization across text and vision models. Our findings reveal three key insights. First, in text retrieval, output (document) magnitude strongly correlates with relevance (Cohen's $d$ up to 1.80), yielding the largest gains on reasoning-intensive tasks. Second, input and output magnitudes serve asymmetric roles: output magnitude directly scales similarity scores while input magnitude modulates training dynamics. Third, magnitude learning benefits asymmetric tasks (text retrieval, RAG) but harms symmetric tasks (STS, text-image alignment). These findings establish a task symmetry principle: the choice between cosine and dot product depends on whether the task has distinct input roles, enabling cost-free improvements by simply removing an unnecessary constraint. 
+
+---
+# Closing Reasoning Gaps in Clinical Agents with Differential Reasoning Learning 
+
+**Authors**: Jinsong Liu, Yuhang Jiang, Ramayya Krishnan, Rema Padman, Yiye Zhang, Jiang Bian  
+
+**Link**: [PDF](https://arxiv.org/pdf/2602.09945)  
+
+**Abstract**: Clinical decision support requires not only correct answers but also clinically valid reasoning. We propose Differential Reasoning Learning (DRL), a framework that improves clinical agents by learning from reasoning discrepancies. From reference reasoning rationales (e.g., physician-authored clinical rationale, clinical guidelines, or outputs from more capable models) and the agent's free-form chain-of-thought (CoT), DRL extracts reasoning graphs as directed acyclic graphs (DAGs) and performs a clinically weighted graph edit distance (GED)-based discrepancy analysis. An LLM-as-a-judge aligns semantically equivalent nodes and diagnoses discrepancies between graphs. These graph-level discrepancy diagnostics are converted into natural-language instructions and stored in a Differential Reasoning Knowledge Base (DR-KB). At inference, we retrieve top-$k$ instructions via Retrieval-Augmented Generation (RAG) to augment the agent prompt and patch likely logic gaps. Evaluation on open medical question answering (QA) benchmarks and a Return Visit Admissions (RVA) prediction task from internal clinical data demonstrates gains over baselines, improving both final-answer accuracy and reasoning fidelity. Ablation studies confirm gains from infusing reference reasoning rationales and the top-$k$ retrieval strategy. Clinicians' review of the output provides further assurance of the approach. Together, results suggest that DRL supports more reliable clinical decision-making in complex reasoning scenarios and offers a practical mechanism for deployment under limited token budgets. 
+
+---
+# FlyAOC: Evaluating Agentic Ontology Curation of Drosophila Scientific Knowledge Bases 
+
+**Authors**: Xingjian Zhang, Sophia Moylan, Ziyang Xiong, Qiaozhu Mei, Yichen Luo, Jiaqi W. Ma  
+
+**Link**: [PDF](https://arxiv.org/pdf/2602.09163)  
+
+**Abstract**: Scientific knowledge bases accelerate discovery by curating findings from primary literature into structured, queryable formats for both human researchers and emerging AI systems. Maintaining these resources requires expert curators to search relevant papers, reconcile evidence across documents, and produce ontology-grounded annotations - a workflow that existing benchmarks, focused on isolated subtasks like named entity recognition or relation extraction, do not capture. We present FlyBench to evaluate AI agents on end-to-end agentic ontology curation from scientific literature. Given only a gene symbol, agents must search and read from a corpus of 16,898 full-text papers to produce structured annotations: Gene Ontology terms describing function, expression patterns, and historical synonyms linking decades of nomenclature. The benchmark includes 7,397 expert-curated annotations across 100 genes drawn from FlyBase, the Drosophila (fruit fly) knowledge base. We evaluate four baseline agent architectures: memorization, fixed pipeline, single-agent, and multi-agent. We find that architectural choices significantly impact performance, with multi-agent designs outperforming simpler alternatives, yet scaling backbone models yields diminishing returns. All baselines leave substantial room for improvement. Our analysis surfaces several findings to guide future development; for example, agents primarily use retrieval to confirm parametric knowledge rather than discover new information. We hope FlyBench will drive progress on retrieval-augmented scientific reasoning, a capability with broad applications across scientific domains. 
+
+---
