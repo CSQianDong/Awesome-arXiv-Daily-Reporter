@@ -1,0 +1,66 @@
+# MLDocRAG: Multimodal Long-Context Document Retrieval Augmented Generation 
+
+**Authors**: Yongyue Zhang, Yaxiong Wu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2602.10271)  
+
+**Abstract**: Understanding multimodal long-context documents that comprise multimodal chunks such as paragraphs, figures, and tables is challenging due to (1) cross-modal heterogeneity to localize relevant information across modalities, (2) cross-page reasoning to aggregate dispersed evidence across pages. To address these challenges, we are motivated to adopt a query-centric formulation that projects cross-modal and cross-page information into a unified query representation space, with queries acting as abstract semantic surrogates for heterogeneous multimodal content. In this paper, we propose a Multimodal Long-Context Document Retrieval Augmented Generation (MLDocRAG) framework that leverages a Multimodal Chunk-Query Graph (MCQG) to organize multimodal document content around semantically rich, answerable queries. MCQG is constructed via a multimodal document expansion process that generates fine-grained queries from heterogeneous document chunks and links them to their corresponding content across modalities and pages. This graph-based structure enables selective, query-centric retrieval and structured evidence aggregation, thereby enhancing grounding and coherence in long-context multimodal question answering. Experiments on datasets MMLongBench-Doc and LongDocURL demonstrate that MLDocRAG consistently improves retrieval quality and answer accuracy, demonstrating its effectiveness for long-context multimodal understanding. 
+
+---
+# Diffusion-Pretrained Dense and Contextual Embeddings 
+
+**Authors**: Sedigheh Eslami, Maksim Gaiduk, Markus Krimmel, Louis Milliken, Bo Wang, Denis Bykov  
+
+**Link**: [PDF](https://arxiv.org/pdf/2602.11151)  
+
+**Abstract**: In this report, we introduce pplx-embed, a family of multilingual embedding models that employ multi-stage contrastive learning on a diffusion-pretrained language model backbone for web-scale retrieval. By leveraging bidirectional attention through diffusion-based pretraining, our models capture comprehensive bidirectional context within passages, enabling the use of mean pooling and a late chunking strategy to better preserve global context across long documents. We release two model types: pplx-embed-v1 for standard retrieval, and pplx-embed-context-v1 for contextualized embeddings that incorporate global document context into passage representations. pplx-embed-v1 achieves competitive performance on the MTEB(Multilingual, v2), MTEB(Code), MIRACL, BERGEN, and ToolRet retrieval benchmarks, while pplx-embed-context-v1 sets new records on the ConTEB benchmark. Beyond public benchmarks, pplx-embed-v1 demonstrates strong performance on our internal evaluation suite, which focuses on real-world, large-scale search scenarios over tens of millions of documents. These results validate the models' effectiveness in production environments where retrieval quality and efficiency are critical at scale. 
+
+---
+# When to Memorize and When to Stop: Gated Recurrent Memory for Long-Context Reasoning 
+
+**Authors**: Leheng Sheng, Yongtao Zhang, Wenchang Ma, Yaorui Shi, Ting Huang, Xiang Wang, An Zhang, Ke Shen, Tat-Seng Chua  
+
+**Link**: [PDF](https://arxiv.org/pdf/2602.10560)  
+
+**Abstract**: While reasoning over long context is crucial for various real-world applications, it remains challenging for large language models (LLMs) as they suffer from performance degradation as the context length grows. Recent work MemAgent has tried to tackle this by processing context chunk-by-chunk in an RNN-like loop and updating a textual memory for final answering. However, this naive recurrent memory update faces two crucial drawbacks: (i) memory can quickly explode because it can update indiscriminately, even on evidence-free chunks; and (ii) the loop lacks an exit mechanism, leading to unnecessary computation after even sufficient evidence is collected. To address these issues, we propose GRU-Mem, which incorporates two text-controlled gates for more stable and efficient long-context reasoning. Specifically, in GRU-Mem, the memory only updates when the update gate is open and the recurrent loop will exit immediately once the exit gate is open. To endow the model with such capabilities, we introduce two reward signals $r^{\text{update}}$ and $r^{\text{exit}}$ within end-to-end RL, rewarding the correct updating and exiting behaviors respectively. Experiments on various long-context reasoning tasks demonstrate the effectiveness and efficiency of GRU-Mem, which generally outperforms the vanilla MemAgent with up to 400\% times inference speed acceleration. 
+
+---
+# Learning to Evict from Key-Value Cache 
+
+**Authors**: Luca Moschella, Laura Manduchi, Ozan Sener  
+
+**Link**: [PDF](https://arxiv.org/pdf/2602.10238)  
+
+**Abstract**: The growing size of Large Language Models (LLMs) makes efficient inference challenging, primarily due to the memory demands of the autoregressive Key-Value (KV) cache. Existing eviction or compression methods reduce cost but rely on heuristics, such as recency or past attention scores, which serve only as indirect proxies for a token's future utility and introduce computational overhead. We reframe KV cache eviction as a reinforcement learning (RL) problem: learning to rank tokens by their predicted usefulness for future decoding. To this end, we introduce KV Policy (KVP), a framework of lightweight per-head RL agents trained on pre-computed generation traces using only key and value vectors. Each agent learns a specialized eviction policy guided by future utility, which evaluates the quality of the ranking across all cache budgets, requiring no modifications to the underlying LLM or additional inference. Evaluated across two different model families on the long-context benchmark RULER and the multi-turn dialogue benchmark OASST2-4k, KVP significantly outperforms baselines. Furthermore, zero-shot tests on standard downstream tasks (e.g., LongBench, BOOLQ, ARC) indicate that KVP generalizes well beyond its training distribution and to longer context lengths. These results demonstrate that learning to predict future token utility is a powerful and scalable paradigm for adaptive KV cache management. 
+
+---
+# Rotary Positional Embeddings as Phase Modulation: Theoretical Bounds on the RoPE Base for Long-Context Transformers 
+
+**Authors**: Feilong Liu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2602.10959)  
+
+**Abstract**: Rotary positional embeddings (RoPE) are widely used in large language models to encode token positions through multiplicative rotations, yet their behavior at long context lengths remains poorly characterized. In this work, we reinterpret RoPE as phase modulation applied to a bank of complex oscillators, enabling analysis through classical signal processing theory.
+Under this formulation, we derive principled lower bounds on the RoPE base parameter that are necessary to preserve positional coherence over a target context length. These include a fundamental aliasing bound, analogous to a Nyquist limit, and a DC-component stability bound that constrains phase drift in low-frequency positional modes. We further extend this analysis to deep transformers, showing that repeated rotary modulation across layers compounds angular misalignment, tightening the base requirement as depth increases.
+Complementing these results, we derive a precision-dependent upper bound on the RoPE base arising from finite floating-point resolution. Beyond this limit, incremental phase updates become numerically indistinguishable, leading to positional erasure even in the absence of aliasing. Together, the lower and upper bounds define a precision- and depth-dependent feasibility region a Goldilocks zone for long-context transformers.
+We validate the framework through a comprehensive case study of state-of-the-art models, including LLaMA, Mistral, and DeepSeek variants, showing that observed successes, failures, and community retrofits align closely with the predicted bounds. Notably, models that violate the stability bound exhibit attention collapse and long-range degradation, while attempts to scale beyond one million tokens encounter a hard precision wall independent of architecture or training. 
+
+---
+# SnapMLA: Efficient Long-Context MLA Decoding via Hardware-Aware FP8 Quantized Pipelining 
+
+**Authors**: Yifan Zhang, Zunhai Su, Shuhao Hu, Rui Yang, Wei Wu, Yulei Qian, Yuchen Xie, Xunliang Cai  
+
+**Link**: [PDF](https://arxiv.org/pdf/2602.10718)  
+
+**Abstract**: While FP8 attention has shown substantial promise in innovations like FlashAttention-3, its integration into the decoding phase of the DeepSeek Multi-head Latent Attention (MLA) architecture presents notable challenges. These challenges include numerical heterogeneity arising from the decoupling of positional embeddings, misalignment of quantization scales in FP8 PV GEMM, and the need for optimized system-level support. In this paper, we introduce SnapMLA, an FP8 MLA decoding framework optimized to improve long-context efficiency through the following hardware-aware algorithm-kernel co-optimization techniques: (i) RoPE-Aware Per-Token KV Quantization, where the RoPE part is maintained in high precision, motivated by our comprehensive analysis of the heterogeneous quantization sensitivity inherent to the MLA KV cache. Furthermore, per-token granularity is employed to align with the autoregressive decoding process and maintain quantization accuracy. (ii) Quantized PV Computation Pipeline Reconstruction, which resolves the misalignment of quantization scale in FP8 PV computation stemming from the shared KV structure of the MLA KV cache. (iii) End-to-End Dataflow Optimization, where we establish an efficient data read-and-write workflow using specialized kernels, ensuring efficient data flow and performance gains. Extensive experiments on state-of-the-art MLA LLMs show that SnapMLA achieves up to a 1.91x improvement in throughput, with negligible risk of performance degradation in challenging long-context tasks, including mathematical reasoning and code generation benchmarks. Code is available at this https URL. 
+
+---
+# VERA: Identifying and Leveraging Visual Evidence Retrieval Heads in Long-Context Understanding 
+
+**Authors**: Rongcan Pei, Huan Li, Fang Guo, Qi Zhu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2602.10146)  
+
+**Abstract**: While Vision-Language Models (VLMs) have shown promise in textual understanding, they face significant challenges when handling long context and complex reasoning tasks. In this paper, we dissect the internal mechanisms governing long-context processing in VLMs to understand their performance bottlenecks. Through the lens of attention analysis, we identify specific Visual Evidence Retrieval (VER) Heads - a sparse, dynamic set of attention heads critical for locating visual cues during reasoning, distinct from static OCR heads. We demonstrate that these heads are causal to model performance; masking them leads to significant degradation. Leveraging this discovery, we propose VERA (Visual Evidence Retrieval Augmentation), a training-free framework that detects model uncertainty (i.e., entropy) to trigger the explicit verbalization of visual evidence attended by VER heads. Comprehensive experiments demonstrate that VERA significantly improves long-context understanding of open-source VLMs: it yields an average relative improvement of 21.3% on Qwen3-VL-8B-Instruct and 20.1% on GLM-4.1V-Thinking across five benchmarks. 
+
+---
