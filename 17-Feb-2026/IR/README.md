@@ -1,0 +1,299 @@
+# DRAMA: Domain Retrieval using Adaptive Module Allocation 
+
+**Authors**: Pranav Kasela, Marco Braga, Ophir Frieder, Nazli Goharian, Gabriella Pasi, Raffaele Perego  
+
+**Link**: [PDF](https://arxiv.org/pdf/2602.14960)  
+
+**Abstract**: Neural models are increasingly used in Web-scale Information Retrieval (IR). However, relying on these models introduces substantial computational and energy requirements, leading to increasing attention toward their environmental cost and the sustainability of large-scale deployments. While neural IR models deliver high retrieval effectiveness, their scalability is constrained in multi-domain scenarios, where training and maintaining domain-specific models is inefficient and achieving robust cross-domain generalisation within a unified model remains difficult. This paper introduces DRAMA (Domain Retrieval using Adaptive Module Allocation), an energy- and parameter-efficient framework designed to reduce the environmental footprint of neural retrieval. DRAMA integrates domain-specific adapter modules with a dynamic gating mechanism that selects the most relevant domain knowledge for each query. New domains can be added efficiently through lightweight adapter training, avoiding full model retraining. We evaluate DRAMA on multiple Web retrieval benchmarks covering different domains. Our extensive evaluation shows that DRAMA achieves comparable effectiveness to domain-specific models while using only a fraction of their parameters and computational resources. These findings show that energy-aware model design can significantly improve scalability and sustainability in neural IR. 
+
+---
+# Beyond Retractions: Forensic Scientometrics Techniques to Identify Research Misconduct, Citation Leakage, and Funding Anomalies 
+
+**Authors**: Leslie D. McIntosh, Alexandra Sinclair, Simon Linacre  
+
+**Link**: [PDF](https://arxiv.org/pdf/2602.14793)  
+
+**Abstract**: This paper presents a forensic scientometric case study of the Pharmakon Neuroscience Research Network, a fabricated research collective that operated primarily between 2019 and 2022 while embedding itself within legitimate scholarly publishing channels. 
+
+---
+# Intent-Driven Dynamic Chunking: Segmenting Documents to Reflect Predicted Information Needs 
+
+**Authors**: Christos Koutsiaris  
+
+**Link**: [PDF](https://arxiv.org/pdf/2602.14784)  
+
+**Abstract**: Breaking long documents into smaller segments is a fundamental challenge in information retrieval. Whether for search engines, question-answering systems, or retrieval-augmented generation (RAG), effective segmentation determines how well systems can locate and return relevant information. However, traditional methods, such as fixed-length or coherence-based segmentation, ignore user intent, leading to chunks that split answers or contain irrelevant noise. We introduce Intent-Driven Dynamic Chunking (IDC), a novel approach that uses predicted user queries to guide document segmentation. IDC leverages a Large Language Model to generate likely user intents for a document and then employs a dynamic programming algorithm to find the globally optimal chunk boundaries. This represents a novel application of DP to intent-aware segmentation that avoids greedy pitfalls. We evaluated IDC on six diverse question-answering datasets, including news articles, Wikipedia, academic papers, and technical documentation. IDC outperformed traditional chunking strategies on five datasets, improving top-1 retrieval accuracy by 5% to 67%, and matched the best baseline on the sixth. Additionally, IDC produced 40-60% fewer chunks than baseline methods while achieving 93-100% answer coverage. These results demonstrate that aligning document structure with anticipated information needs significantly boosts retrieval performance, particularly for long and heterogeneous documents. 
+
+---
+# Orcheo: A Modular Full-Stack Platform for Conversational Search 
+
+**Authors**: Shaojie Jiang, Svitlana Vakulenko, Maarten de Rijke  
+
+**Link**: [PDF](https://arxiv.org/pdf/2602.14710)  
+
+**Abstract**: Conversational search (CS) requires a complex software engineering pipeline that integrates query reformulation, ranking, and response generation. CS researchers currently face two barriers: the lack of a unified framework for efficiently sharing contributions with the community, and the difficulty of deploying end-to-end prototypes needed for user evaluation. We introduce Orcheo, an open-source platform designed to bridge this gap. Orcheo offers three key advantages: (i) A modular architecture promotes component reuse through single-file node modules, facilitating sharing and reproducibility in CS research; (ii) Production-ready infrastructure bridges the prototype-to-system gap via dual execution modes, secure credential management, and execution telemetry, with built-in AI coding support that lowers the learning curve; (iii) Starter-kit assets include 50+ off-the-shelf components for query understanding, ranking, and response generation, enabling the rapid bootstrapping of complete CS pipelines. We describe the framework architecture and validate Orcheo's utility through case studies that highlight modularity and ease of use. Orcheo is released as open source under the MIT License at this https URL. 
+
+---
+# Adaptive Autoguidance for Item-Side Fairness in Diffusion Recommender Systems 
+
+**Authors**: Zihan Li, Gustavo Escobedo, Marta Moscati, Oleg Lesota, Markus Schedl  
+
+**Link**: [PDF](https://arxiv.org/pdf/2602.14706)  
+
+**Abstract**: Diffusion recommender systems achieve strong recommendation accuracy but often suffer from popularity bias, resulting in unequal item exposure. To address this shortcoming, we introduce A2G-DiffRec, a diffusion recommender that incorporates adaptive autoguidance, where the main model is guided by a less-trained version of itself. Instead of using a fixed guidance weight, A2G-DiffRec learns to adaptively weigh the outputs of the main and weak models during training, supervised by a popularity regularization that promotes balanced exposure across items with different popularity levels. Experimental results on the MovieLens-1M, Foursquare-Tokyo, and Music4All-Onion datasets show that A2G-DiffRec is effective in enhancing item-side fairness at a marginal cost of accuracy reduction compared to existing guided diffusion recommenders and other non-diffusion baselines. 
+
+---
+# Behavioral Feature Boosting via Substitute Relationships for E-commerce Search 
+
+**Authors**: Chaosheng Dong, Michinari Momma, Yijia Wang, Yan Gao, Yi Sun  
+
+**Link**: [PDF](https://arxiv.org/pdf/2602.14502)  
+
+**Abstract**: On E-commerce platforms, new products often suffer from the cold-start problem: limited interaction data reduces their search visibility and hurts relevance ranking. To address this, we propose a simple yet effective behavior feature boosting method that leverages substitute relationships among products (BFS). BFS identifies substitutes-products that satisfy similar user needs-and aggregates their behavioral signals (e.g., clicks, add-to-carts, purchases, and ratings) to provide a warm start for new items. Incorporating these enriched signals into ranking models mitigates cold-start effects and improves relevance and competitiveness. Experiments on a large E-commerce platform, both offline and online, show that BFS significantly improves search relevance and product discovery for cold-start products. BFS is scalable and practical, improving user experience while increasing exposure for newly launched items in E-commerce search. The BFS-enhanced ranking model has been launched in production and has served customers since 2025. 
+
+---
+# High Precision Audience Expansion via Extreme Classification in a Two-Sided Marketplace 
+
+**Authors**: Dillon Davis, Huiji Gao, Thomas Legrand, Juan Manuel Caicedo Carvajal, Malay Haldar, Kedar Bellare, Moutupsi Paul, Soumyadip Banerjee, Liwei He, Stephanie Moyerman, Sanjeev Katariya  
+
+**Link**: [PDF](https://arxiv.org/pdf/2602.14358)  
+
+**Abstract**: Airbnb search must balance a worldwide, highly varied supply of homes with guests whose location, amenity, style, and price expectations differ widely. Meeting those expectations hinges on an efficient retrieval stage that surfaces only the listings a guest might realistically book, before resource intensive ranking models are applied to determine the best results. Unlike many recommendation engines, our system faces a distinctive challenge, location retrieval, that sits upstream of ranking and determines which geographic areas are queried in order to filter inventory to a candidate set. The preexisting approach employs a deep bayesian bandit based system to predict a rectangular retrieval bounds area that can be used for filtering. The purpose of this paper is to demonstrate the methodology, challenges, and impact of rearchitecting search to retrieve from the subset of most bookable high precision rectangular map cells defined by dividing the world into 25M uniform cells. 
+
+---
+# MixFormer: Co-Scaling Up Dense and Sequence in Industrial Recommenders 
+
+**Authors**: Xu Huang, Hao Zhang, Zhifang Fan, Yunwen Huang, Zhuoxing Wei, Zheng Chai, Jinan Ni, Yuchao Zheng, Qiwei Chen  
+
+**Link**: [PDF](https://arxiv.org/pdf/2602.14110)  
+
+**Abstract**: As industrial recommender systems enter a scaling-driven regime, Transformer architectures have become increasingly attractive for scaling models towards larger capacity and longer sequence. However, existing Transformer-based recommendation models remain structurally fragmented, where sequence modeling and feature interaction are implemented as separate modules with independent parameterization. Such designs introduce a fundamental co-scaling challenge, as model capacity must be suboptimally allocated between dense feature interaction and sequence modeling under a limited computational budget. In this work, we propose MixFormer, a unified Transformer-style architecture tailored for recommender systems, which jointly models sequential behaviors and feature interactions within a single backbone. Through a unified parameterization, MixFormer enables effective co-scaling across both dense capacity and sequence length, mitigating the trade-off observed in decoupled designs. Moreover, the integrated architecture facilitates deep interaction between sequential and non-sequential representations, allowing high-order feature semantics to directly inform sequence aggregation and enhancing overall expressiveness. To ensure industrial practicality, we further introduce a user-item decoupling strategy for efficiency optimizations that significantly reduce redundant computation and inference latency. Extensive experiments on large-scale industrial datasets demonstrate that MixFormer consistently exhibits superior accuracy and efficiency. Furthermore, large-scale online A/B tests on two production recommender systems, Douyin and Douyin Lite, show consistent improvements in user engagement metrics, including active days and in-app usage duration. 
+
+---
+# DAIAN: Deep Adaptive Intent-Aware Network for CTR Prediction in Trigger-Induced Recommendation 
+
+**Authors**: Zhihao Lv, Longtao Zhang, Ailong He, Shuzhi Cao, Shuguang Han, Jufeng Chen  
+
+**Link**: [PDF](https://arxiv.org/pdf/2602.13971)  
+
+**Abstract**: Recommendation systems are essential for personalizing e-commerce shopping experiences. Among these, Trigger-Induced Recommendation (TIR) has emerged as a key scenario, which utilizes a trigger item (explicitly represents a user's instantaneous interest), enabling precise, real-time recommendations. Although several trigger-based techniques have been proposed, most of them struggle to address the intent myopia issue, that is, a recommendation system overemphasizes the role of trigger items and narrowly focuses on suggesting commodities that are highly relevant to trigger items. Meanwhile, existing methods rely on collaborative behavior patterns between trigger and recommended items to identify the user's preferences, yet the sparsity of ID-based interaction restricts their effectiveness. To this end, we propose the Deep Adaptive Intent-Aware Network (DAIAN) that dynamically adapts to users' intent preferences. In general, we first extract the users' personalized intent representations by analyzing the correlation between a user's click and the trigger item, and accordingly retrieve the user's related historical behaviors to mine the user's diverse intent. Besides, sparse collaborative behaviors constrain the performance in capturing items associated with user intent. Hence, we reinforce similarity by leveraging a hybrid enhancer with ID and semantic information, followed by adaptive selection based on varying intents. Experimental results on public datasets and our industrial e-commerce datasets demonstrate the effectiveness of DAIAN. 
+
+---
+# A Tale of Two Graphs: Separating Knowledge Exploration from Outline Structure for Open-Ended Deep Research 
+
+**Authors**: Zhuofan Shi, Ming Ma, Zekun Yao, Fangkai Yang, Jue Zhang, Dongge Han, Victor Rühle, Qingwei Lin, Saravan Rajmohan, Dongmei Zhang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2602.13830)  
+
+**Abstract**: Open-Ended Deep Research (OEDR) pushes LLM agents beyond short-form QA toward long-horizon workflows that iteratively search, connect, and synthesize evidence into structured reports. However, existing OEDR agents largely follow either linear ``search-then-generate'' accumulation or outline-centric planning. The former suffers from lost-in-the-middle failures as evidence grows, while the latter relies on the LLM to implicitly infer knowledge gaps from the outline alone, providing weak supervision for identifying missing relations and triggering targeted exploration. We present DualGraph memory, an architecture that separates what the agent knows from how it writes. DualGraph maintains two co-evolving graphs: an Outline Graph (OG), and a Knowledge Graph (KG), a semantic memory that stores fine-grained knowledge units, including core entities, concepts, and their relations. By analyzing the KG topology together with structural signals from the OG, DualGraph generates targeted search queries, enabling more efficient and comprehensive iterative knowledge-driven exploration and refinement. Across DeepResearch Bench, DeepResearchGym, and DeepConsult, DualGraph consistently outperforms state-of-the-art baselines in report depth, breadth, and factual grounding; for example, it reaches a 53.08 RACE score on DeepResearch Bench with GPT-5. Moreover, ablation studies confirm the central role of the dual-graph design. 
+
+---
+# DMESR: Dual-view MLLM-based Enhancing Framework for Multimodal Sequential Recommendation 
+
+**Authors**: Mingyao Huang, Qidong Liu, Wenxuan Yang, Moranxin Wang, Yuqi Sun, Haiping Zhu, Feng Tian, Yan Chen  
+
+**Link**: [PDF](https://arxiv.org/pdf/2602.13715)  
+
+**Abstract**: Sequential Recommender Systems (SRS) aim to predict users' next interaction based on their historical behaviors, while still facing the challenge of data sparsity. With the rapid advancement of Multimodal Large Language Models (MLLMs), leveraging their multimodal understanding capabilities to enrich item semantic representation has emerged as an effective enhancement strategy for SRS. However, existing MLLM-enhanced recommendation methods still suffer from two key limitations. First, they struggle to effectively align multimodal representations, leading to suboptimal utilization of semantic information across modalities. Second, they often overly rely on MLLM-generated content while overlooking the fine-grained semantic cues contained in the original textual data of items. To address these issues, we propose a Dual-view MLLM-based Enhancing framework for multimodal Sequential Recommendation (DMESR). For the misalignment issue, we employ a contrastive learning mechanism to align the cross-modal semantic representations generated by MLLMs. For the loss of fine-grained semantics, we introduce a cross-attention fusion module that integrates the coarse-grained semantic knowledge obtained from MLLMs with the fine-grained original textual semantics. Finally, these two fused representations can be seamlessly integrated into the downstream sequential recommendation models. Extensive experiments conducted on three real-world datasets and three popular sequential recommendation architectures demonstrate the superior effectiveness and generalizability of our proposed approach. 
+
+---
+# Pailitao-VL: Unified Embedding and Reranker for Real-Time Multi-Modal Industrial Search 
+
+**Authors**: Lei Chen, Chen Ju, Xu Chen, Zhicheng Wang, Yuheng Jiao, Hongfeng Zhan, Zhaoyang Li, Shihao Xu, Zhixiang Zhao, Tong Jia, Jinsong Lan, Xiaoyong Zhu, Bo Zheng  
+
+**Link**: [PDF](https://arxiv.org/pdf/2602.13704)  
+
+**Abstract**: In this work, we presented Pailitao-VL, a comprehensive multi-modal retrieval system engineered for high-precision, real-time industrial search. We here address three critical challenges in the current SOTA solution: insufficient retrieval granularity, vulnerability to environmental noise, and prohibitive efficiency-performance gap. Our primary contribution lies in two fundamental paradigm shifts. First, we transitioned the embedding paradigm from traditional contrastive learning to an absolute ID-recognition task. Through anchoring instances to a globally consistent latent space defined by billions of semantic prototypes, we successfully overcome the stochasticity and granularity bottlenecks inherent in existing embedding solutions. Second, we evolved the generative reranker from isolated pointwise evaluation to the compare-and-calibrate listwise policy. By synergizing chunk-based comparative reasoning with calibrated absolute relevance scoring, the system achieves nuanced discriminative resolution while circumventing the prohibitive latency typically associated with conventional reranking methods. Extensive offline benchmarks and online A/B tests on Alibaba e-commerce platform confirm that Pailitao-VL achieves state-of-the-art performance and delivers substantial business impact. This work demonstrates a robust and scalable path for deploying advanced MLLM-based retrieval architectures in demanding, large-scale production environments. 
+
+---
+# PT-RAG: Structure-Fidelity Retrieval-Augmented Generation for Academic Papers 
+
+**Authors**: Rui Yu, Tianyi Wang, Ruixia Liu, Yinglong Wang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2602.13647)  
+
+**Abstract**: Retrieval-augmented generation (RAG) is increasingly applied to question-answering over long academic papers, where accurate evidence allocation under a fixed token budget is critical. Existing approaches typically flatten academic papers into unstructured chunks during preprocessing, which destroys the native hierarchical structure. This loss forces retrieval to operate in a disordered space, thereby producing fragmented contexts, misallocating tokens to non-evidential regions under finite token budgets, and increasing the reasoning burden for downstream language models. To address these issues, we propose PT-RAG, an RAG framework that treats the native hierarchical structure of academic papers as a low-entropy retrieval prior. PT-RAG first inherits the native hierarchy to construct a structure-fidelity PaperTree index, which prevents entropy increase at the source. It then designs a path-guided retrieval mechanism that aligns query semantics to relevant sections and selects high relevance root-to-leaf paths under a fixed token budget, yielding compact, coherent, and low-entropy retrieval contexts. In contrast to existing RAG approaches, PT-RAG avoids entropy increase caused by destructive preprocessing and provides a native low-entropy structural basis for subsequent retrieval. To assess this design, we introduce entropy-based structural diagnostics that quantify retrieval fragmentation and evidence allocation accuracy. On three academic question-answering benchmarks, PT-RAG achieves consistently lower section entropy and evidence alignment cross entropy than strong baselines, indicating reduced context fragmentation and more precise allocation to evidential regions. These structural advantages directly translate into higher answer quality. 
+
+---
+# GEMs: Breaking the Long-Sequence Barrier in Generative Recommendation with a Multi-Stream Decoder 
+
+**Authors**: Yu Zhou, Chengcheng Guo, Kuo Cai, Ji Liu, Qiang Luo, Ruiming Tang, Han Li, Kun Gai, Guorui Zhou  
+
+**Link**: [PDF](https://arxiv.org/pdf/2602.13631)  
+
+**Abstract**: While generative recommendations (GR) possess strong sequential reasoning capabilities, they face significant challenges when processing extremely long user behavior sequences: the high computational cost forces practical sequence lengths to be limited, preventing models from capturing users' lifelong interests; meanwhile, the inherent "recency bias" of attention mechanisms further weakens learning from long-term history. To overcome this bottleneck, we propose GEMs (Generative rEcommendation with a Multi-stream decoder), a novel and unified framework designed to break the long-sequence barrier by capturing users' lifelong interaction sequences through a multi-stream perspective. Specifically, GEMs partitions user behaviors into three temporal streams$\unicode{x2014}$Recent, Mid-term, and Lifecycle$\unicode{x2014}$and employs tailored inference schemes for each: a one-stage real-time extractor for immediate dynamics, a lightweight indexer for cross attention to balance accuracy and cost for mid-term sequences, and a two-stage offline-online compression module for lifelong modeling. These streams are integrated via a parameter-free fusion strategy to enable holistic interest representation. Extensive experiments on large-scale industrial datasets demonstrate that GEMs significantly outperforms state-of-the-art methods in recommendation accuracy. Notably, GEMs is the first lifelong GR framework successfully deployed in a high-concurrency industrial environment, achieving superior inference efficiency while processing user sequences of over 100,000 interactions. 
+
+---
+# Climber-Pilot: A Non-Myopic Generative Recommendation Model Towards Better Instruction-Following 
+
+**Authors**: Da Guo, Shijia Wang, Qiang Xiao, Yintao Ren, Weisheng Li, Songpei Xu, Ming Yue, Bin Huang, Guanlin Wu, Chuanjiang Luo  
+
+**Link**: [PDF](https://arxiv.org/pdf/2602.13581)  
+
+**Abstract**: Generative retrieval has emerged as a promising paradigm in recommender systems, offering superior sequence modeling capabilities over traditional dual-tower architectures. However, in large-scale industrial scenarios, such models often suffer from inherent myopia: due to single-step inference and strict latency constraints, they tend to collapse diverse user intents into locally optimal predictions, failing to capture long-horizon and multi-item consumption patterns. Moreover, real-world retrieval systems must follow explicit retrieval instructions, such as category-level control and policy constraints. Incorporating such instruction-following behavior into generative retrieval remains challenging, as existing conditioning or post-hoc filtering approaches often compromise relevance or efficiency. In this work, we present Climber-Pilot, a unified generative retrieval framework to address both limitations. First, we introduce Time-Aware Multi-Item Prediction (TAMIP), a novel training paradigm designed to mitigate inherent myopia in generative retrieval. By distilling long-horizon, multi-item foresight into model parameters through time-aware masking, TAMIP alleviates locally optimal predictions while preserving efficient single-step inference. Second, to support flexible instruction-following retrieval, we propose Condition-Guided Sparse Attention (CGSA), which incorporates business constraints directly into the generative process via sparse attention, without introducing additional inference steps. Extensive offline experiments and online A/B testing at NetEase Cloud Music, one of the largest music streaming platforms, demonstrate that Climber-Pilot significantly outperforms state-of-the-art baselines, achieving a 4.24\% lift of the core business metric. 
+
+---
+# Unleash the Potential of Long Semantic IDs for Generative Recommendation 
+
+**Authors**: Ming Xia, Zhiqin Zhou, Guoxin Ma, Dongmin Huang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2602.13573)  
+
+**Abstract**: Semantic ID-based generative recommendation represents items as sequences of discrete tokens, but it inherently faces a trade-off between representational expressiveness and computational efficiency. Residual Quantization (RQ)-based approaches restrict semantic IDs to be short to enable tractable sequential modeling, while Optimized Product Quantization (OPQ)-based methods compress long semantic IDs through naive rigid aggregation, inevitably discarding fine-grained semantic information. To resolve this dilemma, we propose ACERec, a novel framework that decouples the granularity gap between fine-grained tokenization and efficient sequential modeling. It employs an Attentive Token Merger to distill long expressive semantic tokens into compact latents and introduces a dedicated Intent Token serving as a dynamic prediction anchor. To capture cohesive user intents, we guide the learning process via a dual-granularity objective, harmonizing fine-grained token prediction with global item-level semantic alignment. Extensive experiments on six real-world benchmarks demonstrate that ACERec consistently outperforms state-of-the-art baselines, achieving an average improvement of 14.40\% in NDCG@10, effectively reconciling semantic expressiveness and computational efficiency. 
+
+---
+# LiveNewsBench: Evaluating LLM Web Search Capabilities with Freshly Curated News 
+
+**Authors**: Yunfan Zhang, Kathleen McKeown, Smaranda Muresan  
+
+**Link**: [PDF](https://arxiv.org/pdf/2602.13543)  
+
+**Abstract**: Large Language Models (LLMs) with agentic web search capabilities show strong potential for tasks requiring real-time information access and complex fact retrieval, yet evaluating such systems remains challenging. We introduce \bench, a rigorous and regularly updated benchmark designed to assess the agentic web search abilities of LLMs. \bench automatically generates fresh question-answer pairs from recent news articles, ensuring that questions require information beyond an LLM's training data and enabling clear separation between internal knowledge and search capability. The benchmark features intentionally difficult questions requiring multi-hop search queries, page visits, and reasoning, making it well-suited for evaluating agentic search behavior. Our automated data curation and question generation pipeline enables frequent benchmark updates and supports construction of a large-scale training dataset for agentic web search models, addressing the scarcity of such data in the research community. To ensure reliable evaluation, we include a subset of human-verified samples in the test set. We evaluate a broad range of systems using \bench, including commercial and open-weight LLMs as well as LLM-based web search APIs. The leaderboard, datasets, and code are publicly available at this http URL. 
+
+---
+# Hunt Globally: Deep Research AI Agents for Drug Asset Scouting in Investing, Business Development, and Search & Evaluation 
+
+**Authors**: Alisa Vinogradova, Vlad Vinogradov, Luba Greenwood, Ilya Yasny, Dmitry Kobyzev, Shoman Kasbekar, Kong Nguyen, Dmitrii Radkevich, Roman Doronin, Andrey Doronichev  
+
+**Link**: [PDF](https://arxiv.org/pdf/2602.15019)  
+
+**Abstract**: Bio-pharmaceutical innovation has shifted: many new drug assets now originate outside the United States and are disclosed primarily via regional, non-English channels. Recent data suggests >85% of patent filings originate outside the U.S., with China accounting for nearly half of the global total; a growing share of scholarly output is also non-U.S. Industry estimates put China at ~30% of global drug development, spanning 1,200+ novel candidates. In this high-stakes environment, failing to surface "under-the-radar" assets creates multi-billion-dollar risk for investors and business development teams, making asset scouting a coverage-critical competition where speed and completeness drive value. Yet today's Deep Research AI agents still lag human experts in achieving high-recall discovery across heterogeneous, multilingual sources without hallucinations.
+We propose a benchmarking methodology for drug asset scouting and a tuned, tree-based self-learning Bioptic Agent aimed at complete, non-hallucinated scouting. We construct a challenging completeness benchmark using a multilingual multi-agent pipeline: complex user queries paired with ground-truth assets that are largely outside U.S.-centric radar. To reflect real deal complexity, we collected screening queries from expert investors, BD, and VC professionals and used them as priors to conditionally generate benchmark queries. For grading, we use LLM-as-judge evaluation calibrated to expert opinions. We compare Bioptic Agent against Claude Opus 4.6, OpenAI GPT-5.2 Pro, Perplexity Deep Research, Gemini 3 Pro + Deep Research, and Exa Websets. Bioptic Agent achieves 79.7% F1 versus 56.2% (Claude Opus 4.6), 50.6% (Gemini 3 Pro + Deep Research), 46.6% (GPT-5.2 Pro), 44.2% (Perplexity Deep Research), and 26.9% (Exa Websets). Performance improves steeply with additional compute, supporting the view that more compute yields better results. 
+
+---
+# Learning User Interests via Reasoning and Distillation for Cross-Domain News Recommendation 
+
+**Authors**: Mengdan Zhu, Yufan Zhao, Tao Di, Yulan Yan, Liang Zhao  
+
+**Link**: [PDF](https://arxiv.org/pdf/2602.15005)  
+
+**Abstract**: News recommendation plays a critical role in online news platforms by helping users discover relevant content. Cross-domain news recommendation further requires inferring user's underlying information needs from heterogeneous signals that often extend beyond direct news consumption. A key challenge lies in moving beyond surface-level behaviors to capture deeper, reusable user interests while maintaining scalability in large-scale production systems. In this paper, we present a reinforcement learning framework that trains large language models to generate high-quality lists of interest-driven news search queries from cross-domain user signals. We formulate query-list generation as a policy optimization problem and employ GRPO with multiple reward signals. We systematically study two compute dimensions: inference-time sampling and model capacity, and empirically observe consistent improvements with increased compute that exhibit scaling-like behavior. Finally, we perform on-policy distillation to transfer the learned policy from a large, compute-intensive teacher to a compact student model suitable for scalable deployment. Extensive offline experiments, ablation studies and large-scale online A/B tests in a production news recommendation system demonstrate consistent gains in both interest modeling quality and downstream recommendation performance. 
+
+---
+# Additive Control Variates Dominate Self-Normalisation in Off-Policy Evaluation 
+
+**Authors**: Olivier Jeunen, Shashank Gupta  
+
+**Link**: [PDF](https://arxiv.org/pdf/2602.14914)  
+
+**Abstract**: Off-policy evaluation (OPE) is essential for assessing ranking and recommendation systems without costly online interventions. Self-Normalised Inverse Propensity Scoring (SNIPS) is a standard tool for variance reduction in OPE, leveraging a multiplicative control variate. Recent advances in off-policy learning suggest that additive control variates (baseline corrections) may offer superior performance, yet theoretical guarantees for evaluation are lacking. This paper provides a definitive answer: we prove that $\beta^\star$-IPS, an estimator with an optimal additive baseline, asymptotically dominates SNIPS in Mean Squared Error. By analytically decomposing the variance gap, we show that SNIPS is asymptotically equivalent to using a specific -- but generally sub-optimal -- additive baseline. Our results theoretically justify shifting from self-normalisation to optimal baseline corrections for both ranking and recommendation. 
+
+---
+# Measuring the relatedness between scientific publications using controlled vocabularies 
+
+**Authors**: Emil Dolmer Alnor  
+
+**Link**: [PDF](https://arxiv.org/pdf/2602.14755)  
+
+**Abstract**: Measuring the relatedness between scientific publications is essential in many areas of bibliometrics and science policy. Controlled vocabularies provide a promising basis for measuring relatedness and are widely used in combination with Salton's cosine similarity. The latter is problematic because it only considers exact matches between terms. This article introduces two alternative methods - soft cosine and maximum term similarities - that account for the semantic similarity between non-matching terms. The article compares the accuracy of all three methods using the assignment of publications to topics in the TREC 2006 Genomics Track and the assumption that accurate relatedness measures should assign high relatedness scores to publication pairs within the same topic and low scores to pairs from separate topics. Results show that soft cosine is the most accurate method, while the most widely used version of Salton's cosine is markedly less accurate than the other methods tested. These findings have implications for how controlled vocabularies should be used to measure relatedness. 
+
+---
+# Alignment Adapter to Improve the Performance of Compressed Deep Learning Models 
+
+**Authors**: Rohit Raj Rai, Abhishek Dhaka, Amit Awekar  
+
+**Link**: [PDF](https://arxiv.org/pdf/2602.14635)  
+
+**Abstract**: Compressed Deep Learning (DL) models are essential for deployment in resource-constrained environments. But their performance often lags behind their large-scale counterparts. To bridge this gap, we propose Alignment Adapter (AlAd): a lightweight, sliding-window-based adapter. It aligns the token-level embeddings of a compressed model with those of the original large model. AlAd preserves local contextual semantics, enables flexible alignment across differing dimensionalities or architectures, and is entirely agnostic to the underlying compression method. AlAd can be deployed in two ways: as a plug-and-play module over a frozen compressed model, or by jointly fine-tuning AlAd with the compressed model for further performance gains. Through experiments on BERT-family models across three token-level NLP tasks, we demonstrate that AlAd significantly boosts the performance of compressed models with only marginal overhead in size and latency. 
+
+---
+# DeepMTL2R: A Library for Deep Multi-task Learning to Rank 
+
+**Authors**: Chaosheng Dong, Peiyao Xiao, Yijia Wang, Kaiyi Ji  
+
+**Link**: [PDF](https://arxiv.org/pdf/2602.14519)  
+
+**Abstract**: This paper presents DeepMTL2R, an open-source deep learning framework for Multi-task Learning to Rank (MTL2R), where multiple relevance criteria must be optimized simultaneously. DeepMTL2R integrates heterogeneous relevance signals into a unified, context-aware model by leveraging the self-attention mechanism of transformer architectures, enabling effective learning across diverse and potentially conflicting objectives. The framework includes 21 state-of-the-art multi-task learning algorithms and supports multi-objective optimization to identify Pareto-optimal ranking models. By capturing complex dependencies and long-range interactions among items and labels, DeepMTL2R provides a scalable and expressive solution for modern ranking systems and facilitates controlled comparisons across MTL strategies. We demonstrate its effectiveness on a publicly available dataset, report competitive performance, and visualize the resulting trade-offs among objectives. DeepMTL2R is available at \href{this https URL}{this https URL}. 
+
+---
+# Query as Anchor: Scenario-Adaptive User Representation via Large Language Model 
+
+**Authors**: Jiahao Yuan, Yike Xu, Jinyong Wen, Baokun Wang, Ziyi Gao, Xiaotong Lin, Yun Liu, Xing Fu, Yu Cheng, Yongchao Liu, Weiqiang Wang, Zhongle Xie  
+
+**Link**: [PDF](https://arxiv.org/pdf/2602.14492)  
+
+**Abstract**: Industrial-scale user representation learning requires balancing robust universality with acute task-sensitivity. However, existing paradigms primarily yield static, task-agnostic embeddings that struggle to reconcile the divergent requirements of downstream scenarios within unified vector spaces. Furthermore, heterogeneous multi-source data introduces inherent noise and modality conflicts, degrading representation. We propose Query-as-Anchor, a framework shifting user modeling from static encoding to dynamic, query-aware synthesis. To empower Large Language Models (LLMs) with deep user understanding, we first construct UserU, an industrial-scale pre-training dataset that aligns multi-modal behavioral sequences with user understanding semantics, and our Q-Anchor Embedding architecture integrates hierarchical coarse-to-fine encoders into dual-tower LLMs via joint contrastive-autoregressive optimization for query-aware user representation. To bridge the gap between general pre-training and specialized business logic, we further introduce Cluster-based Soft Prompt Tuning to enforce discriminative latent structures, effectively aligning model attention with scenario-specific modalities. For deployment, anchoring queries at sequence termini enables KV-cache-accelerated inference with negligible incremental latency. Evaluations on 10 Alipay industrial benchmarks show consistent SOTA performance, strong scalability, and efficient deployment. Large-scale online A/B testing in Alipay's production system across two real-world scenarios further validates its practical effectiveness. Our code is prepared for public release and will be available at: this https URL. 
+
+---
+# InnoEval: On Research Idea Evaluation as a Knowledge-Grounded, Multi-Perspective Reasoning Problem 
+
+**Authors**: Shuofei Qiao, Yunxiang Wei, Xuehai Wang, Bin Wu, Boyang Xue, Ningyu Zhang, Hossein A. Rahmani, Yanshan Wang, Qiang Zhang, Keyan Ding, Jeff Z. Pan, Huajun Chen, Emine Yilmaz  
+
+**Link**: [PDF](https://arxiv.org/pdf/2602.14367)  
+
+**Abstract**: The rapid evolution of Large Language Models has catalyzed a surge in scientific idea production, yet this leap has not been accompanied by a matching advance in idea evaluation. The fundamental nature of scientific evaluation needs knowledgeable grounding, collective deliberation, and multi-criteria decision-making. However, existing idea evaluation methods often suffer from narrow knowledge horizons, flattened evaluation dimensions, and the inherent bias in LLM-as-a-Judge. To address these, we regard idea evaluation as a knowledge-grounded, multi-perspective reasoning problem and introduce InnoEval, a deep innovation evaluation framework designed to emulate human-level idea assessment. We apply a heterogeneous deep knowledge search engine that retrieves and grounds dynamic evidence from diverse online sources. We further achieve review consensus with an innovation review board containing reviewers with distinct academic backgrounds, enabling a multi-dimensional decoupled evaluation across multiple metrics. We construct comprehensive datasets derived from authoritative peer-reviewed submissions to benchmark InnoEval. Experiments demonstrate that InnoEval can consistently outperform baselines in point-wise, pair-wise, and group-wise evaluation tasks, exhibiting judgment patterns and consensus highly aligned with human experts. 
+
+---
+# Predicting New Concept-Object Associations in Astronomy by Mining the Literature 
+
+**Authors**: Jinchu Li, Yuan-Sen Ting, Alberto Accomazzi, Tirthankar Ghosal, Nesar Ramachandra  
+
+**Link**: [PDF](https://arxiv.org/pdf/2602.14335)  
+
+**Abstract**: We construct a concept-object knowledge graph from the full astro-ph corpus through July 2025. Using an automated pipeline, we extract named astrophysical objects from OCR-processed papers, resolve them to SIMBAD identifiers, and link them to scientific concepts annotated in the source corpus. We then test whether historical graph structure can forecast new concept-object associations before they appear in print. Because the concepts are derived from clustering and therefore overlap semantically, we apply an inference-time concept-similarity smoothing step uniformly to all methods. Across four temporal cutoffs on a physically meaningful subset of concepts, an implicit-feedback matrix factorization model (alternating least squares, ALS) with smoothing outperforms the strongest neighborhood baseline (KNN using text-embedding concept similarity) by 16.8% on NDCG@100 (0.144 vs 0.123) and 19.8% on Recall@100 (0.175 vs 0.146), and exceeds the best recency heuristic by 96% and 88%, respectively. These results indicate that historical literature encodes predictive structure not captured by global heuristics or local neighborhood voting, suggesting a path toward tools that could help triage follow-up targets for scarce telescope time. 
+
+---
+# AD-Bench: A Real-World, Trajectory-Aware Advertising Analytics Benchmark for LLM Agents 
+
+**Authors**: Lingxiang Hu, Yiding Sun, Tianle Xia, Wenwei Li, Ming Xu, Liqun Liu, Peng Shu, Huan Yu, Jie Jiang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2602.14257)  
+
+**Abstract**: While Large Language Model (LLM) agents have achieved remarkable progress in complex reasoning tasks, evaluating their performance in real-world environments has become a critical problem. Current benchmarks, however, are largely restricted to idealized simulations, failing to address the practical demands of specialized domains like advertising and marketing analytics. In these fields, tasks are inherently more complex, often requiring multi-round interaction with professional marketing tools. To address this gap, we propose AD-Bench, a benchmark designed based on real-world business requirements of advertising and marketing platforms. AD-Bench is constructed from real user marketing analysis requests, with domain experts providing verifiable reference answers and corresponding reference tool-call trajectories. The benchmark categorizes requests into three difficulty levels (L1-L3) to evaluate agents' capabilities under multi-round, multi-tool collaboration. Experiments show that on AD-Bench, Gemini-3-Pro achieves Pass@1 = 68.0% and Pass@3 = 83.0%, but performance drops significantly on L3 to Pass@1 = 49.4% and Pass@3 = 62.1%, with a trajectory coverage of 70.1%, indicating that even state-of-the-art models still exhibit substantial capability gaps in complex advertising and marketing analysis scenarios. AD-Bench provides a realistic benchmark for evaluating and improving advertising marketing agents, the leaderboard and code can be found at this https URL. 
+
+---
+# Index Light, Reason Deep: Deferred Visual Ingestion for Visual-Dense Document Question Answering 
+
+**Authors**: Tao Xu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2602.14162)  
+
+**Abstract**: Existing multimodal document question answering methods universally adopt a supply-side ingestion strategy: running a Vision-Language Model (VLM) on every page during indexing to generate comprehensive descriptions, then answering questions through text retrieval. However, this "pre-ingestion" approach is costly (a 113-page engineering drawing package requires approximately 80,000 VLM tokens), end-to-end unreliable (VLM outputs may fail to be correctly retrieved due to format mismatches in the retrieval infrastructure), and irrecoverable once it fails. This paper proposes the Deferred Visual Ingestion (DVI) framework, adopting a demand-side ingestion strategy: the indexing phase performs only lightweight metadata extraction, deferring visual understanding to the moment users pose specific questions. DVI's core principle is "Index for locating, not understanding"--achieving page localization through structured metadata indexes and BM25 full-text search, then sending original images along with specific questions to a VLM for targeted analysis. Experiments on two real industrial engineering drawings (113 pages + 7 pages) demonstrate that DVI achieves comparable overall accuracy at zero ingestion VLM cost (46.7% vs. 48.9%), an effectiveness rate of 50% on visually necessary queries (vs. 0% for pre-ingestion), and 100% page localization (98% search space compression). DVI also supports interactive refinement and progressive caching, transforming the "QA accuracy" problem into a "page localization" problem--once the correct drawing page is found, obtaining the answer becomes a matter of interaction rounds. 
+
+---
+# Agentic Assistant for 6G: Turn-based Conversations for AI-RAN Hierarchical Co-Management 
+
+**Authors**: Udhaya Srinivasan, Weisi Guo  
+
+**Link**: [PDF](https://arxiv.org/pdf/2602.13868)  
+
+**Abstract**: New generations of radio access networks (RAN), especially with native AI services are increasingly difficult for human engineers to manage in real-time. Enterprise networks are often managed locally, where expertise is scarce. Existing research has focused on creating Retrieval-Augmented Generation (RAG) LLMs that can help to plan and configure RAN and core aspects only. Co-management of RAN and edge AI is the gap, which creates hierarchical and dynamic problems that require turn-based human interactions. Here, we create an agentic network manager and turn-based conversation assistant that can understand human intent-based queries that match hierarchical problems in AI-RAN. The framework constructed consists of: (a) a user interface and evaluation dashboard, (b) an intelligence layer that interfaces with the AI-RAN, and (c) a knowledge layer for providing the basis for evaluations and recommendations. These form 3 layers of capability with the following validation performances (average response time 13s): (1) design and planning a service (78\% accuracy), (2) operating specific AI-RAN tools (89\% accuracy), and (3) tuning AI-RAN performance (67\%). These initial results indicate the universal challenges of hallucination but also fast response performance success that can really reduce OPEX costs for small scale enterprise users. 
+
+---
+# From Fluent to Verifiable: Claim-Level Auditability for Deep Research Agents 
+
+**Authors**: Razeen A Rasheed, Somnath Banerjee, Animesh Mukherjee, Rima Hazra  
+
+**Link**: [PDF](https://arxiv.org/pdf/2602.13855)  
+
+**Abstract**: A deep research agent produces a fluent scientific report in minutes; a careful reader then tries to verify the main claims and discovers the real cost is not reading, but tracing: which sentence is supported by which passage, what was ignored, and where evidence conflicts. We argue that as research generation becomes cheap, auditability becomes the bottleneck, and the dominant risk shifts from isolated factual errors to scientifically styled outputs whose claim-evidence links are weak, missing, or misleading. This perspective proposes claim-level auditability as a first-class design and evaluation target for deep research agents, distills recurring long-horizon failure modes (objective drift, transient constraints, and unverifiable inference), and introduces the Auditable Autonomous Research (AAR) standard, a compact measurement framework that makes auditability testable via provenance coverage, provenance soundness, contradiction transparency, and audit effort. We then argue for semantic provenance with protocolized validation: persistent, queryable provenance graphs that encode claim--evidence relations (including conflicts) and integrate continuous validation during synthesis rather than after publication, with practical instrumentation patterns to support deployment at scale. 
+
+---
+# InfoCIR: Multimedia Analysis for Composed Image Retrieval 
+
+**Authors**: Ioannis Dravilas, Ioannis Kapetangeorgis, Anastasios Latsoudis, Conor McCarthy, Gonçalo Marcelino, Marcel Worring  
+
+**Link**: [PDF](https://arxiv.org/pdf/2602.13402)  
+
+**Abstract**: Composed Image Retrieval (CIR) allows users to search for images by combining a reference image with a text prompt that describes desired modifications. While vision-language models like CLIP have popularized this task by embedding multiple modalities into a joint space, developers still lack tools that reveal how these multimodal prompts interact with embedding spaces and why small wording changes can dramatically alter the results. We present InfoCIR, a visual analytics system that closes this gap by coupling retrieval, explainability, and prompt engineering in a single, interactive dashboard. InfoCIR integrates a state-of-the-art CIR back-end (SEARLE arXiv:2303.15247) with a six-panel interface that (i) lets users compose image + text queries, (ii) projects the top-k results into a low-dimensional space using Uniform Manifold Approximation and Projection (UMAP) for spatial reasoning, (iii) overlays similarity-based saliency maps and gradient-derived token-attribution bars for local explanation, and (iv) employs an LLM-powered prompt enhancer that generates counterfactual variants and visualizes how these changes affect the ranking of user-selected target images. A modular architecture built on Plotly-Dash allows new models, datasets, and attribution methods to be plugged in with minimal effort. We argue that InfoCIR helps diagnose retrieval failures, guides prompt enhancement, and accelerates insight generation during model development. All source code allowing for a reproducible demo is available at this https URL. 
+
+---
+# BLUEPRINT Rebuilding a Legacy: Multimodal Retrieval for Complex Engineering Drawings and Documents 
+
+**Authors**: Ethan Seefried, Ran Eldegaway, Sanjay Das, Nathaniel Blanchard, Tirthankar Ghosal  
+
+**Link**: [PDF](https://arxiv.org/pdf/2602.13345)  
+
+**Abstract**: Decades of engineering drawings and technical records remain locked in legacy archives with inconsistent or missing metadata, making retrieval difficult and often manual. We present Blueprint, a layout-aware multimodal retrieval system designed for large-scale engineering repositories. Blueprint detects canonical drawing regions, applies region-restricted VLM-based OCR, normalizes identifiers (e.g., DWG, part, facility), and fuses lexical and dense retrieval with a lightweight region-level reranker. Deployed on ~770k unlabeled files, it automatically produces structured metadata suitable for cross-facility search.
+We evaluate Blueprint on a 5k-file benchmark with 350 expert-curated queries using pooled, graded (0/1/2) relevance judgments. Blueprint delivers a 10.1% absolute gain in Success@3 and an 18.9% relative improvement in nDCG@3 over the strongest vision-language baseline}, consistently outperforming across vision, text, and multimodal intents. Oracle ablations reveal substantial headroom under perfect region detection and OCR. We release all queries, runs, annotations, and code to facilitate reproducible evaluation on legacy engineering archives. 
+
+---
+# CrisiSense-RAG: Crisis Sensing Multimodal Retrieval-Augmented Generation for Rapid Disaster Impact Assessment 
+
+**Authors**: Yiming Xiao, Kai Yin, Ali Mostafavi  
+
+**Link**: [PDF](https://arxiv.org/pdf/2602.13239)  
+
+**Abstract**: Timely and spatially resolved disaster impact assessment is essential for effective emergency response. However, automated methods typically struggle with temporal asynchrony. Real-time human reports capture peak hazard conditions while high-resolution satellite imagery is frequently acquired after peak conditions. This often reflects flood recession rather than maximum extent. Naive fusion of these misaligned streams can yield dangerous underestimates when post-event imagery overrides documented peak flooding. We present CrisiSense-RAG, which is a multimodal retrieval-augmented generation framework that reframes impact assessment as evidence synthesis over heterogeneous data sources without disaster-specific fine-tuning. The system employs hybrid dense-sparse retrieval for text sources and CLIP-based retrieval for aerial imagery. A split-pipeline architecture feeds into asynchronous fusion logic that prioritizes real-time social evidence for peak flood extent while treating imagery as persistent evidence of structural damage. Evaluated on Hurricane Harvey across 207 ZIP-code queries, the framework achieves a flood extent MAE of 10.94% to 28.40% and damage severity MAE of 16.47% to 21.65% in zero-shot settings. Prompt-level alignment proves critical for quantitative validity because metric grounding improves damage estimates by up to 4.75 percentage points. These results demonstrate a practical and deployable approach to rapid resilience intelligence under real-world data constraints. 
+
+---

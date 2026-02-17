@@ -1,0 +1,108 @@
+# PT-RAG: Structure-Fidelity Retrieval-Augmented Generation for Academic Papers 
+
+**Authors**: Rui Yu, Tianyi Wang, Ruixia Liu, Yinglong Wang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2602.13647)  
+
+**Abstract**: Retrieval-augmented generation (RAG) is increasingly applied to question-answering over long academic papers, where accurate evidence allocation under a fixed token budget is critical. Existing approaches typically flatten academic papers into unstructured chunks during preprocessing, which destroys the native hierarchical structure. This loss forces retrieval to operate in a disordered space, thereby producing fragmented contexts, misallocating tokens to non-evidential regions under finite token budgets, and increasing the reasoning burden for downstream language models. To address these issues, we propose PT-RAG, an RAG framework that treats the native hierarchical structure of academic papers as a low-entropy retrieval prior. PT-RAG first inherits the native hierarchy to construct a structure-fidelity PaperTree index, which prevents entropy increase at the source. It then designs a path-guided retrieval mechanism that aligns query semantics to relevant sections and selects high relevance root-to-leaf paths under a fixed token budget, yielding compact, coherent, and low-entropy retrieval contexts. In contrast to existing RAG approaches, PT-RAG avoids entropy increase caused by destructive preprocessing and provides a native low-entropy structural basis for subsequent retrieval. To assess this design, we introduce entropy-based structural diagnostics that quantify retrieval fragmentation and evidence allocation accuracy. On three academic question-answering benchmarks, PT-RAG achieves consistently lower section entropy and evidence alignment cross entropy than strong baselines, indicating reduced context fragmentation and more precise allocation to evidential regions. These structural advantages directly translate into higher answer quality. 
+
+---
+# CrisiSense-RAG: Crisis Sensing Multimodal Retrieval-Augmented Generation for Rapid Disaster Impact Assessment 
+
+**Authors**: Yiming Xiao, Kai Yin, Ali Mostafavi  
+
+**Link**: [PDF](https://arxiv.org/pdf/2602.13239)  
+
+**Abstract**: Timely and spatially resolved disaster impact assessment is essential for effective emergency response. However, automated methods typically struggle with temporal asynchrony. Real-time human reports capture peak hazard conditions while high-resolution satellite imagery is frequently acquired after peak conditions. This often reflects flood recession rather than maximum extent. Naive fusion of these misaligned streams can yield dangerous underestimates when post-event imagery overrides documented peak flooding. We present CrisiSense-RAG, which is a multimodal retrieval-augmented generation framework that reframes impact assessment as evidence synthesis over heterogeneous data sources without disaster-specific fine-tuning. The system employs hybrid dense-sparse retrieval for text sources and CLIP-based retrieval for aerial imagery. A split-pipeline architecture feeds into asynchronous fusion logic that prioritizes real-time social evidence for peak flood extent while treating imagery as persistent evidence of structural damage. Evaluated on Hurricane Harvey across 207 ZIP-code queries, the framework achieves a flood extent MAE of 10.94% to 28.40% and damage severity MAE of 16.47% to 21.65% in zero-shot settings. Prompt-level alignment proves critical for quantitative validity because metric grounding improves damage estimates by up to 4.75 percentage points. These results demonstrate a practical and deployable approach to rapid resilience intelligence under real-world data constraints. 
+
+---
+# Text Style Transfer with Parameter-efficient LLM Finetuning and Round-trip Translation 
+
+**Authors**: Ruoxi Liu, Philipp Koehn  
+
+**Link**: [PDF](https://arxiv.org/pdf/2602.15013)  
+
+**Abstract**: This paper proposes a novel method for Text Style Transfer (TST) based on parameter-efficient fine-tuning of Large Language Models (LLMs). Addressing the scarcity of parallel corpora that map between styles, the study employs roundtrip translation to synthesize such parallel datasets from monolingual corpora. This approach creates 'neutralized' text devoid of stylistic attributes, essentially creating a shared input style at training-time and inference-time. Experimental results demonstrate consistent superiority of this method over zero-shot prompting and fewshot ICL techniques measured by BLEU scores and style accuracy scores across four investigated domains. Furthermore, the integration of retrieval-augmented generation (RAG) for terminology and name knowledge enhances robustness and stylistic consistency. 
+
+---
+# HyperRAG: Reasoning N-ary Facts over Hypergraphs for Retrieval Augmented Generation 
+
+**Authors**: Wen-Sheng Lien, Yu-Kai Chan, Hao-Lung Hsiao, Bo-Kai Ruan, Meng-Fen Chiang, Chien-An Chen, Yi-Ren Yeh, Hong-Han Shuai  
+
+**Link**: [PDF](https://arxiv.org/pdf/2602.14470)  
+
+**Abstract**: Graph-based retrieval-augmented generation (RAG) methods, typically built on knowledge graphs (KGs) with binary relational facts, have shown promise in multi-hop open-domain QA. However, their rigid retrieval schemes and dense similarity search often introduce irrelevant context, increase computational overhead, and limit relational expressiveness. In contrast, n-ary hypergraphs encode higher-order relational facts that capture richer inter-entity dependencies and enable shallower, more efficient reasoning paths. To address this limitation, we propose HyperRAG, a RAG framework tailored for n-ary hypergraphs with two complementary retrieval variants: (i) HyperRetriever learns structural-semantic reasoning over n-ary facts to construct query-conditioned relational chains. It enables accurate factual tracking, adaptive high-order traversal, and interpretable multi-hop reasoning under context constraints. (ii) HyperMemory leverages the LLM's parametric memory to guide beam search, dynamically scoring n-ary facts and entities for query-aware path expansion. Extensive evaluations on WikiTopics (11 closed-domain datasets) and three open-domain QA benchmarks (HotpotQA, MuSiQue, and 2WikiMultiHopQA) validate HyperRAG's effectiveness. HyperRetriever achieves the highest answer accuracy overall, with average gains of 2.95% in MRR and 1.23% in Hits@10 over the strongest baseline. Qualitative analysis further shows that HyperRetriever bridges reasoning gaps through adaptive and interpretable n-ary chain construction, benefiting both open and closed-domain QA. 
+
+---
+# Evaluating Prompt Engineering Techniques for RAG in Small Language Models: A Multi-Hop QA Approach 
+
+**Authors**: Amir Hossein Mohammadi, Ali Moeinian, Zahra Razavizade, Afsaneh Fatemi, Reza Ramezani  
+
+**Link**: [PDF](https://arxiv.org/pdf/2602.13890)  
+
+**Abstract**: Retrieval Augmented Generation (RAG) is a powerful approach for enhancing the factual grounding of language models by integrating external knowledge. While widely studied for large language models, the optimization of RAG for Small Language Models (SLMs) remains a critical research gap, particularly in complex, multi-hop question-answering tasks that require sophisticated reasoning. In these systems, prompt template design is a crucial yet under-explored factor influencing performance. This paper presents a large-scale empirical study to investigate this factor, evaluating 24 different prompt templates on the HotpotQA dataset. The set includes a standard RAG prompt, nine well-formed techniques from the literature, and 14 novel hybrid variants, all tested on two prominent SLMs: Qwen2.5-3B Instruct and Gemma3-4B-It. Our findings, based on a test set of 18720 instances, reveal significant performance gains of up to 83% on Qwen2.5 and 84.5% on Gemma3-4B-It, yielding an improvement of up to 6% for both models compared to the Standard RAG prompt. This research also offers concrete analysis and actionable recommendations for designing effective and efficient prompts for SLM-based RAG systems, practically for deployment in resource-constrained environments. 
+
+---
+# LLM-Confidence Reranker: A Training-Free Approach for Enhancing Retrieval-Augmented Generation Systems 
+
+**Authors**: Zhipeng Song, Xiangyu Kong, Xinrui Bao, Yizhi Zhou, Jiulong Jiao, Sitong Liu, Yuhang Zhou, Heng Qi  
+
+**Link**: [PDF](https://arxiv.org/pdf/2602.13571)  
+
+**Abstract**: Large language models (LLMs) have revolutionized natural language processing, yet hallucinations in knowledge-intensive tasks remain a critical challenge. Retrieval-augmented generation (RAG) addresses this by integrating external knowledge, but its efficacy depends on accurate document retrieval and ranking. Although existing rerankers demonstrate effectiveness, they frequently necessitate specialized training, impose substantial computational expenses, and fail to fully exploit the semantic capabilities of LLMs, particularly their inherent confidence signals. We propose the LLM-Confidence Reranker (LCR), a training-free, plug-and-play algorithm that enhances reranking in RAG systems by leveraging black-box LLM confidence derived from Maximum Semantic Cluster Proportion (MSCP). LCR employs a two-stage process: confidence assessment via multinomial sampling and clustering, followed by binning and multi-level sorting based on query and document confidence thresholds. This approach prioritizes relevant documents while preserving original rankings for high-confidence queries, ensuring robustness. Evaluated on BEIR and TREC benchmarks with BM25 and Contriever retrievers, LCR--using only 7--9B-parameter pre-trained LLMs--consistently improves NDCG@5 by up to 20.6% across pre-trained LLM and fine-tuned Transformer rerankers, without degradation. Ablation studies validate the hypothesis that LLM confidence positively correlates with document relevance, elucidating LCR's mechanism. LCR offers computational efficiency, parallelism for scalability, and broad compatibility, mitigating hallucinations in applications like medical diagnosis. 
+
+---
+# On Theoretically-Driven LLM Agents for Multi-Dimensional Discourse Analysis 
+
+**Authors**: Maciej Uberna, Michał Wawer, Jarosław A. Chudziak, Marcin Koszowy  
+
+**Link**: [PDF](https://arxiv.org/pdf/2602.13713)  
+
+**Abstract**: Identifying the strategic uses of reformulation in discourse remains a key challenge for computational argumentation. While LLMs can detect surface-level similarity, they often fail to capture the pragmatic functions of rephrasing, such as its role within rhetorical discourse. This paper presents a comparative multi-agent framework designed to quantify the benefits of incorporating explicit theoretical knowledge for this task. We utilise an dataset of annotated political debates to establish a new standard encompassing four distinct rephrase functions: Deintensification, Intensification, Specification, Generalisation, and Other, which covers all remaining types (D-I-S-G-O). We then evaluate two parallel LLM-based agent systems: one enhanced by argumentation theory via Retrieval-Augmented Generation (RAG), and an identical zero-shot baseline. The results reveal a clear performance gap: the RAG-enhanced agents substantially outperform the baseline across the board, with particularly strong advantages in detecting Intensification and Generalisation context, yielding an overall Macro F1-score improvement of nearly 30\%. Our findings provide evidence that theoretical grounding is not only beneficial but essential for advancing beyond mere paraphrase detection towards function-aware analysis of argumentative discourse. This comparative multi-agent architecture represents a step towards scalable, theoretically informed computational tools capable of identifying rhetorical strategies in contemporary discourse. 
+
+---
+# Differentially Private Retrieval-Augmented Generation 
+
+**Authors**: Tingting Tang, James Flemings, Yongqin Wang, Murali Annavaram  
+
+**Link**: [PDF](https://arxiv.org/pdf/2602.14374)  
+
+**Abstract**: Retrieval-augmented generation (RAG) is a widely used framework for reducing hallucinations in large language models (LLMs) on domain-specific tasks by retrieving relevant documents from a database to support accurate responses. However, when the database contains sensitive corpora, such as medical records or legal documents, RAG poses serious privacy risks by potentially exposing private information through its outputs. Prior work has demonstrated that one can practically craft adversarial prompts that force an LLM to regurgitate the augmented contexts. A promising direction is to integrate differential privacy (DP), a privacy notion that offers strong formal guarantees, into RAG systems. However, naively applying DP mechanisms into existing systems often leads to significant utility degradation. Particularly for RAG systems, DP can reduce the usefulness of the augmented contexts leading to increase risk of hallucination from the LLMs. Motivated by these challenges, we present DP-KSA, a novel privacy-preserving RAG algorithm that integrates DP using the propose-test-release paradigm. DP-KSA follows from a key observation that most question-answering (QA) queries can be sufficiently answered with a few keywords. Hence, DP-KSA first obtains an ensemble of relevant contexts, each of which will be used to generate a response from an LLM. We utilize these responses to obtain the most frequent keywords in a differentially private manner. Lastly, the keywords are augmented into the prompt for the final output. This approach effectively compresses the semantic space while preserving both utility and privacy. We formally show that DP-KSA provides formal DP guarantees on the generated output with respect to the RAG database. We evaluate DP-KSA on two QA benchmarks using three instruction-tuned LLMs, and our empirical results demonstrate that DP-KSA achieves a strong privacy-utility tradeoff. 
+
+---
+# ReusStdFlow: A Standardized Reusability Framework for Dynamic Workflow Construction in Agentic AI 
+
+**Authors**: Gaoyang Zhang, Shanghong Zou, Yafang Wang, He Zhang, Ruohua Xu, Feng Zhao  
+
+**Link**: [PDF](https://arxiv.org/pdf/2602.14922)  
+
+**Abstract**: To address the ``reusability dilemma'' and structural hallucinations in enterprise Agentic AI,this paper proposes ReusStdFlow, a framework centered on a novel ``Extraction-Storage-Construction'' paradigm. The framework deconstructs heterogeneous, platform-specific Domain Specific Languages (DSLs) into standardized, modular workflow segments. It employs a dual knowledge architecture-integrating graph and vector databases-to facilitate synergistic retrieval of both topological structures and functional semantics. Finally, workflows are intelligently assembled using a retrieval-augmented generation (RAG) strategy. Tested on 200 real-world n8n workflows, the system achieves over 90% accuracy in both extraction and construction. This framework provides a standardized solution for the automated reorganization and efficient reuse of enterprise digital assets. 
+
+---
+# Guided Collaboration in Heterogeneous LLM-Based Multi-Agent Systems via Entropy-Based Understanding Assessment and Experience Retrieval 
+
+**Authors**: Linlin Wang, Tianqing Zhu, Laiqiao Qin, Longxiang Gao, Wanlei Zhou  
+
+**Link**: [PDF](https://arxiv.org/pdf/2602.13639)  
+
+**Abstract**: With recent breakthroughs in large language models (LLMs) for reasoning, planning, and complex task generation, artificial intelligence systems are transitioning from isolated single-agent architectures to multi-agent systems with collaborative intelligence. However, in heterogeneous multi-agent systems (HMAS), capability differences among agents give rise to consistent cognitive problems, where strong and weak models fail to contribute effectively. We define the collaboration as a strong-weak system. Through comprehensive experiments, we disclose a counterintuitive phenomenon in the strong-weak system: a strong-weak collaboration may under-perform weak-weak combinations, revealing that cognitive mismatching are key bottlenecks limiting heterogeneous cooperation. To overcome these challenges, we propose an Entropy-Based Adaptive Guidance Framework that dynamically aligns the guidance with the cognitive state of each agent. The framework quantifies the understanding of weak agents through multi-dimensional entropy metrics - covering expression, uncertainty, structure, coherence, and relevance - and adaptively adjusts the intensity of the guidance at light, moderate and intensive levels. Furthermore, a Retrieval-Augmented Generation (RAG) mechanism is incorporated to retain successful collaboration experiences, enabling both immediate adaptation and long-term learning. Extensive experiments on three benchmark datasets, GSM8K, MBPP, and CVRP demonstrate that our approach consistently enhances the effectiveness and stability of heterogeneous collaboration. The results highlight that adaptive guidance not only mitigates cognitive imbalance but also establishes a scalable pathway toward more robust, cooperative multi-agent intelligence. 
+
+---
+# LongAudio-RAG: Event-Grounded Question Answering over Multi-Hour Long Audio 
+
+**Authors**: Naveen Vakada, Kartik Hegde, Arvind Krishna Sridhar, Yinyi Guo, Erik Visser  
+
+**Link**: [PDF](https://arxiv.org/pdf/2602.14612)  
+
+**Abstract**: Long-duration audio is increasingly common in industrial and consumer settings, yet reviewing multi-hour recordings is impractical, motivating systems that answer natural-language queries with precise temporal grounding and minimal hallucination. Existing audio-language models show promise, but long-audio question answering remains difficult due to context-length limits. We introduce LongAudio-RAG (LA-RAG), a hybrid framework that grounds Large Language Model (LLM) outputs in retrieved, timestamped acoustic event detections rather than raw audio. Multi-hour streams are converted into structured event records stored in an SQL database, and at inference time the system resolves natural-language time references, classifies intent, retrieves only the relevant events, and generates answers using this constrained evidence. To evaluate performance, we construct a synthetic long-audio benchmark by concatenating recordings with preserved timestamps and generating template-based question-answer pairs for detection, counting, and summarization tasks. Finally, we demonstrate the practicality of our approach by deploying it in a hybrid edge-cloud environment, where the audio grounding model runs on-device on IoT-class hardware while the LLM is hosted on a GPU-backed server. This architecture enables low-latency event extraction at the edge and high-quality language reasoning in the cloud. Experiments show that structured, event-level retrieval significantly improves accuracy compared to vanilla Retrieval-Augmented Generation (RAG) or text-to-SQL approaches. 
+
+---
+# Responsible AI in Business 
+
+**Authors**: Stephan Sandfuchs, Diako Farooghi, Janis Mohr, Sarah Grewe, Markus Lemmen, Jörg Frochte  
+
+**Link**: [PDF](https://arxiv.org/pdf/2602.13244)  
+
+**Abstract**: Artificial intelligence (AI) and Machine Learning (ML) have moved from research and pilot projects into everyday business operations, with generative AI accelerating adoption across processes, products, and services. This paper introduces the concept of Responsible AI for organizational practice, with a particular focus on small and medium-sized enterprises. It structures Responsible AI along four focal areas that are central for introducing and operating AI systems in a legally compliant, comprehensible, sustainable, and data-sovereign manner. First, it discusses the EU AI Act as a risk-based regulatory framework, including the distinction between provider and deployer roles and the resulting obligations such as risk assessment, documentation, transparency requirements, and AI literacy measures. Second, it addresses Explainable AI as a basis for transparency and trust, clarifying key notions such as transparency, interpretability, and explainability and summarizing practical approaches to make model behavior and decisions more understandable. Third, it covers Green AI, emphasizing that AI systems should be evaluated not only by performance but also by energy and resource consumption, and outlines levers such as model reuse, resource-efficient adaptation, continuous learning, model compression, and monitoring. Fourth, it examines local models (on-premise and edge) as an operating option that supports data protection, control, low latency, and strategic independence, including domain adaptation via fine-tuning and retrieval-augmented generation. The paper concludes with a consolidated set of next steps for establishing governance, documentation, secure operation, sustainability considerations, and an implementation roadmap. 
+
+---
