@@ -1,0 +1,92 @@
+# The Next Paradigm Is User-Centric Agent, Not Platform-Centric Service 
+
+**Authors**: Luankang Zhang, Hang Lv, Qiushi Pan, Kefen Wang, Yonghao Huang, Xinrui Miao, Yin Xu, Wei Guo, Yong Liu, Hao Wang, Enhong Chen  
+
+**Link**: [PDF](https://arxiv.org/pdf/2602.15682)  
+
+**Abstract**: Modern digital services have evolved into indispensable tools, driving the present large-scale information systems. Yet, the prevailing platform-centric model, where services are optimized for platform-driven metrics such as engagement and conversion, often fails to align with users' true needs. While platform technologies have advanced significantly-especially with the integration of large language models (LLMs)-we argue that improvements in platform service quality do not necessarily translate to genuine user benefit. Instead, platform-centric services prioritize provider objectives over user welfare, resulting in conflicts against user interests. This paper argues that the future of digital services should shift from a platform-centric to a user-centric agent. These user-centric agents prioritize privacy, align with user-defined goals, and grant users control over their preferences and actions. With advancements in LLMs and on-device intelligence, the realization of this vision is now feasible. This paper explores the opportunities and challenges in transitioning to user-centric intelligence, presents a practical device-cloud pipeline for its implementation, and discusses the necessary governance and ecosystem structures for its adoption. 
+
+---
+# Can Recommender Systems Teach Themselves? A Recursive Self-Improving Framework with Fidelity Control 
+
+**Authors**: Luankang Zhang, Hao Wang, Zhongzhou Liu, Mingjia Yin, Yonghao Huang, Jiaqi Li, Wei Guo, Yong Liu, Huifeng Guo, Defu Lian, Enhong Chen  
+
+**Link**: [PDF](https://arxiv.org/pdf/2602.15659)  
+
+**Abstract**: The scarcity of high-quality training data presents a fundamental bottleneck to scaling machine learning models. This challenge is particularly acute in recommendation systems, where extreme sparsity in user interactions leads to rugged optimization landscapes and poor generalization. We propose the Recursive Self-Improving Recommendation (RSIR) framework, a paradigm in which a model bootstraps its own performance without reliance on external data or teacher models. RSIR operates in a closed loop: the current model generates plausible user interaction sequences, a fidelity-based quality control mechanism filters them for consistency with user's approximate preference manifold, and a successor model is augmented on the enriched dataset. Our theoretical analysis shows that RSIR acts as a data-driven implicit regularizer, smoothing the optimization landscape and guiding models toward more robust solutions. Empirically, RSIR yields consistent, cumulative gains across multiple benchmarks and architectures. Notably, even smaller models benefit, and weak models can generate effective training curricula for stronger ones. These results demonstrate that recursive self-improvement is a general, model-agnostic approach to overcoming data sparsity, suggesting a scalable path forward for recommender systems and beyond. Our anonymized code is available at this https URL . 
+
+---
+# Eco-Amazon: Enriching E-commerce Datasets with Product Carbon Footprint for Sustainable Recommendations 
+
+**Authors**: Giuseppe Spillo, Allegra De Filippo, Cataldo Musto, Michela Milano, Giovanni Semeraro  
+
+**Link**: [PDF](https://arxiv.org/pdf/2602.15508)  
+
+**Abstract**: In the era of responsible and sustainable AI, information retrieval and recommender systems must expand their scope beyond traditional accuracy metrics to incorporate environmental sustainability. However, this research line is severely limited by the lack of item-level environmental impact data in standard benchmarks. This paper introduces Eco-Amazon, a novel resource designed to bridge this gap. Our resource consists of an enriched version of three widely used Amazon datasets (i.e., Home, Clothing, and Electronics) augmented with Product Carbon Footprint (PCF) metadata. CO2e emission scores were generated using a zero-shot framework that leverages Large Language Models (LLMs) to estimate item-level PCF based on product attributes. Our contribution is three-fold: (i) the release of the Eco-Amazon datasets, enriching item metadata with PCF signals; (ii) the LLM-based PCF estimation script, which allows researchers to enrich any product catalogue and reproduce our results; (iii) a use case demonstrating how PCF estimates can be exploited to promote more sustainable products. By providing these environmental signals, Eco-Amazon enables the community to develop, benchmark, and evaluate the next generation of sustainable retrieval and recommendation models. Our resource is available at this https URL, while our source code is available at: this http URL. 
+
+---
+# Binge Watch: Reproducible Multimodal Benchmarks Datasets for Large-Scale Movie Recommendation on MovieLens-10M and 20M 
+
+**Authors**: Giuseppe Spillo, Alessandro Petruzzelli, Cataldo Musto, Marco de Gemmis, Pasquale Lops, Giovanni Semeraro  
+
+**Link**: [PDF](https://arxiv.org/pdf/2602.15505)  
+
+**Abstract**: With the growing interest in Multimodal Recommender Systems (MRSs), collecting high-quality datasets provided with multimedia side information (text, images, audio, video) has become a fundamental step. However, most of the current literature in the field relies on small- or medium-scale datasets that are either not publicly released or built using undocumented processes.
+In this paper, we aim to fill this gap by releasing M3L-10M and M3L-20M, two large-scale, reproducible, multimodal datasets for the movie domain, obtained by enriching with multimodal features the popular MovieLens-10M and MovieLens-20M, respectively. By following a fully documented pipeline, we collect movie plots, posters, and trailers, from which textual, visual, acoustic, and video features are extracted using several state-of-the-art encoders. We publicly release mappings to download the original raw data, the extracted features, and the complete datasets in multiple formats, fostering reproducibility and advancing the field of MRSs. In addition, we conduct qualitative and quantitative analyses that showcase our datasets across several perspectives.
+This work represents a foundational step to ensure reproducibility and replicability in the large-scale, multimodal movie recommendation domain. Our resource can be fully accessed at the following link: this https URL, while the source code is accessible at this https URL. 
+
+---
+# GaiaFlow: Semantic-Guided Diffusion Tuning for Carbon-Frugal Search 
+
+**Authors**: Rong Fu, Wenxin Zhang, Jia Yee Tan, Chunlei Meng, Shuo Yin, Xiaowen Ma, Wangyu Wu, Muge Qi, Guangzhen Yao, Zhaolu Kang, Zeli Su, Simon Fong  
+
+**Link**: [PDF](https://arxiv.org/pdf/2602.15423)  
+
+**Abstract**: As the burgeoning power requirements of sophisticated neural architectures escalate, the information retrieval community has recognized ecological sustainability as a pivotal priority that necessitates a fundamental paradigm shift in model design. While contemporary neural rankers have attained unprecedented accuracy, the substantial environmental externalities associated with their computational intensity often remain overlooked in large-scale deployments. We present GaiaFlow, an innovative framework engineered to facilitate carbon-frugal search by operationalizing semantic-guided diffusion tuning. Our methodology orchestrates the convergence of retrieval-guided Langevin dynamics and a hardware-independent performance modeling strategy to optimize the trade-off between search precision and environmental preservation. By incorporating adaptive early exit protocols and precision-aware quantized inference, the proposed architecture significantly mitigates operational carbon footprints while maintaining robust retrieval quality across heterogeneous computing infrastructures. Extensive experimental evaluations demonstrate that GaiaFlow achieves a superior equilibrium between effectiveness and energy efficiency, offering a scalable and sustainable pathway for next-generation neural search systems. 
+
+---
+# Automatic Funny Scene Extraction from Long-form Cinematic Videos 
+
+**Authors**: Sibendu Paul, Haotian Jiang, Caren Chen  
+
+**Link**: [PDF](https://arxiv.org/pdf/2602.15381)  
+
+**Abstract**: Automatically extracting engaging and high-quality humorous scenes from cinematic titles is pivotal for creating captivating video previews and snackable content, boosting user engagement on streaming platforms. Long-form cinematic titles, with their extended duration and complex narratives, challenge scene localization, while humor's reliance on diverse modalities and its nuanced style add further complexity. This paper introduces an end-to-end system for automatically identifying and ranking humorous scenes from long-form cinematic titles, featuring shot detection, multimodal scene localization, and humor tagging optimized for cinematic content. Key innovations include a novel scene segmentation approach combining visual and textual cues, improved shot representations via guided triplet mining, and a multimodal humor tagging framework leveraging both audio and text. Our system achieves an 18.3% AP improvement over state-of-the-art scene detection on the OVSD dataset and an F1 score of 0.834 for detecting humor in long text. Extensive evaluations across five cinematic titles demonstrate 87% of clips extracted by our pipeline are intended to be funny, while 98% of scenes are accurately localized. With successful generalization to trailers, these results showcase the pipeline's potential to enhance content creation workflows, improve user engagement, and streamline snackable content generation for diverse cinematic media formats. 
+
+---
+# Semantics-Aware Denoising: A PLM-Guided Sample Reweighting Strategy for Robust Recommendation 
+
+**Authors**: Xikai Yang, Yang Wang, Yilin Li, Sebastian Sun  
+
+**Link**: [PDF](https://arxiv.org/pdf/2602.15359)  
+
+**Abstract**: Implicit feedback, such as user clicks, serves as the primary data source for modern recommender systems. However, click interactions inherently contain substantial noise, including accidental clicks, clickbait-induced interactions, and exploratory browsing behaviors that do not reflect genuine user preferences. Training recommendation models with such noisy positive samples leads to degraded prediction accuracy and unreliable recommendations. In this paper, we propose SAID (Semantics-Aware Implicit Denoising), a simple yet effective framework that leverages semantic consistency between user interests and item content to identify and downweight potentially noisy interactions. Our approach constructs textual user interest profiles from historical behaviors and computes semantic similarity with target item descriptions using pre-trained language model (PLM) based text encoders. The similarity scores are then transformed into sample weights that modulate the training loss, effectively reducing the impact of semantically inconsistent clicks. Unlike existing denoising methods that require complex auxiliary networks or multi-stage training procedures, SAID only modifies the loss function while keeping the backbone recommendation model unchanged. Extensive experiments on two real-world datasets demonstrate that SAID consistently improves recommendation performance, achieving up to 2.2% relative improvement in AUC over strong baselines, with particularly notable robustness under high noise conditions. 
+
+---
+# ScrapeGraphAI-100k: A Large-Scale Dataset for LLM-Based Web Information Extraction 
+
+**Authors**: William Brach, Francesco Zuppichini, Marco Vinciguerra, Lorenzo Padoan  
+
+**Link**: [PDF](https://arxiv.org/pdf/2602.15189)  
+
+**Abstract**: The use of large language models for web information extraction is becoming increasingly fundamental to modern web information retrieval pipelines. However, existing datasets tend to be small, synthetic or text-only, failing to capture the structural context of the web. We introduce ScrapeGraphAI-100k, a large-scale dataset comprising real-world LLM extraction events, collected via opt-in ScrapeGraphAI telemetry during Q2 and Q3 of 2025. Starting from 9M events, we deduplicate and balance by schema to produce 93,695 examples spanning diverse domains and languages. Each instance includes Markdown content, a prompt, a JSON schema, the LLM response, and complexity/validation metadata. We characterize the datasets structural diversity and its failure modes as schema complexity increases. We also provide a fine-tuning experiment showing that a small language model (1.7B) trained on a subset narrows the gap to larger baselines (30B), underscoring the datasets utility for efficient extraction. ScrapeGraphAI-100k enables fine-tuning small models, benchmarking structured extraction, and studying schema induction for web IR indexing, and is publicly available on HuggingFace. 
+
+---
+# tensorFM: Low-Rank Approximations of Cross-Order Feature Interactions 
+
+**Authors**: Alessio Mazzetto, Mohammad Mahdi Khalili, Laura Fee Nern, Michael Viderman, Alex Shtoff, Krzysztof Dembczyński  
+
+**Link**: [PDF](https://arxiv.org/pdf/2602.15229)  
+
+**Abstract**: We address prediction problems on tabular categorical data, where each instance is defined by multiple categorical attributes, each taking values from a finite set. These attributes are often referred to as fields, and their categorical values as features. Such problems frequently arise in practical applications, including click-through rate prediction and social sciences. We introduce and analyze {tensorFM}, a new model that efficiently captures high-order interactions between attributes via a low-rank tensor approximation representing the strength of these interactions. Our model generalizes field-weighted factorization machines. Empirically, tensorFM demonstrates competitive performance with state-of-the-art methods. Additionally, its low latency makes it well-suited for time-sensitive applications, such as online advertising. 
+
+---
+# da Costa and Tarski meet Goguen and Carnap: a novel approach for ontological heterogeneity based on consequence systems 
+
+**Authors**: Gabriel Rocha  
+
+**Link**: [PDF](https://arxiv.org/pdf/2602.15158)  
+
+**Abstract**: This paper presents a novel approach for ontological heterogeneity that draws heavily from Carnapian-Goguenism, as presented by Kutz, Mossakowski and Lücke (2010). The approach is provisionally designated da Costian-Tarskianism, named after da Costa's Principle of Tolerance in Mathematics and after Alfred Tarski's work on the concept of a consequence operator. The approach is based on the machinery of consequence systems, as developed by Carnielli et al. (2008) and Citkin and Muravitsky (2022), and it introduces the idea of an extended consequence system, which is a consequence system extended with ontological axioms. The paper also defines the concept of an extended development graph, which is a graph structure that allows ontologies to be related via morphisms of extended consequence systems, and additionally via other operations such as fibring and splitting. Finally, we discuss the implications of this approach for the field of applied ontology and suggest directions for future research. 
+
+---
