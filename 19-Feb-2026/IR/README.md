@@ -1,0 +1,114 @@
+# Why Thinking Hurts? Diagnosing and Rectifying the Reasoning Shift in Foundation Recommender Models 
+
+**Authors**: Luankang Zhang, Yonghao Huang, Hang Lv, Mingjia Yin, Liangyue Li, Zulong Chen, Hao Wang, Enhong Chen  
+
+**Link**: [PDF](https://arxiv.org/pdf/2602.16587)  
+
+**Abstract**: Integrating Chain-of-Thought (CoT) reasoning into Semantic ID-based recommendation foundation models (such as OpenOneRec) often paradoxically degrades recommendation performance. We identify the root cause as textual inertia from the General Subspace, where verbose reasoning dominates inference and causes the model to neglect critical Semantic ID. To address this, we propose a training-free Inference-Time Subspace Alignment framework. By compressing reasoning chains and applying bias-subtracted contrastive decoding, our approach mitigates ungrounded textual drift. Experiments show this effectively calibrates inference, allowing foundation models to leverage reasoning without sacrificing ID-grounded accuracy. 
+
+---
+# From Latent to Observable Position-Based Click Models in Carousel Interfaces 
+
+**Authors**: Santiago de Leon-Martinez, Robert Moro, Branislav Kveton, Maria Bielikova  
+
+**Link**: [PDF](https://arxiv.org/pdf/2602.16541)  
+
+**Abstract**: Click models are a central component of learning and evaluation in recommender systems, yet most existing models are designed for single ranked-list interfaces. In contrast, modern recommender platforms increasingly use complex interfaces such as carousels, which consist of multiple swipeable lists that enable complex user browsing behaviors.
+In this paper, we study position-based click models in carousel interfaces and examine optimization methods, model structure, and alignment with user behavior. We propose three novel position-based models tailored to carousels, including the first position-based model without latent variables that incorporates observed examination signals derived from eye tracking data, called the Observed Examination Position-Based Model (OEPBM). We develop a general implementation of these carousel click models, supporting multiple optimization techniques and conduct experiments comparing gradient-based methods with classical approaches, namely expectation-maximization and maximum likelihood estimation.
+Our results show that gradient-based optimization consistently achieve better click likelihoods. Among the evaluated models, the OEPBM achieves the strongest performance in click prediction and produces examination patterns that most closely align to user behavior. However, we also demonstrate that strong click fit does not imply realistic modeling of user examination and browsing patterns. This reveals a fundamental limitation of click-only models in complex interfaces and the need for incorporating additional behavioral signals when designing click models for carousel-based recommender systems. 
+
+---
+# Variable-Length Semantic IDs for Recommender Systems 
+
+**Authors**: Kirill Khrylchenko  
+
+**Link**: [PDF](https://arxiv.org/pdf/2602.16375)  
+
+**Abstract**: Generative models are increasingly used in recommender systems, both for modeling user behavior as event sequences and for integrating large language models into recommendation pipelines. A key challenge in this setting is the extremely large cardinality of item spaces, which makes training generative models difficult and introduces a vocabulary gap between natural language and item identifiers. Semantic identifiers (semantic IDs), which represent items as sequences of low-cardinality tokens, have recently emerged as an effective solution to this problem.
+However, existing approaches generate semantic identifiers of fixed length, assigning the same description length to all items. This is inefficient, misaligned with natural language, and ignores the highly skewed frequency structure of real-world catalogs, where popular items and rare long-tail items exhibit fundamentally different information requirements. In parallel, the emergent communication literature studies how agents develop discrete communication protocols, often producing variable-length messages in which frequent concepts receive shorter descriptions. Despite the conceptual similarity, these ideas have not been systematically adopted in recommender systems.
+In this work, we bridge recommender systems and emergent communication by introducing variable-length semantic identifiers for recommendation. We propose a discrete variational autoencoder with Gumbel-Softmax reparameterization that learns item representations of adaptive length under a principled probabilistic framework, avoiding the instability of REINFORCE-based training and the fixed-length constraints of prior semantic ID methods. 
+
+---
+# The Diversity Paradox revisited: Systemic Effects of Feedback Loops in Recommender Systems 
+
+**Authors**: Gabriele Barlacchi, Margherita Lalli, Emanuele Ferragina, Fosca Giannotti, Dino Pedreschi, Luca Pappalardo  
+
+**Link**: [PDF](https://arxiv.org/pdf/2602.16315)  
+
+**Abstract**: Recommender systems shape individual choices through feedback loops in which user behavior and algorithmic recommendations coevolve over time. The systemic effects of these loops remain poorly understood, in part due to unrealistic assumptions in existing simulation studies. We propose a feedback-loop model that captures implicit feedback, periodic retraining, probabilistic adoption of recommendations, and heterogeneous recommender systems. We apply the framework on online retail and music streaming data and analyze systemic effects of the feedback loop. We find that increasing recommender adoption may lead to a progressive diversification of individual consumption, while collective demand is redistributed in model- and domain-dependent ways, often amplifying popularity concentration. Temporal analyses further reveal that apparent increases in individual diversity observed in static evaluations are illusory: when adoption is fixed and time unfolds, individual diversity consistently decreases across all models. Our results highlight the need to move beyond static evaluations and explicitly account for feedback-loop dynamics when designing recommender systems. 
+
+---
+# MICE: Minimal Interaction Cross-Encoders for efficient Re-ranking 
+
+**Authors**: Mathias Vast, Victor Morand, Basile van Cooten, Laure Soulier, Josiane Mothe, Benjamin Piwowarski  
+
+**Link**: [PDF](https://arxiv.org/pdf/2602.16299)  
+
+**Abstract**: Cross-encoders deliver state-of-the-art ranking effectiveness in information retrieval, but have a high inference cost. This prevents them from being used as first-stage rankers, but also incurs a cost when re-ranking documents. Prior work has addressed this bottleneck from two largely separate directions: accelerating cross-encoder inference by sparsifying the attention process or improving first-stage retrieval effectiveness using more complex models, e.g. late-interaction ones. In this work, we propose to bridge these two approaches, based on an in-depth understanding of the internal mechanisms of cross-encoders. Starting from cross-encoders, we show that it is possible to derive a new late-interaction-like architecture by carefully removing detrimental or unnecessary interactions. We name this architecture MICE (Minimal Interaction Cross-Encoders). We extensively evaluate MICE across both in-domain (ID) and out-of-domain (OOD) datasets. MICE decreases fourfold the inference latency compared to standard cross-encoders, matching late-interaction models like ColBERT while retaining most of cross-encoder ID effectiveness and demonstrating superior generalization abilities in OOD. 
+
+---
+# Retrieval Collapses When AI Pollutes the Web 
+
+**Authors**: Hongyeon Yu, Dongchan Kim, Young-Bum Kim  
+
+**Link**: [PDF](https://arxiv.org/pdf/2602.16136)  
+
+**Abstract**: The rapid proliferation of AI-generated content on the Web presents a structural risk to information retrieval, as search engines and Retrieval-Augmented Generation (RAG) systems increasingly consume evidence produced by the Large Language Models (LLMs). We characterize this ecosystem-level failure mode as Retrieval Collapse, a two-stage process where (1) AI-generated content dominates search results, eroding source diversity, and (2) low-quality or adversarial content infiltrates the retrieval pipeline. We analyzed this dynamic through controlled experiments involving both high-quality SEO-style content and adversarially crafted content. In the SEO scenario, a 67\% pool contamination led to over 80\% exposure contamination, creating a homogenized yet deceptively healthy state where answer accuracy remains stable despite the reliance on synthetic sources. Conversely, under adversarial contamination, baselines like BM25 exposed $\sim$19\% of harmful content, whereas LLM-based rankers demonstrated stronger suppression capabilities. These findings highlight the risk of retrieval pipelines quietly shifting toward synthetic evidence and the need for retrieval-aware strategies to prevent a self-reinforcing cycle of quality decline in Web-grounded systems. 
+
+---
+# Rethinking ANN-based Retrieval: Multifaceted Learnable Index for Large-scale Recommendation System 
+
+**Authors**: Jiang Zhang, Yubo Wang, Wei Chang, Lu Han, Xingying Cheng, Feng Zhang, Min Li, Songhao Jiang, Wei Zheng, Harry Tran, Zhen Wang, Lei Chen, Yueming Wang, Benyu Zhang, Xiangjun Fan, Bi Xue, Qifan Wang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2602.16124)  
+
+**Abstract**: Approximate nearest neighbor (ANN) search is widely used in the retrieval stage of large-scale recommendation systems. In this stage, candidate items are indexed using their learned embedding vectors, and ANN search is executed for each user (or item) query to retrieve a set of relevant items. However, ANN-based retrieval has two key limitations. First, item embeddings and their indices are typically learned in separate stages: indexing is often performed offline after embeddings are trained, which can yield suboptimal retrieval quality-especially for newly created items. Second, although ANN offers sublinear query time, it must still be run for every request, incurring substantial computation cost at industry scale. In this paper, we propose MultiFaceted Learnable Index (MFLI), a scalable, real-time retrieval paradigm that learns multifaceted item embeddings and indices within a unified framework and eliminates ANN search at serving time. Specifically, we construct a multifaceted hierarchical codebook via residual quantization of item embeddings and co-train the codebook with the embeddings. We further introduce an efficient multifaceted indexing structure and mechanisms that support real-time updates. At serving time, the learned hierarchical indices are used directly to identify relevant items, avoiding ANN search altogether. Extensive experiments on real-world data with billions of users show that MFLI improves recall on engagement tasks by up to 11.8\%, cold-content delivery by up to 57.29\%, and semantic relevance by 13.5\% compared with prior state-of-the-art methods. We also deploy MFLI in the system and report online experimental results demonstrating improved engagement, less popularity bias, and higher serving efficiency. 
+
+---
+# FeDecider: An LLM-Based Framework for Federated Cross-Domain Recommendation 
+
+**Authors**: Xinrui He, Ting-Wei Li, Tianxin Wei, Xuying Ning, Xinyu He, Wenxuan Bao, Hanghang Tong, Jingrui He  
+
+**Link**: [PDF](https://arxiv.org/pdf/2602.16034)  
+
+**Abstract**: Federated cross-domain recommendation (Federated CDR) aims to collaboratively learn personalized recommendation models across heterogeneous domains while preserving data privacy. Recently, large language model (LLM)-based recommendation models have demonstrated impressive performance by leveraging LLMs' strong reasoning capabilities and broad knowledge. However, adopting LLM-based recommendation models in Federated CDR scenarios introduces new challenges. First, there exists a risk of overfitting with domain-specific local adapters. The magnitudes of locally optimized parameter updates often vary across domains, causing biased aggregation and overfitting toward domain-specific distributions. Second, unlike traditional recommendation models (e.g., collaborative filtering, bipartite graph-based methods) that learn explicit and comparable user/item representations, LLMs encode knowledge implicitly through autoregressive text generation training. This poses additional challenges for effectively measuring the cross-domain similarities under heterogeneity. To address these challenges, we propose an LLM-based framework for federated cross-domain recommendation, FeDecider. Specifically, FeDecider tackles the challenge of scale-specific noise by disentangling each client's low-rank updates and sharing only their directional components. To handle the need for flexible and effective integration, each client further learns personalized weights that achieve the data-aware integration of updates from other domains. Extensive experiments across diverse datasets validate the effectiveness of our proposed FeDecider. 
+
+---
+# Neighborhood Stability as a Measure of Nearest Neighbor Searchability 
+
+**Authors**: Thomas Vecchiato, Sebastian Bruch  
+
+**Link**: [PDF](https://arxiv.org/pdf/2602.16673)  
+
+**Abstract**: Clustering-based Approximate Nearest Neighbor Search (ANNS) organizes a set of points into partitions, and searches only a few of them to find the nearest neighbors of a query. Despite its popularity, there are virtually no analytical tools to determine the suitability of clustering-based ANNS for a given dataset -- what we call "searchability." To address that gap, we present two measures for flat clusterings of high-dimensional points in Euclidean space. First is Clustering-Neighborhood Stability Measure (clustering-NSM), an internal measure of clustering quality -- a function of a clustering of a dataset -- that we show to be predictive of ANNS accuracy. The second, Point-Neighborhood Stability Measure (point-NSM), is a measure of clusterability -- a function of the dataset itself -- that is predictive of clustering-NSM. The two together allow us to determine whether a dataset is searchable by clustering-based ANNS given only the data points. Importantly, both are functions of nearest neighbor relationships between points, not distances, making them applicable to various distance functions including inner product. 
+
+---
+# ColBERT-Zero: To Pre-train Or Not To Pre-train ColBERT models 
+
+**Authors**: Antoine Chaffin, Luca Arnaboldi, Amélie Chatelain, Florent Krzakala  
+
+**Link**: [PDF](https://arxiv.org/pdf/2602.16609)  
+
+**Abstract**: Current state-of-the-art multi-vector models are obtained through a small Knowledge Distillation (KD) training step on top of strong single-vector models, leveraging the large-scale pre-training of these models. In this paper, we study the pre-training of multi-vector models and show that large-scale multi-vector pre-training yields much stronger multi-vector models. Notably, a fully ColBERT-pre-trained model, ColBERT-Zero, trained only on public data, outperforms GTE-ModernColBERT as well as its base model, GTE-ModernBERT, which leverages closed and much stronger data, setting new state-of-the-art for model this size. We also find that, although performing only a small KD step is not enough to achieve results close to full pre-training, adding a supervised step beforehand allows to achieve much closer performance while skipping the most costly unsupervised phase. Finally, we find that aligning the fine-tuning and pre-training setups is crucial when repurposing existing models. To enable exploration of our results, we release various checkpoints as well as code used to train them. 
+
+---
+# Latent Objective Induction and Diversity-Constrained Selection: Algorithms for Multi-Locale Retrieval Pipelines 
+
+**Authors**: Faruk Alpay, Levent Sarioglu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2602.15921)  
+
+**Abstract**: We present three algorithms with formal correctness guarantees and complexity bounds for the problem of selecting a diverse, multi-locale set of sources from ranked search results. First, we formulate weighted locale allocation as a constrained integer partition problem and give an $O(n \log n)$ algorithm that simultaneously satisfies minimum-representation, budget-exhaustion, and proportionality-bound constraints; we prove all three hold with a tight deviation bound of $< 1$. Second, we define a cascaded country-code inference function as a deterministic priority chain over heterogeneous signals (TLD structure, model-inferred metadata, language fallback) and prove it satisfies both determinism and graceful degradation. Third, we introduce a $\kappa$-domain diversity constraint for source selection and give an $O(|K| \cdot R)$ algorithm that maintains the invariant via hash-map lookup, eliminating the aggregator monopolization pathology present in URL-level deduplication. We further formalize Latent Objective Induction (LOI), an environment-shaping operator over prompt spaces that steers downstream model behavior without restricting the feasible output set, and prove its convergence under mild assumptions. Applied to a multi-locale retrieval pipeline, these algorithms yield 62% improvement in first-party source ratio and 89% reduction in same-domain duplication across 120 multilingual queries. 
+
+---
+# Rethinking Soft Compression in Retrieval-Augmented Generation: A Query-Conditioned Selector Perspective 
+
+**Authors**: Yunhao Liu, Zian Jia, Xinyu Gao, Kanjun Xu, Yun Xiong  
+
+**Link**: [PDF](https://arxiv.org/pdf/2602.15856)  
+
+**Abstract**: Retrieval-Augmented Generation (RAG) effectively grounds Large Language Models (LLMs) with external knowledge and is widely applied to Web-related tasks. However, its scalability is hindered by excessive context length and redundant retrievals. Recent research on soft context compression aims to address this by encoding long documents into compact embeddings, yet they often underperform non-compressed RAG due to their reliance on auto-encoder-like full-compression that forces the encoder to compress all document information regardless of relevance to the input query.
+In this work, we conduct an analysis on this paradigm and reveal two fundamental limitations: (I) Infeasibility, full-compression conflicts with the LLM's downstream generation behavior; and (II) Non-necessity: full-compression is unnecessary and dilutes task-relevant information density. Motivated by these insights, we introduce SeleCom, a selector-based soft compression framework for RAG that redefines the encoder's role as query-conditioned information selector. The selector is decoder-only and is trained with a massive, diverse and difficulty-graded synthetic QA dataset with curriculum learning.
+Extensive experiments show that SeleCom significantly outperforms existing soft compression approaches and achieves competitive or superior performance to non-compression baselines, while reducing computation and latency by 33.8%~84.6%. 
+
+---
