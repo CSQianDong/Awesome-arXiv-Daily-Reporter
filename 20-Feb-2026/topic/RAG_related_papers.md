@@ -1,0 +1,27 @@
+# PEACE 2.0: Grounded Explanations and Counter-Speech for Combating Hate Expressions 
+
+**Authors**: Greta Damo, Stéphane Petiot, Elena Cabrio, Serena Villata  
+
+**Link**: [PDF](https://arxiv.org/pdf/2602.17467)  
+
+**Abstract**: The increasing volume of hate speech on online platforms poses significant societal challenges. While the Natural Language Processing community has developed effective methods to automatically detect the presence of hate speech, responses to it, called counter-speech, are still an open challenge. We present PEACE 2.0, a novel tool that, besides analysing and explaining why a message is considered hateful or not, also generates a response to it. More specifically, PEACE 2.0 has three main new functionalities: leveraging a Retrieval-Augmented Generation (RAG) pipeline i) to ground HS explanations into evidence and facts, ii) to automatically generate evidence-grounded counter-speech, and iii) exploring the characteristics of counter-speech replies. By integrating these capabilities, PEACE 2.0 enables in-depth analysis and response generation for both explicit and implicit hateful messages. 
+
+---
+# Enhancing Large Language Models (LLMs) for Telecom using Dynamic Knowledge Graphs and Explainable Retrieval-Augmented Generation 
+
+**Authors**: Dun Yuan, Hao Zhou, Xue Liu, Hao Chen, Yan Xin, Jianzhong, Zhang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2602.17529)  
+
+**Abstract**: Large language models (LLMs) have shown strong potential across a variety of tasks, but their application in the telecom field remains challenging due to domain complexity, evolving standards, and specialized terminology. Therefore, general-domain LLMs may struggle to provide accurate and reliable outputs in this context, leading to increased hallucinations and reduced utility in telecom this http URL address these limitations, this work introduces KG-RAG-a novel framework that integrates knowledge graphs (KGs) with retrieval-augmented generation (RAG) to enhance LLMs for telecom-specific tasks. In particular, the KG provides a structured representation of domain knowledge derived from telecom standards and technical documents, while RAG enables dynamic retrieval of relevant facts to ground the model's outputs. Such a combination improves factual accuracy, reduces hallucination, and ensures compliance with telecom this http URL results across benchmark datasets demonstrate that KG-RAG outperforms both LLM-only and standard RAG baselines, e.g., KG-RAG achieves an average accuracy improvement of 14.3% over RAG and 21.6% over LLM-only models. These results highlight KG-RAG's effectiveness in producing accurate, reliable, and explainable outputs in complex telecom scenarios. 
+
+---
+# Dynamic System Instructions and Tool Exposure for Efficient Agentic LLMs 
+
+**Authors**: Uria Franko  
+
+**Link**: [PDF](https://arxiv.org/pdf/2602.17046)  
+
+**Abstract**: Large Language Model (LLM) agents often run for many steps while re-ingesting long system instructions and large tool catalogs each turn. This increases cost, agent derailment probability, latency, and tool-selection errors. We propose Instruction-Tool Retrieval (ITR), a RAG variant that retrieves, per step, only the minimal system-prompt fragments and the smallest necessary subset of tools. ITR composes a dynamic runtime system prompt and exposes a narrowed toolset with confidence-gated fallbacks. Using a controlled benchmark with internally consistent numbers, ITR reduces per-step context tokens by 95%, improves correct tool routing by 32% relative, and cuts end-to-end episode cost by 70% versus a monolithic baseline. These savings enable agents to run 2-20x more loops within context limits. Savings compound with the number of agent steps, making ITR particularly valuable for long-running autonomous agents. We detail the method, evaluation protocol, ablations, and operational guidance for practical deployment. 
+
+---

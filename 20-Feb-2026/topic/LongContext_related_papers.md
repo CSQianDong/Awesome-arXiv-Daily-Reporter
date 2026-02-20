@@ -1,0 +1,27 @@
+# KLong: Training LLM Agent for Extremely Long-horizon Tasks 
+
+**Authors**: Yue Liu, Zhiyuan Hu, Flood Sung, Jiaheng Zhang, Bryan Hooi  
+
+**Link**: [PDF](https://arxiv.org/pdf/2602.17547)  
+
+**Abstract**: This paper introduces KLong, an open-source LLM agent trained to solve extremely long-horizon tasks. The principle is to first cold-start the model via trajectory-splitting SFT, then scale it via progressive RL training. Specifically, we first activate basic agentic abilities of a base model with a comprehensive SFT recipe. Then, we introduce Research-Factory, an automated pipeline that generates high-quality training data by collecting research papers and constructing evaluation rubrics. Using this pipeline, we build thousands of long-horizon trajectories distilled from Claude 4.5 Sonnet (Thinking). To train with these extremely long trajectories, we propose a new trajectory-splitting SFT, which preserves early context, progressively truncates later context, and maintains overlap between sub-trajectories. In addition, to further improve long-horizon task-solving capability, we propose a novel progressive RL, which schedules training into multiple stages with progressively extended timeouts. Experiments demonstrate the superiority and generalization of KLong, as shown in Figure 1. Notably, our proposed KLong (106B) surpasses Kimi K2 Thinking (1T) by 11.28% on PaperBench, and the performance improvement generalizes to other coding benchmarks like SWE-bench Verified and MLE-bench. 
+
+---
+# WSDM Cup 2026 Multilingual Retrieval: A Low-Cost Multi-Stage Retrieval Pipeline 
+
+**Authors**: Chentong Hao, Minmao Wang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2602.16989)  
+
+**Abstract**: We present a low-cost retrieval system for the WSDM Cup 2026 multilingual retrieval task, where English queries are used to retrieve relevant documents from a collection of approximately ten million news articles in Chinese, Persian, and Russian, and to output the top-1000 ranked results for each query. We follow a four-stage pipeline that combines LLM-based GRF-style query expansion with BM25 candidate retrieval, dense ranking using long-text representations from jina-embeddings-v4, and pointwise re-ranking of the top-20 candidates using Qwen3-Reranker-4B while preserving the dense order for the remaining results. On the official evaluation, the system achieves nDCG@20 of 0.403 and Judged@20 of 0.95. We further conduct extensive ablation experiments to quantify the contribution of each stage and to analyze the effectiveness of query expansion, dense ranking, and top-$k$ reranking under limited compute budgets. 
+
+---
+# Robustness and Reasoning Fidelity of Large Language Models in Long-Context Code Question Answering 
+
+**Authors**: Kishan Maharaj, Nandakishore Menon, Ashita Saxena, Srikanth Tamilselvam  
+
+**Link**: [PDF](https://arxiv.org/pdf/2602.17183)  
+
+**Abstract**: Large language models (LLMs) increasingly assist software engineering tasks that require reasoning over long code contexts, yet their robustness under varying input conditions remains unclear. We conduct a systematic study of long-context code question answering using controlled ablations that test sensitivity to answer format, distractors, and context scale. Extending LongCodeBench Python dataset with new COBOL and Java question-answer sets, we evaluate state-of-the-art models under three settings: (i) shuffled multiple-choice options, (ii) open-ended questions and (iii) needle-in-a-haystack contexts containing relevant and adversarially irrelevant information. Results show substantial performance drops in both shuffled multiple-choice options and open-ended questions, and brittle behavior in the presence of irrelevant cues. Our findings highlight limitations of current long-context evaluations and provide a broader benchmark for assessing code reasoning in both legacy and modern systems. 
+
+---
