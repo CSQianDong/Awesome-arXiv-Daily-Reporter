@@ -1,0 +1,244 @@
+# ManCAR: Manifold-Constrained Latent Reasoning with Adaptive Test-Time Computation for Sequential Recommendation 
+
+**Authors**: Kun Yang, Yuxuan Zhu, Yazhe Chen, Siyao Zheng, Bangyang Hong, Kangle Wu, Yabo Ni, Anxiang Zeng, Cong Fu, Hui Li  
+
+**Link**: [PDF](https://arxiv.org/pdf/2602.20093)  
+
+**Abstract**: Sequential recommendation increasingly employs latent multi-step reasoning to enhance test-time computation. Despite empirical gains, existing approaches largely drive intermediate reasoning states via target-dominant objectives without imposing explicit feasibility constraints. This results in latent drift, where reasoning trajectories deviate into implausible regions. We argue that effective recommendation reasoning should instead be viewed as navigation on a collaborative manifold rather than free-form latent refinement. To this end, we propose ManCAR (Manifold-Constrained Adaptive Reasoning), a principled framework that grounds reasoning within the topology of a global interaction graph. ManCAR constructs a local intent prior from the collaborative neighborhood of a user's recent actions, represented as a distribution over the item simplex. During training, the model progressively aligns its latent predictive distribution with this prior, forcing the reasoning trajectory to remain within the valid manifold. At test time, reasoning proceeds adaptively until the predictive distribution stabilizes, avoiding over-refinement. We provide a variational interpretation of ManCAR to theoretically validate its drift-prevention and adaptive test-time stopping mechanisms. Experiments on seven benchmarks demonstrate that ManCAR consistently outperforms state-of-the-art baselines, achieving up to a 46.88% relative improvement w.r.t. NDCG@10. Our code is available at this https URL. 
+
+---
+# FairFS: Addressing Deep Feature Selection Biases for Recommender System 
+
+**Authors**: Xianquan Wang, Zhaocheng Du, Jieming Zhu, Qinglin Jia, Zhenhua Dong, Kai Zhang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2602.20001)  
+
+**Abstract**: Large-scale online marketplaces and recommender systems serve as critical technological support for e-commerce development. In industrial recommender systems, features play vital roles as they carry information for downstream models. Accurate feature importance estimation is critical because it helps identify the most useful feature subsets from thousands of feature candidates for online services. Such selection enables improved online performance while reducing computational cost. To address feature selection problems in deep learning, trainable gate-based and sensitivity-based methods have been proposed and proven effective in industrial practice. However, through the analysis of real-world cases, we identified three bias issues that cause feature importance estimation to rely on partial model layers, samples, or gradients, ultimately leading to inaccurate importance estimation. We refer to these as layer bias, baseline bias, and approximation bias. To mitigate these issues, we propose FairFS, a fair and accurate feature selection algorithm. FairFS regularizes feature importance estimated across all nonlinear transformation layers to address layer bias. It also introduces a smooth baseline feature close to the classifier decision boundary and adopts an aggregated approximation method to alleviate baseline and approximation biases. Extensive experiments demonstrate that FairFS effectively mitigates these biases and achieves state-of-the-art feature selection performance. 
+
+---
+# GrIT: Group Informed Transformer for Sequential Recommendation 
+
+**Authors**: Adamya Shyam, Venkateswara Rao Kagita, Bharti Rana, Vikas Kumar  
+
+**Link**: [PDF](https://arxiv.org/pdf/2602.19728)  
+
+**Abstract**: Sequential recommender systems aim to predict a user's future interests by extracting temporal patterns from their behavioral history. Existing approaches typically employ transformer-based architectures to process long sequences of user interactions, capturing preference shifts by modeling temporal relationships between items. However, these methods often overlook the influence of group-level features that capture the collective behavior of similar users. We hypothesize that explicitly modeling temporally evolving group features alongside individual user histories can significantly enhance next-item recommendation. Our approach introduces latent group representations, where each user's affiliation to these groups is modeled through learnable, time-varying membership weights. The membership weights at each timestep are computed by modeling shifts in user preferences through their interaction history, where we incorporate both short-term and long-term user preferences. We extract a set of statistical features that capture the dynamics of user behavior and further refine them through a series of transformations to produce the final drift-aware membership weights. A group-based representation is derived by weighting latent group embeddings with the learned membership scores. This representation is integrated with the user's sequential representation within the transformer block to jointly capture personal and group-level temporal dynamics, producing richer embeddings that lead to more accurate, context-aware recommendations. We validate the effectiveness of our approach through extensive experiments on five benchmark datasets, where it consistently outperforms state-of-the-art sequential recommendation methods. 
+
+---
+# A Three-stage Neuro-symbolic Recommendation Pipeline for Cultural Heritage Knowledge Graphs 
+
+**Authors**: Krzysztof Kutt, Elżbieta Sroka, Oleksandra Ishchuk, Luiz do Valle Miranda  
+
+**Link**: [PDF](https://arxiv.org/pdf/2602.19711)  
+
+**Abstract**: The growing volume of digital cultural heritage resources highlights the need for advanced recommendation methods capable of interpreting semantic relationships between heterogeneous data entities. This paper presents a complete methodology for implementing a hybrid recommendation pipeline integrating knowledge-graph embeddings, approximate nearest-neighbour search, and SPARQL-driven semantic filtering. The work is evaluated on the JUHMP (Jagiellonian University Heritage Metadata Portal) knowledge graph developed within the CHExRISH project, which at the time of experimentation contained ${\approx}3.2$M RDF triples describing people, events, objects, and historical relations affiliated with the Jagiellonian University (Kraków, PL). We evaluate four embedding families (TransE, ComplEx, ConvE, CompGCN) and perform hyperparameter selection for ComplEx and HNSW. Then, we present and evaluate the final three-stage neuro-symbolic recommender. Despite sparse and heterogeneous metadata, the approach produces useful and explainable recommendations, which were also proven with expert evaluation. 
+
+---
+# DReX: An Explainable Deep Learning-based Multimodal Recommendation Framework 
+
+**Authors**: Adamya Shyam, Venkateswara Rao Kagita, Bharti Rana, Vikas Kumar  
+
+**Link**: [PDF](https://arxiv.org/pdf/2602.19702)  
+
+**Abstract**: Multimodal recommender systems leverage diverse data sources, such as user interactions, content features, and contextual information, to address challenges like cold-start and data sparsity. However, existing methods often suffer from one or more key limitations: processing different modalities in isolation, requiring complete multimodal data for each interaction during training, or independent learning of user and item representations. These factors contribute to increased complexity and potential misalignment between user and item embeddings. To address these challenges, we propose DReX, a unified multimodal recommendation framework that incrementally refines user and item representations by leveraging interaction-level features from multimodal feedback. Our model employs gated recurrent units to selectively integrate these fine-grained features into global representations. This incremental update mechanism provides three key advantages: (1) simultaneous modeling of both nuanced interaction details and broader preference patterns, (2) eliminates the need for separate user and item feature extraction processes, leading to enhanced alignment in their learned representation, and (3) inherent robustness to varying or missing modalities. We evaluate the performance of the proposed approach on three real-world datasets containing reviews and ratings as interaction modalities. By considering review text as a modality, our approach automatically generates interpretable keyword profiles for both users and items, which supplement the recommendation process with interpretable preference indicators. Experiment results demonstrate that our approach outperforms state-of-the-art methods across all evaluated datasets. 
+
+---
+# SplitLight: An Exploratory Toolkit for Recommender Systems Datasets and Splits 
+
+**Authors**: Anna Volodkevich, Dmitry Anikin, Danil Gusak, Anton Klenitskiy, Evgeny Frolov, Alexey Vasilev  
+
+**Link**: [PDF](https://arxiv.org/pdf/2602.19339)  
+
+**Abstract**: Offline evaluation of recommender systems is often affected by hidden, under-documented choices in data preparation. Seemingly minor decisions in filtering, handling repeats, cold-start treatment, and splitting strategy design can substantially reorder model rankings and undermine reproducibility and cross-paper comparability.
+In this paper, we introduce SplitLight, an open-source exploratory toolkit that enables researchers and practitioners designing preprocessing and splitting pipelines or reviewing external artifacts to make these decisions measurable, comparable, and reportable. Given an interaction log and derived split subsets, SplitLight analyzes core and temporal dataset statistics, characterizes repeat consumption patterns and timestamp anomalies, and diagnoses split validity, including temporal leakage, cold-user/item exposure, and distribution shifts. SplitLight further allows side-by-side comparison of alternative splitting strategies through comprehensive aggregated summaries and interactive visualizations. Delivered as both a Python toolkit and an interactive no-code interface, SplitLight produces audit summaries that justify evaluation protocols and support transparent, reliable, and comparable experimentation in recommender systems research and industry. 
+
+---
+# SIDEKICK: A Semantically Integrated Resource for Drug Effects, Indications, and Contraindications 
+
+**Authors**: Mohammad Ashhad, Olga Mashkova, Ricardo Henao, Robert Hoehndorf  
+
+**Link**: [PDF](https://arxiv.org/pdf/2602.19183)  
+
+**Abstract**: Pharmacovigilance and clinical decision support systems utilize structured drug safety data to guide medical practice. However, existing datasets frequently depend on terminologies such as MedDRA, which limits their semantic reasoning capabilities and their interoperability with Semantic Web ontologies and knowledge graphs. To address this gap, we developed SIDEKICK, a knowledge graph that standardizes drug indications, contraindications, and adverse reactions from FDA Structured Product Labels. We developed and used a workflow based on Large Language Model (LLM) extraction and Graph-Retrieval Augmented Generation (Graph RAG) for ontology mapping. We processed over 50,000 drug labels and mapped terms to the Human Phenotype Ontology (HPO), the MONDO Disease Ontology, and RxNorm. Our semantically integrated resource outperforms the SIDER and ONSIDES databases when applied to the task of drug repurposing by side effect similarity. We serialized the dataset as a Resource Description Framework (RDF) graph and employed the Semanticscience Integrated Ontology (SIO) as upper level ontology to further improve interoperability. Consequently, SIDEKICK enables automated safety surveillance and phenotype-based similarity analysis for drug repurposing. 
+
+---
+# Adaptive Multi-Agent Reasoning for Text-to-Video Retrieval 
+
+**Authors**: Jiaxin Wu, Xiao-Yong Wei, Qing Li  
+
+**Link**: [PDF](https://arxiv.org/pdf/2602.19040)  
+
+**Abstract**: The rise of short-form video platforms and the emergence of multimodal large language models (MLLMs) have amplified the need for scalable, effective, zero-shot text-to-video retrieval systems. While recent advances in large-scale pretraining have improved zero-shot cross-modal alignment, existing methods still struggle with query-dependent temporal reasoning, limiting their effectiveness on complex queries involving temporal, logical, or causal relationships. To address these limitations, we propose an adaptive multi-agent retrieval framework that dynamically orchestrates specialized agents over multiple reasoning iterations based on the demands of each query. The framework includes: (1) a retrieval agent for scalable retrieval over large video corpora, (2) a reasoning agent for zero-shot contextual temporal reasoning, and (3) a query reformulation agent for refining ambiguous queries and recovering performance for those that degrade over iterations. These agents are dynamically coordinated by an orchestration agent, which leverages intermediate feedback and reasoning outcomes to guide execution. We also introduce a novel communication mechanism that incorporates retrieval-performance memory and historical reasoning traces to improve coordination and decision-making. Experiments on three TRECVid benchmarks spanning eight years show that our framework achieves a twofold improvement over CLIP4Clip and significantly outperforms state-of-the-art methods by a large margin. 
+
+---
+# Give Users the Wheel: Towards Promptable Recommendation Paradigm 
+
+**Authors**: Fuyuan Lyu, Chenglin Luo, Qiyuan Zhang, Yupeng Hou, Haolun Wu, Xing Tang, Xue Liu, Jin L.C. Guo, Xiuqiang He  
+
+**Link**: [PDF](https://arxiv.org/pdf/2602.18929)  
+
+**Abstract**: Conventional sequential recommendation models have achieved remarkable success in mining implicit behavioral patterns. However, these architectures remain structurally blind to explicit user intent: they struggle to adapt when a user's immediate goal (e.g., expressed via a natural language prompt) deviates from their historical habits. While Large Language Models (LLMs) offer the semantic reasoning to interpret such intent, existing integration paradigms force a dilemma: LLM-as-a-recommender paradigm sacrifices the efficiency and collaborative precision of ID-based retrieval, while Reranking methods are inherently bottlenecked by the recall capabilities of the underlying model. In this paper, we propose Decoupled Promptable Sequential Recommendation (DPR), a model-agnostic framework that empowers conventional sequential backbones to natively support Promptable Recommendation, the ability to dynamically steer the retrieval process using natural language without abandoning collaborative signals. DPR modulates the latent user representation directly within the retrieval space. To achieve this, we introduce a Fusion module to align the collaborative and semantic signals, a Mixture-of-Experts (MoE) architecture that disentangles the conflicting gradients from positive and negative steering, and a three-stage training strategy that progressively aligns the semantic space of prompts with the collaborative space. Extensive experiments on real-world datasets demonstrate that DPR significantly outperforms state-of-the-art baselines in prompt-guided tasks while maintaining competitive performance in standard sequential recommendation scenarios. 
+
+---
+# Towards Reliable Negative Sampling for Recommendation with Implicit Feedback via In-Community Popularity 
+
+**Authors**: Chen Chen, Haobo Lin, Yuanbo Xu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2602.18759)  
+
+**Abstract**: Learning from implicit feedback is a fundamental problem in modern recommender systems, where only positive interactions are observed and explicit negative signals are unavailable. In such settings, negative sampling plays a critical role in model training by constructing negative items that enable effective preference learning and ranking optimization. However, designing reliable negative sampling strategies remains challenging, as they must simultaneously ensure realness, hardness, and interpretability. To this end, we propose \textbf{ICPNS (In-Community Popularity Negative Sampling)}, a novel framework that leverages user community structure to identify reliable and informative negative samples. Our approach is grounded in the insight that item exposure is driven by latent user communities. By identifying these communities and utilizing in-community popularity, ICPNS effectively approximates the probability of item exposure. Consequently, items that are popular within a user's community but remain unclicked are identified as more reliable true negatives. Extensive experiments on four benchmark datasets demonstrate that ICPNS yields consistent improvements on graph-based recommenders and competitive performance on MF-based models, outperforming representative negative sampling strategies under a unified evaluation protocol. 
+
+---
+# Altar: Structuring Sharable Experimental Data from Early Exploration to Publication 
+
+**Authors**: William Gaultier, Andrea Lodetti, Ian Coghill, David Colliaux, Maximilian Fleck, Alienor Lahlou  
+
+**Link**: [PDF](https://arxiv.org/pdf/2602.18588)  
+
+**Abstract**: Managing the data and metadata during the active development phase of an experimental project presents a significant challenge, particularly in collaborative research. This phase is frequently overlooked in Data Management Plans included in project proposals, despite its important role in ensuring reproducibility and preventing the need for retroactive reconstruction at the time of publication. Here we present Altar, a lightweight, domain-agnostic framework for structuring experimental data from the onset of a project without imposing rigid data models. Altar is built around the Sacred experiment-tracking model and captures experimental (meta)data and structures them. Parameters, metadata, curves and small files are stored in a flexible NoSQL database, while large raw data are maintained in dedicated storage and linked through unique identifiers, ensuring efficiency and traceability. This integration is composable with exiting workflows, allowing integration with minimial disruption of work habits. We document different pathways to use Altar based on users skillset (PhD students, Post-docs, Principal Investigators, Laboratory administrators, System administrators). While getting started with Altar does not require a specialized infrastructure, the framework can be easily deployed on a server and made publicly accessible when scaling up or preparing data for publication. By addressing the dynamic phase of research, Altar provides a practical bridge between exploratory experimentation and FAIR-aligned data sharing. 
+
+---
+# FineRef: Fine-Grained Error Reflection and Correction for Long-Form Generation with Citations 
+
+**Authors**: Yixing Peng, Licheng Zhang, Shancheng Fang, Yi Liu, Peijian Gu, Quan Wang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2602.18437)  
+
+**Abstract**: Generating with citations is crucial for trustworthy Large Language Models (LLMs), yet even advanced LLMs often produce mismatched or irrelevant citations. Existing methods over-optimize citation fidelity while overlooking relevance to the user query, which degrades answer quality and robustness in real-world settings with noisy or irrelevant retrieved content. Moreover, the prevailing single-pass paradigm struggles to deliver optimal answers in long-form generation that requiring multiple citations. To address these limitations, we propose FineRef, a framework based on Fine-grained error Reflection, which explicitly teaches the model to self-identify and correct two key citation errors, mismatch and irrelevance, on a per-citation basis. FineRef follows a two-stage training strategy. The first stage instills an "attempt-reflect-correct" behavioral pattern via supervised fine-tuning, using fine-grained and controllable reflection data constructed by specialized lightweight models. An online self-reflective bootstrapping strategy is designed to improve generalization by iteratively enriching training data with verified, self-improving examples. To further enhance the self-reflection and correction capability, the second stage applies process-level reinforcement learning with a multi-dimensional reward scheme that promotes reflection accuracy, answer quality, and correction gain. Experiments on the ALCE benchmark demonstrate that FineRef significantly improves both citation performance and answer accuracy. Our 7B model outperforms GPT-4 by up to 18% in Citation F1 and 4% in EM Recall, while also surpassing the state-of-the-art model across key evaluation metrics. FineRef also exhibits strong generalization and robustness in domain transfer settings and noisy retrieval scenarios. 
+
+---
+# KNIGHT: Knowledge Graph-Driven Multiple-Choice Question Generation with Adaptive Hardness Calibration 
+
+**Authors**: Mohammad Amanlou, Erfan Shafiee Moghaddam, Yasaman Amou Jafari, Mahdi Noori, Farhan Farsi, Behnam Bahrak  
+
+**Link**: [PDF](https://arxiv.org/pdf/2602.20135)  
+
+**Abstract**: With the rise of large language models (LLMs), they have become instrumental in applications such as Retrieval-Augmented Generation (RAG). Yet evaluating these systems remains bottlenecked by the time and cost of building specialized assessment datasets. We introduce KNIGHT, an LLM-based, knowledge-graph-driven framework for generating multiple-choice question (MCQ) datasets from external sources. KNIGHT constructs a topic-specific knowledge graph, a structured and parsimonious summary of entities and relations, that can be reused to generate instructor-controlled difficulty levels, including multi-hop questions, without repeatedly re-feeding the full source text. This knowledge graph acts as a compressed, reusable state, making question generation a cheap read over the graph. We instantiate KNIGHT on Wikipedia/Wikidata while keeping the framework domain- and ontology-agnostic. As a case study, KNIGHT produces six MCQ datasets in History, Biology, and Mathematics. We evaluate quality on five criteria: fluency, unambiguity (single correct answer), topic relevance, option uniqueness, and answerability given the provided sources (as a proxy for hallucination). Results show that KNIGHT enables token- and cost-efficient generation from a reusable graph representation, achieves high quality across these criteria, and yields model rankings aligned with MMLU-style benchmarks, while supporting topic-specific and difficulty-controlled evaluation. 
+
+---
+# NanoKnow: How to Know What Your Language Model Knows 
+
+**Authors**: Lingwei Gu, Nour Jedidi, Jimmy Lin  
+
+**Link**: [PDF](https://arxiv.org/pdf/2602.20122)  
+
+**Abstract**: How do large language models (LLMs) know what they know? Answering this question has been difficult because pre-training data is often a "black box" -- unknown or inaccessible. The recent release of nanochat -- a family of small LLMs with fully open pre-training data -- addresses this as it provides a transparent view into where a model's parametric knowledge comes from. Towards the goal of understanding how knowledge is encoded by LLMs, we release NanoKnow, a benchmark dataset that partitions questions from Natural Questions and SQuAD into splits based on whether their answers are present in nanochat's pre-training corpus. Using these splits, we can now properly disentangle the sources of knowledge that LLMs rely on when producing an output. To demonstrate NanoKnow's utility, we conduct experiments using eight nanochat checkpoints. Our findings show: (1) closed-book accuracy is strongly influenced by answer frequency in the pre-training data, (2) providing external evidence can mitigate this frequency dependence, (3) even with external evidence, models are more accurate when answers were seen during pre-training, demonstrating that parametric and external knowledge are complementary, and (4) non-relevant information is harmful, with accuracy decreasing based on both the position and the number of non-relevant contexts. We release all NanoKnow artifacts at this https URL. 
+
+---
+# A Context-Aware Knowledge Graph Platform for Stream Processing in Industrial IoT 
+
+**Authors**: Monica Marconi Sciarroni, Emanuele Storti  
+
+**Link**: [PDF](https://arxiv.org/pdf/2602.19990)  
+
+**Abstract**: Industrial IoT ecosystems bring together sensors, machines and smart devices operating collaboratively across industrial environments. These systems generate large volumes of heterogeneous, high-velocity data streams that require interoperable, secure and contextually aware management. Most of the current stream management architectures, however, still rely on syntactic integration mechanisms, which result in limited flexibility, maintainability and interpretability in complex Industry 5.0 scenarios. This work proposes a context-aware semantic platform for data stream management that unifies heterogeneous IoT/IoE data sources through a Knowledge Graph enabling formal representation of devices, streams, agents, transformation pipelines, roles and rights. The model supports flexible data gathering, composable stream processing pipelines, and dynamic role-based data access based on agents' contexts, relying on Apache Kafka and Apache Flink for real-time processing, while SPARQL and SWRL-based reasoning provide context-dependent stream discovery. Experimental evaluations demonstrate the effectiveness of combining semantic models, context-aware reasoning and distributed stream processing to enable interoperable data workflows for Industry 5.0 environments. 
+
+---
+# Counterfactual Understanding via Retrieval-aware Multimodal Modeling for Time-to-Event Survival Prediction 
+
+**Authors**: Ha-Anh Hoang Nguyen, Tri-Duc Phan Le, Duc-Hoang Pham, Huy-Son Nguyen, Cam-Van Thi Nguyen, Duc-Trong Le, Hoang-Quynh Le  
+
+**Link**: [PDF](https://arxiv.org/pdf/2602.19987)  
+
+**Abstract**: This paper tackles the problem of time-to-event counterfactual survival prediction, aiming to optimize individualized survival outcomes in the presence of heterogeneity and censored data. We propose CURE, a framework that advances counterfactual survival modeling via comprehensive multimodal embedding and latent subgroup retrieval. CURE integrates clinical, paraclinical, demographic, and multi-omics information, which are aligned and fused through cross-attention mechanisms. Complex multi-omics signals can be adaptively refined using a mixture-of-experts architecture, emphasizing the most informative omics components. Building upon this representation, CURE implicitly retrieves patient-specific latent subgroups that capture both baseline survival dynamics and treatment-dependent variations. Experimental results on METABRIC and TCGA-LUAD datasets demonstrate that proposed CURE model consistently outperforms strong baselines in survival analysis, evaluated using the Time-dependent Concordance Index ($C^{td}$) and Integrated Brier Score (IBS). These findings highlight the potential of CURE to enhance multimodal understanding and serve as a foundation for future treatment recommendation models. All code and related resources are publicly available to facilitate the reproducibility this https URL. 
+
+---
+# Unlocking Multimodal Document Intelligence: From Current Triumphs to Future Frontiers of Visual Document Retrieval 
+
+**Authors**: Yibo Yan, Jiahao Huo, Guanbo Feng, Mingdong Ou, Yi Cao, Xin Zou, Shuliang Liu, Yuanhuiyi Lyu, Yu Huang, Jungang Li, Kening Zheng, Xu Zheng, Philip S. Yu, James Kwok, Xuming Hu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2602.19961)  
+
+**Abstract**: With the rapid proliferation of multimodal information, Visual Document Retrieval (VDR) has emerged as a critical frontier in bridging the gap between unstructured visually rich data and precise information acquisition. Unlike traditional natural image retrieval, visual documents exhibit unique characteristics defined by dense textual content, intricate layouts, and fine-grained semantic dependencies. This paper presents the first comprehensive survey of the VDR landscape, specifically through the lens of the Multimodal Large Language Model (MLLM) era. We begin by examining the benchmark landscape, and subsequently dive into the methodological evolution, categorizing approaches into three primary aspects: multimodal embedding models, multimodal reranker models, and the integration of Retrieval-Augmented Generation (RAG) and Agentic systems for complex document intelligence. Finally, we identify persistent challenges and outline promising future directions, aiming to provide a clear roadmap for future multimodal document intelligence. 
+
+---
+# Enhancing Automatic Chord Recognition via Pseudo-Labeling and Knowledge Distillation 
+
+**Authors**: Nghia Phan, Rong Jin, Gang Liu, Xiao Dong  
+
+**Link**: [PDF](https://arxiv.org/pdf/2602.19778)  
+
+**Abstract**: Automatic Chord Recognition (ACR) is constrained by the scarcity of aligned chord labels, as well-aligned annotations are costly to acquire. At the same time, open-weight pre-trained models are currently more accessible than their proprietary training data. In this work, we present a two-stage training pipeline that leverages pre-trained models together with unlabeled audio. The proposed method decouples training into two stages. In the first stage, we use a pre-trained BTC model as a teacher to generate pseudo-labels for over 1,000 hours of diverse unlabeled audio and train a student model solely on these pseudo-labels. In the second stage, the student is continually trained on ground-truth labels as they become available, with selective knowledge distillation (KD) from the teacher applied as a regularizer to prevent catastrophic forgetting of the representations learned in the first stage. In our experiments, two models (BTC, 2E1D) were used as students. In stage 1, using only pseudo-labels, the BTC student achieves over 98% of the teacher's performance, while the 2E1D model achieves about 96% across seven standard mir_eval metrics. After a single training run for both students in stage 2, the resulting BTC student model surpasses the traditional supervised learning baseline by 2.5% and the original pre-trained teacher model by 1.55% on average across all metrics. And the resulting 2E1D student model improves from the traditional supervised learning baseline by 3.79% on average and achieves almost the same performance as the teacher. Both cases show the large gains on rare chord qualities. 
+
+---
+# Iconographic Classification and Content-Based Recommendation for Digitized Artworks 
+
+**Authors**: Krzysztof Kutt, Maciej Baczyński  
+
+**Link**: [PDF](https://arxiv.org/pdf/2602.19698)  
+
+**Abstract**: We present a proof-of-concept system that automates iconographic classification and content-based recommendation of digitized artworks using the Iconclass vocabulary and selected artificial intelligence methods. The prototype implements a four-stage workflow for classification and recommendation, which integrates YOLOv8 object detection with algorithmic mappings to Iconclass codes, rule-based inference for abstract meanings, and three complementary recommenders (hierarchical proximity, IDF-weighted overlap, and Jaccard similarity). Although more engineering is still needed, the evaluation demonstrates the potential of this solution: Iconclass-aware computer vision and recommendation methods can accelerate cataloging and enhance navigation in large heritage repositories. The key insight is to let computer vision propose visible elements and to use symbolic structures (Iconclass hierarchy) to reach meaning. 
+
+---
+# Sculpting the Vector Space: Towards Efficient Multi-Vector Visual Document Retrieval via Prune-then-Merge Framework 
+
+**Authors**: Yibo Yan, Mingdong Ou, Yi Cao, Xin Zou, Jiahao Huo, Shuliang Liu, James Kwok, Xuming Hu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2602.19549)  
+
+**Abstract**: Visual Document Retrieval (VDR), which aims to retrieve relevant pages within vast corpora of visually-rich documents, is of significance in current multimodal retrieval applications. The state-of-the-art multi-vector paradigm excels in performance but suffers from prohibitive overhead, a problem that current efficiency methods like pruning and merging address imperfectly, creating a difficult trade-off between compression rate and feature fidelity. To overcome this dilemma, we introduce Prune-then-Merge, a novel two-stage framework that synergizes these complementary approaches. Our method first employs an adaptive pruning stage to filter out low-information patches, creating a refined, high-signal set of embeddings. Subsequently, a hierarchical merging stage compresses this pre-filtered set, effectively summarizing semantic content without the noise-induced feature dilution seen in single-stage methods. Extensive experiments on 29 VDR datasets demonstrate that our framework consistently outperforms existing methods, significantly extending the near-lossless compression range and providing robust performance at high compression ratios. 
+
+---
+# Hyper-KGGen: A Skill-Driven Knowledge Extractor for High-Quality Knowledge Hypergraph Generation 
+
+**Authors**: Rizhuo Huang, Yifan Feng, Rundong Xue, Shihui Ying, Jun-Hai Yong, Chuan Shi, Shaoyi Du, Yue Gao  
+
+**Link**: [PDF](https://arxiv.org/pdf/2602.19543)  
+
+**Abstract**: Knowledge hypergraphs surpass traditional binary knowledge graphs by encapsulating complex $n$-ary atomic facts, providing a more comprehensive paradigm for semantic representation. However, constructing high-quality hypergraphs remains challenging due to the \textit{scenario gap}: generic extractors struggle to generalize across diverse domains with specific jargon, while existing methods often fail to balance structural skeletons with fine-grained details. To bridge this gap, we propose \textbf{Hyper-KGGen}, a skill-driven framework that reformulates extraction as a dynamic skill-evolving process. First, Hyper-KGGen employs a \textit{coarse-to-fine} mechanism to systematically decompose documents, ensuring full-dimensional coverage from binary links to complex hyperedges. Crucially, it incorporates an \textit{adaptive skill acquisition} module that actively distills domain expertise into a Global Skill Library. This is achieved via a stability-based feedback loop, where extraction stability serves as a relative reward signal to induce high-quality skills from unstable traces and missed predictions. Additionally, we present \textbf{HyperDocRED}, a rigorously annotated benchmark for document-level knowledge hypergraph extraction. Experiments demonstrate that Hyper-KGGen significantly outperforms strong baselines, validating that evolved skills provide substantially richer guidance than static few-shot examples in multi-scenario settings. 
+
+---
+# PerSoMed: A Large-Scale Balanced Dataset for Persian Social Media Text Classification 
+
+**Authors**: Isun Chehreh, Ebrahim Ansari  
+
+**Link**: [PDF](https://arxiv.org/pdf/2602.19333)  
+
+**Abstract**: This research introduces the first large-scale, well-balanced Persian social media text classification dataset, specifically designed to address the lack of comprehensive resources in this domain. The dataset comprises 36,000 posts across nine categories (Economic, Artistic, Sports, Political, Social, Health, Psychological, Historical, and Science & Technology), each containing 4,000 samples to ensure balanced class distribution. Data collection involved 60,000 raw posts from various Persian social media platforms, followed by rigorous preprocessing and hybrid annotation combining ChatGPT-based few-shot prompting with human verification. To mitigate class imbalance, we employed undersampling with semantic redundancy removal and advanced data augmentation strategies integrating lexical replacement and generative prompting. We benchmarked several models, including BiLSTM, XLM-RoBERTa (with LoRA and AdaLoRA adaptations), FaBERT, SBERT-based architectures, and the Persian-specific TookaBERT (Base and Large). Experimental results show that transformer-based models consistently outperform traditional neural networks, with TookaBERT-Large achieving the best performance (Precision: 0.9622, Recall: 0.9621, F1- score: 0.9621). Class-wise evaluation further confirms robust performance across all categories, though social and political texts exhibited slightly lower scores due to inherent ambiguity. This research presents a new high-quality dataset and provides comprehensive evaluations of cutting-edge models, establishing a solid foundation for further developments in Persian NLP, including trend analysis, social behavior modeling, and user classification. The dataset is publicly available to support future research endeavors. 
+
+---
+# Learning to Reason for Multi-Step Retrieval of Personal Context in Personalized Question Answering 
+
+**Authors**: Maryam Amirizaniani, Alireza Salemi, Hamed Zamani  
+
+**Link**: [PDF](https://arxiv.org/pdf/2602.19317)  
+
+**Abstract**: Personalization in Question Answering (QA) requires answers that are both accurate and aligned with users' background, preferences, and historical context. Existing state-of-the-art methods primarily rely on retrieval-augmented generation (RAG) solutions that construct personal context by retrieving relevant items from the user's profile. Existing methods use the user's query directly to retrieve personal documents, and such strategies often lead to surface-level personalization. We propose PR2 (Personalized Retrieval-Augmented Reasoning), a reinforcement learning framework that integrates reasoning and retrieval from personal context for personalization. PR2 learns adaptive retrieval-reasoning policies, determining when to retrieve, what evidence to retrieve from user profiles, and how to incorporate it into intermediate reasoning steps. By optimizing multi-turn reasoning trajectories under a personalized reward function, the framework reinforces reasoning paths that better align with user-specific preferences and contextual signals reflected by the reward model. Extensive experiments on the LaMP-QA benchmark using three LLMs show that PR2 consistently outperforms strong baselines, achieving an average relative improvement of 8.8%-12% in personalized QA. 
+
+---
+# NeuroWise: A Multi-Agent LLM "Glass-Box" System for Practicing Double-Empathy Communication with Autistic Partners 
+
+**Authors**: Albert Tang, Yifan Mo, Jie Li, Yue Su, Mengyuan Zhang, Sander L. Koole, Koen Hindriks, Jiahuan Pei  
+
+**Link**: [PDF](https://arxiv.org/pdf/2602.18962)  
+
+**Abstract**: The double empathy problem frames communication difficulties between neurodivergent and neurotypical individuals as arising from mutual misunderstanding, yet most interventions focus on autistic individuals. We present NeuroWise, a multi-agent LLM-based coaching system that supports neurotypical users through stress visualization, interpretation of internal experiences, and contextual guidance. In a between-subjects study (N=30), NeuroWise was rated as helpful by all participants and showed a significant condition-time effect on deficit-based attributions (p=0.02): NeuroWise users reduced deficit framing, while baseline users shifted toward blaming autistic "deficits" after difficult interactions. NeuroWise users also completed conversations more efficiently (37% fewer turns, p=0.03). These findings suggest that AI-based interpretation can support attributional change by helping users recognize communication challenges as mutual. 
+
+---
+# CaliCausalRank: Calibrated Multi-Objective Ad Ranking with Robust Counterfactual Utility Optimization 
+
+**Authors**: Xikai Yang, Sebastian Sun, Yilin Li, Yue Xing, Ming Wang, Yang Wang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2602.18786)  
+
+**Abstract**: Ad ranking systems must simultaneously optimize multiple objectives including click-through rate (CTR), conversion rate (CVR), revenue, and user experience metrics. However, production systems face critical challenges: score scale inconsistency across traffic segments undermines threshold transferability, and position bias in click logs causes offline-online metric discrepancies. We propose CaliCausalRank, a unified framework that integrates training-time scale calibration, constraint-based multi-objective optimization, and robust counterfactual utility estimation. Our approach treats score calibration as a first-class training objective rather than post-hoc processing, employs Lagrangian relaxation for constraint satisfaction, and utilizes variance-reduced counterfactual estimators for reliable offline evaluation. Experiments on the Criteo and Avazu datasets demonstrate that CaliCausalRank achieves 1.1% relative AUC improvement, 31.6% calibration error reduction, and 3.2% utility gain compared to the best baseline (PairRank) while maintaining consistent performance across different traffic segments. 
+
+---
+# NutriOrion: A Hierarchical Multi-Agent Framework for Personalized Nutrition Intervention Grounded in Clinical Guidelines 
+
+**Authors**: Junwei Wu, Runze Yan, Hanqi Luo, Darren Liu, Minxiao Wang, Kimberly L. Townsend, Lydia S. Hartwig, Derek Milketinas, Xiao Hu, Carl Yang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2602.18650)  
+
+**Abstract**: Personalized nutrition intervention for patients with multimorbidity is critical for improving health outcomes, yet remains challenging because it requires the simultaneous integration of heterogeneous clinical conditions, medications, and dietary guidelines. Single-agent large language models (LLMs) often suffer from context overload and attention dilution when processing such high-dimensional patient profiles. We introduce NutriOrion, a hierarchical multi-agent framework with a parallel-then-sequential reasoning topology. NutriOrion decomposes nutrition planning into specialized domain agents with isolated contexts to mitigate anchoring bias, followed by a conditional refinement stage. The framework includes a multi-objective prioritization algorithm to resolve conflicting dietary requirements and a safety constraint mechanism that injects pharmacological contraindications as hard negative constraints during synthesis, ensuring clinical validity by construction rather than post-hoc filtering. For clinical interoperability, NutriOrion maps synthesized insights into the ADIME standard and FHIR R4 resources. Evaluated on 330 stroke patients with multimorbidity, NutriOrion outperforms multiple baselines, including GPT-4.1 and alternative multi-agent architectures. It achieves a 12.1 percent drug-food interaction violation rate, demonstrates strong personalization with negative correlations (-0.26 to -0.35) between patient biomarkers and recommended risk nutrients, and yields clinically meaningful dietary improvements, including a 167 percent increase in fiber and a 27 percent increase in potassium, alongside reductions in sodium (9 percent) and sugars (12 percent). 
+
+---
+# Diagnosing LLM Reranker Behavior Under Fixed Evidence Pools 
+
+**Authors**: Baris Arat, Emre Sefer  
+
+**Link**: [PDF](https://arxiv.org/pdf/2602.18613)  
+
+**Abstract**: Standard reranking evaluations study how a reranker orders candidates returned by an upstream retriever. This setup couples ranking behavior with retrieval quality, so differences in output cannot be attributed to the ranking policy alone. We introduce a controlled diagnostic that isolates reranking by using Multi-News clusters as fixed evidence pools. We limit each pool to exactly eight documents and pass identical inputs to all rankers. Within this setup, BM25 and MMR serve as interpretable reference points for lexical matching and diversity optimization. Across 345 clusters, we find that redundancy patterns vary by model: one LLM implicitly diversifies at larger selection budgets, while another increases redundancy. In contrast, LLMs underperform on lexical coverage at small selection budgets. As a result, LLM rankings diverge substantially from both baselines rather than consistently approximating either strategy. By eliminating retrieval variance, we can attribute these differences directly to the ranking policy. This diagnostic is model-agnostic and applicable to any ranker, including open source systems and proprietary APIs. 
+
+---
