@@ -1,0 +1,101 @@
+# MTRAG-UN: A Benchmark for Open Challenges in Multi-Turn RAG Conversations 
+
+**Authors**: Sara Rosenthal, Yannis Katsis, Vraj Shah, Lihong He, Lucian Popa, Marina Danilevsky  
+
+**Link**: [PDF](https://arxiv.org/pdf/2602.23184)  
+
+**Abstract**: We present MTRAG-UN, a benchmark for exploring open challenges in multi-turn retrieval augmented generation, a popular use of large language models. We release a benchmark of 666 tasks containing over 2,800 conversation turns across 6 domains with accompanying corpora. Our experiments show that retrieval and generation models continue to struggle on conversations with UNanswerable, UNderspecified, and NONstandalone questions and UNclear responses. Our benchmark is available at this https URL 
+
+---
+# TCM-DiffRAG: Personalized Syndrome Differentiation Reasoning Method for Traditional Chinese Medicine based on Knowledge Graph and Chain of Thought 
+
+**Authors**: Jianmin Li, Ying Chang, Su-Kit Tang, Yujia Liu, Yanwen Wang, Shuyuan Lin, Binkai Ou  
+
+**Link**: [PDF](https://arxiv.org/pdf/2602.22828)  
+
+**Abstract**: Background: Retrieval augmented generation (RAG) technology can empower large language models (LLMs) to generate more accurate, professional, and timely responses without fine tuning. However, due to the complex reasoning processes and substantial individual differences involved in traditional Chinese medicine (TCM) clinical diagnosis and treatment, traditional RAG methods often exhibit poor performance in this domain. Objective: To address the limitations of conventional RAG approaches in TCM applications, this study aims to develop an improved RAG framework tailored to the characteristics of TCM reasoning. Methods: We developed TCM-DiffRAG, an innovative RAG framework that integrates knowledge graphs (KG) with chains of thought (CoT). TCM-DiffRAG was evaluated on three distinctive TCM test datasets. Results: The experimental results demonstrated that TCM-DiffRAG achieved significant performance improvements over native LLMs. For example, the qwen-plus model achieved scores of 0.927, 0.361, and 0.038, which were significantly enhanced to 0.952, 0.788, and 0.356 with TCM-DiffRAG. The improvements were even more pronounced for non-Chinese LLMs. Additionally, TCM-DiffRAG outperformed directly supervised fine-tuned (SFT) LLMs and other benchmark RAG methods. Conclusions: TCM-DiffRAG shows that integrating structured TCM knowledge graphs with Chain of Thought based reasoning substantially improves performance in individualized diagnostic tasks. The joint use of universal and personalized knowledge graphs enables effective alignment between general knowledge and clinical reasoning. These results highlight the potential of reasoning-aware RAG frameworks for advancing LLM applications in traditional Chinese medicine. 
+
+---
+# Search-P1: Path-Centric Reward Shaping for Stable and Efficient Agentic RAG Training 
+
+**Authors**: Tianle Xia, Ming Xu, Lingxiang Hu, Yiding Sun, Wenwei Li, Linfang Shang, Liqun Liu, Peng Shu, Huan Yu, Jie Jiang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2602.22576)  
+
+**Abstract**: Retrieval-Augmented Generation (RAG) enhances large language models (LLMs) by incorporating external knowledge, yet traditional single-round retrieval struggles with complex multi-step reasoning. Agentic RAG addresses this by enabling LLMs to dynamically decide when and what to retrieve, but current RL-based training methods suffer from sparse outcome rewards that discard intermediate signals and low sample efficiency where failed samples contribute nothing. We propose Search-P1, a framework that introduces path-centric reward shaping for agentic RAG training, comprising two key components: (1) Path-Centric Reward, which evaluates the structural quality of reasoning trajectories through order-agnostic step coverage and soft scoring that extracts learning signals even from failed samples, and (2) Dual-Track Path Scoring with offline-generated reference planners that assesses paths from both self-consistency and reference-alignment perspectives. Experiments on multiple QA benchmarks demonstrate that Search-P1 achieves significant improvements over Search-R1 and other strong baselines, with an average accuracy gain of 7.7 points. 
+
+---
+# Towards Faithful Industrial RAG: A Reinforced Co-adaptation Framework for Advertising QA 
+
+**Authors**: Wenwei Li, Ming Xu, Tianle Xia, Lingxiang Hu, Yiding Sun, Linfang Shang, Liqun Liu, Peng Shu, Huan Yu, Jie Jiang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2602.22584)  
+
+**Abstract**: Industrial advertising question answering (QA) is a high-stakes task in which hallucinated content, particularly fabricated URLs, can lead to financial loss, compliance violations, and legal risk. Although Retrieval-Augmented Generation (RAG) is widely adopted, deploying it in production remains challenging because industrial knowledge is inherently relational, frequently updated, and insufficiently aligned with generation objectives. We propose a reinforced co-adaptation framework that jointly optimizes retrieval and generation through two components: (1) Graph-aware Retrieval (GraphRAG), which models entity-relation structure over a high-citation knowledge subgraph for multi-hop, domain-specific evidence selection; and (2) evidence-constrained reinforcement learning via Group Relative Policy Optimization (GRPO) with multi-dimensional rewards covering faithfulness, style compliance, safety, and URL validity. Experiments on an internal advertising QA dataset show consistent gains across expert-judged dimensions including accuracy, completeness, and safety, while reducing the hallucination rate by 72\%. A two-week online A/B test demonstrates a 28.6\% increase in like rate, a 46.2\% decrease in dislike rate, and a 92.7\% reduction in URL hallucination. The system has been running in production for over half a year and has served millions of QA interactions. 
+
+---
+# SmartChunk Retrieval: Query-Aware Chunk Compression with Planning for Efficient Document RAG 
+
+**Authors**: Xuechen Zhang, Koustava Goswami, Samet Oymak, Jiasi Chen, Nedim Lipka  
+
+**Link**: [PDF](https://arxiv.org/pdf/2602.22225)  
+
+**Abstract**: Retrieval-augmented generation (RAG) has strong potential for producing accurate and factual outputs by combining language models (LMs) with evidence retrieved from large text corpora. However, current pipelines are limited by static chunking and flat retrieval: documents are split into short, predetermined, fixed-size chunks, embeddings are retrieved uniformly, and generation relies on whatever chunks are returned. This design brings challenges, as retrieval quality is highly sensitive to chunk size, often introduces noise from irrelevant or misleading chunks, and scales poorly to large corpora. We present SmartChunk retrieval, a query-adaptive framework for efficient and robust long-document question answering (QA). SmartChunk uses (i) a planner that predicts the optimal chunk abstraction level for each query, and (ii) a lightweight compression module that produces high-level chunk embeddings without repeated summarization. By adapting retrieval granularity on the fly, SmartChunk balances accuracy with efficiency and avoids the drawbacks of fixed strategies. Notably, our planner can reason about chunk abstractions through a novel reinforcement learning scheme, STITCH, which boosts accuracy and generalization. To reflect real-world applications, where users face diverse document types and query styles, we evaluate SmartChunk on five QA benchmarks plus one out-of-domain dataset. Across these evaluations, SmartChunk outperforms state-of-the-art RAG baselines, while reducing cost. Further analysis demonstrates strong scalability with larger corpora and consistent gains on out-of-domain datasets, highlighting its effectiveness as a general framework for adaptive retrieval. 
+
+---
+# Comparative Analysis of Neural Retriever-Reranker Pipelines for Retrieval-Augmented Generation over Knowledge Graphs in E-commerce Applications 
+
+**Authors**: Teri Rumble, Zbyněk Gazdík, Javad Zarrin, Jagdeep Ahluwalia  
+
+**Link**: [PDF](https://arxiv.org/pdf/2602.22219)  
+
+**Abstract**: Recent advancements in Large Language Models (LLMs) have transformed Natural Language Processing (NLP), enabling complex information retrieval and generation tasks. Retrieval-Augmented Generation (RAG) has emerged as a key innovation, enhancing factual accuracy and contextual grounding by integrating external knowledge sources with generative models. Although RAG demonstrates strong performance on unstructured text, its application to structured knowledge graphs presents challenges: scaling retrieval across connected graphs and preserving contextual relationships during response generation. Cross-encoders refine retrieval precision, yet their integration with structured data remains underexplored. Addressing these challenges is crucial for developing domain-specific assistants that operate in production environments. This study presents the design and comparative evaluation of multiple Retriever-Reranker pipelines for knowledge graph natural language queries in e-Commerce contexts. Using the STaRK Semi-structured Knowledge Base (SKB), a production-scale e-Commerce dataset, we evaluate multiple RAG pipeline configurations optimized for language queries. Experimental results demonstrate substantial improvements over published benchmarks, achieving 20.4% higher Hit@1 and 14.5% higher Mean Reciprocal Rank (MRR). These findings establish a practical framework for integrating domain-specific SKBs into generative systems. Our contributions provide actionable insights for the deployment of production-ready RAG systems, with implications that extend beyond e-Commerce to other domains that require information retrieval from structured knowledge bases. 
+
+---
+# Graph Your Way to Inspiration: Integrating Co-Author Graphs with Retrieval-Augmented Generation for Large Language Model Based Scientific Idea Generation 
+
+**Authors**: Pengzhen Xie, Huizhi Liang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2602.22215)  
+
+**Abstract**: Large Language Models (LLMs) demonstrate potential in the field of scientific idea generation. However, the generated results often lack controllable academic context and traceable inspiration pathways. To bridge this gap, this paper proposes a scientific idea generation system called GYWI, which combines author knowledge graphs with retrieval-augmented generation (RAG) to form an external knowledge base to provide controllable context and trace of inspiration path for LLMs to generate new scientific ideas. We first propose an author-centered knowledge graph construction method and inspiration source sampling algorithms to construct external knowledge base. Then, we propose a hybrid retrieval mechanism that is composed of both RAG and GraphRAG to retrieve content with both depth and breadth knowledge. It forms a hybrid context. Thirdly, we propose a Prompt optimization strategy incorporating reinforcement learning principles to automatically guide LLMs optimizing the results based on the hybrid context. To evaluate the proposed approaches, we constructed an evaluation dataset based on arXiv (2018-2023). This paper also develops a comprehensive evaluation method including empirical automatic assessment in multiple-choice question task, LLM-based scoring, human evaluation, and semantic space visualization analysis. The generated ideas are evaluated from the following five dimensions: novelty, feasibility, clarity, relevance, and significance. We conducted experiments on different LLMs including GPT-4o, DeepSeek-V3, Qwen3-8B, and Gemini 2.5. Experimental results show that GYWI significantly outperforms mainstream LLMs in multiple metrics such as novelty, reliability, and relevance. 
+
+---
+# Automating the Detection of Requirement Dependencies Using Large Language Models 
+
+**Authors**: Ikram Darif, Feifei Niu, Manel Abdellatif, Lionel C. Briand, Ramesh S., Arun Adiththan  
+
+**Link**: [PDF](https://arxiv.org/pdf/2602.22456)  
+
+**Abstract**: Requirements are inherently interconnected through various types of dependencies. Identifying these dependencies is essential, as they underpin critical decisions and influence a range of activities throughout software development. However, this task is challenging, particularly in modern software systems, given the high volume of complex, coupled requirements. These challenges are further exacerbated by the ambiguity of Natural Language (NL) requirements and their constant change. Consequently, requirement dependency detection is often overlooked or performed manually. Large Language Models (LLMs) exhibit strong capabilities in NL processing, presenting a promising avenue for requirement-related tasks. While they have shown to enhance various requirements engineering tasks, their effectiveness in identifying requirement dependencies remains unexplored. In this paper, we introduce LEREDD, an LLM-based approach for automated detection of requirement dependencies that leverages Retrieval-Augmented Generation (RAG) and In-Context Learning (ICL). It is designed to identify diverse dependency types directly from NL requirements. We empirically evaluate LEREDD against two state-of-the-art baselines. The results show that LEREDD provides highly accurate classification of dependent and non-dependent requirements, achieving an accuracy of 0.93, and an F1 score of 0.84, with the latter averaging 0.96 for non-dependent cases. LEREDD outperforms zero-shot LLMs and baselines, particularly in detecting fine-grained dependency types, where it yields average relative gains of 94.87% and 105.41% in F1 scores for the Requires dependency over the baselines. We also provide an annotated dataset of requirement dependencies encompassing 813 requirement pairs across three distinct systems to support reproducibility and future research. 
+
+---
+# RAGdb: A Zero-Dependency, Embeddable Architecture for Multimodal Retrieval-Augmented Generation on the Edge 
+
+**Authors**: Ahmed Bin Khalid  
+
+**Link**: [PDF](https://arxiv.org/pdf/2602.22217)  
+
+**Abstract**: Retrieval-Augmented Generation (RAG) has established itself as the standard paradigm for grounding Large Language Models (LLMs) in domain-specific, up-to-date data. However, the prevailing architecture for RAG has evolved into a complex, distributed stack requiring cloud-hosted vector databases, heavy deep learning frameworks (e.g., PyTorch, CUDA), and high-latency embedding inference servers. This ``infrastructure bloat'' creates a significant barrier to entry for edge computing, air-gapped environments, and privacy-constrained applications where data sovereignty is paramount.
+This paper introduces RAGdb, a novel monolithic architecture that consolidates automated multimodal ingestion, ONNX-based extraction, and hybrid vector retrieval into a single, portable SQLite container. We propose a deterministic Hybrid Scoring Function (HSF) that combines sublinear TF-IDF vectorization with exact substring boosting, eliminating the need for GPU inference at query time. Experimental evaluation on an Intel i7-1165G7 consumer laptop demonstrates that RAGdb achieves 100\% Recall@1 for entity retrieval and an ingestion efficiency gain of 31.6x during incremental updates compared to cold starts. Furthermore, the system reduces disk footprint by approximately 99.5\% compared to standard Docker-based RAG stacks, establishing the ``Single-File Knowledge Container'' as a viable primitive for decentralized, local-first AI.
+Keywords: Edge AI, Retrieval-Augmented Generation, Vector Search, Green AI, Serverless Architecture, Knowledge Graphs, Efficient Computing. 
+
+---
+# Retrieval-Augmented Generation Assistant for Anatomical Pathology Laboratories 
+
+**Authors**: Diogo Pires, Yuriy Perezhohin, Mauro Castelli  
+
+**Link**: [PDF](https://arxiv.org/pdf/2602.22216)  
+
+**Abstract**: Accurate and efficient access to laboratory protocols is essential in Anatomical Pathology (AP), where up to 70% of medical decisions depend on laboratory diagnoses. However, static documentation such as printed manuals or PDFs is often outdated, fragmented, and difficult to search, creating risks of workflow errors and diagnostic delays. This study proposes and evaluates a Retrieval-Augmented Generation (RAG) assistant tailored to AP laboratories, designed to provide technicians with context-grounded answers to protocol-related queries. We curated a novel corpus of 99 AP protocols from a Portuguese healthcare institution and constructed 323 question-answer pairs for systematic evaluation. Ten experiments were conducted, varying chunking strategies, retrieval methods, and embedding models. Performance was assessed using the RAGAS framework (faithfulness, answer relevance, context recall) alongside top-k retrieval metrics. Results show that recursive chunking and hybrid retrieval delivered the strongest baseline performance. Incorporating a biomedical-specific embedding model (MedEmbed) further improved answer relevance (0.74), faithfulness (0.70), and context recall (0.77), showing the importance of domain-specialised embeddings. Top-k analysis revealed that retrieving a single top-ranked chunk (k=1) maximized efficiency and accuracy, reflecting the modular structure of AP protocols. These findings highlight critical design considerations for deploying RAG systems in healthcare and demonstrate their potential to transform static documentation into dynamic, reliable knowledge assistants, thus improving laboratory workflow efficiency and supporting patient safety. 
+
+---
+# MammoWise: Multi-Model Local RAG Pipeline for Mammography Report Generation 
+
+**Authors**: Raiyan Jahangir, Nafiz Imtiaz Khan, Amritanand Sudheerkumar, Vladimir Filkov  
+
+**Link**: [PDF](https://arxiv.org/pdf/2602.22462)  
+
+**Abstract**: Screening mammography is high volume, time sensitive, and documentation heavy. Radiologists must translate subtle visual findings into consistent BI-RADS assessments, breast density categories, and structured narrative reports. While recent Vision Language Models (VLMs) enable image-to-text reporting, many rely on closed cloud systems or tightly coupled architectures that limit privacy, reproducibility, and adaptability. We present MammoWise, a local multi-model pipeline that transforms open source VLMs into mammogram report generators and multi-task classifiers. MammoWise supports any Ollama-hosted VLM and mammography dataset, and enables zero-shot, few-shot, and Chain-of-Thought prompting, with optional multimodal Retrieval Augmented Generation (RAG) using a vector database for case-specific context. We evaluate MedGemma, LLaVA-Med, and Qwen2.5-VL on VinDr-Mammo and DMID datasets, assessing report quality (BERTScore, ROUGE-L), BI-RADS classification, breast density, and key findings. Report generation is consistently strong and improves with few-shot prompting and RAG. Classification is feasible but sensitive to model and dataset choice. Parameter-efficient fine-tuning (QLoRA) of MedGemma improves reliability, achieving BI-RADS accuracy of 0.7545, density accuracy of 0.8840, and calcification accuracy of 0.9341 while preserving report quality. MammoWise provides a practical and extensible framework for deploying local VLMs for mammography reporting within a unified and reproducible workflow. 
+
+---
