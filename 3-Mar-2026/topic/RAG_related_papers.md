@@ -1,0 +1,122 @@
+# Scaling Retrieval Augmented Generation with RAG Fusion: Lessons from an Industry Deployment 
+
+**Authors**: Luigi Medrano, Arush Verma, Mukul Chhabra  
+
+**Link**: [PDF](https://arxiv.org/pdf/2603.02153)  
+
+**Abstract**: Retrieval-Augmented Generation (RAG) systems commonly adopt retrieval fusion techniques such as multi-query retrieval and reciprocal rank fusion (RRF) to increase document recall, under the assumption that higher recall leads to better answer quality. While these methods show consistent gains in isolated retrieval benchmarks, their effectiveness under realistic production constraints remains underexplored. In this work, we evaluate retrieval fusion in a production-style RAG pipeline operating over an enterprise knowledge base, with fixed retrieval depth, re-ranking budgets, and latency constraints.
+Across multiple fusion configurations, we find that retrieval fusion does increase raw recall, but these gains are largely neutralized after re-ranking and truncation. In our setting, fusion variants fail to outperform single-query baselines on KB-level Top-$k$ accuracy, with Hit@10 decreasing from $0.51$ to $0.48$ in several configurations. Moreover, fusion introduces additional latency overhead due to query rewriting and larger candidate sets, without corresponding improvements in downstream effectiveness.
+Our analysis suggests that recall-oriented fusion techniques exhibit diminishing returns once realistic re-ranking limits and context budgets are applied. We conclude that retrieval-level improvements do not reliably translate into end-to-end gains in production RAG systems, and argue for evaluation frameworks that jointly consider retrieval quality, system efficiency, and downstream impact. 
+
+---
+# ReFeed: Retrieval Feedback-Guided Dataset Construction for Style-Aware Query Rewriting 
+
+**Authors**: Jiyoon Myung, Jungki Son, Kyungro Lee, Jihyeon Park, Joohyung Han  
+
+**Link**: [PDF](https://arxiv.org/pdf/2603.01417)  
+
+**Abstract**: Retrieval systems often fail when user queries differ stylistically or semantically from the language used in domain documents. Query rewriting has been proposed to bridge this gap, improving retrieval by reformulating user queries into semantically equivalent forms. However, most existing approaches overlook the stylistic characteristics of target documents-their domain-specific phrasing, tone, and structure-which are crucial for matching real-world data distributions. We introduce a retrieval feedback-driven dataset generation framework that automatically identifies failed retrieval cases, leverages large language models to rewrite queries in the style of relevant documents, and verifies improvement through re-retrieval. The resulting corpus of (original, rewritten) query pairs enables the training of rewriter models that are explicitly aware of document style and retrieval feedback. This work highlights a new direction in data-centric information retrieval, emphasizing how feedback loops and document-style alignment can enhance the reasoning and adaptability of RAG systems in real-world, domain-specific contexts. 
+
+---
+# Legal RAG Bench: an end-to-end benchmark for legal RAG 
+
+**Authors**: Abdur-Rahman Butler, Umar Butler  
+
+**Link**: [PDF](https://arxiv.org/pdf/2603.01710)  
+
+**Abstract**: We introduce Legal RAG Bench, a benchmark and evaluation methodology for assessing the end-to-end performance of legal RAG systems. As a benchmark, Legal RAG Bench consists of 4,876 passages from the Victorian Criminal Charge Book alongside 100 complex, hand-crafted questions demanding expert knowledge of criminal law and procedure. Both long-form answers and supporting passages are provided. As an evaluation methodology, Legal RAG Bench leverages a full factorial design and novel hierarchical error decomposition framework, enabling apples-to-apples comparisons of the contributions of retrieval and reasoning models in RAG. We evaluate three state-of-the-art embedding models (Isaacus' Kanon 2 Embedder, Google's Gemini Embedding 001, and OpenAI's Text Embedding 3 Large) and two frontier LLMs (Gemini 3.1 Pro and GPT-5.2), finding that information retrieval is the primary driver of legal RAG performance, with LLMs exerting a more moderate effect on correctness and groundedness. Kanon 2 Embedder, in particular, had the largest positive impact on performance, improving average correctness by 17.5 points, groundedness by 4.5 points, and retrieval accuracy by 34 points. We observe that many errors attributed to hallucinations in legal RAG systems are in fact triggered by retrieval failures, concluding that retrieval sets the ceiling for the performance of many modern legal RAG systems. We document why and how we built Legal RAG Bench alongside the results of our evaluations. We also openly release our code and data to assist with reproduction of our findings. 
+
+---
+# Tiny-Critic RAG: Empowering Agentic Fallback with Parameter-Efficient Small Language Models 
+
+**Authors**: Yichao Wu, Penghao Liang, Yafei Xiang, Mengwei Yuan, Jianan Liu, Jing Yang, Xianyou Li, Weiran Yan  
+
+**Link**: [PDF](https://arxiv.org/pdf/2603.00846)  
+
+**Abstract**: Retrieval-Augmented Generation (RAG) grounds Large Language Models (LLMs) to mitigate factual hallucinations. Recent paradigms shift from static pipelines to Modular and Agentic RAG frameworks, granting models autonomy for multi-hop reasoning or self-correction. However, current reflective RAG heavily relies on massive LLMs as universal evaluators. In high-throughput systems, executing complete forward passes for billion-parameter models merely for binary routing introduces severe computational redundancy. Furthermore, in autonomous agent scenarios, inaccurate retrieval causes models to expend excessive tokens on spurious reasoning and redundant tool calls, inflating Time-to-First-Token (TTFT) and costs. We propose Tiny-Critic RAG, decoupling evaluation by deploying a parameter-efficient Small Language Model (SLM) via Low-Rank Adaptation (LoRA). Acting as a deterministic gatekeeper, Tiny-Critic employs constrained decoding and non-thinking inference modes for ultra-low latency binary routing. Evaluations on noise-injected datasets demonstrate Tiny-Critic RAG achieves routing accuracy comparable to GPT-4o-mini while reducing latency by an order of magnitude, establishing a highly cost-effective paradigm for agent deployment. 
+
+---
+# FLANS at SemEval-2026 Task 7: RAG with Open-Sourced Smaller LLMs for Everyday Knowledge Across Diverse Languages and Cultures 
+
+**Authors**: Liliia Bogdanova, Shiran Sun, Lifeng Han, Natalia Amat Lefort, Flor Miriam Plaza-del-Arco  
+
+**Link**: [PDF](https://arxiv.org/pdf/2603.01910)  
+
+**Abstract**: This system paper describes our participation in the SemEval-2025 Task-7 ``Everyday Knowledge Across Diverse Languages and Cultures''. We attended two subtasks, i.e., Track 1: Short Answer Questions (SAQ), and Track 2: Multiple-Choice Questions (MCQ). The methods we used are retrieval augmented generation (RAGs) with open-sourced smaller LLMs (OS-sLLMs). To better adapt to this shared task, we created our own culturally aware knowledge base (CulKBs) by extracting Wikipedia content using keyword lists we prepared. We extracted both culturally-aware wiki-text and country-specific wiki-summary. In addition to the local CulKBs, we also have one system integrating live online search output via DuckDuckGo. Towards better privacy and sustainability, we aimed to deploy smaller LLMs (sLLMs) that are open-sourced on the Ollama platform. We share the prompts we developed using refinement techniques and report the learning curve of such prompts. The tested languages are English, Spanish, and Chinese for both tracks. Our resources and codes are shared via this https URL 
+
+---
+# AnnoABSA: A Web-Based Annotation Tool for Aspect-Based Sentiment Analysis with Retrieval-Augmented Suggestions 
+
+**Authors**: Nils Constantin Hellwig, Jakob Fehle, Udo Kruschwitz, Christian Wolff  
+
+**Link**: [PDF](https://arxiv.org/pdf/2603.01773)  
+
+**Abstract**: We introduce AnnoABSA, the first web-based annotation tool to support the full spectrum of Aspect-Based Sentiment Analysis (ABSA) tasks. The tool is highly customizable, enabling flexible configuration of sentiment elements and task-specific requirements. Alongside manual annotation, AnnoABSA provides optional Large Language Model (LLM)-based retrieval-augmented generation (RAG) suggestions that offer context-aware assistance in a human-in-the-loop approach, keeping the human annotator in control. To improve prediction quality over time, the system retrieves the ten most similar examples that are already annotated and adds them as few-shot examples in the prompt, ensuring that suggestions become increasingly accurate as the annotation process progresses. Released as open-source software under the MIT License, AnnoABSA is freely accessible and easily extendable for research and practical applications. 
+
+---
+# Individual Turing Test: A Case Study of LLM-based Simulation Using Longitudinal Personal Data 
+
+**Authors**: Minghao Guo, Ziyi Ye, Wujiang Xu, Xi Zhu, Wenyue Hua, Dimitris N. Metaxas  
+
+**Link**: [PDF](https://arxiv.org/pdf/2603.01289)  
+
+**Abstract**: Large Language Models (LLMs) have demonstrated remarkable human-like capabilities, yet their ability to replicate a specific individual remains under-explored. This paper presents a case study to investigate LLM-based individual simulation with a volunteer-contributed archive of private messaging history spanning over ten years. Based on the messaging data, we propose the "Individual Turing Test" to evaluate whether acquaintances of the volunteer can correctly identify which response in a multi-candidate pool most plausibly comes from the volunteer. We investigate prevalent LLM-based individual simulation approaches including: fine-tuning, retrieval-augmented generation (RAG), memory-based approach, and hybrid methods that integrate fine-tuning and RAG or memory. Empirical results show that current LLM-based simulation methods do not pass the Individual Turing Test, but they perform substantially better when the same test is conducted on strangers to the target individual. Additionally, while fine-tuning improves the simulation in daily chats representing the language style of the individual, retrieval-augmented and memory-based approaches demonstrate stronger performance on questions involving personal opinions and preferences. These findings reveal a fundamental trade-off between parametric and non-parametric approaches to individual simulation with LLMs when given a longitudinal context. 
+
+---
+# S-VoCAL: A Dataset and Evaluation Framework for Inferring Speaking Voice Character Attributes in Literature 
+
+**Authors**: Abigail Berthe-Pardo, Gaspard Michel, Elena V. Epure, Christophe Cerisara  
+
+**Link**: [PDF](https://arxiv.org/pdf/2603.00958)  
+
+**Abstract**: With recent advances in Text-to-Speech (TTS) systems, synthetic audiobook narration has seen increased interest, reaching unprecedented levels of naturalness. However, larger gaps remain in synthetic narration systems' ability to impersonate fictional characters, and convey complex emotions or prosody. A promising direction to enhance character identification is the assignment of plausible voices to each fictional characters in a book. This step typically requires complex inference of attributes in book-length contexts, such as a character's age, gender, origin or physical health, which in turns requires dedicated benchmark datasets to evaluate extraction systems' performances. We present S-VoCAL (Speaking Voice Character Attributes in Literature), the first dataset and evaluation framework dedicated to evaluate the inference of voice-related fictional character attributes. S-VoCAL entails 8 attributes grounded in sociophonetic studies, and 952 character-book pairs derived from Project Gutenberg. Its evaluation framework addresses the particularities of each attribute, and includes a novel similarity metric based on recent Large Language Models embeddings. We demonstrate the applicability of S-VoCAL by applying a simple Retrieval-Augmented Generation (RAG) pipeline to the task of inferring character attributes. Our results suggest that the RAG pipeline reliably infers attributes such as Age or Gender, but struggles on others such as Origin or Physical Health. The dataset and evaluation code are available at this https URL . 
+
+---
+# GAM-RAG: Gain-Adaptive Memory for Evolving Retrieval in Retrieval-Augmented Generation 
+
+**Authors**: Yifan Wang, Mingxuan Jiang, Zhihao Sun, Yixin Cao, Yicun Liu, Keyang Chen, Guangnan Ye, Hongfeng Chai  
+
+**Link**: [PDF](https://arxiv.org/pdf/2603.01783)  
+
+**Abstract**: Retrieval-Augmented Generation (RAG) grounds large language models with external evidence, but many implementations rely on pre-built indices that remain static after construction. Related queries therefore repeat similar multi-hop traversal, increasing latency and compute. Motivated by schema-based learning in cognitive neuroscience, we propose GAM-RAG, a training-free framework that accumulates retrieval experience from recurring or related queries and updates retrieval memory over time. GAM-RAG builds a lightweight, relation-free hierarchical index whose links capture potential co-occurrence rather than fixed semantic relations. During inference, successful retrieval episodes provide sentence-level feedback, updating sentence memories so evidence useful for similar reasoning types becomes easier to activate later. To balance stability and adaptability under noisy feedback, we introduce an uncertainty-aware, Kalman-inspired gain rule that jointly updates memory states and perplexity-based uncertainty estimates. It applies fast updates for reliable novel signals and conservative refinement for stable or noisy memories. We provide a theoretical analysis of the update dynamics, and empirically show that GAM-RAG improves average performance by 3.95% over the strongest baseline and by 8.19% with 5-turn memory, while reducing inference cost by 61%. Our code and datasets are available at: this https URL. 
+
+---
+# S5-HES Agent: Society 5.0-driven Agentic Framework to Democratize Smart Home Environment Simulation 
+
+**Authors**: Akila Siriweera, Janani Rangila, Keitaro Naruse, Incheon Paik, Isuru Jayanada  
+
+**Link**: [PDF](https://arxiv.org/pdf/2603.01554)  
+
+**Abstract**: The smart home is a key domain within the Society 5.0 vision for a human-centered society. Smart home technologies rapidly evolve, and research should diversify while remaining aligned with Society 5.0 objectives. Democratizing smart home research would engage a broader community of innovators beyond traditional limited experts. This shift necessitates inclusive simulation frameworks that support research across diverse fields in industry and academia. However, existing smart home simulators require significant technical expertise, offer limited adaptability, and lack automated evolution, thereby failing to meet the holistic needs of Society 5.0. These constraints impede researchers from efficiently conducting simulations and experiments for security, energy, health, climate, and socio-economic research. To address these challenges, this paper presents the Society 5.0-driven Smart Home Environment Simulator Agent (S5-HES Agent), an agentic simulation framework that transforms traditional smart home simulation through autonomous AI orchestration. The framework coordinates specialized agents through interchangeable large language models (LLMs), enabling natural-language-driven end-to-end smart home simulation configuration without programming expertise. A retrieval-augmented generation (RAG) pipeline with semantic, keyword, and hybrid search retrieves smart home knowledge. Comprehensive evaluation on S5-HES Agent demonstrates that the RAG pipeline achieves near-optimal retrieval fidelity, simulated device behaviour and threat scenarios align with real-world IoT datasets, and simulation engine scales predictably across home configurations, establishing a stable foundation for Society 5.0 smart home research. Source code is available under the MIT License at this https URL. 
+
+---
+# MED-COPILOT: A Medical Assistant Powered by GraphRAG and Similar Patient Case Retrieval 
+
+**Authors**: Shuheng Chen, Namratha Patil, Haonan Pan, Angel Hsing-Chi Hwang, Yao Du, Ruishan Liu, Jieyu Zhao  
+
+**Link**: [PDF](https://arxiv.org/pdf/2603.00460)  
+
+**Abstract**: Clinical decision-making requires synthesizing heterogeneous evidence, including patient histories, clinical guidelines, and trajectories of comparable cases. While large language models (LLMs) offer strong reasoning capabilities, they remain prone to hallucinations and struggle to integrate long, structured medical documents. We present MED-COPILOT, an interactive clinical decision-support system designed for clinicians and medical trainees, which combines guideline-grounded GraphRAG retrieval with hybrid semantic-keyword similar-patient retrieval to support transparent and evidence-aware clinical reasoning. The system builds a structured knowledge graph from WHO and NICE guidelines, applies community-level summarization for efficient retrieval, and maintains a 36,000-case similar-patient database derived from SOAP-normalized MIMIC-IV notes and Synthea-generated records.
+We evaluate our framework on clinical note completion and medical question answering, and demonstrate that it consistently outperforms parametric LLM baselines and standard RAG, improving both generation fidelity and clinical reasoning accuracy. The full system is available at this https URL , enabling users to inspect retrieved evidence, visualize token-level similarity contributions, and conduct guided follow-up analysis. Our results demonstrate a practical and interpretable approach to integrating structured guideline knowledge with patient-level analogical evidence for clinical LLMs. 
+
+---
+# Retrieval, Refinement, and Ranking for Text-to-Video Generation via Prompt Optimization and Test-Time Scaling 
+
+**Authors**: Zillur Rahman, Alex Sheng, Cristian Meo  
+
+**Link**: [PDF](https://arxiv.org/pdf/2603.01509)  
+
+**Abstract**: While large-scale datasets have driven significant progress in Text-to-Video (T2V) generative models, these models remain highly sensitive to input prompts, demonstrating that prompt design is critical to generation quality. Current methods for improving video output often fall short: they either depend on complex, post-editing models, risking the introduction of artifacts, or require expensive fine-tuning of the core generator, which severely limits both scalability and accessibility. In this work, we introduce 3R, a novel RAG based prompt optimization framework. 3R utilizes the power of current state-of-the-art T2V diffusion model and vision language model. It can be used with any T2V model without any kind of model training. The framework leverages three key strategies: RAG-based modifiers extraction for enriched contextual grounding, diffusion-based Preference Optimization for aligning outputs with human preferences, and temporal frame interpolation for producing temporally consistent visual contents. Together, these components enable more accurate, efficient, and contextually aligned text-to-video generation. Experimental results demonstrate the efficacy of 3R in enhancing the static fidelity and dynamic coherence of generated videos, underscoring the importance of optimizing user prompts. 
+
+---
+# Inference-Time Safety For Code LLMs Via Retrieval-Augmented Revision 
+
+**Authors**: Manisha Mukherjee, Vincent J. Hellendoorn  
+
+**Link**: [PDF](https://arxiv.org/pdf/2603.01494)  
+
+**Abstract**: Large Language Models (LLMs) are increasingly deployed for code generation in high-stakes software development, yet their limited transparency in security reasoning and brittleness to evolving vulnerability patterns raise critical trustworthiness concerns. Models trained on static datasets cannot readily adapt to newly discovered vulnerabilities or changing security standards without retraining, leading to the repeated generation of unsafe code.
+We present a principled approach to trustworthy code generation by design that operates as an inference-time safety mechanism. Our approach employs retrieval-augmented generation to surface relevant security risks in generated code and retrieve related security discussions from a curated Stack Overflow knowledge base, which are then used to guide an LLM during code revision. This design emphasizes three aspects relevant to trustworthiness: (1) interpretability, through transparent safety interventions grounded in expert community explanations; (2) robustness, by allowing adaptation to evolving security practices without model retraining; and (3) safety alignment, through real-time intervention before unsafe code reaches deployment.
+Across real-world and benchmark datasets, our approach improves the security of LLM-generated code compared to prompting alone, while introducing no new vulnerabilities as measured by static analysis. These results suggest that principled, retrieval-augmented inference-time interventions can serve as a complementary mechanism for improving the safety of LLM-based code generation, and highlight the ongoing value of community knowledge in supporting trustworthy AI deployment. 
+
+---
