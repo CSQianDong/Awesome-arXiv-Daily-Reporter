@@ -1,0 +1,129 @@
+# Proactive Guiding Strategy for Item-side Fairness in Interactive Recommendation 
+
+**Authors**: Chongjun Xia, Xiaoyu Shi, Hong Xie, Xianzhi Wang, yun lu, Mingsheng Shang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2603.03094)  
+
+**Abstract**: Item-side fairness is crucial for ensuring the fair exposure of long-tail items in interactive recommender systems. Existing approaches promote the exposure of long-tail items by directly incorporating them into recommended results. This causes misalignment between user preferences and the recommended long-tail items, which hinders long-term user engagement and reduces the effectiveness of recommendations. We aim for a proactive fairness-guiding strategy, which actively guides user preferences toward long-tail items while preserving user satisfaction during the interactive recommendation process. To this end, we propose HRL4PFG, an interactive recommendation framework that leverages hierarchical reinforcement learning to guide user preferences toward long-tail items progressively. HRL4PFG operates through a macro-level process that generates fairness-guided targets based on multi-step feedback, and a micro-level process that fine-tunes recommendations in real time according to both these targets and evolving user preferences. Extensive experiments show that HRL4PFG improves cumulative interaction rewards and maximum user interaction length by a larger margin when compared with state-of-the-art methods in interactive recommendation environments. 
+
+---
+# Reproducing and Comparing Distillation Techniques for Cross-Encoders 
+
+**Authors**: Victor Morand, Mathias Vast, Basile Van Cooten, Laure Soulier, Josiane Mothe, Benjamin Piwowarski  
+
+**Link**: [PDF](https://arxiv.org/pdf/2603.03010)  
+
+**Abstract**: Recent advances in Information Retrieval have established transformer-based cross-encoders as a keystone in IR. Recent studies have focused on knowledge distillation and showed that, with the right strategy, traditional cross-encoders could reach the level of effectiveness of LLM re-rankers. Yet, comparisons with previous training strategies, including distillation from strong cross-encoder teachers, remain unclear. In addition, few studies cover a similar range of backbone encoders, while substantial improvements have been made in this area since BERT. This lack of comprehensive studies in controlled environments makes it difficult to identify robust design choices. In this work, we reproduce \citet{schlattRankDistiLLMClosingEffectiveness2025} LLM-based distillation strategy and compare it to \citet{hofstatterImprovingEfficientNeural2020} approach based on an ensemble of cross-encoder teachers, as well as other supervised objectives, to fine-tune a large range of cross-encoders, from the original BERT and its follow-ups RoBERTa, ELECTRA and DeBERTa-v3, to the more recent ModernBERT. We evaluate all models on both in-domain (TREC-DL and MS~MARCO dev) and out-of-domain datasets (BEIR, LoTTE, and Robust04). Our results show that objectives emphasizing relative comparisons -- pairwise MarginMSE and listwise InfoNCE -- consistently outperform pointwise baselines across all backbones and evaluation settings, and that objective choice can yield gains comparable to scaling the backbone architecture. 
+
+---
+# OneRanker: Unified Generation and Ranking with One Model in Industrial Advertising Recommendation 
+
+**Authors**: Dekai Sun, Yiming Liu, Jiafan Zhou, Xun Liu, Chenchen Yu, Yi Li, Huan Yu, Jun Zhang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2603.02999)  
+
+**Abstract**: The end-to-end generative paradigm is revolutionizing advertising recommendation systems, driving a shift from traditional cascaded architectures towards unified modeling. However, practical deployment faces three core challenges: the misalignment between interest objectives and business value, the target-agnostic limitation of generative processes, and the disconnection between generation and ranking stages. Existing solutions often fall into a dilemma where single-stage fusion induces optimization tension, while stage decoupling causes irreversible information loss. To address this, we propose OneRanker, achieving architectural-level deep integration of generation and ranking. First, we design a value-aware multi-task decoupling architecture. By leveraging task token sequences and causal mask, we separate interest coverage and value optimization spaces within shared representations, effectively alleviating target conflicts. Second, we construct a coarse-to-fine collaborative target awareness mechanism, utilizing Fake Item Tokens for implicit awareness during generation and a ranking decoder for explicit value alignment at the candidate level. Finally, we propose input-output dual-side consistency guarantees. Through Key/Value pass-through mechanisms and Distribution Consistency (DC) Constraint Loss, we achieve end-to-end collaborative optimization between generation and ranking. The full deployment on Tencent's WeiXin channels advertising system has shown a significant improvement in key business metrics (GMV - Normal +1.34\%), providing a new paradigm with industrial feasibility for generative advertising recommendations. 
+
+---
+# Model Editing for New Document Integration in Generative Information Retrieval 
+
+**Authors**: Zhen Zhang, Zihan Wang, Xinyu Ma, Shuaiqiang Wang, Dawei Yin, Xin Xin, Pengjie Ren, Maarten de Rijke, Zhaochun Ren  
+
+**Link**: [PDF](https://arxiv.org/pdf/2603.02773)  
+
+**Abstract**: Generative retrieval (GR) reformulates the Information Retrieval (IR) task as the generation of document identifiers (docIDs). Despite its promise, existing GR models exhibit poor generalization to newly added documents, often failing to generate the correct docIDs. While incremental training offers a straightforward remedy, it is computationally expensive, resource-intensive, and prone to catastrophic forgetting, thereby limiting the scalability and practicality of GR. In this paper, we identify the core bottleneck as the decoder's ability to map hidden states to the correct docIDs of newly added documents. Model editing, which enables targeted parameter modifications for docID mapping, represents a promising solution. However, applying model editing to current GR models is not trivial, which is severely hindered by indistinguishable edit vectors across queries, due to the high overlap of shared docIDs in retrieval results. To address this, we propose DOME (docID-oriented model editing), a novel method that effectively and efficiently adapts GR models to unseen documents. DOME comprises three stages: (1) identification of critical layers, (2) optimization of edit vectors, and (3) construction and application of updates. At its core, DOME employs a hybrid-label adaptive training strategy that learns discriminative edit vectors by combining soft labels, which preserve query-specific semantics for distinguishable updates, with hard labels that enforce precise mapping modifications. Experiments on widely used benchmarks, including NQ and MS MARCO, show that our method significantly improves retrieval performance on new documents while maintaining effectiveness on the original collection. Moreover, DOME achieves this with only about 60% of the training time required by incremental training, considerably reducing computational cost and enabling efficient, frequent model updates. 
+
+---
+# APAO: Adaptive Prefix-Aware Optimization for Generative Recommendation 
+
+**Authors**: Yuanqing Yu, Yifan Wang, Weizhi Ma, Zhiqiang Guo, Min Zhang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2603.02730)  
+
+**Abstract**: Generative recommendation has recently emerged as a promising paradigm in sequential recommendation. It formulates the task as an autoregressive generation process, predicting discrete tokens of the next item conditioned on user interaction histories. Existing generative recommendation models are typically trained with token-level likelihood objectives, such as cross-entropy loss, while employing multi-step beam search during inference to generate ranked item candidates. However, this leads to a fundamental training-inference inconsistency: standard training assumes ground-truth history is always available, ignoring the fact that beam search prunes low-probability branches during inference. Consequently, the correct item may be prematurely discarded simply because its initial tokens (prefixes) have low scores. To address this issue, we propose the Adaptive Prefix-Aware Optimization (APAO) framework, which introduces prefix-level optimization losses to better align the training objective with the inference setting. Furthermore, we design an adaptive worst-prefix optimization strategy that dynamically focuses on the most vulnerable prefixes during training, thereby enhancing the model's ability to retain correct candidates under beam search constraints. We provide theoretical analyses to demonstrate the effectiveness and efficiency of our framework. Extensive experiments on multiple datasets further show that APAO consistently alleviates the training-inference inconsistency and improves performance across various generative recommendation backbones. Our codes are publicly available at this https URL. 
+
+---
+# S2CDR: Smoothing-Sharpening Process Model for Cross-Domain Recommendation 
+
+**Authors**: Xiaodong Li, Juwei Yue, Xinghua Zhang, Jiawei Sheng, Wenyuan Zhang, Taoyu Su, Zefeng Zhang, Tingwen Liu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2603.02725)  
+
+**Abstract**: User cold-start problem is a long-standing challenge in recommendation systems. Fortunately, cross-domain recommendation (CDR) has emerged as a highly effective remedy for the user cold-start challenge, with recently developed diffusion models (DMs) demonstrating exceptional performance. However, these DMs-based CDR methods focus on dealing with user-item interactions, overlooking correlations between items across the source and target domains. Meanwhile, the Gaussian noise added in the forward process of diffusion models would hurt user's personalized preference, leading to the difficulty in transferring user preference across domains. To this end, we propose a novel paradigm of Smoothing-Sharpening Process Model for CDR to cold-start users, termed as S2CDR which features a corruption-recovery architecture and is solved with respect to ordinary differential equations (ODEs). Specifically, the smoothing process gradually corrupts the original user-item/item-item interaction matrices derived from both domains into smoothed preference signals in a noise-free manner, and the sharpening process iteratively sharpens the preference signals to recover the unknown interactions for cold-start users. Wherein, for the smoothing process, we introduce the heat equation on the item-item similarity graph to better capture the correlations between items across domains, and further build the tailor-designed low-pass filter to filter out the high-frequency noise information for capturing user's intrinsic preference, in accordance with the graph signal processing (GSP) theory. Extensive experiments on three real-world CDR scenarios confirm that our S2CDR significantly outperforms previous SOTA methods in a training-free manner. 
+
+---
+# AlphaFree: Recommendation Free from Users, IDs, and GNNs 
+
+**Authors**: Minseo Jeon, Junwoo Jung, Daewon Gwak, Jinhong Jung  
+
+**Link**: [PDF](https://arxiv.org/pdf/2603.02653)  
+
+**Abstract**: Can we design effective recommender systems free from users, IDs, and GNNs? Recommender systems are central to personalized content delivery across domains, with top-K item recommendation being a fundamental task to retrieve the most relevant items from historical interactions. Existing methods rely on entrenched design conventions, often adopted without reconsideration, such as storing per-user embeddings (user-dependent), initializing features from raw IDs (ID-dependent), and employing graph neural networks (GNN-dependent). These dependencies incur several limitations, including high memory costs, cold-start and over-smoothing issues, and poor generalization to unseen interactions.
+In this work, we propose AlphaFree, a novel recommendation method free from users, IDs, and GNNs. Our main ideas are to infer preferences on-the-fly without user embeddings (user-free), replace raw IDs with language representations (LRs) from pre-trained language models (ID-free), and capture collaborative signals through augmentation with similar items and contrastive learning, without GNNs (GNN-free). Extensive experiments on various real-world datasets show that AlphaFree consistently outperforms its competitors, achieving up to around 40% improvements over non-LR-based methods and up to 5.7% improvements over LR-based methods, while significantly reducing GPU memory usage by up to 69% under high-dimensional LRs. 
+
+---
+# FlashEvaluator: Expanding Search Space with Parallel Evaluation 
+
+**Authors**: Chao Feng, Yuanhao Pu, Chenghao Zhang, Shanqi Liu, Shuchang Liu, Xiang Li, Yongqi Liu, Lantao Hu, Kaiqiao Zhan, Han Li, Kun Gai  
+
+**Link**: [PDF](https://arxiv.org/pdf/2603.02565)  
+
+**Abstract**: The Generator-Evaluator (G-E) framework, i.e., evaluating K sequences from a generator and selecting the top-ranked one according to evaluator scores, is a foundational paradigm in tasks such as Recommender Systems (RecSys) and Natural Language Processing (NLP). Traditional evaluators process sequences independently, suffering from two major limitations: (1) lack of explicit cross-sequence comparison, leading to suboptimal accuracy; (2) poor parallelization with linear complexity of O(K), resulting in inefficient resource utilization and negative impact on both throughput and latency. To address these challenges, we propose FlashEvaluator, which enables cross-sequence token information sharing and processes all sequences in a single forward pass. This yields sublinear computational complexity that improves the system's efficiency and supports direct inter-sequence comparisons that improve selection accuracy. The paper also provides theoretical proofs and extensive experiments on recommendation and NLP tasks, demonstrating clear advantages over conventional methods. Notably, FlashEvaluator has been deployed in online recommender system of Kuaishou, delivering substantial and sustained revenue gains in practice. 
+
+---
+# SOLAR: SVD-Optimized Lifelong Attention for Recommendation 
+
+**Authors**: Chenghao Zhang, Chao Feng, Yuanhao Pu, Xunyong Yang, Wenhui Yu, Xiang Li, Yongqi Liu, Lantao Hu, Kaiqiao Zhan, Han Li, Kun Gai  
+
+**Link**: [PDF](https://arxiv.org/pdf/2603.02561)  
+
+**Abstract**: Attention mechanism remains the defining operator in Transformers since it provides expressive global credit assignment, yet its $O(N^2 d)$ time and memory cost in sequence length $N$ makes long-context modeling expensive and often forces truncation or other heuristics. Linear attention reduces complexity to $O(N d^2)$ by reordering computation through kernel feature maps, but this reformulation drops the softmax mechanism and shifts the attention score distribution. In recommender systems, low-rank structure in matrices is not a rare case, but rather the default inductive bias in its representation learning, particularly explicit in the user behavior sequence modeling. Leveraging this structure, we introduce SVD-Attention, which is theoretically lossless on low-rank matrices and preserves softmax while reducing attention complexity from $O(N^2 d)$ to $O(Ndr)$. With SVD-Attention, we propose SOLAR, SVD-Optimized Lifelong Attention for Recommendation, a sequence modeling framework that supports behavior sequences of ten-thousand scale and candidate sets of several thousand items in cascading process without any filtering. In Kuaishou's online recommendation scenario, SOLAR delivers a 0.68\% Video Views gain together with additional business metrics improvements. 
+
+---
+# Relevance Matters: A Multi-Task and Multi-Stage Large Language Model Approach for E-commerce Query Rewriting 
+
+**Authors**: Aijun Dai, Jixiang Zhang, Haiqing Hu, Guoyu Tang, Lin Liu, Ziguang Cheng  
+
+**Link**: [PDF](https://arxiv.org/pdf/2603.02555)  
+
+**Abstract**: For e-commerce search, user experience is measured by users' behavioral responses to returned products, like click-through rate and conversion rate, as well as the relevance between returned products and search queries. Consequently, relevance and user conversion constitute the two primary objectives in query rewriting, a strategy to bridge the lexical gap between user expressions and product descriptions. This research proposes a multi-task and multi-stage query rewriting framework grounded in large language models (LLMs). Critically, in contrast to previous works that primarily emphasized rewritten query generation, we inject the relevance task into query rewriting. Specifically, leveraging a pretrained model on user data and product information from this http URL, the approach initiates with multi-task supervised fine-tuning (SFT) comprising of the rewritten query generation task and the relevance tagging task between queries and rewrites. Subsequently, we employ Group Relative Policy Optimization (GRPO) for the model's objective alignment oriented toward enhancing the relevance and stimulating user conversions. Through offline evaluation and online A/B test, our framework illustrates substantial improvements in the effectiveness of e-commerce query rewriting, resulting in elevating the search results' relevance and boosting the number of purchases made per user (UCVR). Since August 2025, our approach has been implemented on this http URL, one of China's leading online shopping platforms. 
+
+---
+# The Science Data Lake: A Unified Open Infrastructure Integrating 293 Million Papers Across Eight Scholarly Sources with Embedding-Based Ontology Alignment 
+
+**Authors**: Jonas Wilinski  
+
+**Link**: [PDF](https://arxiv.org/pdf/2603.03126)  
+
+**Abstract**: Scholarly data are largely fragmented across siloed databases with divergent metadata and missing linkages among them. We present the Science Data Lake, a locally-deployable infrastructure built on DuckDB and simple Parquet files that unifies eight open sources - Semantic Scholar, OpenAlex, SciSciNet, Papers with Code, Retraction Watch, Reliance on Science, a preprint-to-published mapping, and Crossref - via DOI normalization while preserving source-level schemas. The resource comprises approximately 960GB of Parquet files spanning ~293 million uniquely identifiable papers across ~22 schemas and ~153 SQL views. An embedding-based ontology alignment using BGE-large sentence embeddings maps 4,516 OpenAlex topics to 13 scientific ontologies (~1.3 million terms), yielding 16,150 mappings covering 99.8% of topics ($\geq 0.65$ threshold) with $F1 = 0.77$ at the recommended $\geq 0.85$ operating point, outperforming TF-IDF, BM25, and Jaro-Winkler baselines on a 300-pair gold-standard evaluation. We validate through 10 automated checks, cross-source citation agreement analysis (pairwise Pearson $r = 0.76$ - $0.87$), and stratified manual annotation. Four vignettes demonstrate cross-source analyses infeasible with any single database. The resource is open source, deployable on a single drive or queryable remotely via HuggingFace, and includes structured documentation suitable for large language model (LLM) based research agents. 
+
+---
+# Timehash: Hierarchical Time Indexing for Efficient Business Hours Search 
+
+**Authors**: Jinoh Kim, Jaewon Son  
+
+**Link**: [PDF](https://arxiv.org/pdf/2603.02941)  
+
+**Abstract**: Temporal range filtering is a critical operation in large-scale search systems, particularly for location-based services that need to filter businesses by operating hours. Traditional approaches either suffer from poor query performance (scope filtering) or index size explosion (minute-level indexing).
+We present Timehash, a novel hierarchical time indexing algorithm that achieves over 99% reduction in index size compared to minute-level indexing while maintaining 100% precision. Timehash employs a flexible multi-resolution strategy with customizable hierarchical levels. Through empirical analysis on distributions from 12.6 million business records of a production location search service, we demonstrate a data-driven methodology for selecting optimal hierarchies tailored to specific data distributions.
+We evaluated Timehash on up to 12.6 million synthetic POIs generated from production distributions. Experimental results show that a five-level hierarchy reduces index terms to 5.6 per document (99.1% reduction versus minute-level indexing), with zero false positives and zero false negatives. Scalability benchmarks confirm constant per-document cost from 100K to 12.6M POIs, while supporting complex scenarios such as break times and irregular schedules. Our approach is generalizable to various temporal filtering problems in search systems, e-commerce, and reservation platforms. 
+
+---
+# Agentic Mixed-Source Multi-Modal Misinformation Detection with Adaptive Test-Time Scaling 
+
+**Authors**: Wei Jiang, Tong Chen, Wei Yuan, Quoc Viet Hung Nguyen, Hongzhi Yin  
+
+**Link**: [PDF](https://arxiv.org/pdf/2603.02519)  
+
+**Abstract**: Vision-language models (VLMs) have been proven effective for detecting multi-modal misinformation on social platforms, especially in zero-shot settings with unavailable or delayed annotations. However, a single VLM's capacity falls short in the more complex mixed-source multi-modal misinformation detection (M3D) task. Taking captioned images as an example, in M3D, false information can originate from untruthful texts, forged images, or mismatches between the two modalities. Although recent agentic systems can handle zero-shot M3D by connecting modality-specific VLM agents, their effectiveness is still bottlenecked by their architecture. In existing agentic M3D solutions, for any input sample, each agent performs only one forward reasoning pass, making decisions prone to model randomness and reasoning errors in challenging cases. Moreover, the lack of exploration over alternative reasoning paths prevents modern VLMs from fully utilizing their reasoning capacity. In this work, we present AgentM3D, a multi-agent framework for zero-shot M3D. To amplify the reasoning capability of VLMs, we introduce an adaptive test-time scaling paradigm in which each modality-specific VLM agent applies a Best-of-N mechanism, coupled with a critic agent for task-aligned scoring. The agents are organized in a cascading, modality-specific decision chain to reduce unnecessary computation and limit error propagation. To ensure scalability, a planning agent dynamically determines the maximum number of reasoning paths based on sample difficulty, and an adaptive stopping mechanism prevents excessive reasoning within each agent. Extensive experiments on two M3D benchmarks demonstrate that AgentM3D achieves state-of-the-art zero-shot detection performance compared with various VLM-based and agentic baselines. 
+
+---
+# HELIOS: Harmonizing Early Fusion, Late Fusion, and LLM Reasoning for Multi-Granular Table-Text Retrieval 
+
+**Authors**: Sungho Park, Joohyung Yun, Jongwuk Lee, Wook-Shin Han  
+
+**Link**: [PDF](https://arxiv.org/pdf/2603.02248)  
+
+**Abstract**: Table-text retrieval aims to retrieve relevant tables and text to support open-domain question answering. Existing studies use either early or late fusion, but face limitations. Early fusion pre-aligns a table row with its associated passages, forming "stars," which often include irrelevant contexts and miss query-dependent relationships. Late fusion retrieves individual nodes, dynamically aligning them, but it risks missing relevant contexts. Both approaches also struggle with advanced reasoning tasks, such as column-wise aggregation and multi-hop reasoning. To address these issues, we propose HELIOS, which combines the strengths of both approaches. First, the edge-based bipartite subgraph retrieval identifies finer-grained edges between table segments and passages, effectively avoiding the inclusion of irrelevant contexts. Then, the query-relevant node expansion identifies the most promising nodes, dynamically retrieving relevant edges to grow the bipartite subgraph, minimizing the risk of missing important contexts. Lastly, the star-based LLM refinement performs logical inference at the star graph level rather than the bipartite subgraph, supporting advanced reasoning tasks. Experimental results show that HELIOS outperforms state-of-the-art models with a significant improvement up to 42.6\% and 39.9\% in recall and nDCG, respectively, on the OTT-QA benchmark. 
+
+---

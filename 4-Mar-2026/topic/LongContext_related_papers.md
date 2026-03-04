@@ -1,0 +1,36 @@
+# MaBERT:A Padding Safe Interleaved Transformer Mamba Hybrid Encoder for Efficient Extended Context Masked Language Modeling 
+
+**Authors**: Jinwoong Kim, Sangjin Park  
+
+**Link**: [PDF](https://arxiv.org/pdf/2603.03001)  
+
+**Abstract**: Self attention encoders such as Bidirectional Encoder Representations from Transformers(BERT) scale quadratically with sequence length, making long context modeling expensive. Linear time state space models, such as Mamba, are efficient; however, they show limitations in modeling global interactions and can suffer from padding induced state contamination. We propose MaBERT, a hybrid encoder that interleaves Transformer layers for global dependency modeling with Mamba layers for linear time state updates. This design alternates global contextual integration with fast state accumulation, enabling efficient training and inference on long inputs. To stabilize variable length batching, we introduce paddingsafe masking, which blocks state propagation through padded positions, and mask aware attention pooling, which aggregates information only from valid tokens. On GLUE, MaBERT achieves the best mean score on five of the eight tasks, with strong performance on the CoLA and sentence pair inference tasks. When extending the context from 512 to 4,096 tokens, MaBERT reduces training time and inference latency by 2.36x and 2.43x, respectively, relative to the average of encoder baselines, demonstrating a practical long context efficient encoder. 
+
+---
+# Cross-Family Speculative Prefill: Training-Free Long-Context Compression with Small Draft Models 
+
+**Authors**: Shubhangi Upasani, Ravi Shanker Raju, Bo Li, Mengmeing Ji, John Long, Chen Wu, Urmish Thakker, Guangtao Wang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2603.02631)  
+
+**Abstract**: Prompt length is a major bottleneck in agentic large language model (LLM) workloads, where repeated inference steps and multi-call loops incur substantial prefill cost. Recent work on speculative prefill demonstrates that attention-based token importance estimation can enable training-free prompt compression, but this assumes the existence of a draft model that shares the same tokenizer as the target model. In practice, however, agentic pipelines frequently employ models without any smaller in-family draft model. In this work, we study cross-family speculative prefill, where a lightweight draft model from one model family is used to perform prompt compression for a target model from a different family. Using the same speculative prefill mechanism as prior work, we evaluate a range of cross-family draft-target combinations, including Qwen, LLaMA, and DeepSeek models. Across a broad diversity of tasks, we find that attention-based token importance estimation transfers reliably across different model families despite differences in model architectures and tokenizers between draft and target models. Cross-model prompt compression largely retains 90~100% of full-prompt baseline performance and, in some cases, slightly improves accuracy due to denoising effects, while delivering substantial reductions in time to first token (TTFT). These results suggest that speculative prefill depends mainly on task priors and semantic structure, thus serving as a generalizable prompt compression primitive. We discuss the implications of our findings for agentic systems, where repeated long-context inference and heterogeneous model stacks make cross-model prompt compression both necessary and practical. 
+
+---
+# Neural Paging: Learning Context Management Policies for Turing-Complete Agents 
+
+**Authors**: Liang Chen, Qi Liu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2603.02228)  
+
+**Abstract**: The proof that Large Language Models (LLMs) augmented with external read-write memory constitute a computationally universal system has established the theoretical foundation for general-purpose agents. However, existing implementations face a critical bottleneck: the finite and costly Context Window, which functions not as infinite memory but as a scarce semantic cache. In this work, we introduce \textit{Neural Paging}, a hierarchical architecture that decouples symbolic reasoning from information resource management. We formulate the \textit{Context Paging Problem (CPP)} and propose a lightweight, differentiable \textit{Page Controller} designed to approximate ``Semantic Belady's Optimality'' -- retaining tokens with high future utility under explicit assumptions on access patterns. We provide theoretical analysis showing that, under bounded context window size~$K$, Neural Paging reduces the asymptotic complexity of long-horizon reasoning from quadratic $O(N^2)$ to $O(N \cdot K^2)$, and we derive a robustness bound (Theorem~4) that quantifies competitive-ratio degradation under policy-dependent access with bounded sensitivity. We validate these bounds on synthetic paging traces, confirming that the theoretical guarantees hold and identifying significant slack that motivates learned policies. 
+
+---
+# SOLAR: SVD-Optimized Lifelong Attention for Recommendation 
+
+**Authors**: Chenghao Zhang, Chao Feng, Yuanhao Pu, Xunyong Yang, Wenhui Yu, Xiang Li, Yongqi Liu, Lantao Hu, Kaiqiao Zhan, Han Li, Kun Gai  
+
+**Link**: [PDF](https://arxiv.org/pdf/2603.02561)  
+
+**Abstract**: Attention mechanism remains the defining operator in Transformers since it provides expressive global credit assignment, yet its $O(N^2 d)$ time and memory cost in sequence length $N$ makes long-context modeling expensive and often forces truncation or other heuristics. Linear attention reduces complexity to $O(N d^2)$ by reordering computation through kernel feature maps, but this reformulation drops the softmax mechanism and shifts the attention score distribution. In recommender systems, low-rank structure in matrices is not a rare case, but rather the default inductive bias in its representation learning, particularly explicit in the user behavior sequence modeling. Leveraging this structure, we introduce SVD-Attention, which is theoretically lossless on low-rank matrices and preserves softmax while reducing attention complexity from $O(N^2 d)$ to $O(Ndr)$. With SVD-Attention, we propose SOLAR, SVD-Optimized Lifelong Attention for Recommendation, a sequence modeling framework that supports behavior sequences of ten-thousand scale and candidate sets of several thousand items in cascading process without any filtering. In Kuaishou's online recommendation scenario, SOLAR delivers a 0.68\% Video Views gain together with additional business metrics improvements. 
+
+---
