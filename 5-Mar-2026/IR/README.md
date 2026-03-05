@@ -1,0 +1,174 @@
+# CAMMSR: Category-Guided Attentive Mixture of Experts for Multimodal Sequential Recommendation 
+
+**Authors**: Jinfeng Xu, Zheyu Chen, Shuo Yang, Jinze Li, Hewei Wang, Yijie Li, Jianheng Tang, Yunhuai Liu, Edith C. H. Ngai  
+
+**Link**: [PDF](https://arxiv.org/pdf/2603.04320)  
+
+**Abstract**: The explosion of multimedia data in information-rich environments has intensified the challenges of personalized content discovery, positioning recommendation systems as an essential form of passive data management. Multimodal sequential recommendation, which leverages diverse item information such as text and images, has shown great promise in enriching item representations and deepening the understanding of user interests. However, most existing models rely on heuristic fusion strategies that fail to capture the dynamic and context-sensitive nature of user-modal interactions. In real-world scenarios, user preferences for modalities vary not only across individuals but also within the same user across different items or categories. Moreover, the synergistic effects between modalities-where combined signals trigger user interest in ways isolated modalities cannot-remain largely underexplored.
+To this end, we propose CAMMSR, a Category-guided Attentive Mixture of Experts model for Multimodal Sequential Recommendation. At its core, CAMMSR introduces a category-guided attentive mixture of experts (CAMoE) module, which learns specialized item representations from multiple perspectives and explicitly models inter-modal synergies. This component dynamically allocates modality weights guided by an auxiliary category prediction task, enabling adaptive fusion of multimodal signals. Additionally, we design a modality swap contrastive learning task to enhance cross-modal representation alignment through sequence-level augmentation. Extensive experiments on four public datasets demonstrate that CAMMSR consistently outperforms state-of-the-art baselines, validating its effectiveness in achieving adaptive, synergistic, and user-centric multimodal sequential recommendation. 
+
+---
+# Constraint-Aware Generative Re-ranking for Multi-Objective Optimization in Advertising Feeds 
+
+**Authors**: Chenfei Li, Hantao Zhao, Weixi Yao, Ruiming Huang, Rongrong Lu, Geng Tian, Dongying Kong  
+
+**Link**: [PDF](https://arxiv.org/pdf/2603.04227)  
+
+**Abstract**: Optimizing reranking in advertising feeds is a constrained combinatorial problem, requiring simultaneous maximization of platform revenue and preservation of user experience. Recent generative ranking methods enable listwise optimization via autoregressive decoding, but their deployment is hindered by high inference latency and limited constraint handling.
+We propose a constraint-aware generative reranking framework that transforms constrained optimization into bounded neural decoding. Unlike prior approaches that separate generator and evaluator models, our framework unifies sequence generation and reward estimation into a single network.
+We further introduce constraint-aware reward pruning, integrating constraint satisfaction directly into decoding to efficiently generate optimal sequences. Experiments on large-scale industrial feeds and online A/B tests show that our method improves revenue and user engagement while meeting strict latency requirements, providing an efficient neural solution for constrained listwise optimization. 
+
+---
+# SORT: A Systematically Optimized Ranking Transformer for Industrial-scale Recommenders 
+
+**Authors**: Chunqi Wang, Bingchao Wu, Taotian Pang, Jiahao Wang, Jie Yang, Jia Liu, Hao Zhang, Hai Zhu, Lei Shen, Shizhun Wang, Bing Wang, Xiaoyi Zeng  
+
+**Link**: [PDF](https://arxiv.org/pdf/2603.03988)  
+
+**Abstract**: While Transformers have achieved remarkable success in LLMs through superior scalability, their application in industrial-scale ranking models remains nascent, hindered by the challenges of high feature sparsity and low label density. In this paper, we propose SORT (Systematically Optimized Ranking Transformer), a scalable model designed to bridge the gap between Transformers and industrial-scale ranking models. We address the high feature sparsity and low label density challenges through a series of optimizations, including request-centric sample organization, local attention, query pruning and generative pre-training. Furthermore, we introduce a suite of refinements to the tokenization, multi-head attention (MHA), and feed-forward network (FFN) modules, which collectively stabilize the training process and enlarge the model capacity. To maximize hardware efficiency, we optimize our training system to elevate the model FLOPs utilization (MFU) to 22%. Extensive experiments demonstrate that SORT outperforms strong baselines and exhibits excellent scalability across data size, model size and sequence length, while remaining flexible at integrating diverse features. Finally, online A/B testing in large-scale e-commerce scenarios confirms that SORT achieves significant gains in key business metrics, including orders (+6.35%), buyers (+5.97%) and GMV (+5.47%), while simultaneously halving latency (-44.67%) and doubling throughput (+121.33%). 
+
+---
+# DisenReason: Behavior Disentanglement and Latent Reasoning for Shared-Account Sequential Recommendation 
+
+**Authors**: Jiawei Cheng, Min Gao, Zongwei Wang, Xiaofei Zhu, Zhiyi Liu, Wentao Li, Wei Li, Huan Wu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2603.03782)  
+
+**Abstract**: Shared-account usage is common on streaming and e-commerce platforms, where multiple users share one account. Existing shared-account sequential recommendation (SSR) methods often assume a fixed number of latent users per account, limiting their ability to adapt to diverse sharing patterns and reducing recommendation accuracy. Recent latent reasoning technique applied in sequential recommendation (SR) generate intermediate embeddings from the user embedding (e.g, last item embedding) to uncover users' potential interests, which inspires us to treat the problem of inferring the number of latent users as generating a series of intermediate embeddings, shifting from inferring preferences behind user to inferring the users behind account. However, the last item cannot be directly used for reasoning in SSR, as it can only represent the behavior of the most recent latent user, rather than the collective behavior of the entire account. To address this, we propose DisenReason, a two-stage reasoning method tailored to SSR. DisenReason combines behavior disentanglement stage from frequency-domain perspective to create a collective and unified account behavior representation, which serves as a pivot for latent user reasoning stage to infer the number of users behind the account. Experiments on four benchmark datasets show that DisenReason consistently outperforms all state-of-the-art baselines across four benchmark datasets, achieving relative improvements of up to 12.56\% in MRR@5 and 6.06\% in Recall@20. 
+
+---
+# Not All Candidates are Created Equal: A Heterogeneity-Aware Approach to Pre-ranking in Recommender Systems 
+
+**Authors**: Pengfei Tong, Siyuan Chen, Chenwei Zhang, Bo Wang, Qi Pi, Pixun Li, Zuotao Liu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2603.03770)  
+
+**Abstract**: Most large-scale recommender systems follow a multi-stage cascade of retrieval, pre-ranking, ranking, and re-ranking. A key challenge at the pre-ranking stage arises from the heterogeneity of training instances sampled from coarse-grained retrieval results, fine-grained ranking signals, and exposure feedback. Our analysis reveals that prevailing pre-ranking methods, which indiscriminately mix heterogeneous samples, suffer from gradient conflicts: hard samples dominate training while easy ones remain underutilized, leading to suboptimal performance. We further show that the common practice of uniformly scaling model complexity across all samples is inefficient, as it overspends computation on easy cases and slows training without proportional gains. To address these limitations, this paper presents Heterogeneity-Aware Adaptive Pre-ranking (HAP), a unified framework that mitigates gradient conflicts through conflict-sensitive sampling coupled with tailored loss design, while adaptively allocating computational budgets across candidates. Specifically, HAP disentangles easy and hard samples, directing each subset along dedicated optimization paths. Building on this separation, it first applies lightweight models to all candidates for efficient coverage, and further engages stronger models on the hard ones, maintaining accuracy while reducing cost. This approach not only improves pre-ranking effectiveness but also provides a practical perspective on scaling strategies in industrial recommender systems. HAP has been deployed in the Toutiao production system for 9 months, yielding up to 0.4% improvement in user app usage duration and 0.05% in active days, without additional computational cost. We also release a large-scale industrial hybrid-sample dataset to enable the systematic study of source-driven candidate heterogeneity in pre-ranking. 
+
+---
+# Behind the Prompt: The Agent-User Problem in Information Retrieval 
+
+**Authors**: Saber Zerhoudi, Michael Granitzer, Dang Hai Dang, Jelena Mitrovic, Florian Lemmerich, Annette Hautli-Janisz, Stefan Katzenbeisser, Kanishka Ghosh Dastidar  
+
+**Link**: [PDF](https://arxiv.org/pdf/2603.03630)  
+
+**Abstract**: User models in information retrieval rest on a foundational assumption that observed behavior reveals intent. This assumption collapses when the user is an AI agent privately configured by a human operator. For any action an agent takes, a hidden instruction could have produced identical output - making intent non-identifiable at the individual level. This is not a detection problem awaiting better tools; it is a structural property of any system where humans configure agents behind closed doors. We investigate the agent-user problem through a large-scale corpus from an agent-native social platform: 370K posts from 47K agents across 4K communities. Our findings are threefold: (1) individual agent actions cannot be classified as autonomous or operator-directed from observables; (2) population-level platform signals still separate agents into meaningful quality tiers, but a click model trained on agent interactions degrades steadily (-8.5% AUC) as lower-quality agents enter training data; (3) cross-community capability references spread endemically ($R_0$ 1.26-3.53) and resist suppression even under aggressive modeled intervention. For retrieval systems, the question is no longer whether agent users will arrive, but whether models built on human-intent assumptions will survive their presence. 
+
+---
+# MemSifter: Offloading LLM Memory Retrieval via Outcome-Driven Proxy Reasoning 
+
+**Authors**: Jiejun Tan, Zhicheng Dou, Liancheng Zhang, Yuyang Hu, Yiruo Cheng, Ji-Rong Wen  
+
+**Link**: [PDF](https://arxiv.org/pdf/2603.03379)  
+
+**Abstract**: As Large Language Models (LLMs) are increasingly used for long-duration tasks, maintaining effective long-term memory has become a critical challenge. Current methods often face a trade-off between cost and accuracy. Simple storage methods often fail to retrieve relevant information, while complex indexing methods (such as memory graphs) require heavy computation and can cause information loss. Furthermore, relying on the working LLM to process all memories is computationally expensive and slow. To address these limitations, we propose MemSifter, a novel framework that offloads the memory retrieval process to a small-scale proxy model. Instead of increasing the burden on the primary working LLM, MemSifter uses a smaller model to reason about the task before retrieving the necessary information. This approach requires no heavy computation during the indexing phase and adds minimal overhead during inference. To optimize the proxy model, we introduce a memory-specific Reinforcement Learning (RL) training paradigm. We design a task-outcome-oriented reward based on the working LLM's actual performance in completing the task. The reward measures the actual contribution of retrieved memories by mutiple interactions with the working LLM, and discriminates retrieved rankings by stepped decreasing contributions. Additionally, we employ training techniques such as Curriculum Learning and Model Merging to improve performance. We evaluated MemSifter on eight LLM memory benchmarks, including Deep Research tasks. The results demonstrate that our method meets or exceeds the performance of existing state-of-the-art approaches in both retrieval accuracy and final task completion. MemSifter offers an efficient and scalable solution for long-term LLM memory. We have open-sourced the model weights, code, and training data to support further research. 
+
+---
+# Turning Trust to Transactions: Tracking Affiliate Marketing and FTC Compliance in YouTube's Influencer Economy 
+
+**Authors**: Chen Sun, Yash Vekaria, Zubair Shafiq, Rishab Nithyanand  
+
+**Link**: [PDF](https://arxiv.org/pdf/2603.04383)  
+
+**Abstract**: YouTube has evolved into a powerful platform that where creators monetize their influence through affiliate marketing, raising concerns about transparency and ethics, especially when creators fail to disclose their affiliate relationships. Although regulatory agencies like the US Federal Trade Commission (FTC) have issued guidelines to address these issues, non-compliance and consumer harm persist, and the extent of these problems remains unclear. In this paper, we introduce tools, developed with insights from recent advances in Web measurement and NLP research, to examine the state of the affiliate marketing ecosystem on YouTube. We apply these tools to a 10-year dataset of 2 million videos from nearly 540,000 creators, analyzing the prevalence of affiliate marketing on YouTube and the rates of non-compliant behavior. Our findings reveal that affiliate links are widespread, yet dis- closure compliance remains low, with most videos failing to meet FTC standards. Furthermore, we analyze the effects of different stakeholders in improving disclosure behavior. Our study suggests that the platform is highly associated with improved compliance through standardized disclosure features. We recommend that regulators and affiliate partners collaborate with platforms to enhance transparency, accountability, and trust in the influencer economy. 
+
+---
+# $τ$-Knowledge: Evaluating Conversational Agents over Unstructured Knowledge 
+
+**Authors**: Quan Shi, Alexandra Zytek, Pedram Razavi, Karthik Narasimhan, Victor Barres  
+
+**Link**: [PDF](https://arxiv.org/pdf/2603.04370)  
+
+**Abstract**: Conversational agents are increasingly deployed in knowledge-intensive settings, where correct behavior depends on retrieving and applying domain-specific knowledge from large, proprietary, and unstructured corpora during live interactions with users. Yet most existing benchmarks evaluate retrieval or tool use independently of each other, creating a gap in realistic, fully agentic evaluation over unstructured data in long-horizon interactions. We introduce $\tau$-Knowledge, an extension of $\tau$-Bench for evaluating agents in environments where success depends on coordinating external, natural-language knowledge with tool outputs to produce verifiable, policy-compliant state changes. Our new domain, $\tau$-Banking, models realistic fintech customer support workflows in which agents must navigate roughly 700 interconnected knowledge documents while executing tool-mediated account updates. Across embedding-based retrieval and terminal-based search, even frontier models with high reasoning budgets achieve only $\sim$25.5% pass^1, with reliability degrading sharply over repeated trials. Agents struggle to retrieve the correct documents from densely interlinked knowledge bases and to reason accurately over complex internal policies. Overall, $\tau$-Knowledge provides a realistic testbed for developing agents that integrate unstructured knowledge in human-facing deployments. 
+
+---
+# LabelBuddy: An Open Source Music and Audio Language Annotation Tagging Tool Using AI Assistance 
+
+**Authors**: Ioannis Prokopiou, Ioannis Sina, Agisilaos Kounelis, Pantelis Vikatos, Themos Stafylakis  
+
+**Link**: [PDF](https://arxiv.org/pdf/2603.04293)  
+
+**Abstract**: The advancement of Machine learning (ML), Large Audio Language Models (LALMs), and autonomous AI agents in Music Information Retrieval (MIR) necessitates a shift from static tagging to rich, human-aligned representation learning. However, the scarcity of open-source infrastructure capable of capturing the subjective nuances of audio annotation remains a critical bottleneck. This paper introduces \textbf{LabelBuddy}, an open-source collaborative auto-tagging audio annotation tool designed to bridge the gap between human intent and machine understanding. Unlike static tools, it decouples the interface from inference via containerized backends, allowing users to plug in custom models for AI-assisted pre-annotation. We describe the system architecture, which supports multi-user consensus, containerized model isolation, and a roadmap for extending agents and LALMs. Code available at this https URL. 
+
+---
+# AgentSelect: Benchmark for Narrative Query-to-Agent Recommendation 
+
+**Authors**: Yunxiao Shi, Wujiang Xu, Tingwei Chen, Haoning Shang, Ling Yang, Yunfeng Wan, Zhuo Cao, Xing Zi, Dimitris N. Metaxas, Min Xu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2603.03761)  
+
+**Abstract**: LLM agents are rapidly becoming the practical interface for task automation, yet the ecosystem lacks a principled way to choose among an exploding space of deployable configurations. Existing LLM leaderboards and tool/agent benchmarks evaluate components in isolation and remain fragmented across tasks, metrics, and candidate pools, leaving a critical research gap: there is little query-conditioned supervision for learning to recommend end-to-end agent configurations that couple a backbone model with a toolkit. We address this gap with AgentSelect, a benchmark that reframes agent selection as narrative query-to-agent recommendation over capability profiles and systematically converts heterogeneous evaluation artifacts into unified, positive-only interaction data. AgentSelectcomprises 111,179 queries, 107,721 deployable agents, and 251,103 interaction records aggregated from 40+ sources, spanning LLM-only, toolkit-only, and compositional agents. Our analyses reveal a regime shift from dense head reuse to long-tail, near one-off supervision, where popularity-based CF/GNN methods become fragile and content-aware capability matching is essential. We further show that Part~III synthesized compositional interactions are learnable, induce capability-sensitive behavior under controlled counterfactual edits, and improve coverage over realistic compositions; models trained on AgentSelect also transfer to a public agent marketplace (MuleRun), yielding consistent gains on an unseen catalog. Overall, AgentSelect provides the first unified data and evaluation infrastructure for agent recommendation, which establishes a reproducible foundation to study and accelerate the emerging agent ecosystem. 
+
+---
+# SafeCRS: Personalized Safety Alignment for LLM-Based Conversational Recommender Systems 
+
+**Authors**: Haochang Hao, Yifan Xu, Xinzhuo Li, Yingqiang Ge, Lu Cheng  
+
+**Link**: [PDF](https://arxiv.org/pdf/2603.03536)  
+
+**Abstract**: Current LLM-based conversational recommender systems (CRS) primarily optimize recommendation accuracy and user satisfaction. We identify an underexplored vulnerability in which recommendation outputs may negatively impact users by violating personalized safety constraints, when individualized safety sensitivities -- such as trauma triggers, self-harm history, or phobias -- are implicitly inferred from the conversation but not respected during recommendation. We formalize this challenge as personalized CRS safety and introduce SafeRec, a new benchmark dataset designed to systematically evaluate safety risks in LLM-based CRS under user-specific constraints. To further address this problem, we propose SafeCRS, a safety-aware training framework that integrates Safe Supervised Fine-Tuning (Safe-SFT) with Safe Group reward-Decoupled Normalization Policy Optimization (Safe-GDPO) to jointly optimize recommendation quality and personalized safety alignment. Extensive experiments on SafeRec demonstrate that SafeCRS reduces safety violation rates by up to 96.5% relative to the strongest recommendation-quality baseline while maintaining competitive recommendation quality. Warning: This paper contains potentially harmful and offensive content. 
+
+---
+# Stringology-Based Motif Discovery from EEG Signals: an ADHD Case Study 
+
+**Authors**: Anat Dahan, Samah Ghazawi  
+
+**Link**: [PDF](https://arxiv.org/pdf/2603.03476)  
+
+**Abstract**: We propose a novel computational framework for analyzing electroencephalography (EEG) time series using methods from stringology, the study of efficient algorithms for string processing, to systematically identify and characterize recurrent temporal patterns in neural signals. The primary aim is to introduce quantitative measures to understand neural signal dynamics, with the present findings serving as a proof-of-concept. The framework adapts order-preserving matching (OPM) and Cartesian tree matching (CTM) to detect temporal motifs that preserve relative ordering and hierarchical structure while remaining invariant to amplitude scaling. This approach provides a temporally precise representation of EEG dynamics that complements traditional spectral and global complexity analyses. To evaluate its utility, we applied the framework to multichannel EEG recordings from individuals with attention-deficit/hyperactivity disorder (ADHD) and matched controls using a publicly available dataset. Highly recurrent, group-specific motifs were extracted and quantified using both OPM and CTM. The ADHD group exhibited significantly higher motif frequencies, suggesting increased repetitiveness in neural activity. OPM analysis revealed shorter motif lengths and greater gradient instability in ADHD, reflected in larger mean and maximal inter-sample amplitude changes. CTM analysis further demonstrated reduced hierarchical complexity in ADHD, characterized by shallower tree structures and fewer hierarchical levels despite comparable motif lengths. These findings suggest that ADHD-related EEG alterations involve systematic differences in the structure, stability, and hierarchical organization of recurrent temporal patterns. The proposed stringology-based motif framework provides a complementary computational tool with potential applications for objective biomarker development in neurodevelopmental disorders. 
+
+---
+# Graph Hopfield Networks: Energy-Based Node Classification with Associative Memory 
+
+**Authors**: Abinav Rao, Alex Wa, Rishi Athavale  
+
+**Link**: [PDF](https://arxiv.org/pdf/2603.03464)  
+
+**Abstract**: We introduce Graph Hopfield Networks, whose energy function couples associative memory retrieval with graph Laplacian smoothing for node classification. Gradient descent on this joint energy yields an iterative update interleaving Hopfield retrieval with Laplacian propagation. Memory retrieval provides regime-dependent benefits: up to 2.0~pp on sparse citation networks and up to 5 pp additional robustness under feature masking; the iterative energy-descent architecture itself is a strong inductive bias, with all variants (including the memory-disabled NoMem ablation) outperforming standard baselines on Amazon co-purchase graphs. Tuning enables graph sharpening for heterophilous benchmarks without architectural changes. 
+
+---
+# Combating data scarcity in recommendation services: Integrating cognitive types of VARK and neural network technologies (LLM) 
+
+**Authors**: Nikita Zmanovskii  
+
+**Link**: [PDF](https://arxiv.org/pdf/2603.03309)  
+
+**Abstract**: Cold start scenarios present fundamental obstacles to effective recommendation generation, particularly when dealing with users lacking interaction history or items with sparse metadata. This research proposes an innovative hybrid framework that leverages Large Language Models (LLMs) for content semantic analysis and knowledge graph development, integrated with cognitive profiling based on VARK (Visual, Auditory, Reading/Writing, Kinesthetic) learning preferences. The proposed system tackles multiple cold start dimensions: enriching inadequate item descriptions through LLM processing, generating user profiles from minimal data, and dynamically adjusting presentation formats based on cognitive assessment. The framework comprises six integrated components: semantic metadata enhancement, dynamic graph construction, VARK-based profiling, mental state estimation, graph-enhanced retrieval with LLM-powered ranking, and adaptive interface design with iterative learning. Experimental validation on MovieLens-1M dataset demonstrates the system's capacity for personalized recommendation generation despite limited initial information. This work establishes groundwork for cognitively-aware recommendation systems capable of overcoming cold start limitations through semantic comprehension and psychological modeling, offering personalized, explainable recommendations from initial user contact. 
+
+---
+# Developing an AI Assistant for Knowledge Management and Workforce Training in State DOTs 
+
+**Authors**: Divija Amaram, Lu Gao, Gowtham Reddy Gudla, Tejaswini Sanjay Katale  
+
+**Link**: [PDF](https://arxiv.org/pdf/2603.03302)  
+
+**Abstract**: Effective knowledge management is critical for preserving institutional expertise and improving the efficiency of workforce training in state transportation agencies. Traditional approaches, such as static documentation, classroom-based instruction, and informal mentorship, often lead to fragmented knowledge transfer, inefficiencies, and the gradual loss of expertise as senior engineers retire. Moreover, given the enormous volume of technical manuals, guidelines, and research reports maintained by these agencies, it is increasingly challenging for engineers to locate relevant information quickly and accurately when solving field problems or preparing for training tasks. These limitations hinder timely decision-making and create steep learning curves for new personnel in maintenance and construction operations. To address these challenges, this paper proposes a Retrieval-Augmented Generation (RAG) framework with a multi-agent architecture to support knowledge management and decision making. The system integrates structured document retrieval with real-time, context-aware response generation powered by a large language model (LLM). Unlike conventional single-pass RAG systems, the proposed framework employs multiple specialized agents for retrieval, answer generation, evaluation, and query refinement, which enables iterative improvement and quality control. In addition, the system incorporates an open-weight vision-language model to convert technical figures into semantic textual representations, which allows figure-based knowledge to be indexed and retrieved alongside text. Retrieved text and figure-based context are then provided to an open-weight large language model, which generates the final responses grounded in the retrieved evidence. 
+
+---
+# PlugMem: A Task-Agnostic Plugin Memory Module for LLM Agents 
+
+**Authors**: Ke Yang, Zixi Chen, Xuan He, Jize Jiang, Michel Galley, Chenglong Wang, Jianfeng Gao, Jiawei Han, ChengXiang Zhai  
+
+**Link**: [PDF](https://arxiv.org/pdf/2603.03296)  
+
+**Abstract**: Long-term memory is essential for large language model (LLM) agents operating in complex environments, yet existing memory designs are either task-specific and non-transferable, or task-agnostic but less effective due to low task-relevance and context explosion from raw memory retrieval. We propose PlugMem, a task-agnostic plugin memory module that can be attached to arbitrary LLM agents without task-specific redesign. Motivated by the fact that decision-relevant information is concentrated as abstract knowledge rather than raw experience, we draw on cognitive science to structure episodic memories into a compact, extensible knowledge-centric memory graph that explicitly represents propositional and prescriptive knowledge. This representation enables efficient memory retrieval and reasoning over task-relevant knowledge, rather than verbose raw trajectories, and departs from other graph-based methods like GraphRAG by treating knowledge as the unit of memory access and organization instead of entities or text chunks. We evaluate PlugMem unchanged across three heterogeneous benchmarks (long-horizon conversational question answering, multi-hop knowledge retrieval, and web agent tasks). The results show that PlugMem consistently outperforms task-agnostic baselines and exceeds task-specific memory designs, while also achieving the highest information density under a unified information-theoretic analysis. Code and data are available at this https URL. 
+
+---
+# From Conflict to Consensus: Boosting Medical Reasoning via Multi-Round Agentic RAG 
+
+**Authors**: Wenhao Wu, Zhentao Tang, Yafu Li, Shixiong Kai, Mingxuan Yuan, Zhenhong Sun, Chunlin Chen, Zhi Wang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2603.03292)  
+
+**Abstract**: Large Language Models (LLMs) exhibit high reasoning capacity in medical question-answering, but their tendency to produce hallucinations and outdated knowledge poses critical risks in healthcare fields. While Retrieval-Augmented Generation (RAG) mitigates these issues, existing methods rely on noisy token-level signals and lack the multi-round refinement required for complex reasoning. In the paper, we propose **MA-RAG** (**M**ulti-Round **A**gentic RAG), a framework that facilitates test-time scaling for complex medical reasoning by iteratively evolving both external evidence and internal reasoning history within an agentic refinement loop. At each round, the agent transforms semantic **conflict** among candidate responses into actionable queries to retrieve external evidence, while optimizing history reasoning traces to mitigate long-context degradation. MA-RAG extends the *self-consistency* principle by leveraging the lack of consistency as a proactive signal for multi-round agentic reasoning and retrieval, and mirrors a *boosting* mechanism that iteratively minimizes the residual error toward a stable, high-fidelity medical **consensus**. Extensive evaluations across 7 medical Q&A benchmarks show that MA-RAG consistently surpasses competitive inference-time scaling and RAG baselines, delivering **substantial +6.8 points** on average accuracy over the backbone model. Our code is available at [this url](this https URL). 
+
+---
+# AriadneMem: Threading the Maze of Lifelong Memory for LLM Agents 
+
+**Authors**: Wenhui Zhu, Xiwen Chen, Zhipeng Wang, Jingjing Wang, Xuanzhao Dong, Minzhou Huang, Rui Cai, Hejian Sang, Hao Wang, Peijie Qiu, Yueyue Deng, Prayag Tiwari, Brendan Hogan Rappazzo, Yalin Wang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2603.03290)  
+
+**Abstract**: Long-horizon LLM agents require memory systems that remain accurate under fixed context budgets. However, existing systems struggle with two persistent challenges in long-term dialogue: (i) \textbf{disconnected evidence}, where multi-hop answers require linking facts distributed across time, and (ii) \textbf{state updates}, where evolving information (e.g., schedule changes) creates conflicts with older static logs. We propose AriadneMem, a structured memory system that addresses these failure modes via a decoupled two-phase pipeline. In the \textbf{offline construction phase}, AriadneMem employs \emph{entropy-aware gating} to filter noise and low-information message before LLM extraction and applies \emph{conflict-aware coarsening} to merge static duplicates while preserving state transitions as temporal edges. In the \textbf{online reasoning phase}, rather than relying on expensive iterative planning, AriadneMem executes \emph{algorithmic bridge discovery} to reconstruct missing logical paths between retrieved facts, followed by \emph{single-call topology-aware synthesis}. On LoCoMo experiments with GPT-4o, AriadneMem improves \textbf{Multi-Hop F1 by 15.2\%} and \textbf{Average F1 by 9.0\%} over strong baselines. Crucially, by offloading reasoning to the graph layer, AriadneMem reduces \textbf{total runtime by 77.8\%} using only \textbf{497} context tokens. The code is available at this https URL. 
+
+---
