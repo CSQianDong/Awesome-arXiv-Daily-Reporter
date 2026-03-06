@@ -1,0 +1,108 @@
+# Core-based Hierarchies for Efficient GraphRAG 
+
+**Authors**: Jakir Hossain, Ahmet Erdem Sarıyüce  
+
+**Link**: [PDF](https://arxiv.org/pdf/2603.05207)  
+
+**Abstract**: Retrieval-Augmented Generation (RAG) enhances large language models by incorporating external knowledge. However, existing vector-based methods often fail on global sensemaking tasks that require reasoning across many documents. GraphRAG addresses this by organizing documents into a knowledge graph with hierarchical communities that can be recursively summarized. Current GraphRAG approaches rely on Leiden clustering for community detection, but we prove that on sparse knowledge graphs, where average degree is constant and most nodes have low degree, modularity optimization admits exponentially many near-optimal partitions, making Leiden-based communities inherently non-reproducible. To address this, we propose replacing Leiden with k-core decomposition, which yields a deterministic, density-aware hierarchy in linear time. We introduce a set of lightweight heuristics that leverage the k-core hierarchy to construct size-bounded, connectivity-preserving communities for retrieval and summarization, along with a token-budget-aware sampling strategy that reduces LLM costs. We evaluate our methods on real-world datasets including financial earnings transcripts, news articles, and podcasts, using three LLMs for answer generation and five independent LLM judges for head-to-head evaluation. Across datasets and models, our approach consistently improves answer comprehensiveness and diversity while reducing token usage, demonstrating that k-core-based GraphRAG is an effective and efficient framework for global sensemaking. 
+
+---
+# Debiasing Sequential Recommendation with Time-aware Inverse Propensity Scoring 
+
+**Authors**: Sirui Huang, Jing Long, Qian Li, Guandong Xu, Qing Li  
+
+**Link**: [PDF](https://arxiv.org/pdf/2603.04986)  
+
+**Abstract**: Sequential Recommendation (SR) predicts users next interactions by modeling the temporal order of their historical behaviors. Existing approaches, including traditional sequential models and generative recommenders, achieve strong performance but primarily rely on explicit interactions such as clicks or purchases while overlooking item exposures. This ignorance introduces selection bias, where exposed but unclicked items are misinterpreted as disinterest, and exposure bias, where unexposed items are treated as irrelevant. Effectively addressing these biases requires distinguishing between items that were "not exposed" and those that were "not of interest", which cannot be reliably inferred from correlations in historical data. Counterfactual reasoning provides a natural solution by estimating user preferences under hypothetical exposure, and Inverse Propensity Scoring (IPS) is a common tool for such estimation. However, conventional IPS methods are static and fail to capture the sequential dependencies and temporal dynamics of user behavior. To overcome these limitations, we propose Time aware Inverse Propensity Scoring (TIPS). Unlike traditional static IPS, TIPS effectively accounts for sequential dependencies and temporal dynamics, thereby capturing user preferences more accurately. Extensive experiments show that TIPS consistently enhances recommendation performance as a plug-in for various sequential recommenders. Our code will be publicly available upon acceptance. 
+
+---
+# Detecting RAG Advertisements Across Advertising Styles 
+
+**Authors**: Sebastian Heineking, Wilhelm Pertsch, Ines Zelch, Janek Bevendorff, Benno Stein, Matthias Hagen, Martin Potthast  
+
+**Link**: [PDF](https://arxiv.org/pdf/2603.04925)  
+
+**Abstract**: Large language models (LLMs) enable a new form of advertising for retrieval-augmented generation (RAG) systems in which organic responses are blended with contextually relevant ads. The prospect of such "generated native ads" has sparked interest in whether they can be detected automatically. Existing datasets, however, do not reflect the diversity of advertising styles discussed in the marketing literature. In this paper, we (1) develop a taxonomy of advertising styles for LLMs, combining the style dimensions of explicitness and type of appeal, (2) simulate that advertisers may attempt to evade detection by changing their advertising style, and (3) evaluate a variety of ad-detection approaches with respect to their robustness under these changes. Expanding previous work on ad detection, we train models that use entity recognition to exactly locate an ad in an LLM response and find them to be both very effective at detecting responses with ads and largely robust to changes in the advertising style. Since ad blocking will be performed on low-resource end-user devices, we include lightweight models like random forests and SVMs in our evaluation. These models, however, are brittle under such changes, highlighting the need for further efficiency-oriented research for a practical approach to blocking of generated ads. 
+
+---
+# Beyond Text: Aligning Vision and Language for Multimodal E-Commerce Retrieval 
+
+**Authors**: Qujiaheng Zhang, Guagnyue Xu, Fengjie Li  
+
+**Link**: [PDF](https://arxiv.org/pdf/2603.04836)  
+
+**Abstract**: Modern e-commerce search is inherently multimodal: customers make purchase decisions by jointly considering product text and visual informations. However, most industrial retrieval and ranking systems primarily rely on textual information, underutilizing the rich visual signals available in product images. In this work, we study unified text-image fusion for two-tower retrieval models in the e-commerce domain. We demonstrate that domain-specific fine-tuning and two stage alignment between query with product text and image modalities are both crucial for effective multimodal retrieval. Building on these insights, we propose a noval modality fusion network to fuse image and text information and capture cross-modal complementary information. Experiments on large-scale e-commerce datasets validate the effectiveness of the proposed approach. 
+
+---
+# Scaling Laws for Reranking in Information Retrieval 
+
+**Authors**: Rahul Seetharaman, Aman Bansal, Hamed Zamani, Kaustubh Dhole  
+
+**Link**: [PDF](https://arxiv.org/pdf/2603.04816)  
+
+**Abstract**: Scaling laws have been observed across a wide range of tasks, such as natural language generation and dense retrieval, where performance follows predictable patterns as model size, data, and compute grow. However, these scaling laws are insufficient for understanding the scaling behavior of multi-stage retrieval systems, which typically include a reranking stage. In large-scale multi-stage retrieval systems, reranking is the final and most influential step before presenting a ranked list of items to the end user. In this work, we present the first systematic study of scaling laws for rerankers by analyzing performance across model sizes and data budgets for three popular paradigms: pointwise, pairwise, and listwise reranking. Using a detailed case study with cross-encoder rerankers, we demonstrate that performance follows a predictable power law. This regularity allows us to accurately forecast the performance of larger models for some metrics more than others using smaller-scale experiments, offering a robust methodology for saving significant computational resources. For example, we accurately estimate the NDCG of a 1B-parameter model by training and evaluating only smaller models (up to 400M parameters), in both in-domain as well as out-of-domain settings. Our experiments encompass span several loss functions, models and metrics and demonstrate that downstream metrics like NDCG, MAP (Mean Avg Precision) show reliable scaling behavior and can be forecasted accurately at scale, while highlighting the limitations of metrics like Contrastive Entropy and MRR (Mean Reciprocal Rank) which do not follow predictable scaling behavior in all instances. Our results establish scaling principles for reranking and provide actionable insights for building industrial-grade retrieval systems. 
+
+---
+# DARE: Aligning LLM Agents with the R Statistical Ecosystem via Distribution-Aware Retrieval 
+
+**Authors**: Maojun Sun, Yue Wu, Yifei Xie, Ruijian Han, Binyan Jiang, Defeng Sun, Yancheng Yuan, Jian Huang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2603.04743)  
+
+**Abstract**: Large Language Model (LLM) agents can automate data-science workflows, but many rigorous statistical methods implemented in R remain underused because LLMs struggle with statistical knowledge and tool retrieval. Existing retrieval-augmented approaches focus on function-level semantics and ignore data distribution, producing suboptimal matches. We propose DARE (Distribution-Aware Retrieval Embedding), a lightweight, plug-and-play retrieval model that incorporates data distribution information into function representations for R package retrieval. Our main contributions are: (i) RPKB, a curated R Package Knowledge Base derived from 8,191 high-quality CRAN packages; (ii) DARE, an embedding model that fuses distributional features with function metadata to improve retrieval relevance; and (iii) RCodingAgent, an R-oriented LLM agent for reliable R code generation and a suite of statistical analysis tasks for systematically evaluating LLM agents in realistic analytical scenarios. Empirically, DARE achieves an NDCG at 10 of 93.47%, outperforming state-of-the-art open-source embedding models by up to 17% on package retrieval while using substantially fewer parameters. Integrating DARE into RCodingAgent yields significant gains on downstream analysis tasks. This work helps narrow the gap between LLM automation and the mature R statistical ecosystem. 
+
+---
+# Still Fresh? Evaluating Temporal Drift in Retrieval Benchmarks 
+
+**Authors**: Nathan Kuissi, Suraj Subrahmanyan, Nandan Thakur, Jimmy Lin  
+
+**Link**: [PDF](https://arxiv.org/pdf/2603.04532)  
+
+**Abstract**: Information retrieval (IR) benchmarks typically follow the Cranfield paradigm, relying on static and predefined corpora. However, temporal changes in technical corpora, such as API deprecations and code reorganizations, can render existing benchmarks stale. In our work, we investigate how temporal corpus drift affects FreshStack, a retrieval benchmark focused on technical domains. We examine two independent corpus snapshots of FreshStack from October 2024 and October 2025 to answer questions about LangChain. Our analysis shows that all but one query posed in 2024 remain fully supported by the 2025 corpus, as relevant documents "migrate" from LangChain to competitor repositories, such as LlamaIndex. Next, we compare the accuracy of retrieval models on both snapshots and observe only minor shifts in model rankings, with overall strong correlation of up to 0.978 Kendall $\tau$ at Recall@50. These results suggest that retrieval benchmarks re-judged with evolving temporal corpora can remain reliable for retrieval evaluation. We publicly release all our artifacts at this https URL. 
+
+---
+# Signal in the Noise: Decoding the Reality of Airline Service Quality with Large Language Models 
+
+**Authors**: Ahmed Dawoud, Osama El-Shamy, Ahmed Habashy  
+
+**Link**: [PDF](https://arxiv.org/pdf/2603.04404)  
+
+**Abstract**: Traditional service quality metrics often fail to capture the nuanced drivers of passenger satisfaction hidden within unstructured online feedback. This study validates a Large Language Model (LLM) framework designed to extract granular insights from such data. Analyzing over 16,000 TripAdvisor reviews for EgyptAir and Emirates (2016-2025), the study utilizes a multi-stage pipeline to categorize 36 specific service issues. The analysis uncovers a stark "operational perception disconnect" for EgyptAir: despite reported operational improvements, passenger satisfaction plummeted post-2022 (ratings < 2.0). Our approach identified specific drivers missed by conventional metrics-notably poor communication during disruptions and staff conduct-and pinpointed critical sentiment erosion in key tourism markets. These findings confirm the framework's efficacy as a powerful diagnostic tool, surpassing traditional surveys by transforming unstructured passenger voices into actionable strategic intelligence for the airline and tourism sectors. 
+
+---
+# FinRetrieval: A Benchmark for Financial Data Retrieval by AI Agents 
+
+**Authors**: Eric Y. Kim, Jie Huang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2603.04403)  
+
+**Abstract**: AI agents increasingly assist with financial research, yet no benchmark evaluates their ability to retrieve specific numeric values from structured databases. We introduce FinRetrieval, a benchmark of 500 financial retrieval questions with ground truth answers, agent responses from 14 configurations across three frontier providers (Anthropic, OpenAI, Google), and complete tool call execution traces. Our evaluation reveals that tool availability dominates performance: Claude Opus achieves 90.8% accuracy with structured data APIs but only 19.8% with web search alone--a 71 percentage point gap that exceeds other providers by 3-4x. We find that reasoning mode benefits vary inversely with base capability (+9.0pp for OpenAI vs +2.8pp for Claude), explained by differences in base-mode tool utilization rather than reasoning ability. Geographic performance gaps (5.6pp US advantage) stem from fiscal year naming conventions, not model limitations. We release the dataset, evaluation code, and tool traces to enable research on financial AI systems. 
+
+---
+# SearchGym: A Modular Infrastructure for Cross-Platform Benchmarking and Hybrid Search Orchestration 
+
+**Authors**: Jerome Tze-Hou Hsu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2603.04402)  
+
+**Abstract**: The rapid growth of Retrieval-Augmented Generation (RAG) has created a proliferation of toolkits, yet a fundamental gap remains between experimental prototypes and robust, production-ready systems. We present SearchGym, a modular infrastructure designed for cross-platform benchmarking and hybrid search orchestration. Unlike existing model-centric frameworks, SearchGym decouples data representation, embedding strategies, and retrieval logic into stateful abstractions: Dataset, VectorSet, and App. This separation enables a Compositional Config Algebra, allowing designers to synthesize entire systems from hierarchical configurations while ensuring perfect reproducibility. Moreover, we analyze the "Top-$k$ Cognizance" in hybrid retrieval pipelines, demonstrating that the optimal sequence of semantic ranking and structured filtering is highly dependent on filter strength. Evaluated on the LitSearch expert-annotated benchmark, SearchGym achieves a 70% Top-100 retrieval rate. SearchGym reveals a design tension between generalizability and optimizability, presenting the potential where engineering optimization may serve as a tool for uncovering the causal mechanisms inherent in information retrieval across heterogeneous domains. An open-source implementation of SearchGym is available at: this https URL 
+
+---
+# CONE: Embeddings for Complex Numerical Data Preserving Unit and Variable Semantics 
+
+**Authors**: Gyanendra Shrestha, Anna Pyayt, Michael Gubanov  
+
+**Link**: [PDF](https://arxiv.org/pdf/2603.04741)  
+
+**Abstract**: Large pre-trained models (LMs) and Large Language Models (LLMs) are typically effective at capturing language semantics and contextual relationships. However, these models encounter challenges in maintaining optimal performance on tasks involving numbers. Blindly treating numerical or structured data as terms is inadequate -- their semantics must be well understood and encoded by the models. In this paper, we propose CONE, a hybrid transformer encoder pre-trained model that encodes numbers, ranges, and gaussians into an embedding vector space preserving distance. We introduce a novel composite embedding construction algorithm that integrates numerical values, ranges or gaussians together with their associated units and attribute names to precisely capture their intricate semantics. We conduct extensive experimental evaluation on large-scale datasets across diverse domains (web, medical, finance, and government) that justifies CONE's strong numerical reasoning capabilities, achieving an F1 score of 87.28% on DROP, a remarkable improvement of up to 9.37% in F1 over state-of-the-art (SOTA) baselines, and outperforming major SOTA models with a significant Recall@10 gain of up to 25%. 
+
+---
+# iAgentBench: Benchmarking Sensemaking Capabilities of Information-Seeking Agents on High-Traffic Topics 
+
+**Authors**: Preetam Prabhu Srikar Dammu, Arnav Palkhiwala, Tanya Roosta, Chirag Shah  
+
+**Link**: [PDF](https://arxiv.org/pdf/2603.04656)  
+
+**Abstract**: With the emergence of search-enabled generative QA systems, users are increasingly turning to tools that browse, aggregate, and reconcile evidence across multiple sources on their behalf. Yet many widely used QA benchmarks remain answerable by retrieving a single relevant passage, making them poorly suited for measuring cross-source sensemaking, such as integrating evidence, tracking causal links, and resolving dependencies across facets of a topic. We present iAgentBench, a dynamic ODQA benchmark that targets these higher-level information needs while keeping questions natural and grounded in realistic information-seeking behavior. iAgentBench draws seed topics from real-world attention signals and uses common user intent patterns to construct user-like questions whose answers require combining evidence from multiple sources, not just extracting a single snippet. Each instance is released with traceable evidence and auditable intermediate artifacts that support contamination checks and enable fine-grained diagnosis of failures in retrieval versus synthesis. Experiments across multiple LLMs show that retrieval improves accuracy, but retrieval alone does not reliably resolve these questions, underscoring the need to evaluate evidence use, not just evidence access. 
+
+---
