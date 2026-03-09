@@ -1,0 +1,110 @@
+# Efficient, Property-Aligned Fan-Out Retrieval via RL-Compiled Diffusion 
+
+**Authors**: Pengcheng Jiang, Judith Yue Li, Moonkyung Ryu, R. Lily Hu, Kun Su, Zhong Yi Wan, Liam Hebert, Hao Peng, Jiawei Han, Dima Kuzmin, Craig Boutilier  
+
+**Link**: [PDF](https://arxiv.org/pdf/2603.06397)  
+
+**Abstract**: Many modern retrieval problems are set-valued: given a broad intent, the system must return a collection of results that optimizes higher-order properties
+(e.g., diversity, coverage, complementarity, coherence) while remaining grounded with respect to a fixed database. Set-valued objectives are typically
+non-decomposable and are not captured by existing supervised (query, content) datasets which only prioritize top-1 retrieval. Consequently, fan-out
+retrieval is often employed to generate diverse subqueries to retrieve item sets. While reinforcement learning (RL) can optimize set-level objectives via
+interaction, deploying an RL-tuned LLM for fan-out retrieval is prohibitively expensive at inference time. Conversely, diffusion-based generative
+retrieval enables efficient single-pass fan-out in embedding space, but requires objective-aligned training targets. To address these issues, we propose
+R4T (Retrieve-for-Train), which uses RL once as an objective transducer in a three-step process: (i) train a fan-out LLM with composite set-level rewards,
+(ii) synthesize objective-consistent training pairs, and (iii) train a lightweight diffusion retriever to model the conditional distribution of set-valued
+outputs. Across large-scale fashion and music benchmarks consisting of curated item sets, we show that R4T improves retrieval quality relative to strong
+baselines while reducing query-time fan-out latency by an order of magnitude. 
+
+---
+# MLLMRec-R1: Incentivizing Reasoning Capability in Large Language Models for Multimodal Sequential Recommendation 
+
+**Authors**: Yu Wang, Yonghui Yang, Le Wu, Jiancan Wu, Hefei Xu, Hui Lin  
+
+**Link**: [PDF](https://arxiv.org/pdf/2603.06243)  
+
+**Abstract**: Group relative policy optimization (GRPO) has become a standard post-training paradigm for improving reasoning and preference alignment in large language models (LLMs), and has recently shown strong effectiveness in LLM-based recommender systems. However, extending GRPO-based reasoning pipelines to multimodal sequential recommendation (MSR) with multimodal large language models (MLLMs) faces fundamental obstacles. First, MSR requires jointly encoding visual content for both historical interactions and multiple candidate items, causing visual tokens to dominate the input and making the cost of group-based rollout scale with history length and candidate set size, which renders GRPO-based training prohibitively expensive. Second, existing Chain-of-Thought (CoT) supervision suffers from reward inflation in recommendation scenarios, where higher training rewards do not reliably translate into improved ranking performance and may induce shortcut learning. To address these challenges, we propose MLLMRec-R1, an efficient and stable GRPO-based reasoning framework for multimodal sequential recommendation. MLLMRec-R1 textualizes visual signals offline to eliminate expensive visual tokens while preserving multimodal semantics, and constructs high-quality multimodal CoT supervision through refinement and confidence-aware assessment. Furthermore, a mixed-grained data augmentation strategy selectively injects reliable CoT samples while retaining standard training data, mitigating reward inflation and improving generalization stability. Extensive experiments on three benchmark datasets demonstrate that MLLMRec-R1 consistently outperforms state-of-the-art methods, establishing a practical and effective GRPO-based reasoning pipeline for multimodal sequential recommendation. The code is available at this https URL. 
+
+---
+# ChatShopBuddy: Towards Reliable Conversational Shopping Agents via Reinforcement Learning 
+
+**Authors**: Yiruo Cheng, Kelong Mao, Tianhao Li, Jiejun Tan, Ji-Rong Wen, Zhicheng Dou  
+
+**Link**: [PDF](https://arxiv.org/pdf/2603.06065)  
+
+**Abstract**: Conversational shopping agents represent a critical consumer-facing application of Large Language Model (LLM)-powered agents, yet how to effectively apply post-training Reinforcement Learning (RL) to optimize such agents remains underexplored. This work investigates RL-based optimization for shopping agents in real-world scenarios, where agents must simultaneously satisfy multiple interdependent objectives spanning objective metrics (product correctness), subjective qualities (persuasiveness), outcome rewards (final response quality), and process rewards (tool efficiency). We present a complete methodology to address this challenge. Specifically, we first construct SmartShopBench, a benchmark that captures diverse shopping intents with a hierarchical evaluation that decomposes complex quality requirements into measurable levels. Building on this evaluation framework, we design Hierarchical Reward Modeling (HRM) to structure mixed reward types through conditional gating that reflects their logical dependencies. To enable efficient training, we further propose Dynamic Contrastive Policy Optimization (DCPO), which balances response quality with operational efficiency through dynamic trajectory selection based on reward and reasoning length. Extensive experiments demonstrate that our RL-trained agent, namely ChatShopBuddy, consistently outperforms larger models relying on generic reasoning, achieving superior stability rather than merely higher peaks. Our work provides valuable guidance for applying RL to real-world conversational agents. 
+
+---
+# Sensitivity-Aware Retrieval-Augmented Intent Clarification 
+
+**Authors**: Maik Larooij  
+
+**Link**: [PDF](https://arxiv.org/pdf/2603.06025)  
+
+**Abstract**: In conversational search systems, a key component is to determine and clarify the intent behind complex queries. We view intent clarification in light of the exploratory search paradigm, where users, through an iterative, evolving process of selection, exploration and retrieval, transform a visceral or conscious need into a formalized one. Augmenting the clarification component with a retrieval step (retrieval-augmented intent clarification) can seriously enhance clarification performance, especially in domains where Large Language Models (LLMs) lack parametric knowledge. However, in more sensitive domains, such as healthcare, government (e.g. FOIA search) or legal contexts, the retrieval database may contain sensitive information that needs protection. In this paper, we explore the research challenge of developing a retrieval-augmented conversational agent that can act as a mediator and gatekeeper for the sensitive collection. To do that, we also need to know what we are protecting and against what. We propose to tackle this research challenge in three steps: 1) define an attack model, 2) design sensitivity-aware defenses on the retrieval level and 3) develop evaluation methods to measure the trade-off between the level of protection and the system's utility. 
+
+---
+# Balancing Domestic and Global Perspectives: Evaluating Dual-Calibration and LLM-Generated Nudges for Diverse News Recommendation 
+
+**Authors**: Ruixuan Sun, Matthew Zent, Minzhu Zhao, Thanmayee Boyapati, Xinyi Li, Joseph A. Konstan  
+
+**Link**: [PDF](https://arxiv.org/pdf/2603.05780)  
+
+**Abstract**: In this study, we applied the ``personalized diversity nudge framework'' with the goal of expanding user reading coverage in terms of news locality (i.e., domestic and world news). We designed a novel topic-locality dual calibration algorithmic nudge and a large language model-based news personalization presentation nudge, then launched a 5-week real-user study with 120 U.S. news readers on the news recommendation experiment platform POPROX. With user interaction logs and survey responses, we found that algorithmic nudges can successfully increase exposure and consumption diversity, while the impact of LLM-based presentation nudges varied. User-level topic interest is a strong predictor of user clicks, while highlighting the relevance of news articles to prior read articles outperforms generic topic-based and no personalization. We also demonstrate that longitudinal exposure to calibrated news may shift readers' reading habits to value a balanced news digest from both domestic and world articles. Our results provide direction for future work on nudging for diverse consumption in news recommendation systems. 
+
+---
+# CBR-to-SQL: Rethinking Retrieval-based Text-to-SQL using Case-based Reasoning in the Healthcare Domain 
+
+**Authors**: Hung Nguyen, Hans Moen, Pekka Marttinen  
+
+**Link**: [PDF](https://arxiv.org/pdf/2603.05569)  
+
+**Abstract**: Extracting insights from Electronic Health Record (EHR) databases often requires SQL expertise, creating a barrier for healthcare decision-making and research. While a promising approach is to use Large Language Models (LLMs) to translate natural language questions to SQL via Retrieval-Augmented Generation (RAG), adapting this approach to the medical domain is non-trivial. Standard RAG relies on single-step retrieval from a static pool of examples, which struggles with the variability and noise of medical terminology and jargon. This often leads to anti-patterns such as expanding the task demonstration pool to improve coverage, which in turn introduces noise and scalability problems. To address this, we introduce CBR-to-SQL, a framework inspired by Case-Based Reasoning (CBR). It represents question-SQL pairs as reusable, abstract case templates and utilizes a two-stage retrieval process that first captures logical structure and then resolves relevant entities. Evaluated on MIMICSQL, CBR-to-SQL achieves state-of-the-art logical form accuracy and competitive execution accuracy. More importantly, it demonstrates higher sample efficiency and robustness than standard RAG approaches, particularly under data scarcity and retrieval perturbations. 
+
+---
+# AutothinkRAG: Complexity-Aware Control of Retrieval-Augmented Reasoning for Image-Text Interaction 
+
+**Authors**: Jiashu Yang, Chi Zhang, Abudukelimu Wuerkaixi, Xuxin Cheng, Cao Liu, Ke Zeng, Xu Jia, Xunliang Cai  
+
+**Link**: [PDF](https://arxiv.org/pdf/2603.05551)  
+
+**Abstract**: Information-intensive Document Question Answering (DocQA) is often constrained by long contexts and information overload, which hinders Vision-Language Models (VLMs) from performing precise direct reasoning. Although multimodal GraphRAG has achieved preliminary breakthroughs, existing frameworks still face dual challenges: (1) the necessity of large-scale models for handling queries of diverse complexities and (2) the inherent reasoning bottlenecks of end-to-end VLMs. To address these issues, we propose AutoThinkRAG, a framework that enhances the understanding of complex documents by synergizing the capabilities of multiple models. Specifically, we introduce a Query Complexity Router to allocate reasoning paths based on the analysis of query difficulty. Furthermore, to overcome the reasoning boundaries of VLM, we propose a functional decoupling architecture: a small-scale VLM serves as a high-fidelity visual interpreter to transform query-relevant visual cues into textual representations, which are subsequently processed by an LLM for logical deduction and synthesis. Extensive experiments on DocBench and MMLongBench demonstrate that AutoThinkRAG significantly reduces inference costs while achieving new state-of-the-art performance. Further ablation studies verifies the effectiveness of our proposed method. 
+
+---
+# Efficient Vector Search in the Wild: One Model for Multi-K Queries 
+
+**Authors**: Yifan Peng, Jiafei Fan, Xingda Wei, Sijie Shen, Rong Chen, Jianning Wang, Xiaojian Luo, Wenyuan Yu, Jingren Zhou, Haibo Chen  
+
+**Link**: [PDF](https://arxiv.org/pdf/2603.06159)  
+
+**Abstract**: Learned top-K search is a promising approach for serving vector queries with both high accuracy and performance. However, current models trained for a specific K value fail to generalize to real-world multi-K queries: they suffer from accuracy degradation (for larger Ks) and performance loss (for smaller Ks). Training the model to generalize on different Ks requires orders of magnitude more preprocessing time and is not suitable for serving vector queries in the wild. We present OMEGA, a K-generalizable learned top-K search method that simultaneously achieves high accuracy, high performance, and low preprocessing cost for multi-K vector queries. The key idea is that a base model properly trained on K=1 with our trajectory-based features can be used to accurately predict larger Ks with a dynamic refinement procedure and smaller Ks with minimal performance loss. To make our refinements efficient, we further leverage the statistical properties of top-K searches to reduce excessive model invocations. Extensive evaluations on multiple public and production datasets show that, under the same preprocessing budgets, OMEGA achieves 6-33% lower average latency compared to state-of-the-art learned search methods, while all systems achieve the same recall target. With only 16-30% of the preprocessing time, OMEGA attains 1.01-1.28x of the optimal average latency of these baselines. 
+
+---
+# The DSA's Blind Spot: Algorithmic Audit of Advertising and Minor Profiling on TikTok 
+
+**Authors**: Sara Solarova, Matej Mosnar, Matus Tibensky, Jan Jakubcik, Adrian Bindas, Simon Liska, Filip Hossner, Matúš Mesarčík, Ivan Srba  
+
+**Link**: [PDF](https://arxiv.org/pdf/2603.05653)  
+
+**Abstract**: Adolescents spend an increasing amount of their time in digital environments where their still-developing cognitive capacities leave them unable to recognize or resist commercial persuasion. Article 28(2) of the Digital Service Act (DSA) responds to this vulnerability by prohibiting profiling-based advertising to minors. However, the regulation's narrow definition of "advertisement" excludes current advertising practices including influencer marketing and promotional content that serve functionally equivalent commercial purposes. We provide the first empirical evidence of how this definitional gap operates in practice through an algorithmic audit of TikTok. Our approach deploys sock-puppet accounts simulating a pair of minor and adult users with distinct interest profiles. The content recommended to these users is automatically annotated, enabling systematic statistical analysis across four video categories: containing formal, disclosed, undisclosed and none advertisement; as well as advertisement topical relevance to user's interest. Our findings reveal a stark regulatory paradox. TikTok demonstrates formal compliance with Article 28(2) by shielding minors from profiled formal advertisements, yet both disclosed and undisclosed ads exhibit significant profiling aligned with user interests (5-8 times stronger than for adult formal advertising). The strongest profiling emerges within undisclosed commercial content, where brands/creators fail to label promotional content/paid partnership and the platform neither corrects this omission nor prevents its personalized delivery to minors. We argue that protecting minors requires expanding the regulatory definition of advertisement to encompass brand/influencer marketing and extending the Article 28(2) prohibition accordingly, ensuring that commercial content cannot circumvent protections merely by operating outside formal advertising channels. 
+
+---
+# VDCook:DIY video data cook your MLLMs 
+
+**Authors**: Chengwei Wu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2603.05539)  
+
+**Abstract**: We introduce VDCook: a self-evolving video data operating system, a configurable video data construction platform for researchers and vertical domain teams. Users initiate data requests via natural language queries and adjustable parameters (scale, retrieval-synthesis ratio, quality threshold). The system automatically performs query optimization, concurrently running real video retrieval and controlled synthesis modules. It ultimately generates in-domain data packages with complete provenance and metadata, along with reproducible Notebooks.
+Unlike traditional static, one-time-built datasets, VDCook enables continuous updates and domain expansion through its automated data ingestion mechanism based on MCP (Model Context Protocol)\cite{mcp2024anthropic}, transforming datasets into dynamically evolving open ecosystems. The system also provides multi-dimensional metadata annotation (scene segmentation, motion scoring, OCR ratio, automatic captioning, etc.), laying the foundation for flexible subsequent data `cooking' and indexing\cite{vlogger}.
+This platform aims to significantly lower the barrier to constructing specialized video training datasets through infrastructure-level solutions, while supporting community contributions and a governance-enabled data expansion paradigm. \textbf{Project demo:} this https URL 
+
+---
+# Verify as You Go: An LLM-Powered Browser Extension for Fake News Detection 
+
+**Authors**: Dorsaf Sallami, Esma Aïmeur  
+
+**Link**: [PDF](https://arxiv.org/pdf/2603.05519)  
+
+**Abstract**: The rampant spread of fake news in the digital age poses serious risks to public trust and democratic institutions, underscoring the need for effective, transparent, and user-centered detection tools. Existing browser extensions often fall short due to opaque model behavior, limited explanatory support, and a lack of meaningful user engagement. This paper introduces Aletheia, a novel browser extension that leverages Retrieval-Augmented Generation (RAG) and Large Language Models (LLMs) to detect fake news and provide evidence-based explanations. Aletheia further includes two interactive components: a Discussion Hub that enables user dialogue around flagged content and a Stay Informed feature that surfaces recent fact-checks. Through extensive experiments, we show that Aletheia outperforms state-of-the-art baselines in detection performance. Complementing this empirical evaluation, a complementary user study with 250 participants confirms the system's usability and perceived effectiveness, highlighting its potential as a transparent tool for combating online fake news. 
+
+---
