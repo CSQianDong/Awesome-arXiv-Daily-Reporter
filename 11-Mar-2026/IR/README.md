@@ -1,0 +1,181 @@
+# A Voronoi Cell Formulation for Principled Token Pruning in Late-Interaction Retrieval Models 
+
+**Authors**: Yash Kankanampati, Yuxuan Zong, Nadi Tomeh, Benjamin Piwowarksi, Joseph Le Roux  
+
+**Link**: [PDF](https://arxiv.org/pdf/2603.09933)  
+
+**Abstract**: Late-interaction models like ColBERT offer a competitive performance across various retrieval tasks, but require storing a dense embedding for each document token, leading to a substantial index storage overhead. Past works address this by attempting to prune low-importance token embeddings based on statistical and empirical measures, but they often either lack formal grounding or are ineffective. To address these shortcomings, we introduce a framework grounded in hyperspace geometry and cast token pruning as a Voronoi cell estimation problem in the embedding space. By interpreting each token's influence as a measure of its Voronoi region, our approach enables principled pruning that retains retrieval quality while reducing index size. Through our experiments, we demonstrate that this approach serves not only as a competitive pruning strategy but also as a valuable tool for improving and interpreting token-level behavior within dense retrieval systems. 
+
+---
+# Overview of the TREC 2025 Retrieval Augmented Generation (RAG) Track 
+
+**Authors**: Shivani Upadhyay, Nandan Thakur, Ronak Pradeep, Nick Craswell, Daniel Campos, Jimmy Lin  
+
+**Link**: [PDF](https://arxiv.org/pdf/2603.09891)  
+
+**Abstract**: The second edition of the TREC Retrieval Augmented Generation (RAG) Track advances research on systems that integrate retrieval and generation to address complex, real-world information needs. Building on the foundation of the inaugural 2024 track, this year's challenge introduces long, multi-sentence narrative queries to better reflect the deep search task with the growing demand for reasoning-driven responses. Participants are tasked with designing pipelines that combine retrieval and generation while ensuring transparency and factual grounding. The track leverages the MS MARCO V2.1 corpus and employs a multi-layered evaluation framework encompassing relevance assessment, response completeness, attribution verification, and agreement analysis. By emphasizing multi-faceted narratives and attribution-rich answers from over 150 submissions this year, the TREC 2025 RAG Track aims to foster innovation in creating trustworthy, context-aware systems for retrieval augmented generation. 
+
+---
+# RecThinker: An Agentic Framework for Tool-Augmented Reasoning in Recommendation 
+
+**Authors**: Haobo Zhang, Yutao Zhu, Kelong Mao, Tianhao Li, Zhicheng Dou  
+
+**Link**: [PDF](https://arxiv.org/pdf/2603.09843)  
+
+**Abstract**: Large Language Models (LLMs) have revolutionized recommendation agents by providing superior reasoning and flexible decision-making capabilities. However, existing methods mainly follow a passive information acquisition paradigm, where agents either rely on static pre-defined workflows or perform reasoning with constrained information. It limits the agent's ability to identify information sufficiency, often leading to suboptimal recommendations when faced with fragmented user profiles or sparse item metadata. To address these limitations, we propose RecThinker, an agentic framework for tool-augmented reasoning in recommendation, which shifts recommendation from passive processing to autonomous investigation by dynamically planning reasoning paths and proactively acquiring essential information via autonomous tool-use. Specifically, RecThinker adopts an Analyze-Plan-Act paradigm, which first analyzes the sufficiency of user-item information and autonomously invokes tool-calling sequences to bridge information gaps between available knowledge and reasoning requirements. We develop a suite of specialized tools for RecThinker, enabling the model to acquire user-side, item-side, and collaborative information for better reasoning and user-item matching. Furthermore, we introduce a self-augmented training pipeline, comprising a Supervised Fine-Tuning (SFT) stage to internalize high-quality reasoning trajectories and a Reinforcement Learning (RL) stage to optimize for decision accuracy and tool-use efficiency. Extensive experiments on multiple benchmark datasets demonstrate that RecThinker consistently outperforms strong baselines in the recommendation scenario. 
+
+---
+# MITRA: An AI Assistant for Knowledge Retrieval in Physics Collaborations 
+
+**Authors**: Abhishikth Mallampalli, Sridhara Dasu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2603.09800)  
+
+**Abstract**: Large-scale scientific collaborations, such as the Compact Muon Solenoid (CMS) at CERN, produce a vast and ever-growing corpus of internal documentation. Navigating this complex information landscape presents a significant challenge for both new and experienced researchers, hindering knowledge sharing and slowing down the pace of scientific discovery. To address this, we present a prototype of MITRA, a Retrieval-Augmented Generation (RAG) based system, designed to answer specific, context-aware questions about physics analyses. MITRA employs a novel, automated pipeline using Selenium for document retrieval from internal databases and Optical Character Recognition (OCR) with layout parsing for high-fidelity text extraction. Crucially, MITRA's entire framework, from the embedding model to the Large Language Model (LLM), is hosted on-premise, ensuring that sensitive collaboration data remains private. We introduce a two-tiered vector database architecture that first identifies the relevant analysis from abstracts before focusing on the full documentation, resolving potential ambiguities between different analyses. We demonstrate the prototype's superior retrieval performance against a standard keyword-based baseline on realistic queries and discuss future work towards developing a comprehensive research agent for large experimental collaborations. 
+
+---
+# TA-Mem: Tool-Augmented Autonomous Memory Retrieval for LLM in Long-Term Conversational QA 
+
+**Authors**: Mengwei Yuan, Jianan Liu, Jing Yang, Xianyou Li, Weiran Yan, Yichao Wu, Penghao Liang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2603.09297)  
+
+**Abstract**: Large Language Model (LLM) has exhibited strong reasoning ability in text-based contexts across various domains, yet the limitation of context window poses challenges for the model on long-range inference tasks and necessitates a memory storage system. While many current storage approaches have been proposed with episodic notes and graph representations of memory, retrieval methods still primarily rely on predefined workflows or static similarity top-k over embeddings. To address this inflexibility, we introduced a novel tool-augmented autonomous memory retrieval framework (TA-Mem), which contains: (1) a memory extraction LLM agent which is prompted to adaptively chuck an input into sub-context based on semantic correlation, and extract information into structured notes, (2) a multi-indexed memory database designed for different types of query methods including both key-based lookup and similarity-based retrieval, (3) a tool-augmented memory retrieval agent which explores the memory autonomously by selecting appropriate tools provided by the database based on the user input, and decides whether to proceed to the next iteration or finalizing the response after reasoning on the fetched memories. The TA-Mem is evaluated on the LoCoMo dataset, achieving significant performance improvements over existing baseline approaches. In addition, an analysis of tool use across different question types also demonstrates the adaptivity of the proposed method. 
+
+---
+# Diagnosing and Repairing Citation Failures in Generative Engine Optimization 
+
+**Authors**: Zhihua Tian, Yuhan Chen, Yao Tang, Jian Liu, Ruoxi Jia  
+
+**Link**: [PDF](https://arxiv.org/pdf/2603.09296)  
+
+**Abstract**: Generative Engine Optimization (GEO) aims to improve content visibility in AI-generated responses. However, existing methods measure contribution-how much a document influences a response-rather than citation, the mechanism that actually drives traffic back to creators. Also, these methods apply generic rewriting rules uniformly, failing to diagnose why individual document are not cited. This paper introduces a diagnostic approach to GEO that asks why a document fails to be cited and intervenes accordingly. We develop a unified framework comprising: (1) the first taxonomy of citation failure modes spanning different stages of a citation pipeline; (2) AgentGEO, an agentic system that diagnoses failures using this taxonomy, selects targeted repairs from a corresponding tool library, and iterates until citation is achieved; and (3) a document-centric benchmark evaluating whether optimizations generalize across held-out queries. AgentGEO achieves over 40% relative improvement in citation rates while modifying only 5% of content, compared to 25% for baselines. Our analysis reveals that generic optimization can harm long-tail content and some documents face challenges that optimization alone cannot fully address-findings with implications for equitable visibility in AI-mediated information access. 
+
+---
+# Evoking User Memory: Personalizing LLM via Recollection-Familiarity Adaptive Retrieval 
+
+**Authors**: Yingyi Zhang, Junyi Li, Wenlin Zhang, Penyue Jia, Xianneng Li, Yichao Wang, Derong Xu, Yi Wen, Huifeng Guo, Yong Liu, Xiangyu Zhao  
+
+**Link**: [PDF](https://arxiv.org/pdf/2603.09250)  
+
+**Abstract**: Personalized large language models (LLMs) rely on memory retrieval to incorporate user-specific histories, preferences, and contexts. Existing approaches either overload the LLM by feeding all the user's past memory into the prompt, which is costly and unscalable, or simplify retrieval into a one-shot similarity search, which captures only surface matches. Cognitive science, however, shows that human memory operates through a dual process: Familiarity, offering fast but coarse recognition, and Recollection, enabling deliberate, chain-like reconstruction for deeply recovering episodic content. Current systems lack both the ability to perform recollection retrieval and mechanisms to adaptively switch between the dual retrieval paths, leading to either insufficient recall or the inclusion of noise. To address this, we propose RF-Mem (Recollection-Familiarity Memory Retrieval), a familiarity uncertainty-guided dual-path memory retriever. RF-Mem measures the familiarity signal through the mean score and entropy. High familiarity leads to the direct top-K Familiarity retrieval path, while low familiarity activates the Recollection path. In the Recollection path, the system clusters candidate memories and applies alpha-mix with the query to iteratively expand evidence in embedding space, simulating deliberate contextual reconstruction. This design embeds human-like dual-process recognition into the retriever, avoiding full-context overhead and enabling scalable, adaptive personalization. Experiments across three benchmarks and corpus scales demonstrate that RF-Mem consistently outperforms both one-shot retrieval and full-context reasoning under fixed budget and latency constraints. Our code can be found in the Reproducibility Statement. 
+
+---
+# Beyond Relevance: On the Relationship Between Retrieval and RAG Information Coverage 
+
+**Authors**: Saron Samuel, Alexander Martin, Eugene Yang, Andrew Yates, Dawn Lawrie, Ian Soborof, Laura Dietz, Benjamin Van Durme  
+
+**Link**: [PDF](https://arxiv.org/pdf/2603.08819)  
+
+**Abstract**: Retrieval-augmented generation (RAG) systems combine document retrieval with a generative model to address complex information seeking tasks like report generation. While the relationship between retrieval quality and generation effectiveness seems intuitive, it has not been systematically studied. We investigate whether upstream retrieval metrics can serve as reliable early indicators of the final generated response's information coverage. Through experiments across two text RAG benchmarks (TREC NeuCLIR 2024 and TREC RAG 2024) and one multimodal benchmark (WikiVideo), we analyze 15 text retrieval stacks and 10 multimodal retrieval stacks across four RAG pipelines and multiple evaluation frameworks (Auto-ARGUE and MiRAGE). Our findings demonstrate strong correlations between coverage-based retrieval metrics and nugget coverage in generated responses at both topic and system levels. This relationship holds most strongly when retrieval objectives align with generation goals, though more complex iterative RAG pipelines can partially decouple generation quality from retrieval effectiveness. These findings provide empirical support for using retrieval metrics as proxies for RAG performance. 
+
+---
+# Time warping with Hellinger elasticity 
+
+**Authors**: Yuly Billig  
+
+**Link**: [PDF](https://arxiv.org/pdf/2603.08807)  
+
+**Abstract**: We consider a matching problem for time series with values in an arbitrary metric space, with the stretching penalty given by the Hellinger kernel. To optimize this matching, we introduce the Elastic Time Warping algorithm with a cubic computational complexity. 
+
+---
+# Fine-grained Motion Retrieval via Joint-Angle Motion Images and Token-Patch Late Interaction 
+
+**Authors**: Yao Zhang, Zhuchenyang Liu, Yanlan He, Thomas Ploetz, Yu Xiao  
+
+**Link**: [PDF](https://arxiv.org/pdf/2603.09930)  
+
+**Abstract**: Text-motion retrieval aims to learn a semantically aligned latent space between natural language descriptions and 3D human motion skeleton sequences, enabling bidirectional search across the two modalities. Most existing methods use a dual-encoder framework that compresses motion and text into global embeddings, discarding fine-grained local correspondences, and thus reducing accuracy. Additionally, these global-embedding methods offer limited interpretability of the retrieval results. To overcome these limitations, we propose an interpretable, joint-angle-based motion representation that maps joint-level local features into a structured pseudo-image, compatible with pre-trained Vision Transformers. For text-to-motion retrieval, we employ MaxSim, a token-wise late interaction mechanism, and enhance it with Masked Language Modeling regularization to foster robust, interpretable text-motion alignment. Extensive experiments on HumanML3D and KIT-ML show that our method outperforms state-of-the-art text-motion retrieval approaches while offering interpretable fine-grained correspondences between text and motion. The code is available in the supplementary material. 
+
+---
+# Automatic Cardiac Risk Management Classification using large-context Electronic Patients Health Records 
+
+**Authors**: Jacopo Vitale, David Della Morte, Luca Bacco, Mario Merone, Mark de Groot, Saskia Haitjema, Leandro Pecchia, Bram van Es  
+
+**Link**: [PDF](https://arxiv.org/pdf/2603.09685)  
+
+**Abstract**: To overcome the limitations of manual administrative coding in geriatric Cardiovascular Risk Management, this study introduces an automated classification framework leveraging unstructured Electronic Health Records (EHRs). Using a dataset of 3,482 patients, we benchmarked three distinct modeling paradigms on longitudinal Dutch clinical narratives: classical machine learning baselines, specialized deep learning architectures optimized for large-context sequences, and general-purpose generative Large Language Models (LLMs) in a zero-shot setting. Additionally, we evaluated a late fusion strategy to integrate unstructured text with structured medication embeddings and anthropometric data. Our analysis reveals that the custom Transformer architecture outperforms both traditional methods and generative \acs{llm}s, achieving the highest F1-scores and Matthews Correlation Coefficients. These findings underscore the critical role of specialized hierarchical attention mechanisms in capturing long-range dependencies within medical texts, presenting a robust, automated alternative to manual workflows for clinical risk stratification. 
+
+---
+# Understanding the Interplay between LLMs' Utilisation of Parametric and Contextual Knowledge: A keynote at ECIR 2025 
+
+**Authors**: Isabelle Augenstein  
+
+**Link**: [PDF](https://arxiv.org/pdf/2603.09654)  
+
+**Abstract**: Language Models (LMs) acquire parametric knowledge from their training process, embedding it within their weights. The increasing scalability of LMs, however, poses significant challenges for understanding a model's inner workings and further for updating or correcting this embedded knowledge without the significant cost of retraining. Moreover, when using these language models for knowledge-intensive language understanding tasks, LMs have to integrate relevant context, mitigating their inherent weaknesses, such as incomplete or outdated knowledge. Nevertheless, studies indicate that LMs often ignore the provided context as it can be in conflict with the pre-existing LM's memory learned during pre-training. Conflicting knowledge can also already be present in the LM's parameters, termed intra-memory conflict. This underscores the importance of understanding the interplay between how a language model uses its parametric knowledge and the retrieved contextual knowledge. In this talk, I will aim to shed light on this important issue by presenting our research on evaluating the knowledge present in LMs, diagnostic tests that can reveal knowledge conflicts, as well as on understanding the characteristics of successfully used contextual knowledge. 
+
+---
+# PRECEPT: Planning Resilience via Experience, Context Engineering & Probing Trajectories A Unified Framework for Test-Time Adaptation with Compositional Rule Learning and Pareto-Guided Prompt Evolution 
+
+**Authors**: Arash Shahmansoori  
+
+**Link**: [PDF](https://arxiv.org/pdf/2603.09641)  
+
+**Abstract**: LLM agents that store knowledge as natural language suffer steep retrieval degradation as condition count grows, often struggle to compose learned rules reliably, and typically lack explicit mechanisms to detect stale or adversarial knowledge. We introduce PRECEPT, a unified framework for test-time adaptation with three tightly coupled components: (1) deterministic exact-match rule retrieval over structured condition keys, (2) conflict-aware memory with Bayesian source reliability and threshold-based rule invalidation, and (3) COMPASS, a Pareto-guided prompt-evolution outer loop. Exact retrieval eliminates partial-match interpretation errors on the deterministic path (0% by construction, vs 94.4% under Theorem~B.6's independence model at N=10) and supports compositional stacking through a semantic tier hierarchy; conflict-aware memory resolves static--dynamic disagreements and supports drift adaptation; COMPASS evaluates prompts through the same end-to-end execution pipeline.
+Results (9--10 seeds): PRECEPT achieves a +41.1pp first-try advantage over Full Reflexion (d>1.9), +33.3pp compositional generalization (d=1.55), 100% $P_1$ on 2-way logistics compositions (d=2.64), +40--55pp continuous learning gains, strong eventual robustness under adversarial static knowledge (100% logistics with adversarial SK active; partial recovery on integration), +55.0pp drift recovery (d=0.95, p=0.031), and 61% fewer steps. Core comparisons are statistically significant, often at p<0.001. 
+
+---
+# DataFactory: Collaborative Multi-Agent Framework for Advanced Table Question Answering 
+
+**Authors**: Tong Wang, Chi Jin, Yongkang Chen, Huan Deng, Xiaohui Kuang, Gang Zhao  
+
+**Link**: [PDF](https://arxiv.org/pdf/2603.09152)  
+
+**Abstract**: Table Question Answering (TableQA) enables natural language interaction with structured tabular data. However, existing large language model (LLM) approaches face critical limitations: context length constraints that restrict data handling capabilities, hallucination issues that compromise answer reliability, and single-agent architectures that struggle with complex reasoning scenarios involving semantic relationships and multi-hop logic. This paper introduces DataFactory, a multi-agent framework that addresses these limitations through specialized team coordination and automated knowledge transformation. The framework comprises a Data Leader employing the ReAct paradigm for reasoning orchestration, together with dedicated Database and Knowledge Graph teams, enabling the systematic decomposition of complex queries into structured and relational reasoning tasks. We formalize automated data-to-knowledge graph transformation via the mapping function T:D x S x R -> G, and implement natural language-based consultation that - unlike fixed workflow multi-agent systems - enables flexible inter-agent deliberation and adaptive planning to improve coordination robustness. We also apply context engineering strategies that integrate historical patterns and domain knowledge to reduce hallucinations and improve query accuracy. Across TabFact, WikiTableQuestions, and FeTaQA, using eight LLMs from five providers, results show consistent gains. Our approach improves accuracy by 20.2% (TabFact) and 23.9% (WikiTQ) over baselines, with significant effects (Cohen's d > 1). Team coordination also outperforms single-team variants (+5.5% TabFact, +14.4% WikiTQ, +17.1% FeTaQA ROUGE-2). The framework offers design guidelines for multi-agent collaboration and a practical platform for enterprise data analysis through integrated structured querying and graph-based knowledge representation. 
+
+---
+# From Verification to Amplification: Auditing Reverse Image Search as Algorithmic Gatekeeping in Visual Misinformation Fact-checking 
+
+**Authors**: Cong Lin, Yifei Chen, Jiangyue Chen, Yingdan Lu, Yilang Peng, Cuihua Shen  
+
+**Link**: [PDF](https://arxiv.org/pdf/2603.09130)  
+
+**Abstract**: As visual misinformation becomes increasingly prevalent, platform algorithms act as intermediaries that curate information for users' verification practices. Yet, it remains unclear how algorithmic gatekeeping tools, such as reverse image search (RIS), shape users' information exposure during fact-checking. This study systematically audits Google RIS by reversely searching newly identified misleading images over a 15-day window and analyzing 34,486 collected top-ranked search results. We find that Google RIS returns a substantial volume of irrelevant information and repeated misinformation, whereas debunking content constitutes less than 30% of search results. Debunking content faces visibility challenges in rankings amid repeated misinformation and irrelevant information. Our findings also indicate an inverted U-shaped curve of RIS results page quality over time, likely due to search engine "data voids" when visual falsehoods first appear. These findings contribute to scholarship of visual misinformation verification, and extend algorithmic gatekeeping research to the visual domain. 
+
+---
+# Unlocking High-Fidelity Analog Joint Source-Channel Coding on Standard Digital Transceivers 
+
+**Authors**: Shumin Yao, Hao Chen, Yaping Sun, Nan Ma, Xiaodong Xu, Qinglin Zhao, Shuguang Cui  
+
+**Link**: [PDF](https://arxiv.org/pdf/2603.09080)  
+
+**Abstract**: Analog joint source-channel coding (JSCC) has demonstrated superior performance for semantic communications through graceful degradation across channel conditions. However, a fundamental hardware-software mismatch prevents deployment on modern digital physical layers (PHYs): analog JSCC generates continuous-valued symbols requiring infinite waveform diversity, while digital PHYs produce a finite set of discrete waveforms and employ non-differentiable operations that break end-to-end gradient flow. Existing solutions either fundamentally limit representation granularity or require impractical white-box PHY access. We introduce D2AJSCC, a novel framework enabling high-fidelity analog JSCC deployment on standard digital PHYs. Our approach exploits orthogonal frequency-division multiplexing's parallel subcarrier structure as a waveform synthesizer: computational PHY inversion determines input bitstreams that orchestrate subcarrier amplitudes and phases to emulate ideal analog waveforms. To enable end-to-end training despite non-differentiable PHY operations, we develop ProxyNet-a differentiable neural surrogate of the communication link that provides uninterrupted gradient flow while preventing JSCC degeneration. Simulation results for image transmission over WiFi PHY demonstrate that our system achieves near-ideal analog JSCC performance with graceful degradation across SNR conditions, while baselines exhibit cliff effects or catastrophic failures. By enabling next-generation semantic transmission on legacy infrastructure without hardware modification, our framework promotes sustainable network evolution and bridges the critical gap between analog JSCC's theoretical promise and practical deployment on ubiquitous digital hardware. 
+
+---
+# A Consensus-Driven Multi-LLM Pipeline for Missing-Person Investigations 
+
+**Authors**: Joshua Castillo, Ravi Mukkamala  
+
+**Link**: [PDF](https://arxiv.org/pdf/2603.08954)  
+
+**Abstract**: The first 72 hours of a missing-person investigation are critical for successful recovery. Guardian is an end-to-end system designed to support missing-child investigation and early search planning. This paper presents the Guardian LLM Pipeline, a multi-model system in which LLMs are used for intelligent information extraction and processing related to missing-person search operations. The pipeline coordinates end-to-end execution across task-specialized LLM models and invokes a consensus LLM engine that compares multiple model outputs and resolves disagreements. The pipeline is further strengthened by QLoRA-based fine-tuning, using curated datasets. The presented design aligns with prior work on weak supervision and LLM-assisted annotation, emphasizing conservative, auditable use of LLMs as structured extractors and labelers rather than unconstrained end-to-end decision makers. 
+
+---
+# PathoScribe: Transforming Pathology Data into a Living Library with a Unified LLM-Driven Framework for Semantic Retrieval and Clinical Integration 
+
+**Authors**: Abdul Rehman Akbar, Samuel Wales-McGrath, Alejadro Levya, Lina Gokhale, Rajendra Singh, Wei Chen, Anil Parwani, Muhammad Khalid Khan Niazi  
+
+**Link**: [PDF](https://arxiv.org/pdf/2603.08935)  
+
+**Abstract**: Pathology underpins modern diagnosis and cancer care, yet its most valuable asset, the accumulated experience encoded in millions of narrative reports, remains largely inaccessible. Although institutions are rapidly digitizing pathology workflows, storing data without effective mechanisms for retrieval and reasoning risks transforming archives into a passive data repository, where institutional knowledge exists but cannot meaningfully inform patient care. True progress requires not only digitization, but the ability for pathologists to interrogate prior similar cases in real time while evaluating a new diagnostic dilemma. We present PathoScribe, a unified retrieval-augmented large language model (LLM) framework designed to transform static pathology archives into a searchable, reasoning-enabled living library. PathoScribe enables natural language case exploration, automated cohort construction, clinical question answering, immunohistochemistry (IHC) panel recommendation, and prompt-controlled report transformation within a single architecture. Evaluated on 70,000 multi-institutional surgical pathology reports, PathoScribe achieved perfect Recall@10 for natural language case retrieval and demonstrated high-quality retrieval-grounded reasoning (mean reviewer score 4.56/5). Critically, the system operationalized automated cohort construction from free-text eligibility criteria, assembling research-ready cohorts in minutes (mean 9.2 minutes) with 91.3% agreement to human reviewers and no eligible cases incorrectly excluded, representing orders-of-magnitude reductions in time and cost compared to traditional manual chart review. This work establishes a scalable foundation for converting digital pathology archives from passive storage systems into active clinical intelligence platforms. 
+
+---
+# Interpretable Markov-Based Spatiotemporal Risk Surfaces for Missing-Child Search Planning with Reinforcement Learning and LLM-Based Quality Assurance 
+
+**Authors**: Joshua Castillo, Ravi Mukkamala  
+
+**Link**: [PDF](https://arxiv.org/pdf/2603.08933)  
+
+**Abstract**: The first 72 hours of a missing-child investigation are critical for successful recovery. However, law enforcement agencies often face fragmented, unstructured data and a lack of dynamic, geospatial predictive tools. Our system, Guardian, provides an end-to-end decision-support system for missing-child investigation and early search planning. It converts heterogeneous, unstructured case documents into a schema-aligned spatiotemporal representation, enriches cases with geocoding and transportation context, and provides probabilistic search products spanning 0-72 hours. In this paper, we present an overview of Guardian as well as a detailed description of a three-layer predictive component of the system. The first layer is a Markov chain, a sparse, interpretable model with transitions incorporating road accessibility costs, seclusion preferences, and corridor bias with separate day/night parameterizations. The Markov chain's output prediction distributions are then transformed into operationally useful search plans by the second layer's reinforcement learning. Finally, the third layer's LLM performs post hoc validation of layer 2 search plans prior to their release. Using a synthetic but realistic case study, we report quantitative outputs across 24/48/72-hour horizons and analyze sensitivity, failure modes, and tradeoffs. Results show that the proposed predictive system with the three-layer architecture produces interpretable priors for zone optimization and human review. 
+
+---
+# Quantifying Uncertainty in AI Visibility: A Statistical Framework for Generative Search Measurement 
+
+**Authors**: Ronald Sielinski  
+
+**Link**: [PDF](https://arxiv.org/pdf/2603.08924)  
+
+**Abstract**: AI-powered answer engines are inherently non-deterministic: identical queries submitted at different times can produce different responses and cite different sources. Despite this stochastic behavior, current approaches to measuring domain visibility in generative search typically rely on single-run point estimates of citation share and prevalence, implicitly treating them as fixed values. This paper argues that citation visibility metrics should be treated as sample estimators of an underlying response distribution rather than fixed values. We conduct an empirical study of citation variability across three generative search platforms--Perplexity Search, OpenAI SearchGPT, and Google Gemini--using repeated sampling across three consumer product topics. Two sampling regimes are employed: daily collections over nine days and high-frequency sampling at ten-minute intervals. We show that citation distributions follow a power-law form and exhibit substantial variability across repeated samples. Bootstrap confidence intervals reveal that many apparent differences between domains fall within the noise floor of the measurement process. Distribution-wide rank stability analysis further demonstrates that citation rankings are unstable across samples, not only among top-ranked domains but throughout the frequently cited domain set. These findings demonstrate that single-run visibility metrics provide a misleadingly precise picture of domain performance in generative search. We argue that citation visibility must be reported with uncertainty estimates and provide practical guidance for sample sizes required to achieve interpretable confidence intervals. 
+
+---
