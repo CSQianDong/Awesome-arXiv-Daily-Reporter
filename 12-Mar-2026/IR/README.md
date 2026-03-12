@@ -1,0 +1,137 @@
+# A Systematic Study of Pseudo-Relevance Feedback with LLMs 
+
+**Authors**: Nour Jedidi, Jimmy Lin  
+
+**Link**: [PDF](https://arxiv.org/pdf/2603.11008)  
+
+**Abstract**: Pseudo-relevance feedback (PRF) methods built on large language models (LLMs) can be organized along two key design dimensions: the feedback source, which is where the feedback text is derived from and the feedback model, which is how the given feedback text is used to refine the query representation. However, the independent role that each dimension plays is unclear, as both are often entangled in empirical evaluations. In this paper, we address this gap by systematically studying how the choice of feedback source and feedback model impact PRF effectiveness through controlled experimentation. Across 13 low-resource BEIR tasks with five LLM PRF methods, our results show: (1) the choice of feedback model can play a critical role in PRF effectiveness; (2) feedback derived solely from LLM-generated text provides the most cost-effective solution; and (3) feedback derived from the corpus is most beneficial when utilizing candidate documents from a strong first-stage retriever. Together, our findings provide a better understanding of which elements in the PRF design space are most important. 
+
+---
+# Structured Linked Data as a Memory Layer for Agent-Orchestrated Retrieval 
+
+**Authors**: Andrea Volpini, Elie Raad, Beatrice Gamba, David Riccitelli  
+
+**Link**: [PDF](https://arxiv.org/pdf/2603.10700)  
+
+**Abstract**: Retrieval-Augmented Generation (RAG) systems typically treat documents as flat text, ignoring the structured metadata and linked relationships that knowledge graphs provide. In this paper, we investigate whether structured linked data, specifically this http URL markup and dereferenceable entity pages served by a Linked Data Platform, can improve retrieval accuracy and answer quality in both standard and agentic RAG systems. We conduct a controlled experiment across four domains (editorial, legal, travel, e-commerce) using Vertex AI Vector Search 2.0 for retrieval and the Google Agent Development Kit (ADK) for agentic reasoning. Our experimental design tests seven conditions: three document representations (plain HTML, HTML with JSON-LD, and an enhanced agentic-optimized entity page) crossed with two retrieval modes (standard RAG and agentic RAG with multi-hop link traversal), plus an Enhanced+ condition that adds rich navigational affordances and entity interlinking. Our results reveal that while JSON-LD markup alone provides only modest improvements, our enhanced entity page format, incorporating this http URL-style agent instructions, breadcrumbs, and neural search capabilities, achieves substantial gains: +29.6% accuracy improvement for standard RAG and +29.8% for the full agentic pipeline. The Enhanced+ variant, with richer navigational affordances, achieves the highest absolute scores (accuracy: 4.85/5, completeness: 4.55/5), though the incremental gain over the base enhanced format is not statistically significant. We release our dataset, evaluation framework, and enhanced entity page templates to support reproducibility. 
+
+---
+# Breaking User-Centric Agency: A Tri-Party Framework for Agent-Based Recommendation 
+
+**Authors**: Yaxin Gong, Chongming Gao, Chenxiao Fan, Wenjie Wang, Fuli Feng, Xiangnan He  
+
+**Link**: [PDF](https://arxiv.org/pdf/2603.10673)  
+
+**Abstract**: Recent advances in large language models (LLMs) have stimulated growing interest in agent-based recommender systems, enabling language-driven interaction and reasoning for more expressive preference modeling. However, most existing agentic approaches remain predominantly user-centric, treating items as passive entities and neglecting the interests of other critical stakeholders. This limitation exacerbates exposure concentration and long-tail under-representation, threatening long-term system sustainability. In this work, we identify this fundamental limitation and propose the first Tri-party LLM-agent Recommendation framework (TriRec) that explicitly coordinates user utility, item exposure, and platform-level fairness. The framework employs a two-stage architecture: Stage~1 empowers item agents with personalized self-promotion to improve matching quality and alleviate cold-start barriers, while Stage~2 uses a platform agent for sequential multi-objective re-ranking, balancing user relevance, item utility, and exposure fairness. Experiments on multiple benchmarks show consistent gains in accuracy, fairness, and item-level utility. Moreover, we find that item self-promotion can simultaneously enhance fairness and effectiveness, challenging the conventional trade-off assumption between relevance and fairness. Our code is available at this https URL. 
+
+---
+# Modeling Stage-wise Evolution of User Interests for News Recommendation 
+
+**Authors**: Zhiyong Cheng, Yike Jin, Zhijie Zhang, Huilin Chen, Zhangling Duan, Meng Wang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2603.10471)  
+
+**Abstract**: Personalized news recommendation is highly time-sensitive, as user interests are often driven by emerging events, trending topics, and shifting real-world contexts. These dynamics make it essential to model not only users' long-term preferences, which reflect stable reading habits and high-order collaborative patterns, but also their short-term, context-dependent interests that change rapidly over time. However, most existing approaches rely on a single static interaction graph, which struggles to capture both long-term preference patterns and short-term interest changes as user behavior evolves. To address this challenge, we propose a unified framework that learns user preferences from both global and local temporal perspectives. A global preference modeling component captures long-term collaborative signals from the overall interaction graph, while a local preference modeling component partitions historical interactions into stage-wise temporal subgraphs to represent short-term dynamics. Within this module, an LSTM branch models the progressive evolution of recent interests, and a self-attention branch captures long-range temporal dependencies. Extensive experiments on two large-scale real-world datasets show that our approach consistently outperforms strong baselines and delivers fresher and more relevant recommendations across diverse user behaviors and temporal settings. 
+
+---
+# Differentiable Geometric Indexing for End-to-End Generative Retrieval 
+
+**Authors**: Xujing Wang, Yufeng Chen, Boxuan Zhang, Jie Zhao, Chao Wei, Cai Xu, Ziyu Guan, Wei Zhao, Weiru Zhang, Xiaoyi Zeng  
+
+**Link**: [PDF](https://arxiv.org/pdf/2603.10409)  
+
+**Abstract**: Generative Retrieval (GR) has emerged as a promising paradigm to unify indexing and search within a single probabilistic framework. However, existing approaches suffer from two intrinsic conflicts: (1) an Optimization Blockage, where the non-differentiable nature of discrete indexing creates a gradient blockage, decoupling index construction from the downstream retrieval objective; and (2) a Geometric Conflict, where standard unnormalized inner-product objectives induce norm-inflation instability, causing popular "hub" items to geometrically overshadow relevant long-tail items.
+To systematically resolve these misalignments, we propose Differentiable Geometric Indexing (DGI). First, to bridge the optimization gap, DGI enforces Operational Unification. It employs Soft Teacher Forcing via Gumbel-Softmax to establish a fully differentiable pathway, combined with Symmetric Weight Sharing to effectively align the quantizer's indexing space with the retriever's decoding space. Second, to restore geometric fidelity, DGI introduces Isotropic Geometric Optimization. We replace inner-product logits with scaled cosine similarity on the unit hypersphere to effectively decouple popularity bias from semantic relevance.
+Extensive experiments on large-scale industry search datasets and online e-commerce platform demonstrate that DGI outperforms competitive sparse, dense, and generative baselines. Notably, DGI exhibits superior robustness in long-tail scenarios, validating the necessity of harmonizing structural differentiability with geometric isotropy. 
+
+---
+# Beyond Interleaving: Causal Attention Reformulations for Generative Recommender Systems 
+
+**Authors**: Hailing Cheng  
+
+**Link**: [PDF](https://arxiv.org/pdf/2603.10369)  
+
+**Abstract**: Generative Recommender Systems (GR) increasingly model user behavior as a sequence generation task by interleaving item and action tokens. While effective, this formulation introduces significant structural and computational inefficiencies: it doubles sequence length, incurs quadratic overhead, and relies on implicit attention to recover the causal relationship between an item and its associated action. Furthermore, interleaving heterogeneous tokens forces the Transformer to disentangle semantically incompatible signals, leading to increased attention noise and reduced representation this http URL this work, we propose a principled reformulation of generative recommendation that aligns sequence modeling with underlying causal structures and attention theory. We demonstrate that current interleaving mechanisms act as inefficient proxies for similarity-weighted action pooling. To address this, we introduce two novel architectures that eliminate interleaved dependencies to reduce sequence complexity by 50%: Attention-based Late Fusion for Actions (AttnLFA) and Attention-based Mixed Value Pooling (AttnMVP). These models explicitly encode the $i_n \rightarrow a_n$ causal dependency while preserving the expressive power of Transformer-based sequence this http URL evaluate our framework on large-scale product recommendation data from a major social network. Experimental results show that AttnLFA and AttnMVP consistently outperform interleaved baselines, achieving evaluation loss improvements of 0.29% and 0.80%, and significant gains in Normalized Entropy (NE). Crucially, these performance gains are accompanied by training time reductions of 23% and 12%, respectively. Our findings suggest that explicitly modeling item-action causality provides a superior design paradigm for scalable and efficient generative ranking. 
+
+---
+# Does Reasoning Make Search More Fair? Comparing Fairness in Reasoning and Non-Reasoning Rerankers 
+
+**Authors**: Saron Samuel, Benjamin Van Durme, Eugene Yang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2603.10332)  
+
+**Abstract**: While reasoning rerankers, such as Rank1, have demonstrated strong abilities in improving ranking relevance, it is unclear how they perform on other retrieval qualities such as fairness. We conduct the first systematic comparison of fairness between reasoning and non-reasoning rerankers. Using the TREC 2022 Fair Ranking Track dataset, we evaluate six reranking models across multiple retrieval settings and demographic attributes. Our findings demonstrate reasoning neither improve nor harm fairness compared to non-reasoning approaches. Our fairness metric, Attention-Weighted Rank Fairness (AWRF) remained stable (0.33-0.35) across all models, even as relevance varies substantially (nDCG 0.247-1.000). Demographic breakdown analysis revealed fairness gaps for geographic attributes regardless of model architecture. These results indicate that future work in specializing reasoning models to be aware of fairness attributes could lead to improvements, as current implementations preserve the fairness characteristics of their input ranking. 
+
+---
+# Chasing RATs: Tracing Reading for and as Creative Activity 
+
+**Authors**: Sophia Liu, Shm Garanganao Almeda  
+
+**Link**: [PDF](https://arxiv.org/pdf/2603.11031)  
+
+**Abstract**: Creativity research has privileged making over the interpretive labor that precedes and shapes it. We introduce Reading Activity Traces (RATs), a proposal that treats reading -- broadly defined to include navigating, interpreting, and curating media across interconnected sources -- as creative activity both for future artifacts and as a form of creation in its own right. By tracing trajectories of traversal, association, and reflection as inspectable artifacts, RATs render visible the creative work that algorithmic feeds and AI summarization increasingly compress and automate away. We illustrate this through WikiRAT, a speculative instantiation on Wikipedia, and open new ground for reflective practice, reader modeling, collective sensemaking, and understanding what is lost when human interpretation is automated -- towards designing intelligent tools that preserve it. 
+
+---
+# LLMGreenRec: LLM-Based Multi-Agent Recommender System for Sustainable E-Commerce 
+
+**Authors**: Hao N. Nguyen, Hieu M. Nguyen, Son Van Nguyen, Nguyen Thi Hanh  
+
+**Link**: [PDF](https://arxiv.org/pdf/2603.11025)  
+
+**Abstract**: Rising environmental awareness in e-commerce necessitates recommender systems that not only guide users to sustainable products but also minimize their own digital carbon footprints. Traditional session-based systems, optimized for short-term conversions, often fail to capture nuanced user intents for eco-friendly choices, perpetuating a gap between green intentions and actions. To tackle this, we introduce LLMGreenRec, a novel multi-agent framework that leverages Large Language Models (LLMs) to promote sustainable consumption. Through collaborative analysis of user interactions and iterative prompt refinement, LLMGreenRec's specialized agents deduce green-oriented user intents and prioritize eco-friendly product recommendations. Notably, this intent-driven approach also reduces unnecessary interactions and energy consumption. Extensive experiments on benchmark datasets validate LLMGreenRec's effectiveness in recommending sustainable products, demonstrating a robust solution that fosters a responsible digital economy. 
+
+---
+# A Hybrid Knowledge-Grounded Framework for Safety and Traceability in Prescription Verification 
+
+**Authors**: Yichi Zhu, Kan Ling, Xu Liu, Hengrun Zhang, Huiqun Yu, Guisheng Fan  
+
+**Link**: [PDF](https://arxiv.org/pdf/2603.10891)  
+
+**Abstract**: Medication errors pose a significant threat to patient safety, making pharmacist verification (PV) a critical, yet heavily burdened, final safeguard. The direct application of Large Language Models (LLMs) to this zero-tolerance domain is untenable due to their inherent factual unreliability, lack of traceability, and weakness in complex reasoning. To address these challenges, we introduce PharmGraph-Auditor, a novel system designed for safe and evidence-grounded prescription auditing. The core of our system is a trustworthy Hybrid Pharmaceutical Knowledge Base (HPKB), implemented under the Virtual Knowledge Graph (VKG) paradigm. This architecture strategically unifies a relational component for set constraint satisfaction and a graph component for topological reasoning via a rigorous mapping layer. To construct this HPKB, we propose the Iterative Schema Refinement (ISR) algorithm, a framework that enables the co-evolution of both graph and relational schemas from medical texts. For auditing, we introduce the KB-grounded Chain of Verification (CoV), a new reasoning paradigm that transforms the LLM from an unreliable generator into a transparent reasoning engine. CoV decomposes the audit task into a sequence of verifiable queries against the HPKB, generating hybrid query plans to retrieve evidence from the most appropriate data store. Experimental results demonstrate robust knowledge extraction capabilities and show promises of using PharmGraph-Auditor to enable pharmacists to achieve safer and faster prescription verification. 
+
+---
+# An Extreme Multi-label Text Classification (XMTC) Library Dataset: What if we took "Use of Practical AI in Digital Libraries" seriously? 
+
+**Authors**: Jennifer D'Souza, Sameer Sadruddin, Maximilian Kähler, Andrea Salfinger, Luca Zaccagna, Francesca Incitti, Lauro Snidaro, Osma Suominen  
+
+**Link**: [PDF](https://arxiv.org/pdf/2603.10876)  
+
+**Abstract**: Subject indexing is vital for discovery but hard to sustain at scale and across languages. We release a large bilingual (English/German) corpus of catalog records annotated with the Integrated Authority File (GND), plus a machine-actionable GND taxonomy. The resource enables ontology-aware multi-label classification, mapping text to authority terms, and agent-assisted cataloging with reproducible, authority-grounded evaluation. We provide a brief statistical profile and qualitative error analyses of three systems. We invite the community to assess not only accuracy but usefulness and transparency, toward authority-anchored AI co-pilots that amplify catalogers' work. 
+
+---
+# Interpretable Chinese Metaphor Identification via LLM-Assisted MIPVU Rule Script Generation: A Comparative Protocol Study 
+
+**Authors**: Weihang Huang, Mengna Liu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2603.10784)  
+
+**Abstract**: Metaphor identification is a foundational task in figurative language processing, yet most computational approaches operate as opaque classifiers offering no insight into why an expression is judged metaphorical. This interpretability gap is especially acute for Chinese, where rich figurative traditions, absent morphological cues, and limited annotated resources compound the challenge. We present an LLM-assisted pipeline that operationalises four metaphor identification protocols--MIP/MIPVU lexical analysis, CMDAG conceptual-mapping annotation, emotion-based detection, and simile-oriented identification--as executable, human-auditable rule scripts. Each protocol is a modular chain of deterministic steps interleaved with controlled LLM calls, producing structured rationales alongside every classification decision. We evaluate on seven Chinese metaphor datasets spanning token-, sentence-, and span-level annotation, establishing the first cross-protocol comparison for Chinese metaphor identification. Within-protocol evaluation shows Protocol A (MIP) achieves an F1 of 0.472 on token-level identification, while cross-protocol analysis reveals striking divergence: pairwise Cohen's kappa between Protocols A and D is merely 0.001, whereas Protocols B and C exhibit near-perfect agreement (kappa = 0.986). An interpretability audit shows all protocols achieve 100% deterministic reproducibility, with rationale correctness from 0.40 to 0.87 and editability from 0.80 to 1.00. Error analysis identifies conceptual-domain mismatch and register sensitivity as dominant failure modes. Our results demonstrate that protocol choice is the single largest source of variation in metaphor identification, exceeding model-level variation, and that rule-script architectures achieve competitive performance while maintaining full transparency. 
+
+---
+# RAGPerf: An End-to-End Benchmarking Framework for Retrieval-Augmented Generation Systems 
+
+**Authors**: Shaobo Li, Yirui Zhou, Yuan Xu, Kevin Chen, Daniel Waddington, Swaminathan Sundararaman, Hubertus Franke, Jian Huang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2603.10765)  
+
+**Abstract**: We present the design and implementation of a RAG-based AI system benchmarking (RAGPerf) framework for characterizing the system behaviors of RAG pipelines. To facilitate detailed profiling and fine-grained performance analysis, RAGPerf decouples the RAG workflow into several modular components - embedding, indexing, retrieval, reranking, and generation. RAGPerf offers the flexibility for users to configure the core parameters of each component and examine their impact on the end-to-end query performance and quality. RAGPerf has a workload generator to model real-world scenarios by supporting diverse datasets (e.g., text, pdf, code, and audio), different retrieval and update ratios, and query distributions. RAGPerf also supports different embedding models, major vector databases such as LanceDB, Milvus, Qdrant, Chroma, and Elasticsearch, as well as different LLMs for content generation. It automates the collection of performance metrics (i.e., end-to-end query throughput, host/GPU memory footprint, and CPU/GPU utilization) and accuracy metrics (i.e., context recall, query accuracy, and factual consistency). We demonstrate the capabilities of RAGPerf through a comprehensive set of experiments and open source its codebase at GitHub. Our evaluation shows that RAGPerf incurs negligible performance overhead. 
+
+---
+# A Hypergraph-Based Framework for Exploratory Business Intelligence 
+
+**Authors**: Yunkai Lou, Shunyang Li, Longbin Lai, Jianke Yu, Wenyuan Yu, Ying Zhang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2603.10625)  
+
+**Abstract**: Business Intelligence (BI) analysis is evolving towards Exploratory BI, an iterative, multi-round exploration paradigm where analysts progressively refine their understanding. However, traditional BI systems impose critical limits for Exploratory BI: heavy reliance on expert knowledge, high computational costs, static schemas, and lack of reusability. We present ExBI, a novel system that introduces the hypergraph data model with operators, including Source, Join, and View, to enable dynamic schema evolution and materialized view reuse. Using sampling-based algorithms with provable estimation guarantees, ExBI addresses the computational bottlenecks, while maintaining analytical accuracy. Experiments on LDBC datasets demonstrate that ExBI achieves significant speedups over existing systems: on average 16.21x (up to 146.25x) compared to Neo4j and 46.67x (up to 230.53x) compared to MySQL, while maintaining high accuracy with an average error rate of only 0.27% for COUNT, enabling efficient and accurate large-scale exploratory BI workflows. 
+
+---
+# Trajectory-Informed Memory Generation for Self-Improving Agent Systems 
+
+**Authors**: Gaodan Fang, Vatche Isahagian, K. R. Jayaram, Ritesh Kumar, Vinod Muthusamy, Punleuk Oum, Gegi Thomas  
+
+**Link**: [PDF](https://arxiv.org/pdf/2603.10600)  
+
+**Abstract**: LLM-powered agents face a persistent challenge: learning from their execution experiences to improve future performance. While agents can successfully complete many tasks, they often repeat inefficient patterns, fail to recover from similar errors, and miss opportunities to apply successful strategies from past executions. We present a novel framework for automatically extracting actionable learnings from agent execution trajectories and utilizing them to improve future performance through contextual memory retrieval. Our approach comprises four components: (1) a Trajectory Intelligence Extractor that performs semantic analysis of agent reasoning patterns, (2) a Decision Attribution Analyzer that identifies which decisions and reasoning steps led to failures, recoveries, or inefficiencies, (3) a Contextual Learning Generator that produces three types of guidance -- strategy tips from successful patterns, recovery tips from failure handling, and optimization tips from inefficient but successful executions, and (4) an Adaptive Memory Retrieval System that injects relevant learnings into agent prompts based on multi-dimensional similarity. Unlike existing memory systems that store generic conversational facts, our framework understands execution patterns, extracts structured learnings with provenance, and retrieves guidance tailored to specific task contexts. Evaluation on the AppWorld benchmark demonstrates consistent improvements, with up to 14.3 percentage point gains in scenario goal completion on held-out tasks and particularly strong benefits on complex tasks (28.5~pp scenario goal improvement, a 149\% relative increase). 
+
+---
