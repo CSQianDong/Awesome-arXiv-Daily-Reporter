@@ -1,0 +1,147 @@
+# Can Fairness Be Prompted? Prompt-Based Debiasing Strategies in High-Stakes Recommendations 
+
+**Authors**: Mihaela Rotar, Theresia Veronika Rampisela, Maria Maistro  
+
+**Link**: [PDF](https://arxiv.org/pdf/2603.12935)  
+
+**Abstract**: Large Language Models (LLMs) can infer sensitive attributes such as gender or age from indirect cues like names and pronouns, potentially biasing recommendations. While several debiasing methods exist, they require access to the LLMs' weights, are computationally costly, and cannot be used by lay users. To address this gap, we investigate implicit biases in LLM Recommenders (LLMRecs) and explore whether prompt-based strategies can serve as a lightweight and easy-to-use debiasing approach. We contribute three bias-aware prompting strategies for LLMRecs. To our knowledge, this is the first study on prompt-based debiasing approaches in LLMRecs that focuses on group fairness for users. Our experiments with 3 LLMs, 4 prompt templates, 9 sensitive attribute values, and 2 datasets show that our proposed debiasing approach, which instructs an LLM to be fair, can improve fairness by up to 74% while retaining comparable effectiveness, but might overpromote specific demographic groups in some cases. 
+
+---
+# NanoVDR: Distilling a 2B Vision-Language Retriever into a 70M Text-Only Encoder for Visual Document Retrieval 
+
+**Authors**: Zhuchenyang Liu, Yao Zhang, Yu Xiao  
+
+**Link**: [PDF](https://arxiv.org/pdf/2603.12824)  
+
+**Abstract**: Vision-Language Model (VLM) based retrievers have advanced visual document retrieval (VDR) to impressive quality. They require the same multi-billion parameter encoder for both document indexing and query encoding, incurring high latency and GPU dependence even for plain-text queries. We observe that this design is unnecessarily symmetric: documents are visually complex and demand strong visual understanding, whereas queries are just short text strings. NanoVDR exploits this query--document asymmetry by decoupling the two encoding paths: a frozen 2B VLM teacher indexes documents offline, while a distilled text-only student as small as 69M parameters encodes queries at inference. The key design choice is the distillation objective. Through systematic comparison of six objectives across three backbones and 22 ViDoRe benchmark datasets, we find that pointwise cosine alignment on query text consistently outperforms ranking-based and contrastive alternatives, while requiring only pre-cached teacher query embeddings and no document processing during training. Furthermore, we identify cross-lingual transfer as the primary performance bottleneck, and resolve it cheaply by augmenting training data with machine-translated queries. The resulting NanoVDR-S-Multi (DistilBERT, 69M) retains 95.1\% of teacher quality and outperforms DSE-Qwen2 (2B) on v2 and v3 with 32$\times$ fewer parameters and 50$\times$ lower CPU query latency, at a total training cost under 13 GPU-hours. 
+
+---
+# Taming the Long Tail: Efficient Item-wise Sharpness-Aware Minimization for LLM-based Recommender Systems 
+
+**Authors**: Jiaming Zhang, Yuyuan Li, Xiaohua Feng, Li Zhang, Longfei Li, Jun Zhou, Chaochao Chen  
+
+**Link**: [PDF](https://arxiv.org/pdf/2603.12752)  
+
+**Abstract**: Large Language Model-based Recommender Systems (LRSs) have recently emerged as a new paradigm in sequential recommendation by directly adopting LLMs as backbones. While LRSs demonstrate strong knowledge utilization and instruction-following abilities, they have not been systematically studied under the long-standing long-tail problem. In this paper, we conduct an empirical study and reveal that LRSs face two distinct types of long-tail: i) prior long-tail, inherited implicitly from pretraining corpora, and ii) data long-tail, originating from skewed recommendation datasets. Our analysis shows that both contribute to the performance disparity between head and tail items, with the intersection of the two heads exhibiting an even stronger head effect. Nevertheless, the overall performance distribution in LRSs, especially on the tail, remains dominated by the data long-tail. To address this challenge, we propose Efficient Item-wise Sharpness-Aware Minimization (EISAM), a novel optimization framework that improves tail-item performance by adaptively regularizing the loss landscape at the item level. EISAM introduces an efficient penalty design that captures fine-grained item-specific sharpness while maintaining computational scalability for LLMs. In addition, we derive a generalization bound for EISAM. Our theoretical analysis shows that the bound decreases at a faster rate under our item-wise regularization, offering theoretical support for its effectiveness. Extensive experiments on three real-world datasets demonstrate that EISAM significantly boosts tail-item recommendation performance while preserving overall quality, establishing the first systematic solution to the long-tail problem in LRSs. 
+
+---
+# Anchored Alignment: Preventing Positional Collapse in Multimodal Recommender Systems 
+
+**Authors**: Yonghun Jeong, David Yoon Suk Kang, Yeon-Chang Lee  
+
+**Link**: [PDF](https://arxiv.org/pdf/2603.12726)  
+
+**Abstract**: Multimodal recommender systems (MMRS) leverage images, text, and interaction signals to enrich item representations. However, recent alignment based MMRSs that enforce a unified embedding space often blur modality specific structures and exacerbate ID dominance. Therefore, we propose AnchorRec, a multimodal recommendation framework that performs indirect, anchor based alignment in a lightweight projection domain. By decoupling alignment from representation learning, AnchorRec preserves each modality's native structure while maintaining cross modal consistency and avoiding positional collapse. Experiments on four Amazon datasets show that AnchorRec achieves competitive top N recommendation accuracy, while qualitative analyses demonstrate improved multimodal expressiveness and coherence. The codebase of AnchorRec is available at this https URL. 
+
+---
+# FGTR: Fine-Grained Multi-Table Retrieval via Hierarchical LLM Reasoning 
+
+**Authors**: Chaojie Sun, Bin Cao, Tiantian Li, Chenyu Hou, Ruizhe Li, Qing Fan  
+
+**Link**: [PDF](https://arxiv.org/pdf/2603.12702)  
+
+**Abstract**: With the rapid advancement of large language models (LLMs), growing efforts have been made on LLM-based table retrieval. However, existing studies typically focus on single-table query, and implement it by similarity matching after encoding the entire table. These methods usually result in low accuracy due to their coarse-grained encoding which incorporates much query-irrelated data, and are also inefficient when dealing with large tables, failing to fully utilize the reasoning capabilities of LLM. Further, multi-table query is under-explored in retrieval tasks. To this end, we propose a hierarchical multi-table query method based on LLM: Fine-Grained Multi-Table Retrieval FGTR, a new retrieval paradigm that employs a human-like reasoning strategy. Through hierarchical reasoning, FGTR first identifies relevant schema elements and then retrieves the corresponding cell contents, ultimately constructing a concise and accurate sub-table that aligns with the given query. To comprehensively evaluate the performance of FGTR, we construct two new benchmark datasets based on Spider and BIRD . Experimental results show that FGTR outperforms previous state-of-the-art methods, improving the F_2 metric by 18% on Spider and 21% on BIRD, demonstrating its effectiveness in enhancing fine-grained retrieval and its potential to improve end-to-end performance on table-based downstream tasks. 
+
+---
+# VLM4Rec: Multimodal Semantic Representation for Recommendation with Large Vision-Language Models 
+
+**Authors**: Ty Valencia, Burak Barlas, Varun Singhal, Ruchir Bhatia, Wei Yang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2603.12625)  
+
+**Abstract**: Multimodal recommendation is commonly framed as a feature fusion problem, where textual and visual signals are combined to better model user preference. However, the effectiveness of multimodal recommendation may depend not only on how modalities are fused, but also on whether item content is represented in a semantic space aligned with preference matching. This issue is particularly important because raw visual features often preserve appearance similarity, while user decisions are typically driven by higher-level semantic factors such as style, material, and usage context. Motivated by this observation, we propose LVLM-grounded Multimodal Semantic Representation for Recommendation (VLM4Rec), a lightweight framework that organizes multimodal item content through semantic alignment rather than direct feature fusion. VLM4Rec first uses a large vision-language model to ground each item image into an explicit natural-language description, and then encodes the grounded semantics into dense item representations for preference-oriented retrieval. Recommendation is subsequently performed through a simple profile-based semantic matching mechanism over historical item embeddings, yielding a practical offline-online decomposition. Extensive experiments on multiple multimodal recommendation datasets show that VLM4Rec consistently improves performance over raw visual features and several fusion-based alternatives, suggesting that representation quality may matter more than fusion complexity in this setting. The code is released at this https URL. 
+
+---
+# InterDeepResearch: Enabling Human-Agent Collaborative Information Seeking through Interactive Deep Research 
+
+**Authors**: Bo Pan, Lunke Pan, Yitao Zhou, Qi Jiang, Zhen Wen, Minfeng Zhu, Wei Chen  
+
+**Link**: [PDF](https://arxiv.org/pdf/2603.12608)  
+
+**Abstract**: Deep research systems powered by LLM agents have transformed complex information seeking by automating the iterative retrieval, filtering, and synthesis of insights from massive-scale web sources. However, existing systems predominantly follow an autonomous "query-to-report" paradigm, limiting users to a passive role and failing to integrate their personal insights, contextual knowledge, and evolving research intents. This paper addresses the lack of human-in-the-loop collaboration in the agentic research process. Through a formative study, we identify that current systems hinder effective human-agent collaboration in terms of process observability, real-time steerability, and context navigation efficiency. Informed by these findings, we propose InterDeepResearch, an interactive deep research system backed by a dedicated research context management framework. The framework organizes research context into a hierarchical architecture with three levels (information, actions, and sessions), enabling dynamic context reduction to prevent LLM context exhaustion and cross-action backtracing for evidence provenance. Built upon this framework, the system interface integrates three coordinated views for visual sensemaking, and dedicated interaction mechanisms for interactive research context navigation. Evaluation on the Xbench-DeepSearch-v1 and Seal-0 benchmarks shows that InterDeepResearch achieves competitive performance compared to state-of-the-art deep research systems, while a formal user study demonstrates its effectiveness in supporting human-agent collaborative information seeking. Project page with system demo: this https URL. 
+
+---
+# Deferred is Better: A Framework for Multi-Granularity Deferred Interaction of Heterogeneous Features 
+
+**Authors**: Yi Xu, Moyu Zhang, Chaofan Fan, Jinxin Hu, Yu Zhang, Xiaoyi Zeng  
+
+**Link**: [PDF](https://arxiv.org/pdf/2603.12586)  
+
+**Abstract**: Click-through rate (CTR) prediction models estimates the probability of a user-item click by modeling interactions across a vast feature space. A fundamental yet often overlooked challenge is the inherent heterogeneity of these features: their sparsity and information content vary dramatically. For instance, categorical features like item IDs are extremely sparse, whereas numerical features like item price are relatively dense. Prevailing CTR models have largely ignored this heterogeneity, employing a uniform feature interaction strategy that inputs all features into the interaction layers simultaneously. This approach is suboptimal, as the premature introduction of low-information features can inject significant noise and mask the signals from information-rich features, which leads to model collapse and hinders the learning of robust representations. To address the above challenge, we propose a Multi-Granularity Information-Aware Deferred Interaction Network (MGDIN), which adaptively defers the introduction of features into the feature interaction process. MGDIN's core mechanism operates in two stages: First, it employs a multi-granularity feature grouping strategy to partition the raw features into distinct groups with more homogeneous information density in different granularities, thereby mitigating the effects of extreme individual feature sparsity and enabling the model to capture feature interactions from diverse perspectives. Second, a delayed interaction mechanism is implemented through a hierarchical masking strategy, which governs when and how each group participates by masking low-information groups in the early layers and progressively unmasking them as the network deepens. This deferred introduction allows the model to establish a robust understanding based on high-information features before gradually incorporating sparser information from other groups... 
+
+---
+# Bridging Sequential and Contextual Features with a Dual-View of Fine-grained Core-Behaviors and Global Interest-Distribution 
+
+**Authors**: Yi Xu, Chaofan Fan, Moyu Zhang, Jinxin Hu, Jiahao Wang, Hao Zhang, Shizhun Wang, Yu Zhang, Xiaoyi Zeng  
+
+**Link**: [PDF](https://arxiv.org/pdf/2603.12578)  
+
+**Abstract**: Click-through rate (CTR) prediction tasks typically estimate the probability of a user clicking on a candidate item by modeling both user behavior sequence features and the item's contextual features, where the user behavior sequence is particularly critical as it dynamically reflects real-time shifts in user interest. Traditional CTR models often aggregate this dynamic sequence into a single vector before interacting it with contextual features. This approach, however, not only leads to behavior information loss during aggregation but also severely limits the model's capacity to capture interactions between contextual features and specific user behaviors, ultimately impairing its ability to capture fine-grained behavioral details and hindering models' prediction accuracy. Conversely, a naive approach of directly interacting with each user action with contextual features is computationally expensive and introduces significant noise from behaviors irrelevant to the candidate item. This noise tends to overwhelm the valuable signals arising from interactions involving more behaviors relevant to the candidate item. Therefore, to resolve the above issue, we propose a Core-Behaviors and Distributional-Compensation Dual-View Interaction Network (CDNet), which bridges the gap between sequential and contextual feature interactions from two complementary angles: a fine-grained interaction involving the most relevant behaviors and contextual features, and a coarse-grained interaction that models the user's overall interest distribution against the contextual features. By simultaneously capturing important behavioral details without forgoing the holistic user interest, CDNet effectively models the interplay between sequential and contextual features without imposing a significant computational burden. Ultimately, extensive experiments validate the effectiveness of CDNet. 
+
+---
+# Test-Time Strategies for More Efficient and Accurate Agentic RAG 
+
+**Authors**: Brian Zhang, Deepti Guntur, Zhiyang Zuo, Abhinav Sharma, Shreyas Chaudhari, Wenlong Zhao, Franck Dernoncourt, Puneet Mathur, Ryan Rossi, Nedim Lipka  
+
+**Link**: [PDF](https://arxiv.org/pdf/2603.12396)  
+
+**Abstract**: Retrieval-Augmented Generation (RAG) systems face challenges with complex, multihop questions, and agentic frameworks such as Search-R1 (Jin et al., 2025), which operates iteratively, have been proposed to address these complexities. However, such approaches can introduce inefficiencies, including repetitive retrieval of previously processed information and challenges in contextualizing retrieved results effectively within the current generation prompt. Such issues can lead to unnecessary retrieval turns, suboptimal reasoning, inaccurate answers, and increased token consumption.
+In this paper, we investigate test-time modifications to the Search-R1 pipeline to mitigate these identified shortcomings. Specifically, we explore the integration of two components and their combination: a contextualization module to better integrate relevant information from retrieved documents into reasoning, and a de-duplication module that replaces previously retrieved documents with the next most relevant ones. We evaluate our approaches using the HotpotQA (Yang et al., 2018) and the Natural Questions (Kwiatkowski et al., 2019) datasets, reporting the exact match (EM) score, an LLM-as-a-Judge assessment of answer correctness, and the average number of turns.
+Our best-performing variant, utilizing GPT-4.1-mini for contextualization, achieves a 5.6% increase in EM score and reduces the number of turns by 10.5% compared to the Search-R1 baseline, demonstrating improved answer accuracy and retrieval efficiency. 
+
+---
+# Multi-Step Semantic Reasoning in Generative Retrieval 
+
+**Authors**: Steven Dong, Yubao Tang, Maarten de Rijke  
+
+**Link**: [PDF](https://arxiv.org/pdf/2603.12368)  
+
+**Abstract**: Generative retrieval (GR) models encode a corpus within model parameters and generate relevant document identifiers directly for a given query. While this paradigm shows promise in retrieval tasks, existing GR models struggle with complex queries in numerical contexts, such as those involving semantic reasoning over financial reports, due to limited reasoning capabilities. This limitation leads to suboptimal retrieval accuracy and hinders practical applicability. We propose ReasonGR, a framework designed to enhance multi-step semantic reasoning in numerical contexts within GR. ReasonGR employs a structured prompting strategy combining task-specific instructions with stepwise reasoning guidance to better address complex retrieval queries. Additionally, it integrates a reasoning-focused adaptation module to improve the learning of reasoning-related parameters. Experiments on the FinQA dataset, which contains financial queries over complex documents, demonstrate that ReasonGR improves retrieval accuracy and consistency, indicating its potential for advancing GR models in reasoning-intensive retrieval scenarios. 
+
+---
+# Detecting Miscitation on the Scholarly Web through LLM-Augmented Text-Rich Graph Learning 
+
+**Authors**: Huidong Wu, Haojia Xiang, Jingtong Gao, Xiangyu Zhao, Dengsheng Wu, Jianping Li  
+
+**Link**: [PDF](https://arxiv.org/pdf/2603.12290)  
+
+**Abstract**: Scholarly web is a vast network of knowledge connected by citations. However, this system is increasingly compromised by miscitation, where references do not support or even contradict the claims they are cited for. Current miscitation detection methods, which primarily rely on semantic similarity or network anomalies, struggle to capture the nuanced relationship between a citation's context and its place in the wider network. While large language models (LLMs) offer powerful capabilities in semantic reasoning for this task, their deployment is hindered by hallucination risks and high computational costs. In this work, we introduce LLM-Augmented Graph Learning-based Miscitation Detector (LAGMiD), a novel framework that leverages LLMs for deep semantic reasoning over citation graphs and distills this knowledge into graph neural networks (GNNs) for efficient and scalable miscitation detection. Specifically, LAGMiD introduces an evidence-chain reasoning mechanism, which uses chain-of-thought prompting, to perform multi-hop citation tracing and assess semantic fidelity. To reduce LLM inference costs, we design a knowledge distillation method aligning GNN embeddings with intermediate LLM reasoning states. A collaborative learning strategy further routes complex cases to the LLM while optimizing the GNN for structure-based generalization. Experiments on three real-world benchmarks show that LAGMiD achieves state-of-the-art miscitation detection with significantly reduced inference cost. 
+
+---
+# Algorithmic Trust and Compliance: Benchmarking Brand Notability for UK iGaming Entities in Generative Search Engines 
+
+**Authors**: Julen Oruesagasti  
+
+**Link**: [PDF](https://arxiv.org/pdf/2603.12282)  
+
+**Abstract**: The rapid adoption of generative AI-powered search engines, such as ChatGPT, Perplexity, and Gemini, is fundamentally reshaping information retrieval. We are witnessing a critical shift from traditional ranked lists to synthesized, citation-backed answers. This paradigm shift challenges established Search Engine Optimization (SEO) practices and necessitates a new framework, termed Generative Engine Optimization (GEO). In highly regulated environments like the UK iGaming sector, visibility is no longer dictated by keyword density, but by an entity's ability to project "Algorithmic Trust". This report presents an empirical analysis of how compliance signals -- such as UK Gambling Commission (UKGC) standards -- function as authority multipliers for Large Language Models (LLMs) when properly structured. Recent large-scale experiments reveal that AI Search exhibits a systematic and overwhelming bias towards Earned media (third-party, authoritative sources) over Brand-owned content. Consequently, practitioners must engineer their content for machine scannability and justification to dominate these new AI-perceived authority metrics. 
+
+---
+# Developing and evaluating a chatbot to support maternal health care 
+
+**Authors**: Smriti Jha, Vidhi Jain, Jianyu Xu, Grace Liu, Sowmya Ramesh, Jitender Nagpal, Gretchen Chapman, Benjamin Bellows, Siddhartha Goyal, Aarti Singh, Bryan Wilder  
+
+**Link**: [PDF](https://arxiv.org/pdf/2603.13168)  
+
+**Abstract**: The ability to provide trustworthy maternal health information using phone-based chatbots can have a significant impact, particularly in low-resource settings where users have low health literacy and limited access to care. However, deploying such systems is technically challenging: user queries are short, underspecified, and code-mixed across languages, answers require regional context-specific grounding, and partial or missing symptom context makes safe routing decisions difficult.
+We present a chatbot for maternal health in India developed through a partnership between academic researchers, a health tech company, a public health nonprofit, and a hospital. The system combines (1) stage-aware triage, routing high-risk queries to expert templates, (2) hybrid retrieval over curated maternal/newborn guidelines, and (3) evidence-conditioned generation from an LLM. Our core contribution is an evaluation workflow for high-stakes deployment under limited expert supervision. Targeting both component-level and end-to-end testing, we introduce: (i) a labeled triage benchmark (N=150) achieving 86.7% emergency recall, explicitly reporting the missed-emergency vs. over-escalation trade-off; (ii) a synthetic multi-evidence retrieval benchmark (N=100) with chunk-level evidence labels; (iii) LLM-as-judge comparison on real queries (N=781) using clinician-codesigned criteria; and (iv) expert validation. Our findings show that trustworthy medical assistants in multilingual, noisy settings require defense-in-depth design paired with multi-method evaluation, rather than any single model and evaluation method choice. 
+
+---
+# Beyond Final Answers: CRYSTAL Benchmark for Transparent Multimodal Reasoning Evaluation 
+
+**Authors**: Wayner Barrios, SouYoung Jin  
+
+**Link**: [PDF](https://arxiv.org/pdf/2603.13099)  
+
+**Abstract**: We introduce **CRYSTAL** (*__C__lear __R__easoning via __Y__ielded __S__teps, __T__raceability and __L__ogic*), a diagnostic benchmark with 6,372 instances that evaluates multimodal reasoning through verifiable intermediate steps. We propose two complementary metrics: *Match F1*, which scores step-level precision and recall via semantic similarity matching, and *Ordered Match F1*, which further penalizes disordered reasoning chains. References are constructed through a Delphi-inspired pipeline where four independent MLLMs generate trajectories, aggregated via semantic clustering and validated through human quality gates. Evaluation of 20 MLLMs, including commercial frontier systems not used during benchmark construction, reveals systematic failures invisible to accuracy: universal cherry-picking (precision far exceeds recall), non-monotonic scaling trade-offs, and disordered reasoning where no competitive model preserves more than 60% of matched steps in correct order. Beyond evaluation, we propose the **Causal Process Reward (CPR)**, a multiplicative reward that couples answer correctness with step-level alignment, and **CPR-Curriculum**, which progressively increases reasoning difficulty during training. CPR-Curriculum achieves +32% Match F1 via GRPO where additive reward strategies fail, improving reasoning without manual step annotation. 
+
+---
+# Structured Distillation for Personalized Agent Memory: 11x Token Reduction with Retrieval Preservation 
+
+**Authors**: Sydney Lewis  
+
+**Link**: [PDF](https://arxiv.org/pdf/2603.13017)  
+
+**Abstract**: Long conversations with an AI agent create a simple problem for one user: the history is useful, but carrying it verbatim is expensive. We study personalized agent memory: one user's conversation history with an agent, distilled into a compact retrieval layer for later search. Each exchange is compressed into a compound object with four fields (exchange_core, specific_context, thematic room_assignments, and regex-extracted files_touched). The searchable distilled text averages 38 tokens per exchange. Applied to 4,182 conversations (14,340 exchanges) from 6 software engineering projects, the method reduces average exchange length from 371 to 38 tokens, yielding 11x compression. We evaluate whether personalized recall survives that compression using 201 recall-oriented queries, 107 configurations spanning 5 pure and 5 cross-layer search modes, and 5 LLM graders (214,519 consensus-graded query-result pairs). The best pure distilled configuration reaches 96% of the best verbatim MRR (0.717 vs 0.745). Results are mechanism-dependent. All 20 vector search configurations remain non-significant after Bonferroni correction, while all 20 BM25 configurations degrade significantly (effect sizes |d|=0.031-0.756). The best cross-layer setup slightly exceeds the best pure verbatim baseline (MRR 0.759). Structured distillation compresses single-user agent memory without uniformly sacrificing retrieval quality. At 1/11 the context cost, thousands of exchanges fit within a single prompt while the verbatim source remains available for drill-down. We release the implementation and analysis pipeline as open-source software. 
+
+---
