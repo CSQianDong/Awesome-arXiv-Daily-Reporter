@@ -1,0 +1,72 @@
+# Expert Mind: A Retrieval-Augmented Architecture for Expert Knowledge Preservation in the Energy Sector 
+
+**Authors**: Diego Ezequiel Cervera  
+
+**Link**: [PDF](https://arxiv.org/pdf/2603.14541)  
+
+**Abstract**: The departure of subject-matter experts from industrial organizations results in the irreversible loss of tacit knowledge that is rarely captured through conventional documentation practices. This paper proposes Expert Mind, an experimental system that leverages Retrieval-Augmented Generation (RAG), large language models (LLMs), and multimodal capture techniques to preserve, structure, and make queryable the deep expertise of organizational knowledge holders. Drawing on the specific context of the energy sector, where decades of operational experience risk being lost to an aging workforce, we describe the system architecture, processing pipeline, ethical framework, and evaluation methodology. The proposed system addresses the knowledge elicitation problem through structured interviews, think-aloud sessions, and text corpus ingestion, which are subsequently embedded into a vector store and queried through a conversational interface. Preliminary design considerations suggest Expert Mind can significantly reduce knowledge transfer latency and improve onboarding efficiency. Ethical dimensions including informed consent, intellectual property, and the right to erasure are addressed as first-class design constraints. 
+
+---
+# $p^2$RAG: Privacy-Preserving RAG Service Supporting Arbitrary Top-$k$ Retrieval 
+
+**Authors**: Yulong Ming, Mingyue Wang, Jijia Yang, Cong Wang, Xiaohua Jia  
+
+**Link**: [PDF](https://arxiv.org/pdf/2603.14778)  
+
+**Abstract**: Retrieval-Augmented Generation (RAG) enables large language models to use external knowledge, but outsourcing the RAG service raises privacy concerns for both data owners and users. Privacy-preserving RAG systems address these concerns by performing secure top-$k$ retrieval, which typically is secure sorting to identify relevant documents. However, existing systems face challenges supporting arbitrary $k$ due to their inability to change $k$, new security issues, or efficiency degradation with large $k$. This is a significant limitation because modern long-context models generally achieve higher accuracy with larger retrieval sets. We propose $p^2$RAG, a privacy-preserving RAG service that supports arbitrary top-$k$ retrieval. Unlike existing systems, $p^2$RAG avoids sorting candidate documents. Instead, it uses an interactive bisection method to determine the set of top-$k$ documents. For security, $p^2$RAG uses secret sharing on two semi-honest non-colluding servers to protect the data owner's database and the user's prompt. It enforces restrictions and verification to defend against malicious users and tightly bound the information leakage of the database. The experiments show that $p^2$RAG is 3--300$\times$ faster than the state-of-the-art PRAG for $k = 16$--$1024$. 
+
+---
+# Citation-Enforced RAG for Fiscal Document Intelligence: Cited, Explainable Knowledge Retrieval in Tax Compliance 
+
+**Authors**: Akhil Chandra Shanivendra  
+
+**Link**: [PDF](https://arxiv.org/pdf/2603.14170)  
+
+**Abstract**: Tax authorities and public-sector financial agencies rely on large volumes of unstructured and semi-structured fiscal documents - including tax forms, instructions, publications, and jurisdiction-specific guidance - to support compliance analysis and audit workflows. While recent advances in generative AI and retrieval-augmented generation (RAG) have shown promise for document-centric question answering, existing approaches often lack the transparency, citation fidelity, and conservative behaviour required in high-stakes regulatory domains. This paper presents a multimodal, citation-enforced RAG framework for fiscal document intelligence that prioritises explainability and auditability. The framework adopts a source-first ingestion strategy, preserves page-level provenance, enforces citations during generation, and supports abstention when evidence is insufficient. Evaluation on real IRS and state tax documents demonstrates improved citation fidelity, reduced hallucination, and analyst-usable explanations, illustrating a pathway toward trustworthy AI for tax compliance. 
+
+---
+# Hybrid Intent-Aware Personalization with Machine Learning and RAG-Enabled Large Language Models for Financial Services Marketing 
+
+**Authors**: Akhil Chandra Shanivendra  
+
+**Link**: [PDF](https://arxiv.org/pdf/2603.14173)  
+
+**Abstract**: Personalized marketing in financial services requires models that can both predict customer behavior and generate compliant, context-appropriate content. This paper presents a hybrid architecture that integrates classical machine learning for segmentation, latent intent modeling, and personalization prediction with retrieval-augmented large language models for grounded content generation. A synthetic, reproducible dataset is constructed to reflect temporal customer behavior, product interactions, and marketing responses. The proposed framework incorporates temporal encoders, latent representations, and multi-task classification to estimate segment membership, customer intent, and product-channel recommendations. A retrieval-augmented generation layer then produces customer-facing messages constrained by retrieved domain documents. Experiments show that temporal modeling and intent features improve personalization accuracy, while citation-based retrieval reduces unsupported generation and supports auditability in regulated settings. The contribution is primarily architectural, demonstrating how predictive modeling and RAG-based generation can be combined into a transparent, explainable pipeline for financial services personalization. 
+
+---
+# APEX-Searcher: Augmenting LLMs' Search Capabilities through Agentic Planning and Execution 
+
+**Authors**: Kun Chen, Qingchao Kong, Zhao Feifei, Wenji Mao  
+
+**Link**: [PDF](https://arxiv.org/pdf/2603.13853)  
+
+**Abstract**: Retrieval-augmented generation (RAG), based on large language models (LLMs), serves as a vital approach to retrieving and leveraging external knowledge in various domain applications. When confronted with complex multi-hop questions, single-round retrieval is often insufficient for accurate reasoning and problem solving. To enhance search capabilities for complex tasks, most existing works integrate multi-round iterative retrieval with reasoning processes via end-to-end training. While these approaches significantly improve problem-solving performance, they are still faced with challenges in task reasoning and model training, especially ambiguous retrieval execution paths and sparse rewards in end-to-end reinforcement learning (RL) process, leading to inaccurate retrieval results and performance degradation. To address these issues, in this paper, we proposes APEX-Searcher, a novel Agentic Planning and Execution framework to augment LLM search capabilities. Specifically, we introduce a two-stage agentic framework that decouples the retrieval process into planning and execution: It first employs RL with decomposition-specific rewards to optimize strategic planning; Built on the sub-task decomposition, it then applies supervised fine-tuning on high-quality multi-hop trajectories to equip the model with robust iterative sub-task execution capabilities. Extensive experiments demonstrate that our proposed framework achieves significant improvements in both multi-hop RAG and task planning performances across multiple benchmarks. 
+
+---
+# The Impact of Ideological Discourses in RAG: A Case Study with COVID-19 Treatments 
+
+**Authors**: Elmira Salari, Maria Claudia Nunes Delfino, Hazem Amamou, José Victor de Souza, Shruti Kshirsagar, Alan Davoust, Anderson Avila  
+
+**Link**: [PDF](https://arxiv.org/pdf/2603.14838)  
+
+**Abstract**: This paper studies the impact of retrieved ideological texts on the outputs of large language models (LLMs). While interest in understanding ideology in LLMs has recently increased, little attention has been given to this issue in the context of Retrieval-Augmented Generation (RAG). To fill this gap, we design an external knowledge source based on ideological loaded texts about COVID-19 treatments. Our corpus is based on 1,117 academic articles representing discourses about controversial and endorsed treatments for the disease. We propose a corpus linguistics framework, based on Lexical Multidimensional Analysis (LMDA), to identify the ideologies within the corpus. LLMs are tasked to answer questions derived from three identified ideological dimensions, and two types of contextual prompts are adopted: the first comprises the user question and ideological texts; and the second contains the question, ideological texts, and LMDA descriptions. Ideological alignment between reference ideological texts and LLMs' responses is assessed using cosine similarity for lexical and semantic representations. Results demonstrate that LLMs' responses based on ideological retrieved texts are more aligned with the ideology encountered in the external knowledge, with the enhanced prompt further influencing LLMs' outputs. Our findings highlight the importance of identifying ideological discourses within the RAG framework in order to mitigate not just unintended ideological bias, but also the risks of malicious manipulation of such models. 
+
+---
+# The Reasoning Bottleneck in Graph-RAG: Structured Prompting and Context Compression for Multi-Hop QA 
+
+**Authors**: Yasaman Zarinkia, Venkatesh Srinivasan, Alex Thomo  
+
+**Link**: [PDF](https://arxiv.org/pdf/2603.14045)  
+
+**Abstract**: Graph-RAG systems achieve strong multi-hop question answering by indexing documents into knowledge graphs, but strong retrieval does not guarantee strong answers. Evaluating KET-RAG, a leading Graph-RAG system, on three multi-hop QA benchmarks (HotpotQA, MuSiQue, 2WikiMultiHopQA), we find that 77% to 91% of questions have the gold answer in the retrieved context, yet accuracy is only 35% to 78%, and 73% to 84% of errors are reasoning failures. We propose two augmentations: (i) SPARQL chain-of-thought prompting, which decomposes questions into triple-pattern queries aligned with the entity-relationship context, and (ii) graph-walk compression, which compresses the context by ~60% via knowledge-graph traversal with no LLM calls. SPARQL CoT improves accuracy by +2 to +14 pp; graph-walk compression adds +6 pp on average when paired with structured prompting on smaller models. Surprisingly, we show that, with question-type routing, a fully augmented budget open-weight Llama-8B model matches or exceeds the unaugmented Llama-70B baseline on all three benchmarks at ~12x lower cost. A replication on LightRAG confirms that our augmentations transfer across Graph-RAG systems. 
+
+---
+# Mitigating KG Quality Issues: A Robust Multi-Hop GraphRAG Retrieval Framework 
+
+**Authors**: Yizhuo Ma, Shuang Liang, Rongzheng Wang, Jiakai, Qizhi Chen, Muquan Li, Ke Qin  
+
+**Link**: [PDF](https://arxiv.org/pdf/2603.14828)  
+
+**Abstract**: Graph Retrieval-Augmented Generation enhances multi-hop reasoning but relies on imperfect knowledge graphs that frequently suffer from inherent quality issues. Current approaches often overlook these issues, consequently struggling with retrieval drift driven by spurious noise and retrieval hallucinations stemming from incomplete information. To address these challenges, we propose C2RAG (Constraint-Checked Retrieval-Augmented Generation), a framework aimed at robust multi-hop retrieval over the imperfect KG. First, C2RAG performs constraint-based retrieval by decomposing each query into atomic constraint triples, with using fine-grained constraint anchoring to filter candidates for suppressing retrieval drift. Second, C2RAG introduces a sufficiency check to explicitly prevent retrieval hallucinations by deciding whether the current evidence is sufficient to justify structural propagation, and activating textual recovery otherwise. Extensive experiments on multi-hop benchmarks demonstrate that C2RAG consistently outperforms the latest baselines by 3.4\% EM and 3.9\% F1 on average, while exhibiting improved robustness under KG issues. 
+
+---
