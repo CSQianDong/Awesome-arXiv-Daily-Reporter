@@ -1,0 +1,45 @@
+# ImplicitRM: Unbiased Reward Modeling from Implicit Preference Data for LLM alignment 
+
+**Authors**: Hao Wang, Haocheng Yang, Licheng Pan, Lei Shen, Xiaoxi Li, Yinuo Wang, Zhichao Chen, Yuan Lu, Haoxuan Li, Zhouchen Lin  
+
+**Link**: [PDF](https://arxiv.org/pdf/2603.23184)  
+
+**Abstract**: Reward modeling represents a long-standing challenge in reinforcement learning from human feedback (RLHF) for aligning language models. Current reward modeling is heavily contingent upon experimental feedback data with high collection costs. In this work, we study \textit{implicit reward modeling} -- learning reward models from implicit human feedback (e.g., clicks and copies) -- as a cost-effective alternative. We identify two fundamental challenges in implicit reward modeling: (1) Implicit preference data lacks definitive negative samples, which makes standard positive-negative classification methods inapplicable; (2) Implicit preference data suffers from user preference bias, where different responses have different propensities to elicit user feedback actions, which exacerbates the difficulty of distinguishing definitive negative samples. To address these challenges, we propose ImplicitRM, which aims to learn unbiased reward models from implicit preference data. ImplicitRM stratifies training samples into four latent groups via a stratification model. Building on this, it derives a learning objective through likelihood maximization, which we prove is theoretically unbiased, effectively resolving both challenges. Experiments demonstrate that ImplicitRM learns accurate reward models across implicit preference datasets. Code is available on our project website. 
+
+---
+# TIPS: Turn-Level Information-Potential Reward Shaping for Search-Augmented LLMs 
+
+**Authors**: Yutao Xie, Nathaniel Thomas, Nicklas Hansen, Yang Fu, Li Erran Li, Xiaolong Wang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2603.22293)  
+
+**Abstract**: Search-augmented large language models (LLMs) trained with reinforcement learning (RL) have achieved strong results on open-domain question answering (QA), but training still remains a significant challenge. The optimization is often unstable due to sparse rewards and difficult credit assignments across reasoning and tool calls. To address this, we introduce Turn-Level Information Potential Reward Shaping (TIPS), a simple framework that assigns dense, turn-level rewards to each reasoning + tool-call segment based on the increased likelihood of the correct answer under a teacher model. By leveraging the potential-based reward shaping, TIPS offers fine-grained and policy-invariant guidance that overcomes the limitations of outcome-only optimization. Evaluated on seven QA benchmarks, TIPS consistently outperforms GRPO/PPO baselines and substantially improves training stability. For instance, with a Qwen-2.5 7B Instruct model, TIPS improves the average Exact Match score by 11.8% and F1 by 13.6% relative to PPO. Our results demonstrate that turn-level information-potential reward shaping provides an effective and general solution to sparse-reward credit assignment for multi-turn LLM reasoning. 
+
+---
+# Improving Safety Alignment via Balanced Direct Preference Optimization 
+
+**Authors**: Shiji Zhao, Mengyang Wang, Shukun Xiong, Fangzhou Chen, Qihui Zhu, Shouwei Ruan, Yisong Xiao, Ranjie Duan, Xun Chen, XingXing Wei  
+
+**Link**: [PDF](https://arxiv.org/pdf/2603.22829)  
+
+**Abstract**: With the rapid development and widespread application of Large Language Models (LLMs), their potential safety risks have attracted widespread attention. Reinforcement Learning from Human Feedback (RLHF) has been adopted to enhance the safety performance of LLMs. As a simple and effective alternative to RLHF, Direct Preference Optimization (DPO) is widely used for safety alignment. However, safety alignment still suffers from severe overfitting, which limits its actual performance. This paper revisits the overfitting phenomenon from the perspective of the model's comprehension of the training data. We find that the Imbalanced Preference Comprehension phenomenon exists between responses in preference pairs, which compromises the model's safety performance. To address this, we propose Balanced Direct Preference Optimization (B-DPO), which adaptively modulates optimization strength between preferred and dispreferred responses based on mutual information. A series of experimental results show that B-DPO can enhance the safety capability while maintaining the competitive general capabilities of LLMs on various mainstream benchmarks compared to state-of-the-art methods. \color{red}{Warning: This paper contains examples of harmful texts, and reader discretion is recommended. 
+
+---
+# EVA: Efficient Reinforcement Learning for End-to-End Video Agent 
+
+**Authors**: Yaolun Zhang, Ruohui Wang, Jiahao Wang, Yepeng Tang, Xuanyu Zheng, Haonan Duan, Hao Lu, Hanming Deng, Lewei Lu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2603.22918)  
+
+**Abstract**: Video understanding with multimodal large language models (MLLMs) remains challenging due to the long token sequences of videos, which contain extensive temporal dependencies and redundant frames. Existing approaches typically treat MLLMs as passive recognizers, processing entire videos or uniformly sampled frames without adaptive reasoning. Recent agent-based methods introduce external tools, yet still depend on manually designed workflows and perception-first strategies, resulting in inefficiency on long videos. We present EVA, an Efficient Reinforcement Learning framework for End-to-End Video Agent, which enables planning-before-perception through iterative summary-plan-action-reflection reasoning. EVA autonomously decides what to watch, when to watch, and how to watch, achieving query-driven and efficient video understanding. To train such agents, we design a simple yet effective three-stage learning pipeline - comprising supervised fine-tuning (SFT), Kahneman-Tversky Optimization (KTO), and Generalized Reward Policy Optimization (GRPO) - that bridges supervised imitation and reinforcement learning. We further construct high-quality datasets for each stage, supporting stable and reproducible training. We evaluate EVA on six video understanding benchmarks, demonstrating its comprehensive capabilities. Compared with existing baselines, EVA achieves a substantial improvement of 6-12% over general MLLM baselines and a further 1-3% gain over prior adaptive agent methods. Our code and model are available at this https URL. 
+
+---
+# WIST: Web-Grounded Iterative Self-Play Tree for Domain-Targeted Reasoning Improvement 
+
+**Authors**: Fangyuan Li, Pengfei Li, Shijie Wang, Junqi Gao, Jianxing Liu, Biqing Qi, Yuqiang Li  
+
+**Link**: [PDF](https://arxiv.org/pdf/2603.22352)  
+
+**Abstract**: Recent progress in reinforcement learning with verifiable rewards (RLVR) offers a practical path to self-improvement of language models, but existing methods face a key trade-off: endogenous self-play can drift over iterations, while corpus-grounded approaches rely on curated data environments. We present \textbf{WIST}, a \textbf{W}eb-grounded \textbf{I}terative \textbf{S}elf-play \textbf{T}ree framework for domain-targeted reasoning improvement that learns directly from the open web without requiring any pre-arranged domain corpus. WIST incrementally expands a domain tree for exploration, and retrieves and cleans path-consistent web corpus to construct a controllable training environment. It then performs Challenger--Solver self-play with verifiable rewards, and feeds learnability signals back to update node posteriors and guide subsequent exploration through an adaptive curriculum. Across four backbones, WIST consistently improves over the base models and typically outperforms both purely endogenous self-evolution and corpus-grounded self-play baselines, with the Overall gains reaching \textbf{+9.8} (\textit{Qwen3-4B-Base}) and \textbf{+9.7} (\textit{OctoThinker-8B}). WIST is also domain-steerable, improving \textit{Qwen3-8B-Base} by \textbf{+14.79} in medicine and \textit{Qwen3-4B-Base} by \textbf{+5.28} on PhyBench. Ablations further confirm the importance of WIST's key components for stable open-web learning. Our Code is available at this https URL. 
+
+---
