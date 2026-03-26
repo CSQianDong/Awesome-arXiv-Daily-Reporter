@@ -1,0 +1,82 @@
+# Retrieval Improvements Do Not Guarantee Better Answers: A Study of RAG for AI Policy QA 
+
+**Authors**: Saahil Mathur, Ryan David Rittner, Vedant Ajit Thakur, Daniel Stuart Schiff, Tunazzina Islam  
+
+**Link**: [PDF](https://arxiv.org/pdf/2603.24580)  
+
+**Abstract**: Retrieval-augmented generation (RAG) systems are increasingly used to analyze complex policy documents, but achieving sufficient reliability for expert usage remains challenging in domains characterized by dense legal language and evolving, overlapping regulatory frameworks. We study the application of RAG to AI governance and policy analysis using the AI Governance and Regulatory Archive (AGORA) corpus, a curated collection of 947 AI policy documents. Our system combines a ColBERT-based retriever fine-tuned with contrastive learning and a generator aligned to human preferences using Direct Preference Optimization (DPO). We construct synthetic queries and collect pairwise preferences to adapt the system to the policy domain. Through experiments evaluating retrieval quality, answer relevance, and faithfulness, we find that domain-specific fine-tuning improves retrieval metrics but does not consistently improve end-to-end question answering performance. In some cases, stronger retrieval counterintuitively leads to more confident hallucinations when relevant documents are absent from the corpus. These results highlight a key concern for those building policy-focused RAG systems: improvements to individual components do not necessarily translate to more reliable answers. Our findings provide practical insights for designing grounded question-answering systems over dynamic regulatory corpora. 
+
+---
+# The Alignment Tax: Response Homogenization in Aligned LLMs and Its Implications for Uncertainty Estimation 
+
+**Authors**: Mingyi Liu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2603.24124)  
+
+**Abstract**: RLHF-aligned language models exhibit response homogenization: on TruthfulQA (n=790), 40-79% of questions produce a single semantic cluster across 10 i.i.d. samples. On affected questions, sampling-based uncertainty methods have zero discriminative power (AUROC=0.500), while free token entropy retains signal (0.603). This alignment tax is task-dependent: on GSM8K (n=500), token entropy achieves 0.724 (Cohen's d=0.81).
+A base-vs-instruct ablation confirms the causal role of alignment: the base model shows 1.0% single-cluster rate vs. 28.5% for the instruct model (p < 10^{-6}). A training stage ablation (Base 0.0% -> SFT 1.5% -> DPO 4.0% SCR) localizes the cause to DPO, not SFT. Cross-family replication on four model families reveals alignment tax severity varies by family and scale. We validate across 22 experiments, 5 benchmarks, 4 model families, and 3 model scales (3B-14B), with Jaccard, embedding, and NLI-based baselines at three DeBERTa scales (all ~0.51 AUROC). Cross-embedder validation with two independent embedding families rules out coupling bias. Cross-dataset validation on WebQuestions (58.0% SCR) confirms generalization beyond TruthfulQA. The central finding -- response homogenization -- is implementation-independent and label-free. Motivated by this diagnosis, we explore a cheapest-first cascade (UCBD) over orthogonal uncertainty signals. Selective prediction raises GSM8K accuracy from 84.4% to 93.2% at 50% coverage; weakly dependent boundaries (|r| <= 0.12) enable 57% cost savings. 
+
+---
+# Towards Effective Experiential Learning: Dual Guidance for Utilization and Internalization 
+
+**Authors**: Fei Bai, Zhipeng Chen, Chuan Hao, Ming Yang, Ran Tao, Bryan Dai, Wayne Xin Zhao, Jian Yang, Hongteng Xu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2603.24093)  
+
+**Abstract**: Recently, reinforcement learning~(RL) has become an important approach for improving the capabilities of large language models~(LLMs). In particular, reinforcement learning from verifiable rewards~(RLVR) has emerged as a promising paradigm for reasoning tasks. However, existing RL-based training still remains only a rough approximation to human learning. Human learners leverage both external and internal experience to guide exploration and gradually internalize useful trajectories into stable knowledge. Motivated by this gap, we ask: how can LLMs better utilize and internalize experience during RLVR training? To answer this question, we propose \textbf{D}ual \textbf{G}uidance \textbf{O}ptimization~(\textbf{DGO}), a unified framework that leverages \emph{external} and \emph{internal experience} to improve training effectiveness. Specifically, DGO first constructs an experience bank from previously explored trajectories. The policy then performs exploration under the joint guidance of the experience bank and the model's internal knowledge. The resulting trajectories are further used to refine the experience bank and optimize model parameters, forming a closed loop of experience utilization and internalization. Experiments show that DGO consistently outperforms baseline methods, suggesting that better utilization and internalization of experience lead to more effective reasoning. 
+
+---
+# From Oracle to Noisy Context: Mitigating Contextual Exposure Bias in Speech-LLMs 
+
+**Authors**: Xiaoyong Guo, Nanjie Li, Zijie Zeng, Kai Wang, Hao Huang, Haihua Xu, Wei Shi  
+
+**Link**: [PDF](https://arxiv.org/pdf/2603.24034)  
+
+**Abstract**: Contextual automatic speech recognition (ASR) with Speech-LLMs is typically trained with oracle conversation history, but relies on error-prone history at inference, causing a train-test mismatch in the context channel that we term contextual exposure bias. We propose a unified training framework to improve robustness under realistic histories: (i) Teacher Error Knowledge by using Whisper large-v3 hypotheses as training-time history, (ii) Context Dropout to regularize over-reliance on history, and (iii) Direct Preference Optimization (DPO) on curated failure cases. Experiments on TED-LIUM 3 (in-domain) and zero-shot LibriSpeech (out-of-domain) show consistent gains under predicted-history decoding. With a two-utterance history as context, SFT with Whisper hypotheses reduce WER from 5.59% (oracle-history training) to 5.47%, and DPO further improves to 5.17%. Under irrelevant-context attacks, DPO yields the smallest degradation (5.17% -> 5.63%), indicating improved robustness to misleading context. Our code and models are published on this https URL. 
+
+---
+# HDPO: Hybrid Distillation Policy Optimization via Privileged Self-Distillation 
+
+**Authors**: Ken Ding  
+
+**Link**: [PDF](https://arxiv.org/pdf/2603.23871)  
+
+**Abstract**: Large language models trained with reinforcement learning (RL) for mathematical reasoning face a fundamental challenge: on problems the model cannot solve at all - "cliff" prompts - the RL gradient vanishes entirely, preventing any learning signal from reaching these failure modes. We introduce Hybrid Distillation Policy Optimization (HDPO), which augments standard RL with privileged self-distillation targeting cliff prompts. On each training step, HDPO identifies prompts where all rollouts fail, generates privileged rollouts by providing the model with ground-truth information, filters for correct solutions, and distills the teacher's token-level distribution into the student. Because teacher and student share the same weights - differing only in their input - the realizability gap is provably bounded, unlike cross-model distillation. We prove that R=1 filtered privileged generation recovers the optimal KL-regularized RL policy in the hard-threshold limit. Experiments on OpenMathInstruct-2 with Qwen2.5-Math-1.5B-Instruct show that HDPO consistently improves coverage metrics (pass@4 by +0.8-1.1%, pass@8 by +0.4-1.7%) while maintaining greedy accuracy, with the distillation weight lambda providing direct control over the exploration-exploitation tradeoff. 
+
+---
+# MARCH: Multi-Agent Reinforced Self-Check for LLM Hallucination 
+
+**Authors**: Zhuo Li, Yupeng Zhang, Pengyu Cheng, Jiajun Song, Mengyu Zhou, Hao Li, Shujie Hu, Yu Qin, Erchao Zhao, Xiaoxi Jiang, Guanjun Jiang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2603.24579)  
+
+**Abstract**: Hallucination remains a critical bottleneck for large language models (LLMs), undermining their reliability in real-world applications, especially in Retrieval-Augmented Generation (RAG) systems. While existing hallucination detection methods employ LLM-as-a-judge to verify LLM outputs against retrieved evidence, they suffer from inherent confirmation bias, where the verifier inadvertently reproduces the errors of the original generation. To address this, we introduce Multi-Agent Reinforced Self-Check for Hallucination (MARCH), a framework that enforces rigorous factual alignment by leveraging deliberate information asymmetry. MARCH orchestrates a collaborative pipeline of three specialized agents: a Solver, a Proposer, and a Checker. The Solver generates an initial RAG response, which the Proposer decomposes into claim-level verifiable atomic propositions. Crucially, the Checker validates these propositions against retrieved evidence in isolation, deprived of the Solver's original output. This well-crafted information asymmetry scheme breaks the cycle of self-confirmation bias. By training this pipeline with multi-agent reinforcement learning (MARL), we enable the agents to co-evolve and optimize factual adherence. Extensive experiments across hallucination benchmarks demonstrate that MARCH substantially reduces hallucination rates. Notably, an 8B-parameter LLM equipped with MARCH achieves performance competitive with powerful closed-source models. MARCH paves a scalable path for factual self-improvement of LLMs through co-evolution. The code is at this https URL. 
+
+---
+# Improving Lean4 Autoformalization via Cycle Consistency Fine-tuning 
+
+**Authors**: Arsen Shebzukhov  
+
+**Link**: [PDF](https://arxiv.org/pdf/2603.24372)  
+
+**Abstract**: Autoformalization - automatically translating natural language mathematical texts into formal proof language such as Lean4 - can help accelerate AI-assisted mathematical research, be it via proof verification or proof search. I fine-tune Qwen3.5-2B with LoRA for natural language to Lean4 formalization on FineLeanCorpus and consider three training regimes: supervised fine-tuning (SFT) with curriculum learning (difficulty 1 to 10), SFT without curriculum ordering, and reinforcement learning using group relative policy optimization (GRPO) with a cycle consistency reward. Cycle consistency measures how well the meaning of a statement is preserved through a NL to Lean4 to NL' loop, computed as cosine similarity of off-the-shelf sentence embeddings. On an unseen subset of FineLeanCorpus (FLC) and on PutnamBench, RL substantially outperforms both SFT variants (mean cycle consistency 0.669 vs. 0.513 on FLC; 0.561 vs. 0.422 on PutnamBench), while increasing cross-entropy loss by only 0.011 nats, with minimal impact on formalization quality. Curriculum ordering provides no measurable benefit over shuffled training. 
+
+---
+# From AI Assistant to AI Scientist: Autonomous Discovery of LLM-RL Algorithms with LLM Agents 
+
+**Authors**: Sirui Xia, Yikai Zhang, Aili Chen, Siye Wu, Siyu Yuan, Yanghua Xiao  
+
+**Link**: [PDF](https://arxiv.org/pdf/2603.23951)  
+
+**Abstract**: Discovering improved policy optimization algorithms for language models remains a costly manual process requiring repeated mechanism-level modification and validation. Unlike simple combinatorial code search, this problem requires searching over algorithmic mechanisms tightly coupled with training dynamics while reusing empirical evidence across iterations. We propose POISE, a closed-loop framework for automated discovery of policy optimization algorithms for language models. POISE maintains a structured, genealogically linked archive linking proposals, executable implementations, standardized evaluations, and natural-language reflections to support evidence-driven iteration. In mathematical reasoning experiments starting from GRPO, POISE evaluates 64 candidate algorithms and discovers improved mechanisms, including analytic-variance scaling and validity masking. The best variant improves weighted Overall from 47.8 to 52.5 (+4.6) and increases AIME25 pass@32 from 26.7% to 43.3%, demonstrating the feasibility of automated policy optimization discovery while supporting interpretable design principles. 
+
+---
+# SumRank: Aligning Summarization Models for Long-Document Listwise Reranking 
+
+**Authors**: Jincheng Feng, Wenhan Liu, Zhicheng Dou  
+
+**Link**: [PDF](https://arxiv.org/pdf/2603.24204)  
+
+**Abstract**: Large Language Models (LLMs) have demonstrated superior performance in listwise passage reranking task. However, directly applying them to rank long-form documents introduces both effectiveness and efficiency issues due to the substantially increased context length. To address this challenge, we propose a pointwise summarization model SumRank, aligned with downstream listwise reranking, to compress long-form documents into concise rank-aligned summaries before the final listwise reranking stage. To obtain our summarization model SumRank, we introduce a three-stage training pipeline comprising cold-start Supervised Fine-Tuning (SFT), specialized RL data construction, and rank-driven alignment via Reinforcement Learning. This paradigm aligns the SumRank with downstream ranking objectives to preserve relevance signals. We conduct extensive experiments on five benchmark datasets from the TREC Deep Learning tracks (TREC DL 19-23). Results show that our lightweight SumRank model achieves state-of-the-art (SOTA) ranking performance while significantly improving efficiency by reducing both summarization overhead and reranking complexity. 
+
+---
