@@ -1,0 +1,205 @@
+# With a Little Help From My Friends: Collective Manipulation in Risk-Controlling Recommender Systems 
+
+**Authors**: Giovanni De Toni, Cristian Consonni, Erasmo Purificato, Emilia Gomez, Bruno Lepri  
+
+**Link**: [PDF](https://arxiv.org/pdf/2603.28476)  
+
+**Abstract**: Recommendation systems have become central gatekeepers of online information, shaping user behaviour across a wide range of activities. In response, users increasingly organize and coordinate to steer algorithmic outcomes toward diverse goals, such as promoting relevant content or limiting harmful material, relying on platform affordances -- such as likes, reviews, or ratings. While these mechanisms can serve beneficial purposes, they can also be leveraged for adversarial manipulation, particularly in systems where such feedback directly informs safety guarantees. In this paper, we study this vulnerability in recently proposed risk-controlling recommender systems, which use binary user feedback (e.g., "Not Interested") to provably limit exposure to unwanted content via conformal risk control. We empirically demonstrate that their reliance on aggregate feedback signals makes them inherently susceptible to coordinated adversarial user behaviour. Using data from a large-scale online video-sharing platform, we show that a small coordinated group (comprising only 1% of the user population) can induce up to a 20% degradation in nDCG for non-adversarial users by exploiting the affordances provided by risk-controlling recommender systems. We evaluate simple, realistic attack strategies that require little to no knowledge of the underlying recommendation algorithm and find that, while coordinated users can significantly harm overall recommendation quality, they cannot selectively suppress specific content groups through reporting alone. Finally, we propose a mitigation strategy that shifts guarantees from the group level to the user level, showing empirically how it can reduce the impact of adversarial coordinated behaviour while ensuring personalized safety for individuals. 
+
+---
+# RCLRec: Reverse Curriculum Learning for Modeling Sparse Conversions in Generative Recommendation 
+
+**Authors**: Yulei Huang, Hao Deng, Haibo Xing, Jinxin Hu, Chuanfei Xu, Zulong Chen, Yu Zhang, Xiaoyi Zeng  
+
+**Link**: [PDF](https://arxiv.org/pdf/2603.28124)  
+
+**Abstract**: Conversion objectives in large-scale recommender systems are sparse, making them difficult to optimize. Generative recommendation (GR) partially alleviates data sparsity by organizing multi-type behaviors into a unified token sequence with shared representations, but conversion signals remain insufficiently modeled. While recent behavior-aware GR models encode behavior types and employ behavior-aware attention to highlight decision-related intermediate behaviors, they still rely on standard attention over the full history and provide no additional supervision for conversions, leaving conversion sparsity largely unresolved. To address these challenges, we propose RCLRec, a reverse curriculum learning-based GR framework for sparse conversion supervision. For each conversion target, RCLRec constructs a short curriculum by selecting a subsequence of conversion-related items from the history in reverse. Their semantic tokens are fed to the decoder as a prefix, together with the target conversion tokens, under a joint generation objective. This design provides additional instance-specific intermediate supervision, alleviating conversion sparsity and focusing the model on the user's critical decision process. We further introduce a curriculum quality-aware loss to ensure that the selected curricula are informative for conversion prediction. Experiments on offline datasets and an online A/B test show that RCLRec achieves superior performance, with +2.09% advertising revenue and +1.86% orders in online deployment. 
+
+---
+# On the Accuracy Limits of Sequential Recommender Systems: An Entropy-Based Approach 
+
+**Authors**: En Xu, Jingtao Ding, Yong Li  
+
+**Link**: [PDF](https://arxiv.org/pdf/2603.27952)  
+
+**Abstract**: Sequential recommender systems have achieved steady gains in offline accuracy, yet it remains unclear how close current models are to the intrinsic accuracy limit imposed by the data. A reliable, model-agnostic estimate of this ceiling would enable principled difficulty assessment and headroom estimation before costly model development. Existing predictability analyses typically combine entropy estimation with Fano's inequality inversion; however, in recommendation they are hindered by sensitivity to candidate-space specification and distortion from Fano-based scaling in low-predictability regimes. We develop an entropy-induced, training-free approach for quantifying accuracy limits in sequential recommendation, yielding a candidate-size-agnostic estimate. Experiments on controlled synthetic generators and diverse real-world benchmarks show that the estimator tracks oracle-controlled difficulty more faithfully than baselines, remains insensitive to candidate-set size, and achieves high rank consistency with best-achieved offline accuracy across state-of-the-art sequential recommenders (Spearman rho up to 0.914). It also supports user-group diagnostics by stratifying users by novelty preference, long-tail exposure, and activity, revealing systematic predictability differences. Furthermore, predictability can guide training data selection: training sets constructed from high-predictability users yield strong downstream performance under reduced data budgets. Overall, the proposed estimator provides a practical reference for assessing attainable accuracy limits, supporting user-group diagnostics, and informing data-centric decisions in sequential recommendation. 
+
+---
+# GroupRAG: Cognitively Inspired Group-Aware Retrieval and Reasoning via Knowledge-Driven Problem Structuring 
+
+**Authors**: Xinyi Duan, Yuanrong Tang, Jiangtao Gong  
+
+**Link**: [PDF](https://arxiv.org/pdf/2603.26807)  
+
+**Abstract**: The performance of language models is commonly limited by insufficient knowledge and constrained reasoning. Prior approaches such as Retrieval-Augmented Generation (RAG) and Chain-of-Thought (CoT) address these issues by incorporating external knowledge or enforcing linear reasoning chains, but often degrade in real-world settings. Inspired by cognitive science, which characterizes human problem solving as search over structured problem spaces rather than single inference chains, we argue that inadequate awareness of problem structure is a key overlooked limitation. We propose GroupRAG, a cognitively inspired, group-aware retrieval and reasoning framework based on knowledge-driven keypoint grouping. GroupRAG identifies latent structural groups within a problem and performs retrieval and reasoning from multiple conceptual starting points, enabling fine-grained interaction between the two processes. Experiments on MedQA show that GroupRAG outperforms representative RAG- and CoT-based baselines. These results suggest that explicitly modeling problem structure, as inspired by human cognition, is a promising direction for robust retrieval-augmented reasoning. 
+
+---
+# Agentic AI for Human Resources: LLM-Driven Candidate Assessment 
+
+**Authors**: Kamer Ali Yuksel, Abdul Basit Anees, Ashraf Elneima, Sanjika Hewavitharana, Mohamed Al-Badrashiny, Hassan Sawaf  
+
+**Link**: [PDF](https://arxiv.org/pdf/2603.26710)  
+
+**Abstract**: In this work, we present a modular and interpretable framework that uses Large Language Models (LLMs) to automate candidate assessment in recruitment. The system integrates diverse sources, including job descriptions, CVs, interview transcripts, and HR feedback; to generate structured evaluation reports that mirror expert judgment. Unlike traditional ATS tools that rely on keyword matching or shallow scoring, our approach employs role-specific, LLM-generated rubrics and a multi-agent architecture to perform fine-grained, criteria-driven evaluations. The framework outputs detailed assessment reports, candidate comparisons, and ranked recommendations that are transparent, auditable, and suitable for real-world hiring workflows.
+Beyond rubric-based analysis, we introduce an LLM-Driven Active Listwise Tournament mechanism for candidate ranking. Instead of noisy pairwise comparisons or inconsistent independent scoring, the LLM ranks small candidate subsets (mini-tournaments), and these listwise permutations are aggregated using a Plackett-Luce model. An active-learning loop selects the most informative subsets, producing globally coherent and sample-efficient rankings. This adaptation of listwise LLM preference modeling (previously explored in financial asset ranking) provides a principled and highly interpretable methodology for large-scale candidate ranking in talent acquisition. 
+
+---
+# EVNextTrade: Learning-to-Rank-Based Recommendation of Next Charging Nodes for EV-EV Energy Trading 
+
+**Authors**: Md Mahfujur Rahmana, Alistair Barros, Raja Jurdak, Darshika Koggalahewa  
+
+**Link**: [PDF](https://arxiv.org/pdf/2603.26688)  
+
+**Abstract**: Peer-to-peer energy trading among electric vehicles (EVs) has been increasingly studied as a promising solution for improving supply-side resilience under growing charging demand and constrained charging infrastructure. While prior studies on EV-EV energy trading and related EV research have largely focused on transaction management or isolated mobility prediction tasks, the problem of identifying which charging nodes are more suitable for EV-EV trading in journey contexts remains open. We address this gap by formulating next charging nodes recommendation as a learning-to-rank problem, where each EV decision event is associated with a set of candidate charging locations. We propose a supervised ranking framework applied to a large-scale urban EV mobility dataset comprising millions of journey records and multidimensional EV trading-related features, including EV energy level, trading role, distance to charging locations, charging speed, and temporal station popularity. To account for uncertainty arising from the mobility of both energy providers and consumers, as well as the presence of multiple viable charging nodes at a decision point, we employ probabilistic relevance refinement to generate graded labels for ranking. We evaluate gradient-boosted learning-to-rank models, including LightGBM, XGBoost, and CatBoost, on EV journey records enriched with candidate charging nodes. Experimental results show that LightGBM consistently achieves the strongest ranking performance across standard metrics, including NDCG@k, Recall@k, and MRR, with particularly strong early-ranking quality, reflected in the highest NDCG@1 (0.9795) and MRR (0.9990). These results highlight the effectiveness of uncertainty-aware learning-to-rank for charging node recommendation and support improved coordination and matching in decentralized EV-EV energy trading systems. 
+
+---
+# LITTA: Late-Interaction and Test-Time Alignment for Visually-Grounded Multimodal Retrieval 
+
+**Authors**: Seonok Kim  
+
+**Link**: [PDF](https://arxiv.org/pdf/2603.26683)  
+
+**Abstract**: Retrieving relevant evidence from visually rich documents such as textbooks, technical reports, and manuals is challenging due to long context, complex layouts, and weak lexical overlap between user questions and supporting pages. We propose LITTA, a query-expansion-centric retrieval framework for evidence page retrieval that improves multimodal document retrieval without retriever retraining. Given a user query, LITTA generates complementary query variants using a large language model and retrieves candidate pages for each variant using a frozen vision retriever with late-interaction scoring. Candidates from expanded queries are then aggregated through reciprocal rank fusion to improve evidence coverage and reduce sensitivity to any single phrasing. This simple test-time strategy significantly improves retrieval robustness while remaining compatible with existing multimodal embedding indices. We evaluate LITTA on visually grounded document retrieval tasks across three domains: computer science, pharmaceuticals, and industrial manuals. Multi-query retrieval consistently improves top-k accuracy, recall, and MRR compared to single-query retrieval, with particularly large gains in domains with high visual and semantic variability. Moreover, the accuracy-efficiency trade-off is directly controllable by the number of query variants, making LITTA practical for deployment under latency constraints. These results demonstrate that query expansion provides a simple yet effective mechanism for improving visually grounded multimodal retrieval. 
+
+---
+# SRAG: RAG with Structured Data Improves Vector Retrieval 
+
+**Authors**: Shalin Shah, Srikanth Ryali, Ramasubbu Venkatesh  
+
+**Link**: [PDF](https://arxiv.org/pdf/2603.26670)  
+
+**Abstract**: Retrieval Augmented Generation (RAG) provides the necessary informational grounding to LLMs in the form of chunks retrieved from a vector database or through web search. RAG could also use knowledge graph triples as a means of providing factual information to an LLM. However, the retrieval is only based on representational similarity between a question and the contents. The performance of RAG depends on the numeric vector representations of the query and the chunks. To improve these representations, we propose Structured RAG (SRAG), which adds structured information to a query as well as the chunks in the form of topics, sentiments, query and chunk types (e.g., informational, quantitative), knowledge graph triples and semantic tags. Experiments indicate that this method significantly improves the retrieval process. Using GPT-5 as an LLM-as-a-judge, results show that the method improves the score given to answers in a question answering system by 30% (p-value = 2e-13) (with tighter bounds). The strongest improvement is in comparative, analytical and predictive questions. The results suggest that our method enables broader, more diverse, and episodic-style retrieval. Tail risk analysis shows that SRAG attains very large gains more often, with losses remaining minor in magnitude. 
+
+---
+# ReCQR: Incorporating conversational query rewriting to improve Multimodal Image Retrieval 
+
+**Authors**: Yuan Hu, ZhiYu Cao, PeiFeng Li, QiaoMing Zhu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2603.26669)  
+
+**Abstract**: With the rise of multimodal learning, image retrieval plays a crucial role in connecting visual information with natural language queries. Existing image retrievers struggle with processing long texts and handling unclear user expressions. To address these issues, we introduce the conversational query rewriting (CQR) task into the image retrieval domain and construct a dedicated multi-turn dialogue query rewriting dataset. Built on full dialogue histories, CQR rewrites users' final queries into concise, semantically complete ones that are better suited for retrieval. Specifically, We first leverage Large Language Models (LLMs) to generate rewritten candidates at scale and employ an LLM-as-Judge mechanism combined with manual review to curate approximately 7,000 high-quality multimodal dialogues, forming the ReCQR dataset. Then We benchmark several SOTA multimodal models on the ReCQR dataset to assess their performance on image retrieval. Experimental results demonstrate that CQR not only significantly enhances the accuracy of traditional image retrieval models, but also provides new directions and insights for modeling user queries in multimodal systems. 
+
+---
+# Bridge-RAG: An Abstract Bridge Tree Based Retrieval Augmented Generation Algorithm With Cuckoo Filter 
+
+**Authors**: Zihang Li, Wenjun Liu, Yikun Zong, Jiawen Tao, Siying Dai, Songcheng Ren, Zirui Liu, Yanbing Jiang, Tong Yang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2603.26668)  
+
+**Abstract**: As an important paradigm for enhancing the generation quality of Large Language Models (LLMs), retrieval-augmented generation (RAG) faces the two challenges regarding retrieval accuracy and computational efficiency. This paper presents a novel RAG framework called Bridge-RAG. To overcome the accuracy challenge, we introduce the concept of abstract to bridge query entities and document chunks, providing robust semantic understanding. We organize the abstracts into a tree structure and design a multi-level retrieval strategy to ensure the inclusion of sufficient contextual information. To overcome the efficiency challenge, we introduce the improved Cuckoo Filter, an efficient data structure supporting rapid membership queries and updates, to accelerate entity location during the retrieval process. We design a block linked list structure and an entity temperature-based sorting mechanism to improve efficiency from the aspects of spatial and temporal locality. Extensive experiments show that Bridge-RAG achieves around 15.65% accuracy improvement and reduces 10x to 500x retrieval time compared to other RAG frameworks. 
+
+---
+# M-RAG: Making RAG Faster, Stronger, and More Efficient 
+
+**Authors**: Sun Xu, Tongkai Xu, Baiheng Xie, Li Huang, Qiang Gao, Kunpeng Zhang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2603.26667)  
+
+**Abstract**: Retrieval-Augmented Generation (RAG) has become a widely adopted paradigm for enhancing the reliability of large language models (LLMs). However, RAG systems are sensitive to retrieval strategies that rely on text chunking to construct retrieval units, which often introduce information fragmentation, retrieval noise, and reduced efficiency. Recent work has even questioned the necessity of RAG, arguing that long-context LLMs may eliminate multi-stage retrieval pipelines by directly processing full documents. Nevertheless, expanded context capacity alone does not resolve the challenges of relevance filtering, evidence prioritization, and isolating answer-bearing information. To this end, we proposed M-RAG, a novel Chunk-free retrieval strategy. Instead of retrieving coarse-grained textual chunks, M-RAG extracts structured, k-v decomposition meta-markers, with a lightweight, intent-aligned retrieval key for retrieval and a context-rich information value for generation. Under this setting, M-RAG enables efficient and stable query-key similarity matching without sacrificing expressive ability. Experimental results on the LongBench subtasks demonstrate that M-RAG outperforms chunk-based RAG baselines across varying token budgets, particularly under low-resource settings. Extensive analysis further reveals that M-RAG retrieves more answer-friendly evidence with high efficiency, validating the effectiveness of decoupling retrieval representation from generation and highlighting the proposed strategy as a scalable and robust alternative to existing chunk-based methods. 
+
+---
+# CirrusBench: Evaluating LLM-based Agents Beyond Correctness in Real-World Cloud Service Environments 
+
+**Authors**: Yi Yu, Guangquan Hu, Chenghuang Shen, Xingyan Liu, Jing Gu, Hangyi Sun, Junzhuo Ma, Weiting Liu, Jianfeng Liu, Mingyue Pu, Yu Wang, Zhengdong Xiao, Rui Xie, Longjiu Luo, Qianrong Wang, Gurong Cui, Honglin Qiao, Wenlian Lu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2603.28569)  
+
+**Abstract**: The increasing agentic capabilities of Large Language Models (LLMs) have enabled their deployment in real-world applications, such as cloud services, where customer-assistant interactions exhibit high technical complexity and long-horizon dependencies, making robustness and resolution efficiency critical for customer satisfaction. However, existing benchmarks for LLM-based agents largely rely on synthetic environments that fail to capture the diversity and unpredictability of authentic customer inputs, often ignoring the resolution efficiency essential for real-world deployment. To bridge this gap, we introduce CirrusBench, a novel evaluation framework distinguished by its foundation in real-world data from authentic cloud service tickets. CirrusBench preserves the intricate multi-turn logical chains and realistic tool dependencies inherent to technical service environments. Moving beyond execution correctness, we introduce novel Customer-Centric metrics to define agent success, quantifying service quality through metrics such as the Normalized Efficiency Index and Multi-Turn Latency to explicitly measure resolution efficiency. Experiments utilizing our framework reveal that while state-of-the-art models demonstrate strong reasoning capabilities, they frequently struggle in complex, realistic multi-turn tasks and fail to meet the high-efficiency standards required for customer service, highlighting critical directions for the future development of LLM-based agents in practical technical service applications. CirrusBench evaluation framework is released at: this https URL 
+
+---
+# Hydra: Unifying Document Retrieval and Generation in a Single Vision-Language Model 
+
+**Authors**: Athos Georgiou  
+
+**Link**: [PDF](https://arxiv.org/pdf/2603.28554)  
+
+**Abstract**: Visual document understanding typically requires separate retrieval and generation models, doubling memory and system complexity. We present Hydra, a dual-head approach that provides both ColBERT-style late-interaction retrieval and autoregressive generation from a single vision-language model (VLM). A single LoRA adapter, trained only for retrieval, is toggled at inference: enabling it produces multi-vector embeddings; disabling it recovers the base model's generation quality -- byte-identical outputs in 100% of 10,500 greedy and stochastic samples, with max delta-ANLS = 0.0044 across 15,301 samples on four VQA benchmarks (three informative; ChartQA is near-zero for both models under greedy decoding) when compared against an independent base-model pipeline. We identify three engineering requirements (attention-mode restoration, lm_head preservation, KV-cache-aware decoding) whose omission silently breaks generation despite correct weight recovery. On ViDoRe V1, Hydra (4B) is within 1 percentage point of a controlled single-head baseline in a single training run, with higher aggregate scores on V2 and V3 that are concentrated on a subset of tasks; multi-seed experiments are needed to confirm these trends. The single-model design reduces peak GPU memory by 41%, though adapter switching introduces throughput overhead under concurrent serving loads. An ablation shows that GritLM-style joint training provides no benefit within the LoRA-based (r=16) training regime. A proof-of-concept extension to Qwen2.5-Omni-3B demonstrates that the mechanism generalizes to audio retrieval and video embedding, with speech generation. 
+
+---
+# Quid est VERITAS? A Modular Framework for Archival Document Analysis 
+
+**Authors**: Leonardo Bassanini, Ludovico Biancardi, Alfio Ferrara, Andrea Gamberini, Sergio Picascia, Folco Vaglienti  
+
+**Link**: [PDF](https://arxiv.org/pdf/2603.28108)  
+
+**Abstract**: The digitisation of historical documents has traditionally been conceived as a process limited to character-level transcription, producing flat text that lacks the structural and semantic information necessary for substantive computational analysis. We present VERITAS (Vision-Enhanced Reading, Interpretation, and Transcription of Archival Sources), a modular, model-agnostic framework that reconceptualises digitisation as an integrated workflow encompassing transcription, layout analysis, and semantic enrichment. The pipeline is organised into four stages - Preprocessing, Extraction, Refinement, and Enrichment - and employs a schema-driven architecture that allows researchers to declaratively specify their extraction objectives. We evaluate VERITAS on the critical edition of Bernardino Corio's Storia di Milano, a Renaissance chronicle of over 1,600 pages. Results demonstrate that the pipeline achieves a 67.6% relative reduction in word error rate compared to a commercial OCR baseline, with a threefold reduction in end-to-end processing time when accounting for manual correction. We further illustrate the downstream utility of the pipeline's output by querying the transcribed corpus through a retrieval-augmented generation system, demonstrating its capacity to support historical inquiry. 
+
+---
+# Transcription and Recognition of Italian Parliamentary Speeches Using Vision-Language Models 
+
+**Authors**: Luigi Curini, Alfio Ferrara, Giovanni Pagano, Sergio Picascia  
+
+**Link**: [PDF](https://arxiv.org/pdf/2603.28103)  
+
+**Abstract**: Parliamentary proceedings represent a rich yet challenging resource for computational analysis, particularly when preserved only as scanned historical documents. Existing efforts to transcribe Italian parliamentary speeches have relied on traditional Optical Character Recognition pipelines, resulting in transcription errors and limited semantic annotation. In this paper, we propose a pipeline based on Vision-Language Models for the automatic transcription, semantic segmentation, and entity linking of Italian parliamentary speeches. The pipeline employs a specialised OCR model to extract text while preserving reading order, followed by a large-scale Vision-Language Model that performs transcription refinement, element classification, and speaker identification by jointly reasoning over visual layout and textual content. Extracted speakers are then linked to the Chamber of Deputies knowledge base through SPARQL queries and a multi-strategy fuzzy matching procedure. Evaluation against an established benchmark demonstrates substantial improvements both in transcription quality and speaker tagging. 
+
+---
+# GEAKG: Generative Executable Algorithm Knowledge Graphs 
+
+**Authors**: Camilo Chacón Sartori, José H. García, Andrei Voicu Tomut, Christian Blum  
+
+**Link**: [PDF](https://arxiv.org/pdf/2603.27922)  
+
+**Abstract**: In the context of algorithms for problem solving, procedural knowledge -- the know-how of algorithm design and operator composition -- remains implicit in code, lost between runs, and must be re-engineered for each new domain. Knowledge graphs (KGs) have proven effective for organizing declarative knowledge, yet current KG paradigms provide limited support for representing procedural knowledge as executable, learnable graph structures. We introduce \textit{Generative Executable Algorithm Knowledge Graphs} (GEAKG), a class of KGs whose nodes store executable operators, whose edges encode learned composition patterns, and whose traversal generates solutions. A GEAKG is \emph{generative} (topology and operators are synthesized by a Large Language Model), \emph{executable} (every node is runnable code), and \emph{transferable} (learned patterns generalize zero-shot across domains). The framework is domain-agnostic at the engine level: the same three-layer architecture and Ant Colony Optimization (ACO)-based learning engine can be instantiated across domains, parameterized by a pluggable ontology (\texttt{RoleSchema}). Two case studies -- sharing no domain-specific framework code -- provide concrete evidence for this framework hypothesis: (1)~Neural Architecture Search across 70 cross-dataset transfer pairs on two tabular benchmarks, and (2)~Combinatorial Optimization, where knowledge learned on the Traveling Salesman Problem transfers zero-shot to scheduling and assignment domains. Taken together, the results support that algorithmic expertise can be explicitly represented, learned, and transferred as executable knowledge graphs. 
+
+---
+# GAAMA: Graph Augmented Associative Memory for Agents 
+
+**Authors**: Swarna Kamal Paul, Shubhendu Sharma, Nitin Sareen  
+
+**Link**: [PDF](https://arxiv.org/pdf/2603.27910)  
+
+**Abstract**: AI agents that interact with users across multiple sessions require persistent long-term memory to maintain coherent, personalized behavior. Current approaches either rely on flat retrieval-augmented generation (RAG), which loses structural relationships between memories, or use memory compression and vector retrieval that cannot capture the associative structure of multi-session conversations. There are few graph based techniques proposed in the literature, however they still suffer from hub dominated retrieval and poor hierarchical reasoning over evolving memory. We propose GAAMA, a graph-augmented associative memory system that constructs a concept-mediated hierarchical knowledge graph through a three-step pipeline: (1)~verbatim episode preservation from raw conversations, (2)~LLM-based extraction of atomic facts and topic-level concept nodes, and (3)~synthesis of higher-order reflections. The resulting graph uses four node types (episode, fact, reflection, concept) connected by five structural edge types, with concept nodes providing cross-cutting traversal paths that complement semantic similarity. Retrieval combines cosine-similarity-based $k$-nearest neighbor search with edge-type-aware Personalized PageRank (PPR) through an additive scoring function. On the LoCoMo-10 benchmark (1,540 questions across 10 multi-session conversations), GAAMA achieves 78.9\% mean reward, outperforming a tuned RAG baseline (75.0\%), HippoRAG (69.9\%), A-Mem (47.2\%), and Nemori (52.1\%). Ablation analysis shows that augmenting graph-traversal-based ranking (Personalized PageRank) with semantic search consistently improves over pure semantic search on graph nodes (+1.0 percentage point overall). 
+
+---
+# Advancing Multi-Instrument Music Transcription: Results from the 2025 AMT Challenge 
+
+**Authors**: Ojas Chaturvedi, Kayshav Bhardwaj, Tanay Gondil, Benjamin Shiue-Hal Chou, Kristen Yeon-Ji Yun, Yung-Hsiang Lu, Yujia Yan, Sungkyun Chang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2603.27528)  
+
+**Abstract**: This paper presents the results of the 2025 Automatic Music Transcription (AMT) Challenge, an online competition to benchmark progress in multi-instrument transcription. Eight teams submitted valid solutions; two outperformed the baseline MT3 model. The results highlight both advances in transcription accuracy and the remaining difficulties in handling polyphony and timbre variation. We conclude with directions for future challenges: broader genre coverage and stronger emphasis on instrument detection. 
+
+---
+# The Price of Meaning: Why Every Semantic Memory System Forgets 
+
+**Authors**: Sambartha Ray Barman, Andrey Starenky, Sofia Bodnar, Nikhil Narasimhan, Ashwin Gopinath  
+
+**Link**: [PDF](https://arxiv.org/pdf/2603.27116)  
+
+**Abstract**: Every major AI memory system in production today organises information by meaning. That organisation enables generalisation, analogy, and conceptual retrieval -- but it comes at a price. We prove that the same geometric structure enabling semantic generalisation makes interference, forgetting, and false recall inescapable. We formalise this tradeoff for \textit{semantically continuous kernel-threshold memories}: systems whose retrieval score is a monotone function of an inner product in a semantic feature space with finite local intrinsic dimension.
+Within this class we derive four results: (1) semantically useful representations have finite effective rank; (2) finite local dimension implies positive competitor mass in retrieval neighbourhoods; (3) under growing memory, retention decays to zero, yielding power-law forgetting curves under power-law arrival statistics; (4) for associative lures satisfying a $\delta$-convexity condition, false recall cannot be eliminated by threshold tuning.
+We test these predictions across five architectures: vector retrieval, graph memory, attention-based context, BM25 filesystem retrieval, and parametric memory. Pure semantic systems express the vulnerability directly as forgetting and false recall. Reasoning-augmented systems partially override these symptoms but convert graceful degradation into catastrophic failure. Systems that escape interference entirely do so by sacrificing semantic generalisation.
+The price of meaning is interference, and no architecture we tested avoids paying it. 
+
+---
+# Autonomous Agent-Orchestrated Digital Twins (AADT): Leveraging the OpenClaw Framework for State Synchronization in Rare Genetic Disorders 
+
+**Authors**: Hongzhuo Chen, Zhanliang Wang, Quan M. Nguyen, Gongbo Zhang, Chunhua Weng, Kai Wang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2603.27104)  
+
+**Abstract**: Background: Medical Digital Twins (MDTs) are computational representations of individual patients that integrate clinical, genomic, and physiological data to support diagnosis, treatment planning, and outcome prediction. However, most MDTs remain static or passively updated, creating a critical synchronization gap, especially in rare genetic disorders where phenotypes, genomic interpretations, and care guidelines evolve over time.
+Methods: We propose an agent-orchestrated digital twin framework using OpenClaw's proactive "heartbeat" mechanism and modular Agent Skills. This Autonomous Agent-orchestrated Digital Twin (AADT) system continuously monitors local and external data streams (e.g., patient-reported phenotypes and updates in variant classification databases) and executes automated workflows for data ingestion, normalization, state updates, and trigger-based analysis.
+Results: A prototype implementation demonstrates that agent orchestration can continuously synchronize MDT states with both longitudinal phenotype updates and evolving genomic knowledge. In rare disease settings, this enables earlier diagnosis and more accurate modeling of disease progression. We present two case studies, including variant reinterpretation and longitudinal phenotype tracking, highlighting how AADTs support timely, auditable updates for both research and clinical care.
+Conclusion: The AADT framework addresses the key bottleneck of real-time synchronization in MDTs, enabling scalable and continuously updated patient models. We also discuss data security considerations and mitigation strategies through human-in-the-loop system design. 
+
+---
+# Text Data Integration 
+
+**Authors**: Md Ataur Rahman, Dimitris Sacharidis, Oscar Romero, Sergi Nadal  
+
+**Link**: [PDF](https://arxiv.org/pdf/2603.27055)  
+
+**Abstract**: Data comes in many forms. From a shallow perspective, they can be viewed as being either in structured (e.g., as a relation, as key-value pairs) or unstructured (e.g., text, image) formats. So far, machines have been fairly good at processing and reasoning over structured data that follows a precise schema. However, the heterogeneity of data poses a significant challenge on how well diverse categories of data can be meaningfully stored and processed. Data Integration, a crucial part of the data engineering pipeline, addresses this by combining disparate data sources and providing unified data access to end-users. Until now, most data integration systems have leaned on only combining structured data sources. Nevertheless, unstructured data (a.k.a. free text) also contains a plethora of knowledge waiting to be utilized. Thus, in this chapter, we firstly make the case for the integration of textual data, to later present its challenges, state of the art and open problems. 
+
+---
+# Resolving the Robustness-Precision Trade-off in Financial RAG through Hybrid Document-Routed Retrieval 
+
+**Authors**: Zhiyuan Cheng, Longying Lai, Yue Liu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2603.26815)  
+
+**Abstract**: Retrieval-Augmented Generation (RAG) systems for financial document question answering typically follow a chunk-based paradigm: documents are split into fragments, embedded into vector space, and retrieved via similarity search. While effective in general settings, this approach suffers from cross-document chunk confusion in structurally homogeneous corpora such as regulatory filings. Semantic File Routing (SFR), which uses LLM structured output to route queries to whole documents, reduces catastrophic failures but sacrifices the precision of targeted chunk retrieval. We identify this robustness-precision trade-off through controlled evaluation on the FinDER benchmark (1,500 queries across five groups): SFR achieves higher average scores (6.45 vs. 6.02) and fewer failures (10.3% vs. 22.5%), while chunk-based retrieval (CBR) yields more perfect answers (13.8% vs. 8.5%). To resolve this trade-off, we propose Hybrid Document-Routed Retrieval (HDRR), a two-stage architecture that uses SFR as a document filter followed by chunk-based retrieval scoped to the identified document(s). HDRR eliminates cross-document confusion while preserving targeted chunk precision. Experimental results demonstrate that HDRR achieves the best performance on every metric: an average score of 7.54 (25.2% above CBR, 16.9% above SFR), a failure rate of only 6.4%, a correctness rate of 67.7% (+18.7 pp over CBR), and a perfect-answer rate of 20.1% (+6.3 pp over CBR, +11.6 pp over SFR). HDRR resolves the trade-off by simultaneously achieving the lowest failure rate and the highest precision across all five experimental groups. 
+
+---

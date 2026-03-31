@@ -1,0 +1,45 @@
+# DongYuan: An LLM-Based Framework for Integrative Chinese and Western Medicine Spleen-Stomach Disorders Diagnosis 
+
+**Authors**: Hua Li, Yingying Li, Xiaobin Feng, Xinyi Fu, Lifeng Dong, Qingfeng Yang, Yanzhe Chen, Xiaoju Feng, Zhidong Cao, Jianbin Guo, Yanru Du  
+
+**Link**: [PDF](https://arxiv.org/pdf/2603.28191)  
+
+**Abstract**: The clinical burden of spleen-stomach disorders is substantial. While large language models (LLMs) offer new potential for medical applications, they face three major challenges in the context of integrative Chinese and Western medicine (ICWM): a lack of high-quality data, the absence of models capable of effectively integrating the reasoning logic of traditional Chinese medicine (TCM) syndrome differentiation with that of Western medical (WM) disease diagnosis, and the shortage of a standardized evaluation benchmark. To address these interrelated challenges, we propose DongYuan, an ICWM spleen-stomach diagnostic framework. Specifically, three ICWM datasets (SSDF-Syndrome, SSDF-Dialogue, and SSDF-PD) were curated to fill the gap in high-quality data for spleen-stomach disorders. We then developed SSDF-Core, a core diagnostic LLM that acquires robust ICWM reasoning capabilities through a two-stage training regimen of supervised fine-tuning. tuning (SFT) and direct preference optimization (DPO), and complemented it with SSDF-Navigator, a pluggable consultation navigation model designed to optimize clinical inquiry strategies. Additionally, we established SSDF-Bench, a comprehensive evaluation benchmark focused on ICWM diagnosis of spleen-stomach disorders. Experimental results demonstrate that SSDF-Core significantly outperforms 12 mainstream baselines on SSDF-Bench. DongYuan lays a solid methodological foundation and provides practical technical references for the future development of intelligent ICWM diagnostic systems. 
+
+---
+# Seeing with You: Perception-Reasoning Coevolution for Multimodal Reasoning 
+
+**Authors**: Ziqi Miao, Haonan Jia, Lijun Li, Chen Qian, Yuan Xiong, Wenting Yan, Jing Shao  
+
+**Link**: [PDF](https://arxiv.org/pdf/2603.28618)  
+
+**Abstract**: Reinforcement learning with verifiable rewards (RLVR) has substantially enhanced the reasoning capabilities of multimodal large language models (MLLMs). However, existing RLVR approaches typically rely on outcome-driven optimization that updates both perception and reasoning using a shared reward based solely on the final answer. This shared reward blurs credit assignment, frequently improving reasoning patterns while failing to reliably enhance the accuracy of upstream visual evidence extraction. To address this perception bottleneck, we introduce PRCO (Perception-Reasoning Coevolution), a dual-role RLVR framework with a shared policy. PRCO consists of two cooperative roles: an Observer that generates an evidence caption tailored to the question and a Solver that predicts the final answer based on this caption. Crucially, PRCO employs role-specific reward signals: the Solver is optimized using verifiable outcome rewards on the final answer, while the Observer receives a utility reward derived from the Solver's downstream success. Extensive experiments across eight challenging multimodal reasoning benchmarks demonstrate that PRCO yields consistent improvements across model scales by over 7 points on average accuracy compared to the base model, outperforming prior open-source RL-tuned baselines. 
+
+---
+# SARL: Label-Free Reinforcement Learning by Rewarding Reasoning Topology 
+
+**Authors**: Yifan Wang, Bolian Li, David Cho, Ruqi Zhang, Fanping Sui, Ananth Grama  
+
+**Link**: [PDF](https://arxiv.org/pdf/2603.27977)  
+
+**Abstract**: Reinforcement learning has become central to improving large reasoning models, but its success still relies heavily on verifiable rewards or labeled supervision. This limits its applicability to open ended domains where correctness is ambiguous and cannot be verified. Moreover, reasoning trajectories remain largely unconstrained, and optimization towards final answer can favor early exploitation over generalization. In this work, we ask whether general reasoning ability can be improved by teaching models how to think (the structure of reasoning) rather than what to produce (the outcome of reasoning) and extend traditional RLVR to open ended settings. We introduce structure aware reinforcement learning (SARL), a label free framework that constructs a per response Reasoning Map from intermediate thinking steps and rewards its small world topology, inspired by complex networks and the functional organization of the human brain. SARL encourages reasoning trajectories that are both locally coherent and globally efficient, shifting supervision from destination to path. Our experiments on Qwen3-4B show SARL surpasses ground truth based RL and prior label free RL baselines, achieving the best average gain of 9.1% under PPO and 11.6% under GRPO on math tasks and 34.6% under PPO and 30.4% under GRPO on open ended tasks. Beyond good performance, SARL also exhibits lower KL divergence, higher policy entropy, indicating a more stable and exploratory training and generalized reasoning ability. 
+
+---
+# ERPO: Token-Level Entropy-Regulated Policy Optimization for Large Reasoning Models 
+
+**Authors**: Song Yu, Li Li  
+
+**Link**: [PDF](https://arxiv.org/pdf/2603.28204)  
+
+**Abstract**: Reinforcement learning from verifiable rewards (RLVR) has significantly advanced the reasoning capabilities of large language models. However, standard Group Relative Policy Optimization (GRPO) typically assigns a uniform, sequence-level advantage to all tokens, thereby overlooking the intrinsic information heterogeneity along reasoning chains. We show that this coarse-grained credit assignment leads to premature entropy collapse and encourages the model to generate redundant, low-quality reasoning paths. Through systematic empirical analysis, we identify Critical Decision Pivots (CDPs): transient high-entropy states where the policy's trajectory is most sensitive to perturbations. These pivots represent the "forks in the road" where effective multi-path exploration is most crucial yet often suppressed by uniform advantage signals. Building on these insights, we propose Entropy-Regulated Policy Optimization (ERPO), which transitions the optimization focus from coarse sequences to fine-grained token dynamics. ERPO introduces three synergistic components: (i) Entropy-aware Gating, which adaptively amplifies exploration at CDPs to facilitate diverse path discovery; (ii) Bucket-based Implicit Normalization, which mitigates difficulty bias by aligning token progress windows; and (iii) Result-anchored Advantage Synthesis, which re-weights token-level signals via outcome-driven anchors. Extensive experiments on competitive mathematical benchmarks (e.g., MATH, AIME) demonstrate that ERPO significantly outperforms GRPO. Notably, ERPO not only boosts reasoning accuracy but also yields significantly more concise and robust derivation paths, establishing a new efficiency-accuracy frontier for large reasoning models. 
+
+---
+# Stable Reasoning, Unstable Responses: Mitigating LLM Deception via Stability Asymmetry 
+
+**Authors**: Guoxi Zhang, Jiawei Chen, Tianzhuo Yang, Lang Qin, Juntao Dai, Yaodong Yang, Jingwei Yi  
+
+**Link**: [PDF](https://arxiv.org/pdf/2603.26846)  
+
+**Abstract**: As Large Language Models (LLMs) expand in capability and application scope, their trustworthiness becomes critical. A vital risk is intrinsic deception, wherein models strategically mislead users to achieve their own objectives. Existing alignment approaches based on chain-of-thought (CoT) monitoring supervise explicit reasoning traces. However, under optimization pressure, models are incentivized to conceal deceptive reasoning, rendering semantic supervision fundamentally unreliable. Grounded in cognitive psychology, we hypothesize that a deceptive LLM maintains a stable internal belief in its CoT while its external response remains fragile under perturbation. We term this phenomenon stability asymmetry and quantify it by measuring the contrast between internal CoT stability and external response stability under perturbation. Building on this structural signature, we propose the Stability Asymmetry Regularization (SAR), a novel alignment objective that penalizes this distributional asymmetry during reinforcement learning. Unlike CoT monitoring, SAR targets the statistical structure of model outputs, rendering it robust to semantic concealment. Extensive experiments confirm that stability asymmetry reliably identifies deceptive behavior, and that SAR effectively suppresses intrinsic deception without degrading general model capability. 
+
+---
