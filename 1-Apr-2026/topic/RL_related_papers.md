@@ -1,0 +1,81 @@
+# UniRank: End-to-End Domain-Specific Reranking of Hybrid Text-Image Candidates 
+
+**Authors**: Yupei Yang, Lin Yang, Wanxi Deng, Lin Qu, Shikui Tu, Lei Xu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2603.29897)  
+
+**Abstract**: Reranking is a critical component in many information retrieval pipelines. Despite remarkable progress in text-only settings, multimodal reranking remains challenging, particularly when the candidate set contains hybrid text and image items. A key difficulty is the modality gap: a text reranker is intrinsically closer to text candidates than to image candidates, leading to biased and suboptimal cross-modal ranking. Vision-language models (VLMs) mitigate this gap through strong cross-modal alignment and have recently been adopted to build multimodal rerankers. However, most VLM-based rerankers encode all candidates as images, and treating text as images introduces substantial computational overhead. Meanwhile, existing open-source multimodal rerankers are typically trained on general-domain data and often underperform in domain-specific scenarios. To address these limitations, we propose UniRank, a VLM-based reranking framework that natively scores and orders hybrid text-image candidates without any modality conversion. Building on this hybrid scoring interface, UniRank provides an end-to-end domain adaptation pipeline that includes: (1) an instruction-tuning stage that learns calibrated cross-modal relevance scoring by mapping label-token likelihoods to a unified scalar score; and (2) a hard-negative-driven preference alignment stage that constructs in-domain pairwise preferences and performs query-level policy optimization through reinforcement learning from human feedback (RLHF). Extensive experiments on scientific literature retrieval and design patent search demonstrate that UniRank consistently outperforms state-of-the-art baselines, improving Recall@1 by 8.9% and 7.3%, respectively. 
+
+---
+# Learning Diagnostic Reasoning for Decision Support in Toxicology 
+
+**Authors**: Nico Oberländer, David Bani-Harouni, Tobias Zellner, Nassir Navab, Florian Eyer, Matthias Keicher  
+
+**Link**: [PDF](https://arxiv.org/pdf/2603.29608)  
+
+**Abstract**: Acute poly-substance intoxication requires rapid, life-saving decisions under substantial uncertainty, as clinicians must rely on incomplete ingestion details and nonspecific symptoms. Effective diagnostic reasoning in this chaotic environment requires fusing unstructured, non-medical narratives (e.g. paramedic scene descriptions and unreliable patient self-reports or known histories), with structured medical data like vital signs. While Large Language Models (LLMs) show potential for processing such heterogeneous inputs, they struggle in this setting, often underperforming simple baselines that rely solely on patient histories. To address this, we present DeToxR (Decision-support for Toxicology with Reasoning), the first adaptation of Reinforcement Learning (RL) to emergency toxicology. We design a robust data-fusion engine for multi-label prediction across 14 substance classes based on an LLM finetuned with Group Relative Policy Optimization (GRPO). We optimize the model's reasoning directly using a clinical performance reward. By formulating a multi-label agreement metric as the reward signal, the model is explicitly penalized for missing co-ingested substances and hallucinating absent poisons. Our model significantly outperforms its unadapted base LLM counterpart and supervised baselines. Furthermore, in a clinical validation study, the model indicates a clinical advantage by outperforming an expert toxicologist in identifying the correct poisons (Micro-F1: 0.644 vs. 0.473). These results demonstrate the potential of RL-aligned LLMs to synthesize unstructured pre-clinical narratives and structured medical data for decision support in high-stakes environments. 
+
+---
+# Calibrated Confidence Expression for Radiology Report Generation 
+
+**Authors**: David Bani-Harouni, Chantal Pellegrini, Julian Lüers, Su Hwan Kim, Markus Baalmann, Benedikt Wiestler, Rickmer Braren, Nassir Navab, Matthias Keicher  
+
+**Link**: [PDF](https://arxiv.org/pdf/2603.29492)  
+
+**Abstract**: Safe deployment of Large Vision-Language Models (LVLMs) in radiology report generation requires not only accurate predictions but also clinically interpretable indicators of when outputs should be thoroughly reviewed, enabling selective radiologist verification and reducing the risk of hallucinated findings influencing clinical decisions. One intuitive approach to this is verbalized confidence, where the model explicitly states its certainty. However, current state-of-the-art language models are often overconfident, and research on calibration in multimodal settings such as radiology report generation is limited. To address this gap, we introduce ConRad (Confidence Calibration for Radiology Reports), a reinforcement learning framework for fine-tuning medical LVLMs to produce calibrated verbalized confidence estimates alongside radiology reports. We study two settings: a single report-level confidence score and a sentence-level variant assigning a confidence to each claim. Both are trained using the GRPO algorithm with reward functions based on the logarithmic scoring rule, which incentivizes truthful self-assessment by penalizing miscalibration and guarantees optimal calibration under reward maximization. Experimentally, ConRad substantially improves calibration and outperforms competing methods. In a clinical evaluation we show that ConRad's report level scores are well aligned with clinicians' judgment. By highlighting full reports or low-confidence statements for targeted review, ConRad can support safer clinical integration of AI-assistance for report generation. 
+
+---
+# MemFactory: Unified Inference & Training Framework for Agent Memory 
+
+**Authors**: Ziliang Guo, Ziheng Li, Zhiyu Li  
+
+**Link**: [PDF](https://arxiv.org/pdf/2603.29493)  
+
+**Abstract**: Memory-augmented Large Language Models (LLMs) are essential for developing capable, long-term AI agents. Recently, applying Reinforcement Learning (RL) to optimize memory operations, such as extraction, updating, and retrieval, has emerged as a highly promising research direction. However, existing implementations remain highly fragmented and task-specific, lacking a unified infrastructure to streamline the integration, training, and evaluation of these complex pipelines. To address this gap, we present MemFactory, the first unified, highly modular training and inference framework specifically designed for memory-augmented agents. Inspired by the success of unified fine-tuning frameworks like LLaMA-Factory, MemFactory abstracts the memory lifecycle into atomic, plug-and-play components, enabling researchers to seamlessly construct custom memory agents via a "Lego-like" architecture. Furthermore, the framework natively integrates Group Relative Policy Optimization (GRPO) to fine-tune internal memory management policies driven by multi-dimensional environmental rewards. MemFactory provides out-of-the-box support for recent cutting-edge paradigms, including Memory-R1, RMM, and MemAgent. We empirically validate MemFactory on the open-source MemAgent architecture using its publicly available training and evaluation data. Across both in-domain and out-of-distribution evaluation sets, MemFactory consistently improves performance over the corresponding base models, with relative gains of up to 14.8%. By providing a standardized, extensible, and easy-to-use infrastructure, MemFactory significantly lowers the barrier to entry, paving the way for future innovations in memory-driven AI agents. 
+
+---
+# Reinforced Reasoning for End-to-End Retrosynthetic Planning 
+
+**Authors**: Chenyang Zuo, Siqi Fan, Yizhen Luo, Zaiqing Nie  
+
+**Link**: [PDF](https://arxiv.org/pdf/2603.29723)  
+
+**Abstract**: Retrosynthetic planning is a fundamental task in organic chemistry, yet remains challenging due to its combinatorial complexity. To address this, conventional approaches typically rely on hybrid frameworks that combine single-step predictions with external search heuristics, inevitably fracturing the logical coherence between local molecular transformations and global planning objectives. To bridge this gap and embed sophisticated strategic foresight directly into the model's chemical reasoning, we introduce ReTriP, an end-to-end generative framework that reformulates retrosynthesis as a direct Chain-of-Thought reasoning task. We establish a path-coherent molecular representation and employ a progressive training curriculum that transitions from reasoning distillation to reinforcement learning with verifiable rewards, effectively aligning stepwise generation with practical route utility. Empirical evaluation on RetroBench demonstrates that ReTriP achieves state-of-the-art performance, exhibiting superior robustness in long-horizon planning compared to hybrid baselines. 
+
+---
+# Learning to Generate Formally Verifiable Step-by-Step Logic Reasoning via Structured Formal Intermediaries 
+
+**Authors**: Luoxin Chen, Yichi Zhou, Huishuai Zhang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2603.29500)  
+
+**Abstract**: Large language models (LLMs) have recently demonstrated impressive performance on complex, multi-step reasoning tasks, especially when post-trained with outcome-rewarded reinforcement learning Guo et al. 2025. However, it has been observed that outcome rewards often overlook flawed intermediate steps, leading to unreliable reasoning steps even when final answers are correct. To address this unreliable reasoning, we propose PRoSFI (Process Reward over Structured Formal Intermediates), a novel reward method that enhances reasoning reliability without compromising accuracy. Instead of generating formal proofs directly, which is rarely accomplishable for a modest-sized (7B) model, the model outputs structured intermediate steps aligned with its natural language reasoning. Each step is then verified by a formal prover. Only fully validated reasoning chains receive high rewards. The integration of formal verification guides the model towards generating step-by-step machine-checkable proofs, thereby yielding more credible final answers. PRoSFI offers a simple and effective approach to training trustworthy reasoning models. 
+
+---
+# Aligned, Orthogonal or In-conflict: When can we safely optimize Chain-of-Thought? 
+
+**Authors**: Max Kaufmann, David Lindner, Roland S. Zimmermann, and Rohin Shah  
+
+**Link**: [PDF](https://arxiv.org/pdf/2603.30036)  
+
+**Abstract**: Chain-of-Thought (CoT) monitoring, in which automated systems monitor the CoT of an LLM, is a promising approach for effectively overseeing AI systems. However, the extent to which a model's CoT helps us oversee the model - the monitorability of the CoT - can be affected by training, for instance by the model learning to hide important features of its reasoning. We propose and empirically validate a conceptual framework for predicting when and why this occurs. We model LLM post-training as an RL environment where the reward decomposes into two terms: one term depending on final outputs and another term depending on the CoT. Our framework allows us to classify these two terms as "aligned", "orthogonal", or "in-conflict" before training. We predict that training with in-conflict terms will reduce monitorability, orthogonal terms will not affect it, and aligned terms will improve it. To validate our framework, we use it to classify a set of RL environments, train LLMs within those environments, and evaluate how training affects CoT monitorability. We find that (1) training with "in-conflict" reward terms reduces CoT monitorability and (2) optimizing in-conflict reward terms is difficult. 
+
+---
+# VectorGym: A Multitask Benchmark for SVG Code Generation, Sketching, and Editing 
+
+**Authors**: Juan Rodriguez, Haotian Zhang, Abhay Puri, Tianyang Zhang, Rishav Pramanik, Meng Lin, Xiaoqing Xie, Marco Terral, Darsh Kaushik, Aly Shariff, Perouz Taslakian, Spandana Gella, Sai Rajeswar, David Vazquez, Christopher Pal, Marco Pedersoli  
+
+**Link**: [PDF](https://arxiv.org/pdf/2603.29852)  
+
+**Abstract**: We introduce VectorGym, a comprehensive benchmark suite for Scalable Vector Graphics (SVG) that spans generation from text and sketches, complex editing, and visual understanding. VectorGym addresses the lack of realistic, challenging benchmarks aligned with professional design workflows. Our benchmark comprises four tasks with expert human-authored annotations: the novel Sketch2SVG task (VG-Sketch); a new SVG editing dataset (VG-Edit) featuring complex, multi-step edits with higher-order primitives; Text2SVG generation (VG-Text); and SVG captioning (VG-Cap). Unlike prior benchmarks that rely on synthetic edits, VectorGym provides gold-standard human annotations that require semantic understanding and design intent. We also propose a multi-task reinforcement learning approach that jointly optimizes across all four tasks using rendering-based rewards. Our method, built on GRPO with curriculum learning, trains a Qwen3-VL 8B model that achieves state-of-the-art performance among open-source models, surpassing much larger models including Qwen3-VL 235B and matching GPT-4o. We also introduce a VLM-as-a-Judge metric for SVG generation, validated through human correlation studies. Our evaluation of frontier VLMs reveals significant performance gaps, positioning VectorGym as a rigorous framework for advancing visual code generation. VectorGym is publicly available on this http URL. 
+
+---
+# Self-Improving Code Generation via Semantic Entropy and Behavioral Consensus 
+
+**Authors**: Huan Zhang, Wei Cheng, Wei Hu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2603.29292)  
+
+**Abstract**: Improving the code generation capabilities of large language models (LLMs) typically relies on supervised fine-tuning or preference optimization, both of which require costly external resources such as powerful teacher models or reliable test units. However, in real-world scenarios, it is much harder to obtain reference solutions and test oracles than problem descriptions and test inputs. In this paper, we tackle a challenging yet realistic question: Can a code language model improve itself without access to a superior teacher and a test oracle? To answer this, we propose ConSelf, a self-improving approach built upon two key ideas. First, we introduce code semantic entropy, a novel metric that measures problem-level uncertainty by assessing the functional diversity of program behaviors, enabling a curriculum construction with the most learnable problems. Second, we present consensus-driven direct preference optimization (Con-DPO), a preference-based fine-tuning method that weights each preference pair by its behavioral consensus, thereby mitigating the impact of noisy self-generated supervision. Experiments on various benchmarks and backbone LLMs demonstrate that ConSelf significantly outperforms baselines, validating the effectiveness of semantic entropy-based curriculum construction and consensus-driven optimization in improving code generation without external supervision. 
+
+---
