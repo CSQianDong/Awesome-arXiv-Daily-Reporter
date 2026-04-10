@@ -1,0 +1,207 @@
+# Search Changes Consumers' Minds: How Recognizing Gaps Drives Sustainable Choices 
+
+**Authors**: Frans van der Sluis, Leif Azzopardi  
+
+**Link**: [PDF](https://arxiv.org/pdf/2604.08079)  
+
+**Abstract**: Despite a growing desire among consumers to shop responsibly, translating this intention into behaviour remains challenging. Previous work has identified that information seeking (or lack thereof) is a contributing factor to this intention-behaviour this http URL this paper, we hypothesize that searching can bridge this gap - helping consumers to make purchasing decisions that are better aligned with their values. We conducted a task-based study with 308 participants, asking them to search for information on one of eight ethical aspects regarding a product they were actively shopping for. Our findings show that actively searching for such information led to an overall increase in the importance participants' assigned to ethical this http URL, it was the recognition and understanding of ethical considerations, rather than ethical intentions or search activity, that drove shifts towards more responsible purchasing decisions. Participants who acknowledged and filled knowledge gaps in their decision making showed significant behaviour change, including increased searching and a stronger desire to alter their future shopping habits. We conclude that responsible consumption can be considered a partial information problem, where awareness of one's own knowledge limitations may be the catalyst needed for meaningful consumer behaviour change. 
+
+---
+# Beyond Dense Connectivity: Explicit Sparsity for Scalable Recommendation 
+
+**Authors**: Yantao Yu, Sen Qiao, Lei Shen, Bing Wang, Xiaoyi Zeng  
+
+**Link**: [PDF](https://arxiv.org/pdf/2604.08011)  
+
+**Abstract**: Recent progress in scaling large models has motivated recommender systems to increase model depth and capacity to better leverage massive behavioral data. However, recommendation inputs are high-dimensional and extremely sparse, and simply scaling dense backbones (e.g., deep MLPs) often yields diminishing returns or even performance degradation. Our analysis of industrial CTR models reveals a phenomenon of implicit connection sparsity: most learned connection weights tend towards zero, while only a small fraction remain prominent. This indicates a structural mismatch between dense connectivity and sparse recommendation data; by compelling the model to process vast low-utility connections instead of valid signals, the dense architecture itself becomes the primary bottleneck to effective pattern modeling. We propose \textbf{SSR} (Explicit \textbf{S}parsity for \textbf{S}calable \textbf{R}ecommendation), a framework that incorporates sparsity explicitly into the architecture. SSR employs a multi-view "filter-then-fuse" mechanism, decomposing inputs into parallel views for dimension-level sparse filtering followed by dense fusion. Specifically, we realize the sparsity via two strategies: a Static Random Filter that achieves efficient structural sparsity via fixed dimension subsets, and Iterative Competitive Sparse (ICS), a differentiable dynamic mechanism that employs bio-inspired competition to adaptively retain high-response dimensions. Experiments on three public datasets and a billion-scale industrial dataset from AliExpress (a global e-commerce platform) show that SSR outperforms state-of-the-art baselines under similar budgets. Crucially, SSR exhibits superior scalability, delivering continuous performance gains where dense models saturate. 
+
+---
+# Context-Aware Disentanglement for Cross-Domain Sequential Recommendation: A Causal View 
+
+**Authors**: Xingzi Wang, Qingtian Bian, Hui Fang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2604.07992)  
+
+**Abstract**: Cross-Domain Sequential Recommendation (CDSR) aims to en-hance recommendation quality by transferring knowledge across domains, offering effective solutions to data sparsity and cold-start issues. However, existing methods face three major limitations: (1) they overlook varying contexts in user interaction sequences, resulting in spurious correlations that obscure the true causal relationships driving user preferences; (2) the learning of domain- shared and domain-specific preferences is hindered by gradient conflicts between domains, leading to a seesaw effect where performance in one domain improves at the expense of the other; (3) most methods rely on the unrealistic assumption of substantial user overlap across domains. To address these issues, we propose CoDiS, a context-aware disentanglement framework grounded in a causal view to accurately disentangle domain-shared and domain-specific preferences. Specifically, Our approach includes a variational context adjustment method to reduce confounding effects of contexts, expert isolation and selection strategies to resolve gradient conflict, and a variational adversarial disentangling module for the thorough disentanglement of domain-shared and domain-specific representations. Extensive experiments on three real-world datasets demonstrate that CoDiS consistently outperforms state-of-the-art CDSR baselines with statistical significance. Code is available at:this https URL. 
+
+---
+# Show Me the Infographic I Imagine: Intent-Aware Infographic Retrieval for Authoring Support 
+
+**Authors**: Jing Xu, Jiarui Hu, Zhihao Shuai, Yiyun Chen, Weikai Yang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2604.07989)  
+
+**Abstract**: While infographics have become a powerful medium for communicating data-driven stories, authoring them from scratch remains challenging, especially for novice users. Retrieving relevant exemplars from a large corpus can provide design inspiration and promote reuse, substantially lowering the barrier to infographic authoring. However, effective retrieval is difficult because users often express design intent in ambiguous natural language, while infographics embody rich and multi-faceted visual designs. As a result, keyword-based search often fails to capture design intent, and general-purpose vision-language retrieval models trained on natural images are ill-suited to the text-heavy, multi-component nature of infographics. To address these challenges, we develop an intent-aware infographic retrieval framework that better aligns user queries with infographic designs. We first conduct a formative study of how people describe infographics and derive an intent taxonomy spanning content and visual design facets. This taxonomy is then leveraged to enrich and refine free-form user queries, guiding the retrieval process with intent-specific cues. Building on the retrieved exemplars, users can adapt the designs to their own data with high-level edit intents, supported by an interactive agent that performs low-level adaptation. Both quantitative evaluations and user studies are conducted to demonstrate that our method improves retrieval quality over baseline methods while better supporting intent satisfaction and efficient infographic authoring. 
+
+---
+# Unified Supervision for Walmarts Sponsored Search Retrieval via Joint Semantic Relevance and Behavioral Engagement Modeling 
+
+**Authors**: Shasvat Desai, Md Omar Faruk Rokon, Jhalak Nilesh Acharya, Isha Shah, Hong Yao, Utkarsh Porwal, Kuang-chih Lee  
+
+**Link**: [PDF](https://arxiv.org/pdf/2604.07930)  
+
+**Abstract**: Modern search systems rely on a fast first stage retriever to fetch relevant items from a massive catalog of items. Deployed search systems often use user engagement signals to supervise bi-encoder retriever training at scale, because these signals are continuously logged from real traffic and require no additional annotation effort. However, engagement is an imperfect proxy for semantic relevance. Items may receive interactions due to popularity, promotion, attractive visuals, titles, or price, despite weak query-item relevance. These limitations are further accentuated in Walmart's e-commerce sponsored search. User engagement on ad items is often structurally sparse because the frequency with which an ad is shown depends on factors beyond relevance such as whether the advertiser is currently running that ad, the outcome of the auction for available ad slots, bid competitiveness, and advertiser budget. Thus, even highly relevant query ad pairs can have limited engagement signals simply due to limited impressions. We propose a bi-encoder training framework for Walmart's sponsored search retrieval in e-commerce that uses semantic relevance as the primary supervision signal, with engagement used only as a preference signal among relevant items. Concretely, we construct a context-rich training target by combining 1. graded relevance labels from a cascade of cross-encoder teacher models, 2. a multichannel retrieval prior score derived from the rank positions and cross-channel agreement of retrieval systems running in production, and 3. user engagement applied only to semantically relevant items to refine preferences. Our approach outperforms the current production system in both offline evaluation and online AB tests, yielding consistent gains in average relevance and NDCG. 
+
+---
+# Same Outcomes, Different Journeys: A Trace-Level Framework for Comparing Human and GUI-Agent Behavior in Production Search Systems 
+
+**Authors**: Maria Movin, Claudia Hauff, Aron Henriksson, Panagiotis Papapetrou  
+
+**Link**: [PDF](https://arxiv.org/pdf/2604.07929)  
+
+**Abstract**: LLM-driven GUI agents are increasingly used in production systems to automate workflows and simulate users for evaluation and optimization. Yet most GUI-agent evaluations emphasize task success and provide limited evidence on whether agents interact in human-like ways. We present a trace-level evaluation framework that compares human and agent behavior across (i) task outcome and effort, (ii) query formulation, and (iii) navigation across interface states. We instantiate the framework in a controlled study in a production audio-streaming search application, where 39 participants and a state-of-the-art GUI agent perform ten multi-hop search tasks. The agent achieves task success comparable to participants and generates broadly aligned queries, but follows systematically different navigation strategies: participants exhibit content-centric, exploratory behavior, while the agent is more search-centric and low-branching. These results show that outcome and query alignment do not imply behavioral alignment, motivating trace-level diagnostics when deploying GUI agents as proxies for users in production search systems. 
+
+---
+# Ensembles at Any Cost? Accuracy-Energy Trade-offs in Recommender Systems 
+
+**Authors**: Jannik Nitschke, Lukas Wegmeth, Joeran Beel  
+
+**Link**: [PDF](https://arxiv.org/pdf/2604.07869)  
+
+**Abstract**: Ensemble methods are frequently used in recommender systems to improve accuracy by combining multiple models. Recent work reports sizable performance gains, but most studies still optimize primarily for accuracy and robustness rather than for energy efficiency. This paper measures accuracy energy trade offs of ensemble techniques relative to strong single models. We run 93 controlled experiments in two pipelines: 1. explicit rating prediction with Surprise (RMSE) and 2. implicit feedback ranking with LensKit (NDCG@10). We evaluate four datasets ranging from 100,000 to 7.8 million interactions (MovieLens 100K, MovieLens 1M, ModCloth, Anime). We compare four ensemble strategies (Average, Weighted, Stacking or Rank Fusion, Top Performers) against baselines and optimized single models. Whole system energy is measured with EMERS using a smart plug and converted to CO2 equivalents. Across settings, ensembles improve accuracy by 0.3% to 5.7% while increasing energy by 19% to 2,549%. On MovieLens 1M, a Top Performers ensemble improves RMSE by 0.96% at an 18.8% energy overhead over SVD++. On MovieLens 100K, an averaging ensemble improves NDCG@10 by 5.7% with 103% additional energy. On Anime, a Surprise Top Performers ensemble improves RMSE by 1.2% but consumes 2,005% more energy (0.21 vs. 0.01 Wh), increasing emissions from 2.6 to 53.8 mg CO2 equivalents, and LensKit ensembles fail due to memory limits. Overall, selective ensembles are more energy efficient than exhaustive averaging, 
+
+---
+# Task-Adaptive Retrieval over Agentic Multi-Modal Web Histories via Learned Graph Memory 
+
+**Authors**: Saman Forouzandeh, Kamal Berahmand, Mahdi Jalili  
+
+**Link**: [PDF](https://arxiv.org/pdf/2604.07863)  
+
+**Abstract**: Retrieving relevant observations from long multi-modal web interaction histories is challenging because relevance depends on the evolving task state, modality (screenshots, HTML text, structured signals), and temporal distance. Prior approaches typically rely on static similarity thresholds or fixed-capacity buffers, which fail to adapt relevance to the current task context. We propose \textbf{ACGM}, a learned graph-memory retriever that constructs \emph{task-adaptive} relevance graphs over agent histories using policy-gradient optimization from downstream task success. ACGM captures heterogeneous temporal dynamics with modality-specific decay (visual decays $4.3\times$ faster than text: $\lambda_v{=}0.47$ vs.\ $\lambda_x{=}0.11$) and learns sparse connectivity (3.2 edges/node), enabling efficient $O(\log T)$ retrieval. Across WebShop, VisualWebArena, and Mind2Web, ACGM improves retrieval quality to \textbf{82.7 nDCG@10} (+9.3 over GPT-4o, $p{<}0.001$) and \textbf{89.2\% Precision@10} (+7.7), outperforming 19 strong dense, re-ranking, multi-modal, and graph-based baselines. Code to reproduce our results is available at{\color{blue}\href{this https URL}{Saman Forouzandeh}}. 
+
+---
+# ReRec: Reasoning-Augmented LLM-based Recommendation Assistant via Reinforcement Fine-tuning 
+
+**Authors**: Jiani Huang, Shijie Wang, Liangbo Ning, Wenqi Fan, Qing Li  
+
+**Link**: [PDF](https://arxiv.org/pdf/2604.07851)  
+
+**Abstract**: With the rise of LLMs, there is an increasing need for intelligent recommendation assistants that can handle complex queries and provide personalized, reasoning-driven recommendations. LLM-based recommenders show potential but face challenges in multi-step reasoning, underscoring the need for reasoning-augmented systems. To address this gap, we propose ReRec, a novel reinforcement fine-tuning (RFT) framework designed to improve LLM reasoning in complex recommendation tasks. Our framework introduces three key components: (1) Dual-Graph Enhanced Reward Shaping, integrating recommendation metrics like NDCG@K with Query Alignment and Preference Alignment Scores to provide fine-grained reward signals for LLM optimization; (2) Reasoning-aware Advantage Estimation, which decomposes LLM outputs into reasoning segments and penalizes incorrect steps to enhance reasoning of recommendation; and (3) Online Curriculum Scheduler, dynamically assess query difficulty and organize training curriculum to ensure stable learning during RFT. Experiments demonstrate that ReRec outperforms state-of-the-art baselines and preserves core abilities like instruction-following and general knowledge. Our codes are available at this https URL. 
+
+---
+# Filling the Gaps: Selective Knowledge Augmentation for LLM Recommenders 
+
+**Authors**: Jaehyun Lee, Sanghwan Jang, SeongKu Kang, Hwanjo Yu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2604.07825)  
+
+**Abstract**: Large language models (LLMs) have recently emerged as powerful training-free recommenders. However, their knowledge of individual items is inevitably uneven due to imbalanced information exposure during pretraining, a phenomenon we refer to as knowledge gap problem. To address this, most prior methods have employed a naive uniform augmentation that appends external information for every item in the input prompt. However, this approach not only wastes limited context budget on redundant augmentation for well-known items but can also hinder the model's effective reasoning. To this end, we propose KnowSA_CKP (Knowledge-aware Selective Augmentation with Comparative Knowledge Probing) to mitigate the knowledge gap problem. KnowSA_CKP estimates the LLM's internal knowledge by evaluating its capability to capture collaborative relationships and selectively injects additional information only where it is most needed. By avoiding unnecessary augmentation for well-known items, KnowSA_CKP focuses on items that benefit most from knowledge supplementation, thereby making more effective use of the context budget. KnowSA_CKP requires no fine-tuning step, and consistently improves both recommendation accuracy and context efficiency across four real-world datasets. 
+
+---
+# PeReGrINE: Evaluating Personalized Review Fidelity with User Item Graph Context 
+
+**Authors**: Steven Au, Baihan Lin  
+
+**Link**: [PDF](https://arxiv.org/pdf/2604.07788)  
+
+**Abstract**: We introduce PeReGrINE, a benchmark and evaluation framework for personalized review generation grounded in graph-structured user--item evidence. PeReGrINE restructures Amazon Reviews 2023 into a temporally consistent bipartite graph, where each target review is conditioned on bounded evidence from user history, item context, and neighborhood interactions under explicit temporal cutoffs. To represent persistent user preferences without conditioning directly on sparse raw histories, we compute a User Style Parameter that summarizes each user's linguistic and affective tendencies over prior reviews. This setup supports controlled comparison of four graph-derived retrieval settings: product-only, user-only, neighbor-only, and combined evidence. Beyond standard generation metrics, we introduce Dissonance Analysis, a macro-level evaluation framework that measures deviation from expected user style and product-level consensus. We also study visual evidence as an auxiliary context source and find that it can improve textual quality in some settings, while graph-derived evidence remains the main driver of personalization and consistency. Across product categories, PeReGrINE offers a reproducible way to study how evidence composition affects review fidelity, personalization, and grounding in retrieval-conditioned language models. 
+
+---
+# Efficient Dataset Selection for Continual Adaptation of Generative Recommenders 
+
+**Authors**: Cathy Jiao, Juan Elenter, Praveen Ravichandran, Bernd Huber, Joseph Cauteruccio, Todd Wasson, Timothy Heath, Chenyan Xiong, Mounia Lalmas, Paul Bennett  
+
+**Link**: [PDF](https://arxiv.org/pdf/2604.07739)  
+
+**Abstract**: Recommendation systems must continuously adapt to evolving user behavior, yet the volume of data generated in large-scale streaming environments makes frequent full retraining impractical. This work investigates how targeted data selection can mitigate performance degradation caused by temporal distributional drift while maintaining scalability. We evaluate a range of representation choices and sampling strategies for curating small but informative subsets of user interaction data. Our results demonstrate that gradient-based representations, coupled with distribution-matching, improve downstream model performance, achieving training efficiency gains while preserving robustness to drift. These findings highlight data curation as a practical mechanism for scalable monitoring and adaptive model updates in production-scale recommendation systems. 
+
+---
+# LitXBench: A Benchmark for Extracting Experiments from Scientific Literature 
+
+**Authors**: Curtis Chong, Jorge Colindres  
+
+**Link**: [PDF](https://arxiv.org/pdf/2604.07649)  
+
+**Abstract**: Aggregating experimental data from papers enables materials scientists to build better property prediction models and to facilitate scientific discovery. Recently, interest has grown in extracting not only single material properties but also entire experimental measurements. To support this shift, we introduce LitXBench, a framework for benchmarking methods that extract experiments from literature. We also present LitXAlloy, a dense benchmark comprising 1426 total measurements from 19 alloy papers. By storing the benchmark's entries as Python objects, rather than text-based formats such as CSV or JSON, we improve auditability and enable programmatic data validation. We find that frontier language models, such as Gemini 3.1 Pro Preview, outperform existing multi-turn extraction pipelines by up to 0.37 F1. Our results suggest that this performance gap arises because extraction pipelines associate measurements with compositions rather than the processing steps that define a material. 
+
+---
+# DCD: Domain-Oriented Design for Controlled Retrieval-Augmented Generation 
+
+**Authors**: Valeriy Kovalskiy, Nikita Belov, Nikita Miteyko, Igor Reshetnikov, Max Maximov  
+
+**Link**: [PDF](https://arxiv.org/pdf/2604.07590)  
+
+**Abstract**: Retrieval-Augmented Generation (RAG) is widely used to ground large language models in external knowledge sources. However, when applied to heterogeneous corpora and multi-step queries, Naive RAG pipelines often degrade in quality due to flat knowledge representations and the absence of explicit workflows. In this work, we introduce DCD (Domain-Collection-Document), a domain-oriented design to structure knowledge and control query processing in RAG systems without modifying the underlying language model. The proposed approach relies on a hierarchical decomposition of the information space and multi-stage routing based on structured model outputs, enabling progressive restriction of both retrieval and generation scopes. The architecture is complemented by smart chunking, hybrid retrieval, and integrated validation and generation guardrail mechanisms. We describe the DCD architecture and workflow and discuss evaluation results on synthetic evaluation dataset, highlighting their impact on robustness, factual accuracy, and answer relevance in applied RAG scenarios. 
+
+---
+# Don't Measure Once: Measuring Visibility in AI Search (GEO) 
+
+**Authors**: Julius Schulte, Malte Bleeker, Philipp Kaufmann  
+
+**Link**: [PDF](https://arxiv.org/pdf/2604.07585)  
+
+**Abstract**: As large language model-based chat systems become increasingly widely used, generative engine optimization (GEO) has emerged as an important problem for information access and retrieval. In classical search engines, results are comparatively transparent and stable: a single query often provides a representative snapshot of where a page or brand appears relative to competitors. The inherent probabilistic nature of AI search changes this paradigm. Answers can vary across runs, prompts, and time, making one-off observations unreliable. Drawing on empirical studies, our findings underscore the need for repeated measurements to assess a brand's GEO performance and to characterize visibility as a distribution rather than a single-point outcome. 
+
+---
+# HiMARS: Hybrid multi-objective algorithms for recommender systems 
+
+**Authors**: Elaheh Lotfian, Alireza Kabgani  
+
+**Link**: [PDF](https://arxiv.org/pdf/2604.07572)  
+
+**Abstract**: In recommender systems, it is well-established that both accuracy and diversity are crucial for generating high-quality recommendation lists. However, achieving a balance between these two typically conflicting objectives remains a significant challenge. In this work, we address this challenge by proposing four novel hybrid multi-objective algorithms inspired by the Non-dominated Neighbor Immune Algorithm (NNIA), Archived Multi-Objective Simulated Annealing (AMOSA), and Non-dominated Sorting Genetic Algorithm-II (NSGA-II), aimed at simultaneously enhancing both accuracy and diversity through multi-objective optimization. Our approach follows a three-stage process: First, we generate an initial top-$k$ list using item-based collaborative filtering for a given user. Second, we solve a bi-objective optimization problem to identify Pareto-optimal top-$s$ recommendation lists, where $s \ll k$, using the proposed hybrid algorithms. Finally, we select an optimal personalized top-$s$ list from the Pareto-optimal solutions. We evaluate the performance of the proposed algorithms on real-world datasets and compare them with existing methods using conventional metrics in recommender systems such as accuracy, diversity, and novelty. Additionally, we assess the quality of the Pareto frontiers using metrics including the spacing metric, mean ideal distance, diversification metric, and spread of non-dominated solutions. Results demonstrate that some of our proposed algorithms significantly improve both accuracy and diversity, offering a novel contribution to multi-objective optimization in recommender systems. 
+
+---
+# Dual-Rerank: Fusing Causality and Utility for Industrial Generative Reranking 
+
+**Authors**: Chao Zhang, Shuai Lin, ChengLei Dai, Ye Qian, Fan Mingyang, Yi Zhang, Yi Wang, Jingwei Zhuo  
+
+**Link**: [PDF](https://arxiv.org/pdf/2604.07420)  
+
+**Abstract**: Kuaishou serves over 400 million daily active users, processing hundreds of millions of search queries daily against a repository of tens of billions of short videos. As the final decision layer, the reranking stage determines user experience by optimizing whole-page utility. While traditional score-and-sort methods fail to capture combinatorial dependencies, Generative Reranking offers a superior paradigm by directly modeling the permutation probability. However, deploying Generative Reranking in such a high-stakes environment faces a fundamental dual dilemma: 1) the structural trade-off where Autoregressive (AR) models offer superior Sequential modeling but suffer from prohibitive latency, versus Non-Autoregressive (NAR) models that enable efficiency but lack dependency capturing; 2) the optimization gap where Supervised Learning faces challenges in directly optimizing whole-page utility, while Reinforcement Learning (RL) struggles with instability in high-throughput data streams. To resolve this, we propose Dual-Rerank, a unified framework designed for industrial reranking that bridges the structural gap via Sequential Knowledge Distillation and addresses the optimization gap using List-wise Decoupled Reranking Optimization (LDRO) for stable online RL. Extensive A/B testing on production traffic demonstrates that Dual-Rerank achieves State-of-the-Art performance, significantly improving User satisfaction and Watch Time while drastically reducing inference latency compared to AR baselines. 
+
+---
+# ReAlign: Optimizing the Visual Document Retriever with Reasoning-Guided Fine-Grained Alignment 
+
+**Authors**: Hao Yang, Yifan Ji, Zhipeng Xu, Zhenghao Liu, Yukun Yan, Zulong Chen, Shuo Wang, Yu Gu, Ge Yu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2604.07419)  
+
+**Abstract**: Visual document retrieval aims to retrieve a set of document pages relevant to a query from visually rich collections. Existing methods often employ Vision-Language Models (VLMs) to encode queries and visual pages into a shared embedding space, which is then optimized via contrastive training. However, during visual document representation, localized evidence is usually scattered across complex document layouts, making it difficult for retrieval models to capture crucial cues for effective embedding learning. In this paper, we propose Reasoning-Guided Alignment (ReAlign), a method that enhances visual document retrieval by leveraging the reasoning capability of VLMs to provide fine-grained visual document descriptions as supervision signals for training. Specifically, ReAlign employs a superior VLM to identify query-related regions on a page and then generates a query-aware description grounding the cropped visual regions. The retriever is then trained using these region-focused descriptions to align the semantics between queries and visual documents by encouraging the document ranking distribution induced by the region-focused descriptions to match that induced by the original query. Experiments on diverse visually rich document retrieval benchmarks demonstrate that ReAlign consistently improves visual document retrieval performance on both in-domain and out-of-domain datasets, achieving up to 2% relative improvements. Moreover, the advantages of ReAlign generalize across different VLM backbones by guiding models to better focus their attention on critical visual cues for document representation. All code and datasets are available at this https URL. 
+
+---
+# SubSearch: Intermediate Rewards for Unsupervised Guided Reasoning in Complex Retrieval 
+
+**Authors**: Roxana Petcu, Evangelos Kanoulas, Maarten de Rijke  
+
+**Link**: [PDF](https://arxiv.org/pdf/2604.07415)  
+
+**Abstract**: Large language models (LLMs) are probabilistic in nature and perform more reliably when augmented with external information. As complex queries often require multi-step reasoning over the retrieved information, with no clear or predetermined reasoning path, they remain challenging. Recent approaches train models using reinforcement learning on the model's outcome, showing promise in improving how models handle complex information. We introduce SubSearch, a specialized framework that shifts from outcome-only supervision to intermediate reward signals that incentivize planning high-quality reasoning. Unlike previous work on process reward modeling, which focuses on training a separate reward model with annotated trajectories by either human annotators or large LLM judges, SubSearch directly optimizes the generator using intrinsic process rewards, which we define as internally-derived rewards, eliminating the need for external supervision, and moving towards autonomous information-intensive reasoning. Experiments on seven benchmarks show that rewarding intermediate reasoning steps with intrinsic rewards leads to more robust reasoning traces in both QA and multi-hop QA datasets over using only outcome rewards. SubSearch can help in building reasoning traces that allow agents to better integrate search engines for complex query answering, while offering a data-efficient alternative to supervised process modeling. 
+
+---
+# Improving Search Suggestions for Alphanumeric Queries 
+
+**Authors**: Samarth Agrawal, Jayanth Yetukuri, Diptesh Kanojia, Qunzhi Zhou, Zhe Wu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2604.07364)  
+
+**Abstract**: Alphanumeric identifiers such as manufacturer part numbers (MPNs), SKUs, and model codes are ubiquitous in e-commerce catalogs and search. These identifiers are sparse, non linguistic, and highly sensitive to tokenization and typographical variation, rendering conventional lexical and embedding based retrieval methods ineffective. We propose a training free, character level retrieval framework that encodes each alphanumeric sequence as a fixed length binary vector. This representation enables efficient similarity computation via Hamming distance and supports nearest neighbor retrieval over large identifier corpora. An optional re-ranking stage using edit distance refines precision while preserving latency guarantees. The method offers a practical and interpretable alternative to learned dense retrieval models, making it suitable for production deployment in search suggestion generation systems. Significant gains in business metrics in the A/B test further prove utility of our approach. 
+
+---
+# FedUTR: Federated Recommendation with Augmented Universal Textual Representation for Sparse Interaction Scenarios 
+
+**Authors**: Kang Fu, Honglei Zhang, Zikai Zhang, Jundong Chen, Xin Zhou, Zhiqi Shen, Dusit Niyato, Yidong Li  
+
+**Link**: [PDF](https://arxiv.org/pdf/2604.07351)  
+
+**Abstract**: Federated recommendations (FRs) have emerged as an on-device privacy-preserving paradigm, attracting considerable attention driven by rising demands for data security. Existing FRs predominantly adapt ID embeddings to represent items, making the quality of item embeddings entirely dependent on users' historical behaviors. However, we empirically observe that this pattern leads to suboptimal recommendation performance under high data sparsity scenarios, due to its strong reliance on historical interactions. To address this issue, we propose a novel method named FedUTR, which incorporates item textual representations as a complement to interaction behaviors, aiming to enhance model performance under high data sparsity. Specifically, we utilize textual modality as the universal representation to capture generic item knowledge, and design a Collaborative Information Fusion Module (CIFM) to complement each user's personalized interaction information. Besides, we introduce a Local Adaptation Module (LAM) that adaptively exploits the off-the-shelf local model to efficiently preserve client-specific personalized preferences. Moreover, we propose a variant of FedUTR, termed FedUTR-SAR, which incorporates a sparsity-aware resnet component to granularly balance universal and personalized information. The convergence analysis proves theoretical guarantees for the effectiveness of FedUTR. Extensive experiments on four real-world datasets show that our method achieves superior performance, with improvements of up to 59% across all datasets compared to the SOTA baselines. 
+
+---
+# Rag Performance Prediction for Question Answering 
+
+**Authors**: Or Dado, David Carmel. Oren Kurland  
+
+**Link**: [PDF](https://arxiv.org/pdf/2604.07985)  
+
+**Abstract**: We address the task of predicting the gain of using RAG (retrieval augmented generation) for question answering with respect to not using it. We study the performance of a few pre-retrieval and post-retrieval predictors originally devised for ad hoc retrieval. We also study a few post-generation predictors, one of which is novel to this study and posts the best prediction quality. Our results show that the most effective prediction approach is a novel supervised predictor that explicitly models the semantic relationships among the question, retrieved passages, and the generated answer. 
+
+---
+# Event-Centric World Modeling with Memory-Augmented Retrieval for Embodied Decision-Making 
+
+**Authors**: Fan Zhaowen  
+
+**Link**: [PDF](https://arxiv.org/pdf/2604.07392)  
+
+**Abstract**: Autonomous agents operating in dynamic and safety-critical environments require decision-making frameworks that are both computationally efficient and physically grounded. However, many existing approaches rely on end-to-end learning, which often lacks interpretability and explicit mechanisms for ensuring consistency with physical constraints. In this work, we propose an event-centric world modeling framework with memory-augmented retrieval for embodied decision-making. The framework represents the environment as a structured set of semantic events, which are encoded into a permutation-invariant latent representation. Decision-making is performed via retrieval over a knowledge bank of prior experiences, where each entry associates an event representation with a corresponding maneuver. The final action is computed as a weighted combination of retrieved solutions, providing a transparent link between decision and stored experiences. The proposed design enables structured abstraction of dynamic environments and supports interpretable decision-making through case-based reasoning. In addition, incorporating physics-informed knowledge into the retrieval process encourages the selection of maneuvers that are consistent with observed system dynamics. Experimental evaluation in UAV flight scenarios demonstrates that the framework operates within real-time control constraints while maintaining interpretable and consistent behavior. 
+
+---
