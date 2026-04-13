@@ -1,0 +1,211 @@
+# Dynamic Ranked List Truncation for Reranking Pipelines via LLM-generated Reference-Documents 
+
+**Authors**: Nilanjan Sinhababu, Soumedhik Bharati, Debasis Ganguly, Pabitra Mitra  
+
+**Link**: [PDF](https://arxiv.org/pdf/2604.09492)  
+
+**Abstract**: Large Language Models (LLM) have been widely used in reranking. Computational overhead and large context lengths remain a challenging issue for LLM rerankers. Efficient reranking usually involves selecting a subset of the ranked list from the first stage, known as ranked list truncation (RLT). The truncated list is processed further by a reranker. For LLM rerankers, the ranked list is often partitioned and processed sequentially in batches to reduce the context length. Both these steps involve hyperparameters and topic-agnostic heuristics. Recently, LLMs have been shown to be effective for relevance judgment. Equivalently, we propose that LLMs can be used to generate reference documents that can act as a pivot between relevant and non-relevant documents in a ranked list. We propose methods to use these generated reference documents for RLT as well as for efficient listwise reranking. While reranking, we process the ranked list in either parallel batches of non-overlapping windows or overlapping windows with adaptive strides, improving the existing fixed stride setup. The generated reference documents are also shown to improve existing efficient listwise reranking frameworks. Experiments on TREC Deep Learning benchmarks show that our approach outperforms existing RLT-based approaches. In-domain and out-of-domain benchmarks demonstrate that our proposed methods accelerate LLM-based listwise reranking by up to 66\% compared to existing approaches. This work not only establishes a practical paradigm for efficient LLM-based reranking but also provides insight into the capability of LLMs to generate semantically controlled documents using relevance signals. 
+
+---
+# TME-PSR: Time-aware, Multi-interest, and Explanation Personalization for Sequential Recommendation 
+
+**Authors**: Qingzhuo Wang, Leilei Wen, Juntao Chen, Kunyu Peng, Ruiyang Qin, Zhihua Wei, Wen Shen  
+
+**Link**: [PDF](https://arxiv.org/pdf/2604.09439)  
+
+**Abstract**: In this paper, we propose a sequential recommendation model that integrates Time-aware personalization, Multi-interest personalization, and Explanation personalization for Personalized Sequential Recommendation (TME-PSR). That is, we consider the differences across different users in temporal rhythm preference, multiple fine-grained latent interests, and the personalized semantic alignment between recommendations and explanations. Specifically, the proposed TME-PSR model employs a dual-view gated time encoder to capture personalized temporal rhythms, a lightweight multihead Linear Recurrent Unit architecture that enables fine-grained sub-interest modeling with improved efficiency, and a dynamic dual-branch mutual information weighting mechanism to achieve personalized alignment between recommendations and explanations. Extensive experiments on real-world datasets demonstrate that our method consistently improves recommendation accuracy and explanation quality, at a lower computational cost. 
+
+---
+# On the Representational Limits of Quantum-Inspired 1024-D Document Embeddings: An Experimental Evaluation Framework 
+
+**Authors**: Dario Maio  
+
+**Link**: [PDF](https://arxiv.org/pdf/2604.09430)  
+
+**Abstract**: Text embeddings are central to modern information retrieval and Retrieval-Augmented Generation (RAG). While dense models derived from Large Language Models (LLMs) dominate current practice, recent work has explored quantum-inspired alternatives motivated by the geometric properties of Hilbert-like spaces and their potential to encode richer semantic structure.
+This paper presents an experimental framework for constructing quantum-inspired 1024-dimensional document embeddings based on overlapping windows and multi-scale aggregation. The pipeline combines semantic projections (e.g., EigAngle), circuit-inspired feature mappings, and optional teacher-student distillation, together with a fingerprinting mechanism for reproducibility and controlled evaluation.
+We introduce a set of diagnostic tools for hybrid retrieval, including static and dynamic interpolation between BM25 and embedding-based scores, candidate union strategies, and a conceptual alpha-oracle that provides an upper bound for score-level fusion.
+Experiments on controlled corpora of Italian and English documents across technical, narrative, and legal domains, using synthetic queries, show that BM25 remains a strong baseline, teacher embeddings provide stable semantic structure, and standalone quantum-inspired embeddings exhibit weak and unstable ranking signals. Distillation yields mixed effects, improving alignment in some cases but not consistently enhancing retrieval performance, while hybrid retrieval can recover competitive results when lexical and embedding-based signals are combined.
+Overall, the results highlight structural limitations in the geometry of quantum-inspired embeddings, including distance compression and ranking instability, and clarify their role as auxiliary components rather than standalone retrieval representations. 
+
+---
+# Hybrid Cold-Start Recommender System for Closure Model Selection in Multiphase Flow Simulations 
+
+**Authors**: S. Hänsch, A. Sajdoková, A. Rębowski, F. Miškařík, K. Ramakrishna, F. Schlegel, V. Rybář, R. Alves, P. Kordík  
+
+**Link**: [PDF](https://arxiv.org/pdf/2604.09112)  
+
+**Abstract**: Selecting appropriate physical models is a critical yet difficult step in many areas of computational science and engineering. In multiphase Computational Fluid Dynamics (CFD), practitioners must choose among numerous closure model combinations whose performance varies strongly across flow conditions. Sub-optimal choices can lead to inaccurate predictions, simulation failures, and wasted computational resources, making model selection a prime candidate for data-driven decision support. This work formulates closure model selection as a cold-start recommender system problem in a high-cost scientific domain. We propose a hybrid recommendation framework that combines (i) metadata-driven case similarity and (ii) collaborative inference via matrix completion. The approach enables case-specific model recommendations for entirely new CFD cases using their descriptive features, while leveraging historical simulation results from similar cases. The methodology is evaluated on 13,600 simulations across 136 validation cases and 100 model combinations. A nested cross-validation protocol with experiment-level holdout is employed to rigorously assess generalisation to unseen flow scenarios under varying levels of data sparsity. Recommendation quality is measured using ranking-based metrics and a domain-specific regret measure capturing performance loss relative to the per-case optimum. Results show that the proposed hybrid recommender consistently outperforms popularity-based and expert-designed reference models and reduces regret across the investigated sparsities. These findings demonstrate that recommender system methodology can effectively support complex scientific decision-making tasks characterised by expensive evaluations, structured metadata, and limited prior observations. 
+
+---
+# DIAURec: Dual-Intent Space Representation Optimization for Recommendation 
+
+**Authors**: Yu Zhang, Yiwen Zhang, Yi Zhang, Lei Sang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2604.09087)  
+
+**Abstract**: General recommender systems deliver personalized services by learning user and item representations, with the central challenge being how to capture latent user preferences. However, representations derived from sparse interactions often fail to comprehensively characterize user behaviors, thereby limiting recommendation effectiveness. Recent studies attempt to enhance user representations through sophisticated modeling strategies ($e.g.,$ intent or language modeling). Nevertheless, most works primarily concentrate on model interpretability instead of representation optimization. This imbalance has led to limited progress, as representation optimization is crucial for recommendation quality by promoting the affinity between users and their interacted items in the feature space, yet remains largely overlooked. To overcome these limitations, we propose DIAURec, a novel representation learning framework that unifies intent and language modeling for recommendation. DIAURec reconstructs representations based on the prototype and distribution intent spaces formed by collaborative and language signals. Furthermore, we design a comprehensive representation optimization strategy. Specifically, we adopts alignment and uniformity as the primary optimization objectives, and incorporates both coarse- and fine-grained matching to achieve effective alignment across different spaces, thereby enhancing representational consistency. Additionally, we further introduce intra-space and interaction regularization to enhance model robustness and prevent representation collapse in reconstructed space representation. Experiments on three public datasets against fifteen baseline methods show that DIAURec consistently outperforms state-of-the-art baselines, fully validating its effectiveness and superiority. 
+
+---
+# Regime-Conditional Retrieval: Theory and a Transferable Router for Two-Hop QA 
+
+**Authors**: Andre Bacellar  
+
+**Link**: [PDF](https://arxiv.org/pdf/2604.09019)  
+
+**Abstract**: Two-hop QA retrieval splits queries into two regimes determined by whether the hop-2 entity is explicitly named in the question (Q-dominant) or only in the bridge passage (B-dominant). We formalize this split with three theorems: (T1) per-query AUC is a monotone function of the cosine separation margin, with R^2 >= 0.90 for six of eight type-encoder pairs; (T2) regime is characterized by two surface-text predicates, with P1 decisive for routing and P2 qualifying the B-dominant case, holding across three encoders and three datasets; and (T3) bridge advantage requires the relation-bearing sentence, not entity name alone, with removal causing an 8.6-14.1 pp performance drop (p < 0.001). Building on this theory, we propose RegimeRouter, a lightweight binary router that selects between question-only and question-plus-relation-sentence retrieval using five text features derived directly from the predicate definitions. Trained on 2WikiMultiHopQA (n = 881, 5-fold cross-fitted) and applied zero-shot to MuSiQue and HotpotQA, RegimeRouter achieves +5.6 pp (p < 0.001), +5.3 pp (p = 0.002), and +1.1 pp (non-significant, no-regret) R@5 improvement, respectively, with artifact-driven. 
+
+---
+# IAT: Instance-As-Token Compression for Historical User Sequence Modeling in Industrial Recommender Systems 
+
+**Authors**: Xinchun Li, Ning Zhang, Qianqian Yang, Fei Teng, Wenlin Zhao, Huizhi Yang, Heng Shi, Linlan Chen, Yixin Wu, Zhen Wang, Daiye Hou, Fei Qin, Lele Yu, Yaocheng Tan  
+
+**Link**: [PDF](https://arxiv.org/pdf/2604.08933)  
+
+**Abstract**: Although sophisticated sequence modeling paradigms have achieved remarkable success in recommender systems, the information capacity of hand-crafted sequential features constrains the performance upper bound. To better enhance user experience by encoding historical interaction patterns, this paper presents a novel two-stage sequence modeling framework termed Instance-As-Token (IAT). The first stage of IAT compresses all features of each historical interaction instance into a unified instance embedding, which encodes the interaction characteristics in a compact yet informative token. Both temporal-order and user-order compression schemes are proposed, with the latter better aligning with the demands of downstream sequence modeling. The second stage involves the downstream task fetching fixed-length compressed instance tokens via timestamps and adopting standard sequence modeling approaches to learn long-range preferences patterns. Extensive experiments demonstrate that IAT significantly outperforms state-of-the-art methods and exhibits superior in-domain and cross-domain transferability. IAT has been successfully deployed in real-world industrial recommender systems, including e-commerce advertising, shopping mall marketing, and live-streaming e-commerce, delivering substantial improvements in key business metrics. 
+
+---
+# Beyond Relevance: Utility-Centric Retrieval in the LLM Era 
+
+**Authors**: Hengran Zhang, Minghao Tang, Keping Bi, Jiafeng Guo  
+
+**Link**: [PDF](https://arxiv.org/pdf/2604.08920)  
+
+**Abstract**: Information retrieval systems have traditionally optimized for topical relevance-the degree to which retrieved documents match a query. However, relevance only approximates a deeper goal: utility, namely, whether retrieved information helps accomplish a user's underlying task. The emergence of retrieval-augmented generation (RAG) fundamentally changes this paradigm. Retrieved documents are no longer consumed directly by users but instead serve as evidence for large language models (LLMs) that produce answers. As a result, retrieval effectiveness must be evaluated by its contribution to generation quality rather than by relevance-based ranking metrics alone. This tutorial argues that retrieval objectives are evolving from relevance-centric optimization toward LLM-centric utility. We present a unified framework covering LLM-agnostic versus LLM-specific utility, context-independent versus context-dependent utility, and the connection with LLM information needs and agentic RAG. By synthesizing recent advances, the tutorial provides conceptual foundations and practical guidance for designing retrieval systems aligned with the requirements of LLM-based information access. 
+
+---
+# BracketRank: Large Language Model Document Ranking via Reasoning-based Competitive Elimination 
+
+**Authors**: Abdelrahman Abdallah, Mohammed Ali, Bhawna Piryani, Adam Jatowt  
+
+**Link**: [PDF](https://arxiv.org/pdf/2604.08834)  
+
+**Abstract**: Reasoning-intensive retrieval requires deep semantic inference beyond surface-level keyword matching, posing a challenge for current LLM-based rerankers limited by context constraints and order sensitivity. We propose \textbf{\BracketRank}, a framework that treats document reranking as a reasoning-driven competitive tournament. Our approach introduces three key innovations: (1) adaptive grouping based on model context limits, (2) reasoning-enhanced prompts that mandate step-by-step relevance explanations, and (3) a bracket-style elimination structure with winner and loser tracks. This design ensures robust document advancement while enabling parallel processing across competition stages. Evaluation on the BRIGHT reasoning benchmark shows that \BracketRank achieves \textbf{26.56 nDCG@10}, significantly outperforming state-of-the-art baselines including RankGPT-4 (17.0) and Rank-R1-14B (20.5). On TREC datasets, BracketRank achieves 77.90 nDCG@5 on DL 19 and 75.85 nDCG@5 on DL 20, exceeding all baselines, establishing that explicit reasoning within competitive elimination is a powerful paradigm for complex, multi-step retrieval tasks. this https URL 
+
+---
+# SkillForge: Forging Domain-Specific, Self-Evolving Agent Skills in Cloud Technical Support 
+
+**Authors**: Xingyan Liu, Xiyue Luo, Linyu Li, Ganghong Huang, Jianfeng Liu, Honglin Qiao  
+
+**Link**: [PDF](https://arxiv.org/pdf/2604.08618)  
+
+**Abstract**: Deploying LLM-powered agents in enterprise scenarios such as cloud technical support demands high-quality, domain-specific skills. However, existing skill creators lack domain grounding, producing skills poorly aligned with real-world task requirements. Moreover, once deployed, there is no systematic mechanism to trace execution failures back to skill deficiencies and drive targeted refinements, leaving skill quality stagnant despite accumulating operational evidence. We introduce SkillForge, a self-evolving framework that closes an end-to-end creation-evaluation-refinement loop. To produce well-aligned initial skills, a Domain-Contextualized Skill Creator grounds skill synthesis in knowledge bases and historical support tickets. To enable continuous self-optimization, a three-stage pipeline -- Failure Analyzer, Skill Diagnostician, and Skill Optimizer -- automatically diagnoses execution failures in batch, pinpoints the underlying skill deficiencies, and rewrites the skill to eliminate them. This cycle runs iteratively, allowing skills to self-improve with every round of deployment feedback. Evaluated on five real-world cloud support scenarios spanning 1,883 tickets and 3,737 tasks, experiments show that: (1) the Domain-Contextualized Skill Creator produces substantially better initial skills than the generic skill creator, as measured by consistency with expert-authored reference responses from historical tickets; and (2) the self-evolution loop progressively improves skill quality from diverse starting points (including expert-authored, domain-created, and generic skills) across successive rounds, demonstrating that automated evolution can surpass manually curated expert knowledge. 
+
+---
+# Pretrain-then-Adapt: Uncertainty-Aware Test-Time Adaptation for Text-based Person Search 
+
+**Authors**: Jiahao Zhang, Shaofei Huang, Yaxiong Wang, Zhedong Zheng  
+
+**Link**: [PDF](https://arxiv.org/pdf/2604.08598)  
+
+**Abstract**: Text-based person search faces inherent limitations due to data scarcity, driven by stringent privacy constraints and the high cost of manual annotation. To mitigate this, existing methods usually rely on a Pretrain-then-Finetune paradigm, where models are first pretrained on synthetic person-caption data to establish cross-modal alignment, followed by fine-tuning on labeled real-world datasets. However, this paradigm lacks practicality in real-world deployment scenarios, where large-scale annotated target-domain data is typically inaccessible. In this work, we propose a new Pretrain-then-Adapt paradigm that eliminates reliance on extensive target-domain supervision through an offline test-time adaptation manner, enabling dynamic model adaptation using only unlabeled test data with minimal post-train time cost. To mitigate overconfidence with false positives of previous entropy-based test-time adaptation, we propose an Uncertainty-Aware Test-Time Adaptation (UATTA) framework, which introduces a bidirectional retrieval disagreement mechanism to estimate uncertainty, i.e., low uncertainty is assigned when an image-text pair ranks highly in both image-to-text and text-to-image retrieval, indicating high alignment; otherwise, high uncertainty is detected. This indicator drives offline test-time model recalibration without labels, effectively mitigating domain shift. We validate UATTA on four benchmarks, i.e., CUHK-PEDES, ICFG-PEDES, RSTPReid, and PAB, showing consistent improvements across both CLIP-based (one-stage) and XVLM-based (two-stage) frameworks. Ablation studies confirm that UATTA outperforms existing offline test-time adaptation strategies, establishing a new benchmark for label-efficient, deployable person search systems. Our code is available at this https URL. 
+
+---
+# Unbiased Rectification for Sequential Recommender Systems Under Fake Orders 
+
+**Authors**: Qiyu Qin, Yichen Li, Haozhao Wang, Cheng Wang, Rui Zhang, Ruixuan Li  
+
+**Link**: [PDF](https://arxiv.org/pdf/2604.08550)  
+
+**Abstract**: Fake orders pose increasing threats to sequential recommender systems by misleading recommendation results through artificially manipulated interactions, including click farming, context-irrelevant substitutions, and sequential perturbations. Unlike injecting carefully designed fake users to influence recommendation performance, fake orders embedded within genuine user sequences aim to disrupt user preferences and mislead recommendation results, thereby manipulating exposure rates of specific items to gain competitive advantages. To protect users' authentic interest preferences and eliminate misleading information, this paper aims to perform precise and efficient rectification on compromised sequential recommender systems while avoiding the enormous computational and time costs of retraining existing models. Specifically, we identify that fake orders are not absolutely harmful - in certain cases, partial fake orders can even have a data augmentation effect. Based on this insight, we propose Dual-view Identification and Targeted Rectification (DITaR), which primarily identifies harmful samples to achieve unbiased rectification of the system. The core idea of this method is to obtain differentiated representations from collaborative and semantic views for precise detection, and then filters detected suspicious fake orders to select truly harmful ones for targeted rectification with gradient ascent. This ensures that useful information in fake orders is not removed while preventing bias residue. Moreover, it maintains the original data volume and sequence structure, thus protecting system performance and trustworthiness to achieve optimal unbiased rectification. Extensive experiments on three datasets demonstrate that DITaR achieves superior performance compared to state-of-the-art methods in terms of recommendation quality, computational efficiency, and system robustness. 
+
+---
+# VerifAI: A Verifiable Open-Source Search Engine for Biomedical Question Answering 
+
+**Authors**: Miloš Košprdić, Adela Ljajić, Bojana Bašaragin, Darija Medvecki, Lorenzo Cassano, Nikola Milošević  
+
+**Link**: [PDF](https://arxiv.org/pdf/2604.08549)  
+
+**Abstract**: We introduce VerifAI, an open-source expert system for biomedical question answering that integrates retrieval-augmented generation (RAG) with a novel post-hoc claim verification mechanism. Unlike standard RAG systems, VerifAI ensures factual consistency by decomposing generated answers into atomic claims and validating them against retrieved evidence using a fine-tuned natural language inference (NLI) engine. The system comprises three modular components: (1) a hybrid Information Retrieval (IR) module optimized for biomedical queries (MAP@10 of 42.7%), (2) a citation-aware Generative Component fine-tuned on a custom dataset to produce referenced answers, and (3) a Verification Component that detects hallucinations with state-of-the-art accuracy, outperforming GPT-4 on the HealthVer benchmark. Evaluations demonstrate that VerifAI significantly reduces hallucinated citations compared to zero-shot baselines and provides a transparent, verifiable lineage for every claim. The full pipeline, including code, models, and datasets, is open-sourced to facilitate reliable AI deployment in high-stakes domains. 
+
+---
+# Trans-RAG: Query-Centric Vector Transformation for Secure Cross-Organizational Retrieval 
+
+**Authors**: Yu Liu, Kun Peng, Wenxiao Zhang, Fangfang Yuan, Cong Cao, Wenxuan Lu, Yanbing Liu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2604.09541)  
+
+**Abstract**: Retrieval Augmented Generation (RAG) systems deployed across organizational boundaries face fundamental tensions between security, accuracy, and efficiency. Current encryption methods expose plaintext during decryption, while federated architectures prevent resource integration and incur substantial overhead. We introduce Trans-RAG, implementing a novel vector space language paradigm where each organization's knowledge exists in a mathematically isolated semantic space. At the core lies vector2Trans, a multi-stage transformation technique that enables queries to dynamically "speak" each organization's vector space "language" through query-centric transformations, eliminating decryption overhead while maintaining native retrieval efficiency. Security evaluations demonstrate near-orthogonal vector spaces with 89.90° angular separation and 99.81% isolation rates. Experiments across 8 retrievers, 3 datasets, and 3 LLMs show minimal accuracy degradation (3.5% decrease in nDCG@10) and significant efficiency improvements over homomorphic encryption. 
+
+---
+# Case-Grounded Evidence Verification: A Framework for Constructing Evidence-Sensitive Supervision 
+
+**Authors**: Soroosh Tayebi Arasteh, Mehdi Joodaki, Mahshad Lotfinia, Sven Nebelung, Daniel Truhn  
+
+**Link**: [PDF](https://arxiv.org/pdf/2604.09537)  
+
+**Abstract**: Evidence-grounded reasoning requires more than attaching retrieved text to a prediction: a model should make decisions that depend on whether the provided evidence supports the target claim. In practice, this often fails because supervision is weak, evidence is only loosely tied to the claim, and evaluation does not test evidence dependence directly. We introduce case-grounded evidence verification, a general framework in which a model receives a local case context, external evidence, and a structured claim, and must decide whether the evidence supports the claim for that case. Our key contribution is a supervision construction procedure that generates explicit support examples together with semantically controlled non-support examples, including counterfactual wrong-state and topic-related negatives, without manual evidence annotation. We instantiate the framework in radiology and train a standard verifier on the resulting support task. The learned verifier substantially outperforms both case-only and evidence-only baselines, remains strong under correct evidence, and collapses when evidence is removed or swapped, indicating genuine evidence dependence. This behavior transfers across unseen evidence articles and an external case distribution, though performance degrades under evidence-source shift and remains sensitive to backbone choice. Overall, the results suggest that a major bottleneck in evidence grounding is not only model capacity, but the lack of supervision that encodes the causal role of evidence. 
+
+---
+# RecaLLM: Addressing the Lost-in-Thought Phenomenon with Explicit In-Context Retrieval 
+
+**Authors**: Kyle Whitecross, Negin Rahimi  
+
+**Link**: [PDF](https://arxiv.org/pdf/2604.09494)  
+
+**Abstract**: We propose RecaLLM, a set of reasoning language models post-trained to make effective use of long-context information. In-context retrieval, which identifies relevant evidence from context, and reasoning are deeply intertwined: retrieval supports reasoning, while reasoning often determines what must be retrieved. However, their interaction remains largely underexplored. In preliminary experiments on several open-source LLMs, we observe that in-context retrieval performance substantially degrades even after a short reasoning span, revealing a key bottleneck for test-time scaling that we refer to as lost-in-thought: reasoning steps that improve performance also make subsequent in-context retrieval more challenging. To address this limitation, RecaLLM interleaves reasoning with explicit in-context retrieval, alternating between reasoning and retrieving context information needed to solve intermediate subproblems. We introduce a negligible-overhead constrained decoding mechanism that enables verbatim copying of evidence spans, improving the grounding of subsequent generation. Trained on diverse lexical and semantic retrieval tasks, RecaLLM achieves strong performance on two long-context benchmarks, RULER and HELMET, significantly outperforming baselines. Notably, we observe consistent gains at context windows of up to 128K tokens using training samples of at most 10K tokens, far shorter than those used by existing long-context approaches, highlighting a promising path toward improving long-context performance without expensive long-context training data. 
+
+---
+# Three Modalities, Two Design Probes, One Prototype, and No Vision: Experience-Based Co-Design of a Multi-modal 3D Data Visualization Tool 
+
+**Authors**: Sanchita S. Kamath, Aziz N Zeidieh, Venkatesh Potluri, Sile O'Modhrain, Kenneth Perry, JooYoung Seo  
+
+**Link**: [PDF](https://arxiv.org/pdf/2604.09426)  
+
+**Abstract**: Three-dimensional (3D) data visualizations, such as surface plots, are vital in STEM fields from biomedical imaging to spectroscopy, yet remain largely inaccessible to blind and low-vision (BLV) people. To address this gap, we conducted an Experience-Based Co-Design with BLV co-designers with expertise in non-visual data representations to create an accessible, multi-modal, web-native visualization tool. Using a multi-phase methodology, our team of five BLV and one non-BLV researcher(s) participated in two iterative sessions, comparing a low-fidelity tactile probe with a high-fidelity digital prototype. This process produced a prototype with empirically grounded features, including reference sonification, stereo and volumetric audio, and configurable buffer aggregation, which our co-designers validated as improving analytic accuracy and learnability. In this study, we target core analytic tasks essential for non-visual 3D data exploration: orientation, landmark and peak finding, comparing local maxima versus global trends, gradient tracing, and identifying occluded or partially hidden features. Our work offers accessibility researchers and developers a co-design protocol for translating tactile knowledge to digital interfaces, concrete design guidance for future systems, and opportunities to extend accessible 3D visualization into embodied data environments. 
+
+---
+# FashionStylist: An Expert Knowledge-enhanced Multimodal Dataset for Fashion Understanding 
+
+**Authors**: Kaidong Feng, Zhuoxuan Huang, Huizhong Guo, Yuting Jin, Xinyu Chen, Yue Liang, Yifei Gai, Li Zhou, Yunshan Ma, Zhu Sun  
+
+**Link**: [PDF](https://arxiv.org/pdf/2604.09249)  
+
+**Abstract**: Fashion understanding requires both visual perception and expert-level reasoning about style, occasion, compatibility, and outfit rationale. However, existing fashion datasets remain fragmented and task-specific, often focusing on item attributes, outfit co-occurrence, or weak textual supervision, and thus provide limited support for holistic outfit understanding. In this paper, we introduce FashionStylist, an expert-annotated benchmark for holistic and expert-level fashion understanding. Constructed through a dedicated fashion-expert annotation pipeline, FashionStylist provides professionally grounded annotations at both the item and outfit levels. It supports three representative tasks: outfit-to-item grounding, outfit completion, and outfit evaluation. These tasks cover realistic item recovery from complex outfits with layering and accessories, compatibility-aware composition beyond co-occurrence matching, and expert-level assessment of style, season, occasion, and overall coherence. Experimental results show that FashionStylist serves not only as a unified benchmark for multiple fashion tasks, but also as an effective training resource for improving grounding, completion, and outfit-level semantic evaluation in MLLM-based fashion systems. 
+
+---
+# Taming the Black Swan: A Momentum-Gated Hierarchical Optimisation Framework for Asymmetric Alpha Generation 
+
+**Authors**: Arya Chakraborty, Randhir Singh  
+
+**Link**: [PDF](https://arxiv.org/pdf/2604.09060)  
+
+**Abstract**: Conventional momentum strategies, despite their proven efficacy in generating alpha, frequently suffer from the "Winner's Curse", a structural vulnerability in which high performing assets exhibit clustered volatility and severe drawdowns during market reversals. To counteract this propensity for momentum crashes, this study presents the Adaptive Equity Generation and Immunisation System (AEGIS), a novel framework that fundamentally reengineers the trade-off between growth and stability. By leveraging a volatility-adjusted momentum filter to identify trend strength and employing a minimax correlation algorithm to enforce structural diversification, the model utilises sequential least squares programming (SLSQP) to optimise capital allocation for the sortino ratio. This architecture allows the portfolio to dynamically adapt to distinct market regimes: explicitly lowering the intensity of crashes during bear markets by decoupling correlated risks, while retaining asymmetric upside participation during bull runs. Empirical validation via a comprehensive 20-year walk-forward backtest (2006-2025), which covers significant stress events like the 2008 Global Financial Crisis, confirms that the framework produces substantial excess alpha relative to the standard S&P 500 benchmark. Notably, the strategy successfully matched the capital appreciation of the high-beta NASDAQ-100 index while achieving significantly reduced downside volatility and improved structural resilience. These results suggest that synthetic beta can be effectively engineered through mathematical regularisation, enabling investors to capture the high-growth characteristics of concentrated portfolios while preserving the defensive stability typically associated with broad-market diversification. 
+
+---
+# MAB-DQA: Addressing Query Aspect Importance in Document Question Answering with Multi-Armed Bandits 
+
+**Authors**: Yixin Xiang, Yunshan Ma, Xiaoyu Du, Yibing Chen, Yanxin Zhang, Jinhui Tang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2604.08952)  
+
+**Abstract**: Document Question Answering (DQA) involves generating answers from a document based on a user's query, representing a key task in document understanding. This task requires interpreting visual layouts, which has prompted recent studies to adopt multimodal Retrieval-Augmented Generation (RAG) that processes page images for answer generation. However, in multimodal RAG, visual DQA struggles to utilize a large number of images effectively, as the retrieval stage often retains only a few candidate pages (e.g., Top-4), causing informative but less visually salient content to be overlooked in favor of common yet low-information pages. To address this issue, we propose a Multi-Armed Bandit-based DQA framework (MAB-DQA) to explicitly model the varying importance of multiple implicit aspects in a query. Specifically, MAB-DQA decomposes a query into aspect-aware subqueries and retrieves an aspect-specific candidate set for each. It treats each subquery as an arm and uses preliminary reasoning results from a small number of representative pages as reward signals to estimate aspect utility. Guided by an exploration-exploitation policy, MAB-DQA dynamically reallocates retrieval budgets toward high-value aspects. With the most informative pages and their correlations, MAB-DQA generates the expected results. On four benchmarks, MAB-DQA shows an average improvement of 5%-18% over the state-of-the-art method, consistently enhancing document understanding. Code at this https URL. 
+
+---
+# Towards Generalizable Representations of Mathematical Strategies 
+
+**Authors**: Siddhartha Pradhan, Ethan Prihar, Erin Ottmar  
+
+**Link**: [PDF](https://arxiv.org/pdf/2604.08693)  
+
+**Abstract**: Pretrained encoders for mathematical texts have achieved significant improvements on various tasks such as formula classification and information retrieval. Yet they remain limited in representing and capturing student strategies for entire solution pathways. Previously, this has been accomplished either through labor-intensive manual labeling, which does not scale, or by learning representations tied to platform-specific actions, which limits generalizability. In this work, we present a novel approach for learning problem-invariant representations of entire algebraic solution pathways. We first construct transition embeddings by computing vector differences between consecutive algebraic states encoded by high-capacity pretrained models, emphasizing transformations rather than problem-specific features. Sequence-level embeddings are then learned via SimCSE, using contrastive objectives to position semantically similar solution pathways close in embedding space while separating dissimilar strategies. We evaluate these embeddings through multiple tasks, including multi-label action classification, solution efficiency prediction, and sequence reconstruction, and demonstrate their capacity to encode meaningful strategy information. Furthermore, we derive embedding-based measures of strategy uniqueness, diversity, and conformity that correlate with both short-term and distal learning outcomes, providing scalable proxies for mathematical creativity and divergent thinking. This approach facilitates platform-agnostic and cross-problem analyses of student problem-solving behaviors, demonstrating the effectiveness of transition-based sequence embeddings for educational data mining and automated assessment. 
+
+---
+# PRAGMA: Revolut Foundation Model 
+
+**Authors**: Maxim Ostroukhov, Ruslan Mikhailov, Vladimir Iashin, Artem Sokolov, Andrei Akshonov, Vitaly Protasov, Dmitrii Beloborodov, Vince Mullin, Roman Yokunda Enzmann, Georgios Kolovos, Jason Renders, Pavel Nesterov, Anton Repushko  
+
+**Link**: [PDF](https://arxiv.org/pdf/2604.08649)  
+
+**Abstract**: Modern financial systems generate vast quantities of transactional and event-level data that encode rich economic signals. This paper presents PRAGMA, a family of foundation models for multi-source banking event sequences. Our approach pre-trains a Transformer-based architecture with masked modelling on a large-scale, heterogeneous banking event corpus using a self-supervised objective tailored to the discrete, variable-length nature of financial records. The resulting model supports a wide range of downstream tasks such as credit scoring, fraud detection, and lifetime value prediction: strong performance can be achieved by training a simple linear model on top of the extracted embeddings and can be further improved with lightweight fine-tuning. Through extensive evaluation on downstream tasks, we demonstrate that PRAGMA achieves superior performance across multiple domains directly from raw event sequences, providing a general-purpose representation layer for financial applications. 
+
+---
+# Retrieval Augmented Classification for Confidential Documents 
+
+**Authors**: Yeseul E. Chang, Rahul Kailasa, Simon Shim, Byunghoon Oh, Jaewoo Lee  
+
+**Link**: [PDF](https://arxiv.org/pdf/2604.08628)  
+
+**Abstract**: Unauthorized disclosure of confidential documents demands robust, low-leakage classification. In real work environments, there is a lot of inflow and outflow of documents. To continuously update knowledge, we propose a methodology for classifying confidential documents using Retrieval Augmented Classification (RAC). To confirm this effectiveness, we compare RAC and supervised fine tuning (FT) on the WikiLeaks US Diplomacy corpus under realistic sequence-length constraints. On balanced data, RAC matches FT. On unbalanced data, RAC is more stable while delivering comparable performance--about 96% Accuracy on both the original (unbalanced) and augmented (balanced) sets, and up to 94% F1 with proper prompting--whereas FT attains 90% F1 trained on the augmented, balanced set but drops to 88% F1 trained on the original, unbalanced set. When robust augmentation is infeasible, RAC provides a practical, security-preserving path to strong classification by keeping sensitive content out of model weights and under your control, and it remains robust as real-world conditions change in class balance, data, context length, or governance requirements. Because RAC grounds decisions in an external vector store with similarity matching, it is less sensitive to label skew, reduces parameter-level leakage, and can incorporate new data immediately via reindexing--a difficult step for FT, which typically requires retraining. The contributions of this paper are threefold: first, a RAC-based classification pipeline and evaluation recipe; second, a controlled study that isolates class imbalance and context-length effects for FT versus RAC in confidential-document grading; and third, actionable guidance on RAC design patterns for governed deployments. 
+
+---
