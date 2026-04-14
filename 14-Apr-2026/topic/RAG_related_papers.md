@@ -1,0 +1,259 @@
+# Exploring Structural Complexity in Normative RAG with Graph-based approaches: A case study on the ETSI Standards 
+
+**Authors**: Aiman Al Masoud, Marco Arazzi, Simone Germani, Antonino Nocera  
+
+**Link**: [PDF](https://arxiv.org/pdf/2604.09868)  
+
+**Abstract**: Industrial standards and normative documents exhibit intricate hierarchical structures, domain-specific lexicons, and extensive cross-referential dependencies, which making it challenging to process them directly by Large Language Models (LLMs).
+While Retrieval-Augmented Generation (RAG) provides a computationally efficient alternative to LLM fine-tuning, standard "vanilla" vector-based retrieval may fail to capture the latent structural and relational features intrinsic in normative documents.
+With the objective of shedding light on the most promising technique for building high-performance RAG solutions for normative, standards, and regulatory documents, this paper investigates the efficacy of Graph RAG architectures, which represent information as interconnected nodes, thus moving from simple semantic similarity toward a more robust, relation-aware retrieval mechanism.
+Despite the promise of graph-based techniques, there is currently a lack of empirical evidence as to which is the optimal indexing strategy for technical standards. Therefore, to help solve this knowledge gap, we propose a specialized RAG methodology tailored to the unique structure and lexical characteristics of standards and regulatory documents.
+Moreover, to keep our investigation grounded, we focus on well-known public standards, such as the ETSI EN 301 489 series. We evaluate several lightweight and low-latency strategies designed to embed document structure directly into the retrieval workflow.
+The considered approaches are rigorously tested against a custom synthesized Q&A dataset, facilitating a quantitative performance analysis. Our experimental results demonstrate that the incorporation of structural and lexical information into the index can enhance, at least to some extent, retrieval performance, providing a scalable framework for automated normative and standards elaboration. 
+
+---
+# Do We Still Need GraphRAG? Benchmarking RAG and GraphRAG for Agentic Search Systems 
+
+**Authors**: Dongzhe Fan, Zheyi Xue, Siyuan Liu, Qiaoyu Tan  
+
+**Link**: [PDF](https://arxiv.org/pdf/2604.09666)  
+
+**Abstract**: Retrieval-augmented generation (RAG) and its graph-based extensions (GraphRAG) are effective paradigms for improving large language model (LLM) reasoning by grounding generation in external knowledge. However, most existing RAG and GraphRAG systems operate under static or one-shot retrieval, where a fixed set of documents is provided to the LLM in a single pass. In contrast, recent agentic search systems enable dynamic, multi-round retrieval and sequential decision-making during inference, and have shown strong gains when combined with vanilla RAG by introducing implicit structure through interaction. This progress raises a fundamental question: can agentic search compensate for the absence of explicit graph structure, reducing the need for costly GraphRAG pipelines? To answer this question, we introduce RAGSearch, a unified benchmark that evaluates dense RAG and representative GraphRAG methods as retrieval infrastructures under agentic search. RAGSearch covers both training-free and training-based agentic inference across multiple question answering benchmarks. To ensure fair and reproducible comparison, we standardize the LLM backbone, retrieval budgets, and inference protocols, and report results on full test sets. Beyond answer accuracy, we report offline preprocessing cost, online inference efficiency, and stability. Our results show that agentic search substantially improves dense RAG and narrows the performance gap to GraphRAG, particularly in RL-based settings. Nevertheless, GraphRAG remains advantageous for complex multi-hop reasoning, exhibiting more stable agentic search behavior when its offline cost is amortized. Together, these findings clarify the complementary roles of explicit graph structure and agentic search, and provide practical guidance on retrieval design for modern agentic RAG systems. 
+
+---
+# MCERF: Advancing Multimodal LLM Evaluation of Engineering Documentation with Enhanced Retrieval 
+
+**Authors**: Kiarash Naghavi Khanghah, Hoang Anh Nguyen, Anna C. Doris, Amir Mohammad Vahedi, Daniele Grandi, Faez Ahmed, Hongyi Xu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2604.09552)  
+
+**Abstract**: Engineering rulebooks and technical standards contain multimodal information like dense text, tables, and illustrations that are challenging for retrieval augmented generation (RAG) systems. Building upon the DesignQA framework [1], which relied on full-text ingestion and text-based retrieval, this work establishes a Multimodal ColPali Enhanced Retrieval and Reasoning Framework (MCERF), a system that couples a multimodal retriever with large language model reasoning for accurate and efficient question answering from engineering documents. The system employs the ColPali, which retrieves both textual and visual information, and multiple retrieval and reasoning strategies: (i) Hybrid Lookup mode for explicit rule mentions, (ii) Vision to Text fusion for figure and table guided queries, (iii) High Reasoning LLM mode for complex multi modal questions, and (iv) SelfConsistency decision to stabilize responses. The modular framework design provides a reusable template for future multimodal systems regardless of underlying model architecture. Furthermore, this work establishes and compares two routing approaches: a single case routing approach and a multi-agent system, both of which dynamically allocate queries to optimal pipelines. Evaluation on the DesignQA benchmark illustrates that this system improves average accuracy across all tasks with a relative gain of +41.1% from baseline RAG best results, which is a significant improvement in multimodal and reasoning-intensive tasks without complete rulebook ingestion. This shows how vision language retrieval, modular reasoning, and adaptive routing enable scalable document comprehension in engineering use cases. 
+
+---
+# HyEm: Query-Adaptive Hyperbolic Retrieval for Biomedical Ontologies via Euclidean Vector Indexing 
+
+**Authors**: Ou Deng, Shoji Nishimura, Atsushi Ogihara, Qun Jin  
+
+**Link**: [PDF](https://arxiv.org/pdf/2604.09550)  
+
+**Abstract**: Retrieval-augmented generation (RAG) for biomedical knowledge faces a hierarchy-aware ontology grounding challenge: resources like HPO, DO, and MeSH use deep ``is-a" taxonomies, yet production stacks rely on Euclidean embeddings and ANN indexes. While hyperbolic embeddings suit hierarchical representation, they face two barriers: (i) lack of native vector database support, and (ii) risk of underperforming on entity-centric queries where hierarchy is irrelevant. We present HyEm, a lightweight retrieval layer integrating hyperbolic ontology embeddings into existing Euclidean ANN infrastructure. HyEm learns radius-controlled hyperbolic embeddings, stores origin log-mapped vectors in standard Euclidean databases for candidate retrieval, then applies exact hyperbolic reranking. A query-adaptive gate outputs continuous mixing weights, combining Euclidean semantic similarity with hyperbolic hierarchy distance at reranking time. Our bi-Lipschitz analysis under radius constraints provides practical guidance for ANN oversampling and this http URL on biomedical ontology subsets demonstrate HyEm preserves 94-98% of Euclidean baseline performance on entity-centric queries while substantially improving hierarchy-navigation and mixed-intent queries, maintaining indexability at moderate oversampling. 
+
+---
+# Retrieval-Augmented Large Language Models for Evidence-Informed Guidance on Cannabidiol Use in Older Adults 
+
+**Authors**: Ali Abedi, Charlene H. Chu, Shehroz S. Khan  
+
+**Link**: [PDF](https://arxiv.org/pdf/2604.09548)  
+
+**Abstract**: Older adults commonly experience chronic conditions such as pain and sleep disturbances and may consider cannabidiol for symptom management. Safe use requires appropriate dosing, careful titration, and awareness of drug interactions, yet stigma and limited health literacy often limit understanding. Conversational artificial intelligence systems based on large language models and retrieval-augmented generation may support cannabidiol education, but their safety and reliability remain insufficiently evaluated. This study developed a retrieval-augmented large language model framework that combines structured prompt engineering with curated cannabidiol evidence to generate context-aware guidance for older adults, including those with cognitive impairment. We also proposed an automated, annotation-free evaluation framework to benchmark leading standalone and retrieval-augmented models in the absence of standardized benchmarks. Sixty-four diverse user scenarios were generated by varying symptoms, preferences, cognitive status, demographics, comorbidities, medications, cannabis history, and caregiver support. Multiple state-of-the-art models were evaluated, including a novel ensemble retrieval architecture that integrates multiple retrieval systems. Across three automated evaluation strategies, retrieval-augmented models consistently produced more cautious and guideline-aligned recommendations than standalone models, with the ensemble approach performing best. These findings demonstrate that structured retrieval improves the reliability and safety of AI-driven cannabidiol education and provide a reproducible framework for evaluating AI tools used in sensitive health contexts. 
+
+---
+# Deep-Reporter: Deep Research for Grounded Multimodal Long-Form Generation 
+
+**Authors**: Fangda Ye, Zhifei Xie, Yuxin Hu, Yihang Yin, Shurui Huang, Shikai Dong, Jianzhu Bao, Shuicheng Yan  
+
+**Link**: [PDF](https://arxiv.org/pdf/2604.10741)  
+
+**Abstract**: Recent agentic search frameworks enable deep research via iterative planning and retrieval, reducing hallucinations and enhancing factual grounding. However, they remain text-centric, overlooking the multimodal evidence that characterizes real-world expert reports. We introduce a pressing task: multimodal long-form generation. Accordingly, we propose Deep-Reporter, a unified agentic framework for grounded multimodal long-form generation. It orchestrates: (i) Agentic Multimodal Search and Filtering to retrieve and filter textual passages and information-dense visuals; (ii) Checklist-Guided Incremental Synthesis to ensure coherent image-text integration and optimal citation placement; and (iii) Recurrent Context Management to balance long-range coherence with local fluency. We develop a rigorous curation pipeline producing 8K high-quality agentic traces for model optimization. We further introduce M2LongBench, a comprehensive testbed comprising 247 research tasks across 9 domains and a stable multimodal sandbox. Extensive experiments demonstrate that long-form multimodal generation is a challenging task, especially in multimodal selection and integration, and effective post-training can bridge the gap. 
+
+---
+# Frugal Knowledge Graph Construction with Local LLMs: A Zero-Shot Pipeline, Self-Consistency and Wisdom of Artificial Crowds 
+
+**Authors**: Pierre Jourlin  
+
+**Link**: [PDF](https://arxiv.org/pdf/2604.11104)  
+
+**Abstract**: This paper presents an empirical study of a multi-model zero-shot pipeline for knowledge graph construction and exploitation, executed entirely through local inference on consumer-grade hardware. We propose a reproducible evaluation framework integrating two external benchmarks (DocRED, HotpotQA), WebQuestionsSP-style synthetic data, and the RAGAS evaluation framework in an automated pipeline. On 500 document-level relations, our system achieves an F1 of 0.70 $\pm$ 0.041 in zero-shot, compared to 0.80 for supervised DREEAM. Text-to-query achieves an accuracy of 0.80 $\pm$ 0.06 on 200 samples. Multi-hop reasoning achieves an Exact Match (EM) of 0.46$\pm$0.04 on 500 HotpotQA questions, with a RAGAS faithfulness of 0.96 $\pm$ 0.04 on 50 samples. Beyond the pipeline, we study diversity mechanisms for difficult multi-hop reasoning. On 181 questions unsolvable at zero temperature, self-consistency (k=5, T =0.7) recovers up to 23% EM with a single Mixture-of-Experts (MoE) model, but the cross-model oracle (3 architectures x 5 samples) reaches 46.4%. We highlight an agreement paradox: strong consensus among samples signals collective hallucination rather than a reliable answer, echoing the work of Moussa{ï}d et al. on the wisdom of crowds. Extending to the full pipeline (500 questions), self-consistency (k=3) raises EM from 0.46 to 0.48 $\pm$ 0.04. A confidence-routing cascade mechanism (Phi-4 $\rightarrow$ GPT-OSS, k=5) achieves an EM of 0.55 $\pm$ 0.04, the best result obtained, with 45.4% of questions rerouted. Finally, we show that V3 prompt engineering applied to other models does not reproduce the gains observed with Gemma-4, confirming the specific prompt/model interaction. The entire system runs in $\sim$5 h on a single RTX 3090, without any training, for an estimated carbon footprint of 0.09 kg CO2 eq. 
+
+---
+# Retrieval Is Not Enough: Why Organizational AI Needs Epistemic Infrastructure 
+
+**Authors**: Federico Bottino, Carlo Ferrero, Nicholas Dosio, Pierfrancesco Beneventano  
+
+**Link**: [PDF](https://arxiv.org/pdf/2604.11759)  
+
+**Abstract**: Organizational knowledge used by AI agents typically lacks epistemic structure: retrieval systems surface semantically relevant content without distinguishing binding decisions from abandoned hypotheses, contested claims from settled ones, or known facts from unresolved questions. We argue that the ceiling on organizational AI is not retrieval fidelity but \emph{epistemic} fidelity--the system's ability to represent commitment strength, contradiction status, and organizational ignorance as computable properties.
+We present OIDA, a framework that structures organizational knowledge as typed Knowledge Objects carrying epistemic class, importance scores with class-specific decay, and signed contradiction edges. The Knowledge Gravity Engine maintains scores deterministically with proved convergence guarantees (sufficient condition: max degree $< 7$; empirically robust to degree 43). OIDA introduces QUESTION-as-modeled-ignorance: a primitive with inverse decay that surfaces what an organization does \emph{not} know with increasing urgency--a mechanism absent from all surveyed systems. We describe the Epistemic Quality Score (EQS), a five-component evaluation methodology with explicit circularity analysis. In a controlled comparison ($n{=}10$ response pairs), OIDA's RAG condition (3,868 tokens) achieves EQS 0.530 vs.\ 0.848 for a full-context baseline (108,687 tokens); the $28.1\times$ token budget difference is the primary confound. The QUESTION mechanism is statistically validated (Fisher $p{=}0.0325$, OR$=21.0$). The formal properties are established; the decisive ablation at equal token budget (E4) is pre-registered and not yet run. 
+
+---
+# DreamKG: A KG-Augmented Conversational System for People Experiencing Homelessness 
+
+**Authors**: Javad M Alizadeh, Genhui Zheng, Chiu C Tan, Yuzhou Chen, Omar Martinez, Philip McCallion, Ying Ding, Chenguang Yang, AnneMarie Tomosky, Huanmei Wu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2604.11703)  
+
+**Abstract**: People experiencing homelessness (PEH) face substantial barriers to accessing timely, accurate information about community services. DreamKG addresses this through a knowledge graph-augmented conversational system that grounds responses in verified, up-to-date data about Philadelphia organizations, services, locations, and hours. Unlike standard large language models (LLMs) prone to hallucinations, DreamKG combines Neo4j knowledge graphs with structured query understanding to handle location-aware and time-sensitive queries reliably. The system performs spatial reasoning for distance-based recommendations and temporal filtering for operating hours. Preliminary evaluation shows 59% superiority over Google Search AI on relevant queries and 84% rejection of irrelevant queries. This demonstration highlights the potential of hybrid architectures that combines LLM flexibility with knowledge graph reliability to improve service accessibility for vulnerable populations effectively. 
+
+---
+# Beyond RAG for Cyber Threat Intelligence: A Systematic Evaluation of Graph-Based and Agentic Retrieval 
+
+**Authors**: Dzenan Hamzic, Florian Skopik, Max Landauer, Markus Wurzenberger, Andreas Rauber  
+
+**Link**: [PDF](https://arxiv.org/pdf/2604.11419)  
+
+**Abstract**: Cyber threat intelligence (CTI) analysts must answer complex questions over large collections of narrative security reports. Retrieval-augmented generation (RAG) systems help language models access external knowledge, but traditional vector retrieval often struggles with queries that require reasoning over relationships between entities such as threat actors, malware, and vulnerabilities. This limitation arises because relevant evidence is often distributed across multiple text fragments and documents. Knowledge graphs address this challenge by enabling structured multi-hop reasoning through explicit representations of entities and relationships. However, multiple retrieval paradigms, including graph-based, agentic, and hybrid approaches, have emerged with different assumptions and failure modes. It remains unclear how these approaches compare in realistic CTI settings and when graph grounding improves performance. We present a systematic evaluation of four RAG architectures for CTI analysis: standard vector retrieval, graph-based retrieval over a CTI knowledge graph, an agentic variant that repairs failed graph queries, and a hybrid approach combining graph queries with text retrieval. We evaluate these systems on 3,300 CTI question-answer pairs spanning factual lookups, multi-hop relational queries, analyst-style synthesis questions, and unanswerable cases. Results show that graph grounding improves performance on structured factual queries. The hybrid graph-text approach improves answer quality by up to 35 percent on multi-hop questions compared to vector RAG, while maintaining more reliable performance than graph-only systems. 
+
+---
+# RAG-KT: Cross-platform Explainable Knowledge Tracing with Multi-view Fusion Retrieval Generation 
+
+**Authors**: Zhiyi Duan, Hongyu Yuan, Rui Liu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2604.10960)  
+
+**Abstract**: Knowledge Tracing (KT) infers a student's knowledge state from past interactions to predict future performance. Conventional Deep Learning (DL)-based KT models are typically tied to platform-specific identifiers and latent representations, making them hard to transfer and interpret. Large Language Model (LLM)-based methods can be either ungrounded under prompting or overly domain-dependent under fine-tuning. In addition, most existing KT methods are developed and evaluated under a same-distribution assumption. In real deployments, educational data often arise from heterogeneous platforms with substantial distribution shift, which often degrades generalization. To this end, we propose RAG-KT, a retrieval-augmented paradigm that frames cross-platform KT as reliable context constrained inference with LLMs. It builds a unified multi-source structured context with cross-source alignment via Question Group abstractions and retrieves complementary rich and reliable context for each prediction, enabling grounded prediction and interpretable diagnosis. Experiments on three public KT benchmarks demonstrate consistent gains in accuracy and robustness, including strong performance under cross-platform conditions. 
+
+---
+# CARO: Chain-of-Analogy Reasoning Optimization for Robust Content Moderation 
+
+**Authors**: Bingzhe Wu, Haotian Lu, Yuchen Mou  
+
+**Link**: [PDF](https://arxiv.org/pdf/2604.10504)  
+
+**Abstract**: Current large language models (LLMs), even those explicitly trained for reasoning, often struggle with ambiguous content moderation cases due to misleading "decision shortcuts" embedded in context. Inspired by cognitive psychology insights into expert moderation, we introduce \caro (Chain-of-Analogy Reasoning Optimization), a novel two-stage training framework to induce robust analogical reasoning in LLMs. First, \caro bootstraps analogical reasoning chains via retrieval-augmented generation (RAG) on moderation data and performs supervised fine-tuning (SFT). Second, we propose a customized direct preference optimization (DPO) approach to reinforce analogical reasoning behaviors explicitly. Unlike static retrieval methods, \caro dynamically generates tailored analogical references during inference, effectively mitigating harmful decision shortcuts. Extensive experiments demonstrate that \caro substantially outperforms state-of-the-art reasoning models (DeepSeek R1, QwQ), specialized moderation models (LLaMA Guard), and advanced fine-tuning and retrieval-augmented methods, achieving an average F1 score improvement of 24.9\% on challenging ambiguous moderation benchmarks. 
+
+---
+# CHAIRO: Contextual Hierarchical Analogical Induction and Reasoning Optimization for LLMs 
+
+**Authors**: Haotian Lu, Yuchen Mou, Bingzhe Wu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2604.10502)  
+
+**Abstract**: Content moderation in online platforms faces persistent challenges due to the evolving complexity of user-generated content and the limitations of traditional rule-based and machine learning approaches. While recent advances in large language models (LLMs) have enabled more sophisticated moderation via direct prompting or fine-tuning, these approaches often exhibit limited generalization, interpretability, and adaptability to unseen or ambiguous cases.
+In this work, we propose a novel moderation framework that leverages analogical examples to enhance rule induction and decision reliability. Our approach integrates end-to-end optimization of analogical retrieval, rule generation, and moderation classification, enabling the dynamic adaptation of moderation rules to diverse content scenarios. Through comprehensive experiments, we demonstrate that our method significantly outperforms both rule-injected fine-tuning baselines and multi-stage static RAG pipelines in terms of moderation accuracy and rule quality. Further evaluations, including human assessments and external model generalization tests, confirm that our framework produces rules with better clarity, interpretability, and applicability. These findings show that analogical example-driven methods can advance robust, explainable, and generalizable content moderation in real-world applications. 
+
+---
+# Persistent Identity in AI Agents: A Multi-Anchor Architecture for Resilient Memory and Continuity 
+
+**Authors**: Prahlad G. Menon  
+
+**Link**: [PDF](https://arxiv.org/pdf/2604.09588)  
+
+**Abstract**: Modern AI agents suffer from a fundamental identity problem: when context windows overflow and conversation histories are summarized, agents experience catastrophic forgetting -- losing not just information, but continuity of self. This technical limitation reflects a deeper architectural flaw: AI agent identity is centralized in a single memory store, creating a single point of failure. Drawing on neurological case studies of human memory disorders, we observe that human identity survives damage because it is distributed across multiple systems: episodic memory, procedural memory, emotional continuity, and embodied knowledge. We present this http URL, an open-source architecture that implements persistent identity through separable components (identity files and memory logs), and propose extensions toward multi-anchor resilience. The framework introduces a hybrid RAG+RLM retrieval system that automatically routes queries to appropriate memory access patterns, achieving efficient retrieval without sacrificing comprehensiveness. We formalize the notion of identity anchors for AI systems and present a roadmap for building agents whose identity can survive partial memory failures. Code is available at this http URL 
+
+---
+# DeepReviewer 2.0: A Traceable Agentic System for Auditable Scientific Peer Review 
+
+**Authors**: Yixuan Weng, Minjun Zhu, Qiujie Xie, Zhiyuan Ning, Shichen Li, Panzhong Lu, Zhen Lin, Enhao Gu, Qiyao Sun, Yue Zhang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2604.09590)  
+
+**Abstract**: Automated peer review is often framed as generating fluent critique, yet reviewers and area chairs need judgments they can \emph{audit}: where a concern applies, what evidence supports it, and what concrete follow-up is required. DeepReviewer~2.0 is a process-controlled agentic review system built around an output contract: it produces a \textbf{traceable review package} with anchored annotations, localized evidence, and executable follow-up actions, and it exports only after meeting minimum traceability and coverage budgets. Concretely, it first builds a manuscript-only claim--evidence--risk ledger and verification agenda, then performs agenda-driven retrieval and writes anchored critiques under an export gate. On 134 ICLR~2025 submissions under three fixed protocols, an \emph{un-finetuned 196B} model running DeepReviewer~2.0 outperforms Gemini-3.1-Pro-preview, improving strict major-issue coverage (37.26\% vs.\ 23.57\%) and winning 71.63\% of micro-averaged blind comparisons against a human review committee, while ranking first among automatic systems in our pool. We position DeepReviewer~2.0 as an assistive tool rather than a decision proxy, and note remaining gaps such as ethics-sensitive checks. 
+
+---
+# Legal2LogicICL: Improving Generalization in Transforming Legal Cases to Logical Formulas via Diverse Few-Shot Learning 
+
+**Authors**: Jieying Xue, Phuong Minh Nguyen, Ha Thanh Nguyen, May Myo Zin, Ken Satoh  
+
+**Link**: [PDF](https://arxiv.org/pdf/2604.11699)  
+
+**Abstract**: This work aims to improve the generalization of logic-based legal reasoning systems by integrating recent advances in NLP with legal-domain adaptive few-shot learning techniques using LLMs. Existing logic-based legal reasoning pipelines typically rely on fine-tuned models to map natural-language legal cases into logical formulas before forwarding them to a symbolic reasoner. However, such approaches are heavily constrained by the scarcity of high-quality annotated training data. To address this limitation, we propose a novel LLM-based legal reasoning framework that enables effective in-context learning through retrieval-augmented generation. Specifically, we introduce Legal2LogicICL, a few-shot retrieval framework that balances diversity and similarity of exemplars at both the latent semantic representation level and the legal text structure level. In addition, our method explicitly accounts for legal structure by mitigating entity-induced retrieval bias in legal texts, where lengthy and highly specific entity mentions often dominate semantic representations and obscure legally meaningful reasoning patterns. Our Legal2LogicICL constructs informative and robust few-shot demonstrations, leading to accurate and stable logical rule generation without requiring additional training. In addition, we construct a new dataset, named Legal2Proleg, which is annotated with alignments between legal cases and PROLEG logical formulas to support the evaluation of legal semantic parsing. Experimental results on both open-source and proprietary LLMs demonstrate that our approach significantly improves accuracy, stability, and generalization in transforming natural-language legal case descriptions into logical representations, highlighting its effectiveness for interpretable and reliable legal reasoning. Our code is available at this https URL. 
+
+---
+# Synthius-Mem: Brain-Inspired Hallucination-Resistant Persona Memory Achieving 94.4% Memory Accuracy and 99.6% Adversarial Robustness on LoCoMo 
+
+**Authors**: Artem Gadzhiev, Andrew Kislov  
+
+**Link**: [PDF](https://arxiv.org/pdf/2604.11563)  
+
+**Abstract**: Providing AI agents with reliable long-term memory that does not hallucinate remains an open problem. Current approaches to memory for LLM agents -- sliding windows, summarization, embedding-based RAG, and flat fact extraction -- each reduce token cost but introduce catastrophic information loss, semantic drift, or uncontrolled hallucination about the user. The structural reason is architectural: every published memory system on the LoCoMo benchmark treats conversation as a retrieval problem over raw or lightly summarized dialogue segments, and none reports adversarial robustness, the ability to refuse questions about facts the user never disclosed. We present Synthius-Mem, a brain-inspired structured persona memory system that takes a fundamentally different approach. Instead of retrieving what was said, Synthius-Mem extracts what is known about the person: a full persona extraction pipeline decomposes conversations into six cognitive domains (biography, experiences, preferences, social circle, work, psychometrics), consolidates and deduplicates per domain, and retrieves structured facts via CategoryRAG at 21.79 ms latency. On the LoCoMo benchmark (ACL 2024, 10 conversations, 1,813 questions), Synthius-Mem achieves 94.37% accuracy, exceeding all published systems including MemMachine (91.69%, adversarial score is not reported) and human performance (87.9 F1). Core memory fact accuracy reaches 98.64%. Adversarial robustness, the hallucination resistance metric that no competing system reports, reaches 99.55%. Synthius-Mem reduces token consumption by ~5x compared to full-context replay while achieving higher accuracy. Synthius-Mem achieves state-of-the-art results on LoCoMo and is, to our knowledge, the only persona memory system that both exceeds human-level performance and reports adversarial robustness. 
+
+---
+# Retrieval as Generation: A Unified Framework with Self-Triggered Information Planning 
+
+**Authors**: Bo Li, Mingda Wang, Gexiang Fang, Shikun Zhang, Wei Ye  
+
+**Link**: [PDF](https://arxiv.org/pdf/2604.11407)  
+
+**Abstract**: We revisit retrieval-augmented generation (RAG) by embedding retrieval control directly into generation. Instead of treating retrieval as an external intervention, we express retrieval decisions within token-level decoding, enabling end-to-end coordination without additional controllers or classifiers. Under the paradigm of Retrieval as Generation, we propose \textbf{GRIP} (\textbf{G}eneration-guided \textbf{R}etrieval with \textbf{I}nformation \textbf{P}lanning), a unified framework in which the model regulates retrieval behavior through control-token emission. Central to GRIP is \textit{Self-Triggered Information Planning}, which allows the model to decide when to retrieve, how to reformulate queries, and when to terminate, all within a single autoregressive trajectory. This design tightly couples retrieval and reasoning and supports dynamic multi-step inference with on-the-fly evidence integration. To supervise these behaviors, we construct a structured training set covering answerable, partially answerable, and multi-hop queries, each aligned with specific token patterns. Experiments on five QA benchmarks show that GRIP surpasses strong RAG baselines and is competitive with GPT-4o while using substantially fewer parameters. 
+
+---
+# RECIPER: A Dual-View Retrieval Pipeline for Procedure-Oriented Materials Question Answering 
+
+**Authors**: Zhuoyu Wu, Wenhui Ou, Pei-Sze Tan, Wenqi Fang, Sailaja Rajanala, Raphaël C.-W. Phan  
+
+**Link**: [PDF](https://arxiv.org/pdf/2604.11229)  
+
+**Abstract**: Retrieving procedure-oriented evidence from materials science papers is difficult because key synthesis details are often scattered across long, context-heavy documents and are not well captured by paragraph-only dense retrieval. We present RECIPER, a dual-view retrieval pipeline that indexes both paragraph-level context and compact large language model-extracted procedural summaries, then combines the two candidate streams with lightweight lexical reranking. Across four dense retrieval backbones, RECIPER consistently improves early-rank retrieval over paragraph-only dense retrieval, achieving average gains of +3.73 in Recall@1, +2.85 in nDCG@10, and +3.13 in MRR. With BGE-large-en-v1.5, it reaches 86.82%, 97.07%, and 97.85% on Recall@1, Recall@5, and Recall@10, respectively. We further observe improved downstream question answering under automatic metrics, suggesting that procedural summaries can serve as a useful complementary retrieval signal for procedure-oriented materials question answering. Code and data are available at this https URL. 
+
+---
+# Exploring Knowledge Conflicts for Faithful LLM Reasoning: Benchmark and Method 
+
+**Authors**: Tianzhe Zhao, Jiaoyan Chen, Shuxiu Zhang, Haiping Zhu, Qika Lin, Jun Liu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2604.11209)  
+
+**Abstract**: Large language models (LLMs) have achieved remarkable success across a wide range of applications especially when augmented by external knowledge through retrieval-augmented generation (RAG). Despite their widespread adoption, recent studies have shown that LLMs often struggle to perform faithful reasoning when conflicting knowledge is retrieved. However, existing work primarily focuses on conflicts between external knowledge and the parametric knowledge of LLMs, leaving conflicts across external knowledge largely unexplored. Meanwhile, modern RAG systems increasingly emphasize the integration of unstructured text and (semi-)structured data like knowledge graphs (KGs) to improve knowledge completeness and reasoning faithfulness. To address this gap, we introduce ConflictQA, a novel benchmark that systematically instantiates conflicts between textual evidence and KG evidence. Extensive evaluations across representative LLMs reveal that, facing such cross-source conflicts, LLMs often fail to identify reliable evidence for correct reasoning. Instead, LLMs become more sensitive to prompting choices and tend to rely exclusively on either KG or textual evidence, resulting in incorrect responses. Based on these findings, we further propose XoT, a two-stage explanation-based thinking framework tailored for reasoning over heterogeneous conflicting evidence, and verify its effectiveness with extensive experiments. 
+
+---
+# AOP-Smart: A RAG-Enhanced Large Language Model Framework for Adverse Outcome Pathway Analysis 
+
+**Authors**: Qinjiang Niu, Lu Yan  
+
+**Link**: [PDF](https://arxiv.org/pdf/2604.10874)  
+
+**Abstract**: Adverse Outcome Pathways (AOPs) are an important knowledge framework in toxicological research and risk assessment. In recent years, large language models (LLMs) have gradually been applied to AOP-related question answering and mechanistic reasoning tasks. However, due to the existence of the hallucination problem, that is, the model may generate content that is inconsistent with facts or lacks evidence, their reliability is still limited. To address this issue, this study proposes an AOP-oriented Retrieval-Augmented Generation (RAG) framework, AOP-Smart. Based on the official XML data from AOP-Wiki, this method uses Key Events (KEs), Key Event Relationships (KERs), and specific AOP information to retrieve relevant knowledge for user questions, thereby improving the reliability of the generated results of large language models. To evaluate the effectiveness of the proposed method, this study constructed a test set containing 20 AOP-related question answering tasks, covering KE identification, upstream and downstream KE retrieval, and complex AOP retrieval tasks. Experiments were conducted on three mainstream large language models, Gemini, DeepSeek, and ChatGPT, and comparative tests were performed under two settings: without RAG and with RAG. The experimental results show that, without using RAG, the accuracies of GPT, DeepSeek, and Gemini were 15.0\%, 35.0\%, and 20.0\%, respectively; after using RAG, their accuracies increased to 95.0\%, 100.0\%, and 95.0\%, respectively. The results indicate that AOP-Smart can significantly alleviate the hallucination problem of large language models in AOP knowledge tasks, and greatly improve the accuracy and consistency of their answers. 
+
+---
+# Detecting RAG Extraction Attack via Dual-Path Runtime Integrity Game 
+
+**Authors**: Yuanbo Xie, Yingjie Zhang, Yulin Li, Shouyou Song, Xiaokun Chen, Zhihan Liu, Liya Su, Tingwen Liu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2604.10717)  
+
+**Abstract**: Retrieval-Augmented Generation (RAG) systems augment large language models with external knowledge, yet introduce a critical security vulnerability: RAG Knowledge Base Leakage, wherein adversarial prompts can induce the model to divulge retrieved proprietary content. Recent studies reveal that such leakage can be executed through adaptive and iterative attack strategies (named RAG extraction attack), while effective countermeasures remain notably lacking. To bridge this gap, we propose CanaryRAG, a runtime defense mechanism inspired by stack canaries in software security. CanaryRAG embeds carefully designed canary tokens into retrieved chunks and reformulates RAG extraction defense as a dual-path runtime integrity game. Leakage is detected in real time whenever either the target or oracle path violates its expected canary behavior, including under adaptive suppression and obfuscation. Extensive evaluations against existing attacks demonstrate that CanaryRAG provides robust defense, achieving substantially lower chunk recovery rates than state-of-the-art baselines while imposing negligible impact on task performance and inference latency. Moreover, as a plug-and-play solution, CanaryRAG can be seamlessly integrated into arbitrary RAG pipelines without requiring retraining or structural modifications, offering a practical and scalable safeguard for proprietary data. 
+
+---
+# Generating Multiple-Choice Knowledge Questions with Interpretable Difficulty Estimation using Knowledge Graphs and Large Language Models 
+
+**Authors**: Mehmet Can Şakiroğlu, H. Altay Güvenir, Kamer Kaya  
+
+**Link**: [PDF](https://arxiv.org/pdf/2604.10748)  
+
+**Abstract**: Generating multiple-choice questions (MCQs) with difficulty estimation remains challenging in automated MCQ-generation systems used in adaptive, AI-assisted education. This study proposes a novel methodology for generating MCQs with difficulty estimation from the input documents by utilizing knowledge graphs (KGs) and large language models (LLMs). Our approach uses an LLM to construct a KG from input documents, from which MCQs are then systematically generated. Each MCQ is generated by selecting a node from the KG as the key, sampling a related triple or quintuple -- optionally augmented with an extra triple -- and prompting an LLM to generate a corresponding stem from these graph components. Distractors are then selected from the KG. For each MCQ, nine difficulty signals are computed and combined into a unified difficulty score using a data-driven approach. Experimental results demonstrate that our method generates high-quality MCQs whose difficulty estimation is interpretable and aligns with human perceptions. Our approach improves automated MCQ generation by integrating structured knowledge representations with LLMs and a data-driven difficulty estimation model. 
+
+---
+# CodaRAG: Connecting the Dots with Associativity Inspired by Complementary Learning 
+
+**Authors**: Cheng-Yen Li, Xuanjun Chen, Claire Lin, Wei-Yu Chen, Wenhua Nie, Hung-Yi Lee, Jyh-Shing Roger Jang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2604.10426)  
+
+**Abstract**: Large Language Models (LLMs) struggle with knowledge-intensive tasks due to hallucinations and fragmented reasoning over dispersed information. While Retrieval-Augmented Generation (RAG) grounds generation in external sources, existing methods often treat evidence as isolated units, failing to reconstruct the logical chains that connect these dots. Inspired by Complementary Learning Systems (CLS), we propose CodaRAG, a framework that evolves retrieval from passive lookup into active associative discovery. CodaRAG operates via a three-stage pipeline: (1) Knowledge Consolidation to unify fragmented extractions into a stable memory substrate; (2) Associative Navigation to traverse the graph via multi-dimensional pathways-semantic, contextualized, and functional-explicitly recovering dispersed evidence chains; and (3) Interference Elimination to prune hyper-associative noise, ensuring a coherent, high-precision reasoning context. On GraphRAG-Bench, CodaRAG achieves absolute gains of 7-10% in retrieval recall and 3-11% in generation accuracy. These results demonstrate CodaRAG's superior ability to systematically robustify associative evidence retrieval for factual, reasoning, and creative tasks. 
+
+---
+# Agentic Application in Power Grid Static Analysis: Automatic Code Generation and Error Correction 
+
+**Authors**: Qinjuan Wang, Shan Yang, Yongli Zhu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2604.09995)  
+
+**Abstract**: This paper introduces an LLM agent that automates power grid static analysis by converting natural language into MATPOWER scripts. The framework utilizes DeepSeek-OCR to build an enhanced vector database from MATPOWER manuals. To ensure reliability, it devises a three-tier error-correction system: a static pre-check, a dynamic feedback loop, and a semantic validator. Operating via the Model Context Protocol, the tool enables asynchronous execution and automatically debugging in MATLAB. Experimental results demonstrate that the system achieves a 82.38% accuracy regarding the code fidelity, effectively eliminating hallucinations even in complex analysis tasks. 
+
+---
+# ACE-TA: An Agentic Teaching Assistant for Grounded Q&A, Quiz Generation, and Code Tutoring 
+
+**Authors**: Himanshu Tripathi, Charlottee Crowell, Kaley Newlin, Subash Neupane, Shahram Rahimi, Jason Keith  
+
+**Link**: [PDF](https://arxiv.org/pdf/2604.09572)  
+
+**Abstract**: We introduce ACE-TA, the Agentic Coding and Explanations Teaching Assistant framework, that autonomously routes conceptual queries drawn from programming course material to grounded Q&A, stepwise coding guidance, and automated quiz generation using pre-trained Large Language Models (LLMs). ACE-TA consists of three coordinated modules: a retrieval grounded conceptual Q&A system that provides precise, context-aligned explanations; a quiz generator that constructs adaptive, multi-topic assessments targeting higher-order understanding; and an interactive code tutor that guides students through step-by-step reasoning with sandboxed execution and iterative feedback. 
+
+---
+# Back to Basics: Let Conversational Agents Remember with Just Retrieval and Generation 
+
+**Authors**: Yuqian Wu, Wei Chen, Zhengjun Huang, Junle Chen, Qingxiang Liu, Kai Wang, Xiaofang Zhou, Yuxuan Liang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2604.11628)  
+
+**Abstract**: Existing conversational memory systems rely on complex hierarchical summarization or reinforcement learning to manage long-term dialogue history, yet remain vulnerable to context dilution as conversations grow. In this work, we offer a different perspective: the primary bottleneck may lie not in memory architecture, but in the \textit{Signal Sparsity Effect} within the latent knowledge manifold. Through controlled experiments, we identify two key phenomena: \textit{Decisive Evidence Sparsity}, where relevant signals become increasingly isolated with longer sessions, leading to sharp degradation in aggregation-based methods; and \textit{Dual-Level Redundancy}, where both inter-session interference and intra-session conversational filler introduce large amounts of non-informative content, hindering effective generation. Motivated by these insights, we propose \method, a minimalist framework that brings conversational memory back to basics, relying solely on retrieval and generation via Turn Isolation Retrieval (TIR) and Query-Driven Pruning (QDP). TIR replaces global aggregation with a max-activation strategy to capture turn-level signals, while QDP removes redundant sessions and conversational filler to construct a compact, high-density evidence set. Extensive experiments on multiple benchmarks demonstrate that \method achieves robust performance across diverse settings, consistently outperforming strong baselines while maintaining high efficiency in tokens and latency, establishing a new minimalist baseline for conversational memory. 
+
+---
+# Evaluating Memory Capability in Continuous Lifelog Scenario 
+
+**Authors**: Jianjie Zheng, Zhichen Liu, Zhanyu Shen, Jingxiang Qu, Guanhua Chen, Yile Wang, Yang Xu, Yang Liu, Sijie Cheng  
+
+**Link**: [PDF](https://arxiv.org/pdf/2604.11182)  
+
+**Abstract**: Nowadays, wearable devices can continuously lifelog ambient conversations, creating substantial opportunities for memory systems. However, existing benchmarks primarily focus on online one-on-one chatting or human-AI interactions, thus neglecting the unique demands of real-world scenarios. Given the scarcity of public lifelogging audio datasets, we propose a hierarchical synthesis framework to curate \textbf{\textsc{LifeDialBench}}, a novel benchmark comprising two complementary subsets: \textbf{EgoMem}, built on real-world egocentric videos, and \textbf{LifeMem}, constructed using simulated virtual community. Crucially, to address the issue of temporal leakage in traditional offline settings, we propose an \textbf{Online Evaluation} protocol that strictly adheres to temporal causality, ensuring systems are evaluated in a realistic streaming fashion. Our experimental results reveal a counterintuitive finding: current sophisticated memory systems fail to outperform a simple RAG-based baseline. This highlights the detrimental impact of over-designed structures and lossy compression in current approaches, emphasizing the necessity of high-fidelity context preservation for lifelog scenarios. We release our code and data at this https URL. 
+
+---
