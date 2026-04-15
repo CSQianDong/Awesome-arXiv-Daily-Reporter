@@ -1,0 +1,117 @@
+# Sparse Contrastive Learning for Content-Based Cold Item Recommendation 
+
+**Authors**: Gregor Meehan, Johan Pauwels  
+
+**Link**: [PDF](https://arxiv.org/pdf/2604.12990)  
+
+**Abstract**: Item cold-start is a pervasive challenge for collaborative filtering (CF) recommender systems. Existing methods often train cold-start models by mapping auxiliary item content, such as images or text descriptions, into the embedding space of a CF model. However, such approaches can be limited by the fundamental information gap between CF signals and content features. In this work, we propose to avoid this limitation with purely content-based modeling of cold items, i.e. without alignment with CF user or item embeddings. We instead frame cold-start prediction in terms of item-item similarity, training a content encoder to project into a latent space where similarity correlates with user preferences. We define our training objective as a sparse generalization of sampled softmax loss with the $\alpha$-entmax family of activation functions, which allows for sharper estimation of item relevance by zeroing gradients for uninformative negatives. We then describe how this Sampled Entmax for Cold-start (SEMCo) training regime can be extended via knowledge distillation, and show that it outperforms existing cold-start methods and standard sampled softmax in ranking accuracy. We also discuss the advantages of purely content-based modeling, particularly in terms of equity of item outcomes. 
+
+---
+# Efficient Retrieval Scaling with Hierarchical Indexing for Large Scale Recommendation 
+
+**Authors**: Dongqi Fu, Kaushik Rangadurai, Haiyu Lu, Yunchen Pu, Siyang Yuan, Minhui Huang, Yiqun Liu, Golnaz Ghasemiesfeh, Xingfeng He, Fangzhou Xu, Andrew Cui, Vidhoon Viswanathan, Lin Yang, Liang Wang, Jiyan Yang, Chonglin Sun  
+
+**Link**: [PDF](https://arxiv.org/pdf/2604.12965)  
+
+**Abstract**: The increase in data volume, computational resources, and model parameters during training has led to the development of numerous large-scale industrial retrieval models for recommendation tasks. However, effectively and efficiently deploying these large-scale foundational retrieval models remains a critical challenge that has not been fully addressed. Common quick-win solutions for deploying these massive models include relying on offline computations (such as cached user dictionaries) or distilling large models into smaller ones. Yet, both approaches fall short of fully leveraging the representational and inference capabilities of foundational models. In this paper, we explore whether it is possible to learn a hierarchical organization over the memory of foundational retrieval models. Such a hierarchical structure would enable more efficient search by reducing retrieval costs while preserving exactness. To achieve this, we propose jointly learning a hierarchical index using cross-attention and residual quantization for large-scale retrieval models. We also present its real-world deployment at Meta, supporting daily advertisement recommendations for billions of Facebook and Instagram users. Interestingly, we discovered that the intermediate nodes in the learned index correspond to a small set of high-quality data. Fine-tuning the model on this set further improves inference performance, and concretize the concept of "test-time training" within the recommendation system domain. We demonstrate these findings using both internal and public datasets with strong baseline comparisons and hope they contribute to the community's efforts in developing the next generation of foundational retrieval models. 
+
+---
+# Deep Situation-Aware Interaction Network for Click-Through Rate Prediction 
+
+**Authors**: Yimin Lv, Shuli Wang, Beihong Jin, Yisong Yu, Yapeng Zhang, Jian Dong, Yongkang Wang, Xingxing Wang, Dong Wang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2604.12298)  
+
+**Abstract**: User behavior sequence modeling plays a significant role in Click-Through Rate (CTR) prediction on e-commerce platforms. Except for the interacted items, user behaviors contain rich interaction information, such as the behavior type, time, location, etc. However, so far, the information related to user behaviors has not yet been fully exploited. In the paper, we propose the concept of a situation and situational features for distinguishing interaction behaviors and then design a CTR model named Deep Situation-Aware Interaction Network (DSAIN). DSAIN first adopts the reparameterization trick to reduce noise in the original user behavior sequences. Then it learns the embeddings of situational features by feature embedding parameterization and tri-directional correlation fusion. Finally, it obtains the embedding of behavior sequence via heterogeneous situation aggregation. We conduct extensive offline experiments on three real-world datasets. Experimental results demonstrate the superiority of the proposed DSAIN model. More importantly, DSAIN has increased the CTR by 2.70\%, the CPM by 2.62\%, and the GMV by 2.16\% in the online A/B test. Now, DSAIN has been deployed on the Meituan food delivery platform and serves the main traffic of the Meituan takeout app. 
+
+---
+# UniRec: Bridging the Expressive Gap between Generative and Discriminative Recommendation via Chain-of-Attribute 
+
+**Authors**: Ziliang Wang, Gaoyun Lin, Xuesi Wang, Shaoqiang Liang, Yili Huang, Weijie Bian  
+
+**Link**: [PDF](https://arxiv.org/pdf/2604.12234)  
+
+**Abstract**: Generative Recommendation (GR) reframes retrieval and ranking as autoregressive decoding over Semantic IDs (SIDs), unifying the multi-stage pipeline into a single model. Yet a fundamental expressive gap persists: discriminative models score items with direct feature access, enabling explicit user-item crossing, whereas GR decodes over compact SID tokens without item-side signal. We formalize this via Bayes' theorem, showing ranking by p(y|f,u) is equivalent to ranking by p(f|y,u), which factorizes autoregressively over item features. This establishes that a generative model with full feature access is as expressive as its discriminative counterpart; any practical gap stems solely from incomplete feature coverage. We propose UniRec with Chain-of-Attribute (CoA) as its core mechanism. CoA prefixes each SID sequence with structured attribute tokens--category, seller, brand--before decoding the SID itself, recovering the item-side feature crossing that discriminative models exploit. Because items sharing identical attributes cluster in adjacent SID regions, attribute conditioning yields a measurable per-step entropy reduction H(s_k|s_{<k},a) < H(s_k|s_{<k}), narrowing the search space and stabilizing beam search trajectories. We further address two deployment challenges: Capacity-constrained SID introduces exposure-weighted capacity penalties into residual quantization to suppress token collapse and the Matthew effect across SID layers; Conditional Decoding Context (CDC) combines Task-Conditioned BOS with hash-based Content Summaries, injecting scenario-conditioned signals at each decoding step. A joint RFT and DPO framework aligns the model with business objectives beyond distribution matching. Experiments show UniRec outperforms the strongest baseline by +22.6% HR@50 overall and +15.5% on high-value orders, with online A/B tests confirming significant business metric gains. 
+
+---
+# AdversarialCoT: Single-Document Retrieval Poisoning for LLM Reasoning 
+
+**Authors**: Hongru Song, Yu-An Liu, Ruqing Zhang, Jiafeng Guo, Maarten de Rijke, Yixing Fan, Xueqi Cheng  
+
+**Link**: [PDF](https://arxiv.org/pdf/2604.12201)  
+
+**Abstract**: Retrieval-augmented generation (RAG) enhances large language model (LLM) reasoning by retrieving external documents, but also opens up new attack surfaces. We study knowledge-base poisoning attacks in RAG, where an attacker injects malicious content into the retrieval corpus, which is then naturally surfaced by the retriever and consumed by the LLM during reasoning. Unlike prior work that floods the corpus with poisoned documents, we propose AdversarialCoT, a query-specific attack that poisons only a single document in the corpus. AdversarialCoT first extracts the target LLM's reasoning framework to guide the construction of an initial adversarial chain-of-thought (CoT). The adversarial document is iteratively refined through interactions with the LLM, progressively exposing and exploiting critical reasoning vulnerabilities. Experiments on benchmark LLMs show that a single adversarial document can significantly degrade reasoning accuracy, revealing subtle yet impactful weaknesses. This study exposes security risks in RAG systems and provides actionable insights for designing more robust LLM reasoning pipelines. 
+
+---
+# The Effect of Document Selection on Query-focused Text Analysis 
+
+**Authors**: Sandesh S Rangreji, Mian Zhong, Anjalie Field  
+
+**Link**: [PDF](https://arxiv.org/pdf/2604.12099)  
+
+**Abstract**: Analyses of document collections often require selecting what data to analyze, as not all documents are relevant to a particular research question and computational constraints preclude analyzing all documents, yet little work has examined effects of selection strategy choices. We systematically evaluate seven selection methods (from random selection to hybrid retrieval) on outputs from four text analyses methods (LDA, BERTopic, TopicGPT, HiCode) over two datasets with 26 open-ended queries. Our evaluation reveals practice guidance: semantic or hybrid retrieval offer strong go-to approaches that avoid the pitfalls of weaker selection strategies and the unnecessary compute overhead of more complicated ones. Overall, our evaluation framework establishes data selection as a methodological decision, rather than a practical necessity, inviting the development of new strategies. 
+
+---
+# Beyond Single-Dimension Novelty: How Combinations of Theory, Method, and Results-based Novelty Shape Scientific Impact 
+
+**Authors**: Yi Zhao, Yang Chenggang, Yuzhuo Wang, Tong Bao, Zhang Heng, Chengzhi Zhang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2604.12471)  
+
+**Abstract**: Scientific novelty drives advances at the research frontier, yet it is also associated with heightened uncertainty and potential resistance from incumbent paradigms, leading to complex patterns of scientific impact. Prior studies have primarily ex-amined the relationship between a single dimension of novelty -- such as theoreti-cal, methodological, or results-based novelty -- and scientific impact. However, because scientific novelty is inherently multidimensional, focusing on isolated dimensions may obscure how different types of novelty jointly shape impact. Consequently, we know little about how combinations of novelty types influence scientific impact. To this end, we draw on a dataset of 15,322 articles published in Nature Communications. Using the DeepSeek-V3 model, we classify articles into three novelty dimensions based on the content of their Introduction sections: theoretical novelty, methodological novelty, and results-based novelty. These dimensions may coexist within the same article, forming distinct novelty configura-tions. Scientific impact is measured using five-year citation counts and indicators of whether an article belongs to the top 1% or top 10% highly cited papers. Descriptive results indicate that results-based novelty alone and the simultaneous presence of all three novelty types are the dominant configurations in the sample. Regression results further show that articles with results-based novelty only re-ceive significantly more citations and are more likely to rank among the top 1% and top 10% highly cited papers than articles exhibiting all three novelty types. These findings advance our understanding of how multidimensional novelty configurations shape knowledge diffusion. 
+
+---
+# Is Sliding Window All You Need? An Open Framework for Long-Sequence Recommendation 
+
+**Authors**: Sayak Chakrabarty, Souradip Pal  
+
+**Link**: [PDF](https://arxiv.org/pdf/2604.12372)  
+
+**Abstract**: Long interaction histories are central to modern recommender systems, yet training with long sequences is often dismissed as impractical under realistic memory and latency budgets. This work demonstrates that it is not only practical but also effective-at academic scale. We release a complete, end-to-end framework that implements industrial-style long-sequence training with sliding windows, including all data processing, training, and evaluation scripts. Beyond reproducing prior gains, we contribute two capabilities missing from earlier reports: (i) a runtime-aware ablation study that quantifies the accuracy-compute frontier across windowing regimes and strides, and (ii) a novel k-shift embedding layer that enables million-scale vocabularies on commodity GPUs with negligible accuracy loss. Our implementation trains reliably on modest university clusters while delivering competitive retrieval quality (e.g., up to +6.04% MRR and +6.34% Recall@10 on Retailrocket) with $\sim 4 \times $ training-time overheads. By packaging a robust pipeline, reporting training time costs, and introducing an embedding mechanism tailored for low-resource settings, we transform long-sequence training from a closed, industrial technique into a practical, open, and extensible methodology for the community. 
+
+---
+# Thought-Retriever: Don't Just Retrieve Raw Data, Retrieve Thoughts for Memory-Augmented Agentic Systems 
+
+**Authors**: Tao Feng, Pengrui Han, Guanyu Lin, Ge Liu, Jiaxuan You  
+
+**Link**: [PDF](https://arxiv.org/pdf/2604.12231)  
+
+**Abstract**: Large language models (LLMs) have transformed AI research thanks to their powerful internal capabilities and knowledge. However, existing LLMs still fail to effectively incorporate the massive external knowledge when interacting with the world. Although retrieval-augmented LLMs are proposed to mitigate the issue, they are still fundamentally constrained by the context length of LLMs, as they can only retrieve top-K raw data chunks from the external knowledge base which often consists of millions of data chunks. Here we propose Thought-Retriever, a novel model-agnostic algorithm that helps LLMs generate output conditioned on arbitrarily long external data, without being constrained by the context length or number of retrieved data chunks. Our key insight is to let an LLM fully leverage its intermediate responses generated when solving past user queries (thoughts), filtering meaningless and redundant thoughts, organizing them in thought memory, and retrieving the relevant thoughts when addressing new queries. This effectively equips LLM-based agents with a self-evolving long-term memory that grows more capable through continuous interaction. Besides algorithmic innovation, we further meticulously prepare a novel benchmark, AcademicEval, which requires an LLM to faithfully leverage ultra-long context to answer queries based on real-world academic papers. Extensive experiments on AcademicEval and two other public datasets validate that Thought-Retriever remarkably outperforms state-of-the-art baselines, achieving an average increase of at least 7.6% in F1 score and 16% in win rate across various tasks. More importantly, we further demonstrate two exciting findings: (1) Thought-Retriever can indeed help LLM self-evolve after solving more user queries; (2) Thought-Retriever learns to leverage deeper thoughts to answer more abstract user queries. 
+
+---
+# AgenticAI-DialogGen: Topic-Guided Conversation Generation for Fine-Tuning and Evaluating Short- and Long-Term Memories of LLMs 
+
+**Authors**: Manoj Madushanka Perera, Adnan Mahmood, Kasun Eranda Wijethilake, Quan Z. Sheng  
+
+**Link**: [PDF](https://arxiv.org/pdf/2604.12179)  
+
+**Abstract**: Recent advancements in Large Language Models (LLMs) have improved their ability to process extended conversational contexts, yet fine-tuning and evaluating short- and long-term memories remain difficult due to the absence of datasets that encode both short- and long-term conversational history. Existing conversational datasets lack memory grounding, overlook topic continuity, or rely on costly human annotation. To address these gaps, we introduce AgenticAI-DialogGen, a modular agent-based framework that generates persona-grounded and topic-guided conversations without human supervision. The framework uses LLM agents to extract knowledge graphs, identify topics, build speaker personas, and simulate topic-guided conversations from unstructured conversations. A QA module generates memory-grounded Question Answer (QA) pairs drawn from short- and long-term conversational histories. We also generated a new dataset entitled, TopicGuidedChat (TGC), where long-term memory is encoded as speaker-specific knowledge graphs and short-term memory as newly generated topic-guided conversations. Evaluations depict that AgenticAI-DialogGen yields higher conversational quality and LLMs fine-tuned on TGC dataset achieve improved performance on memory-grounded QA tasks. 
+
+---
+# Beyond Factual Grounding: The Case for Opinion-Aware Retrieval-Augmented Generation 
+
+**Authors**: Aditya Agrawal, Alwarappan Nakkiran, Darshan Fofadiya, Alex Karlsson, Harsha Aduri  
+
+**Link**: [PDF](https://arxiv.org/pdf/2604.12138)  
+
+**Abstract**: RAG systems have transformed how LLMs access external knowledge, but we find that current implementations exhibit a bias toward factual, objective content, as evidenced by existing benchmarks and datasets that prioritize objective retrieval. This factual bias - treating opinions and diverse perspectives as noise rather than information to be synthesized - limits RAG systems in real-world scenarios involving subjective content, from social media discussions to product reviews. Beyond technical limitations, this bias poses risks to transparent and accountable AI: echo chamber effects that amplify dominant viewpoints, systematic underrepresentation of minority voices, and potential opinion manipulation through biased information synthesis. We formalize this limitation through the lens of uncertainty: factual queries involve epistemic uncertainty reducible through evidence, while opinion queries involve aleatoric uncertainty reflecting genuine heterogeneity in human perspectives. This distinction implies that factual RAG should minimize posterior entropy, whereas opinion-aware RAG must preserve it. Building on this theoretical foundation, we present an Opinion-Aware RAG architecture featuring LLM-based opinion extraction, entity-linked opinion graphs, and opinion-enriched document indexing. We evaluate our approach on e-commerce seller forum data, comparing an Opinion-Enriched knowledge base against a traditional baseline. Experiments demonstrate substantial improvements in retrieval diversity: +26.8% sentiment diversity, +42.7% entity match rate, and +31.6% author demographic coverage on entity-matched documents. Our results provide empirical evidence that treating subjectivity as a first-class citizen yields measurably more representative retrieval-a first step toward opinion-aware RAG. Future work includes joint optimization of retrieval and generation for distributional fidelity. 
+
+---
+# Empirical Evaluation of PDF Parsing and Chunking for Financial Question Answering with RAG 
+
+**Authors**: Omar El Bachyr, Yewei Song, Saad Ezzini, Jacques Klein, Tegawendé F. Bissyandé, Anas Zilali, Ulrick Ble, Anne Goujon  
+
+**Link**: [PDF](https://arxiv.org/pdf/2604.12047)  
+
+**Abstract**: PDF files are primarily intended for human reading rather than automated processing. In addition, the heterogeneous content of PDFs, such as text, tables, and images, poses significant challenges for parsing and information extraction. To address these difficulties, both practitioners and researchers are increasingly developing new methods, including the promising Retrieval-Augmented Generation (RAG) systems to automated PDF processing. However, there is no comprehensive study investigating how different components and design choices affect the performance of a RAG system for understanding PDFs. In this paper, we propose such a study (1) by focusing on Question Answering, a specific language understanding task, and (2) by leveraging two benchmarks from the financial domain, including TableQuest, our newly generated, publicly available benchmark. We systematically examine multiple PDF parsers and chunking strategies (with varied overlap), along with their potential synergies in preserving document structure and ensuring answer correctness. Overall, our results offer practical guidelines for building robust RAG pipelines for PDF understanding. 
+
+---
+# Constant-Factor Approximation for the Uniform Decision Tree 
+
+**Authors**: Michał Szyfelbein  
+
+**Link**: [PDF](https://arxiv.org/pdf/2604.12036)  
+
+**Abstract**: We resolve a long-standing open question, about the existence of a constant-factor approximation algorithm for the average-case \textsc{Decision Tree} problem with uniform probability distribution over the hypotheses. We answer the question in the affirmative by providing a simple polynomial-time algorithm with approximation ratio of $\frac{2}{1-\sqrt{(e+1)/(2e)}}+\epsilon <11.57$. This improves upon the currently best-known, greedy algorithm which achieves $O(\log n/{\log\log n})$-approximation. The first key ingredient in our analysis is the usage of a decomposition technique known from problems related to \textsc{Hierarchical Clustering} [SODA '17, WALCOM '26], which allows us to decompose the optimal decision tree into a series of objects called separating subfamilies. The second crucial idea is to reduce the subproblem of finding a \textsc{Separating Subfamily} to an instance of the \textsc{Maximum Coverage} problem. To do so, we analyze the properties of cutting cliques into small pieces, which represent pairs of hypotheses to be separated. This allows us to obtain a good approximation for the \textsc{Separating Subfamily} problem, which then enables the design of the approximation algorithm for the original problem. 
+
+---
