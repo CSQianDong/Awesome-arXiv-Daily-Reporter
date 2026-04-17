@@ -1,0 +1,193 @@
+# Metric-agnostic Learning-to-Rank via Boosting and Rank Approximation 
+
+**Authors**: Camilo Gomez, Pengyang Wang, Yanjie Fu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2604.15101)  
+
+**Abstract**: Learning-to-Rank (LTR) is a supervised machine learning approach that constructs models specifically designed to order a set of items or documents based on their relevance or importance to a given query or context. Despite significant success in real-world information retrieval systems, current LTR methods rely on one prefix ranking metric (e.g., such as Normalized Discounted Cumulative Gain (NDCG) or Mean Average Precision (MAP)) for optimizing the ranking objective function. Such metric-dependent setting limits LTR methods from two perspectives: (1) non-differentiable problem: directly optimizing ranking functions over a given ranking metric is inherently non-smooth, making the training process unstable and inefficient; (2) limited ranking utility: optimizing over one single metric makes it difficult to generalize well to other ranking metrics of interest. To address the above issues, we propose a novel listwise LTR framework for efficient and generalizable ranking purpose. Specifically, we propose a new differentiable ranking loss that combines a smooth approximation to the ranking operator with the average mean square loss per query. Then, we adapt gradient-boosting machines to minimize our proposed loss with respect to each list, a novel contribution. Finally, extensive experimental results confirm that our method outperforms the current state-of-the-art in information retrieval measures with similar efficiency. 
+
+---
+# SAGER: Self-Evolving User Policy Skills for Recommendation Agent 
+
+**Authors**: Zhen Tao, Riwei Lai, Chenyun Yu, Weixin Chen, Li Chen, Beibei Kong, Lei Cheng, Chengxiang Zhuo, Zang Li, Qingqiang Sun  
+
+**Link**: [PDF](https://arxiv.org/pdf/2604.14972)  
+
+**Abstract**: Large language model (LLM) based recommendation agents personalize what they know through evolving per-user semantic memory, yet how they reason remains a universal, static system prompt shared identically across all users. This asymmetry is a fundamental bottleneck: when a recommendation fails, the agent updates its memory of user preferences but never interrogates the decision logic that produced the failure, leaving its reasoning process structurally unchanged regardless of how many mistakes it accumulates. To address this bottleneck, we propose SAGER (Self-Evolving Agent for Personalized Recommendation), the first recommendation agent framework in which each user is equipped with a dedicated policy skill, a structured natural-language document encoding personalized decision principles that evolves continuously through interaction. SAGER introduces a two-representation skill architecture that decouples a rich evolution substrate from a minimal inference-time injection, an incremental contrastive chain-of-thought engine that diagnoses reasoning flaws by contrasting accepted against unchosen items while preserving accumulated priors, and skill-augmented listwise reasoning that creates fine-grained decision boundaries where the evolved skill provides genuine discriminative value. Experiments on four public benchmarks demonstrate that SAGER achieves state-of-the-art performance, with gains orthogonal to memory accumulation, confirming that personalizing the reasoning process itself is a qualitatively distinct source of recommendation improvement. 
+
+---
+# GenRec: A Preference-Oriented Generative Framework for Large-Scale Recommendation 
+
+**Authors**: Yanyan Zou, Junbo Qi, Lunsong Huang, Yu Li, Kewei Xu, Jiabao Gao, Binglei Zhao, Xuanhua Yang, Sulong Xu, Shengjie Li  
+
+**Link**: [PDF](https://arxiv.org/pdf/2604.14878)  
+
+**Abstract**: Generative Retrieval (GR) offers a promising paradigm for recommendation through next-token prediction (NTP). However, scaling it to large-scale industrial systems introduces three challenges: (i) within a single request, the identical model inputs may produce inconsistent outputs due to the pagination request mechanism; (ii) the prohibitive cost of encoding long user behavior sequences with multi-token item representations based on semantic IDs, and (iii) aligning the generative policy with nuanced user preference signals. We present GenRec, a preference-oriented generative framework deployed on the JD App that addresses above challenges within a single decoder-only architecture. For training objective, we propose Page-wise NTP task, which supervises over an entire interaction page rather than each interacted item individually, providing denser gradient signal and resolving the one-to-many ambiguity of point-wise training. On the prefilling side, an asymmetric linear Token Merger compresses multi-token Semantic IDs in the prompt while preserving full-resolution decoding, reducing input length by ~2X with negligible accuracy loss. To further align outputs with user satisfaction, we introduce GRPO-SR, a reinforcement learning method that pairs Group Relative Policy Optimization with NLL regularization for training stability, and employs Hybrid Rewards combining a dense reward model with a relevance gate to mitigate reward hacking. In month-long online A/B tests serving production traffic, GenRec achieves 9.5% improvement in click count and 8.7% in transaction count over the existing pipeline. 
+
+---
+# Well Begun is Half Done: Training-Free and Model-Agnostic Semantically Guaranteed User Representation Initialization for Multimodal Recommendation 
+
+**Authors**: Jinfeng Xu, Zheyu Chen, Shuo Yang, Jinze Li, Hewei Wang, Jianheng Tang, Wei Wang, Xiping Hu, Edith C. H. Ngai  
+
+**Link**: [PDF](https://arxiv.org/pdf/2604.14839)  
+
+**Abstract**: Recent advancements in multimodal recommendations, which leverage diverse modality information to mitigate data sparsity and improve recommendation accuracy, have gained significant attention. However, existing multimodal recommendations overlook the critical role of user representation initialization. Unlike items, which are naturally associated with rich modality information, users lack such inherent information. Consequently, item representations initialized based on meaningful modality information and user representations initialized randomly exhibit a significant semantic gap.
+To this end, we propose a Semantically Guaranteed User Representation Initialization (SG-URInit). SG-URInit constructs the initial representation for each user by integrating both the modality features of the items they have interacted with and the global features of their corresponding clusters. SG-URInit enables the initialization of semantically enriched user representations that effectively capture both local (item-level) and global (cluster-level) semantics.
+Our SG-URInit is training-free and model-agnostic, meaning it can be seamlessly integrated into existing multimodal recommendation models without incurring any additional computational overhead during training. Extensive experiments on multiple real-world datasets demonstrate that incorporating SG-URInit into advanced multimodal recommendation models significantly enhances recommendation performance. Furthermore, the results show that SG-URInit can further alleviate the item cold-start problem and also accelerate model convergence, making it an efficient and practical solution for multimodal recommendations. 
+
+---
+# Federated User Behavior Modeling for Privacy-Preserving LLM Recommendation 
+
+**Authors**: Lei Guo, Hongyun Yang, Pengjie Ren, Tong Chen, Hui Liu, Zhumin Chen  
+
+**Link**: [PDF](https://arxiv.org/pdf/2604.14833)  
+
+**Abstract**: Large Language Models have shown great success in recommender systems. However, the limited and sparse nature of user data often restricts the LLM's ability to effectively model behavior patterns. To address this, existing studies have explored cross-domain solutions by conducting Cross-Domain Recommendation tasks. But previous methods typically assume domains are overlapped and can be accessed readily. None of the LLM methods address the privacy-preserving issues in the CDR settings, that is, Privacy-Preserving Cross-Domain Recommendation. Conducting non-overlapping PPCDR with LLM is challenging since: 1)The inability to share user identity or behavioral data across domains impedes effective cross-domain alignment. 2)The heterogeneity of data modalities across domains complicates knowledge integration. 3)Fusing collaborative filtering signals from traditional recommendation models with LLMs is difficult, as they operate within distinct feature spaces. To address the above issues, we propose SF-UBM, a Semantic-enhanced Federated User Behavior Modeling method. Specifically, to deal with Challenge 1, we leverage natural language as a universal bridge to connect disjoint domains via a semantic-enhanced federated architecture. Here, text-based item representations are encrypted and shared, while user-specific data remains local. To handle Challenge 2, we design a Fact-counter Knowledge Distillation module to integrate domain-agnostic knowledge with domain-specific knowledge, across different data modalities. To tackle Challenge 3, we project pre-learned user preferences and cross-domain item representations into the soft prompt space, aligning behavioral and semantic spaces for effective LLM learning. We conduct extensive experiments on three pairs of real-world domains, and the experimental results demonstrate the effectiveness of SF-UBM compared to the recent SOTA methods. 
+
+---
+# Uncertainty-aware Generative Learning Path Recommendation with Cognition-Adaptive Diffusion 
+
+**Authors**: Xiangrui Xiong, Hang Liang, Baiyang Chen, Zifei Pan, Yanli Lee  
+
+**Link**: [PDF](https://arxiv.org/pdf/2604.14613)  
+
+**Abstract**: Learning Path Recommendation (LPR) is critical for personalized education, yet current methods often fail to account for historical interaction uncertainty (e.g., lucky guesses or accidental slips) and lack adaptability to diverse learning goals. We propose U-GLAD (Uncertainty-aware Generative Learning Path Recommendation with Cognition-Adaptive Diffusion). To address representation bias, the framework models cognitive states as probability distributions, capturing the learner's underlying true state via a Gaussian LSTM. To ensure highly personalized recommendation, a goal-oriented concept encoder utilizes multi-head attention and objective-specific transformations to dynamically align concept semantics with individual learning goals, generating uniquely tailored embeddings. Unlike traditional discriminative ranking approaches, our model employs a generative diffusion model to predict the latent representation of the next optimal concept. Extensive evaluations on three public datasets demonstrate that U-GLAD significantly outperforms representative baselines. Further analyses confirm its superior capability in perceiving interaction uncertainty and providing stable, goal-driven recommendation paths. 
+
+---
+# Category-based and Popularity-guided Video Game Recommendation: A Balance-oriented Framework 
+
+**Authors**: Xiping Li, Jianghong Ma, Kangzhe Liu, Shanshan Feng, Haijun Zhang, Yutong Wang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2604.14598)  
+
+**Abstract**: In recent years, the video game industry has experienced substantial growth, presenting players with a vast array of game choices. This surge in options has spurred the need for a specialized recommender system tailored for video games. However, current video game recommendation approaches tend to prioritize accuracy over diversity, potentially leading to unvaried game suggestions. In addition, the existing game recommendation methods commonly lack the ability to establish strict connections between games to enhance accuracy. Furthermore, many existing diversity-focused methods fail to leverage crucial item information, such as item category and popularity during neighbor modeling and message propagation. To address these challenges, we introduce a novel framework, called CPGRec, comprising three modules, namely accuracy-driven, diversity-driven, and comprehensive modules. The first module extends the state-of-the-art accuracy-focused game recommendation method by connecting games in a more stringent manner to enhance recommendation accuracy. The second module connects neighbors with diverse categories within the proposed game graph and harnesses the advantages of popular game nodes to amplify the influence of long-tail games within the player-game bipartite graph, thereby enriching recommendation diversity. The third module combines the above two modules and employs a new negative-sample rating score reweighting method to balance accuracy and diversity. Experimental results on the Steam dataset demonstrate the effectiveness of our proposed method in improving game recommendations. The dataset and source codes are anonymously released at: this https URL. 
+
+---
+# CPGRec+: A Balance-oriented Framework for Personalized Video Game Recommendations 
+
+**Authors**: Xiping Li, Aier Yang, Jianghong Ma, Kangzhe Liu, Shanshan Feng, Haijun Zhang, Yi Zhao  
+
+**Link**: [PDF](https://arxiv.org/pdf/2604.14586)  
+
+**Abstract**: The rapid expansion of gaming industry requires advanced recommender systems tailored to its dynamic landscape. Existing Graph Neural Network (GNN)-based methods primarily prioritize accuracy over diversity, overlooking their inherent trade-off. To address this, we previously proposed CPGRec, a balance-oriented gaming recommender system. However, CPGRec fails to account for critical disparities in player-game interactions, which carry varying significance in reflecting players' personal preferences and may exacerbate over-smoothness issues inherent in GNN-based models. Moreover, existing approaches underutilize the reasoning capabilities and extensive knowledge of large language models (LLMs) in addressing these limitations. To bridge this gap, we propose two new modules. First, Preference-informed Edge Reweighting (PER) module assigns signed edge weights to qualitatively distinguish significant player interests and disinterests while then quantitatively measuring preference strength to mitigate over-smoothing in graph convolutions. Second, Preference-informed Representation Generation (PRG) module leverages LLMs to generate contextualized descriptions of games and players by reasoning personal preferences from comparing global and personal interests, thereby refining representations of players and games. Experiments on \textcolor{black}{two Steam datasets} demonstrate CPGRec+'s superior accuracy and diversity over state-of-the-art models. The code is accessible at this https URL. 
+
+---
+# Behavior-Aware Dual-Channel Preference Learning for Heterogeneous Sequential Recommendation 
+
+**Authors**: Jing Xiao, Dongqi Wu, Liwei Pan, Yawen Luo, Weike Pan, Zhong Ming  
+
+**Link**: [PDF](https://arxiv.org/pdf/2604.14581)  
+
+**Abstract**: Heterogeneous sequential recommendation (HSR) aims to learn dynamic behavior dependencies from the diverse behaviors of user-item interactions to facilitate precise sequential recommendation. Despite many efforts yielding promising achievements, there are still challenges in modeling heterogeneous behavior data. One significant issue is the inherent sparsity of a real-world data, which can weaken the recommendation performance. Although auxiliary behaviors (e.g., clicks) partially address this problem, they inevitably introduce some noise, and the sparsity of the target behavior (e.g., purchases) remains unresolved. Additionally, contrastive learning-based augmentation in existing methods often focuses on a single behavior type, overlooking fine-grained user preferences and losing valuable information. To address these challenges, we have meticulously designed a behavior-aware dual-channel preference learning framework (BDPL). This framework begins with the construction of customized behavior-aware subgraphs to capture personalized behavior transition relationships, followed by a novel cascade-structured graph neural network to aggregate node context information. We then model and enhance user representations through a preference-level contrastive learning paradigm, considering both long-term and short-term preferences. Finally, we fuse the overall preference information using an adaptive gating mechanism to predict the next item the user will interact with under the target behavior. Extensive experiments on three real-world datasets demonstrate the superiority of our BDPL over the state-of-the-art models. 
+
+---
+# Don't Retrieve, Navigate: Distilling Enterprise Knowledge into Navigable Agent Skills for QA and RAG 
+
+**Authors**: Yiqun Sun, Pengfei Wei, Lawrence B. Hsieh  
+
+**Link**: [PDF](https://arxiv.org/pdf/2604.14572)  
+
+**Abstract**: Retrieval-Augmented Generation (RAG) grounds LLM responses in external evidence but treats the model as a passive consumer of search results: it never sees how the corpus is organized or what it has not yet retrieved, limiting its ability to backtrack or combine scattered evidence. We present Corpus2Skill, which distills a document corpus into a hierarchical skill directory offline and lets an LLM agent navigate it at serve time. The compilation pipeline iteratively clusters documents, generates LLM-written summaries at each level, and materializes the result as a tree of navigable skill files. At serve time, the agent receives a bird's-eye view of the corpus, drills into topic branches via progressively finer summaries, and retrieves full documents by ID. Because the hierarchy is explicitly visible, the agent can reason about where to look, backtrack from unproductive paths, and combine evidence across branches. On WixQA, an enterprise customer-support benchmark for RAG, Corpus2Skill outperforms dense retrieval, RAPTOR, and agentic RAG baselines across all quality metrics. 
+
+---
+# NewsTorch: A PyTorch-based Toolkit for Learner-oriented News Recommendation 
+
+**Authors**: Rongyao Wang, Veronica Liesaputra, Zhiyi Huang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2604.14510)  
+
+**Abstract**: News recommender systems are devised to alleviate the information overload, attracting more and more researchers' attention in recent years. The lack of a dedicated learner-oriented news recommendation toolkit hinders the advancement of research in news recommendation. We propose a PyTorch-based news recommendation toolkit called NewsTorch, developed to support learners in acquiring both conceptual understanding and practical experience. This toolkit provides a modular, decoupled, and extensible framework with a learner-friendly GUI platform that supports dataset downloading and preprocessing. It also enables training, validation, and testing of state-of-the-art neural news recommendation models with standardized evaluation metrics, ensuring fair comparison and reproducible experiments. Our open-source toolkit is released on Github: this https URL. 
+
+---
+# Controlling Authority Retrieval: A Missing Retrieval Objective for Authority-Governed Knowledge 
+
+**Authors**: Andre Bacellar  
+
+**Link**: [PDF](https://arxiv.org/pdf/2604.14488)  
+
+**Abstract**: In any domain where knowledge accumulates under formal authority -- law, drug regulation, software security -- a later document can formally void an earlier one while remaining semantically distant from it. We formalize this as Controlling Authority Retrieval (CAR): recovering the active frontier front(cl(A_k(q))) of the authority closure of the semantic anchor set -- a different mathematical problem from argmax_d s(q,d). The two central results are: Theorem 4 (CAR-Correctness Characterization) gives necessary-and-sufficient conditions on any retrieved set R for TCA(R,q)=1 -- frontier inclusion and no-ignored-superseder -- independent of how R was produced. Proposition 2 (Scope Identifiability Upper Bound) establishes phi(q) as a hard worst-case ceiling: for any scope-indexed algorithm, TCA@k <= phi(q) * R_anchor(q), proved by an adversarial permutation argument. Three independent real-world corpora validate the proved structure: security advisories (Dense TCA@5=0.270, two-stage 0.975), SCOTUS overruling pairs (Dense=0.172, two-stage 0.926), FDA drug records (Dense=0.064, two-stage 0.774). A GPT-4o-mini experiment shows the downstream cost: Dense RAG produces explicit "not patched" claims for 39% of queries where a patch exists; Two-Stage cuts this to 16%. Four benchmark datasets, domain adapters, and a single-command scorer are released at this https URL. 
+
+---
+# A Unified Model and Document Representation for On-Device Retrieval-Augmented Generation 
+
+**Authors**: Julian Killingback, Ofer Meshi, Henry Li, Hamed Zamani, Maryam Karimzadehgan  
+
+**Link**: [PDF](https://arxiv.org/pdf/2604.14403)  
+
+**Abstract**: Traditional Retrieval-Augmented Generation (RAG) approaches generally assume that retrieval and generation occur on powerful servers removed from the end user. While this reduces local hardware constraints, it introduces significant drawbacks: privacy concerns regarding data access, recurring maintenance and storage costs, increased latency, and the necessity of an internet connection. On-device RAG addresses these challenges by executing the entire pipeline locally, making it ideal for querying sensitive personal information such as financial documents, contact details, and medical history. However, on-device deployment necessitates a delicate balance between limited memory and disk space. Specifically, the context size provided to the generative model must be restricted to manage KV cache and attention memory usage, while the size of stored embeddings must be minimized to preserve disk space. In this work, we propose a unified model that compresses the RAG context and utilizes the same representations for retrieval. This approach minimizes disk utilization compared to using separate representations, while significantly reducing the context size required for generation. With an average of 1/10 of the context, our model matches the performance of a traditional RAG reader without increasing storage requirements compared to a multi-vector retrieval model. This approach represents the first model to unify retrieval and context compression using a shared model and representation. We believe this work will inspire further consolidation of distinct models to optimize on-device performance. 
+
+---
+# Evaluation of Agents under Simulated AI Marketplace Dynamics 
+
+**Authors**: To Eun Kim, Alireza Salemi, Hamed Zamani, Fernando Diaz  
+
+**Link**: [PDF](https://arxiv.org/pdf/2604.14256)  
+
+**Abstract**: Modern information access ecosystems consist of mixtures of systems, such as retrieval systems and large language models, and increasingly rely on marketplaces to mediate access to models, tools, and data, making competition between systems inherent to deployment. In such settings, outcomes are shaped not only by benchmark quality but also by competitive pressure, including user switching, routing decisions, and operational constraints. Yet evaluation is still largely conducted on static benchmarks with accuracy-focused measures that assume systems operate in isolation. This mismatch makes it difficult to predict post-deployment success and obscures competitive effects such as early-adoption advantages and market dominance. We introduce Marketplace Evaluation, a simulation-based paradigm that evaluates information access systems as participants in a competitive marketplace. By simulating repeated interactions and evolving user and agent preferences, the framework enables longitudinal evaluation and marketplace-level metrics, such as retention and market share, that complement and can extend beyond traditional accuracy-based metrics. We formalize the framework and outline a research agenda, motivated by business and economics, around marketplace simulation, metrics, optimization, and adoption in evaluation campaigns like TREC. 
+
+---
+# FRESCO: Benchmarking and Optimizing Re-rankers for Evolving Semantic Conflict in Retrieval-Augmented Generation 
+
+**Authors**: Sohyun An, Hayeon Lee, Shuibenyang Yuan, Chun-cheng Jason Chen, Cho-Jui Hsieh, Vijai Mohan, Alexander Min  
+
+**Link**: [PDF](https://arxiv.org/pdf/2604.14227)  
+
+**Abstract**: Retrieval-Augmented Generation (RAG) is a key approach to mitigating the temporal staleness of large language models (LLMs) by grounding responses in up-to-date evidence. Within the RAG pipeline, re-rankers play a pivotal role in selecting the most useful documents from retrieved candidates. However, existing benchmarks predominantly evaluate re-rankers in static settings and do not adequately assess performance under evolving information -- a critical gap, as real-world systems often must choose among temporally different pieces of evidence. To address this limitation, we introduce FRESCO (Factual Recency and Evolving Semantic COnflict), a benchmark for evaluating re-rankers in temporally dynamic contexts. By pairing recency-seeking queries with historical Wikipedia revisions, FRESCO tests whether re-rankers can prioritize factually recent evidence while maintaining semantic relevance. Our evaluation reveals a consistent failure mode across existing re-rankers: a strong bias toward older, semantically rich documents, even when they are factually obsolete. We further investigate an instruction optimization framework to mitigate this issue. By identifying Pareto-optimal instructions that balance Evolving and Non-Evolving Knowledge tasks, we obtain gains of up to 27% on Evolving Knowledge tasks while maintaining competitive performance on Non-Evolving Knowledge tasks. 
+
+---
+# TRACE: A Conversational Framework for Sustainable Tourism Recommendation with Agentic Counterfactual Explanations 
+
+**Authors**: Ashmi Banerjee, Adithi Satish, Wolfgang Wörndl, Yashar Deldjoo  
+
+**Link**: [PDF](https://arxiv.org/pdf/2604.14223)  
+
+**Abstract**: Traditional conversational travel recommender systems primarily optimize for user relevance and convenience, often reinforcing popular, overcrowded destinations and carbon-intensive travel choices. To address this, we present TRACE (Tourism Recommendation with Agentic Counterfactual Explanations), a multi-agent, LLM-based framework that promotes sustainable tourism through interactive nudging. TRACE uses a modular orchestrator-worker architecture where specialized agents elicit latent sustainability preferences, construct structured user personas, and generate recommendations that balance relevance with environmental impact.
+A key innovation lies in its use of agentic counterfactual explanations and LLM-driven clarifying questions, which together surface greener alternatives and refine understanding of intent, fostering user reflection without coercion. User studies and semantic alignment analyses demonstrate that TRACE effectively supports sustainable decision-making while preserving recommendation quality and interactive responsiveness. TRACE is implemented on Google's Agent Development Kit, with full code, Docker setup, prompts, and a publicly available demo video to ensure reproducibility.
+A project summary, including all resources, prompts, and demo access, is available at this https URL. 
+
+---
+# Adaptive Query Routing: A Tier-Based Framework for Hybrid Retrieval Across Financial, Legal, and Medical Documents 
+
+**Authors**: Afshan Hashmi  
+
+**Link**: [PDF](https://arxiv.org/pdf/2604.14222)  
+
+**Abstract**: Retrieval-Augmented Generation (RAG) has become the standard paradigm for grounding Large Language Model outputs in external knowledge. Lumer et al. [1] presented the first systematic evaluation comparing vector-based agentic RAG against hierarchical node-based reasoning systems for financial document QA across 1,200 SEC filings, finding vector-based systems achieved a 68% win rate. Concurrently, the PageIndex framework [2] demonstrated 98.7% accuracy on FinanceBench through purely reasoning-based retrieval. This paper extends their work by: (i) implementing and evaluating three retrieval architectures: Vector RAG, Tree Reasoning, and the proposed Adaptive Hybrid Retrieval (AHR) across financial, legal, and medical domains; (ii) introducing a four-tier query complexity benchmark; and (iii) employing GPT-4-powered LLM-as-judge evaluation. Experiments reveal that Tree Reasoning achieves the highest overall score (0.900), but no single paradigm dominates across all tiers: Vector RAG wins on multi-document synthesis (Tier 4, score 0.900), while the Hybrid AHR achieves the best performance on cross-reference (0.850) and multi-section queries (0.929). Cross-reference recall reaches 100% for tree-based and hybrid approaches versus 91.7% for vector search, quantifying a critical capability gap. Validation on FinanceBench (150 expert-annotated questions on real SEC 10-K and 10-Q filings) confirms and strengthens these findings: Tree Reasoning scores 0.938, Hybrid AHR 0.901, and Vector RAG 0.821, with the Tree--Vector quality gap widening to 11.7 percentage points on real-world documents. These findings support the development of adaptive retrieval systems that dynamically select strategies based on query complexity and document structure. All code and data are publicly available. 
+
+---
+# Knowledge Graph RAG: Agentic Crawling and Graph Construction in Enterprise Documents 
+
+**Authors**: Koushik Chakraborty, Koyel Guha  
+
+**Link**: [PDF](https://arxiv.org/pdf/2604.14220)  
+
+**Abstract**: This research paper addresses the limitations of semantic search in complex enterprise document ecosystems. Traditional RAG pipelines often fail to capture hierarchical and interconnected information, leading to retrieval inaccuracies. We propose Agentic Knowledge Graphs featuring Recursive Crawling as a robust solution for navigating superseding logic and multi-hop references. Our benchmark evaluation using the Code of Federal Regulations (CFR) demonstrates that this Knowledge Graph-enhanced approach achieves a 70% accuracy improvement over standard vector-based RAG systems, providing exhaustive and precise answers for complex regulatory queries. 
+
+---
+# PriHA: A RAG-Enhanced LLM Framework for Primary Healthcare Assistant in Hong Kong 
+
+**Authors**: Richard Wai Cheung Chan, Shanru Lin, Ya-nan Ma, Hao Chen, Liangjun Jiang, Wenqi Fan  
+
+**Link**: [PDF](https://arxiv.org/pdf/2604.14215)  
+
+**Abstract**: To address the unsustainable rise in public health expenditures, the Hong Kong SAR Government is shifting its strategic focus to primary healthcare and encouraging citizens to use community resources to self-manage their health. However, official clinical guidelines are fragmented across disparate departments and formats, creating significant access barriers. While general-purpose Large Language Models (LLMs) such as ChatGPT and DeepSeek offer potential solutions for information accessibility, they are prone to generating factually inaccurate content due to a lack of localized and domain-specific knowledge. To this end, we propose a Retrieval-Augmented Generation-Enhanced LLM system as Primary Healthcare Assistant (PriHA) in Hong Kong. Specifically, a tri-stage pipeline is proposed that leverages a query optimizer to generalize user intent-oriented sub-queries, followed by a novel Dual Retrieval Augmented Generation (DRAG) architecture for mixed-source retrieval and context-reorganized generation. Comprehensive experiments and a detailed case study demonstrate that our proposed method can outperform both ablations and baseline in terms of accuracy and clarity. Our research provides a reliable and traceable dialogue retrieval framework for exploring other high-risk, localized application scenarios. 
+
+---
+# IG-Search: Step-Level Information Gain Rewards for Search-Augmented Reasoning 
+
+**Authors**: Zihan Liang, Yufei Ma, Ben Chen, Zhipeng Qian, Huangyu Dai, Lingtao Mao, Xuxin Zhang, Chenyi Lei, Wenwu Ou  
+
+**Link**: [PDF](https://arxiv.org/pdf/2604.15148)  
+
+**Abstract**: Reinforcement learning has emerged as an effective paradigm for training large language models to perform search-augmented reasoning. However, existing approaches rely on trajectory-level rewards that cannot distinguish precise search queries from vague or redundant ones within a rollout group, and collapse to a near-zero gradient signal whenever every sampled trajectory fails. In this paper, we propose IG-Search, a reinforcement learning framework that introduces a step-level reward based on Information Gain (IG). For each search step, IG measures how much the retrieved documents improve the model's confidence in the gold answer relative to a counterfactual baseline of random documents, thereby reflecting the effectiveness of the underlying search query. This signal is fed back to the corresponding search-query tokens via per-token advantage modulation in GRPO, enabling fine-grained, step-level credit assignment within a rollout. Unlike prior step-level methods that require either externally annotated intermediate supervision or shared environment states across trajectories, IG-Search derives its signals from the policy's own generation probabilities, requiring no intermediate annotations beyond standard question-answer pairs. Experiments on seven single-hop and multi-hop QA benchmarks demonstrate that IG-Search achieves an average EM of 0.430 with Qwen2.5-3B, outperforming the strongest trajectory-level baseline (MR-Search) by 1.6 points and the step-level method GiGPO by 0.9 points on average across benchmarks, with particularly pronounced gains on multi-hop reasoning tasks. Despite introducing a dense step-level signal, IG-Search adds only ~6.4% to per-step training wall-clock time over the trajectory-level baseline and leaves inference latency unchanged, while still providing a meaningful gradient signal even when every sampled trajectory answers incorrectly. 
+
+---
+# APEX-MEM: Agentic Semi-Structured Memory with Temporal Reasoning for Long-Term Conversational AI 
+
+**Authors**: Pratyay Banerjee, Masud Moshtaghi, Shivashankar Subramanian, Amita Misra, Ankit Chadha  
+
+**Link**: [PDF](https://arxiv.org/pdf/2604.14362)  
+
+**Abstract**: Large language models still struggle with reliable long-term conversational memory: simply enlarging context windows or applying naive retrieval often introduces noise and destabilizes responses. We present APEX-MEM, a conversational memory system that combines three key innovations: (1) a property graph which uses domain-agnostic ontology to structure conversations as temporally grounded events in an entity-centric framework, (2) append-only storage that preserves the full temporal evolution of information, and (3) a multi-tool retrieval agent that understands and resolves conflicting or evolving information at query time, producing a compact and contextually relevant memory summary. This retrieval-time resolution preserves the full interaction history while suppressing irrelevant details. APEX-MEM achieves 88.88% accuracy on LOCOMO's Question Answering task and 86.2% on LongMemEval, outperforming state-of-the-art session-aware approaches and demonstrating that structured property graphs enable more temporally coherent long-term conversational reasoning. 
+
+---
