@@ -1,0 +1,135 @@
+# Bilevel Optimization of Agent Skills via Monte Carlo Tree Search 
+
+**Authors**: Chenyi Huang, Haoting Zhang, Jingxu Xu, Zeyu Zheng, Yunduan Lin  
+
+**Link**: [PDF](https://arxiv.org/pdf/2604.15709)  
+
+**Abstract**: Agent \texttt{skills} are structured collections of instructions, tools, and supporting resources that help large language model (LLM) agents perform particular classes of tasks. Empirical evidence shows that the design of \texttt{skills} can materially affect agent task performance, yet systematically optimizing \texttt{skills} remains challenging. Since a \texttt{skill} comprises instructions, tools, and supporting resources in a structured way, optimizing it requires jointly determining both the structure of these components and the content each component contains. This gives rise to a complex decision space with strong interdependence across structure and components. We therefore represent these two coupled decisions as \texttt{skill} structure and component content, and formulate \texttt{skill} optimization as a bilevel optimization problem. We propose a bilevel optimization framework in which an outer loop employs Monte Carlo Tree Search to determine the \texttt{skill} structure, while an inner loop refines the component content within the structure selected by the outer loop. In both loops, we employ LLMs to assist the optimization procedure. We evaluate the proposed framework on an open-source Operations Research Question Answering dataset, and the experimental results suggest that the bilevel optimization framework improves the performance of the agents with the optimized \texttt{skill}. 
+
+---
+# Beyond Distribution Sharpening: The Importance of Task Rewards 
+
+**Authors**: Sarthak Mittal, Leo Gagnon, Guillaume Lajoie  
+
+**Link**: [PDF](https://arxiv.org/pdf/2604.16259)  
+
+**Abstract**: Frontier models have demonstrated exceptional capabilities following the integration of task-reward-based reinforcement learning (RL) into their training pipelines, enabling systems to evolve from pure reasoning models into sophisticated agents. However, debate persists regarding whether RL genuinely instills new skills within a base model or merely sharpens its existing distribution to elicit latent capabilities. To address this dichotomy, we present an explicit comparison between distribution sharpening and task-reward-based learning, utilizing RL as a tool to implement both paradigms. Our analysis reveals the inherent limitations of distribution sharpening, demonstrating from first principles how and why the optima can be unfavorable and the approach fundamentally unstable. Furthermore, our experiments using Llama-3.2-3B-Instruct, Qwen2.5-3B-Instruct and Qwen3-4B-Instruct-2507 on math datasets confirm that sharpening yields limited gains, whereas incorporating task-based reward signal can greatly help achieve robust performance improvements and stable learning. 
+
+---
+# AtManRL: Towards Faithful Reasoning via Differentiable Attention Saliency 
+
+**Authors**: Max Henning Höth, Kristian Kersting, Björn Deiseroth, Letitia Parcalabescu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2604.16158)  
+
+**Abstract**: Large language models (LLMs) increasingly rely on chain-of-thought (CoT) reasoning to solve complex tasks. Yet ensuring that the reasoning trace both contributes to and faithfully reflects the processes underlying the model's final answer, rather than merely accompanying it, remains challenging. We introduce AtManRL, a method that leverages differentiable attention manipulation to learn more faithful reasoning through reinforcement learning. By training an additive attention mask that identifies tokens in the CoT crucial for producing correct answers, we derive a saliency reward signal that encourages the model to generate reasoning traces that genuinely influence its final predictions. We integrate this saliency reward with outcome-based rewards within the GRPO framework to jointly optimize for correctness and interpretability. Experiments on GSM8K and MMLU with Llama-3.2-3B-Instruct demonstrate that our approach can identify influential reasoning tokens and enable training more transparent reasoning models. 
+
+---
+# Where does output diversity collapse in post-training? 
+
+**Authors**: Constantinos Karouzos, Xingwei Tan, Nikolaos Aletras  
+
+**Link**: [PDF](https://arxiv.org/pdf/2604.16027)  
+
+**Abstract**: Post-trained language models produce less varied outputs than their base counterparts. This output diversity collapse undermines inference-time scaling methods that rely on varied samples, and risks homogenizing model outputs on creative and value-laden tasks. Prior work attributes collapse to specific post-training methods, without separating the role of training data composition from the method, or the generation format from the model weights. We trace output diversity through three parallel post-training lineages of Olmo 3, Think (chain-of-thought distillation), Instruct (broad multi-source data), and RL-Zero, across 15 tasks and four text diversity metrics. We find that the location of collapse co-varies with data composition: the Think lineage loses most semantic diversity at supervised fine-tuning, and the effect of DPO is larger in Instruct than in Think. Suppressing chain-of-thought reasoning at inference in Think models drops accuracy on hard tasks, yet leaves answer-level diversity unchanged, showing that the collapse is embedded in the model weights by training data, not imposed by the generation format. Decomposing diversity loss on six verifiable tasks into a quality-control component (removal of incorrect outputs) and a residual component (genuine narrowing among correct outputs) reveals that the split is task-dependent, and Think models retain more correct-answer diversity than Instruct despite collapsing more in aggregate. Our results indicate that diversity collapse is determined during training by data composition and cannot be addressed at inference time alone. 
+
+---
+# AgentV-RL: Scaling Reward Modeling with Agentic Verifier 
+
+**Authors**: Jiazheng Zhang, Ziche Fu, Zhiheng Xi, Wenqing Jing, Mingxu Chai, Wei He, Guoqiang Zhang, Chenghao Fan, Chenxin An, Wenxiang Chen, Zhicheng Liu, Haojie Pan, Dingwei Zhu, Tao Gui, Qi Zhang, Xuanjing Huang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2604.16004)  
+
+**Abstract**: Verifiers have been demonstrated to enhance LLM reasoning via test-time scaling (TTS). Yet, they face significant challenges in complex domains. Error propagation from incorrect intermediate reasoning can lead to false positives for seemingly plausible solutions, while lacking external grounding makes verifiers unreliable on computation or knowledge-intensive tasks. To address these challenges, we propose Agentic Verifier, a framework that transforms reward modeling into a multi-turn, tool-augmented deliberative process. We introduce complementary forward and backward agents: one traces solutions from premises to conclusions, while the other re-checks conclusions against their underlying premises. This bidirectional process enables a comprehensive, reliable, and interpretable assessment of solutions. To facilitate practical deployment, we propose AgentV-RL. Through proactive exploration and reinforcement learning, the verifier autonomously interleaves tool-use with internal reasoning. Extensive experiments show that Agentic Verifier yields consistent performance gains under both parallel and sequential TTS. Notably, our 4B variant surpasses state-of-the-art ORMs by 25.2%, positioning it as a promising paradigm for agentic reward modeling. 
+
+---
+# Reward Weighted Classifier-Free Guidance as Policy Improvement in Autoregressive Models 
+
+**Authors**: Alexander Peysakhovich, William Berman  
+
+**Link**: [PDF](https://arxiv.org/pdf/2604.15577)  
+
+**Abstract**: Consider an auto-regressive model that produces outputs x (e.g., answers to questions, molecules) each of which can be summarized by an attribute vector y (e.g., helpfulness vs. harmlessness, or bio-availability vs. lipophilicity). An arbitrary reward function r(y) encodes tradeoffs between these properties. Typically, tilting the model's sampling distribution to increase this reward is done at training time via reinforcement learning. However, if the reward function changes, re-alignment requires re-training. In this paper, we show that a reward weighted classifier-free guidance (RCFG) can act as a policy improvement operator in this setting, approximating tilting the sampling distribution by the Q function. We apply RCFG to molecular generation, demonstrating that it can optimize novel reward functions at test time. Finally, we show that using RCFG as a teacher and distilling into the base policy to serve as a warm start significantly speeds up convergence for standard RL. 
+
+---
+# "Excuse me, may I say something..." CoLabScience, A Proactive AI Assistant for Biomedical Discovery and LLM-Expert Collaborations 
+
+**Authors**: Yang Wu, Jinhong Yu, Jingwei Xiong, Zhimin Tao, Xiaozhong Liu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2604.15588)  
+
+**Abstract**: The integration of Large Language Models (LLMs) into scientific workflows presents exciting opportunities to accelerate biomedical discovery. However, the reactive nature of LLMs, which respond only when prompted, limits their effectiveness in collaborative settings that demand foresight and autonomous engagement. In this study, we introduce CoLabScience, a proactive LLM assistant designed to enhance biomedical collaboration between AI systems and human experts through timely, context-aware interventions. At the core of our method is PULI (Positive-Unlabeled Learning-to-Intervene), a novel framework trained with a reinforcement learning objective to determine when and how to intervene in streaming scientific discussions, by leveraging the team's project proposal and long- and short-term conversational memory. To support this work, we introduce BSDD (Biomedical Streaming Dialogue Dataset), a new benchmark of simulated research discussion dialogues with intervention points derived from PubMed articles. Experimental results show that PULI significantly outperforms existing baselines in both intervention precision and collaborative task utility, highlighting the potential of proactive LLMs as intelligent scientific assistants. 
+
+---
+# Harmonizing Multi-Objective LLM Unlearning via Unified Domain Representation and Bidirectional Logit Distillation 
+
+**Authors**: Yisheng Zhong, Sijia Liu, Zhuangdi Zhu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2604.15482)  
+
+**Abstract**: Large Language Models (LLMs) unlearning is crucial for removing hazardous or privacy-leaking information from the model. Practical LLM unlearning demands satisfying multiple challenging objectives simultaneously: removing undesirable knowledge, preserving general utility, avoiding over-refusal of neighboring concepts, and, crucially, ensuring robustness against adversarial probing attacks. However, existing unlearning methods primarily focus on a limited subset of these goals, typically unlearning efficacy and utility preservation while overlooking robustness and boundary behaviors. Naively extending these methods to multi-objective settings may lead to unlearning task interference. We propose a novel multi-objective unlearning framework that harmonizes multiple unlearning objectives through a data and optimization co-design: We standardize training corpora into a unified data representation to reduce the domain gap, and then introduce a bidirectional distillation method that simultaneously elicits desired behavior from a context-instructed teacher while suppressing undesirable behavior in the student model. Theoretical and empirical analyses show that our method aligns domain distributions and converts seemingly irrelevant unlearning tasks into cooperative optimization. Evaluation demonstrates state-of-the-art performance, which enables balanced and reliable unlearning across diverse, challenging requirements. 
+
+---
+# On the Rejection Criterion for Proxy-based Test-time Alignment 
+
+**Authors**: Ayoub Hammal, Pierre Zweigenbaum, Caio Corro  
+
+**Link**: [PDF](https://arxiv.org/pdf/2604.16146)  
+
+**Abstract**: Recent works proposed test-time alignment methods that rely on a small aligned model as a proxy that guides the generation of a larger base (unaligned) model. The implicit reward approach skews the large model distribution, whereas the nudging approach defers the generation of the next token to the small aligned model when the large base one is unconfident about its outcome. In this work, we first show that both approaches can be reduced to sampling from similar graphical models, where they differ only in the definition of a rejection criterion (or distribution). Moreover, we argue that the confidence criterion is ill-motivated due to linguistic phenomena like ambiguous phrasing. We propose a novel rejection criterion based on a conservative confidence bet. Experimentally, our novel approach outperforms previous work on several datasets. 
+
+---
+# CiPO: Counterfactual Unlearning for Large Reasoning Models through Iterative Preference Optimization 
+
+**Authors**: Junyi Li, Yongqiang Chen, Ningning Ding  
+
+**Link**: [PDF](https://arxiv.org/pdf/2604.15847)  
+
+**Abstract**: Machine unlearning has gained increasing attention in recent years, as a promising technique to selectively remove unwanted privacy or copyrighted information from Large Language Models that are trained on a massive scale of human data. However, the emergence of Large Reasoning Models (LRMs), which emphasize long chain-of-thought (CoT) reasoning to address complex questions, presents a dilemma to unlearning: existing methods either struggle to completely eliminate undesired knowledge from the CoT traces or degrade the reasoning performances due to the interference with the reasoning process. To this end, we introduce Counterfactual Unlearning through iterative Preference Optimization (CiPO), a novel framework that redefines unlearning as the targeted intervention of the CoT reasoning in LRMs. More specifically, given a desired unlearning target answer, CiPO instructs LRMs to generate a logically valid counterfactual reasoning trace for preference tuning. As the LRM adjusts to the counterfactual trace, CiPO iteratively updates the preference learning data to increase the discrepancy from the original model. This iterative loop ensures both desirable unlearning and smooth optimization, effectively mitigating the dilemma. Experiments on challenging benchmarks demonstrate that CiPO excels at unlearning, completely removing knowledge from both the intermediate CoT steps and the final answer, while preserving the reasoning abilities of LRMs. 
+
+---
+# CoEvolve: Training LLM Agents via Agent-Data Mutual Evolution 
+
+**Authors**: Shidong Yang, Ziyu Ma, Tongwen Huang, Yiming Hu, Yong Wang, Xiangxiang Chu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2604.15840)  
+
+**Abstract**: Reinforcement learning for LLM agents is typically conducted on a static data distribution, which fails to adapt to the agent's evolving behavior and leads to poor coverage of complex environment interactions. To address these challenges, we propose CoEvolve, an agent-data mutual evolution framework that enables LLM agents to improve through closed-loop, interaction-driven training. Specifically, CoEvolve extracts feedback signals such as forgetting and uncertainty from rollout trajectories to identify failure-prone interaction patterns, and utilizes them to guide LLM-based task synthesis. The synthesized tasks are validated through environment interaction and utilized to update the data distribution, enabling joint adaptation of the agent and its data. Extensive experiments on AppWorld and BFCL across Qwen2.5-7B, Qwen3-4B, and Qwen3-30B-A3B demonstrate consistent and significant improvements over strong base models, yielding absolute gains of 19.43%, 15.58%, and 18.14%, respectively. 
+
+---
+# Improving Reasoning Capabilities in Small Models through Mixture-of-Layers Distillation with Stepwise Attention on Key Information 
+
+**Authors**: Yao Chen, Jiawei Sheng, Wenyuan Zhang, Tingwen Liu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2604.15701)  
+
+**Abstract**: The significant computational demands of large language models have increased interest in distilling reasoning abilities into smaller models via Chain-of-Thought (CoT) distillation. Current CoT distillation methods mainly focus on transferring teacher-generated rationales for complex reasoning to student models. However, they do not adequately explore teachers' dynamic attention toward critical information during reasoning. We find that language models exhibit progressive attention shifts towards key information during reasoning, which implies essential clues for drawing conclusions. Building on this observation and analysis, we introduce a novel CoT distillation framework that transfers the teacher's stepwise attention on key information to the student model. This establishes structured guidance for the student's progressive concentration on key information during reasoning. More importantly, we develop a Mixture of Layers module enabling dynamic alignment that adapts to different layers between the teacher and student. Our method achieves consistent performance improvements across multiple mathematical and commonsense reasoning datasets. To our knowledge, it is the first method to leverage stepwise attention within CoT distillation to improve small model reasoning. 
+
+---
+# GroupDPO: Memory efficient Group-wise Direct Preference Optimization 
+
+**Authors**: Jixuan Leng, Si Si, Hsiang-Fu Yu, Vinod Raman, Inderjit S. Dhillon  
+
+**Link**: [PDF](https://arxiv.org/pdf/2604.15602)  
+
+**Abstract**: Preference optimization is widely used to align Large Language Models (LLMs) with preference feedback. However, most existing methods train on a single positive-negative pair per prompt, discarding additional supervision available in preference datasets that typically contain multiple candidate responses. Motivated by this limitation, recent work explores group-wise preference optimization, which jointly contrasts multiple responses for the same prompt, but its empirical behavior and scalability remain underexplored due to the memory overhead of group-coupled objectives. In this work, we introduce a memory-efficient group-wise preference optimization algorithm that preserves gradients while decoupling samples during backpropagation, substantially reducing peak memory usage, which enables scalable training with larger group sizes. Across both offline and online alignment settings, we show that leveraging multiple responses consistently outperforms single-pair training. Furthermore, incorporating a negative log-likelihood (NLL) term on positive responses is critical for both performance gains and training stability. 
+
+---
+# Detecting and Suppressing Reward Hacking with Gradient Fingerprints 
+
+**Authors**: Songtao Wang, Quang Hieu Pham, Fangcong Yin, Xinpeng Wang, Jocelyn Qiaochu Chen, Greg Durrett, Xi Ye  
+
+**Link**: [PDF](https://arxiv.org/pdf/2604.16242)  
+
+**Abstract**: Reinforcement learning with verifiable rewards (RLVR) typically optimizes for outcome rewards without imposing constraints on intermediate reasoning. This leaves training susceptible to reward hacking, where models exploit loopholes (e.g., spurious patterns in training data) in the reward function to achieve high scores without solving the intended task. These reward-hacking behaviors are often implicit, as the intermediate chain-of-thought (CoT) may appear plausible on the surface, limiting the effectiveness of purely text-based monitoring. We propose Gradient Fingerprint (GRIFT), a method for detecting reward hacking using models' internal computations. Given a prompt and a model-generated CoT, GRIFT computes gradients of the CoT conditioned on the prompt and compresses them into a compact representation, which is then used to assess whether the CoT reflects reward hacking behavior. Across verifiable reasoning benchmarks spanning math, code, and logical reasoning, GRIFT substantially outperforms strong baselines, including CoT Monitor and TRACE, achieving over 25% relative improvement in detecting reward hacking behavior. Moreover, integrating GRIFT into the rejection fine-tuning pipeline for reasoning tasks reduces reward hacking and improves performance on the true task objective. Our results highlight a promising direction of leveraging gradient level representations for assessing the quality of CoT reasoning traces. Our code is available at: this https URL. 
+
+---
+# Scattered Hypothesis Generation for Open-Ended Event Forecasting 
+
+**Authors**: He Chang, Zhulin Tao, Lifang Yang, Xianglin Huang, Yunshan Ma  
+
+**Link**: [PDF](https://arxiv.org/pdf/2604.15788)  
+
+**Abstract**: Despite the importance of open-ended event forecasting for risk management, current LLM-based methods predominantly target only the most probable outcomes, neglecting the intrinsic uncertainty of real-world events. To bridge this gap, we advance open-ended event forecasting from pinpoint forecasting to scatter forecasting by introducing the proxy task of hypothesis generation. This paradigm aims to generate an inclusive and diverse set of hypotheses that broadly cover the space of plausible future events. To this end, we propose SCATTER, a reinforcement learning framework that jointly optimizes inclusiveness and diversity of the hypothesis. Specifically, we design a novel hybrid reward that consists of three components: 1) a validity reward that measures semantic alignment with observed events, 2) an intra-group diversity reward to encourage variation within sampled responses, and 3) an inter-group diversity reward to promote exploration across distinct modes. By integrating the validity-gated score into the overall objective, we confine the exploration of wildly diversified outcomes to contextually plausible futures, preventing the mode collapse issue. Experiments on two real-world benchmark datasets, i.e., OpenForecast and OpenEP, demonstrate that SCATTER significantly outperforms strong baselines. Our code is available at this https URL. 
+
+---

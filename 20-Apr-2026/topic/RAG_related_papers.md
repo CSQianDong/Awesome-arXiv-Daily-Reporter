@@ -1,0 +1,90 @@
+# MARCH: Multi-Agent Radiology Clinical Hierarchy for CT Report Generation 
+
+**Authors**: Yi Lin, Yihao Ding, Yonghui Wu, Yifan Peng  
+
+**Link**: [PDF](https://arxiv.org/pdf/2604.16175)  
+
+**Abstract**: Automated 3D radiology report generation often suffers from clinical hallucinations and a lack of the iterative verification found in human practice. While recent Vision-Language Models (VLMs) have advanced the field, they typically operate as monolithic "black-box" systems without the collaborative oversight characteristic of clinical workflows. To address these challenges, we propose MARCH (Multi-Agent Radiology Clinical Hierarchy), a multi-agent framework that emulates the professional hierarchy of radiology departments and assigns specialized roles to distinct agents. MARCH utilizes a Resident Agent for initial drafting with multi-scale CT feature extraction, multiple Fellow Agents for retrieval-augmented revision, and an Attending Agent that orchestrates an iterative, stance-based consensus discourse to resolve diagnostic discrepancies. On the RadGenome-ChestCT dataset, MARCH significantly outperforms state-of-the-art baselines in both clinical fidelity and linguistic accuracy. Our work demonstrates that modeling human-like organizational structures enhances the reliability of AI in high-stakes medical domains. 
+
+---
+# Using Large Language Models and Knowledge Graphs to Improve the Interpretability of Machine Learning Models in Manufacturing 
+
+**Authors**: Thomas Bayer, Alexander Lohr, Sarah Weiß, Bernd Michelberger, Wolfram Höpken  
+
+**Link**: [PDF](https://arxiv.org/pdf/2604.16280)  
+
+**Abstract**: Explaining Machine Learning (ML) results in a transparent and user-friendly manner remains a challenging task of Explainable Artificial Intelligence (XAI). In this paper, we present a method to enhance the interpretability of ML models by using a Knowledge Graph (KG). We store domain-specific data along with ML results and their corresponding explanations, establishing a structured connection between domain knowledge and ML insights. To make these insights accessible to users, we designed a selective retrieval method in which relevant triplets are extracted from the KG and processed by a Large Language Model (LLM) to generate user-friendly explanations of ML results. We evaluated our method in a manufacturing environment using the XAI Question Bank. Beyond standard questions, we introduce more complex, tailored questions that highlight the strengths of our approach. We evaluated 33 questions, analyzing responses using quantitative metrics such as accuracy and consistency, as well as qualitative ones such as clarity and usefulness. Our contribution is both theoretical and practical: from a theoretical perspective, we present a novel approach for effectively enabling LLMs to dynamically access a KG in order to improve the explainability of ML results. From a practical perspective, we provide empirical evidence showing that such explanations can be successfully applied in real-world manufacturing environments, supporting better decision-making in manufacturing processes. 
+
+---
+# DeepER-Med: Advancing Deep Evidence-Based Research in Medicine Through Agentic AI 
+
+**Authors**: Zhizheng Wang, Chih-Hsuan Wei, Joey Chan, Robert Leaman, Chi-Ping Day, Chuan Wu, Mark A Knepper, Antolin Serrano Farias, Jordina Rincon-Torroella, Hasan Slika, Betty Tyler, Ryan Huu-Tuan Nguyen, Asmita Indurkar, Mélanie Hébert, Shubo Tian, Lauren He, Noor Naffakh, Aseem Aseem, Nicholas Wan, Emily Y Chew, Tiarnan D L Keenan, Zhiyong Lu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2604.15456)  
+
+**Abstract**: Trustworthiness and transparency are essential for the clinical adoption of artificial intelligence (AI) in healthcare and biomedical research. Recent deep research systems aim to accelerate evidence-grounded scientific discovery by integrating AI agents with multi-hop information retrieval, reasoning, and synthesis. However, most existing systems lack explicit and inspectable criteria for evidence appraisal, creating a risk of compounding errors and making it difficult for researchers and clinicians to assess the reliability of their outputs. In parallel, current benchmarking approaches rarely evaluate performance on complex, real-world medical questions. Here, we introduce DeepER-Med, a Deep Evidence-based Research framework for Medicine with an agentic AI system. DeepER-Med frames deep medical research as an explicit and inspectable workflow of evidence-based generation, consisting of three modules: research planning, agentic collaboration, and evidence synthesis. To support realistic evaluation, we also present DeepER-MedQA, an evidence-grounded dataset comprising 100 expert-level research questions derived from authentic medical research scenarios and curated by a multidisciplinary panel of 11 biomedical experts. Expert manual evaluation demonstrates that DeepER-Med consistently outperforms widely used production-grade platforms across multiple criteria, including the generation of novel scientific insights. We further demonstrate the practical utility of DeepER-Med through eight real-world clinical cases. Human clinician assessment indicates that DeepER-Med's conclusions align with clinical recommendations in seven cases, highlighting its potential for medical research and decision support. 
+
+---
+# ChemGraph-XANES: An Agentic Framework for XANES Simulation and Analysis 
+
+**Authors**: Vitor F. Grizzi, Thang Duc Pham, Luke N. Pretzie, Jiayi Xu, Murat Keceli, Cong Liu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2604.16205)  
+
+**Abstract**: Computational X-ray absorption near-edge structure (XANES) is widely used to probe local coordination environments, oxidation states, and electronic structure in chemically complex systems. However, the use of computational XANES at scale is constrained more by workflow complexity than by the underlying simulation method itself. To address this challenge, we present ChemGraph-XANES, an agentic framework for automated XANES simulation and analysis that unifies natural-language task specification, structure acquisition, FDMNES input generation, task-parallel execution, spectral normalization, and provenance-aware data curation. Built on ASE, FDMNES, Parsl, and a LangGraph/LangChain-based tool interface, the framework exposes XANES workflow operations as typed Python tools that can be orchestrated by large language model (LLM) agents. In multi-agent mode, a retrieval-augmented expert agent consults the FDMNES manual to ground parameter selection, while executor agents translate user requests into structured tool calls. We demonstrate documentation-grounded parameter retrieval and show that the same workflow supports both explicit structure-file inputs and chemistry-level natural-language requests. Because independent XANES calculations are naturally task-parallel, the framework is well suited for high-throughput deployment on high-performance computing (HPC) systems, enabling scalable XANES database generation for downstream analysis and machine-learning applications. ChemGraph-XANES thus provides a reproducible and extensible workflow layer for physics-based XANES simulation, spectral curation, and agent-compatible computational spectroscopy. 
+
+---
+# RAGognizer: Hallucination-Aware Fine-Tuning via Detection Head Integration 
+
+**Authors**: Fabian Ridder, Laurin Lessel, Malte Schilling  
+
+**Link**: [PDF](https://arxiv.org/pdf/2604.15945)  
+
+**Abstract**: Retrieval-Augmented Generation (RAG) is widely used to augment the input to Large Language Models (LLMs) with external information, such as recent or domain-specific knowledge. Nonetheless, current models still produce closed-domain hallucinations and generate content that is unsupported by the retrieved context. Current detection approaches typically treat hallucination as a post-hoc problem, relying on black-box consistency checks or probes over frozen internal representations. In this work, we demonstrate that hallucination detection based on internal state representation can also serve as a direct training signal. We introduce RAGognize, a dataset of naturally occurring closed-domain hallucinations with token-level annotations, and RAGognizer, a hallucination-aware fine-tuning approach that integrates a lightweight detection head into an LLM, allowing for the joint optimization of language modeling and hallucination detection. This joint objective forces the model to improve the separability of its internal states regarding hallucinations while simultaneously learning to generate well-formed and meaningful responses. Across multiple benchmarks, RAGognizer achieves state-of-the-art token-level hallucination detection while substantially reducing hallucination rates during generation, without degrading language quality or relevance. 
+
+---
+# CHOP: Chunkwise Context-Preserving Framework for RAG on Multi Documents 
+
+**Authors**: Hyunseok Park, Jihyeon Kim, Jongeun Kim, Dongsik Yoon  
+
+**Link**: [PDF](https://arxiv.org/pdf/2604.15802)  
+
+**Abstract**: Retrieval-Augmented Generation (RAG) systems lose retrieval accuracy when similar documents coexist in the vector database, causing unnecessary information, hallucinations, and factual errors. To alleviate this issue, we propose CHOP, a framework that iteratively evaluates chunk relevance with Large Language Models (LLMs) and progressively reconstructs documents by determining their association with specific topics or query types. CHOP integrates two key components: the CNM-Extractor, which generates compact per-chunk signatures capturing categories, key nouns, and model names, and the Continuity Decision Module, which preserves contextual coherence by deciding whether consecutive chunks belong to the same document flow. By prefixing each chunk with context-aware metadata, CHOP reduces semantic conflicts among similar documents and enhances retriever discrimination. Experiments on benchmark datasets show that CHOP alleviates retrieval confusion and provides a scalable approach for building high-quality knowledge bases, achieving a Top-1 Hit Rate of 90.77% and notable gains in ranking quality metrics. 
+
+---
+# FD-NL2SQL: Feedback-Driven Clinical NL2SQL that Improves with Use 
+
+**Authors**: Suparno Roy Chowdhury, Tejas Anvekar, Manan Roy Choudhury, Muhammad Ali Khan, Kaneez Zahra Rubab Khakwani, Mohamad Bassam Sonbol, Irbaz Bin Riaz, Vivek Gupta  
+
+**Link**: [PDF](https://arxiv.org/pdf/2604.15646)  
+
+**Abstract**: Clinicians exploring oncology trial repositories often need ad-hoc, multi-constraint queries over biomarkers, endpoints, interventions, and time, yet writing SQL requires schema expertise. We demo FD-NL2SQL, a feedback-driven clinical NL2SQL assistant for SQLite-based oncology databases. Given a natural-language question, a schema-aware LLM decomposes it into predicate-level sub-questions, retrieves semantically similar expert-verified NL2SQL exemplars via sentence embeddings, and synthesizes executable SQL conditioned on the decomposition, retrieved exemplars, and schema, with post-processing validity checks. To improve with use, FD-NL2SQL incorporates two update signals: (i) clinician edits of generated SQL are approved and added to the exemplar bank; and (ii) lightweight logic-based SQL augmentation applies a single atomic mutation (e.g., operator or column change), retaining variants only if they return non-empty results. A second LLM generates the corresponding natural-language question and predicate decomposition for accepted variants, automatically expanding the exemplar bank without additional annotation. The demo interface exposes decomposition, retrieval, synthesis, and execution results to support interactive refinement and continuous improvement. 
+
+---
+# A Case Study on the Impact of Anonymization Along the RAG Pipeline 
+
+**Authors**: Andreea-Elena Bodea, Stephen Meisenbacher, Florian Matthes  
+
+**Link**: [PDF](https://arxiv.org/pdf/2604.15958)  
+
+**Abstract**: Despite the considerable promise of Retrieval-Augmented Generation (RAG), many real-world use cases may create privacy concerns, where the purported utility of RAG-enabled insights comes at the risk of exposing private information to either the LLM or the end user requesting the response. As a potential mitigation, using anonymization techniques to remove personally identifiable information (PII) and other sensitive markers in the underlying data represents a practical and sensible course of action for RAG administrators. Despite a wealth of literature on the topic, no works consider the placement of anonymization along the RAG pipeline, i.e., asking the question, where should anonymization happen? In this case study, we systematically and empirically measure the impact of anonymization at two important points along the RAG pipeline: the dataset and generated answer. We show that differences in privacy-utility trade-offs can be observed depending on where anonymization took place, demonstrating the significance of privacy risk mitigation placement in RAG. 
+
+---
+# Rethinking the Necessity of Adaptive Retrieval-Augmented Generation through the Lens of Adaptive Listwise Ranking 
+
+**Authors**: Jun Feng, Jiahui Tang, Zhicheng He, Hang Lv, Hongchao Gu, Hao Wang, Xuezhi Yang, Shuai Fang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2604.15621)  
+
+**Abstract**: Adaptive Retrieval-Augmented Generation aims to mitigate the interference of extraneous noise by dynamically determining the necessity of retrieving supplementary passages. However, as Large Language Models evolve with increasing robustness to noise, the necessity of adaptive retrieval warrants re-evaluation. In this paper, we rethink this necessity and propose AdaRankLLM, a novel adaptive retrieval framework. To effectively verify the necessity of adaptive listwise reranking, we first develop an adaptive ranker employing a zero-shot prompt with a passage dropout mechanism, and compare its generation outcomes against static fixed-depth retrieval strategies. Furthermore, to endow smaller open-source LLMs with this precise listwise ranking and adaptive filtering capability, we introduce a two-stage progressive distillation paradigm enhanced by data sampling and augmentation techniques. Extensive experiments across three datasets and eight LLMs demonstrate that AdaRankLLM consistently achieves optimal performance in most scenarios with significantly reduced context overhead. Crucially, our analysis reveals a role shift in adaptive retrieval: it functions as a critical noise filter for weaker models to overcome their limitations, while serving as a cost-effective efficiency optimizer for stronger reasoning models. 
+
+---
+# SocialWise: LLM-Agentic Conversation Therapy for Individuals with Autism Spectrum Disorder to Enhance Communication Skills 
+
+**Authors**: Albert Tang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2604.15347)  
+
+**Abstract**: Autism Spectrum Disorder (ASD) affects more than 75 million people worldwide. However, scalable support for practicing everyday conversation is scarce: Low-cost activities such as story reading yield limited improvement. At the same time, effective role-play therapy demands expensive, in-person sessions with specialists. SocialWise bridges this gap through a browser-based application that pairs LLM conversational agents with a therapeutic retrieval augmented generation (RAG) knowledge base. Users select a scenario (e.g., ordering food, joining a group), interact by text or voice, and receive instant, structured feedback on tone, engagement, and alternative phrasing. The SocialWise prototype, implemented with Streamlit, LangChain, and ChromaDB, runs on any computer with internet access, and demonstrates how recent advances in LLM can provide evidence-based, on-demand communication coaching for individuals with ASD. 
+
+---

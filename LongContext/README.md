@@ -2,6 +2,7 @@
 
 | Date | Link | Number of Papers |
 |:----:|:----:|:----------------:|
+| 20-Apr-2026 | [Link](https://github.com/Deriq-Qian-Dong/Awesome-arXiv-Daily-Reporter/blob/main/20-Apr-2026/topic/LongContext_related_papers.md) | 0 |
 | 17-Apr-2026 | [Link](https://github.com/Deriq-Qian-Dong/Awesome-arXiv-Daily-Reporter/blob/main/17-Apr-2026/topic/LongContext_related_papers.md) | 0 |
 | 16-Apr-2026 | [Link](https://github.com/Deriq-Qian-Dong/Awesome-arXiv-Daily-Reporter/blob/main/16-Apr-2026/topic/LongContext_related_papers.md) | 0 |
 | 15-Apr-2026 | [Link](https://github.com/Deriq-Qian-Dong/Awesome-arXiv-Daily-Reporter/blob/main/15-Apr-2026/topic/LongContext_related_papers.md) | 0 |
