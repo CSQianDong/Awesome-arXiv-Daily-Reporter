@@ -1,0 +1,91 @@
+# Thinking Without Words: Efficient Latent Reasoning with Abstract Chain-of-Thought 
+
+**Authors**: Keshav Ramji, Tahira Naseem, Ramón Fernandez Astudillo  
+
+**Link**: [PDF](https://arxiv.org/pdf/2604.22709)  
+
+**Abstract**: While long, explicit chains-of-thought (CoT) have proven effective on complex reasoning tasks, they are costly to generate during inference. Non-verbal reasoning methods have emerged with shorter generation lengths by leveraging continuous representations, yet their performance lags behind verbalized CoT. We propose $\textbf{Abstract Chain-of-Thought}$, a discrete latent reasoning post-training mechanism in which the language model produces a short sequence of tokens from a reserved vocabulary in lieu of a natural language CoT, before generating a response. To make previously unseen ''abstract'' tokens useful, we introduce a policy iteration-style warm-up loop that alternates between (i.) bottlenecking from a verbal CoT via masking and performing supervised fine-tuning, and (ii.) self-distillation by training the model to generate abstract tokens from the prompt alone via constrained decoding with the codebook. After warm-up, we optimize the generation of abstract sequences with warm-started reinforcement learning under constrained decoding. Abstract-CoT achieves up to $11.6\times$ fewer reasoning tokens while demonstrating comparable performance across mathematical reasoning, instruction-following, and multi-hop reasoning, and generalizes across language model families. We also find an emergent power law distribution over the abstract vocabulary, akin to those seen in natural language, that evolves across the training phases. Our findings highlight the potential for post-training latent reasoning mechanisms that enable efficient inference through a learned abstract reasoning language. 
+
+---
+# Learning Evidence Highlighting for Frozen LLMs 
+
+**Authors**: Shaoang Li, Yanhang Shi, Yufei Li, Mingfu Liang, Xiaohan Wei, Yunchen Pu, Fei Tian, Chonglin Sun, Frank Shyu, Luke Simon, Sandeep Pandey, Xi Liu, Jian Li  
+
+**Link**: [PDF](https://arxiv.org/pdf/2604.22565)  
+
+**Abstract**: Large Language Models (LLMs) can reason well, yet often miss decisive evidence when it is buried in long, noisy contexts. We introduce HiLight, an Evidence Emphasis framework that decouples evidence selection from reasoning for frozen LLM solvers. HiLight avoids compressing or rewriting the input, which can discard or distort evidence, by training a lightweight Emphasis Actor to insert minimal highlight tags around pivotal spans in the unaltered context. A frozen Solver then performs downstream reasoning on the emphasized input. We cast highlighting as a weakly supervised decision-making problem and optimize the Actor with reinforcement learning using only the Solver's task reward, requiring no evidence labels and no access to or modification of the Solver. Across sequential recommendation and long-context question answering, HiLight consistently improves performance over strong prompt-based and automated prompt-optimization baselines. The learned emphasis policy transfers zero-shot to both smaller and larger unseen Solver families, including an API-based Solver, suggesting that the Actor captures genuine, reusable evidence structure rather than overfitting to a single backbone. 
+
+---
+# Controllable Spoken Dialogue Generation: An LLM-Driven Grading System for K-12 Non-Native English Learners 
+
+**Authors**: Haidong Yuan, Haokun Zhao, Wanshi Xu, Songjun Cao, Qingyu Zhou, Long Ma, Hongjie Fan  
+
+**Link**: [PDF](https://arxiv.org/pdf/2604.22542)  
+
+**Abstract**: Large language models (LLMs) often fail to meet the pedagogical needs of K-12 English learners in non-native contexts due to a proficiency mismatch. To address this widespread challenge, we introduce a proficiency-aligned framework that adapts LLM outputs to learner abilities, using China's national curriculum (CSE) as a representative case. Our framework enables precise control over lexical complexity through a four-tier grading system, supported by a comprehensive suite of new resources: graded vocabulary lists and a multi-turn dialogue corpus.
+Our core technical contribution is the \textbf{DDPO} algorithm,Diversity Driven Policy Optimization, a multi-turn GRPO-based approach designed to preserve dialogue diversity while holistically optimizing dialogue quality. This method significantly outperforms conventional approaches, achieving low out-of-vocabulary rates and high diversity while enhancing conversational naturalness and pedagogical value. While grounded in the CSE, our framework is designed for flexibility and can be readily adapted to other educational standards. Our models, data, and code will all be open-sourced, providing a scalable platform for personalized English speaking practice that effectively addresses the unique challenges faced by K-12 learners in non-immersive environments. 
+
+---
+# Measuring and Mitigating Persona Distortions from AI Writing Assistance 
+
+**Authors**: Paul Röttger, Kobi Hackenburg, Hannah Rose Kirk, Christopher Summerfield  
+
+**Link**: [PDF](https://arxiv.org/pdf/2604.22503)  
+
+**Abstract**: Hundreds of millions of people use artificial intelligence (AI) for writing assistance. Here, we evaluated how AI writing assistance distorts writer personas - their perceived beliefs, personality, and identity. In three large-scale experiments, writers (N=2,939) wrote political opinion paragraphs with and without AI assistance. Separate groups of readers (N=11,091) blindly evaluated these paragraphs across 29 socially salient dimensions of reader perception, spanning political opinion, writing quality, writer personality, emotions, and demographics. AI writing assistance produced persona distortions across all dimensions: with AI, writers seemed more opinionated, competent, and positive, and their perceived demographic profile shifted towards more privileged groups. Writers objected to many of the observed distortions, yet continued to prefer AI-assisted text even when made aware of them. We successfully mitigated objectionable persona distortions at the model level by training reward models on our experimental data (10,008 paragraphs, 2,903,596 ratings) to steer AI outputs towards faithful representation of writer stance. However, this came at a cost to user acceptance, suggesting an entanglement between desirable and undesirable properties of AI writing assistance that may be difficult to resolve. Together, our findings demonstrate that persona distortions from AI writing assistance are pervasive and persistent even under realistic conditions of human oversight, which carries implications for public discourse, trust, and democratic deliberation that scale with AI adoption. 
+
+---
+# Outcome Rewards Do Not Guarantee Verifiable or Causally Important Reasoning 
+
+**Authors**: Qinan Yu, Alexa Tartaglini, Peter Hase, Carlos Guestrin, Christopher Potts  
+
+**Link**: [PDF](https://arxiv.org/pdf/2604.22074)  
+
+**Abstract**: Reinforcement Learning from Verifiable Rewards (RLVR) on chain-of-thought reasoning has become a standard part of language model post-training recipes. A common assumption is that the reasoning chains trained through RLVR reliably represent how a model gets to its answer. In this paper, we develop two metrics for critically examining this assumption: Causal Importance of Reasoning (CIR), which measures the cumulative effect of reasoning tokens on the final answer, and Sufficiency of Reasoning (SR), which measures whether a verifier can arrive at an unambiguous answer based on the reasoning alone. Through experiments with the Qwen2.5 model series and ReasoningGym tasks, we find that: (1) while RLVR does improve task accuracy, it does not reliably improve CIR or SR, calling the role of reasoning in model performance into question; (2) a small amount of SFT before RLVR can be a remedy for low CIR and SR; and (3) CIR and SR can be improved even without SFT by applying auxiliary CIR/SR rewards on top of the outcome-based reward. This joint reward matches the accuracy of RLVR while also leading to causally important and sufficient reasoning. These results show that RLVR does not always lead models to rely on reasoning in the way that is commonly thought, but this issue can be remedied with simple modifications to the post-training procedure. 
+
+---
+# Incentivizing Neuro-symbolic Language-based Reasoning in VLMs via Reinforcement Learning 
+
+**Authors**: Karthic Palaniappan  
+
+**Link**: [PDF](https://arxiv.org/pdf/2604.22062)  
+
+**Abstract**: There are 7,407 languages in the world. But, what about the languages that are not there in the world? Are humans so narrow minded that we don't care about the languages aliens communicate in? Aliens are humans too! In the 2016 movie Arrival, Amy Adams plays a linguist, Dr. Louise Banks who, by learning to think in an alien language (Heptapod) formed of non-sequential sentences, gains the ability to transcend time and look into the future. In this work, I aim to explore the representation and reasoning of vision-language concepts in a neuro-symbolic language, and study improvement in analytical reasoning abilities and efficiency of "thinking systems". With Qwen3-VL-2B-Instruct as base model and 4 $\times$ Nvidia H200 GPU nodes, I achieve an accuracy improvement of 3.33\% on a vision-language evaluation dataset consisting of math, science, and general knowledge questions, while reducing the reasoning tokens by 75\% over SymPy. I've documented the compute challenges faced, scaling possibilities, and the future work to improve thinking in a neuro-symbolic language in vision-language models. The training and inference setup can be found here: this https URL. 
+
+---
+# SOLAR-RL: Semi-Online Long-horizon Assignment Reinforcement Learning 
+
+**Authors**: Jichao Wang, Liuyang Bian, Yufeng Zhou, Han Xiao, Yue Pan, Guozhi Wang, Hao Wang, Zhaoxiong Wang, Yafei Wen, Xiaoxin Chen, Shuai Ren, Lingfang Zeng  
+
+**Link**: [PDF](https://arxiv.org/pdf/2604.22558)  
+
+**Abstract**: As Multimodal Large Language Models (MLLMs) mature, GUI agents are evolving from static interactions to complex navigation. While Reinforcement Learning (RL) has emerged as a promising paradigm for training MLLM agents on dynamic GUI tasks, its effective application faces a dilemma. Standard Offline RL often relies on static step-level data, neglecting global trajectory semantics such as task completion and execution quality. Conversely, Online RL captures the long-term dynamics but suffers from high interaction costs and potential environmental instability. To bridge this gap, we propose SOLAR-RL (Semi-Online Long-horizon Assignment Reinforcement Learning). Instead of relying solely on expensive online interactions, our framework integrates global trajectory insights directly into the offline learning process. Specifically, we reconstruct diverse rollout candidates from static data, detect the first failure point using per-step validity signals, and retroactively assign dense step-level rewards with target-aligned shaping to reflect trajectory-level execution quality, effectively simulating online feedback without interaction costs. Extensive experiments demonstrate that SOLAR-RL significantly improves long-horizon task completion rates and robustness compared to strong baselines, offering a sample-efficient solution for autonomous GUI navigation. 
+
+---
+# Reliable Self-Harm Risk Screening via Adaptive Multi-Agent LLM Systems 
+
+**Authors**: Meghana Karnam, Ananya Joshi  
+
+**Link**: [PDF](https://arxiv.org/pdf/2604.22154)  
+
+**Abstract**: Emerging AI systems in behavioral health and psychiatry use multi-step or multi-agent LLM pipelines for tasks like assessing self-harm risk and screening for depression. However, common evaluation approaches, like LLM-as-a-judge, do not indicate when a decision is reliable or how errors may accumulate across multiple LLM judgements, limiting their suitability for safety-critical settings. We present a statistical framework for multi-agent pipelines structured as directed acyclic graphs (DAGs) that provides an alternative to heuristic voting with principled, adaptive decision-making. We model each agent as a stochastic categorical decision and introduce (1) tighter agent-level performance confidence bounds, (2) a bandit-based adaptive sampling strategy based on input difficulty, and (3) regret guarantees over the multi-agent system that shows logarithmic error growth when deployed. We evaluate our system on two labeled datasets in behavioral health : the AEGIS 2.0 behavioral health subset (N=161) and a stratified sample of SWMH Reddit posts (N=250). Empirically, our adaptive sampling strategy achieves the lowest false positive rate of any condition across both datasets, 0.095 on AEGIS 2.0 compared to 0.159 for single-agent models, reducing incorrect flagging of safe content by 40\% and still having similar false negative rates across all conditions. These results suggest that principled adaptive sampling offers a meaningful improvement in precision without reducing recall in this setting. 
+
+---
+# Feedback Over Form: Why Execution Feedback Matters More Than Pipeline Topology in 1-3B Code Generation 
+
+**Authors**: Charles Junichi McAndrews  
+
+**Link**: [PDF](https://arxiv.org/pdf/2604.21950)  
+
+**Abstract**: Small language models (1-3B) are practical to run locally, but individually limited on harder code generation tasks. We ask whether composing them into pipelines can recover some of that lost capability. We study code generation pipelines built from 1-3B models with execution feedback, and use a NEAT-inspired evolutionary search to test whether more complex pipeline structure helps beyond a simple refinement loop. We evaluate on HumanEval (164 problems) and sanitized MBPP (427 problems), all with local inference on a single laptop. Self-refinement with execution feedback improves code generation by more than 4 standard deviations on both benchmarks. The gains are narrow in mechanism: refinement fixes many runtime errors (especially NameError and SyntaxError), but rarely fixes logic errors such as AssertionError. Within our tested general-purpose model pool, generator identity mattered less than refiner capability: a 1.5B generator paired with a 3B refiner matched a 3B model doing both roles. Early stopping is essential; without it, every iteration is net-negative. The code-specialized models outperform every general-purpose pipeline configuration, suggesting model specialization matters more than pipeline architecture. Preliminary text-only pipeline experiments without execution feedback did not show gains at this scale. In our constrained search space, evolutionary search mostly rediscovered the same simple generate-execute-refine loop we found manually, with no clearly significant gain from added topology. Single-evaluation fitness inflates results by 5-7 percent, selecting lucky genomes over good ones. On these benchmarks at 1-3B scale, execution feedback mattered more than added pipeline complexity in determining whether composition helped. 
+
+---
+# Objective Shaping with Hard Negatives: Windowed Partial AUC Optimization for RL-based LLM Recommenders 
+
+**Authors**: Wentao Shi, Qifan Wang, Chen Chen, Fei Liu, Dongfang Liu, Xu Liu, Wanli Ma, Junfeng Pan, Linhong Zhu, Fuli Feng  
+
+**Link**: [PDF](https://arxiv.org/pdf/2604.22504)  
+
+**Abstract**: Reinforcement learning (RL) effectively optimizes Large Language Model (LLM)-based recommenders by contrasting positive and negative items. Empirically, training with beam-search negatives consistently outperforms random negatives, yet the mechanism is not well understood. We address this gap by analyzing the induced optimization objective and show that: (i) Under binary reward feedback, optimizing LLM recommenders with Group Relative Policy Optimization (GRPO) is theoretically equivalent to maximizing the Area Under the ROC Curve (AUC), which is often misaligned with Top-$K$ recommendation; and (ii) Replacing random negatives with beam-search negatives reshapes the objective toward partial AUC, improving alignment with Top-$K$ metrics. Motivated by this perspective, we introduce Windowed Partial AUC (WPAUC), which constrains the false positive rate (FPR) to a window [$\alpha,\alpha+d$] to more directly align with Top-$K$ metrics. We further propose an efficient Threshold-Adjusted Windowed reweighting (TAWin) RL method for its optimization, enabling explicit control over the targeted Top-$K$ performance. Experiments on four real-world datasets validate the theory and deliver consistent state-of-the-art performance. 
+
+---
