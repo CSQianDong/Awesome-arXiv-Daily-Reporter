@@ -1,0 +1,72 @@
+# Retrieval and Multi-Hop Reasoning in 1M-Token Context Windows: Evaluating LLMs on Classical Chinese Text 
+
+**Authors**: Eric H. C. Chow  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.02173)  
+
+**Abstract**: We evaluate the long-context retrieval and reasoning capabilities of five frontier large language models with advertised 1M-token context windows on a classical Chinese corpus. Two complementary studies are reported. Test 1 measures single-needle retrieval at 1M tokens of input, with three biographical needles planted at three depths and pairs of real (training-prior-consistent) and altered (training-prior-contradicting) variants to separate genuine in-context retrieval from reliance on memorised training data. Test 2, a follow-up designed to probe whether long-context capability degrades when retrieval requires intermediate reasoning, measures three-hop chain traversal across three context tiers (256K, 512K, and 1M tokens). We find that single-needle retrieval at 1M is essentially solved for the strongest models - Gemini 3.1 Pro, Claude Opus 4.7, and GPT-5.5 each achieve 100% - but that multi-hop performance reveals three distinct decay signatures: a stable regime (Gemini Pro, Claude) maintaining greater than 80% accuracy through 512K with modest degradation at 1M; a late-cliff regime (GPT-5.5, Qwen3.6-plus) collapsing sharply between 512K and 1M; and a smooth-decline regime (DeepSeek V4 Pro) decaying gradually across the entire range. The findings suggest that nominal context-window length is a poor proxy for usable long-context multi-hop capability, and that the sharpest discriminator between current 1M-context flagships is the 512K-to-1M transition. 
+
+---
+# Valley3: Scaling Omni Foundation Models for E-commerce 
+
+**Authors**: Zeyu Chen, Guanghao Zhou, Qixiang Yin, Ziwang Zhao, Huanjin Yao, Pengjiu Xia, Min Yang, Cen Chen, Minghui Qiu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.01278)  
+
+**Abstract**: In this work, we present Valley3, an omni multimodal large language model (MLLM) developed for diverse global e-commerce tasks, with unified understanding and reasoning capabilities across text, images, video, and audio. A key feature of Valley3 is its native multilingual audio capability for e-commerce, developed by extending vision-language models to better support crucial audio-visual tasks, particularly in short-video scenarios. To achieve this, we carefully design a four-stage omni e-commerce continued pre-training pipeline, through which Valley3 progressively acquires audio understanding, cross-modal instruction-following, e-commerce domain knowledge, and long-context reasoning capabilities, ultimately evolving into an omni model for diverse e-commerce scenarios. Then, we further improve Valley3 through post-training to encourage long-chain reasoning with controllable reasoning modes, enabling one non-thinking mode and three distinct levels of thinking, thereby balancing inference efficiency in simple scenarios with deep reasoning for complex applications. Moreover, we equip Valley3 with agentic search capabilities to proactively invoke search tools and acquire task-relevant information for e-commerce deep research tasks. To comprehensively assess the capabilities of Valley3, we construct an omni e-commerce benchmark spanning 6 tasks. Experimental results show that Valley3 consistently outperforms strong baselines on our in-house and open-source e-commerce benchmarks, while remaining competitive on general-domain benchmarks. 
+
+---
+# Stochastic Sparse Attention for Memory-Bound Inference 
+
+**Authors**: Kyle Lee, Corentin Delacour, Kevin Callahan-Coray, Kyle Jiang, Can Yaras, Samet Oymak, Tathagata Srimani, Kerem Y. Camsari  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.01910)  
+
+**Abstract**: Autoregressive decoding becomes bandwidth-limited at long contexts, as generating each token requires reading all $n_k$ key and value vectors from KV cache. We present Stochastic Additive No-mulT Attention (SANTA), a method that sparsifies value-cache access by sampling $S \ll n_k$ indices from the post-softmax distribution and aggregates only those value rows. This yields an unbiased estimator of the post-softmax value aggregation while replacing value-stage multiply-accumulates with gather-and-add. We introduce stratified sampling to design variance-reduced, GPU-friendly variants, demonstrating $1.5\times$ decode-step attention kernel speedup over FlashInfer and FlashDecoding on an NVIDIA RTX 6000 Ada while matching baseline accuracy at 32k-token contexts. Finally, we propose Bernoulli $qK^\mathsf{T}$ sampling as a complementary technique to sparsify the score stage, reducing key-feature access through stochastic ternary queries. Both methods are orthogonal to upstream techniques such as ternary quantization, low-rank projections, and KV-cache compression. Together, they point toward sparse, multiplier-free, and energy-efficient inference. We open-source our kernels at: this https URL 
+
+---
+# SplitZip: Ultra Fast Lossless KV Compression for Disaggregated LLM Serving 
+
+**Authors**: Yipin Guo, Siddharth Joshi  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.01708)  
+
+**Abstract**: Contemporary systems serving large language models (LLMs) have adopted prefill-decode disaggregation to better load-balance between the compute-bound prefill phase and the memory-bound decode phase. Under this design, prefill workers generate a KV cache that must be transferred to decode workers before token generation can begin. With these workers residing on different physical systems, this transfer becomes a significant bottleneck to serving LLMs at scale. This bottleneck gets exacerbated for long-input and agentic workloads, which typically require long inputs. Existing lossless codecs are not well suited to this setting as they primarily target offline weight compression, rely on CPU-side, or use variable-length coding that decompresses fast but compresses too slowly for online use. SplitZip is a GPU-friendly lossless compressor for KV-cache transfer. It exploits redundancy in floating-point exponents of KV activations, encoding the most frequent exponent values with fixed-length codes, and encoding (position, value) pairs and value of rare exponents in an escape stream. An offline calibrated top-16 exponent codebook enables online encoding, while the regular dense path and sparse escape correction make both encoding and decoding efficient on GPUs. On real BF16 activation tensors, SplitZip achieves 613.3 GB/s compression throughput and 2181.8 GB/s decompression throughput, substantially outperforming prior lossless compressors on the latency-critical codec path. End-to-end transfer experiments show up to 1.32$\times$ speedup for BF16 KV-cache transfer, 1.30$\times$ speedup for TTFT and 1.23$\times$ increase on Request Throughput. 
+
+---
+# CLaC at SemEval-2026 Task 6: Response Clarity Detection in Political Discourse 
+
+**Authors**: Nawar Turk, Lucas Miquet-Westphal, Leila Kosseim  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.02170)  
+
+**Abstract**: In this paper, we present our system for SemEval-2026 Task 6 (CLARITY) on response clarity and evasion detection in question-answer pairs from U.S. presidential interviews, comparing fine-tuned encoders with prompt-based LLMs. Our LLM ensemble achieves 80 macro-F1 on the 3-class Task 1 (9th/41) and 59 on the 9-class Task 2 (3rd/33). Across 8 transformer encoders optimized through a four-stage pipeline, partial encoder layer unfreezing outperforms full fine-tuning by a wide margin. Combining English and multilingual encoders further improves ensemble performance over either family alone, despite multilingual models being individually weaker. Prompt-based LLMs, without any task-specific parameter updates, outperform fine-tuned encoders, particularly on minority classes; among open-weight LLMs, parameter count does not predict performance. Enriched input, concatenating the full interviewer turn, improves LLM performance but not that of encoders, an effect that persists with Longformer's extended context window, suggesting the divergence is not attributable to sequence-length capacity alone in our settings. The Clear Reply/Ambivalent boundary remains the dominant failure mode, mirroring the disagreement among human annotators. Our code, prompts, model configurations, and results are publicly available. 
+
+---
+# TCDA: Thread-Constrained Discourse-Aware Modeling for Conversational Sentiment Quadruple Analysis 
+
+**Authors**: Xinran Li, Xinze Che, Yifan Lyu, Zhiqi Huang, Xiujuan Xu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.01717)  
+
+**Abstract**: Conversational Aspect-based Sentiment Quadruple Analysis (DiaASQ) needs to capture the complex interrelationships in multiple rounds of dialogues. Existing methods usually employ simple Graph Convolutional Networks (GCN), which introduce structural noise and fail to consider the temporal sequence of the dialogues, or use standard RoPE, which implicitly captures relative distances in a flat sequence but cannot clearly separate the token-level syntactic order from the utterance-level progression, and may suffer from the Distance Dilution problem. To address these issues, we propose a new framework that combines Thread-Constrained Directed Acyclic Graph (TC-DAG) and Discourse-Aware Rotary Position Embedding (D-RoPE). Specifically, TC-DAG filters out cross-thread noise based on thread constraints, maintains global connectivity through root anchoring, and incorporates the temporal sequence of the dialogues. D-RoPE aligns multi-layer semantics using dual-stream projection and multi-scale frequency signals, captures thread dependencies using tree-like distances, and alleviates the token-level Distance Dilution problem by incorporating utterance-level progressions. Experimental results on two benchmark datasets demonstrate that our framework achieves state-of-the-art performance. 
+
+---
+# GRAVITY: Architecture-Agnostic Structured Anchoring for Long-Horizon Conversational Memory 
+
+**Authors**: Yushi Sun, Bowen Cao, Dong Fang, Lingfeng Su, Wai Lam  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.01688)  
+
+**Abstract**: Long-horizon conversational agents rely on memory systems with increasingly sophisticated retrieval mechanisms. However, retrieved fragments are typically fed to the language model as unstructured text, lacking the relational, temporal, and thematic structures essential for complex reasoning. To bridge this reasoning gap, we introduce GRAVITY (\textbf{G}eneration-time \textbf{R}elational \textbf{A}nchoring \textbf{V}ia \textbf{I}njected \textbf{T}opological Memor\textbf{Y}), a plug-and-play structured memory module. GRAVITY extracts three complementary knowledge representations from raw conversational utterances: entity profiles grounded in relational graphs, temporal event tuples linked into causal traces, and cross-session topic summaries. At generation time, it injects these representations into the host system's prompt as structured anchoring contexts. This approach effectively synthesizes scattered evidence into a coherent, query-relevant context without requiring any architectural modifications to the host model. Extensive evaluations across five diverse memory systems on the LongMemEval and LoCoMo benchmarks demonstrate the efficacy of our approach. On average, GRAVITY improves LLM-judge accuracy by 7.5--10.1%. Gains are inversely correlated with baseline strength: the weakest host improves by 12.2% while the strongest still gains 3.8--5.7%. These findings establish structured context anchoring as a broadly effective, architecture-agnostic augmentation paradigm for long-horizon conversational memory. 
+
+---
+# MedMosaic: A Challenging Large Scale Benchmark of Diverse Medical Audio 
+
+**Authors**: Harshit Rajgarhia, Shuubham Ojha, Asif Shaik, Akhil Pothanapalli, Rachuri Lokesh, Abhishek Mukherji, Prasanna Desikan  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.00969)  
+
+**Abstract**: We present MedMosaic, a medical audio question-answering dataset designed to benchmark language and audio reasoning models under realistic clinical constraints. Medical audio data is difficult to collect due to privacy regulations and high annotation costs arising from domain expertise. Thus, existing benchmarks tend to underrepresent complex medical audio scenarios. To address these challenges, MedMosaic features a diverse range of medical audio types, including condition-related physiological sounds, carefully constructed synthetic voices to mimic speech with artifacts as well as real short and long length clinical conversations to model varying context lengths. The dataset also features a total of 46,701 question-answer pairs, spanning categories such as multiple-choice, sequential multi-turn, and open-ended question-answers, enabling systematic evaluation of multi-hop reasoning and answer generation capabilities. Benchmarking 13 audio and multimodal reasoning models reveals that reasoning remains challenging for all evaluated systems, with substantial performance variation across question types. In particular, even state-of-the-art model like Gemini-2.5-pro can only achieve 68.1% accuracy approximately. These findings underscore persistent limitations in medical reasoning and highlight the need for more robust, domain-specific multimodal reasoning models. 
+
+---
