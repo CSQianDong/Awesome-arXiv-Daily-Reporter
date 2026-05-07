@@ -1,0 +1,55 @@
+# Storage Is Not Memory: A Retrieval-Centered Architecture for Agent Recall 
+
+**Authors**: Joshua Adler, Guy Zehavi  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.04897)  
+
+**Abstract**: Extraction at ingestion is the wrong primitive for agent memory: content discarded before the query is known cannot be recovered at retrieval time. We propose True Memory, a six-layer architecture that shifts the center of the system from a storage schema to a multi-stage retrieval pipeline operating over events preserved verbatim. The full system runs as a single SQLite file on commodity CPU with no external database, vector index, graph store, or GPU. On LoCoMo (1,540 questions across 10 multi-session conversations), True Memory Pro reaches 93.0% accuracy (3-run mean) against 61.4% for Mem0, 65.4% for Supermemory, approximately 71% for Zep, and 94.5% for EverMemOS under a matched gpt-4.1-mini answer model. On LongMemEval (500 questions), True Memory Pro reaches 87.8% (3-run mean). On BEAM-1M (700 questions at the 1-million-token scale), True Memory Pro reaches 76.6% (3-run mean), above the prior published result of 73.9% for Hindsight. A 56-configuration ablation shows a 1.3-percentage-point spread within the top-performing configuration family. 
+
+---
+# Graph-Augmented LLMs for Swiss MP Ideology Prediction 
+
+**Authors**: Yifei Yuan, Luis Salamanca, Sophia Schlosser, Laurence Brandenberger  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.04643)  
+
+**Abstract**: Approximating the ideological position of Members of Parliament (MPs) is a fundamental task in political science, helping researchers understand legislative behavior, party alignment, and policy preferences. While Large Language Models (LLMs) have shown promising results in estimating MPs' ideological stances, there are more actors and elements in the parliamentary system, and relations between them, that could provide a wider and more informative picture. However, due to the complexity of integrating them in the prediction task, these additional elements are generally ignored. In this work, we propose an LLM framework, PG-RAG, that implements a retrieval-augmented generation pipeline: it first queries a political knowledge graph (KG) and then integrates the resulting graph-structured information into the context. This allows for capturing both textual semantics and inter-MP relationships, another relevant information source in any parliamentary system. We evaluate the approach on the task of ideology prediction, using data from a Swiss parliamentary dataset. When comparing graph-augmented models against several state-of-the-art baselines, the results demonstrate that incorporating this enriched information, which encodes information about different entities and relations, improves prediction performance. These results help to highlight the value of domain-specific relational information in modeling political behavior. 
+
+---
+# DoGMaTiQ: Automated Generation of Question-and-Answer Nuggets for Report Evaluation 
+
+**Authors**: Bryan Li, William Walden, Yu Hou, Gabrielle Kaili-May Liu, Dawn Lawrie, Jame Mayfield, Eugene Yang, Chris Callison-Burch, Laura Dietz  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.04458)  
+
+**Abstract**: Evaluation of long-form, citation-backed reports has lately received significant attention due to the wide-scale adoption of retrieval-augmented generation (RAG) systems. Core to many evaluation frameworks is the use of atomic facts, or nuggets, to assess a report's coverage of query-relevant information attested in the underlying collection. While nuggets have traditionally been represented as short statements, recent work has used question-answer (QA) representations, enabling fine-grained evaluations that decouple the information need (i.e. the question) from the potentially diverse content that satisfies it (i.e. its answers).
+A persistent challenge for nugget-based evaluation is the need to manually curate sets of nuggets for each topic in a test collection -- a laborious process that scales poorly to novel information needs. This challenge is acute in cross-lingual settings, where information is found in multilingual source documents. Accordingly, we introduce DoGMaTiQ, a pipeline for generating high-quality QA-based nugget sets in three stages: (1) document-grounded nugget generation, (2) paraphrase clustering, and (3) nugget subselection based on principled quality criteria. We integrate DoGMaTiQ nuggets with AutoArgue -- a recent nugget-based evaluation framework -- to enable fully automatic evaluation of generated reports. We conduct extensive experiments on two cross-lingual TREC shared tasks, NeuCLIR and RAGTIME, showing strong rank correlations with both human-in-the-loop and fully manual judgments. Finally, detailed analysis of our pipeline reveals that a strong LLM nugget generator is key, and that the system rankings induced by DoGMaTiQ are robust to outlier systems. We facilitate future research in report evaluation by publicly releasing our code and artifacts at this https URL. 
+
+---
+# CAR: Query-Guided Confidence-Aware Reranking for Retrieval-Augmented Generation 
+
+**Authors**: Zhipeng Song, Yizhi Zhou, Xiangyu Kong, Jiulong Jiao, Xuezhou Ye, Chunqi Gao, Xueqing Shi, Yuhang Zhou, Heng Qi  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.04495)  
+
+**Abstract**: Retrieval-Augmented Generation (RAG) depends on document ranking to provide useful evidence for generation, but conventional reranking methods mainly optimize query-document relevance rather than generation usefulness. A relevant document may still introduce noise, while a lower-ranked document may better reduce the generator's uncertainty. We propose CAR (Confidence-Aware Reranking), a query-guided, training-free, and plug-and-play reranking framework that uses generator confidence change as a document usefulness signal. CAR estimates confidence through the semantic consistency of multiple sampled answers under query-only and query-document conditions. Documents that significantly increase confidence are promoted, those that decrease confidence are demoted, and uncertain cases preserve the baseline order, while a query-level gate avoids unnecessary intervention on already confident queries. Experiments on four BEIR datasets show that CAR consistently improves NDCG@5 across sparse and dense retrievers, LLM-based and supervised rerankers, and four LLM backbones. Notably, CAR improves the YesNo reranker by 25.4 percent on average under Contriever retrieval, and its ranking gains strongly correlate with downstream generation F1 improvements, achieving Spearman rho = 0.964. 
+
+---
+# Curated AI beats frontier LLMs at pharma asset discovery 
+
+**Authors**: Łukasz Kidziński, Kevin Thomas  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.04908)  
+
+**Abstract**: General-purpose LLMs with web search are increasingly used to scout the competitive landscape of pharmaceutical pipelines. We benchmark Gosset -- an AI platform with a chat interface backed by curated target-, modality-, and indication-level drug-asset annotations -- against four frontier systems with web access (Claude Opus 4.7, GPT 5.5, Gemini 3.1 Pro, Perplexity sonar-pro) on ten niche oncology/immunology targets where most of the pipeline lives in the long tail of preclinical and Asian-developed assets. All five systems receive the same natural-language query and the same JSON output schema. Across 10 targets Gosset returns 3.2x more verified drugs per query than the best frontier system, at perfect precision and 100% recall against the cross-system union of verified drugs. The same curated index is exposed as a Gosset MCP server that any frontier model can call as a tool, suggesting that each of these systems can close most of the recall gap by swapping generic web search for a curated index behind the same chat interface. 
+
+---
+# Architectural Constraints Alignment in AI-assisted, Platform-based Service Development 
+
+**Authors**: Julius Irion, Moritz Leugers, Paul Hartwig, Simon Kling, Tachmyrat Annayev, Alexander Schwind, Maria C. Borges, Sebastian Werner  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.04973)  
+
+**Abstract**: AI-assisted development tools enable rapid prototyping of services but often lack awareness of architectural constraints, infrastructure dependencies, and organizational standards required in production environments. Consequently, generated artifacts may exhibit brittle behavior and limited deployability. We propose a retrieval-augmented scaffolding approach that combines platform-based code generation with agentic clarification loops to expose and resolve architectural constraint ambiguities. By combining template retrieval with structured interaction, the method embeds production-relevant considerations during service scaffolding. Evaluation indicates improved architectural consistency and deployability compared to general-purpose AI code generation workflows, suggesting that constraint-aware retrieval is essential for aligning AI-assisted service development with production software engineering practices. 
+
+---

@@ -1,0 +1,120 @@
+# Interests Burn-down Diffusion Process for Personalized Collaborative Filtering 
+
+**Authors**: Yifang Qin, Zhaobin Li, Arisa Watanabe, Wei Ju, Zhiping Xiao, Ming Zhang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.05165)  
+
+**Abstract**: Generative methods have gained widespread attention in Collaborative Filtering (CF) tasks for their ability to produce high-quality personalized samples aligned with users' interests. Among them, diffusion generative models have raised increasing attention in recommendation field. Despite that the pioneering efforts have applied the conventional diffusion process to model diffusive user interests, the incongruity between the Gaussian noise and the subtle nature of user's personalized interaction behavior has led to sub-optimal results. To this end, we introduce a specifically-tailored diffusion scheme for interaction systems, namely the interests burn-down process. The interests burn-down process delineates the decay of user interests towards candidate items, complemented by its reverse burn-up process that yields personalized recommendation for users. The inherent burn-down nature of this process adeptly models the diffusive user interests, aligning seamlessly with the requirements of CF tasks. We present a novel recommendation method StageCF to illustrate the superiority of this newly proposed diffusion process. Experimental results have demonstrated the effectiveness of StageCF against existing generative and diffusion-based baseline methods. Furthermore, comprehensive studies validate the functionality of interests burn-down process, shedding light on its capacity to generate personalized interactions. 
+
+---
+# CapsID: Soft-Routed Variable-Length Semantic IDs for Generative Recommendation 
+
+**Authors**: Wenzhuo Cheng, Menghang Gong, Qixin Guo, Hang Zheng, Zhaobin Yang, Jianguo Lou, Zhengwei Zheng  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.05096)  
+
+**Abstract**: Generative recommendation maps each item to a sequence of Semantic IDs (SIDs) and recasts retrieval as autoregressive token generation. In this paradigm the main bottleneck is the tokenizer rather than the Transformer: residual vector quantization with a hard nearest-neighbor assignment at every layer collapses multi-faceted item semantics at cluster boundaries and propagates early errors to later SID positions. A common workaround is to append a dense vector or attribute prefix to the SID, but this dual-representation design inflates inference cost and gives up the simplicity of a generative interface. We address the bottleneck at the tokenizer itself. CAPSID replaces hard residual quantization with capsule routing: at each layer an item probabilistically routes to several semantic capsules, the residual is updated by the routed reconstruction rather than by a single winning code, and the SID terminates once the active capsule's confidence is high enough. On top of CAPSID, SEMANTICBPE composes adjacent SID tokens into reusable subwords by combining their co-occurrence with their embedding compatibility. On Amazon Beauty, Sports, Toys, and a 35M-item proprietary industrial catalog, CAPSID+SEMANTICBPE improves Recall at 10 by 9.6% on average over ReSID, the strongest single-representation baseline, and matches or exceeds a COBRA-style sparse-dense system on every public benchmark while running at 51% of its inference latency. Ablations show that soft routing, iterative agreement, and confidence-driven length each contribute independently, and the gains are largest on tail items where boundary semantics dominate. 
+
+---
+# AllSERP: Exhaustive Per-Element Enrichment of the Versatile AdSERP Dataset 
+
+**Authors**: K. Andrew Edmonds  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.04949)  
+
+**Abstract**: We release AllSERP, a typed AOI and per-element behavioral enrichment of the AdSERP commercial-intent SERP corpus [4]. AdSERP ships 2,776 trials of full-page screenshots, captured SERP HTML, 150 Hz Gazepoint eye tracking, evtrack mouse telemetry, scroll, and pupil signals against real Google SERPs collected before AI Overviews -- but its bounding boxes cover only ad surfaces (15.5 % of attributable clicks). AllSERP adds pixel-accurate organic and widget bboxes via screenshot-anchored CV, semantic types across thirteen element types via an HTML parser, an inter-result gap-fill flavor (typed_gapfill), and X+Y click attribution that reaches 91.7 % of the corpus while flagging the rest at trial level. The Phase C ad-vs-non-ad partition is internally consistent with the shipped ad rectangles (0 disagreements across 38,250 classifications). We ship the pipeline, per-trial JSONs, a corpus CSV, and a browser-based replay viewer; everything is reproducible from the AdSERP Zenodo volume. The release enables per-element click, fixation, regression, and above-fold analyses that the shipped ads-vs-organic split could not resolve. 
+
+---
+# Beyond Seeing Is Believing: On Crowdsourced Detection of Audiovisual Deepfakes 
+
+**Authors**: Michael Soprano, Andrea Cioci, Stefano Mizzaro  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.04797)  
+
+**Abstract**: Deepfakes are increasingly realistic and easy to produce, raising concerns about the reliability of human judgments in misinformation settings. We study audiovisual deepfake detection by measuring how consistently crowd workers distinguish authentic from manipulated videos and, when they flag a video as manipulated, how accurately they identify the manipulation type (audio-only, video-only, or audio-video) and how consistently they report manipulation timestamps. We run two matched crowdsourcing studies on Prolific using AV-Deepfake1M and the Trusted Media Challenge (TMC) dataset. We sample 48 videos per dataset (96 total) and collect 960 judgments (10 per video). Results show that crowd workers rarely misclassify authentic videos as manipulated, but they miss many manipulations, and agreement remains limited across videos. Aggregating multiple judgments per video stabilizes the authenticity signal, but it cannot recover manipulations that most workers consistently miss. Manipulation type identification is substantially noisier than authenticity detection even when workers detect a manipulation, with joint audio-video cases being particularly hard to recognize. Overall, these findings suggest that crowdsourcing can provide a scalable screening signal for audiovisual authenticity, while reliable modality attribution remains an open challenge. 
+
+---
+# RecGPT-Mobile: On-Device Large Language Models for User Intent Understanding in Taobao Feed Recommendation 
+
+**Authors**: Bin Zhang, Weipeng Huang, Dimin Wang, Jialin Zhu, Yuning Jiang, Zhaode Wang, Chengfei Lv, Jian Wang, Qichao Ma, Li Chen, Junqing Wu, Yipeng Yu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.04726)  
+
+**Abstract**: Predicting a user's next search query from recent interaction behaviors is a critical problem in modern e-commerce systems, particularly in scenarios where user intent evolves rapidly. Large Language Models (LLMs) offer strong semantic reasoning capabilities and have recently been adopted to enhance training data construction for next-query prediction. However, due to resource constraints on mobile devices, existing applications are deployed on cloud servers, resulting in high inference costs. In this paper, we propose RecGPT-Mobile, a framework that designs a lightweight LLM-based intent understanding agent to improve recommendation quality in mobile e-commerce scenarios. By deploying LLMs directly on mobile devices, our approach can capture evolving interests of users more quickly and adjust the recommendation results in real time. Extensive offline analyses and online experiments demonstrate that our method significantly improves the accuracy of recommendation results, laying a practical path for LLM deployment in production-scale recommendation systems on mobile devices, as well as a scalable solution for integrating LLMs into real-world next-query prediction systems. 
+
+---
+# Rethinking Convolutional Networks for Attribute-Aware Sequential Recommendation 
+
+**Authors**: Shereen Elsayed, Ngoc Son Le, Ahmed Rashed, Lars Schmidt-Thieme  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.04723)  
+
+**Abstract**: Attribute-aware sequential recommendation entails predicting the next item a user will interact with based on a chronologically ordered history of past interactions, enriched with item attributes. Existing methods typically leverage self-attention mechanisms to aggregate the entire sequence into a unified representation used for next-item prediction. While effective, these models often suffer from high computational complexity and memory consumption, limiting their ability to process long user histories. This constraint restricts the model's capacity to fully capture long-term user preferences. In some scenarios, modeling item interactions purely through attention may also not be the most effective approach to extract sequential patterns. In this work, we propose ConvRec, an alternative method with linear computational and memory complexity that employs convolutional layers in a hierarchical, down-scaled fashion to generate compact, yet expressive sequence representations. To further enhance the model's ability to capture diverse sequential patterns, each layer aggregates the neighboring items gradually to reach a comprehensive sequence representation. Extensive experiments on four real-world datasets demonstrate that our approach outperforms state-of-the-art sequential recommendation models, highlighting the potential of convolution-based architectures for efficient and effective sequence modeling in recommendation systems. Our implementation code and datasets are available here this https URL. 
+
+---
+# Beyond Static Best-of-N: Bayesian List-wise Alignment for LLM-based Recommendation 
+
+**Authors**: Ruijun Chen, Chongming Gao, Jiawei Chen, Weiqin Yang, Xiangnan He  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.04559)  
+
+**Abstract**: Large Language Models have revolutionized recommender systems (LLM4Rec) by leveraging their generative capabilities to model complex user preferences. However, existing LLM4Rec methods primarily rely on token-level objectives, making it difficult to optimize list-level and non-differentiable metrics (e.g., NDCG, fairness) that define actual recommendation quality. While Best-of-N (BoN) directly optimizes these metrics during inference, its high computational cost hinders real-world deployment. To address this, BoN Alignment aims to distill the search capability into the model itself, yet current approaches suffer from two critical limitations: (1) Indiscriminate Supervision, where the static reference fails to distinguish the relative quality of candidates exceeding its empirical range, leading to a loss of ranking guidance; and (2) Gradient Decay, where the effective supervision signal rapidly diminishes as the evolving policy improves, resulting in inefficient optimization.
+To overcome these challenges, we propose BLADE (Bayesian List-wise Alignment via Dynamic Estimation). Unlike static approaches, BLADE introduces a Bayesian framework that continuously updates the target distribution by fusing historical priors with dynamic evidence from the model's current rollouts. This mechanism constructs a self-evolving target that adapts to the model's growing capabilities, ensuring the training signal remains informative throughout the learning process. Extensive experiments on three real-world datasets demonstrate that BLADE significantly outperforms state-of-the-art baselines. Crucially, it breaks the static performance upper bound, achieving sustained gains in both ranking accuracy (Recall, NDCG) and complex list-wise metrics (Fairness, Diversity). The code is available via this https URL. 
+
+---
+# Empirical Study of Pop and Jazz Mix Ratios for Genre-Adaptive Chord Generation 
+
+**Authors**: Jinju Lee  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.04998)  
+
+**Abstract**: Chord progression generation is practically important but understudied. Most large-scale symbolic music systems target melody, multi-track arrangement, or audio synthesis, and chord-only models tend to be relegated to conditioning components inside larger pipelines. This paper treats chord generation as a standalone task and addresses a question that arises whenever such a model is adapted across genres: how much old-domain data must be retained during fine-tuning to acquire a new domain without forgetting the old? I study jazz fine-tuning starting from a pop-pretrained 25M-parameter Music Transformer (84.24% top-1 chord accuracy on a held-out pop test set). The available jazz corpus is an order of magnitude smaller than the pop corpus, so every fine-tune run uses all 1,513 jazz training sequences. The swept variable is the volume of pop "rehearsal" data mixed alongside, taking values in {0, 1K, 2.5K, 5K, 10K}. Every fine-tuned model gains 7 to 9 points of jazz top-1. Pop accuracy collapses by 2.14 points under jazz-only fine-tuning, recovers to baseline at approximately 2.5K rehearsal samples (1.65x the jazz volume), and saturates beyond that point. A complementary observation: the metric-best run (F3, 2.5K mix) is not always the perceptually preferred one. The pop-leaning (10K) and jazz-leaning (1K) endpoints carry more committed stylistic identities that the author more often selects as finished output in informal listening. I discuss what this suggests for music co-creation tools but make no perceptual claim, since no formal listening study has been conducted. All six checkpoints are released on the HuggingFace Hub at this https URL. 
+
+---
+# TabEmbed: Benchmarking and Learning Generalist Embeddings for Tabular Understanding 
+
+**Authors**: Minjie Qiang, Mingming Zhang, Xiaoyi Bao, Xing Fu, Yu Cheng, Weiqiang Wang, Zhongqing Wang, Ningtao Wang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.04962)  
+
+**Abstract**: Foundation models have established unified representations for natural language processing, yet this paradigm remains largely unexplored for tabular data. Existing methods face fundamental limitations: LLM-based approaches lack retrieval-compatible vector outputs, whereas text embedding models often fail to capture tabular structure and numerical semantics. To bridge this gap, we first introduce the Tabular Embedding Benchmark (TabBench), a comprehensive suite designed to evaluate the tabular understanding capability of embedding models. We then propose TabEmbed, the first generalist embedding model that unifies tabular classification and retrieval within a shared embedding space. By reformulating diverse tabular tasks as semantic matching problems, TabEmbed leverages large-scale contrastive learning with positive-aware hard negative mining to discern fine-grained structural and numerical nuances. Experimental results on TabBench demonstrate that TabEmbed significantly outperforms state-of-the-art text embedding models, establishing a new baseline for universal tabular representation learning. Code and datasets are publicly available at this https URL and this https URL. 
+
+---
+# Storage Is Not Memory: A Retrieval-Centered Architecture for Agent Recall 
+
+**Authors**: Joshua Adler, Guy Zehavi  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.04897)  
+
+**Abstract**: Extraction at ingestion is the wrong primitive for agent memory: content discarded before the query is known cannot be recovered at retrieval time. We propose True Memory, a six-layer architecture that shifts the center of the system from a storage schema to a multi-stage retrieval pipeline operating over events preserved verbatim. The full system runs as a single SQLite file on commodity CPU with no external database, vector index, graph store, or GPU. On LoCoMo (1,540 questions across 10 multi-session conversations), True Memory Pro reaches 93.0% accuracy (3-run mean) against 61.4% for Mem0, 65.4% for Supermemory, approximately 71% for Zep, and 94.5% for EverMemOS under a matched gpt-4.1-mini answer model. On LongMemEval (500 questions), True Memory Pro reaches 87.8% (3-run mean). On BEAM-1M (700 questions at the 1-million-token scale), True Memory Pro reaches 76.6% (3-run mean), above the prior published result of 73.9% for Hindsight. A 56-configuration ablation shows a 1.3-percentage-point spread within the top-performing configuration family. 
+
+---
+# DoGMaTiQ: Automated Generation of Question-and-Answer Nuggets for Report Evaluation 
+
+**Authors**: Bryan Li, William Walden, Yu Hou, Gabrielle Kaili-May Liu, Dawn Lawrie, Jame Mayfield, Eugene Yang, Chris Callison-Burch, Laura Dietz  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.04458)  
+
+**Abstract**: Evaluation of long-form, citation-backed reports has lately received significant attention due to the wide-scale adoption of retrieval-augmented generation (RAG) systems. Core to many evaluation frameworks is the use of atomic facts, or nuggets, to assess a report's coverage of query-relevant information attested in the underlying collection. While nuggets have traditionally been represented as short statements, recent work has used question-answer (QA) representations, enabling fine-grained evaluations that decouple the information need (i.e. the question) from the potentially diverse content that satisfies it (i.e. its answers).
+A persistent challenge for nugget-based evaluation is the need to manually curate sets of nuggets for each topic in a test collection -- a laborious process that scales poorly to novel information needs. This challenge is acute in cross-lingual settings, where information is found in multilingual source documents. Accordingly, we introduce DoGMaTiQ, a pipeline for generating high-quality QA-based nugget sets in three stages: (1) document-grounded nugget generation, (2) paraphrase clustering, and (3) nugget subselection based on principled quality criteria. We integrate DoGMaTiQ nuggets with AutoArgue -- a recent nugget-based evaluation framework -- to enable fully automatic evaluation of generated reports. We conduct extensive experiments on two cross-lingual TREC shared tasks, NeuCLIR and RAGTIME, showing strong rank correlations with both human-in-the-loop and fully manual judgments. Finally, detailed analysis of our pipeline reveals that a strong LLM nugget generator is key, and that the system rankings induced by DoGMaTiQ are robust to outlier systems. We facilitate future research in report evaluation by publicly releasing our code and artifacts at this https URL. 
+
+---
+# One Pool, Two Caches: Adaptive HBM Partitioning for Accelerating Generative Recommender Serving 
+
+**Authors**: Wenjun Yu, Shuguang Han, Amelie Chi Zhou  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.04450)  
+
+**Abstract**: Generative Recommender (GR) inference places embedding hot caches (EMB) and KV caches in direct competition for limited GPU HBM: allocating more memory to one improves its efficiency but degrades the other. Existing systems optimize them in isolation, overlooking that the optimal EMB-KV allocation ratio can shift by up to 0.35 across workload regimes, leaving 20-30\% latency improvement unrealized. While online reallocation is required to close this gap, naive approaches introduce H2D refill traffic on the critical path, causing P99 SLO violations.
+To address this, we present HELM, which jointly manages HBM allocation and request routing at runtime through two key components: (1) Adaptive Memory Allocation, a three-layer PPO-based controller (frozen base policy, online residual adapter, and burst-aware recovery controller) that achieves $32\,\mathrm{\mu s}$ decision latency while staying within 0.024-0.029 of the offline-optimal ratio; and (2) EMB-KV-Aware Scheduling, which routes requests by jointly considering KV residency, embedding locality, and node load to avoid routing inefficiencies under heterogeneous allocations. Evaluations on three production-scale datasets over a 32-node A100 cluster show that HELM reduces P99 latency by 24-38\% over the best static policy and achieves 93.5-99.6\% SLO satisfaction across Steady, Trend, and Burst workloads, significantly outperforming state-of-the-art baselines without sacrificing throughput. 
+
+---
+# Reproducing Complex Set-Compositional Information Retrieval 
+
+**Authors**: Vincent Degenhart, Dewi Timman, Arjen P. de Vries, Faegheh Hasibi, Mohanna Hoveyda  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.03824)  
+
+**Abstract**: Complex information needs may involve set-compositional queries using conjunction, disjunction, and exclusion, yet it remains unclear whether current retrieval paradigms genuinely satisfy such constraints or exploit `semantic shortcuts'. We conduct a reproducibility study to benchmark major retrieval families and reasoning-targeted methods on QUEST and QUEST+Variants, and introduce LIMIT+, a controlled benchmark where relevance depends on arbitrary attribute predicates and constraint satisfaction, and less on pretrained knowledge. Our findings show that (i) on QUEST, the best neural retrievers achieve an effectiveness that is more than double what can be achieved with BM25 (Recall@100 ${>}$0.41 vs.\ 0.20), but reasoning-targeted methods like ReasonIR and Search-R1 do not outperform general-purpose retrievers uniformly; (ii) on LIMIT+, gains fail to transfer, where the strongest QUEST method collapses from Recall@100${\approx}$0.42 to below 0.02, while classic lexical retrieval gains to ${\sim}$0.96. Lastly, (iii) stratifying by compositional depth reveals a consistent degradation across all methods, where algebraic sparse and lexical methods show more stable performance while dense approaches collapse. We release code and LIMIT+ data generation scripts to support future reproducibility and controlled evaluation. 
+
+---
