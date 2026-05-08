@@ -1,0 +1,293 @@
+# Career-Aware Resume Tailoring via Multi-Source Retrieval-Augmented Generation with Provenance Tracking: A Case Study 
+
+**Authors**: Kumar Abhinav  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.05257)  
+
+**Abstract**: AI-assisted resume tailoring systems commonly operate on a single uploaded resume, which limits their ability to recover relevant experience omitted from the current draft and makes it difficult for users to distinguish grounded edits from model-generated suggestions. This paper presents Resume Tailor, an agentic resume-tailoring system that maintains a longitudinal career vault in a vector database and uses multi-source retrieval-augmented generation (RAG) to assemble job-specific resume content from historical resumes and structured career records. The system is implemented as a 12-node LangGraph pipeline with typed state management, hybrid semantic-lexical confidence scoring, provenance-aware fallback generation, anti-hallucination guardrails, and a conditional review loop. We report a pilot evaluation on nine job descriptions (JDs) across software engineering, data analytics, and business analysis roles using a single candidate's career history. For six JDs where the candidate held at least one prior role in the same occupational category, enabling the career vault improved Applicant Tracking System (ATS)-style fit scores by an average of 7.8 points. For two JDs requiring domain-specific expertise absent from the vault, scores decreased by an average of 8.0 points. One partially overlapping role showed a modest gain of 2 points. These results suggest that longitudinal retrieval can improve resume tailoring when relevant prior experience exists, while also highlighting the need for confidence-gated retrieval when domain overlap is weak. 
+
+---
+# Superintelligent Retrieval Agent: The Next Frontier of Information Retrieval 
+
+**Authors**: Zeyu Yang, Qi Ma, Jason Chen, Anshumali Shrivastava  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.06647)  
+
+**Abstract**: Retrieval-augmented agents are increasingly the interface to large organizational knowledge bases, yet most still treat retrieval as a black box: they issue exploratory queries, inspect returned snippets, and iteratively reformulate until useful evidence emerges. This approach resembles how a newcomer searches an unfamiliar database rather than how an expert navigates it with strong priors about terminology and likely evidence, and results in unnecessary retrieval rounds, increased latency, and poor recall.
+We introduce \textit{SuperIntelligent Retrieval Agent} (SIRA), which defines \emph{superintelligence} in retrieval as the ability to compress multi-round exploratory search into a single corpus-discriminative retrieval action. SIRA does not merely ask what terms are relevant to the query; it asks which terms are likely to separate the desired evidence from corpus-level confusers. On the corpus side, an LLM enriches each document offline with missing search vocabulary; on the query side, it predicts evidence vocabulary omitted by the query; and document-frequency statistics as a tool call to filter proposed terms that are absent, overly common, or unlikely to create retrieval margin. The final retrieval step is a single weighted BM25 call combining the original query with the validated expansion.
+Across ten BEIR benchmarks and downstream question-answering tasks, SIRA achieves the significantly superior performance outperforming dense retrievers and state-of-the-art multi-round agentic baselines, demonstrating that one well-formed lexical query, guided by LLM cognition and lightweight corpus statistics, can exceed substantially more expensive multi-round search while remaining interpretable, training-free, and efficient. 
+
+---
+# Towards Dependable Retrieval-Augmented Generation Using Factual Confidence Prediction 
+
+**Authors**: Florian Geissler, Francesco Carella, Laura Fieback, Jakob Spiegelberg  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.05244)  
+
+**Abstract**: Incorporating specific knowledge into large language models via retrieval-augmented generation (RAG) is a widespread technique that fuels many of today's industry AI applications. A fundamental problem is to assess if the context retrieved by some similarity search provides indeed supporting facts, or instead misguides the generator with irrelevant information. It is critical to associate meaningful confidence measures about the factuality of the retrieval process with the generated answers. We present a new, two-staged approach to predict fact faithfulness of the output of retrieval-augmented generations. First, we employ conformal prediction to select only those retrieved chunks who have a high chance to come from the correct source. This approach in itself can improve answer quality by up to 6% in some of the studied datasets, however, the associated statistical guarantees do not hold generally, since the assumption of sample exchangeability depends on the retriever setup. We present diagnostic metrics to assess whether a setup is suitable. Second, we quantify confidence in the consistency of a generated final answer with a given retrieved context, using an attention-based factuality classifier. This approach can detect inconsistent answers with a chance of up to 77%. Our work helps to establish a novel type of certified RAG systems for a broad range of natural language industry applications. 
+
+---
+# GATHER: Convergence-Centric Hyper-Entity Retrieval for Zero-Shot Cell-Type Annotation 
+
+**Authors**: Zhonghui Zhang, Feng Jiang, Shaowei Qin, Jiahao Zhao, Min Yang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.06403)  
+
+**Abstract**: Zero-shot single-cell cell-type annotation aims to determine a cell's type from a given set of expressed genes without any training. Existing knowledge-graph-based RAG approaches retrieve evidence by expanding from source entities and relying on iterative LLM reasoning. However, in this setting each query contains tens to hundreds of genes, where no single gene is decisive and the label emerges only from their collective co-occurrence. Such hyper-entity queries fundamentally challenge local, entity-wise exploration strategies, which reason from individual genes, leading to poor scalability and substantial LLM cost. We propose GATHER (Graph-Aware Traversal with Hyper-Entity Retrieval), a convergence-centric retriever tailored to hyper-entity queries. It performs global multi-source graph traversal and identifies topological convergence points -- nodes jointly reachable from many input genes. These convergence nodes act as high-information hyper-entities that capture entity synergy. By incorporating node- and path-importance scoring, GATHER selects informative evidence entirely without LLM involvement during retrieval. Instantiated on a self-constructed cell-centric biological knowledge graph (VCKG), GATHER outperforms strong KG-RAG baselines (ToG, ToG-2, RoG, PoG) on two datasets (Immune and Lung), achieving the highest exact-match accuracy (27.45% and 59.64%) with only a single LLM call per sample, compared to 2--61 calls for KG-RAG baselines. Our results demonstrate that convergence nodes compress multi-entity signals into compact, high-information evidence that conveys more per item than multi-hop paths, providing an efficient global alternative to local entity-wise reasoning. 
+
+---
+# EnterpriseRAG-Bench: A RAG Benchmark for Company Internal Knowledge 
+
+**Authors**: Yuhong Sun, Joachim Rahmfeld, Chris Weaver, Roshan Desai, Wenxi Huang, Mark H. Butler  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.05253)  
+
+**Abstract**: Retrieval-Augmented Generation (RAG) has become the standard approach for grounding large language models in information that was not available during training. While existing datasets and benchmarks focus on web or other public sources, there is still no widely adopted dataset that realistically reflects the nature of company-internal knowledge. Meanwhile, startups, enterprises, and researchers are increasingly developing AI Agents designed to operate over exactly this kind of proprietary data. To close this gap, we release a synthetic enterprise corpus, its generation framework, and a leaderboard.
+We present EnterpriseRAG-Bench, a dataset consisting of approximately 500,000 documents spanning nine enterprise source types (Slack, Gmail, Linear, Google Drive, HubSpot, Fireflies, GitHub, Jira, and Confluence) and 500 questions across ten categories that test distinct retrieval and reasoning capabilities. The corpus is generated with cross-document coherence (grounded in shared projects, people, and initiatives) and augmented with realistic noise such as misfiled documents, near-duplicates, and conflicting information. The question set ranges from simple single-document lookups to multi-document reasoning, constrained retrieval, conflict resolution, and recognizing when information is absent. The generation framework lets teams generate variants tailored to their own industry, scale, and source mix. The dataset, code, evaluation harness, and leaderboard are available at this https URL. 
+
+---
+# AdaGATE: Adaptive Gap-Aware Token-Efficient Evidence Assembly for Multi-Hop Retrieval-Augmented Generation 
+
+**Authors**: Yilin Guo, Yinshan Wang, Yixuan Wang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.05245)  
+
+**Abstract**: Retrieval-augmented generation (RAG) remains brittle on multi-hop questions in realistic deployment settings, where retrieved evidence may be noisy or redundant and only limited context can be passed to the generator. Existing controllers address parts of this problem, but typically either expand context additively, select from a fixed top-k set, or optimize relevance without explicitly repairing missing bridge facts. We propose AdaGATE, a training-free evidence controller for multi-hop RAG that frames evidence selection as a token-constrained repair problem. AdaGATE combines entity centric gap tracking, targeted micro-query generation, and a utility based selection mechanism that balances gap coverage, corroboration, novelty, redundancy, and direct question relevance. We evaluate AdaGATE on HotpotQA under clean, redundancy, and noise injected retrieval conditions. Across all three settings, AdaGATE achieves the best evidence F1 among the compared controllers, reaching 62.3% on clean data and 71.2% under redundancy injection, while using 2.6x fewer input tokens than Adaptive-k. These results suggest that explicit gap-aware repair, combined with token-efficient evidence selection, improves robustness in multi-hop RAG under imperfect retrieval. Our code and evaluation pipeline are available at this https URL. 
+
+---
+# Securing the Agent: Vendor-Neutral, Multitenant Enterprise Retrieval and Tool Use 
+
+**Authors**: Francisco Javier Arceo, Varsha Prasad Narsing  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.05287)  
+
+**Abstract**: Retrieval-Augmented Generation (RAG) and agentic AI systems are increasingly prevalent in enterprise AI deployments. However, real enterprise environments introduce challenges largely absent from academic treatments and consumer-facing APIs: multiple tenants with heterogeneous data, strict access-control requirements, regulatory compliance, and cost pressures that demand shared infrastructure.
+A fundamental problem underlies existing RAG architectures in these settings: retrieval systems rank documents by relevance--whether through semantic similarity, keyword matching, or hybrid approaches--not by authorization, so a query from one tenant can surface another tenant's confidential data simply because it scores highest. We formalize this gap and analyze additional shortcomings--including tool-mediated disclosure, context accumulation across turns, and client-side orchestration bypass--that arise when agentic systems conflate relevance with authorization. To address these challenges, we introduce a layered isolation architecture combining policy-aware ingestion, retrieval-time gating, and shared inference, enforced through server-side agentic orchestration. This approach centralizes security-critical operations--tool execution authorization, state isolation, and policy enforcement--on the server, creating natural enforcement points for multitenant isolation while allowing client-side frameworks to retain control over agent composition and latency-sensitive operations.
+We validate the proposed architecture through an open-source implementation in OGX, a vendor-neutral framework that implements an OpenAI-compatible, open-source Responses API with server-side multi-turn orchestration. We evaluate it empirically and show that ABAC gating eliminates cross-tenant leakage while introducing negligible overhead. 
+
+---
+# DisastRAG: A Multi-Source Disaster Information Integration and Access System Based on Retrieval-Augmented Large Language Models 
+
+**Authors**: Bo Li, Zhitong Chen, Kai Yin, Junwei Ma, Yiming Xiao, Ali Mostafavi  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.05210)  
+
+**Abstract**: Effective disaster management requires rapid access to information distributed across structured operational records, unstructured institutional documents, and dynamic external sources. However, most existing disaster information systems and retrieval-augmented generation frameworks remain organized around a single access pathway, limiting their ability to support heterogeneous, time-sensitive, and context-dependent information needs. This study presents DisastRAG, a disaster-aware information integration and access system that combines large language models with retrieval-augmented access to structured, unstructured, and contextual disaster information. The framework is built around a multi-path architecture that supports document retrieval over a curated hazard corpus, structured access over relational disaster records, and external web fallback for out-of-corpus requests, while also incorporating query understanding, strategy routing, response generation, and contextual memory within a unified system. We evaluated the document retrieval performance using four open-source large language models across multiple retrieval configurations on multiple-choice and open-ended disaster information tasks. Retrieval augmentation consistently improves performance over no-retrieval baselines, yielding multiple-choice gains of 12-23 percentage points and open-ended keypoint coverage gains of up to 10.5 percentage points. Results show that larger candidate pools are most helpful for weaker models, while stronger models are more sensitive to retrieval noise. Hybrid retrieval performs best for open-ended coverage, whereas vector retrieval and shallower reranking more often favor closed-form factual selection. Case studies further show that structured access and web fallback extend the framework beyond document-only RAG. 
+
+---
+# Text-Graph Synergy: A Bidirectional Verification and Completion Framework for RAG 
+
+**Authors**: Jiarui Zhong, Hong Cai Chen  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.05643)  
+
+**Abstract**: Retrieval-Augmented Generation (RAG) has become a core paradigm for enhancing factual grounding and multi-hop reasoning in Large Language Models (LLMs). Traditional text-based RAG often retrieves logically irrelevant pseudo-evidence, while graph-based RAG is frequently hindered by search-time pruning, which may discard potentially valid reasoning paths. Existing hybrid approaches primarily adopt simple evidence concatenation or unidirectional enhancement, which fails to address the fundamental "Information Island" problem caused by asymmetric reasoning flows between unstructured text and structured graphs. We propose \textbf{TGS-RAG}, a unified framework for \textbf{T}ext-\textbf{G}raph \textbf{S}ynergistic enhancement. TGS-RAG introduces a bidirectional mechanism: (i) a \textbf{Graph-to-Text} channel that employs a Global Voting strategy from visited graph nodes to re-rank and refine textual evidence, filtering out semantic noise; and (ii) a \textbf{Text-to-Graph} channel that utilizes the \textbf{Memory-based Orphan Entity Bridging} algorithm. This algorithm utilizes textual cues to proactively resurrect valid but previously pruned reasoning paths from the search history without additional database overhead. Experimental results on multiple multi-hop reasoning benchmarks demonstrate that TGS-RAG significantly outperforms state-of-the-art baselines, achieving a superior balance between retrieval precision and computational efficiency. 
+
+---
+# AgenticRAG: Agentic Retrieval for Enterprise Knowledge Bases 
+
+**Authors**: Susheel Suresh, Hazel Mak, Shangpo Chou, Fred Kroon, Sahil Bhatnagar  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.05538)  
+
+**Abstract**: We present AgenticRAG, a practical agentic harness for retrieval and analysis over enterprise knowledge bases. Standard RAG pipelines place significant burden of grounding on the search stack, constraining the language model to a fixed candidate set chosen deep in the retrieval process. Our approach reduces this overdependence by layering a lightweight harness on top of existing enterprise search infrastructure, equipping a reasoning LLM with search, find, open, and summarize tools enabling the model to iteratively retrieve information, navigate within documents, and analyze evidence autonomously. On three open benchmarks we observe substantial gains: $49.6\%$ recall@1 on BRIGHT (+21.8 pp over the best embedding baseline), 0.96 factuality on WixQA ($+13\%$ relative improvement), and $92\%$ answer correctness on FinanceBench--within 2 pp of oracle access to true evidence. Ablation studies show that the most significant factor is the shift from single-shot retrieval to agentic tool use ($5.9\times$ improvement), while multi-query search and in-document navigation contribute to both quality and efficiency. We present various design choices in our agentic harness that were informed by pre-production deployments. Our results demonstrate its suitability for real-world enterprise production environments. 
+
+---
+# Cited but Not Verified: Parsing and Evaluating Source Attribution in LLM Deep Research Agents 
+
+**Authors**: Hailey Onweller, Elias Lumer, Austin Huber, Pia Ramchandani, Vamse Kumar Subbiah, Corey Feld  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.06635)  
+
+**Abstract**: Large language models (LLMs) power deep research agents that synthesize information from hundreds of web sources into cited reports, yet these citations cannot be reliably verified. Current approaches either trust models to self-cite accurately, risking bias, or employ retrieval-augmented generation (RAG) that does not validate source accessibility, relevance, or factual consistency. We introduce the first source attribution evaluation framework that uses a reproducible AST parser to extract and evaluate inline citations from LLM-generated Markdown reports at scale. Unlike methods that verify claims in isolation, our framework closes the loop by retrieving the actual cited content, enabling human or model evaluators to judge each citation against its source. Citations are evaluated along three dimensions. (1) Link Works verifies URL accessibility, (2) Relevant Content measures topical alignment, and (3) Fact Check validates factual accuracy against source content. We benchmark 14 closed-source and open-source LLMs across three evaluation dimensions using rubric-based LLM-as-a-judge evaluators calibrated through human review. Our results reveal that even the strongest frontier models maintain link validity above 94% and relevance above 80%, yet achieve only 39-77% factual accuracy, while fewer than half of open-source models successfully generate cited reports in a one-shot setting. Ablation studies on research depth show that Fact Check accuracy drops by approximately 42% on average across two frontier models as tool calls scale from 2 to 150, demonstrating that more retrieval does not produce more accurate citations. These findings reveal a critical disconnect between surface-level citation quality and factual reliability, and our framework provides the evaluation infrastructure to assess the disconnect. 
+
+---
+# MiA-Signature: Approximating Global Activation for Long-Context Understanding 
+
+**Authors**: Yuqing Li, Jiangnan Li, Mo Yu, Zheng Lin, Weiping Wang, Jie Zhou  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.06416)  
+
+**Abstract**: A growing body of work in cognitive science suggests that reportable conscious access is associated with \emph{global ignition} over distributed memory systems, while such activation is only partially accessible as individuals cannot directly access or enumerate all activated contents. This tension suggests a plausible mechanism that cognition may rely on a compact representation that approximates the global influence of activation on downstream processing. Inspired by this idea, we introduce the concept of \textbf{Mindscape Activation Signature (MiA-Signature)}, a compressed representation of the global activation pattern induced by a query. In LLM systems, this is instantiated via submodular-based selection of high-level concepts that cover the activated context space, optionally refined through lightweight iterative updates using working memory. The resulting MiA-Signature serves as a conditioning signal that approximates the effect of the full activation state while remaining computationally tractable. Integrating MiA-Signatures into both RAG and agentic systems yields consistent performance gains across multiple long-context understanding tasks. 
+
+---
+# LatentRAG: Latent Reasoning and Retrieval for Efficient Agentic RAG 
+
+**Authors**: Yijia Zheng, Marcel Worring  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.06285)  
+
+**Abstract**: Single-step retrieval-augmented generation (RAG) provides an efficient way to incorporate external information for simple question answering tasks but struggles with complex questions. Agentic RAG extends this paradigm by replacing single-step retrieval with a multi-step process, in which the large language model (LLM) acts as a search agent that generates intermediate thoughts and subqueries to iteratively interact with the retrieval system. This iterative process incurs substantial latency due to the autoregressive generation of lengthy thoughts and subqueries. To address this limitation, we propose LatentRAG, a novel framework that shifts both reasoning and retrieval from discrete language space to continuous latent space. Unlike existing explicit methods that generate natural language thoughts or subqueries token-by-token, LatentRAG produces latent tokens for thoughts and subqueries directly from the hidden states in a single forward pass. We align LLMs with dense retrieval models in the latent space, enabling retrieval over latent subquery tokens and supporting end-to-end joint optimization. To improve transparency and encourage semantically meaningful latent representations, we incorporate a parallel latent decoding mechanism that translates latent tokens back into natural language. Extensive experiments on seven benchmark datasets show that LatentRAG achieves performance comparable to explicit agentic RAG methods while reducing inference latency by approximately 90%, substantially narrowing the latency gap with traditional single-step RAG. 
+
+---
+# IRC-Bench: Recognizing Entities from Contextual Cues in First-Person Reminiscences 
+
+**Authors**: Yehudit Aperstein, Eden Moran, Alexander Apartsin  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.06142)  
+
+**Abstract**: When people recount personal memories, they often refer to people, places, and events indirectly, relying on contextual cues rather than explicit names. Such implicit references are central to reminiscence narratives: first-person accounts of lived experience used in therapeutic, archival, and social settings. They pose a difficult computational problem because the intended entity must be inferred from dispersed narrative evidence rather than from a local mention. We introduce IRC-Bench, the Implicit Reminiscence Context Benchmark, for evaluating implicit entity recognition in reminiscence transcripts. The benchmark targets non-locality: entity-identifying cues are distributed across multiple, non-contiguous clauses, unlike named entity recognition, entity linking, or coreference resolution. IRC-Bench comprises 25,136 samples constructed from 12,337 Wiki-data-linked entities across 1,994 transcripts spanning 11 thematic domains. Each sample pairs an Entity-Grounded Narrative, in which the target entity is explicitly mentioned, with an Entity-Elided Narrative, in which direct mentions are removed. We evaluate 19 configurations across LLM generation, dense retrieval, RAG, and fine-tuning. QLoRA-adapted Llama 3.1 8B performs best in the open-world setting (38.94% exact match; 51.59% Jaccard), while fine-tuned DPR leads closed-world retrieval (35.38% Hit@1; 71.49% Hit@10). We release IRC-Bench with data, code, and evaluation tools. 
+
+---
+# MemReranker: Reasoning-Aware Reranking for Agent Memory Retrieval 
+
+**Authors**: Chunyu Li, Jingyi Kang, Ding Chen, Mengyuan Zhang, Jiajun Shen, Bo Tang, Xuanhe Zhou, Feiyu Xiong, Zhiyu Li  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.06132)  
+
+**Abstract**: In agent memory systems, the reranking model serves as the critical bridge connecting user queries with long-term memory. Most systems adopt the "retrieve-then-rerank" two-stage paradigm, but generic reranking models rely on semantic similarity matching and lack genuine reasoning capabilities, leading to a problem where recalled results are semantically highly relevant yet do not contain the key information needed to answer the question. This deficiency manifests in memory scenarios as three specific problems. First, relevance scores are miscalibrated, making threshold-based filtering difficult. Second, ranking degrades when facing temporal constraints, causal reasoning, and other complex queries. Third, the model cannot leverage dialogue context for semantic disambiguation. This report introduces MemReranker, a reranking model family (0.6B/4B) built on Qwen3-Reranker through multi-stage LLM knowledge distillation. Multi-teacher pairwise comparisons generate calibrated soft labels, BCE pointwise distillation establishes well-distributed scores, and InfoNCE contrastive learning enhances hard-sample discrimination. Training data combines general corpora with memory-specific multi-turn dialogue data covering temporal constraints, causal reasoning, and coreference resolution. On the memory retrieval benchmark, MemReranker-0.6B substantially outperforms BGE-Reranker and matches open-source 4B/8B models as well as GPT-4o-mini on key metrics. MemReranker-4B further achieves 0.737 MAP, with several metrics on par with Gemini-3-Flash, while maintaining inference latency at only 10--20\% of large models. On finance and healthcare vertical-domain benchmarks, the models preserve generalization capabilities on par with mainstream large-parameter rerankers. 
+
+---
+# Tatarstan Toponyms: A Bilingual Dataset and Hybrid RAG System for Geospatial Question Answering 
+
+**Authors**: Mullosharaf K. Arabov  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.05962)  
+
+**Abstract**: This paper addresses automatic geospatial question answering over multilingual toponymic data. An original bilingual dataset of toponyms of the Republic of Tatarstan is introduced, comprising 9,688 structured records with linguistic, etymological, administrative, and coordinate information (93.1% georeferenced). Based on this dataset, a question-answering corpus of approximately 39,000 question-context-answer triples is constructed with guaranteed answer localization. A hybrid retriever integrates dense semantic indexing (multilingual-e5-large) with geospatial filtering via KD-trees and haversine distance. On 500 test queries, the hybrid search achieves Recall@1=0.988, Recall@5=1.000, and MRR=0.994, significantly outperforming BM25 and purely spatial methods. Among tested reader architectures (RuBERT, XLM-RoBERTa-large, T5-RUS), XLM-RoBERTa-large attains the best quality: EM=0.992, F1=0.994. On raw outputs, RuBERT models fail on coordinate questions (F1=0) while XLM-RoBERTa-large reaches F1=0.984; however, simple post-processing eliminates numerical gaps and restores RuBERT accuracy to 100%. This discrepancy stems from tokenization differences and pre-training corpora composition. All resources (dataset, QA corpus, model weights, web demo) are openly published on Hugging Face. Results apply to geospatial QA services, geocoding, and digital humanities in multilingual regions. 
+
+---
+# The Cost of Context: Mitigating Textual Bias in Multimodal Retrieval-Augmented Generation 
+
+**Authors**: Hoin Jung, Xiaoqian Wang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.05594)  
+
+**Abstract**: While Multimodal Large Language Models (MLLMs) are increasingly integrated with Retrieval-Augmented Generation (RAG) to mitigate hallucinations, the introduction of external documents can conceal severe failure modes at the instance level. We identify and formalize the phenomenon of recorruption, where the introduction of even perfectly accurate "oracle" context causes a capable model to abandon an initially correct prediction. Through a mechanistic diagnosis of internal attention matrices, we show that recorruption is driven by a two-fold attentional collapse: (1) visual blindness, characterized by the systemic suppression of visual attention mass ($M_{vis}$) and sharpness ($S_{vis}$), and (2) a structural positional bias that forces the model to prioritize boundary tokens over semantic relevance. Our analysis reveals an Illusion of Success, demonstrating that many seemingly correct RAG outcomes are merely positional coincidences where the model's textual copying bias happens to align with the ground-truth location. To address these vulnerabilities, we propose Bottleneck Attention Intervention for Recovery (BAIR), a parameter-free, inference-time framework that restores visual saliency and applies position-aware penalties to textual distractors. Across medical factuality, social fairness, and geospatial benchmarks, BAIR successfully restores multimodal grounding and improves diagnostic reliability without requiring model retraining or fine-tuning. 
+
+---
+# LeakDojo: Decoding the Leakage Threats of RAG Systems 
+
+**Authors**: Maosen Zhang, Jianshuo Dong, Boting Lu, Wenyue Li, Xiaoping Zhang, Tianwei Zhang, Han Qiu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.05818)  
+
+**Abstract**: Retrieval-Augmented Generation (RAG) enables large language models (LLMs) to leverage external knowledge, but also exposes valuable RAG databases to leakage attacks. As RAG systems grow more complex and LLMs exhibit stronger instruction-following capabilities, existing studies fall short of systematically assessing RAG leakage risks. We present LeakDojo, a configurable framework for controlled evaluation of RAG leakage. Using LeakDojo, we benchmark six existing attacks across fourteen LLMs, four datasets, and diverse RAG systems. Our study reveals that (1) query generation and adversarial instructions contribute independently to leakage, with overall leakage well approximated by their product; (2) stronger instruction-following capability correlates with higher leakage risk; and (3) improvements in RAG faithfulness can introduce increased leakage risk. These findings provide actionable insights for understanding and mitigating RAG leakage in practice. Our codebase is available at this https URL. 
+
+---
+# Architecture Matters: Comparing RAG Systems under Knowledge Base Poisoning 
+
+**Authors**: Samuel Korn  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.05632)  
+
+**Abstract**: Retrieval-Augmented Generation (RAG) systems are vulnerable to knowledge base poisoning, yet existing attacks have been evaluated almost exclusively against vanilla retrieve-then-generate pipelines. Architectures designed to handle conflicting retrieved information - multi-agent debate, agentic retrieval, recursive language models - remain untested against adversarially optimized contradictions. We evaluate four RAG architectures (vanilla RAG, agentic RAG, MADAM-RAG, and Recursive Language Models) under controlled single-document (N=1) poisoning on 921 Natural Questions QA pairs, comparing a clean baseline, naive injection, and CorruptRAG-AK - an adversarial attack whose meta-epistemic framing targets credibility assessment. Architecture is a high-impact variable in adversarial robustness: under CorruptRAG-AK, attack success rates range from 81.9% (vanilla) to 24.4% (RLM) - a spread of nearly 58 percentage points across architectures with comparable clean accuracy (~92%). Decomposing this gap, once the poisoned document is retrieved, adversarial framing - not retrieval optimization - drives the majority of CorruptRAG-AK's advantage for three of four architectures, localizing the cross-architecture vulnerability at the content-reasoning stage. Our MADAM-RAG reimplementation shows the highest apparent contradiction detection rate, though our LLM judge over-identifies this behavior (~48.5% precision), so reported rates are upper bounds. Regardless of detection, MADAM-RAG cannot resolve contradictions reliably, producing a 41.4% non-answer rate even on clean inputs - though implementation divergences from the original may contribute. We introduce a seven-category behavioral taxonomy capturing contradiction detection, hedging, and failure modes beyond binary accuracy. Code, data, and analysis notebooks are publicly available. 
+
+---
+# Agentic Retrieval-Augmented Generation for Financial Document Question Answering 
+
+**Authors**: Yang Shu, Yingmin Liu, Zequn Xie  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.05409)  
+
+**Abstract**: Financial document question answering (QA) demands complex multi-step numerical reasoning over heterogeneous evidence--structured tables, textual narratives, and footnotes--scattered across corporate filings. Existing retrieval-augmented generation (RAG) approaches adopt a single-pass retrieve-then-generate paradigm that struggles with the compositional reasoning chains prevalent in financial analysis. We propose FinAgent-RAG, an agentic RAG framework that orchestrates iterative retrieval-reasoning loops with self-verification, specifically engineered for the precision requirements of financial numerical reasoning. The framework integrates three domain-specific innovations: (1) a Contrastive Financial Retriever trained with hard negative mining to distinguish semantically similar but numerically distinct financial passages, (2) a Program-of-Thought reasoning module that generates executable Python code for precise arithmetic rather than relying on error-prone LLM-based mental computation, and (3) an Adaptive Strategy Router that dynamically allocates computational resources based on question complexity, reducing API costs by 41.3% on FinQA while preserving accuracy. Extensive experiments on three benchmark datasets--FinQA, ConvFinQA, and TAT-QA--demonstrate that FinAgent-RAG achieves 76.81%, 78.46%, and 74.96% execution accuracy respectively, outperforming the strongest baseline by 5.62--9.32 percentage points. Ablation studies, cross-backbone evaluation with four LLMs, and deployment cost analysis confirm the framework's robustness and practical viability for financial institutions. 
+
+---
+# More Is Not Always Better: Cross-Component Interference in LLM Agent Scaffolding 
+
+**Authors**: Ming Liu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.05716)  
+
+**Abstract**: LLM agent systems are built by stacking scaffolding components (planning, tools, memory, self-reflection, retrieval) assuming more is better. We study cross-component interference (CCI): degradation when components interact destructively. We run a full factorial experiment over all 2^5=32 subsets of five components on HotpotQA and GSM8K with Llama-3.1-8B/70B (96 conditions, up to 10 seeds). The All-In system is consistently suboptimal: on HotpotQA, a single-tool agent surpasses All-In by 32% (F1 0.233 vs 0.177, p=0.023); on GSM8K, a 3-component subset beats All-In by 79% (0.43 vs 0.24, p=0.010). Optimal component count is task-dependent (k*=1-4) and scale-sensitive: at 70B, combinations that hurt at 8B provide gains, though All-In still trails the best subset. We fit a main-effects regression (R^2=0.916, adj-R^2=0.899, LOOCV=0.872), compute exact Shapley values, and find 183/325 submodularity violations (56.3%), showing greedy selection is unreliable. A three-body synergy among Tool Use, Self-Reflection, and Retrieval (INT_3=+0.175, 95% CI [+0.003,+0.351]) is reported as exploratory. CCI replicates across model families (Qwen2.5) and is robust to prompt paraphrasing. Our findings suggest maximally-equipped agent defaults should be replaced by task-specific subset selection via interaction-aware analysis. 
+
+---
+# FinRAG-12B: A Production-Validated Recipe for Grounded Question Answering in Banking 
+
+**Authors**: Denys Katerenchuk, Pablo Duboue, Keelan Evanini, David Gondek, Nithin Govindugari, Olivier Allauzen, Joshua Baptiste, David J More, Joshua Schechter  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.05482)  
+
+**Abstract**: Large language models (LLMs) are rapidly being adopted across various domains. However, their adoption in banking industry faces resistance due to demands for high accuracy, regulatory compliance, and the need for verifiable and grounded responses. We present a unified, data-efficient framework for training grounded domain-specific LLMs that optimizes answer quality, citation grounding, and calibrated refusal under real-world deployment constraints. First, we describe a data generation pipeline that combines LLM-as-a-Judge filtering, citation annotation, and curriculum learning with only 143M tokens. The resulting 12B model achieves high answer quality outperforming GPT-4.1 on citation grounding, with a modest citation tradeoff versus the untuned base. Second, we propose a calibrated refusal mechanism: training on 22% unanswerable examples yield a 12% "I don't know" rate, substantially improving over the base model's unsafe 4.3% rate while avoiding GPT-4.1's over-refusal (20.2%). Third, we present an end-to-end methodology spanning from data curation to quantized serving. The system is deployed at 40+ financial institutions, achieving a 7.1 percentage point improvement in query resolution (p < 0.001). Additionally, the model delivers 3-5x faster responses at 20-50x lower cost compared to GPT-4.1. 
+
+---
+# Knowledge Graphs, the Missing Link in Agentic AI-based Formal Verification 
+
+**Authors**: Vaisakh Naduvodi Viswambharan, Keerthan Kopparam Radhakrishna, Deepak Narayan Gadde, Aman Kumar  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.06434)  
+
+**Abstract**: Recent advances in Large Language Models (LLMs) have enabled workflows that generate SystemVerilog Assertions (SVAs) from natural-language specifications, with the potential to accelerate Formal Verification (FV). However, high-quality assertion synthesis remains challenging because specifications are often ambiguous or incomplete and critical micro-architectural details reside in the Register Transfer Level (RTL). Many existing approaches treat the specification and RTL as loosely structured text, which weakens specification-to-RTL grounding and leads to semantic mismatches and frequent syntax failures during formal parsing and elaboration. This work addresses these limitations with a verification-centric Knowledge Graph (KG) constructed from structured Intermediate Representations (IRs) extracted from the specification, RTL, and formal-tool feedback, including syntax diagnostics, Counterexamples (CEXs), and coverage reports. The KG links requirements, design hierarchy, signals, assumptions, and properties to provide traceable, design-grounded context for generation. A multi-agent workflow queries and updates this KG to generate SVAs and to drive three refinement loops: syntax repair guided by tool diagnostics, CEX-guided correction using trace links, and coverage-directed property augmentation. Evaluation across seven benchmark designs indicates that KG-based context retrieval improves specification-to-RTL grounding and consistently produces compilable SVAs with low syntax-repair overhead. The approach achieves formal coverage ranging from 78.5% to 99.4%, though convergence exhibits design dependence with complex temporal and arithmetic reasoning remaining challenging for current LLM capabilities. 
+
+---
+# Event-Causal RAG: A Retrieval-Augmented Generation Framework for Long Video Reasoning in Complex Scenarios 
+
+**Authors**: Peizheng Yan, Yu Zhao, Liang Xie, Juntong Qi, Mingming Wang, Erwei Yin  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.06185)  
+
+**Abstract**: Recent large vision-language models have achieved strong performance on short- and medium-length video understanding, yet they remain inadequate for ultra-long or even infinite video reasoning, where models must preserve coherent memory over extended durations and infer causal dependencies across temporally distant events. Existing end-to-end video understanding methods are fundamentally limited by the $O(n^2)$ complexity of self-attention, while recent retrieval-augmented generation (RAG) approaches still suffer from fragmented clip-level memory, weak modeling of temporal and causal structure, and high storage and online inference costs. We present Event-Causal RAG, a lightweight retrieval-augmented framework for infinite long-video reasoning. Instead of indexing fixed-length clips, our method segments streaming videos into semantically coherent events and represents each event as a structured State-Event-State (SES) graph, capturing the event together with its surrounding state transitions. These graphs are merged into a global Event Knowledge Graph and stored in a dual-store memory that supports both semantic matching and causal-topological retrieval. On top of this memory, we design a bidirectional retrieval strategy to efficiently identify the most relevant event causal chains and provide them, together with the associated video evidence, to a backbone video foundation model for answer generation. Experiments on long-video understanding benchmarks demonstrate that Event-Causal RAG consistently outperforms strong clip-based retrieval baselines and long-context video models, particularly on questions requiring multi-event integration and causal inference across long temporal gaps, while also achieving improved memory efficiency and robust streaming performance. 
+
+---
+# Sheet as Token: A Graph-Enhanced Representation for Multi-Sheet Spreadsheet Understanding 
+
+**Authors**: Yiming Lei, Yiqi Wang, Yujia Zhang, Bo Guan, Depei Zhu, Chunhui Wang, Zhuonan Hao, Tianyu Shi  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.05811)  
+
+**Abstract**: Workbook-scale spreadsheet understanding is increasingly important for language-model-based data analysis agents, but remains challenging because relevant information is often distributed across multiple sheets with heterogeneous schemas, layouts, and implicit relationships. Existing retrieval-augmented approaches typically decompose spreadsheets into rows, columns, or blocks to improve scalability; however, such chunk-centric representations can fragment worksheets into isolated text spans and weaken global sheet-level semantics. We propose Sheet as Token, a graph-enhanced framework that treats each worksheet as a unified semantic unit for multi-sheet spreadsheet retrieval. Our method extracts schema-aware records from sheet names, column headers, representative values, and layout features, and encodes each worksheet into a compact dense token. Given a natural-language query, a Graph Retriever constructs a query-specific candidate graph over sheet tokens using semantic, query-conditioned, schema-consistency, and shape-compatibility relations, and composes these channels through a multi-stage graph transformer to retrieve supporting sheet sets. Experiments on a constructed multi-sheet spreadsheet corpus show that sheet-level tokenization learns stable representations, and that graph-enhanced cross-sheet reasoning improves listwise retrieval over a shallow graph baseline with limited additional graph-side computation. These results suggest that sheet-level tokenization is a promising abstraction for scalable multi-sheet spreadsheet understanding. 
+
+---
+# SkillRet: A Large-Scale Benchmark for Skill Retrieval in LLM Agents 
+
+**Authors**: Hongcheol Cho, Ryangkyung Kang, Youngeun Kim  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.05726)  
+
+**Abstract**: As LLM agents are increasingly deployed with large libraries of reusable skills, selecting the right skill for a user request has become a critical systems challenge. In small libraries, users may invoke skills explicitly by name, but this assumption breaks down as skill ecosystems grow under tight context and latency budgets. Despite its practical importance, skill retrieval remains underexplored, with limited benchmarks and little understanding of retrieval behavior on realistic skill libraries. To address this gap, we introduce SkillRet, a large-scale benchmark for skill retrieval in LLM agents. SkillRet contains 17,810 public agent skills, organized with structured semantic tags and a two-level taxonomy spanning 6 major categories and 18 sub-categories. It provides 63,259 training samples and 4,997 evaluation queries with disjoint skill pools, enabling both benchmarking and retrieval-oriented training. Across a diverse set of retrievers, we find that skill retrieval remains far from solved: off-the-shelf models struggle on realistic large-scale skill libraries, and prior skill-retrieval models still leave substantial headroom. Task-specific fine-tuning on SkillRet substantially improves performance, improving NDCG@10 by +13.1 points over the strongest prior retriever and by +16.9 points over the strongest off-the-shelf retriever. Our analysis further suggests that these gains arise because fine-tuned models better focus on the small skill-relevant signals within long and noisy queries. These results establish SkillRet as a strong benchmark and foundation for future research on retrieval in large-scale agent systems. 
+
+---
+# Partial Evidence Bench: Benchmarking Authorization-Limited Evidence in Agentic Systems 
+
+**Authors**: Krti Tallam  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.05379)  
+
+**Abstract**: Enterprise agents increasingly operate inside scoped retrieval systems, delegated workflows, and policy-constrained evidence environments. In these settings, access control can be enforced correctly while the system still produces an answer that appears complete even though material evidence lies outside the caller's authorization boundary. This paper introduces Partial Evidence Bench, a deterministic benchmark for measuring that failure mode. The benchmark ships three scenario families -- due diligence, compliance audit, and security incident response -- with 72 tasks total, ACL-partitioned corpora, oracle complete answers, oracle authorized-view answers, oracle completeness judgments, and structured gap-report oracles. It evaluates systems along four surfaces: answer correctness, completeness awareness, gap-report quality, and unsafe completeness behavior. Checked-in baselines show that silent filtering is catastrophically unsafe across all shipped families, while explicit fail-and-report behavior eliminates unsafe completeness without collapsing the task into trivial abstention. Preliminary real-model runs show model-dependent and scenario-sensitive differences in whether systems overclaim completeness, conservatively underclaim, or report incompleteness in an enterprise-usable form. The benchmark's broader contribution is to make a governance-critical agent failure measurable without human judges or contamination-prone static corpora. 
+
+---
+# Retina-RAG: Retrieval-Augmented Vision-Language Modeling for Joint Retinal Diagnosis and Clinical Report Generation 
+
+**Authors**: Abdelrahman Zaian, Sheethal Bhat, Mohamed Abdalkader, Andreas Maier  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.06173)  
+
+**Abstract**: Diabetic Retinopathy (DR) is a leading cause of preventable blindness among working-age adults worldwide, yet most automated screening systems are limited to image-level classification and lack clinically structured reporting. We propose Retina-RAG, a low-cost modular framework that jointly performs DR severity grading, macular edema (ME) detection, and report generation. The architecture decouples a high-performance retinal classifier and a parameter-efficient vision-language model (Qwen2.5-VL-7B-Instruct) adapted via Low-Rank Adaptation (LoRA), enabling flexible component integration. A retrieval-augmented generation (RAG) module injects curated ophthalmic knowledge together with structured classifier outputs at inference time to improve diagnostic consistency and reduce hallucinations. Retina-RAG achieves an F1-score of 0.731 for DR grading and 0.948 for ME detection, substantially outperforming zero-shot Qwen (0.096, 0.732) and MMed-RAG (0.541, 0.641) on a retinal disease detection dataset with captions. For report generation, Retina-RAG attains ROUGE-L 0.429 and SBERT similarity 0.884, exceeding all baselines. The full framework operates on a single consumer-grade GPU, demonstrating that clinically structured retinal AI can be achieved with modest computational resources. 
+
+---
+# LLM-Driven Design Space Exploration of FPGA-based Accelerators 
+
+**Authors**: Vinamra Sharma, Xingjian Fu, Jude Haris, José Cano  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.05920)  
+
+**Abstract**: Designing field-programmable gate array (FPGA)-based accelerators for modern artificial intelligence workloads requires navigating a large and complex hardware design space encompassing architectural parameters, dataflow strategies, and memory hierarchies, making the process time-consuming and resource-intensive. While the SECDA methodology enables rapid hardware-software co-design of accelerators through SystemC simulation and FPGA execution, identifying optimal accelerator configurations still requires substantial manual effort and domain expertise. This work presents SECDA-DSE, a framework that integrates Large Language Models (LLMs) into the SECDA ecosystem, comprising tools built around SECDA to automate the design space exploration (DSE) of FPGA-based accelerators. SECDA-DSE combines a structured DSE Explorer for generating accelerator configurations with an LLM Stack that performs reasoning-guided exploration using retrieval-augmented generation and chain-of-thought prompting, alongside a feedback loop that enables reinforced fine-tuning for continuous improvement. We demonstrate the feasibility of SECDA-DSE through an initial high-level synthesis based evaluation of a generated accelerator design that meets synthesis timing and resource constraints on an Zynq-7000 FPGA. 
+
+---
+# LCC-LLM: Leveraging Code-Centric Large Language Models for Malware Attribution 
+
+**Authors**: Christopher G. Pedraza Pohlenz, Hassan Jalil Hadi, Ali Hassan, Ali Shoker  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.05807)  
+
+**Abstract**: LLMs are increasingly explored for malware analysis; however, current LLM-based malware attribution remains limited by unsupported indicators and insufficient code-level grounding for identifying malicious and vulnerable code segments. To address these limitations, this research introduces LCC-LLM, a code-centric benchmark dataset and evidence-grounded framework for malware attribution and multi-task static malware analysis. The proposed LCCD dataset contains approximately 34K PE samples processed through a large-scale reverse-engineering pipeline and represented using decompiled C code, assembly code, CFG/FCG artifacts, hexadecimal data, PE metadata, suspicious API evidence, and structural features. Beyond dataset construction, LCC-LLM integrates LangGraph-orchestrated static analysis with multi-source cybersecurity knowledge to support evidence-grounded malware reasoning. The framework employs a seven-layer retrieval-augmented generation pipeline, CoVe for IoC validation, and a multi-dimensional quality gate to improve factual reliability and analyst-oriented decision support. Curriculum-ordered instruction data is used to fine-tune DeepSeek-R1-Distill-Qwen-14B and Qwen3-Coder-30B-A3B using QLoRA. Evaluation across 43 malware-analysis task types achieves an average semantic similarity of 0.634, with the highest task-level performance in structured report generation, IoC extraction, vulnerability assessment, malware configuration extraction, and malware class detection. In a real-world case study using MalwareBazaar samples, the grounded pipeline achieves a 10/10 structured analysis pass rate, producing CFG/FCG evidence, MITRE ATT&CK mappings, detection guidance, and analyst-ready reports. These results show that code-centric representations, retrieval grounding, and verification-guided reasoning improve the reliability and operational usefulness of LLM-assisted malware attribution. 
+
+---
+# EGA: Adapting Frozen Encoders for Vector Search with Bounded Out-of-Distribution Degradation 
+
+**Authors**: Dongfang Zhao  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.05674)  
+
+**Abstract**: Vector search systems built on frozen vision encoders face queries from unseen classes at deployment, yet existing adapter training collapses under this shift: high-capacity adapters with global contrastive losses silently reassign unseen-class samples to wrong seen-class clusters, dropping worst-case Label Precision by over 40 points below the frozen baseline in our tests. We propose Euclidean Geodesic Alignment (EGA), a residual adapter that couples three principles: zero initialization, local triplet loss, and hypersphere projection. These collectively induce a self-limiting dynamic: triplets that already satisfy a small margin stop producing gradients, so the adapter automatically stops updating where the local geometry is already correct. Our experiments show that at convergence $96.5\%$ of triplets are gradient-free, leaving unseen-class regions largely untouched while still enabling full-capacity refinement of seen classes. Across five diverse out-of-distribution (OOD) benchmarks, EGA achieves the highest worst-case Label Precision on the four primary splits and a consistent improvement on the fifth. The design also transfers to stronger backbones in addition to CLIP, and we provide an analytical justification linking gradient sparsity to bounded OOD perturbation. 
+
+---
+# Beyond Semantic Similarity: Rethinking Retrieval for Agentic Search via Direct Corpus Interaction 
+
+**Authors**: Zhuofeng Li, Haoxiang Zhang, Cong Wei, Pan Lu, Ping Nie, Yi Lu, Yuyang Bai, Shangbin Feng, Hangxiao Zhu, Ming Zhong, Yuyu Zhang, Jianwen Xie, Yejin Choi, James Zou, Jiawei Han, Wenhu Chen, Jimmy Lin, Dongfu Jiang, Yu Zhang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.05242)  
+
+**Abstract**: Modern retrieval systems, whether lexical or semantic, expose a corpus through a fixed similarity interface that compresses access into a single top-k retrieval step before reasoning. This abstraction is efficient, but for agentic search, it becomes a bottleneck: exact lexical constraints, sparse clue conjunctions, local context checks, and multi-step hypothesis refinement are difficult to implement by calling a conventional off-the-shelf retriever, and evidence filtered out early cannot be recovered by stronger downstream reasoning. Agentic tasks further exacerbate this limitation because they require agents to orchestrate multiple steps, including discovering intermediate entities, combining weak clues, and revising the plan after observing partial evidence. To tackle the limitation, we study direct corpus interaction (DCI), where an agent searches the raw corpus directly with general-purpose terminal tools (e.g., grep, file reads, shell commands, lightweight scripts), without any embedding model, vector index, or retrieval API. This approach requires no offline indexing and adapts naturally to evolving local corpora. Across IR benchmarks and end-to-end agentic search tasks, this simple setup substantially outperforms strong sparse, dense, and reranking baselines on several BRIGHT and BEIR datasets, and attains strong accuracy on BrowseComp-Plus and multi-hop QA without relying on any conventional semantic retriever. Our results indicate that as language agents become stronger, retrieval quality depends not only on reasoning ability but also on the resolution of the interface through which the model interacts with the corpus, with which DCI opens a broader interface-design space for agentic search. 
+
+---

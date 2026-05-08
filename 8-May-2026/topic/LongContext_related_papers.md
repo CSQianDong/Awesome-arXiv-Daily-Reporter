@@ -1,0 +1,145 @@
+# OBLIQ-Bench: Exposing Overlooked Bottlenecks in Modern Retrievers with Latent and Implicit Queries 
+
+**Authors**: Diane Tchuindjo, Devavrat Shah, Omar Khattab  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.06235)  
+
+**Abstract**: Retrieval benchmarks are increasingly saturating, but we argue that efficient search is far from a solved problem. We identify a class of queries we call oblique, which seek documents that instantiate a latent pattern, like finding all tweets that express an implicit stance, chat logs that demonstrate a particular failure mode, or transcripts that match an abstract scenario. We study three mechanisms through which obliqueness may arise and introduce OBLIQ-Bench, a suite of five oblique search problems over real long-tail corpora. OBLIQ-Bench exposes an overlooked asymmetry between retrieval and verification, where reasoning LLMs reliably recognize latent relevance whenever relevant documents are surfaced, but even sophisticated retrieval pipelines fail to surface most relevant documents in the first place. We hope that OBLIQ-Bench will drive research into retrieval architectures that efficiently capture latent patterns and implicit signals in large corpora. 
+
+---
+# Long Context Pre-Training with Lighthouse Attention 
+
+**Authors**: Bowen Peng, Subho Ghosh, Jeffrey Quesnelle  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.06554)  
+
+**Abstract**: Training causal transformers at extreme sequence lengths is bottlenecked by the quadratic time and memory of scaled dot-product attention (SDPA). In this work, we propose Lighthouse Attention, a training-only symmetrical selection-based hierarchical attention algorithm that wraps around ordinary SDPA and can be easily removed towards the end of the training. Our hierarchical selection is also gradient-free, which exempts us from dealing with a complicated and potentially inefficient backward pass kernel. Our contribution is three-fold: (i) A subquadratic hierarchical pre- and post-processing step that does adaptive compression and decompression of the sequence. (ii) A symmetrical compression strategy that pools queries, keys and values at the same time, while preserving left-to-right causality, which greatly improves parallelism. (iii) A two stage training approach which we pre-train for the majority of the time with Lighthouse Attention and recover a full attention model at the end with a short training. We run preliminary small scale LLM pre-training experiments that show the effectiveness of our method compared to full attention training with all other settings matched, where we achieve a faster total training time and lower final loss after the recovery phase. Full code is available at: this https URL 
+
+---
+# MiA-Signature: Approximating Global Activation for Long-Context Understanding 
+
+**Authors**: Yuqing Li, Jiangnan Li, Mo Yu, Zheng Lin, Weiping Wang, Jie Zhou  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.06416)  
+
+**Abstract**: A growing body of work in cognitive science suggests that reportable conscious access is associated with \emph{global ignition} over distributed memory systems, while such activation is only partially accessible as individuals cannot directly access or enumerate all activated contents. This tension suggests a plausible mechanism that cognition may rely on a compact representation that approximates the global influence of activation on downstream processing. Inspired by this idea, we introduce the concept of \textbf{Mindscape Activation Signature (MiA-Signature)}, a compressed representation of the global activation pattern induced by a query. In LLM systems, this is instantiated via submodular-based selection of high-level concepts that cover the activated context space, optionally refined through lightweight iterative updates using working memory. The resulting MiA-Signature serves as a conditioning signal that approximates the effect of the full activation state while remaining computationally tractable. Integrating MiA-Signatures into both RAG and agentic systems yields consistent performance gains across multiple long-context understanding tasks. 
+
+---
+# STALE: Can LLM Agents Know When Their Memories Are No Longer Valid? 
+
+**Authors**: Hanxiang Chao, Yihan Bai, Rui Sheng, Tianle Li, Yushi Sun  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.06527)  
+
+**Abstract**: Large Language Model (LLM) agents are increasingly expected to maintain coherent, long-term personalized memory, yet current benchmarks primarily measure static fact retrieval, overlooking the ability to revise stored beliefs when new evidence emerges. We identify a critical and underexplored failure mode, Implicit Conflict: a later observation invalidates an earlier memory without explicit negation, requiring contextual inference and commonsense reasoning to detect. To rigorously evaluate this capability, we introduce STALE, a benchmark of 400 expert-validated conflict scenarios (1,200 evaluation queries across three probing dimensions) spanning over 100 everyday topics with contexts up to 150K tokens. We propose a three-dimensional probing framework that tests State Resolution (detecting that a prior belief is outdated), Premise Resistance (rejecting queries that falsely presuppose a stale state), and Implicit Policy Adaptation (proactively applying updated states in downstream behavior). A systematic evaluation of frontier LLMs and specialized memory frameworks reveals a pervasive gap between retrieving updated evidence and acting on it, with even the best evaluated model achieving only 55.2% overall accuracy. Models often accept outdated assumptions embedded in a user's query, and they struggle to recognize when a change in one aspect of the user's state should invalidate related memories. To establish an initial baseline for state-aware memory, we further present CUPMem, a prototype that strengthens write-time revision through structured state consolidation and propagation-aware search, suggesting that explicit state adjudication is a promising direction for robust agentic memory. 
+
+---
+# Don't Lose Focus: Activation Steering via Key-Orthogonal Projections 
+
+**Authors**: Haoyan Luo, Mateo Espinosa Zarlenga, Mateja Jamnik  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.06342)  
+
+**Abstract**: Activation steering controls LLM behaviour towards target behaviour by intervening in internal representations, yet it often degrades reasoning and retrieval performance. We argue that a primary cause of this trade-off is attention rerouting: steering vectors alter query-key matching, shifting attention away from contextually important tokens toward less informative ones. To address this, we propose Steering via Key-Orthogonal Projections (SKOP), a steering method that constrains harmful attention rerouting without eliminating steering efficacy. SKOP achieves this by preserving attention patterns on a small set of focus tokens the model relies on for reasoning and retrieval, while allowing redistribution among less critical tail tokens. Across multiple steering benchmarks, we show that SKOP achieves the best joint steering-utility trade-off, reducing utility degradation by 5-7x while retaining over 95% of vanilla steering efficacy. Our results further suggest that, in long-context retrieval settings where vanilla steering approaches are ineffective, SKOP can maintain robust performance by avoiding attention rerouting. 
+
+---
+# UniPrefill: Universal Long-Context Prefill Acceleration via Block-wise Dynamic Sparsification 
+
+**Authors**: Qihang Fan, Huaibo Huang, Zhiying Wu, Bingning Wang, Ran He  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.06221)  
+
+**Abstract**: As large language models (LLMs) continue to advance rapidly, they are becoming increasingly capable while simultaneously demanding ever-longer context lengths. To improve the inference efficiency of long-context processing, several novel low-complexity hybrid architectures have recently been proposed, effectively alleviating the computational burden of long-context inference. However, existing research on long-context prefill acceleration remains predominantly focused on sparse attention mechanisms, which achieve their maximum speedup only on full-attention models. When transferred to emerging architectures--such as linear/full attention hybrids or sliding window/full attention hybrids--these prefill acceleration approaches suffer significant performance degradation. Furthermore, such methods are generally incompatible with continuous batching, making them difficult to integrate into modern inference engines such as vLLM. To this end, we propose UniPrefill, a prefill acceleration framework applicable to virtually any model architecture, which directly accelerates the model's computation at the token level. We further implement UniPrefill as a continuous batching operator and extend vLLM's scheduling strategy to natively support prefill-decode co-processing and tensor parallel for UniPrefill, enabling its seamless integration into vLLM. UniPrefill achieves up to 2.1x speedup in Time-To-First-Token (TTFT), with the acceleration becoming increasingly pronounced as the number of concurrent requests grows. 
+
+---
+# Recursive Agent Optimization 
+
+**Authors**: Apurva Gandhi, Satyaki Chakraborty, Xiangjun Wang, Aviral Kumar, Graham Neubig  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.06639)  
+
+**Abstract**: We introduce Recursive Agent Optimization (RAO), a reinforcement learning approach for training recursive agents: agents that can spawn and delegate sub-tasks to new instantiations of themselves recursively. Recursive agents implement an inference-time scaling algorithm that naturally allows agents to scale to longer contexts and generalize to more difficult problems via divide-and-conquer. RAO provides a method to train models to best take advantage of such recursive inference, teaching agents when and how to delegate and communicate. We find that recursive agents trained in this way enjoy better training efficiency, can scale to tasks that go beyond the model's context window, generalize to tasks much harder than the ones the agent was trained on, and can enjoy reduced wall-clock time compared to single-agent systems. 
+
+---
+# Cubit: Token Mixer with Kernel Ridge Regression 
+
+**Authors**: Chuanyang Zheng, Jiankai Sun, Yihang Gao, Yuehao Wang, Liangchen Tan, Mac Schwager, Anderson Schneider, Yuriy Nevmyvaka, Xiaodong Liu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.06501)  
+
+**Abstract**: Since its introduction in 2017, the Transformer has become one of the most widely adopted architectures in modern deep learning. Despite extensive efforts to improve positional encoding, attention mechanisms, and feed-forward networks, the core token-mixing mechanism in Transformers remains attention. In this work, we show that the attention module in Transformers can be interpreted as performing Nadaraya-Watson regression, where it computes similarities between tokens and aggregates the corresponding values accordingly. Motivated by this perspective, we propose Cubit, a potential next-generation architecture that leverages Kernel Ridge Regression (KRR), while the vanilla Transformer relies on Nadaraya-Watson regression. Specifically, Cubit modifies the classical attention computation by incorporating the closed-form solution of KRR, combining value aggregation through kernel similarities with normalization via the inverse of the kernel matrix. To improve the training stability, we further propose the Limited-Range Rescale (LRR), which rescales the value layer within a controlled range. We argue that Cubit, as a KRR-based architecture, provides a stronger mathematical foundation than the vanilla Transformer, whose attention mechanism corresponds to Nadaraya-Watson regression. We validate this claim through comprehensive experiments. The experimental results suggest that Cubit may exhibit stronger long-sequence modeling capability. In particular, its performance gain over the Transformer appears to increase as the training sequence length grows. 
+
+---
+# Shallow Prefill, Deep Decoding: Efficient Long-Context Inference via Layer-Asymmetric KV Visibility 
+
+**Authors**: Jungsuk Oh, Hyeseo Jeon, Hyunjune Ji, Kyongmin Kong, Jay-Yoon Lee  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.06105)  
+
+**Abstract**: Long-context inference in decoder-only language models is costly because long prompts are processed during Prefill, cached at every layer, and repeatedly attended to during autoregressive Decode. We introduce \emph{Shallow Prefill, dEEp Decode} (SPEED), a phase-asymmetric KV-visibility policy that materializes non-anchor prompt-token KV states only in lower layers while keeping Decode-phase tokens full-depth. Unlike previous approaches that make upper-layer prompt KV states cheaper to store or construct, SPEED removes prefill tokens from the upper-layer Decode visibility set altogether. With a minimal BoS anchor, this simple change preserves broad benchmark quality while reducing long-context cost. In a controlled Llama-3.1-8B instruction-tuning study, SPEED using only 75\% of layers for prefill tokens reaches 51.2 average score on OLMES-style benchmarks, compared with 51.4 for the full-depth baseline, while improving TTFT by 33\%, TPOT by 22\%, and reducing active KV memory by 25.0\% at 128K context. Layer-wise diagnostics suggest that this cutoff retains the main prompt-selection and representation-stabilization regions of the full-depth model. These results show that long-context prompt tokens need not always persist as full-depth KV-cache objects when Decode-phase tokens remain full-depth. 
+
+---
+# Belief Memory: Agent Memory Under Partial Observability 
+
+**Authors**: Junfeng Liao, Qizhou Wang, Jianing Zhu, Bo Du, Rui Yan, Xiuying Chen  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.05583)  
+
+**Abstract**: LLM agents that operate over long context depend on external memory to accumulate knowledge over time. However, existing methods typically store each observation as a single deterministic conclusion (e.g., inferring "API~X failed" from temporary errors), even though such observations are inherently partial and potentially ambiguous. By committing to one conclusion and discarding uncertainty, these methods introduce self-reinforcing error: the agent acts on the stored conclusion, never revisits alternatives, and reinforces the conclusion over time. To address this issue, we propose BeliefMem, which shifts the memory paradigm from committing to a single conclusion per observation to retaining multiple candidate conclusions with their probabilities. Concretely, BeliefMem stores the candidate conclusions as separate memory entries, each carrying a probability that is updated via Noisy-OR rules as new observations arrive. At retrieval, all candidates surface together with their probabilities, keeping alternatives visible to the agent. Since each conclusion in memory retains its probability, BeliefMem preserves the uncertainty that the deterministic paradigm discards, enabling the agent to act with high confidence on well-evidenced knowledge while retaining the capacity to update its confidence when new evidence arrives. Empirical evaluations on LoCoMo and ALFWorld benchmarks show that, even with limited data, BeliefMem achieves the best average performance, remarkably outperforming well-known baselines. More broadly, such probabilistic memory produces substantial gains and explores a new direction for agent memory in partially observable environments. 
+
+---
+# From History to State: Constant-Context Skill Learning for LLM Agents 
+
+**Authors**: Haoyang Xie, Xinyuan Wang, Yancheng Wang, Puda Zhao, Feng Ju  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.05413)  
+
+**Abstract**: Large language model (LLM) agents are increasingly used to operate browsers, files, code and tools, making personal assistants a natural deployment target. Yet personal agents face a privacy-cost-capability tension: cloud models execute multi-step workflows well but expose sensitive intermediate context to external APIs, while local models preserve privacy but remain less reliable. Both settings also pay repeatedly for long skill prompts and growing histories. We propose constant-context skill learning, a context-to-weights framework for recurring agent workflows: reusable procedures are learned in lightweight task-family modules, while inference conditions only on the current observation and a compact state block. A deterministic tracker renders this state block from task progress and supplies aligned subgoal rewards, so each module can be trained with step-level SFT and refined through online RL. Across ALFWorld, WebShop, and SciWorld, our agents achieve strong performance across Qwen3-4B, Qwen3-8B and Llama-3.1-8B. With Qwen3-8B, SFT+RL reaches 89.6\% unseen success on ALFWorld, 76.8\% success on WebShop, and 66.4\% unseen success on SciWorld. They match or exceed strong published agent-training results while reducing prompt tokens per turn by 2--7$\times$ relative to controlled ReAct prompting baselines, showing that procedural context can be moved from prompts into weights. 
+
+---
+# Memory Inception: Latent-Space KV Cache Manipulation for Steering LLMs 
+
+**Authors**: Andy Zeyi Liu, Michael Zhang, Ilana Greenberg, Adam Alnasser, Lucas Baker, John Sous  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.06225)  
+
+**Abstract**: Steering large language models (LLMs) is usually done by either instruction prompting or activation steering. Prompting often gives strong control, but caches guidance tokens at every layer and can clutter long interactions; activation steering is compact but typically weaker and does not support large structured reminders. We introduce memory inception (MI), a training-free method that steers in latent attention space by inserting text-derived key-value (KV) banks only at selected layers. Rather than materializing reminder content throughout the prompt cache, MI treats steering as selective KV allocation, injecting latent slots only where the model routes to them. On matched personality-steering tasks, MI gives the best overall control--drift trade-off, remaining competitive with prompting while consistently outperforming CAA. On updateable guidance, MI supports mid-conversation behavior shifts without rewriting the visible transcript, achieving the highest post-shift alignment on Qwen3. On structured reasoning, MI outperforms visible prompting on HARDMath and PHYSICS (10/12 subject$\times$mode cells), serving as proxies for structured reasoning in verifiable domains, while cutting content-matched KV storage by up to 118$\times$. These results position MI as a powerful steering method when guidance is persistent, structured, or expensive to keep in the visible transcript. 
+
+---
+# When Quantization Is Free: An int4 KV Cache That Outruns fp16 on Apple Silicon 
+
+**Authors**: Mohamed Amine Bergach  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.05699)  
+
+**Abstract**: KV-cache quantization is framed as a quality--latency trade-off. We show it is \emph{inverted} on Apple Silicon's unified memory: a single fused Metal kernel (sign-randomized FFT $+$ per-channel $\lambda$ $+$ per-group abs-max $+$ int4 nibble pack), exposed as a HuggingFace \texttt{Cache} subclass, runs \emph{faster than fp16} across $256$--$4096$-token prefixes on Gemma-3 1B ($-3$ to $-8\%$ ms/tok) and at short context on Qwen2.5-1.5B ($-0.7$ to $-2.6\%$ through $1$K), with $3\times$ persistent memory compression and quality preserved ($\dPPL = 0.000$ Qwen short-prompt; $+3.6$ hook $\dPPL$ Gemma). The kernel's $\sim\!25$\,ns/vec overhead is below the bandwidth savings from $3\times$ compression. The fused kernel also closes Qwen's 4-bit per-token catastrophe ($\dPPL = +7975 \to +638.6$, $12.5\times$ reduction) at $182$\,GFLOPS / $D{=}128$. Supporting findings: $\SRFT$ and $\SRHT$ are statistically indistinguishable for KV quality (we pick $\SRFT$ for mixed-radix and matrix-multiply alignment); a learned-rotation ablation surfaces a regularization role for the fixed random SRFT base (learning $R+\lambda$ without SRFT lowers calibration MSE $84.9\%$ vs $50.3\%$ but yields worse PPL); Householder rotations at $k{=}d/2$ reflectors are effectively lossless at $d{=}256$. 
+
+---
+# Irminsul: MLA-Native Position-Independent Caching for Agentic LLM Serving 
+
+**Authors**: Bole Ma, Jan Eitzinger, Harald Köstler  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.05696)  
+
+**Abstract**: Agentic LLM workloads put bit-identical tokens at shifted positions every turn, voiding prefix caches at the first byte of divergence. Operators report cache-hit regressions ranging from moderate slowdowns to severe TTFT spikes of 10-16s on unchanged content. Prior position-independent caching systems correct RoPE on the full $d_K$-dimensional key, an architectural cost imposed by GQA, not by caching itself. Multi-Head Latent Attention, deployed at scale in DeepSeek-V2/V3/R1, Kimi-K2/Moonlight, GLM-5, and Mistral Large 3, factors each KV row into a position-free $c_{KV}$ and a 64-dim $k_r$ correctable in closed form; this structure motivates content-addressed caching as a natural fit rather than a GQA workaround. We present Irminsul, which extends SGLang's radix cache with content-hash keying over CDC-chunked segments and a $\delta$-rotation rule for $k_r$. We evaluate three native MLA-MoE deployments - DeepSeek-V2-Lite (16B/2.4B), Kimi Moonlight-16B-A3B, and JoyAI-Flash (48B/3B) - with output-consistency on all three and recovery measured on the two endpoints; Irminsul recovers up to ~83% of prompt tokens above exact-prefix on agentic traffic while delivering 63% prefill energy savings per cache hit. We argue that content-addressed caching belongs in the serving stack as a first-class primitive, not a retrofit over prefix matching. 
+
+---
+# VideoRouter: Query-Adaptive Dual Routing for Efficient Long-Video Understanding 
+
+**Authors**: Kuanwei Lin, Wenhao Zhang, Ge Li  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.05848)  
+
+**Abstract**: Video large multimodal models increasingly face a scalability bottleneck: long videos produce excessively long visual-token sequences, which sharply increase memory and latency during inference. While existing compression methods are effective in specific settings, most are either weakly query-aware or apply a fixed compression policy across frames, proving suboptimal when visual evidence is unevenly distributed over time. To address this, we present VideoRouter, a query-adaptive dual-router framework built on InternVL for budgeted evidence allocation. The Semantic Router predicts the dominant allocation policy, choosing between broad temporal coverage and adaptive high-resolution preservation, while the Image Router uses early LLM layers to score frame relevance. This enables aggressive compression on less relevant frames while preserving detail on critical evidence frames. To train both routers, we build Video-QTR-10K for allocation-policy supervision and Video-FLR-200K for frame-relevance supervision. Experiments on VideoMME, MLVU, and LongVideoBench show that VideoRouter consistently improves over the InternVL baseline under comparable or lower budgets, achieving up to a 67.9% token reduction. 
+
+---
+# Sparse Prefix Caching for Hybrid and Recurrent LLM Serving 
+
+**Authors**: Mikhail Shirokikh, Sergey Nikolenko  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.05219)  
+
+**Abstract**: Prefix caching is a key latency optimization for autoregressive LLM serving, yet existing systems assume dense per-token key/value reuse. State-space models change the structure of the problem: a recurrent layer can resume from a single stored state rather than requiring the entire token history. This asymmetry opens a new design point between no reuse and dense caching: store exact recurrent states at a sparse set of checkpoint positions and, on a cache hit, resume from the deepest stored checkpoint and recompute the remaining suffix exactly.
+We formalize sparse prefix caching as checkpoint placement under a distribution over overlap depths, yielding an exact O(NM) dynamic program. For use cases where requests share a non-trivial prefix (e.g. asking different questions about a single long document), we show that our method consistently improves the Pareto frontier traced by standard heuristics on real-world data. Across QuALITY and System Prompts, distribution-aware placement dominates every fixed-budget baseline on the measured layer-group Pareto frontier and matches or outperforms the strongest heuristic (block caching) while typically using substantially fewer checkpoints, with the largest gains at low checkpoint budgets where the overlap distribution is most non-uniform. The method is most relevant when many requests share a substantial but not identical prefix within a retained cache entry. It preserves exact outputs, does not change the recurrent computation itself or require new recurrent update kernels, applies to recurrent/SSM layers whose hidden state can be extracted and restored exactly, and for hybrid models can be combined with existing KV-cache compression techniques. 
+
+---
