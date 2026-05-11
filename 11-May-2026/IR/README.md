@@ -1,0 +1,139 @@
+# FAVOR: Efficient Filter-Agnostic Vector ANNS Based on Selectivity-Aware Exclusion Distances 
+
+**Authors**: Junjie Song, Yu Liu, Guoyu Hu, Zhongle Xie, Ming Yang, Beng Chin Ooi, Ke Zhou  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.07770)  
+
+**Abstract**: Modern retrieval systems increasingly require integrating approximate nearest neighbor search (ANNS) with complex attribute filtering to handle hybrid queries in applications such as recommendation systems and retrieval-augmented generation (RAG). While HNSW-based inline-filtering methods show promise, existing approaches struggle to deliver high throughput under low-selectivity scenarios while balancing search efficiency, filtering generality, and index connectivity. To address these challenges, we propose FAVOR, an efficient filter-agnostic vector ANNS that supports arbitrary filtering conditions while maintaining stable performance across varying selectivity levels. FAVOR introduces three novel features: (1) an integrated architecture that unifies selectivity estimation and filtered ANNS execution, providing a cohesive solution for hybrid vector-attribute queries; (2) a HNSW-based inline-filtering algorithm that introduces an exclusion distance mechanism to dynamically reshape the vector distance distribution, pushing non-target vectors away from the query while promoting valid candidates toward the query, thus improving search efficiency without compromising generality or graph connectivity; and (3) a selectivity-driven search selector that estimates query selectivity and dynamically routes queries between a pre-filtering brute-force algorithm for low-selectivity cases and an optimized HNSW-based search algorithm for other scenarios, ensuring consistent performance. Extensive experiments on real-world datasets demonstrate that FAVOR achieves a 1.3-5$\times$ higher QPS at $Recall@10 = 95\%$ compared to state-of-the-art methods for arbitrary filtering conditions, while maintaining competitive performance even against tailored solutions in some filtering conditions. 
+
+---
+# TRACE: Tourism Recommendation with Accountable Citation Evidence 
+
+**Authors**: Zixu Zhao, Sijin Wang, Yu Hou, Yuanyuan Xu, Yufan Sheng, Xike Xie, Wenjie Zhang, Won-Yong Shin, Xin Cao  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.07677)  
+
+**Abstract**: Tourism is a high-stakes setting for conversational recommender systems (CRS): a plausible-sounding suggestion can waste real money and trip time once a traveler acts on it. Existing CRS benchmarks primarily evaluate systems with a single Recall@k score over entity mentions, and tourism-specific resources add spatial or knowledge-graph context, yet none of them couple multi-turn recommendation with verbatim review-span evidence and rejection recovery. This leaves an evaluation gap for tourism recommendation that is simultaneously trustworthy, verifiable, and adaptive: recommend the right point of interest (POI) for multi-aspect preferences (such as cuisine, price, atmosphere, walking distance), justify each suggestion with verifiable evidence from prior visitors so the traveler can act without trial and error, and recover when the first recommendation is rejected mid-dialogue. We introduce TRACE, where each item is a multi-turn tourism recommendation dialogue with review-span citations and explicit rejection turns: 10,000 dialogues over 2,400 Yelp POIs and 34,208 reviews across eight U.S. cities, paired with 14 retrieval, planning, and LLM baselines, along with 25 metrics organized under Accuracy, Grounding, and Recovery. Across these baselines, TRACE reveals the Three-Competency Gap: LLM Zero-Shot leads in closed-set Recall@1 and rejection recovery but cites less densely than retrievers; non-LLM retrievers achieve surface-verbatim grounding but with low accuracy; Multi-Review Synthesis fails at recovery. The Grounding Score agrees with human citation precision (Spearman rho=+0.80, p<10^-20), and paired t-tests reproduce the per-baseline ranking (p<0.01 on the dominant contrasts). TRACE reframes accountable tourism recommendation as a joint target (right POI, verifiable evidence, adaptive repair) rather than a single-axis leaderboard. 
+
+---
+# LARAG: Link-Aware Retrieval Strategy for RAG Systems in Hyperlinked Technical Documentation 
+
+**Authors**: Giorgia Bolognesi, Claudio Estatico, Ulderico Fugacci, Isabella Mastroianni, Claudio Muselli, Luca Oneto  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.07517)  
+
+**Abstract**: Retrieval-Augmented Generation (RAG) enhances the factual grounding of Large Language Models by conditioning their outputs on external documents. However, standard embedding-based retrievers treat naturally structured corpora, such as technical manuals, as flat collections of passages, thereby overlooking the hyperlink topology that users rely on when navigating such content.
+We introduce LARAG (Link-Aware RAG): a lightweight, link-aware retrieval strategy that leverages the author-defined hyperlink structure already present in HTML documentation, encoding hyperlink relations as metadata in the chunk representations and exploiting them to perform a form of graph-like retrieval of locally relevant content.
+In a benchmark of twenty expert-designed queries over Rulex Platform technical documentation and four prompting strategies, LARAG consistently improves answer quality, achieving the highest BERTScore F1, while retrieving fewer chunks and generating fewer tokens than a baseline RAG architecture used for comparison. These results show that directly leveraging the existing hyperlink topology of technical documentation, even without explicit graph construction or inference, enables an implicit form of graph-like retrieval that yields a more faithful and efficient RAG pipeline, providing better grounding at lower cost. 
+
+---
+# A Comprehensive Survey on Agent Skills: Taxonomy, Techniques, and Applications 
+
+**Authors**: Yingli Zhou, Wang Shu, Yaodong Su, Wenchuan Du, Yixiang Fang, Xuemin Lin  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.07358)  
+
+**Abstract**: Large language model (LLM)-based agents that reason, plan, and act through tools, memory, and structured interaction are emerging as a promising paradigm for automating complex workflows. Recent systems such as OpenClaw and Claude Code exemplify a broader shift from passive response generation to action-oriented task execution. Yet as agents move toward open-ended, real-world deployment, relying on from-scratch reasoning and low-level tool calls for every task become increasingly inefficient, error-prone, and hard to maintain. This survey examines this challenge through the lens of \emph{agent skills}, which we define as reusable procedural artifacts that coordinate tools, memory, and runtime context under task-specific constraints. Under this view, agents and skills play complementary roles: agents handle high-level reasoning and planning, while skills form the operational layer that enables reliable, reusable, and composable execution. Skills are therefore central to the scalability, robustness, and maintainability of modern agent systems. We organize the literature around four stages of the agent skill lifecycle -- representation, acquisition, retrieval, and evolution -- and review representative methods, ecosystem resources, and application settings across each stage. We conclude by discussing open challenges in quality control, interoperability, safe updating, and long-term capability management. All related resources, including research papers, open-source data, and projects, are collected for the community in \textcolor{blue}{this https URL}. 
+
+---
+# DCGL: Dual-Channel Graph Learning with Large Language Models for Knowledge-Aware Recommendation 
+
+**Authors**: Xinchi Zou, Tongzhenzhi Su, Jianjun Li, Yuan Fu, Chang Liu, Zhiying Deng, Zhiwei Shen  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.07314)  
+
+**Abstract**: Knowledge Graphs (KGs) have proven highly effective for recommendation systems by capturing latent item relationships, while recent integration of Large Language Models (LLMs) has further enhanced semantic understanding and addressed knowledge sparsity issues. Nevertheless, current KG-and-LLM-based methods still face three main limitations: 1) inadequate modeling of implicit semantic relationships beyond explicit KG links; 2) suboptimal single-channel fusion of ID and LLM embeddings, which often leads to signal interference and blurred representations; and 3) insufficient consideration of user-item interaction frequency variations in recommendation strategies. To address these challenges, we propose the Dual-Channel Graph Learning (DCGL) framework, featuring three key innovations: 1) a dual-channel architecture that structurally decouples rich semantic information from user behavioral patterns, preventing early interference; 2) a multi-level contrastive learning mechanism that enhances robustness against KG noise through intra-view contrasts and bridges semantic gaps between channels via inter-view alignment; and 3) a dynamic fusion mechanism that adaptively balances semantic generalization and behavioral specificity based on interaction frequency, resolving the cascading limitation. Extensive experiments on four real-world datasets show that DCGL consistently outperforms state-of-the-art methods, yielding substantial improvements in sparse scenarios while maintaining precision for active users. Our code is available at this https URL. 
+
+---
+# PRISM: Refracting the Entangled User Behavior Space for E-Commerce Search 
+
+**Authors**: Haoqian Zhang, Ziyuan Yang, Yi Zhang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.07296)  
+
+**Abstract**: E-commerce search systems rely on modeling user behavior to estimate item relevance and user preference, which are typically assumed to be stable and independently learnable signals. However, in practice, user interactions are jointly shaped by exposure mechanisms, feedback loops, and semantic matching, leading to entangled and dynamically drifting behavioral signals. As a result, both preference estimation and relevance modeling suffer from confounding effects and semantic misalignment, which limits the robustness of downstream ranking models. To address this issue, we propose PRISM, a Preference-Relevance Interaction Semantic Modeling framework for e-commerce search behavior prediction. PRISM explicitly models the interaction between user preference and item relevance rather than treating them as independent components. Specifically, it introduces a preference rectification module to iteratively refine user preference under relevance-aware constraints, improving robustness against behavioral confounding. To ensure semantic consistency, we further incorporate a large language model (LLM)-driven semantic anchoring mechanism that leverages positive and negative prototypes to calibrate relevance representations. Finally, a preference-conditioned evidence routing module adaptively aggregates multi-source behavioral signals, enabling context-aware and preference-aligned relevance estimation. Extensive experiments on two public e-commerce benchmarks demonstrate that PRISM consistently outperforms strong baselines, validating the effectiveness of explicitly modeling preference-relevance interaction for robust and semantically grounded search behavior modeling. 
+
+---
+# MLAIRE: Multilingual Language-Aware Information Retrieval Evaluation Protocal 
+
+**Authors**: Youngjoon Jang, Seongtae Hong, Hyeonseok Moon, Heuiseok Lim  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.07249)  
+
+**Abstract**: Multilingual Information Retrieval is increasingly important in real-world search settings, where users issue queries over mixed-language corpora. Existing evaluations mainly reward language-agnostic semantic relevance, treating relevant passages equally regardless of language. Yet retrieval utility also depends on the language of the retrieved passages: users may prefer results they can read and verify in the query language, and query--passage language mismatch can complicate downstream grounding and answer verification in Retrieval-Augmented Generation systems. To evaluate this language-aware dimension, we introduce MLAIRE, a Multilingual Language-Aware Information Retrieval Evaluation protocol that disentangles cross-lingual semantic retrieval from query-language preference. MLAIRE constructs controlled pools with parallel passages across languages, enabling measurement of semantic retrieval accuracy and query-language preference when equivalent translations are available. We propose language-aware metrics, including Language Preference Rate (LPR) and Lang-nDCG, together with a 4-way decomposition separating semantic and query-language preference failures. Evaluating 31 dense, sparse, and late-interaction retrievers, we show that standard metrics obscure distinct behaviors: semantically strong retrievers may return correct content in a non-query language, while retrievers with stronger query-language preference may retrieve less semantically relevant passages. 
+
+---
+# DiffRetriever: Parallel Representative Tokens for Retrieval with Diffusion Language Models 
+
+**Authors**: Shuai Wang, Yin Yu, Shengyao Zhuang, Bevan Koopman, Guido Zuccon  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.07210)  
+
+**Abstract**: PromptReps showed that an autoregressive language model can be used directly as a retriever by prompting it to generate dense and sparse representations of a query or passage. Extending this to multiple representatives is inefficient for autoregressive models, since tokens must be generated sequentially, and prior multi-token variants did not reliably improve over single-token decoding.
+We show that the bottleneck is sequential generation, not the multi-token idea itself. DiffRetriever is a representative-token retriever for diffusion language models: it appends K masked positions to the prompt and reads all K in a single bidirectional forward pass. Across in-domain and out-of-domain evaluation, multi-token DiffRetriever substantially improves over single-token on every diffusion backbone we test, while autoregressive multi-token is flat or negative and pays a latency cost that scales with K where diffusion does not. After supervised fine-tuning, DiffRetriever on Dream is the strongest BEIR-7 retriever in our comparison, ahead of PromptReps, the encoder-style DiffEmbed baseline on the same diffusion backbones, and the contrastively fine-tuned single-vector RepLLaMA. A per-query oracle on the frozen base model exceeds contrastive fine-tuning at the same fixed budget, pointing to adaptive budget selection as future work. Code is available at this https URL. 
+
+---
+# Topic Is Not Agenda: A Citation-Community Audit of Text Embeddings 
+
+**Authors**: Junseon Yoo  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.07158)  
+
+**Abstract**: Vector search and retrieval-augmented generation (RAG) rest on the assumption that cosine similarity between text embeddings reflects conceptual relatedness. We measure where this assumption breaks. We build an augmented citation graph over 3.58M scientific papers and partition it via Leiden CPM at two granularities: sub-field (L1) and research-agenda (L2, hierarchical inside each L1). Four state-of-the-art embeddings (Gemini, Qwen3-8B, Qwen3-0.6B, SPECTER2) clear the L1 bar reasonably (45-52% top-10 same-rate) but stop working at L2: only 15-21% of top-10 neighbors share the query's research agenda. In absolute terms, 8 of every 10 retrieved papers are off-agenda. The failure is universal across eight scientific domains and all four models; SPECTER2, despite its citation-based contrastive training, is the weakest. As a diagnostic probe, we test whether the same augmented graph also functions as a retrieval signal: a deliberately simple citation-count rerank reaches 57.7% top-1 L2 on top of LLM-expanded Boolean retrieval and 59.6% on top of plain BM25, on 80 curated agenda queries -- about 9 points above the best cosine retriever (Gemini, 50.6%) and 20 points above BM25 alone (39.3%). The probe isolates a slice of the agenda-matching signal the graph carries but the embeddings miss, connecting recent theoretical limits on single-vector retrieval to a concrete failure mode of scientific RAG. 
+
+---
+# RRCM: Ranking-Driven Retrieval over Collaborative and Meta Memories for LLM Recommendation 
+
+**Authors**: Shijun Li, Wooseong Yang, Yu Wang, Tianxin Wei, Joydeep Ghosh  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.07129)  
+
+**Abstract**: Large Language Models (LLMs) have emerged as a promising paradigm for next-generation recommender systems, offering strong semantic understanding and natural-language reasoning abilities. Despite recent progress, current LLM-based recommenders still face key challenges in constructing decision-relevant contexts from heterogeneous evidence. First, existing methods often rely on fixed context construction strategies: collaborative behavioral evidence and item-side metadata are typically incorporated through predefined prompts, static retrieval pipelines, or handcrafted injection mechanisms, making it difficult to determine what information is truly beneficial for each instance. Second, heterogeneous evidence introduces a severe context-efficiency bottleneck. Rich metadata and collaborative interaction records can quickly overwhelm the context window, while aggressive compression or heuristic filtering may discard fine-grained evidence critical for accurate recommendation. To address these challenges, we propose RRCM, a ranking-driven retrieval-and-reasoning framework over collaborative and metadata memories for LLM-based agentic recommendation. RRCM starts from a lightweight user-history context and learns whether to recommend directly, retrieve collaborative evidence, retrieve item metadata, or interleave both through reasoning. Both memories are represented in natural language and accessed through a unified retrieval interface, enabling flexible evidence acquisition without handcrafted CF injection or fixed retrieval rules. We optimize this memory-reading policy with an outcome-only ranking reward, instantiated using group relative policy optimization, so that retrieval decisions are directly driven by final top-k recommendation quality. Extensive experiments show that RRCM significantly outperforms traditional baselines and diverse LLM-based recommendation approaches. 
+
+---
+# An Embarrassingly Simple Graph Heuristic Reveals Shortcut-Solvable Benchmarks for Sequential Recommendation 
+
+**Authors**: Haoyu Han, Li Ma, Hanbing Wang, Bingheng Li, Daochen Zha, Chun How Tan, Huiji Gao, Xin Liu, Stephanie Moyerman, Sanjeev Katariya, Hui Liu, Jiliang Tang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.07125)  
+
+**Abstract**: Sequential recommendation has increasingly shifted toward generative recommenders that combine sequential patterns with semantic item information. Yet these methods are often evaluated on a small set of widely used benchmarks, raising a key question: do these benchmarks actually require the advanced modeling capabilities that modern generative recommenders claim to provide? We conduct a benchmark audit with an intentionally simple graph heuristic. Starting from only the last one or two interacted items, it retrieves candidates from a few-hop item-transition graph and ranks them by item-feature similarity. Despite using no sequence encoder, generative objective, or training, this heuristic matches or outperforms many modern baselines, with relative NDCG@10 improvements of 38.10% and 44.18% over the best competing baseline on Amazon Review Sports and CDs.
+We show that this behavior reflects shortcut solvability rather than an artifact of one heuristic. We identify three shortcut structures that can make next-item prediction easier than expected: low-branching local transitions, feature-smooth transitions, and limited dependence on long user histories. These shortcuts need not appear together; even one or two strong signals can make simple local retrieval highly competitive, while weakening them makes the benefits of more sophisticated models clearer. Across 14 datasets, model rankings vary substantially with dataset properties, yet the heuristic remains competitive on 10 of them. Our findings suggest that strong performance on standard benchmarks does not always demonstrate advanced sequential, semantic, or generative modeling ability. We call for more careful dataset selection and dataset-level diagnostic analysis when using benchmarks to support claims about new recommendation models. 
+
+---
+# Bridging Textual Profiles and Latent User Embeddings for Personalization 
+
+**Authors**: Zhaoxuan Tan, Xiang Zhai, Yan Zhu, Meng Jiang, Mohamed Hammad  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.06981)  
+
+**Abstract**: Personalized systems rely on user representations to connect behavioral history with downstream recommendation applications. Existing methods typically employ either supervised latent user embeddings, which are effective for retrieval but difficult to interpret, or textual user profiles, which are interpretable but challenging to optimize for downstream utility due to lack of direct supervision. To bridge this gap, we present BLUE, a reinforcement learning framework that unifies these two forms of user representation by aligning language-based user profiles with embedding-based recommendation objectives. Given a user interaction history, BLUE leverages a profiler Large Language Model (LLM) to generate textual profiles, while an embedding model provides reward signals. This encourages the resulting textual representations to move closer to positive items and farther from negative ones in the embedding space. We further introduce a text-space supervision signal based on next-item prediction, ensuring the learned profiles remain both semantically meaningful and highly effective for downstream retrieval. Experiments on Amazon Reviews 2023 and Google Local Reviews in zero-shot sequential recommendation settings demonstrate that BLUE consistently outperforms strong baselines under both frozen and trainable embedding conditions. Notably, BLUE achieves clear gains in cross-domain transfer, highlighting the strong generalization ability of the learned user profiles. Furthermore, these generated profiles provide superior personalized context for question answering compared to raw user histories or alternative profile optimization methods. Overall, these results show that BLUE provides an effective way to unify interpretable textual profiling with discriminative latent embeddings for personalization. 
+
+---
+# InterLV-Search: Benchmarking Interleaved Multimodal Agentic Search 
+
+**Authors**: Bohan Hou, Jiuning Gu, Jiayan Guo, Ronghao Dang, Sicong Leng, Xin Li, Xuemeng Song, Jianfei Yang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.07510)  
+
+**Abstract**: Existing benchmarks for multimodal agentic search evaluate multimodal search and visual browsing, but visual evidence is either confined to the input or treated as an answer endpoint rather than part of an interleaved search trajectory. We introduce \textbf{InterLV-Search}, a benchmark for Interleaved Language-Vision Agentic Search, in which textual and visual evidence is repeatedly used to condition later search. It contains 2,061 examples across three levels: active visual evidence seeking, controlled offline interleaved multimodal search, and open-web interleaved multimodal search. Beyond existing benchmarks, it also includes multimodal multi-branch samples that involve comparison between multiple entities during the evidence search. We construct Level 1 and Level 2 with automated pipelines and Level 3 with a machine-led, human-supervised open-web pipeline. We further provide InterLV-Agent for standardized tool use, trajectory logging, and evaluation. Experiments on proprietary and open-source multimodal agents show that current systems remain far from solving interleaved multimodal search, with the best model below 50% overall accuracy, highlighting challenges in visual evidence seeking, search control, and multimodal evidence integration. We release the benchmark data and evaluation code at this https URL 
+
+---
+# TCMIIES: A Browser-Based LLM-Powered Intelligent Information Extraction System for Academic Literature 
+
+**Authors**: Hanqing Zhao  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.07507)  
+
+**Abstract**: The exponential growth of academic publications has created an urgent need for automated tools capable of extracting structured knowledge from unstructured scientific texts. While large language models (LLMs) have demonstrated remarkable capabilities in natural language understanding and information extraction, existing solutions often require specialized infrastructure, programming expertise, or fine-tuned domain-specific models that create barriers for researchers in specialized fields. This paper presents TCMIIES, a browser-based, zero-installation platform that leverages commercial LLM APIs to perform structured information extraction from academic literature. The system employs a novel schema-guided prompting framework with automatic system prompt generation, enabling researchers to define custom extraction schemas through an intuitive graphical interface without any programming. TCMIIES features a pure front-end architecture that ensures data privacy by processing all information locally in the browser, supports five major LLM providers, implements concurrent batch processing with automatic retry mechanisms, and provides intelligent field mapping for Chinese academic databases including CNKI and Wanfang. We demonstrate the system's effectiveness through comprehensive evaluation across multiple extraction scenarios in Traditional Chinese Medicine research, achieving structured output compliance rates exceeding 94\% and information extraction accuracy comparable to domain-expert annotation. The system represents a practical, accessible solution that bridges the gap between advanced LLM capabilities and domain-specific academic information extraction needs, particularly for researchers in specialized fields who require flexible, privacy-preserving, and cost-effective extraction tools. 
+
+---
+# From Surface Learning to Deep Understanding: A Grounded AI Tutoring System for Moodle 
+
+**Authors**: Anna Ostrowska, Michał Kukla, Gabriela Majstrak, Jan Opala, Sebastian Pergała, Jan Skwarek, Anna Wróblewska  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.06963)  
+
+**Abstract**: This demo paper describes the development of the AI Teaching \& Learning Assistant, a modular Moodle plugin that leverages Retrieval-Augmented Generation (RAG) to deliver high-quality, hallucination-free education. The system employs a dual-centric design, providing students with interactive, Socratic-based tutoring and educators with a "human-in-the-loop" workspace for supervised content generation. By grounding Large Language Model (LLM) responses in teacher-provided materials, the assistant addresses the risks of misinformation while encouraging deep conceptual mastery. Evaluation via the Ragas (LLM-as-a-Judge) framework and a preliminary user study confirms its effectiveness, achieving faithfulness scores up to 0.97 and a 4.00/5.00 recommendation rate. 
+
+---
