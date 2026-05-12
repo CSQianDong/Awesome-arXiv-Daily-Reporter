@@ -1,0 +1,282 @@
+# The First Drop of Ink: Nonlinear Impact of Misleading Information in Long-Context Reasoning 
+
+**Authors**: Muhan Gao, Zih-Ching Chen, Kuan-Hao Huang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.10828)  
+
+**Abstract**: As large language models are increasingly deployed in retrieval-augmented generation and agentic systems that accumulate extensive context, understanding how distracting information affects long-context performance becomes critical. Prior work shows that semantically relevant yet misleading documents degrade performance, but the quantitative relationship between the proportion of distractors and performance remains unstudied. In this work, we systematically vary the hard-distractor proportion in fixed-length contexts, revealing a striking nonlinear pattern: as the proportion of hard distractors increases, performance drops sharply within the first small fraction, while the remainder of the range yields only marginal additional decline. We term this ''The First Drop of Ink'' effect, analogous to how a single drop of ink contaminates water. Our theoretical and empirical analyses grounded in attention mechanics show that hard distractors capture disproportionate attention even at small proportions, with diminishing marginal impact as their proportion grows. Controlled experiments further show that filtering gains mainly come from context-length reduction rather than distractor removal; substantial recovery requires reducing the hard-distractor proportion to near zero, highlighting the importance of upstream retrieval precision. 
+
+---
+# FRACTAL: SSM with Fractional Recurrent Architecture for Computational Temporal Analysis of Long Sequences 
+
+**Authors**: Mengqi Li, Wensheng Lin, Jinshuai Yang, Lixin Li  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.08833)  
+
+**Abstract**: Effective sequence modeling fundamentally requires balancing the retention of unbounded history with the high-resolution detection of abrupt short-term variations common in real-world phenomena. However, existing state space models (SSMs) relying on high-order polynomial projection operators (HiPPO) face a critical trade-off where uniform measures dilute recent information to maintain timescale invariance, while exponential measures sacrifice global context to capture local dynamics. This paper proposes a Fractional Recurrent Architecture for Computational Temporal Analysis of Long sequences (FRACTAL), a novel architecture integrating fractional measure theory into recursive memory updates to address this limitation. By deriving projection operators with analytically characterized spectral properties and a tunable singularity index, the proposed method amplifies sensitivity to recent signal perturbations while preserving the spectral structure that encodes scale-invariant memory dynamics. This theoretical innovation is instantiated within a simplified diagonalized state space framework by modulating input projection initialization to enable simultaneous capture of multi-scale temporal features. FRACTAL achieves an average score of 87.11\% on the Long Range Arena benchmark, including 61.85\% on the ListOps task, outperforming the S5 model. 
+
+---
+# Human-Inspired Memory Architecture for LLM Agents 
+
+**Authors**: Doga Kerestecioglu, Alexei Robsky, Clemens Vasters, Anshul Sharma, Yitzhak Kesselman  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.08538)  
+
+**Abstract**: Current LLM agents lack principled mechanisms for managing persistent memory across long interaction horizons. We present a biologically-grounded memory architecture comprising six cognitive mechanisms: (1) sleep-phase consolidation, (2) interference-based forgetting, (3) engram maturation, (4) reconsolidation upon retrieval, (5) entity knowledge graphs, and (6) hybrid multi-cue retrieval. Each mechanism addresses a specific failure mode of naive memory accumulation. We introduce a synthetic calibration methodology that derives all pipeline thresholds without benchmark data exposure, eliminating a common source of evaluation leakage. We evaluate on two benchmarks. First, a VSCode issue-tracking dataset (13K issues, 120K events) where deduplication-based consolidation achieves 97.2% retention precision with 58% store reduction (+21.8 pp over baseline). Second, the LongMemEval personal-chat benchmark where we conduct the first streaming M-tier evaluation (475 sessions, ~540K unique turns). At a 200K-token context budget, our pipeline matches raw retrieval accuracy (70.1% vs. 71.2%, overlapping 95% CI) while exposing a tunable accuracy/store-size operating curve. At S-tier scale (50 sessions), dedup-based consolidation yields a +13.3 pp improvement in preference recall. 
+
+---
+# MemReread: Enhancing Agentic Long-Context Reasoning via Memory-Guided Rereading 
+
+**Authors**: Baibei Ji, Xiaoyang Weng, Juntao Li, Zecheng Tang, Yihang Lou, Min Zhang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.10268)  
+
+**Abstract**: To tackle long-context reasoning tasks without the quadratic complexity of standard attention mechanisms, approaches based on agent memory have emerged, which typically maintain a dynamically updated memory when linearly processing document chunks. To mitigate the potential loss of latent evidence in this memorize-while-reading paradigm, recent works have integrated retrieval modules that allow agents to recall information previously discarded during memory overwriting. However, retrieval-based recall suffers from both evidence loss during memory formation and interference induced by invalid queries. To overcome these limitations, we propose MemReread. Built upon streaming reading, MemReread circumvents intermediate retrieval. It triggers question decomposition and rereading when the final memory is insufficient, enabling the recovery of indirect facts that were prematurely discarded. This design supports non-linear reasoning while preserving the inherent logical flow of document comprehension. To further enhance practicality, we introduce a reinforcement learning framework that enhances length extrapolation capability while dynamically determining the number of rereading passes based on task complexity, thereby flexibly controlling computational overhead. Extensive experiments demonstrate that MemReread consistently outperforms baseline frameworks on long-context reasoning tasks, while maintaining linear time complexity with respect to context length. 
+
+---
+# Phoenix-VL 1.5 Medium Technical Report 
+
+**Authors**: Team Phoenix, Arka Ray, Askar Ali Mohamed Jawad, Biondi Lee, Elijah Seah, Eva Lim, Fiona Teo, Grace Toh, Guang Xiang Teo, Jun En Tan, Jia Hui Bong, Jiale Wang, Jonathan Ng, Justin Tan, Kai Zhe Yew, Matthew Ong, Shun Yi Yeo, Wen Jett Lam, Wen Xiu Tan, Ze Yu Zhang, Gee Wah Ng, Chee Wee Ang, Mistral AI, Adrien Sadé, Guillaume Kunsch, Jia Sin Loh, Nicolas Schuhl, Rupert Menneer, Umar Jamil, Vincent Maladière, Yimu Pan  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.10391)  
+
+**Abstract**: We introduce Phoenix-VL 1.5 Medium, a 123B-parameter natively multimodal and multilingual foundation model, adapted to regional languages and the Singapore context. Developed as a sovereign AI asset, it demonstrates that deep domain adaptation can be achieved with minimal degradation to broad-spectrum intelligence and alignment. Continued pretraining was performed on Mistral Medium 3.1 using a localized 1-trillion tokens multimodal corpus, followed by a 250-billion tokens long-context extension phase. Subsequent post-training incorporated a novel human-annotated Singapore multimodal dataset and curated textual corpus on Singapore culture, knowledge, and legislation, totaling 22-billion tokens. An additional 5 billion tokens of model alignment was performed through Online Direct Preference Optimization. Phoenix-VL 1.5 Medium achieves state-of-the-art performance for its size on Singapore multimodal, legal, and government policy benchmarks while remaining globally competitive on general multimodal intelligence, multilingual, and STEM benchmarks. We also introduce a novel evaluation suite encompassing localized knowledge benchmarks and an institutionally aligned model behavior and safety framework. We report the data curation principles, training methodology, and highlight benchmark and inference performance. 
+
+---
+# Attention Drift: What Autoregressive Speculative Decoding Models Learn 
+
+**Authors**: Doğaç Eldenk, Payal Mohapatra, Yigitcan Comlek, Kaan Oktay, Hongyang Zhang, Stephen Xia  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.09992)  
+
+**Abstract**: Speculative decoding accelerates LLM inference by drafting future tokens with a small model, but drafter models degrade sharply under template perturbation and long-context inputs. We identify a previously-unreported phenomenon we call \textbf{attention drift}: as the drafter generates successive tokens within a speculation chain, attention progressively moves from the prompt onto its own recently-generated tokens. We observe this across both \emph{EAGLE3} drafters and \emph{MTP heads}, suggesting drift is a property of drafter designs. We trace this to the un-normalized residual path between chain steps: the drafter's hidden state magnitude grows monotonically with chain depth, which exhibits dynamics consistent with additional pre-norm transformer layers stacked on the target rather than as a standalone autoregressive predictor. In order to limit the growth, we propose two architectural changes: Post-norm on the drafter hidden states and per-hidden-state RMSNorm after capturing target hidden states. Our interventions improve acceptance length over the current leading model, pre-norm EAGLE3, by up to $2\times$ under template perturbation, $1.18\times$ on long-context tasks, and $1.10\times$ on seven standard benchmarks spanning multi-turn chat, math, and coding. Our changes also allow shorter train-time-test depths to generalize over longer drafting sequences. 
+
+---
+# Key-Value Means 
+
+**Authors**: Daniel Goldstein, Eugene Cheah  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.09877)  
+
+**Abstract**: We present Key-Value Means ("KVM"), a novel block-recurrence for attention that can accommodate either fixed-size or growing state. Equipping a strong transformer baseline with fixed-size KVM attention layers yields a strong $O(N)$ chunked RNN, while adding only an insignificant number of new parameters. We train a transformer with a growable KVM cache and show it performs competitively on long-context tests with only subquadratic prefill time and sublinear state growth. KVM is implementable with standard operations and without custom kernels, and supports chunk-wise parallelizable training and prefill. It provides many of the benefits of both traditional transformers (expandable context memory, chunk-wise parallelizable training and prefill) and linear RNNs in a single unified package. It can be used on every layer, saving KV-cache memory, and allowing a continuous range of choices of prefill time complexity between $O(N)$ and $O(N^2)$. It can also be implemented in a hybrid solution in tandem with LRNN layers in place of traditional attention, to supplement the LRNN with improved sublinear memory growth context length usage and long context decoding. We release our code at this https URL and trained models at this https URL under the Apache 2.0 license. 
+
+---
+# EgoMemReason: A Memory-Driven Reasoning Benchmark for Long-Horizon Egocentric Video Understanding 
+
+**Authors**: Ziyang Wang, Yue Zhang, Shoubin Yu, Ce Zhang, Zengqi Zhao, Jaehong Yoon, Hyunji Lee, Gedas Bertasius, Mohit Bansal  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.09874)  
+
+**Abstract**: Next-generation visual assistants, such as smart glasses, embodied agents, and always-on life-logging systems, must reason over an entire day or more of continuous visual experience. In ultra-long video settings, relevant information is sparsely distributed across hours or days, making memory a fundamental challenge: models must accumulate information over time, recall prior states, track temporal order, and abstract recurring patterns. However, existing week-long video benchmarks are primarily designed for perception and recognition, such as moment localization or global summarization, rather than reasoning that requires integrating evidence across multiple days. To address this gap, we introduce EgoMemReason, a comprehensive benchmark that systematically evaluates week-long egocentric video understanding through memory-driven reasoning. EgoMemReason evaluates three complementary memory types: entity memory, tracking how object states evolve and change across days; event memory, recalling and ordering activities separated by hours or days; and behavior memory, abstracting recurring patterns from sparse, repeated observations over the whole week period. EgoMemReason comprises 500 questions across three memory types and six core challenges, with an average of 5.1 video segments of evidence per question and 25.9 hours of memory backtracking. We evaluate EgoMemReason on 17 methods across MLLMs and agentic frameworks, revealing that even the best model achieves only 39.6% overall accuracy. Further analysis shows that the three memory types fail for distinct reasons and that performance degrades as evidence spans longer temporal horizons, revealing that long-horizon memory remains far from solved. We believe EgoMemReason establishes a strong foundation for evaluating and advancing long-context, memory-aware multimodal systems. 
+
+---
+# Kaczmarz Linear Attention 
+
+**Authors**: Jiaxuan Zou, Ruifeng Ren, Yong Liu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.08587)  
+
+**Abstract**: Long-context language modeling remains central to modern sequence modeling, but the quadratic cost of Transformer attention makes scaling computationally prohibitive. Linear recurrent models address this bottleneck by compressing the context into a fixed-size state, making the rule that forgets, writes, and edits information a central design problem. To address state maintenance, Gated DeltaNet (GDN) combines gated state decay with delta-rule residual writes, using a learnable coefficient to balance forgetting and update magnitude. However, this coefficient is learned empirically rather than derived from the underlying objective, which can lead to suboptimal update magnitudes. We revisit the online-regression objective underlying GDN and, inspired by the Kaczmarz projection method, derive the key-norm-normalized dynamic step size $\beta_t = \eta_t / (\|k_t\|_2^2 + \epsilon)$ for residual updates. We propose Kaczmarz Linear Attention (KLA), a one-scalar modification of GDN that preserves the state shape, gates, linear recurrence, and chunkwise parallel algorithm. At the 0.4B scale with a 1B-token budget, KLA achieves the lowest validation perplexity among evaluated linear-time baselines, 8.09 versus 8.50 for GDN, and remains stable up to 65K tokens. On controlled tasks, KLA reaches 100% on single-needle-in-a-haystack retrieval, improves 8x multi-query associative recall by 7.03 points over GDN, and delivers 2.1x higher decode throughput at 32K context. These results suggest that the key-norm-normalized Kaczmarz coefficient is a first-order design axis for delta-rule sequence models: it improves accuracy, extrapolation, and decoding efficiency without changing the recurrent state or hardware kernel. 
+
+---
+# Slipstream: Trajectory-Grounded Compaction Validation for Long-Horizon Agents 
+
+**Authors**: Zhuofu Chen, Rui Pan, Yinwei Dai, Ravi Netravali  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.08580)  
+
+**Abstract**: To cope with the large contexts that long-horizon LLM agents produce, modern frameworks increasingly rely on compaction -- invoking an LLM to rewrite the accumulated trajectory into a shorter summary that the agent resumes from. Today, compaction runs synchronously on the critical path of agent execution but this can unpredictably degrade accuracy due to a structural validation gap: the compactor must condense context but is fundamentally unaware of precisely what information the agent will need later. Further, because post-compaction agent steps are conditioned on the new summary, targeted validation criteria do not exist and errors silently propagate through coherent but incorrect behavior. Our key insight is that asynchronous compaction efficiently addresses this gap: by running the compactor in parallel with continued agent execution on the original context, the candidate summary and the agent's next steps are generated independently from the same pre-compaction state, yielding a validation signal independent of the summary itself. We build Slipstream, a trajectory-grounded compaction system that uses a judge to validate the candidate summary against the agent's continued reasoning, checking that it preserves both the agent's forward intent and the key facts and constraints it depends on. Across long-horizon coding (SWE-bench Verified) and web-browsing (BrowseComp) workloads, Slipstream improves task accuracy by up to 8.8 percentage points while reducing end-to-end latency by up to 39.7%. 
+
+---
+# Scaling Limits of Long-Context Transformers 
+
+**Authors**: Giuseppe Bruno, Shi Chen, Zhengjiang Lin, Yury Polyanskiy, Philippe Rigollet  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.08505)  
+
+**Abstract**: We study the long-context limit of softmax self-attention with a fixed query and a random context of $n$ i.i.d. keys on the sphere, viewing the inverse temperature $\beta_n$ as the scaling parameter that decides whether attention degenerates into uniform averaging or collapses onto the single closest key. We show that the critical scale at which selectivity emerges is determined by the local exponent of the distance-to-query distribution near zero rather than by global features of the context, and scales like $\beta_n^\ast \asymp n^{2/(d-1)}$ for uniform keys on $\mathbb{S}^{d-1}$. Furthermore, we characterize the limiting laws of the ordered attention weights and of the attention output across all regimes of $\beta_n$: a subcritical regime in which the output reduces to a local average around $q$ with explicit deterministic bias and Gaussian fluctuations; a critical regime in which a finite collection of nearest keys retains macroscopic mass without single-key collapse; and a supercritical regime in which all mass concentrates on the closest key. Of notable interest is the subcritical case with identity value matrix where the attention map approximately implements a backward heat equation. 
+
+---
+# RDKV: Rate-Distortion Bit Allocation for Joint Eviction and Quantization of the KV Cache 
+
+**Authors**: Junkai Zhang, Hang Guo, Luca Benini, Yawei Li  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.08317)  
+
+**Abstract**: Large language models (LLMs) have shown strong performance across diverse tasks, but their inference with long input contexts is bottlenecked by memory size and bandwidth. The Key-Value (KV) cache size grows linearly with sequence length and needs to be re-read from off-chip high-bandwidth memory (HBM) to on-chip memory at every decoding step, resulting in memory-bound inference. Existing methods reduce the cache by either eviction or quantization, but typically treat the two in isolation. In this paper, we cast KV cache compression as a rate-distortion problem, under which eviction and quantization are two end-points of the same bit allocation scheme. This exposes the need to optimize them jointly, motivating our method, RDKV (Rate-Distortion KV cache compression). RDKV derives the weight of each token or channel from the distortion that compression induces on the attention computation. Based on these weights, it assigns each token or channel a bit-width ranging from full precision down to zero bits guided by reverse water-filling, applied once after the prefilling stage. Experiments on LongBench, RULER, and InfiniteBench show that RDKV outperforms the best evaluated baseline by 9.1% on average. On LongBench it recovers 97.81% of full-cache accuracy with only 2.48% cache retention. Compared with full-cache FlashAttention-2 decoding, it achieves 4.5x decode speedup and 1.9x peak memory reduction with 128K context length, while maintaining comparable performance. 
+
+---
+# Priming: Hybrid State Space Models From Pre-trained Transformers 
+
+**Authors**: Aditya Chattopadhyay, Elvis Nunez, Prannay Kaul, Benjamin Bowman, Evan Becker, Luca Zancato, David Thomas, Wei Xia, Stefano Soatto  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.08301)  
+
+**Abstract**: Hybrid State-Space models combine Attention with recurrent State-Space Model (SSM) layers, balancing eidetic memory from Attention with compressed fading memory from SSMs. This yields smaller Key-Value caches and faster decoding than Transformers, along with a richer architectural design space. Exploring that design space at scale has so far required training from scratch, a barrier that has kept most large-model Hybrid research within a narrow range of architectures. We introduce Priming, a method that turns Hybrid architecture design from a pre-training problem into a knowledge transfer one. Priming initializes a Hybrid model from a pre-trained Transformer and, through short alignment and post-training phases, recovers downstream quality using less than 0.5% of the source model's pre-training token budget. Priming is agnostic to the source Transformer family (e.g., Qwen, Llama, Mistral), model class (dense or Mixture-of-Experts), and model scale. Priming enables us to run the first controlled comparison of SSM layer types at scale under identical conditions. We evaluate, Gated KalmaNet (GKA), Gated DeltaNet (GDN), and Mamba-2, and show that their expressiveness hierarchy, GKA>GDN>Mamba-2, directly predicts downstream performance on long-context reasoning tasks. We scale Priming to 8B/32B reasoning models with native 128K contexts. Our Hybrid GKA 32B improves over its source Qwen3-32B by +3.8 average reasoning points, while staying within 1% of a Transformer post-trained on the same data and enabling up to 2.3x higher decode throughput. To foster research on Hybrid architectures, we release a model zoo of primed Hybrid models for long-context reasoning and instruction following, together with the Priming training and inference code (Sequence Parallelism algorithms for long-context training, optimized GKA kernels, and vLLM serving plugin), all under Apache~2.0 License. 
+
+---
+# Bridging Modalities, Spanning Time: Structured Memory for Ultra-Long Agentic Video Reasoning 
+
+**Authors**: Jiazheng Li, Chi-Hao Wu, Yunze Liu, Kaize Ding, Jundong Li, Chuxu Zhang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.08271)  
+
+**Abstract**: Understanding ultra-long videos such as egocentric recordings, live streams, or surveillance footage spanning days to weeks, remains a challenge. For current multimodal LLMs: even with million-token context windows, frame budgets cover only tens of minutes of densely sampled video, and most evidence is discarded before inference begins. Memory-augmented and agentic approaches help with scale, but their retrieval remains fragmented across modalities and lacks long-range narrative summaries that span days or weeks. We propose \textbf{MAGIC-Video}, a training-free framework built around a multimodal memory graph with interleaved narrative chain: the graph unifies episodic, semantic, and visual content through six typed edges and supports cross-modal retrieval, while the chain distils long-horizon entity biographies and recurring activity events. At inference time, an agentic loop interleaves graph retrieval with narrative fact injection, covering both the modality and time dimensions of ultra-long video in a single retrieval pipeline. On EgoLifeQA, Ego-R1 and MM-Lifelong, MAGIC-Video consistently outperforms strong general-purpose, long-video, and agentic baselines, with gains of 10.1, 7.4, and 5.9 points over the prior best agentic system on each benchmark. Code is available at this https URL. 
+
+---
+# When Does Value-Aware KV Eviction Help? A Fixed-Contract Diagnostic for Non-Monotone Cache Compression 
+
+**Authors**: Ruijie Zhang, Haozhe Liang, Da Chang, Li Hu, Fanqi Kong, Huaxiao Yin, Yu Li  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.08234)  
+
+**Abstract**: Long-context LLM inference is bottlenecked by the memory and bandwidth cost of reading large KV caches during decoding. KV compression reduces this cost by keeping only part of the cache, but task accuracy alone does not identify why a selector succeeds or fails. A selector can fail at three steps: it may miss the evidence future decoding needs, give high scores to tokens that do not affect the output, or break related evidence when fitting scores into a small cache. We introduce a fixed-contract diagnostic that holds the selector's setup fixed and changes one decision slot at a time. For value ranking, the probe combines a block's attention mass with the estimated output change from removing it. On LongBench across three models and two budgets, the probe is positive on 72.6% of positive-margin cells and 32.4% of nonpositive-margin cells. NeedleBench M-RT at 32k and a RULER 8k check probe support closure under branched retrieval, and a 264-cell sign evaluation separates support recovery and output-value ranking from leverage effects near the boundary. The resulting order is to recover decode-side evidence, rank its output value, and preserve coupled evidence during projection. 
+
+---
+# Mela: Test-Time Memory Consolidation based on Transformation Hypothesis 
+
+**Authors**: Lungchuan Chen  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.10537)  
+
+**Abstract**: Memory consolidation, the process by which transient experiences are transformed into stable, structured representations, is a foundational organizing principle in the human brain, yet it remains largely unexplored as a design principle for modern sequence models. In this work, we leverage established neuroscientific theories of memory consolidation and cross-frequency coupling to propose the Hierarchical Memory Module (HMM), a neural memory architecture composed of two functionally distinct sub-modules that operate at different update frequencies. Inspired by the transformation hypothesis, the low-frequency sub-module produces high-level representations that capture abstract, gist-level knowledge, while the high-frequency sub-module produces fine-grained representations that preserve richer episodic detail. The final memory output is dynamically reconstructed as a context-dependent combination of both representations, analogous to the reconstructive nature of human memory retrieval. We integrate HMM into a Transformer-based language decoder to form Mela, a family of memory-augmented language models that perform online memory consolidation at test time. To further exploit the multi-granularity memory representations produced by HMM, we introduce MemStack, a method that distributes different levels of memory features across the early layers of the decoder without introducing additional tokens. Experiments on language modeling demonstrate that Mela outperforms Transformer baselines across all the model sizes. Moreover, with the pretrained context length fixed at 4K, Mela maintains performance on significantly longer contexts, whereas Transformer baselines degrade rapidly beyond their training length. Extensive ablation studies validate the contribution of each component and provide guidance for practical configuration. 
+
+---
+# Where Does Long-Context Supervision Actually Go? Effective-Context Exposure Balancing 
+
+**Authors**: Jinchang Zhu, Jindong Li, Chengyu Zou, Rong Fu, Chao Wang, Haowei He, Menglin Yang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.10544)  
+
+**Abstract**: Long-context adaptation is often viewed as window scaling, but this misses a token-level supervision mismatch: in packed training with document masking, each target token's effective context remains short. We introduce EXACT, a supervision-allocation objective that assigns extra weight to long effective-context targets by inverse frequency within the long tail. Across seven Qwen/LLaMA CPT configurations, EXACT improves all 28 trained/extrapolated NoLiMa and RULER comparisons. On Qwen2.5-0.5B, NoLiMa improves by +10.09 (trained) and +5.34 (extrapolated); RULER by +10.69 and +5.55. On LLaMA-3.2-3B, RULER improves by +17.91 and +16.11. Standard QA/reasoning are preserved (+0.24 macro change across six benchmarks). A distance-resolved probe shows gains arise when evidence is thousands of tokens away, while short cases remain unchanged. Results support a supervision-centric thesis: long-context adaptation depends on how strongly training supervises long-context predictions. 
+
+---
+# Route Before Retrieve: Activating Latent Routing Abilities of LLMs for RAG vs. Long-Context Selection 
+
+**Authors**: Yiwen Chen, Kuan Li, Fuzhen Zhuang, Deqing Wang, Zhao Zhang, Liwen Zhang, Yong Jiang, Shuai Wang, Minhao Cheng  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.10235)  
+
+**Abstract**: Recent advances in large language models (LLMs) have expanded the context window to beyond 128K tokens, enabling long-document understanding and multi-source reasoning. A key challenge, however, lies in choosing between retrieval-augmented generation (RAG) and long-context (LC) strategies: RAG is efficient but constrained by retrieval quality, while LC supports global reasoning at higher cost and with position sensitivity. Existing methods such as Self-Route adopt failure-driven fallback from RAG to LC, but remain passive, inefficient, and hard to interpret. We propose Pre-Route, a proactive routing framework that performs structured reasoning before answering. Using lightweight metadata (e.g., document type, length, initial snippet), Pre-Route enables task analysis, coverage estimation, and information-need prediction, producing explainable and cost-efficient routing decisions. Our study shows three key findings: (i) LLMs possess latent routing ability that can be reliably elicited with guidelines, allowing single-sample performance to approach that of multi-sample (Best-of-N) results; (ii) linear probes reveal that structured prompts sharpen the separability of the "optimal routing dimension" in representation space; and (iii) distillation transfers this reasoning structure to smaller models for lightweight deployment. Experiments on LaRA (in-domain) and LongBench-v2 (OOD) confirm that Pre-Route outperforms Always-RAG, Always-LC, and Self-Route baselines, achieving superior overall cost-effectiveness. 
+
+---
+# FocuSFT: Bilevel Optimization for Dilution-Aware Long-Context Fine-Tuning 
+
+**Authors**: Zehua Pei, Hui-Ling Zhen, Xianzhi Yu, Sinno Jialin Pan, Mingxuan Yuan, Bei Yu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.09932)  
+
+**Abstract**: Large language models can now process increasingly long inputs, yet their ability to effectively use information spread across long contexts remains limited. We trace this gap to how attention budget is spent during supervised fine-tuning (SFT) on long sequences: positional biases and attention sinks cause the model to allocate most of its attention to positionally privileged tokens rather than semantically relevant content. This training-time attention dilution (the starvation of content tokens in the attention distribution) weakens the gradient signal, limiting the model's ability to learn robust long-context capabilities. We introduce FocuSFT, a bilevel optimization framework that addresses this problem at training time. An inner loop adapts lightweight fast-weight parameters on the training context to form a parametric memory that concentrates attention on relevant content, and the outer loop performs SFT conditioned on this sharpened representation. Both loops apply bidirectional attention over context tokens while preserving causal masking for responses, reducing the causal asymmetry that gives rise to attention sinks and aligning inner-outer behavior. On BABILong, FocuSFT improves accuracy by up to +14pp across 4K--32K context lengths; on RULER, it raises CWE aggregation from 72.9\% to 81.1\% at 16K; and on GPQA with agentic tool use, it yields a 24\% relative gain in pass@1. Attention analysis shows that FocuSFT reduces attention sink mass by 529$\times$ and triples context engagement during training. Code: this https URL 
+
+---
+# Mem-W: Latent Memory-Native GUI Agents 
+
+**Authors**: Guibin Zhang, Yaohui Ling, Fanci Meng, Kun Wang, Shuicheng Yan  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.09317)  
+
+**Abstract**: GUI agents are beginning to operate the web, mobile, and desktop as interactive worlds, where successful control depends on carrying forward visual, procedural, and task-level evidence beyond the fleeting present screen. Yet most agents still treat memory as an external, human-readable artifact: histories are summarized, categorized, retrieved, and reinserted as text or structured records before being encoded again by the policy. This creates a mismatch between the representational form in which experience is stored and the latent embedding sequence over which modern GUI policies actually act. We introduce Mem-W, a series of latent-memory-native GUI agents that treat memory as part of the agent's continuous context rather than as an auxiliary symbolic scaffold. Mem-W weaves both historical trajectories (as experiential memory) and in-session segments (as working memory) into compact memory tokens through a shared trajectory-to-latent compressor. These tokens are woven with the current GUI observation and local context into one continuous embedding sequence, allowing the agent to read successes, failures, and unfinished progress through the same machine-native interface. Mem-W is trained with self-distillation and outcome-aware supervision to preserve decision-relevant state while filtering memory toward evidence that truly supports task success. Across four web and mobile navigation benchmarks, Mem-W consistently improves diverse backbones and memory-enhanced baselines, with gains of up to $+30.0$, suggesting that latent-context-native memory can serve as a scalable foundation for long-horizon GUI agency. 
+
+---
+# Beyond Position Bias: Shifting Context Compression from Position-Driven to Semantic-Driven 
+
+**Authors**: Jiwei Tang, Zhijing Huang, Xinyu Zhang, Chen Jason Zhang, Jianxing Yu, Libin Zheng, Rui Meng, Jian Yin  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.09463)  
+
+**Abstract**: Large Language Models (LLMs) have demonstrated exceptional performance across diverse tasks. However, their deployment in long-context scenarios faces high computational overhead and information redundancy. While soft prompt compression has emerged as a promising way to mitigate these costs by compressing sequences into compact embeddings, existing paradigms remain fundamentally constrained by position bias: they primarily rely on learnable tokens insertion at fixed positions or group tokens according to their physical token layout, thereby inducing performance instability and semantic fragmentation. To overcome this bottleneck, we propose Semantic Consistency Context Compression (SeCo), a method that shifts context compression from position-driven to semantic-driven. Rather than constraint by physical token layout, SeCo dynamically anchors compression directly in the semantic space by selecting query-relevant tokens as semantic centers and aggregating remaining tokens via consistency-weighted merging. This design inherently preserves semantic consistency while eliminating position bias. Extensive experiments on 14 benchmarks across two backbone models demonstrate that SeCo consistently shows superiority in downstream tasks, inference latency, and out-of-domain robustness. The code is available at this https URL. 
+
+---
+# GRC: Unifying Reasoning-Driven Generation, Retrieval and Compression 
+
+**Authors**: Zhongtao Miao, Qiyu Wu, Yoshimasa Tsuruoka  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.09100)  
+
+**Abstract**: Text embedding and generative tasks are usually trained separately based on large language models (LLMs) nowadays. This causes a large amount of training cost and deployment effort. Context compression is also a challenging and pressing task, which is vital to reasoning-driven generation, and agentic tasks requiring long context and continual learning. In this paper, we explore how to unify reasoning-driven generation, reasoning-enhanced text representation and context compression tasks in one forward pass for LLMs. Through meta latent tokens and a unified generative, representative and compressive tuning approach, we propose a training framework named GRC that bridges the three tasks. The trained models can accomplish three objectives in a single forward pass while maintaining modular, LEGO-style flexibility during inference. This design greatly reduces the deployment effort for retrieval-augmented generation (RAG) and achieves efficient inference and three times data utilization during training. Furthermore, this framework design enables a new paradigm for text embedding: self-reason-latent embeds, and a new generation paradigm, latent memory-augmented generation, where compressed and internalized KV cache with O(1) length is used as the updatable memory. We also propose hybrid paged attention to speed up the inference of our models. Extensive experiments on reasoning-intensive retrieval benchmarks, generative tasks, document compression, latency evaluation, and RAG settings demonstrate the effectiveness of our method and may shed light on the truly unified model that can handle reasoning-driven generation, embedding and compression tasks seamlessly. 
+
+---
+# Fin-Bias: Comprehensive Evaluation for LLM Decision-Making under human bias in Finance Domain 
+
+**Authors**: Xiaoyu Hu, Jinman Zhao  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.09106)  
+
+**Abstract**: Large language models (LLMs) are increasingly deployed in financial contexts, raising critical concerns about reliability, alignment, and susceptibility to adversarial manipulation. While prior finance-related benchmarks assess LLMs' capabilities in stock trading, they are often restricted to small sample and fail to demonstrate LLM susceptibility to context with potential human bias. We introduce Fin-Bias (financial herding under long and uncertain financial context), a benchmark for evaluating LLM investment decision-making when faced with uncertainty and possible human-biased opinions. Fin-Bias includes 8868 long firm-specific analyst reports, including firm aspects summarized and analyzed by sophisticated analysts with investment ratings (Bullish/Neutral/Bearish) spanning from various industries. We present large language models with firm analyst reports with/without analyst investment ratings and even with 'fake' rating, to get investment ratings generated by LLMs. Our results reveal that LLMs tend to herd the explicit bias in context. We also develop a method to detect potential human opinions, which can encourage LLMs to think independently, some models even exceed human performance in predicting future stock return. 
+
+---
+# DocScope: Benchmarking Verifiable Reasoning for Trustworthy Long-Document Understanding 
+
+**Authors**: Xiang Feng, Jiawei Zhou, Zhangfeng Huang, Kewei Wang, Shanshan Ye, Jinxin Hu, Zulong Chen, Yong Luo, Jing Zhang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.08888)  
+
+**Abstract**: Evaluating whether Multimodal Large Language Models can produce trustworthy, verifiable reasoning over long, visually rich documents requires evaluation beyond end-to-end answer accuracy. We introduce DocScope, a benchmark that formulates long-document QA as a structured reasoning trajectory prediction problem: given a complete PDF document and a question, the model outputs evidence pages, supporting evidence regions, relevant factual statements, and a final answer. We design a four-stage evaluation protocol -- Page Localization, Region Grounding, Fact Extraction, and Answer Verification -- that audits each level of the trajectory independently through inter-stage decoupling, with all judges selected and calibrated via human alignment studies. DocScope comprises 1,124 questions derived from 273 documents, with all hierarchical evidence annotations completed by human annotators. We benchmark 6 proprietary models, 12 open-weight models, and several domain-specific systems. Our experiments reveal that answer accuracy cannot substitute for trajectory-level evaluation: even among correct answers, the highest observed rate of complete evidence chains is only 29\%. Across all models, region grounding remains the weakest trajectory stage. Furthermore, the primary difficulty stems from aggregating evidence dispersed across long distances and multiple document clusters, while an oracle study identifies faithful perception and fact extraction as the dominant capability bottleneck. Cross-architecture comparisons further suggest that activated parameter count matters more than total scale. The benchmark and code will be publicly released at this https URL. 
+
+---
+# ReST-KV: Robust KV Cache Eviction with Layer-wise Output Reconstruction and Spatial-Temporal Smoothing 
+
+**Authors**: Yongqi An, Chang Lu, Kuan Zhu, Tao Yu, Chaoyang Zhao, Hong Wu, Ming Tang, Jinqiao Wang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.08840)  
+
+**Abstract**: Large language models (LLMs) face growing challenges in efficient generative inference due to the increasing memory demands of Key-Value (KV) caches, especially for long sequences. Existing eviction methods typically retain KV pairs with high attention weights but overlook the impact of attention redistribution caused by token removal, as well as the spatial-temporal dynamics in KV selection. In this paper, we propose ReST-KV, a robust KV eviction method that combines layer-wise output Reconstruction and Spatial-Temporal smoothing to provide a more comprehensive perspective for the KV cache eviction task. Specifically, ReST-KV formulates KV cache eviction as an optimization problem that minimizes output discrepancies through efficient layer-wise reconstruction. By directly modeling how each token's removal affects the model output, our method naturally captures attention redistribution effects, going beyond simplistic reliance on raw attention weights. To further enhance robustness, we design exponential moving average smoothing to handle temporal variations and an adaptive window-based mechanism to capture spatial patterns. Our method, ReST-KV, significantly advances performance on long-context benchmarks. It surpasses state-of-the-art baselines by 2.58% on LongBench and 15.2% on RULER. Additionally, ReST-KV consistently outperforms existing methods on Needle-in-a-Haystack and InfiniteBench, all while achieving a remarkable 10.61$\times$ reduction in decoding latency at 128k context length. The code is publicly available at this https URL to facilitate reproducibility and further research. 
+
+---
+# NARRA-Gym for Evaluating Interactive Narrative Agents 
+
+**Authors**: Yue Huang, Yuchen Ma, Jiayi Ye, Wenjie Wang, Zipeng Ling, Xingjian Hu, Yuexing Hao, Zichen Chen, Zhangchen Xu, Yunhong He, Zhengqing Yuan, Yujun Zhou, Kehan Guo, Chaoran Chen, Toby Jia-Jun Li, Stefan Feuerriegel, Xiangliang Zhang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.08503)  
+
+**Abstract**: Interactive narrative tasks require LLMs to sustain a coherent, evolving story while adapting to a user over multiple turns. However, suitable benchmarks for this setting are limited: existing evaluations often focus on static prompts, isolated story generations, or post-hoc ratings, and therefore miss whether models can jointly manage story generation, long-context state and pacing, character simulation, empathic personalization, and story-grounded artifacts. We introduce NARRA-Gym, an executable evaluation environment that turns a sparse emotional seed into a complete interactive story episode and logs the full model-in-the-loop trajectory, including story construction, memory updates, planning, pacing interventions, and optional artifact synthesis. We evaluate nine frontier LLMs using a controlled LLM-as-judge sweep over eight benchmark personas and a human evaluation in which participants rate customized model outputs. Our results show substantial variation across models, personas, and evaluation dimensions: models that produce fluent stories can still fail on robustness, user experience, or resistance-sensitive personalization. These findings suggest that interactive narrative offers a useful benchmark for evaluating long-horizon, user-adaptive LLM behavior beyond isolated story quality. 
+
+---
+# Nectar: Neural Estimation of Cached-Token Attention via Regression 
+
+**Authors**: João Monteiro, Michal Klein, Pierre Ablin, Marco Cuturi  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.09778)  
+
+**Abstract**: Evaluating softmax attention over a fixed long context requires reading every cached key-value pair for each new query token. For a given context (a book, a manual, a legal corpus) the attention output is a deterministic function of the query. We propose Nectar, which fits a compact neural network to this function for queries drawn from a task-relevant distribution. Nectar fits two networks per layer and KV-head: a target network that predicts the attention output and a score network that predicts the log-normalizer. The pair plugs into the standard masked self-attention at inference time, replacing the $O(n)$ attention over the cache with a forward pass whose cost does not depend on $n$. Each module carries on the order of $|\theta|$ parameters per layer and KV-head, typically much smaller than the $2nd$ KV-cache footprint at the same granularity. We report experiments on models from 1.7B to 8B parameters across five long-context datasets. The approximation error tracks the next-token accuracy gap to full attention, and allocating capacity non-uniformly across layers reduces that gap in our ablation. Beyond this analysis of metrics, we check that the text generations (following a question prompt) of a model equipped with a Nectar module match in semantic content those obtained by giving the same model access to the full cache. 
+
+---
+# UserGPT Technical Report 
+
+**Authors**: Yunyi Xuan, Hao Yi, Fengling Mao, Daye Cai, Leikun Liang, Xingsheng He, Jiangnan Xie, Guoshuai Wang, Yushan Han, Wenwen Guo, Xiaoxiao Xu, Lin Qu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.08766)  
+
+**Abstract**: Personalized user understanding from large-scale digital traces remains a fundamental challenge. Traditional user profiling methods rely on discriminative models and manual feature engineering to predict discrete attributes, often producing fragmented and logically inconsistent profiles that generalize poorly to long-tail behaviors. In this work, we study a generative paradigm in which large language models (LLMs) summarize long and noisy behavioral histories into coherent narratives that capture nuanced user evolution. Our experiments show that even strong LLMs remain limited in complex and implicit personalization reasoning.
+We propose UserGPT, a framework for improving LLM-based persona understanding through both attribute generation and summary generation. To address the scarcity of real-world behavioral data, we develop a User Behavior Simulation Engine that produces realistic and complex user trajectories. We further introduce a Data-Centric Semantization module that transforms heterogeneous behavioral logs into structured and semantically coherent inputs, reducing noise and sparsity. On top of this pipeline, we design a curriculum-driven post-training strategy that combines multi-stage Supervised Fine-Tuning (SFT) with Dual-Filter Group Relative Policy Optimization (DF-GRPO) to strengthen reasoning over long behavioral histories.
+We also construct HPR-Bench, a benchmark for holistic persona reasoning derived from simulated data. On HPR-Bench, UserGPT achieves an Avg@10 score of 0.7325 on tag prediction and an $Acc_{Ex}$ score of 0.7528 on summary generation, while compressing behavioral records by up to 97.9% with critical information preserved. These results demonstrate the effectiveness of UserGPT for holistic persona reasoning and personalized user-agent interaction. 
+
+---
+# Block-Wise Differentiable Sinkhorn Attention: Tail-Refinement Gradients with a Gap-Aware Dustbin Bridge 
+
+**Authors**: Dylan Forde  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.08123)  
+
+**Abstract**: We study long-context balanced entropic optimal transport (OT) attention on TPU hardware through a stopped-base, fixed-depth tail-refinement surrogate. After a stopped $T$-step Sinkhorn solve, we unroll a short refinement tail and differentiate that surrogate exactly. For the production $R=2$ case, the backward pass contains four staircase plan factors. We prove an exact one-reference-tile schedule: the $R=2$ score cotangent is a single reference plan tile times an explicit modifier field built from vector cotangents and dual differences. This yields block-wise cost $O((T+R)LW)$, $O(Ld)$ input storage, and $O(L)$ additional HBM usage for fixed head dimension $d$ and band width $W$. We also formalize the current \texttt{dustbin\_block} path as the same balanced surrogate on an augmented support, so the schedule lifts to the gap-aware transport path used in our TPU runs. We provide a local surrogate-bias bound, an a posteriori bias certificate, and a projective contraction certificate for strictly positive active blocks. On synthetic masked problems, the optimized kernel matches exact autodiff of the same centered surrogate to within $10^{-5}$--$10^{-10}$. On TPU v6e-8, a four-configuration Pfam screen completes end-to-end, and a promoted balanced $R=2$ run sustains roughly $8.5$ examples per second through a three-hour budget, reaching step $1437$. Held-out Pfam test shards improve reconstruction from $3.17$ to $0.99$ and sparse CE from $5.86$ to $5.69$ relative to step $0$. These results support exact fixed-depth backward theory, a theorem-matching gap-aware bridge, and trainability evidence for the production path. 
+
+---
+# Nautilus Compass: Black-box Persona Drift Detection for Production LLM Agents 
+
+**Authors**: Chunxiao Wang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.09863)  
+
+**Abstract**: Production LLM coding agents drift over long sessions: they forget user-specified constraints, slip into mistakes the user already flagged, and confabulate prior agreements. White-box approaches such as persona vectors require model weights and so cannot be applied to closed APIs (Claude, GPT-4) that most users actually interact with. We present Nautilus Compass, a black-box persona drift detector and agent memory layer for production coding agents. The method operates entirely at the prompt-text layer: cosine similarity between user prompts and behavioral anchor texts, aggregated by a weighted top-k mean using BGE-m3 embeddings. Compass is, to our knowledge, the only public agent memory layer (among Mem0, Letta, Cognee, Zep, MemOS, smrti verified May 2026) that does not call an LLM at index time to extract facts or build a graph; raw conversation text is embedded directly. The system ships as a Claude Code plugin, an MCP 2024-11-05 A2A server (Cursor, Cline, Hermes), a CLI, and a REST API on one daemon, with a Merkle-chained audit log for tamper-evident anchor updates. On a held-out test set built from real Claude Code session traces and labeled by an independent LLM judge, Compass reaches ROC AUC 0.83 for drift detection. The embedded retrieval pipeline scores 56.6% on LongMemEval-S v0.8 and 44.4% on EverMemBench-Dynamic (n=500), topping the four published EverMemBench Table 4 baselines. LongMemEval-S 56.6% is ~30 points below recent white-box leaders (90+%); we treat that as the architectural ceiling of the no-extraction design. End-to-end reproduction cost is $3.50 (~14x cheaper than GPT-4o-judged stacks). A paired cross-vendor behavior A/B accompanies these numbers as preliminary system-level evidence.
+Code, anchors, frozen test data, and audit-log tooling are MIT-licensed at this http URL. 
+
+---
+# Retrieval Mechanisms Surpass Long-Context Scaling in Time Series Forecasting 
+
+**Authors**: Rishi Ahuja, Kumar Prateek, Simranjit Singh, Vijay Kumar  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.08217)  
+
+**Abstract**: Time Series Foundation Models (TSFMs) have borrowed the long context paradigm from natural language processing under the premise that feeding more history into the model improves forecast quality. But in stochastic domains, distant history is often just high-frequency noise, not signal. Hence, the proposed work tests whether this premise actually holds by running continuous context architectures (PatchTST included) through the ETTh1 benchmark. The obtained results contradict the premise: an inverse scaling law shows up clearly, with forecasting error rising as context gets longer. A 3,000-step window causes performance to drop by over 68%, evidence that attention mechanisms are poor at ignoring irrelevant historical volatility. Retrieval-Augmented Forecasting (RAFT) is evaluated as an alternative. RAFT achieves a mean squared error (MSE) of 0.379 with a fixed 720-step window and selective retrieval, outperforming both long-context configurations and zero-shot foundation models (Chronos, Moirai) despite requiring far less computation. In addition, the retrieval step injects only the most relevant historical segments as dynamic exogenous variables, which gives the model a context-informed inductive bias it cannot build on its own from raw sequences. Therefore, foundation models going forward need to shift architecturally toward selective retrieval. 
+
+---
