@@ -1,0 +1,303 @@
+# EHR-RAGp: Retrieval-Augmented Prototype-Guided Foundation Model for Electronic Health Records 
+
+**Authors**: Saeed Shurrab, Mariam Al-Omari, Dana El Samad, Farah E. Shamout  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.12335)  
+
+**Abstract**: Electronic Health Records (EHR) contain rich longitudinal patient information and are widely used in predictive modeling applications. However, effectively leveraging historical data remains challenging due to long trajectories, heterogeneous events, temporal irregularity, and the varying relevance of past clinical context. Existing approaches often rely on fixed windows or uniform aggregation, which can obscure clinically important signals. In this work, we introduce EHR-RAGp, a retrieval-augmented foundation model that dynamically integrates the most relevant patient history across diverse clinical event types. We propose a prototype-guided retrieval module that acts as an alignment mechanism and estimates the relevance of retrieved historical chunks with respect to a given prediction task, guiding the model towards the most informative context. Across multiple clinical prediction tasks, EHR-RAGp consistently outperforms state-of-the-art EHR foundation models and transformer-based baselines. Furthermore, integrating EHR-RAGp with existing clinical foundation models yields substantial performance gains. Overall, EHR-RAGp provides a scalable and efficient framework for leveraging long-range clinical context to improve downstream performance. 
+
+---
+# BatchBench: Toward a Workload-Aware Benchmark for Autoscaling Policies in Big Data Batch Processing -- A Proposed Framework 
+
+**Authors**: Venkata Krishna Prasanth Budigi, Siri Chandana Sirigiri  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.12272)  
+
+**Abstract**: Autoscaling has become a baseline expectation for cloud-native big data processing, and the design space has expanded beyond rule-based heuristics to include learned controllers and, most recently, large language model (LLM) agents. Yet despite a growing body of work spanning these paradigms, the community lacks a shared benchmark for comparing them. Existing evaluations rely on synthetic TPC-style queries, vendor blog posts with proprietary baselines, or narrow trace replays. Each new policy reports favorable numbers against a different baseline, on a different workload, with a different cost model, making cross-paper comparison effectively impossible. This is a position paper. We propose BatchBench, an open benchmarking framework designed to place rule-based, learned, and agentic autoscaling policies on equal experimental footing. The contribution is the design of the framework, not empirical results. We contribute: (1) a workload taxonomy of six batch processing classes synthesized from published autoscaling benchmarks and publicly released cluster traces; (2) the design of a parameterized workload generator with a validation methodology based on two-sample Kolmogorov-Smirnov and earth-mover distance; (3) a five-axis evaluation harness specification covering cost, SLA attainment, scaling responsiveness, scaling thrash, and decision interpretability, with first-class accounting for LLM inference cost; and (4) a standardized agent interface that lets LLM-based and reinforcement-learning autoscalers be evaluated alongside rule-based controllers with a single API. We discuss the expected evaluation surface, identify open research questions the framework is designed to answer, and outline a roadmap for the empirical paper that will follow. BatchBench's reference implementation is in active development and will be released as open source. 
+
+---
+# Unlocking Crowdsourcing for Ontology Matching Validation 
+
+**Authors**: Zhangcheng Qiang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.12226)  
+
+**Abstract**: Recent advances in large language models (LLMs) pose new challenges for ontology matching (OM). While OM systems built on LLMs have shown remarkable capabilities in discovering more mappings, traditional OM validation that relies on domain experts has become overwhelming. In this study, we explore the use of crowdsourcing for OM validation and introduce a novel crowdsourcing system. We propose three domain-specific mechanisms, namely differential trustworthiness, coherence pre-filling, and time-dependent beliefs, to ensure the quality of crowdsourcing for OM validation. We demonstrate that our crowdsourcing system can be integrated with state-of-the-art OM systems to enable human-in-the-loop validation. Two real-world use cases illustrate the effectiveness of our crowdsourcing system. 
+
+---
+# From Trajectories to Phenotypes: Disease Progression as Structural Priors for Multi-organ Imaging Representation Learning 
+
+**Authors**: Zian Wang, Lizhen Lan, Guangming Wang, Haosen Zhang, Minxuan Xu, Qing Li, Tianxing He, Mo Yang, Wenyue Mao, Yajing Zhang, Yan Li, Chengyan Wang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.11958)  
+
+**Abstract**: Imaging-derived phenotypes (IDPs) summarize multi-organ physiology but provide only static snapshots of diseases that evolve over time. In contrast, longitudinal electronic health records encode disease trajectories through temporal dependencies among past diagnosis events and comorbidity structure. We hypothesize that IDPs and disease trajectories contain partially shared disease-relevant structure. We propose a trajectory-aware distillation framework that transfers structural knowledge from a generative disease trajectory Transformer into an organ-wise IDP encoder. A population-scale trajectory model trained on longitudinal diagnosis sequences produces subject-level embeddings that supervise IDP representation learning via geometry-preserving alignment. During downstream prediction, trajectory and imaging representations can also be fused via cross-attention. Across 159 diseases in the UK Biobank cohort, trajectory-aware pretraining consistently improves both discrimination (AUC) and time-to-onset prediction (MAE), with the largest gains for low-prevalence diseases. Similarity relationships in IDP embedding space also align with those in trajectory space, providing supportive evidence for partially aligned representation geometry. These results suggest that population-scale generative disease models can serve as structural priors for data-limited imaging modalities, improving robustness under realistic cohort constraints. 
+
+---
+# RecRM-Bench: Benchmarking Multidimensional Reward Modeling for Agentic Recommender Systems 
+
+**Authors**: Wenwen Zeng, Jinhui Zhang, Hao Chen, Zhaoyu Hu, Yongqi Liang, Jiajun Chai, Dengcan Liu, Zhenfeng Liu, Shurui Yan, Minglong Xue, Xiaohan Wang, Wei Lin, Guojun Yin  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.11874)  
+
+**Abstract**: The integration of Large Language Model (LLM) agents is transforming recommender systems from simple query-item matching towards deeply personalized and interactive recommendations. Reinforcement Learning (RL) provides an essential framework for the optimization of these agents in recommendation tasks. However, current methodologies remain limited by a reliance on single dimensional outcome-based rewards that focus exclusively on final user interactions, overlooking critical intermediate capabilities, such as instruction following and complex intent understanding. Despite the necessity for designing multi-dimensional reward, the field lacks a standardized benchmark to facilitate this development. To bridge this gap, we introduce RecRM-Bench, the largest and most comprehensive benchmark to date for agentic recommender systems. It comprises over 1 million structured entries across four core evaluation dimensions: instruction following, factual consistency, query-item relevance, and fine-grained user behavior prediction. By supporting comprehensive assessment from syntactic compliance to complex intent grounding and preference modeling, RecRM-Bench provides a foundational dataset for training sophisticated reward models. Furthermore, we propose a systematic framework for the construction of multi-dimensional reward models and the integration of a hybrid reward function, establishing a robust foundation for developing reliable and highly capable agentic recommender systems. The complete RecRM-Bench dataset is publicly available at this https URL. 
+
+---
+# Very Efficient Listwise Multimodal Reranking for Long Documents 
+
+**Authors**: Yiqun Sun, Pengfei Wei, Lawrence B. Hsieh  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.11864)  
+
+**Abstract**: Listwise reranking is a key yet computationally expensive component in vision-centric retrieval and multimodal retrieval-augmented generation (M-RAG) over long documents. While recent VLM-based rerankers achieve strong accuracy, their practicality is often limited by long visual-token sequences and multi-step autoregressive decoding. We propose ZipRerank, a highly efficient listwise multimodal reranker that directly addresses both bottlenecks. It reduces input length via a lightweight query-image early interaction mechanism and eliminates autoregressive decoding by scoring all candidates in a single forward pass. To enable effective learning, ZipRerank adopts a two-stage training strategy: (i) listwise pretraining on large-scale text data rendered as images, and (ii) multimodal finetuning with VLM-teacher-distilled soft-ranking supervision. Extensive experiments on the MMDocIR benchmark show that ZipRerank matches or surpasses state-of-the-art multimodal rerankers while reducing LLM inference latency by up to an order of magnitude, making it well-suited for latency-sensitive real-world systems. The code is available at this https URL. 
+
+---
+# AgentDisCo: Towards Disentanglement and Collaboration in Open-ended Deep Research Agents 
+
+**Authors**: Jiarui Jin, Zexuan Yan, Shijian Wang, Wenxiang Jiao, Yuan Lu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.11732)  
+
+**Abstract**: In this paper, we present AgentDisCo, a novel Disentangled and Collaborative agentic architecture that formulates deep research as an adversarial optimization problem between information exploration and exploitation. Unlike existing approaches that conflate these two processes into a single module, AgentDisCo employs a critic agent to evaluate generated outlines and refine search queries, and a generator agent to retrieve updated results and revise outlines accordingly. The iteratively refined outline is then passed to a downstream report writer that synthesizes a comprehensive research report. The overall workflow supports both handcrafted and automatically discovered design strategies via a meta-optimization harness, in which the generator agent is repurposed as a scoring agent to evaluate critic outputs and generate quality signals. Powerful code-generation agents (e.g., Claude-Code, Codex) systematically explore agent configurations and construct a policy bank, a structured repository of reusable design strategies, enabling the framework to self-refine without extensive human intervention. We evaluate AgentDisCo on three established deep research benchmarks (DeepResearchBench, DeepConsult, DeepResearchGym) using Gemini-2.5-Pro, achieving performance comparable to or surpassing leading closed-source systems. Observing that existing benchmarks inadequately reflect real-world user needs, we introduce GALA (General AI Life Assistants), a benchmark that mines latent research interests from users' historical browsing behavior. We further develop a rendering agent that converts research reports into visually rich poster presentations, and demonstrate an end-to-end product, AutoResearch Your Interest, which delivers personalized deep research recommendations derived from individual browsing histories. 
+
+---
+# Quality-Aware Collaborative Multi-Positive Contrastive Learning for Sequential Recommendation 
+
+**Authors**: Wei Wang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.11707)  
+
+**Abstract**: The effectiveness of contrastive learning in sequential recommendation hinges on the construction of contrastive views, which ideally should be both semantically consistent and diverse. However, most existing CL-based methods rely on heuristic augmentations that are prone to removing crucial items or disrupting transition patterns, leading to semantic drift. While a few studies have explored learnable augmentations to improve view quality, they often suffer from limited diversity and still necessitate heuristic aids. Furthermore, the quality differences across views are rarely modeled explicitly and adaptively, aggravating the false-positive issue. To address these issues, we propose Quality-aware Collaborative Multi-Positive Contrastive Learning for sequential recommendation. First, we introduce a learnable collaborative sequence augmentation module that generates two augmented views under two complementary collaborative contexts, one based on same-target sequences and the other on similar sequences, thereby enhancing view diversity while preserving intent this http URL, we design a quality-aware mechanism, tightly integrated into the model representations, which estimates each view' s quality from the confidence of its augmentation operations and assigns adaptive weights to ensure that high-confidence views contribute more supervision while low-confidence ones contribute this http URL experiments on three real-world datasets demonstrate that QCMP-CL outperforms state-of-the-art CL-based sequential recommendation baselines. 
+
+---
+# HSUGA: LLM-Enhanced Recommendation with Hierarchical Semantic Understanding and Group-Aware Alignment 
+
+**Authors**: Guorui Li, Dugang Liu, Lei Li, Xing Tang, Zhong Ming  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.11662)  
+
+**Abstract**: Large language model (LLM)-enhanced sequential recommendation typically aims to improve two core components: user semantic embedding extraction and utilization. Despite promising results, existing methods still have two limitations: 1) In the extraction stage, most methods directly input long interaction sequence fragments into LLM for preference summarization. However, excessively long sequences increase inference difficulty, making it challenging to reliably infer accurate user embeddings. 2) In the utilization stage, most methods employ the same semantic embedding utilization strategy for all users, neglecting the differences caused by user activity levels, leading to suboptimal performance. To address these issues, we propose HSUGA, which introduces a simple yet effective plugin for each of the two core components: Hierarchical Semantic Understanding (HSU) and Group-Aware Alignment (GAA). HSU performs a staged two-phase preference mining and models preference evolution through constrained editing operations, thereby improving the reliability of user semantic extraction. GAA adjusts the intensity of semantic utilization based on user activity levels, providing weaker alignment for active users and stronger guidance for users with sparse historical data. Finally, extensive experiments on three benchmark datasets demonstrate the effectiveness and compatibility of HSUGA. 
+
+---
+# TwiSTAR:Think Fast, Think Slow, Then Act,Generative Recommendation with Adaptive Reasoning 
+
+**Authors**: Shiteng Cao, Kaian Jiang, Yunlong Gong, Zhiheng Li  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.11553)  
+
+**Abstract**: Generative recommendation with Semantic IDs (SIDs) has emerged as a promising paradigm, yet existing methods apply a fixed inference strategy, either fast direct generation or slow chain-of-thought reasoning, uniformly across all user histories. This approach creates a trade-off: fast recommendation model produces suboptimal accuracy on hard samples, while always invoking slow reasoning incurs prohibitive latency and wastes computation on easy cases. To address this, we propose Think Fast, Think Slow, Then Act, a framework that learns to adaptively allocate reasoning effort per user sequence. Our system equips an LLM with three complementary tools: a fast SID-based retriever, a lightweight candidate ranker, and a slow reasoning model that generates explicit rationales before recommending. Crucially, we inject collaborative commonsense into the slow model by transforming item-to-item knowledge into natural language explanations. A planner, trained through supervised warm-up followed by agentic reinforcement learning, dynamically decides which tool to invoke. Experiments on three datasets demonstrate that our method outperforms strong baselines, achieving consistent accuracy gains while reducing inference latency compared to uniform slow reasoning. 
+
+---
+# Conditional Memory Enhanced Item Representation for Generative Recommendation 
+
+**Authors**: Ziwei Liu, Yejing Wang, Shengyu Zhou, Xinhang Li, Xiangyu Zhao  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.11447)  
+
+**Abstract**: Generative recommendation (GR) has emerged as a promising paradigm that predicts target items by autoregressively generating their semantic identifiers (SID). Most GR methods follow a quantization-representation-generation pipeline, first assigning each item a SID, then constructing input representations from SID-token embeddings, and finally predicting the target SID through autoregressive generation. Existing item-level representation constructions mainly take two forms: directly merging SID-token embeddings into a compact vector, or enriching item-level representations with external inputs through additional networks. However, these item-level constructors still expose two practical challenges: direct merging may amplify the information loss caused by quantization and ID collision while obscuring SID code relations, whereas external-input-based methods can strengthen item semantics but cannot reliably preserve the SID-structured evidence required for token-level generation. These limitations make representation construction an underexplored bottleneck, leading to two severe problems, \ie{} the Identity-Structure Preservation Conflict and Input-Output Granularity Mismatch. To this end, we propose ComeIR, a Conditional Memory enhanced Item Representation framework that reconstructs SID-token embeddings into item-aware inputs and restores the token granularity during SID decoding. Specifically, MM-guided token scoring adaptively estimates the contribution of each code within the SID, dual-level Engram memory captures intra-item code composition and inter-item transition patterns, and a memory-restoring prediction head reuses the memories during SID decoding. Extensive experiments demonstrate the effectiveness and flexibility of ComeIR, and further reveal scalable gains from enlarging conditional memory. 
+
+---
+# FedMM: Federated Collaborative Signal Quantization for Multi-Market CTR Prediction 
+
+**Authors**: Jun Zhang, Dugang Liu, Xing Tang, Xiuqiang He, Zhong Ming  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.11433)  
+
+**Abstract**: Online platforms such as Amazon and Netflix serve users across multiple countries and regions, underscoring the importance of multi-market recommendation (MMR). Most MMR methods adopt a pre-training and fine-tuning paradigm, in which a unified model is first trained on centralized, global data and subsequently adapted to specific markets. However, this approach ignores the privacy of market data. While traditional federated learning preserves privacy, it typically aims to obtain a global model by aggregating model parameters and does not account for significant market heterogeneity. Additionally, because ID spaces are disjoint across markets, embedding-based aggregation strategies become ineffective. To overcome these challenges, we propose a federated collaborative signal quantization (FedMM) method for multi-market click-through rate (CTR) prediction. Our core idea leverages a discrete codebook mechanism to achieve privacy-preserving transmission and align disjoint ID spaces. We further employ a hierarchical codebook structure to capture cross-market shared patterns and market-specific characteristics. Specifically, we deploy a residual quantized variational autoencoder (RQ-VAE) with a dual-layer codebook mechanism for each market to quantize collaborative embeddings. The first layer utilizes a global federated codebook, updated via aggregation to capture universally shared collaborative patterns, while the second layer maintains a local codebook to learn market-specific semantics. Finally, the learned discrete codes, which integrate both general and specific collaborative signals, are incorporated into downstream CTR models to enhance prediction accuracy across all markets. Extensive experiments on benchmark datasets demonstrate that FedMM significantly improves recommendation performance with privacy guarantees. 
+
+---
+# Much of Geospatial Web Search Is Beyond Traditional GIS 
+
+**Authors**: Ilya Ilyankou, Stefano Cavazzi, James Haworth  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.11336)  
+
+**Abstract**: Web search queries concern place far more often than existing labelling schemes suggest, yet the landscape of geospatial web search queries - what people ask of place, and how often - remains poorly characterised at scale. We apply dense sentence embeddings, a lightweight SetFit classifier, and density-based clustering to the full MS MARCO corpus of 1.01 million real Bing queries without prior filtering for toponyms or spatial keywords, identifying 181,827 geospatial queries (18.0%), nearly threefold the 6.17% labelled as Location in the original annotations. The resulting taxonomy of 88 query categories reveals that geospatial web search is dominated by transactional and practical lookups: costs and prices alone account for 15.3% of geospatial queries, nearly twice the size of the entire physical geography theme. Much of this activity - costs, opening hours, contact details, weather, travel recommendations - falls outside the scope traditional GIS systems and knowledge graphs are built to serve. The categories vary substantially in the kind of answer they admit, from deterministic lookups answerable from spatial databases or knowledge graphs to evaluative or temporally volatile queries that require generative or real-time systems. We discuss implications for hybrid retrieval architectures and for benchmarks of geographic reasoning in large language models. We openly release the labelled dataset, classifier, and taxonomy. 
+
+---
+# Beyond Similarity Search: Tenure and the Case for Structured Belief State in LLM Memory 
+
+**Authors**: Jeffrey Flynt  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.11325)  
+
+**Abstract**: Why do we need another AI to help the AI? We argue you don't. Stateless LLM sessions impose re-orientation costs on iterative, session-heavy workflows. Prior work addresses cross-session memory through retrieval-augmented approaches: store history, embed it, retrieve by semantic similarity. Cross-session memory is a state management problem, not a search problem. Similarity search fails for named entity resolution within bounded vocabulary contexts because beliefs about a shared technical domain are semantically proximate by construction. A single user is the simplest bounded vocabulary context; engineering teams converge on the same property through shared codebases and terminology.
+We present Tenure, a local-first proxy that maintains a typed belief store with epistemic status, versioned supersession, and scope isolation, injecting curated context into every LLM session through precision-first retrieval. Hard scope isolation provides a structural guarantee: the right beliefs surface, and only within the boundaries the user has authorized. Tenure's typed schema converts extracted facts into imperative instructions via a why it matters field, making injected beliefs directly actionable rather than raw material for the model to re-derive.
+A controlled evaluation on 72 retrieval cases demonstrates the gap. Cosine similarity over dense embeddings achieves mean precision of 0.12. Alias-weighted BM25 maintains mean precision of 1.0, passing 72/72 cases versus 8/72 for cosine similarity on the same corpus. Hybrid retrieval typically solves vocabulary mismatch between disparate authors; Tenure eliminates this structurally: query and belief authors are the same person, and an alias enrichment flywheel continuously indexes their specific vocabulary. Under multi-turn topic drift this worsens: the vector backend produces drift scores of 0.43--0.50 on noise-critical turns where BM25 maintains 0. 
+
+---
+# MIRA: An LLM-Assisted Benchmark for Multi-Category Integrated Retrieval 
+
+**Authors**: Mehmet Deniz Türkmen, Suchana Datta, Dwaipayan Roy, Daniel Hienert, Philipp Mayr, Derek Greene  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.11254)  
+
+**Abstract**: Users increasingly expect modern search systems to offer a unified interface that seamlessly retrieves information from diverse data sources and formats. However, current information retrieval (IR) evaluation benchmarks have not kept pace with this development, primarily due to the lack of test collections that represent the diversity of contemporary search domains. We address this critical gap with MIRA, a novel benchmark based on a large-scale social science search platform. MIRA is designed for category-aware ranking across heterogeneous categories - Publications, Research Data, Variables, and Instruments & Tools - within a single, unified evaluation framework. The proposed collection is distinctive in several ways: (1) it is built upon real user queries, providing a more realistic basis for evaluation; (2) it covers scholarly items from four distinct categories, enabling multi-faceted evaluation; and (3) it leverages a Large Language Model to generate topic descriptions and narratives, as well as for relevance assessment with respect to these topics, substantially reducing the labor and cost of test collection generation. We release this resource to benefit the community by providing a foundational testbed for the research on multi-faceted, category-aware, integrated, or cross-category information retrieval. 
+
+---
+# Debiasing Message Passing to Mitigate Popularity Bias in GNN-based Collaborative Filtering 
+
+**Authors**: Md Aminul Islam, Ahmed Sayeed Faruk, Sourav Medya, Elena Zheleva  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.11145)  
+
+**Abstract**: Collaborative filtering (CF) models based on graph neural networks (GNNs) achieve strong performance in recommender systems by propagating user-item signals over interaction graphs. However, they are highly susceptible to popularity bias, since skewed interaction distributions and repeated message passing across high-order neighborhoods amplify the influence of popular items while suppressing long-tail ones. Existing debiasing approaches, including re-weighting objectives, regularization, causal methods, and post-processing, are less effective in GNN-based settings because they do not directly counteract bias propagated through the aggregation process, and recent in-aggregation weighting methods often rely on static heuristics or unstable embedding estimates. We propose Debiasing Popularity Amplification in Aggregation (DPAA), a popularity debiasing framework for GNN-based CF that integrates adaptive, embedding-aware interaction weighting and layer-wise weighting directly into message passing. DPAA assigns interaction-level weights from a representation-aware popularity signal, stabilized by a smooth transition from pre-trained to evolving model embeddings during training. It further introduces a layer-wise weighting that amplifies higher-order neighborhoods, surfacing long-range interactions with diverse and underexposed items. Experiments on real-world and semi-synthetic datasets show that DPAA outperforms state-of-the-art popularity-bias correction methods for GNN-based CF. 
+
+---
+# Task-Adaptive Embedding Refinement via Test-time LLM Guidance 
+
+**Authors**: Ariel Gera, Shir Ashury-Tahan, Gal Bloch, Ohad Eytan, Assaf Toledo  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.12487)  
+
+**Abstract**: We explore the effectiveness of an LLM-guided query refinement paradigm for extending the usability of embedding models to challenging zero-shot search and classification tasks. Our approach refines the embedding representation of a user query using feedback from a generative LLM on a small set of documents, enabling embeddings to adapt in real time to the target task. We conduct extensive experiments with state-of-the-art text embedding models across a diverse set of challenging search and classification benchmarks. Empirical results indicate that LLM-guided query refinement yields consistent gains across all models and datasets, with relative improvements of up to +25% in literature search, intent detection, key-point matching, and nuanced query-instruction following. The refined queries improve ranking quality and induce clearer binary separation across the corpus, enabling the embedding space to better reflect the nuanced, task-specific constraints of each ad-hoc user query. Importantly, this expands the range of practical settings in which embedding models can be effectively deployed, making them a compelling alternative when costly LLM pipelines are not viable at corpus-scale. We release our experimental code for reproducibility, at this https URL. 
+
+---
+# ORBIT: Preserving Foundational Language Capabilities in GenRetrieval via Origin-Regulated Merging 
+
+**Authors**: Neha Verma, Nikhil Mehta, Shao-Chuan Wang, Naijing Zhang, Alicia Tsai, Li Wei, Lukasz Heldt, Lichan Hong, Ed Chi, Xinyang Yi  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.12419)  
+
+**Abstract**: Despite the rapid advancements in large language model (LLM) development, fine-tuning them for specific tasks often results in the catastrophic forgetting of their general, language-based reasoning abilities. This work investigates and addresses this challenge in the context of the Generative Retrieval (GenRetrieval) task. During GenRetrieval fine-tuning, we find this forgetting occurs rapidly and correlates with the distance between the fine-tuned and original model parameters. Given these observations, we propose ORBIT, a novel approach that actively tracks the distance between fine-tuned and initial model weights, and uses a weight averaging strategy to constrain model drift during GenRetrieval fine-tuning when this inter-model distance exceeds a maximum threshold. Our results show that ORBIT retains substantial text and retrieval performance by outperforming both common continual learning baselines and related regularization methods that also employ weight averaging. 
+
+---
+# Question Difficulty Estimation for Large Language Models via Answer Plausibility Scoring 
+
+**Authors**: Jamshid Mozafari, Bhawna Piryani, Adam Jatowt  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.12398)  
+
+**Abstract**: Estimating question difficulty is a critical component in evaluating and improving large language models (LLMs) for question answering (QA). Existing approaches often rely on readability formulas, retrieval-based signals, or popularity statistics, which may not fully capture the reasoning challenges posed to modern LLMs. In this paper, we introduce Q-DAPS (Question Difficulty based on Answer Plausibility Scores) method, a novel approach that estimates question difficulty by computing the entropy of plausibility scores over candidate answers. We systematically evaluate Q-DAPS across four prominent QA datasets-TriviaQA, NQ, MuSiQue, and QASC-demonstrating that it consistently outperforms baselines. Moreover, Q-DAPS shows strong robustness across hyperparameter variations and question types. Extensive ablation studies further show that Q-DAPS remains robust across different plausibility estimation paradigms, model sizes, and realistic settings. Human evaluations further confirm strong alignment between Q-DAPS's difficulty estimates and human judgments of question difficulty. Overall, Q-DAPS provides an interpretable, scalable, and bias-resilient approach to question difficulty estimation in modern QA systems. 
+
+---
+# Context Convergence Improves Answering Inferential Questions 
+
+**Authors**: Jamshid Mozafari, Bhawna Piryani, Adam Jatowt  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.12370)  
+
+**Abstract**: While Large Language Models (LLMs) are widely used in open-domain Question Answering (QA), their ability to handle inferential questions-where answers must be derived rather than directly retrieved-remains still underexplored. This study investigates how the structure and quality of passages influence LLM performance on such questions. We focus on convergence, a measure of how effectively sentences (hints) eliminate incorrect answers, as a criterion for constructing passages. Using subsets of the TriviaHG dataset, we form passages by combining sentences with varying convergence levels and evaluate six LLMs of different sizes and architectures. Our results show that passages built from higher convergence sentences lead to substantially better answer accuracy than those selected by cosine similarity, indicating that convergence captures meaningful relevance for inferential reasoning. Additionally, ordering sentences by descending convergence slightly improves performance, suggesting that LLMs tend to prioritize earlier, information-rich cues. These findings highlight convergence as a practical signal for guiding passage construction and analyzing inferential reasoning behavior in LLMs. 
+
+---
+# MedHopQA: A Disease-Centered Multi-Hop Reasoning Benchmark and Evaluation Framework for LLM-Based Biomedical Question Answering 
+
+**Authors**: Rezarta Islamaj, Robert Leaman, Joey Chan, Nicholas Wan, Qiao Jin, Natalie Xie, John Wilbur, Shubo Tian, Lana Yeganova, Po-Ting Lai, Chih-Hsuan Wei, Yifan Yang, Yao Ge, Qingqing Zhu, Zhizheng Wang, Zhiyong Lu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.12361)  
+
+**Abstract**: Evaluating large language models (LLMs) in the biomedical domain requires benchmarks that can distinguish reasoning from pattern matching and remain discriminative as model capabilities improve. Existing biomedical question answering (QA) benchmarks are limited in this respect. Multiple-choice formats can allow models to succeed through answer elimination rather than inference, while widely circulated exam-style datasets are increasingly vulnerable to performance saturation and training data contamination. Multi-hop reasoning, defined as the ability to integrate information across multiple sources to derive an answer, is central to clinically meaningful tasks such as diagnostic support, literature-based discovery, and hypothesis generation, yet remains underrepresented in current biomedical QA benchmarks. MedHopQA is a disease-centered multi-hop reasoning benchmark consisting of 1,000 expert-curated question-answer pairs introduced as a shared task at BioCreative IX. Each question requires synthesis of information across two distinct Wikipedia articles, and answers are provided in an open-ended free-text format. Gold annotations are augmented with ontology-grounded synonym sets from MONDO, NCBI Gene, and NCBI Taxonomy to support both lexical and concept-level evaluation. MedHopQA was constructed through a structured process combining human annotation, triage, iterative verification, and LLM-as-a-judge validation. To reduce leaderboard gaming and contamination risk, the 1,000 scored questions are embedded within a publicly downloadable set of 10,000 questions, with answers withheld, on a CodaBench leaderboard. MedHopQA provides both a benchmark and a reusable framework for constructing future biomedical QA datasets that prioritize compositional reasoning, saturation resistance, and contamination resistance as core design constraints. 
+
+---
+# Overview of the MedHopQA track at BioCreative IX: track description, participation and evaluation of systems for multi-hop medical question answering 
+
+**Authors**: Rezarta Islamaj, Joey Chan, Robert Leaman, Jongmyung Jung, Hyeongsoon Hwang, Quoc-An Nguyen, Hoang-Quynh Le, Harikrishnan Gurushankar Saisudha, Ganesh Chandrasekar, Rustam R. Taktashov, Nadezhda Yu. Bizyukova, Sofia I. R. Conceição, Paulo R. C. Lopes, Reem Abdel Salam, Mary Adewunmi, Zhiyong Lu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.12313)  
+
+**Abstract**: Multi-hop question answering (QA) remains a significant challenge in the biomedical domain, requiring systems to integrate information across multiple sources to answer complex questions. To address this problem, the BioCreative IX MedHopQA shared task was designed to benchmark in multi-hop reasoning for large language models (LLMs). We developed a novel dataset of 1,000 challenging QA pairs spanning diseases, genes, and chemicals, with particular emphasis on rare diseases. Each question was constructed to require two-hop reasoning through the integration of information from two distinct Wikipedia pages. The challenge attracted 48 submissions from 13 teams. Systems were evaluated using both surface string comparison and conceptual accuracy (MedCPT score). The results showed a substantial performance gap between baseline LLMs and enhanced systems. The top-ranked submission achieved an 89.30% F1 score on the MedCPT metric and an 87.30% exact match (EM) score, compared with 67.40% and 60.20%, respectively, for the zero-shot baseline. A central finding of the challenge was that retrieval-augmented generation (RAG) and related retrieval-based strategies were critical for strong performance. In addition, concept-level evaluation improved answer assessment when correct responses differed in surface form. The MedHopQA dataset is publicly available to support continued progress in this important area. Challenge materials: this https URL and benchmark this https URL 
+
+---
+# Design Your Ad: Personalized Advertising Image and Text Generation with Unified Autoregressive Models 
+
+**Authors**: Yexing Xu, Wei Feng, Shen Zhang, Haohan Wang, Yuxin Qin, Yaoyu Li, Ao Ma, Yuhao Luo, Lu Wang, Xudong Ren, Haoran Wang, Run Ling, Zheng Zhang, Jingjing Lv, Junjie Shen, Ching Law, Longguang Wang, Yulan Guo  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.12138)  
+
+**Abstract**: Generating realistic and user-preferred advertisements is a key challenge in e-commerce. Existing approaches utilize multiple independent models driven by click-through-rate (CTR) to controllably create attractive image or text advertisements. However, their pipelines lack cross-modal perception and rely on CTR that only reflects average preferences. Therefore, we explore jointly generating personalized image-text advertisements from historical click behaviors. We first design a Unified Advertisement Generative model (Uni-AdGen) that employs a single autoregressive framework to produce both advertising images and texts. By incorporating a foreground perception module and instruction tuning, Uni-AdGen enhances the realism of the generated content. To further personalize advertisements, we equip Uni-AdGen with a coarse-to-fine preference understanding module that effectively captures user interests from noisy multimodal historical behaviors to drive personalized generation. Additionally, we construct the first large-scale Personalized Advertising image-text dataset (PAd1M) and introduce a Product Background Similarity (PBS) metric to facilitate training and evaluation. Extensive experiments show that our method outperforms baselines in general and personalized advertisement generation. Our project is available at this https URL. 
+
+---
+# Caraman at SemEval-2026 Task 8: Three-Stage Multi-Turn Retrieval with Query Rewriting, Hybrid Search, and Cross-Encoder Reranking 
+
+**Authors**: David-Maximilian Caraman, Gheorghe Cosmin Silaghi  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.12028)  
+
+**Abstract**: We describe our system for SemEval-2026 Task 8 (MTRAGEval), participating in Task A (Retrieval) across four English-language domains. Our approach employs a three-stage pipeline: (1) query rewriting via a LoRA-fine-tuned Qwen 2.5 7B model that transforms context-dependent follow-up questions into standalone queries, (2) hybrid BM25 and dense retrieval combined through Reciprocal Rank Fusion, and (3) cross-encoder reranking with BGE-reranker-v2-m3. On the official test set, the system achieves nDCG@5 of 0.531, ranking 8th out of 38 participating systems and 10.7% above the organizer baseline. Development comparisons reveal that domain-specific temperature tuning for query generation, where technical domains benefit from deterministic decoding and general domains from controlled randomness, provides consistent gains, while more complex strategies such as domain-aware prompting and multi-query expansion degrade performance. 
+
+---
+# On the LSH Distortion of Ulam and Cayley Similarities 
+
+**Authors**: Flavio Chierichetti, Mirko Giacchini, Ravi Kumar, Erasmo Tani  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.11921)  
+
+**Abstract**: Locality-sensitive hashing (LSH) has found widespread use as a fundamental primitive, particularly to accelerate nearest neighbor search. An LSH scheme for a similarity function $S:\mathcal{X} \times \mathcal{X} \to [0,1]$ is a distribution over hash functions on $\mathcal{X}$ with the property that the probability of collision of any two elements $x,y\in \mathcal{X}$ is exactly equal to $S(x,y)$. However, not all similarity functions admit exact LSH schemes. The notion of LSH distortion measures how multiplicatively close a similarity function is to having an LSH scheme.
+In this work, we study the LSH distortion of the Ulam and Cayley similarities, which are popular similarity measures on permutations of $n$ elements. We show that the Ulam similarity admits a sublinear LSH distortion of $O(n / \sqrt{\log n})$; we also prove a lower bound of $\Omega(n^{0.12})$ on the best LSH distortion achievable. On the other hand, we show that the LSH distortion of the Cayley similarity is $\Theta(n)$. 
+
+---
+# Test-Time Compute for Dense Retrieval: Agentic Program Generation with Frozen Embedding Models 
+
+**Authors**: Han Xiao  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.11374)  
+
+**Abstract**: Test-time compute is widely believed to benefit only large reasoning models. We show it also helps small embedding models. Most modern embedding checkpoints are distilled from large LLM backbones and inherit their representation space; a frozen embedding model should therefore benefit from extra inference compute without retraining. Using an agentic program-search loop, we explore 259 candidate inference programs over a frozen embedding API across ninety generations. The entire Pareto frontier collapses onto a single algebra: a softmax-weighted centroid of the local top-K documents interpolated with the query. This parameter-free default lifts nDCG@10 statistically significantly across seven embedding-model families spanning a tenfold parameter range, with held-out full-BEIR validation confirming the lift on every model tested. 
+
+---
+# Large Language Models for Causal Relations Extraction in Social Media: A Validation Framework for Disaster Intelligence 
+
+**Authors**: Ujun Jeong, Saketh Vishnubhatla, Bohan Jiang, Andre Harrison, Adrienne Raglin, Huan Liu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.11348)  
+
+**Abstract**: During disasters, extracting causal relations from social media can strengthen situational awareness by identifying factors linked to casualties, physical damage, infrastructure disruption, and cascading impacts. However, disaster-related posts are often informal, fragmented, and context-dependent, and they may describe personal experiences rather than explicit causal relations. In this work, we examine whether Large Language Models (LLMs) can effectively extract causal relations from disaster-related social media posts. To this end, we (1) propose an expert-grounded evaluation framework that compares LLM-generated causal graphs with reference graphs derived from disaster-specific reports and (2) assess whether the extracted relations are supported by post-event evidence or instead reflect model priors. Our findings highlight both the potential and risks of using LLMs for causal relation extraction in disaster decision-support systems. 
+
+---
+# VERDI: Single-Call Confidence Estimation for Verification-Based LLM Judges via Decomposed Inference 
+
+**Authors**: Jasmine Qi, Danylo Dantsev, Muyang Sun  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.11334)  
+
+**Abstract**: LLM-as-Judge systems are widely deployed for automated evaluation, yet practitioners lack reliable methods to know when a judge's verdict should be trusted. Token log-probabilities, the standard post-hoc confidence signal, are unavailable for many commercial LLMs and, even when accessible, saturate above 0.999 with structured JSON output.
+We introduce VERDI (VERification-Decomposed Inference), a method that extracts confidence from the reasoning trace a structured judge already produces, with no additional inference calls. VERDI decomposes each verification-style evaluation into sub-checks and derives three structural signals: Step-Verdict Alignment, Claim-Level Margin, and Evidence Grounding Score. We combine them with Platt-scaled logistic regression.
+On three public benchmarks, VERDI achieves AUROC 0.72-0.91 on GPT-4.1-mini and 0.66-0.80 on GPT-5.4-mini. On Qwen3.5-4B/9B/27B, where answer-token logprobs are anti-calibrated (higher confidence on errors, AUROC 0.32-0.49), VERDI achieves 0.56-0.70. We additionally validate on a production system with eight rubrics (AUROC 0.73-0.88 on factual rubrics), demonstrate cross-model transfer (AUROC 0.66-0.69), and show that a 33M-parameter NLI (Natural Language Inference) model provides a scalable alternative to regex extraction. 
+
+---
+# Localization Boosting for Growth Markets: Mitigating Cross-Locale Behavioral Bias in Learning-to-Rank 
+
+**Authors**: Suryaa Veerabathiran Seran, Ashwin Naresh Kumar, Tracy Holloway King, Jing Zheng  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.11272)  
+
+**Abstract**: Adobe Express is expanding internationally, but the US has a disproportionately large content supply and interaction volume. Learning-to-rank (LTR) models trained primarily on behavioral feedback inherit this imbalance: templates popular in US are over-served in non-US locales. This cross-locale exposure bias suppresses local content discoverability and degrades ranking quality in growth locales.
+We show that click-only training suppresses semantically informative localization features. Adding vision-language model (VLM) graded relevance labels as auxiliary supervision alongside clicks improves semantic alignment but does not preserve local content visibility. We propose a multi-objective framework combining behavioral supervision, VLM-derived relevance signals, and locale-aware boosting. Across five locales, the resulting model improves relevance while restoring stable localization, demonstrating the importance of disentangling exposure from semantic supervision. 
+
+---
+# ClinicalBench: Stress-Testing Assertion-Aware Retrieval for Cross-Admission Clinical QA on MIMIC-IV 
+
+**Authors**: Alex Stinard  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.11143)  
+
+**Abstract**: Reasoning benchmarks measure clinical performance on clean inputs. We evaluate the step before reasoning: retrieval over real EHR notes, where negation, temporality, and family-versus-patient attribution can flip a correct answer to a wrong one. EpiKG carries an assertion label and a temporality tag with every fact in a patient knowledge graph, then routes retrieval by question intent. ClinicalBench is a 400-question test over 43 MIMIC-IV patients across 9 assertion-sensitive categories. A 7-condition ablation tests each piece of EpiKG across six LLMs (Claude Opus 4.6, GPT-OSS 20B, MedGemma 27B, Gemma 4 31B, MedGemma 1.5 4B, Qwen 3.5 35B). Three physicians blindly adjudicated 100 paired items. The author-blind primary endpoint, leave-author-out paired exact McNemar on 50 unanimous-strict items rated by two external physicians, yields +22.0 percentage points (95 percent Newcombe CI [+5.1, +31.5], p=0.0192). The architectural novelty, intent-aware KG-RAG over a Contriever dense-RAG baseline (C2b to C4g_kw on the change-excluded n=362 endpoint), is +8.84 percentage points (paired McNemar p=1.79e-3); +12.43 percentage points under oracle intent. Sensitivities agree directionally: three-rater physician majority +24.0 percentage points (subject to single-author circularity); deterministic keyword reproducibility proxy +39.5 percentage points. Across the six models, the gain shrinks as the LLM-alone baseline rises (beta=-1.123, r=-0.921, p=0.009). With n=6 this looks more like regression to the mean than encoding substituting for model size. Physician adjudication identified 56 percent of auto-generated reference answers as defective, a methodological finding indicating that NLP-pipeline clinical-QA benchmarks require physician adjudication to be usable. ClinicalBench, the frozen evaluator, three-rater adjudication data, and the EpiKG output stack are publicly released. 
+
+---
+# A Cascaded Generative Approach for e-Commerce Recommendations 
+
+**Authors**: Moein Hasani, Hamidreza Shahidi, Trace Levinson, Yuan Zhong, Guanghua Shu, Vinesh Gudla, Tejaswi Tenneti  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.11118)  
+
+**Abstract**: Personalized storefronts in large e-commerce marketplaces are often assembled from many independent components: static themes per page section ("placement"), retrieval systems to fetch eligible products per placement, and pointwise rankers to order content. While effective in optimizing for aggregate preferences, this paradigm is rigid and can limit personalization and semantic cohesion across the page. This makes it poorly suited to support dynamic objectives and merchandising requirements over time. To address this, we introduce a cascaded merchandising framework that decomposes storefront construction into two generative tasks: (i) placement-level theme generation and (ii) constrained keyword generation per placement to power product retrieval. Teacher-student fine-tuning is leveraged to improve scalability of this framework under production latency and cost constraints. Fine-tuned model ablations are shown to approach closed-weight LLM performance. We further contribute frameworks for AI-driven content evaluation and quality filtering, enabling safe and automated deployment of dynamic content at scale. Generative output is fused with traditional ranking models to preserve hybrid infrastructure. In online experiments, this framework yields an estimated +2.7% lift in cart adds per page view over a strong baseline. 
+
+---
+# Simpson's Paradox in Behavioral Curves: How Aggregation Distorts Parametric Models of User Dynamics 
+
+**Authors**: Chao Zhou  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.11017)  
+
+**Abstract**: Behavioral curve modeling -- fitting parametric functions to engagement-versus-exposure data -- is standard practice in recommendation, advertising, and clinical dosing. We show that aggregation introduces a systematic distortion: Simpson's paradox in behavioral curves. On Goodreads (3.3M users, 9 genres), individual users peak at n* approximately 11 exposures while the aggregate peaks at n* approximately 34 -- a 3x gap driven by survival bias. Amazon Electronics (18M reviews) shows a 5.3x distortion. MovieLens-25M (D approximately 1) serves as a negative control, confirming that survival bias -- not aggregation per se -- is the operative mechanism. The distortion is robust to category granularity, engagement operationalization, and classifier calibration. We develop Synthetic Null Calibration to address a 32% false positive rate in per-user classification. Our findings apply wherever individual behavioral parameters are estimated from aggregate curves under differential attrition. 
+
+---
+# Continuous Flood Nowcasting in South Asia: A Multi-Sensor Ensemble Remote Sensing Framework for Flood Extent 
+
+**Authors**: Usman Nazir, Disha Gomathinayagam, Muhammad Kamran, Sara Khalid  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.10950)  
+
+**Abstract**: Pakistan experienced an unusually severe flood season between June and December 2025, with cascading impacts on population, infrastructure, and agriculture. Existing operational flood products (e.g., UNOSAT) provide valuable episode-level snapshots but rarely deliver spatially and temporally continuous inundation maps at near-real-time latency within the country. We present a multi-sensor, ensemble-based remote-sensing framework for continuous flood nowcasting in Pakistan that integrates Sentinel-1 SAR, Harmonized Landsat-Sentinel (HLS L30 and S30), MODIS, and VIIRS observations on a harmonized grid in Google Earth Engine. The framework employs a tiered nowcasting ensemble that prioritizes higher-resolution sensors (Sentinel-1 and HLS) and falls back to MODIS and VIIRS when necessary, preserving daily continuity of flood extent at each sensor's native resolution. Applied to the 2025 monsoon period, the system generates near-real-time, spatially consistent inundation maps across Pakistan. As a nowcasting case study, we track the super-flood of 26 August-7 September 2025 day by day, demonstrating the framework's ability to capture the evolving flood footprint in near real time and extend beyond the temporal limits of episodic mapping products. Validation against GloFAS discharge anomalies and precipitation datasets (CHIRPS v3.0, MSWEP) shows strong agreement with observed hydrometeorological conditions. By integrating nowcast outputs with exposure layers (WorldPop, ESA WorldCover, Giga-HOTOSM), the framework enables rapid estimation of affected populations, cropland, and critical infrastructure, supporting timely disaster response and resilience planning in South Asia. 
+
+---
