@@ -1,0 +1,319 @@
+# BalanceRAG: Joint Risk Calibration for Cascaded Retrieval-Augmented Generation 
+
+**Authors**: Zijun Jia, Yuanchang Ye, Sen Jia, Yiyao Qian, Haoning Wang, Baojie Chen, Diyin Tang, Jinsong Yu, Zhiyuan Wang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.20084)  
+
+**Abstract**: Large language models (LLMs) can enhance factuality via retrieval-augmented generation (RAG), but applying RAG to every query is unnecessary when the model-only answer is reliable. This motivates cascaded RAG: each query is first handled by an LLM-only branch, escalated to a RAG fallback only if the primary branch is uncertain, and abstained from when neither branch is sufficiently trustworthy. However, calibrating such cascades stage by stage may be conservative, since the final utility depends on joint uncertainty thresholding of LLM-only and RAG. In this work, we develop BalanceRAG to certify threshold pairs at a target risk level. Given uncertainty scores from the two branches, BalanceRAG frames each threshold pair as an operating point on a two-dimensional lattice and identifies safe operating points using sequential graphical testing. This enables risk-adaptive threshold calibration, controlling the system-level error rate among accepted points, while retaining more examples. Furthermore, BalanceRAG extends to multi-risk calibration, allowing retrieval usage to be bounded together with the selection-conditioned risk. Experiments on three open-domain question answering (QA) benchmarks across multiple LLM backbones demonstrate that BalanceRAG meets prescribed risk levels, preserves higher coverage and more accepted correct examples, and reduces unnecessary retrieval calls compared with always-on RAG. 
+
+---
+# ClinSeekAgent: Automating Multimodal Evidence Seeking for Agentic Clinical Reasoning 
+
+**Authors**: Juncheng Wu, Letian Zhang, Yuhan Wang, Haoqin Tu, Hardy Chen, Zijun Wang, Cihang Xie, Yuyin Zhou  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.20176)  
+
+**Abstract**: Large language models (LLMs) and agentic systems have shown promise for clinical decision support, but existing works largely assume that evidence has already been curated and handed to the model. Real-world clinical workflows instead require agents to actively seek, iteratively plan, and synthesize multimodal evidence from heterogeneous sources. In this paper, we introduce ClinSeekAgent, an automated agentic framework for dynamic multimodal evidence seeking that shifts the paradigm from passive evidence consumption to active evidence acquisition. Given only a clinical query and access to raw data sources, ClinSeekAgent gathers evidence by querying medical knowledge bases, navigating raw EHRs, and invoking medical imaging tools; refines its hypotheses as new information emerges; and integrates the collected evidence into grounded clinical decisions. ClinSeekAgent serves both as an inference-time agent for frontier LLMs and as a training-time pipeline for distilling high-quality agent trajectories into compact open-source models. To validate its inference-time effectiveness, we construct ClinSeek-Bench, which pairs Curated Input reasoning from fixed pre-selected evidence with Automated Evidence-Seeking over raw clinical data. On text-only EHR tasks, ClinSeekAgent improves Claude Opus 4.6 from 60.0 to 63.2 overall F1 and MiniMax M2.5 from 43.1 to 47.3, with positive risk-prediction gains in 7 out of 9 evaluated host models. On multimodal tasks, ClinSeekAgent improves Claude Opus 4.6 from 47.5 to 62.6 (+15.1); all evaluated models improve across the three CXR-related task groups. We further validate ClinSeekAgent as a training pipeline by distilling agentic evidence-seeking trajectories into ClinSeek-35B-A3B, which achieves 34.0 average F1 on existing AgentEHR-Bench, improving over its Qwen3.5-35B-A3B baseline by +11.9 points and approaching Claude Opus 4.6. 
+
+---
+# Chunking German Legal Code 
+
+**Authors**: Max Prior, Natalia Milanova, Andreas Schultz  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.19806)  
+
+**Abstract**: This paper investigates chunking strategies for retrieval-augmented generation on German statutory law, using the German Civil Code as a structured benchmark corpus. We implement and compare a range of segmentation approaches, including structural units (sections, subsections, sentences, propositions), fixed-size windows, contextual chunking, semantic clustering, Lumber-style chunking, and RAPTOR-based hierarchical retrieval. All methods are evaluated on a legal question-answering dataset with section-level gold labels, measuring recall, query latency, index build time, and storage requirements. Results show that chunking strategies aligned with the inherent legal structure - particularly section and subsection - based retrieval-achieve the highest recall, while more complex approaches that override this structure perform worse. These simpler methods also offer favorable computational efficiency compared to LLM-intensive techniques such as contextual chunking, RAPTOR, and Lumber. The findings highlight a key trade-off between semantic enrichment and operational cost, and demonstrate that preserving domain-specific structure is critical for effective legal information retrieval. 
+
+---
+# ContextRAG: Extraction-Free Hierarchical Graph Construction for Retrieval-Augmented Generation 
+
+**Authors**: Roman Prosvirnin, Sergei Kuznetsov, Seungmin Jin  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.19735)  
+
+**Abstract**: Graph-structured retrieval-augmented generation (RAG) systems can improve answer quality on multi-hop questions, but many current systems rely on large language models (LLMs) to extract entities, relations, and summaries during indexing. These calls add token and wall-clock costs that grow with corpus size. We present ContextRAG, a graph RAG system whose graph topology is constructed without LLM-based entity or relation extraction. ContextRAG derives a fuzzy concept graph over chunk embeddings using residual-quantization k-means and Formal Concept Analysis with Lukasiewicz residuated logic. Bridge-like and meet-derived context nodes are induced by soft fuzzy join and meet operations, rather than by LLM-written graph edges. On a 130-task UltraDomain subset, ContextRAG builds its index with 30 LLM calls and 22,073 tokens. In contrast, a local HiRAG reproduction stress test required 870 indexing calls and 3.54M tokens on a 20-task subset before failing during graph construction; linear extrapolation to 130 tasks implies over 23M indexing tokens. ContextRAG obtains 33.6% F1 overall and 36.8% F1 on multi-hop tasks. An activation analysis shows that queries retrieving at least one lattice-derived node in the top five achieve +3.9 percentage points F1 over queries that do not; this association is diagnostic rather than causal. 
+
+---
+# Retrieval-Augmented Linguistic Calibration 
+
+**Authors**: Yi-Fan Yeh, Linwei Tao, Minjing Dong, Tao Huang, Jialin Yu, Philip Torr, Chang Xu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.19344)  
+
+**Abstract**: Linguistic cues such as "I believe" and "probably" offer an intuitive interface for communicating confidence, yet a generalisable, principled calibration framework for linguistic confidence expressions remains underexplored. In particular, co-occurring linguistic cues, contextual variation, and subjective audience interpretation pose unique challenges. We therefore model linguistic confidence as a distribution over plausible perceived probability values that a statement is correct, capturing interpretation variability that scalar representations discard. Within this distributional framework, we introduce faithfulness as a complementary evaluation dimension and present Faithfulness Divergence (FD), an information-theoretic metric quantifying the surprise induced in audience beliefs upon truth revelation. Building on these foundations, we present Retrieval-Augmented Linguistic Calibration (RALC), a lightweight post-hoc pipeline that propagates calibrated confidence signals back into natural language via retrieval-augmented rewriting. Across three QA benchmarks and five LLM families, RALC improves in-domain faithfulness and calibration up to 66% and 58%, respectively, outperforming black-box and grey-box calibration baselines. 
+
+---
+# How Do Document Parsers Break? Auditing Structural Vulnerability in Document Intelligence 
+
+**Authors**: Yue Chen, Yihao Wang, Ziyi Tang, Keze Wang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.19309)  
+
+**Abstract**: Document Layout Analysis (DLA) pipelines provide structured page representations for retrieval-augmented generation, long-document question answering, and other document intelligence systems, yet their robustness evaluation remains largely area-centric. We identify this Footprint Bias and propose a lightweight output-level auditing framework that decouples probe construction, policy-driven targeting, and structure-aware diagnosis. The framework combines Block-level Structural Loss Rate (B-SLR), granularity-aware exposure descriptors, and pathway attribution to analyze where perturbations interact with layout structure and how failures propagate. Across MinerU and PP-StructureV3 on 1,000 pages, affected area weakly tracks perturbation-induced OCR instability (R^2=0.384/0.110), whereas B-SLR aligns much more closely with it (R^2=0.727/0.916). Exposure descriptors further separate occlusion- and topology-dominant pathways, and small structurally targeted probes cause downstream QA/retrieval degradation comparable to larger-footprint perturbations. These results shift DLA robustness evaluation from footprint-based stress testing toward structure-aware vulnerability auditing. 
+
+---
+# Library Drift: Diagnosing and Fixing a Silent Failure Mode in Self-Evolving LLM Skill Libraries 
+
+**Authors**: Xing Zhang, Yanwei Cui, Guanghui Wang, Ziyuan Li, Wei Qiu, Bing Zhu, Peiyang He  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.19576)  
+
+**Abstract**: Self-evolving skill libraries face a silent failure mode we term \emph{library drift}: unbounded skill accumulation without outcome-driven lifecycle management causes retrieval degradation, false-positive injections, and performance stagnation. Recent evaluation confirms the symptom--LLM-authored skills deliver +0.0pp gain while human-curated ones deliver +16.2pp (SkillsBench)--yet the underlying mechanism has not been isolated. We provide (1) a reproducible trigger: ablations that isolate drift--one disables skill injection (flat floor, +0.002), one imposes premature retirement (active harm, $-$0.019); (2) trace-level diagnostics: an append-only evidence log with per-skill contribution scores, attribution verdicts, and router engagement metrics that make the failure visible before it reaches end-task scores; and (3) a verified fix: a minimal governance recipe (outcome-driven retirement + bounded active-cap + meta-skill authoring prior) that lifts held-out pass@1 from a 0.258 baseline to a late-window mean of 0.584 (rolling gain $+$0.328) on MBPP+ hard-100 over 100 rounds. Eight ablations decompose which governance mechanisms are load-bearing and which are subsumed, providing a concrete playbook for diagnosing library drift in any self-evolving agent. 
+
+---
+# Trust or Abstain? A Self-Aware RAG Approach 
+
+**Authors**: Xi Zhu, Ziqi Wang, Kai Mei, Wujiang Xu, Minghao Guo, Bangji Yang, Jiajun Fan, Dimitris N. Metaxas  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.18792)  
+
+**Abstract**: Retrieval-augmented generation (RAG) improves large language models (LLMs) by incorporating external evidence, but it also introduces knowledge conflicts when retrieved contextual knowledge (CK) and parametric knowledge (PK) disagree or are both unreliable. Existing approaches mainly coordinate which source to use, without explicitly asking whether each answer path is correct. We argue that faithful RAG requires LLM self-awareness, namely the ability to recognize the limits of its own knowledge and reasoning. To ground this problem, we construct a model-specific, ground-truth-aligned knowledge-conflict benchmark by evaluating LLM backbones on PK-only and CK-conditioned answer paths over approximately 69K query-context instances per backbone, drawn from five conflict-QA datasets. We then introduce SABER, a Self-Aware Belief Estimator for RAG that requires no LLM fine-tuning. SABER combines a self-prior with PK-side and CK-side conditional reasoning representations from multi-trace inference, then estimates reliability beliefs with two lightweight predictors to drive a 4-cell decision over trust PK, trust CK, trust either, or abstain. Across four LLM backbones, SABER improves end-to-end accuracy and conflict-specific faithfulness over ten inference-time and fine-tuning baselines, with the largest gains on conflict-heavy datasets. Under abstention, SABER's risk-coverage curve Pareto-dominates every prompt-based abstainer, providing a tunable balance between coverage and answer risk. Our code is available at this https URL. 
+
+---
+# Improving Retrieval-Augmented Generation without Taxonomy-based Error Categorization 
+
+**Authors**: Gongbo Zhang, Yifan Peng, Chunhua Weng  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.18772)  
+
+**Abstract**: Retrieval-Augmented Generation (RAG) improves the factual accuracy of large language model (LLM) outputs by grounding generation in external knowledge. Recent agentic RAG systems extend this paradigm with critical agents to evaluate model responses and iteratively refine outputs. However, most prior work implicitly assumes reliable critic feedback and focuses on planning strategies, while paying limited attention to the robustness of the error-correction process itself, which can be impacted by misaligned error categories and ineffective or incorrect corrections. Here, we hypothesize that RAG performance can be improved without explicit error categorization. We propose RePAIR, a response-action learning paradigm that directly maps flawed RAG outputs to error-mitigating action plans without relying on fine-grained error taxonomies and explicit critic supervision. Across multiple benchmarks, RePAIR consistently improves agentic RAG performance. 
+
+---
+# ClusterRAG: Cluster-Based Collaborative Filtering for Personalized Retrieval-Augmented Generation 
+
+**Authors**: Gibson Nkhata, Uttamasha Anjally Oyshi, Quan Mai, Susan Gauch  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.18769)  
+
+**Abstract**: Personalized Retrieval-Augmented Generation (RAG) relies on accurately selecting user-relevant documents. In practice, existing RAG approaches often suffer from high retrieval costs and overlook that collaborative signals from similar users can enhance personalized generation for the current user. We propose ClusterRAG, a Cluster-Based Collaborative Filtering for Personalized Retrieval-Augmented Generation. ClusterRAG represents users through their profile documents, organizes users into semantically coherent clusters using density-based clustering, and performs retrieval at both the cluster and document levels via cluster-level similarity and fine-grained ranking. Extensive experiments on the LaMP benchmark demonstrate that jointly leveraging the target user's profile and profiles from top similar users consistently yields the best performance across diverse tasks. Further analysis shows that ClusterRAG integrates seamlessly with different dense retrievers and rankers, and remains effective when paired with both fine-tuned and zero-shot language models. 
+
+---
+# EngiAI: A Multi-Agent Framework and Benchmark Suite for LLM-Driven Engineering Design 
+
+**Authors**: Gioele Molinari, Florian Felten, Soheyl Massoudi, Mark Fuge  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.19743)  
+
+**Abstract**: Large Language Model (LLM) agents are increasingly applied to engineering design tasks, yet existing evaluation frameworks do not adequately address multi-agent systems that combine simulation, retrieval, and manufacturing preparation. We introduce a benchmark suite with three evaluation dimensions: (1) a workflow benchmark with seven prompt styles targeting distinct cognitive demands-including direct tool use, semantic disambiguation, conditional branching, and working-memory tasks; (2) a Retrieval-Augmented Generation (RAG) benchmark with gated scoring isolating retrieval contributions to parameter selection; and (3) an High Performance Computing (HPC) benchmark evaluating end-to-end ML training orchestration on a SLURM cluster. Alongside the benchmark we present EngiAI, a Multi-Agent System (MAS) reference implementation built on LangGraph that operationalizes the benchmark by coordinating seven specialized agents through a supervisor architecture, unifying topology optimization, document retrieval, HPC job orchestration, and 3D printer control. Across four LLM backends and two EngiBench problems, proprietary models achieve 96-97% average task completion on Beams2D, while open-source 4B-parameter models reach 55-78%, with clear generational improvement. Conditional branching proves most challenging, with task completion dropping to 20-53% for the conditional style on Photonics2D. RAG gating confirms near-perfect retrieval-augmented scores ($\approx 1.0$) versus near-zero without retrieval, validating the evaluation design. On HPC orchestration, one model completes all pipeline steps in 100% of runs while another drops to 50%, revealing that multi-step instruction following degrades over long-running workflows. 
+
+---
+# Can Large Language Models Revolutionize Survey Research? Experiments with Disaster Preparedness Responses 
+
+**Authors**: Yan Wang, Ziyi Guo, Christopher McCarty  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.19229)  
+
+**Abstract**: Survey research faces mounting structural challenges: declining response rates, sample bias, block-wise missingness among at-risk respondents, and AI-assisted fraudulent completions in online panels. Large language models (LLMs) have been proposed as a remedy, yet rigorous evaluations across the full survey workflow remain scarce, particularly in disaster contexts where data quality matters most. We present and evaluate a five-stage framework for LLM integration covering questionnaire design, sample selection, pilot testing, missing-data imputation, and post-collection analysis, using the 2024 Hurricane Milton preparedness survey of Florida residents (n=946) as a shared empirical testbed. We introduce a Protection Motivation Theory (PMT)-constrained co-occurrence knowledge graph and develop seven LLM configurations spanning zero-shot inference, retrieval-augmented baselines, and novel theory-informed variants. Our proposed Anchored Marginal Theory-Informed LLM (A-TLM) outperforms all three classical imputation baselines (IPW/MI, MICE+PMM, missForest) on RMSE under disaster-relevant block-wise MNAR conditions (S4 RMSE 1.439 vs. 1.496 for the next-best), while achieving near-zero signed bias (-0.121) where the random-forest imputer produces the largest absolute bias (-0.631). Organizing retrieval around PMT causal structure and integrating all evidence in a single model call outperforms unstructured retrieval and staged sequential inference (MAE 0.993 vs. 1.097 for standard RAG). We document that near-zero aggregate bias can mask opposing subgroup errors and propose subgroup-stratified bias auditing as a reporting standard. A retrieval-constrained knowledge-graph chatbot demonstrates that hallucination is architecturally manageable through grounded refusal. 
+
+---
+# Evaluating the Utility of Personal Health Records in Personalized Health AI 
+
+**Authors**: Rory Sayres, Kejia Chen, Ayush Jain, Matthew Thompson, Jonathan Richina, Xiang Yin, Jimmy Hu, Fan Zhang, Bob Lou, Mike Sanchez, Ines Mezerreg, Meredith Schreier, Hamsa Subramaniam, I-Ching Lee, Yugang Jia, Daniel Mcduff, Yossi Matias, Avinatan Hassidim, Dale Webster, Yun Liu, Jackie Barr, Quang Duong  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.18937)  
+
+**Abstract**: Patient-managed Personal Health Records (PHRs) promises to empower patients to better understand their health; but information in the record is complex, potentially hindering insights. In this study, we assess the potential of large language models (LLMs, Gemini 3.0 Flash) to provide helpful answers to user health queries, when provided clinical data from PHRs as context. A total of 2,257 user queries were drawn from 3 different distributions to represent patient questions: shorter web search queries, longer questions derived from templates of chatbot conversations, and questions patients asked to their healthcare team (patient calls). Queries were matched with de-identified PHRs (from a pool of 1,945). Gemini responses were generated (1) without PHR context; (2) with a basic summary of demographics, conditions, and medications; (3) with full, extensive clinical notes. For evaluation, we leveraged an existing rating framework (SHARP), and developed a new framework for specific error modes when interpreting PHRs. Evaluation was performed using autoraters for the full set, and with clinician ratings for a subset (n=95), with both sets of raters knowing the full PHR context. We see significant improvements in the helpfulness of answers to all question types with PHR data (p < 0.001, paired t-test). We also observe potential gains in safety, accuracy, relevance and personalization of answers. Our PHR evaluation framework further identifies gaps in LLM understanding of particular aspects of complex PHRs, such as temporal disorientation, and rare but meaningful confabulations. These results suggest potential for PHR data to help people with a wide range of user needs; and provide a framework for monitoring for gaps in LLM answers based on PHR context. This study motivates further work to assess and realize potential benefits to users from understanding their health records. 
+
+---
+# Draft Less, Retrieve More: Hybrid Tree Construction for Speculative Decoding 
+
+**Authors**: Yuhao Shen, Tianyu Liu, Xinyi Hu, Quan Kong, Baolin Zhang, Jun Dai, Jun Zhang, Shuang Ge, Lei Chen, Yue Li, Mingcheng Wan, Cong Wang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.20104)  
+
+**Abstract**: Speculative decoding (SD) accelerates large language model inference by leveraging a draft-then-verify paradigm. To maximize the acceptance rate, recent methods construct expansive draft trees, which unfortunately incur severe VRAM bandwidth and computational overheads that bottleneck end-to-end speedups. While dynamic-depth pruning can reduce this latency by removing marginal branches, it also discards potentially valid candidates, preventing the acceptance rate from reaching the upper bound of dense trees. In this paper, we identify a critical opportunity in resource allocation: the transition from dense to pruned drafting frees up significant computational budget. To break this Pareto tradeoff, we introduce Graft, a compensation framework that couples pruning and retrieval as mutually reinforcing operations. Pruning supplies sufficient budget for retrieval, while retrieval compensates for pruning-induced coverage loss and recovers accepted length. By employing a sequential `prune-then-graft' mechanism, Graft attaches highly predictive retrieved tokens into positions opened by pruning, filling the topological gaps with near-zero overhead. Graft is entirely training-free and lossless. Comprehensive evaluations show that Graft establishes a new Pareto frontier across practical deployment settings, including short-context generation, long-context generation, and large-scale models. On short-context benchmarks, it achieves up to 5.41$\times$ speedup and improves average speedup over EAGLE-3 by up to 21.8% on the large-scale Qwen3-235B. We also provide a preliminary exploration of applying Graft to the DFlash-style block drafting paradigm, offering initial evidence and insights for extending grafting beyond autoregressive draft trees. 
+
+---
+# Synthesis and Evaluation of Long-term History-aware Medical Dialogue 
+
+**Authors**: Hebin Hu, Renke Dai, Ah-Hwee Tan, Yilin Kang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.19766)  
+
+**Abstract**: An effective healthcare agent must be able to recall and reason over a patient's longitudinal medical history. However, the absence of datasets with realistic long-term dialogue timelines limits systematic evaluation. Real clinical text is constrained by privacy and ethics, while existing benchmarks focus on isolated interactions, failing to capture cross-session reasoning. We introduce a framework for synthesizing high-quality, long-term medical dialogues with LLMs. Our approach entails a knowledge-guided decomposition into three stages: constructing synthetic patient profiles with diverse disease and complication trajectories, generating multi-turn dialogues per encounter, and integrating them into a coherent longitudinal history dataset, MediLongChat. We establish three benchmark tasks-In-dialogue Reasoning, Cross-dialogue Reasoning, and Synthesis Reasoning-to evaluate the memory capabilities of healthcare agents. To assess data quality, we introduce a multi-dimensional evaluation framework combining vector-based metrics with LLM-as-a-judge assessments. Specifically, we define automatic measures-Faithfulness, Coherence, and Diversity-together with two LLM-based evaluations: Correctness and Realism. Benchmark experiments show that even state-of-the-art LLMs struggle with MediLongChat. These findings highlight the benchmark's applicability and underscore the need for tailored methods to advance healthcare agents. 
+
+---
+# HalluWorld: A Controlled Benchmark for Hallucination via Reference World Models 
+
+**Authors**: Emmy Liu, Varun Gangal, Michael Yu, Zhuofu Tao, Karan Singh, Sachin Kumar, Steven Y. Feng  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.19341)  
+
+**Abstract**: Hallucination remains a central failure mode of large language models, but existing benchmarks operationalize it inconsistently across summarization, question answering, retrieval-augmented generation, and agentic interaction. This fragmentation makes it unclear whether a mitigation that works in one setting reduces hallucinations across contexts. Current benchmarks either require human annotation and fixed references that may be memorized, or rely on observations in settings that are difficult to reproduce. To study root causes, we introduce HalluWorld, an extensible benchmark grounded in an explicit reference-world formulation: a model hallucinates when it produces an observable claim that is false with respect to this world. Building on this view, we construct synthetic and semi-synthetic environments in which the reference world is fully specified, the model's view is controlled, and hallucination labels are generated automatically. HalluWorld spans gridworlds, chess, and realistic terminal tasks, enabling controlled variation of world complexity, observability, temporal change, and source-conflict policy, and disentangling hallucinations into fine-grained error categories. We evaluate frontier and open-weight language models across these settings and find consistent patterns: perceptual hallucination on directly observed information is near-solved for frontier models, while multi-step state tracking and causal forward simulation remain difficult and are not generally solved by extended thinking. In the terminal setting, models also struggle with when to abstain. The uneven profile of failures across probe types and domains suggests that hallucinations arise from distinct failure modes rather than a single capability. Our results suggest that controlled reference worlds offer a scalable and reproducible path toward measuring and reducing hallucinations in modern language models. 
+
+---
+# Bridge: Retrieval-Augmented Spatiotemporal Modeling for Urban Delivery Demand 
+
+**Authors**: Yihong Tang, Tong Nie, Junlin He, Qianjun Huang, Dingyi Zhuang, Lijun Sun  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.19172)  
+
+**Abstract**: Forecasting urban delivery demand becomes substantially more challenging when newly added service regions lack historical records. Existing spatiotemporal forecasters effectively model spatial dependence once sufficient node histories are available. Still, they remain parametric and therefore struggle to recover short-term operational dynamics in cold-start regions. Geospatial embeddings help identify where a region is and what function it serves, yet they do not directly reveal how a similar region behaves under a comparable temporal context. We propose Bridge, a retrieval-augmented spatiotemporal graph framework that combines an inductive contextual graph backbone with a time-aware memory of region-time windows. For each target region, Bridge retrieves future demand patterns from the memory using both regional context and recent dynamics, and refines the backbone forecast through a gated fusion mechanism. To align retrieval with forecasting utility, we further train the retriever with a future-aware objective that favors entries whose future trajectories best match the target. Experiments on four real-world delivery datasets show that Bridge consistently improves over competitive spatiotemporal baselines in both within-city cold-start and cross-city transfer with partial observations. The results show that retrieval augmentation provides a useful operational memory for cold-start urban demand forecasting when parametric graph generalization alone is insufficient. 
+
+---
+# The 99% Success Paradox: When Near-Perfect Retrieval Equals Random Selection 
+
+**Authors**: Vyzantinos Repantis, Harshvardhan Singh, Tony Joseph, Cien Zhang, Akash Vishwakarma, Svetlana Karslioglu, Michael Wyatt Thot, Ameya Gawde  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.18857)  
+
+**Abstract**: For most of the history of information retrieval (IR), search results were designed for human consumers who could scan, filter, and discard irrelevant information on their own. This shaped retrieval systems to optimize for finding and ranking more relevant documents, but not keeping results clean and minimal, as the human was the final filter. However, LLMs have changed that by lacking this filtering ability.
+To address this, we introduce Bits-over-Random (BoR), a chance-corrected measure of retrieval selectivity that reveals when high success rates mask random-level performance. We measure selectivity as $BoR = \log_{2}\left(\frac{\mathrm{P}_{obs}}{\mathrm{P}_{rand}}\right)$, where $\mathrm{P}_{rand}$ is the hypergeometric baseline for the chosen success rule (here, coverage: $ \geq1 $ relevant in top-$K$).
+On the 20 Newsgroups dataset, BM25 and SPLADE both report $>99$% success at $K=100$ (coverage), yet $BoR \approx 0$, indicating random-level selectivity at that depth. When the expected coverage ratio $\left(\frac{K \cdot \bar{R}_{q}}{N}\right)$ exceeds 3-5, the baseline dominates and selectivity collapses. Downstream retrieval-augmented generation (RAG) evaluation confirms this pattern: LLM accuracy can degrade substantially at $K=100$, consistent with the near-zero BoR ceiling. In contrast, BoR remains positive on BEIR/SciFact and on MS MARCO (where 41 systems cluster within 0.2 bits of the theoretical ceiling despite a 13-point recall gap), confirming baseline predictions across sparse and large-scale settings. We further show that the collapse boundary applies to LLM agent tool selection, where small catalog sizes cause selectivity to vanish even with perfect selectors. These findings suggest reporting BoR alongside traditional metrics and reconsidering depth choices when additional retrieval provides negligible selectivity gains while inflating computational costs. 
+
+---
+# KadiAssistant: A conversational AI Agent for information retrieval in Kadi4Mat 
+
+**Authors**: Adrian Cierpka, Mohammad Shafiqul Islam, Johannes Steinhülb, Eric Dietriche Sesso Domtchoueng, Michael Selzer, Arnd Koeppe  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.18850)  
+
+**Abstract**: We introduce KadiAssistant, a privacy-by-design AI assistant integrated into the Kadi research data ecosystem, enabling researchers to efficiently access, aggregate, and synthesize information from heterogeneous, privacy-sensitive research data. Interdisciplinary fields such as materials science bring together disciplines with their own terminology and standards. While this convergence fuels innovation, it also makes it increasingly difficult to connect and access knowledge, as data are distributed across disciplines, organizations, and individuals. For example, battery research combines electrochemical measurements, materials characterization data, physics-based simulations, and manufacturing parameters, each using different formats, vocabularies, and standards. Efficiently storing and sharing such heterogeneous data via research data platforms, such as Kadi4Mat, demands domain knowledge, technical expertise, and familiarity with metadata schemas and interfaces. Research data also vary in sensitivity: newly generated 'warm' data are often private, whereas published 'cold' data are usually openly accessible. The Kadi ecosystem offers fine-grained access control needed for sensitive data. A solution for efficient information retrieval in Kadi must therefore respect the fine-grained access permissions. To address these intertwined challenges of information retrieval, strong data privacy, and complex access control, KadiAssistant combines a self-hosted large language model (LLM) with a privacy-preserving semantic search, inspired by retrieval-augmented generation, that can access files and record metadata on Kadi. This allows the assistant to screen, aggregate, and structure information into a highly informative answer. KadiAssistant therefore bridges terminology and standards, lowers access barriers for researchers, and strengthens the Findable pillar of FAIR data principles. 
+
+---
+# Precision Tracked Transformer via Kalman Filtering, Kriging and Process Noise 
+
+**Authors**: Bo Long, Deepak Agarwal, Jelena Markovic-Voronov, Yi Wang, Liuqing Li  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.18832)  
+
+**Abstract**: The Transformer is the foundational building block of modern AI, yet offers no principled handling of \emph{uncertainty}, which is prevalent in real applications: cold-start tokens with sparse histories in sequential recommendation, heterogeneous signal quality in language models, and attention sinks induced by unconstrained softmax. Every token is treated with uniform confidence. We show this uniformity is a degenerate case of our \emph{Bayesian Filtering Transformer} (BFT): attention becomes precision-weighted kriging, the residual connection becomes a Kalman update with adaptive gain, and the FFN becomes a dynamics model propagating precision via a Jacobian--plus--process-noise rule. Observation precision comes from a parameter-free Restricted Maximum Likelihood (REML) estimator with a conjugate Bayesian prior. BFT replaces any Transformer layer with negligible overhead. On sequential recommendation, BFT applied to three major architectures yields significant gains on six benchmarks, with the largest improvements on cold-start users and rare items where uncertainty is highest. On supervised fine-tuning of large language models with noisy data, BFT improves robustness in two regimes: noisy supervision (token-label corruption in question answering) and noisy context (retrieval-augmented QA with real RAG distractors). A single principled modification -- restoring precision -- unlocks substantial headroom across both classical sequence-modeling and modern LLM regimes. 
+
+---
+# TwinRouterBench: Fast Static and Live Dynamic Evaluation for Realistic Agentic LLM Routing 
+
+**Authors**: Pei Yang, Wanyi Chen, Tongyun Yang, Pengbin Feng, Jiarong Xing, Wentao Guo, Yuhang Yao, Yuhang Han, Hanchen Li, Xu Wang, Zeyu Wang, Jie Xiao, Anjie Yang, Liang Tian, Lynn Ai, Eric Yang, Tianyu Shi  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.18859)  
+
+**Abstract**: LLM routing matters most in long-horizon applications such as coding agents, deep research systems, and computer-use agents, where a single user request triggers many model calls. Routing each call to the cheapest sufficient model can cut costs without sacrificing quality, yet existing router benchmarks evaluate routers only on one-shot prompts. They never expose the router-visible prefix at an intermediate agent step, never test whether a cheaper replacement preserves downstream task success, and often rely on online LLM judges at evaluation time. We introduce TwinRouterBench, a step-level routing benchmark with two tracks. The static track provides 970 router-visible prefixes from 520 instances across SWE-bench, BFCL, mtRAG, QMSum, and PinchBench, each paired with an execution-verified target tier estimated under a released downgrade-and-cascade protocol; scoring is deterministic arithmetic over tier labels, trajectory membership, and token costs, with no online evaluator-side LLM judge. The dynamic track supplies a harness that runs routers on the full 500-case SWE-bench Verified suite; in this paper we report a 100-case held-out evaluation disjoint from the static SWE supervision split. At each LLM call the router selects a concrete model from a locked pool, and success is measured by official task resolution and realized API spend. The two tracks support fast offline iteration followed by end-to-end validation under live agent execution. Code and data are available at this https URL. 
+
+---
+# Query-Aware Flow Diffusion for Graph-Based RAG with Retrieval Guarantees 
+
+**Authors**: Zhuoping Zhou, Davoud Ataee Tarzanagh, Sima Didari, Wenjun Hu, Baruch Gutow, Oxana Verkholyak, Masoud Faraki, Heng Hao, Hankyu Moon, Seungjai Min  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.18775)  
+
+**Abstract**: Graph-based Retrieval-Augmented Generation (RAG) systems leverage interconnected knowledge structures to capture complex relationships that flat retrieval struggles with, enabling multi-hop reasoning. Yet most existing graph-based methods suffer from (i) heuristic designs lacking theoretical guarantees for subgraph quality or relevance and/or (ii) the use of static exploration strategies that ignore the query's holistic meaning, retrieving neighborhoods or communities regardless of intent. We propose Query-Aware Flow Diffusion RAG (QAFD-RAG), a training-free framework that dynamically adapts graph traversal to each query's holistic semantics. The central innovation is query-aware traversal: during graph exploration, edges are dynamically weighted by how well their endpoints align with the query's embedding, guiding flow along semantically relevant paths while avoiding structurally connected but irrelevant regions. These query-specific reasoning subgraphs enable the first statistical guarantees for query-aware graph retrieval, showing that QAFD-RAG recovers relevant subgraphs with high probability under mild signal-to-noise conditions. The algorithm converges exponentially fast, with complexity scaling with the retrieved subgraph size rather than the full graph. Experiments on question answering and text-to-SQL tasks demonstrate consistent improvements over state-of-the-art graph-based RAG methods. 
+
+---
+# Mask-to-Correct$^+$: Leveraging Retriever Diversity for Masking-guided Faithful Fact Correction 
+
+**Authors**: Payel Santra, Lavisha Sharma, Madhusudan Ghosh, Partha Basuchowdhuri  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.18776)  
+
+**Abstract**: The rapid spread of misinformation on social media highlights the need for robust, automated fact correction frameworks. However, existing works rely on supervised learning from manually annotated claim-evidence pairs, which are scarce and prone to biases, limiting their generalization across domains. Moreover, these methods overlook semantic faithfulness in their correction process. To address these challenges, we propose Mask-to-Correct (M$_2$C), a training-free, inference-only Retrieval Augmented Generation (RAG) based framework that leverages diversity-aware masking to identify erroneous spans of claims and evaluate the faithfulness of corrections using retrieved evidence. However, the effectiveness of RAG heavily depends on the choice of retriever, which may vary across queries. To mitigate this, we further introduce M$_2$C$^+$, an ensemble-based framework that combines corrections across multiple rankers to reduce retrieval bias and improve robustness. Extensive experiments on the benchmark datasets demonstrate that our proposed frameworks consistently outperform all baselines, achieving up to 14% improvement in SARI scores, without using gold evidence. 
+
+---
+# Agentic GraphRAG: Navigating Unstructured Financial Data with Collaborative AI 
+
+**Authors**: Arthur Capozzi, Dirk Helbing  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.18770)  
+
+**Abstract**: We present a collaborative agentic GraphRAG framework for expert analysis of commercial registry data. Public registries are often formally accessible, yet difficult to use in practice because they combine structured records with large volumes of unstructured legal text. This limits conventional keyword and vector-only retrieval, especially for multi-hop, temporal, and entity-centric investigations. Our approach builds a Neo4j knowledge graph through a three-phase pipeline: (i) deterministic ingestion of strong nodes from verified structured fields, (ii) LLM-based extraction of weak nodes from unstructured notices, and (iii) deterministic identity resolution and deduplication. On top of this graph, we introduce an analytical modular agent that integrates zero-shot intent routing, a bounded reflection loop, secure tool-mediated graph access, and state-aware response synthesis. A human-in-the-loop dashboard exposes evidence and execution traces to support transparency and auditability. We evaluate the framework on the Swiss Official Gazette of Commerce, a multilingual corpus of more than seven million publications over seven years. We further contribute a multi-tier evaluation protocol covering entity-resolution precision, tool-routing behavior, answer quality, and multi-turn conversational performance. Across automated, human-curated, and conversational benchmarks, the proposed agentic GraphRAG system consistently outperforms a standard agentic vector-RAG baseline, with strong gains in correctness, answer relevance, information recall, turn success rate, and context carryover accuracy. The architecture is modular, reproducible, and transferable to other commercial gazettes and public-sector registry systems. 
+
+---
+# M3DocDep: Multi-modal, Multi-page, Multi-document Dependency Chunking with Large Vision-Language Models 
+
+**Authors**: Joongmin Shin, Jeongbae Park, Jaehyung Seo, Heuiseok Lim  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.18774)  
+
+**Abstract**: In long, multi-page industrial documents, retrieval-augmented generation (RAG) depends heavily on whether chunk boundaries follow the document's true structure. Existing text-centric chunkers and generative hierarchy parsers often miss cross-page parent-child relations, figure/table-caption bindings, and boundary cues, which leads to fragmented or redundant chunks and degrades both retrieval and answer quality. We propose M3DocDep, an LVLM-based pipeline that first recovers block-level dependencies and then constructs chunks along the recovered document tree. The pipeline uses SharedDet as a common DP+OCR preprocessing layer, extracts multimodal block embeddings with boundary-aware SoftROI pooling, scores candidate parent-child edges with a biaffine head, decodes a globally valid dependency tree with MST constraints, and builds tree-guided chunks annotated with section paths and page ranges. Under a shared-block evaluation protocol, M3DocDep improves STEDS by +28.5 to +39.6 percent on DHP benchmarks, retrieval nDCG by +1.1 to +15.3 percent, and QA ANLS by +4.5 to +15.3 percent on corpus-level RAG benchmarks. These results show that recovering document dependencies before chunking yields more coherent retrieval units for long, multi-page multimodal documents. 
+
+---
+# STAR: Semantic-Tuned and Tail-Adaptive Retriever for Graph-Augmented Generation 
+
+**Authors**: Shuai Li, Chen Huang, Duanyu Feng, Wenqiang Lei, See-Kiong Ng  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.18765)  
+
+**Abstract**: To augment Large Language Models (LLMs) for multi-hop question answering, a mainstream solution within Graph Retrieval Augmented Generation (GraphRAG) leverages lightweight retrievers to efficiently extract information from a given Knowledge Graph (KG). However, existing methods often overlook the inherent challenge of sparse semantic information in graphs. Specifically, our experiments reveal that these methods produce biased retrieval Semantic Shortcut Bias and Long-Tail Path Bias, leading to inadequate semantic modeling and limited GraphRAG effectiveness. To address these issues, we propose STAR, a semantic-tuned and tail-adaptive retriever for GraphRAG. STAR integrates two key learning paradigms: token-level interaction learning and path-weighted contrastive learning. The former employs a cross-attention architecture and a hard path mining mechanism to jointly model the query and path, thereby mitigating the Semantic Shortcut Bias. The latter introduces a tailored contrastive learning objective that utilizes tail-adaptive path weighting, designed to optimize the training process and ease the Long-Tail Path Bias. Extensive experiments demonstrate that STAR consistently outperforms baselines, achieving average retrieval performance gains of 1.8\% and LLM QA performance improvements of 2.2\% across all benchmark datasets. Our code is available at this https URL. 
+
+---
+# Query-Conditioned Graph Retrieval for Contextualized LLM Reasoning in Personalized Wearable Data 
+
+**Authors**: Zhenyu Lu, Mahyar Abbasian, Amir M. Rahmani  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.18763)  
+
+**Abstract**: Large language models (LLMs) are increasingly applied to analyzing wearable sensing data, which are long-term, multimodal, and highly personalized. A key challenge is context selection: providing insufficient context limits reasoning, while including all available data leads to inefficiency and degraded generation quality. We propose Wearable As Graph (WAG), a graph-based context retrieval framework that enables query-adaptive reasoning over wearable data with LLMs. WAG organizes wearable metrics and user-specific signals into a personalized knowledge graph, and retrieves a query-conditioned subgraph to support downstream generation. The retrieval process integrates global relationships, capturing prior knowledge and population- and individual-level patterns via hierarchical Bayesian modeling, with local relationships that reflect short-term signal deviations. A query openness signal further controls retrieval breadth. We evaluate WAG on over 10,000 data-grounded queries from real-world wearable datasets. Across LLM-based and human evaluations, WAG achieves an approximately 70% win rate over baseline and standard RAG methods, demonstrating the effectiveness of structured, query-adaptive context retrieval for LLM-driven analysis of wearable data. 
+
+---
+# DualView: Adaptive Local-Global Fusion for Multi-Hop Document Reranking 
+
+**Authors**: Litong Zhang, Jiaxin Li, Kuo Zhao  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.18767)  
+
+**Abstract**: Multi-hop question answering requires aggregating information from multiple documents, a critical capability for knowledge-intensive applications. A fundamental challenge lies in efficiently identifying the minimal relevant document set from retrieved candidates while maintaining high recall.
+We present an efficient dual-view cascaded reranking framework for multi-hop document reranking. Operating as a lightweight post-retrieval stage over E5-base-v2 candidates, our architecture comprises: (1) a Local Scorer employing stacked cross-attention for fine-grained query-document relevance; and (2) a Global Scorer modeling inter-document dependencies via Transformer-based context aggregation. These views are dynamically fused through an Adaptive Gate conditioned on query semantics.
+Under the fixed candidate set reranking setting with offline cached embeddings, our model achieves competitive results, particularly outstanding on MuSiQue with 99.4% Top-4 Recall and 97.8% Full Hit accuracy at 4.0 ms latency (249 QPS). It substantially outperforms 600M-parameter cross-encoders (BGE-Large: 92.0% Recall, Jina-v3: 90.1% Recall) while maintaining 5 to 6 times lower latency. Ablation studies validate that both Local and Global views contribute substantially to multi-hop performance. 
+
+---
+# DOTRAG: Retrieval-Time Reasoning Along Paths 
+
+**Authors**: Larnell Moore, Naihao Deng, Rada Mihalcea, Farnaz Jahanbakhsh  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.18760)  
+
+**Abstract**: Graph Retrieval-Augmented Generation (GraphRAG) is dominated by a retrieve-then-reason paradigm, where context is retrieved using heuristics and then reasoned over. Such methods struggle to adapt to the query-specific logic required for complex multi-hop tasks, often accumulating irrelevant context or missing correct relational paths. We propose DotRAG, a training-free GraphRAG framework that reformulates retrieval as a reasoning process over paths. Our approach generates query-conditioned constraints that guide graph exploration, prune irrelevant regions, and iteratively discover relational paths without relying on explicit step-by-step reasoning chains. We introduce Division of Thought (DOT), an abstraction that decomposes retrieval into localized search spaces and adapts the search strategy to each query. DotRAG achieves SOTA performance on MetaQA and UltraDomain, with consistent gains on multi-hop tasks, demonstrating the effectiveness of reasoning-guided retrieval. 
+
+---
+# ALDEN: Boosting Private Data Extraction from Retrieval-Augmented Generation Systems via Active Learning and Distribution Estimation 
+
+**Authors**: Xingyu Lyu, Jianfeng He, Ning Wang, Yidan Hu, Tao Li, Danjue Chen, Shixiong Li, Yimin Chen  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.18762)  
+
+**Abstract**: Retrieval-Augmented Generation (RAG) is widely used to augment large language models with external knowledge retrieval to improve reliability and generalization. However, recent studies have shown that RAG systems remain vulnerable to data extraction attacks, where adversaries can extract private data by embedding malicious commands into user queries. Despite their feasibility, existing attacks typically suffer from low data extraction rates and limited practical effectiveness. Here, we propose ALDEN, a novel attack that effectively and efficiently extracts private data from RAGs. First, we employ active learning to diversify malicious queries and improve data extraction rates. Second, we observe that the data distribution of the underlying knowledge base provides valuable guidance for query generation and introduce a decay-based dynamic algorithm to estimate the corresponding topic distribution. By combining them together, we demonstrate that ALDEN substantially outperforms state-of-the-art methods through comprehensive evaluations. 
+
+---
+# Towards FairRAG: Preventing Representational Harm in Retrieval-Augmented Generation by Enforcing Fair Exposure at Retrieval Time 
+
+**Authors**: Riddhi Tikoo  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.18806)  
+
+**Abstract**: As Large Language Model (LLM) integration has accelerated in high-stakes domains, model hallucination is a critical issue. Retrieval-augmented generation (RAG) is a technique for addressing hallucination; however, RAG's multi-component pipeline introduces vulnerabilities where biases can be introduced. This study considers two previously developed utility-focused ranking strategies (Standard and Stochastic) alongside two proposed exposure-aware approaches (Forced-Exposure and Representative Stochastic). Using the TREC 2022 Fair Ranking Dataset, which contains Wikipedia articles annotated as protected or non-protected, the LLM was asked to identify relevant articles with citations for four scenario-based Q&A prompts. The retrieval rankings and the generated outputs were evaluated for exposure bias and utility across all ranking methods. Overall, the Representative Stochastic ranker resulted in a statistically significant near-parity average exposure, acknowledging that relevance scores initially produced during retrieval are already shaped by representational bias, whereas the other rankers assume those scores are unbiased. Across all the methods of document ranking, generation demographic parity closely mirrored the exposure parity, reinforcing that representational bias in RAG systems is driven by retrieval and propagates to generation. These findings highlight that retrieval ranking is a critical point for mitigating downstream bias and propose a Representative Stochastic ranker that reintroduces fairness in RAG systems. 
+
+---
+# ClinQueryAgent: A Conversational Agent for Population Health Management 
+
+**Authors**: Joseph S. Boyle, Anthony Dranfield, Mike O'Neil, Maria Liakata, Alison Q. Smithard  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.18768)  
+
+**Abstract**: In this paper we introduce ClinQueryAgent, a system for translating natural language population health questions into executable database queries using agents with access to both local and external knowledge bases. Our novel architecture enables the use of powerful cloud-based language models whilst ensuring that no patient data leaves the secure environment. To combat inaccuracies over the course of longer dialogues due to context rot, information retrieval is delegated to a sub-agent. We deploy the system via a chat window embedded within an existing population health management platform where it has been used by 128 staff from 15 healthcare practices covering a total of 148,319 patients in the UK's National Health Service (NHS). We evaluate the system's capacity to autonomously handle a range of health informatics tasks on a constructed dataset and via a beta-testing phase. Our results show that both analysts and clinicians are able to easily generate actionable information from patient health records using natural language requests requiring no programming expertise to verify. We make a public demo of the system available at: this https URL 
+
+---
+# Auditing Privacy in Multi-Tenant RAG under Account Collusion 
+
+**Authors**: Florian A. D. Burnat, Brittany I. Davidson  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.19847)  
+
+**Abstract**: Multi-tenant retrieval-augmented generation (RAG) services advertise per-account differential privacy as the operative leakage boundary: each account's queries are guaranteed to satisfy $(\varepsilon_{\text{acc}}, \delta_{\text{acc}})$-DP with respect to the index. We identify same-index multi-account collusion as a privacy-boundary failure: for $k$ same-tenant accounts coordinating against the tenant's index -- the operative regime -- known DP composition theory implies joint leakage degrades unconditionally at rate $\Theta(\sqrt{k} \cdot \varepsilon_{\text{acc}})$ for Gaussian-noised retrieval. Cross-tenant and external collusion match the rate only under explicit access-control failure (M4); without M4 these regimes have zero leakage by design and reduce to an architectural audit, not a DP audit. We exhibit an attack realizing the rate and derive a RAG-specific MIA prediction we test empirically. To make this per-account/joint gap auditable, we design the first audit protocol that operates against unmodified RAG deployments and issues a quantitative $(\textsf{PASS}, \varepsilon_{\text{audit}})$ verdict for the retrieval-score channel -- the noise-then-select step the per-account DP guarantee actually covers -- without index disclosure, pipeline redesign, or model-weight exposure. Generation-channel privacy (LLM output conditioned on selected documents) is a separate audit predicate that should compose with ours; we explicitly scope it out. The protocol composes generic cryptographic primitives (Merkle ledgers, ZK function-application proofs, Gaussian noise attestations) with six RAG-specific primitives (embedder commitment, index-content vector commitment, per-account query ledger, noise-then-select attestation, cross-tenant containment proof, coalition-size estimator) and supports both closed-form audit bounds and Rényi-DP moments-accountant tracking. 
+
+---
+# BiRD: A Bidirectional Ranking Defense Mechanism for Retrieval Augmented Generation 
+
+**Authors**: Chengcai Gao, Zhihong Sun, Xiaochuan Shi, Qiufeng Wang, Chao Liang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.20123)  
+
+**Abstract**: The growing adoption of Retrieval-Augmented Generation (RAG) has led to a rise in adversarial attacks. Existing defenses, relying on semantic analysis or voting, face a trade-off between high computational cost and limited robustness under strong poisoning attacks. Their fundamental limitation is the exclusive focus on semantic content relevance, while neglecting the retrieval context that is critically defined by ranking structures. To this end, we investigate the bidirectional ranking behavior of poisoned and benign documents, and discover a key discriminative pattern: poisoned documents exhibit significantly stronger alignment between their backward rankings and the query's forward ranking. Capitalizing on this, we propose BiRD, a bidirectional ranking defense mechanism built upon a dual-signal framework that leverages forward ranking to assess semantic content relevance and backward ranking to quantify ranking context consistency. This design directly addresses the fundamental limitation of prior approaches, enabling simultaneous efficiency and robustness. Extensive evaluation across 3 datasets with 3 retrievers and 3 LLMs under 2 attack scenarios validates BiRD's effectiveness. Notably, BiRD reduces the attack success rate of PoisonedRAG by up to 54% while simultaneously improving task accuracy by up to 56%, with average additional latency under 1 second. 
+
+---
+# PASC: Pipeline-Aware Conformal Prediction with Joint Coverage Guarantees for Multi-Stage NLP and LLM Pipelines 
+
+**Authors**: Varun Kotte  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.18812)  
+
+**Abstract**: Modern NLP and LLM systems are pipelines: named entity recognition (NER) -> entity disambiguation (NED) -> entity typing, retrieval-augmented generation (retriever -> reader), and agentic chains of planner -> tool -> critic. Errors compound across stages, but existing uncertainty quantification methods either calibrate each stage independently (no joint coverage) or apply a Bonferroni union bound (joint coverage, but conservative). We present PASC (Pipeline-Aware Split Conformal), which reduces multi-stage joint coverage to a single scalar conformal prediction problem on the joint maximum nonconformity score. PASC provides a finite-sample distribution-free guarantee that all K stages are simultaneously covered with probability at least 1 - alpha, and is nearly tight up to a 1/(n+1) factor. On a three-stage NER -> NED -> entity-typing pipeline over CoNLL-2003, PASC achieves 96.4% end-to-end coverage versus 93.4% for Bonferroni and 86.5% for independent CP, at identical average prediction set size (1.083). Under distribution shift to WNUT-17 Twitter and WikiNEuRal Wikipedia data, PASC empirically maintains the target coverage in the tested shift settings while independent CP collapses to 59%. PASC requires a single quantile computation, runs 1.7x faster than Bonferroni, and scales to K = 6 stages where independent CP drops to 0.53 end-to-end coverage. The same joint-maximum-score reduction applies directly to compound LLM systems and agent pipelines. 
+
+---

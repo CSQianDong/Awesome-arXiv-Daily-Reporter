@@ -1,0 +1,171 @@
+# Text-to-SPARQL Generation with Reinforcement Learning: A GRPO-based Approach on DBLP 
+
+**Authors**: Jann Pfeifer, Debayan Banerjee, Ricardo Usbeck  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.20066)  
+
+**Abstract**: Knowledge graph question answering seeks to translate natural language questions into executable queries over knowledge graphs, but existing approaches often rely on large models or full supervision in the form of gold query annotations. This study examines whether reinforcement learning with outcome-based rewards can train a small instruction-tuned language model to perform zero-shot Text-to-SPARQL generation in the scholarly domain. Group-Relative Policy Optimization (GRPO) is applied to the Qwen3-1.7B model on DBLP-QuAD, using prompts that combine natural language questions with symbolic hints about entities and relations. Training relies on execution feedback, structural constraints, and answer-level rewards, with an additional variant that incorporates gold-query-based shaping. The resulting models are compared to the unmodified zero-shot baseline and to a supervised DoRA-finetuned baseline across answer-level accuracy, execution accuracy, category-wise scores, and generalization to held-out templates. GRPO substantially improves over the zero-shot baseline and exhibits competitive generalization, while supervised DoRA finetuning achieves higher overall accuracy on the same model scale. Ablation analyses indicate that execution-based rewards account for most gains, with additional shaping yielding limited additional benefit, suggesting that outcome-based reinforcement learning is a viable training strategy when gold queries are unavailable for token-level supervision. 
+
+---
+# Rewarding Beliefs, Not Actions: Consistency-Guided Credit Assignment for Long-Horizon Agents 
+
+**Authors**: Wenjie Tang, Minne Li, Sijie Huang, Liquan Xiao, Yuan Zhou  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.20061)  
+
+**Abstract**: Reinforcement learning from verifiable rewards (RLVR) is a promising paradigm for improving large language model (LLM) agents on long-horizon interactive tasks. However, in partially observable environments, incomplete observations cause agent beliefs to drift over time, while delayed rewards obscure the causal impact of intermediate decisions, exacerbating temporal credit assignment challenges. To address this, we propose ReBel (Reward Belief), a process-level reinforcement learning algorithm that explicitly models structured belief states to summarize interaction history and guide subsequent policy learning. ReBel introduces belief-consistency supervision, converting discrepancies between predicted beliefs and observed feedback into dense self-supervised signals without requiring external step-wise annotations or verifiers. It also employs belief-aware grouping to compare trajectories under similar belief states, yielding more robust and lower-variance advantage estimates. We evaluate ReBel on challenging long-horizon benchmarks, including ALFWorld and WebShop. ReBel improves task success by up to $20.4$ percentage points over the episode-level baseline GRPO and increases sample efficiency by $2.1\times$. These results suggest that belief-aware self-supervision is a promising direction for reliable long-horizon decision-making under partial observability. Code is available at: this https URL. 
+
+---
+# CopT: Contrastive On-Policy Thinking with Continuous Spaces for General and Agentic Reasoning 
+
+**Authors**: Dachuan Shi, Hanlin Zhu, Xiangchi Yuan, Wanjia Zhao, Kejing Xia, Wen Xiao, Wenke Lee  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.20075)  
+
+**Abstract**: Chain-of-thought (CoT) is a standard approach for eliciting reasoning capabilities from large language models (LLMs). However, the common CoT paradigm treats thinking as a prerequisite for answering, which can delay access to plausible answers and incur unnecessary token costs even when the model is able to identify an answer before extended thinking, a behavior known as performative reasoning. In this paper, we introduce CopT, a reformulated reasoning pipeline that reverses the usual order of thinking and answering. Instead of thinking before answering, CopT first elicits a draft answer and then invokes subsequent on-policy thinking conditioned on its own draft answer for reflection and correction. To assess whether the draft answer should be trusted, CopT recasts continuous embeddings as inference-time contrastive verifiers. Specifically, it contrasts the model's support for the same generated tokens under discrete-token inputs and continuous-embedding inputs, yielding a sequence-level reverse KL estimator for answer reliability. Our analysis shows that under certain assumptions, the expected estimate equals the mutual information between the unresolved latent state and the emitted answer token, explaining why it captures answer-relevant uncertainty rather than arbitrary uncertainty in the latent state. When the answer is deemed insufficiently reliable, CopT performs further on-policy thinking, where a second KL estimator dynamically controls draft-answer visibility, preserving useful partial information while reducing the risk of being misled by unreliable content. Across mathematics, coding, and agentic reasoning tasks, CopT improves peak accuracy by up to 23% and reduces token usage by up to 57% at comparable or higher accuracy, without any additional training. The code is available at this https URL. 
+
+---
+# Are Tools Always Beneficial? Learning to Invoke Tools Adaptively for Dual-Mode Multimodal LLM Reasoning 
+
+**Authors**: Qinghe Ma, Zhen Zhao, Yiming Wu, Jian Zhang, Lei Bai, Yinghuan Shi  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.19852)  
+
+**Abstract**: Tool-augmented reasoning has emerged as a promising direction for enhancing the reasoning capabilities of multimodal large language models (MLLMs). However, existing studies mainly focus on enabling models to perform tool invocation, while neglecting the necessity of invoking tools. We argue that tool usage is not always beneficial, as redundant or inappropriate invocations largely increase reasoning overhead and even mislead model predictions. To address this issue, we introduce AutoTool, a model that adaptively decides whether to invoke tools according to the characteristics of each query. Within a reinforcement learning framework, we design an explicit dual-mode reasoning strategy with mode-specific reward functions to guide the model toward producing accurate responses. Moreover, to prevent premature bias toward a single reasoning mode, AutoTool jointly explores and balances tool-assisted and text-centric reasoning throughout training, and promotes free exploration in later stages. Extensive experiments demonstrate that AutoTool exhibits outstanding performance and high efficiency, yielding a 21.8\% accuracy gain on V* benchmark compared to the base model, and a 44.9\% improvement in efficiency over existing tool-augmented methods on POPE benchmark. Code is available at this https URL. 
+
+---
+# LambdaPO: A Lambda Style Policy Optimization for Reasoning Language Models 
+
+**Authors**: Zhe Yuan, Yipeng Zhou, Jinghan Li, Xinyuan Chen, Bowen Deng, Zhiqian Chen, Liang Zhao  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.19416)  
+
+**Abstract**: Group Relative Policy Optimization(GRPO) has become a cornerstone of modern reinforcement learning alignment, prized for its efficacy in foregoing an explicit value-critic by leveraging reward normalization across sampled trajectory cohorts. However, the method's reliance on a monolithic statistical baseline, such as the group mean, collapses the relational topology of the trajectory space into a single scalar, thereby erasing the fine-grained preference information essential for navigating complex, rank-sensitive reward landscapes. To address this issue, we introduce a novel framework, Lambda Policy Optimization (LambdaPO), that addresses this information-theoretic bottleneck by re-conceptualizing advantage estimation from a scalar value to a decomposed, pairwise preference structure. Specifically, the advantage for any given trajectory is formulated as the integrated sum of reward differentials against all peers in its cohort, where each pairwise comparison is dynamically attenuated by the policy's own probabilistic confidence in the established preference. To further mitigate the sparsity of binary outcome supervision, we augment the objective with a semantic density reward, derived from the precision-recall alignment between generated reasoning traces and ground-truth solutions. As a result, our method can mine more fine-grained optimization signals from a group of rollouts, guiding the LLM to a better optima. Experimental results across challenging math reasoning and question-answering tasks demonstrates that LambdaPO improves performance compared to the baseline methods. 
+
+---
+# Taming the Thinker: Conditional Entropy Shaping for Adaptive LLM Reasoning 
+
+**Authors**: Shuyu Wei, Jian Sun, Delai Qiu, Yining Wang, Shengping Liu, Jiaen Liang, Ying Fu, Wei Huang, Jitao Sang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.19358)  
+
+**Abstract**: Entropy-based deep reasoning has emerged as a promising direction for improving the reasoning capabilities of Large Language Models (LLMs), but existing methods often either increase response length indiscriminately or shorten responses at the cost of accuracy. To better balance this trade-off, we introduce Conditional Entropy Shaping (CES), a framework that dynamically controls token-level response entropy, enabling LLMs to produce concise solutions on simple problems while encouraging deeper exploration on hard ones. Built on DAPO, CES uses token-level entropy as an uncertainty signal and applies a conditional bidirectional policy: it penalizes high-entropy "forking point" tokens on correct reasoning paths to improve conciseness, and rewards them on incorrect paths to encourage exploration and error correction. We implement CES on DeepSeek-R1-Distill-7B and evaluate it on 12 mathematical benchmarks. CES consistently improves average accuracy while reducing response length relative to DAPO, and supplementary experiments show similar trends on a smaller 1.5B backbone and on out-of-domain benchmarks. 
+
+---
+# CEPO: RLVR Self-Distillation using Contrastive Evidence Policy Optimization 
+
+**Authors**: Ahmed Heakl, Abdelrahman M. Shaker, Youssef Mohamed, Rania Elbadry, Omar Fetouh, Fahad Shahbaz Khan, Salman Khan  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.19436)  
+
+**Abstract**: When a model produces a correct solution under reinforcement learning with verifiable rewards (RLVR), every token receives the same reward signal regardless of whether it was a decisive reasoning step or a grammatical filler. A natural fix is to condition the model on the correct answer as a teacher, identifying tokens it would have generated differently had it known the answer. Prior work shows this either corrupts training by leaking the answer into the gradient, or produces a weak signal that cannot distinguish decisive steps from filler, since both look equally surprising relative to the model's baseline. We propose Contrastive Evidence Policy Optimization (CEPO), which asks a sharper question at every token: not just "does the correct answer favor this token?" but "does the correct answer favor it while the wrong answer disfavors it?" A token satisfying both is a genuine reasoning step; one satisfying neither is filler. The wrong-answer teacher is constructed from rejected rollouts already in the training batch, incurring no additional sampling cost. We prove CEPO inherits all structural safety guarantees of the prior state of the art while strictly sharpening credit at decisive tokens, with the improvement vanishing exactly at filler positions. Empirically, CEPO achieves 43.43% and 60.56% average accuracy across five multimodal mathematical reasoning benchmarks at 2B and 4B scale, respectively, versus 41.17% and 57.43% for GRPO under identical training budgets. Distribution-matching self-distillation methods (OPSD, SDPO) fall below the untrained baseline, empirically confirming the information leakage our theory predicts. Our code is available at this https URL. 
+
+---
+# SAGE: Shaping Anchors for Guided Exploration in RLVR of LLMs 
+
+**Authors**: Chanuk Lee, Minki Kang, Sung Ju Hwang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.18864)  
+
+**Abstract**: Recent studies observe that reinforcement learning with verifiable rewards (RLVR) reliably improves pass@1 on reasoning tasks, yet often fails to yield comparable gains in pass@k, raising the question of whether RLVR genuinely enables large language models to acquire novel reasoning abilities or merely enhances the efficiency of sampling reasoning modes already present in the base model. Prior analyses largely support the latter view, attributing this limitation to structural properties of standard RLVR objectives that result in insufficient exploration pressure. In this work, we argue that a central structural constraint arises from reverse-KL regularization, which stabilizes training but inherently anchors the policy to the reference distribution, thereby suppressing the emergence of alternative reasoning modes. However, we show that neither removing the KL term nor replacing it with forward-KL provides a satisfactory solution, as both disrupt the efficiency-coverage trade-off by either inducing reward hacking or allocating probability mass to off-target regions. To resolve this tension, we propose SAGE, a principled framework that enables controllable empirical support expansion by reshaping the reverse-KL anchor distribution itself through a guide function q(x,y), achieving consistent improvements in both pass@1 and pass@k across challenging mathematical reasoning benchmarks. Our code is available at this https URL. 
+
+---
+# ReCrit: Transition-Aware Reinforcement Learning for Scientific Critic Reasoning 
+
+**Authors**: Wanghan Xu, Yuhao Zhou, Hengyuan Zhao, Shuo Li, Dianzhi Yu, Zhenfei Yin, Yaowen Hu, Fengli Xu, Wanli Ouyang, Wenlong Zhang, Lei Bai  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.18799)  
+
+**Abstract**: Large language models can fail in critic interaction not only by answering incorrectly, but also by abandoning an initially correct scientific solution after user criticism. This is especially risky in scientific reasoning, where user criticism can turn a valid answer into an incorrect one. We frame critic interaction as an inter-turn correctness-transition problem rather than a final-answer accuracy problem, and identify three challenges: transition awareness, decoupling useful correction from harmful sycophancy, and scalable rollout. We propose ReCrit, a transition-aware reinforcement learning framework that decomposes Initial-to-Critic behavior into four quadrants: Correction, Sycophancy, Robustness, and Boundary. ReCrit rewards correction and robustness, penalizes sycophancy, and treats persistent errors as weak boundary signals. To make interaction training practical, ReCrit further uses dynamic asynchronous rollout with tail-adaptive completion to reduce rollout waiting. On three scientific reasoning benchmarks, ChemBench, TRQA, and EarthSE, ReCrit improves average Critic accuracy from 38.15 to 51.49 on Qwen3.5-4B and from 45.40 to 55.59 on Qwen3.5-9B. Ablations show that final-answer rewards provide little interaction-level gain, while transition-aware rewards and quadrant weighting produce more distinguishable training signals and larger net Critic-stage improvement. The code is available at this https URL . 
+
+---
+# Not Every Rubric Teaches Equally: Policy-Aware Rubric Rewards for RLVR 
+
+**Authors**: Utkarsh Tyagi, Xingang Guo, MohammadHossein Rezaei, Daniel George, Anas Mahmoud, Jackson Lee, Bing Liu, Yunzhong He  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.20164)  
+
+**Abstract**: Reinforcement learning with verifiable rewards has made post-training highly effective when correctness can be checked automatically. However, many important model behaviors require satisfying several qualitative criteria at once. Rubric-based rewards address this setting by grading prompt-specific criteria and aggregating them into a scalar reward. Yet standard static aggregations conflate a criterion's human-assigned importance with its current usefulness as an optimization signal. We show that this assumption breaks down in rubric RL: many important criteria are already saturated or currently unreachable, while criteria that distinguish rollouts are not necessarily those with the largest human weights. We introduce POW3R, a policy-aware rubric reward framework that preserves human weights and category balance as the rubric objective while adapting criterion-level reward weights during training. POW3R uses rollout-level contrast to emphasize criteria that currently separate the policy's outputs, making the GRPO reward more informative without changing the underlying evaluation target. Across three base policies on two datasets spanning multimodal and text-only settings, POW3R wins $24$ of $30$ base-policy/metric comparisons, improving both mean rubric reward and strict completion (the fraction of prompts whose response satisfies every required rubric criterion) over vanilla GRPO with rubric rewards, and reaches the same plateau in $2.5$--$4\times$ fewer training steps. Rubric rewards should therefore distinguish what should matter in the final answer from what can teach the current policy. 
+
+---
+# Memory-Augmented Reinforcement Learning Agent for CAD Generation 
+
+**Authors**: Yin Xiaolong, Liu Yu, Shen Jiahang, Lu Xingyu, Ni Jingzhe, Fan Fengxiao, Sang Fan  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.19748)  
+
+**Abstract**: Automatic generation of computer-aided design (CAD) models is a core technology for enabling intelligence in advanced manufacturing. Existing generation methods based on large language models (LLMs) often fall short when handling complex CAD models characterized by long operation sequences, diverse operation types, and strong geometric constraints, primarily because reasoning chains break and effective error-correction mechanisms are lacking. To address this problem, this paper proposes a memory-augmented reinforcement learning framework for CAD generation agents. The framework encapsulates the underlying geometric kernel into a structured toolchain callable by the agent and builds a closed-loop mechanism of design intent understanding, global planning, execution, and multi-dimensional verification. It also designs a dual-track memory module consisting of a case library and a skill library, and proposes a dynamic utility retrieval algorithm. By introducing reinforcement learning into retrieval and policy optimization, the agent can effectively avoid retrieval traps in which examples are semantically similar but geometrically infeasible, enabling online self-correction and continual evolution without additional large-scale annotated data. Experiments show that the proposed method significantly improves both the success rate and geometric consistency on complex CAD model generation tasks. 
+
+---
+# Beyond Mode Collapse: Distribution Matching for Diverse Reasoning 
+
+**Authors**: Xiaozhe Li, Yang Li, Xinyu Fang, Shengyuan Ding, Peiji Li, Yongkang Chen, Yichuan Ma, Tianyi Lyu, Linyang Li, Dahua Lin, Qipeng Guo, Qingwen Liu, Kai Chen  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.19461)  
+
+**Abstract**: On-policy reinforcement learning methods like GRPO suffer from mode collapse: they exhibit reduced solution diversity, concentrating probability mass on a single solution once discovered and ceasing exploration of alternative strategies. We show this stems from reverse KL minimization's mode-seeking behavior, which reinforces the first high-reward trajectory found rather than maintaining a distribution over multiple diverse solutions. We propose DMPO (Distribution-Matching Policy Optimization), which prevents mode collapse through principled approximation of forward KL minimization. DMPO constructs a group level target distribution over sampled trajectories proportional to their rewards, then aligns the policy distribution to this target. This provides mode-covering behavior without requiring sampling from the intractable global target distribution, enabling sustained exploration throughout training. We validate DMPO on NP-hard combinatorial optimization, where exponentially many feasible solutions exist but only a few approach optimality, an ideal testbed for evaluating exploration. DMPO achieves 43.9% Quality Ratio on text-based NP-Bench (vs. GRPO's 40.1%) and 43.1% on vision-based NP-Bench (vs. 38.4%), demonstrating 9% and 12% relative improvements respectively. These gains generalize to mathematical reasoning (+2.0%) and out-of-domain tasks (+2.3%), showing that diversity-preserving training enhances general reasoning capabilities across modalities. Our work establishes distribution matching as a practical, principled approach to preventing mode collapse in on-policy RL, with consistent quality improvements demonstrating sustained exploration across diverse reasoning tasks. 
+
+---
+# MOCHA: Multi-Objective Chebyshev Annealing for Agent Skill Optimization 
+
+**Authors**: Md Mehrab Tanjim, Jayakumar Subramanian, Xiang Chen, Branislav Kveton, Subhojyoti Mukherjee, Anlan Zhang, Sungchul Kim, Somdeb Sarkhel, Sunav Choudhury  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.19330)  
+
+**Abstract**: LLM agents organize behavior through skills - structured natural-language specifications governing how an agent reasons, retrieves, and responds. Unlike monolithic prompts, skills are multi-field artifacts subject to hard platform constraints: description fields are truncated for routing, instruction bodies are compacted via progressive disclosure, and co-resident skills compete for limited context windows. These constraints make skill optimization inherently multi-objective: a skill must simultaneously maximize task performance and satisfy platform limits. Yet existing prompt optimizers either ignore these trade-offs or collapse them into a weighted sum, missing Pareto-optimal variants in non-convex objective regions. We introduce MOCHA (Multi-Objective Chebyshev Annealing), which replaces single-objective selection with Chebyshev scalarization - covering the full Pareto front, including non-convex regions - combined with exponential annealing that transitions from exploration to exploitation. In our experiments across six diverse agent skills - where all methods share the same multi-objective mutation operator and baselines receive identical per-objective textual feedback - existing optimizers fail to improve the seed skill on 4 of 6 tasks: 1000 rollouts yield zero progress. MOCHA breaks through on every task, achieving 7.5% relative improvement in mean correctness over the strongest baseline (up to 14.9% on FEVER and 10.4% on TheoremQA) while discovering twice as many more Pareto-optimal skill variants. 
+
+---
+# Base Models Look Human To AI Detectors 
+
+**Authors**: Yixuan Even Xu, Ziqian Zhong, Aditi Raghunathan, Fei Fang, J. Zico Kolter  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.19516)  
+
+**Abstract**: As AI-generated text enters the real-world at scale, institutions increasingly use commercial AI-text detectors, especially in education and academic-integrity workflows. We report a surprising empirical finding about such systems: when evaluated by GPTZero and Pangram, generated text from base models is often judged overwhelmingly human, whereas text generated by their instruction-tuned counterparts is not. Building on this observation, we propose Humanization by Iterative Paraphrasing (HIP), a detector-agnostic pipeline that minimally fine-tunes a base model into a paraphraser and applies it iteratively. Compared with the baselines we test, HIP yields a stronger trade-off between semantic preservation and detector evasion on commercial detectors. Across Llama-3 and Qwen-3 families, spanning model sizes from 0.6B to 70B, HIP consistently improves detector human-likeness. Our findings suggest that current detectors are tracking artifacts of instruction tuning and local context more than any invariant notion of machine-generated text. This, in turn, calls for detector designs that model these factors more explicitly. 
+
+---
+# When the Majority Votes Wrong, the Intervention Timing for Test-Time Reinforcement Learning Hides in the Extinction Window 
+
+**Authors**: Hongxiang Lin, Zhirui Kuai, Erpeng Xue, Lei Wang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.19444)  
+
+**Abstract**: Test-time reinforcement learning (TTRL) reports substantial accuracy gains on mathematical reasoning benchmarks using majority vote as a pseudo-label signal. We argue these gains are systematically misinterpreted: most reflect sharpening of already-solvable problems rather than genuine learning, while problems corrupted from correct to incorrect outnumber truly learned ones, and this damage is irreversible once majority vote locks onto a wrong answer. Per-problem tracking reveals that correct-answer signals in low-ability problems are briefly active before being permanently suppressed, a phenomenon we term the \textit{Correct-Answer Extinction Window}, with Flip Rate (FR) as its leading indicator. We thus propose \textbf{TTRL-Guard}, a lightweight framework with three mechanisms targeting the extinction window: Flip-Rate-Aware Reward Scaling (FRS) down-weights at-risk updates as FR declines, Minority-Preserving Sampling (MPS) retains gradient signal from minority correct answers, and Risk-Conditioned Sparse Updatings (RCSU) suspends updates on polarized problems. Experiments across three models and four benchmarks show that TTRL-Guard achieves the best average pass@1 on Qwen2.5-7B-Instruct and Qwen3-4B, improves relatively over TTRL by +54\% on AIME 2025. \footnote{Our code and implementation details are available at this https URL. 
+
+---
+# When to Stop Reusing: Dynamic Gradient Gating for Sample-Efficient RLVR 
+
+**Authors**: Yuchun Miao, Sen Zhang, Yuqi Zhang, Yaorui Shi, Qi Gu, Xunliang Cai, Lefei Zhang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.19425)  
+
+**Abstract**: Reinforcement Learning with Verifiable Rewards (RLVR) has become the dominant paradigm for advanced reasoning in Large Language Models (LLMs), but rollout samples are expensive to obtain, making sample efficiency a critical bottleneck. A natural remedy is to reuse each rollout batch for multiple gradient updates, a standard practice in classical RL. Yet in RLVR, this amplifies policy shift, leading to severe performance degradation. Detecting the onset of degradation early enough to stop reuse remains an open and challenging problem. We close this gap by identifying the \textit{Disproportionate Weight Divergence (DWD)} phenomenon: performance degradation is synchronized with a sharp surge in the \texttt{lm\_head} weight change, while intermediate layers remain stable. Empirically, we verify that DWD emerges consistently across diverse LLMs and tasks. Theoretically, we prove that (i) harmful gradients concentrate at the \texttt{lm\_head} while intermediate layers are structurally attenuated, and (ii) the \texttt{lm\_head} gradient norm lower-bounds the policy divergence. These results establish the \texttt{lm\_head} gradient norm as a principled, real-time signal of catastrophic policy shift. Guided by this insight, we propose \textit{Dynamic Gradient Gating (DGG)}, a lightweight intervention that monitors the \texttt{lm\_head} gradient norm in real time and intercepts harmful gradients before they corrupt the optimizer. DGG consistently matches or exceeds the standard single-use baseline, achieving up to $2.93\times$ sample efficiency and $2.14\times$ wall-clock speedup across math, ALFWorld, WebShop, and search-augmented QA tasks. 
+
+---
+# PAVE: A Cognitive Architecture for Legitimate Violation in Generative Agent Societies 
+
+**Authors**: Ahmad Yehia, Abduallah Mohamed, Kun Qian, Tianyi Wang, Jiseop Byeon, Omar Hassanin, Christian Claudel  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.19351)  
+
+**Abstract**: Generative agents based on large language models reproduce believable human behavior in cooperative settings, but how they should reason in situations where rule-breaking may be required, such as fire evacuation or authority-supervised emergency, remains poorly characterized. We propose PAVE (Perception, Assessment, Verdict, Emulation), a novel four-module cognitive architecture that addresses this gap end to end: (i) Perception extracts a structured context with explicit authority distance, peer behaviors, and severity-tagged situational cues; (ii) Assessment scores the context along five scalars including an explicit legitimacy judgment that checks necessity, proportionality, and absence of alternatives; (iii) Verdict decides to comply or violate under a hard legitimacy gate, with a per-agent threshold elicited from the persona; (iv) Emulation enacts the verdict and scopes the violation to the rule the trigger justifies. We instantiate PAVE in Voville, a tile-based traffic environment forked from Smallville, and evaluate across three scenarios, four LLM backbones, and a focused ablation. PAVE agents satisfy four properties simultaneously: legitimate violation (only when a trigger justifies it), authority deference (officer instructions override even high legitimacy), bounded scope (violations confined to the targeted rule), and recovery (baseline restored once the trigger ends). PAVE agents make more structured and interpretable decisions than vanilla across all four properties, and human evaluators rate them as more plausible. Ablating the legitimacy gate reproduces vanilla-like failures. We release Voville, the PAVE prompts and code, and the evaluation pipeline. 
+
+---
+# Auditing Reasoning-Trace Memorization Claims after Unlearning with Head-Conditioned Canaries 
+
+**Authors**: Yanhang Li, Zhichao Fan, Zexin Zhuang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.18891)  
+
+**Abstract**: Evaluations of unlearning on reasoning models sometimes show a bypass pattern. The answer side looks unlearned, but the model's own thinking trace keeps emitting the forgotten content, and the gap is taken as evidence that the weights still remember. We audit this reading on DeepSeek-R1-Distill-Qwen-7B with LoRA-memorized fictional authors and NPO unlearning, conditioned on a six-token canary head. On one seed, swapping the thinking trace for a short non-canary prefill on the same weights drops the answer rate by as much as the bypass gap itself, whether the prefill mimics the training template or not. On a second seed the bypass gap shrinks rather than vanishing, and the prefill swap reverses direction and brings the answer rate to ceiling. A positive parser-split bypass gap thus does not by itself identify hidden weight-level memorization, and does not rule it out either. On a different distillate the same metric flips sign because the parser cannot find the closing tag. We recommend a decode-time template swap as a cheap sanity check alongside the canonical audit. 
+
+---
+# Hybrid-LoRA: Bridging Full Fine-Tuning and Low-Rank Adaptation for Post-Training 
+
+**Authors**: Chengqian Zhang, Wei Zhu, Kyumin Lee  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.18822)  
+
+**Abstract**: Post-training has become essential for adapting large language models (LLMs) to complex downstream behaviors, including instruction following, preference alignment, and multi-step reasoning. Reinforcement learning with verifiable rewards (RLVR) has recently emerged as a particularly effective post-training paradigm for improving reasoning capabilities, with critic-free algorithms such as GRPO and GSPO enabling scalable optimization. However, RLVR post-training with full fine-tuning (FFT) requires substantial GPU memory and incurs high training costs. Although parameter-efficient fine-tuning (PEFT) methods, such as Low-Rank Adaptation (LoRA), effectively reduce computational costs, they often suffer from a noticeable performance gap compared to full fine-tuning in post-training for complex reasoning tasks. In this paper, we propose Hybrid-LoRA, an efficient hybrid post-training framework that selectively applies full fine-tuning to a small subset of modules less suited to low-rank adaptation, while adapting the remaining components with LoRA. We introduce a novel Hybrid-LoRA Score to rank candidate modules according to their sensitivity to low-rank adaptation under a fixed parameter budget. Experiments show that Hybrid-LoRA closely matches full fine-tuning performance under a 10% full fine-tuning module budget, with the remaining candidate modules adapted by LoRA, consistently outperforming four state-of-the-art PEFT post-training baselines, achieving improvements of up to 5.65% and on average 4.36% over the best baseline. 
+
+---
