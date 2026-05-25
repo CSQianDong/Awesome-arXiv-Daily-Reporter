@@ -1,0 +1,64 @@
+# Parallel Context Compaction for Long-Horizon LLM Agent Serving 
+
+**Authors**: Musa Cim, Burak Topcu, Chita Das, Mahmut Taylan Kandemir  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.23296)  
+
+**Abstract**: Long-horizon LLM agents accumulate growing conversation histories that eventually exceed the model's context window. Context compaction via LLM-based summarization keeps the conversation bounded, but summarization is inherently lossy and the blocking call stalls agent inference for tens of seconds. Moreover, the operator has no fine-grained control over summary volume since prompt instructions are largely ignored, and as context grows, both the amount of output tokens the model produces and the information it retains fluctuate substantially from run to run, making the agent's retained knowledge unpredictable across runs. We introduce \textbf{parallel compaction} for long-horizon agentic flows and characterize it against the sequential synchronous baseline across four backbones spanning 8B to 120B parameters, mixing dense and MoE architectures with reasoning and non-reasoning models, on the HotpotQA multi-hop QA and LoCoMo long-context dialogue benchmarks. Parallel compaction gives the operator fine-grained, predictable control over summary volume and enables more targeted prompt engineering per block. At matched compaction decode volume, it reduces end-to-end wall time and improves compaction throughput over the sequential baseline. 
+
+---
+# Preisach Attention: A Hysteretic Model of Sequential Memory 
+
+**Authors**: Piotr Frydrych  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.23603)  
+
+**Abstract**: We introduce the Preisach Attention Layer (PAL), a novel sequence modelling architecture grounded in the classical Preisach hysteresis operator from mathematical physics. PAL replaces the softmax attention mechanism with a binary relay operator parameterised by learned activation and deactivation thresholds, maintaining a stack of local extrema as its internal state. A single-layer PAL-Transformer with O(1) depth is Turing-complete under arbitrary precision arithmetic, achievable through simulation of a two-stack pushdown automaton -- in contrast to the O(log n) depth required by standard hard-attention transformers. Second, we prove that the function classes computable by PAL and by the transformer are incomparable: PAL computes historical range statistics in O(1) layers that require O(log n) layers for transformers, while transformers support random-access retrieval that PAL cannot perform without auxiliary state. The separating property is rate-independence -- PAL responds only to the sequence of local extrema, not to absolute token positions or temporal spacing. Third, we show that the extremum stack constitutes a minimal sufficient statistic of the input history for all rate-independent functionals, providing a formal analogue of the wiping property in classical hysteresis theory. PAL is thus an efficient architecture for tasks with long episodic memory and weak positional dependence, with O(n log n) total inference cost versus O(n^2) for standard attention. 
+
+---
+# Adaptive Mass-Segmented KV Compression for Long-Context Reasoning 
+
+**Authors**: Junzhe Yang, Xiaoyu Shen  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.23200)  
+
+**Abstract**: The linear growth of the Key-Value (KV) cache is a critical bottleneck in long-form LLM inference. Existing KV compression methods mitigate this by evicting tokens based on importance scores. However, we show that their reliance on global Top-k selection triggers Region Wipe-out: the severe eviction of contiguous reasoning blocks that derails logical coherence. To address this, we propose Adaptive Mass-Segmented (AMS) KV Compression, a framework that shifts the paradigm from token-level competition to region-aware quota allocation. AMS adaptively partitions the KV cache based on the spatial distribution of attention mass, ensuring structurally vital reasoning segments receive guaranteed memory quotas. To ensure stability during iterative decoding, an EMA-based smoothing mechanism is incorporated to prevent jitter in segment boundaries. Crucially, AMS is a universal plug-and-play layer that is orthogonal to existing scorers. It can be seamlessly integrated into representative methods such as TOVA, Expected Attention, KeyDiff, R-KV and TriAttention. AMS is also system-compatible with modern paged-KV serving frameworks such as vLLM, supporting efficient gather-and-compact KV execution without introducing additional steady-state attention overhead. Extensive experiments across a diverse suite of tasks, including mathematical reasoning (MATH500, AIME, GSM8K), code completion, open-domain QA, and sparse retrieval, demonstrate that AMS consistently mitigates structural fragmentation and boosts model performance. 
+
+---
+# Positional Failures in Long-Context LLMs: A Blind Spot in Reasoning Benchmarks 
+
+**Authors**: Chuyifei Zhang, Hongyu Cui, Xiaowen Huang, Jitao Sang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.23170)  
+
+**Abstract**: Position-controlled evaluation is standard for retrieval tasks such as Needle-in-a-Haystack and RULER, but mainstream reasoning benchmarks do not control positional placement of target tasks in long contexts. We audit 11 long-context benchmarks and find none jointly controls task position, filler content, and context length for reasoning. An audit of four flagship long-context releases finds no main result-table entry for NIAH, RULER, or LongBench-family benchmarks, while agentic and coding benchmarks appear in main result-tables across all four. We propose Context Rot Evaluation (CRE), a controlled framework varying all three factors, and evaluate nine LLMs on GSM8K and ARC-Challenge across two rounds: an initial five-model set and four newer vendor releases. Models can drop sharply when the target task moves from end to middle, and the drop grows worse with context length for vulnerable models. MiMo-v2-Flash drops 88pp at 64K under with_solutions filler (middle accuracy 8%). Newer releases show smaller drops: at 64K, three of four stay within +/-6pp of end-position accuracy; MiMo-V2.5-Pro narrows the MiMo-v2-Flash 88pp drop to 32pp. Under questions_only_v2 filler, middle-position drops persist across all four (range -16pp to -56pp across 8K, 32K, 64K). At 8K, a diagnostic probe adding a target-task copy at the end brings middle accuracy within +/-4pp of end baseline across all nine models, consistent with a positional explanation. In the initial five-model set, 76% of middle-position errors match surrounding filler text versus 22% at the end position, consistent with filler-answer interference as a dominant error mode. These results expose a structural evaluation gap in current reasoning benchmark design and vendor evaluation practice: positional vulnerabilities that grow with context length cannot be measured when task position is not controlled. 
+
+---
+# Tensor Cache: Eviction-conditioned Associative Memory for Transformers 
+
+**Authors**: Kabir Swain, Sijie Han, Daniel Karl I. Weidele, Mauro Martino, Antonio Torralba  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.22884)  
+
+**Abstract**: Autoregressive Transformer KV caches grow linearly with context length; sliding-window caching bounds memory but discards evicted tokens entirely, so relevant evidence outside the window becomes inaccessible. We introduce \emph{Tensor Cache}, a two-level cache that pairs sliding-window softmax attention as a first-level cache (L1) with a fixed-size outer-product fast-weight memory as a second-level cache (L2) fed by KV pairs evicted from the window. Recent tokens remain in exact local attention; evicted pairs are compressed into a per-layer matrix $A$ and read by future queries through a single matrix multiplication, exploiting the linear-attention identity $q_t(k_i \otimes v_i)=\langle q_t,k_i\rangle v_i$. A learned scalar gate fuses the L1 and L2 outputs, and per-head decay and write-rate parameters are trained end-to-end. The outer-product memory and the read identity are well-known; our contribution is their use as an L2 cache fed exclusively by sliding-window evictions, plus identifying that the common chunked-mean training shortcut $A\!\leftarrow\!\lambda A\!+\!\eta(\bar k\!\otimes\!\bar v)$ silently introduces $C^2{-}C$ spurious cross-token outer products per chunk, and closing the gap with a parallel weighted-sum scan equivalent to per-token writes within float32 epsilon. Across systems scaling, controlled associative recall, long-context language modeling, and memory-capacity diagnostics, Tensor Cache improves the memory--quality frontier over bounded-state baselines. 
+
+---
+# LFRAG: Layout-oriented Fine-grained Retrieval-Augmented Generation on Multimodal Document Understanding 
+
+**Authors**: Yifan Zhu, Yu Mi, Yue Lu, Yanchu Guan, Zhixuan Chu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.22829)  
+
+**Abstract**: Multimodal Retrieval-Augmented Generation (RAG) has emerged as an effective paradigm for enhancing Large Language Models (LLMs) with external knowledge. However, existing multimodal RAG systems predominantly rely on coarse-grained page-level retrieval, which fails to capture fine-grained semantic and layout structures in visually rich documents, thereby compromising retrieval accuracy and leading to redundant context in downstream tasks. To address these issues, we propose Layout-oriented Fine-grained Retrieval-Augmented Generation (LFRAG), a novel framework that advances multimodal RAG from page-level to block-level retrieval. We perform layout segmentation to construct semantically coherent fine-grained retrieval units and design a semantic-layout fusion encoder that integrates local semantics with global context via cross-attention. With block-level late interaction retrieval, LFRAG enables precise query-content alignment and reduces irrelevant content for downstream generation. To enable rigorous evaluation, we construct LFDocQA, a large-scale benchmark with block-level annotations spanning diverse document types, designed to assess both multimodal document retrieval and question answering with greater granularity than existing datasets. Extensive experiments on LFDocQA demonstrate that LFRAG achieves state-of-the-art performance on retrieval tasks, outperforms the best baseline by 7.20% in answer accuracy, and reduces token consumption by 73.07% in generation tasks, confirming LFRAG as an accurate and efficient framework for multimodal RAG over visually rich documents. Our code and datasets will be released soon. 
+
+---
+# The Efficiency Frontier: A Unified Framework for Cost-Performance Optimization in LLM Context Management 
+
+**Authors**: Binqi Shen, Lier Jin, Hanyu Cai, Lan Hu, Yuting Xin  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.23071)  
+
+**Abstract**: Large language models (LLMs) increasingly rely on long-context processing, but expanding context windows introduces substantial computational and financial costs. Existing context reduction approaches, including retrieval and memory compression methods, are typically evaluated using performance and efficiency metrics independently, limiting systematic comparison and deployment-aware decision-making.
+This paper introduces The Efficiency Frontier, a unified framework for cost-performance optimization in LLM context management. The framework models context strategy selection as a deployment-aware optimization problem that jointly accounts for task performance, token cost, and preprocessing reuse through amortized cost modeling. Unlike existing evaluations that compare methods in isolation, the proposed framework enables decision-oriented analysis of when different context management strategies become preferable under varying operational conditions. Evaluated on 5,000 HotpotQA instances, the framework reveals distinct operational regimes and transition boundaries between retrieval-based and preprocessing-based strategies. Results show that deployment-aware optimization reduces effective token usage by approximately 25% at comparable performance ($F1 \approx 0.78$), while amortized memory compression achieves over 50% lower token cost relative to full-context prompting in higher-performance settings. Overall, the proposed framework provides a principled and practical foundation for evaluating and deploying scalable, efficient, and sustainable LLM systems. 
+
+---

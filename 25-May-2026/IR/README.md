@@ -1,0 +1,147 @@
+# TubiFM: Unified Item, Carousel, and Search Ranking for Streaming Discovery 
+
+**Authors**: Alexandre Salle, Chenglei Niu, Suchismit Mahapatra, Xiaoxiao Chen, Suvash Sedhain, Yaqi Wang, Shervin Shahryari, Saurabh Agrawal, Qiang Chen, Michael Tamir  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.23702)  
+
+**Abstract**: Personalized discovery systems often train separate models for item ranking, carousel ranking, and search, even though these tasks expose complementary signals from the same viewer journey: watches shape carousel and item ranking, search queries reveal intent even when they do not lead to a catalog match, and watch history helps interpret search as rewatching, continuation, or new discovery. We introduce the user story, a serialized representation that turns a user's cross-surface history - attributes, sessions, watch events with surface and carousel context, and search events - into a single token sequence. By interleaving pretrained language tokens with domain-specific event tokens, user stories let heterogeneous recommendation and search tasks be expressed as prompted next-token prediction over a shared grammar. TubiFM is one instantiation of this approach: a Llama 3.2 1B-based model trained on user stories and prompted to rank items, carousels, or search results without task-specific architectures. In offline evaluation, this single model outperforms specialist baselines across item, carousel, and search ranking. In online A/B tests, TubiFM significantly improves search total viewing time (TVT) by $+3.9\%$ and carousel TVT by $+0.30\%$. Item ranking is statistically neutral on TVT ($+0.14\%$), but matches a mature production stack; across all three tasks, TubiFM serves on L40S GPUs and reduces p99 ranking latency from 500ms to 200ms. These results show that shared user stories can improve discovery while simplifying ranking systems. 
+
+---
+# Synthetic Sources?: Auditing Generative Search Engine Citations for Evidence of AI-Generated Sources 
+
+**Authors**: Mowafak Allaham, Nicholas Diakopoulos  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.23684)  
+
+**Abstract**: The growing accessibility of Large Language Models via conversational interfaces capable of responding to users' questions by drawing on, synthesizing, and citing information from the web (i.e., Generative Search Engines) has simplified the information-seeking process for users. However, with the proliferation of AI-generated content on the web, it is unclear whether these engines can reliably omit citing synthetic sources (i.e., AI-generated sources). Should these engines be unable to do so, this puts users at risk of harm by treating information from AI-generated sources synthesized in responses of generative search engines as equivalent to information from authoritative or official sources. In a step towards identifying whether AI-generated sources are being cited by these engines, this work presents an audit of four generative search engines (ChatGPT, Copilot, Gemini, Perplexity) using a total of 712 real-world human-generated queries spanning domains of public importance: politics, health, and the environment. Our findings show evidence of AI-generated sources being cited across all four generative search engines (~16% of cited sources) and identifies key source web domains these sources belong to that are frequently cited across these engines and topics. In addition, we observed that generative search engines include a somewhat narrow set of repeatedly cited domains while predominantly surfacing a large number of minimally cited domains in responses to users' queries. These findings contribute to the growing body of work on assessing the risks of generative search engines with the objective of increasing public awareness of their limitations and encouraging appropriate measures to improve information quality and governance of these systems. 
+
+---
+# HARNESS-LM: A Three-Phase Training Recipe for Harnessing SLMs in Sponsored Search Retrieval 
+
+**Authors**: Vipul Gupta, Shikhar Mohan, Lakshya Kumar, Pranjal Chitale, Nikit Begwani, Amit Singh, Manik Varma  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.23572)  
+
+**Abstract**: In the competitive landscape of sponsored search, balancing retrieval quality with production latency is a critical challenge. While large retrieval models based on Small Language Models (SLMs) such as Qwen3-Embedding-4B/8B set strong upper bounds on public benchmarks, their deployment in high-throughput, latency-sensitive environments remains impractical. In this paper, we present HARNESS-LM (HLM), a three-phase training framework for transferring the capabilities of large-scale retrievers into compact, cost-efficient models. The approach comprises: (1) training a high-performance reference ("teacher") retriever by fine-tuning a billion-parameter-scale SLM; (2) aligning query representations via an L2 objective to distill knowledge into a sub-600M parameter student encoder; and (3) applying a final contrastive refinement stage to optimize the student for retrieval performance. We also present a comprehensive empirical study of key design choices, including alignment objectives, embedding dimensionality, model scale, architecture, and optimization strategies, to identify configurations that are most effective in production settings. On a real-world Bing Ads evaluation benchmark, HLM recovers over 98% of the reference retriever's precision across multiple settings, while delivering up to 27x lower online query-encoder latency and 20x higher throughput on NVIDIA A100 GPUs. Online A/B testing on Bing Ads further shows a +1% Revenue, +0.6% Impression, and +0.4% Click uplift over the current ensemble of retrievers running in production with the deployed 190M parameter model, clearly highlighting the practical efficacy of the HLM recipe in a real-world sponsored search setting. 
+
+---
+# TPMM-DPO: Trajectory-aware Preference-guided Model Merging for Iterative Direct Preference Optimization 
+
+**Authors**: Lingling Fu, Yongfu Xu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.23398)  
+
+**Abstract**: Direct Preference Optimization (DPO) has been widely adopted for large language model alignment due to its simple training procedure and lack of an explicit reward model. However, in iterative DPO, when the policy model from the previous iteration is repeatedly used as the reference model for subsequent rounds, noise in preference data and errors in the reference model accumulate over time. This accumulation can lead to late-stage over-optimization, performance fluctuations, and degraded generalization.
+To address these issues, we propose TPMM-DPO, a trajectory-aware preference-guided model merging method. The method treats the sequence of policy models generated during iterative DPO as an optimization trajectory and adaptively integrates them using learned fusion weights, thereby constructing a smoother and more robust reference model. In contrast to conventional iterative DPO, which relies solely on a single previous model, TPMM-DPO effectively mitigates error accumulation induced by noisy preferences and improves training stability.
+Experimental results show that standard iterative DPO often suffers from performance degradation in the middle and later stages of training, whereas TPMM-DPO consistently improves generation quality and achieves higher win rates and reward scores on both in-domain and out-of-domain evaluations. Further ablation studies and robustness analyses demonstrate that, compared with simple averaging, learnable-weight fusion more effectively alleviates late-stage performance degradation caused by noisy preferences. 
+
+---
+# Towards Generalizable and Efficient Large-Scale Generative Recommenders 
+
+**Authors**: Qiuling Xu, Ko-Jen Hsiao, Moumita Bhattacharya  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.23312)  
+
+**Abstract**: Generative recommendation models can model user behavior as sequences of events and provide a shared backbone for multiple recommendation tasks. In production, however, pre-training gains do not automatically translate into downstream application improvements: task headroom, repeated-training cost, serving latency, and item freshness all affect transfer. We describe our experience scaling a generative recommender from 2M to 1B backbone parameters, excluding embedding and decoding layers, in a production-scale title recommendation setting. Across multiple downstream tasks, we observe task-dependent scaling behavior: some tasks approach an empirical ceiling within the observed scale range, while others continue to benefit from additional capacity. This motivates using offset scaling-law fits as a diagnostic for where additional model scale may be more or less useful.
+We then study production constraints that arise when applying the model in practice. Frequent retraining over trillions of behavior tokens makes training and decoding efficiency important; cached serving can make the immediate next-token target stale; and newly launched titles may need to be scored from semantic metadata before collaborative ID embeddings are reliable. We address these issues with multi-token prediction for serving-latency alignment, sampled softmax and a projected decoding head for efficient repeated training, and semantic item towers with collaborative-embedding masking for cold-start adaptation. In a one-week production-shadow evaluation over 1M users, the 1B-backbone model achieves higher MRR than the 2M-backbone baseline across all reported tasks. Overall, the results support treating model scale as one component of a production transfer problem, alongside task headroom, decoding cost, serving-latency alignment, and item generalization. 
+
+---
+# From Head to Tail: Asymmetric Knowledge Transfer in Long-tail Recommendation with Generative Semantic IDs 
+
+**Authors**: Chenyi Yan, Ruocong Tang, Xing Fang, Yang Huang, He Guo, Jing Wang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.23310)  
+
+**Abstract**: Long-tail recommendation in real-world e-commerce platforms remains challenging due to severe data imbalance. Existing methods often struggle to combine content-based multimodal features with collaborative signals. Many of these methods also ignore an important asymmetry in knowledge transfer between head and tail IDs: noisy signals from tail IDs can hurt representation learning for head IDs. This paper presents AKT-Rec, a framework for Asymmetric Knowledge Transfer in long-tail Recommendation that uses LLM-generated semantic IDs. AKT-Rec uses Multimodal LLMs (MLLMs) with supervised fine-tuning to align content representations with collaborative information for both items and users, producing semantic representations. It then discretizes these representations into semantic IDs with a Residual-Quantized VAE (RQ-VAE), which yields semantic clusters of similar entities. AKT-Rec has two main components: (1) Cluster-Guided Adaptive Embedding, which decomposes each ID representation into a cluster-level embedding that captures shared semantics and an individual embedding. Through an asymmetric contrastive objective and an activity-aware gating mechanism, this module directs knowledge transfer from head to tail IDs. (2) Hierarchical Feature Aggregation, which builds parallel feature views and adaptively fuses them to optimize predictions for samples with varying activity levels. Extensive experiments on a large-scale industrial dataset and online A/B testing on the Alibaba Tmall platform demonstrate the effectiveness of AKT-Rec. AKT-Rec improves offline performance by 0.35% in AUC and 1.53% in GAUC, outperforming several competitive baselines. In online A/B testing, AKT-Rec achieves a 2.76% increase in CTR and a 3.47% increase in GMV, validating its utility in real-world production environments. 
+
+---
+# AI-Friendly LaTeX: Using LaTeX Code as a Knowledge Source for Retrieval-Augmented Generation 
+
+**Authors**: Tom Verhoeff  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.22923)  
+
+**Abstract**: Large language models can answer questions about textbooks, lecture notes, and programming exercises more reliably when their answers are grounded in an explicit knowledge source. Retrieval-augmented generation (RAG) is a common approach: relevant fragments of a document are retrieved and inserted into the model context before answering. For mathematical and technical material, the original LaTeX source can be a better starting point than a PDF, because it contains structural information, labels, sectioning commands, macros, and authorial intent that are often lost or distorted in PDF extraction. However, LaTeX source is not automatically AI-friendly. Cross-references must be resolved, custom macros must be interpreted, exercises and examples must be identified, and author-supplied semantic metadata may be needed. This article describes a focused preprocessing approach for turning LaTeX source, together with its compiled auxiliary files and optional author annotations, into Markdown and JSONL chunks suitable for indexing in a vector database. 
+
+---
+# RAG4Outcome: A Retrieval-Augmented Multimodal Framework for Prognostic Prediction in Chronic Osteomyelitis 
+
+**Authors**: Daqian Shi, Pei Han, Jishizhan Chen, Yang Wang, Xiaolei Diao, Xianyou Zheng, Pengfei Cheng  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.22833)  
+
+**Abstract**: Chronic osteomyelitis presents substantial prognostic challenges due to its high recurrence risk and complex postoperative recovery trajectories. Traditional assessment often relies on manual scoring systems, which limit scalability, efficiency, and consistency in clinical practice. Furthermore, the heterogeneous nature of clinical data poses challenges for current multimodal learning approaches that require aligned inputs and large annotated datasets. In this work, we propose RAG4Outcome, a retrieval-augmented generation (RAG) framework for prognostic prediction in chronic osteomyelitis. Our method integrates multimodal clinical data, including PET-CT imaging reports, structured surgical and diagnostic records, and unstructured follow-up notes, into a unified prediction pipeline. By combining a domain-specific retrieval corpus with expert-guided prompting, the framework enables more interpretable, evidence-grounded, and clinically reliable prognosis. Preliminary results on real-world cases demonstrate promising effectiveness and clinical alignment, highlighting the potential of RAG4Outcome for AI-assisted infection management and postoperative decision support. 
+
+---
+# LFRAG: Layout-oriented Fine-grained Retrieval-Augmented Generation on Multimodal Document Understanding 
+
+**Authors**: Yifan Zhu, Yu Mi, Yue Lu, Yanchu Guan, Zhixuan Chu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.22829)  
+
+**Abstract**: Multimodal Retrieval-Augmented Generation (RAG) has emerged as an effective paradigm for enhancing Large Language Models (LLMs) with external knowledge. However, existing multimodal RAG systems predominantly rely on coarse-grained page-level retrieval, which fails to capture fine-grained semantic and layout structures in visually rich documents, thereby compromising retrieval accuracy and leading to redundant context in downstream tasks. To address these issues, we propose Layout-oriented Fine-grained Retrieval-Augmented Generation (LFRAG), a novel framework that advances multimodal RAG from page-level to block-level retrieval. We perform layout segmentation to construct semantically coherent fine-grained retrieval units and design a semantic-layout fusion encoder that integrates local semantics with global context via cross-attention. With block-level late interaction retrieval, LFRAG enables precise query-content alignment and reduces irrelevant content for downstream generation. To enable rigorous evaluation, we construct LFDocQA, a large-scale benchmark with block-level annotations spanning diverse document types, designed to assess both multimodal document retrieval and question answering with greater granularity than existing datasets. Extensive experiments on LFDocQA demonstrate that LFRAG achieves state-of-the-art performance on retrieval tasks, outperforms the best baseline by 7.20% in answer accuracy, and reduces token consumption by 73.07% in generation tasks, confirming LFRAG as an accurate and efficient framework for multimodal RAG over visually rich documents. Our code and datasets will be released soon. 
+
+---
+# Tracking a Decade of Research at the University of Nigeria, Nsukka: A Scientometric Analysis (2014-2023) 
+
+**Authors**: Muneer Ahmad, Joseph U Igligli  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.23586)  
+
+**Abstract**: This study employs scientometric methods to assess the research output and performance of the University of Nigeria from 2014 to 2023. By analyzing publication trends, citation patterns, and collaboration networks, the research aims to comprehensively evaluate the university's research productivity, impact, and disciplinary focus. These research endeavors are characterized by innovation, interdisciplinary collaboration, and commitment to excellence, making the University of Nigeria a significant hub for cutting-edge research in Nigeria and beyond. The present study has been undertaken to determine the impact of the university's research and publication trends from 2014 to 2023. The study focuses on year-wise research output, citation impact at local and global levels, prominent authors and their total output, top journals, collaborating countries, and the most contributing departments of the University of Nigeria. The university's ten years of publication data indicate that 6,353 papers were published from 2014 to 2023, receiving 86,202 citations with an h-index of 39. In addition to this, the stenographical mapping of data is presented through graphs using the VOSviewer software mapping technique. The findings of this study will contribute to understanding the university's research strengths, weaknesses, and potential areas for improvement. Additionally, the results will inform evidence-based decision-making for enhancing research strategies and policies at the University of Nigeria 
+
+---
+# Is Dimensionality a Barrier for Retrieval Models? 
+
+**Authors**: Kiril Bangachev, Guy Bresler, Jonathan Kogan, Yury Polyanskiy  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.23556)  
+
+**Abstract**: Why does the low dimensionality of representations, typically $d\approx 1000$, not prevent modern embedding-based retrieval models from scaling to billions, or even trillions, of data points? To answer this question, we study maximal-margin embeddings in the following retrieval model, classically studied in communication complexity [PS86] and more recently in embedding-based retrieval [WBNL26]. Let $A\in \{0,1\}^{N\times n}$ be a matrix indicating whether each of $N$ queries is relevant to each of $n$ documents. We are interested in the largest margin $m>0,$ denoted by $\mathsf{m}^{\mathsf{rd}}(d, A),$ for which there exist unit norm embeddings of the queries and documents $\{U_j\}_{j = 1}^N, \{V_i\}_{i = 1}^n$ with the following property. $\langle U_j, V_i\rangle \ge m$ whenever $A_{ji} = 1$ and $\langle U_j, V_i\rangle \le -m$ otherwise. A large margin is a key proxy for representation quality: it controls both robustness to perturbations and compositional generalization across queries. Our main theorem establishes that the best possible margin without a restriction on the dimension, $\mathsf{m}^{\mathsf{rd}}(+\infty, A),$ can be nearly achieved in dimension $d = O(\mathsf{m}^{\mathsf{rd}}(+\infty, A)^{-2}\log n)$ which improves a theorem of [BDES02]. Together with a matching lower bound in Theorem 1.5, we conclude that when $A\in \{0,1\}^{\binom{n}{k}\times n}$ is the matrix containing all possible $k$-sparse rows once, dimension $d = O(k\log (n/k))$ is necessary and sufficient for the maximal possible margin $\mathsf{m}^{\mathsf{rd}}(+\infty, A) = \Theta(k^{-1/2})$ in this setting. This fully resolves the setup of [WBNL26]. We also give several constructions for large margins when $d = o(k\log (n/k)).$ Finally, we empirically test the InfoNCE and sigmoid losses for producing large margin embeddings and demonstrate a clear advantage of the sigmoid loss. 
+
+---
+# Expand More, Shrink Less: Shaping Effective-Rank Dynamics for Dense Scaling in Recommendation 
+
+**Authors**: Guoming Li, Shangyu Zhang, Junwei Pan, Wentao Ning, Jin Chen, Gengsheng Xue, Chao Zhou, Shudong Huang, Haijie Gu, Menglin Yang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.23191)  
+
+**Abstract**: Scaling recommendation models is a central challenge in recommender systems. Recently, RankMixer has emerged as an effective solution, operating on a unified token representation and alternating between token mixing and per-token feedforward networks (P-FFNs) to achieve scalable performance. However, RankMixer suffers from \textit{embedding collapse}, where learned representations have low effective rank, limiting expressivity and underutilizing the expanded representation space. Through empirical analysis and theoretical insights, we identify rigid token mixing and P-FFN modules as the primary causes of this phenomenon, jointly inducing a \textbf{damped oscillatory trajectory} in effective-rank evolution across layers. To address it, we propose RankElastor, a novel architecture that produces spectrum-robust representations with provable collapse mitigation. RankElastor introduces two components: (i) \textbf{parameterized full mixing}, which enables expressive token mixing with improved spectral robustness; and (ii) \textbf{GLU-improved P-FFNs}, which stabilize representation spectra through GLU-style FFN modules. Extensive experiments on large-scale industrial datasets demonstrate that RankElastor consistently improves recommendation performance, mitigates embedding collapse, and exhibits robust scaling behavior. Code is available at this GitHub repository: this https URL 
+
+---
+# Building a privacy-preserving Federated Recommender system for mobile devices 
+
+**Authors**: Aasheesh Singh  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.22924)  
+
+**Abstract**: Serving personalized content on mobile devices has traditionally required pooling sensitive user data on centralized servers, a practice increasingly at odds with modern privacy expectations and geographical regulations. We present a two-stage federated recommendation system pipeline for mobile devices, built around a principled separation between non-sensitive user preference data and sensitive mobile context data that never leaves the device. The first stage runs a collaborative filtering model on non-sensitive app-context data in the cloud to generate a shortlist of relevant items. The second stage re-ranks these candidates on-device using sensitive mobile signals, with only model updates/gradients ever leaving the device. We validate the approach on MovieLens, UCI Human Activity Recognition, and a proprietary pilot dataset, and deliver a production-ready implementation as a Kotlin Multiplatform library deployable on Android and iOS. 
+
+---
+# SciAtlas: A Large-Scale Knowledge Graph for Automated Scientific Research 
+
+**Authors**: Shuofei Qiao, Yunxiang Wei, Jiazheng Fan, Bin Wu, Busheng Zhang, Mengru Wang, Yuqi Zhu, Ningyu Zhang, Keyan Ding, Qiang Zhang, Huajun Chen  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.22878)  
+
+**Abstract**: The exponential growth of global academic output has confronted researchers and AI agents with an unprecedented ``information explosion,'' where fragmented and unstructured knowledge organization impedes deep interdisciplinary integration. Current academic retrieval tools predominantly rely on superficial keyword matching or vector-space semantic retrieval, which lack the topological reasoning capabilities required to navigate complex logical connections. Agentic deep-research-based frameworks are often prone to logical hallucinations and consuming high inference costs. To bridge this gap, in this report, we introduce SciAtlas, a large-scale, multi-disciplinary, heterogeneous academic resource knowledge graph designed as a panoramic scientific evolution network. By integrating over 43M papers from 26 disciplines, and a total of 157M entities and 3B triplets, SciAtlas provides a structured topological cognitive substrate that dismantles disciplinary barriers and furnishes AI agents with a global perspective. Furthermore, we develop a neuro-symbolic retrieval algorithm featuring tri-path collaborative recall and graph reranking, achieving a seamless transition from simple semantic matching to deterministic association discovery. We also present key application directions of SciAtlas, including literature review, automated research trend synthesis, idea positioning, and academic trajectory exploration, to demonstrate that SciAtlas can serve as an effective ``cognitive map'' to empower the full loop of automated scientific research while significantly reducing reasoning costs. We have released the interfaces for KG retrieval and various downstream tasks in our GitHub repo. 
+
+---
+# Knowledge Distillation for Low-Resource Open-source Text-to-SQL Model 
+
+**Authors**: Tianhao Qiu, Xiaojun Chen  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.22843)  
+
+**Abstract**: Text-to-SQL converts natural language questions into executable SQL queries, enabling non-technical users to access relational databases for analytics and intelligent data services. In real-world scenarios, performance is often constrained by low-resource settings, where high-quality annotated \texttt{<question, SQL>} pairs are scarce, particularly for domain-specific databases. Additional challenges include opaque schema definitions, abbreviations, and implicit business logic that are not explicitly encoded in the schema. Existing data synthesis and prompting techniques improve coverage but often fail to produce task-specific, semantically grounded examples aligned with database constraints. To address these challenges, we propose a knowledge-aware Text-to-SQL framework that constructs task-specific knowledge base including schema semantics, abbreviations, business logic, and query patterns, and injects them into both training and inference. This framework generates diverse, contextually grounded synthetic training data and enhances inference through targeted knowledge retrieval. Experiments on seven benchmarks, covering both general and domain-specific datasets, demonstrate that our approach substantially improves the performance of open-source and closed-source large language models in Text-to-SQL tasks, especially in low-resource domain-specific settings, enhancing generalization, robustness, and adaptability. 
+
+---
+# Query-Adaptive Semantic Chunking for Retrieval-Augmented Generation: A Dynamic Strategy with Contextual Window Expansion 
+
+**Authors**: Mudit Rastogi  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.22834)  
+
+**Abstract**: Retrieval-Augmented Generation (RAG) systems depend critically on document chunking quality for retrieving relevant context. Fixed chunking segments documents into uniform units irrespective of semantics or user intent, producing a precision-recall trade-off unresolvable by tuning chunk size alone. Semantic and agentic methods partially address these limitations but do not integrate user queries at the chunking stage. We present Query-Adaptive Semantic Chunking (QASC), which dynamically constructs chunks by integrating queries into segmentation through three mechanisms: cosine similarity scoring between sentence and query embeddings to identify seed sentences, contextual window expansion around seeds to preserve coherence, and chunk-level score aggregation to ensure holistic relevance. We evaluate QASC on 100 technical documents across 200 queries spanning four types, comparing against fixed chunking at five granularities, recursive splitting, semantic chunking, and agentic chunking. QASC achieves an F1-score of 0.85, a relative improvement of 18-27% over fixed chunking and 8-12% over semantic and agentic alternatives. Ablation studies confirm each component contributes meaningfully. Human evaluation by three annotators (Cohen kappa = 0.82) corroborates that QASC produces more relevant and coherent chunks than existing methods. 
+
+---
