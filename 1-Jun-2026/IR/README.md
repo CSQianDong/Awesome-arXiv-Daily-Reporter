@@ -1,0 +1,171 @@
+# SPECTRA: Synthetic IR Test Collections with Relevance Oracles and Controlled Distractor Diagnostics 
+
+**Authors**: Eric Liang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.31575)  
+
+**Abstract**: Scalable information retrieval testing needs corpora that are large enough to stress index construction, ranking latency, query routing, and evaluation tooling, yet human-judged test collections remain expensive and may be unavailable when documents are private or still under design. This paper introduces SPECTRA, a reproducible framework for generating synthetic text corpora and retrieval test collections through a separation of latent topical structure, surface text realization, metadata controls, query intent generation, and deterministic relevance oracles. The framework is intended as a diagnostic complement to Cranfield-style and TREC-style evaluation, not as a replacement for human assessment. A single-process Python prototype generated corpora up to 60,000 documents and 9.61 million tokens while preserving controllable long-tail vocabulary growth and producing graded relevance labels for 96 queries. In the local simulation study, generation remained close to linear at roughly 12K to 14K documents per second, estimated Zipf slopes stayed near 0.86 in absolute value, and increasing cross-topic distractor text reduced BM25 nDCG@10 from 1.00 at 2% distractors to 0.43 at 36% distractors. These results show that lightweight synthetic corpora can expose retrieval-system scaling and failure modes before costly collection construction begins. 
+
+---
+# Evaluating Factual Density in Multi-Source RAG: A Study in Medical AI Accuracy 
+
+**Authors**: Michael R. DeMarco  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.31506)  
+
+**Abstract**: Retrieval-Augmented Generation (RAG) is the current industry standard for grounding AI in real-world facts. Traditional retrieval methods rely on keyword matching and topic proximity, ranking content based on how closely it sounds like the user's query. What they do not measure is how many verified facts the content actually contains. This structural gap, termed the Expert Blindness Effect, causes standard RAG pipelines to consistently bury high-density factual evidence in favor of lexically dominant text on the same topic. To address this gap, this paper introduces Factual Density (FD*), a novel retrieval optimization signal that measures the proportion of verified atomic claims relative to total token count. Using the NexusAgentics Ghost Audit preprocessing pipeline, raw text is scored for factual specificity using probabilistic factuality analysis to filter content before corpus ingestion. An initial formulation introduced a severe document-length confound (Pearson R = -0.8636, p = 2.27e-07). Implementing Z-score normalization within length bins resolved this bias, validating FD* as a length-independent density signal (p = 0.0749). Evaluated against the HealthFC benchmark (750 health claims labeled Supported, Refuted, or No Evidence by medical experts), FD*-optimized retrieval was the only condition to achieve 100% systematic review saturation in top-5 results, surfacing Cochrane evidence that standard cosine similarity ranked outside the top ten. Ground truth verification confirmed 25 mappings across seven HealthFC-supported claims. While full statistical validation across n=50 queries remains future work due to constraints on corpus-benchmark alignment, these findings establish factual density reranking as a low-cost, high-impact intervention for improving factual precision in health RAG architectures. 
+
+---
+# Beyond Instance-Level Alignment and Uniformity: Semantic Factor Learning for Collaborative Filtering 
+
+**Authors**: Yajie Yu, Chenzhong Bin, Zhoubo Xu, Zhixin Zeng, Tongxin Xu, Cihan Xia, Jiafeng Wu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.31414)  
+
+**Abstract**: Collaborative filtering (CF) is widely used in recommender systems (RecSys) due to its simplicity and efficiency. However, existing CF methods follow an instance-level learning paradigm. During the instance learning stage, a large number of uninteracted user-item instances, of which items are potential interested by the user, are incorrectly treated as true negative samples resulting in a severe limitation to the generalization and scalability of models. Moreover, mainstream graph convolutional networks (GCNs) inherently suffer from high computational cost and over-smoothing issues, which limit the ability in capturing higher-order connectivity and lead to a poor generalization under sparse supervision signals. To address the above limitations, we propose Semantic Factor enhanced Alignment and Uniformity (SaFeAU), a novel framework that augments interacted instances with semantic factors, thereby mitigating false negative labeling and enabling matrix factorization (MF) to capture high-order CF signals without graph neighborhood aggregation. Specifically, SaFeAU consists of three tightly coupled components. First, Semantic Factor Routing (SFR) disentangles item representations into independent and global semantic factors. Building on these factors, Semantic Factor Matching (SFM) identifies uninteracted items, which share the same semantic factors with interacted ones, as potential positive pairs for enriching sparse supervision signals. Finally, Semantic Pairs Alignment (SPA) aligns both observed and potential positive pairs while promoting uniformity of user and item representations. Extensive experiments on four sparse real-world datasets show that SaFeAU consistently outperforms GCN-based and MF-based state-of-the-art CF methods in both recommendation accuracy and computational efficiency, confirming the effectiveness of the proposed semantic enhanced learning paradigm. 
+
+---
+# DynaTree: Dynamic Agentic Retrieval Tree for Time-Sensitive News Retrieval 
+
+**Authors**: Siyuan Qi, Xinyuan Wang, Yingxuan Yang, Haochuan Guo, Jianghao Lin, Weiwen Liu, Yong Yu, Weinan Zhang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.31377)  
+
+**Abstract**: Agentic Retrieval-Augmented Generation improves retrieval by integrating planning, tool use, and iterative reasoning, but existing agentic RAG methods often couple semantic expansion with retrieval decisions in short-horizon inference loops, leading to high inference cost and limited suitability for time-sensitive news retrieval. We propose DynaTree, a two-stage framework for efficient and adaptive news retrieval. In the offline stage, DynaTree uses coordinated agents to construct a reusable retrieval tree that materializes the semantic space of a query topic. In the online stage, DynaTree performs lightweight daily subtree selection over a time-localized evaluation proxy, without further agentic reasoning, tree modification, or retraining. Experiments on a multi-day Syft news benchmark and multiple BEIR datasets show that DynaTree achieves strong recall and ranking performance, consistently outperforming standard RAG and prior agentic baselines. We further deploy DynaTree in the Syft production system and evaluate it through online A/B testing from Jan. 28 to Feb. 6, 2026. The dynamically adapted variant improves survival rate from 0.32-0.53 to 0.59-0.73 over a fixed offline-selected subtree and outperforms existing production recallers on every evaluation day. These results show that persistent, structure-aware semantic expansion can translate offline agentic reasoning into practical improvements in coverage, freshness, and relevance for real-world news retrieval. 
+
+---
+# Contextual Scalarisation Thompson Sampling for multi-objective decisions in public media 
+
+**Authors**: Théo Maëtz, Luc Guillet, Andrea Cavallaro  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.31291)  
+
+**Abstract**: Recommender systems may operate under multiple, competing objectives. For example, audience reach, cultural values, public service mandate, and operational constraints must be balanced in editorial decisions of public service media. Existing approaches relying on fixed combinations of objectives or Pareto-based optimisation do not adapt to changing priorities across situations. In this paper, we propose Contextual Scalarisation Thompson Sampler (CSTS), a multi-objective contextual bandit method that learns to weight objectives as a function of the observed context. We evaluate CSTS on real programming data from Radio Télévision Suisse, the Swiss national broadcaster, showing improved contextual relevance and better alignment with expert curation practices compared to fixed weight and standard contextual bandit approaches. 
+
+---
+# MIMO: Multilingual Information Retrieval via Monolingual Objectives 
+
+**Authors**: Youngjoon Jang, Seongtae Hong, Heuiseok Lim  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.31171)  
+
+**Abstract**: Multilingual Information Retrieval (MLIR) reflects real-world search environments in which queries and relevant documents may appear in different languages within a mixed-language corpus. However, existing embedding models are primarily optimized for Multi-Monolingual retrieval and their performance often degrades in MLIR settings. Moreover, directly applying conventional contrastive learning to MLIR can exacerbate language clustering and expose a trade-off between cross-lingual alignment and embedding uniformity. To address these limitations, we propose MIMO: Multilingual Information Retrieval via Monolingual Objectives, a two-stage framework that uses a stable English semantic space from a high-performing teacher model as an anchor. MIMO first initializes the student model's cross-lingual alignment through knowledge distillation, and then jointly optimizes distillation and cross-lingual contrastive learning to improve retrieval discrimination while preserving alignment. Extensive experiments show that MIMO consistently outperforms existing cross-lingual training baselines across various MLIR and Multi-Monolingual benchmarks. MIMO also remains competitive with off-the-shelf models of similar or larger parameter scales. Furthermore, our cross-lingual Alignment-Uniformity analysis clarifies the distinct roles of the two loss components and shows that their combination yields a favorable trade-off between alignment and uniformity. 
+
+---
+# Fighting Numerical Hallucinations via Data-centric Compilation for Online Financial QA 
+
+**Authors**: Hao Chen, Xing Tang, Qirui Liu, Weijie Shi, Shiwei Li, Fuyuan Lyu, Weihong Luo, Xiku Du, Xiuqiang He  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.31064)  
+
+**Abstract**: Large Language Models (LLMs) have significantly advanced online data services, particularly in the domain of financial question answering (FinQA). However, such systems remain susceptible to numerical reasoning hallucinations, which critically undermine reliability in high-stakes financial applications. Although retrieval-augmented generation (RAG) has been widely adopted to ground responses in external knowledge, it introduces three persistent challenges: noise sensitivity, calculation fragility, and an auditability crisis. Existing model-centric approaches, which primarily focus on optimizing either the retriever or generator in isolation, still struggle to address these issues in an integrated manner. In this work, we pioneer a data-centric paradigm and propose a novel framework, the Data-centric Reasoning Compiler (DCRC). The framework operates through three cohesive phases: (1) adversarial data construction, which synthesizes training examples with controlled noise to teach robustness; (2) multi-stage training that cultivates a Data-centric Structuring Agent (DSA) capable of explicit evidence auditing and program synthesis; and (3) a compile-and-execute inference process, where the DSA transforms user queries and retrieved documents into verifiable, executable reasoning programs. This data-driven framework ensures faithful numerical reasoning by design. We conduct extensive experiments on established offline benchmarks and further validate our framework through deployment in a real-world online financial QA system. 
+
+---
+# Graph-GRPO: Dependency-Aware Credit Assignment for Generative E-commerce Search Relevance 
+
+**Authors**: Jiarui Che, Yifei Chen, Zhixing Tian, Chenyang Wang, Ziguang Cheng  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.31003)  
+
+**Abstract**: Search relevance modeling is a core task in e-commerce search systems, assessing how well a user query matches candidate products. Rather than relying on a single holistic matching signal, relevance judgment often requires structured reasoning over query understanding, product understanding, and facet-level matching. With large language models (LLMs), this process is increasingly formulated as chain-of-thought (CoT) reasoning and optimized with reinforcement learning (RL). However, existing RL methods mainly rely on outcome-level rewards and treat the entire reasoning chain as a single optimization unit. This makes it difficult to distinguish faulty reasoning steps from correct intermediate ones, leading to misaligned credit assignment. Although process-reward methods provide denser supervision, they often treat reasoning steps independently and ignore dependency-driven error propagation, making responsibility attribution difficult and limiting the optimization of structured relevance reasoning. We propose Graph-GRPO, a graph-structured extension of GRPO for multi-component relevance reasoning. Graph-GRPO constructs a relevance reasoning dependency graph, where CoT steps are modeled as nodes and their logical dependencies as edges. It propagates outcome-level rewards over the graph to derive step-level credit signals, enabling more accurate fine-grained credit assignment. We further introduce a main-loss-driven controller that adaptively adjusts edge-wise credit-propagation coefficients. Together with CoT random masking for supervised policy initialization and graph-node-based multi-head distillation, we build a trainable and deployable framework for generative relevance modeling. Extensive offline evaluations and online A/B tests on a leading e-commerce platform demonstrate that the Graph-GRPO-based framework improves relevance classification metrics and key engagement metrics. 
+
+---
+# Reading Between the Citations: A Typed Claim Network for Scientific Literature 
+
+**Authors**: Ning Ding, Sergio J. Rodríguez Méndez, Pouya G. Omran  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.30966)  
+
+**Abstract**: Knowledge graphs over corpora of inter-referencing documents - scholarly papers, legal opinions, policy briefs - encode the topology of reference but not its stance. The standard representation collapses a rich evaluative relation into an untyped edge, losing the very content that supports community-level queries about how one document is received by another. We propose the claim network: a representational pattern in which each cross-document reference is reified as a typed claim, carrying source, target, claim text, and a four-class stance label grounded in the citation-intent literature. We give a construction pipeline applicable to any corpus of scholarly inter-referencing documents and instantiate it on a corpus of 127 papers in 3D point cloud semantic segmentation, producing a network of 8,260 typed claims. Three downstream task families demonstrate what the network enables: retrieval signal augmentation, aggregated-stance summarisation, and topological analytics. Head-to-head evaluation against standard Retrieval-Augmented Generation (RAG) baselines shows that the gain over flat retrieval is the gain from the right intermediate representation rather than the wrong one. 
+
+---
+# Inference-Free Multimodal Learned Sparse Retrieval for Production-Scale Visual Document Search 
+
+**Authors**: Gyu-Hwung Cho, Youngjune Lee, Kiyoon Jeong, Siyoung Lee, Sanggyu Han, Hervé Dejean, Stéphane Clinchant, Seung-won Hwang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.30917)  
+
+**Abstract**: As large-scale visual-document corpora such as arXiv papers and enterprise PDFs continue to grow, visual-document retrieval has gained increasing attention; yet it still lacks a deployable system that lexically indexes visual documents to serve queries without neural encoding at scale. Existing methods either achieve strong retrieval quality with VLM-based dense or multi-vector models but require neural query encoding at serving time, or avoid query encoding with OCR- or caption-based BM25 at the cost of time-consuming text extraction or generation. To fill this missing serving regime, we present V-SPLADE, an inference-free sparse retriever for visual-document retrieval. However, such inference-free multimodal learned sparse retrieval systems remain underexplored and have not yet shown dense-level effectiveness under high sparsity. We attribute this limitation to a lexical grounding problem: visual sparse representations often fail to capture the lexical content embedded in document images. To address this problem, we introduce caption-gated token supervision, a training-only signal that uses VLM-generated captions as lexical cues to activate retrieval-relevant vocabulary dimensions. With this supervision, V-SPLADE improves average NDCG@5 across six visual-document retrieval benchmarks by +13.8pp over the same-scale dense baseline and by up to +6.3pp over OCR- or caption-based BM25 baselines. On an 18.7M-document corpus, it more than doubles R@5 over the same-scale dense baseline and further improves competing retrievers through score fusion by up to +2.4pp R@5. Code will be released soon at this https URL. 
+
+---
+# On the impact of retrieved content representations in RAG Pipelines 
+
+**Authors**: Jonathan J Ross, Bevan Koopman, Anton van der Vegt, Guido Zuccon  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.30790)  
+
+**Abstract**: Retrieval-Augmented Generation (RAG) supplements a language model's input with retrieved documents, yet most RAG pipelines inherit retrieval components designed for human readers. How retrieved content should be represented when the consumer is a large language model (LLM) rather than a human is less well understood. Recent work has proposed transformations of retrieved content and identified properties that affect generation, but each examines a single transformation or property in isolation, leaving open which features of a document's representation matter most. We address this with a controlled comparison: holding retrieval fixed, we vary only the representation of retrieved documents, comparing an original baseline against thirteen transformations spanning selection, summarisation, and reformulation, in query-dependent and query-independent variants. Across these fourteen representations we measure question-answering accuracy for four generators, and for each representation we also measure answer retention: whether a known answer-bearing document still supports its answer after transformation. We find that answer retention is the primary determinant of generator accuracy; notably, when retention is high, a representation's wording, structure, length, and query-dependence have limited effect. This suggests that accuracy gains attributed to specific mechanisms in prior work may be partly explained by how well those mechanisms preserve answer-bearing content, an attribution that cannot be settled without controlling for retention. 
+
+---
+# FOSTER: First-order Dataset Distillation for Text-based Sequential Recommendation 
+
+**Authors**: Hung Vinh Tran, Tong Chen, Xinyi Gao, Junliang Yu, Julien Monteil, Hongzhi Yin  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.30772)  
+
+**Abstract**: Text-based sequential recommender systems, while greatly improving recommendation accuracy by incorporating item contexts, are undeniably more expensive to train. By condensing a large dataset into a compact set of synthetic samples for model training, dataset distillation offers a promising solution. However, its adoption in text-based sequential recommendation is non-trivial given the large pool of discrete items. This challenge is further compounded by language model-based item encoding, which makes bi-level optimization commonly used in dataset distillation prohibitively expensive. To this end, we propose First-order dataset distillation for Text-based Sequential Recommendation (FOSTER), which facilitates effectiveness and efficiency via three novel components: (1) stochastic item subset sampling that replaces costly full-corpus embedding extraction at each distillation step; (2) first-order optimization with trajectory-anchored parameter reset to avoid expensive bi-level gradient computation; and (3) regularization that explicitly promotes co-occurrence between semantically similar items in the synthetic sequences. Extensive experiments on three benchmarks show that FOSTER consistently outperforms existing dataset distillation and coreset selection baselines, approximating full-dataset performance using as few as 20 synthetic interaction sequences. 
+
+---
+# Effects of Vertex Merging & Splitting on Large Coauthorship Networks: A Counterfactual Analysis 
+
+**Authors**: Jinseok Kim  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.31555)  
+
+**Abstract**: Researchers analyze coauthorship networks, but author name ambiguity in their network data remains a significant challenge as it can change the number of vertices, distorting network properties. Although many scholars use straightforward heuristics for author name disambiguation using author's forename initials, these techniques can skew our understanding of network properties by merging or splitting vertices, raising concerns about the reliability and validity of these methods. This study investigates how different levels of vertex merging and splitting errors that are induced by name ambiguity impact network measures, using three large coauthorship networks with highly accurate algorithmic author name disambiguation. As a counterfactual scenario, two initial-based disambiguation methods widely used in coauthorship network research were applied to these datasets. Nine coauthorship network metrics were computed while varying randomly the numbers of merged or split vertices. Results show that initial-based disambiguation generates coauthorship networks with specific network properties underestimated, leading to the discovery of coauthorship networks that are smaller and more closely connected than they genuinely are. In contrast, other network metric values increase, making authors appear more collaborative and embedded within less fragmented research communities than they are. The study emphasizes the importance of careful disambiguation of vertex names in analyzing coauthorship networks for rigorous and valid findings. 
+
+---
+# Latent Space Disentanglement via Activation Steering for Interpretable Attribute Control in Symbolic Music Generation 
+
+**Authors**: Ioannis Prokopiou, Pantelis Vikatos, Maximos Kaliakatsos-Papakostas, Theodoros Giannakopoulos, Themos Stafylakis  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.31295)  
+
+**Abstract**: Transformer-based architectures have significantly advanced the generation of complex symbolic sequences, yet a significant gap remains in achieving fine-grained, interpretable control over discrete signal attributes. This paper investigates the mechanistic interpretability of the Multitrack Music Transformer (MMT) and proposes a framework for deterministic attribute modulation without retraining to bridge this gap via inference-time activation steering. Utilizing the Difference-in-Means (DiffMean) methodology, we isolate latent directions for signal attributes, specifically Pitch and Duration, within the residual stream. We validate the Linear Representation Hypothesis in this domain, achieving high correlation between steering magnitude and attribute shift. To address the inherent feature entanglement in multi-attribute steering, we introduce a Dual Steering framework utilizing Gram-Schmidt Orthogonalization. Experimental results demonstrate that this geometric decoupling reduces conceptual interference and signal degradation compared to naive vector addition, enabling independent deterministic control even against strong autoregressive conditioning. 
+
+---
+# Vector Linking via Cross-Model Local Isometric Consistency 
+
+**Authors**: Ziying Chen, Yang Cao, He Sun, Beining Yang, Tianjian Yang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.31100)  
+
+**Abstract**: We study Vector Linking: given two embedding clouds produced by different black-box encoders over partially overlapping datasets, recover cross-model object correspondences using only vectors. Empirically and theoretically, we show that independently trained contrastive encoders exhibit local geometric consistency: short-range distances are approximately preserved up to a scale factor, while long-range distances are not due to model-specific distortion. Building on this, we propose an iterative, reference-based geometric embedding hashing that recovers vector links from a tiny seed set of paired anchors. It represents each vector by distances to sampled paired anchors, proposes candidate links via hash-space matching, and aggregates evidence across views in a Beta-Bernoulli posterior to bootstrap high-confidence links as new anchors. Experiments across multiple benchmarks and embedding model pairs demonstrate accurate and robust linking under varying overlap, seed budgets, and out-of-domain anchors, with applications to vector database integration and cross-model clustering. Code is available at this https URL. 
+
+---
+# Beyond Static Dialogues: Benchmarking Realistic, Heterogeneous, and Evolving Long-Term Memory 
+
+**Authors**: Han Zhang, Zihao Tang, Xin Yu, Xiao Liu, Yeyun Gong, Haizhen Huang, Yan Lu, Weiwei Deng, Feng Sun, Qi Zhang, Hanfang Yang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.31086)  
+
+**Abstract**: In existing memory benchmarks for Large Language Models (LLMs), the evaluated dialogue sessions often lack long-term semantic consistency, and the underlying personas tend to be flat and static. Furthermore, in real-world scenarios, interactions between users and assistants involve more diverse, heterogeneous data streams, such as documents and emails. These shortcomings significantly limit the realism and effectiveness of current evaluations. To address these limitations, we introduce RHELM (Realistic, Heterogeneous, and Evolving Long-term Memory). Driven by meticulously crafted user profiles and a novel LOOP (pLan-rOllout-evOlve-Prune) module, we construct realistic dialogues across diverse interaction scenarios that exhibit dynamic temporal evolution and long-term coherence. Crucially, these dialogues are deeply integrated with heterogeneous external sources synchronized with the user's temporal event trajectory. The resulting benchmark encompasses challenging question-answer pairs spanning seven inquiry types, with each question mapping to at least one of 27 critical memory characteristics that we identify as essential yet underexplored in current research. Comprehensive experiments across full-context models, retrieval-augmented generation (RAG) methods, and representative memory frameworks reveal that contemporary approaches still expose critical weaknesses in complex, real-world settings, particularly in resolving multi-source aggregation and real-world contextual reasoning. 
+
+---
+# SemStruct: Contextualizing Semantic Embeddings with Structural Information for Schema Matching 
+
+**Authors**: Inwon Kang, Kavitha Srinivas, Nandana Mihindukulasooriya, Sola Shirai, Parikshit Ram, Horst Samulowitz, Oshani Seneviratne  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.30729)  
+
+**Abstract**: Schema matching is a fundamental step in integrating heterogeneous data sources. While Pre-trained Language Models (PLMs) have revolutionized this task by capturing linguistic semantics, they typically process tabular data as serialized text sequences of standalone column descriptions. This serialization discards critical structural information -- specifically, the row-level co-occurrences, i.e. the relational context -- forcing models to rely solely on column header semantics or standalone distributions. To bridge this gap, we propose SemStruct, a framework that joins the semantic power of frozen PLMs with the structural inductive bias of Graph Neural Networks (GNNs). We model the table as a heterogeneous graph where columns and values are nodes connected by rows, allowing the GNN to propagate disambiguating context across the structure. Unlike other state-of-the-art methods that require proprietary LLM access and fine-tuning of language models, SemStruct keeps the language model frozen and trains only a lightweight structural encoder. Extensive experiments on the Valentine and SOTAB-SM benchmarks demonstrate that SemStruct achieves state-of-the-art performance, outperforming fully fine-tuned baselines on complex, semantically joinable datasets. Furthermore, our ablation studies reveal that row representations serve primarily as topological conduits rather than semantic entities, validating the necessity of explicit structural modeling in schema matching. 
+
+---
+# An Organization-Scoped LLM Agent Runtime Architecture for Regulated Cybersecurity Operations 
+
+**Authors**: George Fatouros, Georgios Makridis, George Kousiouris, John Soldatos, Dimosthenis Kyriazis  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.30604)  
+
+**Abstract**: Regulated cybersecurity workflows lack a runtime substrate that enforces organization-level scope across retrieval, tool calls, memory, findings, reports, and audit while remaining model-agnostic and locally deployable. Recent large language model (LLM) agent systems report strong results on isolated cybersecurity tasks, yet they do not by themselves define an auditable platform architecture for regulated security operations centre (SOC) and compliance workflows, where a single analyst may trigger actions that bind the organization, and where the runtime must integrate with existing SIEM/XDR stacks as a primary source of context and alert-driven triggers rather than operate as a standalone analytical layer. This paper proposes an organization-scoped LLM agent runtime architecture for financial cybersecurity. The contribution is a typed Security Context that is created at every entry point, including SIEM/XDR notifications ingested as first-class triggers, and enforced at every component boundary, combined with a shared Runtime Core, logical specialist subagents, a governed Tool Adapter Layer exposing SIEM/XDR query, enrichment, and response primitives under uniform policy and audit, structured findings with evidence references, tiered human-in-the-loop (HITL) gates, and append-only audit. Model Context Protocol (MCP), extended telemetry, digital twins for pentesting, graph retrieval, and federated knowledge sharing are treated as optional extension paths rather than mandatory runtime assumptions. We describe an implementable slice as the architecture's testability surface, and we propose a falsifiable evaluation plan with metric-level pass criteria for architecture readiness, security-policy enforcement, evidence traceability, output quality, and operational observability. 
+
+---
+# Exploring Autonomous Agentic Data Engineering for Model Specialization 
+
+**Authors**: Yujie Luo, Xiangyuan Ru, Jingsheng Zheng, Jingjing Wang, Yuqi Zhu, Jintian Zhang, Runnan Fang, Kewei Xu, Ye Liu, Zheng Wei, Jiang Bian, Zang Li, Shumin Deng  
+
+**Link**: [PDF](https://arxiv.org/pdf/2605.30407)  
+
+**Abstract**: Large Language Models (LLMs) have demonstrated strong performance on general tasks, while often struggling to adapt to specialized domains without high-quality domain-specific data. Existing LLM-based data curation methods primarily rely on human-designed workflows, leaving it unexamined whether LLMs can autonomously execute an end-to-end data engineering pipeline for model specialization. We formalize \textbf{Autonomous Agentic Data Engineering}, a novel task designed to evaluate LLMs as autonomous data engineers that drive model specialization through end-to-end data curation. We frame data as an optimizable component and study agents that plan, generate, and iteratively optimize training data across multiple domains, guided by post-training performance improvement. Experiments show that autonomous LLM data engineers yield substantial gains, as GPT-5.2 constructs a training curriculum that improves a student model by \textbf{57.29\%}, entirely through iterative, agent-driven data adaptation. By illuminating both potential and bottlenecks, our study establishes autonomous data engineering as a measurable capability and charts a path toward agent-driven model specialization\footnote{Code will be released at this https URL.}. 
+
+---
