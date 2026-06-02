@@ -1,0 +1,291 @@
+# ODTQA-FoRe: An Open-Domain Tabular Question Answering Dataset for Future Data Forecasting and Reasoning 
+
+**Authors**: Zhensheng Wang, Xiaole Liu, Wenmian Yang, Kun Zhou, Yiquan Zhang, Weijia Jia  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.02433)  
+
+**Abstract**: The rapid development of LLMs has significantly advanced tabular question answering, but most systems cannot perform future-oriented numerical prediction. To address this gap, we introduce a novel task, Open-Domain Tabular Question Answering for Future Data Forecasting and Reasoning, and propose the first dataset to cover time-series forecasting and forecast-based reasoning scenarios using real estate data. This task poses challenges in retrieving precise historical data, overcoming the forecasting limitations of LLMs, and standardizing responses for diverse queries. To solve the above challenges, we propose TimeFore, an LLM agent-based framework that decomposes the problem into three collaborative roles: a Retriever autonomously generates SQL to fetch data, a Forecaster invokes external time-series models for higher accuracy, and an Analyzer synthesizes the results to construct a precise and consistent final answer. Extensive experiments demonstrate the effectiveness of our TimeFore. 
+
+---
+# Dynamic Spectral Denoising with Global-Context Attention for Multi-Behavior Recommendation 
+
+**Authors**: Miaomiao Cai, Yunshan Ma, Fangqi Zhu, Junfeng Fang, Zhijie Zhang, Zhiyong Cheng, Xiang Wang, See-Kiong Ng  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.02417)  
+
+**Abstract**: Multi-behavior recommendation improves target-behavior prediction by exploiting heterogeneous auxiliary feedback (e.g., view, collect, and cart), yet its robustness is undermined by behavior-dependent noise and inconsistency. We argue that the key bottleneck is a representation-level failure caused by two coupled heterogeneities. First, intra-behavior representation entanglement arises when multi-hop propagation blends incidental signals with true preferences in the embedding space, making coarse spatial denoising unable to suppress noise without sacrificing informative niche signals. Second, inter-behavior reliability heterogeneity complicates cross-behavior fusion because the predictive value of auxiliary behaviors varies across users and contexts. Without reliability calibration, frequent yet unreliable signals may dominate aggregation and cause target-intent drift.
+To address this bottleneck, we propose Dynamic Spectral Denoising with Global-Context Attention for Multi-Behavior Recommendation (SpectraMB), a target-oriented model that performs representation purification before reliability-aware fusion. SpectraMB introduces Dynamic Feature-Level Spectral Filtering, which re-parameterizes embeddings along the feature dimension into a feature-frequency space and learns view-adaptive spectral modulation under target supervision, enabling component-wise purification without hand-crafted frequency assumptions. It further proposes Global-Context Attention Fusion, which uses a purified global representation as a context anchor to assess view compatibility and perform reliability-aware aggregation, while a residual global backbone preserves collaborative structure. Extensive experiments on three real-world datasets show that SpectraMB achieves the best results in most evaluation settings and exhibits improved robustness under noisy interactions. 
+
+---
+# Rank-Constrained Deep Matrix Completion for Group Recommendation 
+
+**Authors**: Mubaraka Sani Ibrahim, Lehel Csató, Isah Charles Saidu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.01948)  
+
+**Abstract**: The growing popularity of group activities has increased the need for methods that provide recommendations to groups of users given their individual preferences. Many existing group recommender systems rely on aggregating individual user preferences, but they often struggle with high-dimensional and highly sparse rating data commonly found in real-world scenarios. We propose Group Rank-Constrained Deep Matrix Completion (Group RC-DMC), a novel framework that extends RC-DMC by integrating group-level representation learning via a Set-Transformer aggregator, jointly leveraging low-rank structure and attention-based nonlinear modeling. Unlike most existing group recommender systems, Group RC-DMC unifies explicit low-rank regularization, linear encoder-decoder architectures, and attention-based nonlinear group modeling within a single framework, yielding accurate predictions at both the individual and group levels. Group RC-DMC addresses data sparsity through low-rank matrix completion, computing per-user latent representations from observed ratings only, and enforcing a rank constraint on the latent space using a nuclear-norm proximal step based on periodic singular value thresholding. The decoder is parametrized as a low-rank factorization, enabling efficient inference. Experimental results on the MovieLens and Goodbooks datasets demonstrate that Group RC-DMC achieves superior reconstruction accuracy, measured by lower group RMSE, while remaining computationally efficient and competitive in group-level performance in terms of precision, recall, and F1 score compared with weighted-before-factorization (WBF) and after-factorization (AF) baselines. The results highlight the model's ability to recover the underlying low-rank structure of user-item interactions and provide robust group recommendations across small, medium, and large user groups. 
+
+---
+# Decoupled Residual Quantization for Robust Semantic IDs in Recommendation 
+
+**Authors**: Xuesi Wang, Junjie Wang, Ziliang Wang, Weijie Bian, Guanxing Zhang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.01844)  
+
+**Abstract**: Semantic IDs represent items as shared discrete token sequences and have become a practical tool for recommendation and retrieval. Yet it remains difficult to tell why a tokenizer fails: poor quality may come from codebook underutilization, unstable decision boundaries, or geometric distortion of the embedding space. This paper develops a quantitative framework for diagnosing these failures through expected codeword overlap and effective codebook capacity. The former measures expected codeword confusion under retrieval-time perturbation, while the latter converts that confusion into an effective number of usable, well-separated codes. The framework links semantic boundary confusion to both code usage imbalance and Euclidean geometric constraints. As a proof of concept, we present Decoupled Residual Quantization (DRQ), which separates continuous geometry reconstruction from discrete distribution matching. Experiments on a large-scale industrial dataset show that Semantic ID quality is multi-objective: symbolic robustness, reconstruction fidelity, and behavior-aware soft matching each stress different aspects of a tokenizer. These downstream observations are based on one proprietary industrial dataset, so they should be read as a case study rather than a universal benchmark claim. 
+
+---
+# Breaking the Information Silo: Semantic Personas for Cross-Domain Recommendation 
+
+**Authors**: Jonathan Mayo, Moshe Unger, Konstantin Bauman  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.01783)  
+
+**Abstract**: Digital platforms increasingly operate as isolated information silos, limiting their ability to construct comprehensive user representations across domains. Cross-domain recommender systems seek to overcome this limitation by transferring knowledge from a source domain to a target domain, yet most existing approaches depend on shared users, shared items, or structurally similar interaction graphs. These assumptions are often unrealistic across independent platforms. We propose SPHERE (Semantic Personas for Heterogeneous cross-domain Recommendation), a design artifact that enables recommendation knowledge transfer across strictly disjoint domains with no shared users or items. Rather than aligning domains through identity or graph structure, SPHERE uses large language models to induce a shared behavioral vocabulary, generate structured semantic personas for users, and retrieve behaviorally similar source-domain communities that form a Community Source Persona. This semantic signal is integrated with collaborative signals through a dual-tower architecture and dynamic fusion gate, allowing SPHERE to augment standard recommender backbones. Empirical evaluation across Amazon Books, Goodreads, and Steam demonstrates consistent improvements over NCF, SVD++, and LightGCN baselines under full-ranking evaluation. The results show that cross-domain transfer effectiveness is not determined solely by semantic proximity between domains; rather, it depends critically on the structural density and native predictive strength of the target domain. The study contributes to information systems research by reframing cross-domain personalization as behavior-based semantic alignment, offering a practical mechanism for overcoming information silos while preserving interpretability and modularity. 
+
+---
+# Whole-Pool Setwise Reranking with Long-Context Language Models 
+
+**Authors**: Hang Li, Chuting Yu, Teerapong Leelanupab, Bevan Koopman, Guido Zuccon  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.01782)  
+
+**Abstract**: Previous LLM-based passage re-rankers are often expensive and slow because the input context constraints require the LLM to make many dependent model calls. We study how recent long-context LLMs change this problem: when the full set of retrieved candidate passages can be shown to the model at once, ranking no longer has to be reconstructed from many overlapping local comparisons. We propose Whole-Pool Setwise re-ranking, where each call considers all currently unranked candidate passages, and introduce DualEnd, which identifies both the most and least relevant passages in one call. By filling the ranking from both ends, DualEnd ranks 100 candidates with 50 serial LLM calls, compared with 99 calls for comparable one-passage-at-a-time whole-pool methods. Experiments with nine open-weight LLMs on two passage re-ranking benchmarks, measuring effectiveness, call count, token use, runtime, and output reliability shows that long context is not merely more prompt space, but an opportunity to make LLM re-rankers both effective and efficient. 
+
+---
+# Time-Aware Diffusion based on Preference Disentanglement for Generative Recommendation 
+
+**Authors**: Bangguo Zhu, Peng Huo, Yuanbo Zhao, Zhicheng Du, Jun Yin, Senzhang Wang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.01670)  
+
+**Abstract**: Recently, Generative Recommenders (GRs) have emerged as a transformative recommendation paradigm by replacing traditional item IDs with semantic indices (SIDs). Owing to the exceptional generative capabilities of diffusion models, a few pioneering works explore developing GRs with diffusion architectures as the backbone. However, a fatal limitation of existing diffusion-based GRs is that the diffusion process applies uniformly to all items within the historical interactions. In contrast, the user preference is shaped by multifaceted time-evolving factors and thus exhibits a non-stationary distribution in the temporal aspect. To bridge this gap, this study proposes a novel GR framework, named TDPM, by designing the time-aware diffusion on SID tokens. Specifically, TDPM explicitly integrates the impact of time-evolving user preferences into the diffusion process. In detail, the user preference is disentangled into (i) the period preference, which remains consistent over a long time-span, and (ii) the point preference, which is triggered by recent focal events. Extensive experiments on three public real-world datasets demonstrate the significant superiority of TDPM over the state-of-the-art baselines. TDPM achieves average improvements of up to 29.21% and 25.45% in terms of HR@20 and NDCG@20, respectively. The ablation study further underscores the necessity of time-aware token diffusion in diffusion-based GRs. 
+
+---
+# TechGraphRAG: An Agentic Graph-Augmented RAG Framework for Technical Literature Reasoning 
+
+**Authors**: Kanwar Bharat Singh  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.01613)  
+
+**Abstract**: This paper presents an agentic retrieval-augmented generation (RAG) framework for domain-specific technical reasoning support, instantiated over a curated corpus of approximately 2,100 academic papers in intelligent tires, vehicle dynamics, and vehicle control. Unlike conventional single-pass RAG systems, the proposed architecture employs a 13-step autonomous pipeline that classifies queries by intent, scores evidence sufficiency against a multi-dimensional rubric, performs agentic retry with drift-guarded query reformulation, searches external academic databases (Crossref, OpenAlex, Semantic Scholar) through iterative optimize--search--vet loops, traverses a Neo4j knowledge graph for relational context, verifies citation integrity, and applies post-generation quality checks with automatic regeneration. Key contributions include a 100-point evidence sufficiency scoring framework across five dimensions with relevance damping and hybrid rule-based/LLM review; a route-dependent external search architecture with iterative agentic loops; a knowledge graph constructed via LLM-based entity extraction and OpenAlex author validation with intra-corpus citation resolution; and a self-correcting generation loop with citation verification and quality assessment. The framework is presented as a practical, implemented case study illustrating how agentic, evidence-grounded RAG can support literature navigation and technical reasoning over large, domain-specific corpora. 
+
+---
+# Semantic Retrieval for Product Search in E-Commerce 
+
+**Authors**: Nikhil Kothari, Saksham Samdani, Ritam Mallick, Praveen Gupta, Ankit Vijay, Surender Kumar  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.01504)  
+
+**Abstract**: Semantic retrieval in e-commerce must handle short, noisy, and colloquial queries over large product catalogs with fine-grained attribute distinctions. We present a Siamese LLM dual-encoder trained through a two-stage pipeline: contrastive learning with a false-negative margin mask to prevent penalization of near-duplicate products, followed by Relative Odds Alignment for Retrieval (ROAR), a preference optimization objective that extends Bradley-Terry to variable-sized graded relevance groups via consecutive odds-ratio margins. The training corpus mirrors this progression - substitute query-product pairs provide coarse semantic supervision in Stage 1 and graded relevance annotations drive fine-grained ranking in Stage 2. The resulting system accurately retrieves exact matches while correctly ordering substitutes and complementary products, with gains confirmed across query-frequency strata and business verticals, and statistical significance validated through live A/B deployment at scale. 
+
+---
+# Quantizing Intent: Cross-Domain Semantic IDs from Organic Activity for Industrial Ranking 
+
+**Authors**: Julie Choi, Haoran Ye, Zhiwei Ding, Bo Long, Benjamin Zelditch, Arpita Vats  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.01396)  
+
+**Abstract**: Ads click-through rate (CTR) prediction is constrained by sparse user supervision: most users engage with ads infrequently while generating dense behavioral evidence in organic surfaces such as feed. Transferring these cross-domain signals into ads ranking is difficult due to domain mismatch, serving cost, and production complexity. We introduce cross-domain user Semantic IDs (SIDs) derived from organic feed activity and show that behavioral activity richness governs cross-domain transfer quality: SIDs from user profile text yield +0.036% AUC, SIDs from an activity-tuned LLaMA-based user embedding model yield +0.107%, and SIDs from direct feed activity behavioral embeddings yield +0.213%. We further propose RQ-FSQ, a residual finite scalar quantization method that discretizes pre-trained embeddings while matching dense-embedding AUC at substantially smaller storage. Across two heterogeneous sources, RQ-FSQ matches or slightly exceeds dense source embeddings, achieving +0.351% AUC for Feed Activity at about 30x smaller storage and +0.265% AUC for Activity-Tuned LLaMA at about 280x smaller storage. We also introduce a Hierarchical Discrete Embedding module that encodes multi-level SIDs through prefix n-gram sparse embedding tables trained end-to-end under the CTR objective. In a large-scale industrial ads ranking system, cold-start segment analysis shows gains up to +1.522% for users with near-zero ad interaction history, validating cross-domain behavioral transfer as an effective bridge for sparse-history ranking. 
+
+---
+# Test-Time Training for Zero-Resource Dense Retrieval Reranking 
+
+**Authors**: Shiyan Liu, Yichen Li  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.01070)  
+
+**Abstract**: Dense retrievers excel at first-stage candidate generation but lack effective reranking in zero-resource settings. Existing approaches face a fundamental dilemma: cross-encoders deliver strong reranking quality but require costly supervised training and incur high latency, while unsupervised BM25 reranking consistently degrades dense retrieval performance on most of BEIR benchmarks. We propose DART (Dense Adaptive Reranking at Test-time), which resolves this dilemma by adapting the scoring function at inference time. For each query, the top-ranked documents serve as pseudo-positive examples and the bottom-ranked as pseudo-negative examples, providing noisy but readily available supervision to adapt a bilinear scoring matrix $W$ via a small number of gradient updates. We further introduce a confidence-weighted margin loss and a cross-query momentum buffer that warm-starts adaptation across queries. On six BEIR benchmarks, DART achieves a mean per-dataset relative NDCG@10 gain of +2.1% over the dense retrieval baseline with under 10ms additional latency per query, demonstrating a powerful capability for zero-shot performance enhancement and cross-domain generalization. 
+
+---
+# SkillPager: Query-Adaptive Intra-Skill Navigation via Semantic Node Retrieval 
+
+**Authors**: Zicai Cui, Zihan Guo, Weiwen Liu, Weinan Zhang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.00822)  
+
+**Abstract**: Skill-based LLM agents increasingly rely on long procedural documents, but full-document prompting wastes tokens and dilutes information critical to execution. We study this setting as intra-skill retrieval, where the goal is to select a minimal, execution-sufficient context from a known skill document given a query. We present SkillPager, a two-stage framework that parses each Markdown skill into typed semantic nodes offline and leverages Maximal Marginal Relevance (MMR) to perform global, query-conditioned node selection online. On a benchmark of 395 skills and 1,975 queries, SkillPager achieves 78.89% LLM-judged context sufficiency, compared to 82.23% for the exhaustive full-document baseline, while reducing prompt tokens by 47.04%. A granularity ablation shows that applying the same retrieval algorithm to raw fixed-length chunks reaches a comparable 81.77% sufficiency but increases token cost by 28.81%, demonstrating that efficiency gains are driven by typed semantic granularity rather than the retrieval algorithm alone. Among graph-based baselines, SkillPager outperforms the strongest baseline by a margin of 12.16%. Further ablations show that supporting content is most effective when retained in the candidate pool and selected adaptively rather than removed by static heuristics. These results identify typed intra-document retrieval as a distinct access problem for skill-based agents. 
+
+---
+# SpikeHash: Learning Binary Codes with Spiking Neural Networks for Cross-Modal Hashing Retrieval 
+
+**Authors**: Yukuan Zhang, Jiarui Zhao, Shangqing Nie, Shengsheng Wang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.00740)  
+
+**Abstract**: Cross-modal hashing retrieval encodes heterogeneous data into compact binary codes for efficient Hamming-space search. Existing methods usually learn cross-modal semantics in continuous feature spaces and generate binary codes through a final sign operation, which weakly couples training optimization with discrete hash retrieval. We propose SpikeHash, a unified spiking framework that formulates cross-modal hashing as spike-state evolution, directional spike interaction, and competitive spike readout. Specifically, SpikeHash converts image and text features into multi-timestep spike sequences. In a shared Hamming space, the two spike sequences jointly drive the temporal evolution of a shared hash state. Cross-modal interaction is further performed through directional spike modulation, enabling each modality to influence the firing dynamics of the other. Crucially, SpikeHash replaces the conventional continuous hash head with a positive-negative spiking hash readout, where each hash bit is produced by temporal competition between paired spike channels. Experimental results show that SpikeHash achieves competitive retrieval accuracy on three benchmark datasets while reducing the parameter size, operation count, and estimated energy of the hash learning stage, suggesting a compact spiking alternative to conventional continuous hash mapping. The project page is available at this https URL. 
+
+---
+# MemGraphRAG: Memory-based Multi-Agent System for Graph Retrieval-Augmented Generation 
+
+**Authors**: Chuanjie Wu, Zhishang Xiang, Yunbo Tang, Zerui Chen, Qinggang Zhang, Jinsong Su  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.00610)  
+
+**Abstract**: Retrieval-Augmented Generation (RAG) has become an essential method for mitigating hallucinations in Large Language Models (LLMs) by leveraging external knowledge. Although effective for simple queries, traditional RAG struggles with large-scale, unstructured corpora where information is highly fragmented. Graph-based RAG (GraphRAG) incorporates knowledge graphs to capture structural relationships, enabling more comprehensive retrieval for complex reasoning. However, existing GraphRAG methods rely on isolated, fragment-level extraction for graph construction, lacking a global perspective on the whole corpus. As a result, these methods frequently lead to thematically inconsistent, logically conflicting, and structurally fragmented graphs that degrade retrieval performance. In this paper, we propose MemGraphRAG, a novel framework that introduces a memory-based multi-agent system to ensure high-quality graph construction. Specifically, MemGraphRAG employs a collaborative society of agents supported by shared memory, which provides a unified global context throughout the extraction process. This mechanism allows agents to dynamically resolve logical conflicts and maintain structural connectivity throughout the corpus. Furthermore, we propose a memory-aware hierarchical retrieval algorithm tailored for the constructed graph. Extensive experiments on multiple benchmarks demonstrate that MemGraphRAG outperforms the state-of-the-art baseline models with comparable efficiency. Our code is available at this https URL. 
+
+---
+# Critic-R: Improving Agentic Search using Instruction-tuned Retrievers with Natural Language Introspective Feedback 
+
+**Authors**: Md Zarif Ul Alam, Alireza Salemi, Hamed Zamani  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.00590)  
+
+**Abstract**: Agentic search systems iteratively interact with retrieval models to answer complex queries. Despite substantial progress, optimizing retrievers for agentic search remains challenging, often requiring heavy co-training or gold-standard annotations that limit real-world applicability. We propose Critic-R, a framework that explicitly closes the feedback loop between the reasoning agent and the retrieval model during both inference and training. Critic-R introduces a critic model that evaluates the agent's introspective reasoning trace after consuming retrieved evidence to determine whether the retrieved context sufficiently supports the next reasoning step. Critic-R has two complementary mechanisms: Critic-R-Zero, an inference-time query refinement loop that iteratively rewrites queries and retrieval instructions, and Critic-Embed, an optimization approach for retrieval models that leverages successful and failed refinement trajectories as automatic supervision without requiring manual relevance annotation. We evaluate Critic-R on HotpotQA, 2WikiMultihopQA, MuSiQue, and Bamboogle. Results show that Critic-R significantly improves both retrieval quality and downstream answer accuracy. 
+
+---
+# Trustworthy Recommendation in the Era of Large Language Models: Opportunities and Challenges 
+
+**Authors**: Bohao Wang, Yu Cui, Zhenxiang Xu, Jujia Zhao, Chenxiao Fan, Jizhi Zhang, Weiqin Yang, Shengjia Zhang, Sirui Chen, Yang Zhang, Xiaoyan Zhao, Wenjie Wang, Chongming Gao, Fuli Feng, Xiangnan He, Jiawei Chen  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.00540)  
+
+**Abstract**: The field of recommender systems (RS) is currently undergoing two profound paradigm shifts. From the perspective of objectives, the goal has shifted beyond mere recommendation accuracy to comprehensive trustworthiness, encompassing multiple dimensions such as robustness, fairness, and privacy preservation. From a technical perspective, Large Language Models (LLMs) have been extensively integrated into RS, reshaping the foundations of recommendation through richer semantic understanding, stronger intent reasoning, and more flexible user interactions. The convergence of these two shifts prompts a timely and pivotal question: how does the integration of LLMs reshape the landscape of trustworthy recommendation? In this work, we present a systematic review of trustworthy LLM-empowered recommendation. By comprehensively analyzing over 200 recent studies, we reveal that the introduction of LLMs acts as a double-edged sword. While their advanced mechanisms and user-friendly interfaces offer unprecedented opportunities to enhance trustworthiness, they simultaneously introduce new risks, such as novel forms of bias and hallucination-induced issues. To characterize this dual impact, we systematically identify 13 opportunities and 18 challenges across six fundamental dimensions of trustworthiness, and accordingly organize the existing literature into a novel taxonomy. We also provide a comprehensive review of commonly used datasets and evaluation metrics to facilitate empirical validation. Finally, we identify critical open challenges and outline future directions, hoping to inspire future research on this emerging topic. 
+
+---
+# UniPinRec: Unifying Generative Retrieval and Ranking at Pinterest Scale 
+
+**Authors**: Hanyu Li, Yi-Ping Hsu, Aditya Mantha, Prabhat Agarwal, Laksh Bhasin, Jialu Wang, Hongtao Lin, Bella Huang, Yaxin Li, Xinyi Li, Chuxi Wang, Kousik Rajesh, Hooshmand Shokri Razaghi, Shunyao Li, Zongyue Qin, Jaewon Yang, James Li, Dhruvil Deven Badani, Jiajing Xu, Charles Rosenberg  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.00422)  
+
+**Abstract**: Modern recommendation systems predominantly train retrieval and ranking as separate models despite both increasingly relying on large transformers encoding the same user behavior data, duplicating parameters, compute, and serving cost. Prior work unifies the model architecture but not the full pipeline: input formats, training procedures, and serving stacks remain fragmented across stages. We present UniPinRec, which achieves full-stack unification of retrieval and ranking at Pinterest: one input format, one model, one training stage, deployed within existing serving infrastructure. A shared transformer encodes the user action sequence into candidate-independent representations that branch into retrieval (ANN dot-product) and ranking (cross-attention) via task-specific heads. Three ideas make this work: (1) Masked Action Modeling (MAM) eliminates interleaving, enabling weight sharing without doubling context length; (2) Blended training examples pair action sequences with feedview impression slates to satisfy both objectives jointly; (3) Cross-stage KV cache sharing reuses user-history computation from retrieval for ranking, reducing total FLOPs versus serving two independent models. Deployed in the Pinterest core surfaces, UniPinRec delivers approximately +1% online engagement lift while cutting end-to-end serving latency by 11.1% and lifting QPS by 63.6%. To our knowledge, this is the first full-stack unification of retrieval and ranking, covering inputs, model, training and serving, deployed in a production recommendation system. 
+
+---
+# LLMs Need Encoders for Semantic IDs Too 
+
+**Authors**: Xiangyi Chen, Zelun Wang, Xinyi Li, Yi-Ping Hsu, Jaewon Yang, Jiajing Xu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.00324)  
+
+**Abstract**: Multimodal LLMs use dedicated encoders to bridge non-language modalities (vision encoders for images, depth models for audio codec tokens) because raw token embeddings alone cannot capture modality-specific structure. We argue that Semantic IDs (SIDs), the hierarchical codes used in generative recommendation, constitute another such modality: a SID level token's meaning depends on its prefix context, yet current systems simply add SID tokens to the vocabulary and rely on training to learn these context-dependent meanings from scratch. We propose PrefixMem, a lightweight SID encoder based on prefix n-gram memory tables that provides the LLM with structured, prefix-conditioned representations at SID token positions. Like vision encoders in multimodal LLMs, PrefixMem can be pre-trained independently and then attached to any LLM for joint training. We evaluate on large-scale data from Pinterest across multiple LLM families and show that PrefixMem improves deepest-level SID accuracy by up to 46% relative and full-SID retrieval recall by up to 22% relative at matched training compute. The encoder's benefit concentrates on hard examples where greedy decoding fails, with up to 77% relative accuracy gains, confirming that SID tokens benefit from a dedicated encoder just as other non-language modalities do. 
+
+---
+# Synthetic Data from Cross-Domain Events for Large-Scale Recommendation Systems 
+
+**Authors**: Xiangyu Wang, Yawen He, Shivendra Pratap Singh, Han Huang, Mengtong Hu, Sharath Ciddu, Yi-Hsuan Hsieh, Erik Groving, Yi Ding, Jieming Di, Tony Wang, Min Yun, Xiaoyu Chen, Ling Leng, Rob Malkin  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.00282)  
+
+**Abstract**: Large-scale recommendation systems operate across diverse domains, yet they face the challenges of data sparsity and noisy implicit feedback. Traditional approaches mitigate this via model-specific knowledge distillation from source domains to a target domain. Inspired by the transformative success of synthetic data generation in large language models (LLMs), we introduce Synthetic Cross-domain Augmentation and Learning for Recommendation (SCALR), a framework that generates synthetic user-item interaction events for a target recommendation domain by leveraging observed events from a source domain. SCALR decomposes cross-domain learning into two modular stages. First, it translates observed user events in source domains by framing event generation as estimating the likelihood that a user would interact with a target-domain item, conditioned on their observed interactions in a source domain. Second, downstream models train on these synthetic events as cross-domain learning objectives, where the synthetic events augment the target domain's training data in a model-agnostic manner. Our approach yields statistically significant improvements in online A/B tests on an industrial recommendation platform. To the best of our knowledge, this is among the first works to explicitly frame cross-domain event transfer as synthetic data generation for recommendation systems. 
+
+---
+# Multimodal Music Recommendation System using LLMs 
+
+**Authors**: Srikar Prabhas Kandagatla, Sreehitha R. Narayana, Chandana Magapu, Swetha Mohan, Shamanth Kuthpadi, Hongjie Chen, Ryan A. Rossi, Franck Dernoncourt, Nesreen Ahmed  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.00125)  
+
+**Abstract**: Music recommendation systems typically treat songs as opaque tokens, relying on collaborative interaction histories which overlooks semantic or acoustic content. Prior work has explored LLM-augmented, multimodal, and text-enhanced approaches to sequential recommendation, and while some methods partially combine semantic, acoustic, or engagement signals, none jointly model all three within a unified LLM-based sequential reasoning framework that grounds recommendations in actual song content. In this work, we propose a multimodal framework for session-based music recommendation that enriches the LastFM-1K dataset with three complementary signals: (1) audio and lyric embeddings extracted using pretrained music and text representation models, (2) LLM-generated semantic metadata using the MGPHot annotation schema, and (3) listening completion ratios. We adopt the E4SRec framework by extending it with multimodal features and different item ID encoder backbones, including SASRec, BERT4Rec, and GRU4Rec. We further extend the LLM backbone option with LLaMa-2-13B, Qwen2.5-7B-Instruct, and LLaMa-3-70B in both zero-shot and fine-tuned settings. Our experiments show that integrating content-based features improves over ID-only baselines up to 95% in terms of Recall and 79% in terms of NDCG. Moreover, our experiments show that naive multimodal fusion does not always yield additive improvements, highlighting challenges in cross-modal integration. We release a large-scale multimodal benchmark for music recommendation. 
+
+---
+# SentimentLens: Reconciling Sentiment and Ratings via Dual-Modality in the Hospitality Sector 
+
+**Authors**: Dineth Jayakody, Pasindu Thenahandi, Sampath Jayarathna  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.00084)  
+
+**Abstract**: Online travel platforms generate vast volumes of user-generated hotel reviews, offering rich opportunities to understand traveler experiences at scale. However, transforming unstructured textual feedback into structured, actionable insights remains a challenging task. This paper presents SentimentLens, a scalable analysis system based on Aspect-Based Sentiment Analysis that performs knowledge extraction from unstructured hotel reviews and organizes them into interpretable service categories. SentimentLens integrates aspect term extraction, aspect sentiment classification, semantic category assignment, and multi-level analytical modules to support region-level, hotel-level, and category-level evaluation. The system is designed to operate across different geographic contexts and hospitality settings. To demonstrate its practical utility, we apply SentimentLens to a large real-world dataset of over 10,000 publicly available hotel reviews. Through extensive analysis, the framework reveals how traveler sentiment varies across regions, service categories, and hotel archetypes. We further implement a cross-modal reconciliation of textual sentiment and numerical ratings to identify latent operational conflicts, structural inconsistencies in service quality, and high-impact improvement opportunities using importance--performance and entropy-based analyses. The results show that SentimentLens effectively transforms large-scale unstructured reviews into actionable intelligence, supporting data-driven decision-making for hospitality management and tourism policy. While demonstrated using a national case study, the proposed system is generalizable to other destinations and review-driven service domains. 
+
+---
+# Beyond Text and Tables: Vision-Language Model Integration in ComProScanner for Extracting Materials Data from Scientific Figures with High Accuracy 
+
+**Authors**: Aritra Roy, Enrico Grisan, Chiara Gattinoni, John Buckeridge  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.00065)  
+
+**Abstract**: Automated extraction of materials composition-property data from scientific literature has advanced considerably with the development of large language model-based pipelines; however, existing frameworks remain limited to textual and tabular content, overlooking the substantial proportion of quantitative property data reported exclusively in scientific figures. Here, we extend ComProScanner, a fully end-to-end multi-agent framework for automated composition-property database construction, with a native vision-language model (VLM) based figure extraction capability. The extension introduces a FigureExtractor utility for caption-keyword-based figure filtering across all supported publishers, and a GraphExtractorTool agent that passes extracted figures to a configurable VLM to recover composition-property pairs from scientific charts and plots. Four VLMs are selected for evaluation on the basis of the LMArena Diagram leaderboard with an input cost criterion of less than \$1.50 per million tokens. Benchmarking on 50 piezoelectric ceramic articles from the established $d_{33}$ test corpus demonstrates that Gemini-3-Flash-Preview achieves the highest performance with a composition accuracy of 0.97 and a normalised F1 score of 0.97, whilst remaining the most cost-effective model among the four evaluated. We additionally introduce a range-based value error threshold parameter into the evaluation framework, providing a more physically meaningful assessment of numeric property values extracted from figures than exact value matching. These contributions establish VLM-integrated ComProScanner as the first materials-specific, fully automated, multimodal literature mining platform capable of extracting structured composition-property data from text, tables, and figures within a single unified pipeline. 
+
+---
+# Harness-1: Reinforcement Learning for Search Agents with State-Externalizing Harnesses 
+
+**Authors**: Pengcheng Jiang, Zhiyi Shi, Kelly Hong, Xueqiang Xu, Jiashuo Sun, Jimeng Sun, Hammad Bashir, Jiawei Han  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.02373)  
+
+**Abstract**: Search agents are often trained as policies over growing transcripts: the model must decide how to search while also remembering what it has seen, which evidence is useful, which constraints remain open, and which claims have actually been checked. We argue that this formulation puts too much routine state management inside the policy: reinforcement learning is forced to optimize both semantic search decisions and recoverable bookkeeping that the environment can maintain more reliably. We introduce Harness-1, a 20B search agent (retrieval subagent) trained with reinforcement learning inside a stateful search harness. The harness maintains environment-side working memory, including a candidate pool, an importance-tagged curated set, compact evidence links, verification records, compressed and deduplicated observations, and budget-aware context rendering. The policy retains the semantic decisions: what to search, which documents to keep or discard, what to verify, and when to stop. Across eight retrieval benchmarks spanning web, finance, patents, and multi-hop QA, Harness-1 achieves 0.730 average curated recall, outperforming the next strongest open search subagent by +11.4 points and remaining competitive with much larger frontier-model searchers. Its gains are especially strong on held-out transfer benchmarks, suggesting that reinforcement learning over explicit search state can produce retrieval behaviors that generalize beyond the training domains. Our code is available at this https URL. 
+
+---
+# Multimodal Approaches for Visually-Rich Document Type Classification: A Comparative Analysis 
+
+**Authors**: Catyana Heyne, Jürgen Frikel, Filippo Riccio  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.02162)  
+
+**Abstract**: Document type classification in visually rich documents remains challenging, as relevant information is distributed across textual, visual, and layout modalities. To capture this complexity, current approaches rely on diverse multimodal modeling strategies, resulting in heterogeneous architectures that complicate systematic comparison. This variability is also reflected in existing comparative studies, which often rely on heterogeneous evaluation setups, further complicating systematic comparison and making it difficult to assess progress. To address these limitations, this work provides a structured analysis of multimodal design strategies across transformer- and LLM-based architectures, combined with a controlled empirical comparison within a unified experimental framework. Specifically, four representative models (LayoutLMv3, Donut, Qwen3-VL-32B-Instruct, and Qwen3-32B) are evaluated on the RVL-CDIP benchmark to systematically analyze the contributions of text, image, and layout information for document type classification, with a particular focus on contrasting OCR-dependent and OCR-free approaches. The results show that specialized multimodal Transformers outperform LLM-based approaches on visually rich and layout-intensive documents. Image information contributes most strongly to reliable classification, while OCR-derived text provides useful but secondary support. These findings highlight that multimodal processing remains essential for documents with pronounced layout structure. Overall, the study provides a systematic basis for comparing multimodal architectures and offers practical guidance for selecting effective feature combinations and model designs for document type classification. 
+
+---
+# Predicting the risk of colorectal anastomotic leak based on preoperative mapping of the blood supply of the bowel 
+
+**Authors**: Zahra Tabatabaei, Jon Sporring, Mark Bremholm Ellebæk, Alaa El-Hussuna  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.02156)  
+
+**Abstract**: Anastomotic leak remains one of the most serious complications following colorectal cancer surgery, substantially affecting patient outcomes, recovery trajectories, and healthcare costs. Despite advances in imaging technology, current preoperative assessment relies only on clinical assessment, a process that is subjective, error-prone, and highly dependent on individual expertise. To date, no validated CT-based method exists to predict anastomotic leak risk prior to surgery. This protocol paper outlines a comprehensive framework for developing and validating an AI-driven system for preoperative risk assessment using pre- and post-contrast CT imaging. The study describes the stages of data collection, ethical handling, and preprocessing of patient data in accordance with GDPR, image preprocessing, and the exploration of deep learning architectures designed to generate clinically interpretable outputs. Two integrated tools constitute the main deliverables of this workflow: 1) a risk assessment module, which quantifies the likelihood of leakage by analyzing vascular and tissue features in CT scans, and 2) a Content-Based Medical Image Retrieval (CBMIR) module, which identifies and displays similar historical cases to support evidence-based surgical decision making. The protocol paper requires close collaboration between hospitals and universities; this protocol demonstrates that such a system is technically feasible and clinically implementable within existing healthcare infrastructures. By following the proposed methodological stages and regulatory principles, other institutions can reproduce this workflow to develop analogous decision-support tools. Ultimately, this interdisciplinary framework aims to enhance surgical planning, reduce leak incidence, and contribute to a broader paradigm shift toward explainable, data-driven precision surgery. 
+
+---
+# Self-Conditioned Positional HNSW for Overlap-Aware Retrieval in Chunked-Document RAG Systems: Method and Industrial Evidence-Quality Audit 
+
+**Authors**: Nataraj Agaram Sundar, Tejas Morabia  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.01542)  
+
+**Abstract**: Chunked-document retrieval is a common component of retrieval-augmented generation (RAG) systems. Documents are split into overlapping chunks, embedded, and indexed with approximate nearest-neighbor search such as hierarchical navigable small world graphs (HNSW). Overlap improves boundary coverage but induces a practical failure mode: top-k retrieval often returns near-adjacent chunks that repeat evidence and waste prompt budget. We propose Self-Conditioned Positional HNSW (SCP-HNSW), a lightweight modification that appends a low-dimensional positional code to chunk embeddings and uses a two-pass query procedure to estimate and apply a query-specific document-position prior. SCP-HNSW leaves HNSW graph construction and traversal unchanged while adding an auditable minimum-index-gap selector for final context construction. We also integrate industrial review artifacts for generated evidence quality: a 770-review text-evidence audit with 318 fully labeled reviews and a 70-case OCR audit with 350 ratings. The text audit shows that 574 of 770 projected reviews are rated 3/5, only 39 fall in the 1-2 range, and narrative reviewer detail appears much more often than structured issue flags. The OCR audit shows slice-level pass rates from 95% for clean chat screenshots to 45% for handwritten/blurry captures, with moderate to strong agreement. These results motivate overlap-aware, audit-friendly RAG retrieval and identify the remaining controlled retrieval ablations needed for causal performance claims. 
+
+---
+# Don't Ask the LLM to Track Freshness: A Deterministic Recipe for Memory Conflict Resolution 
+
+**Authors**: Vikas Reddy, Sumanth Challaram  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.01435)  
+
+**Abstract**: LLM-based memory systems increasingly maintain facts that evolve over time, where a recurring failure is conflict resolution: when a fact has multiple contradictory values, which should the agent return? MemoryAgentBench (MAB; Hu et al., 2026) makes this explicit in its FactConsolidation task: facts are numbered, the counterfactual has the higher serial, and agents are told newer facts have larger serials. Yet every published system underperforms: HippoRAG-v2 reaches 54% on single-hop (FC-SH), BM25 48%, Mem0 18%, and the temporal KG Zep/Graphiti just 7%. Multi-hop is near-unsolved (at most 7% across 22 systems).
+We argue the bottleneck is the assembly step: baselines leave conflict resolution to LLM-mediated retrieval or generation rather than version-aware aggregation. A matched-setup comparison (same backbone, retrieval, chunking, TOP_K) shows that replacing the LLM-judgment answer pipeline with candidate-extraction plus Python max(serial) yields +10.8 points on FC-SH (gpt-4o-mini), widening from +8 at 6K to +21 at 262K. This is a whole-pipeline effect (resolver, prompt, format, and temperature vary jointly); isolating the resolver is future work. The recipe reaches 78.0% on FC-SH (gpt-4o-mini), 94.8% (gpt-4o), and 30.2% on FC-MH (gpt-4o-mini, rising to 51.5% with gpt-4o) via a per-hop deterministic extension of Self-Ask. At matched-262K, it beats HippoRAG-v2 by +28 points and the best published FC-MH result by +20.
+The implication is corrective for the subfield: the bottleneck on conflict resolution is assembly (post-retrieval aggregation), not storage. A LongMemEval knowledge-update check shows the mechanism ports from max(serial) to max(timestamp) but only ties LLM judgment (57.8% vs 64.4%, n=45): deterministic aggregation is the right primitive for current-value conflicts and must be composed with question-type-aware handling for broader memory QA. 
+
+---
+# Differentially Private Datastore Generation for Retrieval-Augmented Inference 
+
+**Authors**: Abdelrahman Abouelenein, Marwan Torki  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.01413)  
+
+**Abstract**: It is crucial for modern on-device AI systems that rely on retrieval-augmented inference to release and share datastores without compromising individual privacy. This can be achieved using Differential Privacy (DP), which provides a formal guarantee that ensures individual contributions remain indistinguishable, even under adversarial analysis. In this paper, we introduce a hashing-based probability generation framework designed to enable the creation and release of differentially private datastores. Our approach employs locality-sensitive hashing (LSH) to efficiently partition high-dimensional data into buckets. We then add calibrated DP noise to the accumulated vote for each bucket, generating a probability distribution across classes. Our method is broadly applicable to any pipeline requiring secure key,value datastore creation and release. We conducted experiments on seven datasets with varying sample sizes and class counts, ranging from 2 to 14. At epsilon=5, our released DP datastore achieves strong privacy protection with only an average 2.6% drop in accuracy. Finally, we benchmark DP datastore resilience to membership inference attacks, reducing attack accuracy to 53.60%. 
+
+---
+# FAiT: Frequency-Aware Inverted Transformer for Multivariate Time Series Forecasting 
+
+**Authors**: Peng He, Yao Liu, Yanglei Gan, Run Lin, Yuxiang Cai, Qiao Liu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.01306)  
+
+**Abstract**: While Transformer-based architectures have established themselves as a dominant paradigm in Multivariate Time Series Forecasting (MTSF), their core self-attention mechanism inherently functions as a low-pass filter, systematically smoothing out high-frequency signals vital for sharp local changes. Recent advancements have increasingly incorporated frequency-domain operations to address this bias, however, most existing designs rely on fixed spectral bases and apply sequence-wise (uniform) modulation, implicitly assuming a time-invariant frequency response. This overlooks a key property of real-world series that their spectral characteristics often evolve over time, making uniform modulation insufficient for capturing fine-grained temporal dynamics. To tackle these limitations, we propose FAiT, a Frequency-Aware inverted Transformer. Specifically, FAiT rectifies the spectral bias internally through Inverted Attention, which interprets the attention map as a learnable low-pass operator and constructs a dedicated complementary high-pass branch by inverting the attention matrix to recover attenuated transient signals. Furthermore, FAiT introduces Dynamic Temporal-Frequency Modulation (DTFM), which synthesizes instance-conditioned weights to adaptively re-calibrate the energy of spectral sub-bands, enabling fine-grained control over evolving multi-scale patterns. Extensive experiments on widely used benchmarks demonstrate that FAiT consistently outperforms state-of-the-art Transformer-based and frequency-enhanced baselines, while maintaining computational efficiency. 
+
+---
+# DiscourseFlip: An Oblique Discourse-Level Opinion Manipulation Attack against Black-box Retrieval-Augmented Generation 
+
+**Authors**: Yuyang Gong, Miaokun Chen, Jiawei Liu, Zhuo Chen, Guoxiu He, Wei Lu, XiaoFeng Wang, Xiaozhong Liu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.01212)  
+
+**Abstract**: Retrieval-Augmented Generation (RAG) systems are widely deployed and increasingly influential, but their reliance on external corpora exposes new security risks from poisoned retrieval content. Existing RAG attacks are largely focusing on individual queries or narrow topic-local query sets, which limits their practical reach and offers limited camouflage in real-world settings. In this paper, we introduce discourse-level opinion manipulation, a new threat model in which coordinated influence across a semantic query network induces opinion shifts over a holistic, multi-topic query space. We formalize this threat in a black-box setting and propose DiscourseFlip, an agentic, graph-guided attack that dynamically allocates a limited poisoning budget to maximize discourse-level opinion deviation. Extensive experiments demonstrate that DiscourseFlip consistently induces targeted opinion shifts across the contextualized query network and significantly outperforms existing baselines in terms of coverage and effectiveness. User studies further confirm that DiscourseFlip is effective while remaining well camouflaged from user detection. Moreover, systematic analyses show that existing mitigation strategies are ineffective against discourse-level manipulation, underscoring the urgent need for more robust and adaptive defenses to address discourse-level vulnerabilities. 
+
+---
+# Masking Stale Observations Helps Search Agents -- Until It Doesn't: A Regime Map and Its Mechanism 
+
+**Authors**: Haoxiang Zhang, Qixin Xu, Zhuofeng Li, Lei Zhang, Pengcheng Jiang, Yu Zhang, Julian McAuley  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.00408)  
+
+**Abstract**: Long-horizon search agents accumulate large amounts of retrieved content across many tool calls, making context-budget efficiency increasingly important. A minimal intervention is to mask stale observations from the context as the trajectory progresses, but it remains unclear when this form of context management helps and why. We study observation masking through a systematic sweep over various agent backbones (4B to 284B parameters) and three retrievers on offline and live-web agentic search benchmarks. We find that the accuracy gain from masking follows an asymmetric inverted-U shape when plotted against the model's accuracy without context management: a plateau under weak retrievers, a peak when a strong retriever meets a mid-capacity model, and a sharp collapse when the model is saturated. This pattern reflects the interaction between retriever recall and the model's implicit filtering capacity, rather than either factor in isolation. Mechanistically, masking implements a token-for-turn trade-off: it removes observations the model has largely stopped attending to and pages the agent rarely re-opens. The added turns help when they convert failures into successes, but they fail when masking removes evidence the model would otherwise have used. We therefore reframe context management as a regime-dependent intervention and provide a holistic perspective for analyzing context use in agentic deep search. We release our scaffold and trajectories here (this https URL) to support future research. 
+
+---
+# Grokers: Bottom-Up Inductive Comprehension and Write-Time Intelligence over Typed Knowledge Graphs 
+
+**Authors**: Gregory Magarshak  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.00050)  
+
+**Abstract**: We present Grokers, an architecture for building persistent, structured comprehension of typed knowledge graphs through bottom-up inductive traversal of dependency subgraphs. Unlike retrieval-augmented generation (RAG), which pays full comprehension cost at every query, Grokers pushes intelligence to write time: autonomous Groker agents analyze nodes in a typed stream graph, extract structured attributes via governed language model (LM) calls, and inductively compose that understanding upward through dependency relations, writing enriched typed attributes that serve all future queries at zero additional LM cost. We prove three formal properties: (1) the Byte-Identity Theorem, establishing that context blocks assembled from a transactionally-maintained denormalization index are byte-identical across LM turns between semantic changes, enabling KV-cache hit rates approaching 100%; (2) the Accumulation Monotonicity Theorem, establishing that the fraction of interactions resolved without LM calls is non-decreasing in the number of completed interactions under a governed wisdom library growth protocol; and (3) the Dual-Traversal Ordering Theorem, establishing that top-down generation and bottom-up comprehension are the unique correct traversal orderings for their respective tasks over a dependency DAG, and that their composition closes into a complete generation-comprehension cycle. We further present a deterministic alternative to embedding-based semantic search, with a synonym caching protocol whose LM fallback rate converges to zero for finite-vocabulary domains. A reference implementation is provided in the open-source Qbix / Safebox / Safebots stack. 
+
+---
