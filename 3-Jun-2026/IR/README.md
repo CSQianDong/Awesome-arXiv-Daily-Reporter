@@ -1,0 +1,180 @@
+# Taiji: Pareto Optimal Policy Optimization with Semantics-IDs Trade-off for Industrial LLM-Enhanced Recommendation 
+
+**Authors**: Yuecheng Li, Zeyu Song, Jing Yao, Chi Lu, Peng Jiang, Kun Gai  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.03866)  
+
+**Abstract**: Scaling recommender systems via large language models (LLMs) has become a prominent trend in the industry. However, aligning the LLM's semantic space with the recommender's ID space via post-training (e.g., SFT and RL) remains challenging. Existing LLM4Rec paradigms are bottlenecked by two main issues: (1) the difficulty of measuring and improving chain-of-thought (CoT) quality in open-domain recommendation during SFT, and (2) the neglect of the trade-off between LLM semantic rewards and recommendation preference rewards during RL alignment. Inspired by these challenges, we present Taiji, a novel LLM-as-Enhancer framework designed for industrial recommender systems. To overcome the SFT bottleneck, we utilize reverse-engineered reasoning and open-ended rejection sampling to generate high-quality, domain-specific CoT data. To resolve the RL alignment issue, we propose Pareto Optimal Policy Optimization (POPO), which adaptively adjusts cross-domain reward weights. Theoretically, it achieves an optimal trade-off between the semantic world knowledge of LLMs and the collaborative ID features representing online user preferences. Extensive offline evaluations and online A/B tests validate the effectiveness of Taiji. Deployed on Kuaishou's advertising platform since May 2026, Taiji currently serves over 400 million users daily, yielding significant commercial revenue and demonstrating its robust scalability in web-scale environments. 
+
+---
+# When Does Latent Reasoning Help? MeRa: Metric-Space Bias for Spatial Prediction 
+
+**Authors**: Zhenyu Yu, Shuigeng Zhou  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.03727)  
+
+**Abstract**: Latent reasoning has improved sequential recommendation by iteratively refining representations before prediction, but does it help spatial prediction? We find that the answer depends on whether reasoning is grounded in the underlying metric space. Without such grounding, latent reasoning degrades spatial prediction below the unmodified baseline, while a learned metric-space bias derived from pairwise distances produces consistent gains. We formalize this finding through MeRa (Metric-space Reasoning), a lightweight backbone-agnostic module that can be inserted between any sequence encoder and its prediction heads. On the GETNext backbone, the gap between reasoning without and with metric-space bias reaches 4.5% NDCG@10. MeRa achieves the best NDCG@10 on all three spatial prediction benchmarks among the compared methods, surpassing recent approaches such as GeoMamba and HMST. We prove that metric-space-constrained reasoning converges to a unique fixed point and that N-step reasoning is strictly more expressive than (N-1)-step reasoning. A controlled experiment on CLEVR with Euclidean distance confirms that the finding generalizes beyond geographic coordinates. The code is included in the supplementary material. 
+
+---
+# MARS: Multi-rate Aggregation of Recency Signals for Sequential Recommendation across Sparse and Dense Regimes 
+
+**Authors**: Zhenyu Yu, Shuigeng Zhou  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.03718)  
+
+**Abstract**: Sequential recommenders weight historical interactions either through positional self-attention as in Transformers or through a single implicit decay schedule as in State-Space Models. Neither makes the multi-scale temporal structure of real user behaviour explicit. We propose MARS, an encoder-agnostic aggregation operator that consumes real timestamps and produces K summaries emphasising distinct recency scales, fused by a context-adaptive gate. MARS adds at most 6% parameters and runs in $\mathcal{O}(LdK)$ time. MARS adapts to data density by automatically selecting between two encoder instantiations: MARS-T (Transformer) for sparse data and MARS-M (Mamba) for dense data, based on the average sequence length of the training set. On five public benchmarks against ten Transformer- and Mamba-based baselines under a unified RecBole protocol, MARS attains the best HR@10 on every benchmark, with mean relative gain +19.7% over the strongest content-only Transformer baseline on sparse data (reaching +36.2% on Games) and +3.2% HR@10 / +0.9% NDCG over SIGMA on dense ML-1M at 42% fewer MFLOPs, occupying the accuracy-efficiency Pareto frontier across the data-density spectrum. A backbone-only ablation isolates the marginal contribution of MARS at +4% to +19% HR@10 on sparse data and motivates the dual-instantiation design. The code is included in the supplementary material. 
+
+---
+# Skill Is Not Document: A Query-Conditional Benchmark and Two-Stage Retriever for LLM Agent Skill Routing 
+
+**Authors**: Zifei Wang, Wei Wen, Qiang Ji, Ruizhi Qiao, Xing Sun  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.03565)  
+
+**Abstract**: LLM agents complete complex tasks by composing multiple skills, and skill retrieval is a front-end stage for agents. Skill retrieval differs fundamentally from traditional document retrieval at the supervision level: top-K joint correctness depends not only on the semantic relevance of each individual query-skill pair, but also on whether the skills retrieved together can collaborate to fulfill the task under the given query. Such "skill compatibility" cannot be derived from independent relevance alone. Yet existing LLM-based data synthesis pipelines can produce a direct supervision signal for "which skills should not be jointly retrieved under this query" -- namely the LLM's own rejection decisions -- and this signal is routinely discarded as low-quality data. To address this gap, we propose Reject-as-Resource Retriever (R3) and construct R3-Skill, a bilingual (Chinese-English) skill retrieval benchmark targeting realistic agent skill routing. R3-Skill spans four language directions, features query phrasings close to real user requests, and is verified through multi-expert cross-checking. On R3-Skill, we build a two-stage retrieval system (R3-Embedding + R3-Reranker) with skill compatibility as an explicit training signal. Gradient analysis shows that the "push-away" signal is diluted by bilateral balancing in the bi-encoder but acts as lossless graded ranking supervision in the cross-encoder -- motivating its placement at the cross-encoder stage, as confirmed by ablations on two datasets. The R3-Embedding + R3-Reranker pipeline attains Hit@1 = 0.7714, NDCG@10 = 0.8327 and Set-Compat = 0.3525 on R3-Skill. The dataset, training code and model weights are released as open source for agent skill routing. 
+
+---
+# Can LLM Rerankers Predict Their Own Ranking Performance? 
+
+**Authors**: Shiyu Ni, Keping Bi, Jiafeng Guo, Jingtong Wu, Zengxin Han, Xueqi Cheng  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.03535)  
+
+**Abstract**: Retrieval effectiveness varies substantially across queries, making it important to estimate ranking quality before relevance judgments are available. Query performance prediction (QPP) addresses this need, but most existing methods rely on external predictors after retrieval or reranking. In this paper, we study \textit{reranker-internal QPP}: can an LLM reranker estimate the quality of the ranking it has just produced? We investigate both training-free and training-based approaches. For training-free estimation, we examine metric-specific self-consistency across sampled rankings and verbalized confidence produced directly by the reranker. Experiments on TREC Deep Learning 2019--2022 with four LLMs show that self-consistency is competitive with the state-of-the-art (SOTA) approach and better calibrated in almost all settings, while direct verbalized confidence is severely overconfident. To improve verbalized confidence, we propose two supervised methods, Verb-Num and Verb-List, which enable LLM rerankers to produce calibrated ranking-quality estimates with only a few additional output tokens. 
+
+---
+# Automating Information Extraction and Retrieval for Industrial Spare Parts Pooling 
+
+**Authors**: Dyuman Bulloni, Rocco Felici, Oliver Avram, Anna Valente  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.03367)  
+
+**Abstract**: Maintenance organizations in manufacturing try to avoid downtime and unnecessary purchasing by reusing existing assets, but the main obstacle is not a lack of parts but a lack of actionable visibility across sites and partners. Inventories are distributed, described with inconsistent naming conventions, and contain duplicates and partially specified references, so the right part often exists somewhere but remains effectively undiscoverable. The paper proposes PhRAG, a hybrid Retrieval-Augmented Generation for Pooling this fragmented landscape into a Virtual Stock Pool (VSPool) that can be structured and searched as a single resource. Unstructured, heterogeneous spare part descriptions are structured via Named Entity Recognition (NER) into a shared virtual pool dataset and indexed to support robust retrieval even when users express needs in natural language rather than exact technical specifications. The proposed modular pipeline leverages the multitasking nature of generative language models to cover two dimensions that make industrial parts pooling challenging: (i) unstructured technical specifications from diverse data sources (e.g. new partners, catalogs, marketplace listings) are handled through an offline extraction and (ii) request variability at runtime (references, partial references, specifications, price/condition constraints) is handled through a hybrid RAG-based search engine capable of retrieving relevant components and justifying results. The framework demonstrates the potential of generative approaches compared with traditional NER approaches in the presence of data scarcity for technical specifications extraction and overcomes the opacity of standard information retrieval systems by generating justifications for retrieved components. The project's open-source code can be found at this https URL. 
+
+---
+# Generalizing Graph Foundation Models via Hyperbolic Retrieval-Augmented Generation 
+
+**Authors**: Yifan Jin, Qirui Ji, Bin Qin, Jiangmeng Li, Lixiang Liu, Fuchun Sun, Changwen Zheng  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.03307)  
+
+**Abstract**: Graph foundation models (GFMs) emerged as a dominant paradigm in graph representation learning by leveraging large-scale pre-training for cross-domain inference. However, the parameterized knowledge encoded within these models is insufficient to cope with distribution shifts, limiting their generalization ability. To mitigate this issue, retrieval-augmented generation (RAG) has been introduced to incorporate external knowledge at inference time. Nevertheless, existing RAG frameworks operating in Euclidean space suffer from a fundamental geometric limitation: the polynomial volume growth of Euclidean space is inherently mismatched with the tree-structured external knowledge bases. This mismatch leads to the loss of semantic granularity in retrieval and gives rise to the hubness this http URL address this limitation, we propose a Hyperbolic Retrieval-Augmented Generation (HyRAG) framework designed to enhance the generalization capabilities of GFMs. Specifically, the introduced Hyperbolic Knowledge Indexing module retains the tree-like hierarchies of the external knowledge base by modeling them within hyperbolic space. The Multi-granularity Retrieval module then provides GFMs with the global semantic anchors and local semantic nuances through coarse-grained and fine-grained knowledge retrieval, respectively. Finally, the Dual-path Fusion module achieves effective knowledge integration for graph tasks at both the feature and structural this http URL on multiple graph benchmarks demonstrate significant improvements in the zero-shot setting, highlighting the generalization of our method for robust GFMs inference. 
+
+---
+# VirtualMLE: A Virtual ML Engineer that Optimizes Sequential Recommenders 
+
+**Authors**: Shiteng Cao, Jingwen Liu, Junda She, Zhiheng Li  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.03221)  
+
+**Abstract**: Recent advancements in Large Language Models (LLMs) have demonstrated remarkable capabilities in reasoning, reflection, and tool utilization, unlocking new paradigms for automating complex engineering workflows. However, in the domain of sequential recommendation (SR), tuning models on new datasets still relies heavily on the manual trial-and-error of experienced machine learning engineers. To bridge this gap, we propose \textbf{VirtualMLE}, an LLM-agent framework that leverages the cognitive capabilities of LLMs to organize recommender optimizing into a closed loop of execution, reflection, and memory update. After each trial, the agent explicitly analyzes the observed outcomes and stores concise heuristic feedback in a hierarchical memory system. We evaluate VirtualMLE on three Amazon SR benchmarks with two representative backbones, SASRec and HSTU. VirtualMLE reaches competitive recommendation quality with substantially fewer trials. Furthermore, we observe that cognition summaries distilled from previous datasets can significantly accelerate the search process on unseen datasets, demonstrating the potential of transferring tuning heuristics. Overall, our results provide compelling evidence that LLM agents equipped with reflection and memory can serve as practical virtual engineers to automate and amortize heuristic learning in SR optimization. Our codes are available. 
+
+---
+# Section-Weighted Hybrid Approach for Legal Case Retrieval 
+
+**Authors**: Rajith Arulanandam, Nisansa de Silva  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.03138)  
+
+**Abstract**: Finding truly analogous precedents requires capturing legal reasoning beyond surface word overlap. We present a two-stage, section-aware framework for legal case retrieval that first segments raw judgments into facts, issues, decision, and reasoning using a deterministic large language model (LLM) offline. In Stage 1, we combine parallel lexical (BM25) and semantic (dense ANN) whole-document searches via Reciprocal Rank Fusion (RRF) to form a high-recall candidate pool. In Stage 2, we perform fine-grained, like-for-like comparisons (e.g., query reasoning vs. candidate reasoning). To address the scale mismatch between unbounded lexical scores and cosine similarities, we apply query-wise Z-score normalization before aggregating signals with learned section weights. For the top results, the system returns the relevant section text with a concise, grounded rationale and party-stance labels. We evaluate on a jurisdiction-scale benchmark, demonstrating consistent gains over strong lexical and neural baselines while maintaining high candidate coverage 
+
+---
+# BAHSD: Bridging the Long-tail Gap via Adaptive Distillation in Black-box Sequential Recommendation 
+
+**Authors**: Xi Zhou, Famin Wu, Mingming Li, Hongyue Zhang, Jiao Dai, Jizhong Han, Tao Guo  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.03091)  
+
+**Abstract**: Sequential recommendation systems are widely adopted but often deployed as black-box APIs, which has driven recent interest in model extraction to replicate their capabilities locally. However, the long-tail distribution induces severe signal heterogeneity: dense head sequences trigger the solidification of teacher preference, biasing extraction toward local patterns, while sparse tail sequences yield flat, noisy predictions. Existing one-size-fits-all extraction overlooks this disparity, resulting in noise overfitting and suboptimal knowledge transfer. We propose BAHSD, a black-box adaptive distillation framework that handles signal heterogeneity via a multi-scale consistency probing mechanism to implicitly quantify signal reliability. Based on this, an adaptive hierarchical objective is designed: dynamic-temperature KL divergence mitigates preference solidification for high-confidence signals, while ranking consistency and InfoNCE contrastive learning provide noise-robust enhancement for low-confidence signals. BAHSD consistently outperforms baselines, achieving up to 4.98\% gain over the teacher and 80\%+ improvement on tail users, offering a plug-and-play solution for high-fidelity black-box recommendation extraction. 
+
+---
+# Slipstream: Locality-Aware Graph Index Construction for Streaming Approximate Nearest Neighbor Search 
+
+**Authors**: Shubing Yang, Dongfang Zhao  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.02992)  
+
+**Abstract**: Graph indexes are widely used for high-recall approximate nearest neighbor search (ANNS), but many real-time applications require streaming ANNS. In these real-time applications, continuously arriving embeddings must search the existing graph for candidate neighbors before updating graph edges, which makes repeated index construction a bottleneck for streaming ingestion workloads. We propose Slipstream, a new method that significantly reduces the computational cost of frequent insertions in graph indexes for ANNS. The core idea of Slipstream is exploiting the continuity in vector streams: the newly arrived point starts from promising candidates found during the previous insertion rather than searching from the entry point. More technically, Slipstream evaluates distinct subsets of starting candidates followed by an adaptive controller that narrows or widens the range according to the stream's stability. We further show that Slipstream is beyond heuristic: We derive an abstract model to characterize Slipstream's performance and analyze its theoretical bounds. We have implemented Slipstream in two popular open-source libraries (Faiss, HNSWLib) and compared it with four baseline methods on five streaming vector datasets. Experimental results show that Slipstream achieves up to 30.8$\times$ higher end-to-end throughput than baselines while maintaining at least 0.95 recall@10. 
+
+---
+# Do Neural Retrievers Prefer Certain Documents? Evidence of Learned Relevance Priors 
+
+**Authors**: Francisco Valentini, Edgar Altszyler, Martin Fajcik  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.02814)  
+
+**Abstract**: Neural retrievers are trained to estimate query-document relevance from annotated query-document pairs. Yet annotation protocols may not purely reflect relevance: they select only a subset of documents for labeling, and this selection can favor certain document types over others. We investigate whether supervised bi-encoder retrievers implicitly learn a document-level relevance prior: a query-independent signal encoded in their representation space as a side effect of training on annotated data. We estimate this prior by training simple classifiers on frozen document embeddings and evaluate three state-of-the-art retrievers across multiple IR benchmarks. We find that supervised neural retrievers encode relevance priors that generalize to unseen documents and are consistent across models. These priors create a findability gap: documents with lower prior are systematically harder to retrieve, even when genuinely relevant. This effect appears in supervised dense retrievers but is weaker and less consistent in BM25, and it persists under controlled matched-document comparisons. Using LLM-based explanations, we find that judged-relevant documents tend to be comprehensive, self-contained summaries of mainstream topics, while niche, fragmentary, or highly technical content is often left unjudged. Retrievers internalize this bias, ranking documents with these favored features higher than documents that lack them, independently of their actual relevance. Our findings expose a structural limitation of supervised retrieval: models trained on annotated data do not just learn relevance, but also the implicit document preferences in their training data. 
+
+---
+# Attention Calibration for Position-Fair Dense Information Retrieval 
+
+**Authors**: Andrianos Michail, Elias Schuhmacher, Juri Opitz, Simon Clematide, Rico Sennrich  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.02737)  
+
+**Abstract**: Dense retrieval models exhibit positional bias: retrieval effectiveness degrades when relevant information appears later in a passage (Zeng et al., 2025). We ask whether this bias can be reduced at inference time, without retraining and without sacrificing overall retrieval effectiveness. To this end, we adapt inference-time attention calibration (Schuhmacher et al., 2026) to downstream retrieval and extend it with a strength coefficient lambda that interpolates between the original and fully calibrated attention distributions. Across three embedding models on SQuAD-PosQ and FineWeb-PosQ, we examine how basket size, calibrated layer set, and strength affect the trade-off between positional fairness and retrieval effectiveness, finding that partial calibration frequently outperforms full calibration. A single configuration (B=128, lambda=0.5, 50% layer depth) improves the harmonic mean of nDCG@10 across positional groups on FineWeb-PosQ for all three models without per-model tuning, and applies to both <s>-pooled and last-token-pooled architectures. This default configuration transfers without modification to PosIR, which spans 10 languages and 31 domains, reducing the Position Sensitivity Index in all 16 length-quartile x model x retrieval-setting combinations, while preserving or improving aggregate nDCG@10. We release our extended codebase at this https URL 
+
+---
+# Cost-Aware Query Routing in RAG: Empirical Analysis of Retrieval Depth Tradeoffs 
+
+**Authors**: Sanjay Mishra  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.02581)  
+
+**Abstract**: Retrieval-augmented generation (RAG) faces a fundamental three-way tension: deeper retrieval improves factual grounding but inflates token costs and end-to-end latency. Static retrieval configurations cannot resolve this tension across heterogeneous query workloads -- simple definitional queries waste budget on unnecessary context, while complex analytical prompts are underserved by shallow retrieval. This paper introduces \emph{Cost-Aware RAG} (CA-RAG), a per-query routing framework that selects from a discrete catalog of \emph{strategy bundles} -- each coupling a retrieval depth (from retrieval-free direct inference to top-$k{=}10$ dense retrieval) with a fixed generation profile -- by maximizing a scalar utility that linearly combines an estimated quality prior with normalized penalties for predicted latency and total billed tokens. CA-RAG is implemented with FAISS-backed dense retrieval and OpenAI chat/embedding APIs, and evaluated on a 28-query benchmark spanning four bundles. The router dynamically exercises all bundles, achieving \textbf{26\% fewer billed tokens} than always-heavy retrieval and \textbf{34\% lower mean latency} than always-direct inference while maintaining equivalent answer quality. Per-query delta analysis reveals that savings are non-uniform and concentrated in simpler queries, motivating complexity-aware guardrails. Sensitivity analysis confirms that the same bundle catalog supports multiple cost-latency-quality operating points through weight adjustment alone. All results are generated directly from logged CSV artifacts for full reproducibility. CA-RAG provides a transparent, auditable foundation for cost-conscious LLM deployments. 
+
+---
+# Re-Ranking Through an Attribution Lens for Citation Quality in Legal QA 
+
+**Authors**: Mohamed Hesham Elganayni, Selim Saleh  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.03728)  
+
+**Abstract**: Retrieval-augmented generation systems for legal question answering typically retrieve passages based on semantic similarity and provide them to a language model, which then generates cited answers. Prior work assumes that highly ranked passages are most likely to be usefully cited by the model. Perturbation-based attribution methods, such as C-LIME, have been used exclusively for post-hoc explanation. However, on the AQuAECHR benchmark, semantic similarity does not correlate with passage attribution. Within a retriever's candidate pool, similarity-based ranking performs worse than random selection at surfacing gold citation paragraphs. To address this limitation, a lightweight cross-encoder is trained on continuous perturbation-based attribution scores to re-rank passages prior to generation. This approach is evaluated on the AQuAECHR benchmark, using two language models and five-fold cross-validation. The re-ranker substantially improves citation faithfulness and alignment with gold expert answers. Notably, two re-rankers trained independently on different models converge beyond their raw attribution agreement. This finding indicates that the cross-encoder reduces model-specific noise and produces a shared relevance signal that partially transfers across models, although same-model re-ranking remains more effective. These results demonstrate that perturbation-based attribution provides a practical, model-agnostic training signal for citation-aware retrieval. 
+
+---
+# Ghost: Plausible Yet Unlearnable Trajectories via On-Manifold Substitution for Next-POI Privacy 
+
+**Authors**: Zhenyu Yu, Jihong Guan, Shuigeng Zhou  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.03711)  
+
+**Abstract**: A publisher who releases check-in trajectories inadvertently publishes a strong predictor of every user's future locations. We address this risk by generating unlearnable trajectories, perturbed sequences that yield victim models with degraded next-Point-of-Interest (next-POI) accuracy on clean test inputs. Direct ports of image-domain unlearnable examples fail on two counts. The published data must remain geographically and semantically plausible, and the perturbation must resist purification adversaries that exploit the structure of randomized defences. We propose Ghost, a manifold-aligned framework whose perturbations look like plausible human check-in sequences yet leave no learnable signal behind. Ghost steers each substitution onto the real-trajectory manifold through a frozen trajectory language model, so a denoising-bridge adversary has nothing to invert and a context-free frequency-table adversary recovers a near-uniform distribution. Across two standard benchmarks, and four attacker postures, Ghost achieves protection-gap competitive with the strongest deterministic baseline (PGD) while attaining the lowest restored accuracy under the bigram adaptive purification adversary on both datasets, and lies within one per-cell standard deviation of PGD on the protection-versus-purification-resistance plane. Ablations confirm the manifold prior subsumes the entropy-floor knob of prior randomized defences, with the frequency-table adversary's survival gap remaining within 0.04 even when twenty percent of the pairs are leaked. 
+
+---
+# Structures Facilitate Retrieve, Rerank, and Generate 
+
+**Authors**: Yeqin Zhang, Haomin Fu, Xujie Zhang, Cam-Tu Nguyen  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.03247)  
+
+**Abstract**: Document-grounded dialogue systems (DGDS) utilize knowledge from external documents to answer domain-specific user questions. Existing solutions typically divide documents into independent passages for retrieval and response generation. This approach, however, neither makes good use of structural information within documents nor provides enough (document) context for knowledge selection and responses. This paper proposes SF-Re2G to address such issues systematically. Firstly, we seek to improve a passage representation by contrasting it with others of the same section, thus improving the retrieval performance. Secondly, a structure-enhanced reranker is built, leveraging the fact that multiple grounding passages of one dialog turn tend to be in the same neighborhood. Specifically, candidates from the retrieval are grouped into subgraphs according to the document structure. The reranker will rescore the candidate integrating its group information. Finally, the chosen passages are used for responses, taking into account the subgraph context for better generation. Experimental results on two DGDS datasets validate our method for both Chinese and English. 
+
+---
+# Patcher: Post-Hoc Patching of Backdoored Large Language Models 
+
+**Authors**: Anjun Gao, Yueyang Quan, Yufei Xia, Zhuqing Liu, Minghong Fang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.02995)  
+
+**Abstract**: Large language models remain vulnerable to jailbreak backdoor attacks, where adversaries poison safety alignment data to embed hidden triggers that bypass safety mechanisms. Existing defenses often require comprehensive attack information or multiple triggered examples, making them impractical when defenders only observe a single reported failure case without knowing whether it stems from a backdoor attack or a natural alignment bug. This paper presents Patcher, a post-hoc defense framework that repairs backdoored language models using only a single reported failure case and the model parameters. Patcher operates in two stages. First, it localizes backdoor triggers by computing response-conditioned gradient-based saliency scores and applying adaptive clustering to separate triggers from benign context. Second, it patches the model through a constrained fine-tuning objective that breaks the trigger-response association while preserving benign-task utility and robustness to non-triggered jailbreak attacks through KL-divergence constraints. We conduct extensive evaluations across multiple backdoor attack strategies and demonstrate that Patcher successfully localizes triggers and neutralizes backdoors while maintaining model utility. We further show robustness against adaptive attacks designed to evade our defense. This work represents a significant step toward practical defenses against training-time attacks in deployed language models. 
+
+---
+# LLM-Assisted Reranking to Operationalize Nuanced Objectives in Recommender Systems 
+
+**Authors**: Amir Ghasemian, Homa Hosseinmardi, Upasana Dutta, Duncan J. Watts  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.02883)  
+
+**Abstract**: Recommender systems have grown from content-organization tools into sophisticated systems that shape daily behavior. By controlling what we see, they shape what we perceive, raising concerns about filter bubbles, radicalization, polarization, and social inequality. Large language models (LLMs) enable more powerful personalization, intensifying these dynamics. Yet most recommenders are tuned for engagement or limited accuracy metrics, with little attention to broader social implications, e.g. how personalization reshapes exposure in socially consequential domains. We investigate whether LLM-assisted reranking, while improving personalization, inadvertently amplifies exposure to ideologically extreme or conspiratorial political content, a risk theorized but not empirically characterized in news recommendation. Using real news-consumption histories, we rerank YouTube's sidebar candidates through zero-shot, instruction-based prompting. We compare a baseline prompt with a constrained variant that preserves topical relevance and broadens ideological exposure while reducing conspiratorial or extreme content. Without constraints, reranking strengthened personalization but increased exposure to conspiratorial and extremist material for users whose histories contained such content. Lightweight prompt-level regularization reduced promotion of extreme content and increased ideological diversity, with modest relevance loss. Synthetic experiments suggest that LLMs rerank via statistical regularities in language rather than semantic understanding of ideology, clarifying why naive prompts amplify these patterns and why regularization can reshape them. Together, our results highlight the power of LLMs to operationalize contextual nuance in high-stakes recommendation, and the need to evaluate LLM-assisted personalization beyond accuracy and treat prompt design as a value-laden rather than neutral default. 
+
+---
+# IdiomX A Multilingual Benchmark for Idiom Understanding, Retrieval, and Interpretation 
+
+**Authors**: Ayman Ali Sharara  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.02584)  
+
+**Abstract**: Idiomatic expressions remain a persistent challenge for natural language processing because their meanings are often non-compositional, context-dependent, and difficult to align across languages. Existing idiom resources are often limited in scale, contextual diversity, or multilingual coverage, restricting their utility for modern language models. We introduce IdiomX, a large-scale multilingual benchmark for idiom understanding, retrieval, and interpretation, constructed through a reproducible multi-stage pipeline combining lexical resource extraction, large-scale normalization, controlled large language model enrichment, and structured validation. The resulting dataset contains over 190K contextualized examples spanning 12K+ idioms, with aligned English, Arabic, and French semantic representations, idiomatic and literal usage labels, and rich linguistic metadata. Building on this resource, we define a unified four-task benchmark covering idiom detection, context-to-idiom retrieval, Arabic-to-English idiom retrieval, and idiom interpretation, extending evaluation from figurative recognition to semantic grounding and explainable meaning retrieval. Experiments show that contextual transformer models substantially improve idiom detection, while hybrid retrieval and reranking architectures significantly strengthen both monolingual and cross-lingual idiom retrieval. Results further demonstrate that idiom interpretation can be effectively modeled as a semantic retrieval task, introducing interpretability as a complementary benchmark dimension. Overall, IdiomX provides a scalable benchmark for studying idiomatic language as a progression from detection to retrieval and semantic interpretation, and offers a modular framework extensible to additional languages and figurative reasoning tasks 
+
+---
