@@ -2,6 +2,7 @@
 
 | Date | Link | Number of Papers |
 |:----:|:----:|:----------------:|
+| 4-Jun-2026 | [Link](https://github.com/Deriq-Qian-Dong/Awesome-arXiv-Daily-Reporter/blob/main/4-Jun-2026/topic/RAG_related_papers.md) | 0 |
 | 3-Jun-2026 | [Link](https://github.com/Deriq-Qian-Dong/Awesome-arXiv-Daily-Reporter/blob/main/3-Jun-2026/topic/RAG_related_papers.md) | 0 |
 | 2-Jun-2026 | [Link](https://github.com/Deriq-Qian-Dong/Awesome-arXiv-Daily-Reporter/blob/main/2-Jun-2026/topic/RAG_related_papers.md) | 0 |
 | 1-Jun-2026 | [Link](https://github.com/Deriq-Qian-Dong/Awesome-arXiv-Daily-Reporter/blob/main/1-Jun-2026/topic/RAG_related_papers.md) | 0 |
