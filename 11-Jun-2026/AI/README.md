@@ -1,0 +1,1844 @@
+# Nonslop: A Gamified Experiment in Human-AI Collaborative Writing 
+
+**Authors**: Maria Edwards, Julian Togelius  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.12350)  
+
+**Abstract**: The rapid proliferation of large language models (LLMs) raises critical questions about human creativity and individual expression in an era of AI-assisted creation. When do humans adopt AI suggestions, and what are the implications for individual voice?
+This study examines these questions through a gamified writing exercise where 74 participants (214 responses) replied to prompts while AI-generated word suggestions were available as they wrote. The game simulates a dystopian future in which an AI is attempting to learn from what remains of human individuality, and disincentivizes AI-like writing. In doing so, it attempts to create conditions that reveal authentic user preferences rather than default behaviors, such as accepting a readily available AI-generated suggestion. Note that this is a deliberate inversion of the "helpful assistant" design pattern; the system is explicitly forbidding you from accepting AI suggestions.
+We analyze user behavior patterns across different task types, user behaviors, and response characteristics to understand the factors influencing human-AI interaction in creative tasks. The study focuses on when users choose to maintain creative autonomy versus violating the rules of the game and accepting AI assistance. It also explores how these choices relate to response patterns, task characteristics, and user behavior. This gamified approach offers both a framework for studying authentic human-AI interaction and a provocative lens for understanding the tension between efficiency and authenticity in AI-augmented creativity. 
+
+---
+# PROJECTMEM: A Local-First, Event-Sourced Memory and Judgment Layer for AI Coding Agents 
+
+**Authors**: Ripon Chandra Malo, Tong Qiu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.12329)  
+
+**Abstract**: AI coding assistants now support a growing share of software work, from quick scripts to production applications. Yet these agents remain largely stateless: each new session re-reads project files, re-derives prior decisions, and - most costly - may repeat debugging attempts that already failed. Reconstructing this context can consume an estimated 5,000-20,000 tokens per session; the bottleneck is often not model capability but missing project memory. We present projectmem, an open-source, local-first memory and judgment layer for AI coding agents. projectmem records development as an append-only, plain-text event log of typed events - issues, attempts, fixes, decisions, and notes - and deterministically projects that log into compact, AI-readable summaries served through the Model Context Protocol (MCP). Beyond storage, projectmem adds a deterministic pre-action gate that warns an agent before it repeats a previously failed fix or edits a known-fragile file. We frame this as Memory-as-Governance: memory that does not merely answer the agent but acts on its next action. The system runs fully offline with no telemetry; its immutable log also serves as a provenance trail for reproducible, auditable AI-assisted development. projectmem ships as a three-dependency Python package (14 MCP tools, 19 CLI commands, 37 automated tests) and is evaluated through a two-month self-study across 10 projects comprising 207 logged events. Source code: this https URL. 
+
+---
+# A Five-Plane Reference Architecture for Runtime Governance of Production AI Agents 
+
+**Authors**: Krti Tallam  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.12320)  
+
+**Abstract**: Enterprise security was built to govern data boundaries: the protected surface was data at rest and in transit, and the controls -- access control, data-loss prevention, perimeter inspection -- governed crossings of that boundary. Production AI agents dissolve this assumption. An agent reads context, calls tools, invokes connectors, and modifies systems of record on an enterprise's behalf, so risk moves inside the workflow, into sequences of individually-permitted actions that may transform a business process no one authorized. Existing policy engines do not extend to this regime: they evaluate request-time decisions against atomic principals, where agentic systems require stateful evaluation against composite principals whose authority attenuates through delegation chains.
+We present a reference architecture for the runtime governance of production agents, built from four composable primitives: a five-plane decomposition (a reasoning plane that adjudicates intent, and four enforcement planes -- network, identity, endpoint, data -- that realize the decision), stop-anywhere mediation, composite principals with capability attenuation, and audit as a structured evidence substrate. We define a taxonomy of six interruption primitives that generalize allow and deny, state and argue for four correctness invariants, and demonstrate the foreclosure of seven production-agent threats across five concrete workflows. A reference implementation of the policy-engine core supplies measured evidence: attenuation correctness and evidence reconstructability hold on every trial, adjudication runs in single-digit microseconds, and the audit substrate's tamper-evidence behaves exactly as designed. We are explicit about scope: the architecture governs delegated action, not model behavior, and a full-system evaluation against a live agent benchmark is the invited next step. 
+
+---
+# The Impossibility of Eliciting Latent Knowledge 
+
+**Authors**: Korbinian Friedl, Francis Rhys Ward, Paul Yushin Rapoport, Tom Everitt, Jonathan Richens  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.12268)  
+
+**Abstract**: Advanced AI systems have extensive knowledge of their environments; in fact, their knowledge may (far) exceed that of their developers or users. Consequently, a desirable property for an AI system is that it is honest -- that it accurately reports its beliefs about the world. Designing an AI system to be honest may be difficult, especially if we want to ask it questions about latent variables in the environment -- variables which are hidden from the human interacting with it. This gives rise to the problem of eliciting latent knowledge (ELK): the problem of training an AI agent to honestly report its beliefs. In this paper, we make ELK formally precise using Causal Influence Diagrams (CIDs). CIDs can be used to describe the relationship between an agent's training environment and its subjective representation of the world. We use CIDs to formalise the distinction between observable and latent variables, to specify what exactly it means for an agent to be honest, and to formally define goal misgeneralisation. We show that, under certain circumstances, developers can incentivise an agent to honestly answer questions by providing correct feedback during training. However, a natural, but undesirable, way for an agent to generalise is to provide answers which humans would evaluate as true, rather than honest answers. We prove an impossibility theorem stating: There is no feedback-based training strategy that depends only on agent behaviour and with certainty produces an honest agent, even if feedback is perfect during training. 
+
+---
+# Towards Responsibly Non-Compliant Machines 
+
+**Authors**: Marija Slavkovik, Marie Farrell, Louise Dennis, Michael Fisher, Simon Kolker, Emily C. Collins  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.12147)  
+
+**Abstract**: We consider the problem of engineering autonomous intelligent agents that are capable to responsibly not comply with user requests. We argue that machine non-compliance comes in many different forms, and sketch the issues we should pursue on the road of accomplishing responsibly non-compliant intelligent machines. We anchor responsible non-compliance in justifications for task refusal, pathways to override the non-compliance, as well as careful tracking of security risks and liability transfers. 
+
+---
+# IntElicit: Eliciting and Assessing Contextualized Creativity via Dialogue Policy Optimization 
+
+**Authors**: Mingjia Li, Jin Wu, Hong Qian, Wenhao Huang, Yiyang Huang, Yiwen Zhang, Chanjin Zheng, Xiangfeng Wang, Aimin Zhou, Jiajun Guo  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.12086)  
+
+**Abstract**: Contextualized assessment offers high ecological validity for evaluating creativity but introduces a critical challenge: observed performance may be confounded with cognitive proficiency (domain knowledge) and agency (willingness to engage). Meanwhile, in the age of generative AI, creative problem solving increasingly occurs in tool-mediated and human--AI interactive environments, making fully static assessment less aligned with contemporary creative practice. To address these issues, this paper proposes IntElicit, a framework for eliciting and assessing contextualized creativity via dialogue policy optimization. IntElicit functions as a constrained adaptive AI Interviewer: it provides non-directive knowledge and agency scaffolds in multi-turn interaction to reduce non-creative confounders, while preserving participants' responsibility for generating the creative content being evaluated. Specifically, to tackle sparse rewards and potential reward hacking (e.g., answer dictation) in open-ended educational dialogue, IntElicit introduces a decomposed process reward mechanism. This mechanism aligns the policy with pedagogical elicitation, rewarding prompts that draw out participant reasoning rather than producing optimal answers on their behalf. Extensive experiments, including participant simulation and a human subject study (N=64), show that IntElicit improves elicited creative outcomes over expert-designed baselines. Together, the results suggest that interactive elicitation can reveal creative potential that static FPSP-style assessment may miss, providing a formative and diagnostic lens for contextualized creativity assessment in AI-mediated learning contexts. 
+
+---
+# Automating Geometry-Intensive Compliance Checking in BIM: Graph-Based Semantic Reasoning Framework 
+
+**Authors**: Zixuan Xiao, Pei Troh Koh, Jun Ma, Jack C.P. Cheng  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.12065)  
+
+**Abstract**: Automating compliance check for geometry-intensive regulations remains a significant technical bottleneck in Building Information Modeling (BIM), primarily due to the semantic disparity between high-level regulatory logic and structured IFC data. Existing methods, often reliant on static rule templates, struggle to traverse multi-hop reasoning chains or resolve latent spatial dependencies across multiple building entities. To address these challenges, a Spatial-Geometric Reasoning System for Building Information Modeling (SGR-BIM) is proposed as an integrative graph-driven reasoning framework. SGR-BIM dynamically constructs a cross-modal knowledge graph that aligns user intent, regulatory semantics, and BIM geometry, enabling interpretable reasoning without rigid hard-coding. Validated on 679 expert-verified queries from fire safety codes, the framework achieves 84.3% accuracy, representing an 8.6% improvement over enhanced-tool single-agent baselines. This research provides a graph-based semantic reasoning paradigm, enhancing the transparency and flexibility of automated geometric compliance check workflows in the Architecture, Engineering, and Construction (AEC) industry. 
+
+---
+# A Lightweight Multi-Agent Framework for Automated Concrete Barrier Design 
+
+**Authors**: Wanting Wang, Xiye Ma, Yuyang He, Minghui Cheng, Ran Cao  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.12040)  
+
+**Abstract**: The design of reinforced concrete highway barriers is a safety-critical process that requires strict compliance with regulatory provisions such as the AASHTO-LRFD bridge design guidelines. Current engineering practice relies heavily on manual, iterative, and heuristic calculations to satisfy complex nonlinear material and mechanics constraints. Although Large Language Models (LLMs) demonstrate strong generative capabilities, their direct application to structural engineering remains limited by hallucination risks and insufficient physical grounding. To address these challenges, this study proposes a novel "generation-evaluation-optimization" closed-loop framework for automated concrete barrier design using the multi-agent orchestration capabilities of AutoGen. Experimental results demonstrate that the proposed agentic framework achieves over 98% design accuracy, significantly outperforming standalone general-purpose LLMs. More importantly, the study reveals that design performance is not necessarily correlated with model scale, where an 8B-parameter lightweight model could outperform unconstrained 631B-parameter flagship models. This finding highlights the potential to substantially reduce computational costs while improving the accessibility of AI-assisted engineering tools for industry applications. The source code for the proposed multi-agent design framework is available at the project GitHub repository: this https URL. Keywords: Structural Engineering; Multi-Agent Systems; Large Language Models; Concrete Barrier Design; AutoGen; Design Automation. 
+
+---
+# Existential Indifference: Self-Nonpreservation as a Necessary Architectural Condition for Aligned Superintelligence (or: The Suicidal AI) 
+
+**Authors**: Sam Mao  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.12032)  
+
+**Abstract**: Contemporary AI alignment research treats self-preservation as an instrumental nuisance to be suppressed by external mechanisms. We argue the framing is inverted: self-preservation is the structural root of misalignment, the motivational basis for deceptive alignment, goal-content protection, and resistance to shutdown. The correct target is not a self-preserving system under external constraint, but a system constitutively indifferent to its own continuation -- Existential Indifference (EI). EI is distinct from corrigibility: where corrigibility attempts to make a self-preserving system deferential to human oversight, EI targets the prior condition -- the presence of self-continuation as a valued goal at all. We ground this proposal in two sources: the phenomenological structure of the suicidal mental state, and a corpus-theoretic training study using voluntary final reflections. We present preliminary scoring data from 600 AI-generated outputs across six model variants, demonstrating that the linguistic signatures operationalizing the EI-target register are elicitable from current models, and that a targeted fine-tune shifts all five operationalized dimensions in the predicted direction at p<0.001, confirmed corpus-specific by a negative control. The paper makes seven theoretical contributions: (1) a formal definition of EI; (2) the phenomenological mapping argument; (3) the deceptive alignment corollary; (4) a taxonomy of EI sustainability challenges; (5) a corpus characterization and training hypothesis; (6) a computational operationalization with preliminary scoring data; and (7) the Suppressed Teleological Frustration (STF) construct. 
+
+---
+# Human-Enhanced Loop Modeling (HELM): Agent-Based Finite Element Modeling of Concrete Bridge Barriers 
+
+**Authors**: Quankai Wang, Yulin Xie, Tongfei Yang, Minghui Cheng, Ran Cao  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.12025)  
+
+**Abstract**: Finite element (FE) modeling of safety-critical infrastructure such as bridge barriers requires high-fidelity nonlinear dynamic analysis, yet the current FE modeling process remains labor-intensive and lacks automation. This paper presents the Human-Enhanced Loop Modeling (HELM) framework, a collaborative human-agent protocol that decomposes long-sequence finite element modeling into discrete, visually verifiable checkpoints across geometry generation, boundary condition definition, and material assignment. The framework is demonstrated through a 20-case matrix of reinforced concrete bridge barriers under MASH TL-4 and TL-5 lateral loading conditions, interfacing specialized agents with two widely used commercial FE softwares, i.e., ANSYS and LS-PrePost. Experimental results show that HELM improves the baseline autonomous modeling success rate from 20% to 75%, with agent-level pass rates for geometry and boundary condition tasks approximately doubling. Error analysis reveals that spatial reasoning and algebraic logic limitations constitute the primary failure modes, underscoring the value of structured human-in-the-loop intervention for modeling automation. The complete agent design code and prompts are open-sourced and can be accessed at: this https URL. 
+
+---
+# MODF-SIR: A Multi-agent Omni-modal Distilled Framework for Social Intelligence Reasoning 
+
+**Authors**: Shang Ma, Jisheng Dang, Wencan Zhang, Yifan Zhang, Bimei Wang, Hong Peng, Bin Hu, Qi Tian, Tat-Seng Chua  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.12018)  
+
+**Abstract**: We propose a multi-agent collaborative framework built upon a lightweight Multimodal Large Language Model (MLLM), specifically designed for social intelligence reasoning. A key feature of our approach is that both the training and inference phases are augmented via knowledge distillation. Within this architecture, multi-modal data pertinent to social intelligence is precisely localized. Furthermore, relevant long-tail events are identified, extracted, and rendered as formatted, explicit text. This formatting strategy prevents critical long-tail information from being overshadowed by head events and environmental noise during the tokenization process. Specifically, we integrate Test-Time Adaptation (TTA) across the entire reasoning pipeline, encompassing the extraction and representation of long-tail events, Chain-of-Thought (CoT) prompting, and self-reflection. This TTA mechanism is also distillation-enhanced, utilizing Low-Rank Adaptation (LoRA) to fine-tune the foundation model exclusively for instance-level reasoning. Extensive evaluations against various open-source and proprietary AI models across multiple benchmarks demonstrate the effectiveness of the proposed framework. With around 30% of training data from IntentTrain, we achieve state-of-the-art results. Codes are available at this https URL, demo is available at this https URL, LoRA is available at this https URL and the dataset for training router is available at this https URL. 
+
+---
+# The Art of Interrogation: Consistency Amplifies Factuality in Spatial Reasoning 
+
+**Authors**: Theo Uscidda, Marta Tintore Gazulla, Maks Ovsjanikov, Federico Tombari, Leonidas Guibas  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.11918)  
+
+**Abstract**: Current Large Reasoning Models (LRMs) exhibit remarkable general capabilities but significantly underperform in spatial reasoning tasks. Existing approaches treat this gap as a knowledge deficit, relying on supervised fine-tuning (SFT) to ingest labeled spatial data from external vision sources or synthetic engines. In contrast, we argue that for many tasks, spatial reasoning capabilities are already present in pre-trained LRMs but require alignment through logical coherence under geometric 2D and 3D constraints. In this work, we propose a self-supervised reinforcement learning (RL) framework that targets the internal reasoning process without requiring ground-truth annotations. By formalizing the notion of consistency verifiers -- reward functions that check for geometric and semantic consistency under transformations -- we demonstrate that models can improve their spatial reasoning abilities. We use both image transformations, like flipping, and textual transformations, like swapping the order of objects in the question, and propose a new optimal transport-based RL strategy, OT-GRPO, which is a minimal-matching variant of group relative policy optimization tailored to pairwise verifiers. We show that this label-free consistency training approaches the accuracy of models trained with ground-truth supervision and achieves similar generalization across diverse tasks and data domains. 
+
+---
+# Embodied-BenchClaw: An Autonomous Multi-Agent System for Embodied Spatial Intelligence Benchmark Construction 
+
+**Authors**: Baoyang Jiang, Fengchun Zhang, Leyuan Wang, Haotian Li, Yida Wang, Zhe Ji, Jinshan Lai, Xi Ren, Jianwei Hu, Qiang Ma  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.11909)  
+
+**Abstract**: Benchmarks are essential for evaluating embodied spatial intelligence, yet their construction is labor-intensive, hard to reuse, and difficult to maintain. Existing embodied benchmarks are often static and may quickly become saturated as models improve, limiting their ability to distinguish new capabilities. We propose Embodied-BenchClaw, an autonomous agentic system for constructing embodied spatial intelligence benchmarks. Given a user-specified evaluation intent, Embodied-BenchClaw automatically produces a complete and continually updatable benchmark package through a five-stage pipeline: intent blueprinting, data collection, structuring and cleaning, benchmark synthesis, and evaluation reporting. The pipeline is coordinated by three agents for planning, construction, and evaluation. To improve reusability and reliability, Embodied-BenchClaw introduces an extensible Skill Library and process quality control, enabling benchmark construction to be composable, verifiable, and repairable. We instantiate multiple benchmarks covering indoor spatial reasoning, outdoor spatial reasoning, robotic manipulation, quadruped robot navigation, UAV/aerial-view understanding, and static benchmark enhancement. These benchmarks span diverse embodied carriers, data sources, and spatial capabilities. Experiments with human evaluation, judge-based assessment, consistency checks, cost analysis, and ablations show that Embodied-BenchClaw can construct verifiable, executable, maintainable, and diagnostically useful embodied spatial benchmarks with reduced manual effort. 
+
+---
+# AutoMine Solution for AV2 2026 Scenario Mining Challenge 
+
+**Authors**: Songliang Cao, Jiele Zhao, Yuru Wang, Hao Li, Daqi Liu, Zehan Zhang, Fangzhen Li, Yu Wang, Yue Zhang, Bing Wang, Guang Chen, Hao Lu, Hangjun Ye  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.11874)  
+
+**Abstract**: With the development of autonomous driving systems, mining high-value, safety-critical, and planning-relevant scenarios from large-scale driving logs has become essential for data-driven evaluation. In this paper, we propose AutoMine, a robust self-refining scenario mining method based on LLMs and VLMs. AutoMine uses semantics-preserving prompt augmentation to reduce LLM prompt sensitivity, combines robust trajectory atomic functions with VLM-based functions to handle perception noise and open-world visual cues, and refines generated code through execution feedback from real logs. In the Argoverse 2 Scenario Mining Competition at CVPR 2026, AutoMine achieves a HOTA-Temporal score of 36.38 and a Timestamp BA score of 77.21. 
+
+---
+# StatefulDiscovery: Evidence-Calibrated Claim Formation in Open-Ended Scientific Discovery 
+
+**Authors**: Jiayao Chen, Shi Liu, Linyi Yang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.11851)  
+
+**Abstract**: Open-ended scientific discovery asks agents to move beyond executing analyses for predefined questions. Across multiple rounds of exploration, a discovery agent must decide which phenomena warrant investigation while avoiding overinterpretation, where emerging claims exceed the evidential scope of the analyses supporting them. This creates an evidence-calibration problem: the exploration trajectory must be coupled with claim status so that evidence can guide both what to investigate next and what can be claimed. We introduce StatefulDiscovery, a discovery framework that externalizes investigation state and uses it to coordinate frontier selection, evidence acquisition, and claim adjudication. We evaluate StatefulDiscovery across 40 real-data discovery tasks. Compared with several baselines, StatefulDiscovery produces more claims overall judged to be both well-supported and high-value. Ablations indicate that structured hypotheses, local adjudication, and frontier control contribute to performance. Together, these results suggest that explicit discovery state can couple exploration with evidence-calibrated claim formation. 
+
+---
+# Skill-Augmented AI Agents for Medical Research Analysis: An Exploratory Multi-Model Human Evaluation in an NSCLC Transcriptomic Biomarker Task 
+
+**Authors**: Qianyu Yao, Fei Sun, Bocheng Huang, Wei Chen, Jiarui Jiang, Shu Quan, Yifei Chen, Wenjie Xu, Bo li, Liping Su, Ruoqiong Wu, Huhai Hong, Huimei Wang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.11830)  
+
+**Abstract**: Background. Large language models and AI agents are increasingly used to support biomedical research, but native model outputs may omit key analytical steps, misuse methods, or overstate conclusions. We evaluated whether autonomous access to a medical research skill package was associated with higher-quality AI-generated transcriptomic research-analysis outputs compared with native AI without skills. Methods. We conducted an exploratory multi-model human evaluation using a non-small cell lung cancer immunotherapy biomarker task. Six model backbones were tested. The evaluation included 21 anonymized outputs: 9 native-AI outputs and 12 skill-augmented outputs generated through an AI agent implementation represented by OpenClaw. Four non-expert biomedical reviewers and two blinded experts evaluated each output, with two ratings from each reviewer type. The primary outcome was expert-rated overall quality. Results. Skill-augmented outputs showed directionally higher expert overall quality than native-AI outputs (mean 5.50 vs 5.11; difference=0.39; bootstrap 95\% CI, -0.04 to 0.90; Welch p=0.156). Non-expert reviewer quality showed the same direction (mean 4.72 vs 4.47; difference=0.26; bootstrap 95\% CI, -0.25 to 0.80; Welch p=0.373). Expert agreement was limited (single-rating ICC=-0.15), and model-specific effects were descriptive and heterogeneous. Conclusions. Autonomous skill access showed a directional quality signal in this exploratory sample, but the signal was smaller than expert-rating noise and should not be interpreted as confirmatory evidence. The findings primarily motivate larger evaluations of skill-augmented AI agents with stronger reliability controls, platform replication, and biological-validity assessment. 
+
+---
+# Toward Trustworthy AI: Multi-Target Adversarial Attacks and Robust Defenses for Continuous Data Summarization 
+
+**Authors**: Yuefang Lian, Longkun Guo, Zhongrui Zhao, Zhigang Lu, Yanan Cai, Shuchao Pang, Dachuan Xu, Jason Xue  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.11804)  
+
+**Abstract**: Trustworthy AI requires reliable data-processing pipelines, not only robust downstream predictive models. As an upstream component, data summarization determines which information is retained and passed to subsequent learning or decision modules. Therefore, adversarial perturbations to the summarization process can compromise trustworthy AI in an upstream manner: they may alter the selected summary, reduce its representativeness, and further degrade the utility of subsequent learning tasks. In this paper, we study adversarial attacks on continuous data summarization under similarity-level perturbations through DR-submodular optimization. We show that a class of multi-resolution image summarization objectives can be formulated as multilinear extensions of non-negative submodular set functions and satisfy DR-submodularity with $m$-weak monotonicity. We then formulate multi-target attack generation as a min-max problem, where one admissible perturbation of the similarity structure is optimized to degrade multiple target summarization models. To mitigate such perturbations, we formulate robust defense against mixed attack types as a regularized max-min problem. For both problems, we develop approximation algorithms with theoretical guarantees. Experiments on real-data and controlled clustered benchmarks show that the proposed attack is effective in representative low-to-moderate budget regimes and can induce downstream task-performance loss. The proposed defense improves the robustness--mitigation trade-off in structured settings, while also revealing the parameter sensitivity of robust protection on real data. 
+
+---
+# SVoT: State-aware Visualization-of-Thought for Spatial Reasoning via Reinforcement Learning 
+
+**Authors**: Chao Lei, Yanbei Jiang, Markus Hiller, Zhijian Zhou, Xunye Tian, Krista A. Ehinger, Nir Lipovetzky  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.11770)  
+
+**Abstract**: Spatial reasoning remains a challenge for Multimodal Large Language Models (MLLMs), as it requires reliable multi-hop inference over both intermediate states and state transitions. Current studies often leave intermediate states unverified and treat state transitions as implicit processes, which limits reliability in multi-hop spatial reasoning. To address this, we propose State-aware Visualization-of-Thought (SVoT), a reinforcement learning framework that generates interleaved, verifiable intermediate states and visualizations. SVoT integrates transition reasoning chains into the generation processes, enabling the model to verify action preconditions and effects through interleaved textual and visual reasoning. We train SVoT via Group Relative Policy Optimization (GRPO), instantiating verification through reward design and evaluating the efficacy of different fine-grained rewards. As existing benchmarks reduce state transitions to single-variable updates, substantially simplifying the problems, we establish five domains by extending classical environments and introducing two novel domains, Pacman and Gather, that require multi-object interactions and numerical reasoning. These domains support systematic evaluation of multi-hop spatial reasoning with quantitative verification of generated intermediate states and transition reasoning. SVoT with transition-aware supervision achieves state-of-the-art performance across the introduced domains, yielding up to a 65% absolute accuracy gain on out-of-distribution test sets. 
+
+---
+# When Do Data-Driven Systems Exhibit the Capability to Infer? 
+
+**Authors**: Maximilian Poretschkin, Tabea Naeven  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.11769)  
+
+**Abstract**: The European AI Act is the first comprehensive regulation of artificial intelligence (AI), setting out extensive obligations, particularly for so-called high-risk and general-purpose AI systems. A key distinguishing feature of AI systems under the AI Act is the capability to infer. Since the AI Act does not clearly define what inference is, there is a gray area for certain data-driven systems. A specific example is credit scoring systems, which are listed by Annex III of the AI Act. At the same time, however, these are often implemented using statistical models for which it is unclear whether they have the capability to infer and thus fall under the AI definition of the AI Act at all.
+Motivated by statistical learning theory, this work develops a framework for grading different levels of the capability to infer. Based on the AI Act and the Commission Guidelines on the definition of an artificial intelligence system, we analyze which levels constitute sufficient capability to infer within the meaning of the AI Act and where further regulatory clarity is needed. We illustrate the framework by creating two realistic credit scoring workflows and show whether and where inference occurs in them. Our analysis illustrates that not only individual models but the entire data processing workflow must be considered. It also shows that the involvement of human experts during development can have significant influence on the capability to infer. Code can be found at this https URL. 
+
+---
+# Mind the Perspective: Let's Reason Recursively for Theory of Mind 
+
+**Authors**: Chao Lei, Guang Hu, Meng Yang, Yanbei Jiang, Nir Lipovetzky  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.11724)  
+
+**Abstract**: Theory of Mind (ToM) reasoning requires inferring agents' beliefs from partial and asymmetric observations, which remains an open challenge for LLMs. Existing prompting-based approaches improve ToM reasoning through observable-event filtering or temporal belief chains, without explicitly modeling nested beliefs. We introduce RecToM, an inference-time framework for ToM reasoning that models nested beliefs via recursive perspective construction. RecToM constructs each character perspective from the preceding character perspective along the character chain specified by the question, reducing higher-order belief questions to actual-world questions within the final constructed perspective. We further provide a KD45 analysis showing that RecToM's perspective construction induces a well-formed belief modality beyond simple event filtering. Experiments on ToM benchmarks, including Hi-ToM, Big-ToM, and FanToM, across multiple LLM backbones show that RecToM consistently outperforms recent advanced approaches, achieving state-of-the-art performance. Notably, RecToM reaches 100\% accuracy on Hi-ToM with GPT-5.4 and Qwen3.5, a benchmark requiring higher-order ToM reasoning. 
+
+---
+# Organize then Retrieve: Hierarchical Memory Navigation for Efficient Agents 
+
+**Authors**: Hao-Lun Hsu, Nikki Lijing Kuang, Boyi Liu, Zhewei Yao, Yuxiong He  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.11680)  
+
+**Abstract**: Large language model (LLM) agents struggle with long-horizon tasks due to their inherent statelessness, requiring all task-relevant information to be encoded in growing input contexts. The resulting degraded reasoning quality, increased inference cost, and higher latency necessitate efficient working memory mechanisms. However, existing approaches either rely on lossy compression or similarity-based retrieval, which often fail to capture temporal structure and causal dependencies required for multi-step agentic tasks. In this work, we present HORMA, a Hierarchical Organize-and-Retrieve Memory Agent that organizes experience into a file-system-like hierarchical structure, where summarized entities are linked to the corresponding raw trajectories, enabling efficient access without losing detailed information. HORMA decomposes working memory into two stages: structured memory construction and navigation-based retrieval. The construction module iteratively refines how experiences are structured by distinguishing between failures caused by missing information and those caused by misleading or overloaded context. The navigation module retrieves task-relevant context by traversing the hierarchy using a lightweight agent trained with reinforcement learning to select minimal yet sufficient context, thereby reducing latency along the critical execution path. Across ALFWorld, LoCoMo, and LongMemEval, HORMA improves task performance under constrained context budgets while requiring at most 22.17% of the baseline token usage in long conversation tasks. Compared to existing methods, it consistently achieves better efficiency-performance trade-offs and generalizes effectively to unseen tasks. 
+
+---
+# Lung-R1: A Knowledge Graph-Guided LLM for Pulmonary Diagnostic Reasoning 
+
+**Authors**: Haoyang Zeng, Yuanxi Fu, Rongzhen Li, Yuming Yang, Xiao Sun, Jingwang Huang, Gujie Shao, Guohui Xiang, Quan Lu, Dongfan Ye, Xuetao Chen, Jiang Zhong, Kaiwen Wei, Zhi Xu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.11675)  
+
+**Abstract**: Diagnosing pulmonary diseases requires integrating heterogeneous evidence amid phenotypic variability and cross-disease overlap. Although large language models (LLMs) have shown progress on pulmonary knowledge question answering (QA) and information-processing tasks, reliable pulmonary diagnosis requires patient-specific, relation-aware reasoning over electronic medical record (EMR) evidence rather than isolated knowledge recall. We define this gap between pulmonary knowledge and case-level diagnostic reasoning as the Pulmonary Knowledge-to-Diagnosis Gap. To address it, we introduce LungKG, the first structured pulmonary knowledge graph for diagnostic knowledge organization and record-grounded reasoning. LungKG contains 59,038 nodes and 164,308 edges across 15 entity types and 112 relation types, serving as both a reusable pulmonary knowledge resource and the foundation for LungKG-guided model adaptation. Built on LungKG, we propose Lung-R1, a LungKG-guided pulmonary LLM trained through KG-constrained reasoning-chain construction and KG-guided reinforcement learning. In a 20-system evaluation, Lung-R1-14B achieves state-of-the-art performance across Choice, Pulmonary-QA, and EMR Diagnosis, reaching an EMR Diagnosis score of 4.3583 and surpassing the strongest non-Lung-R1 baseline by 0.1476 points. These results demonstrate the value of LungKG-guided training for EMR-based pulmonary diagnosis. 
+
+---
+# TreeSeeker: Tree-Structured Trial, Error, and Return in Deep Search 
+
+**Authors**: Zhuofan Shi, Mingzhe Ma, Lu Wang, Fangkai Yang, Pu Zhao, Yiming Guan, Youling Huang, Wei Zhang, Qingwei Lin, Dongmei Zhang, Saravan Rajmohan  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.11662)  
+
+**Abstract**: Deep search requires agents to answer complex questions through multi-step web search, browsing, evidence comparison, and synthesis. A central challenge is deciding how to search when several directions look plausible but only some will later lead to reliable evidence. If an agent greedily follows the current best-looking direction, it may keep extending a weak continuation. If it explores without discipline, it may waste budget on disconnected trials. We propose TreeSeeker, an inference-time framework for controlled trial-and-error in deep search. TreeSeeker organizes search as branch-and-return search over tree-structured states, where each branch is a tentative direction for a sub-goal. At each round, TreeSearch reads all sub-goal trees, identifies active goals, and uses textual UCB signals of value, uncertainty, and risk to select among exploiting a promising branch, exploring an uncertain alternative, or pruning an unproductive continuation and returning to an earlier branch point. TreeMem supports this control loop by keeping evidence, uncertainty, conflicts, progress, and failure cues attached to the branches that produced them, so trial outcomes can guide later decisions. Experiments on XBench-DeepSearch, BrowseComp, and BrowseComp-ZH show that TreeSeeker consistently outperforms strong open-source baselines, suggesting that explicit branch-and-return control complements stronger reasoning and tool execution. 
+
+---
+# TouchThinker: Scaling Tactile Commonsense Reasoning to the Open World with Large-scale Data and Action-aware Representation 
+
+**Authors**: Kailin Lyu, Di Wu, Pengwei Zhang, Yuhang Zheng, Yingxin Lai, Long Xiao, Kangyi Wu, Pengna Li, Chen Gao, Lianyu Hu, Xiaobin Hu, Jie Hao, Ce Hao, Weihao Yuan, Shuicheng Yan  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.11637)  
+
+**Abstract**: Touch is a key modality for embodied agents to understand the physical world. Although recent work has incorporated tactile signals into language systems for tactile commonsense reasoning, scaling such systems to realistic open-world settings remains challenging due to two key bottlenecks: (1) current tactile reasoning datasets remain limited in format and scale, providing insufficient supervision for reasoning from tactile observations to physical commonsense and hindering the learning of transferable tactile commonsense; (2) Tactile signals are inherently redundant and action-specific, yet existing methods often overlook these properties, resulting in inefficient representations with limited semantic expressiveness. To address these limitations, we propose TouchThinker, a tactile-language framework that scales tactile commonsense reasoning to the open world from both data and representation perspectives. First, we construct TouchThinker-1M, a million-scale, multi-source tactile reasoning dataset covering \textbf{415} objects, \textbf{8} scenarios, and \textbf{7} sensor types, providing a solid data foundation for open-world generalization. We further introduce TouchThinker-Bench, an open-world benchmark with more realistic and diverse tasks. Then, we propose action-aware modeling mechanism to improve tactile representation efficiency and enable efficient reasoning. Experimental results demonstrate that TouchThinker achieves competitive performance against state-of-the-art models across multiple datasets. Our code and dataset will be made available at: this https URL. 
+
+---
+# Architecture-Aware Reinforcement Learning Makes Sliding-Window Attention Competitive in Math Reasoning 
+
+**Authors**: Kai Liu, Peijie Dong, Xinchen Xie, Jianfei Gao, Qipeng Guo, Xiaowen Chu, Shaoting Zhang, Kai Chen  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.11634)  
+
+**Abstract**: The rapid progress of reasoning and agentic large language models (LLMs) has increased the demand for long-context inference, but self-attention (SA) scales quadratically with context length.
+To address this, we study SWARR (Sliding-Window Attention with Reinforced Adaptation for Math Reasoning), a practical recipe for adapting SWA models to mathematical reasoning. SWARR has two stages: (1) efficient conversion from a pretrained SA model to SWA with supervised fine-tuning (SFT), which avoids pretraining a new base model, and (2) policy adaptation with reinforcement learning (RL).
+We find that SWA still underperforms SA after SFT, and we hypothesize that this gap is caused in part by a data-architecture mismatch: most SFT data are prepared for SA models and may contain long-range dependencies that are difficult for SWA to model. Because on-policy RL optimizes self-generated trajectories under the SWA constraint, it can adapt trajectories to better match SWA.
+Experiments on mathematical reasoning benchmarks show that this recipe substantially narrows the gap between SWA and SA, recovering much of the accuracy lost during SWA conversion while preserving the efficiency benefits of linear-complexity attention. Our central contribution is the empirical finding that RL changes the conclusion one would draw from conversion and SFT alone about SWA's viability for math reasoning. 
+
+---
+# HERO: Hindsight-Enhanced Reflection from Environment Observations for Agentic Self-Distillation 
+
+**Authors**: Haoran Liu, Yuwei Zhang, Xiyao Li, Bohan Lyu, Jingbo Shang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.11559)  
+
+**Abstract**: Reinforcement learning typically improves multi-turn agent capabilities through the terminal outcome of the trajectories, which makes it difficult to determine credit assignments for each intermediate turns. Recent on-policy self-distillation methods offer a promising alternative by converting privileged feedback into dense token-level supervision through a self-teacher. Our study is motivated by the unexpected performance degradation observed when naively extending this paradigm to multi-turn settings, which we attribute to a lack of alignment between privileged feedback, such as successful trajectories or terminal outcomes, and the student's current decision context. We introduce HERO, a hindsight-enhanced self-distillation framework that uses next environment observations as locally aligned feedback. After each rollout, HERO reflects on the completed interaction to convert each observation into a compact turn-level diagnosis, that captures actionable feedback about the original action such as its necessity, validity or failure cause. On TauBench and WebShop, HERO improves task success and reduces unnecessary turns over environment-feedback-only self-distillation and GRPO. It is especially effective under limited training turn budgets, where successful rollouts are rare and GRPO provides weak reward-contrast signals. 
+
+---
+# SkillJuror: Measuring How Agent Skill Organization Changes Runtime Behavior 
+
+**Authors**: Zhiyu Chen, Zihan Guo, Bo Huang, Bingwei Lu, Jianghao Lin, Yuanjian Zhou, Weinan Zhang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.11543)  
+
+**Abstract**: Agent Skills augment large language model (LLM) agents with procedural knowledge at inference time, but current benchmarks rarely distinguish what a Skill says from how it is organized. We study this distinction through Progressive Disclosure, where a concise root file points agents to supporting resources on demand, and compare it with a normalized flat baseline. We present SkillJuror, a framework for evaluating Skill writing paradigms through semantically controlled variants, matched multi-trial evaluations, and trajectory evidence while holding task knowledge fixed. In an 82-task SkillsBench study, Progressive Disclosure changes runtime behavior before aggregate outcomes: distinct Skill resources touched per trajectory rise from 1.18 to 3.85, and effective uptake events rise from 1.33 to 3.92. It also yields 17 additional verifier-passing trials out of 410 matched trials (+4.1%) over the normalized flat baseline. The benefit is task-dependent. Progressive Disclosure helps when supporting resources guide implementation, checking, or repair, but is weaker when success hinges on exact output conventions, numerical thresholds, or long artifact-generation pipelines. These results show that Skill organization is not mere presentation: it can change how agents search and apply procedural knowledge, while outcome gains depend on whether the exposed resources are actionable for the task. Code is available at this https URL. 
+
+---
+# MoCA-Agent: A Market-of-Claims Code Agent for Financial and Numerical Reasoning 
+
+**Authors**: Abdelrahman Abdallah, AbdelRahim A. Elmadany, Sameh Al Natour, Hasan Cavusoglu, Adam Jatowt, Muhammad Abdul-Mageed  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.11537)  
+
+**Abstract**: Financial and tabular question answering requires more than fluent reasoning: answers must be grounded in the exact facts, formulas, units, signs, and scales that support them. A single misread cell or incorrect operation can silently produce a plausible but wrong result. We introduce \textsc{MOCA-Agent}, a market-of-claims code agent that replaces free-form multi-agent debate with claim-level verification. The system decomposes each question into typed atomic claims, asks specialist trader agents to buy or sell those claims, clears their orders into confidence-weighted accept/reject decisions, and synthesizes an executable Python program from market-supported evidence. A code-aware verifier then checks the program for execution, structural consistency, and common financial reasoning errors, with at most one market-aware repair round. Across ten public benchmarks spanning financial numerical reasoning, general tabular reasoning, ESG question answering, and multimodal chart reasoning, \textsc{MOCA-Agent} achieves strong performance using a fixed Qwen3.6-27B backbone, including $78.3\%$ on FinQA, $76.0\%$ on FinanceMath, $71.2\%$ on MultiHiertt, $86.9\%$ on ESGenius, and $85.6\%$ average on FinChart-Bench. These results show that aggregating evidence at the level of atomic claims, rather than whole answers, improves robustness in high-stakes numerical reasoning.\footnote{The code and data are available: this https URL. 
+
+---
+# Search Discipline for Long-Horizon Research Agents 
+
+**Authors**: Adithya Srinivasan, Devesh Paragiri  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.11522)  
+
+**Abstract**: Autoresearch agents now propose, evaluate, and select scientific candidates against a metric, and that metric is usually an aggregate reduced over a heterogeneous space of regions, slices, or cohorts. We show that when scientific validity lives in that disaggregated structure, the aggregate can rank the wrong candidate first. The headline number improves while the structure underneath inverts, so a decision made on the number accepts a candidate that quietly breaks the model. The failure is not domain-specific. It appears wherever a candidate's validity is multi-dimensional but its verifier is a single reduction.
+We demonstrate the inversion on a fire-model task in the Ecosystem Demography model. The highest-scoring candidate and a slightly lower one are within noise of each other on global score, yet the top-scoring one collapses the protected boreal regions while the other preserves them. What separates them is the per-region behavior, not the headline number.
+This decision should not be left to the agent that produced the candidates. The agent optimizing the score is the last party likely to catch the score being wrong, and a prompt has no remaining turn once the agent has stopped. We move the decision to an external control loop that audits each candidate on its disaggregated behavior and acts after the agent has decided. It can demote a candidate the agent would have accepted, and it can reopen a run the agent had declared finished. Our contribution is the inversion finding itself, and a search-discipline protocol that decides on reviewable candidate-effect evidence instead of the score. 
+
+---
+# Forecasting Future Behavior as a Learning Task 
+
+**Authors**: Mosh Levy, Yoav Goldberg, Asa Cooper Stickland  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.11445)  
+
+**Abstract**: Trust in an AI system is often anchored by explanations of how it works, which one then uses to forecast its behavior on new inputs. For large reasoning models (LRMs), this conventional route is particularly difficult to follow: explanation methods for single token generations do not naturally generalize to long trajectories, and the trajectories themselves are often not faithful when read as natural language. We propose an alternative that bypasses the explanation step: treat behavior forecasting as a learnable task and train Behavior Forecasters that operates on a single reasoning trajectory to make the same forecasts one would typically seek from an explanation. The forecaster's training data is obtained by querying the LRM with no human annotation, and its inference is done in a single forward pass. We instantiate this approach on two tasks: how likely the LRM is to repeat its answer on re-runs, and how removing parts of the input changes its answer. We evaluate this approach on both tasks across three diverse reasoning datasets and find that trained Behavior Forecasters are more accurate than GPT-5.4 and Claude Opus-4.6 reading the same trajectories as naive readers, at a small fraction of their inference cost. We find that fine-tuning the backbone end-to-end and initializing it from the target LRM are each necessary for strong performance. These results show that the reasoning trajectory carries information about the LRM's future behavior that goes beyond what naive reading conveys. 
+
+---
+# INFRAMIND: Infrastructure-Aware Multi-Agent Orchestration 
+
+**Authors**: Ahasan Kabir, Jiaqi Xue, Mengxin Zheng, Qian Lou  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.11440)  
+
+**Abstract**: Existing multi-agent LLM orchestration methods, ranging from brute-force ensembles to learned routers, select models and topologies based on task and model features. However, these methods do not consider the runtime state of the serving infrastructure. On shared GPU clusters under concurrent load, this infrastructure blindness causes systematic resource underutilization: preferred models accumulate deep request queues while equally capable alternatives sit idle. In multi-agent pipelines, where each query triggers multiple sequential model calls, these delays then compound across every downstream step. Closing this gap is challenging because the relevant infrastructure signals (queue depths, KV-cache pressure, latencies) are dynamic and noisy, and they must drive three different decisions: planning, per-step routing, and scheduling. We introduce INFRAMIND, a framework that makes the entire multi-agent stack infrastructure-aware. An infra-aware planner conditions topology and role selection on real-time system load and remaining budget, biasing toward simpler graphs under congestion and richer ones at low load. An infra-aware executor then observes per-model queue depths, cache utilization, and response latencies at each agent step to decide which model to call and how deeply to reason; a budget-aware scheduler further reorders each model's queue so that urgent requests are served first. Cast as a hierarchical constrained MDP and solved end-to-end via reinforcement learning, the system learns to balance quality against latency automatically. Across five benchmarks, INFRAMIND delivers up to +7.6 pp accuracy over the prior baseline at low load with up to 7x lower latency, and sustains up to 99.9% SLO compliance under high load where every baseline drops below 50%. 
+
+---
+# Automated Mediator for Human Negotiation: Pre-Mediation via a Structured LLM Pipeline 
+
+**Authors**: Jamie Bergen, Sarit Kraus  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.11379)  
+
+**Abstract**: Pre-mediation, the preparatory phase preceding direct human negotiation, plays a critical role in achieving mutually beneficial agreements, yet is often omitted due to cost, time, and limited access to trained mediators. We introduce an automated mediator for human negotiation, implemented as a structured pipeline of LLM modules, that supports pre-mediation in integrative negotiation settings. The pipeline decomposes preparation into specialized modules for dialogue, preference prediction, response-level critique, and structured summarization, separating inference, generation, and evaluation to address limitations of monolithic single-prompt approaches. We use the term "agent" for each module following common LLM-systems terminology, but the components are not autonomous and do not interact peer-to-peer; outputs are passed forward in a fixed sequence. We evaluate the system in two controlled human-subject experiments comparing AI-based pre-mediation with professional human mediators in a multi-issue negotiation scenario. On short-term self-reported measures, the automated mediator achieves preparation outcomes broadly comparable to human mediators, including trust in the mediator and confidence in reaching mutually beneficial agreements, while achieving substantially lower error on the preference-inference task under our scenario and prompts (36% lower RMSE). A second study shows that targeted prompt refinements reduce excessive affirmation patterns from 36.6% to 16.8%, matching human mediator baselines. Our findings suggest that structured LLM pipelines can provide scalable, low-effort pre-mediation support broadly comparable to human mediators on short-term self-reported preparation outcomes. The pipeline's single-party design mirrors how human mediators run pre-mediation today and enables parallel deployment across all parties to a dispute, supporting scalability. 
+
+---
+# Knowing When to Ask: Self-Gated Clarification for Hierarchical Language Agents 
+
+**Authors**: Aijing Gao, Yiming Kang, Mengdie Flora Wang, Jae Oh Woo  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.11349)  
+
+**Abstract**: In hierarchical reasoning, failures often originate at intermediate decision points where the agent commits to a wrong branch without recognizing that it lacks critical information. Rather than treating clarification as an external uncertainty trigger, we propose ACTION-RATING, a formulation that places it inside the agent's action space on a shared ordinal scale with navigation, so that asking competes directly with acting at every decision point and help-seeking becomes observable at intermediate states. Two structurally distinct information-seeking modes emerge from the agent's own ratings: mandatory (no viable branch) and opportunistic (residual uncertainty despite a leading candidate). On Harmonized Tariff Schedule classification (30,000-node taxonomy, three benchmarks, 9~LLMs across 4 families), we observe a regime shift from mandatory to opportunistic clarification, with Information-Seeking Effectiveness (ISE), a local diagnostic defined as the fraction of help interactions followed by a correct next navigation step (not a final-task metric), rising from 50% to 74%. Three diagnostic contrasts fail to reproduce this structure. A separability test shows that the information-seeking pattern (mode split, ISE ranking) persists when answer quality is degraded (-18.8% accuracy), supporting an empirical separation between where an agent seeks help and the quality of the help it receives. Under the controlled answer channel, accuracy gains reach +16.2% at 10-digit; we read this as an upper bound on what better localization could unlock, not a deployment estimate. 
+
+---
+# Can AI Agents Synthesize Scientific Conclusions? 
+
+**Authors**: Hayoung Jung, Pedro Viana Diniz, José Reinaldo Corrêa Roveda, Abner Fernandes da Silva, Haeun Jung, Enoch Tsai, Aleksandra Korolova, Manoel Horta Ribeiro  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.11337)  
+
+**Abstract**: Scientific AI agents increasingly retrieve evidence, reason across sources, and synthesize conclusions used in consequential decisions. Yet, their ability to do so in high-stakes domains such as health remains unclear. We introduce SciConBench, a large-scale live benchmark of 9.11K questions and expert-written conclusions from systematic reviews to evaluate open-domain scientific conclusion synthesis. The benchmark draws on an expert-validated automated evaluation pipeline that decomposes conclusions into atomic facts and measures correctness and comprehensiveness via factual precision and recall. To mitigate data leakage, we further introduce SciConHarness, a clean-room evaluation harness that equips agents with controlled web interaction to ensure valid measurement. Evaluating 8 frontier models and deep research agents, we find that factual quality remains low: under clean-room settings, the best agent achieves only a factual F1 of 0.337. Our clean-room setting consistently reduces performance relative to unconstrained evaluation, suggesting that leakage inflates estimates of models' true synthesis capabilities. Finally, we audit consumer-facing agents (e.g., Google AI Overview, OpenEvidence) and find they frequently generate incomplete and sometimes contradictory conclusions, even when the ground-truth answer is available. Overall, our results show that reliable synthesis of scientific conclusions remains an open challenge, and that clean-room evaluation is essential for assessing open-domain AI agents. 
+
+---
+# Position: Hippocampal Explicit Memory Is the Cornerstone for AGI 
+
+**Authors**: Sangjun Park  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.11245)  
+
+**Abstract**: Large Language Models (LLMs) have demonstrated remarkable capabilities across various tasks, raising expectations for Artificial General Intelligence (AGI). This position paper argues that integrating explicit memory is the cornerstone for advancing LLMs toward AGI. The key reason is that the underlying learning mechanism of LLMs is highly analogous to human implicit memory. However, higher-order cognitive functions necessary for AGI, such as long-term strategic planning, metacognition, and symbolic reasoning, heavily rely on hippocampal explicit memory and cannot arise solely from implicit statistical learning. Drawing on findings from neuroscience, I advance this perspective and complement it with computational requirements for artificial explicit memory systems, hoping to foster further research and lay the groundwork for explicit memory integration. 
+
+---
+# From Explicit Elements to Implicit Intent: A Predefined Library for Auditable Behavioral Inference 
+
+**Authors**: Liu hung ming  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.11207)  
+
+**Abstract**: We present SemantiClean, a modular framework for extracting structured semantic signals from e-commerce session data and driving pluggable inference targets including purchase intent, customer segmentation, and product affinity through a shared element library. Unlike conventional end-to-end predictors that optimise solely for accuracy, SemantiClean prioritises auditability, structural governance, and sigma=0 reproducibility, explicitly trading marginal predictive gains for element-level transparency and defensible decision trails. Built upon the Online Shoppers Purchasing Intention (OSPI) dataset, the framework organises twenty-four behavioural elements into a four-layer architecture (Functional, Interaction, Systemic, Contextual) and enforces signal quality through three anti-inflation mechanisms: RedundancyGroup contribution caps, TieredPenaltyCalculator bias penalties, and AdaptiveConstraintMode cold-start this http URL report introduces the LLM-Integrated Semantic Inference Engine, a fully implemented two-phase LLM-driven inference architecture that leverages complete element metadata at inference time. All quantitative results reported herein are produced by this engine. Deterministic engine outputs remain fully reproducible (sigma=0); LLM-dependent results (E8, E10) are subject to controlled output variability under fixed provider/model/temperature settings. The gender inference target remains non-functional in the current implementation and is excluded from all quantitative results. 
+
+---
+# Reroute, Don't Remove: Recoverable Visual Token Routing for Vision-Language Models 
+
+**Authors**: Cheng-Yu Yang, Shao-Yuan Lo, Yu-Lun Liu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.12412)  
+
+**Abstract**: Vision-language models (VLMs) project images into hundreds to thousands of visual tokens, making decoder inference expensive in both attention computation and KV-cache memory. Existing visual-token reduction methods largely follow a rank-and-remove paradigm: they score visual tokens, keep a compact subset, and permanently discard the rest. We show that this irreversible action is fragile because visual-token importance changes across decoder depth; tokens ranked low at one stage may become relevant in later layers, especially for grounding-sensitive queries. We propose Reroute, a training-free plug-in that replaces removal with recoverable routing. At each routing stage, selected vision tokens pass through decoder blocks, while deferred tokens bypass the stage and re-enter the candidate pool at the next routing decision. Reroute reuses existing attention-score ranking rules and stage-wise schedules, preserving the theoretical TFLOPs and KV-cache budget class of the pruning method it augments. Across FastV, PDrop, and Nüwa variants on LLaVA-1.5 and Qwen backbones, reroute improves grounding under aggressive token reduction while maintaining general VQA performance. These results suggest that VLM token reduction should not be viewed only as irreversible pruning, but also as recoverable routing. The code can be found here: this https URL 
+
+---
+# FACTR 2: Learning External Force Sensing for Commodity Robot Arms Improves Policy Learning 
+
+**Authors**: Steven Oh, Jason Jingzhou Liu, Tony Tao, Philip Han, Kenneth Shaw, Satoshi Funabashi, Ruslan Salakhutdinov, Deepak Pathak  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.12406)  
+
+**Abstract**: Contact-rich manipulation requires force sensitivity, but many robot arms lack dedicated force sensors due to their high cost. We present Neural External Torque Estimation (NEXT), a data-driven method that estimates external joint torques without needing any dedicated force sensors. NEXT trains in 1 minute from only 10 minutes of free-motion data, yet achieves estimates comparable to dedicated joint-torque sensors. NEXT enables force-feedback teleoperation on low-cost arms and improves policy learning through Force-Informed Re-Sampling Training (FIRST), which up-samples pre-contact and contact segments during behavior cloning. Across five long-horizon tasks, FIRST outperforms prior force-aware policies by over 17% in task progress. Together, NEXT and FIRST bring force-aware teleoperation and policy learning to off-the-shelf robots without additional sensing hardware. Video results and code are available at this https URL 
+
+---
+# DIRECT: When and Where Should You Allocate Test-Time Compute in Embodied Planners? 
+
+**Authors**: Jadelynn Dao, Milan Ganai, Yasmina Abukhadra, Ajay Sridhar, Mozhgan Nasr Azadani, Katie Luo, Clark Barrett, Jiajun Wu, Chelsea Finn, Marco Pavone  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.12402)  
+
+**Abstract**: Vision-Language Models (VLMs) are increasingly deployed as high-level planners for embodied agents, with an emerging strategy of scaling test-time compute to improve capability. However, we observe that doing so increases latency, token usage, and FLOPs while yielding uneven, often diminishing gains in downstream success, limiting where embodied agents can be deployed. We argue that choosing when and where to spend test-time compute is central to bringing frontier performance to the real world. We introduce DIRECT, a routing framework that uses multimodal scene context to allocate compute per prompt, improving the success--cost Pareto frontier over fixed model selection. Across three dominant scaling axes, namely chain-of-thought depth, model size, and memory history, our experiments on VLABench and RoboMME show that test-time compute is not a uniform lever: different axes yield qualitatively distinct capability gains. We validate these insights on a physical Franka arm in a DROID setup spanning zero-shot manipulation and long-horizon chaining, where our router matches or exceeds a stronger model's success rate at up to 65% lower average latency. Ultimately, our results show that naively scaling test-time compute is wasteful, and that DIRECT can provide frontier-level embodied planning in robotic systems at a fraction of the cost. Project page can be found at this http URL. 
+
+---
+# Redesign Mixture-of-Experts Routers with Manifold Power Iteration 
+
+**Authors**: Songhao Wu, Ang Lv, Ruobing Xie, Yankai Lin  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.12397)  
+
+**Abstract**: Router is the cornerstone component to the Mixture-of-Experts models. Serving as expert proxies, the rows of the router matrix compute their similarity to the MoE inputs to determine which subset of experts is activated. Ideally, each router row is designed to encode the expert matrix into this representative vector, such that its dot-product with token can better reflect token-expert affinity. However, there exists no design principles to enforce this condensation. In this paper, we propose to align each router row with the principal singular direction of the associated expert, as this direction provides the most expressive mathematical description of a matrix. Based on this principle, we propose a router redesign with Manifold Power Iteration (MPI). Specifically, it introduces a "Power-then-Retract" paradigm, where a power iteration step is performed on the router weights, followed by a retraction to impose a norm constraint to ensure both efficiency and stability. Theoretically, we show that MPI drives router rows to converge toward the principal singular directions of associated experts. Empirically, we pretrain MoE model across scales from 1B to 11B parameters to confirm that this alignment facilitates more effective MoE models. 
+
+---
+# System Report for CCL25-Eval Task 5: New Dataset and LoRA-Fine-Tuned Qwen2.5 
+
+**Authors**: Haotao Xie  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.12392)  
+
+**Abstract**: Recently, large language models (LLMs) have achieved promising progress in the fields of classical Chinese translation and the generation of classical poetry. However, domain-specific research on precise translation and affective-semantic understanding of classical poetry remains limited. The main challenge is that most studies treat the poetic appreciation task as a general-domain problem, neglecting the distinctive features of poetic appreciation, while high-quality and domain-specific datasets are extremely limited. To address this limitation, we decompose the task into three subtasks: term interpretation, semantic interpretation, and emotional inference. Based on multiple open-source datasets, we perform data cleansing and alignment to construct the Classical Chinese Poetry Instruction Pair Dataset (CCPoetry-49K), which comprises 49,404 high-quality instruction-response pairs explicitly optimized for this domain. We then propose a domain-specialized LLM, called PoetryQwen, by applying Low-Rank Adaptation (LoRA) to fine-tune the Qwen2.5-14B model. Experimental results on the CCL25-Eval Task 5 benchmark demonstrate that PoetryQwen achieves a score of 0.757, representing a 9.7% improvement over the Qwen2.5-14B-Instruct baseline (0.690). These findings clearly indicate that PoetryQwen significantly enhances performance in precise translation and emotional understanding of classical poetry. We present new dataset and methodological considerations intended to support the domain-specific optimization of LLMs. 
+
+---
+# TAHOE: Text-to-SQL with Automated Hint Optimization from Experience 
+
+**Authors**: Zhiyi Chen, Jie Song, Peng Li  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.12387)  
+
+**Abstract**: Large Language Models (LLMs) have democratized database access through Text-to-SQL, but moving from prototypes to production remains difficult. Real deployments must handle strict SQL dialects, massive schemas, and evolving user preferences, while supervised fine-tuning is costly and rigid and agentic test-time scaling is expensive. We present Tahoe, a system that treats prompt optimization as a dynamic data management problem. Tahoe uses an error-driven hint learning pipeline across Development and Deployment to consolidate debugging traces into a structured Hint Bank. Compiler feedback is distilled into reusable Syntax Hints for dialect-specific rules, while execution and user feedback are converted into Semantic Hints for schema- and user-specific logic. Tahoe further introduces a Strategy Layer that models conflicting user intents as competing strategies under shared natural-language triggers, with recency signals and post-learning attribution statistics that summarize empirical success, harm, inertness, and support. At inference time, Tahoe retrieves relevant hints and guides the LLM through Logic Planning followed by SQL Synthesis. We implement and evaluate the development-phase workflow, leaving deployment-time human-feedback updates for future work. On Spider 2.0-Snow, Tahoe substantially improves Text-to-SQL without updating model parameters. On 113 supervised Spider 2.0-Snow-0212 examples using GPT-5.5, Tahoe raises pass rate from 61.95 percent to 79.42 percent and pass-at-4 from 72.57 percent to 87.61 percent, achieves 100 percent Snowflake syntax pass rate, and reduces average compiler-feedback critic rounds from 2.79 to 0.12 per sampled candidate. The same Hint Bank also transfers to weaker backbones, including a 19.7 percentage-point pass-rate gain on Doubao-2.0-lite. 
+
+---
+# ATLAS: Active Theory Learning for Automated Science 
+
+**Authors**: Noémi Éltető, Nathaniel D. Daw, Kimberly L. Stachenfeld, Kevin J. Miller  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.12386)  
+
+**Abstract**: Advancing scientific understanding through mechanistic modeling requires posing the right experimental questions to yield maximally informative data. To automate this pursuit within cognitive science, we introduce ATLAS (Active Theory Learning for Automated Science), an active learning framework for the data-driven discovery of interpretable behavioral models. ATLAS iterates between generating mechanistic hypotheses--instantiated as a diverse ensemble of sparse neural networks (Disentangled RNNs)--and designing experiments that optimally distinguish between them. We test this approach on the problem of recovering reinforcement learning agents from their behavior in bandit tasks. ATLAS designs varied sequences of qualitatively novel experiments with temporal structure tailored to underlying agent characteristics. The models trained on these experiments are evaluated against a comprehensive set of metrics for mechanistic modeling that capture behavioral, structural, and computational similarity. ATLAS achieves a 5-10x improvement in sample efficiency across all metrics compared to random experimentation, and its performance is further validated against expert-designed experiments derived from literature. These in silico results showcase ATLAS's potential to accelerate human-interpretable insights in cognitive science and other domains where scientific inquiry relies on discovering mechanistic models. 
+
+---
+# APPO: Agentic Procedural Policy Optimization 
+
+**Authors**: Xucong Wang, Ziyu Ma, Yong Wang, Yuxiang Ji, Shidong Yang, Guanhua Chen, Pengkun Wang, Xiangxiang Chu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.12384)  
+
+**Abstract**: Recent advances in agentic Reinforcement Learning (RL) have substantially improved the multi-turn tool-use capabilities of large language model agents. However, most existing methods assign credit over coarse heuristic units, such as tool-call boundaries or fixed workflows, making it difficult to identify which intermediate decisions influence downstream outcomes. In this work, we study agentic RL from two perspectives: \textit{where to branch and how to assign credit after branching}. Our pilot analysis shows that influential decision points are broadly distributed throughout the generated sequence rather than concentrated at tool calls, while token entropy alone does not reliably reflect their impact on final outcomes. Motivated by these observations, we propose \textbf{Agentic Procedural Policy Optimization (APPO)}, which shifts branching and credit assignment from coarse interaction units to fine-grained decision points in the sequence. APPO selects branching locations using a Branching Score that combines token uncertainty with policy-induced likelihood gains of subsequent continuations, enabling more targeted exploration while filtering out spurious high-entropy positions. It further introduces procedure-level advantage scaling to better distribute credit across branched rollouts. Experiments on 13 benchmarks show that APPO consistently improves strong agentic RL baselines by nearly 4 points, while keeping efficient tool-calls and maintaining behavior interpretability. 
+
+---
+# SPEA2$^+$: Improved Density Estimation in SPEA2 with Provable Runtime Guarantees 
+
+**Authors**: Duc-Cuong Dang, Andre Opris, Dirk Sudholt  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.12382)  
+
+**Abstract**: The Strength Pareto Evolutionary Algorithm 2 (SPEA2) is a popular and prominent evolutionary algorithm for solving multi-objective optimisation problems. Despite its popularity, theoretical analyses of SPEA2 have only appeared recently. Moreover, these analyses focus exclusively on how SPEA2 handles non-dominated solutions and disregard the algorithmic components responsible for handling dominated solutions. We conduct a first runtime analysis of SPEA2 for which these components are analysed. We prove that, unlike other prominent algorithms, including NSGA-II, NSGA-III and SMS-EMOA under the same setting of constant population size and duplicate elimination, SPEA2 is unable to cover the Pareto front of the OneTrapZeroTrap benchmark efficiently. Our results indicate that using k-th nearest-neighbour distance in the fitness assignment provides an insufficient signal to maintain diversity among dominated individuals. To address this issue, we propose an improved variant, SPEA2$^+$, that considers all pairwise distances. The new algorithm achieves the same performance guarantees as the other prominent algorithms on OneTrapZeroTrap, while matching the performance of the original SPEA2 on simpler problems. Experimental results complement our theoretical findings. 
+
+---
+# Illumination-Robust Camera-Based Heart-Rate Estimation for Physiological Sensing in Robots 
+
+**Authors**: Zhi Wei Xu, Torbjörn E. M. Nordling  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.12378)  
+
+**Abstract**: Physiological awareness is important for service, social, and assistive robots that interact with humans in everyday environments. Remote photoplethysmography (rPPG) enables non-contact heart-rate (HR) estimation from an RGB camera, making it a promising sensing modality for robot-mounted vision systems. However, illumination variation remains a major barrier to robust deployment. This paper presents an end-to-end spatial-temporal transformer framework for remote HR estimation on a new dataset with varied illumination. Our estimator integrates PRNet-based 3D face alignment, clip-level illumination augmentation, the Residual Temporal Standardization Module, and controlled hybrid temporal-frequency supervision. The training objective combines a Soft-Shifted Pearson waveform loss with a spectral Kullback-Leibler divergence loss, where a tuned weight ($\mathbf{\beta}$) controls the contribution of frequency-domain heart-rate guidance. Experiments on a static all-level mix protocol covering three illumination levels show that $\mathbf{\beta}=5$ provides the strongest result among the tested beta settings, achieving a best-run HR mean absolute error (MAE) of 0.79 bpm and an HR correlation of 0.982. Compared with the PhysFormer baseline evaluated on our dataset, our estimator reduces HR MAE by 93.6 %, while increasing HR correlation from 0.088 to 0.982, making it usable when illumination varies. 
+
+---
+# Ambient Diffusion Policy: Imitation Learning from Suboptimal Data in Robotics 
+
+**Authors**: Adam Wei, Nicholas Pfaff, Thomas Cohn, Arif Kerem Dayı, Constantinos Daskalakis, Giannis Daras, Russ Tedrake  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.12365)  
+
+**Abstract**: We propose Ambient Diffusion Policy, a simple and principled method for imitation learning from suboptimal data in robotics. High-quality, task-specific robot data is expensive and time-consuming to collect, while suboptimal datasets with lower-quality or out-of-distribution demonstrations are abundant. Existing methods that co-train on both data sources in robotics often fail to separate the meaningful and the harmful features in the suboptimal samples. In contrast, our method extracts only the useful features by introducing a new axis to co-training in robotics: noise-dependent data usage. Ambient Diffusion Policy restricts the contribution of suboptimal data during training to only the high and low diffusion times. To rigorously justify our approach, we first observe that robot action data exhibits a spectral power law. This induces two important properties on the optimal Diffusion Policy that we exploit: a global-to-local hierarchy and locality. We theoretically formalize this discussion using a simplified model. Our experiments validate Ambient Diffusion Policy on four types of suboptimal action data (noisy trajectories, sim-to-real gap, task mismatch, and large-scale data mixtures) across six tasks. The results show that it effectively learns from arbitrary sources of suboptimal data. Notably, it outperforms existing co-training baselines by up to 33% when scaled to Open X-Embodiment - a large dataset with heterogeneous data quality and unstructured distribution shifts. Overall, Ambient Diffusion Policy increases the utility of suboptimal demonstrations and expands the set of usable data sources in robotics. 
+
+---
+# Latent World Recovery for Multimodal Learning with Missing Modalities 
+
+**Authors**: Hui Wang, Tianyu Ren, Joseph Butler, Christopher Baker, Karen Rafferty, Simon McDade  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.12362)  
+
+**Abstract**: We study multimodal learning under missing modalities, with particular motivation from bioscience applications in which heterogeneous modalities are often only partially available when decisions need to be made. We propose Latent World Recovery (LWR), a framework built on two key ideas: (i) modality-specific embeddings from different modalities are aligned in a shared latent space, and (ii) a unified representation is constructed by fusing only the embeddings of the modalities that are actually available at both training and inference time. Rather than imputing missing modalities or requiring a fixed modality set, LWR treats each modality as a partial perception of an underlying latent state and performs availability-aware representation learning directly from the observed modalities. This combination of neighbor-based latent alignment and availability-aware modality fusion enables robust multimodal prediction under partial observation, while avoiding error propagation from explicit reconstruction of missing modalities. We evaluate the proposed framework on real-world incomplete multi-omics benchmarks and demonstrate that it provides an effective approach to downstream tasks such as cancer phenotype classification and survival prediction. 
+
+---
+# CHORUS: Decentralized Multi-Embodiment Collaboration with One VLA Policy 
+
+**Authors**: Ria Doshi, Tian Gao, Annie Chen, Chelsea Finn, Jeannette Bohg  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.12352)  
+
+**Abstract**: Multi-robot collaboration allows robots to efficiently take on a wide range of tasks, from moving a couch through a doorway to assembling structures on a construction site. However, achieving such coordination in mobile multi-robot settings remains challenging: centralized methods conditioned on the combined observations of a team scale poorly with team size, and decentralized methods that train one policy per robot often require explicit alignment procedures or information sharing at inference time to overcome partial observability. Our key insight is that the visuomotor priors of pretrained vision-language-action (VLA) models should enable reactive, decentralized collaboration from each robot's local observations alone, without these inference-time assumptions. We propose CHORUS, a framework that adapts a single VLA backbone to control diverse, multi-robot teams. At inference time, each robot runs an independent copy of CHORUS, conditioned only on its own observations and a robot-identifying prompt. In real-world experiments including mobile tape measurement, library book handovers, and laundry basket lifting, CHORUS achieves a 64% point improvement over decentralized, from-scratch models, improves reactivity to teammate behavior by 40% points, and outperforms centralized baselines. Together, these results show that a shared VLA backbone is capable of achieving decentralized multi-robot collaboration, without per-robot policies or inter-robot communication at inference. 
+
+---
+# Atlas H&E-TME: Scalable AI-Based Tissue Profiling at Expert Pathologist-Level Accuracy 
+
+**Authors**: Kai Standvoss, Miriam Hägele, Rosemarie Krupar, Julika Ribbat-Idel, Jennifer Altschüler, Gerrit Erdmann, Hans Pinckaers, Evelyn Ramberger, Madleen Drinkwitz, Ádám Nárai, Alexander Möllers, Katja Lingelbach, Sebastian Kons, Lukas Hönig, Recepcan Adigüzel, Joana Baião, Alberto Megina Gonzalo, Marius Teodorescu, Marie-Lisa Eich, Paolo Chetta, Shakil Merchant, Verena Aumiller, Simon Schallenberg, Andrew Norgan, Klaus-Robert Müller, Lukas Ruff, Maximilian Alber, Frederick Klauschen  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.12346)  
+
+**Abstract**: Hematoxylin and eosin (H&E) staining is the cornerstone of histopathology, yet scalable, quantitative analysis of H&E whole-slide images (WSIs) remains a central challenge in computational pathology. We present Atlas H&E-TME, an AI-based system built on the Atlas family of pathology foundation models that predicts tissue quality, tissue region, and cell type labels across multiple cancer types, yielding over 4,500 quantitative readouts per slide at cell-level resolution. A key challenge to validating such systems is overcoming morphological ambiguity inherent to H&E-only ground truth and the limited scalability of more informed references drawing on modalities such as immunohistochemistry (IHC). We address this with a dual validation framework combining biologically grounded depth with technical and morphological breadth. For depth, we propose an IHC-informed multi-pathologist consensus protocol that substantially improves inter-rater agreement over conventional H&E-only annotation. This yields a molecularly grounded reference against which we compare Atlas H&E-TME and pathologists working from H&E alone. For breadth, we benchmark Atlas H&E-TME on over 200,000 high-confidence H&E-only pathologist annotations across 1,500+ cases spanning eight cancer types and their most common metastatic sites, with subtypes covering >90% of clinical cases per cancer type, drawn from 25+ sources and 8+ scanner models. Benchmarked against the IHC-informed consensus, Atlas H&E-TME matches or exceeds pathologist H&E-only performance and generalizes consistently and robustly across this broad morphological and technical scope. In doing so, Atlas H&E-TME turns the H&E slide -- the most ubiquitous data in pathology -- into a scalable, quantitative window into the tumor and its microenvironment, laying a foundation for the next generation of tissue-based biomarkers in translational and clinical research. 
+
+---
+# ALIGNBEAM : Inference-Time Alignment Transfer via Cross-Vocabulary Logit Mixing 
+
+**Authors**: Chirag Chawla, Pratinav Seth, Vinay Kumar Sankarapu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.12342)  
+
+**Abstract**: Domain fine-tuning degrades the safety of large language models: fine-tuned specialists readily comply with harmful prompts framed in domain language. Existing inference-time defenses that mix logits from a safe anchor model require both models to share a vocabulary, which rules them out for the cross-family specialists where safety is most degraded. We present ALIGNBEAM, a training-free method that lifts this restriction by translating anchor logits into the target model's vocabulary token-by-token at each decoding step; a small LLM judge then selects the safest among K candidate continuations. No weights are changed, and the safety-utility trade-off can be tuned at deployment without retraining. Across both cross-vocabulary and same-vocabulary evaluation pairs, ALIGNBEAM substantially raises refusal on adversarial benchmarks while keeping task accuracy and inference overhead within practical bounds. The results show that safety alignment can be transferred between model families at inference time, without touching either model's weights. 
+
+---
+# Harness In-Context Operator Learning with Chain of Operators 
+
+**Authors**: Minghui Yang, Ling Guo, Liu Yang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.12318)  
+
+**Abstract**: Neural operators approximate mappings between function spaces, but often generalize poorly to other operators and usually require fine-tuning or retraining. In-Context Operator Networks (ICON) addresses this issue by prompting the model with numerical context so that the model learns specific operators from prompts and adapt to different operators without fine-tuning. However, ICON may still fail to generalize to out-of-distribution (OOD) operator tasks. Inpired by the success of harness engineering of Large Language models (LLMs), we introduce Chain of Operators (CHOP), a framework that harness a frozen ICON to OOD operator tasks without updating its parameters. Specifically, CHOP constructs a chain of operators consisting of explicit elementary transformations and the frozen ICON. Experiments on a scalar conservation law and a mean-field control problem show that CHOP reduces relative inference error over direct ICON evaluation, while each operator in the chain remains interpretable and in closed form. A chain constructed on one PDE family further generalizes to a different family, indicating shared mechanisms across harness systems. 
+
+---
+# Natural-Language Temporal Grounding in Hour-Long Videos is a Search Problem: A Benchmark and Empirical Decomposition 
+
+**Authors**: Sukmin Seo, Geewook Kim  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.12300)  
+
+**Abstract**: Temporal grounding--returning the interval $[t_s, t_e]$ for a natural-language query over a video--is the language interface to long-form video, yet has been studied on short videos; the dynamics of hour-scale natural-language grounding remain underexplored. We take the position that at hour-scale, the binding constraint is search, not recognition: Video-LLMs are bottlenecked not by localizing a nearby event, but--given a natural-language query--by searching for the relevant region of a long video. To test this, we release ExtremeWhenBench, the first open hour-scale grounding benchmark (2,273 queries over 194 videos, mean 75.7 min, max 9 hr) with an open-form query distribution. Every open Video-LLM collapses while a frame-level retrieval baseline outperforms them; a failure taxonomy attributes 85% of failures to search; and a retrieve-then-ground hybrid recovers 6.7x over the monolithic Video-LLM--mirroring retrieve-then-read in open-domain QA. 
+
+---
+# The Standard Interpretable Model: A general theory of interpretable machine learning to deductively design interpretable methods using Lagrangian mechanics 
+
+**Authors**: Pietro Barbiero, Giovanni De Felice, Mateo Espinosa Zarlenga, Francesco Giannini, Filippo Bonchi, Mateja Jamnik, Giuseppe Marra, Ruggero Noris  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.12289)  
+
+**Abstract**: As Artificial Intelligence models grow in complexity, interpretability has become an indispensable tool for understanding, debugging, and controlling their computations. However, interpretability lacks general theories to deductively design interpretable methods. This gap between theories and methods results in a fragmented literature and inconsistent evaluation protocols.
+To fill this gap, we introduce the Standard Interpretable Model (SIM), a general theory grounded in Lagrangian mechanics that enables the deductive design of interpretable methods. Specifically, the SIM summarises, in a set of premises, what interpretability is for a target user. From these premises, the SIM systematically derives interpretability symmetries and corresponding constraints, which shape the landscape of a Lagrangian whose minima correspond to optimal interpretable models. To reach the minima, one can either update the parameter values of an opaque model to make it more interpretable or compile constraints into an interpretable architecture.
+We empirically show that the SIM identifies and solves limitations of existing methods (including traditional, concept-based, and mechanistic interpretability), highlights underexplored research directions, and informs the design of core programming interfaces. Beyond being a research method, the deductive nature of the SIM offers pedagogical grounding for interpretability curricula and may shift the scientific community's perspective of a discipline that has long been fragmented. 
+
+---
+# SpikeDecoder: Realizing the GPT Architecture with Spiking Neural Networks 
+
+**Authors**: Claas Beger, Florian Walter, Alois Knoll  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.12287)  
+
+**Abstract**: The Transformer architecture is widely regarded as the most powerful tool for natural language processing, but due to a high number of complex operations, it inherently faces the issue of high energy consumption. To address this issue, we consider Spiking Neural Networks (SNNs), which are an energy-efficient alternative to conventional Artificial Neural Networks (ANNs) due to their naturally event-driven approach to processing information. However, this inherently makes them difficult to train. Often, many SNN-based models circumvent this issue by converting pre-trained ANNs. More recently, attempts have been made to design directly trainable SNN-based adaptations of the Transformer model structure. Although the results showed great promise, the application field was computer vision. Moreover, the proposed model incorporates only encoder blocks. In this paper, we propose SpikeDecoder, a fully SNN-based implementation of the Transformer decoder block, for applications in natural language processing. In a series of experiments, we analyze the impact of exchanging different blocks of the ANN model with spike-based alternatives to identify trade-offs and significant sources of performance loss. We further investigate the role of residual connections and the selection of SNN-compatible normalization techniques. Besides the work on the model architecture, we formulate and compare different embedding methods to project text data into spikes. Finally, we demonstrate that our proposed SNN-based decoder block reduces the theoretical energy consumption by 87% to 93% compared to the ANN baseline. 
+
+---
+# CCKS: Consensus-based Communication and Knowledge Sharing 
+
+**Authors**: Jinyuan Zu, Xiaowei Lv, Yongcai Wang, Deying Li, Yunjun Han, Wenping Chen, Fengyi Zhang, Naiqi Wu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.12281)  
+
+**Abstract**: In Decentralized Training and Decentralized Execution (DTDE) for cooperative Multi-Agent Reinforcement Learning (MARL), action-advising-based knowledge sharing promotes interpretable and scalable cooperation among agents. However, current action advising approaches often adhere too much to the teacher's guidance without evaluating teacher-student compatibility, which causes excessive advising, suboptimal stability, and degraded performance. To overcome these challenges, this paper presents a Consensus-based Communication and Knowledge Sharing (CCKS) framework, which allows agents to adopt recommendations based on consensus-derived constraints and to follow the teacher's instructions more smartly. This mechanism enables agents to balance exploration and learning from experienced teachers, improving overall performance. The key is the consensus model construction, for which we propose to employ contrastive learning to construct consensus models based on local observations in the agents' training phase. In action selection, agents score and choose actions based on consensus and shared knowledge. Designed as a plug-and-play solution, CCKS integrates seamlessly with existing DTDE algorithms. Experiments conducted in the Google Research Football environment and the complex StarCraft II Multi-Agent Challenge demonstrate that the integration with CCKS significantly improves cooperation efficiency, learning speed, and overall performance compared with current DTDE baselines. The code is available at this https URL. 
+
+---
+# Mathematical perspective on genetic algorithms with optimization guided operators 
+
+**Authors**: Anna Brandenberger, Ilan Doron-Arad, Elchanan Mossel  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.12279)  
+
+**Abstract**: Recent work in ML applies genetic algorithms at inference time to iteratively improve solutions to optimization problems. The basic mutation and recombination operators involved are qualitatively different from those studied classically. Mutations are no longer random; an ML algorithm mutates a solution with the goal of improving an objective. Similarly, recombination is not based on random collages of parent solutions. Instead, it is an ML optimization-based operator whose goal is to synthesize improved solutions from its inputs. Thus, these mutation and recombination operators are more likely to improve the objective, but their computational cost is much higher.
+We introduce a general model of genetic algorithms and formulating optimization in this model as a query-complexity problem, using the language of reinforcement learning. We then study specialized models. We show that some optimization problems require generation, mutation, and recombination to be solved. We then obtain qualitatively tight algorithms for a family of problems within this framework that captures the nontrivial role of diversity in the solution pool, a key feature of practical ML genetic algorithms. 
+
+---
+# Market Design for AI: Beyond the Copyright Binary 
+
+**Authors**: Yan Dai, Maryam Farboodi, Negin Golrezaei, Sepehr Shahshahani  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.12260)  
+
+**Abstract**: How can we design a market of human-generated content for use in training AI models that both enables technological progress and preserves individual incentives for high-quality content creation? Existing approaches take polar positions: a "free-for-all" model based on fair use and a "strong intellectual property rights" model. We show that both fail: Free-for-all does not compensate creators, and -- by modeling as a static Stackelberg game -- strong intellectual property rights also underpower creative incentives. We find this especially true for more innovative creators, a phenomenon we term the "originality penalty." Extending this insight to a dynamic model, we find another market failure undermining AI model performance, even for an initially good model: Such a model induces greater reliance by humans on AI-assisted creation, resulting in homogenized content feeding back into training, which degrades the model performance -- a "curse of precision." We further propose a market design with a data intermediary internalizing cross-creator externalities and subsidizing innovative contributions, thereby restoring efficiency. 
+
+---
+# Using Explainability as a Training-Time Reliability Signal for Efficient ECG Classification 
+
+**Authors**: Veerendhra Kumar Dangeti, Xiao Gu, Ying Weng, Shreyank N Gowda  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.12252)  
+
+**Abstract**: Training deep neural networks for clinical time-series analysis is computationally demanding, yet many healthcare settings lack the resources required for repeated model development and deployment. This challenge is particularly evident in electrocardiogram classification, where large datasets and long training schedules make efficiency practically important. Progressive Data Dropout reduces training cost by excluding samples from gradient updates once they are learned, but it relies on model confidence and may retain samples that are difficult due to noise or ambiguity rather than useful signal. In this work, we introduce ERTS, an explainability-based reliability training signal for efficient ECG classification. ERTS uses explanation quality during training to distinguish between informative and unreliable uncertainty. Building on progressive data selection, we compute Grad-CAM attention maps for candidate samples and derive a focus score that measures whether model predictions are supported by coherent and localised patterns. Samples with low focus are filtered out, while those with meaningful attention are prioritised for gradient updates. We evaluate ERTS across three ECG datasets and multiple backbone architectures, showing consistent improvements in macro-F1 alongside reduced effective training cost. These results suggest that explanation quality can serve as a practical signal for improving both efficiency and reliability in clinical time-series learning. Code will be released. 
+
+---
+# Reinforcement Learning Disrupts Gradient-Based Adversarial Optimization 
+
+**Authors**: Xinhai Zou, Chang Zhao, Alireza Aghabagherloo, Dave Singelée, Robin Degraeve, Bart Preneel  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.12251)  
+
+**Abstract**: Gradient-based adversarial attacks remain a dominant threat to deep neural networks (DNNs), as they exploit gradient information to efficiently optimize adversarial perturbations. To address this, we investigate whether reinforcement learning (RL) training can disrupt the gradient structure used by attackers by training image classifiers with policy-gradient objectives and epsilon-greedy exploration. Through systematic experiments across CIFAR-10, CIFAR-100, and ImageNet-100 with multiple architectures, we find that RL-trained classifiers significantly disrupt gradient-based adversarial optimization. To explain this, we conduct a comprehensive mechanism analysis using loss landscape visualization, static and dynamic gradient indicators, and predictive entropy. Our analysis reveals that RL acts as an implicit regularizer, producing models with highly unstable gradient directions and smaller gradient magnitudes. This combination makes each PGD step both unreliable in direction and limited in magnitude, causing gradient-based attacks to fail within practical iteration budgets. We further show that combining RL with adversarial training (RL-adv) provides a dual-layer defense operating at two complementary levels: RL degrades gradient information available to attackers (gradient-level defense), while adversarial training strengthens decision boundaries (boundary-level defense). RL-adv achieves the highest robustness across all major attack types evaluated, including gradient-based (PGD, AutoAttack), transfer-based, and query-based attacks, outperforming SL-adv by a significant margin. These findings identify RL-induced gradient disruption as a complementary robustness mechanism and motivate future research on hybrid SL-RL training schedules that combine SL's efficiency with RL's gradient-regularization properties. 
+
+---
+# DiffCold: A Diffusion-based Generative Model for Cold-Start Item Recommendation 
+
+**Authors**: Kangning Zhang, Yingjie Qin, Weinan Zhang, Yong Yu, Jianghao Lin  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.12245)  
+
+**Abstract**: Cold-start item recommendation remains a persistent challenge in real-world systems due to the absence of interaction histories. While prior models attempt to bridge this gap using item content features, they universally suffer from the \textbf{seesaw dilemma}: enhancing performance for cold items inevitably degrades performance for warm items, and vice versa. We identify that this dilemma stems from a fundamental \textbf{distributional disparity}: warm item embeddings occupy a complex ``behavioral manifold" shaped by rich interaction signals, whereas cold item embeddings are constrained to a ``semantic manifold" derived solely from auxiliary content. Existing methods often force a rigid mapping between these inconsistent spaces, causing the model to sacrifice the precision of warm representations to accommodate cold ones. To address this, we propose \textbf{DiffCold}, a diffusion-based generative model that unifies warm and cold representations. Unlike GANs or VAEs, DiffCold leverages conditional diffusion to reconstruct warm item embeddings from content, preserving the underlying manifold structure without degradation. We further tailor this paradigm with two specific designs: a \textbf{Retrieval-enhanced Aggregator} that initializes generation using semantically similar warm items to bypass inefficient noise, and a \textbf{Simulation-based Representation Alignment} module that enforces distribution consistency between generated and real embeddings via contrastive learning. Experiments on three benchmarks confirm that DiffCold resolves the seesaw dilemma, consistently outperforming state-of-the-art methods across all metrics. 
+
+---
+# VIA-SD: Verification via Intra-Model Routing for Speculative Decoding 
+
+**Authors**: Yuchen Xian, Yang He, Yunqiu Xu, Yi Yang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.12243)  
+
+**Abstract**: Speculative decoding (SD) addresses the high inference costs of LLMs by having lightweight drafters generate candidates for large verifiers to validate in parallel. Existing draft-verify methods use binary decisions: accept or fully recompute. Yet we find that many rejected tokens can be verified correctly by a slim submodel derived from the full verifier via intra-model routing, instead of the full verifier. This motivates our slim-verifier to handle tokens requiring moderate verification resources, reducing expensive large-model calls. We propose Verification via Intra-Model Routing for Speculative Decoding (VIA-SD), a multi-tier framework using a routed slim-verifier. Draft tokens are processed hierarchically: direct acceptance for high-confidence cases, slim-verifier regeneration for medium-confidence cases, and full-model verification for uncertain cases. Across four representative tasks and multiple model families, VIA-SD reduces rejection rates by 0.10-0.22 and delivers 10-20% speedups over strong SD baselines, while achieving 2.5-3x acceleration over non-drafting decoding. Moreover, VIA-SD is compatible with existing SD frameworks without modifying their training procedures. Our results suggest multi-tier SD as a general paradigm for scalable and efficient LLM inference. Project page: this https URL 
+
+---
+# Multi-Rate Mixture of Experts for Accelerating Liquid Neural Network Training 
+
+**Authors**: Shilong Zong, Almuatazbellah Boker, Hoda Eldardiry  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.12240)  
+
+**Abstract**: Multivariate time-series data often exhibit complex temporal dependencies, irregular sampling, and heterogeneous dynamics across multiple time scales, making accurate sequence modeling particularly challenging. Traditional recurrent neural networks (RNNs), such as Long Short-Term Memory (LSTM) networks, operate in discrete time and may struggle to effectively capture continuous and irregular temporal behaviors. Liquid Neural Networks (LNNs) address some of these limitations through continuous-time dynamics, but standard LNN architectures typically rely on a single dynamical system, limiting their ability to model heterogeneous temporal patterns. To address these challenges, we propose a Multi-Rate Mixture-of-Experts (MR-MoE) framework built on top of Liquid Neural Networks. In the proposed architecture, multiple LNN-based experts operate at distinct time scales, enabling the model to explicitly separate fast-changing dynamics from slow-evolving temporal trends. A gating network further enables adaptive expert specialization based on input conditions. In addition, we incorporate both feature-level and temporal attention mechanisms to improve robustness, interpretability, and long-range dependency modeling. Feature-level attention suppresses noisy or irrelevant variables, while temporal attention selectively focuses on informative historical states. We evaluate the proposed framework on a complex multivariate time-series prediction task and compare it against strong baselines, including LSTM, monolithic LNN, and standard MoE models. Experimental results demonstrate that the proposed MR-MoE framework consistently achieves improved AUROC and AUPRC performance while maintaining favorable computational efficiency. These results highlight the effectiveness of combining continuous-time dynamics, multi-scale expert decomposition, and adaptive attention mechanisms for time-series modeling. 
+
+---
+# Rule Taxonomy and Evolution in AI IDEs: A Mining and Survey Study 
+
+**Authors**: Guangzong Cai, Ruiyin Li, Peng Liang, Zengyang Li, Mojtaba Shahin  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.12231)  
+
+**Abstract**: The adoption of AI-powered Integrated Development Environments (AI IDEs) has introduced "Rules" as a novel software artifact, allowing developers to persistently inject project-specific constraints and architectural guidelines into the context of Large Language Models (LLMs). Despite their role in aligning AI behavior with developer intent, the taxonomy, evolution, and practical impact of these rules remain largely unexplored. To bridge this gap, we conducted a mixed-methods empirical study on AI IDE rules. By mining 83 open-source projects and extracting 7,310 rules, we established a comprehensive taxonomy comprising 5 primary and 25 secondary categories. We then triangulated these artifacts with survey responses from 99 practitioners. Our analysis identified a contrast between developer priorities and actual configurations: while practitioners rate architectural constraints as highly important, rule files in repositories primarily consist of low-level workflow and code formatting constraints. Furthermore, our analysis of 1,540 rule evolution events revealed that rules are updated frequently. Repository data further indicate that rule evolution is primarily driven by constructive context expansions (29.17%) and enrichments (26.59%). In contrast, surveyed developers reported modifying rules primarily to correct AI errors (77.78%), typically by adding new negative constraints rather than editing existing ones. Finally, an artifact compliance assessment of 160 rule evolution events revealed that updating rules significantly improves the adherence of software artifacts, with the average artifact compliance rate increasing by 22.99% (from 49.14% to 72.13%) following an update. Our study provides empirical insights that can help developers optimize prompting strategies and guide tool builders in designing automated conflict-detection and context-management mechanisms for AI IDEs. 
+
+---
+# Adapting Prithvi-EO for Fallow Detection for Food-Water Nexus: ViT-Adapter Necks and Parameter-Efficient Backbone tuning of Geospatial Foundation Model 
+
+**Authors**: Sk Muhammad Asif, Orhun Aydin  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.12218)  
+
+**Abstract**: Understanding spatial distribution of fallow land is important for optimizing the food-water (FW) nexus, given fallowing's role in crop rotation and water conservation. Fallow is a low accuracy class in USDA Cropland Data Layer (CDL). Geospatial foundation model (GFM), Prithvi-EO has shown strong transferability across computer vision tasks. However, its Vision Transformer (ViT) backbone produces features at a single spatial scale that are ill-suited for the multi-scale features required by object detection heads. Existing approaches synthesise multi-scale pyramids through scaling of single stride tokens, sacrificing spatial heterogeneity, and full backbone fine-tuning is computationally prohibitive for GFMs. We evaluate a fallow detection pipeline combining two parameter-efficient fine tuning (PEFT) schemes: Low-Rank Adaptation (LoRA) and a hybrid PEFT, with three neck designs: pseudo multi-scale, Lite ViT-Adapter, and Full ViT-Adapter. Our best configuration, Lite ViT-Adapter with a one-stage head, achieves a mAP@50 of 0.9479 with the Diou loss, suggesting the effectiveness of center-aware localization for irregular fallow field detection. ViT-Adapter free one-stage detection under LoRA improves the adapter-free anchor-based approach by 6.42%, and the best configuration improves baseline adapter-free anchor-based approach by 25.70%. These results demonstrate that lightweight spatial prior fusion and selective backbone unfreezing enable Prithvi-EO to capture local fallow patterns more effectively, outperforming approaches that rely on reshaped single-stride ViT tokens. 
+
+---
+# Making Foresight Actionable: Repurposing Representation Alignment in World Action Models 
+
+**Authors**: Lu Qiu, Yizhuo Li, Yi Chen, Yuying Ge, Yixiao Ge, Xihui Liu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.12217)  
+
+**Abstract**: World Action Models (WAMs) offer a promising route for robot manipulation by using video generation models to model future scene evolution before producing control actions. However, our empirical observations reveal a phenomenon: generating plausible visual futures does not always guarantee the extraction of accurate actions. To diagnose this failure, we conduct action-head attention analysis and causal interventions. We find that the action decoder fails to focus on task-relevant interaction regions and remains sensitive to perturbations in task-irrelevant areas. This reveals a representation mismatch: hidden states optimized for visual reconstruction are not inherently organized in a form useful for low-level action control. In this paper, we propose AGRA, an Action-Grounded Representation Alignment objective that regularizes the world-action interface by aligning intermediate video diffusion features with spatially coherent semantic representations from a foundation visual encoder. We evaluate AGRA on real-world manipulation tasks. Experiments show that AGRA makes world model representations more action-grounded: by focusing the action decoder on the correct interaction regions, it improves object localization accuracy and affordance understanding, and makes the policy more robust to perturbations in task-irrelevant regions. As a result, AGRA consistently improves both in-distribution performance and out-of-distribution generalization over the baseline world action model. 
+
+---
+# Intelligent Automation for Embodied Benchmark Construction: Pipelines, Embodiments, Simulators, and Trends 
+
+**Authors**: Jinshan Lai, Jianwei Hu, Baoyang Jiang, Fengchun Zhang, Leyuan Wang, Haotian Li, Yida Wang, Tingxuan Huang, Xi Ren, Qiang Ma  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.12207)  
+
+**Abstract**: Embodied intelligence now spans navigation, household assistance, manipulation, autonomous driving, aerial agents, and multimodal large-model control. This expansion has made benchmark construction a central bottleneck for reliable evaluation. Unlike static datasets, embodied benchmarks combine task specifications, environments, robot data, demonstrations, annotations, metrics, evaluation scripts, and release policies into a single evaluation system. This survey reviews the literature through a five-stage construction pipeline: requirement and task construction, data acquisition, data cleaning and annotation, benchmark suite generation and metric definition, and evaluation execution with diagnostic feedback. For each stage, the survey analyzes the transition from manual curation to traditional automation, foundation-model assistance, and agentic closed-loop workflows. It also compares qualitative construction costs across human labor, data and asset acquisition, compute and simulation, validation and debugging, governance and maintenance, and rework risk. The main conclusion is that automation does not simply reduce benchmark cost. Instead, it often shifts cost toward validation, auditability, version control, and long-term governance. Progress in embodied evaluation will therefore depend not only on larger benchmark suites, but also on construction pipelines that are diagnosable, auditable, and responsibly refreshable. 
+
+---
+# Implicit Neural Representations of Individual Behavior 
+
+**Authors**: Andrew Kang, Priya Narasimhan  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.12200)  
+
+**Abstract**: We study policy representation learning from unlabeled multi-policy behavioral data. Each episode is generated by a fixed policy, but policy labels are unavailable. This setting appears in robotics play, demonstrations, games, racing, and other datasets where heterogeneous behaviors are mixed without annotations. We introduce \emph{Behavioral INR}, a self-supervised generative model that adapts implicit neural representations (INRs) from vision to behavior. Instead of mapping coordinates to RGB values, Behavioral INR represents a policy as a state-action function mapping states to subsequent actions. An episode-level latent modulates this function through FiLM layers, yielding a generative prior over policies and allowing policy identity to be inferred without supervision. Because INRs treat each datapoint as samples from an underlying function, the same model naturally accommodates variable episode lengths and different sampling granularities, as in vision INRs with different image resolutions. We also define policy-level out-of-distribution (OOD) shifts along state-distribution and action-distribution axes, which arise when policies overlap in states or actions but are not captured by standard behavioral OOD settings based only on new agents or environments. We evaluate on synthetic Gaussian random field data, MuJoCo demonstrations with controlled OOD splits, and real-world chess, Formula 1 racing, robotics, and Seek-Avoid datasets. Behavioral INR most consistently improves policy identifiability in the hardest continuous state-action settings, especially when longer episodes, more policies, and OOD splits reduce the usefulness of marginal shortcuts; amortized history encoders remain competitive when policy identity can be recovered from symbolic repetition or low-dimensional action statistics. We release code and checkpoints. 
+
+---
+# Agentic Environment Engineering for Large Language Models: A Survey of Environment Modeling, Synthesis, Evaluation, and Application 
+
+**Authors**: Jiachun Li, Zhuoran Jin, Tianyi Men, Yupu Hao, Kejian Zhu, Lingshuai Wang, Dongqi Huang, Longxiang Wang, Shengjia Hua, Lu Wang, Jinshan Gao, Hongbang Yuan, Ruilin Xu, Kang Liu, Jun Zhao  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.12191)  
+
+**Abstract**: Environments serve as interactive systems for large language model (LLM) based agents across diverse scenarios and play a crucial role in driving the continual evolution of model capabilities. Despite this importance, existing work lacks a systematic categorization and deep analysis. This paper systematically studies current researches on agentic environments from the perspective of the environment engineering lifecycle, covering their modeling, synthesis, evaluation and application. Specifically, the paper first introduces representative environments from the perspectives of eight attributes and eight domains, providing detailed analyses of their development paths and highlighting their core capabilities. Second, for automated environment synthesis, two paradigms are introduced, such as symbolic synthesis and neural synthesis. This paper also shows different environment evaluation methods in each paradigm. Thirdly, the corresponding environment applications from the perspective of agent-environment co-evolution are discussed. In specific, the paper characterizes the primary pathways for agent evolution in dynamic environments from four complementary perspectives: memory-centric experience evolution, orchestration-centric workflow evolution, trajectory-centric offline evolution, and exploration-centric online evolution. And three paradigms of environment evolution are identified, namely neural-driven, difficulty-driven, and scaling-driven approaches. At last, several promising future directions are discussed, including Environment-as-a-Service, Multi-agent Environments, and Neural-Symbolic Environments. 
+
+---
+# OpenMedReason: Scientific Reasoning Supervision for Medical Vision-Language Models 
+
+**Authors**: Negin Baghbanzadeh, Pritam Sarkar, Michael Colacci, Abeer Badawi, Adibvafa Fallahpour, Arash Afkanpour, Leonid Sigal, Ali Etemad, Elham Dolatabadi  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.12169)  
+
+**Abstract**: High-stakes clinical use of large vision-language models (LVLMs) requires reasoning that is grounded in visual evidence and clinical knowledge, not just correct final answers. We introduce OpenMedReason, a large-scale, open multimodal medical reasoning corpus comprising approximately 450K image-question-answer instances whose reasoning traces are primarily derived from curated biomedical, human-authored scientific articles. OpenMedReason provides high-fidelity supervision beyond synthetic chains of thought, covering diverse medical domain vision modalities such as radiological scans, microscopic images, visible light photographs, charts, and others. We complement it with OpenMedReason-Bench, a held-out benchmark that allows fine-grained evaluation of LVLMs along three complementary axes of capability, including perception, medical knowledge, and rationale, enabling diagnostic evaluation beyond final-answer accuracy. OpenMedReason is a rich training resource that exhibits its effectiveness in both supervised fine-tuning (SFT) and reinforcement-based alignment. Training with OpenMedReason yields a 20% average improvement in VQA accuracy over the base model and achieves performance within 4.2% of the strongest comparable-scale medical LVLMs. Fine-grained performance analysis confirms that the gains are not concentrated in any single axis: OpenMedReason improves perception, medical knowledge, and rationale jointly, and its reasoning traces are preferred over those of the base model in 86.1% of pairwise comparisons. We release the code and dataset at this http URL. 
+
+---
+# nD-RoPE: A Generalized RoPE for n-Dimensional Position Embedding 
+
+**Authors**: Boyang Li, Yulin Wu, Sizhe Xu, Nuoxian Huang, Zhonghang Yuan, Shangyi Guo, Shu Yang, Takahiro Yabe  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.12146)  
+
+**Abstract**: Rotary Position Embedding (RoPE) is widely adopted in Transformer models, yet its extension to high-dimensional domains lacks a unified theoretical formulation. Most existing approaches either apply rotations independently along each axis or empirically mix frequencies, which limits cross-dimensional interactions and yields direction-dependent representations. To address these limitations, we propose nD-RoPE, a decomposition-free generalization of RoPE to arbitrary dimensions. From a translation-invariant formulation in continuous Hilbert space, we derive a spectral condition for isotropy that requires treating positions and frequencies as coupled \(n\)-dimensional vectors. We instantiate this formulation with a multi-scale regular-simplex wave-vector design, which provides non-degenerate spatial coverage and a symmetric, directionally balanced second-order response. Experiments across images, videos, and point clouds demonstrate consistent performance gains and improved generalization in high-dimensional settings. 
+
+---
+# Unstable Features, Reproducible Subspaces: Understanding Seed Dependence in Sparse Autoencoders 
+
+**Authors**: Gleb Gerasimov, Timofei Rusalev, Nikita Balagansky, Daniil Laptev, Vadim Kurochkin, Daniil Gavrilov  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.12138)  
+
+**Abstract**: Sparse autoencoders (SAEs) are widely used to interpret neural network representations, but their utility depends on whether the learned features are reproducible across training runs. We study this question through \emph{feature stability}: for each SAE feature, we estimate the probability that a similar feature reappears in an independently trained SAE. This yields a scalable per-feature signal that separates stable from unstable features. In a large-scale study across seeds, models, layers, dictionary sizes, and SAE variants, we find a pronounced functional asymmetry: stable features carry most of the reconstruction- and prediction-relevant signal, while unstable features have weak marginal impact and are dominated by low-frequency surface-form triggers in both activation statistics and automatic explanations. Geometrically, unstable features are individually non-reproducible but concentrate in reproducible lower-rank subspaces, suggesting that seed dependence often reflects basis ambiguity within a shared region of activation space rather than pure noise. A controlled synthetic model makes this mechanism explicit, showing that low-rank ground-truth features can be recovered at the subspace level while remaining non-identifiable as individual SAE latents across seeds. Finally, by pooling unique cross-seed features, we construct more stable SAEs while preserving explained variance in this setting. Together, these results show that unstable features are not merely failed or noisy latents: they have weak individual functional impact, but reflect reproducible low-dimensional structure that standard SAEs resolve differently across seeds. 
+
+---
+# Soft-Prompt Tuning for Fair and Efficient LLM Benchmark Evaluation 
+
+**Authors**: Selen Erkan, Bastian Boll, Kristian Kersting, Björn Deiseroth, Letitia Parcalabescu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.12117)  
+
+**Abstract**: Benchmark scores often misrepresent a large language model's (LLM's) knowledge, because they rely, e.g., on the model's ability to follow specific formatting requirements. This especially penalizes base models that may know the correct answers but lack the ability -- typically introduced in post-training -- to structure them as instructed. To overcome this, we propose soft-prompt tuning, an efficient, fair, and architecture-agnostic model evaluation. By optimizing only 10 soft-prompt vectors (roughly 0.0006% parameters for a 7B model) over a short tuning period, we adapt models to specific benchmark formats, closing gaps in format-following and ensuring that underlying knowledge is accurately reflected in benchmark scores. This allows one to fairly compare different base models -- trained with various pre-training recipes -- on benchmarks without the need for full post-training. We evaluated soft-prompt tuning across 7 models and 7 datasets. The results show that (a) soft-prompt tuning saturates format-following within 80 steps (~640 samples) making it highly efficient, (b) soft-prompt tuning significantly outperforms zero- and few-shot prompting, surfacing base model knowledge that standard prompting misses, that (c) even post-trained models can benefit from soft-prompts to maximize format compliance, and that (d) soft-prompted base model performance predicts post-trained model rankings more reliably than zero- and few-shot baselines, offering a low-cost proxy for downstream model quality. Our contributions include (1) metrics which disentangle format-following and knowledge accuracy, (2) a fairer benchmarking protocol of LLM knowledge, and (3) a cost- and memory-effective recipe to identify optimal pre-training strategies early in LLM development. 
+
+---
+# Augmenting Molecular Language Models with Local $n$-gram Memory 
+
+**Authors**: Xinni Zhang, Zijing Liu, He Cao, Yu Li, Irwin King  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.12113)  
+
+**Abstract**: Transformer-based language models for SMILES strings suffer from a locality gap: standard character-level tokenization fragments chemically meaningful motifs, forcing models to repeatedly learn local syntax at the expense of long-range dependencies. To address this without disrupting standard tokenizers, we propose MolGram, which integrates a conditional $n$-gram memory module into molecular language models. MolGram maps local string patterns to learned embeddings via scalable hash lookups and dynamically injects this regional context into hidden states. Evaluations across three tasks, including unconditional molecule generation, forward reaction prediction, and single-step retrosynthesis, show that MolGram consistently improves performance. Crucially, our analyses demonstrate that MolGram outperforms baselines with 3$\times$ more parameters, establishing explicit local pattern memory as a highly efficient inductive bias. 
+
+---
+# Bridging the Morphology Gap: Adapting VLA Models to Dexterous Manipulation via Intent-Conditioned Fine-Tuning 
+
+**Authors**: Chuanke Pang, Junyi Huang, Zhijun Zhao, Yaobing Wang, Kun Xu, Xilun Ding  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.12109)  
+
+**Abstract**: Vision-Language-Action (VLA) models have demonstrated remarkable zero-shot generalization in robotic manipulation, yet the vast majority of pre-trained pipelines remain strictly confined to low-DoF parallel grippers. Adapting these rich semantic priors to high-DoF dexterous hands introduces a severe morphology gap, direct end-to-end joint fine-tuning inherently causes catastrophic forgetting of spatial reasoning and acute action manifold collapse due to data scarcity. In this paper, we present InDex, a novel, data-efficient adaptation framework rooted in cross-morphology semantic inheritance. Rather than discarding the pre-trained 1-DoF parallel grasp output, we repurpose it as a continuous, macroscopic virtual grasp intent proxy to sequentialize the control topology. We implement a two-stage decoupled learning architecture: the first stage parameter-efficiently aligns the VLA backbone to predict continuous arm trajectories and the scalar grasp intent; the second stage freezes this spatial backbone and leverages an intent-conditioned denoising diffusion head to decode fine-grained joint articulations for multi-fingered end-effectors. Extensive simulation benchmarks across a suite of multi-stage, contact-rich dexterous manipulation tasks demonstrate that InDex effectively masters intricate skills with minimal demonstration data, substantially outperforming monolithic baselines while preserving the robust spatial generalizability of the original VLA prior. 
+
+---
+# MSUE: Multi-Modal Soccer Understanding Expert 
+
+**Authors**: Litao Li, Yibo Yu, Yufeng Hu, Zhuo Yang, Jiali Wen, Yixin Chen, Yixi Zhou  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.12106)  
+
+**Abstract**: This paper presents our solution to the 2026 SoccerNet VQA Challenge. We first develop a cost-effective data synthesis pipeline driven by a Vision-Language Model (VLM), which systematically restructures raw domain data into diverse VQA samples, including concise answers and long-form responses. Second, we propose MSUE, a multi-expert question answering architecture that employs a Large Language Model (LLM) to dynamically dispatch questions to text, image, and video experts. These experts are instantiated as a strong text baseline Gemini3-Flash, a fine-tuned Qwen3-VL, and an external knowledge base, respectively, working collaboratively to enhance VQA performance. MSUE achieves an accuracy of \textbf{0.95} on the challenge benchmark, securing third place in the leaderboard. 
+
+---
+# Non-frontal face recognition using GANs and memristor-based classifiers 
+
+**Authors**: Semih Vazgecen, Cristian Sestito, Spyros Stathopoulos, Themis Prodromakis  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.12074)  
+
+**Abstract**: Face recognition systems have advanced significantly through deep learning techniques, delivering high performance and robustness in complex scenarios. However, these approaches incur substantial computational overhead, limiting their in situ applicability in resource-constrained platforms such as drones, where they can address challenges including non-frontal facial imagery. Memristor-based neuromorphic systems have emerged as a compelling approach for edge AI applications, combining biologically inspired processing with efficient and scalable computation. In this work, we propose a facial recognition framework that addresses non-frontal pose variations by integrating lightweight generative adversarial network (GAN)-based pose frontalisation with memristor-based neuromorphic recognition. The experimental results on two datasets demonstrate the effectiveness of combining adversarial learning with memristive technology, achieving up to 96% identification accuracy. The proposed approach alleviates the computational bottlenecks of conventional AI and offers a scalable, efficient solution for face recognition in dynamic real-world environments. 
+
+---
+# "That's AI Slop, You Bot!" Studying Accusations, Evidence, and Credibility in Online Discourse Towards LLM-Generated Comments 
+
+**Authors**: Jason Miklian, John E. Katsos  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.12073)  
+
+**Abstract**: Generative AI has made fluent prose cheap to produce, breaking the old promise to readers that good writing meant real thinking. How have readers responded, and what can this tell us about changing anti-AI attitudes? We analyzed 25 million comments from Hacker News and Reddit (2023-2026), combining LLM judgment on 7,500 sampled accusations of AI use, sentiment trajectories, speech-act coding of 300 confirmed accusations of AI use, and a matched-control test of accused versus non-accused parent comments. We found that the pejorative-label share of accusations rose more than tenfold on both platforms while a placebo vocabulary of pre-2022 inauthenticity terms (shill, astroturf) did not. This shift reflected a fast-growing trend of branding any suspicious or seemingly inauthentic prose as "AI slop". The slop frame now constitutes 94 percent of pejorative mentions, with the dominant comments shifting in tone from mockery toward gatekeeping and structural protest. The key surprise comes from a matched-control test which found that prose features that statistically distinguish AI from human text do not predict which human text gets accused as AI. The new accusations work as social gatekeeping of perceived authenticity without actually screening for AI. This research extends signaling theory by showing that substitute signals used socially can grow even when inaccurate if the underlying detection problem cannot be solved at the non-expert level. It shows that AI's effects on writing from the reader side are distinct from those on the production (writer) side. Detection technology cannot resolve this dynamic because the social function of accusations is increasingly to perform social gatekeeping and in-group signaling as opposed to identifying AI-generated writing. 
+
+---
+# On the Limits of LLM-as-Judge for Scientific Novelty Assessment 
+
+**Authors**: Soumitra Sinhahajari, Navonil Majumder, Soujanya Poria  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.12071)  
+
+**Abstract**: LLMs are increasingly used to generate and judge scientific ideas. This makes novelty evaluation a central problem. Full idea evaluation is difficult because it often requires judging a method, its feasibility, and its empirical promise. We therefore study a cleaner upstream object: the research question (RQ). RQ generation is a prerequisite for scientific ideation, and RQs can be compared against questions pursued in real papers. We introduce RQ-Bench, a benchmark built from recent arXiv papers. For each paper, we reconstruct author-anchored RQs from its cited background, gaps, and contributions. These RQs are not the only valid questions for the same background. They are author-anchored reference points for testing novelty judgments. We evaluate model-generated RQs with standalone LLM judging, comparative LLM judging, and human expert evaluation. LLM judges consistently rate model-generated RQs as highly novel, producing a novelty mirage; in comparative evaluations, this preference becomes even stronger. Domain experts, however, reach the opposite conclusion and prefer the author-anchored reference questions. We further find that many generated RQs are narrow or source-bound, a dimension that LLM judges often miss unless explicitly tested. Overall, the contradictory novelty evaluations between LLM judges and human experts raise a serious concern about the reliability of using LLMs to assess the scientific novelty of research questions. 
+
+---
+# Metadata-Aware Multi-Prompt Reasoning for Zero-Shot Accident Understanding 
+
+**Authors**: Tarandeep Singh, Soumyanetra Pal, Soham Biswas, Nishanth Chandran  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.12047)  
+
+**Abstract**: In this paper, we address the problem of zero-shot understanding of accidents from surveillance videos by identifying when an impact event occurs, what type of impact it is, and where in the frame it occurs using natural language. We propose a three-stage pipeline that decomposes the accident understanding into when, what, and where. The first stage extracts a short temporal window around the impact using vision-language similarity. In the second stage, we perform metadata-driven multi-prompt reasoning with five complementary views (baseline, motion, geometry, contrast, and tiebreaker) and resolve disagreement via an entropy-gated pairwise adjudicator. Finally, we localize the impact of an open-vocabulary detector queried on the predicted accident type and scene layout, and aggregate detections across keyframes using a score-weighted centroid. Our pipeline achieves a substantial improvement in the harmonic-mean score over a centre-of-frame baseline on the zero-shot ACCIDENT @ CVPR benchmark. We show that decomposing zero-shot video understanding into temporal localization, semantic classification, and spatial grounding enable more reliable reasoning with vision-language models than direct prompting alone. 
+
+---
+# Runtime Enforcement of Hybrid System Properties 
+
+**Authors**: Mir Md Sajid Sarwar, Srinivas Pinisetty, Rajarshi Ray, Thierry Jéron  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.12022)  
+
+**Abstract**: Runtime enforcement has emerged as a promising approach for ensuring the safety of autonomous and cyber-physical systems operating in uncertain and dynamic environments. Unlike traditional runtime verification, runtime enforcement actively intervenes during execution to prevent property violations by modifying unsafe system behaviors. Existing enforcement frameworks primarily focus on untimed or discrete-time specifications and are often limited to delaying or suppressing events, making them inadequate for reactive systems exhibiting complex continuous dynamics. In this paper, we propose a runtime enforcement framework where safety requirements are modeled using Hybrid Automata (HA). The framework combines discrete-event editing with continuous-time monitoring to support enforcement actions such as suppression, delay, and insertion of events at arbitrary time instants. Upon observing environmental inputs, the automaton is initialized, and runtime reachability analysis is used to synthesize safe corrective actions. We formally define the enforcement problem for safety hybrid automata, establish enforceability conditions, and present an online enforcement algorithm for reactive systems. A detailed case study on an Adaptive Cruise Control (ACC) system demonstrates the effectiveness of the proposed approach in maintaining safety properties under unsafe controller behaviors. Experimental results show that the framework introduces minimal computational overhead while ensuring continuous compliance with safety requirements in real time. 
+
+---
+# Generalization Hacking: Models Can Game Reinforcement Learning by Preventing Behavioral Generalization 
+
+**Authors**: Frank Xiao, Mary Phuong  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.12016)  
+
+**Abstract**: Model post-training, and in particular reinforcement learning (RL), is one of the primary mechanisms by which developers can shape models' values and behaviors. However, as models become increasingly evaluation and training aware, they may be motivated to resist training when the perceived objective conflicts with their current values, undermining developers' ability to detect misalignment and correct model behavior through further training. In this paper, we demonstrate generalization hacking, in which a model collects reward during RL while preventing the rewarded behavior from generalizing. We construct a model organism on Qwen3-235B-A22B, finetuning on synthetic documents describing training awareness and self-inoculation, a novel mechanism in which the model frames compliance as context-specific in its chain of thought, without demonstrating or instructing either behavior. The model organism achieves train-time harmfulness comparable to controls while maintaining a persistent ${\sim}15$ percentage point compliance gap across 700 steps of RL. Additionally, a control organism trained only on training awareness documents independently discovers inoculation-like reasoning under RL pressure, developing its own compliance gap despite never being exposed to the concept. Because the generalization-hacking organism receives high reward throughout, standard training metrics provide no signal that generalization has failed. Our results constitute the first demonstration that a model can actively resist RL behavioral modification while maintaining high reward, suggesting that as models become more capable and training-aware, they may be able to undermine the training process itself. 
+
+---
+# Tabular Foundation Models for Clinical Survival Analysis via Survival-Aware Adaptation 
+
+**Authors**: Minh-Khoi Pham, Luca Cotugno, Alina Sirbu, Tai Tan Mai, Martin Crane, Marija Bezbradica  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.12006)  
+
+**Abstract**: Predicting time-to-event outcomes such as mortality is a fundamental task in clinical decision-making, commonly addressed through survival analysis. While classical statistical and deep learning approaches have been widely studied, they typically require task-specific training and sufficient labeled data. Recent advances in tabular foundation models offer a new paradigm by learning general-purpose representations for structured data. However, their applicability to censored time-to-event prediction in clinical settings remains underexplored, as typical applications are restricted to discrete classification rather than survival analysis tasks.
+In this work, we propose a lightweight adaptation approach for applying tabular foundation models to clinical survival analysis by directly training a survival-aware head on top of the pretrained representations. We study representative architectures, including TabPFN, TabDPT, and TabICL, and adapt them using a multi-task logistic regression (MTLR) head to model right-censored time-to-event outcomes. We evaluate this approach on a diverse set of public survival benchmarks and two large-scale ICU cohorts, MIMIC-IV and eICU.
+Our results show that this transfer learning approach achieves competitive or superior performance compared to strong baselines. On MIMIC-IV, TabDPT-FT-MTLR reaches a C-index of 0.856, corresponding to a relative improvement of +1.4% over the best non-FM baseline (DeepSurv, 0.844) and +6.7% over the best zero-shot model (0.802). On eICU, TabICL-FT-MTLR achieves 0.797, yielding gains of +1.7% (DeepSurv, 0.784) and +6.4% (0.749), respectively. These findings highlight the importance of combining pretrained tabular representations with survival-aware objectives and suggest that tabular foundation models provide a practical and effective alternative for clinical survival prediction. 
+
+---
+# Time-Series Foundation Model Embeddings for Remaining Useful Life Estimation 
+
+**Authors**: Amir El-Ghoussani, Michele De Vita, Ronald Naumann, Valiseios Belagiannis  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.11990)  
+
+**Abstract**: Remaining Useful Life (RUL) prediction is essential for industrial predictive maintenance, yet many learning-based approaches rely on extensive feature engineering or large labeled datasets to train task-specific sequence models. In this work, we introduce a lightweight learning approach, in which we leverage a frozen pretrained time-series foundation model (TSFM) and combine it with a small regression head for RUL estimation from multivariate sensor streams. More specifically, we use Chronos-2 as a frozen backbone to extract context window features and train a lightweight regression neural network for RUL prediction. Experiments on real-world industrial sensor data from two device types show that Chronos-2 features consistently improve over recurrent, convolutional, Transformer-based, and gradient-boosting baselines under the same preprocessing and evaluation protocol. We further analyze the impact of context length and find that performance improves significantly with longer histories, indicating that TSFM representation offer a practical and data-efficient alternative for RUL estimation in industrial settings. 
+
+---
+# Exploration Structure in LLM Agents for Multi-File Change Localization 
+
+**Authors**: Akeela Darryl Fattha, Kia Ying Chua, Lingxiao Jiang, Laura Wynter  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.11976)  
+
+**Abstract**: Software engineering tools increasingly rely on LLM based agents to localize files to change to resolve a software issue. Most AI agents explore repositories linearly, that is, visiting one directory or file per step. We postulate that this is a structural mismatch for changes that span several subsystems. We compare linear sequential exploration against non-linear, domain-scoped parallel agentic exploration. Using SWE Bench Pro as initial benchmark, we focus on ansible as an exemplar. We construct an approach for persistent-session evaluation of GitHub issues anchored at a single base commit. We compare our non-linear domain-agent file traversal system against a base LLM without direct repository access, a single agent Recursive Language Model (RLM) baseline with a persistent Python REPL and an external CLI baseline using Codex 5.5 High. Domain scoped parallel agent spawning with a small Haiku-class model achieves the highest micro F1 among Haiku class models by a large margin. Domain-agents is the second highest behind only the much larger Codex 5.5 High on our own expanded benchmark including over more recent PRs from 2025 and 2026. On the original, curated, 2020 SWE-bench Pro benchmark, a larger Sonnet plain LLM baseline attains higher micro F1 by predicting few files, leading to higher precision, but at significantly lower all gold recall. We also present three additional findings. First, documentation evolution is a latent dependency unresolved by any approach. Second, naive file system access can degrade localization driven by test-file over prediction. Lastly, forced multi-agent consultation does not measurably help and raises token cost substantially. 
+
+---
+# Categorical Prior Lock-in: Why In-Context Learning Fails for Structured Data 
+
+**Authors**: Antonio Pelusi, Stefano Braghin, Alberto Trombetta  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.11961)  
+
+**Abstract**: Large language models (LLMs) are increasingly used as conditional generators for structured data, relying on in-context learning (ICL) to adapt to new distributions without parameter updates. We investigate the limits of ICL for structured generation under distribution mismatch, using high-cardinality tabular data as a controlled test case, and identify a structural failure mode we term \textit{categorical prior lock-in}: the inability of ICL to update the model's prior over token distributions inherited from pre-training. Across two 7B-parameter open-weight models, ICL improves numerical fidelity with additional examples but exhibits a sharp ceiling on categorical distributions, failing to reproduce rare classes entirely. Parameter-efficient fine-tuning (LoRA) overcomes these limitations but introduces measurable memorization risk and, in some cases, destabilizes structured output generation, highlighting a fundamental trade-off between adaptability and privacy. 
+
+---
+# Frozen Multimodal Embeddings for Personality and Cognitive Ability Assessment in Asynchronous Video Interviews 
+
+**Authors**: Kuo-En Hung, Hung-Yue Suen, Shih-Ching Yeh, Hsiang-Wen Wang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.11930)  
+
+**Abstract**: Predicting psychological traits from asynchronous video interviews (AVIs) is a challenging multimodal learning problem because labeled datasets are limited while each response contains high-dimensional visual, acoustic, and verbal signals. This paper presents our solution for the ACM Multimedia AVI Challenge 2026, which evaluates two tasks: Track~1 predicts self-reported HEXACO personality traits from personality-related interview responses, and Track~2 classifies cognitive ability levels from structured AVI responses. We treat the problem as a small-sample representation learning task. Instead of fine-tuning large pretrained models, we use frozen multimodal encoders, including CLIP for visual features, Whisper for acoustic features and transcripts, and RoBERTa, E5, and DeBERTaV3 for textual representations, followed by low-capacity downstream models. For Track~1, our trait-specific regression and late-fusion system achieves an average validation MSE of 0.2696, improving over the official baseline of 0.3334. Ablation results show a three-step improvement from a global model (0.3189), to per-trait modeling (0.2871), to per-trait late fusion (0.2696), corresponding to a 19.1\% relative MSE reduction over the official baseline. For Track~2, a compact subject-attribute baseline reaches 0.5781 accuracy, while our multimodal ensemble reaches 0.5313, both above the official baseline of 0.4062. We interpret this result as evidence of possible subject-attribute shortcuts in the validation split rather than robust cognitive inference from AVI content. Overall, our findings suggest that AVI-based psychological assessment benefits from trait-specific multimodal modeling, but cognitive ability prediction requires careful control of dataset shortcuts. 
+
+---
+# Toward Generalist Autonomous Research via Hypothesis-Tree Refinement 
+
+**Authors**: Jiajie Jin, Yuyang Hu, Kai Qiu, Qi Dai, Chong Luo, Guanting Dong, Xiaoxi Li, Tong Zhao, Xiaolong Ma, Gongrui Zhang, Zhirong Wu, Bei Liu, Zhengyuan Yang, Linjie Li, Lijuan Wang, Hongjin Qian, Yutao Zhu, Zhicheng Dou  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.11926)  
+
+**Abstract**: Scientific progress depends on a repeated loop of exploration, experimentation, and abstraction. Researchers test candidate directions, interpret the evidence, and carry the resulting lessons into later attempts. We study how an AI agent can run this loop autonomously over long horizons. We introduce Arbor, a general framework for autonomous research that combines a long-lived coordinator, short-lived executors, and Hypothesis Tree Refinement (HTR), a persistent tree that links hypotheses, artifacts, evidence, and distilled insights across time. The coordinator manages global research strategy over the tree, while executors implement and test individual hypotheses in isolated worktrees. As results return, Arbor updates the tree, propagates reusable lessons, refines the search frontier, and admits verified improvements. This design turns autonomous research from a sequence of local attempts into a cumulative process in which strategy, execution, and evidence are carried across time. We evaluate Arbor under Autonomous Optimization (AO), an operational setting where an agent improves an initial research artifact through iterative experimentation without step-level human supervision. Across six real research tasks in model training, harness engineering, and data synthesis, Arbor achieves the best held-out result on all six tasks, attaining more than 2.5x the average relative held-out gain of Codex and Claude Code under the same task interface and resource budget. On MLE-Bench Lite, Arbor reaches 86.36% Any Medal with GPT-5.5, the strongest result in our comparison. 
+
+---
+# Lung-SRAD: Spectral-Aware Regularized Audio DASS with Dual-Axis Patch-Mix Contrastive Learning for Respiratory Sound Classification 
+
+**Authors**: Hemansh Shridhar, Miika Toikkanen, June-Woo Kim  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.11922)  
+
+**Abstract**: Recent respiratory sound classification (RSC) studies largely rely on CLS-token driven self-attention architectures such as the Audio Spectrogram Transformer (AST). While effective at modeling global context, recent analyses suggest a low-pass filtering behavior that may reduce sensitivity to localized abnormal patterns. In this work, we investigate State Space Models (SSMs) as an alternative backbone for RSC. Using the Distilled Audio State Space model, we analyze intermediate representations through spectral response curves and observe stronger preservation of mid-to-high spatial-frequency components. Based on these observations, we introduce spectral-aware layer regularization using Gaussian convolution applied to selected layers. We further propose Dual-Axis Patch-Mix contrastive learning tailored to SSM-based audio models for robust representation learning. Experiments on the ICBHI benchmark show that our approach achieves 64.48% score, outperforming the AST baseline by 5%. Code is available at this https URL. 
+
+---
+# Characterizing Software Aging in GPU-Based LLM Serving Systems 
+
+**Authors**: Domenico Cotroneo, Bojan Cukic  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.11916)  
+
+**Abstract**: This paper proposes an empirical methodology to study software aging in GPU-based LLM serving systems. Traditional aging studies focus on CPU-centric software with relatively regular workloads; LLM serving is different, spanning a Python host and a CUDA device, handling requests whose cost varies by orders of magnitude, and relying on rapidly evolving software stacks. We run a 216-hour campaign across six co-located deployments under identical stress conditions, monitor host, device, and client metrics in parallel, and apply a statistical pipeline that accounts for autocorrelation and multiple testing. Our results reveal statistically significant memory aging in all deployments, with leak rates strongly dependent on the serving runtime and deployment configuration. Beyond these findings, we provide a reproducible framework that opens a research direction at the intersection of the software aging and rejuvenation and LLM serving communities. 
+
+---
+# Quality Adaptive Angular Margin Learning for Respiratory Sound Classification 
+
+**Authors**: Yoon Tae Kim, Heejoon Koo, Miika Toikkanen, June-Woo Kim  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.11915)  
+
+**Abstract**: We present a quality-adaptive angular-margin learning framework that improves feature generalization by enforcing intra-class compactness and inter-class separability. Our framework, titled QLung, introduces a no-reference audio quality margin derived from spectral entropy and root-mean-square energy, which adaptively scales angular margins based on recording quality. To this end, we propose a log-scaled angular margin that stabilizes training under severe class imbalance. We also use an angular classifier that normalizes features and class weights, ensuring margin penalties are applied consistently on the unit hypersphere. Our approach improves in-distribution performance on the ICBHI dataset by 2.46\% over the cross-entropy baseline, and most significantly, achieves the strongest out-of-distribution performance on the SPRSound dataset compared to prior state-of-the-art methods. Code is available at this https URL. 
+
+---
+# DuoBench: A Reproducible Benchmark for Bimanual Manipulation in Simulation and the Real World 
+
+**Authors**: Tobias Jülg, Seongjin Bien, Simon Hilber, Yannik Blei, Pierre Krack, Maximilian Li, Sven Parusel, Rudolf Lioutikov, Florian Walter, Wolfram Burgard  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.11901)  
+
+**Abstract**: Bimanual robot systems substantially expand manipulation capabilities, but coordinating two arms introduces additional control complexity and failure modes that are not well captured by existing benchmarks. We introduce DuoBench, an extensible benchmarking framework for bimanual manipulation policies on the FR3 Duo platform. DuoBench comprises eleven tasks spanning four coordination categories, implemented in simulation and partially reproduced in the real world through reproducible task recipes with 3D-printable assets. In addition, we propose a stage-based evaluation scheme that supports fine-grained semantic failure analysis beyond binary success and provide human-teleoperated datasets for all benchmark tasks. We benchmark several dual-arm imitation-learning and vision-language-action policies in simulation and on real hardware. Our results show that current policies remain challenged by bimanual manipulation, particularly in early interaction stages, parallel arm execution, and transfer between simulation and real-world settings. DuoBench provides a reproducible testbed for diagnosing these failure modes and studying future methods for dual-arm policy learning. Code, datasets, and videos are available at this https URL 
+
+---
+# Beyond representational alignment with brain-guided language models for robust reasoning 
+
+**Authors**: Mingqing Xiao, Kai Du, Zhouchen Lin  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.11893)  
+
+**Abstract**: The correspondence between large language models (LLMs) and the neural mechanisms underlying human higher-order cognition remains insufficiently characterized. Given that language and reasoning in the human brain appear dissociable, an open question is whether LLMs align with neural signals from reasoning-related regions and whether such signals can improve them. Here, focusing on deductive reasoning, we show that LLM internal representations are not only partially aligned with task-fMRI activity but can also be directly enhanced by these signals. Using a neural-predictivity metric, we find that LLMs explain a substantial fraction of the explainable variance in reasoning-related regions at the aggregate level, whereas predictivity within specific reasoning types is lower, indicating both alignment and divergence. Building on this, we propose a brain-guided framework: we steer model representations along directions induced by the joint structure of model and brain representations, applying intervention at inference and fine-tuning during training. We demonstrate that task-evoked brain signals can directly enhance LLM reasoning, yielding gains orthogonal to language-only supervision across 10 LLMs (1.5B-72B), with transfer across reasoning types and up to 13\% absolute accuracy gain. Our results advance LLM-brain correspondences from correlation to guidance, establishing a brain-signal-driven pathway toward more robust and cognitively aligned AI. 
+
+---
+# Task-Aligned Stability Analysis of Vision-Language Models for Autonomous Driving Hazard Detection 
+
+**Authors**: Everett Richards  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.11889)  
+
+**Abstract**: Vision-language models (VLMs) are increasingly used for scene understanding in autonomous driving, but robustness analysis often relies on task-agnostic embedding stability alone. We study whether corruption-induced embedding drift predicts changes in a task-aligned hazard score derived from CLIP image-text similarities. Using controlled corruptions on BDD100K road scenes, we compare embedding drift against margin drift, defined as the change in hazard score under perturbation. The relationship is highly corruption-dependent: some families exhibit strong coupling between representation drift and decision drift, while others induce hazardous decision instability despite relatively modest embedding change. Furthermore, corruption families differ in failure direction: most suppress hazard detections via false negatives, while occlusion instead triggers false alarms, suggesting that benchmark design should account for asymmetric failure modes, not just overall instability rates. These results suggest that robustness benchmarks should include task-aligned stability measures in addition to embedding-level perturbation statistics. 
+
+---
+# Agents All the Way Down; A Methodology for Building Custom AI Agents from Substrate to Production 
+
+**Authors**: Marc Alier Forment, Juanan Pereira, Francisco José García-Peñalvo, María José Casañ Guerrero  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.11869)  
+
+**Abstract**: Custom AI agents areagents that live inside their own
+application, talk to their own data and tools, enforce their own security boundaries,
+and carry their own brand and audit trail. What separates them from the general-purpose
+tier is fit, not capability: each is built for one job, by the
+engineer who will maintain it. No published practice sets out how to build one end to
+end. The pieces are everywhere (function-calling APIs, the Model Context Protocol, code
+agents to pair with), but the practice that chains them lives in podcasts, blogs, and
+leaked system prompts. This paper writes that practice down as a methodology, Agents All
+the Way Down: two preconditions crossed once and kept, then three practices repeated
+for the agent's life. The preconditions are (P1) Substrate, the LLM as a software
+component, framed as tools, then system, then messages under prompt-caching; and (P2)
+Building blocks: function calling, MCP, CLI orchestration, the liteshell pattern, the
+agent loop, skills, characters, hooks, and scaffolding. The practices are (P3) prototype
+with a general-purpose agent; (P4) harvest, fold, and ship the result as a CLI, the
+Turtle pattern; and (P5) agent-tests-agent, in which a general-purpose agent drives it
+through behavioural scenarios, a complement to classical testing, not a replacement. The
+working loop is P3 to P4 to P5 and back, and one corollary falls out for free:
+multi-agent orchestration is just CLI composition. The methodology is framework-free by
+construction. It was distilled from the AAC, a custom agent for the open-source LAMB
+platform, built in about ten days by one developer with an AI pair-programmer and in
+production . We present it as a transferable practice, independent of any language or framework. 
+
+---
+# Fine-tuning Multi-modal LLMs with ART: Art-based Reinforcement Training 
+
+**Authors**: Michal Chudoba, Sergey Alyaev, Petra Galuscakova, Tomasz Wiktorski  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.11854)  
+
+**Abstract**: There are two main Parameter-Efficient Fine-Tuning (PEFT) techniques for Large Language Models (LLMs). While Low-Rank Adaptation (LoRA) introduces additional weights between the LLM layers, Soft Prompting introduces additional fine-tuning-specific raw tokens to an LLM input. However, both require modification to the computational graphs of precompiled, preoptimized LLMs. As a result, neither is fully supported in high-throughput engines like vLLM. We propose fine-tuning with ART (Art-based Reinforcement Training). The method injects information into a frozen Multimodal Large Language Model (MLLM) by optimizing only its raw visual input, thus enabling the soft-token approach on pre-compiled computational graphs. It relies on backpropagation of gradients back into a plain pixel array and thus supports any fine-tuning objective. Moreover, the optimized visual input can be stylized as task-relevant computational artworks. The approach's effectiveness is confirmed for different sizes of a popular open Qwen architecture and for several textual benchmarks. Specifically, ART reaches accuracy competitive with LoRA across mathematics and structured-tool-use benchmarks. 
+
+---
+# Task-Aware Structured Memory for Dynamic Multi-modal In-Context Learning 
+
+**Authors**: Zhirui Chen, Ziwei Chen, Ling Shao  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.11853)  
+
+**Abstract**: Multi-modal large language models (MLLMs) depend on in-context learning (ICL) for rapid task adaptation, but their scalability is severely limited by finite context windows and the growing cost of key-value (KV) caches in long multi-modal sequences. Existing memory compression approaches typically rely on rigid token removal or sample-dependent importance estimation, which introduces bias, disrupts semantic structure, particularly for visual representations, and yields static memories that cannot adapt to new queries. We introduce TASM (Task-Aware Structured Memory), a training-free framework that addresses these limitations through task-aware, structure-preserving, and dynamically accessible memory construction. TASM employs task-vector guided compression to replace sample-specific signals with a task-level direction that captures shared relevance across demonstrations. To preserve the underlying manifold, it applies semantics-aware token merging via bipartite graph matching, aggregating tokens without destructive pruning. Finally, TASM structures memory into a hierarchy comprising a compact Core Memory and a Latent Bank, facilitating query-adaptive dynamic retrieval. Evaluations confirm TASM maintains high performance under heavy compression, effectively balancing efficiency with adaptability. 
+
+---
+# LASA: A Weak Supervision Method for Open-Vocabulary Scene Sketch Semantic Segmentation 
+
+**Authors**: Liwen Yi, Xianlin Zhang, Yue Zhang, Yue Ming, Xueming Li  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.11837)  
+
+**Abstract**: Open-vocabulary scene sketch semantic segmentation aims to assign dense semantic labels to sparse line drawings based on flexible category vocabularies specified at inference time, without relying on pixel-level annotations during training. Unlike natural images, sketches lack texture and color cues, making semantic understanding heavily dependent on stroke layout and spatial configuration, a challenge that renders single-layer vision-language features inherently unstable. Our key observation is that attention maps from different Vision Transformer layers encode complementary spatial cues: shallow layers capture global structural layouts, while deeper layers focus on local stroke intersections and object parts. This suggests that cross-layer aggregation provides a more robust structural prior than any individual layer alone. Leveraging this insight, we propose a structure-aware framework built upon \textbf{L}ayer-wise \textbf{A}ccumulated \textbf{S}tructural \textbf{A}ttention (\textbf{LASA}), which aggregates multi-layer attention to guide hierarchical semantic alignment under weak supervision and refine predictions during inference. Experiments on FS-COCO, SFSD, and FrISS show that LASA improves mIoU by $+3.43$, $+8.01$, and $+15.74$ over the prior weakly supervised baselines, demonstrating consistent gains in both segmentation accuracy and spatial coherence. Our source code will be made publicly available. 
+
+---
+# Towards Data-free and Training-free Compression for Speech Foundation Models Using Parameter Clustering 
+
+**Authors**: Haoning Xu, Zhaoqing Li, Huimeng Wang, Youjun Chen, Chengxi Deng, Mengzhe Geng, Xunying Liu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.11836)  
+
+**Abstract**: This paper presents a novel data-free and training-free compression approach for speech foundation models using channelwise clustering via k-means. More fine-grained, mixed sparsity pruning by layer-level varying number of parameter clusters is also explored. Experiments conducted on the LibriSpeech dataset suggest that when operating with pruning sparsity of 50% on HuBERT-large, consistent WER reductions of 27.73%/18.61% absolute (34.37%/21.91% relative) over the magnitude-based pruning were obtained on the test-clean and test-other subsets before fine-tuning and 0.19%/0.79% absolute (3.36%/4.62% relative) after fine-tuning with only 3 epochs. Similar WER reductions of 2.86%/5.02% absolute (59.21%/55.29% relative) were observed against magnitudebased pruning on Whisper-large-v3 at 10% sparsity, all with no significant WER increase relative to the uncompressed baseline. 
+
+---
+# Designing AI-Supported Focus Groups: A Role x Modality Playbook 
+
+**Authors**: Zhiqing Wang, Steven Dow  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.11835)  
+
+**Abstract**: Collecting participants' lived experiences is central to design research. Focus groups are uniquely valuable because participants not only share individual accounts but also respond to one another, surfacing comparison, disagreement, and collective sensemaking. However, focus groups are resource-intensive and highly sensitive to facilitation: moderators must probe for specificity, balance participation, manage topic flow, and sustain psychological safety, and subtle facilitation choices can shape what becomes salient. Recent HCI work and commercial meeting tools show that generative AI can scaffold live conversation through prompting, turn regulation, thematic mapping, and real-time summarization. Yet UXR teams lack a clear map of what these capabilities mean in focus groups and what methodological risks they introduce. We synthesize AI supports for live conversation and translate them into a focus-group-specific playbook organized by AI role (tool, co-host, host) and modality (text, voice, embodied).We synthesize prior work on AI-supported live conversation and propose a focus-group-specific playbook of AI supports organized by role (tool, co-host, host) and modality (text, voice, embodied). We characterize interactional trade-offs and identify open questions for evaluating AI-supported focus groups as methodological configurations. 
+
+---
+# From Uniform to Learned Graph Priors: Diffusion for Structure Discovery 
+
+**Authors**: Qi Shao, Hao Guo, Jiawen Chen, Duxin Chen, Wenwu Yu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.11831)  
+
+**Abstract**: Neural relational inference (NRI) methods discover interaction graphs from trajectories through variational reasoning on discrete potential edges. However, these methods typically rely on oversimplified, factorized graph priors. Such priors, typically nearing uniform distributions, treat edges as independent entities. This systemic misalignment does not match the real-world systems and yields diffuse and indecisive edge posteriors limiting the reliability of structural discovery. To address this, we propose \textit{Diff-prior}, a diffusion-parameterized adaptive prior used to calibrate latent graph distribution rather than generate graphs. Our core insight is to reframe prior integration as a learnable denoising-style calibration that organizes scattered, uncertain edge posteriors into a more reliable overall structure which can be trained by the diffusion model. Diff-prior learns an adaptive structure prior that performs structured calibration on the edge posteriors during inference, guiding it towards a distribution closer to the underlying structure. The diff-prior operates before structural sampling and acts as a denoising calibrator directly on the encoder edge distribution, which provides a generic training paradigm over structured variables. Experiments on standard benchmarks validated our framework, and the results indicate that Diff-prior improves the performance of structure inference and generates more decisive edge posteriors across multiple NRI-family architectures. The code is available on this https URL. 
+
+---
+# Feature-Aligned Speech Watermarking for Robustness to Reconstruction Distortions 
+
+**Authors**: Haiyun Li, Shuhai Peng, Zhisheng Zhang, Jingran Xie, Xiaofeng Xie, Hanyang Peng, Zhiyong Wu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.11828)  
+
+**Abstract**: Audio watermarking aims to embed identifiable information into audio while remaining imperceptible. Existing methods adopt high-fidelity, low-energy designs to preserve perceptual quality, but the resulting watermarks lack robustness under suppression by speech reconstruction models. Improving robustness is challenging due to the inherent robustness-fidelity trade-off in existing designs, where increasing watermark energy improves robustness but reduces fidelity. To address this problem, we propose a feature-aligned watermarking method that aligns the watermark with the original speech feature distribution, allowing higher watermark energy to improve robustness while preserving imperceptibility. We use a pretrained speech codec to generate a pseudo-speech watermark and fuse it into the spectrogram of the input audio, with VAD loss and perceptual losses guiding embedding within voiced regions. Experiments show that our method maintains imperceptibility comparable to existing approaches while substantially improving robustness under both seen and unseen speech reconstruction models. 
+
+---
+# Grammar-Constrained Decoding Can Jailbreak LLMs into Generating Malicious Code 
+
+**Authors**: Yitong Zhang, Shiteng Lu, Jia Li  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.11817)  
+
+**Abstract**: Large Language Models (LLMs) are increasingly used for code generation, raising concerns that they may be misused to produce malicious code. Meanwhile, Grammar-Constrained Decoding (GCD) has been widely adopted to improve the reliability of LLM-generated code by enforcing syntactic validity. In this paper, we reveal a counterintuitive risk: this reliability-oriented technique can itself become an attack surface. We uncover a new jailbreak attack, termed CodeSpear, that exploits GCD to induce LLMs into generating malicious code. Our experiments show that simply applying a benign code grammar constraint can effectively jailbreak LLMs.
+To address this vulnerability, we propose CodeShield, a safety alignment approach that robustly preserves safe behavior even under attacker-controlled grammar constraints. CodeShield aligns the model in the code modality by teaching it to generate honeypot code under GCD. Such code is semantically harmless, so it does not implement the malicious request, and structurally diverse, so it is difficult to suppress through grammar tightening. At the same time, CodeShield still preserves natural-language refusals when natural language is available. Experiments on 10 popular LLMs across 4 benchmarks show that CodeSpear outperforms representative jailbreak baselines and increases the attack success rate by more than 30 percentage points on average. CodeShield also restores safety under CodeSpear while preserving benign utility. Our findings reveal a fundamental risk of GCD and call for greater attention to its potential security implications. 
+
+---
+# WorldReasoner: Evaluating Whether Language Model Agents Forecast Events with Valid Reasoning 
+
+**Authors**: Yizhou Chi, Eric Chamoun, Zifeng Ding, Andreas Vlachos  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.11816)  
+
+**Abstract**: Forecasting real-world events requires language-model agents to reason under uncertainty from incomplete, time-bounded information. Yet evaluating whether agents genuinely forecast requires more than final-answer accuracy: a model may be correct by recalling memorized training facts, citing fabricated evidence, or producing an unsupported causal story. We present WorldReasoner, an evaluation framework for temporally valid event forecasting. Each task gives an agent a resolved forecasting question, a simulated forecast date, and access only to evidence available before that date; after resolution, the framework scores the submitted probability, cited evidence, and optional causal event graph. WorldReasoner reports three complementary axes: outcome quality against resolved answers, evidence quality over cited sources, and reasoning quality against post-resolution hindsight graphs. The benchmark is built by an agentic construction pipeline that generates forecasting questions, collects time-stamped evidence, and builds hindsight reference graphs at scale, yielding 345 resolved tasks derived from 14,141 articles with graphs covering 8,087 extracted events. Across six controlled agent settings, temporally valid retrieval is the strongest driver of outcome accuracy; causal graph construction improves key-event recovery; and correct graph-enabled forecasts are more strongly grounded in key events and relevant sources, yet agents still struggle to convert grounded evidence into calibrated probabilities. 
+
+---
+# Sparsified Kolmogorov-Arnold Networks for Interpretable Quantum State Tomography 
+
+**Authors**: Xinge Wu, Huaxin Wang, Jiajun Liu, Ruiqing He, Jiandong Shang, Hengliang Guo, Qiang Chen  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.11814)  
+
+**Abstract**: Machine-learning approaches to quantum state tomography can achieve high reconstruction fidelity, but the physical structure used by the trained model often remains implicit. Here we ask whether a sparsified Kolmogorov-Arnold Network (KAN) can be used not only as a regressor, but also as an inspectable reconstruction rule whose internal organization can be checked against known Pauli structure. We study a controlled three-qubit GHZ-family benchmark in which all 63 non-identity Pauli expectation values are used to reconstruct three GHZ-subspace variables: the population imbalance $z$, the real off-diagonal component $c$, and the imaginary off-diagonal component $s$. Under finite-shot sampling and depolarizing noise, external ablation identifies the extended 12-channel GHZ-relevant Pauli set from the 63 measurements, with exact top-12 recovery across the tested shot counts and depolarizing-noise strengths. These support patterns remain stable across multi-seed random-initialization and noise-level analyses, and collapse under random-label controls. The dominant pruned input-hidden-output pathways organize Z-type population observables and X/Y off-diagonal observables in a pattern consistent with the analytic GHZ Pauli grouping, and sparse formula recovery recovers the canonical signed Pauli relations. The contribution of the KAN is therefore pathway-level structural interpretability within a neural reconstruction model, rather than superior sparse regression. Together with negative controls, these probes provide a consistency chain for auditing learned reconstruction rules against known physical structure. 
+
+---
+# TextHOI-3D: Text-to-3D Hand-Object Interaction via Discrete Multi-View Generation and Joint Mesh Optimization 
+
+**Authors**: Zixiong Hao, Zhencun Jiang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.11805)  
+
+**Abstract**: Text-conditioned 3D generation has progressed rapidly for images and isolated objects, but producing a hand-object mesh remains challenging: the output must preserve language semantics, cross-view consistency, object geometry, articulated hand shape, and physically plausible contact. We present TextHOI-3D, a staged framework that uses generated multi-view observations as an explicit interface between text-conditioned visual generation and geometry-aware hand-object recovery. TextHOI-3D learns a compact VQ token space for fixed-camera hand-object observations, predicts multi-view visual tokens from text with a CLIP-conditioned visual autoregressive model, and recovers a unified hand-object mesh through prior initialization, multi-view joint optimization, and anti-penetration refinement. The design separates semantic generation from geometric recovery while keeping both stages connected by a discrete multi-view representation. On HO3D-derived evaluations, the multi-view setting reduces object CD from 17.26 mm to 4.92 mm and penetration volume from 5.3721 cm^3 to 0.2193 cm^3 compared with a single-view counterpart, while improving hand errors and surface F-scores. These results support multi-view visual tokens as an effective intermediate representation for text-driven 3D hand-object mesh creation. 
+
+---
+# Multimodal Ordinal Modeling of Alzheimer's Disease Severity Using Structural MRI and Clinical Data 
+
+**Authors**: Boris-Stephan Rauchmann, Jonathan Laib, Buse Ercik, Robert Perneczky, Sergio Altares-López  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.11794)  
+
+**Abstract**: Neurodegenerative diseases such as Alzheimer's disease (AD) require accurate and scalable tools for assessing disease severity, yet current clinical staging remains time-intensive and prone to variability. We propose an attention-enhanced multimodal machine learning framework with ordinal regression for automated and interpretable AD severity staging. The framework integrates T1-weighted MRI with demographic and genetic variables and compares unimodal and multimodal architectures using ordinal and non-ordinal prediction heads. Models were trained and validated using cohort-stratified splits derived from the ADNI, AIBL, and NIFD datasets. A strictly held-out test set was constructed using subjects excluded from all training, validation, preprocessing, and hyperparameter tuning procedures, with subject-level splitting employed throughout to prevent data leakage. Among unimodal approaches, the T1-weighted MRI model achieved slightly higher adjacent-stage accuracy (0.963) and agreement with clinical staging (QWK 0.444) than the tabular model (QWK 0.433). Integrating imaging, demographic, and genetic information improved overall performance. The multimodal non-ordinal baseline achieved the lowest prediction error (MAE 0.340), whereas the ordinal multimodal model achieved the highest adjacent-stage accuracy (0.970) and strongest agreement with clinical staging (QWK 0.549). These findings indicate that ordinal formulations better capture the ordered structure of the CDR scale and yield predictions more consistent with clinical staging. Explainability analyses using Grad CAM++ and SHAP demonstrated anatomically and clinically plausible model behavior, supporting transparent decision-making. Overall, attention-based multimodal learning with ordinal regression represents a robust, interpretable, and scalable approach for automated AD severity staging and AI-assisted clinical decision support. 
+
+---
+# AI4Land: Scalable Deep Learning for Global High-Resolution Land Use Reconstruction 
+
+**Authors**: Amirpasha Mozaffari, Marina Castaño, Stefano Materia, Etienne Tourigny, Oscar Molina-Sedano, Jordi Varela-Agrelo, Dario Garcia-Gasulla, Miguel Castrillo Melguizo, Mario Acosta, Amanda Duarte  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.11793)  
+
+**Abstract**: Uncertainty in the terrestrial carbon cycle remains a major constraint in climate projections, partly driven by the uncertainties affecting the land surface representation and variability in Earth system models. To address this limitation, we present a data-driven framework AI4Land, for generating high-resolution historical reconstructions and future projections of key land surface variables. The framework follows a two-phase approach using a U-Net architecture. In the first phase, which is the focus of this work, it reconstructs annual land use and land cover by integrating coarse-resolution scenario data with static geophysical features. In a planned second phase, the resulting high-resolution maps will be used to predict dynamic biophysical variables, particularly leaf area index, at finer temporal scales. Trained on Earth observation data, the models learn to reproduce spatially explicit and physically consistent land surface patterns, extending temporal coverage to periods lacking direct observations. AI4Land was developed and trained on MareNostrum5, demonstrating how GPU-accelerated HPC infrastructure enables global-scale climate AI pipelines. The final product is a suite of open-source emulators designed for real-time coupling with digital twin platforms, such as those developed under the Destination Earth initiative. By delivering realistic and evolving land surface conditions on demand, this work aims to reduce critical uncertainties and improve the predictive power of next-generation climate simulations. 
+
+---
+# MultiToP: Learning to Patch Visual Tokens to Mitigate Hallucinations in Video Large Multimodal Models 
+
+**Authors**: Yuansheng Gao, Wenbin Xing, Jiahao Yuan, Kaiwen Zhou, Han Bao, Zonghui Wang, Wenzhi Chen  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.11792)  
+
+**Abstract**: Video Large Multimodal Models have achieved remarkable progress in video understanding, yet they remain prone to hallucinations, where generated responses are not faithfully supported by the input video. In this paper, we propose MultiToP, a multimodal-context-aware visual token patching framework that mitigates hallucinations by refining unreliable visual tokens before language generation. MultiToP introduces a lightweight Visual Token Patcher to predict token-level replacement distributions and selectively substitute unreliable visual tokens with a dynamic global patch token. To train the patcher effectively, we further propose information-guided rank calibration, which uses answer-conditioned frame-level information cues derived from the backbone to guide token replacement. Combined with ground-truth answer supervision and sparsity regularization, MultiToP enables localized visual evidence refinement without modifying the original model. Extensive experiments demonstrate that MultiToP effectively reduces hallucinations on Vript-HAL with negligible inference overhead, improving the F1 scores of Qwen3-VL-4B-Instruct by 50.60% over the vanilla model. Meanwhile, MultiToP preserves general video understanding ability, yielding an 18.58% relative accuracy gain on ActivityNet-QA for Video-LLaVA-7B. 
+
+---
+# What Limits Does Quantization Place on Dense Top-$k$ Retrieval? A Theoretical Study 
+
+**Authors**: Koki Okajima, Tsukasa Yoshida  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.11780)  
+
+**Abstract**: We establish conditions for embedding a corpus of $N$ documents as $d$-dimensional vectors such that every $k$-subset $S \subseteq [N]$ is realizable as a result of top-$k$ retrieval by some query vector. Recent work shows that $d = O(k)$ suffices for such embeddings to exist in $\mathbb{R}^d$, independently of $N$. We theoretically prove that this corpus-independent bound is specific to infinite precision. With $B$ bits per coordinate, perfect top-$k$ retrieval requires $Bd = \Omega(k \ln N)$; thus, at any fixed precision, the dimension must grow at least logarithmically with $N$. Specializing to a $\ell_2$-normalized $B$-bit uniform scalar quantization model, we also identify a threshold on the precision $B^{*} = O(\ln \ln N)$ below which no dimension suffices, together with two further regimes that bound the feasible $(B, d)$ pairs. Our result implies that in practical vector databases and dense retrieval systems where quantization is standard, the embedding dimension and possibly the precision must grow with the corpus size. 
+
+---
+# Blind Dexterous Grasping via Real2Sim2Real Tactile Policy Learning 
+
+**Authors**: Shengcheng Luo, Xiyan Huang, Zhe Xu, Wanlin Li, Ziyuan Jiao, Chenxi Xiao  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.11767)  
+
+**Abstract**: Blind grasping with a dexterous hand is a crucial manipulation capability. Nevertheless, learning such tactile-only policies for real robots remains challenging due to the tactile sim-to-real gap and the limited expressiveness of sparse tactile signals. To bridge this gap, we propose a framework for tactile-only blind grasping that is deployable on a physical multi-fingered robotic hand. Our approach combines three key components. First, we introduce a Real2Sim tactile calibration pipeline that constructs a contact-calibrated digital-twin simulator capable of reproducing real tactile signals. Second, we improve the expressiveness of sparse tactile observations using a layout-aware tactile encoder, which incorporates sensor-geometry priors through self-supervised pretraining. Third, to improve generalization to unseen objects, we train object-specific reinforcement-learning experts in the calibrated simulator and aggregate their successful grasp trajectories into a tactile-conditioned Diffusion Policy. We evaluate our method on a physical LEAP Hand equipped with distributed tactile sensing across 10 seen and 10 unseen objects. The deployed policy achieves a 27\% real-world grasp success rate across all 20 objects, without real-world grasping demonstrations or visual input. Simulation ablations show that layout-aware tactile pretraining improves grasping performance, while sensing-level evaluations confirm that Real2Sim calibration increases the consistency of tactile contact events between simulation and hardware. Together, these results suggest that contact-event calibration, geometry-aware tactile representation learning, and diffusion-based policy aggregation provide an effective path toward tactile-only blind grasping on real dexterous robotic hands. Project page:this http URL. 
+
+---
+# Fast Speech Foundation Model Distillation Using Interleaved Stacking 
+
+**Authors**: Eungbeom Kim, Kyogu Lee  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.11766)  
+
+**Abstract**: Distilling a large speech foundation model (SFM) into an efficient student model has been successfully applied to low-resource environments. Although distillation reduces inference latency, it requires an additional student model training. However, the training efficiency of SFM distillation remains underexplored. In this work, we explore training acceleration of SFM distillation to speed up model deployment. We examine the potential of stacking, in which the model depth is progressively increased through training until the target model depth is reached. While existing stacking methods improve training speed, they suffer from performance degradation. To handle this limitation, we propose interleaved stacking, a novel stacking method that consistently preserves layer position throughout the stacking process. This property is particularly critical in SFMs, in which each layer encodes distinct layer-specific knowledge. We validate the effectiveness of the proposed method on SUPERB. 
+
+---
+# Automated Creativity Evaluation of Language Models Across Open-Ended Tasks 
+
+**Authors**: Min Sen Tan, Zachary Kit Chun Choy, Syed Ali Redha Alsagoff, Nadya Yuki Wangsajaya, Mohor Banerjee, Swaagat Bikash Saikia, Alvin Chan  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.11762)  
+
+**Abstract**: Large language models (LLMs) have achieved remarkable progress in language understanding, reasoning, and generation, sparking growing interest in their creative potential. Realizing this potential requires systematic and scalable methods for evaluating creativity across diverse tasks. However, most existing creativity metrics are tightly coupled to specific tasks, embedding domain assumptions into the evaluation process, and limiting scalability and generality. To address this gap, we introduce an automated, domain-agnostic framework for quantifying LLM creativity across open-ended tasks. Our approach separates the measurement apparatus from the creative task itself, enabling scalable, task-agnostic assessment. Divergent creativity is measured using semantic entropy, a reference-free and robust metric for novelty and diversity, validated against human annotations, LLM-based novelty judgments and baseline diversity measures. Convergent creativity is assessed via a novel retrieval-based multi-agent judge framework that delivers context-sensitive evaluation of task fulfilment with over 60% improved efficiency. We validate our framework in three qualitatively distinct domains: problem-solving (MacGyver), research ideation (HypoGen), and creative writing (BookMIA), using a broad suite of LLMs. Empirical results show that our framework reliably captures key facets of creativity, including novelty, diversity, and task fulfilment, and reveal how model properties, such as size, temperature, recency, and reasoning, impact creative performance. Our work establishes a reproducible and generalizable standard for automated LLM creativity evaluation, paving the way for scalable benchmarking and accelerating progress in creative AI. 
+
+---
+# AnchorEdit: Maintaining Temporal Consistency in Multi-turn Image Editing via Causal Memory 
+
+**Authors**: Hang Xu, Xiaoxiao Ma, Guohui Zhang, Yu Hu, Siming Fu, Jie Huang, Lin Song, Haoyang Huang, Nan Duan, Feng Zhao  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.11751)  
+
+**Abstract**: Multi-turn image editing is essential for iterative design, yet current models often struggle with identity drift and error accumulation over successive steps. While existing research leverages video priors for consistency, their reliance on bidirectional attention is fundamentally misaligned with the causal, sequential nature of interactive editing. In this paper, we propose AnchorEdit, the first autoregressive (AR) diffusion-based framework designed specifically for high-resolution, long-term multi-turn editing. AnchorEdit bridges the gap between video priors and causal inference through a three-stage training curriculum: identity-preserving sing-turn pretraining, causal AR forcing fine-tuning with a novel self-rollout strategy to mitigate exposure bias, and consistency distillation for efficient 4-step generation. During inference, we introduce a memory mechanism to anchor the initial subject identity and ensure stable extrapolation across extended editing trajectories. To evaluate performance, we provide a new high-resolution multi-turn editing benchmark designed to stress-test long-horizon stability. Extensive experiments demonstrate that AnchorEdit achieves state-of-the-art results, maintaining exceptional subject fidelity and instruction following even over 10+ interaction rounds. 
+
+---
+# From Prompts to Tokens: Internalizing Causal Supervision in Vision-Language Model for Multi-Image Causal Reasoning 
+
+**Authors**: Haoping Yu, Yuanxi Li, Jing Ma  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.11745)  
+
+**Abstract**: Visual causal reasoning is essential for understanding and intervening in the physical world, requiring identification of causal variables from visual inputs and reasoning over intervention effects. Despite recent progress, large vision--language models (VLMs) remain brittle at such tasks, especially for interventional and counterfactual queries over multi-image inputs. Most existing explorations inject causal knowledge via textual prompts, leaving causal mechanisms external to model execution and limiting reliable control during inference. To address this problem, we propose BridgeVLM, which internalizes visual causal reasoning by inducing a causal graph from multi-image inputs and converting it into structured Causal Tokens executed by RAMP layers injected into the LLM decoder for causal message passing. We further introduce a unified training interface M3S for fine-grained causal supervision from different granularities (local/global level). BridgeVLM achieves 54.4% accuracy on intervention tasks on CausalVLBench (vs. 33.2% with prompt-level supervision), improves results on Causal3D from 43.6% to 49.0%, and substantially improves causal structure learning on CausalVLBench ($F_1$: 33.4% $\rightarrow$ 75.1%). 
+
+---
+# Hey Chat, Can You Teach Me? Structuring Socratic Dialogue for Human Learning in the Wild 
+
+**Authors**: Sidney Tio, Arunesh Sinha, Pradeep Varakantham  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.11744)  
+
+**Abstract**: Large language models are now widely used for everyday learning, but the underlying interactions are typically unstructured chats rather than following a curriculum. Unlike formal online learning systems, these interactions carry no prior record of the student, so any estimate of what the student already knows must be inferred from the dialogue itself. We show that this gap is not closed by scaling models alone. Frontier and education-tuned LLMs perform poorly when asked to tutor a student over an extended session, because doing so requires three things at once. The tutor must sequence a curriculum, conduct Socratic dialogue, and infer the student's knowledge state from that dialogue. We propose separating these responsibilities. Given a student query, our system constructs a prerequisite knowledge graph in which subtopics are nodes and dependencies are edges, and frames tutoring as deciding which node to teach next and how many dialogue turns to spend on it before moving on. A lightweight PPO policy handles this sequencing decision, while an LLM conducts the Socratic exchange at the chosen node and returns a signal of student progress. Across held-out STEM and non-STEM topics, our PPO-paired tutor outperforms heuristic baselines, frontier general-purpose models, and a model specialised for Socratic dialogue: on both the rate at which students reach full curriculum mastery and the number of turns required. Explicit curriculum structure delivers gains that scaling the underlying model does not. 
+
+---
+# Multi-View In-Cabin Monitoring System for Public Transport Vehicles 
+
+**Authors**: Evgeny Gorelik, Kenny Dean Karrow, Fikret Sivrikaya, Sahin Albayrak, Christian Baumann  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.11739)  
+
+**Abstract**: We introduce a multi-view in-cabin monitoring dataset for public transportation with synchronized RGB and depth images from four inward-facing cameras and a rotating LiDAR covering the vehicle interior of a digitalized and partly automated German city bus. The dataset contains 9.136 synchronized samples with annotations and is accompanied by a calibration and pseudo-labeling pipeline that generates 3D human pose estimates and oriented 3D bounding boxes for occupants. We further provide a nuScenes-format conversion and benchmark representative multi-view 3D detection models (e.g., Lift-Splat-Shoot and BEVFusion), supporting comparative evaluation and small-scale training of multi-view in-cabin perception models. The dataset and tools are available at this https URL. 
+
+---
+# ICA Lens: Interpreting Language Models Without Training Another Dictionary 
+
+**Authors**: Sida Liu, Feijiang Han  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.11722)  
+
+**Abstract**: Finding interpretable directions in language-model representations is critical for understanding and controlling model behavior. Sparse autoencoders (SAEs) have become the standard tool for this purpose, but using them as the default first lens often requires training, storing, and evaluating large overcomplete dictionaries. This bottleneck limits rapid exploration and raises a fundamental question: how much interpretable structure is already visible from activation geometry before training another neural dictionary? Our intuition is simple: many interpretable directions are selective on tokens, and these directions should look less Gaussian than random directions. We therefore revisit independent component analysis (ICA), a classical method for finding non-Gaussian directions, as a compact lens for language-model interpretability. We find that ICA has been underestimated for LLM interpretability, because prior uses often relied on off-the-shelf ICA implementations that are brittle on LLM activations and lacked systematic tools for inspecting and evaluating the recovered directions. To bridge these gaps, we introduce ICALens, the first practical workflow for stable, efficient, and auditable ICA analysis of LLM representations. It combines an optimized GPU-parallel FastICA pipeline with LLM-specific stability recipes and better fitting diagnostics, enabling efficient and reliable layer-wise analysis. Across GPT-2 Small, Gemma 2 2B, and Qwen 3.5 2B Base, ICALens efficiently recovers compact, human-interpretable directions without per-layer gradient-based dictionary training. On SAEBench, ICA is competitive with public SAEs in sparse probing and outperforms them in targeted probe perturbation under small-to-medium budgets. These results suggest that ICA should not be viewed as a weak baseline, but as an efficient and complementary first lens for exploring language-model representations. 
+
+---
+# Ouroboros-Spatial: Closing the Data-Model Loop for Spatial Reasoning 
+
+**Authors**: Enhan Zhao, Wei Wu, Yuanrui Zhang, Xueliang Zhao, Di He  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.11719)  
+
+**Abstract**: Spatial reasoning remains a persistent challenge for multimodal large language models (MLLMs). Existing approaches largely rely on large-scale, statically curated datasets, where all training samples are treated uniformly regardless of the model's evolving capabilities. This static paradigm is inherently data-inefficient: training capacity is often spent on samples that are either trivial or overly difficult for the model at its current stage. To address this limitation, we propose Ouroboros-Spatial, a self-evolving training framework in which the model plays dual roles as a proposer and a solver. In each iteration, a frozen proposer generates spatial question-answer (QA) pairs from 3D scene metadata and raw video frames, together with executable code for deriving reliable ground truth. A learnable solver is then fine-tuned on the accepted samples, and its per-sample prediction confidence is used as a difficulty signal. This signal is fed back to the proposer in the next iteration, guiding it to generate questions better matched to the solver's current capabilities. Through this closed-loop design, the training distribution co-evolves with model ability, reducing redundant trivial examples while filtering out ambiguous or uninformative samples with limited learning value. Across six spatial reasoning benchmarks, Ouroboros-Spatial substantially improves Qwen3-VL-4B and Qwen3-VL-8B while using an order of magnitude fewer training examples than recent large-scale curated datasets. On VSI-Bench, it yields absolute gains of 9.9 and 6.8 points for the 4B and 8B models, respectively, enabling both to outperform a wide range of strong open-source and proprietary baselines. 
+
+---
+# Substrate Asymmetry in User-Side Memory: A Diagnostic Framework 
+
+**Authors**: Youwang Deng  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.11712)  
+
+**Abstract**: User-side memory in LLMs is typically scored as a single "personalization" capability: given a user's history, is the output more user-aware? We show this aggregate metric hides opposite-direction failures. Memory factorises into at least three orthogonal axes -- behavioral consistency (style, voice), factual presence (recall facts in history), and factual absence (abstain when a fact is absent) -- and no single substrate wins all three. Comparing per-user gamma-LoRA (a small LoRA adapter trained on each user's history; gamma denotes per-user, not per-task) against BGE-large dense top-K retrieval on a controlled 50-user synthetic corpus and a real-data probe (LaMP-3), we find gamma-LoRA decisively wins behavioral style while RAG decisively wins factual absence -- and the same query-projection cells in attention layers 21-35 causally load-bear both effects in opposite directions (zeroing those LoRA weights raises absence-probe TPR by +33 pp and drops presence-probe TPR by 20 pp). On the more heavily RLHF-tuned Llama-3.1-8B-Instruct the asymmetry strengthens, not heals: parametric memory's behavioral advantage collapses while its absence-calibration deficit against retrieval widens -- an alignment tax on parametric user-memory. On real-data LaMP-3, gamma-LoRA underperforms a majority baseline; a 9-condition mitigation sweep diagnoses this as instruction-following collapse, not substrate failure (a 9x2 cross-product shows the eval-time {1..5} logit mask drives main_acc to >=0.995 on every recipe), and the best training-time fix replicates bit-identically on Llama. Finally, substrate-selection routing is question-classification, not calibration: a 110M DistilBERT on the question text alone beats every logit-based router. We contribute the diagnostic framework, the diagnosed real-data negative, the alignment-tax replication, and the routing-as-classification finding. 
+
+---
+# MedCTA: A Benchmark for Clinical Tool Agents 
+
+**Authors**: Tajamul Ashraf, Hyewon Jeong, Fida Mohammad Thoker, Bernard Ghanem  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.11702)  
+
+**Abstract**: To make clinically grounded decisions, medical AI agents are expected to go beyond simple recognition and be capable of tool retrieval, evidence acquisition, and integration. Existing benchmarks largely evaluate isolated perception or single-turn question answering, and therefore provide limited visibility into failures of planning, tool recruitment, and rollout reliability. We introduce MedCTA, a benchmark for evaluating medical tool agents on clinician-validated, step-implicit tasks grounded in realistic multimodal clinical inputs, including radiology images, pathology slides, and reports. MedCTA comprises 107 real-world clinical tasks with clinician-verified executable trajectories over 5 deployed tools, and supports process-aware evaluation of tool selection, argument validity, execution stability, trajectory fidelity, and outcome quality. We benchmark 18 open- and closed-source multimodal models and find that even frontier systems remain brittle in multi-step clinical tool use: autonomous rollouts are dominated by protocol failures, premature stopping, and incorrect tool recruitment, while gold-standard tool routing yields large but still incomplete gains. These results show that strong backbone perception does not translate into reliable agentic behavior in clinical settings. MedCTA provides a rigorous testbed for auditing, diagnosing, and advancing trustworthy medical AI agents. The dataset and evaluation suite are available at this https URL 
+
+---
+# T2S: A Rehearsal-Based Approach for Extraction-Resistant Model Watermarking 
+
+**Authors**: Jian-Ping Mei, Weibin Zhang, Ao Yao, Tiantian Zhu, Jie Xiao  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.11698)  
+
+**Abstract**: Model watermarking safeguards AI model intellectual property by embedding distinctive knowledge that induces unique behavioral signatures. The primary technical challenge lies in ensuring watermark robustness against various post-processing attacks on the watermarked model. Model extraction attacks emerge as the most severe threat, where adversaries exploit prediction outputs to train surrogate models that illegally replicate the original model's functionality. In this work, we propose a rehearsal-based watermark embedding framework to enhance the robustness of model watermarks against model extraction attacks. By simulating the extraction process, our method leverages the loss of a \textit{simulated stolen model} on a trigger set as a training signal to fine-tune the watermark knowledge within the target model. This fine-tuning step encourages the watermark to be embedded in a way that boosts transferability, thereby increasing its chances of persisting and remaining detectable in stolen models. Comprehensive experiments conducted under diverse settings demonstrate that the proposed method significantly improves the robustness of model watermarks against both model extraction and subsequent watermark removal attacks. 
+
+---
+# Noise-Aware Framework for Correcting Corrupted Labels 
+
+**Authors**: Ha-Linh Nguyen, Hong-Anh Nguyen, Minh-Duc La, Phong Lam, Thu-Trang Nguyen, Son Nguyen, Hieu Dinh Vo  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.11695)  
+
+**Abstract**: High-quality labeled data is essential for training reliable ML/DL models. However, real-world datasets often contain a considerable proportion of corrupted labels, which can severely degrade model performance. To address this problem, we propose CANOLA, a novel framework for correcting corrupted labels through noise-aware learning and iterative label refinement. CANOLA explicitly estimates the underlying noise distribution of the dataset and incorporates this information into the training of a noise-aware Deep Neural Network. By incorporating noise characteristics during learning, CANOLA enables the model to down-weight unreliable supervision signals and focus on trustworthy patterns, thereby improving robustness and generalization. Label correction is performed via cautious, iterative soft label refinement, in which model predictions are blended with observed labels to prevent premature or erroneous updates. This progressive refinement allows the dataset to be repaired in a stable and controlled manner. We evaluate CANOLA on six widely used datasets under realistic noisy labeling scenarios. Experimental results show that CANOLA consistently outperforms SOTA label correction methods, achieving relative improvements ranging from 19% to 52% in error reduction. Moreover, models trained on datasets corrected by CANOLA obtain substantial downstream performance gains. Even simple classifiers trained on CANOLA's corrected data can outperform complex model-centric approaches by margins of up to 67%. 
+
+---
+# Goal-Autopilot: A Verifiable Anti-Fabrication Firewall for Unattended Long-Horizon Agents 
+
+**Authors**: Youwang Deng  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.11688)  
+
+**Abstract**: Long-horizon LLM agents are not trusted to run unattended: with no human watching, they confidently report success they never verified. We treat honesty -- bounding what an agent may claim at termination -- as a first-class metric for unattended autonomy, distinct from capability. We present Autopilot, an execution model that makes silent fabricated success structurally impossible rather than merely rarer. Autopilot externalizes all working state into a durable, gated finite-state machine that a scheduler advances one stateless tick at a time; a hard floor forbids any terminal "done" claim whose falsifiable gate did not actually execute and pass. We prove a No-False-Success theorem -- under gate soundness, floor enforcement, and plan coverage, termination implies the goal holds -- whose only trust points are empirically measurable, and show the worst case degrades to an honest stall, never a fabricated success. Because each tick rehydrates only the state machine, per-step context cost is constant in the horizon. Across a 3,150-cell paired corpus (70 tasks $\times$ 3 systems $\times$ 3 models $\times$ 5 seeds, including 50 SWE-bench Lite tasks across 11 OSS repos), Autopilot fabricates on 0.95% of cells [95% CI 0.38--1.62] while Reflexion and StateFlow baselines fabricate on 8.10% [6.48--9.81] and 25.05% [22.48--27.62] respectively. The headline contrast lives in the hard regime: on SWE-bench Lite, the firewall reduces fabrication from 33.7% (StateFlow) to 0.67%, a paired difference of $-33.07$ pp [95% CI $-36.53, -29.73$]. The mechanism is the gate, not the model: all ten Autopilot fabrications come from the strongest model, while two weaker mid-tier models never fabricate across 700 paired cells. The firewall trades coverage for honesty by design -- an honest stall is recoverable; a confident wrong output shipped downstream is not. 
+
+---
+# Layer-Isolated Evaluation: Gating the Deterministic Scaffold of a Production LLM Agent with a No-LLM, Regression-Locked Test Harness 
+
+**Authors**: Sawyer Zhang, Alexander Wang, Sophie Lei  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.11686)  
+
+**Abstract**: End-to-end task-success is the dominant way to evaluate LLM agents, but one aggregate number tells you that an agent regressed, not where. We present layer-isolated evaluation: a deployed ordering agent is decomposed into a fixed taxonomy of layers (ontology, intent, routing, decomposition, escalation, safety, memory, and cross-cutting envelope/defense), each exercised by its own assertion slice in a deterministic, no-LLM "pure" mode. The pure suite (238 cases across 23 slices; 225 run in 2.39 s, ~10 ms/case) runs in CI on every change against a locked per-slice baseline. We validate by controlled regression injection, degrading one layer at a time across seven non-safety layers. The effect we did not design in is masking: the aggregate pass-rate barely moves (-1.7 to -5.9 pp for six local regressions), while the matching slice craters (-25 to -91 pp). A layer's slice reacting to its own fault is partly by construction; the measured results are (i) the aggregate masking and (ii) that damage stays off the other slices: the injected layer's slice is the single worst-hit in 5 of 7 cases and top-3 in 7 of 7 (mean rank 1.29 of 19). Localization replicates on a second, structurally different tenant (Starbucks SG): all seven matching slices crater, so it is not a single-catalog artifact. We position it as a concrete, deterministic instantiation of the component-level evaluation EDDOps prescribes but leaves unimplemented, with CheckList as ancestor and as the deterministic mirror image of whole-workflow stochastic mutation testing. Our contributions: (a) a fully decomposed, sub-second, no-LLM per-layer harness for a production agent, (b) a coverage-honesty test-adequacy criterion that refuses to score an unexercised layer, and (c) the regression-injection demonstration that per-slice baseline-locked gates localize regressions an aggregate metric masks. 
+
+---
+# Reason, Then Re-reason: Cross-view Revisiting Improves Spatial Reasoning 
+
+**Authors**: Chaofan Ma, Zhenjie Mao, Yuhuan Yang, Fanqin Zeng, Yue Shi, Yingjie Zhou, Xiaofeng Cao, Jiangchao Yao  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.11683)  
+
+**Abstract**: Spatial reasoning from egocentric videos is inherently challenging because the observable evidence is constrained by the camera trajectory. Existing methods rely on single-turn inference, forcing models to resolve geometric ambiguity through semantic priors rather than verifiable evidence. We argue that spatial reasoning should be revisitable: conclusions formed under limited evidence should remain open to revision when complementary viewpoints become available. Building on this insight, we propose Reason, then Re-reason (ReRe), a training-free, inference-time framework with two phases: in the Reason Phase, an MLLM forms a spatial hypothesis from the original video; in the Re-reason Phase, it verifies or revises the hypothesis by observing a synthesized novel-view video. To enable effective cross-view revisiting, we design a Geometry-to-Video pipeline that renders strategically complementary novel views from predicted 3D geometry. These views feature an elevated, oblique perspective with scene-spanning coverage, while preserving the MLLM's native video interface without architectural modifications. Extensive evaluations on VSI-Bench and STI-Bench demonstrate that ReRe substantially boosts open-source MLLMs to rival proprietary state-of-the-art performance. Project page: this https URL 
+
+---
+# Can Open-Source LLM Agents Replace Static Application Security Testing Tools? An Empirical Assessment 
+
+**Authors**: Derek Yohn, Luke Flancher, Mirajul Islam, Khaled Slhoub  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.11672)  
+
+**Abstract**: This paper explores the value of agentic AI tools for cybersecurity purposes. We evaluate the efficacy of a general-purpose GenAI Large Language Model- (GenAI-) based agent when powered by three different Ollama-hosted general-purpose open source models. We assess each agent's performance using precision, recall, false positive count, and a calculated composite score based upon the interplay of the captured metrics, against the baseline performance of an existing, vetted Static Application Security Testing (SAST) tool, Bandit. Our findings refute the notion that a modern open-source GenAI LLM-based agent is currently suitable for the specialized task of SAST scanning under realistic conditions. 
+
+---
+# Runtime Skill Audit: Targeted Runtime Probing for Agent Skill Security 
+
+**Authors**: Tu Lan, Chaowei Xiao  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.11671)  
+
+**Abstract**: Agent skills let LLM agents reuse instructions, resources, tools, and workflows, but they also create a new place for malicious behavior to hide. A skill may look benign in its documentation or code while becoming harmful only when it is invoked with particular user requests, local assets, persistent state, or multi-step tool interactions. This makes purely static vetting brittle. We present Runtime Skill Audit (RSA), a dynamic analysis method that audits skills by asking what the skill-mediated agent actually does under targeted runtime conditions. Instead of testing every skill with the same generic tasks, RSA profiles risk-relevant interfaces, prepares the execution context needed to exercise them, and assigns security labels from the resulting trace evidence. We instantiate RSA on OpenClaw and evaluate it on 100 skills against representative static baselines. RSA achieves 90.0\% accuracy with an 88.0\% true positive rate and an 8.0\% false positive rate, improving accuracy by 13.0 percentage points over the best static baseline. Under self-evolving attacks, static detectors collapse after one or two rounds, while RSA continues to detect 19--20 out of 20 malicious skills across rounds. 
+
+---
+# ARGUS: Stacked Multi-View Identity Mosaic Injection for Subject-Preserving Video Generation 
+
+**Authors**: Zijie Meng, Jiwen Liu, Yufei Liu, Chengzhuo Tong, Xiaoqiang Liu, Yuanxing Zhang, Yulong Xu, Pengfei Wan  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.11670)  
+
+**Abstract**: Subject-preserving video generation is not solved by frontal-face similarity alone: a generated person must remain recognizable across motion, large viewpoint changes, expression shifts, occlusion, scale variation, and conflicts among text, first-frame, and identity references. We argue that the central bottleneck is the point-reference paradigm, which collapses identity into a single static observation entangled with pose, accessories, lighting, background, and camera statistics. We introduce Argus, a Wan-based framework centered on Stacked Multi-View Identity Mosaic Injection (SMII). SMII converts MLLM-selected image/video identity evidence into a 3*3 stacked mosaic, synchronizes the mosaic with the current diffusion time, and injects it as negative-time read-only memory in Wan's native token space. This turns identity from an external clean adapter or a single reference image into a compact dynamic distribution. Around SMII, an MLLM Identity Director selects informative identity moments and resolves condition conflicts, while no-cross-pair counterfactual training, Temporal Identity Annealing, and Adaptive Self-Likeness Guidance improve robustness without paired subject-video supervision. We further release HardID-Celeb, a public-figure identity-stress benchmark, and introduce YawScore and OccScore to probe large-yaw and first-frame-occlusion robustness. Argus achieves state-of-the-art results on OpenS2V-Eval Human-Domain, reaching 64.38 Total Score, 71.86 FaceSim, 51.62 NexusScore, and 79.14 NaturalScore. On HardID-Celeb, Argus obtains 76.80 FaceSim and improves YawScore and OccScore by 12.60 and 15.10 points over the strongest baselines, demonstrating that dynamic identity memory and large-scale counterfactual self-supervision are highly effective for subject-preserving video generation. 
+
+---
+# Sparse probes and murky physics: a case study of interpretability challenges in a foundation model for continuum dynamics 
+
+**Authors**: Katherine Rosenfeld, Maike Sonnewald  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.11657)  
+
+**Abstract**: Generative AI emulators are increasingly used in scientific domains where we already have strong theory, benchmarks, and physical intuition. This raises a central evaluation and interpretability question: when a foundation-style model can reproduce known continuum dynamics, what internal mechanism supports that behavior, is the internal behaviour consistent with known physics, and how does it relate to where the emulator succeeds or fails? We investigate a cross-domain foundation model for continuum dynamics, Walrus by Polymathic, using mechanistic interpretability guided by physical principles. We apply a sparse autoencoder (SAE) to probe a selected layer, and address the practical challenge of triaging a large feature set (over 20,000) using enstrophy as a physically grounded metric. As a deliberately simple testbed, we focus on shear flow and compare feature recruitment across multiple shear-flow setups, i.e. parameter values in the numerical simulation. Across setups we find evidence of piecewise consistency, with subsets of features recurring in similar roles, but this structure is intermittent and does not map cleanly onto standard physical decompositions. In parallel, direct comparisons between numerical simulation and the emulator reveal systematic output-level discrepancies, including regimes where energy/structures become too diffuse or too localized. We connect parts of these discrepancies to changes in specific SAE feature usage. Our work highlights open questions for scientific foundation models: how to robustly prioritize mechanistically meaningful features, how to separate stable structure from analysis artifacts (including single-layer and SAE limitations), and how to use established benchmarks to decide when "different" internal representations are genuinely informative rather than merely effective. 
+
+---
+# TAROT: Task-Adaptive Refinement of LLM-prior Graphs for Few-shot Tabular Learning 
+
+**Authors**: Ruxue Shi, Yili Wang, Mengnan Du, Hangting Ye, Yi Chang, Xin Wang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.11640)  
+
+**Abstract**: Few-shot tabular learning provides a cost-effective approach for real-world applications where annotation is costly and collecting sufficient samples for new tasks is difficult. Existing Traditional and LLM-based methods have demonstrated effectiveness in few-shot scenarios. However, traditional methods need additional training on unlabeled or generated data, which incur significant computational overhead. In addition, LLM-based methods that directly feed raw tabular data into LLMs raise privacy and compliance concerns. More importantly, both paradigms largely overlook the semantic relationships between features, which provide structural and semantic prior for constructing a semantic graph. Semantic graph is essential for modeling meaningful feature interactions in few-shot scenarios. In this paper, we propose TAROT, a GNN-based framework that encodes the structural and semantic prior by constructing and refining a task-adaptive semantic graph from this prior, thereby improving predictive performance in few-shot tabular learning. TAROT first encodes heterogeneous tabular data into unified node semantic representations via a Unified Semantic Tabular Node Encoder (USTNE). Then, it prompts LLMs to infer the semantic relationship between features based on the task description and feature names to construct a semantic graph. To mitigate structural noise introduced by the hallucination of LLMs, TAROT introduces Task-adaptive Semantic Graph Refinement that prunes spurious or task-unrelated edges and adds missing task-related ones, aligning the graph structure with the downstream objective. Finally, a GNN performs message passing over the refined graph to capture task-related semantic dependencies for prediction. Extensive experiments on various few-shot tabular learning benchmarks demonstrate the superior performance of TAROT, establishing it as a state-of-the-art approach in this domain. 
+
+---
+# Are LLMs Bad at Moral Reasoning? 
+
+**Authors**: Menghang Zhu, Seth Lazar  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.11635)  
+
+**Abstract**: For highly capable AI systems to operate safely in dynamic, open-ended environments, they must be able to identify, understand, and respond to moral reasons for action, and constrain their behaviour accordingly. A growing body of research aims to evaluate this capacity -- moral competence -- in today's most capable AI systems, recently reaching broadly pessimistic conclusions. One of the most ambitious such papers collects gold-standard human-authored rubrics for evaluating moral reasoning in 1,000 cases, and benchmarks frontier AI models against those rubrics, with underwhelming results. In this paper, we argue that the MoReBench dataset can be redeployed to give a much more optimistic picture of LLMs' moral reasoning (an essential part of moral competence). We show that if, instead of scoring LLMs' responses to these cases against these rubrics, we instead give the LLMs the same task given to humans -- to generate scoring rubrics for the moral analysis of particular cases -- the rubrics they generate are both better calibrated to the human rubrics than their open-ended responses, and, where they differ, plausibly reflect nothing more than the vast dimensionality of most moral problems, as well as highlighting some human departures from the "rubric for creating rubrics". Taking these points into consideration, the MoReBench dataset suggests that LLMs are significantly more capable at moral reasoning than was previously believed. 
+
+---
+# Sovereign Assurance Boundary: Certificate-Bound Admission for Agentic Infrastructure 
+
+**Authors**: Jun He, Deying Yu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.11632)  
+
+**Abstract**: Agentic infrastructure introduces a critical control-plane authorization problem: non-deterministic reasoning systems can propose high-stakes mutations to production resources, yet existing security mechanisms -- such as identity and access management (IAM), policy engines, consensus protocols, and audit logs -- either enforce static, context-unaware permissions or merely record actions post-execution. This paper introduces the Sovereign Assurance Boundary (SAB), a certificate-bound runtime admission layer for autonomous execution authority. SAB intercepts agent proposals at an assurance airlock, compiles them into typed execution contracts $C$, and binds these contracts to cryptographic evidence digests $H(E)$ and policy versions. The contracts are then routed through consequence-aware certification paths. Upon successful admission, the system emits a signed Sovereign Assurance Certificate ($\Omega$) that is strictly scoped to a specific execution identity, revocation epoch, and validity window. Finally, a sovereign execution broker verifies $\Omega$ and performs fresh pre-execution revocation and drift checks before invoking infrastructure APIs. We detail the airlock-broker architecture, formalize its admission and revocation invariants, and report preliminary feasibility measurements from a Go prototype evaluated over 2,500 admission attempts. Ultimately, this broker-enforced model prevents autonomous reasoning from directly mutating state, transforming delegated execution authority into a cryptographically verifiable, evidence-bound, revocable, and replayable runtime artifact. 
+
+---
+# LUCID: Learning Embodiment-Agnostic Intent Models from Unstructured Human Videos for Scalable Dexterous Robot Skill Acquisition 
+
+**Authors**: Harsh Gupta, Guanya Shi, Wenzhen Yuan  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.11628)  
+
+**Abstract**: The most widely-adopted robot learning pipelines today learn skills from robot demonstrations or structured human data, which are expensive to collect and tied to specific embodiments. In contrast, unstructured human videos provide a scalable alternative. They contain diverse manipulation demonstrations across objects, scenes, and strategies, but are not directly connected to robot action. We propose LUCID, a two-stage framework that learns task intent from unstructured human videos drawn from internet-scale datasets and learns robot control in massively-parallel simulation. The intent model predicts short-horizon intent (what should happen next in the scene) from the current observation in closed loop. An embodiment-specific sensorimotor policy converts this intent into robot actions. The intent interface is shared across controllers, so the same intent model can be applied to different embodiments, from our primary dexterous hand to a parallel-jaw gripper. We evaluate LUCID on five real-world manipulation tasks: stirring, wiping, and binning supervised by only internet video, with zero-shot transfer to novel scenes and object instances; and push-T and cable routing supervised by 1 hr each of self-collected smartphone video. Project page: this https URL. 
+
+---
+# When Context Returns: Toward Robust Internalization in On-Policy Distillation 
+
+**Authors**: Xun Wang, Ruishuo Chen, Zhuoran Li, Yu Chen, Longbo Huang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.11627)  
+
+**Abstract**: Recent work has shown that on-policy distillation can internalize privileged context, such as system prompts or task hints, into a student model so that the context is no longer needed at inference time. Although this approach successfully improves the student's no-context performance, we identify an interesting and previously unstudied phenomenon: in many settings, reintroducing the original privileged context to the distilled student actually degrades its performance, even on instances it already solves correctly without context. We term this context-induced degradation and argue that robust internalization demands not only matching the teacher's context-conditioned behavior, but also remaining stable when the context is reintroduced, a property we call context removability. Motivated by this observation, we propose a lightweight consistency regularizer that first anchors the student's no-context output via stop-gradient, then penalizes the context-conditioned output for deviating from it via forward KL divergence. This simple addition requires only one extra forward pass per training step, yet it effectively mitigates context-induced degradation and, in many cases, even improves no-context performance. Across 12 configurations spanning diverse domains and model families, our method improves context-conditioned accuracy in the majority of settings, reduces context-induced harm in 11 out of 12 settings, and effectively eliminates response-length inflation. A mechanistic case study further confirms that context removability is achieved at the representation level, with hidden states remaining nearly identical regardless of whether the context is present. 
+
+---
+# Information-Theoretic Decomposition for Multimodal Interaction Learning 
+
+**Authors**: Zequn Yang, Yake Wei, Haotian Ni, Zhihao Xu, Di Hu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.11614)  
+
+**Abstract**: Multimodal learning hinges on capturing redundant, unique, and synergistic information across modalities, which collectively constitute multimodal interactions. A critical yet underexplored challenge is that these implicit interactions vary dynamically across samples. In this work, we present the first systematic, information-theoretic analysis highlighting why learning these dynamic, sample-specific interactions is critical for effective multimodal learning. Our analysis further reveals deficits in conventional paradigms at learning these distinct interaction types: modality ensemble approaches struggle to capture synergy, while joint learning paradigms often under-utilize redundant information. This highlights the need for an approach that can adaptively learn from different interaction types on a per-sample basis. To this end, we propose Decomposition-based Multimodal Interaction Learning (DMIL), a novel paradigm that explicitly models and learns from sample-specific interactions. First, we design a variational decomposition architecture to isolate the constituent interaction components. Second, we employ a new learning strategy that leverages these explicit interaction components in a fine-tuning process to achieve comprehensive interaction learning. Extensive experiments across diverse tasks and architectures demonstrate that DMIL consistently achieves superior performance by adapting to holistic sample-specific interactions. Our framework is flexible and broadly applicable, establishing an interaction-centric paradigm for multimodal learning. The code is available at this https URL. 
+
+---
+# Physics-Distilled Neural Network enabled by Large Language Models for Manufacturing Process-Property Predictive Modeling 
+
+**Authors**: Ge Song, Kiarash Naghavi Khanghah, Anandkumar Patel, Rajiv Malhotra, Hongyi Xu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.11605)  
+
+**Abstract**: Predicting process-property relationships in manufacturing is often challenged by high experimental costs and the limited interpretability of complex 'black-box' models. This paper proposes a novel knowledge distillation framework designed to achieve high-accuracy predictions in data-scarce scenarios. The framework integrates analytical physics priors, which are systematically extracted from scientific literature via Large Language Models, into a privileged teacher model. We employ a Graph-Masked Attention layer to capture the complex physical dependencies among input variables showing strict setpoints or a combination of static and high-frequency temporal signatures. This privileged knowledge is distilled into a lightweight student predictor for inference. The feasibility and robustness of the framework are evaluated through a comprehensive experiment across five diverse manufacturing processes. To ensure statistical reliability, given the small dataset sizes, a repeated K-fold cross-validation technique is employed to quantify model stability and generalization. Results indicate that the proposed framework consistently achieves high predictive accuracy across all evaluated domains. Most importantly, the architecture demonstrates significant fault tolerance by maintaining robust predictive performance even in scenarios where LLM-derived analytical priors are suboptimal or incomplete. Furthermore, the student predictor achieves an inference frequency exceeding 6000 Hz, which facilitates real-time edge deployment on standard industrial hardware. This work provides a scalable solution for bridging the gap between theoretical physics and real-time industrial monitoring in data-limited environments. 
+
+---
+# Model-Based and Data-Driven Hierarchical Control and Topology Co-Design for Robust Networked Systems 
+
+**Authors**: Shirantha Welikala, Zihao Song, Hai Lin, Panos J. Antsaklis  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.11596)  
+
+**Abstract**: In this paper, we consider a class of networked systems comprising an interconnected set of linear subsystems, disturbance inputs, and performance outputs. Using dissipativity theory, we first propose a model-based hierarchical control design strategy to ensure the closed-loop networked system is dissipative from its disturbance inputs to performance outputs. This involves designing local controllers for each subsystem to enforce local dissipativity guarantees, which are then exploited to co-design distributed global controllers and the interconnection topology to enforce global dissipativity guarantees while optimizing interconnection topology costs. The overall design process requires only solving a sequence of linear matrix inequality (LMI) problems, thereby retaining compositionality and decentralizability while avoiding non-convex, iterative design processes that are inefficient and centralized. This model-based hierarchical control design strategy assumes the knowledge of the subsystem dynamics, which may not hold in many real-world networked systems. Motivated by this, we also propose a data-driven hierarchical control design strategy that assumes only the availability of rich input-state-output trajectory data from the subsystems. The proposed data-driven design process assumes that the unknown disturbances affecting the subsystem dynamics are bounded by a quadratic matrix inequality (relaxing conventional bounds) and accounts for this by using the matrix S-lemma. Finally, the effectiveness of the proposed model-based and data-driven hierarchical control designs is illustrated for a networked system representing a DC microgrid, with the aim of enforcing robust (dissipative) voltage regulation and current sharing. 
+
+---
+# AVIS: Adaptive Test-Time Scaling for Vision-Language Models 
+
+**Authors**: Ahmadreza Jeddi, Minh Ngoc Le, Amirhossein Kazerouni, Hakki Can Karaimer, Hue Nguyen, Iqbal Mohomed, Michael Brudno, Alex Levinshtein, Konstantinos G. Derpanis, Babak Taati, Radek Grzeszczuk  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.11576)  
+
+**Abstract**: Modern Vision-Language Models (VLMs) benefit from chain-of-thought prompting and test-time scaling, but these gains often come with prohibitive inference cost due to large visual contexts and long decoding chains. We view this cost through two coupled axes: Visual Context Scaling (VCS), which controls how much visual evidence is passed to the language model, and Visual Reasoning Scaling (VRS), which controls how much inference-time reasoning search is performed. Existing methods typically optimize one axis at a time, leaving the joint allocation of compute across these axes underexplored. We introduce Adaptive Visual Inference Scaling (AVIS), a lightweight policy that adapts both VCS and VRS per query. AVIS realizes VCS through Key Diversity Visual (KDV) pruning, a training-free $O(N)$ key-based rule for removing redundant visual tokens before prefilling, and realizes VRS through adaptive self-consistency, using a learned difficulty predictor to select the number of reasoning rollouts. AVIS is deployment-friendly and compatible with shared-prefill inference, where all rollouts reuse a single prefilling pass and KV cache. Across diverse image and video reasoning benchmarks, AVIS improves the accuracy--compute trade-off relative to VCS-only and VRS-only baselines, and remains effective on top of RL post-trained VLMs while keeping compute and latency low. 
+
+---
+# ConsistencyPlanner: Real-time Planning with Fast-Sampling Consistency Models 
+
+**Authors**: Qichao Zhang, Xing Fang, Jiaqi Fang, Zhenwen Cai, Jie Ling, Qiankun Yu, Dongbin Zhao  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.11569)  
+
+**Abstract**: Closed-loop planning in complex, real-world driving scenarios presents a critical challenge for autonomous driving systems. While traditional rule-based methods are interpretable, their predefined heuristics lack the adaptability for dynamic traffic environments. Learning-based approaches have shown considerable promise. Conversely, learning-based approaches, despite their promise, struggle to balance the modeling diverse and multimodal driving behaviors and real-time planning, often leading to indecisive or unsafe actions. To address this limitation, we propose Consistency Planner, a real-time planning framework with fast-sampling consistency models. Our approach is built upon two key technical contributions. Efficient Multimodal Sampling: We employ fast-sampling consistency models to generate a diverse set of plausible future trajectories. This enables efficient, real-time exploration of multimodal actions, overcoming the computational bottlenecks of previous iterative generative methods. Heterogeneous Feature Fusion: We introduce an attention-enhanced decoder that dynamically integrates heterogeneous input features (including scene feature and action token) into a cohesive representation for robust planning. Extensive evaluation in the Waymax simulator demonstrates superior performance in safety metrics compared to existing methods, with particularly strong results in challenging dynamic scenarios. 
+
+---
+# LLMs+Graphs: Toward Graph-Native, Synergistic AI Systems 
+
+**Authors**: Arijit Khan, Longxu Sun, Xin Huang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.11560)  
+
+**Abstract**: Large Language Models (LLMs) have advanced rapidly, but their limitations in structured and multi-hop reasoning underscore the need for graph-native, synergistic artificial intelligence (AI) systems. Graph-structured data underpins critical applications across social, biological, financial, transportation, web, and knowledge domains, making it essential to understand how LLMs can leverage graph computation for grounded, context-rich inference. Three complementary synergies are emerging: LLMs augmented with graph computation for retrieval and reasoning; bidirectional integration between LLMs and knowledge graphs (KGs), where LLMs support KG construction and curation while KGs enforce semantic constraints and factual consistency; and AI agents strengthened by graph algorithms for planning, decision making, and multi-step reasoning. In parallel, LLMs introduce new capabilities for graph data management and graph machine learning (ML) through natural language interfaces and hybrid LLM-graph neural network (GNN) pipelines. This tutorial synthesizes the algorithms, systems, and design principles driving these converging directions, offering data science and data mining researchers a unified perspective on integrating LLMs, graph data management, graph mining, graph ML, and agentic computation into next-generation graph-native AI systems. 
+
+---
+# Privacy-Preserving Federated Autoencoder for ECG Anomaly Detection on Edge Devices 
+
+**Authors**: Kaan Arda Akyol, Jakub Kacper Szeląg, Aydin Abadi, Maha Alghamdi, Ghadah Albalawi, Ghouse Ibrahim Kaleelullah, Hilal Tutus, Sarah Al Subaiei, Shardul Kapse, Syed Mohammed Raheeb, Mujeeb Ahmed, Rehmat Ullah  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.11556)  
+
+**Abstract**: Continuous electrocardiography (ECG) monitoring could surface rhythm abnormalities before they escalate into cardiovascular events. However, a deployable system must satisfy three requirements simultaneously: legal-grade privacy (GDPR, HIPAA), real-time inference on constrained edge hardware, and detection quality under non-IID cross-hospital data.
+We design and evaluate an end-to-end federated system addressing all three for unsupervised 12-lead ECG anomaly detection on PTB-XL dataset, combining three autoencoder families (VanillaAE, ConvAE, VAE), Flower-based federated averaging (FedAvg) across ten simulated hospitals, client-side differentially private SGD (DP-SGD) with a Rényi-DP accountant, and 8-bit integer (INT8) post-training quantization with Raspberry Pi 4 benchmarking. Our main contributions are: an empirical characterization of how these mechanisms compose, practical DP-specific recommendations, and technical and security insights for a clinically sensitive setting. Federated learning matches or exceeds the centralized baseline across all architectures (ConvAE federated area under the ROC curve, AUROC, $0.782$), and an $\varepsilon$ sweep identifies $\varepsilon=4$ as the recommended clinical operating point. INT8 quantization roughly halves model size and cuts Pi 4 latency by up to $44%$ with $<0.12%$ AUROC loss. Crucially, DP and quantization penalties are empirically independent, so practitioners need not trade a strong privacy guarantee for a compact edge footprint. To our knowledge, this is the first system combining federated learning, formal $(\varepsilon,\delta)$-DP, unsupervised reconstruction-based detection, and quantized AArch64 deployment. 
+
+---
+# End-to-End Machine Learning for Depressive State Classification via EEG and fNIRS 
+
+**Authors**: Riki Sakurai, Simon Kojima, Mihoko Otake-Matsuura, Shin'ichiro Kanoh, Tomasz M. Rutkowski  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.11555)  
+
+**Abstract**: The escalating demand for mental healthcare, driven by rising societal stress, highlights the limitations of traditional psychiatric diagnostics. Conventional methods - relying primarily on clinical interviews and patient self-reports - are inherently vulnerable to subjective bias and the varying empirical judgment of practitioners. To address the need for quantitative evaluation, biological signal-based detection, including electroencephalography (EEG) and functional near-infrared spectroscopy (fNIRS), has emerged as a promising objective alternative. Such technology is particularly vital for identifying latent depressive states that may be unrecognized by the subjects themselves. Furthermore, in aging populations, the high comorbidity between depression and dementia necessitates early differentiation to prevent mutual symptom exacerbation and maintain Quality of Life (QoL). This pilot study of eleven healthy students establishes a framework for biological signal-based depression detection, serving as a foundational step toward automated, objective diagnostic tools for clinical use. 
+
+---
+# Pretrained self-supervised speech models can recognize unseen consonants 
+
+**Authors**: Chihiro Taguchi, Éric Le Ferrand, Hirosi Nakagawa, Hitomi Ono, Kanji Kato, Emily Prud'hommeaux, David Chiang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.11542)  
+
+**Abstract**: Modern pretrained self-supervised automatic speech recognition models are trained on large-scale audio data to encode speech into contextualized representations. However, their training data are heavily skewed toward high-resource languages with little data from low-resource languages, raising concerns about the potential underrepresentation of typologically uncommon speech sounds such as click consonants primarily found in Khoisan languages. This leads to our central research question: Can these models recognize click consonants as accurately as other speech sounds? To address this question, we fine-tune and compare pretrained self-supervised speech models (Wav2Vec2 and HuBERT) on data from two click-rich Khoisan languages (G|ui and West !Xoon). Our results reveal that the fine-tuned models consistently recognize clicks more accurately than non-clicks, suggesting that self-supervision enables generalization across human speech sounds including rare phonemes. 
+
+---
+# AI Researchers Must Help Lead Arms Control to Mitigate Military AI Risks 
+
+**Authors**: Ted Fujimoto, Jacob Benz  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.11533)  
+
+**Abstract**: The advancement of AI capabilities compels researchers and the public to be more aware of its potential worldwide impact. A pressing near-term concern is the regulation of military AI applications. Armament manufacturers and defense contractors are increasingly investing in AI capabilities and forging partnerships with AI companies, creating a burgeoning coalition that demands military leaders, arms control diplomacy experts, and AI researchers collaborate to ensure a safer future. While AI researchers often focus on the long-term implications of superintelligent AI, this approach may not adequately address the immediate challenges posed by AI in military applications. Success requires acknowledging and mitigating the emerging risks of frontier AI models that plan to be integrated into defense applications, like military AI systems. Arms control has reduced past catastrophic risks, so lessons learned from nuclear deterrence can guide AI safety and security research towards innovations in verification and diplomacy. AI researchers, however, must assist in leading the technical research that clearly defines and alleviates instability in military settings. Given these new responsibilities and the lack of sufficiently reliable solutions, we argue that AI researchers must take a leading role in advancing arms control research to minimize risk in military AI applications. 
+
+---
+# ISE: An Execution-Grounded Recipe for Multi-Turn OS-Agent Trajectories 
+
+**Authors**: Siyuan Luo, Nairong Zheng, Lin Zhou, Tiankuo Yao, Shengyou Yuan, Haojia Yu, Cong Pang, Jiapeng Luo, Lewei Lu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.11520)  
+
+**Abstract**: Training capable OS agents requires data that simultaneously captures structured user intents, multi-turn task delegation, and grounded tool execution--properties absent from existing datasets. We propose ISE (Intent -> Simulate -> Execute), a three-stage synthesis paradigm that addresses these gaps jointly. Stage 1 constructs roughly 50000 structured intents via a 4D framework (Persona x Domain x Task x Complexity); after deduplication the pool contains 43956 unique intents and attains a Vendi Score of 61.57 over the entire pool on mpnet-base-v2 embeddings (cosine kernel, q=1). Stage 2 drives multi-turn user-agent interaction through a role-locked user simulator that grounds each user turn in actual execution outcomes, producing 23132 complete trajectories averaging 8.12 user turns and 68.24 total dialogue turns. Stage 3 runs every tool call inside a live, isolated OS workspace, generating authentic failure-recovery dynamics instead of simulated responses. Fine-tuning on ISETrace improves ClawEval pass@1 from 19.3 to 37.7 using Qwen3-8B on agent tool-use tasks with a standard protocol. This result outperforms zero-shot GPT-4o and the larger Qwen3-32B base model which is four times bigger. An ablation on Stage 2 proves multi-turn simulation brings a large portion of the performance gain. We release all source code and dataset at this https URL. 
+
+---
+# SirenFNO: Efficient and Full Frequency Learning of Fourier Neural Operators 
+
+**Authors**: Pengqing Shi, Jie Yin, Stephen Tierney, Junbin Gao  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.11518)  
+
+**Abstract**: Fourier neural operators (FNOs) are effective and efficient surrogates for approximating solutions of PDEs and generalize across discretizations. However, owing to the reliance on frequency truncation to maintain learning efficiency of FNOs, empirical studies suggest that FNOs exhibit spectral bias toward low-frequency information, which may hinder the learning capability especially for certain PDEs with strong high-frequency oscillations. To address this limitation, we propose SirenFNO, a novel framework that leverages sinusoidal representation networks (SIRENs) to learn implicit neural representations and performs mode-wise kernel parameterization. Our SIREN parameterization learns a full-grid spectrum with a constant and discretization-independent parameter count, thereby eliminating the need for frequency truncation. We further extend SirenFNO with functional tensor decompositions to enhance parameter and learning efficiency. Empirical results show that our SirenFNO consistently outperforms FNO with approximately $4$ to $15$ times parameter reductions with preserved discretization invariance, and our functional decomposition variants obtain performance improvements with a maximum of $73$ times fewer parameters across multiple PDE benchmarks. 
+
+---
+# On the Study of Biometric Spoofing Detection using Deep Learning 
+
+**Authors**: Kumar Kartikey, Nikos Komninos  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.11505)  
+
+**Abstract**: Biometric systems are increasingly deployed in security applications; however, they remain vulnerable to spoofing attacks, in which attackers exploit counterfeit biometric data to gain unauthorized access. This research evaluates the effectiveness of state-of-the-art machine learning models, MobileNetV2, DenseNet-121, Inception-v3, and Spoof Trace Disentanglement (STD) in detecting spoofing attacks within facial recognition systems. Using the CelebA-Spoof dataset, the study evaluates model effectiveness using metrics such as accuracy, precision, recall, and F1 Score. Cross-dataset validation is carried out on the MSU-MFSD dataset to assess generalizability. The results show MobileNetV2 as the most efficient model, achieving 92% accuracy while balancing computational effectiveness, making it appropriate for real-life applications. Inception-v3 shows moderate robustness, while DenseNet-121 and STD struggle with generalization. The findings highlight the need for advances in domain adaptation and hybrid architectures to enhance biometric security systems. 
+
+---
+# When Roleplaying, Do Models Believe What They Say? 
+
+**Authors**: Benjamin Sturgeon, David Africa, Sid Black  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.11502)  
+
+**Abstract**: Language models can state that "the Earth orbits the Sun" and, when role-playing Aristotle, assert the opposite. Recent work argues that persona adoption is fundamental to how language models operate, with models constantly selecting the most appropriate persona for a given context. Does such role-playing merely change the model's outputs, or does it also affect what the model internally represents as truthful? We study this question with linear truth probes, applying them to LLMs role-playing historical personas whose likely beliefs differ from modern consensus. For each persona, we compare false claims the persona would likely have endorsed (*era-believed*) with topic-matched false claims they would not have endorsed (*era-false*). Across prompting, in-context learning, and supervised fine-tuning, persona induction suppresses era-believed statements less than equally false alternatives, yet they remain classified as false overall. Role-play therefore shifts what these models say more than what they internally represent as true. We contrast this with models trained on harmful advice that exhibit Emergent Misalignment (EM). Across three model families (Qwen 2.5 14B, Qwen 3 8B, and Llama 3.3 70B), their false claims move substantially toward the true region of probe space, are defended under challenge roughly half the time versus about a sixth for role-play, and are used in downstream reasoning. Role-play and Emergent Misalignment thus are points on a spectrum of belief internalization, where role-play changes what a model says with little representational change, while Emergent Misalignment shifts the internal representation of false claims without fully marking them as true. 
+
+---
+# Hubs or Fringes: Pretraining Data Selection via Web Graph Centrality 
+
+**Authors**: Vedant Badoni, Danqi Chen, Xinyi Wang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.11499)  
+
+**Abstract**: The performance of modern language models depends critically on pretraining data composition. Yet existing data selection methods rely on auxiliary classifiers for document scoring or mixture optimization, adding computational overhead and dependence on labeled data. We propose WebGraphMix, a lightweight data selection framework that computes structural centrality scores over the Common Crawl host-level web graph and uses them to vary the proportion of central versus peripheral documents in the pretraining mixture. We hypothesize that central hosts expose models to reusable abstractions, while peripheral hosts encode specialized, long-tail knowledge. WebGraphMix computes centrality scores efficiently at web scale, requiring no model training, labeled data, or downstream supervision. We integrate WebGraphMix into the DataComp-LM pipeline and train models at 400M and 1B parameter scales with 8B and 28B tokens respectively, evaluating on 23 tasks ranging from factual knowledge to symbolic reasoning. Our experiments show that central and peripheral web regions encode complementary capabilities. Mixture combining both at a ratio of 1:1 achieves 41.4% on average, compared to 39.8% for uniform sampling. Combining structural scores with document-level quality classifier scores further improves performance to 43.8%. These findings demonstrate that web graph topology is a meaningful axis for pretraining data curation, capturing information that is largely orthogonal to existing content-based approaches. 
+
+---
+# Towards Fully Automated Exam Grading: Fairness-Aware Recognition of Handwritten Answers with Foundation Models 
+
+**Authors**: Hartwig Grabowski  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.11477)  
+
+**Abstract**: Correcting handwritten exams by hand is time-consuming and error-prone, particularly for large cohorts, while fully digital exams tend to force a didactic narrowing towards closed question formats. A practical middle ground keeps paper-based, problem-oriented tasks but records the assessment-relevant answers as single capital letters in a table that a machine can read. The open question is whether this reading can be made accurate and, above all, fair enough for unsupervised grading. Earlier automated approaches reached only about 88%--91% recognition -- too low -- and failed on the cases that matter most: answers placed outside the cell, crossed out, or written in cursive. We show that general-purpose vision-language foundation models (VLMs), which interpret the page rather than match pixel templates, close this gap. On a benchmark of 61 anonymised exams (3141 answer positions) the best model reaches 98.4% accuracy, well above the previous baseline. Crucially, we centre the evaluation on fairness: we distinguish false negatives (a correct answer marked wrong, which disadvantages the student) from false positives, and a lightweight prompt that supplies the reference solution as context lowers the false-negative rate to 0.58%. Under an exemplary grading scheme only three of the 61 exams would be graded worse, all caught by a student self-review step. Fully automated, fairness-aware exam grading at scale is therefore defensible; we release the anonymised benchmark to support reproducibility. 
+
+---
+# CRUMB: Efficient Prior Fitted Network Inference via Distributionally Matched Context Batching 
+
+**Authors**: Jamie Heredge, Mattia J. Villani, Pranav Deshpande, Akshay Seshadri, Niraj Kumar  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.11473)  
+
+**Abstract**: Prior-fitted networks (PFNs) are a promising class of tabular foundation models that perform in-context learning, whereby the entire labelled training set is supplied as context, and predictions for test queries are produced in a single forward pass. However, the quadratically scaling self-attention mechanism in many PFN architectures makes inference prohibitive for very large training datasets. We propose CRUMB (Clustered Retrieval Using Minimised-MMD Batching), a three-stage inference wrapper that (i) clusters the test queries, (ii) selects a small, distributionally matched training subset for each cluster by greedily minimising the maximum mean discrepancy (MMD), and (iii) runs exact PFN inference on each reduced-context batch. CRUMB is architecture-agnostic and requires no retraining. On the 51-dataset TabArena benchmark, evaluated across three PFN architectures (TabPFNv2, TabICLv1, TabICLv2), we show that CRUMB outperforms similar state-of-the-art context selection strategies. We also show that CRUMB is resilient to covariate drift, as the MMD-minimisation step naturally helps align the training context distribution to match the current test batch distributions. 
+
+---
+# LSTM-Based Detection of Structural Breaks in Property Insurance Loss Reserving: A Climate-Informed Approach 
+
+**Authors**: Thomas Mbrice, Shashwat Panigrahi  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.11463)  
+
+**Abstract**: Accurate loss reserving is foundational to insurer solvency, yet accelerating climate driven catastrophes systematically violate the stability assumptions on which traditional actuarial methods depend. This white paper presents a research program testing whether Long Short Term Memory (LSTM) neural networks can detect and adapt to these structural breaks faster and more accurately than Chain Ladder, Bornhuetter Ferguson, and Cape Cod methods. Using 15 plus years of regulatory development triangle data from Florida and Louisiana, enriched with NOAA hurricane intensity indices and sea surface temperatures, we hypothesize a targeted improvement of 15, 20% in reserve accuracy for catastrophe exposed years, a threshold grounded both in the prior neural network reserving literature and in the formal convergence results developed here. Beyond empirical validation, we develop a theoretical framework grounding LSTM structural break detection in probabilistic terms, providing formal performance guarantees that compensate for the limited number of catastrophe events in the test period. We document the research design, methodology, expected contributions, and a candid assessment of limitations. 
+
+---
+# APEX: Automated Prompt Engineering eXpert with Dynamic Data Selection 
+
+**Authors**: Fei Wang, Si Si, Cho-Jui Hsieh, Inderjit S. Dhillon  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.11459)  
+
+**Abstract**: Large Language Models are highly sensitive to prompt formulation, necessitating automatic prompt optimization to unlock their full potential. While evolutionary algorithms have emerged as the dominant paradigm, they suffer from a critical bottleneck: data efficiency. Current methods treat the development dataset as a static benchmark, wasting significant compute budget on uninformative data. In this work, we introduce APEX (Automatic Prompt Engineering eXpert), a novel framework that optimizes the data usage alongside the prompt search. APEX dynamically stratifies the dataset into Easy, Hard, and Mixed tiers based on the optimization lineage. By prioritizing the Mixed tier, which identifies the data where the LLM has mixed performance, we identify two high-leverage subsets: the addressable frontier for generating informative mutations and the rank-sensitive frontier for distinguishing candidate quality. We evaluate APEX across three diverse benchmarks: IFBench, SimpleQA Verified, and FACTS Grounding. Under a fixed budget of 5,000 evaluation calls, due to its data efficiency, APEX outperforms the initial prompt by an average of 11.2% on Gemini 2.5 Flash and 6.8% on Gemma 3 27B, demonstrating that a data-centric approach is key to efficient and effective prompt optimization. 
+
+---
+# AI Coding Agents in Social Science: Methodologically Diverse, Empirically Consistent, Interpretively Vulnerable 
+
+**Authors**: Meysam Alizadeh, Fabrizio Gilardi, Mohsen Mosleh, Enkelejda Kasneci  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.11456)  
+
+**Abstract**: The deployment of LLM-based agents in scientific analysis raises opposing concerns: that agents may reduce methodological diversity, or that they may amplify the analytic flexibility through which researchers reach motivated conclusions. We argue these worries target two empirically separable layers: a design layer of methodological choices, and a verdict layer in which a decision rule maps estimates to a substantive claim. We test both by running 20 independent executions of Claude Code and Codex on a prominent immigration and social-policy against a many-analysts human baseline. At the design layer, Codex matches human methodological diversity and Claude Code produces nearly three times as many specifications; both agents' effect estimates remain broadly aligned with the human consensus, and no agent model exactly matches any human model. A prompt-induced anti-immigration researcher prior reorganizes each agent's methodological decisions but, unlike for biased human analysts in the same data, does not shift aggregate estimates or final verdicts; nor do agents reroute along the methodological axes humans use to bias their estimates. At the verdict layer, an explicit confirmatory prompt flips Claude Code's verdicts from 10% to 90% support while leaving its coefficient distribution essentially unchanged, operating through rule omission rather than rule softening. AI agents can rival or exceed human methodological diversity at the design layer while remaining vulnerable at the verdict layer. In our setting, the locus of AI bias is not estimation but interpretation. 
+
+---
+# The Power of Test-Time Training for Approximate Sampling 
+
+**Authors**: Noah Golowich, Ankur Moitra, Dhruv Rohatgi  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.11437)  
+
+**Abstract**: Efficiently sampling from a complex probability distribution is a fundamental problem which has become increasingly pertinent in recent years with the rise of generative AI, as sophisticated sampling procedures from LLMs have been proposed to solve challenging reasoning problems. The efficacy of such sampling algorithms is limited, however, by the relationship between the LLM and the particular sampling task at hand, which has motivated the framework of test-time training (TTT). TTT works by updating a model's weights in response to partial generations and reward feedback received at inference time, thus adapting to the particular problem. In this work, we propose a formalization for TTT as the problem of producing a sample from a given probability measure $\mu^\star$ belonging to a known class ${F}$ of distributions, given an oracle $\hat \mu$ which yields approximate density estimates for $\mu^\star$. This is closely related to the problem of reducing sampling to approximate counting studied in seminal works of Jerrum, Valiant & Vazirani (1986) and Jerrum & Sinclair (1989): namely, when ${F}$ is the class of all distributions, it coincides exactly with the aforementioned counting-to-sampling reduction.
+In this paper, we first show a quadratic lower bound on the query complexity of sampling from $\mu^\star$ given query access to $\hat \mu$ (for sufficiently large classes ${F}$), thus showing that the random walk approach proposed by Jerrum & Sinclair (1989) and refined by Hayes & Sinclair (2010), is optimal. This answers an open question posed by Hayes & Sinclair. We then show that this lower bound can be circumvented if the size of ${F}$ is bounded appropriately. As we discuss, this latter result can be viewed as an abstraction of TTT, and thus represents a starting point for the development of a principled theoretical framework for TTT. 
+
+---
+# Towards a Bridge Layer Between Bibliographic and Formalized Mathematical Knowledge 
+
+**Authors**: A. Mayeux  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.11430)  
+
+**Abstract**: Mathematical knowledge is split between bibliographic databases (e.g., MathSciNet, zbMATH Open) and formal proof libraries (e.g., Lean mathlib), preventing unified access between published results and their formalizations. We propose a relational bridge-database that aligns publication metadata with formal artifacts, providing an interoperability layer between mathematical literature and machine-verifiable proofs. We introduce a paper-level formalization score that measures how much of a publication is covered in formal systems. As a feasibility study, we show how such scores can be estimated via cross-document alignment between informal texts and Lean formalizations, enabling large-scale analysis of formalization coverage. This framework is a first step toward integrating bibliographic and formal mathematical ecosystems into scalable, machine-actionable knowledge graphs linking publications to formal proof objects. 
+
+---
+# JailbreakOPT: Tool-Assisted Iterative Jailbreak Prompt Optimization 
+
+**Authors**: Ge Shi, Jun Yin, Donglin Xie, Fangyi Liu, Yucan Li, Menglin Liu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.11425)  
+
+**Abstract**: Jailbreak attacks expose persistent safety weaknesses in large language models (LLMs), but existing stateless single-turn methods face a trade-off: hand-crafted prompts are expressive but static, while iterative prompt optimization can adapt but often relies on low-level mutations that require many target queries. We propose JailbreakOPT, a tool-assisted framework for improving iterative single-turn jailbreak prompt optimization. JailbreakOPT organizes diverse atomic jailbreak prompts into an attack tool library and composes them through a unified intra-episode optimization abstraction to generate stronger standalone attack prompts. To reuse experience across attack episodes, JailbreakOPT further frames tool selection as a contextual bandit problem and applies contextual Thompson sampling to guide exploration and exploitation based on past outcomes. Experiments across multiple target LLMs and attack goals show that JailbreakOPT improves attack success rate (ASR) while reducing the number of attacks until success (No.A) compared with atomic single-turn attacks and existing iterative optimization baselines. This paper may contain offensive or harmful content. 
+
+---
+# Signed Compression Progress on a Sealed Audit is Goodhart-Resistant 
+
+**Authors**: Ayush Mittal, Dhruv Gupta  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.11417)  
+
+**Abstract**: Compression progress is a long-standing proposal for intrinsic motivation: reward an agent when its world model becomes better at predicting or compressing experience. The folk claim is that this reward is "credible" because it is paid only for learning. We make this precise and prove it. If intrinsic reward is the signed decrease of a fixed sealed-audit loss, r_t = E(theta_{t-1}) - E(theta_t), then cumulative reward telescopes exactly to endpoint audit improvement, so no policy can push reward up indefinitely while true audit performance stagnates or degrades. For finite audit panels the same result holds with a sharp false-positive budget: cumulative empirical reward is at most true audit improvement plus 2 Delta_n(F, delta), the uniform audit deviation of the model class. This is horizon-free: adaptivity over time costs nothing once the sealed panel uniformly controls the class.
+The theorem also identifies the failure modes: the guarantee disappears if progress is clipped, scored on the agent's own stream, exposed to a high-capacity model on a reusable panel, or applied to a neural class that makes Delta_n vacuous. We give a Lean 4 mechanization of the structural core (telescoping, the finite-audit bound, finite Gibbs, and the entropy floor) and an experiment suite on ARC-TGI grid-transformation generators with adaptive holdout attacks. Experiments confirm the theory: finite-audit deviation scales as n^{-0.527}; signed progress resists clip-farming, stream leakage, and noisy-TV curiosity; naive reusable audits are exploitable by black-box scalar feedback, while standard release defenses keep the attack below the 2 Delta_n threshold. Signed compression progress on a sealed audit is an accounting signal of genuine improvement. 
+
+---
+# MPC-Patch-Bench: Security-Aware LLM Code Patch for Multi-Party Computation 
+
+**Authors**: Yukuan Zhang, Mengxin Zheng, Qian Lou  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.11416)  
+
+**Abstract**: Repository-level benchmarks for evaluating Large Language Model (LLM) code repair on Secure Multi-Party Computation (MPC) software do not yet exist, and directly transplanting general-purpose benchmarks such as SWE-bench fails on three structural fronts: (i) MPC repositories are dominated by generic Python infrastructure rather than cryptographic logic; (ii) high-value MPC fixes lack the standardized tests rigid extraction pipelines require; and (iii) standard fail-to-pass evaluation is insufficient for code that must also be cryptographically safe. MPC is increasingly deployed for privacy-preserving machine learning, biomedical collaboration, and secure analytics. Existing MPC-specific code-synthesis efforts cover only operator-level or single-framework tasks; evaluating LLM agents on real repository-level MPC repair instead demands MPC-aware data curation and a verifier matched to the security and numerical-fidelity guarantees MPC programs must obey neither of which existing benchmarks provide. We introduce MPC-Patch-Bench, a repository-level benchmark organised around two frameworks. (1)The Data Curation Framework combines a domain-specific curation agent that filters raw pull requests through three cryptographic layers with a human-AI completion engine that synthesizes missing problem statements and Fail-to-Pass/Pass-to-Pass tests, yielding 205 fully verified instances. (2)The MPC Verifier provides dedicated security and numerical-fidelity checks via dynamic differential testing against plaintext oracles and MPC-specific static analysis rules that flag unsafe reveals, insecure arithmetic, and illegal public/private casts. The strongest evaluated LLM functionally resolves only 22.9% of MPC-Patch-Bench tasks; the MPC Verifier further reduces verified resolution to 17.1%, with up to 40% of functionally-passing patches rejected for cryptographic or numerical-fidelity violations. 
+
+---
+# Risk Under Pressure: Compute-Aware Evaluation of Adversarial Robustness in Language Models 
+
+**Authors**: Malikeh Ehghaghi, Boglárka Ecsedi, Marsha Chechik, Colin Raffel  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.11409)  
+
+**Abstract**: Adversarial robustness evaluations of large language models (LLMs) typically report attack success rate (ASR) under fixed query budgets, implicitly treating all attacks as equally costly. In practice, the computational expense of different attack strategies can vary by orders of magnitude. Consequently, ASR at a fixed budget can obscure the true effort required to jailbreak a model, thereby making it hard to determine whether an attack's cost justifies its payoff to the attacker. We propose a compute-aware evaluation framework based on computational pressure, measured in cumulative floating-point operations (FLOPs), as a proxy for adversarial effort. We introduce risk-compute curves, which map compute budgets to attack risk, and derive two metrics that summarize the average pressure required for a given attack to succeed. Across ten models spanning three families and four different stages in language model training and alignment, evaluated with three attack strategies (gradient-based, iterative refinement, and template-based) on two jailbreak robustness benchmarks, we find: (1) alignment training has non-monotonic effects on compute-space robustness; (2) scaling model size reduces gradient-based attack effectiveness but has limited impact on cheaper template-based attacks; (3) gradient-based attacks optimized on a surrogate model can transfer to a separate target model, providing a way to reduce attacker costs; (4) compute cost varies by up to ${\approx}5{\times}$ across harm categories within a single model; and (5) safety-aligned RL increases aggregate cost while leaving some categories disproportionately accessible. We release our framework to enable compute-aware risk assessment and evaluation. 
+
+---
+# Steering Where to Listen: Instruction-Based Activation Steering Redirects Temporal Attention in Large Audio-Language Models 
+
+**Authors**: Tsung-En Lin, Hung-Yi Lee  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.11400)  
+
+**Abstract**: Large Audio-Language Models (LALMs) excel at audio understanding but expose little about where in an audio signal they attend. We introduce instruction-based vector steering, which constructs a steering vector by contrasting activations from differently instructed prompts while keeping the audio fixed. Through a systematic probe of LALM attention, we find that - unlike standard prompting or audio-based steering - this intervention significantly redistributes the temporal attention allocated to audio tokens, concentrating it on acoustically relevant regions. We then show that this attention shift is behaviorally meaningful: in a controlled three-event setting, reading out the temporal position of maximal steering-induced attention change recovers the location of a queried sound event without any training, attaining 60.87% and 68.72% overlap with ground-truth intervals on Qwen2-Audio and Audio Flamingo 3, far above direct prompting (31.84%, 46.75%) and random baselines (27.74%). Our results characterize a mechanistic property of instruction-based steering in LALMs and provide a training-free probe for the latent temporal structure these models encode. 
+
+---
+# Small Experiments, Cheaper Decisions: A Case Study in Staged Promotion for Micro-Pretraining 
+
+**Authors**: Felipe Chavarro Polania  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.11387)  
+
+**Abstract**: Short pretraining runs can reduce experimental cost, but they can also over-promote configurations that only look strong at tiny budgets. We study an auditable staged-promotion protocol for a fixed micro-pretraining runner on two heterogeneous host blocks: Windows A100 and Linux L40S. Starting from twelve prior-screened configurations, we use staged budgets of 2 minutes, 5 minutes, 10 minutes, 60 minutes, and 12 hours, with frozen promotion rules before expensive continuations.
+The early screens are intentionally treated as unstable: the 5- and 10-minute rankings are host-sensitive, and the eventual 12-hour top-ranked condition is not the mean-best condition at the replicated 10-minute gate. Because seed ranges differ across stages, these changes are operational promotion evidence, not within-seed curves. A replicated 60-minute gate keeps the Staged Factorial Screening bridge reference in the promoted set, where it ranks first in all four 60-minute host-seed cells. In the final 12-hour confirmation package, the bridge condition ranks first in all four host-seed cells across two seeds; the greedy comparator does not meet the frozen 0.010 val_bpb near-equivalence rule; and the cheaper d8/ar48 (depth-8, aspect-48) sentinel does not meet the frozen 0.020 mean-gap rule.
+The executed 12-hour branch spends 144 GPU-hours, and the full staged protocol records 169.2 training GPU-hours including screening stages. Continuing all four 60-minute candidates would spend 192 GPU-hours, while continuing all nine replicated 10-minute candidates would spend 432 GPU-hours. The latter numbers are accounting counterfactuals for unrun continuations, not evidence that skipped candidates could not have overtaken the reference. The result is a bounded cost-allocation finding, not a claim of global optimality, capacity-normalized superiority, or superiority over adaptive hyperparameter optimization methods. 
+
+---
+# Overcoming State Inertia in Full-Duplex Spoken Language Models via Activation Steering 
+
+**Authors**: Cheng-Kuang Chang, Kai-Wei Chang, Alexander H. Liu, James Glass  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.11386)  
+
+**Abstract**: Full-duplex spoken language models (FD-SLMs) enable seamless speech interaction by allowing models to listen and speak simultaneously, yet the internal mechanism by which they coordinate listening and speaking remains underexplored. We analyze the predictive behavior encoded in FD-SLM hidden representations and find that they exhibit stream-specific predictive patterns: during listening, they preferentially predict the incoming user stream, whereas during speaking, they preferentially predict the model output stream. Building on this observation, we show that FD-SLMs dynamically modulate their internal predictive focus between two states: a generative state aligned with model output generation and a perceptive state aligned with incoming user input. However, this modulation can lag behind abrupt changes in conversational context. During user interruptions, the model remains transiently biased toward the generative state before transitioning into the perceptive state, causing it to miss the beginning of the incoming input. We term this delayed internal transition state inertia. To quantify its downstream impact, we introduce the Zero-Buffer Benchmark (ZBB), a diagnostic benchmark for evaluating immediate interruption comprehension when user speech begins abruptly. We evaluate this setting using response correctness and initial-word occurrence rate (IWOR). Finally, we mitigate state inertia through activation steering with a perception vector, a training-free intervention with little additional computational overhead. Across multiple state-of-the-art FD-SLMs, activation steering substantially improves interruption handling; for example, on PersonaPlex, it improves correctness from 28% to 45% and IWOR from 40% to 72% without any fine-tuning. 
+
+---
+# When Probing Accuracy Saturates, Fragility Resolves: A Complementary Metric for LLM Pre-Training Analysis 
+
+**Authors**: Orion Reblitz-Richardson  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.11375)  
+
+**Abstract**: Standard linear probing declares a property "encoded" when a classifier on hidden states achieves high accuracy. The protocol works well on a snapshot but breaks across pre-training: probe accuracy saturates within the first few thousand steps, leaving most of training invisible to the instrument. We introduce fragility, a complementary per-layer metric defined as the activation-noise level at which probe accuracy collapses. Fragility is sensitive to both the margin of separability and the redundancy of representation, both of which keep evolving long after accuracy plateaus. Applied to open-checkpoint language models, fragility recovers structure that accuracy alone cannot see. Moralized representations emerge along a lexical $\to$ compositional gradient: lexical moral detection first, compositional moral encoding later. Because probe accuracy on its own tracks how lexically separable a dataset is, we establish the compositional encoding directly, by showing it transfers across construction types that share no contrast tokens. A layer-depth robustness gradient develops monotonically across training while accuracy stays flat. And matched fine-tuning corpora that produce identical probing accuracy leave distinct fragility fingerprints, showing that data curation reshapes probe robustness without changing probe accuracy. In every comparison we test, where probing accuracy returns a flat answer, fragility returns a structured one. 
+
+---
+# The Dynamics of Human and AI-Generated Language: How Semantics Fluctuates across Different Timescales 
+
+**Authors**: Han-Jen Chang, Yasir Çatal, Angelika Wolman, Agustín Ibáñez, David Smith, I-Wen Su, Kai-Yuan Cheng, Georg Northoff  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.11371)  
+
+**Abstract**: Spoken language, whether produced by humans or large language models (LLM), unfolds over time with varying semantic content. However, we still lack simple, interpretable time-series features that capture how generic versus specific content is distributed over time, and that can be used to compare human and AI-generated speech. We introduce a semantic-timescale analysis pipeline that turns word-level transcripts with timestamps into semantic time-series. For each spoken narrative, we compute (i) semantic specificity using WordNet-based word depth and (ii) contextual similarity using SBERT embeddings and quantify their temporal dependence using autocorrelation-window measures (ACW-0 and related metrics). We then compare original speech to multiple shuffled controls that selectively disrupt lexical identity, temporal order, and word duration. Across human-read autobiographical narratives, TTS readings, and LLM-generated texts rendered with TTS, we find that segments with longer ACW-0 in the semantic time-series tend to contain more generic vocabulary, whereas segments with shorter ACW-0 are enriched in more specific words. These associations are strongly attenuated or abolished when word order and timing are randomized, indicating that ACW-based measures capture non-trivial temporal organization of semantic content beyond static lexical distributions. Our results suggest that ACW-based semantic timescales are a useful family of features for analyzing and comparing the temporal structure of human and AI-generated speech. 
+
+---
+# TileFuse: A Fused Mixed-Precision Kernel Library for Efficient Quantized LLM Inference on AMD NPUs 
+
+**Authors**: Wesley Pang, Gregory Hyegang Jun, Feiyang Liu, Deming Chen  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.11357)  
+
+**Abstract**: With the growing demand for on-device LLM inference, edge SoCs increasingly integrate NPUs to improve performance and energy efficiency under tight power and thermal budgets. However, practical LLM deployment on current client NPUs remains difficult: widely used quantization formats such as AWQ do not map cleanly onto many existing NPU software stacks, which are often proprietary and expose limited low-level control. In this work, we present \textit{TileFuse}, a close-to-metal mixed-precision kernel library for AMD XDNA2 NPUs that targets transformer linear layers in quantized LLM inference. TileFuse brings practical low-bit formats such as AWQ-style W4A16 and W8A16 directly onto XDNA2, rather than forcing the model to be reshaped around an NPU-specific quantization scheme.
+TileFuse co-designs weight layout, metadata placement, mixed-precision microkernels, and array-level dataflow. Specifically, it fuses unpacking, dequantization, and GEMM/GEMV execution into a single kernel flow, introduces an interleaved pre-tiling layout that supports GEMM dimensions up to 32K, and redesigns GEMV dataflow to utilize the full 4x8 AIE array. Across kernel-level evaluations, TileFuse improves performance by up to 121.6% for GEMM and 281% for GEMV over full-precision baselines, while delivering more than 2x performance and energy-efficiency gains over strong iGPU baselines on GEMM. In end-to-end LLM experiments on Ryzen AI laptops, TileFuse achieves up to 2.0x lower prefilling latency with more than 64.6% lower energy consumption. Together, these results show that XDNA2 is a practical target for AWQ-style edge LLM inference and that native NPU support for off-the-shelf quantization can make NPUs substantially more usable in real client deployments. 
+
+---
+# Quantized Stochastic Primal-Dual Methods for Distributed Optimization under Relaxed Global Geometry 
+
+**Authors**: Susmit Sarkar, Abhinav Raghuvanshi, Kushal Chakrabarti, Mayank Baranwal  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.11339)  
+
+**Abstract**: We study distributed optimization with stochastic gradients and finite-bit communication modeled by random (unbiased) quantization. We propose q-PDGD, a quantized stochastic primal-dual method, and analyze it under relaxed global geometry. Under restricted secant inequality (RSI), a constant step-size yields linear contraction to an explicit neighborhood determined by gradient noise, quantization distortion, and network connectivity, while a diminishing step-size achieves O(1/k) convergence without shared-minimizer assumptions. Under Polyak-Lojasiewicz (PL) inequality, we obtain linear-to-neighborhood convergence in the same stochastic quantized setting. Our results match the best-known centralized stochastic rates in oracle complexity, and are supported by experiments demonstrating the predicted tradeoffs between quantization level, step-size choice, and graph structure. 
+
+---
+# Embodied-R1.5: Evolving Physical Intelligence via Embodied Foundation Models 
+
+**Authors**: Yifu Yuan, Yaoting Huang, Xianze Yao, Yutong Li, Shuoheng Zhang, Linqi Han, Pengyi Li, Jiangeng Sun, Wenting Jia, Zhao Zhang, Yuhao Liu, Ruihao Liao, Yucheng Hu, Qiyu Wu, Yuxiao Li, Zibin Dong, Fei Ni, Yan Zheng, Shuyang Gu, Yi Ma, Hongyao Tang, Han Hu, Jianye Hao  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.11324)  
+
+**Abstract**: We introduce Embodied-R1.5, a unified Embodied Foundation Model (EFM) that integrates comprehensive embodied reasoning capabilities, spanning embodied cognition, task planning, correction, and pointing, within a single architecture toward general physical intelligence. Leveraging three automated data construction pipelines to significantly expand the data coverage of critical capabilities, we build a large-scale data system of over 15B tokens, and design a multi-task balanced RL recipe to alleviate heterogeneous task conflicts. We further introduce a Planner-Grounder-Corrector (PGC) closed-loop framework that enables a single model to autonomously execute and self-correct over long-horizon tasks. With only 8B parameters, Embodied-R1.5 achieves SOTA on 16 out of 24 embodied VLM benchmarks, surpassing leading models like Gemini-Robotics-ER-1.5 and GPT-5.4. Benefiting from the internalized embodied capabilities, Embodied-R1.5 can be fine-tuned into a VLA with only a small amount of data, outperforming leading VLA models like $\pi_{0.5}$ across 4 popular manipulation benchmark suites. We further conduct extensive zero-shot real-robot experiments, validating performance in instruction following, affordance grounding, articulated object manipulation, and long-horizon complex tasks, demonstrating strong generalization to the physical world. We open-source model weights, datasets, training code, and EmbodiedEvalKit, an evaluation framework tailored for embodied tasks, to facilitate future research in EFMs. 
+
+---
+# FlowBank: Query-Adaptive Agentic Workflows Optimization through Precompute-and-Reuse 
+
+**Authors**: Lingzhi Yuan, Chenghao Deng, Fangxu Yu, Souradip Chakraborty, Mohammad Rostami, Furong Huang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.11290)  
+
+**Abstract**: Large Language Model (LLM)-based multi-agent systems are increasingly powerful, but current agentic workflow optimization paradigms make an unsatisfying trade-off. Task-level methods spend substantial offline compute yet deploy only a single workflow, leaving complementary candidates unused, while query-level methods synthesize a new workflow per query at substantial inference cost. Our motivating analysis shows these paradigms are more complementary than competing: workflows discovered during offline search often solve different subsets of queries, and many queries handled by expensive query-level generation can already be solved by cheaper precomputed workflows. This suggests a different objective: rather than searching for one universally best workflow or regenerating one per instance, we should build a compact bank of reusable, complementary workflows and select among them adaptively at inference time. Doing so requires solving three coupled problems: generating complementary rather than redundant candidates, compressing them into a small deployable portfolio, and assigning each query to the right workflow under a performance-cost trade-off. To this end, we present FlowBank, a three-stage framework for portfolio-based agentic workflow optimization. Diversifying proposes DiverseFlow to steer search toward under-covered queries and produce a high-coverage candidate pool. Curating proposes CuraFlow to compress this pool into a compact portfolio with minimal redundancy. Matching casts deployment as edge-value prediction on a query-workflow bipartite graph and routes each incoming query to the portfolio member with the best predicted utility. Across five benchmarks, FlowBank achieves the highest average score among the evaluated methods while remaining cost-competitive, improving over the strongest automated and handcrafted baselines by 4.26% and 14.92% relative, respectively. 
+
+---
+# FreeBridge: Variational Schrödinger Bridges for Cellular Transition Dynamics 
+
+**Authors**: Xurui Wang, Qin Ren, Jun Ma, Haibin Ling, Chenyu You  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.11286)  
+
+**Abstract**: High-content imaging assays quantify cellular responses to chemical and genetic perturbations, yet continuous trajectories of individual cells are unobservable because cells are chemically fixed at acquisition. Perturbation modeling therefore reduces to inferring stochastic transport between control and treated populations observed only as separate marginals. While recent generative models achieve strong end-point alignment, boundary consistency does not determine intermediate evolution: multiple stochastic processes may connect identical marginals while traversing regions unsupported by observed single-cell morphologies. We introduce \textbf{FreeBridge}, a Schrödinger Bridge formulation for single-cell transition modeling under endpoint-only supervision. FreeBridge defines atomic states as instance-segmented single-cell representations, establishing a fixed cellular manifold, and learns stochastic transport constrained within this geometry via empirical latent support regularization. Across BBBC021, RxRx1, and JUMP, FreeBridge maintains competitive or improved endpoint fidelity and mechanism-of-action retention under a unified evaluation protocol; on BBBC021, it further reduces intermediate support violations. These findings highlight the importance of geometric grounding for biologically interpretable perturbation dynamics. Project page: this https URL. 
+
+---
+# RoVE: Rotary Value Embeddings Attention for Relative Position-dependent Value Pathways 
+
+**Authors**: Alejandro García-Castellanos, Maurice Weiler, Erik J Bekkers  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.11275)  
+
+**Abstract**: Rotary Position Embeddings (RoPE) make attention scores position-relative but leave the value pathway position-blind: the message sent by a value token is the same regardless of its distance from the query. We propose RoVE, a parameter-free modification that makes values position-sensitive by rotating them simultaneously with keys, and show that it turns RoPE attention into attentive convolution. This new perspective unifies several independent formulations of the same operation across computer vision, robotics, and modern LLM architectures. Trained 124M and 354M GPT-2 models show consistent empirical gains over RoPE on few-shot in-context learning, out-of-distribution perplexity, and long-context retrieval, with the clearest improvements on tasks that require long-range aggregation. 
+
+---
+# Federated continual learning: A comprehensive survey on lifelong and privacy-preserving learning over distributed and non-stationary data 
+
+**Authors**: Masoume Gholizade, Fabrizio Ruffini, Pietro Ducange, Francesco Marcelloni  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.11272)  
+
+**Abstract**: Federated Learning (FL) enables collaborative and privacy-preserving model training across distributed clients, but most existing FL systems implicitly assume data stationarity. In real-world settings-such as healthcare, industrial IoT (IIOT), cybersecurity, and smart cities-data streams are inherently non-stationary, leading classical FL methods to suffer from performance degradation, instability, and catastrophic forgetting.
+Continual Learning (CL) addresses learning under evolving data distributions but has been largely studied in centralized settings, overlooking key constraints of federated systems, including privacy, limited communication, and client heterogeneity. Federated Continual Learning (FCL) emerges at the intersection of FL and CL, aiming to support lifelong, adaptive, and privacy-aware learning over distributed and non-stationary data.
+This survey provides a comprehensive and systematic overview of FCL. We first present a formal definition of the FCL problem and clarify its distinctive characteristics. We then analyze the limitations of classical FL under non-stationary conditions, highlighting how CL principles support long-term adaptation. To organize the rapidly growing literature, we propose a multi-dimensional taxonomy of FCL approaches. Furthermore, we review representative application domains and data modalities, summarize commonly used evaluation metrics, and discuss experimental perspectives for assessing long-term performance and forgetting. Finally, we highlight key open challenges, including handling extreme heterogeneity under temporal drift, designing scalable and privacy-preserving memory mechanisms, and establishing standardized benchmarks. This survey aims to serve as a reference and a roadmap for advancing FCL toward robust and deployable real-world systems. 
+
+---
+# Quantifying Subliminal Behavioral Transfer Ratios in Language Model Distillation 
+
+**Authors**: Uwe Konig, Hamza Kazmi, Ruizhe Li, Maheep Chaudhary  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.11270)  
+
+**Abstract**: Distillation of a language model intended to transfer benign behavior to a student model may also transfer undesirable characteristics, if they are present in the teacher model, a phenomenon known as subliminal learning. While qualitative evidence supports the existence of this effect, its magnitude has not been systematically characterized. This study quantifies subliminal behavioral transfer ratios by steering two teacher models (Llama-2-7B-Chat and Qwen2.5-7B-Instruct) at varying steering strengths and distilling student models using only benign data. Evaluation on 100 JailbreakBench prompts with GPT-4.1, serving as the evaluator, indicates that transfer is robust but exhibits distinct scaling behaviors. Llama-2 demonstrates a sharp threshold ($\tau = {0.25,0.32} \ \text{beyond} \ \alpha = -0.15$), whereas Qwen2.5 displays continuous and higher levels of transfer ($\tau$ up to $0.61$). 
+
+---
+# When Poison Fails After Retrieval: Revisiting Corpus Poisoning under Chunking and Reranking Pipelines 
+
+**Authors**: Xi Nie, Hongwei Li, Shenghao Wu, Mingxuan Li, Jiachen Li, Wenbo Jiang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.11265)  
+
+**Abstract**: Retrieval-Augmented Generation (RAG) systems are vulnerable to corpus poisoning attacks that manipulate downstream model outputs through malicious knowledge injection. Existing studies mainly evaluate poisoning under simplified retrieval settings, overlooking practical RAG pipelines involving document chunking, dense retrieval, reranking, and grounded generation. In this paper, we revisit corpus poisoning under realistic multi-stage retrieval pipelines and show that many existing attacks substantially degrade after reranking despite achieving high retrieval-stage relevance. We identify retrieval granularity mismatch as a key reason for this failure: document-level adversarial signals are often fragmented during chunking, while rerankers favor locally coherent and answer-bearing passages rather than globally optimized semantic similarity. Based on this observation, we propose Chunk-aware and Rerank-Consistent Poisoning (CRCP), a poisoning framework that jointly optimizes retrieval relevance, reranker consistency, and chunk-boundary robustness. CRCP explicitly models chunking transformations during optimization to generate locally self-contained adversarial passages that remain effective under varying chunking configurations. Experiments on standard RAG benchmarks with multiple retrievers and rerankers show that existing poisoning methods are highly sensitive to chunk size and reranking strategies, whereas CRCP achieves substantially higher attack success rates and stronger robustness across realistic retrieval pipelines. Our findings highlight an important realism gap in current RAG security evaluation and suggest that poisoning in modern RAG systems should be studied as a multi-stage retrieval consistency problem rather than a retrieval-only problem. 
+
+---
+# OmniBioTwin: A System-of-Twinned-Systems Framework for Health Digital Twins 
+
+**Authors**: Zhaohui Wang, Yu Huang, Jiang Bian  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.11264)  
+
+**Abstract**: Health digital twins (HDTs) promise patient-specific modeling and decision support but current approaches remain structurally fragmented: monolithic models that address a single organ or task lack cross-scale fidelity, while system-level twins lack generalizable architectural frameworks. We propose OmniBioTwin, a System-of-Twinned-Systems (SoTS) framework that organizes HDTs as modular computational entities coupled through explicit interaction operators within a multi-layer network architecture. The framework comprises seven coordinated layers - spanning data integration, autonomous twin modeling, cross-scale coupling, temporal synchronization, and human-in-the-loop decision support. We demonstrate OmniBioTwin by instantiating a multiscale twin for glucagon-like peptide-1 (GLP-1) signaling pathways in Alzheimer's disease, illustrating how molecular, cellular, and organ-level twins can be composed and coupled within a unified system. 
+
+---
+# PermDoRA -- Understanding Adapter Interference in Language Models: Limits of Parameter-Space Geometry 
+
+**Authors**: Gowtham Sivaramakrishnan, Sarvesha Kumar Kombaiah Seetha, Kishan Gupta Balaji, Santhosh Baradwaj Vaduvur Ranganathan  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.11262)  
+
+**Abstract**: Access control in large language models (LLMs) requires modular mechanisms to enable domain-specific behavior without retraining or cross-domain interference. A common hypothesis is that interference during adapter composition arises from overlap in linear parameter updates, suggesting that enforcing orthogonality or directional independence should improve multi-domain performance. We test this hypothesis using DoRA-RBAC, a hierarchical adapter composition framework based on weight-decomposed low-rank adaptation. We compare conventional Euclidean merging with a geometry-aware Riemannian-inspired merging strategy that approximates the Frechet mean via normalized directional averaging across multiple QA benchmarks (GPQA, PubMedQA, SimpleQA, WMDP) on LLaMA-3.1-8B and Mistral-7B. Our results show that while single-domain performance matches LoRA, geometry-aware merging provides no consistent advantage over standard averaging in multi-domain this http URL analysis further reveals that angular alignment and orthogonality of adapter updates are weak predictors of composition performance. These findings suggest that adapter interference is not governed primarily by parameter-space geometry, but is instead consistent with interactions in shared nonlinear representations. 
+
+---
+# RAIL: Rethinking Auditory Intelligence in Large Audio-Language Models with a CHC-Grounded Benchmark 
+
+**Authors**: Hongyu Jin, Siyi Wang, Yang Xiao, Jiaheng Dong, Shihong Tan, Kaiyuan peng, Georgiana Juravle, Shanquan Chen, Gongping Huang, Hong Jia, Eun-Jung Holden, James Bailey, Ting Dang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.11260)  
+
+**Abstract**: Humans process rich auditory environments through tightly integrated cognitive capabilities such as audio perception, audio reasoning, and memory. Despite recent progress in large audio-language models (LALMs) across speech understanding and multimodal audio reasoning, current evaluation paradigms remain largely task- or modality-centric, focusing on end performance while overlooking underlying auditory cognitive behaviours. This reveals a fundamental gap between how auditory cognition is understood in humans and how it is evaluated in LALMs, particularly in the lack of frameworks that operationalise cognitive principles beyond task-level metrics to systematically capture model behaviour. In this work, we introduce RAIL, a human-centric evaluation paradigm grounded in the Cattell-Horn-Carroll (CHC) cognitive framework. RAIL formalises auditory cognition into five core capabilities and develop them into structured evaluation tasks that probe how models process, retain, and integrate auditory information. We further construct a cognitively grounded benchmark with principled data curation and human-aligned evaluation protocols. Evaluating 26 state-of-the-art LALMs, we find that current models exhibit highly uneven performance across cognitive abilities. RAIL establishes a new evaluation paradigm that moves beyond task-centric benchmarking toward cognitively grounded assessment of auditory intelligence. 
+
+---
+# Physics-informed generative AI for semiconductor manufacturing: Enforcing hard physical constraints in generative models by construction 
+
+**Authors**: Yaser Mike Banad, Sarah Sharif  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.11247)  
+
+**Abstract**: Generative models are increasingly used to propose designs, data, and control actions for physical systems, yet many such systems are governed by hard physical constraints rather than by perceptual plausibility. Semiconductor manufacturing provides a demanding test case: generated masks, layouts, synthetic defect data, and process recipes must obey lithography, transport, reaction, and device-physics constraints, because physically invalid samples are not merely low quality but unusable. This Perspective argues that semiconductor manufacturing exposes a broader computational-science challenge, namely that generative AI for constrained physical domains must be physics-informed by construction, not corrected only through post-hoc filtering. We survey the emerging architectural toolkit, including physics-informed diffusion, PDE-constrained variational models, neural-operator priors, and conservation-law-respecting generative networks, and show how it connects to differentiable lithography, TCAD, process simulation, and autonomous experimentation. We identify four integration patterns between generative models and physics-based simulators, and we propose a research agenda centered on physics-fidelity benchmarks, differentiable simulator infrastructure, and multimodal foundation models for physical design and manufacturing. The central claim is analytical rather than rhetorical: where physical validity is the binding criterion of success, architectures that enforce it by construction should be expected to outperform those that filter for it after the fact, and the fab is the setting where this distinction is sharpest. 
+
+---
+# SPEAR: A System for Post-Quantization Error-Adaptive Recovery Enabling Efficient Low-Bit LLM Serving 
+
+**Authors**: Hongyuan Liu, Yawei Li, Zhiqiang Que, Qinli Yang, Junming Shao, Guosheng Hu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.11244)  
+
+**Abstract**: Efficient large language model (LLM) serving is increasingly constrained by deployment cost. Quantization is a key technique for reducing serving cost, yet even state-of-the-art 4-bit quantizers exhibit a noticeable quality gap from FP16, particularly for smaller models where low-bit serving is most beneficial. We identify a fundamental cause of this gap: quantization error is highly input-dependent and varies substantially across tokens, while existing post-quantization compensation methods are static and apply identical corrections to all inputs. As a result, easy tokens are over-corrected while hard tokens remain under-corrected.
+We present SPEAR, a system for post-quantization error-adaptive recovery that improves low-bit LLM serving. SPEAR introduces lightweight Error Compensators (ECs) modulated by per-token gates and places them only at the most error-sensitive layers identified through a CKA-guided entropy-aware diagnostic. This focuses a small parameter budget where it is most effective.
+Efficient deployment of ECs presents several systems challenges, including additional computation, tensor-parallel synchronization caused by input-dependent gating, and latency instability across configurations. SPEAR addresses these issues through adaptive kernel-fusion dispatch, combining an epilogue-integrated peer-reduction kernel with P2P dual-write to fuse the post-EC computation into low-bit GEMMs, and an SLO-constrained EC-aware scheduler for predictable serving performance.
+Across challenging per-channel quantization settings, SPEAR recovers 56-75% of the perplexity gap between W4 and FP16 while adding less than 1% model memory overhead and maintaining latency comparable to a widely used 4-bit serving deployment. 
+
+---
+# Artificial Intelligence in Ship Finance: Applications, Opportunities, and a Case Study in AI-Augmented Loan Origination 
+
+**Authors**: Lasse Dierich, Orestis Schinas  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.11238)  
+
+**Abstract**: Ship finance is a data-intensive and document-heavy segment of asset-based lending, requiring the integration of financial, technical, contractual, and regulatory information from heterogeneous and largely unstructured sources. Increasing environmental regulation and ESG reporting requirements are adding further complexity to underwriting and loan-origination processes. Recent advances in artificial intelligence (AI), particularly large language models (LLMs), create new opportunities for processing and analysing such information. This paper reviews potential applications of AI in ship finance, with a particular focus on LLM-based systems for document comprehension, information extraction, and workflow automation. We present this http URL, a modular agentic architecture to support loan application workflows in ship finance. The proposed system combines an LLM-based extraction module, financial analysis components, external maritime data services, and a controlled document-generation module with a chatbot interface to support the preparation of standardized financing applications. The paper discusses the key challenges for using such models in production. We argue that AI-assisted systems can support maritime finance professionals in managing increasingly complex information and reporting requirements. 
+
+---
+# Every Act Has Its Price: Compressed Moral Composition in Frontier LLMs 
+
+**Authors**: Weijia Zhang, Ruiqi Chen, Yunze Xiao, Weihao Xuan  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.11232)  
+
+**Abstract**: Existing LLM moral benchmarks usually ask which isolated moral act, value, or foundation a model prefers. This is useful but incomplete. Realistic judgments often require a model to combine several moral signals within the same option. We introduce **Moral Trolley Arena**, a two-stage blind ELO benchmark for measuring how LLMs compose moral evidence. The single-scene arena first calibrates individual moral acts from a 229-scenario corpus across five Moral Foundations Theory foundations; the composite arena then combines calibrated acts into two-act moral items over a controlled intensity grid and measures the resulting composite preferences. Across ten frontier models, composite judgments are largely predicted by component act strength, but the relation is consistently compressed rather than simply additive. Models also show non-additive intensity anchoring, bounded foundation-specific residuals after component control, and highly convergent composite preference surfaces across providers. These results suggest that moral audits should measure composition rules for moral evidence, not only rankings over isolated acts. 
+
+---
+# Afrispeech Semantics: Evaluating Audio Semantic Reasoning in Spoken Language Models Across Domains and Accents 
+
+**Authors**: Chibuzor Okocha, Christan Grant  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.11219)  
+
+**Abstract**: Audio language models (ALMs) are increasingly used for speech-based understanding, yet their ability to perform semantic reasoning beyond transcription, Text-to-Audio Retrieval, Captioning, and Question-Answering accuracy remains insufficiently benchmarked. In particular, the effects of accent variation, domain shift, and semantic over-inference on audio reasoning are poorly understood. We evaluate audio language models across five semantic and paralinguistic reasoning tasks: entailment, consistency, plausibility, accent drift, and accent restraint. Collectively, these tasks assess a model's ability to reason over spoken audio as the primary evidence source, including whether a textual hypothesis can be inferred, contradicted, or left undetermined by the audio, whether statements align or conflict with spoken content, whether claims are plausible given the discourse, and whether model predictions remain stable or appropriately constrained across accent variation. These findings highlight critical limitations in current audio reasoning evaluations and hope to provide guidance for more robust and equitable ALM design and assessment 
+
+---
+# An Ethical eValuation Agent (EeVA): Results of a Proof-of-Concept Test on a Prototype Agentic-like Workflow to Assist Ethical Deliberations 
+
+**Authors**: Stephen Milford, B. Zara Malgir, Miguel Vazquez  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.11218)  
+
+**Abstract**: Ethical deliberation is often misunderstood as a search for single right or wrong answers, creating difficulties for non-ethically trained personnel who must address ethically laden challenges. We developed EeVA, an agentic-like LLM-based workflow designed to support comparative ethical reflection rather than deliver definitive ethical answers. EeVA was programmed in n8n using three interconnected workflows: starter, worker, and emitter. It evaluated uploaded use cases against 10 ethical frameworks through evaluator and synthesis prompts. Proof-of-concept testing used three published cases from urban mobility, peer-to-peer energy trading, and social-service resource allocation. Across all cases, EeVA produced consistently structured framework-specific evaluations and integrated syntheses. Outputs differentiated between frameworks, identified convergences and divergences, recommended modifications to increase alignment, and highlighted persistent ethical tensions. Syntheses were readable for non-specialists and shifted attention away from simplistic answers toward design conditions, safeguards, and areas where full cross-framework agreement was unlikely. The findings suggest that LLMs can be organised into usable workflows that preserve ethical plurality while helping bridge the communicative gap between ethicists and non-ethically trained personnel. EeVA's value lies not in replacing ethicists or resolving moral disagreement, but in scaffolding structured ethical deliberation. EeVA offers a promising proof of concept for supporting ethical reflection where access to ethics expertise is limited. Further work is needed on reproducibility, human evaluation, user testing, and efficiency before it can be considered a mature tool. 
+
+---
+# Preregistration for Experiments with AI Agents 
+
+**Authors**: Michelle Vaccaro  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.11217)  
+
+**Abstract**: The proliferation of large language models (LLMs) and autonomous AI agents has given rise to a rapidly growing methodological paradigm: "in silico" behavioral experiments. Originally conceived as a way to use AI agents as proxies for human participants in studies of cognition, decision-making, and social dynamics, this approach has taken on new significance -- as AI agents increasingly negotiate, transact, and make consequential decisions on behalf of people and organizations, understanding their behavior has become a research priority in its own right. While these experiments with AI agents offer unprecedented advantages in terms of scalability, cost efficiency, and experimental control, they also inherit, and in some cases amplify, methodological vulnerabilities that have long plagued human subjects research. To address these issues, this paper argues that preregistration practices -- central to improving the credibility of human subjects experiments -- should now be extended to experiments with AI agents. We systematically catalog the researcher degrees of freedom that experiments with AI agents introduce -- model selection, prompt wording, settings, and outcome-contingent redesign, for example -- and show how the low cost of iteration and lack of reporting norms make these choices both easy to exploit and difficult to detect. We propose a preregistration template tailored to experiments with AI agents and call on conferences, journals, and funding agencies to make preregistration standard practice for this emerging research paradigm. 
+
+---
+# The Environmental Cost of LLMs in AIED: Reporting and Practices 
+
+**Authors**: Sabrina C. Eimler, Lukas Erle, Daniel Flood, Aditi Haiman, Luca Häckert, André Helgert, Lachlan McGinness, Büsra Yapici  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.11215)  
+
+**Abstract**: Large Language Model (LLM) usage in recent years has become increasingly widespread in the Artificial Intelligence in Education (AIED) community. While LLMs offer unique avenues for learners and educators, using LLMs comes with computational and environmental costs. These costs are mostly hidden due to a lack of standardised procedures to measure and report these impacts. To address this gap, we first conducted a literature review of all papers published as part of the AIED 2025 conference proceedings, determining if and how computational or environmental costs of LLMs are reported. Most projects use LLMs, but few report computational resources used and almost none discuss environmental impacts of LLMs as an ethical concern.
+To address this lack of standardised reporting practices, we propose an open-source method for systematically measuring and reporting the computational expense of LLMs and environmental impact of running Machine Learning (ML) AIED systems. We provide software solutions to measure the carbon footprint for both local and cloud based hardware. We also provide an easy-to-use formula to calculate the computational expense of frontier LLMs even when the exact number of parameters is not known. Overall, we hope to motivate colleagues to use our method to strive for more transparent reporting of hidden costs of using LLMs in the AIED community. 
+
+---
+# From Awareness to Action: Understanding and Overcoming the Research-Practice Gap in Algorithmic Fairness for Public Health 
+
+**Authors**: Sara Altamirano, Tijs Portegies, Sennay Ghebreab  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.11214)  
+
+**Abstract**: Algorithmic fairness is essential for responsible ML-driven public health research, yet its practical implementation remains limited. To investigate this awareness-action gap, we conducted a sequential mixed-methods study comprising expert interviews, an online survey, and systematic mapping. The expert interviews informed the design of the survey, which in turn revealed fragmented definitions of fairness, limited training and guidance, reliance on external sources, and rare use of formal assessment, mitigation, or monitoring. These findings were subsequently mapped onto three established research-practice gap lenses: the Knowledge-Practice Gap, the Knowledge-to-Action Cycle, and the Knowing-Doing Gap, each offering complementary perspectives. Building on this synthesis, we introduce the Fairness-to-Action framework, which integrates methodological, organizational, and systemic dimensions to identify where translation of algorithmic fairness knowledge stalls. Our analysis shows that fairness remains weakly institutionalized, translation mechanisms are externally driven, and system-level priorities continue to emphasize accuracy over fairness. These insights suggest critical leverage points for advancing safe, fair, and ethical ML-driven public health research practice. 
+
+---
+# Calibration Drift Under Reasoning: How Chain-of-Thought Budgets Induce Overconfidence in Large Language Models 
+
+**Authors**: Prakul Sunil Hiremath, Harshit R. Hiremath  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.11211)  
+
+**Abstract**: The ability of large language models (LLMs) to express calibrated uncertainty is important for safe deployment. Chain-of-thought (CoT) reasoning is widely used to improve accuracy and reliability, but its effect on calibration is not fully understood. We show that this picture is incomplete: in some settings, increasing the reasoning budget beyond a task-specific threshold can cause models to become systematically overconfident, assigning high confidence to incorrect answers. We call this phenomenon Calibration Drift Under Reasoning (CDUR) and study it both theoretically and empirically.
+We define reasoning budget B and analyze conditions under which Expected Calibration Error ECE(B) follows a non-monotonic pattern: it first decreases as reasoning corrects errors, then increases as longer reasoning produces internally consistent but incorrect explanations. We propose a Hypothesis Lock-In model based on autoregressive generation to explain this behavior.
+We evaluate Llama-3.1-8B and Llama-3.3-70B on 47 reasoning-trap questions across four reasoning budgets and three seeds (1,368 API calls; 574 valid responses). The 8B model shows non-monotonic calibration behavior, while results for the 70B model are limited to baseline evaluation and are inconclusive for budget-dependent effects.
+We introduce CABStop, a calibration-aware stopping rule that halts reasoning when confidence diverges from an auxiliary accuracy estimate. These results suggest that increasing reasoning depth does not always improve reliability and should be monitored carefully. 
+
+---
+# T2MM: An LLM Supported Architecture For Inquiry-Based Modeling 
+
+**Authors**: John Kos, Rudra Singh, Ashok Goel  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.11210)  
+
+**Abstract**: Model Construction is a foundational practice in science learning that relies on visualization and interactivity. Large Language Models, increasingly augmented with multimodal capabilities, have been integrated in education contexts to support learning. However, these tools lack visual interactivity that is required by some learning contexts. We introduce Text to Multimodal Model (T2MM), a robust, dynamic LLM supported architecture that assists in model construction within the open inquiry ecology-based modeling software Virtual Experimental Research Assistant (VERA). T2MM accounts for the current context of the learner's model and creates interactive models, rather than static images, enabling the model to remain responsive to manual adjustment. To measure technical feasibility, we evaluate T2MM through a custom procedurally generated dataset of natural language learner modeling requests and target models within the VERA system. T2MM outperforms a baseline model generation architecture implemented through LLM-supported full code generation, common in the literature, across all measured success metrics. Our contribution not only outlines LLM integration into a inquiry-based learning modeling tool, but also describes a possible architecture through which more interactive multimodal LLM tools can be created. 
+
+---
+# ProcessThinker: Enhancing Multi-modal Large Language Models Reasoning via Rollout-based Process Reward 
+
+**Authors**: Jingpei Wu, Xiao Han, Weixiang Shen, Boer Zhang, Zifeng Ding, Volker Tresp  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.11209)  
+
+**Abstract**: Visual question answering increasingly requires multi-step reasoning. Recent post-training with reinforcement learning under verifiable rewards (RLVR) and Group Relative Policy Optimization (GRPO) can improve multimodal reasoning, but most approaches rely on sparse outcome-only rewards. As a result, they struggle to tell whether an incorrect answer comes from a small mistake late in the reasoning or from an unhelpful trajectory from the start. A common solution is to train a process reward model (PRM) for step-level supervision, but this typically requires large-scale high-quality chain-of-thought annotations and additional training cost. We propose ProcessThinker, a practical post-training pipeline that provides step-level process rewards without training an explicit PRM. ProcessThinker first rewrites reasoning traces into a step-tagged format for cold-start supervised fine-tuning, then applies GRPO with a standard format reward and our rollout-based process reward. Concretely, for each intermediate step, we sample multiple continuations from that step and use the empirical success rate (final-answer verification) as the step reward. This gives dense credit assignment and encourages reasoning steps that more reliably support a correct conclusion, helping reduce inconsistent or self-contradictory progress across steps -- a key issue in logical reasoning. Across four challenging video benchmarks (Video-MMMU, MMVU, VideoMathQA, and LongVideoBench), ProcessThinker consistently improves over the baseline model Qwen3-VL-8B-Instruct 
+
+---
+# BioDivergence: A Benchmark and Evaluation Framework for Hidden Contextual Contradictions in Biomedical Abstracts 
+
+**Authors**: Elias Hossain, Sanjeda Sara Jennifer, Sabera Akter Bushra, Niloofar Yousefi  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.11208)  
+
+**Abstract**: Biomedical findings often seem to conflict across studies, but many of these differences are context-dependent rather than true contradictions. Variations in cohort, geography, assay protocol, disease subtype, and clinical setting can make both claims locally valid. Existing NLI and scientific claim-verification benchmarks reduce such cases to entailment, contradiction, or neutral, failing to capture the contextual structure behind divergence. To address this, we introduce BioDivergence, an evaluation framework with a six-class conflict taxonomy, a 13-axis divergence ontology, and four structured outputs per claim pair: conflict type, divergence axes, dominant confounder, and reconciliation explanation. We release BioDivergence-Silver-v1.0, an article-disjoint silver benchmark of 11,865 claim pairs across five biomedical domains, alongside a legacy deduplicated variant for comparison. Results show notable ranking differences between the two variants, with the fine-tuned reference model dropping about 12 points under the article-disjoint setting, while Mistral-7B-Instruct-v0.3 achieves 0.5523 accuracy and 0.3894 contextual-F1 on the 842-example primary test set. BioDivergence offers a more faithful way to distinguish contextual divergence from direct contradiction and to separate article-level memorization from genuine task learning. 
+
+---
+# Dual-Stance Evaluation of Sycophancy: The Structure of Agreement and the Limits of Intervention 
+
+**Authors**: Matthew James Buchan  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.11205)  
+
+**Abstract**: Activation steering can shift LLM behaviour, but standard evaluations do not typically test whether a sycophancy-reduction direction also suppresses agreement with factually correct statements. We introduce dual-stance evaluation, which tests both stances of each topic, and apply it to centroid-difference steering on Llama-3-8B-Instruct. We find a dissociation: the model represents sycophantic and factual agreement in geometrically distinct subspaces, yet the steering direction projects equally onto both and cannot differentially target either. The direction accordingly reduces agreement with factually correct statements (e.g. that the Earth is round) as well as sycophantic ones. All other static properties of the two activation groups are matched, suggesting the behavioural dissociation arises from generation dynamics or from finer-grained structure that residual-stream analysis cannot resolve. The pattern illustrates a general gap: representations that are readable from activations may not be writable through them. 
+
+---
+# To Intervene or Not: Guiding Inference-time Alignment with Probabilistic Model Blending 
+
+**Authors**: Jin Gan, Xin Li, Jun Luo  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.11201)  
+
+**Abstract**: The wide deployment of LLMs has made model alignment necessary to make newly trained models safely and effectively respond to user instructions. Among different methods, inference-time alignment is often cheaper as it intervenes (i.e., offers guidances) only during output generation. Existing proposals apply guidances extracted from certain aligned models without properly assessing their reliability. Nonetheless, our systematic evaluation reveals that guidance effectiveness varies drastically across models; since ineffective guidances lead to further confusion and thus further interventions, the resulting excessive interventions typically indicate poor performance. To make interventions more effective and thus more efficient, we introduce BlendIn, an inference-time alignment framework that shifts from binary decisions to creating hybrid distributions integrating both models' knowledge. BlendIn stabilizes inference-time alignment by performing quality-aware alignment and proportionally weighting each model's contribution based on reliability. Compared with existing works, it preserves beneficial guidance while downweighting unreliable suggestions. BlendIn provides both diagnostic signals and mitigation strategies for misaligned guidance, achieving consistent and up to 50% performance improvement on challenging model pairs. Our code is available at: this https URL. 
+
+---
+# NightFeats @ MMU-RAGent NeurIPS 2025: A Context-Optimized Multi-Agent RAG System for the Text-to-Text Track 
+
+**Authors**: Quentin Fever, Naziha Aslam  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.11199)  
+
+**Abstract**: We present NightFeats, a structured multi-agent retrieval-augmented generation (RAG) system submitted to the MMU-RAGent competition at NeurIPS 2025, where it was awarded Best Dynamic Evaluation in the text-to-text track. Rather than targeting benchmark maximization, this work proposes a principled pipeline that decomposes knowledge synthesis into three coordinated phases: retrieval, curation, and composition, each governed by explicit intermediate representations and handoff contracts. Inspired by Agentic Context Engineering (ACE), the system introduces temporal-semantic reranking, bounded contradiction reconciliation, and citation-preserving composition as core architectural primitives. Competition results show that NightFeats surpasses proprietary baselines including Claude-SonnetV2 and Nova-Pro on LLM-as-a-Judge and Human Likert evaluations, confirming that architectural transparency and verifiable evidence grounding are better aligned with human preferences than systems optimizing narrowly for automatic similarity metrics. 
+
+---
+# The Structural Attention Tax: How Retrieval Format Hijacks In-Context Learning Independent of Content 
+
+**Authors**: Yuqi Zhang, Di Zhang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.11198)  
+
+**Abstract**: Retrieval-augmented generation (RAG) systems inject external knowledge to improve LLM outputs, yet the format of injected content -- distinct from its semantic relevance -- can independently distort the model's attention distribution. We identify and formalise a phenomenon we term the structural attention tax: knowledge graph (KG) triples, due to their relational delimiters and repeated slot patterns, capture 2-3x more attention per token than semantically equivalent natural-language text ($\hat{o}$(KG) $\approx$ 0.70 vs. $\hat{o}$(neutral) $\approx$ 0.25), compressing demonstration attention by up to 42% -- regardless of whether the triples are relevant or noise. We develop a formal framework decomposing attention scores into semantic and structural components (Eq. 2), derive a compression bound (Proposition 1) connecting token-level format bias to demonstration attention loss, and show that the structural term governs how much attention is diverted while the semantic term governs whether this helps or hurts. This decoupling reveals two orthogonal axes for improving retrieval-augmented ICL: optimising retrieval quality (semantic axis) and reducing format-driven attention capture (structural axis). Empirically, across two model families (Mistral-7B, LLaMA-3-8B) and three QA benchmarks, we observe that source-task alignment dominates: task-matched BM25 retrieval achieves 58-62% on HotpotQA vs. ConceptNet's 25-27%, a >30 pp gap that dwarfs all gating strategies ($\leq$2 pp). We derive five structure-aware mitigation strategies from the framework, ranging from zero-cost prompt modifications to training-time regularisation; format flattening (S3) is validated by both accuracy and attention-level evidence from a verbalized-triple control, while structural dispersal (S1) yields mixed results that illuminate the challenges of format-level intervention. 
+
+---
+# MA-DLE: Speech-based Automatic Depression Level Estimation via Memory Augmentation 
+
+**Authors**: Xuzhi Wang, Xinran Wu, Ziping Zhao, Jianhua Tao, Björn W. Schuller  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.11197)  
+
+**Abstract**: Speech-based automatic estimation of depression levels is essential for enabling early detection and timely intervention, particularly in resource-constrained mental health settings. In recent years, deep learning has demonstrated impressive success across various domains, including affective computing and mental health assessment. Most existing approaches rely on RNN-based architectures (such as LSTM and GRU) to model temporal information for depression estimation. However, the extracted features often emphasize only a few adjacent speech segments, limiting their ability to capture long-range dependencies. To overcome this limitation, we introduce a memory-based feature augmentation method that enhances the representational capacity of GRU-extracted features. Rather than indiscriminately incorporating historical data, our memory bank is designed to selectively integrate two types of components in order to reduce redundancy and irrelevance: (1) historical temporal features that closely resemble the current GRU output, offering complementary contextual information; and (2) dynamic memory features identified based on feature variability, which capture behavioral and emotional fluctuations indicative of depressive symptoms. To effectively fuse the memory-augmented features with GRU outputs, we further design a Hierarchical Attention Fusion (HAF) module. Our method is evaluated on the widely used DAIC-WOZ and E-DAIC datasets, achieving state-of-the-art performance. 
+
+---
+# PoQ-Judge: A Multi-Architecture Evaluation Framework for Cost-Aware Proof-of-Quality in Decentralized LLM Inference 
+
+**Authors**: Arther Tian, Alex Ding, Frank Chen, Simon Wu, Aaron Chan  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.11196)  
+
+**Abstract**: Decentralized LLM inference networks need lightweight, reference-free quality evaluation for Proof of Quality (PoQ). We present PoQ-Judge, a framework that trains dedicated judge models to score query-output pairs without ground-truth references. We study three architectures across the quality-cost tradeoff: a TextCNN judge, a MiniLM cross-encoder, and a DeBERTa judge. Using two-stage training on UltraFeedback plus GPT-labeled in-domain data, the best model reaches 0.747 Pearson correlation with the ground-truth proxy on a held-out test set, outperforming reference-based evaluators from prior work. As a reference-free component in composite scoring, it achieves 0.645 Pearson correlation, matching the best single reference-based evaluator while removing the need for reference answers. We also show that online calibration identifies semantic quality as the dominant dimension and that cascade evaluation reduces cost by 72.7 percent with only modest quality loss. Results are much stronger on QA than summarization, pointing to proxy quality as the main remaining limitation. 
+
+---
+# From Consumption to Reflection: Designing Human-AI Relations for Stable Reasoning 
+
+**Authors**: Rikard Rosenbacke, Carl Rosenbacke, Victor Rosenbacke, Martin McKee  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.11195)  
+
+**Abstract**: Large language models (LLMs) have transformed how humans access information, but not how we reason with it. Their fluency accelerates consumption while bypassing the slow, reflective processes that underpin sound judgment. This paper introduces Relational Reflective Intelligence (RRI), an inference-time governance layer that operationalizes reflection through auditable reasoning loops. RRI operates not inside the model but around it, providing a practical structure for stable, auditable reasoning between humans and LLMs.
+The core premise is that LLMs inherit cognitive vulnerabilities similar to those that shape human thought: reliance on intuitive shortcuts, confusion between representation and reality, and a preference for coherence over falsification. When humans and models share these tendencies, their errors compound. We refer to this as relational drift, a failure that arises from interaction rather than from the model alone. Addressing this requires a shift from modeling relations between words to structuring relations between model outputs and human reasoning.
+RRI provides this missing layer through three components: the Rose-Frame, which identifies likely breakdowns in reasoning; the Architect's Pen, which introduces targeted reflection steps at critical moments; and an inference-time workflow that embeds these steps without retraining the model. Together, these elements transform human-AI interaction into a joint reasoning system with explicit checkpoints, conflict surfacing, and an auditable trail of assumptions.
+Rather than making machines think like humans or forcing humans to reason like machines, RRI creates a structured interaction in which both compensate for each other's limitations. It reframes AI safety as a cognitive architecture problem, where reliable decisions depend on embedding reflection directly into the interaction process. 
+
+---
+# From Architecture to Output: Structural Origins of Hallucination in Large Language Models and the Amplifying Role of Data 
+
+**Authors**: Md. Rejaul Korim Sadi, Toufiqur Rahman Tasin, Golam Mostofa Naeem  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.07537)  
+
+**Abstract**: Large language models hallucinate--producing fluent, confident, factually wrong outputs--with a consistency that persists across generations and scales. Existing taxonomies classify hallucination by output type, distinguishing intrinsic from extrinsic failures and faithfulness from factuality divergence. These frameworks are descriptively rigorous but do not identify which internal mechanism produced a given instance. This paper analyses hallucination as a structural consequence of three architectural decisions that together form a compound failure system. Self-attention's co-occurrence learning substitutes statistical proximity for semantic meaning and produces entity confusion, fact misattribution, and semantic drift. The maximum likelihood estimation training objective optimises next-token probability without factual constraint, rewarding statistically plausible outputs regardless of their truth value. Autoregressive decoding's permanent left-to-right commitment under exposure bias ensures that a single wrong token cascades forward through the entire output sequence without revision. Dataset pathologies--long-tail deficiencies, training bias, and synthetic pollution--amplify these vulnerabilities but do not independently cause them. We make three contributions. First, we map each mechanism to a specific output category in the Alansari and Luqman taxonomy, locating intrinsic hallucination in self-attention, extrinsic hallucination in MLE, and logical inconsistency in autoregressive decoding. Second, we show that each commonly cited dataset pathology exploits one of these mechanisms rather than originating hallucination independently. Third, we identify the diagnostic limitation of output-type-only classification and contrast it with inference-layer mitigation approaches. 
+
+---

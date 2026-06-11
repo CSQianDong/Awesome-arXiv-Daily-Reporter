@@ -1,0 +1,171 @@
+# DiffCold: A Diffusion-based Generative Model for Cold-Start Item Recommendation 
+
+**Authors**: Kangning Zhang, Yingjie Qin, Weinan Zhang, Yong Yu, Jianghao Lin  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.12245)  
+
+**Abstract**: Cold-start item recommendation remains a persistent challenge in real-world systems due to the absence of interaction histories. While prior models attempt to bridge this gap using item content features, they universally suffer from the \textbf{seesaw dilemma}: enhancing performance for cold items inevitably degrades performance for warm items, and vice versa. We identify that this dilemma stems from a fundamental \textbf{distributional disparity}: warm item embeddings occupy a complex ``behavioral manifold" shaped by rich interaction signals, whereas cold item embeddings are constrained to a ``semantic manifold" derived solely from auxiliary content. Existing methods often force a rigid mapping between these inconsistent spaces, causing the model to sacrifice the precision of warm representations to accommodate cold ones. To address this, we propose \textbf{DiffCold}, a diffusion-based generative model that unifies warm and cold representations. Unlike GANs or VAEs, DiffCold leverages conditional diffusion to reconstruct warm item embeddings from content, preserving the underlying manifold structure without degradation. We further tailor this paradigm with two specific designs: a \textbf{Retrieval-enhanced Aggregator} that initializes generation using semantically similar warm items to bypass inefficient noise, and a \textbf{Simulation-based Representation Alignment} module that enforces distribution consistency between generated and real embeddings via contrastive learning. Experiments on three benchmarks confirm that DiffCold resolves the seesaw dilemma, consistently outperforming state-of-the-art methods across all metrics. 
+
+---
+# LLM-Based User Personas for Recommendations at Scale 
+
+**Authors**: Haoting Wang, Haokai Lu, Zheyun Feng, Jenny Huang, Yifat Amir, Gregory Hinkson, Ben Most, Zelong Zhao, Yixin Kelly Cui, Rein Zhang, Fabio Soldo, Yu Xia, Nihar Bhupalam, Minmin Chen, Konstantina Christakopoulou, Lichan Hong, Ed H. Chi  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.12198)  
+
+**Abstract**: Large Language Models (LLMs) offer unprecedented potential for enhancing recommendation systems through their world knowledge and reasoning capabilities. However, existing approaches often rely on structured IDs or offline processing, limiting semantic richness, real-time adaptability, and user-facing interpretability. In this paper, we introduce a novel framework that enables real-time generation of LLM-based user interest personas for a large-scale commercial video recommendation platform. Our method generates natural-language user interest personas that address the exploitation-exploration trade-off by combining the summarization of existing interests with novel topics, directly during serving. To overcome the computational challenges of online LLM inference at a billion-user scale, we design a cost-efficient architecture leveraging knowledge distillation, asynchronous inference, and input optimization via semantically clustered video representations. Extensive offline evaluations, user studies, and live A/B tests demonstrate significant improvements in viewer value. This work bridges the gap between high-level semantic understanding and industrial-scale recommendation, paving the way for more dynamic, explainable, and satisfying personalized experiences. 
+
+---
+# Tail-Aware Adaptive-k: Query-Adaptive Context Selection for Retrieval-Augmented Generation 
+
+**Authors**: Ziyu Song, Jiaming Fang, Kuangyu Li, Tuo Xia, Chuanpeng Wang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.11907)  
+
+**Abstract**: Adaptive context selection is critical for retrieval-augmented generation (RAG) systems, as fixed Top-K retrieval fails under query-dependent and heavy-tailed similarity distributions. While Extreme Value Theory (EVT) offers a principled framework for adaptive truncation, existing approaches apply EVT globally across the entire ranked list, incurring prohibitive computational costs and statistical instability. We propose Tail-Aware Adaptive-k(TAA-k), a training-free framework that operationalizes EVT through a localized validation strategy. The key insight is that ranked similarity curves exhibit a characteristic steep--flat--steep pattern reflecting a transition from relevance-dominated to noise-dominated regimes. TAA-k exploits this geometric structure via knee detection to identify a compact candidate region, then applies EVT-based goodness-of-fit testing within this window to validate the onset of tail behavior. This coarse-to-fine design reduces computational complexity from O(N^2M) to O(sqrt{N\log N}*M) while maintaining statistical rigor. Under mild monotone likelihood ratio assumptions, TAA-k yields a stable, query-adaptive cutoff corresponding to the earliest noise-dominated position. Experiments on WebQuestions, 2WikiMultiHopQA, and MuSiQue demonstrate that TAA-k achieves near-oracle retrieval quality (F1 within 2-3% of oracle) with orders-of-magnitude efficiency gains over global EVT methods, while maintaining robustness across embedding models and compression dimensions. 
+
+---
+# CORE-Bench: A Comprehensive Benchmark for Code Retrieval in the Era of Agentic Coding 
+
+**Authors**: Fuwei Zhang, Yanzhao Zhang, Mingxin Li, Dingkun Long, Lexiang Hu, Pengjun Xie, Zhao Zhang, Fuzhen Zhuang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.11864)  
+
+**Abstract**: Code retrieval is becoming central to coding agents, but agentic coding requires more than matching a natural-language query to an isolated snippet. Given a user request, a coding agent needs to navigate a concrete repository state, locate relevant files and functions, gather supporting context, and filter similar in-repository distractors. Existing code retrieval benchmarks mainly evaluate docstring-to-function or snippet-level matching, thereby missing this requirement-driven repository search problem. To address this gap, we introduce CORE-Bench, a comprehensive benchmark for code retrieval in the era of agentic coding. CORE-Bench evaluates code retrieval ability at three levels: code understanding, issue-to-edit localization, and broader context retrieval. Built from curated code-search tasks and SWE-bench-series instances, CORE-Bench contains over 180K queries and 106K broader-context relevance labels. Experiments with representative embedding models show a sharp drop from traditional code search to code retrieval in agentic coding settings. Simple supervised fine-tuning of existing embedding models significantly improves performance in this setting, suggesting substantial room for further progress. 
+
+---
+# What Limits Does Quantization Place on Dense Top-$k$ Retrieval? A Theoretical Study 
+
+**Authors**: Koki Okajima, Tsukasa Yoshida  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.11780)  
+
+**Abstract**: We establish conditions for embedding a corpus of $N$ documents as $d$-dimensional vectors such that every $k$-subset $S \subseteq [N]$ is realizable as a result of top-$k$ retrieval by some query vector. Recent work shows that $d = O(k)$ suffices for such embeddings to exist in $\mathbb{R}^d$, independently of $N$. We theoretically prove that this corpus-independent bound is specific to infinite precision. With $B$ bits per coordinate, perfect top-$k$ retrieval requires $Bd = \Omega(k \ln N)$; thus, at any fixed precision, the dimension must grow at least logarithmically with $N$. Specializing to a $\ell_2$-normalized $B$-bit uniform scalar quantization model, we also identify a threshold on the precision $B^{*} = O(\ln \ln N)$ below which no dimension suffices, together with two further regimes that bound the feasible $(B, d)$ pairs. Our result implies that in practical vector databases and dense retrieval systems where quantization is standard, the embedding dimension and possibly the precision must grow with the corpus size. 
+
+---
+# FAST-MEL: A Fast, Accurate, and Storage Efficient Solution for Multimodal Entity Linking 
+
+**Authors**: Derrien Thomas, Laurent Amsaleg, Pascale Sébillot  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.11749)  
+
+**Abstract**: Multimodal entity linking (MEL) is the task that consists of matching textual and visual mentions of entities in unstructured data to their corresponding entities in a knowledge base (KB). To be effective in large-scale practical settings, MEL systems must meet three objectives: high linking accuracy, computational efficiency, and storage efficiency, i.e., a compact yet efficient index of the KB. In this paper, we highlight that state-of-the-art systems fail to simultaneously satisfy these 3 requirements. To meet this three-fold objective, we propose FAST-MEL, a lightweight encoder-based MEL solution that relies on a novel and compact fixed-size vectorized representation of both the textual and visual information of each entity or mention. It matches the accuracy of the best systems but performs three orders of magnitude faster. It also consumes one order of magnitude less storage than the fastest systems. 
+
+---
+# CompRank: Efficient LLM Reranking via Token-Level Compression and Decoding-Free Scoring 
+
+**Authors**: Xuan Lu, Haohang Huang, Yingqi Fan, Junlong Tong, Yuxuan Zhang, Ping Nie, Rui Meng, Xiaoyu Shen  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.11700)  
+
+**Abstract**: Large language model (LLM) rerankers have become an important component of modern retrieval and retrieval-augmented generation pipelines, but their high computational cost limits their applicability to long candidate lists. In this paper, we propose \textbf{CompRank}, a token-efficient reranking framework that reduces redundant computation by aligning reranker design with the sparsity of ranking signals. CompRank decouples document representations from candidate order and query context, enabling reusable document-side states; applies segment-wise token compression to reduce query--document interaction cost; and introduces a CopyNet-style objective that directly aligns attention-based document scoring with training supervision. Experiments on seven BEIR datasets show that CompRank achieves strong reranking performance while retaining only 10.2\% of document tokens, reaching an average NDCG@10 of 39.2 compared with 39.7 under full-token attention. Further scaling experiments on TREC-COVID show that CompRank remains stable when evaluated on candidate lists of up to 500 documents after training on 30-document lists, while achieving $4.9\times$--$9.5\times$ end-to-end speedup over generation-based listwise reranking and approximately $1.3\times$ speedup over the full-token CompRank variant. These results suggest that token-level compression and decoding-free attention scoring provide an effective path toward scalable LLM-based reranking. 
+
+---
+# The Long Tail, Not the Front Page: Cold-Start Prediction of Crowd Highlight Salience 
+
+**Authors**: Kazuki Nakayashiki, Keisuke Watanabe  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.11654)  
+
+**Abstract**: A social highlighter's most useful signal -- which passages a crowd of readers marks -- exists only for documents people have already read. Can the aggregate crowd salience of a document be predicted from its text before its marks accumulate? Prior work on this data found that zero-shot language models recover highlight locations worse than a trivial lead (position) baseline, so we ask whether a model trained on the highlight corpus can beat that baseline. Using a pre-registered ladder of models and a by-document cluster bootstrap, we find a small but robust edge: a logistic ranker over sentence embeddings and positional/contextual features beats the lead baseline by +0.044 average precision (95% CI [+0.029, +0.058]; clears a pre-registered margin delta=0.03 in 97% of resamples, and stable across pipeline re-runs). Two unsupervised extractive baselines (centroid, LexRank-style centrality) lose to lead, and the trained model beats them by +0.108, so the edge is not recovered by generic unsupervised proxies -- it reflects learning from real reader marks. In product terms, precision@3 rises from 0.25 to 0.39 (+55% relative) and the model beats lead on 69% of documents. An ablation attributes the edge to the raw embedding (+0.014) and training augmentation (+0.010), each with a positive CI. The edge is not a temporal-generalization failure, and we find no evidence that content drift or near-duplicate leakage explains it. A standardized regression shows the advantage is governed mainly by document popularity (lower popularity, larger edge) and by label reliability. It nearly vanishes only on the most popular content; there it is the lead baseline that strengthens, not the model that weakens. Because our evaluation conditions on documents that eventually accumulated readers, these results are a retrospective cold-start simulation. 
+
+---
+# Factions Within, Uncertain Across: Within-Document Reader Sub-Groups in Social Highlighting 
+
+**Authors**: Kazuki Nakayashiki, Keisuke Watanabe  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.11613)  
+
+**Abstract**: When many people highlight the same document, is the crowd a single consensus, or is it internally structured into reader sub-groups that mark different things -- and is that structure a stable property of a reader or of the document? Building on prior work showing an individual's within-document highlighting signal is a whisper while individuality lives in selection, we ask the group-level question on a co-readership platform using a margin-preserving curveball null. Experiment 1: within a document, readers form strong sub-groups -- pairs agree far beyond what shared salience, mark density, and sentence popularity predict (nearest-neighbour agreement z=+6.3, significant in 88% of documents). Under an eight-block region-preserving null, shared engagement with the same coarse regions of the document accounts for about 40% of this excess; the majority survives as finer reader-specific agreement (z=+3.6, 77% significant). So the within-document crowd is, in a descriptive sense, factional. Experiment 2: is that grouping a stable reader trait? Here we are honest about power. The cross-document split-half reproducibility of a pair's agreement is near zero pooled (+0.078 and 0.000 in two separately drawn samples), and a power calibration shows the test is informative only for pairs that co-read many documents. In the only informative high-overlap subset (k>=4), point estimates are positive but small-sample, imprecise across the separately drawn samples, never significant, and attenuate under the region-preserving null. We therefore leave cross-document stability unresolved: the data is consistent with anything from situational grouping to a weak-to-moderate stable reader trait. The crowd is factional within a document; whether its factions follow the reader across documents is, honestly, beyond our reach. 
+
+---
+# A PubMed-Scale Dataset of Structured Biomedical Abstracts 
+
+**Authors**: Chia-Hsuan Chang, Haerin Song, Brian Ondov, Hua Xu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.11361)  
+
+**Abstract**: Structured abstracts are important for biomedical literature processing, by facilitating information retrieval, text mining, and knowledge synthesis. However, a vast portion of abstracts indexed in PubMed remain unstructured, presenting a significant bottleneck for downstream text-processing workflows and applications. To resolve this limitation, we introduce Structured PubMed, a comprehensive corpus of section-labeled biomedical abstracts compiled from the complete PubMed database, encompassing over 23.2 million research-article records. The corpus is divided into two distinct subsets: a collection of 5.9 million author-structured abstracts parsed from official XML files, and an automatically labeled collection of 17.2 million originally unstructured abstracts structured via a verbatim-extraction Large Language Model pipeline. Every record is harmonized under a unified five-section schema and mapped to its original PubMed identifier, publication type, and publication date. This dataset can be utilized to train sentence-classification models, benchmark text-segmentation architectures, and perform large-scale, section-specific information extraction at an unprecedented PubMed-wide scale. 
+
+---
+# Doc-to-Atom: Learning to Compile and Compose Memory Atoms 
+
+**Authors**: Xingjian Diao, Wenbo Li, Yashas Malur Saidutta, Avinash Amballa, Lazar Valkov, Srinivas Chappidi  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.12400)  
+
+**Abstract**: Long input sequences are central to document understanding and multi-step reasoning in Large Language Models, yet the quadratic cost of attention makes inference both memory-intensive and slow. Context distillation mitigates this by compressing contextual information into model parameters, and recent work such as Doc-to-LoRA amortizes context distillation into a single forward pass that generates one LoRA adapter per document. However, producing a single monolithic adapter for all queries leads to irrelevant-query interference, limited compositional recall, and poor scalability to long-document reasoning. To address these challenges, we propose Doc-to-Atom (Doc2Atom), a compositional parametric memory framework that decomposes each document into semantically typed knowledge atoms. Each atom is compiled into an independent micro-LoRA adapter and a provenance retrieval key. At inference time, a lightweight query router selects and assembles only the relevant atoms into a query-specific adapter, which is then injected into a frozen base model. The entire system is trained end-to-end through a multi-objective distillation framework. Experiments on six diverse QA benchmarks demonstrate that Doc2Atom outperforms Doc-to-LoRA baselines while reducing the memory cost of document internalization. 
+
+---
+# Findings of the MAGMaR 2026 Shared Task 
+
+**Authors**: Alexander Martin, Dengjia Zhang, Joel Brogan, Francis Ferraro, Jeremy Gwinnup, Reno Kriz, Teng Long, Kenton Murray, Andrew Yates, Xiang Xiang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.12295)  
+
+**Abstract**: This overview paper presents the results of the shared task for the second workshop on Multimodal Augmented Generation via Multimodal Retrieval (MAGMaR). In this shared task participants submitted systems focused on either (i) video retrieval or (ii) grounded generation of articles given retrieved videos. Teams could submit to either task. For the retrieval task, we had 2 participating teams that submitted a total of 17 systems -- all of which beat a baseline derived from the winner of last year's shared task. On the generation side, we had 4 teams submit 16 systems. All teams had at least one generated report that was labeled the best by a human annotator. 
+
+---
+# Efficient and Robust Online Learning to Rank in Decentralized Systems 
+
+**Authors**: Marcel Gregoriadis, Martijn de Vos, Sayan Biswas, Anne-Marie Kermarrec, Johan Pouwelse  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.12246)  
+
+**Abstract**: In Online Learning to Rank (OLTR), ranking models are trained directly from live user interactions, but existing systems rely on a trusted central server to collect and process these interactions. This leaves operators free to introduce biases that conflict with user interests. Decentralized learning offers an attractive alternative, allowing users to collaboratively train a shared ranking model by exchanging model updates directly with one another, without any central authority. In such settings, however, malicious nodes can send poisoned model updates that degrade the ranking quality of honest nodes. We introduce RankGuard, a decentralized OLTR framework in which users collaboratively train ranking models and exchange model updates directly with other nodes. RankGuard defends against poisoning attacks by carefully evaluating incoming models against the user's own private click history, corrected for position bias. An incoming model is only aggregated if it better explains the user's past interactions than the current local model, making it fundamentally hard for malicious nodes to craft updates that pass this test without also genuinely helping the user. We derive a theoretical convergence guarantee of RankGuard. To the best of our knowledge, this is the first formal convergence analysis of a decentralized OLTR algorithm. We evaluate RankGuard against four poisoning attacks, including a powerful adaptive attack, using four standard benchmarks and three click models. RankGuard outperforms all baselines in most settings while being up to 62x more efficient than its closest competitors. 
+
+---
+# MLT-Dedup: Efficient Large-Scale Online Video Deduplication via Multi-Level Representations and Spatial-Temporal Matching 
+
+**Authors**: David Yuchen Wang, Haoying Li, Hailun Xu, Wei Chee Yew, Zirui Zhu, Sanjay Saha, Hao Hei, Kanchan Sarkar, Kun Xu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.12215)  
+
+**Abstract**: The explosive growth of user-generated video content on online platforms is accompanied by the emergence of numerous near-duplicate videos--videos that are identical or highly similar but differ by partial edits. These duplicates degrade user experience and increase storage and bandwidth costs, making large-scale video deduplication a critical task. Existing video deduplication frameworks face a fundamental challenge in retrieving sufficient high-quality candidates under a limited index budget, as well as trade-offs between efficiency and precision. To address these issues, we propose MLT-Dedup, an efficient large-scale online video deduplication framework with Multi-Level representations and spatial-Temporal matching. Our approach employs a Multi-Level Video Encoder (ML-VE) to extract both fine-grained frame-level and sparse clip-level embeddings: sparse embeddings support efficient candidate retrieval, while fine-grained embeddings are loaded for precise pairwise matching. During matching, we introduce DiF-SiM, a Differential Feature-enhanced Similarity Module capable of locating duplicated temporal segments and providing reliable similarity evidence to support policy-driven deduplication decisions. Extensive experiments on a real-world large-scale platform demonstrate that MLT-Dedup reduces online repetition rates by 91% at 90% precision. Furthermore, our sparse retrieval design achieves a 5x increase in indexing capacity, enabling broader candidate coverage in real-world deployment. 
+
+---
+# uva-irlab-conv at SemEval-2026 Task 8: Multi-Turn RAG with Learned Sparse Retrieval and Listwise Reranking 
+
+**Authors**: Simon Lupart, Kidist Amde Mekonnen, Zahra Abbasiantaeb, Mohammad Aliannejadi  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.11945)  
+
+**Abstract**: This report describes our participation in SemEval-2026 Task 8 on multi-turn retrieval and question answering. The task evaluates conversational systems across four domains (finance, cloud documentation, government, Wikipedia), and includes unanswerable queries where the available collection does not contain sufficient evidence to produce a complete response. We propose a multi-turn retrieval-augmented generation pipeline that combines learned sparse retrieval with LLM-based reranking and generation. Using sparse retrieval as the primary retrieval method, we leverage its strong generalization across domains. In addition, we make use of the long-context capabilities of LLMs for conversational query rewriting, pointwise and listwise reranking, and generating the final response, each conditioned on the full conversational history. This multi-step design enables effective integration of conversational context throughout retrieval and generation, improving robustness across domains. 
+
+---
+# DeMix: Debugging Training Data with Mixed Data Error Types by Investigating Influence Vectors 
+
+**Authors**: Jiale Deng, Yanyan Shen, Xiaogang Shi, Chai Junjun  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.11616)  
+
+**Abstract**: High-quality training data is essential for the success of machine learning models. However, real-world datasets often contain mixed types of errors arising from systematic flaws in data preparation pipelines, including label errors, feature errors, and spurious correlations. Effective debugging of training data requires both detecting erroneous samples and identifying their specific error types to enable targeted repair, yet existing data cleaning and attribution methods fail to adequately address this dual requirement. In this paper, we propose DeMix, a novel framework that simultaneously diagnoses erroneous samples and their error types. Our key insight is that different error types produce distinct patterns on model behavior. DeMix captures such error-specific patterns by influence vectors that characterize how each training sample affects model predictions across all validation samples. We formulate training data debugging as a multi-label classification problem where a classifier is developed to predict error types directly from influence vectors. We further introduce an intervention-based learning strategy that guides the classifier to capture invariant rationales specific to each error type, ensuring the learned classifier generalizes effectively. Empirical evaluations on 11 tasks across tabular data prediction, recommendation systems, and LLM alignment demonstrate that DeMix significantly outperforms state-of-the-art approaches, achieving a 22.61% improvement in data debugging F1-score and a 9.32% gain in task model performance after data repair. Code is available at: this https URL. 
+
+---
+# When More Documents Hurt RAG: Mitigating Vector Search Dilution with Domain-Scoped, Model-Agnostic Retrieval 
+
+**Authors**: Nabaraj Subedi, Ahmed Abdelaty, Shivanand Venkanna Sheshappanavar  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.11350)  
+
+**Abstract**: Retrieval-augmented generation degrades when scaled to large, heterogeneous document collections, where dense similarity loses discriminative power, and top-k retrieval increasingly returns semantically similar but contextually incorrect chunks. We refer to this failure mode as vector search dilution. Even when using hybrid dense+sparse retrieval, we observed this firsthand in a deployed Wyoming Department of Transportation corpus, where scaling from 54 to 1,128 documents (88,907 chunks) reduced accuracy from 75% to below 40%. To address this dilution, we propose MASDR-RAG ( Multi-Agent Scoped Domain Retrieval for RAG) and evaluate it on 200 expert-validated queries across five LLM backbones, six corpora, and two index stacks. Our results indicate that domain scoping using organizational metadata is the key fix, significantly improving P@10 from 0.77 to 0.86 ($p < 0.05$). Furthermore, our investigation of multi-agent orchestration revealed that a high degree of configuration dependence results --creating what we call the precision-faithfulness paradox. Based on these varied outcomes, our practical recommendation is simple: scope first, then perform a single synthesis call, reserving full multi-agent orchestration for genuinely multi-domain corpora paired with native-tool-call backbones. Code and Data will be made public upon acceptance. 
+
+---
+# Benchmarking Large Language Models for Safety Data Extraction 
+
+**Authors**: Jonas Grill, Thomas Bayer, Sören Berlinger  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.11204)  
+
+**Abstract**: Accurate extraction of structured information from Safety Data Sheets (SDS) remains challenging in industrial safety due to heterogeneous document formats and the limitations of traditional rule-based methods. This study benchmarks state-of-the-art Large Language Models (LLMs) for automated SDS data extraction, comparing text-based and multimodal processing pipelines. We systematically evaluate four models: Gemini 1.5 Pro, GPT-4o, Claude 3.7 Sonnet, and Llama 3.1-70B, across three prompting strategies: zero-shot, few-shot, and chain-of-thought. The evaluation framework assessed accuracy, latency, and cost across more than 50,000 extracted data fields. Results show that text-based extraction consistently outperforms multimodal processing across all metrics. Gemini 1.5 Pro combined with a Chain-of-Thought prompt achieved the highest accuracy (84%), outperforming GPT-4o (81%) and Claude 3.7 Sonnet (79%). However, no model surpassed the 90% accuracy threshold commonly required for reliable real-world deployment. These findings indicate that general-purpose LLMs are not yet robust enough for unsupervised industrial use, though performance suggests strong potential with task-specific fine-tuning. Future research should focus on domain-adapted training, model calibration, and the integration of Human-in-the-Loop verification to ensure safety-critical reliability. 
+
+---
+# NightFeats @ MMU-RAGent NeurIPS 2025: A Context-Optimized Multi-Agent RAG System for the Text-to-Text Track 
+
+**Authors**: Quentin Fever, Naziha Aslam  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.11199)  
+
+**Abstract**: We present NightFeats, a structured multi-agent retrieval-augmented generation (RAG) system submitted to the MMU-RAGent competition at NeurIPS 2025, where it was awarded Best Dynamic Evaluation in the text-to-text track. Rather than targeting benchmark maximization, this work proposes a principled pipeline that decomposes knowledge synthesis into three coordinated phases: retrieval, curation, and composition, each governed by explicit intermediate representations and handoff contracts. Inspired by Agentic Context Engineering (ACE), the system introduces temporal-semantic reranking, bounded contradiction reconciliation, and citation-preserving composition as core architectural primitives. Competition results show that NightFeats surpasses proprietary baselines including Claude-SonnetV2 and Nova-Pro on LLM-as-a-Judge and Human Likert evaluations, confirming that architectural transparency and verifiable evidence grounding are better aligned with human preferences than systems optimizing narrowly for automatic similarity metrics. 
+
+---
