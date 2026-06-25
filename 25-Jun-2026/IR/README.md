@@ -1,0 +1,182 @@
+# AutoRelAnnotator: Calibrated Model Cascades for Cost-Efficient Relevance Evaluation in Sponsored Search 
+
+**Authors**: Md Omar Faruk Rokon, Shasvat Desai, Hong Yao, Kuang-chih Lee  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.25871)  
+
+**Abstract**: How can we generate high-quality relevance annotations at scale without the cost and delays of human labeling? Relevance annotations are the backbone of search ranking systems which is needed for training data preparation, NDCG evaluation, and root cause analysis. However, human annotation is slow and off-the-shelf LLMs suffer from accuracy on domain-specific tasks. We propose a calibrated model cascade, a systematic approach for cost-efficient offline relevance annotation by routing queries through progressively larger fine-tuned classifiers. Our central insight is that accuracy and cost are orthogonal optimizations: domain-specific fine-tuning drives accuracy, cascading drives cost, and per-class isotonic calibration adds a small but reliable gain on top. Our contribution is threefold: (a) we decompose the gains and show that fine-tuning contributes 20 accuracy points while cascading is approximately accuracy-neutral but halves compute cost, (b) we introduce per-class isotonic calibration as one component of the cascade, contributing a small but statistically significant gain (+0.6 points over the strongest calibration baseline), and (c) we validate the system in production across six offline use cases, processing 150M+ annotations and enabling faster experimentation cycles. Our work is a building block for scalable, high-quality offline annotation pipelines in search and advertising systems. 
+
+---
+# How Large Language Models Source Brand Reputation Across Languages and Markets 
+
+**Authors**: Dmitrij Zatuchin  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.25787)  
+
+**Abstract**: When a large language model (LLM) answers a question about a company, it grounds the answer in retrieved web sources, and those sources decide what the model says. Most analysis of AI brand visibility looks at the answer text. This study looks one step earlier, at the citations. We merge three this http URL datasets covering 128 brands across 12 home markets and 13 languages, and analyse 167,551 URL-grounded citations (189,974 total attribution rows). We classify each citation by domain and source type and measure where AI gets its brand information, by language and by market. Four patterns hold. First, AI grounds brand answers overwhelmingly in third-party sources: 85.7% of citations point to sites the brand does not own, against 14.3% owned. Second, the source base is concentrated and long-tailed: 80% of citations come from about 18% of domains, fitting a Zipf law (alpha = 0.86, R^2 = 0.983). Third, one reference site dominates almost everywhere: Wikipedia is the most-cited domain in 11 of 12 languages, the exception being Lithuanian, where the business daily this http URL edges it (4.38%). Fourth, the source mix is market-specific at the margin: for 46 Polish national brands the most-cited domain is YouTube, and four HR and careers portals supply 637 citations against 297 for Polish Wikipedia, about twice as many. 
+
+---
+# A Stochastic Epidemiological Model of Latent Tuberculosis in a Radiation Exposed Mars Colony 
+
+**Authors**: Teddy Lazebnik  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.25728)  
+
+**Abstract**: Plans to establish a sustained human presence on Mars have moved from speculative ambition toward concrete engineering programmes, making the biological consequences of settlement an increasingly practical question. A Mars colony would place a small, closed population in an environment combining chronic radiation, altered immunity, constrained medical autonomy, and engineered indoor air. Latent infections are especially important because clinically silent carriers may become sources of transmissible disease when host control deteriorates. In this study, we develop a stochastic host-radiation-pathogen-habitat model of latent tuberculosis reactivation in a Mars colony. The model links galactic cosmic radiation to immune competence, immune competence to latent-tuberculosis reactivation, and reactivation to airborne transmission in a closed habitat. We also formulate countermeasure allocation as a partially observable sequential decision problem in which isolation and medication are selected by fixed baselines or by a proximal policy optimization policy trained on an agent-based simulator. Our simulations show that active tuberculosis can emerge endogenously despite no initial infectious cases, and that risk is most sensitive to latent reservoir size, radiation-immune coupling and reactivation sensitivity. Adaptive control reduced infectious burden and mortality while limiting unnecessary intervention. This framework supports mission-specific stress testing of screening, monitoring, shielding and treatment strategies before launch. 
+
+---
+# Recommendation as Generation: Unifying Personalized Video Generation and Recommendation at Industrial Scale 
+
+**Authors**: Yanhua Cheng, Bo Wang, Haotian Zhang, Xinyuan Gao, Zhihui Yin, Ben Xue, Yongzhi Li, Jieting Xue, Ye Ma, Minquan Wang, Jiahui Li, Tianyu Xu, Zhiqiang Liu, Xiao Lin, Shiyang Wen, Changcheng Li, Liu Liu, Quan Chen, Peng Jiang, Kun Gai  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.25496)  
+
+**Abstract**: Traditional short-video recommendation systems match user interest to a fixed pool of pre-produced videos, which limits their ability to capture fine-grained and dynamic preferences. We propose Recommendation-as-Generation (RaG), a new paradigm that generates personalized videos on demand from inferred user interest. Our framework unifies generative recommendation and video generation through shared semantic IDs (SIDs), which disentangle video representation into content semantics and creative style semantics, enabling both fine-grained modeling of user interest and controllable generation of interest-aligned videos. We further develop Video Generation Agents (VGAs) that are conditioned on inferred SIDs to drive hierarchical planning and refinement for video creation, including visual composition, audio alignment, and artistic effect enhancement. To optimize the framework, we effectively introduce a synergistic cross-domain reward learning mechanism that jointly enforces interest alignment, user feedback, and video quality assessment.
+We deploy RaG on an industrial-scale platform with over 400 million daily active users and evaluate it in a revenue-critical advertising scenario. Online A/B tests show up to 1.87% ad revenue improvement compared to a strong production GRM baseline, demonstrating its effectiveness in driving further revenue gains beyond generative recommendation. Our results highlight a closed-loop generative system as a promising paradigm for integrating personalized video generation into recommendation. 
+
+---
+# S2-CAR: Segmentation-Supervised Complexity-Adaptive Recommendation 
+
+**Authors**: Linjiang Guo, Nitin Bisht, Shiqing Wu, Xianzhi Wang, Guandong Xu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.25415)  
+
+**Abstract**: Sequential recommendation aims to predict user preferences from interaction histories, yet existing models often struggle when behavior patterns become complex and heterogeneous. A key reason is that interaction histories are rarely uniform: users' interests shift in a latent way over time, yet existing models either treat the full sequence as a homogeneous context or rely on rigid time-window segmentation that misaligns with true intent boundaries. This mis-segmentation not only introduces cross-intent interference at intermediate sequence positions but also leads to over-reliance on short-term interest signals. To address this, we propose S2-CAR, a segmentation-supervised and complexity-adaptive framework for sequential recommendation that models user intent as a continuous latent energy state. Specifically, it uses the Context-Aware Soft Temporal Point Process (Soft-TPP) to segment boundaries triggered by the natural decay of latent-state energy rather than fixed intervals, enabling intent segmentation without fixed time-gap rules. Next, upon this segmentation, a Segment-Count-Adaptive Multi-Intent Extraction module hierarchically aggregates intent-coherent segments into a compact set of multi-interest representations. Extensive experiments on 3 representative public benchmark datasets spanning movie, e-commerce, and gaming domains across 13 baselines demonstrate that S2-CAR consistently outperforms state-of-the-art methods across all datasets and metrics. Further analysis shows that the proposed energy-based segmentation serves as a plug-and-play module, yielding consistent improvements when integrated into existing sequential recommendation backbones. 
+
+---
+# TheoremGraph: Bridging Formal and Informal Mathematics 
+
+**Authors**: Simon Kurgan, Evan Wang, Eric Leonen, Sophie Szeto, Luke Alexander, Artemii Remizov, Jarod Alper, Giovanni Inchiostro, Vasily Ilin  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.25363)  
+
+**Abstract**: Mathematical knowledge is organized around statements and their dependencies, but this structure is exposed unevenly: informal papers cite mostly at the document level, while formal libraries record fine-grained dependencies over a much smaller body of mathematics. We introduce TheoremGraph, a unified statement-level dependency graph spanning both informal and formal mathematics. On the informal side, we parse 11.7M theorem-like environments from mathematics arXiv and recover 18.3M candidate directed dependencies, each labeled by the extractor that proposed it so downstream users can trade coverage for precision. On the formal side, we release LeanGraph, a Lean 4 elaborator-level extractor producing 388,105 declaration nodes and 11.3M typed edges across 25 Lean projects. We bridge the two graphs by embedding generated natural-language slogans into a shared semantic space, linking related statements across papers and across the informal/formal divide; an LLM judge affirms 47,952 such matches above a 0.8 cosine floor, with the judge-acceptance rate rising from 48% across the floor to 87% in the >=0.9 tier. On formal concept retrieval, our name-and-signature representation with graph expansion comes within 0.5pp of LeanSearch v2's reranked Recall@10 (0.775 vs. 0.780) without an LM reranker. We release the dataset, extractors, HTTP API, and MCP interface as infrastructure for mathematical search, attribution, and retrieval-augmented reasoning, available at this http URL and this http URL. 
+
+---
+# Adaptive Re-Ranking 
+
+**Authors**: Ata Cinar Genc, Emir Kaan Korukluoglu, James Allan  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.25249)  
+
+**Abstract**: Modern Information Retrieval (IR) systems typically use a "retrieve-then-rerank" pipeline, where a computationally expensive, pre-determined cross-encoder re-ranks the top results from a fast initial retriever. While effective, this approach often applies heavy re-ranking models regardless of query complexity, resulting in high latency and wasted computational resources on simple queries. We propose Adaptive Re-Ranking, an utility-based labeling framework for cost-aware routing and present empirical evidence (via oracle analysis and a trained baseline router) that per-query routing offers large potential gains but is non-trivial to learn from limited supervision. We train a routing classifier with 3 strategies: sparse retrieval (BM25), dense re-ranking (MiniLM-L6-v2), and heavy neural re-ranking (BGE-v2-m3). Compared to BGE our method achieves 1.15-53x lower median latency and 1.11-5.22x lower mean latency across all datasets we have tested, while delivering -17.5% to +4.0% nDCG@10, which is competitive in some datasets. Our findings show that routing queries based on our novel utility function offers a scalable solution for reducing computational costs and latency in a variety of IR systems. 
+
+---
+# Extreme Meta-Classification for Large-Scale Zero-Shot Retrieval 
+
+**Authors**: Sachin Yadav, Deepak Saini, Anirudh Buvanesh, Bhawna Paliwal, Kunal Dahiya, Siddarth Asokan, Yashoteja Prabhu, Jian Jiao, Manik Varma  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.25237)  
+
+**Abstract**: We develop accurate and efficient solutions for large-scale retrieval tasks where novel (zero-shot) items can arrive continuously at a rapid pace. Conventional Siamese-style approaches embed both queries and items through a small encoder and retrieve the items lying closest to the query. While this approach allows efficient addition and retrieval of novel items, the small encoder lacks sufficient capacity for the necessary world knowledge in complex retrieval tasks. The extreme classification approaches have addressed this by learning a separate classifier for each item observed in the training set which significantly increases the representation capacity of the model. Such classifiers outperform Siamese approaches on observed items, but cannot be trained for novel items due to data and latency constraints. To bridge these gaps, this paper develops: (1) A new algorithmic framework, EMMETT, which efficiently synthesizes classifiers on-the-fly for novel items, by relying on the readily available classifiers for observed items; (2) A new algorithm, IRENE, which is a simple and effective instance of EMMETT that is specifically suited for large-scale deployments, and (3) A new theoretical framework for analyzing the generalization performance in large-scale zero-shot retrieval which guides our algorithm and training related design decisions.
+Comprehensive experiments are conducted on a wide range of retrieval tasks which demonstrate that IRENE improves the zero-shot retrieval accuracy by up to 15% points in Recall@10 when added on top of leading encoders. Additionally, on an online A/B test in a large-scale ad retrieval task in a major search engine, IRENE improved the ad click-through rate by 4.2%. Lastly, we validate our design choices through extensive ablative experiments. The source code for IRENE is available at this https URL. 
+
+---
+# TokenMinds: Pretrained User Tokens and Embeddings for User Understanding in Large Recommender Systems 
+
+**Authors**: Qingyun Liu, Bo Yan, Yang Liu, Yuji Roh, Ekansh Sharma, Likang Yin, Emma Olowo, Min-hsuan Tsai, Yuxuan Li, Diego Uribe, Saksham Aggarwal, Siqi Wu, Yuan Hao, Vikas Kedigehalli, Lukasz Heldt, Lichan Hong, Li Wei, Xinyang Yi  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.25147)  
+
+**Abstract**: User modeling in industrial recommender systems typically produces dense embeddings, which suffer from representational constraints inherent to fixed-dimensional vectors. An emerging alternative for discrete user representation -- using LLMs to generate text-based user tokens -- captures topical co-occurrences rather than deep sequential behavior dynamics and produces outputs that are difficult to ground to item attributes. Meanwhile, Semantic ID (SID) based item tokenization has proven effective for improving generalization in generative recommendation, yet discrete SID-based representations for users remain largely unexplored. We propose TokenMinds, an industrial-scale system that extends the PLUM framework from item retrieval to user modeling, generating both discrete SID-based user tokens and dense user embeddings via an encoder-decoder architecture adapted from pre-trained LLMs. This dual-output design provides the complementary benefits of discrete, semantically grounded user representations while maintaining compatibility with existing downstream models that rely on dense embeddings. Additionally, the shared SID vocabulary naturally extends to cross-scenario modeling: by unifying long-form and short-form video behaviors into a single model, we substantially reduce training and serving costs. We validate TokenMinds through extensive offline experiments and live launches on multiple YouTube surfaces, served on full user traffic (billions of users) via an asynchronous infrastructure that decouples representation generation from downstream scoring. Focusing on ranking as the primary downstream use case, our results confirm the practical viability of SID-based user tokens at industrial scale and demonstrate that tokens and dense embeddings provide complementary value across different production ranking systems. 
+
+---
+# Tracing Target Answers in Poisoned Retrieval Corpora via Token Influence Attribution 
+
+**Authors**: Yan-Lun Chen, Pin-Yu Chen, Chia-Mu Yu, Ying-Dar Lin, Yu-Sung Wu, Wei-Bin Lee  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.25721)  
+
+**Abstract**: Retrieval-Augmented Generation (RAG) systems are vulnerable to corpus poisoning attacks that manipulate model outputs through malicious retrieved documents. Existing detection methods typically rely on auxiliary classifiers or additional LLM-based verification, introducing substantial computational overhead. We present TRACE, a lightweight detection framework that identifies poisoning attacks by tracing answer-related tokens through token influence attribution. TRACE first discovers recurrent high-influence keywords across retrieved documents and then performs a secondary verification to confirm their influence on model predictions. Experiments on three QA benchmarks and six LLMs demonstrate strong detection performance while simultaneously uncovering attacker-specified target answers. 
+
+---
+# BitNet Text Embeddings 
+
+**Authors**: Zhen Li, Xin Huang, Liang Wang, Nan Yang, Ting Song, Yan Xia, Xun Wu, Shaohan Huang, Huishuai Zhang, Furu Wei, Dongyan Zhao  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.25674)  
+
+**Abstract**: LLM-based text embedders have substantially improved retrieval and semantic representation quality, but their deployment remains costly: large backbone models slow down embedding inference, while high-dimensional full-precision embeddings impose substantial storage and bandwidth overhead on large-scale indexes. In this paper, we present BITEMBED, an extreme low-bit framework for LLM-based text embedding that jointly targets encoding efficiency and vector storage. BITEMBED converts pretrained LLM backbones into BitNet-style embedding encoders with ternary weights, quantized activations, and lightweight normalization refinement. The converted model is adapted to representation learning through continual contrastive pre-training, followed by supervised contrastive fine-tuning with both similarity-distribution distillation and attention-relation distillation from a full-precision teacher. Beyond quantizing the backbone, BITEMBED further trains output embeddings to support multiple storage precisions meeting different storage needs in various scenarios. Experiments on MMTEB (eng, v2) with Qwen3-0.6B and Gemma3-270M show that BITEMBED is largely comparable to full precision teacher embedders. Moreover, BITEMBED flexibly obtains text embeddings of various precisions, achieving a trade-off between performance and storage cost. 
+
+---
+# Is GraphRAG Needed? From Basic RAG to Graph-/Agentic Solutions with Context Optimization 
+
+**Authors**: Long Chen, Ryan Razkenari, Yuxuan Zhou, Yuan Tian, Rahul Ghosh, Venkatesh Pappakrishnan, Disha Ahuja, Vidya Sagar Ravipati  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.25656)  
+
+**Abstract**: As advanced RAG variants like GraphRAG and Agentic RAG emerge, one leading question is when and how to use them. Here, we introduce a framework for different RAG scenarios evaluation and comparison on semi-structured knowledge bases, including regular RAG, GraphRAG, Modular RAG and Agentic RAG. We provide implementation for 9 standardized RAG scenarios, and conduct experiments for a comprehensive comparison. These scenarios are designed for real use cases regarding data and domain restrictions, spanning from simple document-based retrieval to advanced features such as hybrid text-graph retrieval, integration with computed or pre-defined domain knowledge graphs, agentic multi-step planning, and agent-graph integration. Besides, we present a novel context engineering method for GraphRAG and Agentic RAG, addressing the context/memory overflow issues, efficiently managing text and graph retrievals with new representations and agentic loop design, leading to 19%-53% reduction on token usage. Moreover, further analysis identifies a retrieval-generation gap where expanded retrieval does not proportionally improve generation quality, suggesting retrieval-oriented metrics overstate advanced retrieval benefits. This work provides data-driven insights on when and how to use them for building production-ready intelligent RAG systems. 
+
+---
+# Three Buddhist Vocabularies: Computational Stylometry of the English Pali Canon across Sutta, Vinaya, and Abhidhamma 
+
+**Authors**: Joy Bose  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.25372)  
+
+**Abstract**: We present a computational stylometric analysis of the Tipitaka across all three Pitakas in English translation, extending earlier work on the Sutta Pitaka alone. The corpus spans 134,831 segments from Bhikkhu Sujato's Sutta Pitaka (114,591 segments, CC0), Bhikkhu Brahmali's Vinaya Pitaka (7,923 segments, CC0 2026), I.B. Horner's 1938 Vinaya translation (2,826 segments), three English translations of the Abhidhammattha Sangaha compendium (2,077 segments), and cross-tradition Vinaya texts from the Dharmaguptaka and Mulasarvastivada schools. We compute Zipf rank-frequency distributions with OLS-fitted exponents, Moving Average TTR (MATTR-500), numeral-word density, and vocabulary overlap (Jaccard and Szymkiewicz-Simpson coefficients). Main findings: (1) all corpora show Zipf-consistent distributions (R2 > 0.989); the Vinaya is closest to ideal Zipf slope -1 and the Sangaha corpus deviates most, with 'consciousness' displacing grammatical particles at rank 8; (2) MATTR-500 shows the Sutta and Vinaya Theravada are nearly identical in lexical diversity (0.399 and 0.400), while the Sangaha corpus is genuinely more diverse (0.560), confirmed by size-controlled subsampling; (3) the Sangaha corpus has the highest numeral-word density (3.26%), consistent with its systematic enumeration of mental and material categories; (4) the Mulasarvastivada Vinaya shares 20.0% vocabulary (Jaccard) and 49.1% (overlap coefficient) with the Theravada Vinaya, reflecting shared legal heritage across two millennia; (5) two English translations of the same Vinaya source text share only 24.2% of their vocabulary across 88 years, with 'musing' versus 'absorption' for jhana and 'defeat' versus 'expulsion' for parajika as the most diagnostic shifts. All results are point estimates; no significance testing is conducted. Code and data are released as open-source extensions to the Darshana Graph corpus (arXiv:2606.18222). 
+
+---
+# Memory Makes the Difference: Evaluating How Different Memory Roles Shape Conversational Agents 
+
+**Authors**: Yuxin Wang, Paul Thomas, Zhiwei Yu, Yuan Gao, Saeed Hassanpour, Soroush Vosoughi, Robert Sim, Nick Craswell  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.25361)  
+
+**Abstract**: Prior research on memory mechanism in RAG-based conversational system has emphasized how memory is stored and retrieved. However, far less is known about how memories with different functional roles influence response quality. Specifically, how they shape an agent's responses under varying conversational contexts and whether they lead to substantively different response behaviors. Existing evaluations in conversational system are also largely reference-based, insufficiently capturing the nuances in responses that may address users' preferences differently. In this work, we probe the impact of different memory types in shaping agents' responses. We present a fine-grained taxonomy of conversational memory, classify retrieved memories into different role types, and design a user-centric evaluation framework that simulates user perspectives. Through comparative experiments on long-term datasets and frontier LLMs, our analysis reveal many differentiated effects of memories: e.g., clarifying memory improves responses' factual accuracy and constraint awareness, making them more correct and personalized; irrelevant memory reduces topic relevance and degrades constraint awareness. Despite the power of frontier LLMs, these findings shed light on how different memory types can be leveraged to produce more personalized responses and inspire further research in this direction. 
+
+---
+# Data-Driven Evolution of Library and Information Science Research Methods (1990-2022): A Perspective Based on Fine-grained Method Entities 
+
+**Authors**: Chengzhi Zhang, Yi Mao, Shuyu Peng  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.25320)  
+
+**Abstract**: Since the 1990s, advancements in big data and information technology have increasingly driven data-centric research in the field of Library and Information Science (LIS). To assess the influence of this data-driven research paradigm on the LIS discipline, this study conducts a fine-grained analysis to uncover the evolutionary trends of research methods within the domain. Using academic papers from LIS published between 1990 and 2022, four key categories of data-driven method entities are automatically extracted: algorithms and models, data resources, software and tools, and metrics. Based on these entities, the study examines the evolution of LIS research methods from three dimensions: the characteristics of research method entities over time, their evolution within different research topics, and the evolutionary features of research method entities across various research methods. The findings highlight data resources as a pivotal driver of methodological evolution in LIS, revealing a cyclical pattern of "emergence-stability/practical application" in the development of research methods within the field. 
+
+---
+# Measuring Research Difficulty of Academic Papers: A Case Study in Natural Language Processing 
+
+**Authors**: Haochuan Li, Jingyuan Li, Yi Zhao, Heng Zhang, Yukai Yang, Zile Hu, Chengzhi Zhang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.25307)  
+
+**Abstract**: With the rapid growth of the number of academic papers, systematically evaluating the difficulty of research and its relationship to academic impact offers important significance for research topic selection and resource allocation. However, current studies lack quantitative assessments of research difficulty and its correlation with academic impact. This paper proposes a comprehensive evaluation system for research difficulty, incorporating factors such as academic collaboration, content, and references. Taking the field of Natural Language Processing (NLP) as a case study, we extract both internal and external features from academic papers, compute multiple research difficulty indicators. We assign their weights using the entropy weight method and perform a weighted sum to obtain the research difficulty score of academic papers. This paper uses the citation frequency of academic papers to measure academic impact. To validate our approach, NLP experts assessed the difficulty of a sample of papers, and correlation analyses confirmed the reliability of our measurement. Empirical results reveal that in NLP, factors such as the number of pages, reference count, and participation of high-level institutions are significantly associated with academic impact. Moreover, we identify an inverted U-shaped relationship between research difficulty and academic impact. It suggests that moderately difficult research tends to achieve greater academic impact. 
+
+---
+# Automatic Generation of Highlights for Academic Paper Via Prompt-based Learning 
+
+**Authors**: Yi Xiang, Chengzhi Zhang, Heng Zhang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.25253)  
+
+**Abstract**: Highlights provide a concise summary of the main contributions of an academic paper and help readers quickly understand its focus. However, many journals do not provide highlights, which limits their use in literature retrieval, text mining, and bibliometric analysis. Existing studies have explored supervised learning methods for automatic highlight extraction, but these methods usually require large amounts of labeled training data. This study investigates prompt-based learning for automatic highlight generation. We design task-specific prompt templates and combine them with paper abstracts as model inputs. Several language models are evaluated, including locally deployed pre-trained models such as GPT-2 and T5, as well as ChatGPT accessed through an API. Experiments on three datasets show that ChatGPT with prompt templates achieves performance comparable to previous supervised methods without using task-specific training samples. When a small number of examples are added to the prompts, the model significantly outperforms state-of-the-art methods on two datasets. We further analyze how prompt design affects generation quality and find that, although ChatGPT has strong language modeling ability, its performance on this task is highly sensitive to the information provided in the prompt. Case studies also show that the generated highlights are generally coherent, informative, and close to author-written highlights. This study is among the first to apply prompt-based learning to academic highlight generation. The proposed method does not rely on domain-specific training corpora and can generate highlights for papers that lack such information, thereby supporting downstream text mining and bibliometric research. 
+
+---
+# The Hitchhiker's Guide to Agentic AI: From Foundations to Systems 
+
+**Authors**: Haggai Roitman  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.24937)  
+
+**Abstract**: The Hitchhiker's Guide to Agentic AI is a comprehensive practitioner's reference for building autonomous AI systems. The book covers the full stack from first principles to production deployment, organized around a central thesis: building great agentic systems requires understanding every layer of the pipeline, not just one. The book opens with the LLM substrate -- transformer architecture, GPU systems, training and fine-tuning (SFT,LoRA, MoE), model compression, and inference optimization -- treated as essential foundations rather than the primary focus. It then develops the alignment and reasoning layer: reinforcement learning from human feedback (RLHF), PPO, DPO and its variants, GRPO, reward modeling, and RL for large reasoning models including chain-of-thought and test-time scaling. The second half is devoted to agentic AI proper. Topics include agentic training and trajectory-based RL, retrieval-augmented generation (RAG and Agentic RAG), memory systems (in-context, external, episodic, and semantic), agent harness design and context management, and a taxonomy of agent design patterns. Inter-agent coordination is covered in depth: the Model Context Protocol (MCP), agent skills and tool use, the Agent-to-Agent (A2A) communication protocol, and multi-agent architectures spanning centralized, decentralized, and hierarchical topologies. The book concludes with agent development frameworks, agentic UI design, evaluation methodology for agentic tasks, and production deployment. Each chapter pairs rigorous theoretical foundations with implementation guidance, code examples, and references to the primary literature. 
+
+---
+# Error-Aware TF-IDF Retrieval-Augmented Generation for ASR Error Correction 
+
+**Authors**: Mohammad Aref Jafari-Raddani  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.24915)  
+
+**Abstract**: End-to-end automatic speech recognition systems frequently hallucinate rare entities and domain-specific terms, especially in low-resource languages. While retrieval-augmented generation frameworks can mitigate these errors using large language models, current architectures face significant challenges. They either rely on standard sparse retrieval that ignores phonetic misrecognitions or utilize heavyweight cross-modal embeddings that introduce high latency. This letter proposes a highly efficient, purely lexical error-aware framework designed to explicitly resolve phonetic and loop hallucinations. Our approach integrates a symmetric text normalization module with a novel error-aware term frequency-inverse document frequency algorithm. By constructing a sparse diagonal penalty matrix based on historical errors, the retriever mathematically prioritizes corrective documents containing specific high-risk misrecognitions. Evaluated on the Persian subset of the FLEURS dataset, our method increased the error-aware hit rate from 53.7% to 90.9%. In end-to-end evaluations, the integrated framework reduced the final word error rate from 23.06% to 18.83%, achieving significant accuracy gains with near-zero inference latency. 
+
+---
+# Invisible to humans, visible to machines: a preregistered audit of Unicode fidelity across four biomedical bibliographic APIs 
+
+**Authors**: Przemysław Czuma  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.24897)  
+
+**Abstract**: Biomedical text mining, scientometrics, and the construction of training corpora for biomedical large language models (LLMs) all assume that the abstract text returned by a bibliographic API faithfully reproduces the published abstract. This pre-registered audit (OSF this http URL) tests that assumption for four widely used public APIs (PubMed E-utilities, Crossref, OpenAlex, Semantic Scholar) against PubMed Central (PMC) JATS XML as a common ground truth. From a complete enumeration of the PMC Open Access subset for 2024 (about 700,000 records), a simple random sample of 4,000 English-language research articles was drawn; for each, we recorded whether Unicode characters from four pre-specified classes present in the JATS abstract (typographic punctuation, mathematical/scientific symbols, Greek letters, special whitespace) were preserved by each API. Two systematic, deterministic losses met the pre-registered criterion (upper 95% CI bound below 5%): the PubMed AbstractText field preserved typographic punctuation in only 0.6% of eligible abstracts (95% CI 0.3-1.0%), and OpenAlex preserved special whitespace in 0% (0.0-0.4%). A blinded mechanism audit attributed the first loss to character substitution and the second to inverted-index serialization. Mathematical symbols and Greek letters were preserved faithfully (over 95%) by all four APIs. Separately, Crossref returned no abstract for 24.6% of papers (coverage 75.4%, 95% CI 74.1-76.7%), concentrated in specific publishers (Elsevier and ACS: 0%). Character-level fidelity is therefore API-dependent and undocumented: the same publisher-deposited JATS text carries different surface signatures depending on the serving API, with direct consequences for tokenization-sensitive bibliometrics, corpus construction, and character-level indicators of LLM-assisted writing. 
+
+---
