@@ -1,0 +1,100 @@
+# GR2 Technical Report 
+
+**Authors**: Yufei Li, Zaiwei Zhang, Mingfu Liang, Kavosh Asadi, Jay Xu, Jimmy Kim, Chongyang Bai, Jieyi Zhang, Hongye Xie, Prachi Agrawal, Dian Yu, Tianyi Chen, Jean-Pascal Billaud, Garret Buell, Sachin Patil, Brooke Bian, Zhou Fang, Kevin Huang, Shiva Sudanagunta, Yuzhen Huang, Emma Lu, Chris O'Brien, Yang Song, Lihong Li, Jacob Tao, Zhicheng Zhu, Chao Li, Gaoxiang Liu, Neil Wu, Zhongyin Hu, Li Han, Loki Chen, Ming Lei, Greg Rehm, Siyuan Song, Tianwei Zhang, Li Li, Ketan Singh, Yavuz Yetim, Ilyas Atishev, Satendra Gera, Ashkan Sadeghi, Rachel Yan, Nikko Mizutani, Shuaiwen Wang, Song Yang, Zhijing Li, Jiang Liu, Mengying Sun, Fei Tian, Xiaohan Wei, Chonglin Sun, Parish Aggarwal, Kaushik Rangadurai, Zhi Hua, Frank Shyu, Ruchit Sharma, Liyuan Li, Shike Mei, Wenlin Chen, Santanu Kolay, Ben Schulte, Deepak Chandra, Adam, Song, Sandeep Pandey, Xi Liu, Hamed Firooz, Luke Simon  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.31984)  
+
+**Abstract**: Industrial recommendation systems serve billions of users through a multi-stage funnel -- retrieval, early-stage ranking, and re-ranking -- where the final re-ranking step disproportionately shapes user engagement and downstream performance, particularly for carousel and grid display formats. Despite growing enthusiasm for Large Language Models (LLMs) in recommendation, three gaps hinder industrial adoption: (1) most efforts target retrieval and ranking, leaving re-ranking -- the stage closest to the final user experience -- largely underexplored; (2) LLMs are typically deployed zero-shot or via supervised fine-tuning, underutilizing the reasoning capabilities unlocked by reinforcement learning (RL) on verifiable rewards; (3) deployed catalogs index billions of items with non-semantic identifiers that lie outside any base-LLM vocabulary. We present GR2 (Generative Reasoning Re-Ranker), an end-to-end framework that combines (i) mid-training on semantic IDs produced by a tokenizer with >=99% uniqueness, (ii) reasoning-trace distilled from a stronger teacher via targeted prompting and rejection sampling, and (iii) RL with verifiable rewards purpose-built for re-ranking. To make GR2 resource-viable, we further (iv) introduce a context compressor that amortizes training cost, On-Policy Distillation (OPD) as a scalable alternative to SFT -- which we find collapses at industrial scale -- and reasoning distillation for low-latency serving. GR2 delivers +18.7% R@1, +7.1% R@3, and +9.6% N@3 over legacy baselines on industrial-scale traffic. We further find that reward design is critical in re-ranking: LLMs often hack rewards by preserving the incoming order or exploiting position bias, motivating conditional verifiable rewards as essential industrial components. 
+
+---
+# An Open-Source Tool for Reproducible Freeway Network Extraction from OpenStreetMap 
+
+**Authors**: Drew Miller, Cathy Wu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.31857)  
+
+**Abstract**: Freeway simulation is often difficult to deploy at scale not only because of model formulation, but because preparing road network inputs remains a manual, corridor-specific, and difficult-to-reproduce task. This paper presents an open-source tool that extracts freeway networks from OpenStreetMap (OSM) and converts them into a compact, station-referenced representation suitable for downstream freeway simulation. Unlike existing tools that primarily support arterial or general network conversion tasks, the proposed workflow is designed around the specific requirements of freeway traffic studies. The tool supports not only OSM data cleaning and conversion, but also the broader workflow required in practice: corridor-specific querying, visual inspection of extracted segments, extraction validation against OSM, and source-data validation against aerial imagery. A locally hosted frontend allows users to define corridor-specific queries, select endpoints visually, and inspect extracted segments.
+The extraction logic is designed to address several recurring challenges in freeway OSM data, including inconsistent route references, ambiguous path selection through interchanges, managed-lane interference, incomplete corridor capture from naive bounding-box queries, and inconsistent ramp classifications. The workflow was first tested on two prototype corridors, where the extract-first-then-validate approach proposed here required roughly one-third the analyst effort of manual ramp encoding from scratch. It was then deployed across 359.6 miles of freeway in Orange County, California, with total processing and validation averaging about 41 seconds per mile. This deployment also suggests that, in a well-mapped region, OSM is sufficiently accurate for many freeway traffic studies. Overall, the tool provides a more scalable and reproducible foundation for freeway network preparation. 
+
+---
+# ShopX: A Foundation Model for Intent-to-Item Fulfillment in Agentic Shopping 
+
+**Authors**: Jiacheng Chen, Tao Zhang, Manxi Lin, Dunxian Huang, Teng Shi, Honghao Fu, Mengyan Li, Xinming Zhang, Chenchi Zhang, Xuan Lu, Xiaoxiong Du, Haibin Chen, Shaolin Ye, Hao Chang, Xiaoqi Li, Shuwen Xiao, Yujin Yuan, Jingxuan Feng, Shaopan Xiong, Huimin Yi, Ju Huang, Qiu Shen, Ying Chen, Junjun Zheng, Xiangheng Kong, Yuning Jiang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.31693)  
+
+**Abstract**: The wave of AI-native applications is moving shopping beyond page- and feed-based browsing toward intent-driven experiences orchestrated by LLM agents. A common design wraps an LLM around existing search and recommendation pipelines, forcing complex intents through low-bandwidth retrieval or ranking interfaces and leaving a gap between language understanding and item-space fulfillment. Generative recommendation gives LLMs a direct item-space interface through semantic IDs (SIDs), but existing models mainly generate candidates for retrieval rather than translate flexible intents into item-space outcomes. We propose ShopX to address this bottleneck by unifying intent understanding, execution planning, and flexible SID-native item-space operations into a single foundation model. We deploy ShopX in agentic shopping workflows through a model-native item-fulfillment framework with a serving harness that defines a model-facing action protocol and exposes support surfaces for context access, catalog grounding, and state management. Within this framework, ShopX plans and composes SID-based item-space operations such as SID beam-search retrieval, listwise ranking, or product bundling. This model-centric design reduces lossy hand-offs between agent orchestration and item-space execution. To build ShopX, we design semantically recoverable, LLM-operable SIDs and a training recipe that equips a general LLM for flexible multi-turn item-space fulfillment while retaining the knowledge and instruction-following abilities needed by a shopping agent. We evaluate the ShopX framework against tool-mediated agentic systems on single- and multi-turn fulfillment tasks derived from anonymized Taobao production logs, showing that model-native fulfillment improves overall framework behavior, especially on complex or ambiguous requests. 
+
+---
+# Unsupervised Data-Efficient Cross-Modal Retrieval with Global-Neighborhood Alignment Hashing 
+
+**Authors**: Runhao Li, Xiaoxu Ma, Zhenyu Weng, Yue Zhang, Guibo Luo, Huiping Zhuang, Zhiping Lin, Yap-Peng Tan  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.31517)  
+
+**Abstract**: Compared to supervised cross-modal hashing (CMH), unsupervised CMH reduces the reliance on manual labeling by learning binary codes from unlabeled image-text pairs. However, existing unsupervised CMH methods often rely on large-scale image-text pairs, which are costly to collect. To address this limitation, we propose Global-Neighborhood Alignment Hashing (GNAH), a novel approach that preserves the semantic structure of vision-language foundation models within a compact binary Hamming space using only a limited number of image-text pairs. Specifically, GNAH captures global structural information from the continuous latent space and transfers it into the binary Hamming space through a Prototype-Anchored Global Alignment module. In addition, GNAH extends conventional pairwise contrastive learning by modeling stochastic neighborhood relationships via a Contrastive Stochastic Neighborhood Alignment module, thereby alleviating overfitting to sparse pairwise correlations. Extensive experiments demonstrate that GNAH consistently outperforms existing unsupervised cross-modal retrieval methods under data-constrained settings, offering a practical solution for real-world CMH applications. 
+
+---
+# One Retrieval to Cover Them All: Co-occurrence-Aware Knowledge Base Reorganization for Session-Level RAG 
+
+**Authors**: Shivam Ratnakar, Yixuan Zhu, Cecilia Cheng, Chaya Vijayakumar  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.31156)  
+
+**Abstract**: RAG systems retrieve documents optimized for answering one query at a time. Yet enterprise users arrive with sessions, that is, coherent episodes of related questions that span semantically distant parts of the knowledge base. We show that a single retrieval call over a standard knowledge base covers only 41% of a user's session-level information need. To close this gap, we reorganize the KB offline using co-occurrence-aware clustering and expand retrieval candidates through cluster neighborhoods at query time. On WixQA (6,221 enterprise support articles), our method raises single-query session coverage to 58% (+17% absolute; 95% CI: [14.1, 20.4]), reduces retrieval calls to 70% coverage by 34%, and compresses the KB to 20% of its original size, all consistently across four embedding models and six functional domains. We argue that session-level coverage, not single-query recall, should be the primary metric for enterprise RAG evaluation. 
+
+---
+# GenPage: Towards End-to-End Generative Homepage Construction at Netflix 
+
+**Authors**: Lequn Wang, Jiangwei Pan, Fengdi Che, Linas Baltrunas  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.31031)  
+
+**Abstract**: We present GenPage, an end-to-end generative approach to Netflix homepage construction that replaces the traditional multi-stage recommender stack with a single transformer. GenPage treats the user and request context as a prompt, and autoregressively generates the entire structured, multi-row homepage as the response. We adapt the LLM training recipe: pretraining on production pages, followed by post-training via weighted binary classification (WBC) or reinforcement learning (RL). For industry-scale deployment, we introduce techniques addressing cold start, model freshness, business-rule enforcement, and serving efficiency. In online A/B tests against a mature, highly optimized production homepage recommender, the WBC variant of GenPage delivered a +0.24% lift on the core user engagement metric we use for launch decisions (p < 0.001), while reducing end-to-end serving latency by 20%. Offline, two findings stand out: enriching the prompt yields a larger improvement than scaling model capacity in our current regime, and RL post-training increases homepage diversity even though diversity is not part of the objective. 
+
+---
+# Towards Critical IR Theories and Practices 
+
+**Authors**: Bhaskar Mitra  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.30984)  
+
+**Abstract**: Belkin and Robertson urged us, half a century ago, to develop a theoretical foundation for understanding what constitutes societal good that can inform information retrieval (IR) research and serve as a basis for determining when we should limit our scientific inquiry in the face of demands that are contradictory to societal good. In this article, I argue that to achieve this, IR should embrace critical theories and practices in our work, and shift away from the dominant liberal frame through which much of the IR community today view societal concerns in context of our research. Unlike the liberal frame, the critical frame explicitly adopts nondomination as its stated goal which can clarify our conceptualization of societal good within the field, provide necessary theoretical underpinning that Belkin and Robertson urged the community to develop, and serve as a basis for critical appraisals of our progress in enacting desired societal change. 
+
+---
+# Usage frequency and application variety of research methods in library and information science: Continuous investigation from 1991 to 2021 
+
+**Authors**: Chengzhi Zhang, Liang Tian, Heting Chu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.31081)  
+
+**Abstract**: The present study analyzed over 26,000 research articles published between 1991 and 2021 in twenty-one major LIS (Library and Information Science) journals, using the machine learning (ML) approach to categorize the research methods used by LIS scholars. The findings of this study are significant. Firstly, there has been a shift in the research strategy from conceptual research (e.g., "Theoretical approach") to empirical research (e.g., "Interview") in LIS investigations over the past 31 years. Secondly, the research topics explored by LIS scholars during this period have moved from system-centered issues (e.g., "Information retrieval/models and algorithms") to user-centered topics (e.g., "Information services "). Thirdly, the study revealed dynamic and revealing relationships between the 18 research topics identified in the study and the 16 research methods commonly adopted in the LIS field. These dynamic relationships can be visualized by year and longitudinally via an interactive map created in this study. 
+
+---
+# Building a Multimodal Dataset of Academic Paper for Keyword Extraction 
+
+**Authors**: Jingyu Zhang, Xinyi Yan, Yi Xiang, Yingyi Zhang, Chengzhi Zhang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.31069)  
+
+**Abstract**: Up to this point, keyword extraction task typically relies solely on textual data. Neglecting visual details and audio features from image and audio modalities leads to deficiencies in information richness and overlooks potential correlations, thereby constraining the model's ability to learn representations of the data and the accuracy of model predictions. Furthermore, the currently available multimodal datasets for keyword extraction task are particularly scarce, further hindering the progress of research on multimodal keyword extraction task. Therefore, this study constructs a multimodal dataset of academic paper consisting of 1000 samples, with each sample containing paper text, images, audios and keywords. Based on unsupervised and supervised methods of keyword extraction, experiments are conducted using textual data from papers, as well as text extracted from images and audio. The aim is to investigate the differences in performance in keyword extraction task with respect to different modal information and the fusion of multimodal information. The experimental results indicate that text from different modalities exhibits distinct characteristics in the model. The concatenation of paper text, image text and audio text can effectively enhance the keyword extraction performance of academic papers. 
+
+---
+# Exploring the relationship between team institutional composition and novelty in academic papers based on fine-grained knowledge entities 
+
+**Authors**: Ziling Chen, Chengzhi Zhang, Heng Zhang, Yi Zhao, Chen Yang, Yang Yang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.31058)  
+
+**Abstract**: The composition of author teams is an important factor influencing the novelty of academic papers. However, existing studies have paid limited attention to the role of institutional composition, and most novelty measures remain at a general level, making it difficult to explain the specific sources and types of novelty in papers. Taking the field of natural language processing as an example, this study investigates the relationship between team institutional composition and the fine-grained novelty of academic papers. Author teams are classified into three types: academic institutions, industrial institutions, and mixed academic and industrial institutions. Four types of fine-grained knowledge entities are extracted from full-text papers, including methods, datasets, tools, and metrics. The novelty of papers is then measured based on entity combinations, and pairwise combinations of different entity types are further analyzed to examine their contributions to novel papers. The results show that, in the field of natural language processing, collaboration between industrial and academic institutions is more likely to produce novel papers than purely industrial collaboration. From the perspective of fine-grained knowledge entities, mixed academic and industrial teams pay more attention to the novelty of method-metric combinations, whereas industrial teams pay more attention to the novelty of method-tool combinations. This study reveals the relationship between institutional team composition and paper novelty through fine-grained novelty measurement, providing useful evidence for improving paper quality and promoting industry-academia-research collaboration. 
+
+---
+# Information Terra: A Narrative-Anchored Semantic-First Projection of Document Embeddings 
+
+**Authors**: Brian Keith-Norambuena, Fausto German, Chris North  
+
+**Link**: [PDF](https://arxiv.org/pdf/2606.30824)  
+
+**Abstract**: We introduce Information Terra, a narrative-anchored semantic-first projection that places a document corpus on an Earth-like globe whose poles are two user-chosen endpoint documents and whose prime meridian is the great-circle geodesic between them on the embedding hypersphere -- so latitude encodes narrative progress and longitude thematic deviation. Land features are recovered from document density via kernel density estimation and labeled by theme. A narrative trail built from the underlying narrative coherence graph, and constrained to be monotone in geodesic progress, provides a readable storyline. The projection's axes are semantically grounded in the user's chosen narrative endpoints, and the globe metaphor affords rotation and antipodal reading. We demonstrate the method on a 540-article Cuban Protests corpus, showing a storyline from Obama's 2016 visit to the 2021 International Aid during the protests. 
+
+---
