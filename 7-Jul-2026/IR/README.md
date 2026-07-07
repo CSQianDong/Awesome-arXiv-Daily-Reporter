@@ -1,0 +1,310 @@
+# Do All Visual Tokens Matter Equally? Object-Evidence Preserving Token Merging for Vision-Language Retrieval 
+
+**Authors**: Suhyeong Park, Junha Jung, Jungwoo Park, Jaewoo Kang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2607.04605)  
+
+**Abstract**: Multi-vector vision-language retrieval preserves fine-grained visual evidence through maximum-similarity late interaction, but dense image-side tokens make storage and scoring expensive. Existing token compression methods reduce this cost, yet they can remove or collapse object- and region-level evidence that future query tokens may need to select. We propose SaMer, an object-aware token merging framework that compresses image-side post-projector tokens into $K$ representative centroids while preserving the original late-interaction interface. SaMer uses object annotations only during training as a merge prior to discourage cross-instance mixing, requires no ground-truth bounding boxes or detectors at inference time, and adapts only the shared projection layer with frozen vision and language backbones. With $K=64$, SaMer removes more than 93% of image-side tokens and reduces ColPali storage by $16.09\times$, while improving R@1 on Flickr30K and MSCOCO. These gains arise because object-aware merging preserves query-selectable object evidence that pruning or feature-only pooling can remove or collapse. SaMer also outperforms compression baselines and shows stronger phrase-level grounding, suggesting that efficient multi-vector retrieval depends not only on reducing token count, but on preserving the evidence future query tokens need to select. 
+
+---
+# Evaluation and Explainability of Unsupervised Scholarly Collaboration Recommendations 
+
+**Authors**: Md Asaduzzaman Noor, John W. Sheppard, Jason A. Clark  
+
+**Link**: [PDF](https://arxiv.org/pdf/2607.04529)  
+
+**Abstract**: In this paper, we examine unsupervised, content-based collaboration recommendations using publication text in scholarly settings. We compare three families of methods: a TF-IDF baseline, topic-based models (LDA and BERTopic, including clone variants), and embedding-based retrieval using SciBERT with Faiss. To evaluate model behavior beyond simple lexical matching, we introduce a constrained setting where publication overlap between researchers is partially removed while still using historical co-authorship as proxy ground truth for post-hoc evaluation. Results show clear differences across methods. TF-IDF performs best under full information but drops significantly as overlap is reduced. In contrast, topic-based and embedding-based approaches show more stable performance, suggesting they capture broader distributional similarities, rather than relying only on direct lexical overlap. We also examine explainability through two perspectives: intrinsic topic-based explanations and post-hoc, retrieval-based explanations generated using language models. These provide complementary trade-offs between transparency and human readability. 
+
+---
+# Autonomous Information Seeking: A Roadmap for Agentic Recommender Systems 
+
+**Authors**: Xinyu Lin, Yashar Deldjoo, Sunhao Dai, Honghui Bao, Xiaopeng Ye, Fatemeh Nazary, Wenjie Wang, Tommaso Di Noia, Jun Xu, Tat-Seng Chua  
+
+**Link**: [PDF](https://arxiv.org/pdf/2607.04433)  
+
+**Abstract**: The rapid integration of large language model-based agents into recommender systems has driven a shift from static, ranking-based pipelines toward autonomous and interactive systems that can reason, plan, and act. This survey provides a comprehensive overview of this emerging landscape by introducing a unified taxonomy grounded in the level of autonomy and three core paradigms of agentic recommender systems: agent-assisted recommendation, agent-as-recommender, and agent-as-user-simulator. The autonomy framework organizes existing methods along increasing capabilities in proactivity, context awareness, interaction flexibility, and adaptivity. Building on this framework, the survey analyzes how each paradigm adopts different agentic architectures and how agents enhance key components such as profiles, memory, tool use, workflows, and optimization mechanisms. We further examine evaluation methodologies for agentic recommendation, covering automated metrics, LLM-based judging, and simulation-based assessment, and discuss their limitations in capturing reasoning quality, user experience, and system behavior. Beyond existing evaluation protocols, we further discuss unresolved issues in evaluating agentic recommender systems, including trajectory-level assessment, agent contribution analysis, and calibration of user simulation. Lastly, the survey outlines open challenges in lifelong user modeling, contextual abstraction, multimodal alignment, controllability, trustworthiness, privacy, scalability, and efficiency. Together, these analyses establish a unified foundation for understanding the current progress of agentic recommender systems and highlight promising opportunities for developing more autonomous, reliable, and human-aligned recommendation agents. 
+
+---
+# LBR: Towards Mitigating Length Bias in Large Language Models for Recommendation 
+
+**Authors**: Hongchen Li, Bohao Wang, Jingbang Chen, Weiqin Yang, Hang Pan, Bingde Hu, Can Wang, Jiawei Chen  
+
+**Link**: [PDF](https://arxiv.org/pdf/2607.04270)  
+
+**Abstract**: Large language models (LLMs) have recently emerged as powerful backbones for recommender systems by reformulating recommendation as a token-level generation task. Despite their promise, we identify a pervasive yet underexplored issue: $\textit{Length Bias}$. Because items are represented by textual descriptions of varying lengths, LLM-based recommenders can be systematically biased in two ways. On the input side, longer item descriptions occupy more tokens in the context and thus receive disproportionately large aggregate attention mass during user preference modeling. On the output side, decoding based on summed autoregressive log-likelihood score inherently disfavors long items. Worse still, conventional length normalization can introduce an additional bias and even degrade recommendation performance.
+To address this problem, we propose $\textbf{LBR}$ ($\textbf{L}$ength $\textbf{B}$ias $\textbf{R}$eduction), a lightweight and model-agnostic framework for mitigating length bias in LLM-based recommendation. LBR mitigates input-side bias via Length-Aware Attention Calibration, which incorporates a length-dependent offset into attention logits to neutralize attention skew. For the output side, LBR introduces Effective Information Length Normalization, replacing naive token count with an information-theoretic length surrogate derived from the branching structure of the prefix tree. Extensive experiments on three real-world Amazon datasets and two representative LLM-based recommenders demonstrate that LBR substantially alleviates length bias while consistently improving recommendation accuracy and fairness, with negligible additional training and inference overhead (with an average NDCG@5 gain of 16.82%). The code is available at this https URL. 
+
+---
+# Submitted and Diagnostic Analysis of Full-Text Temporal Retrieval for LongEval-Sci 
+
+**Authors**: Yingdong Yang, Haijian Wu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2607.04088)  
+
+**Abstract**: LongEval-Sci evaluates scientific retrieval under collection change, where a system should be effective on the current corpus and remain usable as documents accumulate over time. This paper reports both official Task 1 results and development diagnostics for LongEval-Sci 2026. We compare the official PyTerrier BM25 and Qwen3 dense baselines with full-text BM25, additive and router variants, temporal full-text retrieval, temporal+citation retrieval, RM3 query expansion, cross-encoder reranking, and reciprocal rank fusion (RRF). In the official DCTR evaluation, the temporalized full-text runs are our strongest submissions: FT BM25+temporal and FT BM25+temporal+citation obtain the best ARP on all three snapshots (0.285, 0.267, and 0.180 nDCG@10) and reduce snapshot-3 relative change from 0.481 for the BM25 pivot to 0.368. Citation features match the temporal-only variant but do not provide a measurable additional gain in the official summary. Our internal snapshot-1 diagnostics show a complementary pattern: full-text BM25 is the strongest single development retriever (DCTR nDCG@10 = 0.3302, MAP = 0.2853), RRF gives the best deep recall (Recall@1000 = 0.9667), and some uncalibrated overlays can sharply degrade top-rank quality. We therefore conclude that full-text retrieval is the strongest foundation, temporal integration can improve official longitudinal effectiveness when applied to that foundation, and citation evidence still requires cleaner ablation and calibration. Beyond ranking, we also report a qualitative weekly IR-system update-monitoring analysis based on ingestion velocity and stale-coverage drift. 
+
+---
+# UniSGR: Unified Framework for Semantic ID Generation and Ranking 
+
+**Authors**: Jiawei Sun, Jun Yang, Ziyue Guo, Dongyue Xu, Jianan Yan, Lifang Deng, Xiaoyi Zeng  
+
+**Link**: [PDF](https://arxiv.org/pdf/2607.04068)  
+
+**Abstract**: Recommendation systems play a pivotal role in modern e-commerce platforms. While generative retrieval has emerged as a promising paradigm for alleviating the limitations of multi-stage cascade architectures, existing methods still struggle with fine-grained multi-objective ranking. To bridge this gap, we propose UniSGR, a Unified framework for Semantic ID Generation and Ranking. UniSGR adopts a two-stage training paradigm: a multi-scenario pre-training stage that learns from mixed business-scenario data, followed by a scenario-specific alignment stage that jointly optimizes Value-Aware Parallel Multi-Token Prediction (VA-PMTP) and a unified multi-objective ranking module. To better align generation with downstream ranking, we introduce Task-Aware Tokens (TAT) guided by Funnel-Aware Contrastive Learning. Furthermore, we propose Semantic Tree Attention with Reorganized KV cache (STARK), an inference strategy that removes key efficiency bottlenecks in conventional beam search. Extensive offline experiments on a large-scale e-commerce platform demonstrate the effectiveness and scalability of UniSGR. 
+
+---
+# Claim2Source at CheckThat! 2026: Improving Multilingual Scientific Claim-Source Retrieval with Verification-based Re-Ranking 
+
+**Authors**: Tobias Schreieder, Harsh Khandelwal, Yu-Ling Zhong, Michael Färber  
+
+**Link**: [PDF](https://arxiv.org/pdf/2607.04043)  
+
+**Abstract**: Multilingual scientific claim-source retrieval aims to identify the scientific publication supporting a claim shared on social media. This task is challenging because claims often differ from source publications in terms of language, wording, and level of detail, which weakens the connection between claims and their underlying evidence. In this paper, we present our approach for the CheckThat! 2026 Lab Task 1: Source Retrieval for Scientific Web Claims. We propose a multi-stage retrieval framework for multilingual scientific claim-source retrieval that combines structured claim and source representations with progressive candidate refinement. To address multilingual retrieval challenges, the framework employs bilingual claim representations, metadata-enhanced source representations, and language-specific adaptation of dense retrieval models. Building on this setup, a first-stage retriever generates an initial pool of candidate sources, after which similarity-based re-ranking improves the ranking of highly relevant sources and verification-based re-ranking identifies the candidate source that best supports the claim using verification signals. Our approach achieves an average MRR@5 score of 0.7628 across English, German, and French claims, ranking first on the CheckThat! 2026 leaderboard. 
+
+---
+# Patient-Conditioned Dual Hypergraph Reasoning for Auditable Traditional Chinese Medicine Prescription Support 
+
+**Authors**: Weizhi Nie, Shaojin Bai, Weijie Wang, Yuting Su  
+
+**Link**: [PDF](https://arxiv.org/pdf/2607.04025)  
+
+**Abstract**: Traditional Chinese medicine (TCM) prescription support requires patient-specific reasoning from clinical narratives to syndromes, treatment principles, herbs, and doses. Direct language-model generation can produce fluent prescriptions, but its decisions are difficult to audit against explicit clinical evidence. Static TCM knowledge resources provide useful priors, but they cannot determine which diagnostic and prescription relations should be emphasized for an individual patient. We propose a patient-conditioned dual hypergraph framework for auditable TCM prescription support. The first hypergraph organizes symptom, tongue, pulse, and other clinical evidence around syndrome and treatment-principle reasoning. The second hypergraph organizes syndrome, treatment, disease-context, herb, retrieval, and dose-prior evidence for prescription construction. Unlike static knowledge graphs or fixed hypergraphs, both hypergraphs are dynamically weighted by the patient representation. This design enables individualized activation of diagnostic and prescription paths, supporting personalized syndrome differentiation and herb-dose recommendation while preserving case-level auditability. Experiments on TCM-SD show that dynamic weighting in the first hypergraph improves MacBERT syndrome differentiation to 0.8297 accuracy and 0.3288 macro-F1. On TCM-BEST4SDT, the second hypergraph achieves the best mean Herb-F1 of 0.3111 across three seeds, and the full connected pipeline reaches 0.3074 Herb-F1, close to the oracle setting. A 50-case real-world CAP audit further suggests practical review potential, while highlighting the need for prospective dose-safety validation. 
+
+---
+# Beyond Item Order: Temporal Gap Tokenization for Generative Recommendation with Semantic IDs 
+
+**Authors**: Chengkai Huang, Tianqi Gao, Hongtao Huang, Quan Z. Sheng, Lina Yao  
+
+**Link**: [PDF](https://arxiv.org/pdf/2607.03918)  
+
+**Abstract**: Semantic-ID-based generative recommendation has recently emerged as a scalable paradigm for sequential recommendation, where each item is represented by a compact sequence of discrete codes and next-item prediction is formulated as code generation. Existing methods, however, typically construct user histories as sequences of static item identifiers, leaving the elapsed time between consecutive interactions outside the generative input. This temporal blindness is problematic because inter-interaction gaps provide useful cues about interest continuity and preference drift. In this paper, we propose ChronoSID, a lightweight temporal augmentation framework for semantic-ID-based generative recommendation. ChronoSID injects temporal signals into the standard three-stage semantic-ID pipeline from two complementary perspectives. First, we introduce Time-Aware Field-Aware Masked Auto-Encoding (TA-FAMAE), which regularizes item representation learning with an auxiliary time-gap prediction objective. Second, we discretize historical interaction intervals into fixed log-scale gap tokens and interleave them with semantic ID tuples as the encoder input of the sequence-to sequence generator. This design preserves the compact SID generation paradigm while enabling the model to capture time-aware transition patterns. Experiments on Amazon review benchmarks show that ChronoSID consistently improves over ReSID and other competitive generative recommendation baselines. Ablation studies further verify the contribution of both temporal components, and diagnostic analyses show clearer gains under long-gap scenarios where user interests are more likely to drift. 
+
+---
+# Enhancement of E-commerce Sponsored Search Relevancy with LLM 
+
+**Authors**: Md Omar Faruk Rokon, Andrei Simion, Weizhi Du, Musen Wen, Hong Yao, Kuang-chih Lee  
+
+**Link**: [PDF](https://arxiv.org/pdf/2607.03886)  
+
+**Abstract**: Sponsored search plays a crucial role as a revenue stream for search engines, wherein advertisers competitively bid on keywords that align with the users' search queries. The task of matching relevant keywords to these queries is complicated by the vast and ever-evolving space of keywords, the ambiguity of user and advertiser intentions, and the wide range of topics and languages involved. Consequently, ensuring that ads are pertinent to user queries presents significant challenges. In the fast-paced world of e-commerce, the accuracy of sponsored search results is vital for boosting user satisfaction and optimizing business operations. This paper presents the development of an advanced Ad Relevance Model within a sponsored search framework, utilizing the power of a pretrained large language model. We detail a pioneering adaptation of the LLAMA2 7B model through Low-Rank Adaptation (LoRA), which markedly enhances search precision and operational efficiency, thus opening new avenues for improving user interactions in extensive online marketplaces such as this http URL. We introduce a novel query and ad title classifier, which discerns the relevance of search interactions across three categories: Relevant, Partially Relevant, and Irrelevant. Our approach involved adapting the pretrained model specifically for the e-commerce sponsored search context, training it on a large dataset. The fine-tuned model demonstrated a marked improvement in ad relevance accuracy, achieving 89.43% accuracy on a comprehensive test dataset -- outperforming both the baseline model and other advanced language models like GPT-4. The integration of LoRA with the based model represents a significant stride in customizing language models for e-commerce applications, resulting in enhanced search accuracy, cost efficiency, and operational privacy -- a triad essential for the modern digital marketplace. 
+
+---
+# Next-Gen Sponsored Search: Crafting the Perfect Query with Inventory-Aware RAG (InvAwr-RAG) Based GenAI 
+
+**Authors**: Md Omar Faruk Rokon, Weizhi Du, Zhaodong Wang, Musen Wen  
+
+**Link**: [PDF](https://arxiv.org/pdf/2607.03880)  
+
+**Abstract**: Sponsored search plays a crucial role in e-commerce revenue generation, where advertisers strategically bid on keywords to capture the attention of users through relevant search queries. However, the process of identifying pertinent keywords for a given query presents significant challenges because of a vast and evolving keyword landscape, ambiguous intentions, and topic diversity. This paper highlights an opportunity for to earn a considerable amount of Ads revenue and user engagement where a significant proportion of queries fail to retrieve any sponsored ads. To utilize this opportunity, we introduce the Inventory-Aware RAG-based Generative AI model (InvAwr-RAG), which integrates advanced semantic retrieval and real-time inventory data. This model combines dynamically generated and historically successful queries to align with available inventory and ad campaigns while diversifying rewritten queries to enhance relevance and user engagement. Preliminary results show a significant 68% increase in fill rate and balanced relevance metrics, indicating a strong potential for increased ad revenue. The InvAwr-RAG model sets a new standard in dynamic query optimization, significantly improving ad relevancy, advertiser ROI, and user experience on Walmart's digital platform. 
+
+---
+# The Powerless Noise: How Experimental Settings Shape the Reported Power of Noise 
+
+**Authors**: Michal Mazuryk, Fleur Dolmans, Louis Gehringer, Ina Klaric, Jia-Huei Ju, Mohammad Aliannejadi  
+
+**Link**: [PDF](https://arxiv.org/pdf/2607.03615)  
+
+**Abstract**: Recent work has suggested that adding irrelevant documents to the input of retrieval-augmented generation (RAG) systems can improve question-answering performance, a phenomenon referred to as the ``\textit{Power of Noise}.'' This motivated investigations into the role of noise in information retrieval. In this paper, we reproduce the main findings of Cuconasu et al. \cite{cuconasu2024power} and evaluate the robustness of the effect under extended experimental settings. We first confirm that the phenomenon holds under the original setup, which uses earlier-generation LLMs, restrictive prompting and constrained decoding settings. We subsequently introduce a series of extensions to investigate the underlying causes of the noise effect, examining the authors' original design choices including the use of different models, instruction prompting, and relaxed output length constraints. Across these ablations, the Power-of-Noise pattern proves highly sensitive to inference configuration: it can appear, weaken, or disappear under small changes to prompt formulation and decoding limits. Combined with our error analysis, which shows substantial contributions from truncation and malformed generations, this variance indicates that the original effect cannot be robustly confirmed as a general benefit of noisy retrieval under these experimental conditions. More broadly, our work highlights the importance of carefully scrutinizing inference design in retrieval-augmented generation systems. Our code is available at this https URL. 
+
+---
+# Relevance-Based Embeddings: Lightweight Candidate Retrieval via Heavy-Ranker Calls 
+
+**Authors**: Kirill Shevkunov, Andrey Ploskonosov, Liudmila Prokhorenkova  
+
+**Link**: [PDF](https://arxiv.org/pdf/2607.03515)  
+
+**Abstract**: In many machine learning applications, the most relevant items for a query should be efficiently retrieved. The relevance function is usually an expensive similarity model, making the exhaustive search infeasible. A typical solution is to train another model that separately embeds queries and items to a vector space, where similarity is defined via the dot product or cosine similarity. This allows one to search the relevant items through fast approximate nearest neighbor search at the cost of some reduction in quality. To compensate for this reduction, the found items (candidates) are re-ranked by the expensive ranking model. In this paper, we investigate an alternative approach to candidate selection that utilizes the scores of the expensive model to improve the representations of queries and items. The idea is to describe each query (item) by its relevance to a set of support items (queries) and use these new representations to obtain query (item) embeddings. We theoretically prove that such embeddings are powerful enough to approximate any complex similarity model (under mild conditions). We also investigate the choice of support items, which is a crucial ingredient of the proposed approach. The experiments on diverse academic and production datasets illustrate the power of our method. 
+
+---
+# SentAttack: A Sentence-Level Black-Box Adversarial Attack Method for Dense Retrieval Models 
+
+**Authors**: Luping Wei, Yamin Hu, Sihan Shang, Shiyin Wang, Wenjian Luo  
+
+**Link**: [PDF](https://arxiv.org/pdf/2607.03456)  
+
+**Abstract**: Retrieval-Augmented Generation (RAG) systems typically consist of a dense retrieval (DR) model for initial retrieval and a neural ranking model (NRM) for this http URL robustness studies in RAG mainly focus on NRMs, while adversarial attacks on DR models are mostly limited to word-level this http URL low-ranked target documents that are irrelevant to the query, simple word-level attacks are insufficient to mislead DR models into substantially promoting their this http URL solve these problems, we propose SentAttack, a sentence-level black-box adversarial attack method for DR this http URL is designed as a two-stage this http URL the first stage, SentAttack interacts with the black-box RAG system via iterative retrieval to collect ranked documents and ranking information for training a surrogate DR this http URL the second stage, SentAttack uses the surrogate DR model to encode and cluster documents relevant to the target query, yielding multiple cluster this http URL centroids are concatenated with the target document at the sentence level to form an initial set of adversarial this http URL then optimizes these candidates using a query- and centroid-guided objective combined with gradient-guided beam this http URL experiments demonstrate that SentAttack outperforms existing adversarial attacks on DR models, with especially strong performance on low-ranked target documents. 
+
+---
+# TRIAGE: Trustworthy Retrieval Instrumentation And Graph Evaluation 
+
+**Authors**: Axel TahmasebiMoradi, Lucas Schott, Martin Royer  
+
+**Link**: [PDF](https://arxiv.org/pdf/2607.03447)  
+
+**Abstract**: Knowledge graphs (KGs) that underpin Graph-based Retrieval-Augmented Generation (Graph-RAG) are increasingly built automatically by LLM-driven extraction rather than curated by experts. Proper evaluation would require instrumenting all pertinent stages: extraction, graph construction, and inference, coherently enough to localize failures, so that a failure at one stage is not discovered as a wrong answer at the end. We introduce TRIAGE, a stage-aware instrumentation framework for automated, document-grounded graph-RAG that asks not only whether the underlying graph can be trusted but at what cost it can be queried. TRIAGE attaches stage-specific, independently interpretable metrics to three stages: the KG Implementation (triple confidence, source coverage, and schema and canonicalization checks), the KG Validation by expert (graph-level structural quality, with correctness and completeness computed only as offline calibration when a reference is available), and the KG Usage (retrieval coverage, faithfulness, and retrieval cost); the deployed metrics need no gold annotations, the gold-requiring ones serving only as offline calibration. At usage time these metrics form a diagnostic chain of necessary conditions whose first broken link localizes the failure, and the diagnosis maps to the stage levers that can remedy it: extraction, graph and schema, or retrieval. TRIAGE is a theoretical framework with a proof of concept and a reproducible evaluation protocol. 
+
+---
+# Improving Access to Historical Archives with Real-time RAG-based Systems 
+
+**Authors**: Stergios Konstantinidis, Hayman Lotfy, Alexis Erne, Faruk Zahiragic, Min-Yen Kan, Michalis Vlachos  
+
+**Link**: [PDF](https://arxiv.org/pdf/2607.03440)  
+
+**Abstract**: Digitized historical archives are large, heterogeneous cultural heritage repositories, but access methods for such archives face challenges such as noisy optical character recognition (OCR) output and rigid keyword-based retrieval, which limit retrieval quality. In this work, we present an end-to-end archival processing and retrieval framework that integrates large language models (LLMs) into the archival pipeline. Our system introduces two core components: (i) an LLM-based OCR refinement module that improves text quality, and (ii) a semantic retrieval and cross-encoder reranking pipeline supporting natural-language question answering via retrieval-augmented generation (RAG). Our evaluations are done on a historical archival dataset of 500,000 Swiss newspaper segments spanning over three centuries (1762 to 2001). Experiments are conducted across 384 natural-language test queries. Our results highlight that LLM refinements reduce OCR errors by up to 44.52% (CER) and 60.95% (WER). More importantly, this is accompanied by downstream information retrieval improvements. Compared to traditional keyword baselines, our reranking pipeline increases NDCG@10 by 31.9% (from 65.99% to 87.05%) and achieves statistically significant gains in both answer correctness and context relevance. These results demonstrate that integrating LLMs with established document processing and retrieval pipelines can elevate digital libraries from static repositories to interactive, semantically searchable archival systems. 
+
+---
+# AI Overviews in Academic Search: Evaluating AI-generated Summaries of Search Results in a Domain-specific Search Engine 
+
+**Authors**: Kevin Schott, Kanishka Silva, Ingo Frommholz, Philipp Mayr, Dagmar Kern, Daniel Hienert  
+
+**Link**: [PDF](https://arxiv.org/pdf/2607.03421)  
+
+**Abstract**: Evaluating search engine results pages (SERPs) to assess result relevance is a demanding step in academic search. In a formative mixed-methods design study, we examine AI-generated SERP-level summaries as a support feature in an academic search engine for social science information. First, we manually evaluated summaries of the top five results for 10 queries using two general-purpose models, one commercial and one open, deriving an exploratory six-category error taxonomy and five safeguards for scholarly deployment. We then conducted a within-subjects user study (n = 30) comparing interfaces with and without AI summaries. Confirmatory analyses showed consistent but non-significant trends favoring AI summaries for subjective workload, perceived usefulness, satisfaction, and decision-making confidence. Exploratory analyses suggested lower mental demand, with frustration also tending to be lower. Behaviorally, participants rarely expanded the summaries and descriptively made slightly fewer result clicks and query reformulations when summaries were available. Drawing on Information Foraging Theory and participant feedback, we suggest that AI summaries may concentrate SERP-level information scent to support early triage. Overall, the findings indicate that SERP-level AI summaries are a context- and user-dependent aid rather than a universal improvement, while contributing an error taxonomy, safeguard-aware deployment guidance, and concrete design implications for scholarly search. 
+
+---
+# HGenPush: A Heterogeneous Generative Recommendation Architecture for Industrial Push Notification Systems 
+
+**Authors**: Xiao Liang, Jiali Feng, Xin Feng, Yiqing Wang, Baolin Ye, Siyao Feng, Zhihui Deng, Cunyi Zhang, Huajin Sun, Xuanping Li, Kaiqiao Zhan, Yanan Niu, Kun Gai  
+
+**Link**: [PDF](https://arxiv.org/pdf/2607.03362)  
+
+**Abstract**: With the explosive growth of content platforms, recommendation systems need to better satisfy user demands to enhance user satisfaction and retention. Taking short-video platforms as an example, users not only seek high-quality content but also trusted authors. Although generative recommendation systems have achieved breakthroughs in recent years, existing methods primarily generate single-type recommendation content and typically employ the inefficient autoregressive paradigm to generate semantic IDs. In this paper, we propose an end-to-end heterogeneous generative recommendation architecture called HGenPush. First, we design a hybrid user behavior understanding module that integrates multi-scenario and multi-perspective behaviors to capture precise user interest. Then, we design a dual-branch heterogeneous generative recommendation module that integrates video recommendation and author recommendation within a unified framework. In addition, to improve generation efficiency, we design a lightweight multi-token prediction method that discards the autoregressive paradigm. Finally, we design a user consumption preference alignment module, which leverages user feedback as reward signals to guide the model toward generating higher-quality content, thereby enhancing user experience and engagement. Through these designs, HGenPush simultaneously fulfills users' demands for high-quality content and trusted authors. We have deployed HGenPush on the push notification system of Kuaishou, a large-scale short-video platform, achieving a significant 0.181% increase in daily active users. 
+
+---
+# HETERQA: Benchmarking Record Retrieval over Multiple Heterogeneous Sources 
+
+**Authors**: Yaodong Su, Hanchang Li, Quanqing Xu, Chuanhui Yang, Yixiang Fang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2607.03028)  
+
+**Abstract**: In emerging systems (e.g., social media and e-commerce platforms), data records are often drawn from heterogeneous sources, such as relational tables, text documents, image repositories, spatial databases, and knowledge graphs. Accordingly, retrieving target records for question-answering (QA) tasks requires us to jointly exploit these heterogeneous sources. However, most existing benchmarks are constructed from individual sources, and only a very few recent benchmarks have considered two or three sources. To alleviate this issue, we introduce HETERQA, a comprehensive benchmark with 857 QA pairs for record retrieval over five heterogeneous sources. HETERQA instantiates this setting with Yelp business records, each of which is grounded by multiple sources. We build HETERQA in an answer-driven manner: candidate records are first initialized with record-field constraints, then enriched through heterogeneous sources, and finally cross-verified across required sources before the natural-language question is retained. We validate the benchmark through contradiction detection and human validation, and further evaluate sparse, dense, hybrid, late-interaction, and agentic retrievers under the same metrics. The results show that HETERQA is challenging: hybrid retrieval achieves the strongest Recall@10, Self-RAG achieves the best MRR@10, and all evaluated methods remain far from saturating the benchmark. These findings indicate that HETERQA provides an effective testbed for record retrieval over heterogeneous sources and leaves substantial room for future retrieval methods. The benchmark dataset and source code are publicly available at this https URL and this https URL, respectively. 
+
+---
+# Long-Term Optimization for Large-Scale Generative Retrieval with Off-Policy REINFORCE 
+
+**Authors**: Artem Matveev, Sergei Makeev, Aleksei Krasilnikov, Vladimir Baikalov, Sergei Liamaev, Kirill Khrylchenko  
+
+**Link**: [PDF](https://arxiv.org/pdf/2607.02818)  
+
+**Abstract**: Generative retrieval has become a popular paradigm for large-scale recommendation. However, it is typically trained with supervised next-item prediction objectives that do not directly optimize long-term user satisfaction.
+In this work, we formulate recommendation as a session-level sequential decision-making problem and introduce an autoregressive approach for training generative retrievers with off-policy REINFORCE on pre-collected data. Unlike the one-step off-policy correction used in prior work, we propose a multi-step approximation of importance weights enabled by the autoregressive formulation. To support offline evaluation, we train a user feedback model that simulates user responses to generated recommendations. This lets us adapt doubly robust off-policy evaluation for sequential decision-making to recommendation, a setting that has received limited attention. We further introduce a feedback-model-based test-time scaling procedure that simulates future responses and selects recommendations with the highest predicted long-term returns.
+Experiments on the public large-scale Yambda-5B dataset show that our RL agent improves offline estimates of cumulative session reward over next-item and next-positive prediction baselines, while largely preserving retrieval quality. Moreover, allocating more inference-time compute to simulating future responses improves model-based long-term return estimates without updating the policy. 
+
+---
+# CanniUplift: A Holistic Framework for Mitigating Seller and Incentive Cannibalization in E-commerce Uplift Modeling 
+
+**Authors**: Zuwang He, Shihao Shu, Yuli Qu, Hanyu Gao, Ziliang Zhang, Diwei Chen, Xiangda Yan, Buyu Gao, Tanchao Zhu, Yumeng Li, Junxiong Zhu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2607.05242)  
+
+**Abstract**: Personalized incentive allocation is vital for e-commerce, where uplift modeling is the standard for estimating Individual Treatment Effects (ITE). However, traditional models often fail in complex multi-seller environments with violations of the Stable Unit Treatment Value Assumption (SUTVA). We identify two critical challenges: Seller-level Cannibalization, where incentives shift expenditure between shops without growing the platform, and Incentive-level Cannibalization, where organic conversions or alternative rewards introduce significant noise into incrementality estimation. In this paper, we propose CanniUplift, a unified framework to mitigate these dual-source cannibalization effects. Specifically, we design Platform-level Global Alignment (PGA) to capture cross-shop substitution through global GMV consistency constraints. To tackle incentive-driven noise, we introduce Redemption-based Decomposition Denoising (RDD), which uses redemption behavior to decompose treated outcomes and reduce attribution noise within an entire-space framework. Furthermore, a Treat-Attention mechanism is designed to model intricate interactions between users' historical behaviors and current treatment options. Extensive experiments on both synthetic and large-scale industrial datasets demonstrate that CanniUplift significantly outperforms state-of-the-art baselines. Ablation studies confirm that the integration of PGA and RDD consistently improves wAUUC and wQINI. Successfully deployed online, our framework achieved a 4.08% relative increase in platform-wide incremental GMV (Delta GMV) over the production baseline and improved ROI in online A/B tests, proving effective in driving global platform growth. 
+
+---
+# Curated retrieval versus open web search in public AI information services: a coverage-trust trade-off 
+
+**Authors**: Hafsteinn Einarsson, Hafsteinn Birgir Einarsson, Jón Gunnar Ólafsson, Jón Gunnar Þorsteinsson  
+
+**Link**: [PDF](https://arxiv.org/pdf/2607.05217)  
+
+**Abstract**: Public institutions increasingly use large language models (LLMs) to answer citizens' questions, often pairing a curated knowledge base with live web search, yet whether the sources behind these answers can be trusted has received little empirical scrutiny. We report a pre-launch expert evaluation of Evrópuvefur, an independent, government-funded service run by the University of Iceland that answers questions about the European Union, conducted as Iceland prepared for its referendum of 29 August 2026 on whether to resume EU accession talks. Five domain experts produced 551 evaluations of 449 AI-generated answers, scoring each against a seven-criterion quality rubric and, separately, flagging individual cited sources. We compared two retrieval paths: a curated local corpus (RAG) and open web search. In more than a third of the reviewed web-search answers (35%, 65 of 187), at least one cited source was flagged, almost always as untrustworthy or irrelevant; curated sources were flagged far less often and only for being out of date. Web search answered more questions, but at the cost of source quality; the curated corpus was trustworthy yet limited in coverage, and the model declined to respond when it fell short. The citation mix also passed over strong sources: across all 287 web-search answers, the system never cited RÚV, the public broadcaster and the country's most widely used news source. A companion prompt ablation shows how weak prompt-level steering is: a trusted-domain list in the system prompt raised the share of citations to listed domains only from 12% to 21%. Fluency and topical fit did not predict source trustworthiness. We argue that source trustworthiness is a measurable yet largely invisible dimension of information quality in public AI services, and we discuss transparency-oriented responses and their trade-offs. 
+
+---
+# On the Complexity of Entrywise Power Matrix Factorization 
+
+**Authors**: Nicolas Gillis, Subhayan Saha, Stefano Sicilia, Arnaud Vandaele  
+
+**Link**: [PDF](https://arxiv.org/pdf/2607.04875)  
+
+**Abstract**: Given a nonnegative matrix $X$, a factorization rank $r$ and a real parameter $p$, entrywise power matrix factorization (EPMF) looks for a low-rank matrix $X_r$ such that $X = |X_r|^{\circ p}$ (exact case) or $X \approx |X_r|^{\circ p}$ (approximate case), where $(\cdot)^{\circ p}$ denotes the component-wise exponent. EPMF includes the modulus model ($p=1$) and component-wise square factorization ($p=2$) as special cases, the latter being closely related to the square root rank. We analyze the computational complexity of the exact decision problem and the Frobenius-norm approximation problem, and establish a complete complexity landscape. In the exact case, we show that EPMF is equivalent to the combinatorial problem of flipping the signs of the entries of a given matrix $X$ to obtain a rank-$r$ matrix, which we refer to as the signing problem. We first show that the signing problem, and hence exact EPMF, is strongly NP-hard, improving a weak NP-hardness result for the square-root-rank of Fawzi et al. (Math. Prog., 2015). We then show that the signing problem can be solved in polynomial-time when $r$ is fixed. Moreover, when the rank $r$ is part of the input, we show that for generic matrices the algorithm is fixed-parameter tractable (FPT) in the parameter $r$; in fact, the running time is linear in the input size $X$. In the approximate case using the Frobenius norm as an error measure, we show that EPMF is NP-hard, already when $r=2$, the smallest nontrivial case. 
+
+---
+# MTEB-PT: A Text Embedding Benchmark for Brazilian Portuguese 
+
+**Authors**: Tardelli Ronan Coelho Stekel  
+
+**Link**: [PDF](https://arxiv.org/pdf/2607.04581)  
+
+**Abstract**: Text embeddings for Portuguese have no dedicated benchmark: evaluation rests on translated corpora such as English MS MARCO or on thin multilingual coverage, with native tasks scattered and unconsolidated. We introduce MTEB-PT, a benchmark of 22 native Brazilian-Portuguese tasks across seven categories (classification, multilabel classification, pair classification, semantic textual similarity, clustering, retrieval, and reranking), admitting only data created or found in Portuguese and excluding translations by construction. We evaluate 93 models spanning 23M to 27B parameters: 73 open-weight and 20 closed commercial APIs. Alongside the leaderboard we report a statistical layer for every headline comparison: per-task bootstrap confidence intervals, paired-bootstrap significance, a task- and instance-level discrimination analysis (how sharply each task separates models) adapted from Item Response Theory, and a cross-leaderboard correlation. Three findings stand out. The benchmark cleanly separates about a dozen tiers of models, though the top six are statistically too close to order. An openly licensed, self-hostable model reaches that leading tier, so strong Portuguese embedding quality does not require a commercial API. And a model's rank on the global multilingual leaderboard predicts its Portuguese rank only moderately (Spearman rho = 0.75 over 55 shared models; one model ranks 3rd there and 49th here), so a native benchmark measures something the multilingual boards do not. We release every task, our code, and a public leaderboard, so practitioners can choose Portuguese embedding models on native evidence. 
+
+---
+# Progressive Disclosure for LLM-Maintained Wiki Knowledge Bases: a Preregistered Ablation 
+
+**Authors**: Theodore O. Cochran  
+
+**Link**: [PDF](https://arxiv.org/pdf/2607.04576)  
+
+**Abstract**: LLM agents increasingly answer questions against knowledge bases they help maintain. A common intuition holds that progressive disclosure, a compact catalog plus a one-line summary per page so the agent loads only what it needs, should make this cheaper than consulting a large monolithic index. We test that on a real 709-page markdown wiki maintained by an LLM. We retrofit it for progressive disclosure and run a preregistered ablation in which four versions of the corpus differ only in how the agent reaches the content: page bodies are byte-identical across arms, frozen as immutable git tags, so any measured difference is due to access structure alone. We cross the arms with three access conditions (a protocol-constrained agent, a free self-routing agent, and a catalog-preload regime) and grade answers blind against verified gold references with a cross-family judge.
+A pilot upended the premise: a capable tool-using agent never loads the index, inferring a page's path from the question and reading it directly, so the specific saving the retrofit targets does not materialize. We therefore made answer quality primary and cost secondary. Quality is non-inferior (the retrieval arm matches the index baseline within the preregistered margin) while cost falls in every regime, from about a third for a self-routing agent to well over half under catalog-preload, all confidence intervals excluding zero. The saving comes not from avoiding the index load but from more targeted access: the retrieval arm cites fewer pages and takes fewer tool turns. The study doubles as a case study in evaluation validity, applying threat-to-validity discipline to the tooling that produced it. 
+
+---
+# The New Shape of Search: How Conversational AI Recomposes Information Seeking 
+
+**Authors**: Michael Iannelli, Alan Ai  
+
+**Link**: [PDF](https://arxiv.org/pdf/2607.04282)  
+
+**Abstract**: Classic models cast information seeking as iterative foraging: formulate a keyword query, scan results, reformulate, gather across sources, synthesize. We ask what happens when a conversational assistant is inserted into that episode. Linking real conversations with major assistants to the same users' searches and browsing in an opt-in cross-surface panel, and reconstructing the full episode rather than a single query, we find conversational AI changes the shape of information seeking, not merely its volume. AI episodes do not uniformly collapse; they bifurcate. Most terminate in place, with no onward search or content step in the observed trace, while roughly a third scaffold into longer multi-step journeys. Which shape occurs is governed less by task type than by articulation: collapse is statistically indistinguishable across lookup, learning, and comparison episodes, yet falls monotonically with opening-ask length, from 72% at one-to-three words to 48% beyond twenty. Roughly two-fifths of assistant episodes are workbench use--drafting, coding, editing--not information seeking at all, and these collapse most. Conversational AI also does not displace search: search remains woven through roughly three-quarters of within-episode transitions, after reading a page users return to the search box over the assistant 70/30, and within-user search share does not fall. Verification is rare: searches with explicit verification language follow roughly 1% of episodes, and citation-forward interfaces do not measurably increase checking. All of this is episode structure, a compositional object identifiable without a demand counterfactual. Conversational AI recomposes the seeking episode: it answers brief asks in place and anchors invested asks in longer journeys, adding a layer rather than replacing search. 
+
+---
+# Conductance-Repair Evidence Graphs for Prospective Security Retrieval 
+
+**Authors**: Faruk Alpay, Taylan Alpay  
+
+**Link**: [PDF](https://arxiv.org/pdf/2607.04070)  
+
+**Abstract**: Security retrieval is often evaluated as ranking over complete evidence, but operational triage is prospective: CVE descriptions, weakness metadata, fix commits, EPSS scores, KEV membership, validation-vector metadata, and side-channel benchmark routes arrive through separate channels, and many are missing, delayed, poisoned, or visible only after the decision time. We introduce conductance-repair evidence graphs, a timestamped framework in which retrieval is performed over a temporal admissibility mask and missing channels are widened by a deterministic graph-flow recurrence rather than by a learned predictor. The method emits a repair certificate recording source probes, decision time, withheld edges, repaired channels, forbidden post-decision edges, backend availability, numerical deviation, and verifier results. The theoretical layer gives an adaptive \(\lceil\log_2 N\rceil\) lower bound for missing-channel identification, an NP-hardness result for minimum harmful repair, and a fixed-parameter certified search bound for \(q\) questionable channels. The current artifact materializes 30 deduplicated public security records, 57 terms, and 58 withheld admissible document-term edges. Under random edge withholding, conductance repair changes recall@\(k\) from 0.017 to 0.069 and average precision from 0.062 to 0.060, while a synthetic security fixture improves recall@\(k\) from 0.055 to 0.099; the public AP drop exposes a limit of broad admissible repair under random edge corruption. The implementation benchmarks the same flow/SVD/einsum kernel under NumPy, PyTorch, JAX, and TensorFlow when available, recording unavailable backends rather than silently substituting them. BBBC019 and LIVECell metadata are retained only as structural controls for sparse evolving source channels, with no clinical or biological performance claim. 
+
+---
+# Candidate-Constrained Retrieval-Augmented Generation for LongEval-RAG: System Design and Empirical Analysis 
+
+**Authors**: Yingdong Yang, Haijian Wu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2607.04008)  
+
+**Abstract**: We present a candidate-constrained retrieval-augmented generation system for LongEval-RAG, where each query is associated with an organizer-provided candidate set and all retrieved evidence and final citations must remain within that set. The system combines deterministic provenance tracking with passage-based retrieval, deterministic query expansion, pseudo-relevance feedback (PRF), reciprocal rank fusion (RRF), lightweight evidence reranking, citation-aware evidence aggregation, and optional MiniLM sentence reranking. We evaluate ten pipeline variants using a primary organizer evaluation and a supplementary self-generated diagnostic protocol. The primary evaluation shows that the strongest balanced variant is rule-minilm: a rule-based chunking pipeline with query expansion, PRF, RRF, reranking, citation prior, and late MiniLM sentence selection. This variant obtains the highest BERTScore, retrieval precision, nugget coverage, and average grade among our submissions. The result suggests that the main gain does not come from more complex semantic or topic-shift chunking, but from pairing stable rule-based evidence units with sentence-level neural selection before generation. The supplementary LLM-judge evaluation remains useful for early diagnosis and additional analysis, but it emphasizes different systems than the primary gold-answer and nugget-based evaluation, highlighting the need for multi-metric RAG evaluation. 
+
+---
+# Two-dimensional Fourier compressed sensing under a fixed readout budget per channel 
+
+**Authors**: Nitin Jonathan Myers  
+
+**Link**: [PDF](https://arxiv.org/pdf/2607.03611)  
+
+**Abstract**: Recovering sparse signals from their subsampled Fourier representation is an important problem in communications, radar, and imaging. In this letter, we focus on reconstructing sparse 2D signals (matrices) under the constraint that only a fixed number of entries can be sampled from each channel, e.g., a row or a column in the Fourier domain. For a specified per-channel readout budget, we derive a lower bound on the mutual coherence of the corresponding compressed sensing matrix. We show that our bound is larger than the classical Welch bound, due to a limited readout budget. We also construct deterministic subsampling patterns that attain this bound for a class of matrix dimensions and readout budgets, and benchmark them against random subsampling through simulations. 
+
+---
+# Beyond Post-Quantization: Native Hash Learning with a Dedicated HASH Token 
+
+**Authors**: Xinze Liu, Ding Wang, Hengjie Zhu, Dayan Wu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2607.03328)  
+
+**Abstract**: Efficient large-scale image retrieval requires compact representations that preserve semantic similarity under fast Hamming-space search. Deep hashing is appealing, but most existing CNN- and ViT-based methods still follow a post-quantization paradigm, where continuous visual features are first learned and binary codes are then produced by a terminal hash projection or binarization operation. This late code generation creates a feature-to-code discrepancy between the continuously optimized representation space and the discrete Hamming space used for retrieval. To address this limitation, we propose HashViT, a Vision Transformer framework for native hash token learning. Instead of treating hashing as a terminal readout, HashViT introduces a dedicated HASH token that serves as a persistent, hash-oriented retrieval state inside the transformer. The HASH token is structurally decomposed into a Hash Register for direct binary code generation and a Semantic Workspace for preserving auxiliary continuous semantics. To enable effective workspace-to-register interaction, we further design a lightweight Hash Refinement Adapter that progressively refines the Hash Register across transformer layers. As a result, binary-oriented representations are formed through token evolution within the backbone, rather than being abruptly induced by an output-level projection. HashViT is optimized with a unified objective that combines learnable semantic center supervision, class-token similarity distillation, and quantization regularization, encouraging the HASH token to encode semantically structured and compact binary representations. Extensive experiments on three widely used benchmarks demonstrate that HashViT achieves state-of-the-art or highly competitive retrieval performance while preserving the efficiency of compact Hamming codes. Code is available at this https URL. 
+
+---
+# From Judgments to Issues: Structured Extraction of Legal Reasoning with Citation-Hallucination Control 
+
+**Authors**: Giovanni Piccioli, Alessia Fidelangeli, Piera Santin, Pierpaolo Vivo  
+
+**Link**: [PDF](https://arxiv.org/pdf/2607.03325)  
+
+**Abstract**: We present an automated pipeline that decomposes Italian tax-court judgments into individual legal issues and extracts, for each issue, a structured XML representation grounded in the IRAC framework and the legal syllogism. The pipeline targets a corpus of approximately $330{,}000$ first- and second-instance decisions of the Italian tax courts and is built around a capable yet cost-efficient general-purpose model (DeepSeek V3), a choice driven by the need to process several hundred thousand documents at a sustainable cost. To address the well-documented unreliability of large language models on legal citations, we couple the extraction step with an automatic hallucination-detection filter that compares the references produced by the model with those identified in the judgment text by a dedicated parser (Linkoln), normalised to standard identifiers (URN-NIR, ECLI, CELEX). We validate the pipeline on $50$ judgments annotated by two PhDs in tax law, computing inter-annotator agreement and LLM-vs-expert agreement on both issue extraction and legal citations, together with a stand-alone evaluation of the hallucination filter. To the best of our knowledge, this is the first issue-level, expert-validated structured extraction pipeline with hallucination control for Italian tax-court decisions, and it provides a concrete starting point for downstream applications such as issue-level retrieval, citation-network analysis, and the construction of large-scale datasets of legal reasoning. 
+
+---
+# Taste-aware music retrieval from audio embeddings 
+
+**Authors**: Matteo Spanio, Antonio Rodà  
+
+**Link**: [PDF](https://arxiv.org/pdf/2607.03296)  
+
+**Abstract**: Crossmodal correspondences between sound and taste are well established in psychology and neuroscience, but largely absent from content-based multimedia retrieval. We formalise taste-from-audio prediction as a content-based music information retrieval benchmark over a perceptually validated multi-source corpus, comparing ten frozen audio encoders from the four HEAR families under a shared multi-task regression head, with gated late-fusion as a configurable variant. In order to assess the effectiveness of the models, we compute absolute error and rank correlation. The strongest systems predict the five tastes within a macro RMSE of 0.134; on held-out real music their error is less than half a single rater's deviation from the consensus (RMSE 0.13 vs. 0.28), so the model tracks the group consensus more closely than an average human rater, and well below the previous state of the art baseline (0.219). On absolute error the encoders are statistically flat, with a single VGGish matching the best fusion, but gated late-fusion's advantage is confined to rank correlation (macro Pearson r 0.724 vs. 0.666). Operationalised as a content-based retrieval index, the predicted taste space ranks a 309-item pool far more faithfully than a CLAP-text baseline, which sits at chance; ridge probes and an audio-bandstop knockout read the strongest representations against documented sound-taste correspondences. 
+
+---
+# Agentic and Generative AI for Open-Source Intelligence and Cyber Investigations: Taxonomy, Evaluation, Challenges, and Future Directions 
+
+**Authors**: Eduardo Almeida Palmieri, Mohamed Chahine Ghanem, Dipo Dunsin, Zubair Baig, Ed de Quincey, Kim-Kwang Raymond Choo  
+
+**Link**: [PDF](https://arxiv.org/pdf/2607.03233)  
+
+**Abstract**: The rapid growth of publicly available digital information has rendered manual open-source intelligence (OSINT) analysis insufficient for modern intelligence, cybersecurity, and cyber investigation. Large language models (LLMs) and agentic AI systems, capable of tool use, multi-step reasoning, and iterative intelligence generation, have emerged as promising solutions, yet evaluation frameworks have not kept pace with reported capabilities. This survey systematically reviews 74 studies and makes four contributions. First, it establishes agentic AI as a distinct analytical category rather than an extension of LLM prompting, organising the literature through an 11-category taxonomy covering LLM foundations, agentic architectures, retrieval-augmented generation (RAG), knowledge graphs, prompt engineering, domain adaptation, evaluation benchmarks, and risk. Second, it identifies the hallucination-validation gap as a corpus-level finding: although hallucination is recognised as a major reliability concern in over twenty studies, end-to-end hallucination is empirically measured in only one OSINT-specific RAG-based system, non-reproducible conditions, while related reasoning and factual-correction studies evaluate general-domain question answering rather than OSINT. Third, it maps existing research to the OSINT lifecycle, showing strong support for collection and analysis but limited coverage of verification, reporting, dissemination, and decision support. Fourth, it derives a ten-point research agenda addressing evaluation, benchmarking, hallucination measurement, adversarial robustness, dark-web coverage, multimodal intelligence, and governance. It concludes that a human-AI co-pilot model, where LLMs assist collection and triage while analysts retain responsibility for verification and decision-making, represents the most defensible near-term deployment architecture. 
+
+---
+# Where do LLMs Fall Short in CBT-Guided Affective Reasoning? 
+
+**Authors**: Vaishnavi Sinha, Pooja Guttal, Pranay Deep Reddy Katike, Vishal Sinha, Gerald Ndawula, Lira Yoon, Andrea Kleinsmith, Manas Gaur  
+
+**Link**: [PDF](https://arxiv.org/pdf/2607.02885)  
+
+**Abstract**: Cognitive Behavioral Therapy (CBT) provides a structured framework for understanding a user's mental state by examining the interaction between cognitive and behavioral factors. However, out-of-the-box LLMs respond fluently and empathetically, yet collapse into validation & reflection, regardless of what the user actually needs. They know theoretical CBT (scoring up to 96% accuracy on licensing exam questions) but fail to apply it effectively. We explore this gap with a knowledge-guided framework that treats CBT dialogue as controlled affective reasoning: user narratives are decomposed into Beck's Cognitive Conceptualization structure, grounded in clinical SNOMED CT concepts validated via Natural Language Inference, and a Multiple Chain-of-Thought (MCoT) strategy selection between Validation & Reflection, Socratic Questioning, or Alternative Perspectives. To measure whether such guidance actually changes behavior, we introduce the Protocol Leverage Force (F), a behavior-level metric that captures how far an intervention shifts a model away from its default response. Across three open-weight LLMs and 14 RealCBT-derived case studies, evaluated with human experts, valence-arousal trajectories, and linguistic entrainment, F shows that simply introducing protocol definitions via single chain-of-thought prompting fails to change LLM behavior, while MCoT on these definitions guides strategy selection better. Still, the effect stays within 1% (approx. 1.2-1.3%), and all models remain biased toward Validation & Reflection. These results show CBT knowledge alone does not ensure effective application, giving the affective-computing community instrumentation to measure where LLMs fall short. 
+
+---
