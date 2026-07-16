@@ -1,0 +1,91 @@
+# Optimizing Visibility in Generative Engines: A Critical Survey of Generative Engine Optimization (2023-2026) 
+
+**Authors**: Olivier Martinez  
+
+**Link**: [PDF](https://arxiv.org/pdf/2607.14035)  
+
+**Abstract**: Generative Engine Optimization (GEO) seeks to increase content's presence, likelihood of citation, or influence in answers produced by generative engines. Since the foundational GEO paper, the field has expanded rapidly, but terminology, metrics, and evidence standards remain heterogeneous. This critical survey reviews 45 studies selected under a November 2023-July 2026 publication window, including one earlier preprint published at EMNLP after the window opened, plus relevant RAG and evaluation work. We argue that GEO is not a single ranking task but a stochastic, partially observable pipeline spanning search activation, crawling and indexing, retrieval, reranking and context allocation, citation, prominence, factual absorption, fidelity, and user behavior. The foundational paper's widely cited gains are valid within its experimental setting but conditional on a source already being present in a fixed context; they establish neither organic discoverability nor durable traffic effects. Reviewed work indicates that topical relevance and context position are the most reproducible levers, generic heuristics transfer poorly, competition can erode individual gains, and citation-oriented rewrites can impair retrieval. Commercial audits further reveal low source overlap, substantial run-to-run variability, and persistent fidelity gaps. We contribute a multistage formal model, a visibility vector separating discoverability, citation, absorption, and economic outcomes, an evidence hierarchy, and a reproducible protocol based on repeated measurements, paraphrases, controls, human validation, and multi-actor interference. Within this corpus, the evidence is narrow: already-retrieved content can causally alter its citation or use, but no reviewed technique shows a stable, longitudinal, cross-platform causal effect on organic discoverability or downstream behavior. 
+
+---
+# Cluster with Auctions for Vector Search 
+
+**Authors**: Swann Bessa, Pierre Fernandez, Gergely Szilvasy, Matthijs Douze, Hervé Jégou  
+
+**Link**: [PDF](https://arxiv.org/pdf/2607.13728)  
+
+**Abstract**: Large-scale approximate nearest neighbor search commonly relies on partitions for indexing: database vectors are partitioned into clusters, and for each query a probing function selects the clusters to be scanned. The query probing function and the database partition are rarely treated as separate entities: most techniques assign queries with the same assignment function as the database vectors, which is suboptimal especially when database and query distributions differ. This paper introduces CwA (Cluster with Auctions), which addresses this limitation by jointly learning a balanced database partition and a neural probing function. CwA optimizes search performance directly for the query distribution. It minimizes its objective by alternating two steps: (i) gradient descent on the neural network of the probing function, and (ii) a large-scale combinatorial optimization of the cluster assignment for the database vectors. We solve the latter with a parallelizable auction algorithm that balances the partition by design. To further scale CwA, we extend the method to a Cartesian product of clusters that increases the partition's granularity. When database and query distributions differ, CwA achieves up to 4.7$\times$ throughput over the state-of-the-art at equal recall. In the in-distribution (ID) setting, even a simple linear probing function trained with CwA outperforms competing deep neural methods. 
+
+---
+# Personalizing Incremental Video Search with Hybrid Text and ID Embeddings 
+
+**Authors**: Vivek Kanojiya, Vishalaksh Aggarwal, Daeho Baek, Lyndon Kennedy, Xuetao Yin  
+
+**Link**: [PDF](https://arxiv.org/pdf/2607.13493)  
+
+**Abstract**: Incremental video search requires high-quality ranking after each keystroke, where intent is often underspecified (e.g., 1-3 character prefixes). We present a personalization system for Apple TV search that combines complementary semantic and collaborative signals at ranking time. Our approach learns two item embedding spaces: (i) a text-based multilingual encoder (TextEmb) fine-tuned on co-engagement triplets via contrastive learning, and (ii) an ID-based collaborative embedding model (IdEmb) trained on interaction-derived positives. At serving time, we construct user representations from recent watch history and inject text- and ID-based user-item cosine similarities into a pairwise XGBoost ranker.
+We evaluate with temporally held-out offline datasets and a three-week online controlled experiment. Offline, for sessions with user history, the personalized ranker improves NDCG@10 by 2.99% and MRR by 3.30% over the non-personalized baseline. Slice analyses show that personalization is most needed in incremental search, where intent is still forming: on ambiguous prefix queries (1-3 characters), NDCG@10 lift is +8.63%, versus +1.46% on longer, fully specified queries. Longer-history users benefit more: NDCG lift rises from +2.13% for users with 1-5 history items to +4.37% for users with 51-100, even though baseline relevance is lower for these cohorts (NDCG@10 drops from 0.733 to 0.680), indicating that personalization adds the most value where default ranking underperforms. Online, treatment yields statistically significant gains of +1.14% tap-through rate and +1.23% conversion rate, with a 2.91% improvement in converted-item rank position. We further analyze coverage-precision trade-offs between semantic and collaborative embeddings via ablations isolating each signal, and evaluate embedding quality on a held-out corpus with LLM-judged similarity labels to reduce click/exposure bias. 
+
+---
+# Can We Steer the Black-Box? Towards Controllability-Centric Evaluation of Recommender Systems with Collaborative Agents 
+
+**Authors**: Jiwen Zhou, Xiang Liu, Mingming Li, Pengbo Mo, Jiao Dai, Honglei Lv, Jizhong Han, Songlin Hu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2607.13418)  
+
+**Abstract**: Recommender systems operate as Black-Boxes, leaving users and regulators unable to steer their outputs toward specific intentions or audit their behavior. This lack of controllability, defined as the system's ability to respond to explicit guidance, remains an unaddressed dimension in existing evaluation paradigms. To fill this gap, we propose CtrlBench-Rec, a collaborative multi-agent framework for systematic assessment of controllability. We formalize three fundamental tasks: target content discovery, interest profile shaping, and popularity bias mitigation, which together measure steerability from explicit commands to implicit representation steering and finally to overcoming algorithmic this http URL experiments on real-world datasets and multiple recommendation models demonstrate that our framework effectively quantifies controllability and exposes critical system bottlenecks, most notably persistent resistance to guiding long tail content. CtrlBench-Rec provides the first standardized toolkit for controllable recommendation research, algorithmic auditing, and user empowerment. Our code is released on this https URL. 
+
+---
+# TMallGS: Scaling Unified Feature and Sequence Modeling for Generative E-commerce Search 
+
+**Authors**: Zhentao Song, Yufeng Gao, Xing Fang, Jing Wang, Guangxin Song, Bokang Wang, Yipin Dai, He Guo  
+
+**Link**: [PDF](https://arxiv.org/pdf/2607.13398)  
+
+**Abstract**: In industrial search and ranking systems, Click-Through Rate (CTR) prediction is shifting from traditional Deep Learning Recommendation Models (DLRM) toward unified, compute-intensive Transformer architectures. This transition is driven by the need to improve Model FLOPs Utilization (MFU) and achieve predictable gains through scaling laws. However, existing approaches such as OneTrans and Climber often adopt an all-in-tokenization strategy when adapting Large Language Model (LLM) architectures, overlooking the heterogeneous nature of ranking features. We propose TmallGS, a scalable ranking architecture for Tmall search. TmallGS includes five key components: (1) Hierarchical Distribution-Calibrated Tokenization, which combines Field-wise Saliency Reweighting (FSR) and Distribution-Calibrated Projection (DCP) to map diverse features into optimized subspaces; (2) a Field-Adaptive Gated Transformer Backbone with per-field QKV projections and noise-adaptive gating for refined semantic interaction; (3) Decoupled FiLM Late Fusion to preserve explicit high-frequency signals; (4) a Context-Aware Bias Net to decouple systemic bias from user intent; and (5) Error-Aware Progressive Training with dynamically weighted losses for robust learning. Extensive offline experiments and online A/B tests on Tmall Search show that TmallGS improves training throughput and achieves substantial gains in UCTCVR and GMV. 
+
+---
+# Where Does the Noise Come From? A Variance-Components Decomposition of Non-Determinism in LLM Brand Answers 
+
+**Authors**: Dmitrij Żatuchin  
+
+**Link**: [PDF](https://arxiv.org/pdf/2607.13304)  
+
+**Abstract**: Teams measuring whether large language models (LLMs) recommend a brand face a reproducibility problem: ask the same question twice and the answer moves. Practice resamples each prompt a few times (commonly five) and averages, treating within-prompt resampling as the source of the noise. But a measured brand score moves for at least four separable reasons: within-prompt resampling, prompt paraphrase, model identity, and query language. We specify a crossed random-effects (generalizability-theory) decomposition that partitions the total variance of a response-level brand outcome into these four sources, and embed the components in a decision-study allocation that returns how many repeats, paraphrases, models, and languages to buy for a target reliability. We apply it to a fully crossed corpus of 12,933 LLM responses on 20 Central and Eastern European brands, 8 languages, and 3 models (GPT-5.2 and Gemini 3 Flash in parametric mode, Perplexity in grounded retrieval), with a stability subset of 1,435 cells resampled about five times. The outcome is per-response multilingual sentiment polarity. Query language is the largest systematic facet (26.5% of the variance of one response) against 1.5% for brand identity (ICC 0.0146), so a single AI answer carries almost no brand-discriminating signal. Once a cell term isolates pure resampling, resampling is 34.8% of variance and the brand-in-context interaction 29.6%; brand-by-language is 8.6% (a bilingual penalty) while brand-by-model and brand-by-prompt are near zero. Per unit of query budget, adding languages and models reduces relative-error variance far more than adding repeats: a repeat past the fifth reduces it by only 0.0003. Brand-ranking reliability stays low, near 0.01 for a single answer and about 0.36 at the full crossed design, so reliability is bought by spreading across languages and models, not by repeating one prompt. 
+
+---
+# Multimodal Assessment of Pancreatic Cancer Resectability Using Deep Learning 
+
+**Authors**: Vincent Ochs, Christoph Kuemmerli, Florentin Bieder, Julia Wolleb, Joel L. Lavanchy, Julia Ruppel, Jan Liechti, Stephanie Taha-Mehlitz, Christian Andreas Nebiker, Beat Mueller, Giuseppe Kito Fusai, Joerg-Matthias Pollok, Anas Taha, Philippe C. Cattin, Sebastian Staubli  
+
+**Link**: [PDF](https://arxiv.org/pdf/2607.13826)  
+
+**Abstract**: Accurate determination of pancreatic ductal adenocarcinoma (PDAC) resectability relies on evaluating how the tumor interacts with major peripancreatic vessels on CT imaging, yet expert assessment often shows substantial variability. We introduce a fully automated multimodal deep learning framework that jointly analyzes 3D contrast enhanced CT and structured clinical information to classify patients into the three National Comprehensive Cancer Network (NCCN) resectability categories (upfront resectable, borderline resectable, locally advanced). The approach uses a Swin-UNETR backbone to obtain anatomy aware image representations through auxiliary segmentation of pancreas, tumor, and vascular structures. These features are fused with a compact clinical embedding derived from 17 routinely collected variables and processed by a lightweight classification head. Model training is guided by a dynamic multitask objective that adapts the balance between segmentation and classification based on current tumor Dice performance, promoting feature representations that remain both anatomically informed and discriminative. 
+
+---
+# Measuring What the Crawler Sees: Discovery Curves, Core Persistence, and Shell Dynamics in Longitudinal Web Crawls 
+
+**Authors**: Michael Paris, Hande Celikkanat, Luca Foppiano  
+
+**Link**: [PDF](https://arxiv.org/pdf/2607.13636)  
+
+**Abstract**: A longitudinal web crawl is a sequence of partial samples of an evolving URL population. Pairwise containment between two crawls is the standard probe; under a simple \emph{urn} model of the crawl -- each round samples a fraction of the URLs and replaces a fraction -- it recovers two interpretable rates, per-round survival $\alpha$ and coverage $c$, but treats the population as uniform and consumes one pair at a time. In this work, we define a formal language for talking about a crawl. We extend this analysis with the \emph{discovery curve} $U(s, T)$, the cumulative URL footprint over a sliding window of $T$ crawls starting at $s$, which under the same urn model is also a closed-form function of $(\alpha, c)$. Containment and the discovery curve are then two projections of one process: independent fits agree on $(\alpha, c)$ when the urn is homogeneous, so any disagreement is itself a measurement. Applied to Common Crawl (2020--2025, domain granularity) and to the German Academic Web (GAW, URL granularity), the two projections disagree on both archives, and a two-component urn with a persistent core fraction $\kappa$ alongside shell parameters $(\alpha_\partial, c_\partial)$ reconciles the disagreement. A residual on $c_\partial$ remains, signaling that the shell itself is not homogeneous; $\kappa$ is recorded as the scalar entry point to a rank-resolved generalization, which is left to follow-up work. \keywords{web archive \and crawl coverage \and discovery curve \and urn model \and two-component model \and URL lifetime} 
+
+---
+# Gauge-Invariant, Parameter-Insensitive Regularization for Potential Recovery from Flow on Directed Graphs 
+
+**Authors**: Mohammad Forouhesh  
+
+**Link**: [PDF](https://arxiv.org/pdf/2607.13609)  
+
+**Abstract**: Recovering a latent potential from observed flow on a directed graph (a discrete Poisson problem with Dirichlet boundaries) is ill-posed, and the standard fix backfires: ridge regularization shrinks toward a gauge-meaningless origin, collapsing and reversing the recovered ordering ($+0.81\to-0.42$ rank correlation against a planted ground truth). The gauge-invariant graph Dirichlet energy removes the hazard and delivers parameter-insensitivity: the estimate is stable across four orders of magnitude in $\lambda$, whereas ridge inverts the ordering for every $\lambda>0$. We prove the reduced solve is SPD and preserves dynamic range exactly where ridge collapses it, and localize absorbing boundaries from flow alone via a Poisson residual. The $H^1$ seminorm is classical; what is new is the gauge diagnosis, the parameter-insensitivity it buys, and an ablation showing the result is robust to the extraction method. On three public clickstream corpora the gauge-invariant estimate retains $28$--$41\%$ of the interior dynamic range while ridge collapses to as little as $0.2\%$. The same gauge invariance carries into graph neural networks -- neutralizing the constant mode per layer prevents the oversmoothing that collapses a deep directed GCN -- linking this classical inverse problem to a central question in graph learning. 
+
+---
+# Classifying daily activities needs posture, reconstructing them needs motion 
+
+**Authors**: Arefeh Farahmandi, Gunnar Blohm  
+
+**Link**: [PDF](https://arxiv.org/pdf/2607.13216)  
+
+**Abstract**: Humans recognize movements effortlessly, even from noisy and complex visual input. But what information in the stimulus allows humans to rapidly classify movements? No framework has systematically compared different strategies of movement analysis to address this question. Here, we used videos of 16 daily activities from the MoVi dataset and compared three strategies: Temporal Movement Primitives (TMPs), which decompose movements into weighted sums of temporally smooth basis functions; Legendre polynomial coefficients, which project joint-coordinate trajectories onto an orthogonal polynomial basis; and Autoencoder latent embeddings. Legendre coefficients and TMPs achieved the highest classifier accuracy, followed by autoencoders. We found two discriminative features for movement classification. The most informative is the general posture of the body, the average spatial configuration that distinguishes one activity from another. Additionally, we identified 9 critical joints that are most predictive for movement classification. Interestingly, good classification accuracy did not automatically lead to good movement generation: when we reconstructed movements for each activity, TMPs preserved the temporal dynamics and produced perceptually natural motion, whereas reconstructions from Legendre coefficients retained only the average posture and appeared frozen. These results reveal a dissociation in how movement information is organized: the static configuration of the body suffices to classify what activity is performed, but the temporal dynamics of movement are required to reconstruct how it unfolds. This distinction clarifies which features the visual system may rely upon for rapid action recognition, and suggests that postural features could enable efficient movement screening in clinical applications, while dynamic information remain essential wherever movement generation is the goal. 
+
+---
