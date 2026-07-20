@@ -1,0 +1,92 @@
+# Scientific Claim-Source Retrieval Revisited: A Comparative Study of Style Transfer and Re-Ranking 
+
+**Authors**: Tobias Schreieder, Harsh Khandelwal, Yu-Ling Zhong, Michael Färber  
+
+**Link**: [PDF](https://arxiv.org/pdf/2607.15875)  
+
+**Abstract**: Scientific claims shared on social media are often difficult to verify and may contribute to the spread of misinformation. To address this challenge, automated fact verification systems require scientific claim-source retrieval, the task of identifying the source publication underlying a given claim. However, claims often differ substantially from their source publications in language, style, and specificity, making retrieval challenging. We present a comparative study of scientific claim-source retrieval on the CheckThat! 2026 benchmark across sparse and dense retrieval models. Our results show that translating claims into English outperforms both original and bilingual claim representations, while incorporating publication metadata provides additional retrieval gains by capturing indirect source references. In addition, we analyze four style transfer approaches and find that they improve retrieval performance for most models, although the optimal style depends on the underlying retrieval objective. Finally, we investigate similarity- and signal-based re-ranking approaches, introducing three novel re-ranking models based on attribution, entity overlap, and verification-based reasoning. Verification-based re-ranking yields additional gains beyond semantic similarity and achieves the best overall performance with an MRR@5 of 0.758. 
+
+---
+# What Do Chinese-Language Generative Search Engines Cite and Surface? A Large-Scale Empirical Study 
+
+**Authors**: Tao Zhen, Yue Liu, Gege Zhang, Yixuan Niu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2607.15771)  
+
+**Abstract**: Generative AI question-answering systems increasingly mediate information access, shifting content visibility from ranked search results to retrieval, citation, and presentation in generated answers. We conduct a large-scale empirical study of Chinese-language generative search across the Web and App interfaces of four mainstream platforms. The controlled design covers eight platform interfaces, 614 queries, and three replications per query-platform-interface combination. From 214,119 raw records, we construct a cleaned citation-level dataset of 160,860 records and analyze citation behavior, source attribution, entity exposure, and cross-interface consistency. Five findings emerge. First, brands in the citation pool were selectively surfaced in answers: the overall brand-selection rate was 8.3%, and 12.4% of retrieved sources containing contact information contributed contact information to answers. Second, content fit, cross-source occurrence count, and semantic role were relatively important in predictive models, whereas the 5118-Baidu Composite Quality Score was not the leading predictor for any examined outcome. Third, among cited pages with publication dates, fitted half-lives were approximately 39 days for high-timeliness queries and 68 days for low-timeliness queries. Fourth, approximately 13% of brand exposures could not be matched to the contemporaneous citation pool, and approximately 71% of contact-information exposures could not be matched to the crawled body text. Fifth, source sets differed systematically between the App and Web interfaces of the same platform. These results characterize how Chinese-language generative search systems select, attribute, and surface information and show that interface type is an important dimension of analysis. 
+
+---
+# RECAP: Feedback-Driven Streaming Semantic User Profiles for Short-Video Recommendation 
+
+**Authors**: Ziyi Zhao, Xiaoyou Zhou, Xiao Lv, Yangyang Li, Chubo He, Zhao Liu, Jiayao Shen, Yuqi Liu, He Li, Chengyi Zhang, Jian Liang, Ming Li, Chongming Gao, Fuli Feng, Ruiming Tang, Han Li  
+
+**Link**: [PDF](https://arxiv.org/pdf/2607.15730)  
+
+**Abstract**: Language-based user profiles convert long behavioral histories into explicit semantic representations for recommendation. However, most profile generators are optimized in an open loop: they may summarize past behavior fluently, but are not directly trained to improve future recommendation. We study this problem in real-world short-video recommendation, where user behaviors continuously arrive as streams and profiles must be incrementally updated under limited capacity. This requires maintaining a consistent bounded profile state and constructing profile-targeted semantic feedback from industrial implicit behavior logs. We propose RECAP, an offline closed-loop framework for optimizing streaming structured semantic profiles with historical recommendation feedback. RECAP maintains each profile as a bounded structured memory by combining LLM-based semantic updates with deterministic lifecycle and capacity control. RECAP constructs profile-targeted semantic feedback by filtering label-consistent behavior pairs with an LLM judge and training a dual-tower evaluator whose matching score serves as a GRPO reward. Experiments on Kuaishou short-video data show that RECAP improves uAUC by 0.0084 and Recall@2000 by about 4.9% over the base generator. Further analyses confirm the benefits of feedback construction and policy optimization, and show more grounded refinement and user-level abstraction in profile updates. A seven-day online A/B test further shows a statistically significant 0.139% improvement in average application usage time per user. 
+
+---
+# From Skill Extraction to Multistakeholder Recommendation: A Two-Stage Framework for Bias Governance in Skills-Based Job Matching 
+
+**Authors**: Andrea Forster, Gregor Autischer, Dominik Kowald, Simone Kopeinik  
+
+**Link**: [PDF](https://arxiv.org/pdf/2607.15707)  
+
+**Abstract**: AI-based labor-market systems or platforms can affect access to job opportunities prior to organizational candidate rankings or hiring decisions. Such applications warrant caution, as biases in skill extraction, profile formation, and candidate-job matching may contribute to unfair treatment of candidates. In this paper, we propose a two-stage framework for detecting and governing bias in skills-based job matching. Stage 1, skill extraction and profile formation, addresses how candidates provide skills and preferences to the system, how the system extracts and structures this information, and the bias risks this entails, with a focus on chatbot-based elicitation. Stage 2, multistakeholder candidate-job recommendation, would embed this information in a recommender system in which candidate, company, and regulatory objectives are represented by separate agents, each producing an independent candidate-job ranking; these rankings would be combined through social choice-based aggregation into a single, auditable recommendation. The two stages are connected by a shared distinction between hard constraints, which require correction before processing continues, and soft constraints, which are logged to inform later decisions. Following an AI Act-aligned assessment methodology (based on the Fraunhofer AI Assessment Catalog), we propose using distributional auditing and counterfactual testing to produce a Stage 1 bias inventory sorted into hard and soft constraints, with the latter informing fairness thresholds for Stage 2. The same logic would apply to Stage 2: fairness metrics crossing predefined thresholds would trigger an adapted recommendation process, while smaller deviations would be logged as bias reports and persistent fairness states. 
+
+---
+# PCTD: Preference-Guided Counterfactual Task Decomposition for Agent Tool Retrieval 
+
+**Authors**: Chu Zhao, Lei Tang, Minghang Li, Jianzhe Zhao, Guibing Guo, Zhengzong Chen, Yuanyuan Zhao, Fei Huang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2607.15696)  
+
+**Abstract**: Task decomposition aims to transform ambiguous instructions into executable atomic subtasks, thereby guiding high-precision tool retrieval. However, our analysis reveals that directly adopting tool retrieval metrics, i.e., Recall or NDCG, as rewards for task decomposition can easily induce reward hacking in reinforcement learning-based methods. Specifically, models tend to maximize retrieval matching through strategies such as repetitive decomposition. This spurious correlation between the shallow features of decomposition results and retrieval metric impairs generalization in Out-of-Domain (OOD) scenarios involving unseen tools. To address this issue, we propose PCTD, a Preference-guided Counterfactual Task Decomposition framework. PCTD quantifies the marginal causal gain of decomposition on retrieval ranking through a counterfactual reward, thereby cutting off spurious correlations at their source. Meanwhile, it introduces a preference reward to impose fine-grained structural supervision on logical coherence and atomicity, encouraging the model to generate high-quality decompositions. In addition, we construct MTDTool, the task decomposition benchmark specifically designed for mobile multi-turn interactions. Extensive experiments demonstrate that PCTD alleviates repetitive decomposition and surpasses SOTA methods in retrieval, decomposition quality, and OOD generalization. 
+
+---
+# RecGPT-V3 Technical Report 
+
+**Authors**: Bowen Zheng, Chao Yi, Dian Chen, Gaoyang Guo, Han Zhu, Jiakai Tang, Jian Wu, Mao Zhang, Wen Chen, Yifan Lu, Yujie Luo, Yuning Jiang, Zhujin Gao, Bo Zheng, Dixuan Wang, Hao Fang, Jiancai Liu, Jing Yu, Ke Chen, Kewei Zhu, Mingke Xu, Wenjun Yang, Xunke Xi, Zile Zhou  
+
+**Link**: [PDF](https://arxiv.org/pdf/2607.15591)  
+
+**Abstract**: Large language models (LLMs) are transforming recommender systems from matching co-occurrence patterns in historical behavior toward reasoning about the intent that drives it. RecGPT-V1 pioneered this paradigm on Taobao by centering user understanding, and RecGPT-V2 scaled it via coordinated multi-agent reasoning; both are deployed in production with consistent gains in user experience and commercial outcomes. However, operating RecGPT at scale reveals three challenges: (1) stateless behavior modeling, where each request reprocesses full user history, wasting computation and discarding prior analysis; (2) a tag-to-item information bottleneck, where natural-language tags form a lossy channel between user understanding and item grounding; and (3) inefficient explicit reasoning, whose lengthy chain-of-thought incurs untenable latency and compute overhead.
+We present RecGPT-V3, a stateful, hybrid-modal recommender that reasons over natural language for open-world knowledge and Semantic IDs (SIDs) for concrete item grounding. A Memory Hub maintains structured, continually evolving user memory that distills long-horizon behavior into condensed units, cutting user-modeling computation by 55.8%. A Hybrid-modal Foundation Model allows the LLM jointly reason over text tags and SIDs, opening a high-bandwidth channel into the item space. Latent Intent Reasoning internalizes verbose rationales into compact learnable latent tokens that remain decodable into readable explanations, lowering output token cost by 200x. Deployed in Taobao's "Guess What You Like" feed, RecGPT-V3 achieves consistent gains in large-scale online A/B tests: IPV +1.28%, CTR +1.00%, TC +1.97%, GMV +3.97%, while cutting end-to-end serving resource consumption by 52.4%. 
+
+---
+# LLMs Encode Relevance as a Layer-Wise Cross-Lingual Signal 
+
+**Authors**: Pietro Bernardelle, Samaneh Mohtadi, Stefano Civelli, Joel Mackenzie, Gianluca Demartini  
+
+**Link**: [PDF](https://arxiv.org/pdf/2607.15555)  
+
+**Abstract**: Large language models (LLMs) are increasingly used in information retrieval (IR) pipelines as relevance judges and re-rankers. Yet most analyses remain output-centric, evaluating generated labels or scores while offering limited insight into how relevance is represented inside the model. In this work, we study whether query-document (q-d) relevance is linearly decodable from residual-stream activations in instruction-tuned LLMs, how this signal compares with generated relevance judgments, and whether it transfers across languages. Using the TREC DL20 and MIRACL evaluation collections, we guide medium-scale LLMs (4-9B parameters) with UMBRELA-style relevance judgment prompts, extract last-token activations from every transformer layer, and train linear probes to predict relevance labels. We compare probe predictions with generated judgments and use TREC DL20 to test whether probe-derived pseudo-labels preserve system rankings against human judgments. Our results suggest that q-d relevance is encoded as a depth-dependent signal: probe performance is weak in early layers and strongest in middle-to-late layers, indicating that relevance becomes more linearly accessible after contextual integration. Most importantly, in several models, validation-selected probes match or outperform generated judgments and better preserve system rankings, revealing a separation between internal relevance representation and external expression. Multilingual experiments suggest partial cross-language portability, although transfer remains weaker than within-language decoding. Overall, this work provides a representation-level perspective on LLM-based relevance assessment. Layer-wise probing can help diagnose where relevance emerges, when generated judgments fail to reflect internally available evidence, and how relevance representations vary across languages, datasets, and model families. 
+
+---
+# How Does Empowering Users with Greater System Control Affect News Filter Bubbles? 
+
+**Authors**: Ping Liu, Karthik Shivaram, Aron Culotta, Matthew Shapiro, Mustafa Bilgic  
+
+**Link**: [PDF](https://arxiv.org/pdf/2607.15284)  
+
+**Abstract**: While recommendation systems enable users to find articles of interest, they can also create ``filter bubbles'' by presenting content that reinforces users' pre-existing beliefs. Users are often unaware that the system placed them in a filter bubble and, even when aware, they often lack direct control over it. To address these issues, we first design a political news recommendation system augmented with an enhanced interface that exposes the political and topical interests the system inferred from user behavior. This allows the user to adjust the recommendation system to receive more articles on a particular topic or presenting a particular political stance. We then conduct a user study to compare our system to a traditional interface and found that the transparent approach helped users realize that they were in a filter bubble. Additionally, the enhanced system led to less extreme news for most users but also allowed others to move the system to more extremes. Similarly, while many users moved the system from extreme liberal/conservative to the center, this came at the expense of reducing political diversity of the articles shown. These findings suggest that, while the proposed system increased awareness of the filter bubbles, it had heterogeneous effects on news consumption depending on user preferences. 
+
+---
+# Adaptive Retrieval Strategies for Biomedical Question Answering 
+
+**Authors**: Han Yue, Eric Zhou, Alex Hu, Xueshen Li, Yuan Zhang, Jinfeng Zhang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2607.15283)  
+
+**Abstract**: Biomedical question answering (QA) encompasses diverse question types, including yes/no, factoid, list, and summary questions, each requiring distinct forms of evidence and reasoning. However, most retrieval-augmented QA systems rely on a unified retrieval pipeline, regardless of the information needs of different question categories. This one-size-fits-all approach may limit the effectiveness of evidence acquisition and downstream answer generation. In this work, we propose an adaptive retrieval framework that selects retrieval and evidence aggregation strategies according to question type. The system combines query understanding, biomedical document retrieval, reranking, knowledge graph augmentation, document clustering, and large language model-based answer generation. For yes/no questions, it focuses on precise evidence retrieval; for factoid and list questions, it emphasizes entity-oriented retrieval and clustering; and for summary questions, it performs broader evidence collection and synthesis. We evaluate the proposed framework on the BioASQ benchmark and demonstrate that adaptive retrieval strategies improve evidence relevance and answer quality across multiple question types. Our results suggest that aligning retrieval mechanisms with question-specific information needs provides an effective direction for enhancing retrieval-augmented biomedical QA systems. 
+
+---
+# Efficient and Effective In-place Graph-based Vector Index Updates 
+
+**Authors**: Haotian Liu, Yujun He, Bo Tang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2607.15576)  
+
+**Abstract**: In the era of Large Language Models (LLMs), efficient vector updates are critical for capturing real-time information from rapidly evolving data. However, it is not trivial to process frequent vector insert and delete updates and maintain a high recall of the search results simultaneously. Specifically, the cluster-based vector indexing methods have high update throughput but low search result quality. Existing out-of-place graph-based vector indexing update approaches suffer from poor update throughput due to the need to periodically merge update batches into the underlying graph index.
+Building a vector data system that supports efficient and effective in-place updates is inherently challenging. In this work, we propose Yi to achieve it. In particular, Yi supports in-place graph-based vector indexing updates with consistently high update throughput and good search result quality. The key idea of Yi is decomposition facilitates consolidation. In particular, we introduce a vector-level update mechanism and architect Yi with three core components: (i) a tasklet-based execution engine, (ii) an asynchronous buffer manager, and (iii) a vector file system. Experimental results demonstrate that Yi achieves 1.75x higher update throughput and 1.8x higher concurrent search throughput than the state-of-the-art systems on the 800M dataset, while using only 73% of the peak memory and fewer CPU cores. 
+
+---
