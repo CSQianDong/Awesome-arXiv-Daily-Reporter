@@ -1,0 +1,108 @@
+# MemoryCPT: An End-to-End Agent Memory Framework for Cost-Performance Trade-off 
+
+**Authors**: Songxin Lei, Kun Ouyang, Weilin Ruan, Yuqian Wu, Zhijiang Guo, Yushi Sun, Fugee Tsung  
+
+**Link**: [PDF](https://arxiv.org/pdf/2608.04843)  
+
+**Abstract**: Long-horizon LLM agents require memory systems that recover useful evidence from large interaction histories without passing excessive context to downstream models. Existing memory pipelines often rely on hand-crafted heuristics and repeated LLM calls, which can introduce redundant context and high inference cost. We propose MemoryCPT, an end-to-end trainable agent memory pipeline that spans offline memory construction and online query-conditioned context generation. MemoryCPT consists of two stages: Query-agnostic Distillation (QAD), which distills a modular memory-construction pipeline into a compact model using explicit reasoning traces; and Query-aware Retrieval and Summarization (QAR), which combines reciprocal rank fusion (RRF) with a LoRA-based summarizer trained via Group Relative Policy Optimization (GRPO) under a cost-aware reward. We further introduce Quality per Cost (QPC) to quantify answer quality per unit inference cost. Experiments on LoCoMo and LongMemEval show that MemoryCPT improves the cost-performance trade-off over the evaluated baselines, while ablation and sensitivity analyses characterize the contributions of its components and the effects of key design choices. 
+
+---
+# DEGR: Dual Exploration-Driven Generative Re-Ranking for Adaptive Cross-Request Context Bridging 
+
+**Authors**: Binglei Zhao, Xuanhua Yang, Xiwei Zhao, Sulong Xu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2608.04809)  
+
+**Abstract**: In industrial recommendation systems, the re-ranking stage balances business objectives and diversity for sequence-level optimization while modeling contextual information. However, constrained by fixed upstream supply, existing methods fail to deliver further effectiveness gains, especially under low-quality supply. To overcome this, re-ranking can actively balance immediate and exploratory value, for instance, by prioritizing exploratory exposure under low-quality supply to preserve browsing potential and facilitate serendipitous conversions. Therefore, we propose a Dual Exploration-Driven Generative Re-Ranking (DEGR) method. DEGR adopts a hybrid supervised-reinforcement exploration and optimization paradigm, guided by an exploratory reward model that adaptively balances immediate and exploratory value. The hybrid optimization paradigm integrates three key components: supervised learning, exploration diversity constraint, and adaptive reward-weighted ORPO for preference optimization. Through this dual exploration, the generator ultimately acts as an adaptive cross-request contextual bridge. Offline and online experiments indicate that DEGR outperforms SOTA methods, achieving improvements of up to 1.22% UCTR and 0.20% PV in the JD E-commerce recommendation system. 
+
+---
+# WatchLens: A Configurable Platform for Online Video Recommendation Experiments 
+
+**Authors**: Deogyong Kim, Dongha Lee  
+
+**Link**: [PDF](https://arxiv.org/pdf/2608.04807)  
+
+**Abstract**: Studying how video recommender systems shape user behavior requires online experiments that link playback behavior with the recommendation conditions that produced it. Existing user-study infrastructure provides one or the other, but not both within a single experimentation workflow. We present WatchLens, an open-source platform that fills this gap. WatchLens adopts a modular architecture in which user interfaces, content sources, and recommendation policies are independently configurable, with policies assignable separately to the feed and the watch page, while a standardized logging layer attaches the recommendation policy and ranking position to every event at recording time. This design enables researchers to analyze how recommendation policies and ranking positions shape downstream playback behavior, session continuation, and navigation between the feed and the watch page, with the linkage between policy and outcome available in each event rather than reconstructed afterwards. We demonstrate WatchLens with a short-form video case study that holds the interface, feed policy, and content pool constant while varying only the watch-page policy, showing how the platform supports session-level comparison of recommendation effects on real viewing behavior. WatchLens is released as a publicly available, single-server deployable system for reproducible online video recommendation research. 
+
+---
+# Characterizing the Evolving Landscape of Modern Information Seeking 
+
+**Authors**: Shuoqi Sun  
+
+**Link**: [PDF](https://arxiv.org/pdf/2608.04609)  
+
+**Abstract**: Information seeking (IS) evolves, as does the human IS process. Since the rise of Generative AI (GenAI), modern IS has shifted by introducing more interfaces, more complex interactions, and expanded system capabilities. We argue that these changes in modern IS should be systematically examined. This PhD research characterizes the changes in the modern IS process. We use mechanisms, including online crowdsourcing survey experiments, theoretical IS frameworks, and in-lab experiments with neurophysiological signals, to characterize the shifts in modern IS, especially those driven by GenAI. We offer insights into the current landscape of search interface preferences and the cognitive efforts involved in seeking information. We believe this PhD research will contribute to and inform future designs of personalized, cognition-aware IS systems. 
+
+---
+# Skills Know Their Neighbors: Cluster-Contrastive Capability Pages for Skill Retrieval 
+
+**Authors**: Zifei Wang, Wei Wen, Qiang Ji, Ruizhi Qiao  
+
+**Link**: [PDF](https://arxiv.org/pdf/2608.04482)  
+
+**Abstract**: As skill libraries grow, large language model agents must retrieve reusable skills from candidates that often share the same topic and vocabulary but implement different capabilities. Retrieval is limited not only by the scorer but also by the text being scored: a document may describe what a skill does without stating which similar requests should be routed elsewhere. We formalize a skill's capability as its \emph{executable region}, the set of queries it can solve, and view its document as a lossy observation of that region. This view exposes a document-imposed component of retrieval error that cannot be removed by improving the retriever alone. We therefore propose \emph{Capability Pages}, cluster-contrastive skill representations containing a positive trigger $\Tpos$, a negative boundary $\Tneg$, and a discriminative body $B$. An offline compiler compares neighboring skills to write these fields. At inference time, the index uses $\Tpos$ and $B$ for candidate recall, while the router uses $\Tneg$ to reject confusable alternatives. On SRA-Bench, which contains 26{,}262 skills and 5{,}400 questions from six datasets, Capability Pages improve Recall@10 for all five tested retrievers, with a mean gain of $2.94$ points. Adding $\Tneg$ to candidate cards improves end-to-end task success by $3.62$ points on average across four executors and six datasets. A transfer evaluation on Chinese SSL-SkillDiscovery reaches $73.07\%$ MRR@50 using the same encoder across conditions. Capability Pages require no modification to the online models; they improve routing by rewriting the offline skill library. 
+
+---
+# Multi-Objective Ranking for Live-Streaming: Balancing Fresh and Delayed Signals with Segment-Aware Targeting 
+
+**Authors**: Xiaoyi Gu, Julia Tavares, Eder Santana, Carlos Mendoza-Cardenas, Nikita Mishra, Saad Ali  
+
+**Link**: [PDF](https://arxiv.org/pdf/2608.04455)  
+
+**Abstract**: One of the most challenging problems entertainment live-streaming services face in recommendation systems is that user behaviors are sparse and delayed, and interaction data exhibits bias for different user segments. Unlike e-commerce applications where user actions follow linear sequences, live-streaming viewers engage in multiple concurrent behaviors of watching, chatting, following, and spending, each occurring with varying delays. We address these challenges through three key contributions: 1) a delayed window approach that extends feedback collection beyond immediate responses, 2) a multi-model architecture that combines fresh and delayed signals, and a segment-aware targeting module that optimizes ranking scores differently across user lifecycle stages, and 3) Multi-gate Mixture-of-Experts (MMoE) integration that jointly models correlated targets while reducing model parameters by 41.9% compared to independent models. Online A/B testing demonstrates significant improvements, including a +0.09% increase in Daily Active Viewers (DAV), generating millions more annual active viewer days, and +0.56% increase in highly engaged viewers' capped Average Revenue Per User (ARPU). Viewer-segment targeting achieved an additional +0.15% DAV improvement for newer and less engaged viewers, while MMoE enhancement added +0.08% overall DAV and +0.27% new follows. The proposed system processes ranking requests with low latency, providing a scalable approach for balancing multiple business objectives across diverse user populations. In addition, we tested the multi-model architecture on the Twitch mobile live feed and achieved a +1.12% increase in positive user-channel interactions (clicks, follows, and likes), demonstrating applicability beyond the primary use case. 
+
+---
+# The Price of Isolation: Estimating the Ecosystem Cost of Symmetric Two-Sided A/B Testing 
+
+**Authors**: Yuanyuan Shen, Yiren Yan, Wenjie Li, Chunhui Zhu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2608.04432)  
+
+**Abstract**: On two-sided content platforms, symmetric two-sided isolation (assigning matched fractions of creators and viewers to isolated treatment and control submarkets) is widely used for creator-side and cold-start experiments because it removes cross-arm marketplace interference. Isolation, however, thins each viewer's candidate catalog, and intuition suggests the resulting engagement cost should fade as the platform grows: a small fraction of a vast catalog is still vast. We show that, in an order-statistics model of engagement, whether this intuition holds depends on the upper tail of match quality. Extreme-value theory yields tail-class loss laws with a sharp dichotomy: for light or bounded tails the loss vanishes as the candidate pool grows, whereas under heavy tails it converges to a size-independent constant, so expanding the candidate pool, even by orders of magnitude, does not asymptotically eliminate the cost. Evidence from two production experiments on a platform with millions of active creators is consistent with this picture: a pure A/A traffic sweep reveals a measurable, depth-graded engagement cost; a one-sided catalog ablation independently shows that per-viewer thinning contributes to the loss; and a tail index calibrated on the small exploration pool predicts an effect consistent with the one observed in the far larger full-catalog ablation. Isolation thus carries a price that experimenters should budget for, like any other cost. We give practitioners a preflight procedure that estimates it before launch, sizes traffic accordingly, and recommends a fallback design when the predicted cost exceeds a chosen tolerance. 
+
+---
+# Neighborhood-Aware Dual Biomedical Entity Linking 
+
+**Authors**: Yicheng Tao, Jie Liu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2608.04144)  
+
+**Abstract**: Biomedical entity linking grounds mentions in clinical and scientific text to entities in a curated knowledge base (KB) with ontological structure, which supports downstream applications such as literature-scale information extraction and patient-record normalization. The task has several challenges at once: the KB contains large numbers of entities, mentions are often ambiguous, and gold labels follow annotation conventions specific to each corpus. To address these challenges, we propose PILOT, a three-stage framework made up of neighborhood-aware retrieval, dual reranking, and score fusion. The retriever injects ontological structure from both the query and KB side, by reformulating mentions and pooling entity embeddings. The retrieved pool is then scored from two complementary views, one over surface forms and one over context, and fused together. PILOT achieves the state of the art on average across five widely-used benchmarks and remains efficient at inference. 
+
+---
+# Caching for the Future: Scrub Jay Episodic Memory Principles for Agent Memory Systems 
+
+**Authors**: Kartikey Singh Bhandari, Aarya Wadhwani, Dhruv Kumar, Pratik Narang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2608.04746)  
+
+**Abstract**: LLM agents that persist across sessions accumulate stored memories whose validity varies enormously by content type, yet existing memory architectures treat all memories as equally persistent and systematically contaminate retrieved context with outdated facts. We show that per-memory, type-conditioned temporal decay, a property of western scrub jay episodic memory, can be operationalized as an auto-classified coefficient $\pi_i$ in an external LLM-agent memory store, yielding ScrubJay-MEM: each memory is encoded as a jointly-bound What--Where--When tuple with an estimated perishability $\pi_i$ and utility horizon $\tau_i$, retrieved by query-adaptive scoring, and revised retroactively at $O(1)$ LLM calls per update. We introduce the Temporal Generalization Test (TGT), a benchmark with held-out retention intervals and a Generalization Gap (GenGap) metric. On TGT, ScrubJay-MEM is the only retrieval-based system with substantially positive GenGap ($+0.108$); on MemoryAgentBench EventQA-64k it improves F1 by $+2.66$ over Mem0 and $+3.09$ over Qwen3-Embedding-4B under a llm backbone. A decay ablation collapses GenGap by $5.7\times$, establishing type-conditioned decay as necessary for the result. Gains narrow under stronger backbones and reverse on fact-consolidation tasks, scoping the contribution to temporal reasoning over perishable facts. 
+
+---
+# Towards Robust Version Identification in the Wild: A Dataset, Benchmark, and Fine-Tuning Study 
+
+**Authors**: Simon Hachmeier, R. Oguz Araz, Dmitry Bogdanov, Robert Jäschke, Xavier Serra  
+
+**Link**: [PDF](https://arxiv.org/pdf/2608.04543)  
+
+**Abstract**: Existing datasets for musical version identification (VI) are primarily derived from curated metadata sources such as SecondHandSongs and Discogs, and are therefore dominated by professionally recorded tracks. This leads to a domain mismatch with real-world scenarios, where amateur and user-generated content is prevalent. To address this limitation, we introduce DiVers, a large-scale VI dataset comprising over 1.1 million musical versions, with train-validation-test splits compatible with established datasets such as Discogs-VI-YT, SHS100K, and Da-TACOS. In addition to standard version-level annotations, DiVers provides automatically assigned tags (e.g., instrumental, live) and segment-level predictions indicating the presence or absence of music. We evaluate the proposed dataset by training state-of-the-art VI systems. Our results show that models trained on DiVers achieve substantially improved robustness to acoustically diverse and noisy inputs, while maintaining a stable performance on cleaner, studio-quality benchmarks. We release the dataset metadata, code for its construction, and all experimental pipelines to support reproducibility. 
+
+---
+# CLIP-CC-Bench: Evaluating Paragraph-Level Video Descriptions in Video-Language Models 
+
+**Authors**: Mukhtiar Ali, Harsh Dubey, Sugam Mishra, Chulwoo Pack  
+
+**Link**: [PDF](https://arxiv.org/pdf/2608.04302)  
+
+**Abstract**: Benchmarking video-language models has largely focused on short clips and single-sentence metrics, leaving open whether current systems can generate accurate long-form, paragraph-level descriptions. We introduce CLIP-CC-Bench, an evaluation suite for long-form video description built from 5 hours of movie content segmented into 90-second clips, each paired with an expert-written paragraph-style reference. The evaluation suite employs an ensemble of five state-of-the-art LLM-based embedding models to increase reliability and mitigate single-model bias, and applies two complementary methodologies: (i) coarse-grained semantic matching and (ii) fine-grained semantic matching to compare model-generated descriptions against CLIP-CC-Bench references. Using this framework, we evaluate 17 state-of-the-art video-language models and report both their Borda-aggregated rankings and their average scores on CLIP-CC-Bench. We further quantify the protocol's internal reliability through inter-judge agreement and bootstrap ranking stability. We release standardized evaluation scripts, model outputs, and aggregation tools at this https URL to support reproducibility. CLIP-CC-Bench provides a practical evaluation framework for long-form video description, filling a gap left by existing short-clip and QA-only benchmarks. 
+
+---
+# A Deep Causal Inference Approach to Measuring the Effects of Forming Group Loans in Online Non-profit Microfinance Platform 
+
+**Authors**: Thai T. Pham, Yuanyuan Shen  
+
+**Link**: [PDF](https://arxiv.org/pdf/1706.02795)  
+
+**Abstract**: Kiva is an online non-profit crowdsouring microfinance platform that raises funds for the poor in the third world. The borrowers on Kiva are small business owners and individuals in urgent need of money. To raise funds as fast as possible, they have the option to form groups and post loan requests in the name of their groups. While it is generally believed that group loans pose less risk for investors than individual loans do, we study whether this is the case in a philanthropic online marketplace. In particular, we measure the effect of group loans on funding time while controlling for the loan sizes and other factors. Because loan descriptions (in the form of texts) play an important role in lenders' decision process on Kiva, we make use of this information through deep learning in natural language processing. In this aspect, this is the first paper that uses one of the most advanced deep learning techniques to deal with unstructured data in a way that can take advantage of its superior prediction power to answer causal questions. We find that on average, forming group loans speeds up the funding time by about 3.3 days. 
+
+---
