@@ -1,0 +1,135 @@
+# Gryphon-v2: One Model in Place of a Cascade - Generate-and-Rank Recommender with Rollout Distillation 
+
+**Authors**: Anna Lipkina, Daria Tikhonovich, Viktor Yanush, Mariia Ulianova, Oleg Sorokin, Vladislav Dodonov, Ilya Murzin, Denis Burshtein, Nikolay Savushkin  
+
+**Link**: [PDF](https://arxiv.org/pdf/2608.06213)  
+
+**Abstract**: Industrial recommender systems are commonly deployed as multi-stage cascades with separate candidate generators, pre-rankers, and final rankers. Although effective, these cascades require repeated user-history processing, complex feature pipelines, and multiple serving stages. Semantic-ID-based generative retrieval offers a path toward simpler end-to-end systems, but next-item prediction alone does not capture the fine-grained preferences encoded by production ranking objectives. We present Gryphon-v2, a unified generate-and-rank architecture for end-to-end recommendation. The model encodes a user history once, generates Semantic-ID candidates with an autoregressive decoder, resolves them to catalogue items, and ranks them with an item-level Ranking Module that reuses the shared encoder states. To transfer fine-grained production ranking preferences without adding an expensive second model to the serving path, we distill a high-capacity, training-only Teacher Ranker into the Ranking Module. Gryphon-v2 is trained with Rollout Distillation: teacher scores are the only ranking supervision, and they are collected over two complementary candidate distributions. Rollouts from the current decoder expose the Ranking Module to candidates produced by the same generation mechanism used at serving time, while logged impressions cover items users were actually shown. In an online A/B experiment on a large-scale recommendation surface at Yandex Music, a single Gryphon-v2 model replaces a production cascade comprising more than 15 candidate generators, pre-ranking, and final ranking. The deployment increases the number of active users by 1.41% at serving latency comparable to the production cascade. These results support the practical viability of a generative retriever with a Ranking Module distilled from the Teacher Ranker as an end-to-end alternative to a production cascade. 
+
+---
+# Is Personalized Modality Weighting Actually Personalized? A Controlled Audit of Per-User Weighting Claims in Multimodal Recommenders 
+
+**Authors**: Jingyuan Zheng, Xin Zhang, Yang Gu, Dongjing Wang, Yuxiang Wang, Xudong Shen, Haiping Zhang, Youhuizi Li, Dongjin Yu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2608.05655)  
+
+**Abstract**: Per-user modality weighting is deployed at billion-user scale in multimodal recommenders, through user modality-strength vectors, attention gates, meta-weight hypernetworks, and low-rank guided weights, each claiming a ranking gain from user-specific modality preference. Yet, to our knowledge, prior evaluations do not isolate a genuinely user-specific signal from a global modality weight plus model capacity. We audit this family with a two-contrast audit principle, reducing six implementations onto one shared collaborative backbone and measuring a utility gap (real-GM) against a single global modality weight and an identifiability gap (real-shuf) against an eval-time permutation of the user-weight binding. Across three independent short-video corpora, a single global weight already delivers nearly all of the content gain (+1.9/+3.6/+3.5pp over a no-modality baseline, p < .001). Making the weight per-user adds no consistent utility: no implementation wins on all corpora and metrics, and the few positive gaps are small (<=0.9pp) and flip. The shuffle control is necessary but not sufficient, since real-shuf reaches +128% of the content gain for heads that simultaneously lose to the global weight. We trace this dissociation to gates reading the shared collaborative embedding: decoupling the gate input collapses the inflated real-shuf to near zero while the utility conclusion stands. A monotone signal-implant dose-response (capture AUROC rising from 0.57 to 0.89 and from 0.64 to 1.00) verifies the harness would detect user-specific structure if present, and every finding replicates on a fourth, cross-domain e-commerce corpus. We propose reporting real-GM alongside real-shuf as a minimum evidentiary standard for personalization claims. 
+
+---
+# omni-macos: On-Device Omni-Modal Search on Apple Silicon 
+
+**Authors**: Han Xiao  
+
+**Link**: [PDF](https://arxiv.org/pdf/2608.05543)  
+
+**Abstract**: A search engine that embeds text, code, documents, images, audio and video into the same representation space has to run its encoder and keep its index somewhere, and almost every component built for the purpose assumes a server. We present omni-macos, which runs that whole engine, encoder, index and store, on the Mac the files are already on, so no file, query or vector ever leaves the machine. It keeps a background indexer and an interactive search box inside one memory budget the user sets: it re-encodes only the chunks an edit changes, hands the GPU smaller units while the user is typing, answers queries from a quantized replica with exact rescoring, and propagates that budget to the allocators that draw on unified memory. We measure every mechanism on five Macs spanning an eightfold range of accelerator width and a thirty-twofold range of memory, each one indexing its own local files. 
+
+---
+# EXCISE: Query-Side Exclusion for Late-Interaction Retrieval 
+
+**Authors**: Mohammed Ali, Abdelrahman Abdallah, Adam Jatowt  
+
+**Link**: [PDF](https://arxiv.org/pdf/2608.05497)  
+
+**Abstract**: Late-interaction retrievers handle exclusion queries poorly. When a user asks for X but not Z, the additive MaxSim score promotes documents covering Z, a problem we call exclusion inversion. We show that no readout of the frozen vectors recovers the constraint, because the difficulty lies in identifying the excluded topic, which depends on the query alone. EXCISE operates at query time and corrects the inversion while leaving the index frozen. Two query-side modules totalling 1.5M parameters identify the topic and re-embed a 100-document shortlist, and a parameter-free rule demotes candidates matching that topic. Across six collections and three backbones, EXCISE is the strongest system in all eighteen backbone-collection cells against that backbone's own frozen and fine-tuned baselines. It raises exclusion success@10 on ExcluIR from 0.058 to 0.691 and raises Boolean NOT accuracy from 0.25-0.29 to 0.90-0.92. Pooled over 1,860 queries, it outperforms every fine-tuned cross-encoder, each of which loses no-harm nDCG@10, whereas EXCISE matches its frozen baseline on its strongest backbone. We release X-BENCH, a tiered benchmark of explicit, implicit, and compound exclusions with no-harm and Boolean controls. 
+
+---
+# An Ontology-Based Framework for Student Profiling and Content Personalization in Higher Education 
+
+**Authors**: José Luiz M. Morais, Arlindo F. da Conceição, Cacilda Encarnação Augusto Alvarenga, Daniela Musa  
+
+**Link**: [PDF](https://arxiv.org/pdf/2608.05489)  
+
+**Abstract**: The expansion of access to Digital Information and Communication Technologies and the offer of distance or semi-distance education courses that make use of virtual learning environments brought changes in the teaching and learning processes, requiring that the student be even more protagonist in this process. The present study aimed to identify important aspects to be considered in the implementation and improvement of self-paced learning and e-learning in higher education courses, with the purpose of rethinking pedagogical models of courses offered at a distance so that they reach even more of your learning objectives. The research is characterized as qualitative, of bibliographic nature, and discusses techniques to monitor and record, electronically and automatically, the results of the process and learning. The importance of processes that store and manage the student's profile is highlighted, both in terms of content and forms of access. The article proposes the use of ontologies to store information about the educational process and presents a computational architecture for this purpose. 
+
+---
+# A Mechanistic Analysis of Gender Sensitivity in Dense Retrieval Models 
+
+**Authors**: Catherine Chen, Maarten de Rijke, Carsten Eickhoff  
+
+**Link**: [PDF](https://arxiv.org/pdf/2608.05467)  
+
+**Abstract**: While gender bias in dense retrieval models is well documented, with prior work showing that models often score male-gendered documents higher than female or neutral variants, the internal mechanisms producing these disparities are poorly understood. In this paper, we mechanistically analyze bi-encoder models to localize gender sensitivity, finding that the signal originates in input embeddings and propagates through a small set of late-layer attention heads that carry both gender and term-matching signals. Guided by these findings, we test steering interventions at both identified points and find distinct effects: embedding-level steering non-specifically neutralizes score differences, while attention-level steering produces directional shifts. Our findings provide a mechanistic basis for targeted debiasing and highlight the challenge of disentangling gender from relevance signals in shared model components. 
+
+---
+# Robustness and User-Perceived Value of Popularity Calibration in Music Recommendation: A User Study 
+
+**Authors**: Oleg Lesota, Gustavo Escobedo, Bruce Ferwerda, Simone Kopeinik, Dominik Kowald, Elisabeth Lex, Markus Schedl  
+
+**Link**: [PDF](https://arxiv.org/pdf/2608.05402)  
+
+**Abstract**: Popularity calibration in recommender systems has been studied both as a form of user-centered personalization and as an indicator of popularity bias. Most existing work evaluates calibration through offline metrics, often assuming that users prefer recommendation lists whose popularity distribution matches their historical consumption profile. However, user studies on calibration remain limited, and existing findings suggest that calibrated recommendations do not necessarily have a strong effect on user experience. Moreover, although prior work has shown that calibration metrics can correlate with users' perceptions of recommendation lists, the robustness of this relation remains unclear under different levels of item familiarity and incomplete user-history information. In this work, we study the perceived value and measurement reliability of popularity calibration in music recommendation. We construct personalized track lists from users' recent listening histories and use a controlled naive recommender to create lists with different popularity compositions: highpop-heavy, lowpop-heavy, and calibrated. We investigate whether users perceive differences between these lists, whether calibrated lists are preferred, how robust JSD-based popularity calibration is under different familiarity and history-availability conditions, and how computational popularity labels align with users' own popularity judgments. Our results show that users perceive differences in popularity composition, but do not clearly prefer calibrated lists. We further find that the relation between JSD and perceived popularity depends on item familiarity, list composition, and available user history, while computational and user-judged popularity labels only weakly align. These findings contribute to a more critical understanding of popularity calibration as both an offline metric and a user-facing construct. 
+
+---
+# Cross-platform epistemic verification for improving factual reliability in AI-generated news summarization 
+
+**Authors**: Zhuo Xie, Haoze Ni  
+
+**Link**: [PDF](https://arxiv.org/pdf/2608.05302)  
+
+**Abstract**: This study proposes Multi-source Evidence Consen- sus Verification (MECV), a post-hoc hallucination cor- rection framework for AI-generated news summariza- tion. Instead of depending on a single retrieval channel, MECV aggregates evidence from multiple heterogeneous sources, including the source document, Wikipedia, and open-web retrieval. The framework further incorporates a multi-LLM jury mechanism that estimates factual reliabil- ity through contradiction-aware consensus scoring across verifier models. Claims identified as potentially unsup- ported are revised through iterative minimal-edit refine- ment. The proposed framework is evaluated on the SummEd- its benchmark using GPT-4o-mini and DeepSeek-Chat as the verifier jury, with Qwen-Plus as the orchestra- tor. Experimental results show that MECV improves fac- tual consistency while preserving the semantic structure of the original summaries. The findings further suggest that agreement across heterogeneous evidence sources can serve as a useful signal for identifying factual uncertainty in AI-generated summaries, including in information- sensitive domains such as financial news aggregation. This study contributes to research on trustworthy AI and automated journalism by introducing a multi-source verification framework for hallucination correction and demonstrating the value of consensus-based verification for improving factual reliability in AI-generated news summarization. 
+
+---
+# From Trajectories to Evidence: Auditable Experimental Records for Industrial Research Agents 
+
+**Authors**: Zijie Zhuang, Changxin Lao, Pengbo Xu, Hanwen Xu, Ruochen Yang, Yingzhi He, Peng Zhang, Jiangxia Cao, Yusheng Huang, Guohong Mu, Jian Liang, Ruiming Tang, Shuang Yang, Zhaojie Liu, Wenwu Ou, Kun Gai  
+
+**Link**: [PDF](https://arxiv.org/pdf/2608.05235)  
+
+**Abstract**: Research agents increasingly conduct multi-round machine-learning experiments in industrial recommendation settings and retain the resulting trajectories to guide later decisions. Yet a completed trajectory is not automatically evidence: generated artifacts may be unsupported or incomplete, executed rounds may be invalid or confounded, and later modifications may obscure earlier findings. We study \textbf{trajectory-to-evidence conversion}, asking what a completed research process has actually established. We introduce an evidence-grounded framework that couples bounded verification of consequential artifacts with post-execution claim qualification. A context-isolated generate--verify--repair process checks artifacts for evidence violations and missing downstream requirements before release. After execution, validity and attribution checks consolidate evidence across rounds, qualify intervention-level claims as actionable repairs, diagnostic guards, or withheld findings, and preserve admitted claims as auditable records with explicit provenance and applicability boundaries. A hybrid LLM-assisted controller subsequently applies, defers, or rejects records based on available target evidence. Record audits characterize which claims survive qualification, while downstream diagnostics identify affirmative applicability judgment as a bottleneck for the tested controller. Across paper-to-target adaptations, later rounds often improve on the first, while final rounds frequently underperform an earlier best, exposing non-monotonic trajectory evolution. Candidates produced through the complete workflow also yielded positive online lifts relative to deployed baselines. 
+
+---
+# BioMedJImpact: A Comprehensive Dataset and LLM Pipeline for AI Engagement and Scientific Impact Analysis of Biomedical Journals 
+
+**Authors**: Ruiyu Wang, Yuzhang Xie, Xiao Hu, Carl Yang, Jiaying Lu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2608.05227)  
+
+**Abstract**: Assessing journal impact is central to scholarly communication, yet existing resources rarely capture how collaboration and artificial intelligence (AI) research jointly shape venue prestige in biomedicine. We present BioMedJImpact, a large-scale, biomedical-oriented dataset built from 1.74 million PubMed Central articles across 2,744 journals. BioMedJImpact integrates bibliometric indicators, collaboration features, and an LLM-derived AI engagement rate, defined as the proportion of AI-related articles within each journal-year. Specifically, AI engagement rate is extracted through a reproducible three-stage LLM pipeline. We analyze how collaboration intensity and AI engagement rate jointly influence scientific impact across two temporal subsets (2016-2019, 2020-2023). Two main patterns emerge: journals with larger author teams tend to have higher citation impact, while AI engagement rate is positively associated with Impact Factor only in the 2019 subset. To validate the LLM pipeline for deriving the AI engagement rate, we conduct human evaluation, confirming substantial agreement in AI relevance detection and consistent subfield classification. Together, BioMedJImpact provides both a comprehensive dataset at the interface of biomedicine and AI and a validated framework for scalable, content-aware scientometric analysis. Code and dataset are available at this https URL. 
+
+---
+# Beyond Top-K: Replacing Black-Box Retrieval with Interpretable Agentic Operations 
+
+**Authors**: Sagar Tamang, Ayush Vyas, Tabarakul Hazarika  
+
+**Link**: [PDF](https://arxiv.org/pdf/2608.06305)  
+
+**Abstract**: Retrieval-augmented generation over long documents is dominated by one design: chunk the text, embed the chunks, and surface the top-k nearest neighbours of the query. We argue that for an important class of documents -- financial statements, audit reports, regulatory returns -- this design is structurally unsound, and we make the argument measurable. On a 780-page government financial report, 86.8% of content lines are table rows, thousands of near-identical figures compete in one embedding space, and a figure inherits its unit from a header a median of 13 lines above it -- so a chunk boundary routinely separates a number from whether it is in lakh or crore, an error of two orders of magnitude. A table-aware chunker built as a steelman fixes the unit problem but leaves 27-30% of numeric chunks with no fiscal-year header at every chunk size we tried. We propose READ (Reliable Embedding-free Agentic Document-search), in which an agent reads the raw document through three deterministic operations -- normalized lexical search, structural navigation, and bounded span reads -- exposed over the Model Context Protocol, so a trajectory is a replayable audit trail, not an opaque similarity score. On 51 verified questions READ answers 58.8% against dense retrieval's 15.7% (p_Holm = 2 x 10^-5) -- or 35.3% tuned, which READ still leads by 23.5 points (p_Holm = 0.017). An agent given the same loop but a top-k tool reaches only 27.5%, locating the gain in the interface rather than in iteration. We also report what the evidence does not support: BM25 is statistically indistinguishable from READ, so our result separates embedding-based from embedding-free retrieval, not agentic from lexical search. 
+
+---
+# "I don't know anything about laptops!" - User Perception of Digital Product Advisors Adapting to Their Knowledge Levels 
+
+**Authors**: Kevin Schott, Andrea Papenmeier, Daniel Hienert, Dagmar Kern  
+
+**Link**: [PDF](https://arxiv.org/pdf/2608.06091)  
+
+**Abstract**: Conversational commerce uses digital assistants to support the search process and decision-making in e-commerce. Effective communication in these interactions can be facilitated by assistants adapting their communication style to users and supporting shared understanding. An open challenge in this context is adapting the presentation of complex product information to users with varying levels of domain knowledge. To investigate strategies for such knowledge-level adaptation, we set up a chatbot-assisted laptop search scenario. In a between-subjects experiment (n = 251), we examined novice and expert perceptions of product attribute recommendations presented as technical information only (T), or augmented with performance categories (TC), attribute explanations (TE), or both (TCE). For novices, approaches with explanations (TE, TCE) were perceived as more helpful and led to higher perceived learning than those without. Novices also rated the combined approach (TCE) more appropriate than the baseline (T) and TC in terms of information quantity, indicating that explanations are crucial to understand and benefit from performance categories. Critically, experts showed no significant differences across conditions, suggesting that providing supplementary information beneficial to novices did not detract from their experience. We distill these findings into four concrete design guidelines for inclusive text-based product advisors in technical domains: use TCE by default; keep a single inclusive interface; avoid standalone categories; and support user agency and personalize to the stated use case. 
+
+---
+# Cleo: A Transparent and Controllable Chatbot for Conversational Commerce 
+
+**Authors**: Kevin Schott, Jan Lattenkamp, Daniel Hienert, Dagmar Kern  
+
+**Link**: [PDF](https://arxiv.org/pdf/2608.06068)  
+
+**Abstract**: We demonstrate Cleo, a transparent and controllable conversational product advisor that addresses the challenges of opacity, unpredictability of LLMs, and the complexity of comparisons in conversational commerce. With our chatbot system, we make four contributions: First, we introduce transparency by prompting the LLM to reflect on interpreted user needs, while an auditable ranking mechanism reveals loss values per attribute, explaining ranking decisions. Second, we propose controllability through a hybrid architecture separating deterministic ranking from language generation. A ranker applies categorical filters and numeric loss functions over 3,638 product specifications. Meanwhile, a constrained LLM generates grounded descriptions constrained to catalog evidence, thus mitigating the risk of hallucinated or persuasive content. Third, we provide decision support in the form of natural-language comparisons and a highlights feature. These aim to reduce mental workload by contextualizing specifications relative to user needs. Fourth, we contribute an extensible experimental system for IR and HCI researchers, as well as practitioners of conversational search and recommendation. Unlike traditional faceted search or opaque LLM-only recommenders, our approach allows for fluid conversation while maintaining algorithmic transparency. In a live demonstration, attendees will experience information needs elicitation and reflection, conversational refinement with real-time re-ranking, inspection of per-attribute loss explanations, and AI-generated multi-item comparisons. The system aims to advance the design of transparent and controllable conversational systems that provide support for decision-making during online product search. 
+
+---
+# Align-RAG: Alignment Is All You Need for TSFM In-Context Learning 
+
+**Authors**: Mohammad Asadi, Soheil Hor, Bardiya Akhbari, Jack W. O'Sullivan, Tahoura Nedaee, Layne C. Price, Raviteja Anantha, Euan Ashley, Ehsan Adeli  
+
+**Link**: [PDF](https://arxiv.org/pdf/2608.05571)  
+
+**Abstract**: Retrieval-augmented forecasting promises to adapt frozen Time Series Foundation Models (TSFMs) to new domains without fine-tuning, but recent methods typically rely on learned fusion modules, i.e., trained adapters that merge retrieved examples into the backbone's forecast, based on the assumption that frozen backbones cannot dynamically incorporate retrieved context on their own. We show this assumption is unnecessary. We introduce Align-RAG, a training-free method that applies a closed-form per-pair amplitude rescaling and integer-lag phase shift to retrieved past-future windows before they enter a frozen backbone's context. With no learned parameters, Align-RAG outperforms the state-of-the-art trained retrieval adapter on a frozen Chronos-Bolt on all seven datasets of the standard benchmark (avg -3.75% MSE), showing that the gains previously attributed to learned fusion are recoverable without any training. Align-RAG further improves zero-shot MSE on four additional frozen TSFMs with various architectures by 2.5% to 13.7% per backbone with no per-backbone tuning. To probe why alignment helps, we compare the frozen backbone's prediction shift under aligned demonstrations to the closed-form ridge prediction shift on the same pairs. We find that aligned demonstrations induce prediction shifts that track a closed-form ridge predictor on the same pairs, with a future-shuffle control ruling out a futures-averaging account. Together, these results indicate that frozen TSFMs already support dynamic in-context use of retrievals, and that closed-form alignment should be the default baseline for retrieval-augmented forecasting before any fusion module is trained. Code available at: this https URL 
+
+---
+# Filtered Vector Search in a Disaggregated Lakehouse: Composing Table-Format Pruning with Per-File ANN 
+
+**Authors**: Rakesh Jain, Thomas Griffin, Syed Zawad  
+
+**Link**: [PDF](https://arxiv.org/pdf/2608.05441)  
+
+**Abstract**: Approximate nearest-neighbor (ANN) search increasingly runs alongside structured data - "find the 10 nearest documents where tenant='acme' AND lang='en'" - yet similarity and filtering are usually bolted together: a specialized vector index for one, a separate filter step for the other. We ask what happens when both live inside an open lakehouse table (Apache Iceberg over Parquet on object storage), where the engine already owns a mature file-pruning stack (partition pruning, zone-maps, a bitmap index). We embed an IVF index in place in each Parquet file's footer and make filtered vector queries fast not with a new filtering algorithm but by composing the table's existing file pruning with per-file ANN: the planner prunes data files by the predicate first, then runs IVF only over the survivors. The index is built distributed and non-destructively - a metadata-only Iceberg replace that every other engine still reads - and a rendezvous-hashed per-file cache keeps object-store read latency from swamping the algorithmic win. The payoff comes entirely from file pruning. On an 11.5M x 768 table, warm IVF search is ~32x faster than brute force at recall@10 >= 0.90, a selective predicate having pruned 355 of 444 data files before ANN runs; on 5M real IBM Granite embeddings, a filter arriving across a join prunes four of five region partitions and runs nearly two orders of magnitude (~94x: 14.7 s -> 157 ms) faster than the query-time join at identical top-k, once the reduction is materialized into a region-partitioned layout. We characterize when the composition pays off - it requires file-level locality on the filter column, and the residual predicate is only safe to push into the search over a provably pure (partitioned) column, not a merely sorted one - and report the failure modes we hit bolting ANN onto a lakehouse engine. 
+
+---
