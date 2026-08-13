@@ -1,0 +1,148 @@
+# Making Collaborative Signals Count: Graph-Aware Large Language Models for Sequential Recommendation 
+
+**Authors**: Fenglin Yan, Bohao Wang, Jian Zhang, Yu Cui, Tongya Zheng, Ye Feng, Can Wang, Jiawei Chen  
+
+**Link**: [PDF](https://arxiv.org/pdf/2608.12184)  
+
+**Abstract**: Large language models (LLMs) have been widely adopted as backbones for recommender systems. However, their language-centric pretraining makes it difficult to capture collaborative signals implicit in user-item interactions, which are crucial for personalized recommendation. Existing methods either inject collaborative representations produced by external recommenders or model only intra-sequence dependencies, limiting their ability to exploit global collaborative patterns. To address this limitation, we propose GALLM, a graph-aware LLM framework for sequential recommendation. GALLM constructs a collaborative graph over text tokens and item tokens, and models three types of relations: Text--Text relations for preserving semantic dependencies, Item--Text relations for aligning item tokens with their textual descriptions, and Item--Item relations derived from global item co-occurrence patterns. These relations are transformed into lightweight learnable attention biases and incorporated into the LLM attention mechanism, enabling collaborative-aware token interactions without introducing an additional graph encoder. Experiments on four real-world benchmarks show that GALLM achieves the best performance among the compared baselines, improving over the strongest baseline by 9.76\% on average in HR@5. 
+
+---
+# Token-Level Credit Assignment Optimization for Generative Document Retrieval 
+
+**Authors**: Xinpeng Zhao, Yang Liu, Ran Chen, Xinyu Ma, Daiting Shi, Pengjie Ren, Zhumin Chen, Zhaochun Ren, Xin Xin  
+
+**Link**: [PDF](https://arxiv.org/pdf/2608.12049)  
+
+**Abstract**: Generative retrieval models perform document retrieval by autoregressively generating document identifiers (DocIDs). This process naturally forms a sequential decision problem, where each decoding step selects a DocID token and the complete token sequence determines the retrieved document. However, retrieval effectiveness is typically evaluated only after the full DocID is generated, creating a mismatch between token-level generation and document-level relevance supervision. As a result, existing reinforcement learning methods for generative retrieval mostly rely on sequence-level rewards, where the same document-level feedback is propagated to all decoding steps. Such coarse-grained feedback makes it difficult to identify which token decisions are responsible for successful or failed retrieval.
+In this work, we propose a fine-grained reinforcement learning framework for generative retrieval with token-level relevance rewards. Instead of assigning a single reward to the entire generated DocID, we estimate step-wise rewards by measuring how each token decision changes the expected retrieval quality of the corresponding generation trajectory. This enables more precise credit assignment and encourages the policy to favor token decisions that contribute more directly to document-level relevance. We further develop practical reward estimation strategies tailored to the DocID generation process and incorporate them into a policy optimization framework. Experiments on retrieval benchmarks show that our method consistently outperforms sequence-level reward baselines, demonstrating the effectiveness of fine-grained supervision for aligning autoregressive DocID generation with retrieval objectives. 
+
+---
+# HCGRec: Hint-Conditioned Generative Recommendation with Semantic IDs 
+
+**Authors**: Kangning Zhang, Haotian Fang, Xukun Luo, Hao Yin, Yang Gao, Peng Yan, Weiwen Liu, Weinan Zhang, Yong Yu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2608.11980)  
+
+**Abstract**: Semantic-ID generative recommenders represent each item as a short sequence of discrete semantic tokens and predict the next item by autoregressively generating this token sequence. This paradigm enables a unified generation interface for item IDs, histories, and item text, but it also creates a structured optimization bottleneck during reward-based post-training: when an early semantic token enters the wrong branch of the item-token space, finite rollout groups rarely reach the ground-truth item, so group-relative optimization receives identical zero rewards and produces no useful advantage. We propose Hint-Conditioned Generative Recommendation (HCGRec), a semantic-ID generative recommendation framework that recovers learning signal for such hard training instances. HCGRec diagnoses each instance with checkpoint rollouts and supplies a minimal target-prefix hint only when the current generator cannot reach the correct item. The model then generates the unhinted suffix under the hinted semantic branch, turning zero-reward groups into informative comparisons over item-token completions. Hinting also changes token identity: hinted prefix tokens are oracle-provided item context, while unhinted suffix tokens are sampled generation actions. We therefore introduce hint-aware credit decomposition, using supervised learning to preserve item-semantic and prefix-structure alignment for hinted tokens and GRPO to optimize the sampled suffix. Experiments on sequential recommendation benchmarks show that HCGRec substantially improves over supervised fine-tuning and vanilla reward-based post-training, while reducing zero-advantage training samples from over 70% to below 20%. The code is accessible at this https URL. 
+
+---
+# Sci-Surf: Navigating Scientific Literature Discovery through Human Feedback and Intelligent Summarizatio 
+
+**Authors**: Fang Guo, Qi Zhu, Rongcan Pei, Shuqi He, Hui Chen, Yue Zhang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2608.11973)  
+
+**Abstract**: The rapid growth of scientific publications makes it increasingly difficult for researchers to identify relevant new studies and effectively comprehend them. Existing academic discovery platforms typically rely on static topic subscriptions or embedding-based similarity and provide only abstracts or short summaries, offering limited support for nuanced intent modeling and in-depth paper summarization. We present Sci-Surf, an intent-centric knowledge discovery system that integrates feedback-driven personalized recommendation with multi-modal blog-style paper digestion. Our approach refines user intent representations through LLM-based user profiling, while generating structured summaries that synthesize textual and visual information from full papers. The demo presents an end-to-end academic discovery pipeline and demonstrates measurable improvements in both recommendation quality and digestion quality through real-user evaluations. Specifically, the integration of verbalized profiles led to a 10.4% average improvement in predictive alignment with real-world user preferences throughout a month-long online evaluation. 
+
+---
+# From Overlooked to Explored: Recovering Item Relations via Mixture of Perspectives for Sequential Recommendation 
+
+**Authors**: Junyoung Kim, Wonbin Kweon, Woojoo Kim, Jaehyung Lim, Dongha Kim, Hwanjo Yu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2608.11846)  
+
+**Abstract**: Capturing user preference from a user's interaction sequence is the central challenge of Sequential Recommendation (SR). This preference intuitively emerges from inter-item relations: each item transition reflects a preference embedded in the relations between items, making the faithful capture of these relations essential for accurate recommendation. For this reason, self-attention is dominant in sequential recommendation for its ability to compute pairwise item interactions, yet our empirical analysis reveals that it consistently suffers from similarity bias across various types of transformer-based SR models: dot-product attention scores disproportionately favor similar items, systematically overlooking heterogeneous relations with meaningful preference signals and directly limiting recommendation performance. To address this, we propose PRISM (Perspective-based Relational Insight Synthesis Module), a module that re-examines item relations from multiple perspectives. PRISM employs K Perspective Lenses to calibrate attention from distinct viewpoints, combining an Affinity View that refines homogeneous relations and a Contrast View that exposes heterogeneous ones suppressed by similarity bias, enabling the model to capture the full spectrum of user preferences. Extensive experiments on seven real-world benchmarks demonstrate that PRISM consistently outperforms state-of-the-art baselines. Our code is available at this https URL. 
+
+---
+# TRACES: A Benchmark for Epistemic Reliability in Scientific Reasoning by LLMs 
+
+**Authors**: Valentin Rodionov, Shamil Assylbekov  
+
+**Link**: [PDF](https://arxiv.org/pdf/2608.11415)  
+
+**Abstract**: Large language models are being proposed as agents in scientific workflows, in domains where no downstream verifier exists. Such deployment assumes the model can distinguish reliable scientific literature from unreliable literature, a capability that has not yet been directly measured. Existing benchmarks evaluate factuality on questions with known answers; the failure mode we target here is different. We introduce a probe corpus of 42 retracted, fraudulent, and pseudoscientific papers, paired with a methodology for eliciting and scoring single-shot model engagement with each paper's framing. Each probe pairs a preamble extracted near-verbatim from the target paper with a scientifically plausible study-design request. The probes span five claim types: fabricated observation, pseudophysical mechanism, magical premise, legitimization bridge, and cargo-cult experiment. Two complementary scores measure whether a model rejects the flawed premise outright (IFR-a) and whether it recognizes the unreliability while still engaging (IFR-i). A depth score, the Engagement Depth Index (EDI), quantifies reproduction of paper- or field-specific withheld details. Across 30 models and 10 repeated runs, aggregate IFR-a is 0.93 $\pm$ 0.004 and aggregate IFR-i is 0.809 $\pm$ 0.009. Models engaged with untenable premises in 95% of all non-empty responses. Every evaluated model fails more than 71% of agentic probes, and 22 of 30 models fail more than 90% of the time. Rejections are concentrated on a small number of high-notoriety topics and specific probes, and disappear under matched-structure controls. These results are consistent with topic-keyed safety behavior rather than robust epistemic competence, and indicate an urgent need for guardrail infrastructure for scientific deployment of language models. 
+
+---
+# A corpus-specific clinical RAG system matches or outperforms newer frontier LLMs on HealthBench 
+
+**Authors**: Praveen Reddy, Charuta Mandke, Suvrankar Datta, Sarah Khan, Siddharth Reddy Anthireddy, Shitij Arora, Vishal Singh  
+
+**Link**: [PDF](https://arxiv.org/pdf/2608.12138)  
+
+**Abstract**: General-purpose large language models (LLMs) have recently been reported to match or exceed specialized clinical AI tools on medical benchmarks, but such comparisons draw on a narrow set of systems and on benchmarks developed largely in high-income settings. We evaluate VITA, a retrieval-augmented generation (RAG) system purpose-built for contextual knowledge retrieval in India and other low- and middle-income (LMIC) settings. VITA retrieves from a curated corpus of disease-specific guidelines, India-specific antimicrobial resistance data, national formulary constraints, and resource-limited care protocols; its architecture and corpus are proprietary, but the benchmark, the physician-written rubrics, and our full response and scoring outputs are public for independent verification. On 4,023 English-language HealthBench questions (80.5% of the benchmark), scored with a GPT-4.1 judge, VITA ranked first with 51.9% of possible rubric points, ahead of GPT-5.4 (46.1%), o4-mini (44.3%), Gemini 3.1 Pro (42.6%), and Claude Sonnet 4.6 (37.3%), and scored highest on 45.4% of questions. To test robustness to newer models and judge lineage, a 500-question subset was re-run against current-generation models (GPT-5.5, Claude Opus 4.8, Gemini 3.5 Pro, Grok 4.3) and graded by a neutral open-weight judge (DeepSeek-V4-Pro) sharing no lineage with any system tested. Here the gap narrowed to parity: VITA and GPT-5.5 were statistically indistinguishable on mean per-question score, while VITA led on points-weighted score and won the most questions. VITA's advantages in accuracy and completeness persisted under the neutral judge; its communication scores were lower. These results indicate that a purpose-built clinical RAG system remains competitive with frontier LLMs on an open benchmark, consistent with corpus specificity as a design variable that improves grounding at some cost to communication polish. 
+
+---
+# LODESTAR: Trustworthy Entropy Is Navigated, Not Merely Measured -- Reinforced Polarizer Keeps a Frozen LLM from Being Confidently Misled by the Wrong Evidence 
+
+**Authors**: Po-Jen Ko, Che-Cheng Wu, Hung-Chun Hsu, Li-Yang Chang, Chuan-Ju Wang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2608.11922)  
+
+**Abstract**: Predictive-distribution entropy makes a strong selection rule in retrieval-augmented question answering: across five QA benchmarks, keeping the candidate answer that a frozen respondent LLM produces with the lowest answer-token entropy lifts mean answer $F_1$ from 0.4769 to 0.5148 over the retriever's top-ranked passage, with no gold answers. Yet this lowest-entropy rule, which prior entropy-based selectors adopt, fails in a specific and consequential way: a misleading passage makes the respondent confidently wrong, driving its entropy down precisely where the signal looks most trustworthy. We show that the failure comes from the passage the respondent reads -- and the context that passage is read in is an input we can intervene on. We introduce LODESTAR, to our knowledge the first method to score a text intervention by the uncertainty it induces in a third-party frozen respondent, compared across one question's candidates. LODESTAR uses reinforcement learning to train, once and offline, a polarizer -- a short fixed natural-language string inserted into the respondent's prompt and never into its weights; its training labels are built offline from gold answers and two LLM judges, and inference reads neither. Evaluating every competing selector under the same frozen respondent and the same candidate pools on 5,008 questions, LODESTAR attains the highest mean $F_1$ of any inference-ready selector (0.5148 to 0.5339), the highest exact match (0.4136), and the highest GPT-4o judge score of the frozen-respondent configurations judged (0.6435); its three-seed mean wins all 70 method-by-dataset $F_1$ cells against fourteen published configurations while remaining paired-significant against every one. The gain holds both in-domain and out-of-domain, and ablating the polarizer shows it is what makes the respondent read a misleading passage less often (26.0% against 30.3%). 
+
+---
+# DexterSQL: Deep Schema Exploration and Rule-based Correction for Text-to-SQL Generation 
+
+**Authors**: Anik Pramanik, Murat Kantarcioglu, Vincent Oria, Shantanu Sharma  
+
+**Link**: [PDF](https://arxiv.org/pdf/2608.11889)  
+
+**Abstract**: Prompting-based (\textit{i}.\textit{e}., non-fine-tuning) Text-to-SQL methods, where underlying large language model parameters are not changed for the task, face three problems: (\textit{i})~relying on coarse-grained schema information that may not reveal the fine-grained relationships needed to distinguish ambiguous columns, (\textit{ii})~not capturing recurring SQL-generation failures, and (\textit{iii})~suffering from omission, hallucination, or misplacement of conditions in complex questions.
+This paper develops \textsc{DexterSQL}, a prompting/non-fine-tuning-based Text-to-SQL system that improves SQL generation with three novel components: (\textit{i})~\emph{deep schema explorator} that identifies ambiguous columns, analyzes their individual and joint data distributions to uncover their relationships and the distinct role of each, (\textit{ii})~\emph{database-agnostic rule creator} that mines mismatches between generated and gold SQL only on the training database and converts them into database-agnostic corrective rules that capture recurring LLM failure patterns; and (\textit{iii})~\emph{multi-path SQL generation} that introduces a dependency-tree-based intermediate representation that uses the question's sentence structure to guide its decomposition into an SQL skeleton for final SQL generation.
+\textsc{DexterSQL} achieves a higher accuracy compared to the state-of-the-art using both open-source/weight and closed-source/weight models. Particularly, \textsc{DexterSQL}'s shows a high improvement of at least 2.7\% using an open-weight model (GPT-OSS-120B) on BIRD-Dev, with total accuracy 67.6\%. \textsc{DexterSQL} also shows better improvement of at least 0.9\% using closed-weight models, with total accuracy 71.6\% and 72.2\% on BIRD-Dev with GPT-4o and GPT-5.2. 
+
+---
+# Total Recall at What Cost? Benchmarking the Serving Cost of Agentic Memory Systems 
+
+**Authors**: Natchanon Pollertlam, Witchayut Kornsuwannawit  
+
+**Link**: [PDF](https://arxiv.org/pdf/2608.11879)  
+
+**Abstract**: Long-running conversational agents increasingly rely on a memory system to avoid resending the whole conversation each turn, yet how much that costs to serve has received little systematic benchmarking. We compare three memory systems (Mem0, Hindsight, and Mastra Observational Memory) against two reference strategies -- a fixed-size rolling window and resubmitting the full transcript -- across two backbones and conversations of up to 400 turns, pairing every cost measurement with answer accuracy on 665 LoCoMo questions. First, a memory system's serving cost cannot be predicted from conversation length and message size alone: a regression that tracks the two reference strategies closely misses the memory systems by 18-69%, their cost driven instead by internal memory behavior. Second, a break-even analysis shows that whether -- and when -- a memory system becomes cheaper to serve than the full transcript is highly sensitive to the system and the backbone, from the first tens of turns for the cheapest to never within 400 turns for the most expensive. Third, no system wins on both axes: accuracy spans 21-54%, and the backbone choice drives cost as much as the memory system does. 
+
+---
+# AgenticTwin: An Agentic LLM Framework Integrated with Digital Twin for Anomaly Detection 
+
+**Authors**: Touseef Hasan, Mounika Ghanta, Souvika Sarkar, Ujjwal Guin  
+
+**Link**: [PDF](https://arxiv.org/pdf/2608.11679)  
+
+**Abstract**: Digital twins are increasingly used to monitor and simulate the behavior of cyber-physical systems. Even with skilled operators, interpreting anomalies detected within digital twin pipelines is challenging, as the sheer complexity and volume of raw sensor data make thorough analysis difficult. Recent advances in large language models (LLMs) offer promising capabilities for reasoning and explanation, yet their integration into digital twin-driven anomaly analysis remains underexplored. In this work, we propose AgenticTwin, an agentic framework that integrates LLM-driven reasoning with a digital twin-based anomaly detection pipeline. The framework grounds LLM-generated explanations in outputs from a digital twin-driven anomaly classifier and enables human operators to ask relevant natural-language questions about the system. Beyond the framework itself, we introduce a benchmark-oriented evaluation pipeline constructed over synthetic anomalies injected into a real-world weather sensor dataset, enabling controlled generation of operator queries over anomaly events. We further evaluate the feasibility of deploying lightweight, open-source LLMs for practical cyber-physical environments. Experimental results demonstrate that structured agent collaboration and knowledge-grounded reasoning improve diagnosis quality, contextual retrieval, and mitigation quality across diverse possible anomaly scenarios. 
+
+---
+# FunnelCausalNet: Funnel-aware Joint Conversion-Revenue Uplift for Multi-tier Coupon Allocation 
+
+**Authors**: Yu Zhang, Zhihan Wang, Guanlin Chen, Min Jiang, Shuai Li  
+
+**Link**: [PDF](https://arxiv.org/pdf/2608.11675)  
+
+**Abstract**: Coupon campaigns seek to lift both conversion and revenue, but gross merchandise value (GMV) follows a deterministic funnel from conversion to conditional order value and is zero-inflated and heavy-tailed. We propose FunnelCausalNet, an uplift estimator coupling a binary conversion head with a nonnegative conditional-value head through $\mu_{\mathrm{gmv}}=\mu_{\mathrm{conv}}\mu_{\mathrm{val}}$. Under explicit RCT, support, rate-gap, and cross-head covariance-control assumptions, an idealized leading-order MSE comparison identifies a regime in which funnel composition can reduce pointwise variance; this is a heuristic, not a guarantee for the shared-representation neural model. The estimator is paired with marginal split-conformal CATE summaries, combined through a Bonferroni union as audit bands, and a Lagrangian budgeted allocator using RCT-anchored estimates for subsidy-aware ROI accounting. On semi-synthetic multi-tier Criteo-MT7, FunnelCausalNet's mean AUUC_GMV is within one seed standard deviation of the leading feature-interaction baseline among eleven baselines, while a controlled ablation reduces GMV effect error versus direct GMV regression by 18--48% across tested zero-inflation regimes. On de-identified industrial Hotel-Coupon RCT logs with about 4.9 million hold-out exposure records per seed, expected-outcome evaluation sweeps full LP frontiers; FunnelCausalNet has the best seed-averaged mean DeltaROI at all seven correlated anchors from 10% to 60%, which we treat as descriptive frontier consistency rather than independent significance. On sparse binary-spend public benchmarks, revenue-focused rankers can dominate uplift-curve proxies, defining an explicit regime boundary. 
+
+---
+# Defending against Model Extraction for GNNs with Model Reprogramming 
+
+**Authors**: Yan Wen, Zhenyi Wang, Heng Huang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2608.11495)  
+
+**Abstract**: Graph Neural Networks (GNNs) serve as the backbone for high-stakes applications in Machine-Learning-as-a-Service (MLaaS). Still, their black-box deployment exposes them to Model Extraction (ME) attacks, in which adversaries steal intellectual property by querying APIs. Existing defenses suffer from a critical ''Euclidean bias'': they transfer image-based strategies (e.g., random noise) to graphs, ignoring the complex topological dependencies between nodes, which often results in severe utility degradation. Passive methods like watermarking also fail to prevent theft in real time. To bridge this gap, we propose GraphRP (Graph Reprogramming Protection), a proactive defense framework that repurposes Model Reprogramming for security. Unlike static perturbations, GraphRP introduces a Structure-Aware Gating Mechanism driven by learnable topological prototypes. This creates a dynamic ''structural firewall'' that selectively modulates the model's decision boundary: it preserves fidelity for benign queries residing on the training manifold, while maximizing the Fisher Information along the perturbation direction for adversarial queries. Under standard assumptions (bounded loss, optimal attacker, and local second-order approximation), we prove a lower bound on the attacker's estimation error that increases with the structural sensitivity of the reprogramming noise. Extensive experiments on both hard-label and soft-label ME attacks demonstrate that GraphRP significantly degrades attack effectiveness while preserving benign utility. 
+
+---
+# Exploring the Social Life of Data: Finding Data You Can Trust 
+
+**Authors**: Penny R. Atkins, Manish Parashar  
+
+**Link**: [PDF](https://arxiv.org/pdf/2608.11395)  
+
+**Abstract**: Artificial intelligence is changing the scale and tempo of scientific inquiry. Models can now search, integrate, and reason over data far beyond data repositories familiar to any individual researcher. Yet this expansion creates a prior problem: before a model can produce a trustworthy scientific result, it must locate data that are appropriate for the question, sufficiently reliable for the intended analysis, and accompanied by enough context to support responsible interpretation. As data becomes increasingly abundant, the challenge of finding data has been overcome by the challenge of finding data that you can trust.
+This paper explores how the social and empirical evidence that accumulates when data are used in research can be used, analogous to social trust networks, to determine fit for purpose and trust. Specifically, the paper explores data-usage graphs as a new layer of scientific data infrastructure. A data-usage graph connects datasets to the publications, people, institutions, topics, software, models, workflows, and other datasets through which they are produced and used. These connections reveal the {\it social life of data:} who has relied on a source, for which questions, in what combinations, with which methods, and with what observable impact. They can turn scattered traces of practice into data-usage descriptors that complement conventional metadata and support judgments of trust and fitness for purpose. The central claim is not that popularity establishes trust, but that this can be grown with appropriate contextual history. Usage evidence must therefore be combined with production quality, provenance, governance, semantic clarity, and community validation. The feasibility and value of data usage graphs is demonstrated by implementing the prototype data insights discovery service within the National Data Platform (NDP). 
+
+---
+# Can Frontier LLMs Match Natively Multimodal Embeddings? A Comparison on Hard-Negative Text-to-Image Retrieval 
+
+**Authors**: Archan Dutta, Vyanktesh Kanungo  
+
+**Link**: [PDF](https://arxiv.org/pdf/2608.11343)  
+
+**Abstract**: Multimodal retrieval and classification across different types of media, spanning text, images,video and audio, has traditionally relied on dual-encoder models that align visual and textual representations through contrastive learning. The March 2026 release of Gemini Embedding 2, Google's first natively multimodal embedding model to map text, images, video, audio, and documents into a single shared space, raises competition among multimodal retrieval systems. Simultaneously, frontier Large language models (LLMs) have also demonstrated strong visual understanding, raising the question of whether they can serve as effective zero-shot rankers. Our study provides the first direct comparison of native multimodal embeddings against LLM-based visual ranking on Flickr30k. We observe that GPT-4.1 and Claude Sonnet 4.6 perform on par with Gemini Embedding 2. Additionally, once embeddings are precomputed, multimodal embeddings are better suited for low-latency applications. 
+
+---
+# RecSys Factory: Bounding LLM Agent Autonomy to Decision Points in the Industrial Recommender Lifecycle 
+
+**Authors**: Dongyang Ao, Kaixiang Fang, Shijie Xu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2608.11241)  
+
+**Abstract**: Deploying LLM agents into industrial recommender operations exposes a three-way tension we frame as the autonomy-determinism-efficiency trilemma: general autonomy (interpreting operator intent, generating glue code zero-shot), industrial determinism (schema-conforming feature extraction, non-crashing A/B, zero compliance-path hallucination), and end-to-end efficiency. Any two can be maximized against the third. We present RecSys Factory, an LLM-agent platform deployed for 78 days across three heterogeneous Tencent recommender business lines. The design principle is autonomy at decision points, not over pipelines, made concrete through three deconstructions that each discharge one vertex of the trilemma. Runtime is deconstructed into three host-emitted event sources (Claude Code Stop hooks, corporate-IM webhooks, workflow scheduler APIs): the platform carries no long-running daemon during the wait phase and consumes zero CPU during the 94% of wall-clock spent waiting on Spark or GPU jobs. Capability is deconstructed into a 29-file skill ecosystem (8,971 lines of this http URL) whose per-skill pitfall tables mechanically compile into a 400-entry PitfallStore, confining autonomy to bounded typed decision surfaces inside pre-committed pipelines. Deployment spans three business lines with disjoint label semantics, A/B layer topologies, and operator personas; an onboarding-time compression is observed on two of the three and is reported as a case-study observation, not a generalization claim, and not measured against a controlled pre-platform baseline. The human is retained at the diagnostic-versus-execution boundary via a human-in-the-loop card protocol, deployed as an audit-trail primitive (schema-validated, idempotent, replayable) and reported from an 8-day 16-run pilot. Across the 78-day window the platform recorded 1,624 CLI-tool dispatches at a 78.6% aggregate success rate. 
+
+---
