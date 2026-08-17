@@ -1,0 +1,119 @@
+# PriCoRec: A Privacy-Aware Cloud-Device Collaborative Framework for Ad Recommendation under Feature Constraints 
+
+**Authors**: Dairui Liu, Zhongyi Lu, Jitao Lu, Aghiles Salah, Mete Sertkan, Roger Zhe Li, Changhong Jin, Barry Smyth, Xingsheng Guo, Ruihai Dong  
+
+**Link**: [PDF](https://arxiv.org/pdf/2608.14429)  
+
+**Abstract**: Privacy regulations increasingly restrict cloud processing of sensitive user data (e.g., age, gender), hindering traditional cloud-only recommendation models. To mitigate this challenge, we propose a Privacy-aware Collaborative cloud-device ads Recommendation framework (PriCoRec) which personalizes recommendations while keeping sensitive features on-device. While separating recommendation into cloud-based and on-device stages enables privacy-aware deployment, naive splitting suffers from degraded shortlist quality and inefficient on-device inference due to limited private features. We therefore design a collaborative framework that comprises a cloud-based pre-ranking stage using cloud-accessible features, and an on-device ranking stage that locally incorporates highly personalized features. We introduce a diversity regularizer to pre-ranking to improve candidate quality. Moreover, to control device power consumption and computational cost, we incorporate a cloud-guided training mechanism that enhances device model performance while keeping the model lightweight. Experiments demonstrate that the proposed framework maintains strong recommendation performance while keeping sensitive features on-device. 
+
+---
+# MACS: A Hybrid Multi-Agent Framework for Reliable Conversational E-Commerce Recommendation 
+
+**Authors**: Juli Huang, Hannah Clay, Sajjad Beygi, Thomas Sarda, Negin Golrezaei, Amin Saberi  
+
+**Link**: [PDF](https://arxiv.org/pdf/2608.14068)  
+
+**Abstract**: Conversational recommendation for e-commerce is increasingly mediated by large language models (LLMs), yet many real-world deployments operate under a stricter requirement: recommendations must be drawn only from a merchant's fixed catalog, without web search or unsupported product claims. In this setting, the main challenge is reliability under hard constraints: the system must satisfy user requirements, remain grounded in available inventory, and preserve preferences across multiple conversational turns. We present MACS (Multi-Agent Commerce System), a hybrid multi-agent framework for reliable conversational recommendation in fixed-catalog settings. MACS uses LLMs for language-facing tasks such as interpreting user requests, eliciting preferences, and generating responses, while correctness-critical operations, including product retrieval, hard-constraint filtering, brand exclusion, and progressive relaxation, are executed deterministically by the merchant agent. A session-persistent preference layer tracks constraints across turns, enabling consistent handling of budget overwrites and exclusion reversals. On a 140-query single-turn benchmark, MACS achieves the highest pass rate (87.1%) and perfect brand compliance (1.000). On a 10-scenario multi-turn benchmark, MACS achieves the strongest macro Pass@5 (72% vs. 56% GPT+Catalog / 52% Gemini+Catalog) with zero constraint drift. The advantage is sharpest on exclusion reversal (100% vs. 20% / 0%) and constraint accumulation (100% vs. 60% / 40%). Mean judged response quality is similar across systems (0.751 vs. 0.736). These results suggest that hybrid architectures combining deterministic constraint enforcement with session-persistent preference tracking provide stronger reliability-oriented performance than catalog-bound prompt-only baselines in the fixed-catalog merchant setting. 
+
+---
+# TenderKG 
+
+**Authors**: Yacine Mokhtari, Véra Pukhkoy, Grégory Smits  
+
+**Link**: [PDF](https://arxiv.org/pdf/2608.14066)  
+
+**Abstract**: Public procurement represents a major economic activity, where public institutions allocate contracts to companies through competitive tendering processes. Despite its importance, this domain remains underexplored by recommender systems, largely due to the lack of publicly available datasets capturing its complexity. In this paper, we introduce TenderKG, a large-scale knowledge graph dataset constructed from French public procurement data covering the period 2021--2023. The dataset models the procurement ecosystem through heterogeneous entities, including companies, tenders, lots, and domain-specific taxonomies of work domains, connected via rich semantic and structural relations. A key specificity of this setting is that only the awarded companies are visible, resulting in sparse explicit signals of awarded interactions. To overcome this limitation, TenderKG integrates extensive side information on the actors in the French tender market and the tenders, including textual descriptions, hierarchical classifications, and geographical features, enabling the study of knowledge-aware recommendation in a highly constrained and competitive environment. We provide detailed statistics and analyses of the dataset, highlighting its structural properties, sparsity patterns, and domain-specific characteristics. We believe TenderKG opens new research directions in bidder recommendation, knowledge graph-based recommendation, competition-aware matching, and provides a valuable benchmark for evaluating methods in real-world, high-stakes decision-making scenarios. 
+
+---
+# HAM-RAG: Hierarchy-Aware Multimodal RAG for Structure-Faithful Interleaved Generation 
+
+**Authors**: Yin Li, Ziyang Hu, Zhiyu Guo, Xiangyu Liu, Wenbin Li, Boo-Ho Yang, Rav Lawana, Ziyue Li, Wei Zeng, Fugee Tsung  
+
+**Link**: [PDF](https://arxiv.org/pdf/2608.14032)  
+
+**Abstract**: Existing multimodal RAG methods often flatten structured documents into isolated text and image units, weakening the source organization and local text-image logic needed for faithful evidence selection and placement. We propose HAM-RAG, a Hierarchy-Aware Multimodal RAG framework for structure-faithful interleaved generation. HAM-RAG uses document hierarchy as a grounding signal across retrieval and generation, contextualizing textual and visual evidence and preserving source position and local text-image relations in the prompt. We further introduce HAM-Bench, covering Wukong, Wiki, arXiv, and Recipe across game walkthroughs, web pages, scientific papers, and step-wise recipe documents. Across multiple backbones, HAM-RAG improves the main multimodal average by 17.3% over the strongest non-hierarchical baseline. On Wukong, HAM-RAG improves Img-CBS by 24.2% over the strongest non-hierarchical baseline, demonstrating substantially better local text-image alignment. The main experiments and ablation study together demonstrate that document hierarchy is a key grounding signal for faithful image selection, placement, and local text-image alignment. These findings highlight the value of hierarchy-aware grounding for reliable multimodal assistants that generate answers faithful to the source organization, procedural structure, and local text-image evidence of structured documents, such as technical manuals, maintenance guides, and industrial SOPs. The code is available at this https URL. 
+
+---
+# EchoRec: Multi-Item Prediction-Empowered Generative Recommendation via Cycle-Consistent Preference Alignment 
+
+**Authors**: Haokai Ma, Aoqi Hu, Yueao Xing, Ruobing Xie, Yonghui Yang, Teng Tu, Lei Meng, Tat-Seng Chua  
+
+**Link**: [PDF](https://arxiv.org/pdf/2608.14011)  
+
+**Abstract**: Generative recommendation autoregressively generates the semantic IDs of the target item, unifying preference modeling and index retrieval within the shared token space. Recent attempts have introduced Multi-Token Prediction (MTP) into this field, yet they primarily inherit its efficiency merit, leaving its potential as dense supervision unexplored. Unlocking this potential hinges on whether future behaviors qualify as informative supervision. Our analysis reveals that future behaviors carry a semantic echo of the current one far above that of random pairs, which nevertheless decays along horizons under intent transitions, making them informative yet order-dependent signals. Motivated by this, we propose EchoRec, which empowers MTP with cycle-consistent holistic preference alignment across multi-horizon for generative recommendation. It comprises two synergistic modules. Horizon-aware Preference Generation (HPG) sequentially chains lightweight auxiliary branches upon the base recommender, where each branch conditions on its predecessor to respect preference evolution. Verifiable Holistic-Preference Alignment (VHA) further consolidates them into the holistic preference and echoes it back through cycle-consistent projectors to suppress spurious alignment, with theoretical guarantees that exclude the rank-collapse form of spurious alignment under an invertible transport, enabling the holistic preference to be retained in the decoding representation. All auxiliary components serve as disposable scaffolding discarded at inference, introducing negligible online serving overhead. Extensive experiments on three datasets demonstrate the superiority of our EchoRec, together with its naturally acquired multi-item generation ability. Our code and datasets will be available upon acceptance. 
+
+---
+# How retriever redundancy and diversity impact RAG effectiveness 
+
+**Authors**: Jonathan J Ross, Bevan Koopman, Anton van der Vegt, Guido Zuccon  
+
+**Link**: [PDF](https://arxiv.org/pdf/2608.13956)  
+
+**Abstract**: In RAG, while the retriever typically ranks documents by their individual relevance to the query, the generator instead produces an answer based on the retrieved documents as a whole. This paper investigates how redundancy and diversity from the retrieved document set impact the generator in terms of answer correctness.
+Previous work has provided a mix of findings: some showing that redundancy improves generation by reinforcing relevant information, others that LLM-based paraphrasing of the same content may be beneficial. Many of these studies did not control for confounding factors like whether the documents contained the exact answer or not, and if parametric knowledge plays a role. We conduct a carefully controlled experiment investigating three key scenarios of retrieved document sets: 1) Duplicate (exact copies of the same document), 2) Paraphrased (LLM rephrased versions of one document) and 3) Diverse (documents from different genres each containing relevant information in different forms). We control for which documents contain the answer in exact match or rephrased form.
+Evaluation is done with FictionalQA, a synthetic, fictional question-answer dataset that ensures the LLM generator prior knowledge cannot answer the question; the answer must come from retrieved documents. We show that duplicate redundancy and LLM paraphrasing does not significantly improve answer correctness. However, providing diverse documents is highly beneficial, improving answer correctness by 17%-47%. We further show this improvement is driven by diverse forms of document genre (news, blogs, etc.) alone and not a consequence of more relevant answer being available to generator. Our findings help to direct more attention to how new retrieval methods might improve RAG by catering to the generator preference for diversity in retrieval results. 
+
+---
+# Predicting Custom-Feed Returns for New Bluesky Posts: A Prospective Study 
+
+**Authors**: Yipeng Wang, Mohit Singhal  
+
+**Link**: [PDF](https://arxiv.org/pdf/2608.13874)  
+
+**Abstract**: The conventional approach to cold-start recommendation addresses new users or newly introduced items. Bluesky custom feeds create a different setting: independently operated feeds filter content from a shared public stream. In this setting, newly published posts are the cold-start objects, while the feeds serve as candidates. We propose a cold-start routing task in which a newly ingested public post is the query and all rankable feeds in the monitored panel are ranked according to whether each will subsequently return it. We build a still-evolving collect-first, label-later benchmark dataset. The collected dataset covers a fixed panel of 5,000 monitored feeds and contains 17.804 million public posts, 1.865 million observable post--feed return records, and 625,083 valid feed polls. The labels record whether a post is observed among a feed's AppView Top-50 results in at least one poll during the 24 hours after publication. The current experiments use two disjoint 24-hour test folds, each paired with a 24-hour training window and separated by a 24-hour outcome-availability gap. Evaluation is conditional on the 602,186 test posts that have at least one positive observed label and satisfy the metric eligibility criteria; these posts account for 9.04% of all 6,661,658 test posts. Across the two folds, LambdaRank achieves the best equal-fold mean values among the evaluated models: 0.7361 for capped Recall@10, 0.6127 for NDCG@10, and 0.7749 for Hit@10. 
+
+---
+# AdsWorldEngine: A Self-Evolving Conversational Advertising Agent through Orchestrator and Tool Coevolution 
+
+**Authors**: Simiao Zuo, Chenhui Xu, Yimeng Jia, Qiang Lou, Jian Jiao, Denis Charles  
+
+**Link**: [PDF](https://arxiv.org/pdf/2608.13833)  
+
+**Abstract**: Conversational advertising aims to deliver useful ads within multi-turn assistant interactions. Unlike conventional query-based advertising, where the user's intent is often expressed in a short standalone query, conversational ads must infer latent commercial intent from the current user query, the assistant response, and dialogue history while also deciding whether an ad would be helpful rather than intrusive. We propose AdsWorldEngine, an agentic framework for conversational advertising. AdsWorldEngine uses an Opportunity Gate to determine whether ads should be shown, an Orchestrator to generate commercial intents, call advertising tools, and construct a top-3 ad slate, and an Evaluator to score delivered ads for offline optimization. The central contribution is an iterative actor-tool training procedure: we first train the Orchestrator with supervised fine-tuning and agentic reinforcement learning, then use high- and low-reward rollouts to construct preference data to train tools. This creates a self-improving loop in which the system learns not only how to use advertising tools, but also how to improve them from rewarded behavior. To support subjective production decisions, we introduce label grounded judgment modeling, which trains judgment models from human labels collected under explicit guidelines. It enriches labels with thinking traces, filters inconsistent rationales through reflection, and further optimizes binary judgments with a cost sensitive GRPO variant that preserves asymmetric reward gaps. Offline, AdsWorldEngine improves diversity by 60% and relevance by 80% over the current production ad delivery system. In an online A/B test, it increases RPM by 22% and ads coverage by 74%. 
+
+---
+# Do AI chatbots find what experts would? Effects of model, user role, and sample size on study retrieval for medical questions 
+
+**Authors**: Qingfang Liu, Qiao Jin, Joe D. Menke, Thorsten Kahnt, Zhiyong Lu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2608.13786)  
+
+**Abstract**: Large language model (LLM) chatbots are increasingly used to answer clinical questions with citations to relevant clinical studies. Prior research has largely focused on citation fabrication, leaving a gap in evaluating the quality of retrieved studies and the factors driving their selection. In this study, we evaluated three general-purpose LLM chatbots: Claude Sonnet 5, Gemini 3.1 Pro, and ChatGPT GPT-5.5. We prompted the models with clinical questions adapted from 20 review questions in Issues 6 and 7 of the 2026 Cochrane Database of Systematic Reviews, simulating patient, clinician, and evidence-synthesis researcher roles. Each chatbot was queried under each user role with four independent repetitions, yielding 720 responses. Each chatbot was asked to support its answers with primary clinical citations, which we benchmarked against the included and excluded study sets of the Cochrane reviews. On average, a chatbot response retrieved 39.2% $\pm$ 29.8% of Cochrane included studies, while citing 5.0% $\pm$ 9.4% of excluded studies. Recall of Cochrane included studies varied significantly by model and user role. ChatGPT achieved higher recall than Claude or Gemini (63.1% $\pm$ 29.5% vs. 37.0% $\pm$ 23.8% vs. 17.3% $\pm$ 13.1%; $p=2.0\times10^{-5}$). The researcher role yielded higher recall than the clinician or patient roles (42.8% $\pm$ 30.8% vs. 38.6% $\pm$ 28.9% vs. 36.1% $\pm$ 29.3%; $p=2.0\times10^{-5}$). Controlling for publication year, citations per year, and open-access status, sample size was the only independently significant predictor of retrieval (odds ratio 1.80 per 1-unit increase in log sample size, 95% CI 1.37-2.36, $p=2.34\times10^{-5}$). These findings suggest that while LLM chatbots can retrieve some studies identified by expert reviewers, their performance varies by model and user role, and they exhibit a bias toward clinical trials with larger sample sizes. 
+
+---
+# Residual Dominance as a Structural Account of Last-Item Reliance in Causal Self-Attention Recommenders 
+
+**Authors**: Keito Kozaki, Keigo Sakurai, Ren Togo, Takahiro Ogawa, Miki Haseyama  
+
+**Link**: [PDF](https://arxiv.org/pdf/2608.14021)  
+
+**Abstract**: Transformer-based sequential recommenders with causal self-attention often rely heavily on the most recent interaction at inference time, but how this behavior is structurally expressed in the representation used for prediction remains unclear. We combine prediction-time diagnostics with norm-based analysis of the full attention block. First, we show that SASRec-style models exhibit highly localized last-item reliance. We then find that, although self-attention aggregates contextual information, residual addition sharply shifts the full-block representation toward same-position contributions, which we term residual dominance. To probe this interpretation, we use inference-time residual scaling as a controlled diagnostic intervention. Changing the residual strength induces a monotonic trade-off between structural mixing and last-item reliance, while reducing residual strength recovers a subset of final-position misses for which representations at non-final positions already rank the ground-truth item correctly. Our results provide a structural account linking extreme last-item reliance to residual dominance at inference time. The code is publicly available. 
+
+---
+# Content Depth Matters in Short-Video Recommendation: Rethinking the Attention Economy 
+
+**Authors**: Liwei Deng, Jing Jiang, Zhiwei Li, Yang Wang, Guodong Long  
+
+**Link**: [PDF](https://arxiv.org/pdf/2608.13990)  
+
+**Abstract**: Driven by the attention economy, short-video Recommender Systems (RSs) are primarily optimized to maximize user engagement by promoting videos that capture attention within seconds. These systems inherently favor shallow-content videos that are effective at attracting immediate attention. However, growing evidence suggests that prolonged exposure to such content may negatively affect users' cognitive engagement and mental well-being, raising concerns about the long-term societal impact of the short-video platform. To tackle this challenge, this paper introduces a new metric, the \textbf{Content Depth Score (CDS)}, to quantify the content depth of short videos. CDS measures the extent to which a video is expected to stimulate higher-order cognitive processes, using a seven-level scale grounded in established theories of cognitive psychology and learning. As an initial step toward this vision, we present \textbf{SCOPE-Bench}, the first benchmark for content-depth evaluation in short-video recommendation. Built upon a large-scale open-source short-video dataset, SCOPE-Bench provides CDS annotations for 150K videos, enabling systematic evaluation of RSs from a cognitive-content perspective. Leveraging SCOPE-Bench, we evaluate 13 representative RSs and reveal a consistent preference for shallow-content videos. Moreover, we find that these algorithms recommending cognitively deep content are only marginally better than random selection, highlighting a previously overlooked limitation of existing recommendation objectives. Our code and datasets are available at this https URL. 
+
+---
+# Whose Posts Get Ranked: Identical-Text Exposure Gaps in Bluesky Custom Feeds 
+
+**Authors**: Yipeng Wang, Mohit Singhal  
+
+**Link**: [PDF](https://arxiv.org/pdf/2608.13879)  
+
+**Abstract**: Bluesky lets users deploy custom feeds, independently operated recommendation algorithms that the platform serves alongside thousands of others. This paper investigates how evenly these feeds treat posts with the same text. To measure this, we take repeated snapshots of the Top-50 lists that 1,366 public feeds return, and we group posts with identical text, from different authors, that were created before the same list response and closely matched in age. Exposure diverges widely inside these matched sets, which span 250 feeds: in 33% of sets, one copy appears on the list while another does not. Fixed-effects regressions show that this divergence is associated with the author's history on the specific feed. Authors new to a feed receive less exposure for the same text (-0.061 in reciprocal-rank weight), while authors whose posts the feed has returned before receive more. A new author with more followers than the competing author still loses 74\% of head-to-head comparisons. Media and post-type features show no detectable association after multiple-comparison correction. These results are early evidence that access to many independent feeds is not enough to give identical texts equal exposure. 
+
+---
+# The MPB Corpus: A Dataset of Melody, Rhythm, Harmony, and Melody-Harmony Relationships in Brazilian Popular Music 
+
+**Authors**: Carlos de L. Almada, Hugo T. de Carvalho, Felipe D. Martins  
+
+**Link**: [PDF](https://arxiv.org/pdf/2608.13842)  
+
+**Abstract**: This paper presents the MPB Corpus, a collection of 500 musical pieces encoded across four musical parameters: melodic contour, melodic rhythm, harmony, and the relationship between melody and harmony. It constitutes the most comprehensive and detailed dataset to date for computational musicology of Brazilian music. To support the encoding process, we introduce specific analytical models designed to capture rhythmic and melodic information with precision, alongside tailored visualizations and metrics summarizing key musical parameters. Finally, we provide a brief qualitative exploratory analysis of the dataset, illustrating its potential to both formulate and systematically address musicological questions concerning the genre. 
+
+---
