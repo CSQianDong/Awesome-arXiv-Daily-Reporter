@@ -1,0 +1,91 @@
+# VisDocAgentBench: Benchmarking Agents for Visually Rich Document Retrieval 
+
+**Authors**: Lexiang Hu, Yanzhao Zhang, Mingxin Li, Dingkun Long, Yikang Li, Fuwei Zhang, Yisen Wang, Zhouchen Lin  
+
+**Link**: [PDF](https://arxiv.org/pdf/2608.17889)  
+
+**Abstract**: Visually rich documents encode relevance through language, layout, structured visual elements, and corpus context, yet retrieval is typically evaluated by one-shot query--page matching. Agentic-search benchmarks usually score downstream question answering or report generation, leaving document ranking under iterative evidence acquisition underexplored. We introduce VisDocAgentBench, a closed-corpus benchmark comparing static and agentic retrieval under a shared ranked-output contract. It contains 2,375 pages from 100 documents and 120 unique-target queries balanced across direct, one-bridge, and two-bridge evidence structures. Relation-preserving construction yields semantic, relational, and visual queries, followed by full-document review and hard-negative validation. A strong late-interaction visual retriever reaches 97.50% Recall@1 on direct items but 2.50% on two-bridge items, exposing the limits of query--target matching when relevance depends on corpus context. Agents recover much of this loss, but planner choice and retrieval representation remain decisive. Every planner performs better with visual retrieval, whose best R@1 reaches 67.50% versus 37.50% for OCR-text. Ablations identify iterative search and page inspection as consequential capabilities, and providing the complete support context improves ranking on both routes. Trace analysis localizes the remaining losses to target discovery, candidate examination, and evidence-role integration. These findings motivate retrieval agents that combine modality-preserving discovery with evidence-directed verification. 
+
+---
+# DEPT: Document Embedding Preservation Tuning for Unified Query Expansion and Retrieval 
+
+**Authors**: Jingyuan Wang, Richong Zhang, Zhijie Nie, Mingxin Li, Yanzhao Zhang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2608.17632)  
+
+**Abstract**: Large language models (LLMs) can both expand underspecified queries and encode text as dense representations, suggesting a unified model for query expansion and retrieval. Existing systems usually rely on prompted expansions, independently trained modules, or staged optimization, leaving generated expansions only indirectly aligned with the retrieval loss that judges them. We train a single decoder-only LLM end to end, where the same model generates the expansion and encodes both the expanded query and candidate documents. This unified setting creates a moving-target problem: retrieval supervision should improve query-side expansion, but the same update also shifts the document embeddings that serve as retrieval targets. We introduce Document Embedding Preservation Tuning (DEPT), which keeps tuned document embeddings close to cached initial embeddings while allowing retrieval gradients to pass through straight-through decoding into the generator. DEPT converts joint query--document movement into query-side adaptation against approximately stable, whitened document embeddings that support index reuse and online hard-negative mining. Experiments with Qwen3-4B-Instruct-2507 and LLaMA-3.2-3B-Instruct on five datasets in BEIR benchmark show that DEPT improves average retrieval quality over training-free, independently trained, and staged unified baselines, while ablations isolate the effects of preservation, whitening, end-to-end expansion training, and online negatives. Code is available at this https URL. 
+
+---
+# From Student Risk Prediction to SC2R: Semantics-Constrained Counterfactual Recourse for Educational Decision Support 
+
+**Authors**: Ngoc Luyen Le, Marie-Hélène Abel, Bertrand Laforge  
+
+**Link**: [PDF](https://arxiv.org/pdf/2608.17618)  
+
+**Abstract**: Learning analytics models can identify students at risk of poor performance, but they do not directly indicate which interventions are feasible, actionable, and compatible with educational constraints. This paper introduces SC2R, a semantics-constrained counterfactual recourse framework for educational decision support. SC2R combines a calibrated predictive model, integer-programming-based recourse generation over discrete action variables, a lightweight RDF vocabulary for intervention-plan representation, and SHACL validation for enforcing timing, budget, immutability, and availability constraints. The framework is evaluated offline on the OULAD dataset using snapshots constructed relative to each assessment at two decision horizons. Results show that the predictive component provides strong performance, that compact intervention plans can be generated at scale, and that semantic validation reveals infeasible plans that lighter optimization-only settings would otherwise accept. Rather than claiming causal improvement in student outcomes, this work shows that counterfactual recourse becomes more operationally meaningful in education when recommendations are not only model-valid, but also semantically feasible and machine-checkable. 
+
+---
+# Once Generated, Ranked: End-to-End Generative Slate Recommendation with Unified Semantic-Collaborative IDs 
+
+**Authors**: Yang Hu, Jiayi Guo, Jingui Ma, Ning Li, Jiangling Qin, Yanming Li, Yang Deng, Xiaoshuang Chen, Kaiqiao Zhan  
+
+**Link**: [PDF](https://arxiv.org/pdf/2608.17613)  
+
+**Abstract**: Slate recommendation treats a slate rather than an individual item as the recommendation unit, requiring joint optimization of item interactions and slate utility. Existing approaches typically separate candidate generation from ranking and restrict optimization to retrieved candidates. Generative recommendation with Semantic IDs (SIDs) offers a path to end-to-end recommendation, but existing SID construction often lacks recommendation-aware semantics and effective local collaborative signals, while next-token prediction is misaligned with slate-level objectives. We propose OGR, an end-to-end framework that directly generates ordered slates-"Once Generated, Ranked." OGR first introduces TUSID, which adaptively fuses item-specific semantic and local collaborative information into hierarchical SIDs. It then uses list-wise preference planning and pipelined position-wise SID decoding to model global preferences and inter-item dependencies while generating ordered slates. We further propose SPA, a reward-guided conservative policy optimization method that aligns generated slates with user preferences beyond likelihood imitation. Offline experiments show that OGR outperforms representative baselines, with 48.2% and 27.2% relative NDCG@5 gains on industrial and public datasets, respectively. Online A/B testing on Kuaishou further yields a 1.120% improvement in Effective Views. 
+
+---
+# Empowering Compact LLMs with Fusion of Layer-wise Exits for Recommendation 
+
+**Authors**: Xurong Liang, Tong Chen, Quoc Viet Hung Nguyen, Jianxin Li, Xiangliang Zhang, Hongzhi Yin  
+
+**Link**: [PDF](https://arxiv.org/pdf/2608.17316)  
+
+**Abstract**: Large language model-based recommender systems (LLM-RSs) have demonstrated remarkable capabilities, but are computationally unsustainable for many real-world applications. Compact LLMs offer a practical alternative, yet their reduced capacity often requires reasoning or knowledge distillation methods that increase latency or depend on larger models. Combined with autoregressive generation, these approaches face severe scalability bottlenecks. In contrast, discriminative LLM-RSs enable efficient full-corpus ranking through embedding similarity, but compact backbones remain limited in expressiveness and structural adaptivity. We propose the Fusion of Layer-wise Exits for Sequential Recommendation (FLEXRec), a discriminative framework that enhances compact LLMs while retaining scalable full-corpus ranking. FLEXRec inserts prediction heads (i.e., exits) at multiple transformer layers and adaptively fuses their score distributions. An adaptive continuous router (AC-Router) dynamically selects both the number and identity of exits for each user sequence, while a novel target-k hinge loss regulates routing sparsity. Experiments on three real-world datasets with Qwen 3 1.7B and Llama 3.2 3B show that FLEXRec achieves state-of-the-art accuracy among compact-backbone methods while remaining highly efficient. Code: this https URL 
+
+---
+# Overview of the TREC 2025 Product Search and Recommendation Track 
+
+**Authors**: Dean E. Alvarez, Surya Kallumadi, Daniel Campos, ChengXiang Zhai, Alessandro Magnani, Rikiya Takehi, Michael D. Ekstrand  
+
+**Link**: [PDF](https://arxiv.org/pdf/2608.17138)  
+
+**Abstract**: In the past few years, consumers have moved the bulk of their product exploration and purchasing efforts online seeking speed, convenience, and price comparison with ease unimaginable for in-person shopping. As product catalogs have grown in diversity and size product search and recommendation have become a cornerstone for e-commerce sites.
+Despite the widespread usage of search engines in e-commerce, there is no high-quality dataset designed to evaluate end-to-end retrieval quality. In 2025, we ran a revised and continued version of the Product Search track previously run at TREC 2023 and TREC 2024. The 2025 product search track had two tasks: query expansion and related-product recommendation. The related-product recommendation task is particularly novel, providing an annotated data set of product relationships that distinguishes between complementary and related products. We anticipate the data from this track will enable better recommendation and search applications that reflect user needs, as a building block for conversational product discovery experiences. 
+
+---
+# Towards welfare-oriented recommendations in activity-travel behavior 
+
+**Authors**: Ekin Ugurel, Takahiro Yabe  
+
+**Link**: [PDF](https://arxiv.org/pdf/2608.16922)  
+
+**Abstract**: While mainstream recommender systems (RS) rely on diverse heuristics to rank alternatives, they generally lack a principled account of user welfare (i.e., whether accepting the recommendation will leave the user better off than other alternatives). The problem is particularly acute in activity-based travel behavior, where users incur costs they cannot recoup (i.e., energy, time) regardless of eventual satisfaction. As a result, existing systems may recommend options based on popularity or collaborative filtering, but may still leave users worse off than nearby or self-selected alternatives. We address this gap by introducing a welfare-oriented framework for activity recommendation that evaluates suggestions in terms of net utility, defined as experienced benefit minus travel costs. Specifically, we formalize two operational decision criteria: Positive Utility Probability (PUP) recommends only when the probability of non-negative net utility exceeds a threshold, while Regret Minimization (RM) recommends only when expected regret relative to the user's best organic alternative falls below a tolerance level. To evaluate these criteria, we develop an agent-based simulation in which heterogeneous synthetic travelers interact with multiple RS over time in a spatial environment with realistic travel costs, congestion, and behavioral feedback loops. This framework enables controlled counterfactual evaluations, and offers a practical foundation for designing RS that treat user welfare as a primary objective rather than an incidental byproduct. 
+
+---
+# MITRE-SAGE: A Multi-Agent Cybersecurity Question-Answering model 
+
+**Authors**: Ali Habibzadeh, Farid Feyzi, Reza Ebrahimi Atani  
+
+**Link**: [PDF](https://arxiv.org/pdf/2608.16921)  
+
+**Abstract**: Effective cybersecurity operations require timely and accurate analysis of large-scale heterogeneous security information; however, analysts increasingly struggle with information overload, alert fatigue, and time-constrained decision-making. Although large language models (LLMs) have demonstrated promising capabilities for question answering (QA), their effectiveness in cybersecurity remains limited by insufficient domain knowledge, a tendency to hallucinate, and difficulties in capturing both semantic and structural relationships. This work proposes MITRE-SAGE, a multi-agent retrieval-augmented generation framework that integrates semantic and structural cybersecurity knowledge to improve the reliability and interpretability of LLM-based QA systems. By decomposing complex tasks into query interpretation, evidence retrieval, and answer synthesis, MITRE-SAGE effectively supports cybersecurity tasks such as vulnerability assessment, threat profiling, and relationship extraction. Furthermore, we propose MITRE-QA, a comprehensive benchmark comprising 3,000 question-answer pairs for evaluating LLMs across diverse cybersecurity knowledge tasks, and use it to systematically evaluate MITRE-SAGE against representative baseline methods. Extensive experiments demonstrate that MITRE-SAGE consistently outperforms standalone LLMs and conventional RAG approaches. Notably, a lightweight configuration comprising Qwen2.5-7B sub-agents and a Qwen2.5-14B orchestrator achieves superior performance on five of the eight benchmark tasks, indicating the effectiveness of the proposed multi-agent framework. The results highlight the potential of MITRE-SAGE as a scalable and interpretable approach for reliable cybersecurity QA, while MITRE-QA provides a standardized benchmark for future research. 
+
+---
+# CARA: Cognitive Adaptive Recommendation Agent 
+
+**Authors**: Weijun Gao, Jinyang Dong, Chuanru Ren, Hengxiao Li  
+
+**Link**: [PDF](https://arxiv.org/pdf/2608.16919)  
+
+**Abstract**: Recent advances in large language models and agent-based recommendation frameworks have introduced new opportunities for more flexible and context-aware recommendation. However, existing methods still largely rely on semantic matching, end-to-end generation, or loosely structured agent workflows, without explicitly modeling how user preferences are processed and translated into final decisions. To address this limitation, we propose CARA, a cognitively inspired recommendation framework that formulates recommendation as a structured decision-making process. The core intuition of CARA is that user decisions are jointly shaped by two complementary mechanisms: intuitive affective preference and deliberate rational evaluation. Accordingly, CARA organizes recommendation into two coordinated stages: candidate filtering, which narrows the search space based on coarse-grained preference constraints, and dual-perspective decision modeling, which captures recommendation decisions through affective and rational judgment. We further introduce a boundary-aware KTO strategy that prioritizes instructions the model can solve occasionally but not consistently, thereby increasing the density of informative preference signals. Extensive experiments on three Amazon Reviews domains show that CARA achieves the best performance on most evaluation metrics, with relative improvements of up to 10.15% over the baseline. 
+
+---
+# Sparse Coverage: Semantic Center Representations for Patent Prior-Art Retrieval 
+
+**Authors**: You Zuo, Kim Gerdes, Éric de la Clergerie, Benoît Sagot  
+
+**Link**: [PDF](https://arxiv.org/pdf/2608.16918)  
+
+**Abstract**: Patent prior-art retrieval is a recall-oriented search task over long and highly structured technical documents. Dense retrieval improves semantic matching, but single-vector representations may compress multiple technical components, functions, and constraints into a single embedding. We propose Sparse Coverage, an unsupervised semantic retrieval framework that maps local span embeddings to a sparse vocabulary of embedding-space centers. The centers are selected with a coverage-oriented k-center objective, and spans activate nearby centers to produce sparse representations compatible with inverted-index retrieval. Experiments on CLEF-IP 2013 show that Sparse Coverage matches or exceeds the document-level recall of strong dense patent encoders in several configurations, while remaining competitive for passage-level retrieval. By combining local semantic evidence with sparse inverted-index search, Sparse Coverage provides an effective first-stage retrieval approach for patent search. 
+
+---
