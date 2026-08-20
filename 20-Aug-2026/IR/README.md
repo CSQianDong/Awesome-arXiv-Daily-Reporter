@@ -1,0 +1,173 @@
+# rEDMRec: Distilling Large Language Model Reasoning into an Editable Experience Memory for Recommendation 
+
+**Authors**: Minh Hoang Nguyen, Tung Le, Huy Tien Nguyen  
+
+**Link**: [PDF](https://arxiv.org/pdf/2608.18952)  
+
+**Abstract**: Large language models can improve recommendation quality by reasoning explicitly over user history and candidate items - for example, extracting a user's preferences or explaining why one item fits better than another - rather than mapping history directly to a ranked list. This reasoning, however, is expensive to repeat on every ranking request and, once produced, is typically consumed once and discarded, leaving it neither reusable across future requests nor easy to inspect or correct as user tastes drift. Our insight is that reasoning does not need to be regenerated at every call if it can instead be compressed once into a compact, structured memory that a lightweight model retrieves from. We propose rEDMRec, which distills a teacher LLM's reasoning into four typed, editable experience channels - long-term preference, short-term context, item-perception, and counterfactual hard-negative comparisons - maintained by an LLM memory controller that performs Add/Delete/Modify/Keep operations and refines entries via K-agent debate. A lightweight student LLM then ranks candidates purely by retrieving from this memory, without invoking the teacher again, decoupling online inference cost from reasoning depth. Across ML-1M, Amazon Beauty, and Steam and ten student backbones, rEDMRec improves HR@1 over zero-shot, few-shot, and RAG on every backbone, and over GraphRAG on most backbones, with Impv up to 13.3% vs. the second-best baseline on ML-1M. Channel ablations show that short-term context is the only channel that helps consistently across capacity tiers, whereas long-term, item-perception, and counterfactual contributions are capacity-dependent (and can reverse on the strongest students); debate-based memory optimization lowers bank duplication by 7.4 percentage points while raising downstream HR@1 by up to +0.029 over six optimization epochs. 
+
+---
+# Think-to-Personalize: Unifying Reasoning and Retrieval for User-Centric Personalized Dense Retrieval 
+
+**Authors**: Angqing Jiang, Gaoming Zhang, Jianchun Song, Kena Qi, Dayao Chen, Wei Lin, Defu Lian  
+
+**Link**: [PDF](https://arxiv.org/pdf/2608.18855)  
+
+**Abstract**: Dense retrieval has become a cornerstone of modern local-lifestyle e-commerce search by encoding queries and items into semantic embedding spaces. While recent advancements have transitioned from BERT-based embedding models to Large Language Models (LLMs), most approaches still treat LLMs as static text encoders, neglecting their inherent reasoning capabilities. Furthermore, standard dense retrieval models remain query-centric, which is insufficient in e-commerce scenarios where sparse and ambiguous queries create an intent gap that can only be bridged by the rich context of user history. Meanwhile, existing personalized retrieval methods typically rely on implicit embedding interactions, which lack the reasoning capability to effectively disambiguate user intent from noisy historical behaviors. To address these challenges, we propose Think-to-Personalize (TTP), a novel framework that unifies explicit user-centric intent reasoning with dense retrieval. By reasoning over the user's historical purchase sequence, TTP explicitly deduces latent personalized needs and generates an intent-enhanced query, which is then encoded into a unified dense embedding. Specifically, we design a two-stage training paradigm: (1) a Supervised Fine-Tuning (SFT) stage that establishes cold-start capabilities; and (2) a Reinforcement Learning (RL) stage that aligns the reasoning process with retrieval utility using Group Relative Policy Optimization (GRPO). Extensive experiments on both proprietary and public benchmarks demonstrate that TTP significantly outperforms state-of-the-art baselines. Furthermore, in online A/B tests, it achieved a +0.46% lift in order volume, validating its practical effectiveness and establishing a new paradigm for reasoning-driven personalized dense retrieval. 
+
+---
+# SIDScope: A Diagnostic Resource for Semantic-ID Interfaces in Generative Recommendation 
+
+**Authors**: Jiandong Ding, Huijie Qin, Tiandeng Wu, Yi Cao  
+
+**Link**: [PDF](https://arxiv.org/pdf/2608.18779)  
+
+**Abstract**: Semantic-ID mappings are reusable interfaces between item tokenizers and generative recommenders, yet released mappings rarely state whether they are coherent, what structure they expose, how generated paths resolve, or what must be revalidated after a refresh. SIDScope is a source-traced diagnostic resource for these decisions. It normalizes item-to-code artifacts, verifies provenance and joins, profiles mapping structure, compares paired revisions, and accounts for path-to-item outcomes in generated traces. Across nine source-traced tokenizer exports from seven families on Amazon and Yelp data - eight executable routes plus one auditable snapshot - SIDScope reveals that interface health is multi-signal rather than scalar. Its central finding is mechanism-conditional: prefix alignment strongly tracks held-out candidate exposure when retrieval consumes SID prefixes, then weakens as scoring becomes prefix-independent. Trained trace accounting exposes a second hidden gap: a valid target path can survive without uniquely retrieving the target item by 1.2-3.0 percentage points. A refresh case establishes a third: repairing the mapping does not by itself restore an inherited generator; model reuse requires a separate handoff check. The package provides frozen evidence summaries, conformance reports, trace labels, table builders, and CPU-only verifiers. It supports decisions about artifact readiness, interface risks, and revalidation before model reuse. 
+
+---
+# GateDiffInt: Gate-Mediated Controllable Diffusion and Multi-Intent LLM Distillation for User Behavior Modeling 
+
+**Authors**: Jialong Duan, Zichen Zhang, Zirui Tu, Zheng Zhang, Zepeng Li, Qingyao Cui, Qinwen Wang, Yudan Liu, Luo Yang, Yao Hu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2608.18764)  
+
+**Abstract**: Existing ranking models encode intent only implicitly, making it hard to disentangle structured intents of varying strength and temporal scale. Noise and intent in behavior sequences are mutually reinforcing---we call this Noise--Intent Coupling (NIC). Noise dilutes true intents, while the lack of structured intent priors leaves denoising without a clear this http URL address NIC, we propose GateDiffInt, an intent interaction framework for industrial ranking. It uses the final conversion signal to jointly align sequence denoising and intent extraction. GateDiffInt applies a controllable forward diffusion process with dual gating to enhance and denoise behavior sequences. A large language model then acts as teacher to distill four structured intents---long-term, short-term, latent, and conversion---into a lightweight student model. The enhanced sequence and structured intent representations are deeply fused via attention to produce intent-aware representations for conversion-rate this http URL experiments on public and large-scale industrial datasets show consistent gains over strong baselines. In online A/B tests serving hundreds of millions of daily active users, GateDiffInt delivers substantial GMV improvements and has been deployed to primary traffic, confirming both effectiveness and production readiness. 
+
+---
+# GreekBarRetrieval: A Benchmark for Greek Statutory Retrieval 
+
+**Authors**: Ernest Beta, Odysseas S. Chlapanis, Dimitrios Galanis, Ion Androutsopoulos  
+
+**Link**: [PDF](https://arxiv.org/pdf/2608.18752)  
+
+**Abstract**: Statutory retrieval is necessary for citation-grounded legal question answering, but remains underexplored for Greek. We introduce GreekBarRetrieval, a public retrieval benchmark derived from, and complementing GreekBarBench, which did not include retrieval. The new benchmark comprises 283 bar-exam questions, each accompanied by the facts of the case it refers to, and 6,308 candidate statutory articles to retrieve from. Questions and facts are stated in everyday language, but need to be mapped to the formal terminology of statutes and their abstract legal concepts. A further complication is that not all of the case facts are relevant to each question of a case. Experimenting with three BM25 variants and nine dense retrievers, we find that vanilla dense retrieval far outperforms vanilla sparse retrieval in Recall@100. However, LLM-based query reformulation helps BM25 close that gap, while also improving dense retrieval. With a ten-round ReAct-like LLM reformulation loop that we introduce, BM25 improves further in Recall@100 and obtains the best nDCG and MAP scores of all tested retrievers. Query reformulation also outperforms pseudo-relevance feedback, sparse-dense fusion, and English translation. 
+
+---
+# PILOT Technical Report 
+
+**Authors**: Jiuning Lin, Ruiquan Lan, Xiaodong Zhu, Bin Zhang, Chengyu Lai, Chuxin Chen, Dimin Wang, Hongtao Cheng, Jialin Zhu, Lingqing Zhang, Shuai Zhong, Tao Wang, Weipeng Huang, Yinjiang Cai, Yinnan Song, Yuan Liu, Zhibo Xiao, Zhixin Ma, Zihong Huang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2608.18637)  
+
+**Abstract**: Existing agentic approaches for recommendation system optimization remain fundamentally reactive: they adjust parameters in response to observed metric changes but lack the ability to proactively design controlled experiments, personalize strategies at the user-segment level, or accumulate reusable experimental methodology across tasks. We present PILOT (Proactive Insight Learner for Online Tree-Experiments), an LLM-agent framework that organizes three roles within a constrained control loop where deterministic services enforce all safety, statistical, and permission boundaries: (1) an Experiment Manager that drives the full experiment lifecycle -- task intake, observation governance, anomaly recovery, and postmortem -- by selecting only from a rule-generated legal-command envelope; (2) a Search Planner that proposes candidate decision trees for user-segment-level personalization, invoked only when the Manager requests planning; and (3) a Memory Curator that asynchronously distills experiment outcomes into strategy-level domain knowledge and provenance-tracked methodology, failure-isolated from the main loop. The Manager makes the agent proactive, the Planner enables population-level personalization beyond global tuning, and the Curator turns every completed task into a learning opportunity for the next. Deployed on Taobao's platform with 5 experimental buckets, PILOT is compared against ROAM(Reactive Optimization with Agent-driven Moves), a free-exploration agent without lifecycle governance or structured hypothesis testing. PILOT achieves up to +1.40% IPV, +1.60% Core IPV, +0.96% transaction count, and +1.50% transaction amount, improving over ROAM's best results (+1.00% IPV, +0.90% Core IPV, +0.60% transaction count, +1.13% transaction amount) while raising search efficiency from 53.3% to 93.3% (+40 pp), with no human intervention throughout the experimental cycle. 
+
+---
+# OneModel: A Unified Foundation for Platform-Scale Multi-Scenario Ranking 
+
+**Authors**: Yinqi Zhang, Peiyu Hu, Yuntian Tang, Siying Gu, Jiahao Liang, Longxin Kou, Haiqing Hu, Shuman Zhuang, Yubin Xu, Chenggen Sun, Bin Ye, Donghui Xu, Zhaoyu Liu, Jiang Rong, Yuting Jia, Zhaokai Luo, Leilei Ma, Yiying Xie, Yao Hu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2608.18606)  
+
+**Abstract**: Platform-scale recommender systems often span multiple business streams such as organic recommendation, advertising, and merchant services, where user behaviors form a continuous cross-stream trajectory. Maintaining separate ranking systems fragments user representations and increases engineering cost. We propose \textbf{OneModel}, a unified framework for multi-stream final ranking. OneModel maps heterogeneous behaviors into shared event sequences, learns long-context user representations with an action-oriented backbone, and introduces \emph{Scenario-aware Information Modulation} to balance cross-stream transfer and stream-specific specialization. For production deployment, OneModel further adopts stratified user representation, multi-objective training, and optimized online serving with feature decomposition, user feature prefetching, shared user-tower computation, and graph-level inference optimization. We deploy OneModel in production at \emph{Xiaohongshu}, where it delivers consistent offline gains over strong baselines and scales favorably with context length and model capacity. Online A/B tests improve Time Spent by \textbf{+0.33\%} and Engagement by \textbf{+1.25\%} in Explore Feed, lift advertising value by \textbf{+3.43\%} and CTR by \textbf{+8.18\%} in Feed Advertising, and raise DGMV by \textbf{+1.1867\%} and GPM by \textbf{+2.1585\%} in Merchant Recommendation, validating unified multi-stream ranking as an effective production foundation. 
+
+---
+# More Context, Same Budget: Dual-Bounded Relational Recall Beyond Top-K Retrieval 
+
+**Authors**: Thomson D. Nguy  
+
+**Link**: [PDF](https://arxiv.org/pdf/2608.18448)  
+
+**Abstract**: More context does not require a larger retrieval budget. Under the same ceiling, a retrieval system can recover more of the evidence a question requires by following relationships between evidence that flat top-k ranking leaves behind. We test that proposition with Dual-Bounded Relational Recall (DBRR), which allocates a fixed retrieval budget between relevance-selected seeds and bounded graph-adjacent context, against matched flat top-k retrieval using the same relevance-ranking stage and the same maximum number of retrieval units and tokens. The outcome is complete recovery of the official HotpotQA supporting-evidence set for each question.
+Across 7,405 FullWiki questions, the Primary DBRR allocation increased complete supporting-evidence recovery by 23.8 percentage points over its matched flat baseline (paired risk difference 0.2377; question-level bootstrap 95% interval 0.2269 to 0.2489). It improved 1,952 questions, tied on 5,261, and harmed 192. Bridge questions drove the effect, with a 28.7-point increase; comparison questions showed a smaller 4.2-point difference. In a prespecified, evaluation-only diagnostic population, real relationships also outperformed random-neighbor and degree-preserving shuffled-graph controls.
+The result is straightforward: under the same context budget, complete-evidence retrieval depends not only on which items rank highest, but on how context is allocated around them. Relational allocation recovered complete evidence sets that flat top-k retrieval left incomplete. 
+
+---
+# AI in Search Reduces Publisher Referrals Without Improving User Experience: Experimental Evidence 
+
+**Authors**: Stephanie T. Wang, Jeffrey Gleason, Yakov Bart, Christo Wilson, Danaé Metaxa  
+
+**Link**: [PDF](https://arxiv.org/pdf/2608.18352)  
+
+**Abstract**: The integration of generative AI into web search delivers synthesized answers to user queries, changing how people navigate and assess information, while raising concerns about the downstream impacts on publishers who supply the underlying content. We conduct a preregistered field experiment (N=1,100) on Google Search, the dominant online search platform, to estimate the causal effects of AI Overviews and AI Mode on user behavior, perceptions, and publisher traffic. We show that removing AI Overviews and AI Mode increases click-through rates to publishers, while an AI Mode-only experience reduces click-through rates and erodes user experience and trust in information found on Google. These findings show that integrating generative AI into web search reshapes online attention, with economic consequences for the online publishers that sustain both search platforms and the overall information ecosystem. 
+
+---
+# Multimedia Asset Personalization via Multimodal Embeddings at Netflix 
+
+**Authors**: Emma Yanyang Kong, Aditya Deshpande, Bowei Yan, Asad Abbasi, Santiago Castro, Avneesh Saluja, David Fagnan, Ashish Rastogi  
+
+**Link**: [PDF](https://arxiv.org/pdf/2608.18322)  
+
+**Abstract**: Personalized promotional assets, namely artwork images and video preview clips, are critical to content discovery on Netflix. Traditional models for asset selection rely on ID-based interaction history, leaving them blind to asset content and unable to serve newly launched titles and assets. We describe how multimodal embeddings reshaped production systems at Netflix and report transferable lessons for practitioners adopting foundation-model embeddings into recommender systems. First, pretrained image embeddings unlock cross-title, cross-canvas knowledge transfer. Augmenting a two-tower model with CLIP image embeddings lets a single model serve all five Netflix artwork canvas types, replacing five separately trained per-canvas models and substantially improving cold-start performance. A lightweight extension reuses CLIP's joint text-image space to make artwork personalization query-aware in search. Second, multimodality decisively beats any single modality for video preview personalization. We describe MediaFM, our in-house tri-modal foundation model trained on a large-scale corpus of shots from the Netflix show catalog, fusing visual (SeqCLIP), audio (wav2vec 2.0), and timed-text signals; adopted for video preview personalization, it outperforms strong visual-only baselines both offline and in online A/B tests. Third, a simple offline proxy task whose performance correlates with online outcomes can accelerate the experimentation and productization cycle. Predicting the popularity-based winner from embeddings alone ranks embedding models and versions, pruning the choice space before any end-to-end integration or A/B test; it now gates every new MediaFM checkpoint. We also share the production engineering decisions (shared embedding infrastructure, low-latency serving, cheap screening) that made these deployments viable, along with the design tradeoffs and failure modes we encountered. 
+
+---
+# Global Crises and National Policies: A Large Scale Analysis of Political Content in German Language Online Media 
+
+**Authors**: Yara Döring, Felix Bießmann  
+
+**Link**: [PDF](https://arxiv.org/pdf/2608.18268)  
+
+**Abstract**: Today most media content is consumed based on algorithmic recommendations. Evidence suggests that this can lead to politically biased media consumption patterns. Automated extraction of political agendas from texts can reveal and analyze political biases in online media -- and thus help fostering politically unbiased media consumption. Here we employ modern political text analysis methods demonstrating the potential of automated fine-grained political bias analysis in online media. We conduct an analysis of political content in German language online media during the period 2019--2022, encompassing several million articles and tweets covering events with profound societal impact globally and nationally, the COVID-19 pandemic and the beginning of the war in Ukraine. Our analysis identifies thematic similarity between national (German and Swiss) reporting, particularly for categories driven by international events. We also find divergences emerging in domestically influenced categories, reflecting differences in national policies and institutional structures. A comparison of newspaper and Twitter discourse reveals that both media converge around a shared core during the pandemic, yet differ in intensity and temporal dynamics. Newspapers exhibit more stable political content, while Twitter reacts through short-lived event-driven spikes. These findings indicate that international crises act as a powerful synchronizing force on political content in classical media, temporarily overriding both national and media-form differences. Our automated political analysis empowers citizens by rendering political agendas in online media transparent. This transparency also enables media outlets to bridge the gap between algorithm-driven echo chambers and a more informed, balanced public discourse. 
+
+---
+# Finetuning Strategies for Querying Sounds by Vocal Imitation 
+
+**Authors**: Aditya Bhattacharjee, Christos Plachouras, Sungkyun Chang, Emmanouil Benetos  
+
+**Link**: [PDF](https://arxiv.org/pdf/2608.19174)  
+
+**Abstract**: This technical report describes our winning submission to the AES AIMLA 2025 Challenge on querying sound effects by vocal imitation. We investigate two complementary fine-tuning strategies: contrastive learning with a frozen, pretrained CED encoder, and joint contrastive-triplet learning with semi-hard negatives using a MobileNetV3 encoder. This report has been updated for posterity to include details released after the challenge. 
+
+---
+# Visual-Aware Representation of Web Pages for Machine Learning Applications 
+
+**Authors**: Radek Burget, Radek Hranický  
+
+**Link**: [PDF](https://arxiv.org/pdf/2608.18727)  
+
+**Abstract**: Applying machine learning to web pages is challenging due to the need to interpret HTML together with associated resources and perform rendering to obtain a meaningful visual and layout-aware representation. As a result, machine learning over web content remains comparatively underexplored. In this paper, we present a platform for visual-aware representation and machine learning over web pages based on the open-source rendering tool FitLayout. The platform provides a server capable of rendering web pages, explicitly capturing their visual and structural properties in an RDF-based representation, and persisting the rendered documents in an integrated storage. The processing pipeline is controlled via a REST API, while SPARQL queries are used to retrieve structured data suitable as input for machine learning algorithms. By explicitly modeling rendered web pages, including fine-grained layout details, the platform enables dataset sharing and supports the reproducibility of experimental results. The architecture supports the complete dataset preparation workflow, from web page collection and rendering through preprocessing and annotation of content elements to downstream learning tasks. We further provide a Python client library that integrates the platform with standard machine learning workflows. As a demonstration, we show how rendered web pages can be transformed into graph-based representations and used to train graph neural networks for recognizing key content elements, illustrating both the applicability of the approach and the reproducibility of the results. 
+
+---
+# Composed Historical Image Retrieval by Modeling Temporal Representations 
+
+**Authors**: Adrià Molina Rodríguez, Oriol Ramos Terrades, Josep Lladós Canet  
+
+**Link**: [PDF](https://arxiv.org/pdf/2608.18694)  
+
+**Abstract**: While time evolves linearly, the geometry of neural embedding spaces is inherently multi-dimensional, often chaotic, and difficult to interpret. In principle, one could constrain an embedding space to a single temporal dimension; however, such a reduction would sacrifice performance on downstream tasks, as one-dimensional embeddings cannot retain sufficient expressive capacity. This paper asks whether it is possible to learn representations that preserve temporal structure while remaining effective for image and object retrieval, and answers this question by building the mathematical foundations of such a system. We propose Temporally Decomposable Image Representations (TDIR), a representation learning algorithm that decomposes historical photographs into separate date and content components through orthogonal subspaces. We define and prove the conditions under which such a decomposition is achievable, characterize the error incurred when those conditions are only partially met, and show that orthogonality between temporal and categorical subspaces emerges naturally from the joint optimization, without requiring it to be imposed explicitly. Beyond its geometric properties, TDIR enables a class of transitive operations on embedding spaces: the temporal information of one image can be extracted and injected into the representation of another, with no label supervision required. All theoretical properties are grounded and validated in the real-world problem of Composed Image Retrieval on historical photographs, where a query simultaneously specifies object content and a target time period, either through labels or through example images. This in-the-wild setting serves as a concrete backing for the propositions we derive, offering an intuitive and interpretable way to navigate photographic archives while maintaining competitive performance in both date estimation and object retrieval. 
+
+---
+# FinRCA-Bench: Benchmarking Evidence Retrieval and Reasoning for Financial AI Systems 
+
+**Authors**: Pratik Ghawate  
+
+**Link**: [PDF](https://arxiv.org/pdf/2608.18534)  
+
+**Abstract**: Large language models are increasingly used to support financial operations, but their apparent reasoning performance can depend on whether they receive the right evidence. In financial reconciliation, the evidence needed for diagnosis is distributed across invoices, purchase orders, approvals, allocations, payments, ledger entries, and bank activity, linked by transactional relationships rather than textual similarity. End-to-end accuracy can therefore conflate evidence access with reasoning quality. We introduce FinRCA-Bench, a deterministic synthetic benchmark of 2,250 accounts-payable-to-bank reconciliation cases spanning 14 operational tables, including 1,500 injected failures across 15 causal categories and 750 legitimate or hard-negative cases. Root-cause labels and record-level evidence contracts are hidden from the model, allowing retrieval to be evaluated independently of answer correctness. We compare Rules/SQL, classical machine learning, dense semantic retrieval, deterministic relational expansion, and Typed Provenance Graph Retrieval (TPGR), a typed traversal restricted to persisted transaction relationships. Rules/SQL reaches 84.97% held-out exact accuracy and classical ML reaches 95.44%. Holding the reasoning model, prompt, and generation settings fixed while changing only retrieval increases macro required-record recall from 0.83% to 77.70% and exact 16-class accuracy from 2.05% to 72.44%. Structural retrieval failures outnumber reasoning failures with sufficient retrieval by 95 to 15; 254 correct predictions occur despite incomplete retrieval, and strict returned-evidence contract accuracy is only 5.72%. On FinRCA-Bench, retrieval architecture strongly shapes observed AI-system performance, and a correct root-cause label is a weak proxy for an auditable diagnosis. 
+
+---
+# Reducing Technician Search Burden: A Multimodal RAG for Cessna 172 Maintenance Manual 
+
+**Authors**: Seongjun Ha, Md Rashedul Islam, Gaurav Nanda, Damon Lercel  
+
+**Link**: [PDF](https://arxiv.org/pdf/2608.18465)  
+
+**Abstract**: Proper use of the aircraft maintenance manual is essential for correct maintenance, providing procedures, diagrams, cautions, and specifications. However, technicians often avoid consulting it because it is difficult to navigate and time-consuming under strict schedules. Retrieval augmented generation (RAG) models have recently been introduced in aircraft maintenance, yet existing models focus solely on textual retrieval. This research therefore targeted the Cessna 172 Maintenance Manual (C172-MM), widely used in general aviation, and developed a multimodal manual retriever (MMR) capable of retrieving multimodal manual pages. Retrieval performance was evaluated using synthetic queries covering procedures, diagrams, caution/safety information, and specifications; the MMR achieved 93.37% recall@5. Beyond retrieval, a multimodal RAG (MRAG) pipeline was examined, in which retrieved pages were input to a vision-language model that generated responses to the synthetic queries, achieving 87.20% semantic similarity to ground-truth answers. Three practical feasibilities were also assessed: inference time, operational cost, and interpretability. Average retrieval time for five pages was 11.93 seconds and response generation took 4.95 seconds, at $0.0091 per query, while interpretability was validated through heatmap visualizations. These results indicate that the MRAG pipeline for the C172-MM can reduce the time technicians spend searching manuals and retrieving multimodal information. 
+
+---
+# Evaluating Structured Information Extraction with Open Models in a High Risk Public Sector Application 
+
+**Authors**: Elias Schubert, Felix Bießmann  
+
+**Link**: [PDF](https://arxiv.org/pdf/2608.18289)  
+
+**Abstract**: The extraction of structured information from unstructured documents represents a critical component of digital transformations in all sectors. While proprietary solutions dominate commercial applications, a rapidly growing ecosystem of open-source Optical Character Recognition (OCR) engines, Large Language Models (LLMs), and Vision-Language Models (VLMs) offers accessible alternatives. However, systematic evaluations on realistic, multi-step extraction pipelines remain scarce. Responsible usage of such extraction tools require comprehensive evaluations on realistic tasks, especially as these solutions will be key components of applications in the public sector that the EU AI act categorizes as high risk. To address this gap we present a comprehensive benchmark assessing the end-to-end performance of open-source systems on a complex real-world document processing task classified as high risk: Student applications for an international study program. We conduct a comprehensive empirical evaluation with state-of-the-art OCR engines, LLMs and VLMs. Our results reveal that while VLMs generally outperform OCR+LLM pipelines, even state-of-the-art open-source models struggle to handle such tasks reliably in zero-shot settings. Only 4 of 35 configurations achieved F1 scores above 0.5, with the best OCR+LLM pipeline matching top VLM performance, though most OCR+LLM combinations performed substantially worse. Roughly 75\% of all configurations scored below 0.25. Model scale influences performance, yet the relationship is non-linear: substantially larger models do not guarantee proportionally better results. Input quality, particularly the structural preservation of OCR output, emerges as a critical factor independent of downstream model capability. 
+
+---
+# Redakto - The Incognito Tab for LLMs 
+
+**Authors**: Saurav Kumar Saha, Tom Röhr, Felix Bießmann  
+
+**Link**: [PDF](https://arxiv.org/pdf/2608.18260)  
+
+**Abstract**: Large Language Models (LLMs) are being increasingly used in everyday applications. A major challenge in the context of LLMs or Artificial Intelligence (AI) in general is to ensure privacy when using them, meaning that personally identifiable information (PII) is removed from any text that enters an LLM. These challenges have become more urgent with novel EU legislation. Uncertainty around LLM usage with respect to privacy concerns in EU countries can be a major blocker for the speed of innovation and transfer from research to applications. Here we present \textbf{Redakto}, a tool that can be used for anonymizing text prior to feeding it to an LLM or other downstream text processing. We provide state-of-the-art functionalities for both redaction of PII but also when used for pseudonymization. These functionalities are exposed such that they can easily be used by end-users, through the Redakto web application, and by developers and researchers, via REST APIs and model context protocol (MCP) hooks. The implementation is fully open source, requires modest compute resources, and can be readily deployed on local hardware. In contrast to prior work and in order to better assess the quality of the anonymized texts, we conduct extensive empirical evaluations on textual data from legal and medical domain with respect to both privacy and utility of the redacted texts. Our empirical results demonstrate that the texts anonymized with different redaction strategies achieve utility scores on par with the original texts, suggesting that anonymization with Redakto can be used for LLM tasks without substantial negative impact for the tasks we explored. 
+
+---
+# Can David Beat Goliath? On Multi-Hop Reasoning with Resource-Constrained Agents 
+
+**Authors**: Hojae Han, Heeyun Jung, Jongyoon Kim, Seung-won Hwang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2601.21699)  
+
+**Abstract**: Multi-turn reasoning agents solve complex questions by decomposing them into intermediate retrieval or tool-use steps, for accumulating supporting evidence across turns. Meanwhile, with reinforcement learning (RL), training these agents rely on many on-policy rollouts and large training batches. Under realistic resource constraints that make dense exploration infeasible, each RL batch contains only few useful reasoning paths from the current policy. Existing approaches do not fully address this bottleneck: SFT-based initialization can overfit when annotated trajectories are scarce, retrieval-level rewards can assign credit to individual retrieved documents without directly optimizing coverage of the full evidence set, and expansion can waste rollouts from poorly chosen prefixes. We introduce David-GRPO, which improves small-batch learning by using information from both outside and inside the current policy: (i) expert bootstrapping injects a few off-policy expert trajectories into RL updates, and (ii) evidence-guided exploration turns on-policy partial successes into evidence-coverage scores and additional continuations. On agents up to 1.5B parameters trained on four RTX 3090 GPUs, David-GRPO improves over prior RL baselines under the same low-budget setting on six multi-hop QA benchmarks. The gains come with a behavioral shift: unlike prior low-budget RL baselines that often skip retrieval or stop after shallow search, David-GRPO learns to increase retrieval depth and evidence coverage. 
+
+---
