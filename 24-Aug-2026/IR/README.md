@@ -1,0 +1,148 @@
+# Adapting Knowledge Graphs for Behavior Denoising in Sequential Recommendation 
+
+**Authors**: Zichun Jin, Zihan Zhou, Yinan Liu, Bin Wang, Xiaochun Yang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2608.21243)  
+
+**Abstract**: Sequential recommendation predicts the next item from a user's interaction history, but not every interaction is equally informative. Real logs combine persistent preferences with temporary needs, exploration, and incidental behavior, so some interactions can distort history representations or provide unreliable supervision. Existing denoising methods judge such interactions mainly from co-occurrence, order, or model predictions, without explicit evidence from relations between items. Knowledge graphs (KGs) offer this evidence, but item popularity, graph degree, uneven coverage, and widely shared entities can inflate connectivity and bias reliability estimates. Here we present AdaptedKG, which derives calibrated KG evidence for each training example without adding graph representations to the recommendation model. It first compares the observed context with structurally matched alternatives to identify relational paths that are unusually prominent and uses them to build a local KG view. It then compares each interaction with structurally matched reference items to calibrate its support within that view. The resulting retention coefficients gate historical representations and reweight target losses. All sample-specific scores are computed offline using training interactions and a fixed KG, so the backbone remains unchanged and no KG access is required at inference. Experiments show gains with a standard sequential recommender and multiple behavior-denoising sequential recommenders. 
+
+---
+# Graph Engineering in the Era of LLM Agents: From Individual Intelligence to System Intelligence 
+
+**Authors**: Yuyuan Feng, Zhishang Xiang, Chaobin Yang, Qichao Ma, Zerui Chen, Yujing Zhang, Ke Huang, Chuanjie Wu, Zhaoxu Liu, Yili Wang, Xin He, Jiapu Wang, Zijin Hong, Hao Chen, Yuanchen Bei, Kun Wang, Shengyuan Chen, Ningyu Zhang, Enyan Dai, Linhao Luo, Qingyi Pan, Qi Wang, Wenqi Fan, Guangjing Wang, Na Zou, Yangqiu Song, Xin Wang, Zechao Li, Xia Hu, Qing Li, Xiao Huang, Zhihong Zhang, Jinsong Su, Qinggang Zhang, Yi Chang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2608.21156)  
+
+**Abstract**: LLMs have evolved from language generators to autonomous agents capable of complex, long-horizon tasks. This evolution has produced paradigms including Prompt Engineering to elicit model capabilities, Context Engineering to manage information access, Harness Engineering to organize external tools and resources, and Loop Engineering to support continual reflection and self-improvement. Yet as tasks grow more complex, individual intelligence faces a fundamental limit: many tasks require heterogeneous expertise, interdependent subtasks, parallel execution, independent verification, and persistent state, exceeding any single agent's organizational capacity. Augmenting one agent's capabilities or context cannot resolve this architectural mismatch; intelligence must instead be distributed across specialized agents and organized at the system level. We call this System Intelligence: an agent system's ability to organize and coordinate multiple intelligent components into a coherent, adaptive whole pursuing a shared objective. Achieving it requires more than adding agents; it demands explicit structures to organize work, coordinate heterogeneous agents, and maintain evolving execution states. We introduce Graph Engineering, an emerging paradigm for next-generation agent systems. Unlike prior paradigms that mainly optimize individual interactions or agent-level behavior, Graph Engineering constructs explicit, dynamic, evolving graph structures representing tasks, agents, and system states. These abstractions provide a unified foundation for organizing complex objectives, orchestrating heterogeneous agents, modeling system dynamics, and enabling scalable agent evolution. We systematically review the principles, methodologies, and applications of Graph Engineering for LLM agents. Related papers, open-source data, and projects are collected at this https URL. 
+
+---
+# From a Static Multi-Level Small Semantic Codebook to a Dynamic Single-Level Large Semantic Codebook for Generative Recommendation 
+
+**Authors**: Tianlu Xie, Xin Ku, Mingjie Sun, Yunhao Sha, Lixiang Wang, Peng Wang, Yiyu Wang, Wenjin Wu, Zhaojie Liu, Peng Jiang, Wenwu Ou  
+
+**Link**: [PDF](https://arxiv.org/pdf/2608.21012)  
+
+**Abstract**: Generative recommendation represents each item with a sequence of discrete Semantic IDs (SIDs) and predicts the sequence to retrieve the next item. Typical systems use multi-level residual quantization, which increases autoregressive decoding cost and creates a large hierarchical space that may be sparsely occupied. Static codebooks also become misaligned with current traffic as new items arrive and exposure distributions change. We propose a single-level large semantic codebook that replaces multiple residual semantic codes with one semantic token while retaining a separate collaborative disambiguation token to reduce item collisions. We further introduce an exposure-aware dynamic update mechanism based on temporal weight decay, exponential moving-average center updates, and an exposure-weighted penalty on SID changes. We also develop an offline evaluation framework covering representation quality, code utilization, cluster load, full-SID collision, and temporal stability. On two public datasets, the two-level SID improves mean Recall@10 by 5.0%-8.8% and mean NDCG@10 by 4.1%-5.1% for OneRec-V1, and by 7.1%-8.7% and 3.8%-8.5%, respectively, for OneRec-V2. Dynamic updating provides further gains on KuaiRec. Across three serving architectures, the shorter SID reduces estimated autoregressive-decoding FLOPs by 47.93%-48.70% and increases single-card QPS by 28.57%-47.0%. A five-day online A/B test serving 2.5% of production traffic improves the primary consumption metric by 0.792%. 
+
+---
+# KoViDoRe: Korean Visual Document Retrieval 
+
+**Authors**: Yongbin Choi, Yongwoo Song, Mujeen Sung  
+
+**Link**: [PDF](https://arxiv.org/pdf/2608.20840)  
+
+**Abstract**: Recent advances in multimodal retrieval have improved the ability to retrieve information from visually rich documents such as PDFs and reports. However, existing benchmarks remain largely centered on English and provide limited coverage of Korean visual documents with complex structures. Furthermore, most existing Korean resources primarily evaluate single-page retrieval, failing to capture realistic scenarios that require evidence aggregation across multiple pages. To address these gaps, we introduce KoViDoRe, a benchmark for Korean visual document retrieval. The dataset is constructed from publicly available Korean documents with diverse layouts, including tables, figures, and multi-column structures. We develop a multi-stage data curation pipeline consisting of structured document parsing, synthetic query generation using both summary-based and context-based strategies, and relevance mapping with human verification. Using KoViDoRe, we evaluate a wide range of multimodal retrieval models and observe that current models struggle to effectively handle Korean visual document retrieval, particularly in settings involving structured content and diverse query types. Motivated by this finding, we further curate a large-scale training dataset, Ko-VDR Train Public, to support the development of retrieval models tailored to Korean visual documents. Together, KoViDoRe and Ko-VDR Train Public provide a unified benchmark and training resource for Korean visual document retrieval. 
+
+---
+# Profiling What Matters: Context-Aware Item Profiles from Large-Scale Metadata for LLM Recommenders 
+
+**Authors**: Dojun Hwang, Seunghan Lee, Cheonyoung Park, Sara Yu, SeongKu Kang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2608.20801)  
+
+**Abstract**: While Large Language Models (LLMs) have significantly advanced reranking in recommendation, effectively leveraging item-side information remains challenging. Real-world items are described by vast, heterogeneous, and unstructured metadata, where decision-relevant signals are often implicit, noisy, or buried in long descriptions. Moreover, feature salience is highly context-dependent, varying not only across items but also across users. Existing methods often rely on item titles, fixed attributes, or static item summaries, which limit personalized and fine-grained item understanding. To bridge this gap, we propose CAIRO, a user context-aware item profiling framework for LLM-based reranking. CAIRO first structures raw metadata and reviews into objective features and subjective traits, and employs a lightweight profiler to select the most relevant information for each user-item pair with limited serving-time overhead. The resulting profiles are concise and context-specific, providing relevant item-side evidence for the LLM's ranking decision. Experiments show that CAIRO consistently improves LLM-based reranking, highlighting the importance of item profiling that effectively exploits vast item-side information. 
+
+---
+# Towards Faithful Simulation of Human Shopping Behavior 
+
+**Authors**: Jiakai Tang, Yan Mi, Jing Yu, Yang Zhang, See-Kiong Ng, Qi Cao, Fei Sun, Xu Chen, Wen Chen, Jian Wu, Han Zhu, Bo Zheng  
+
+**Link**: [PDF](https://arxiv.org/pdf/2608.20707)  
+
+**Abstract**: Simulating realistic user shopping behavior underpins offline evaluation and reinforcement learning in e-commerce scenarios. While recent LLM- and VLM-based simulators have made encouraging progress, reproducing a real browsing session remains difficult for two reasons. (i) Memory Challenge: a shopping session spans dozens of pages, yet existing agents either discard long-range observation histories, losing the evolving user state, or naively concatenate them, overwhelming the context window and even degrading simulation quality. (ii) Optimization Challenge: current user simulators are typically supervised to match each logged action via imitation or step-level rewards; the resulting sessions often display unrealistic patterns, such as over-exploration or excessive passivity, which per-step supervision can neither detect nor correct.
+To address the above challenges, we present RecVerse, a GUI-grounded simulation agent that perceives pages through screenshots and produces faithful multi-turn trajectories. For the memory challenge, RecVerse adopts a cognitive-inspired hierarchical memory: Working Memory for short-term focus, Episodic Memory for in-session traces, and Preference Memory for high-level intent, with memory updates treated as actions so that the agent adaptively learns when and what to memorize. For the optimization challenge, RecVerse is optimized with a trajectory-level RL objective that scores entire sessions, aligning both macro-level action-type distributions and micro-level shopping intent with real users. We further release USB (User Simulation Benchmark), an interactive e-commerce GUI trajectory dataset for multi-turn user simulation. Experiments show that RecVerse significantly outperforms existing baselines in both behavioral fidelity and intent consistency. 
+
+---
+# One Hierarchy, Two Systems: Semantic Product IDs for Discovery-Surface Ranking and Search-Page Query Reformulation 
+
+**Authors**: Steven Xu, Sanjyot Thete, Saathvik Dirisala, Raghav Saboo, Nimesh Sinha, Leo Shao, Elyse Winer, Sudeep Das, Martin Wang, Kyle MacDonald  
+
+**Link**: [PDF](https://arxiv.org/pdf/2608.20640)  
+
+**Abstract**: Multi-merchant e-commerce catalogs contain equivalent and related products under different merchant-scoped identifiers, fragmenting behavioral evidence across merchants. Expert-defined taxonomies, meanwhile, are often too coarse for fine-grained discovery. We investigate whether a single hierarchical Semantic ID (\sid{}) representation can support personalized ranking and query reformulation. Learned once from product-content embeddings, the hierarchy defines product concepts at multiple granularities that each application combines with its own behavioral and serving context. For ranking, we aggregate consumer affinity and product performance over \sid{} prefixes and derive sequence features for candidate products and consumer histories. Controlled ablations show improved offline relevance, while online evaluation of the full ranking treatment shows stronger top-slot add-to-cart engagement and broader exposure for less-popular products. For query reformulation, we ground queries and session transitions in \sid{} concepts, use the hierarchy for navigation and refinement, and filter suggestions against the merchant's assortment. Offline evaluation shows finer intent preservation than taxonomy and higher-quality suggestions than raw query-string transitions; online evaluation shows reduced search effort and earlier access to purchasable products. These results show that a shared semantic product hierarchy can support both recommendation and search while preserving the task-specific context required by each application. 
+
+---
+# Edge-Based Agentic Retrieval-Augmented Generation for Autonomous FHWA Bridge Inspection Compliance 
+
+**Authors**: Viraj Nishesh Darji, Hemaliben Rakeshkumar Darji  
+
+**Link**: [PDF](https://arxiv.org/pdf/2608.20372)  
+
+**Abstract**: The Federal Highway Administration (FHWA) mandates that over 600,000 bridges in the United States be evaluated against the Recording and Coding Guide for the National Bridge Inventory (NBI). Manual compliance verification is labor-intensive, error-prone, and impractical in connectivity-limited field environments. This paper introduces BridgeGuard, a fully air-gapped agentic Retrieval-Augmented Generation (RAG) system for autonomous bridge inspection compliance. BridgeGuard integrates vector search over the FHWA Recording and Coding Guide with structured SQL queries against NBI tabular data, orchestrated by a stateful multi-step ReAct planning loop executing locally on commodity edge hardware. A section-aware chunking algorithm preserves hierarchical regulatory item boundaries, achieving 94.2% chunk integrity compared with 28.4% for naive fixed-size splitting. Evaluated on the full Delaware 2023 NBI inventory (874 bridges) and a Texas sample (200 bridges), the system achieves 99.77% and 100.0% classification accuracy, respectively, for Structurally Deficient bridge identification, with 100.0% citation accuracy, at 197.0 bridges per hour with out external network access. Ablation experiments confirm that both vector search and the multi-step agentic loop are necessary for correct compliance reasoning. 
+
+---
+# Clarify-Then-Search: A Clarification Benchmark for Deep Search with End-to-End Nugget Restoration 
+
+**Authors**: Deqiang Huang, Jingbo Zhou, Xinjiang Lu, Tong Xu, Hua Wu, Enhong Chen  
+
+**Link**: [PDF](https://arxiv.org/pdf/2608.20357)  
+
+**Abstract**: Deep search is brittle on underspecified user queries: missing constraints such as time, location, scope, or definitions can lead to retrieval drift and incomplete answers. We introduce Clarify-Then-Search, a benchmark for evaluating whether LLM-generated clarification questions improve downstream deep-search utility. Built on real-world query data from the Baidu search engine, the benchmark contains 518 curated instances, each with an intent query and a corresponding underspecified query. For each intent query, we run WebDancer once to archive evidence and construct a static golden reference as weighted, evidence-grounded nuggets with traceable source identifiers. At evaluation time, a Clarifier asks k in {1, 2, 3} questions; a closed-book User Answerer replies only with information explicitly stated in the intent query, otherwise returning unknown; and a closed-book Rewriter produces a rewritten query using only the underspecified query and the elicited question-answer pairs. WebDancer then executes on the rewritten query, and we score end-to-end utility using restore_score_100, a weighted nugget-recall score with partial credit against the static gold. Across all evaluated models, clarification improves over the no-interaction baseline at k=1, and larger budgets generally yield further gains. GPT-5.2 achieves the highest mean score at k=1, while ERNIE-4.5-Turbo-128K becomes the overall top-performing model at k=3. Diagnostics reveal a consistent failure mode: many systems over-ask region-only questions that are often unanswerable from the intent and thus elicit unknown. Clarify-Then-Search enables leakage-resistant and reproducible evaluation of clarify-then-search pipelines, with fine-grained analyses of question utility, answerability, and budget effects in deep search. 
+
+---
+# Recommendation Quality and the Concentration of Consumption: Experimental Evidence from Netflix 
+
+**Authors**: Guy Aridor, Winston Chou, Nathan Kallus, Antoine Scheid, Allen Tren, Kevin Zielincki  
+
+**Link**: [PDF](https://arxiv.org/pdf/2608.21274)  
+
+**Abstract**: We study an experiment with 8.5 million users on Netflix's recommender system to measure how improvements in recommendation technology affect the set of products that get consumed. Improvements increase total consumption and users' reliance on recommendations while diffusing recommendations and consumption away from the most popular titles (``superstars") toward a larger number of moderately popular titles (``middle-tail"), with minimal effects on the most niche titles (``long-tail"). Our results challenge the notion that recommender systems polarize consumption -- raising the consumption shares of the head and tail at the expense of the middle -- and suggest that the returns to investing in middle-tail products grow as algorithms improve and platforms scale. 
+
+---
+# EnSI-RAG: Entity-Structure-Indexed Retrieval-Augmented Generation for Long-Document Question Answering 
+
+**Authors**: Xuanyu Meng, Jiashuo Sun, Jash Rajesh Parekh, Jiawei Han  
+
+**Link**: [PDF](https://arxiv.org/pdf/2608.21252)  
+
+**Abstract**: Question answering (QA) over long, connected documents remains challenging because relevant evidence may span multiple entities and their relationships. Existing retrieval-augmented generation (RAG) methods typically index documents as raw chunks and retrieve them through embedding similarity. Their performance degrades when chunk boundaries separate entities from supporting evidence or when a question requires multi-hop reasoning across the corpus. We propose EnSI-RAG (Entity-Structure-Indexed Retrieval-Augmented Generation), a framework that constructs a query-independent, entity-centered index. Each record (e, t, k, v) represents an entity e, its type t, a semantic category k in {property, relation, aspect}, and a value v, while retaining links to the original source passages. At query time, these records serve as retrieval handles, and an LLM synthesizes the retrieved passages into the final answer. This design separates evidence localization from answer synthesis while preserving traceable source evidence. Across Loong and Oolong, EnSI-RAG achieves an average accuracy of 78.24. Relative to the published baseline scores used as references, this is 6.62 points higher, suggesting its effectiveness across these settings. The code is available at this https URL. 
+
+---
+# Enhancing LLMs in Predictive Political QA with Semi-Structured Data 
+
+**Authors**: Yinan Liu, Zihan Zhou, Zichun Jin, Xinyu Wang, Bin Wang, Xiaochun Yang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2608.21218)  
+
+**Abstract**: Predictive political question answering (QA), such as predicting how a political actor will vote, goes beyond factual lookup. External political resources offer rich historical evidence, but rarely contain the answer itself. Existing LLM augmentation methods, including actor-profile-based simulation and knowledge graph evidence injection, improve political reasoning but largely treat external resources as knowledge-based evidence, leaving prediction-relevant signals under-modeled. We identify two complementary signals for predictive political QA: actor stances that capture issue-specific preferences, and high-order structure signals that capture indirect dependencies among political actors. We propose PSL, a dual-view framework that converts semi-structured political records into inference-oriented evidence for LLMs. PSL extracts stance signals from question-relevant actor records in a semantic view, and learns structure-aware actor representations from an actor interaction graph in a vector view. Across three real-world datasets and multiple LLMs, PSL consistently outperforms baselines, with ablations confirming the complementary gains of stance and structure signals. 
+
+---
+# Trustworthy RAG: An Evaluation Agent for Detecting Misinformation and Knowledge Poisoning in Generative AI Systems 
+
+**Authors**: Balkrishna Giri, Md Toufique Hasan, Jussi Rasku, Muhammad Waseem, Pekka Abrahamsson  
+
+**Link**: [PDF](https://arxiv.org/pdf/2608.21095)  
+
+**Abstract**: Retrieval-Augmented Generation (RAG) grounds Large Language Model (LLM) outputs in external knowledge, but RAG systems usually trust whatever they retrieve, creating a Security-Reliability Gap: high semantic relevance does not guarantee factual truth. Adversaries exploit this through knowledge poisoning, inserting malicious documents to cause targeted misinformation. We propose an Evaluation Agent, middleware that combines Natural Language Inference (NLI) factual verification, a five-signal poison detector with relevance-weighted aggregation, and a Trust Index T = 0.4 F + 0.35 C + 0.25 (1 - P ) with a non-linear dampener for high-contamination contexts. On TruthfulQA with Llama 3.3 70B, the agent reaches 91% accuracy and 100% precision, with 100% recall on instruction injection, while in-place edits, such as entity swaps, remain hard to detect. Across three LLMs the Trust Index stays discriminative, with a Receiver Operating Characteristic Area Under the Curve (ROC-AUC) of 0.73 to 0.81; generation style matters more than model size, and per-LLM threshold calibration restores baseline competitive accuracy, whereas a weaker FEVER result shows that cross-dataset generalization requires domain-specific calibration. In a software-engineering use case, a secure-coding assistant over guidance from the Open Worldwide Application Security Project (OWASP) Top 10 and the Common Weakness Enumeration (CWE), the agent reliably blocks instruction injection of unsafe advice (F1 92%), while contradiction and subtle semantic weakening remain hard. Throughout, the agent measures detection of poisoned context before generation, not whether the LLM adopts the injected misinformation. We release the proposed approach, attack generator, and experimental artifacts at the link: this https URL. 
+
+---
+# RAG Deserves an Index: Why Ingest-Time Compilation Beats Query-Time Interpretation 
+
+**Authors**: Kyle Wild, Yusuke Takahashi, Asako Uraki  
+
+**Link**: [PDF](https://arxiv.org/pdf/2608.20845)  
+
+**Abstract**: Nearly every retrieval-augmented question-answering system in production ships with a hidden interpreter: on each query a language model re-derives the meaning of raw corpus text and then throws that work away. Cheaper models do not close the gap: per-token prices have fallen by orders of magnitude while inference spend has risen, because context volume grows faster than prices fall. This is the modern equivalent of the full-table scan, and the remedy is the one databases found fifty years ago: do the expensive work once, at write time, into a maintained structure that makes reads cheap. A corpus whose read pattern is known before it ever meets a user can and should be indexed too.
+We call the paradigm ingest-time semantic compilation (ISC): compile a corpus's meaning into a queryable substrate with two coupled layers - incrementally maintained embeddings, and atomic claims whose provenance is validated at compile time - and treat that substrate as a first-class database object with its own DDL, maintenance contract, migration contract, and cost model.
+Two existence proofs support it. Substrate upkeep scales with change rather than corpus size: incremental updates run 33.7x cheaper than reconstruction while tracking it to floating-point precision. And on a held-out sample of 500 broadcast-interview transcripts, compiled claims as the retrieval payload win all 32 budget-by-model cells: 85.2% correct from roughly 2.2k reader tokens against 72.5% from 16.3k for the best chunk configuration anywhere. The only baseline that keeps pace is a contextualized-chunk pipeline with hybrid retrieval and reranking, statistically indistinguishable from compiled claims at roughly twenty-one times the query-path tokens - and it reaches that parity, we argue, precisely because it has itself begun to compile. We close with the systems agenda this opens, from compilation planners to read planning. 
+
+---
+# Structure for Reading, Prose for Writing: Asymmetric Structural Conditioning in Multi-Agent Document Authoring 
+
+**Authors**: Cheng Yu, Nikhil Mathew, Zhengjie Wang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2608.20786)  
+
+**Abstract**: Multi-agent pipelines that author formal documents must both read a requester's forms and write against them. We report a deployed tender-response system, running an open-weights model under sovereignty constraints, and evaluate it against human-written bids the same organisation actually submitted. On a blind comparison where the system had no worked example available, an LLM judge rated its answers at least as good as the human-submitted answer on $40$ of $55$ ground-truth sections, better on $4$, missing on none, and flagged one unsupported claim in total. Classifying every gap the judge identified shows that $68\%$ were content absent from the system's own sources -- knowledge the human author held and the pipeline was never given -- so only $6$ of the $15$ adverse verdicts involve a deficiency the system could have avoided. A divergence from ground truth is more often an information-availability result than a writing-quality one, and evaluations that do not separate the two understate such systems. Against this backdrop we report a conditioning asymmetry. It is well established that rendering documents as structural markup rather than flat prose improves extraction, and we reproduce that on three reading tasks. The benefit does not transfer to conditioning: converting a bid's \emph{instruction} material from prose to nested XML dropped answer quality from $74\%$ to $48\%$ under a paired comparison. We further find that naming a forbidden construction concentrates rather than removes it -- $96\%$ of surviving defects fall in the two forms the prompt explicitly names -- and that coupling a stochastic annotation to a deterministic windowing function moves the extracted requirement count from $68$ to $51$ on a byte-identical file. Structure belongs where the model reads; prose and self-applied tests belong where it writes. 
+
+---
+# Auditable by Construction: An Ontology-Driven Framework for Trustworthy LLM Analytics in Enterprise Finance 
+
+**Authors**: Sergiy Lunyakin  
+
+**Link**: [PDF](https://arxiv.org/pdf/2608.20661)  
+
+**Abstract**: Enterprise adoption of large language models in finance is constrained less by fluency than by trust: in Financial Planning and Analysis (FP&A) and other regulated workflows, an answer is usable only if it is traceable to authoritative sources and auditable after the fact. This paper argues that retrieval-augmented generation for enterprise finance should be evaluated on auditability alongside accuracy, and presents the Knowledge-Driven Analytics Framework (KDAF), which builds ontology-driven knowledge systems through six iterative stages and retrieves evidence via Context-Aware Relevance Propagation (CARP), so that every retrieved fact carries its relationship type, confidence, and source lineage.
+An evaluation on FinanceBench (145 questions) compares KDAF against zero-context inference, BM25, concept-weighted lexical retrieval, and ungrounded graph traversal. First, retrieval is necessary: zero-context inference reaches 4.1% correctness against 10-12% for retrieval-augmented conditions. Second, on answer correctness the retrieval conditions are statistically indistinguishable (KDAF vs BM25: -0.007, 95% CI [-0.021, 0.000]), so accuracy alone does not justify structured retrieval here -- a negative result we report explicitly. Third, on auditability the ordering reverses: KDAF attains the highest citation traceability F1 (0.515), exceeding ungrounded traversal by +0.027 (CI [0.006, 0.050]) and BM25 by +0.052 (CI [0.024, 0.083]), intervals excluding zero. Graph-structured retrieval also admits no evidence from outside the question subject entity (0 of 426 items, against 16.8% and 20.2% for lexical baselines), and every selected item resolves to a complete provenance chain. We argue that auditability, not accuracy, is the axis on which ontology-grounded retrieval earns its cost. 
+
+---
