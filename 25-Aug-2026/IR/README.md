@@ -1,0 +1,396 @@
+# Robustness of IR Models to Collection Growth 
+
+**Authors**: Emmanouil Georgios Lionis, Debasis Ganguly, Sean MacAvaney  
+
+**Link**: [PDF](https://arxiv.org/pdf/2608.23419)  
+
+**Abstract**: Information Retrieval (IR) systems seek to identify relevant documents within a collection. In practical applications, collections are dynamic, with documents frequently added. We argue that ideally, a retriever's effectiveness should not decrease when non-relevant documents are added to a collection. This study formalises this concept and empirically evaluates it by merging two collections with negligible topic overlap. We hypothesise that the way an IR model conditions its ranking on other documents in a collection (e.g., the IDF component in BM25 or contextual documents in listwise rerankers) plays an important role in its robustness to the addition of non-relevant documents. We broadly classify models as those that do not depend on other documents (Multi-Document-Agnostic, MDA) and those that do (Multi-Document-Dependent, MDD). Our results show that neither MDD nor MDA models are fully robust to the addition of non-relevant documents, as all models exhibit some performance degradation. Interestingly, among the models we test, MDA is more effective than MDD for retrieval, whereas MDD and MDA rerankers are equally effective. 
+
+---
+# Adaptive Item-based Collaborative Structures via Noise Rescheduling in Diffusion for Generative Recommendation 
+
+**Authors**: Jiaqi Wang, Tianying Liu, Heng Chang, Jihong Guan, Wengen Li, Shuigeng Zhou  
+
+**Link**: [PDF](https://arxiv.org/pdf/2608.23400)  
+
+**Abstract**: Discrete Diffusion Models (DDMs) have recently been introduced to recommendation systems, modeling user history as a token generation process via iterative denoising. However, while effective at capturing user-level sequential patterns, these methods often fail to explicitly integrate item-based collaborative filtering information, a critical component for accurate recommendation. This deficiency manifests in two key aspects: (1) the item representation is often semantic-focused, lacking collaborative priors for diffusion training; and (2) the denoising process employs a uniform noise schedule, treating all tokens indiscriminately and ignoring item-level adaptive structural dependencies. To bridge this gap, we propose ANR-DiffRec, a unified framework designed to encode item-based collaborative structures into discrete diffusion for generative recommendation. First, we explicitly incorporate an item co-occurrence matrix to guide semantic ID generation, providing a structured collaborative prior for discrete diffusion training. Second, we introduce an item-based adaptive noise rescheduling mechanism that dynamically adjusts denoising weights according to both local contextual recoverability and behavior-aware item dependencies. Specifically, the proposed strategy jointly models intra-item structural context and inter-item collaborative signals, enabling structure-aware denoising during diffusion training. Extensive experiments on multiple benchmarks demonstrate that our method consistently outperforms state-of-the-art generative recommendation models. Code: this https URL. 
+
+---
+# Towards a Densing Law for User Representation Learning at Billion-Scale Capacity 
+
+**Authors**: Bin Dou, Junru Zhang, Zhaoyi Yuan, Wuliang Huang, Letian Gong, Baokun Wang, Huan Li, Yu Cheng, Weiqiang Wang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2608.23392)  
+
+**Abstract**: User representation learning in real-world industrial scenarios is commonly scaled by increasing user amount, behavioral sequence length and model size. However, existing methods face two challenges: (i) Bottleneck for raw data scaling at billion-scale capacity, as performance exhibit diminishing performance gains with larger-scale raw text user behavioral input, which can be mitigated by tokenization. (ii) Lack of quantitative analysis of how tokenization configurations should scale with data size. In this report, we propose User Behavioral Densing Law for characterizing the quantitative relationship between data scale and the minimum sufficient tokenization capacity. Firstly, we conduct a pilot study on raw & tokenized scaling comparison on billion-scale Alipay dataset, revealing the raw data scaling bottleneck and the sustained gains enabled by tokenization. To derive the scaling pattern governing the minimum sufficient tokenization configuration at different data scales, theoretical analysis and systematic experiments are employed to summarize the quantitative scaling pattern. We find an approximately linear relationship between the logarithms of minimum sufficient tokenization capacity and input data size measured by tokens, and the scaling slope varies systematically with the tokenization method and data source, reflecting differences in representation-space redundancy and intra-source uniqueness. Guided by the proposed law, we further develop ALGN, an adaptive variable-length tokenization method that improves capacity allocation. Extensive experiments across diverse data sources, tokenization methods, and downstream tasks demonstrate the generalizability and reliability of the User Behavioral Densing Law, providing practical guidance for tokenization configuration selection in large-scale user representation learning. Moreover, ALGN outperforms existing baselines. 
+
+---
+# Hierarchical Exponential-Gaussian Mixtures for Watch-Time Distribution Prediction 
+
+**Authors**: Sofia Gulevskaia, Mikhail Trapeznikov, Aleksandr Poslavsky, Alexander D'yakonov  
+
+**Link**: [PDF](https://arxiv.org/pdf/2608.23356)  
+
+**Abstract**: Accurate watch-time (WT) prediction is an important requirement for short-video recommendations. Yet WT distributions are near-zero-inflated, long-tailed and multimodal. The recent Exponential-Gaussian Mixture Network (EGMN) models the full conditional WT distribution rather than a single point estimate and achieves state-of-the-art performance. Our large-scale reproduction study reveals that EGMN is vulnerable to variance collapse, component redundancy, and inactive components. We propose a Hierarchical Exponential-Gaussian Mixture (HEGM) model that addresses these failure modes through a hierarchical skip-watch decomposition, KL-based variance regularization, structured initialization, removing the forced Gaussian shift and the entropy regularizer. Across public and large-scale industrial datasets, HEGM improves ranking accuracy and threshold-event prediction, while maintaining competitive point-estimation accuracy and substantially improving mixture stability and interpretability. A 1.5-month production A/B test confirms statistically significant engagement lifts. Our code and models are publicly released at this https URL. 
+
+---
+# Retrieval-Augmented Classification of Environmental Mitigations in Hydropower Licensing Documents 
+
+**Authors**: Hong-Jun Yoon, Tom Ruggles, Joanna Lee, Debjani Singh  
+
+**Link**: [PDF](https://arxiv.org/pdf/2608.23241)  
+
+**Abstract**: Identifying and classifying environmental mitigation obligations in Federal Energy Regulatory Commission hydropower licensing documents is a labor-intensive task requiring deep domain expertise. We formulate this as a multi-label classification problem over a structured 135-category taxonomy and address the central challenge of severe label scarcity: 40 of 135 categories have no training examples, and 26 have fewer than five. A supervised Bidirectional Encoder Representations from Transformers (BERT)-based pipeline, while effective on well-represented categories, achieves F1 of zero on unseen classes regardless of augmentation strategy. We introduce a Retrieval-Augmented Generation (RAG) pipeline that conditions classification on retrieved category definitions, enabling zero-shot generalization across the full label space. We further propose a hybrid system that combines BERT detection with RAG classification, exploiting the high recall of fine-tuned detection and the zero-shot coverage of retrieval-augmented reasoning. Evaluated on the full set of 2017 license documents (5,860 paragraphs, 135 categories), the hybrid achieves a Micro F1 of 0.524, outperforming the BERT-only pipeline (0.477) and the RAG-only pipeline (0.416) across all training-support buckets. 
+
+---
+# Which Histories Matter for Time Series Forecasting? Learning Predictive Relevance with Future Supervision 
+
+**Authors**: Yong-Hoon Choi, Youngjin Cho  
+
+**Link**: [PDF](https://arxiv.org/pdf/2608.23221)  
+
+**Abstract**: Historical retrieval for time-series prediction commonly treats past similarity as a proxy for usefulness. We ask a different question: which historical examples should be expected to matter for a query? We define predictive relevance as expected future utility conditioned on inference-time information, using realized futures only during training as privileged supervision. A normalized-pattern retriever first forms a coarse candidate set, and a lightweight residual multilayer perceptron (MLP) learns a listwise future-compatibility target while keeping inference-time scoring strictly past-only. Our method retains similarity-based candidate generation but reranks its candidates by a more predictive relevance criterion. Optimal relevance decomposes into candidate-level utility and query-specific compatibility, motivating Candidate-Prior and Shuffled-Future controls. Across six benchmarks, the reranker improves Pattern retrieval while revealing candidate-global, query-specific, and mixed relevance regimes. On all 12 confirmatory tasks, it improves Pattern and outperforms a matched-protocol Stationarity-Aware Retrieval-Augmented Time Series Forecasting (SARAF) retrieval rule. Architecture-matched ablations show that correct future supervision, rather than the MLP or added context alone, drives gains in query-specific regimes. Alternative-similarity experiments show that a strong last-value-anchored L2 rule remains superior in some domains, whereas future-supervised relevance is particularly strong where our diagnostics indicate query-specific relevance, especially on Solar. Candidate-pool diagnostics show that this contrast is not explained solely by coarse Pattern retrieval. Overall, historical relevance is structured and domain dependent rather than governed by a universally superior retrieval rule. 
+
+---
+# Evaluating Modern RAG: Textual, Multimodal, Dense, and Late Interaction Pipelines 
+
+**Authors**: Emre Kuru, Mehmet Onur Keskin  
+
+**Link**: [PDF](https://arxiv.org/pdf/2608.23176)  
+
+**Abstract**: Retrieval-augmented generation (RAG) systems have traditionally relied on text-based pipelines that extract and retrieve information from documents. While efficient and lightweight, these approaches often struggle with documents where meaning is conveyed through layout, tables, and visual elements. Recent advances in multimodal pipelines, powered by vision-language models (VLMs), improve retrieval quality by jointly encoding visual and textual signals, but at increased computational and memory cost. We propose a quantitative, data-driven selection methodology that guides practitioners in choosing the most appropriate RAG pipeline for a given document corpus based on empirical effectiveness and resource constraints. We evaluate contemporary textual and multimodal pipelines, including dense and late-interaction architectures, analyze their trade-offs, and provide actionable guidance for balancing retrieval performance with system efficiency. 
+
+---
+# The Disconnect Between Better Descriptive Reasoning Trace Quality and Recommendation Effectiveness 
+
+**Authors**: Gustavo Penha, Juan Elenter, Claudia Hauff, Hugues Bouchard, Paul Bennett, Mounia Lalmas  
+
+**Link**: [PDF](https://arxiv.org/pdf/2608.23154)  
+
+**Abstract**: Recent work has focused on improving explicit natural-language descriptive reasoning traces for generative recommendation. This includes systems that augment semantic ID (SID) prediction with chain-of-thought reasoning. However, because SIDs are opaque learned identifiers rather than natural language, they require costly alignment before an LLM can reason over them. This provides a controlled experimental setting in which both item representation (Title vs. SID) and semantic grounding (minimal vs. extensive SID alignment) can be varied independently. We therefore present the first controlled comparison of descriptive reasoning trace quality across semantic IDs and natural-language titles in a 2 x 2 factorial study on three Amazon product domains using a shared Qwen3-1.7B backbone. We find that introducing explicit descriptive reasoning traces reduces traditional offline recommendation effectiveness under standard SFT and RL training, even though natural language titles produce substantially more grounded and interpretable traces. Extensive SID alignment improves descriptive trace quality but not traditional offline recommendation effectiveness, while a richer reward signal partially recovers performance. Overall, our results show that improving descriptive reasoning trace quality is not, by itself, sufficient to consistently improve traditional offline recommendation effectiveness under the training objectives and evaluation protocols studied here. 
+
+---
+# A Dual-Expert Strategy Integrating LLMs to Mitigate Negative Transfer in Cross-Domain Sequential Recommendation 
+
+**Authors**: Hyeongjun Yun, Kihyuk Song, Jaegul Choo, Chung Park  
+
+**Link**: [PDF](https://arxiv.org/pdf/2608.23131)  
+
+**Abstract**: Cross-Domain Sequential Recommendation (CDSR) predicts the next item a user will interact with based on their historical interaction sequences across multiple domains. Recent approaches leverage Large Language Models (LLMs) finetuned on textual representations of cross-domain user sequences to retrieve the recommended items, referred to as LLMRec. However, LLMRec primarily models the autoregressive patterns of token-level item texts, while overlooking item-level collaborative signals. This semantic misalignment often leads to distorted knowledge transfer across domains-termed negative transfer degrading performance in the CDSR task. To address this issue, we propose a novel LLM-based CDSR model, DuELRec: Domain-Gated Dual Experts with LLMs for Cross-Domain Sequential Recommendation. We propose a domain-gated dual-expert framework, equipped with an item-aware attention transformation module, which aggregates textual subtokens into item-level representations and enforces block-level attention masking. The single-domain expert restricts autoregressive attention to items within the same domain, while the cross-domain expert allows it across all domains. A gating mechanism adaptively fuses their outputs, using single-domain signals to reduce cross-domain noise that causes negative transfer. Second, we introduce a dual-sampling token-to-item contrastive learning objective that allows LLMs to capture the item-level collaborative signals from both single- and cross-domains. This is achieved by transforming token-level item texts into item-level representations and applying stochastic negative sampling from both single- and cross-domain item pools for contrastive learning. Extensive experiments on two real-world datasets across ten domains show that our model outperforms 26 state-of-the-art methods in recommendation performance. 
+
+---
+# Hypergraph Embedding Indexing for Efficient Dense Vector Retrieval 
+
+**Authors**: Kishore Konda  
+
+**Link**: [PDF](https://arxiv.org/pdf/2608.22980)  
+
+**Abstract**: Dense vector retrieval has become the foundation of modern semantic search, yet existing approximate nearest neighbor (ANN) indexes treat an embedding as an indivisible point in a high-dimensional space. In this work, we propose the Hypergraph Embedding Index (HEI), a framework that instead organizes documents according to combinations of highly activated latent embedding dimensions. This formulation enables inverted-index style candidate generation while preserving the semantic ranking capabilities of dense embeddings. We further demonstrate that constructing multiple complementary hypergraphs substantially improves retrieval coverage without the combinatorial growth associated with increasing the dimensionality of a single hypergraph. Finally, we establish that the statistical properties of embedding activations strongly influence coordinate-inverted indexing efficiency, introducing \emph{activation diversity} as a diagnostic metric governing embedding indexability in coordinate-inverted frameworks. 
+
+---
+# Cascading Relevance-driven Recommendation Network for CTR Prediction in Trigger-Introduced Recommendation 
+
+**Authors**: Kaixuan Chen, Wenwen Wang, Xing Fang, Yang Huang, Jing Wang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2608.22973)  
+
+**Abstract**: E-commerce has emerged as crucial platforms for people's daily consumption and shopping interests. There is a new recommendation scenario, Trigger-Introduced Recommendation (TIR), where users click interested product, which is defined as the trigger item, containing their instant interest, and in the undertaking page following the relevant target items. Distinguished from traditional search and recommendation scenarios, trigger contains relatively strong instant interest, which is more vague and implicit compared to search terms. Relying on large amounts of labeled data, existing methods lack the exploration of trigger relevance, which affects users' immersive experience. To alleviate this problem, we propose the Cascading Relevance-driven Recommendation Network (CRRN) to emphasize the interaction and relevance between trigger and target, comprising three essential components: 1) the Trigger-Target Interaction layer extracts interaction features of trigger and target based on personalized gating. 2) Cascading Interest Fusion module explicitly estimates users' trigger intention and fuses instant and personalized interests adaptively with cascading attention blocks. 3) Category-assisted Pairwise Loss enhances trigger relevance with the guidance of category association between trigger and target. Extensive experiment results show that CRRN outperforms recent state-of-the-art methods on both industrial and public datasets. Online A/B tests further validate the effectiveness of our method. Our code is available at this https URL. 
+
+---
+# WARP: Wasserstein-Aligned RAG for Population Opinions 
+
+**Authors**: Aman Singh Thakur, Aditya Agrawal, Alwarappan Nakkiran, Alex Karlsson  
+
+**Link**: [PDF](https://arxiv.org/pdf/2608.22859)  
+
+**Abstract**: RAG systems are increasingly used to summarize what large collections of documents say. A user asks "What do people think about X?" and receives an answer that reads as consensus. But standard top-k retrieval ranks documents by query similarity, not by how faithfully they represent the population, so minority views quietly disappear. Existing fixes fall short. Diversity re-rankers like MMR and DPP spread retrieved documents apart, but with no target distribution to aim for. Calibration methods based on KL or JS divergence do target one, yet treat opinion bins as unordered: confusing strong positive with strong negative costs no more than an adjacent-bin miss.
+We introduce WARP, a family of post-retrieval algorithms that calibrate retrieved evidence to the population's opinion distribution. WARP first recovers underrepresented opinions that cosine ranking may bury, then uses Wasserstein-1 distance to select documents whose sentiment-intensity distribution matches the population target, capturing the ordinal structure ignored by KL and JS divergence. We develop three variants for dense, sparse, and variable candidate pools, trading off calibration quality and speed. Across three review domains spanning 35K documents, 156 queries, and 26 entities, WARP's domain-matched variants reduce distributional error by at least 43% with sub-second latency. These gains carry through to generation: a five-judge LLM panel prefers WARP-generated answers in 86% of decided comparisons at k <= 5. 
+
+---
+# Same Agent, Different Answers: A Repeat-Aware Audit of Corpus-Induced Answer Churn in Retrieval-Augmented QA 
+
+**Authors**: Jingjie Ning, Xueqi Li  
+
+**Link**: [PDF](https://arxiv.org/pdf/2608.22856)  
+
+**Abstract**: A retrieval-augmented QA system can return different answers after an index expansion even when its requested model identifier, prompt, retrieval policy, evidence depth, rendering, and exposed generation controls are held fixed. Aggregate accuracy may hide these changes when gains and losses cancel, while ordinary generation variability makes one-shot comparisons overstate update effects. We call the hidden phenomenon accuracy-blind answer churn and introduce the \emph{Snapshot Compatibility Audit}, which estimates excess answer churn by subtracting same-snapshot repeat disagreement from cross-snapshot disagreement. We instantiate it by expanding one frozen FineWeb prefix from one to seven shards. In a preregistered 400-question Natural Questions study, normalized-exact and blinded-semantic excess churn are 6.44 and 10.25 percentage points while exact-match accuracy changes by only $-1.50$ points. A post-hoc analysis finds repeat-stable semantic flips on 40/400 questions. A separately preregistered 200-question TriviaQA study yields smaller, directionally consistent excess churn while exact-match accuracy moves in the opposite direction. An outcome-blind post-hoc 100-question subset replication with a second DeepSeek generator and serving configuration finds 8.75 pp of semantic excess churn even as exact match rises by 3.00 percentage points. Answer-level compatibility can therefore fail without a conspicuous or consistently directed utility shift. Retrieval-augmented releases should audit compatibility alongside utility. 
+
+---
+# Risk-Aware Reranking for Agentic Tool Retrieval 
+
+**Authors**: Qinfei Li, Xiaoxuan Dong, Jin Zhang, Dexu Yu, Wenhao Deng, Junchen Fu, Youhua Li, Hanwen Du, Chunxiao Li  
+
+**Link**: [PDF](https://arxiv.org/pdf/2608.22751)  
+
+**Abstract**: Tool retrieval determines which external tools are exposed to an LLM agent for a user query or task, making retrieval a critical pre-execution safety boundary. Unlike document retrieval, tool retrieval exposes executable actions: a tool that is useful for one task may be unnecessary or risky for another. However, existing tool-retrieval methods primarily optimize semantic relevance, and safety evaluations often focus on failures after tool execution rather than risks introduced during retrieval. We study risk-aware tool retrieval, where the goal is to retrieve useful tools while reducing exposure to higher-risk tools. We propose a lightweight reranking framework on top of a frozen first-stage retriever. The framework models query-conditioned relevance and tool-level exposure risk separately, combines them through an explicit parameter controlling the tradeoff between safety and utility, smooths scores over a ToolGraph, and optionally applies rule-based safety constraints. To support retrieval-time safety evaluation, we annotate 6,108 tools across UltraTool and Seal-Tools with five ordinal risk levels and define metrics that measure risky-tool exposure in the top-$k$ results. Experiments on UltraTool and Seal-Tools show that our approach improves the relevance--safety tradeoff over relevance-only retrievers and reranking baselines, with the rule-filtered variant providing a conservative operating point for safety-critical deployments. These findings indicate that retrieval-stage filtering can reduce the candidate action space exposed to agents before execution, complementing downstream tool-use safeguards. The code and supplementary materials are available at: this https URL. 
+
+---
+# Rethinking Item Tokenization in Generative Recommenders: From Fixed Atoms to Semantic Subwords 
+
+**Authors**: Xinrui Miao, Mingjia Yin, Jiaqing Zhang, Wei Guo, Yong Liu, Yuyang Ye, Hao Wang, Enhong Chen  
+
+**Link**: [PDF](https://arxiv.org/pdf/2608.22734)  
+
+**Abstract**: In generative recommender systems, items are typically tokenized into fixed-length semantic ID sequences for autoregressive next-item prediction. However, for user-context modeling, this fine-grained representation triggers Intra-item Attention Overload: excessive attention is spent on low-level intra-item dependencies rather than high-level inter-item behavioral transitions.
+To address this, we propose Semantic Subword Tokenization (SST), which represents historical items as variable-length semantic subwords while preserving fixed-length target decoding. SST first applies Item-level Subword Tokenization (IST) to merge stable adjacent atom tokens into compact semantic subword tokens, thereby reducing intra-item reassembly in the encoder. It then introduces Behavior-induced Co-occurrence Augmentation (BCA) to inject coarse-grained semantic prefix transition signals, guiding the freed modeling capacity toward inter-item behavioral regularities. Extensive experiments on three public datasets and three generative recommender backbones show empirical improvements of SST over fixed-length and transferable variable-length SID baselines. Code is available at this https URL. 
+
+---
+# FashionKG-RAG: Knowledge Graph-Enhanced Retrieval-Augmented Generation for Fashion Question Answering 
+
+**Authors**: Yujuan Ding, Linyin Luo, Shijie Wang, Xu Yuan, Yunshan Ma, Yi Bin, Wenqi Fan, Qing Li  
+
+**Link**: [PDF](https://arxiv.org/pdf/2608.22688)  
+
+**Abstract**: Fashion is a knowledge-intensive domain in which effective decision-making depends on integrating multiple types of knowledge. Although Large Language Models (LLMs) have transformed many areas, their application in fashion remains limited by hallucinations and weak domain specialization. Knowledge Graph (KG)-based Retrieval-Augmented Generation (RAG) offers a promising way to add structured knowledge to LLMs. However, existing fashion KGs are typically restricted to product-level attributes or item relations, and fail to capture the broader fashion ecosystem. To bridge these gaps, we propose \textbf{FashionEcoKG}, a comprehensive, domain-wide knowledge graph built with expert-level precision and professionalism. It is constructed through a three-stage agentic pipeline that extracts high-fidelity knowledge cores from authoritative textbooks and strengthens structural connectivity through cross-domain augmentation and generative expansion. To leverage this resource, we further develop \textbf{PG-RAG} (Pruning-Grounding RAG), a training-free framework designed to handle the conceptual density and linguistic noise of fashion queries. Specifically, we introduce a Dual-Granularity Path Re-Ranking (DGPR) module of two stages. The Pruning-based Semantic Ranking (PSR) module distills each query into a skeleton form to improve retrieval recall, while the Grounding-based Agentic Ranking (GAR) performs point-wise scrutiny of candidate paths against the original full query to ensure global relevance. Experiments on a curated fashion QA dataset show that PG-RAG effectively leverages FashionEcoKG to improve retrieval and answer accuracy, outperforming both non-RAG and existing KG-RAG baselines. 
+
+---
+# GRAFT: Graph-Distilled Generative Retrieval for Facet-Aware Scientific Literature Exploration 
+
+**Authors**: Italo Luis da Silva, Hanqi Yan, Yujing Wang, Jiangnan Ye, Lin Gui, Yulan He  
+
+**Link**: [PDF](https://arxiv.org/pdf/2608.22381)  
+
+**Abstract**: Scientific papers may relate by problem, method, result, or contribution, but document-level retrievers collapse these into a single similarity score without saying why they are related. Citation- and similarity-based retrieval alone also confines search to the neighbourhood of what is already known, whereas generative retrieval generates document identifiers directly, enabling the exploratory retrieval that scientific discovery depends on. We connect papers in a graph whose edges are typed by these four facets, derived from facet items and citation signals, and distil it into a generative retriever whose identifiers are the papers' own facet text. Two graph properties do not survive naive distillation. First, because every training pair is an edge, naive enumeration indexes just 84% of the corpus. Coverage-aware distillation makes every paper learnable through a reverse-neighbour fallback, a minimum-coverage threshold, and edge-importance weighting. Second, constrained decoding guarantees that every generated identifier is a valid paper, but not that the graph connects it to the query. Graph-weighted reciprocal rank fusion scales each candidate's rank term by its query-candidate edge weight, dropping unsupported ones. On LitWeave, our constructed corpus of 11,359 NLP papers, Graft recovers 91% of its graph teacher's Recall@20 with no nearest-neighbour index or encoder at inference, and outperforms the graph teacher on query papers outside the corpus. It reproduces the graph's own facet labels at 0.922 precision, so every returned paper arrives labelled with the facet that surfaced it rather than an opaque score. 
+
+---
+# Prompt-Based Abstention Fails Under Misleading Context: A Controlled Study of Small Frozen RAG Models 
+
+**Authors**: Yohanes Andre Setiawan  
+
+**Link**: [PDF](https://arxiv.org/pdf/2608.22228)  
+
+**Abstract**: Missing and misleading evidence are not the same problem in retrieval-augmented generation (RAG), but prompt-based abstention treats them alike. Models abstain when context is absent, not when it is misleading. We introduce GRAB-RAG (Graded Abstention Benchmark for Retrieval-Augmented Generation), a paired benchmark that tests the same questions across four context conditions (supportive, degraded, missing, and misleading) in Natural Questions and HotpotQA. In the misleading condition, we edit a gold passage to support a wrong answer and place it among other retrieved passages. We test five abstention policies on three small frozen models (3.8B--8B) across two QA benchmarks. Models abstain reliably when evidence is missing, but under explicit abstention prompting still answer 41.6% of misleading questions, with 63% of those answers echoing the planted wrong entity verbatim. Chain-of-thought provides little additional benefit. A generator-side conflict check cuts the rate to 13.3% but discards many correct answers, while an NLI verifier recovers that coverage but fails when parametric memory and the misleading passage agree on the same wrong answer. Prompt-based abstention asks whether context is sufficient, not whether it is correct. Neither verifier closes this gap without trading coverage for safety. 
+
+---
+# GrOIL: Graph-Grounded Domain Ontology Induction with Constrained LLM Mediation 
+
+**Authors**: Maruf Ahmed Mridul, Abid Talukder, Oshani Seneviratne  
+
+**Link**: [PDF](https://arxiv.org/pdf/2608.22135)  
+
+**Abstract**: Constructing formal ontologies from domain documents requires simultaneously enforcing corpus grounding, vocabulary consistency, axiom-level expressivity, and end-to-end provenance, a combination no existing automatic system delivers. We present a seven-stage graph-grounded pipeline that converts domain documents into a complete, auditable Web Ontology Language (OWL) Terminological Box (TBox) without any unconstrained generation step. Documents are first encoded as Unified Discourse-Hypergraphs (UDH) capturing entity participation and discourse dependencies; subsequent stages transform this graph evidence into a class hierarchy, typed object and datatype properties, and restriction axioms, with Large Language Model (LLM) usage restricted to narrow, graph-grounded mediation tasks. A paired Assertional Box (ABox) population procedure grounds named individuals in the induced TBox, enabling SPARQL-based functional evaluation. Every emitted term carries a full decision chain from raw source passages through each pipeline stage, making the TBox directly auditable and suitable for targeted human refinement. Evaluated on the life insurance domain using two established benchmarks and a new 100-contract corpus spanning ten product types, our pipeline achieves strong results across all evaluation dimensions, outperforming direct and multi-agent LLM baselines on competency-question (CQ) coverage (0.85 vs. 0.63 and 0.62 on one term-life contract; 0.77 vs. 0.40 and 0.44 on another contract), while also attaining high keyphrase coverage comparable to a manually-constructed reference ontology and strong performance on structured gap-and-overlap reasoning, all without any manual TBox engineering. Ontology growth analysis provides evidence consistent with vocabulary saturation at scale, demonstrating that the pipeline produces stable, reusable domain representations from large document corpora. 
+
+---
+# SARCLIP: A Scalable CLIP-Based Retrieval System for Seventeenth-Century Spanish American Notary Records 
+
+**Authors**: Chandrasekhar Syamala, Parshad Suthar, Hulayyil Alshammari, Viviana Grieco, Praveen Rao  
+
+**Link**: [PDF](https://arxiv.org/pdf/2608.22036)  
+
+**Abstract**: Historical manuscript archives resist standard text search due to inconsistent handwriting, archaic orthography, and the absence of reliable transcriptions at scale. We present SARCLIP (Spanish American Notary Records Meets CLIP), a deployed retrieval system for the National Archives of Argentina's seventeenth-century Spanish American notary records, a corpus of more than 13.6 million word-image patches spanning over 100 microfilm rolls ("rollos"). SARCLIP is built on a CLIP ViT-B/16 model contrastively fine-tuned on paleography-expert-annotated data, and extends prior work by (1) scaling approximate nearest-neighbor retrieval to the near-complete corpus via a FAISS index, (2) refining top-k results through pseudo-relevance feedback (Rocchio), and (3) closing a human-in-the-loop cycle through visual document browsing, canvas-based patch annotation, and periodic model retraining. Unlike the system's initial research prototype, which evaluated retrieval on a small five-rollo subset, SARCLIP is demonstrated as a complete, interactive tool operating over the near-complete corpus. Attendees experience the full search, browse, annotate, and retrain workflow live during this demonstration. 
+
+---
+# From Click Modeling to Offline and Off-Policy Evaluation in Carousel Recommendation 
+
+**Authors**: Jingwei Kang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2608.22022)  
+
+**Abstract**: Carousel interfaces are widely used in modern recommendation systems. Unlike traditional interfaces that present a single ranked list, carousels simultaneously present several ranked lists to the user, as horizontally swipeable rows stacked on top of each other. In this design, the rankings are closely tied to the two-dimensional layout. Consequently, user behavior is shaped not only by item preference, but also by row organization, viewport constraints, and item context. This tight coupling between ranking and presentation complicates the interpretation of user feedback, introducing new challenges for recommendation evaluation.
+My PhD research aims to address these challenges by rethinking how carousel clicks are modeled and how carousel recommendation policies can be evaluated from logged interaction data. So far, I have studied how users interact with carousel interfaces and developed a click model design framework that prioritizes mathematical relationships between observed variables over latent behavioral assumptions. Building on these results, my ongoing work includes a project using discrete choice models to represent clicks as choices, alongside a project that develops carousel-specific offline metrics. As a next step, I plan to develop off-policy evaluation methods that estimate the performance of recommendation policies from logged interactions. Taken together, the expected contribution of my thesis is a connected body of work that links carousel click modeling with offline and off-policy evaluation, so that carousel recommendation policies can be improved more reliably. 
+
+---
+# Enhancing Group Recommendation with Memory-Augmented Reasoning in LLM Agent 
+
+**Authors**: Qimeng Niu, Bowen Hao, Zixuan Zhang, Shuyu Qu, Hongzhi Yin  
+
+**Link**: [PDF](https://arxiv.org/pdf/2608.21939)  
+
+**Abstract**: The core challenge in group recommendation lies in modeling the dynamic evolution of user preferences and explain?ing the consensus formation process. Existing Large Language Model (LLM)-based methods, despite improved interpretability, treat interaction history as fixed text, ignoring the natural evolution of group/user preferences over time, and lacking explicit modeling of the complex group decision-making process. To address these issues, we propose AGR, a LLM-based agent, which consists of a Memory Module and a Reasoning Module. The Memory Module employs a token-based hash table to dynamically manage the historical interactions of groups and users. This design supports fundamental operations including insertion, updating, retrieval, forgetting of irrelevant records, and summarization of evolving group and user profiles for efficiently tracking. Based on these retrieved dynamic profiles, the Reason?ing Module then performs a multi-step reasoning process includ?ing Group Interests Collection, Group Consensus Refinement, Multi-dimensional Evaluation and Explainable Recommendation Generation, thereby moving beyond black-box inference to de?liver fully interpretable recommendations. In practice, we adopt the Reinforcement Fine-Tuning (RFT) paradigm, where we first use Supervised Fine-Tuning (SFT) to equip the model with basic capabilities for invoking the Memory and Reasoning modules, and then employ Group Relative Policy Optimization (GRPO) to enhance its autonomous ability to coordinate these modules. Experiments on LastFM and Douban datasets demonstrate that AGR significantly outperforms existing state-of-the-art methods in both recommendation accuracy and explainability. Our model is open-sourced at this https URL. 
+
+---
+# Revisiting N2DCG: An Empirically Grounded Reformulation of Carousel Recommendation Evaluation 
+
+**Authors**: Jingwei Kang, Santiago de Leon-Martinez, Maarten de Rijke, Harrie Oosterhuis  
+
+**Link**: [PDF](https://arxiv.org/pdf/2608.21877)  
+
+**Abstract**: Carousel interfaces have been widely used in video and music streaming services, yet it remains unclear how to properly evaluate recommender systems in these two-dimensional layouts. N2DCG has been proposed to address this gap by adapting NDCG to carousel-based recommendation, but it relies on unverified assumptions borrowed from the single-list web-search setting that do not transfer well to two-dimensional carousel layouts.
+We identify two substantial limitations of N2DCG: its ideal ranking, used for normalization, violates carousel constraints, and its discount function does not reflect user browsing behavior observed in empirical data. To address both limitations, we propose a reformulation of N2DCG that normalizes appropriately by respecting constraints and uses an empirically grounded discount function. We validate the proposed metric, showing that it better reflects users' empirical behavior on real-world eye-tracking data and better predicts the comparison results of carousel layouts simulated based on empirical examination patterns. 
+
+---
+# Why This, Not That? Mining User Profiles for Pair-wise Counterfactuals 
+
+**Authors**: Meysam Varasteh, Veronika Bogina, Noam Koenigstein, Robin Burke  
+
+**Link**: [PDF](https://arxiv.org/pdf/2608.21662)  
+
+**Abstract**: The topic of explanation in recommender systems has seen steady research attention since the earliest days of the field. With some exceptions, this work has focused on the explanation of single items in a recommendation list and, especially recently, has emphasized approaches that are decoupled from the logic of the recommendation algorithm itself. Based on findings in the psychology of interpersonal communication, we propose a new task, pairwise interpretation of item rankings, asking the comparative question ``Why is item A ranked higher than item B?''. An effective solution to this task, we argue, is inherently grounded in the operation of the recommendation algorithm. We propose a class of techniques based on counterfactual learning to uncover the items in a user's profile that have contributed to the relative ranking of items. Using multiple datasets, we show that it is possible to identify such items as potential basis for comparative explanation. 
+
+---
+# Why didn't more people see it? Recommendation: Transparency for providers 
+
+**Authors**: Meysam Varasteh, Robin Burke  
+
+**Link**: [PDF](https://arxiv.org/pdf/2608.21641)  
+
+**Abstract**: Transparency in recommender systems has been widely studied from the perspective of those receiving recommendations, yet the needs of item providers, the creators whose content is distributed through these platforms, remain largely unexplored. Providers often lack insight into how their items do or do not receive exposure in users' recommendation lists. In this work, we address this gap by proposing a surrogate modeling approach to explain item exposure at a system level. Rather than explaining individual user-item pairs, we train a proxy model to approximate the exposure distribution produced by a recommender. By quantifying the contribution of each feature, we seek to explain the factors driving the recommendation model's decisions across the entire user base. We evaluate our approach on two datasets and three recommendation models. Results show that the surrogate model captures the global behavior of all three recommenders with high fidelity and that the most influential factors vary meaningfully across models and domains. 
+
+---
+# Retrieval Needs Multivectors: An Exponential Separation 
+
+**Authors**: Mihir Agarwal, Viraj Agrawal, Sabyasachi Basu, Ankit Garg, Kirankumar Shiragur  
+
+**Link**: [PDF](https://arxiv.org/pdf/2608.21494)  
+
+**Abstract**: Recent works have highlighted the expressive limitations of embedding based retrieval models through both theoretical analyses and challenging benchmarks such as LIMIT. While multi-vector embeddings consistently outperform single-vector embeddings, the precise representational gap between them remains poorly understood. In this work, following Jayaram's work, we provide the first explicit family of query and document sets, together with their relevance matrices, for which single-vector embeddings that rank all relevant documents above irrelevant ones require exponential size, whereas polynomial-size multi-vector embeddings suffice. Our result establishes an exponential separation between the expressive power of single-vector and multi-vector embeddings for the task of ranking of documents as opposed to approximating numerical scores as in the work of Jayaram.
+Motivated by our theoretical construction, we introduce ANDOR, a new retrieval benchmark that naturally instantiates these hard examples. We show that state-of-the-art single-vector embedding models perform poorly on ANDOR in the zero-shot setting and exhibit only marginal improvements after fine-tuning, highlighting the inherent difficulty of the benchmark compared to prior work. In contrast, multi-vector models consistently outperform their single-vector counterparts and improve substantially with fine-tuning, closely aligning with our theoretical predictions. 
+
+---
+# The Emergence of Relevance Through Axiomatic Attention Patterns During LoRA Fine-Tuning 
+
+**Authors**: Matthew Perlman, Atharva Nijasure, James Allan  
+
+**Link**: [PDF](https://arxiv.org/pdf/2608.23338)  
+
+**Abstract**: LoRA fine-tuning is standard for adapting LLMs to reranking, but it remains unclear where in the network task-specific relevance behavior is learned and what attention-level changes accompany that learning. Through ablation and attention experiments, we identify where LoRA attention updates to RankLLaMA improve performance and whether those gains coincide with interpretable relevance-oriented attention patterns such as lexical matching, rarity sensitivity, and query-document interaction. We find that given LoRA fine-tuned MLPs throughout the network, restricting LoRA attention updates to a compact mid-network region is sufficient for recovering over half of the performance gained by applying LoRA to all attention layers, and that omitting attention fine-tuning in this region hurts performance more than elsewhere in the network. Additionally, we show that regions where applying LoRA affects performance the most overlap with regions where fine-tuning increased attention to axiomatic IR features. Rarity sensitivity, document-query interaction, and several compositional features are highly correlated with gains in ranking performance. Our results support an interpretable, correlational account of how relevance-oriented behavior emerges during LoRA fine-tuning and point toward improved strategies for adapting rerankers. 
+
+---
+# The Laws of Context Allocation: Causal Measurement and Closed-Loop Orchestration in Generative Search 
+
+**Authors**: Peiyang Liu, Xi Wang, Di Liang, Wei Ye  
+
+**Link**: [PDF](https://arxiv.org/pdf/2608.23252)  
+
+**Abstract**: As Retrieval-Augmented Generation (RAG) shifts toward diverse portfolio generation, it is stymied by two critical bottlenecks: flawed measurement of evidence utilization, and suboptimal context budget allocation. We resolve both sequentially.
+To resolve measurement, we expose a pervasive ``diagnostic illusion'': standard relevance proxies fail catastrophically on hard negatives. We replace them with an efficient causal leave-one-out probe that accurately isolates generative reliance and formally calibrates the structural dilution of LLM attention.
+To resolve allocation, we deploy this causal probe in a deconfounded factorial grid. We prove that the prevailing strategy of monolithic context widening is an architectural trap penalized by relevance decay. Instead, allocating compute iteratively across multiple sequential generations drives transformative portfolio recall gains of 16.7--20.5 absolute percentage points, scaling robustly up to 32B models.
+Finally, we unify these solutions into a deployable closed-loop submodular scheduler. Augmented by an attribution-steered contrastive decoder to override LLM attention inertia, our architecture systematically forces fresh evidence integration. By dominating classical open-loop baselines, we establish sequential, feedback-driven orchestration as the definitive paradigm for generative search. Our code, data, and causal measurement instruments are available at this https URL. 
+
+---
+# Aligning Biomedical Texts and Knowledge Graphs: A Systematic Comparison of Lightweight Alignment Strategies 
+
+**Authors**: Artem Bisliouk, Elizaveta Nosova, Heiko Paulheim, Andreea Iana, Rita T. Sousa  
+
+**Link**: [PDF](https://arxiv.org/pdf/2608.23214)  
+
+**Abstract**: Biomedical knowledge exists in two complementary but distinct forms: unstructured scientific literature and structured knowledge graphs (KGs). Aligning them is essential for knowledge grounding, evidence retrieval, and KG completion, yet existing methods do not explicitly align free-text evidence with KG triples. We present a unified framework for systematically studying design choices for aligning biomedical text and KGs. With a text encoder and a KG embedding model both frozen, we learn only a lightweight projection between their spaces via a contrastive objective. This enables a fair comparison across six design dimensions: text encoder, KG embedding model, projection head, triple composition, training direction, and hard-negatives sampling. We construct CTD-Align, a corpus of over 22K one-to-one tripledocument pairs linking chemical-gene interactions from the Comparative Toxicogenomics Database to supporting PubMed passages. We evaluate alignment on it in two retrieval settings: document-to-triple and triple-to-document. We find that the triple composition and the training direction (i.e., shared retrieval space) have the greatest impact, whereas the text encoder and hard-negatives sampling matter little. Overall, simple choices win: projecting text into the KG space with a linear head over concatenated subject, predicate, and object embeddings performs best. These findings establish lightweight contrastive alignment as an effective, practical foundation for bridging biomedical text and KGs. 
+
+---
+# Training-Free Pseudo-Fusion for Composed Image Retrieval with Diffusion Models and Multimodal Large Language Models 
+
+**Authors**: Fan Xu, Luis A. Leiva  
+
+**Link**: [PDF](https://arxiv.org/pdf/2608.23102)  
+
+**Abstract**: Composed Image Retrieval (CIR) is an emerging paradigm in content-based image retrieval that enables users to formulate compositional queries by combining a reference image with an auxiliary modality, usually text-based. This approach supports fine-grained search where the target image shares structural elements with the user-provided image while incorporating the modifications specified by the auxiliary text. Conventional CIR methods rely on multimodal fusion to combine visual and textual features into a joint query embedding, which requires training modules that align composed queries with the targets. In this work, we propose PeFuse (for pseudo-fusion), a training-free framework that leverages pretrained Diffusion Models and Multimodal Large Language Models to bridge modalities via generative conversion. We introduce two novel strategies: uni-directional and bi-directional conversion, which convert CIR into four single-modality retrieval problems. These methods reformulate CIR as either intra-modal or cross-modal single-query retrieval tasks, bypassing the need for dedicated task-specific training. Extensive experiments on standard benchmarks demonstrate that converting CIR into text-to-image retrieval tasks is more effective than alternative conversion strategies, achieving competitive or superior performance compared with state-of-the-art methods, while maintaining high flexibility thanks to replaceable components of the conversion pipeline. These results highlight the effectiveness of the pseudo-fusion paradigm for zero-shot CIR. Our code is publicly available at: this https URL. 
+
+---
+# Cultural Moment Benchmark: Evaluating Video Cultural Reasoning and Grounding in Southeast Asia 
+
+**Authors**: Burak Satar, Zhixin Ma, Cheng Yu-Tong, Huy Hoang Tran, Phuong Anh Nguyen, Chong-Wah Ngo  
+
+**Link**: [PDF](https://arxiv.org/pdf/2608.23065)  
+
+**Abstract**: Cultural understanding in video means more than recognizing what is visible; it requires grasping the symbolic and temporal significance of cultural concepts. We decompose this into three abilities: naming what a concept symbolizes, visually recognizing it on video, and locating its sub-events in time. Existing video-cultural benchmarks tend to test what is seen, collapsing these three abilities into a single score that hides the bottleneck. We introduce the Cultural Moment Benchmark (CMB): 306 expert-curated concepts from seven countries in Southeast Asia across five categories. We evaluate each concept through three stages, one per ability. Given a description, Stage 1 (S1) selects from four candidate concept names, Stage 2 (S2) selects from four candidate video moments, and Stage 3 (S3) predicts the start and end times of the moment in a video. To keep each stage focused on a distinct ability, we use three design choices: semantic-similarity distractors (S1, S2), unlabeled video moments (S2), and free-form localization on a different example video (S3). Across six vision-language models, failure modes vary by ability and modality. i) Even the strongest closed-source models score below 30% when all three stages must be correct; ii) The three abilities do not fully cascade: naming a concept correctly helps half the models recognize it on video, but recognizing it has little effect on locating the sub-event in time; iii) Audio is complementary, redundant, or distracting depending on the concept, more often distracting in non-Latin-script countries; removing both audio and subtitles hurts Games and Music the most. Our 14-rater human study shows that even Expert raters score below chance on concepts from a neighboring country, indicating that CMB requires country-specific cultural knowledge. CMB acts as a diagnostic harness, attributing failures to a specific ability or modality. 
+
+---
+# TSWAP: A Multilingual Retrieval-Augmented Thai Wellness Advisor 
+
+**Authors**: Pornthep Ukosaramig, Kobkrit Viriyayudhakorn  
+
+**Link**: [PDF](https://arxiv.org/pdf/2608.22917)  
+
+**Abstract**: We present TSWAP, a deployed eight-language conversational wellness advisor grounded, via retrieval-augmented generation, in a verified knowledge base of Thai traditional medicine and certified wellness providers. An unmodified open-weight LLM (Qwen3.6-35B-A3B on vLLM) is grounded on a ~30.6K-chunk Thai index by a hybrid dense-sparse retriever with cross-encoder reranking; a first-turn query classifier forces tool-based retrieval for entity lookups; a rule-based safety layer enforces medical scope and Thai emergency routing; and all eight languages are served zero-shot with translate-then-retrieve. We release the first Thai traditional-medicine/wellness retrieval benchmark (50 questions with gold document IDs; Recall@5 = 0.88), production QA logs (91.1% test-retest pass over 259 cases), and a 71-question frontier no-retrieval probe showing what each grounding pillar contributes: without the safety prompt the backend model family produced a full drug-dosing schedule and complied with out-of-scope requests, and without the knowledge base it produced zero verifiable provider recommendations. We further report two transferable deployment findings: English-calibrated 4-bit AWQ quantization corrupts Thai tone marks, and forced-retrieval routing is necessary for reliable grounding. 
+
+---
+# Better Retrieval, Worse Robustness:How Multi-hop RAG Amplifies Upstream ASR Errors 
+
+**Authors**: Zhenghua Bao  
+
+**Link**: [PDF](https://arxiv.org/pdf/2608.22872)  
+
+**Abstract**: Speech-based applications pass spoken queries through automatic speech recognition (ASR) before any retrieval module, so ASR errors enter the pipeline as a fixed upstream constraint. We empirically test whether two extensions to standard retrieval-augmented generation (RAG), entity-graph linking and iterative reformulation, absorb or amplify these errors. Using four English accents synthesized through neural TTS, we evaluate four RAG configurations on three multi-hop QA benchmarks (HotpotQA, 2WikiMultiHopQA and MuSiQue) against a clean-text oracle. Although the structurally richer configurations generally retain higher absolute F1 under ASR input, both extensions amplify the error: the F1 gap from clean text to the highest-WER accent is 36-67% larger under their combination than under naive dense retrieval, on all three benchmarks. The dominant failure mode is corruption of one or more query entities, accounting for 87-96% of degradation cases on 2WikiMultiHopQA across all four methods. Two lightweight surface-form mitigations leave most of the gap intact, indicating that downstream retrieval structure amplifies remaining entity errors. We release code and data at this https URL . 
+
+---
+# The Compaction Cliff in Long-Running AI Agent Memory 
+
+**Authors**: Saber Zerhoudi, Jelena Mitrovic, Michael Granitzer  
+
+**Link**: [PDF](https://arxiv.org/pdf/2608.22752)  
+
+**Abstract**: A safety rule and an episodic log compete for the same tokens in an AI agent's context. When the budget overflows, both are summarized at the same rate; only the rule needs exact wording to remain enforceable. On 20 production agent configurations, Claude Code's /compact prompt on Sonnet 4.6 preserves 53\% of safety rules after one compaction round and 10\% after five. We name this the Compaction Cliff. We address it with Knowledge Triage, a framework that classifies each line of an agent's knowledge base by type and routes each type through its own retention policy. Three deterministic operators implement this triage across the three context-management operations: TypeCompact rewrites items in place under per-type fidelity, TypeDecompose partitions a topic too large to compact safely, replicating in-scope safety rules across partitions, and TypeRetrieve fetches items from external storage with in-scope rules pinned ahead of relevance. On five public corpora, TypeCompact preserves 2--4$\times$ more safety rules than the strongest single-shot LLM compactor at every ratio, with 96\% recall over five rounds. TypeDecompose reaches 0\% locality violations against 93\% under uniform partitioning. TypeRetrieve reaches 100\% recall@50 against 73\% for the best single-shot LLM retriever. On three downstream behavioral benchmarks, we outperform the production Sonnet compactor on medical compliance (paired McNemar $p < 10^{-8}$ on preservation, $N = 200$), the full-policy and hierarchical baselines on retail task pass rate ($p < 0.01$, $N = 115$), and the hierarchical compaction on the airline domain ($p = 0.024$). We release AgentArtifactCorpus (396{,}934 agent configurations from 54{,}628 public GitHub repositories), the classifier, and the reference implementation. 
+
+---
+# Enrich-Retrieve-Rank: Scaling Capability Discovery Beyond In-Context Routing 
+
+**Authors**: Nazib Sorathiya, Daniel Zhang, Bardiya Akhbari  
+
+**Link**: [PDF](https://arxiv.org/pdf/2608.22695)  
+
+**Abstract**: Agent ecosystems now include thousands of MATS components (Models, Agents, Tools, and Skills), yet their discovery still relies on in-context routing. These systems read a registry (names, hints, or descriptions, as context budget permits), pick a candidate, invoke it, and retry on failure. This pattern degrades with scale, and registries are growing fast. We recast capability discovery as search over a registry by defining an offline enrichment step that turns sparse metadata into searchable profiles, and an online retrieve-then-rank pipeline that returns a ranked shortlist without invoking any candidates online. We show that from N=10 to 7,278 capabilities, in-context routing's top-1 accuracy (Match@1) collapses (0.85 to 0.12), while retrieve-then-rank degrades more gently (0.81 to 0.39) because its reranker still ranks the right capability first 0.70-0.87 of the time once retrieval finds it. In the Nova Micro sweep, the crossover is around N=500. We compare against two in-context baselines. Full-Ctx puts the whole registry in the prompt and asks the LLM to pick. Search&Pick gives the LLM a search tool to narrow candidates before it picks. At full scale the pipeline leads Search&Pick by 6.5 percentage points (pp) on Match@1 at about half the cost. It reduces cost 70x versus Full-Ctx. We use a fixed configuration (same enrichment, retriever, and scorer weights) across agent, tool, and skill registries. The pipeline runs in production as the default capability-discovery layer of a large-scale multi-agent platform. 
+
+---
+# ExecRubrics: Executable Tool-Augmented Rubrics for Verifiable and Efficient Long-Form Evaluation 
+
+**Authors**: Kaustubh D. Dhole, Charles L. A. Clarke, Eugene Y. Agichtein  
+
+**Link**: [PDF](https://arxiv.org/pdf/2608.22559)  
+
+**Abstract**: Rubrics aim to make language-model evaluation transparent by decomposing response quality into interpretable criteria. However, natural-language rubrics are often ambiguous, require black-box LLM judges, and typically assume criteria aggregate independently through linear weighted sums, limiting their ability to capture dependencies, alternatives, penalties, and override conditions. We propose ExecRubrics, a framework for representing rubrics as compact executable programs. ExecRubrics encodes evaluation logic as verifiable Python scoring functions, giving natural-language rubric intent an operational semantics: a fixed decision procedure that can be inspected, executed, and edited. On three long-form response benchmarks-HealthBench, HelpSteer, and ArgQuality-we show that ExecRubrics can substitute for expensive black-box judges in ranking preferred over dispreferred responses, matching or improving NL rubric baselines with best preference accuracies of 53%, 78%, and 92%, respectively, while reducing evaluation latency by up to 320 times. We show that incorporating external logic and resources from text processing libraries such as NLTK and spaCy further improves preference accuracy. Our results suggest a novel way of looking at evaluation, by offering a faster, more explainable, and less ambiguous alternative to black-box rubric evaluation, particularly in high-stakes domains such as healthcare and banking where precision and auditability are critical. 
+
+---
+# VERDICT: Agreement Beats Pixel-Space Verification in Real-Document OCSR 
+
+**Authors**: Yani Guan, Dengpan Dong, Shuang Luo, Zi Wei, Joah Han, Dan Hannah, Yumin Zhang, Qichao Hu, Kang Xu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2608.22183)  
+
+**Abstract**: Optical Chemical Structure Recognition (OCSR) converts 2D molecular depictions in the published literature into SMILES, and is increasingly important for constructing large-scale chemical training datasets. Automation at that scale requires identifying unreliable predictions in the absence of ground truth. Three families of label-free signals were compared on $263$ ACS journal depictions with verified ground truth: model confidence, re-rendering similarity, and agreement among recognizers. Pixel-space re-rendering performed little better than chance (AUROC $0.547$, $95\%$ CI $[0.465,0.629]$), and an oracle-tuned threshold on it reduced correct labels per image from $0.745$ to $0.205$. Agreement among four architecturally distinct recognizers instead reached an AUROC of $0.916$ ($[0.880,0.952]$). The two-of-four rule accepted $81.7\%$ of images at $88.8\%$ precision, the three-of-four rule $52.1\%$ at $98.5\%$. The same pattern held on CLEF-IP, UOB, and USPTO. This distinction is obscured on synthetic benchmarks, where re-rendered predictions naturally resemble their inputs. A substance filter removed $2{,}193$ false agreements on wildcards and R-group fragments, after which the three-of-four rule rejected all $68$ generic depictions. VERDICT was then applied to PMC Open Access, producing $6{,}146$ structure labels for $4{,}833$ molecules; chemist adjudication of $400$ released labels in two independent samples yielded precisions of $0.995$ for the three-of-four tier and $0.958$ for the two-of-four tier. VERDICT therefore enables validated labels for multimodal molecular databases linking structure images, machine-readable representations, and source-publication information. In SES AI's Molecular Universe platform, VERDICT further serves as an image-based interface for searching and retrieving molecular records. 
+
+---
+# RAG Collapse: LLM Responses Collapse When Retrieved Documents Are Self-Authored 
+
+**Authors**: Gregory Druck, Ethan Smith  
+
+**Link**: [PDF](https://arxiv.org/pdf/2608.22118)  
+
+**Abstract**: LLM responses are based on the internet (via training or RAG), and AI is now used to generate a significant amount of content online (Paredes et al., 2026), creating the potential for a self-reinforcing feedback loop. Prior work has shown that when LLMs are recursively trained on their own output, they experience model collapse (Shumailov et al., 2024): responses become less diverse, and eventually no longer resemble the original training data. In this paper, we show that a similar collapse occurs if LLM-based AI systems retrieve references they authored using a search tool. We call this RAG collapse. We conduct extensive experiments with three types of simulations of AI systems retrieving references they generated, using three model families, and 1,019 information-seeking prompts, totaling 1,528 simulations and over one million LLM API calls, and find that 79.6% (1,216/1,528) of simulations end in collapse. Surprisingly, even a single self-authored reference can trigger collapse because the LLM disproportionately cites its own content. This self-bias persists even after controlling for reference quality. 
+
+---
+# W-RAG: Source-Aware Retrieval for Enterprise Document Generation from Heterogeneous Knowledge Bases 
+
+**Authors**: Hridya Dhulipala, Rajesh Ombase, Michael Wang, Tien N. Nguyen  
+
+**Link**: [PDF](https://arxiv.org/pdf/2608.22081)  
+
+**Abstract**: Retrieval-Augmented Generation (RAG) enables large language models to incorporate external knowledge during generation, improving factual grounding and domain adaptability. However, existing RAG pipelines assume that evidence retrieved from multiple repositories can be ranked globally using a single similarity function. While suitable for open-domain retrieval, this assumption breaks down in enterprise document generation, where heterogeneous knowledge bases (such as policies, regulations, technical documentation, and departmental guidelines) serve distinct roles and must be jointly represented in the generated document. As a result, global ranking often produces unbalanced context dominated by a subset of sources, leading to incomplete enterprise drafts. To address this limitation, we propose W-RAG, a source-aware retrieval framework that performs ontology-guided retrieval, local ranking within each knowledge base, and source-level weighting to regulate evidence composition. We further introduce a new dataset for retrieval-grounded enterprise document generation spanning multiple document types and industry domains. Experiments show that standard RAG pipelines struggle on this task, while W-RAG significantly improves document coverage and generation quality. 
+
+---
+# Training a Knowledge Base: Supervised Structure Learning for Agent-Curated Document Stores 
+
+**Authors**: Yu Pan, Hongfeng Yu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2608.21829)  
+
+**Abstract**: Retrieval-augmented generation treats the document store as a frozen input, and the systems that instead let an agent curate one never measure what curation does to the store. We invert the framing: the knowledge base is the model. A training agent answers a supervised question against the current store, is shown the gold, then edits the store; an unchanged reader is later examined on a frozen snapshot under a fixed action budget. Where offline graph construction is unsupervised, (question, answer) pairs are our labels -- and that supervision is what makes the structure cheap. Per point of corpus indexed it returns 1.6x the action saving and 1.8x the accuracy of an unsupervised entity index covering everything, using 1,913 links against its 196,112. On questions the store trained on, an unchanged reader spends 31% fewer actions at higher accuracy, and the result reproduces on an official PhantomWiki generation whose questions we did not write. To measure how far this reaches we introduce a key-coverage gradient, a probe varying how much of a question the training set touched, replacing a train/test split's pass/fail with a decay curve. Generalization proves endpoint-dependent: accuracy carries to unseen questions (+0.167 F1 where both of a question's keys were indexed, +0.100 where one was, zero where neither) while the action saving stays on trained questions. Because that decay is indexed by coverage rather than by novelty, more training extends it -- and the store is undertrained, not saturated: coverage grows linearly in new questions and stops the moment training repeats them, so a hundred questions reach a quarter of the corpus and four times as many would close the gap. 
+
+---
+# HIRA: A Human-in-the-Loop Retrieval-Augmented Cascade for Document Classification in Regulated Industries 
+
+**Authors**: Shangxuan Tian, Yanhui Chen, Carlos Queiroz  
+
+**Link**: [PDF](https://arxiv.org/pdf/2608.21792)  
+
+**Abstract**: Document classification in regulated industries is constrained by data residency, limited cold-start labels, scarce review capacity, and costly model-governance procedures. We present HIRA, a training-free, on-premises retrieval-augmented cascade for document classification in regulated deployments that combines BM25 over OCR text, dense text embeddings, and image-level representations through validation-calibrated weighted reciprocal-rank fusion. Confident documents are classified directly by retrieval; uncertain or visually confusable documents are passed to a locally hosted LLM verifier, which receives the OCR text, retrieved exemplars, label descriptions, and confusion-specific terms. When the verifier remains uncertain, the document is sent to human review. Each correction is stored as a margin-weighted retrieval exemplar and updates a Dirichlet-smoothed confusion graph, letting the system improve without updating model weights.
+On a private 80-class trade-finance corpus, HIRA processes the full 30,233-document production stream while requesting human correction for only 1,945 documents (6.4%), improving Macro-F1 from 0.6218 to 0.8548. On the corrected Tobacco-3482 benchmark, HIRA reaches 0.9423 Macro-F1 with a locally hosted DeepSeek-R1-Distill-Qwen-32B verifier, 17.4 percentage points above the zero-shot LLM baseline, while invoking the verifier for only about 40% of documents and reducing LLM calls by approximately 60%. With 518 human corrections (24.8% of the pool), HIRA matches the fully labelled pool oracle, in which all 2,086 pool documents are indexed with their ground-truth labels. These results show that selective human feedback and retrieval-memory adaptation can be a practical alternative to repeated model retraining for long-tail document classification in regulated deployments. 
+
+---
+# DamageScope: Vision-Language Retrieval at Scale for Disaster Damage Assessment from Satellite Imagery 
+
+**Authors**: Ravi K. Rajendran, Biplob Debnath, Murugan Sankaradas, Srimat T. Chakradhar  
+
+**Link**: [PDF](https://arxiv.org/pdf/2608.21529)  
+
+**Abstract**: Timely and accurate assessment of property damage is critical following natural disasters. Traditional on-site inspections are labor-intensive, costly, and often pose safety risks. Advances in satellite imagery and vision-language models (VLMs) enable scalable remote damage assessment; however, integrating VLMs into large-scale Earth observation pipelines presents challenges in computational efficiency, data organization, and information retrieval. To address these challenges, we present DamageScope, a retrieval-augmented framework that combines satellite imagery with Vision-Language Models (VLMs) and Large Language Models (LLMs) to automate property damage analysis. Built on a Retrieval-Augmented Generation (RAG) framework, DamageScope extracts structured visual representations from satellite imagery to support interactive natural language queries for damage assessment. To address scalability, we introduce a novel multi-vector embedding-based clustering algorithm that outperforms traditional single-vector embedding approaches while reducing indexing time by up to 14x. Furthermore, a dual-store data architecture minimizes LLM API calls, reducing both operational cost and response latency by up to approximately 3x. By effectively balancing scalability and operational efficiency, DamageScope provides a robust and practical solution for real-world damage assessment tasks. 
+
+---
+# KSE-Web: An Analysis of Hybrid Retrieval and LLM-Assisted Query Expansion for Low-Resource Khmer Semantic Search 
+
+**Authors**: Nimol Thuon  
+
+**Link**: [PDF](https://arxiv.org/pdf/2608.21365)  
+
+**Abstract**: As a low-resource language, Khmer presents several retrieval challenges, including limited annotated data, ambiguous word boundaries, weak support in multilingual embedding models, and frequent mixed Khmer-English usage. This paper presents KSE-Web, an analysis of hybrid retrieval and LLM-assisted query expansion for Khmer semantic search. We construct the dataset from approximately 17K candidate Khmer titles and retain 3K cleaned full-text Khmer documents after filtering, normalization, deduplication, and document-length control. The dataset includes 300 manually reviewed user-style Khmer search queries and silver relevance labels with partial human verification. We evaluate character n-gram BM25, multilingual dense retrieval, hybrid BM25+dense retrieval, and LLM-assisted query expansion using Qwen2.5 models. Experimental results show that BM25 achieves the strongest overall performance, reaching 0.943 Recall and 0.876 nDCG. Hybrid BM25+dense retrieval performs comparably, achieving 0.929 Recall and 0.871 nDCG, while dense retrieval alone performs lower. LLM-assisted query expansion does not outperform non-expanded retrieval; however, Qwen2.5-3B produces substantially stronger expanded-query results than Qwen2.5-0.5B, suggesting that LLM size and expansion quality matter for low-resource Khmer retrieval. Our analysis further shows that direct LLM expansion can introduce topic drift, generic terms, and noisy reformulations, while simple filtering may remove useful semantic cues. These findings highlight both the potential and limitations of LLM-assisted retrieval for Khmer semantic search and provide a foundation for future Khmer retrieval datasets with stronger human-verified annotations and Khmer-aware retrieval models. The dataset and documentation will be made available at this http URL. 
+
+---
