@@ -1,0 +1,190 @@
+# AutoConcept: Training-Free Concept-Guided Reranking for Metadata-Available Composed Image Retrieval 
+
+**Authors**: Tianyu Wang, Tianjiao Wu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2609.01456)  
+
+**Abstract**: Composed image retrieval (CIR) retrieves a target image from a reference image and a text modification. This paper studies metadata-available CIR reranking, where a fixed CIR model first returns a candidate pool and gallery metadata is then used for second-stage concept-guided scoring. We introduce AutoConcept, a training-free reranker that converts concept evidence into an interpretable memory. AutoConcept filters noisy concepts, activates query-relevant positive constraints with an auxiliary negative penalty, and combines base retrieval scores with metadata-based concept-candidate alignment through inference-time calibration. On FashionIQ, AutoConcept yields significant early-rank improvements over WeiMoCIR and consistent plug-in gains on LinCIR candidate pools. Metadata-aware controls show that structured concept memory adds signal beyond direct query-text and extracted-attribute matching, while a query-only variant further supports the effectiveness of concept-level reranking. A supplementary real-human concept-label study indicates that the same memory interface can consume participant-provided evidence. These results position AutoConcept as an interpretable concept-memory reranker for product-style CIR galleries with available metadata. 
+
+---
+# MIDR: Enrichment-Augmented Indexing for Multimodal Document Retrieval 
+
+**Authors**: Debanjan Mahata, Atharva Tendle, Daniel Preotiuc-Pietro, Yong Zhuang, Ozan Irsoy  
+
+**Link**: [PDF](https://arxiv.org/pdf/2609.01316)  
+
+**Abstract**: Retrieval over visually rich documents has a representation problem: important content often lives in tables, charts, figures, and layout relations that plain OCR linearizes, corrupts, or omits. ColPali-family visual retrievers address this with patch-level multi-vector indexes and late-interaction scoring, keeping image-derived retrieval on the query-time serving path. We introduce MIDR (Multimodal Indexing for Document Retrieval), a training-free framework for enrichment-augmented indexing that shifts multimodal reasoning to index time. During ingestion, a multimodal LLM converts rendered pages into verified textual fields that are indexed with BM25F and optionally fused with dense retrieval, enabling text-centric serving over multimodally grounded evidence. On ViDoRe V3, MIDR Hybrid achieves 0.6219 average nDCG across five English domains, a 23.0% relative gain over BM25, remaining competitive with ColQwen2.5. On two French-document domains, enrichment bridges English queries and French page text, lifting BM25 from 0.1532 to 0.5448 nDCG and outperforming ColQwen2.5. Across all seven domains, MIDR leads ColQwen2.5 on four while using approximately 9x smaller index memory and approximately 2x lower query latency. These results establish index-time multimodal reasoning as a compelling accuracy-deployment alternative to serving-time visual late interaction. 
+
+---
+# From Language to Behavior: Scaling Sequence Transformers for Industrial Recommendation Ranking with Rec-Native Designs 
+
+**Authors**: Jie Chen, Xiangqian Yu, Yanchao Lian, Tan Lu, Run Yang, Zhengchun Shang, Xing Wang, Cheng Chen, Ke Hu, Qiang Li, Tianjiu Yin, Xiaobing Liu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2609.01240)  
+
+**Abstract**: Scaling Transformers has driven large gains in language modeling, but transplanting this to behavior-sequence modeling in production ranking is challenging: recommendation differs in signal quality, where behavior sequences are noisy, temporally irregular, and sparsely supervised, and in computation asymmetry, where each request scores many candidates against one shared user history under tight latency budgets. We propose ReST, a recommendation-native Transformer scaling framework. For signal quality, it introduces a sequence encoder with dual-gated attention, rotary positional and temporal embedding, stabilized residual normalization, and training-only auxiliary objectives. For computation asymmetry, it factorizes ranking into a heavy reusable encoder and a lightweight cross decoder with projection-free KV attention and token-specific parameterization, coupling user-level shared-prefix training with shared-prefix serving for compute-once, decode-many-times ranking. Across industrial and public benchmarks, ReST achieves higher accuracy and scales more consistently along sequence length, depth, and width, where LLM-style Transformer blocks saturate. A one-week online A/B test on a production advertising platform improves online AUC by 1.31% and lifts a core revenue metric by 11.93% within a 50 ms P99 budget; ReST has since been fully deployed in production, showing that behavior-sequence scaling remains a promising, under-exploited axis for production ranking. 
+
+---
+# World Model-Guided Reinforcement Learning via Counterfactual User Engagement Simulation 
+
+**Authors**: Ang Li, Xin Xu, Bin Liang, Yue Ma, Fubang Zhao, Yangyang Kang, Kam-Fai Wong  
+
+**Link**: [PDF](https://arxiv.org/pdf/2609.01067)  
+
+**Abstract**: Reinforcement learning for user-centric agents is limited by the cost, latency, and risk of collecting online feedback, as well as by the lack of counterfactual comparisons under the same user state. In this paper, we propose World Model-Guided Reinforcement Learning via counterfactual user engagement simulation (WMG-RL), a framework in which a frozen user simulator provides reward supervision before real user exposure. Motivated by language world models, we instantiate the simulator as a User Engagement World Model (UEWM), which treats a recommended item as the agent action and the user's heterogeneous feedback as the environment observation. Rather than learning one fixed environment transition, UEWM learns to infer user-specific dynamics from engagement history and apply them to candidate items. In WMG-RL, a downstream policy proposes multiple candidate items for the same history; UEWM predicts the corresponding engagement feedback in parallel; and the simulated feedback is converted into dense rewards for policy optimization. Experiments show that UEWM provides reliable and transferable reward signals across domains, and that WMG-RL enables a compact 1.7B student policy to match or surpass much larger LLMs on downstream recommendation tasks. 
+
+---
+# Web Price Extraction: State of the Art and an Adaptive Browserless Implementation 
+
+**Authors**: Evgeniia Kositsyna, Jorge Lloret-Gazo  
+
+**Link**: [PDF](https://arxiv.org/pdf/2609.01030)  
+
+**Abstract**: Price extraction from websites is a key task for market monitoring, price comparison, and business analytics in e-commerce. Existing approaches can be broadly divided into four groups, and understanding their trade-offs in accuracy and scalability is essential for selecting suitable extraction strategies. Classical methods rely on manually written wrappers and rule induction from labeled pages, offering high accuracy but adapting poorly to structural changes and requiring considerable maintenance effort. Browser-based methods, using tools such as Selenium and Puppeteer, handle dynamic JavaScript content but consume large computational resources and scale poorly. Browserless approaches retrieve HTML directly via HTTP requests, offering significant gains in speed and cost, but rely on rules calibrated for specific sites. Methods based on machine learning and large language models offer adaptability but require training data and substantial computation.
+Our main contribution is an adaptive browserless price extraction system that improves robustness to structural differences between websites. We implemented a baseline architecture combining HTML page fragmentation with syntactic, semantic, and frequency rules, and extended it in two ways: a Bayesian approach that dynamically updates rule weights, and a genetic algorithm that optimizes the system's global parameters. This hybrid scheme increased precision from 77.2% to 87.3% and reduced average per-page processing time by approximately 14% relative to the baseline, confirming it as a competitive alternative to manually tuned browserless solutions and to more resource-intensive browser- or LLM-based methods, offering high extraction accuracy at low computational cost. 
+
+---
+# TGR: Advancing Industrial Recommendation from Generative-Paradigm Ranking toward Unified Generation and Reasoning 
+
+**Authors**: TGR Team, Lei Cheng, Haonan Hu, Beibei Kong, Yudong Li, Zang Li, Yunsheng Pang, Hongyang Su, Jianchao Tu, Yunlong Wang, Bing Wen, Junzhang Zhu, Shaojie Zhu, Chengxiang Zhuo  
+
+**Link**: [PDF](https://arxiv.org/pdf/2609.00986)  
+
+**Abstract**: Industrial recommender systems typically rely on cascaded retrieval, pre-ranking, ranking, and reranking stages, whose separately optimized models limit scaling, fragment decision making, and lack semantic knowledge and reasoning. We present TGR (Tencent Generative Recommendation), an industrial framework that advances recommendation toward the generative paradigm along three coupled directions. TGR-GenRank upgrades ranking through CCFormer, which combines unified feature tokenization, a scalable Transformer backbone, feature-field separated cross attention, subspace token mixing, and hierarchical sequence compression while retaining per-item multi-task outputs. TGR-GenRec explores end-to-end generation under two paradigms: BARGE bridges item-boundary loss and semantic drift in hierarchical semantic-ID generation through item context-aware attention, hierarchical path reranking, and orthogonal dual-path decoding; HiGR performs whole-slate generation with prefix-structured semantic IDs, coarse-to-fine decoding, and listwise multi-objective alignment. TGR-Reason injects offline-generated semantic-ID reason tokens into online decoding, providing reasoning without request-time rollout. TGR is deployed across Tencent production surfaces serving hundreds of millions of users. CCFormer delivers significant gains in five A/B-tested scenarios and is fully launched in two, including +3.57% CTR and +1.71% advertising revenue. BARGE improves Hit@5 by 10.2-16.9% and yields +0.60% CTR and +1.70% reading time after full rollout. HiGR improves offline slate quality by 15.9-21.3% with a 5x inference speedup and achieves up to +1.22% watch time and +1.73% video views. TGR-Reason raises cold-start new-user Hit@1 by 477.8% and delivers +1.75% effective consumption and +13.09% new-user exposure-to-conversion online. 
+
+---
+# SwapRec: Warming Up Cold Items Through Training-Time Swaps 
+
+**Authors**: Marta Moscati, Jan Malte Lichtenberg, Davide Abbattista, Antonio De Candia, Laura Boggia, Matteo Ruffini  
+
+**Link**: [PDF](https://arxiv.org/pdf/2609.00913)  
+
+**Abstract**: Interactions with cold items negatively impact real-time personalization of ID-based recommender systems. This is because the use of such interactions degrades user preference estimates, whereas excluding cold items from the user profile prevents real-time recommendation updates. In industrial scenarios, one heuristic often applied to address this shortcoming at inference time is to replace, i.e., "swap", cold-start items by their most similar "warm" neighbor, where similarity is inferred from the items' side information. In this paper, we demonstrate that sequential models, most often used for real-time personalization, are not robust to such swaps, and propose SwapRec, an approach to address this issue. SwapRec relies on using the same swap heuristics already at training time. We apply SwapRec to state-of-the-art models for sequential recommendation and analyze its impact by means of quantitative experiments in three recommendation domains (online shopping, movie, music). The experimental results show that, irrespective of the underlying sequential architecture, our easy-to-implement SwapRec approach allows for substantially more accurate recommendations when in presence of interactions with cold items, simultaneously leading to a larger percentage of cold items in the recommendation lists. 
+
+---
+# From Saliency to Discriminability: Rank-Preserving Visual Token Pruning for VLM Rerankers 
+
+**Authors**: Siyi Liu, Hanjun Yang, Chenchen Zhang, Xiaorong Zhu, Xinyu Zuo, Lisheng Duan, Haijin Liang, Jin Ma, Junfu Pu, Yongqi Zhang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2609.00667)  
+
+**Abstract**: Large vision-language models used as listwise rerankers must jointly process visual tokens from tens of candidates per query, making token pruning essential for practical deployment. Existing pruning methods retain tokens by attention saliency, yet we show that saliency is systematically misaligned with ranking contribution: visually prominent tokens often capture order-neutral patterns shared across candidates. This mismatch is layer-dependent: saliency becomes informative only where attention is concentrated, and normalized attention entropy diagnoses the reliability shift (Pearson r=0.87). We propose RaDiCal (Rank-Discriminative Calibration), a training-free framework that uses normalized attention entropy to decide when saliency can be trusted, fusing it with an attention-free rank-discriminative prior and selecting pruning layers from the same trust landscape. Across three retrieval benchmarks and multiple VLM architectures, RaDiCal matches Dense MRR@10 on Flickr30K and surpasses it on MSCOCO at a 20% token budget, ranks first among all pruning methods on FashionIQ, and holds within 1.2 pp on Flickr30K and MSCOCO at 10% retention. It cuts FLOPs by 39--45% and delivers 1.28--1.45$\times$ measured speedups across two VLM architectures without dataset-specific retuning. 
+
+---
+# It Takes Two to Match: Co-Evolving Generative Retriever with Reinforcement Learning 
+
+**Authors**: Runpeng Dai, Kaili Huang, Changsung Kang, Ciya Liao  
+
+**Link**: [PDF](https://arxiv.org/pdf/2609.00638)  
+
+**Abstract**: Retrieval is the first stage of modern search and advertising systems, selecting a candidate set from a large item universe for downstream ranking and auction. Recent work increasingly leverages LLMs to improve retrieval through query expansion, data synthesis, and retrieval-feedback training. However, the generative component is typically used for query-side augmentation, while final matching is still delegated to a downstream retriever. We introduce CoGR, a retrieval framework that instead trains LLMs to directly construct retrieval representations on both query and item sides. Each generator produces a compact set of keywords, which are matched directly through an inverted index, preserving compatibility with existing keyword-based retrieval infrastructure. CoGR uses a two-stage training pipeline. Supervised fine-tuning first establishes an aligned keyword space, after which co-evolving reinforcement learning alternately optimizes the query- and item-side generators with GRPO against the opposite side's frozen index. Both sides optimize the same query-to-item retrieval $F_1$ objective: the query side receives retrieval $F_1$ directly, while the item side receives a counterfactual marginal reward measuring the change in query-side $F_1$ caused by its generated keywords. Across 10 representative sparse, dense, and generative baselines, CoGR achieves the best performance on both an internal APP Marketplace dataset and the public WANDS benchmark, improving $F_1$ over the strongest baseline by $10.9\%$ and $36.1\%$, respectively. Further analysis shows stable co-evolution and increasingly aligned query--item keyword spaces over training. 
+
+---
+# Towards Effective Structured Context Modeling for Conversational Recommender Systems via Dual-node Monte Carlo Tree Search 
+
+**Authors**: Jincheng Zhang, Chen Huang, Wenqiang Lei, See-Kiong Ng, Yang Deng  
+
+**Link**: [PDF](https://arxiv.org/pdf/2609.00618)  
+
+**Abstract**: We investigate the role of conversational context modeling in user preference tracking for Conversational Recommendation Systems (CRSs). In this regard, we propose DREAMS, a novel tree-structured context modeling framework that explicitly captures user preference evolution throughout multi-turn interactions. DREAMS introduces two specialized node types to support the two fundamental objectives of CRSs: preference elicitation and preference exploitation. Specifically, elicitation nodes leverage Monte Carlo Tree Search (MCTS) to strategically explore conversational actions and infer latent user preferences, while exploitation nodes employ LLM-based refinement to transform the tracked preference state into structured retrieval queries for recommendation. Extensive experiments on benchmark datasets demonstrate the effectiveness of DREAMS and its design. 
+
+---
+# Closed Forms and Synthetic Twins: Predicting Approximate Nearest Neighbor Recall from Embedding Statistics 
+
+**Authors**: Shmuel Herman  
+
+**Link**: [PDF](https://arxiv.org/pdf/2609.00364)  
+
+**Abstract**: Embedding models are trained and evaluated as if retrieval were exact; in production they serve behind approximate indexes -- HNSW, IVF, product quantization, or the fixed-dimensional encodings (FDEs) of late-interaction models -- whose behavior the encoder's benchmarks never see: one modern encoder recovers just 14% of its exact top-10 through its raw FDE index. Such failures surface only after an index is built, and the standard patches -- corpus-fitted transforms such as whitening -- must be fitted, stored, and refit as the corpus changes, and can silently rewrite what the encoder returns. This paper shows that index behavior is predictable before anything is built, from label-free statistics of the raw embeddings, through a ladder of instruments matched to what each index family consumes: (1) closed-form moment statistics for the fixed-grid quantizers (PQ, FDE); (2) simulation on a synthetic twin corpus -- cluster statistics made generative, on which any index, composed production systems included, can be built and tested -- for partition indexes; (3) size-extrapolated, lightly calibrated twins for graph indexes at million-document scale. Predictions land within 0.03 of measured recall on an unseen million-document corpus. The same geometry is trainable: targeting the one statistic no post-hoc transform can move -- the score margin -- lifts recall for every index family at once, at a small measured task cost. The result: index choice, correction pricing, and production recall forecast from one cheap measurement pass, on new corpora and new indexes alike; serving without per-corpus transform machinery, suited to continuously changing corpora; and a recall-compute frontier pushed by adapting encoders to geometry rather than coupling them to any single index. 
+
+---
+# MUSES: A Benchmark for Prospective Intellectual-Roots Retrieval 
+
+**Authors**: Rohan Pandey, Sunjae Kwon, Hong Yu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2609.00313)  
+
+**Abstract**: Scientific discovery depends on finding prior literature that shapes what comes next. Existing retrieval systems optimize for relevance and popularity, often favoring central papers over less familiar works that later prove generative. We introduce \textbf{MUSES}, a million-instance benchmark for prospective intellectual-roots retrieval over a fixed 2.33M-paper corpus, with roughly 140K test instances per familiarity tier. To our knowledge, it is the first prospective benchmark at this scale with a shared retrieval task and author-confirmed paper-level root labels. Alongside it, \textbf{CiteRoots} pairs a scalable rhetorical layer over local citation text (LLM judge $\kappa = 0.896$ versus human gold) with a paper-level author-endorsed layer ($n = 1{,}518$ generative-inspiration pairs from 753 focal papers). MUSES organizes difficulty along two axes: a \emph{familiarity} axis spanning CiteNext, CiteNew, and CiteNew-Isolated, and a \emph{functional} axis spanning broad citations, rhetorical roots, and author-endorsed roots. Across 9 method classes, a lean multi-centroid retriever built on SPECTER2 is strongest. Hit@100 falls from 0.534 on CiteNext to 0.424 on CiteNew, 0.205 on rhetorical CiteNew, and 0.171 on author-endorsed CiteNew, a $3.1\times$ decline. In a registered eight-lens full-test audit, roughly half of broad-tier test instances remain unsolved at K=1{,}000. Rhetorical role and author endorsement are distinct: the same judge agrees with endorsement at $\kappa = 0.037$. We release MUSES, both CiteRoots layers, and a distilled open companion judge for future work on prospective retrieval and intellectual roots. 
+
+---
+# Two-Sided State-Space Models for Sequential Recommendation with Non-Random Multimodal Review Feedback 
+
+**Authors**: Ziwen Pan, Zihan Liang, Ruoxuan Xiong  
+
+**Link**: [PDF](https://arxiv.org/pdf/2609.00165)  
+
+**Abstract**: Two-sided digital platforms are inherently dynamic: user preferences shift, item popularity evolves, and reviews both reflect and drive these changes. Yet most sequential recommendation systems treat reviews as passive signals for updating user states, leaving two aspects underexplored. First, review generation is nonrandom, depending on evolving latent states of both users and items. Second, reviews can reshape item states, induce spillover across related items, and influence future user decisions. To address these gaps, we propose a two-sided state-space model (TS-SSM) for event-conditioned sequential recommendation. TS-SSM consists of three components: (1) a modality-missing-not-at-random fusion module that encodes review content and informative observation patterns; (2) user-state evolution with temporal variation and local graph message passing that uses related item states to refine user preferences; and (3) item-state evolution with asymmetric carryover of positive and negative review feedback. In experiments across six Amazon categories, TS-SSM increases Recall@20 over BSARec by 14.8%--18.8% and exceeds HM4SR by 11.7% on average. On Goodreads Fantasy, Recall@20 improves HM4SR from .5191 to .5847. Ablations highlight distinct contributions of observation patterns, local propagation, and item dynamics. 
+
+---
+# SilentProbe: Measuring Silent Failure in Production APIs Used as Agent Tools 
+
+**Authors**: Zongrong Li, Shengkun Ye, Feiyou Guo, Zuoyou Dang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2609.00035)  
+
+**Abstract**: An LLM agent calling a production API cannot distinguish a query that matched nothing from a query the server did not understand. Both return HTTP 200 with a parsable body, no exception to catch and no field to branch on. We ask what predicts which one occurred, and what it does to the agent. Auditing 721,320 parameters across 2,501 independently published OpenAPI documents, we find that 7.5% declare an enumeration and 15.2% declare any machine-checkable constraint at all, while 40.1% of documents state at least one constraint in prose that their schema does not encode. Executing 219 schema-derived perturbations against live commercial endpoints from 27 vendors, reached through a single aggregation layer (Monid) that publishes a schema and returns a run identifier for every call, we find that constraint form, not vendor identity, predicts honesty: machine-checkable constraints yielded an honest error in 111 of 111 cases, prose-only constraints failed silently in 44 of 61 (p = 2e-13). Twelve models across eight families then met these endpoints on ordinary tasks. A vocabulary that the description merely exemplifies was missed by every model on 88 of 88 attempts, while vocabularies written out in full were used correctly 88 to 91% of the time. Running the full agent loop, models detected the resulting silent failure in 12% of cases, repaired it in 0%, asserted a false negative to the user in 41%, and invented a figure in 12%. Promoting the vocabulary into the schema removes the failure, from 88 of 88 to 0 of 89. The fix is one line of schema rather than a better model. Code, schemas, perturbation sets, agent transcripts and per-call run identifiers are released at this https URL. 
+
+---
+# Retrieved but not ranked: surface-form bias in structural retrieval, from mathematics to agent trajectories 
+
+**Authors**: Nabira Rashid, Manolis Kellis  
+
+**Link**: [PDF](https://arxiv.org/pdf/2609.01556)  
+
+**Abstract**: We evaluate embedding retrieval where surface form and meaning are pulled apart on purpose: retrieving items that share underlying structure but not wording, in two unrelated domains under one protocol, competition mathematics (MathNet-Retrieve; 500 queries, 117,088-item corpus) and embodied-agent trajectories (ALFWorld-derived; 118 queries, 336 trajectories). In mathematics the failure is complete: strict Hit@1 at the heaviest disguise tier is 0.0% for both production embedders (bootstrap 95% CI [0.0, 0.0]) while the correct item sits in the top 10 nearly always, and in 95.2 to 99.8% of misses the winner is more lexically similar to the query than the correct answer. In trajectories, where surface variation is incidental, the same models land at or near hypergeometric chance when gold must involve a different object, and below chance for all three embedders once gold must differ in object and receptacle: retrieval anchors on literal tokens, not task structure. A lexical reranker control hurts in mathematics and helps in trajectories (closing 26 to 36% of the gap, CIs excluding zero); its sign reveals whether a benchmark's surface variation is adversarial or incidental. An LLM reranker recovers 5 to 63% of the gap in mathematics and 43 to 76% in trajectories; direction replicates across three judges (all 21 cells positive), but effect sizes, tier profiles, and the outlier judge change with domain (paired differences excluding zero everywhere). Mathematics gains concentrate on well-known competitions (+19.8 points, CI [+6.7, +33.2], one of six cells), so part of the recovery is memorization. In a paired downstream experiment (210 queries, graders at 96 to 99% agreement), oracle retrieval was indistinguishable from adversarially bad retrieval (McNemar p = 0.678); the solver's 69.5% zero-shot accuracy is largely a truncation proxy (97 to 100% on finished answers), leaving no headroom. 
+
+---
+# VerTox: Verifiable Reward-Guided Corpus Poisoning Against Neural Ranking Models 
+
+**Authors**: Zhiqi Huang, Vivek Datla, Zhichao Xu, Puxuan Yu, Vivek Srikumar, Alfy Samuel  
+
+**Link**: [PDF](https://arxiv.org/pdf/2609.01325)  
+
+**Abstract**: Neural ranking models have become core components of modern information retrieval systems and important building blocks of AI systems such as retrieval-augmented generation (RAG) pipelines. However, their robustness remains insufficiently understood in the presence of large language models (LLMs), which can generate fluent and deceptive content at scale. This work investigates the vulnerability of neural ranking models to corpus poisoning attacks, in which an adversary injects a small number of maliciously crafted documents into the corpus to distort ranking behavior. We propose VerTox, the first framework to formulate corpus poisoning as a verifiable reward-guided reinforcement learning (RLVR) problem. By explicitly coupling ranking distortion with factual corruption through specialized reward shaping, we fine-tune compact LLMs into adversarial generators. Experiments demonstrate that our method achieves near-perfect attack success rates, producing adversarial documents that frequently rank higher than target documents across major neural ranking architectures, as well as a proprietary commercial embedding model. The generated adversarial documents are fluent and exhibit low perplexity, making them difficult to detect. Furthermore, by explicitly encouraging factual corruption, our adversarial documents significantly degrade the performance of a downstream RAG application. 
+
+---
+# Staged Linguistic Seeding: Grounded Query Expansion for Verified-Unit QA in AI Contact Centers 
+
+**Authors**: Hyeonseop Yoon, Jeong-Eun Park  
+
+**Link**: [PDF](https://arxiv.org/pdf/2609.00844)  
+
+**Abstract**: Customer-service QA in an AI contact center (AICC) runs under deployment constraints that benchmark QA misses: tight voice-hotline latency and a high cost for unsupported or wrong automatic answers. We deploy a system that answers only from a closed set of verified QA units: it returns a retrieved unit verbatim, or routes to clarify, abstain, or handoff. The index is enriched offline by staged linguistic seeding (SLS): a human authors a per-unit world-grounded slot recipe, gpt-4.1-mini renders it into variants, and a light human gate filters them. One methodology is reused across both domains, so inference stays a single retrieval pass with no query-time generation. On held-out query variants from two industrial domains, SLS lifts hybrid R@1 to 0.881/0.930 (+0.27/+0.34), with gains across all five retrievers tested. At the same gpt-4.1-mini generation budget, SLS beats doc2query by +0.20/+0.32, while cross-provenance evaluation provides additional evidence of transfer across generated-query distributions. Verified-unit answering also removes free-form generation's unsupported-content surface (7-13% versus approximately 0%). We report this as an application study, including negative results. 
+
+---
+# Ctrl-F-Resist. Practices, Challenges, and Technical Needs of Civil Society Organizations Monitoring the Far-Right Online 
+
+**Authors**: Elisabeth Steffen, Helena Mihaljević  
+
+**Link**: [PDF](https://arxiv.org/pdf/2609.00808)  
+
+**Abstract**: As far-right actors increasingly exploit online platforms to disseminate ideology and mobilize supporters, civil society organizations (CSOs) play a vital yet underrecognized role in monitoring antidemocratic dynamics online. Unlike fact-checkers or content moderators, CSOs engage in long-term, contextualized analysis, often in resource-constrained settings and under precarious conditions. Despite their critical societal role, CSOs face significant barriers to adopting or co-developing technical solutions, including legal uncertainty, limited platform access, and chronic underfunding. Existing research and tool development efforts have largely overlooked these actors in favor of more institutionally embedded stakeholders. This paper addresses this gap through a qualitative study with 15 practitioners from 12 Germany-based CSOs engaged in online monitoring, positioning them as key yet overlooked stakeholders in the governance of digital spaces. We explore their current practices, challenges, and expectations regarding technological support. Our findings show that monitoring remains largely manual due to the lack of tailored tools, with enhanced search capabilities emerging as the most pressing technical need. While participants express openness to AI-supported features such as media processing and content discovery, many remain skeptical of automated classification, citing concerns around trust, legal usability, and professional credibility. Grounded in these findings, we introduce a conceptual monitoring workflow and describe its implementation in an open-source Telegram monitoring prototype designed to flexibly support diverse monitoring goals. We outline concrete design, policy, and research recommendatios, and introduce the manual labor trap as an empirically grounded concept that explains why monitoring CSOs tend to remain locked into labor-intensive, low-capacity arrangements. 
+
+---
+# NeuroGraph: An AI Graph-Driven Neuro-Symbolic Framework for Explainable Threat Reasoning in Advanced Manufacturing 
+
+**Authors**: Padmeswari Nandiya, Ahmad Mohsin, Ahmed Ibrahim, Iqbal H. Sarker, Helge Janicke  
+
+**Link**: [PDF](https://arxiv.org/pdf/2609.00604)  
+
+**Abstract**: The growing complexity of cyber-physical attack surfaces in advanced manufacturing has made cyber threat intelligence analysis increasingly difficult. Although large language models and retrieval-augmented generation have improved CTI workflows, text-based approaches remain vulnerable to hallucinations and provide limited support for structured reasoning over interconnected threats. Graph-based RAG reduces some of these limitations, but existing approaches often lack ontology-consistent multi-hop reasoning and transparent evidence tracing across heterogeneous cybersecurity data. This paper proposes a graph-grounded neuro-symbolic framework that integrates ontology-aware symbolic query generation, knowledge graph retrieval, and neural language generation to support accurate and explainable threat analysis across information technology and operational technology environments. The framework adopts a dual-large language model architecture: the first model translates natural-language questions into executable Cypher queries for symbolic graph retrieval, while the second generates answers strictly from the retrieved graph evidence. Experimental evaluation using publicly available cyber threat intelligence benchmarks shows consistent improvements over the published baseline in reasoning accuracy, while also reducing hallucinations, strengthening multi-hop reasoning, and improving robustness to adversarial perturbations. Runtime and explainability analyses further demonstrate that the framework maintains interactive inference performance and exposes graph-grounded reasoning artifacts that allow analysts to inspect and verify each stage of the analysis. Overall, the results highlight the potential of graph-grounded neuro-symbolic reasoning as a scalable, interpretable, and reliable approach to cyber threat intelligence for next-generation Industry 5.0 environments. 
+
+---
+# TRIS: A Tri-Layer Retrieval Integrity Sieve Against Knowledge Poisoning 
+
+**Authors**: Muhaimin Bin Munir, Akib Jawad Ononto, Nazia Shehnaz Joynab, Bhavani Thuraisingham, Latifur Khan  
+
+**Link**: [PDF](https://arxiv.org/pdf/2609.00470)  
+
+**Abstract**: Retrieval-Augmented Generation (RAG) grounds large language models in external corpora, but implicit trust in retrieved documents creates a critical attack surface: PoisonedRAG shows that a handful of crafted passages can dominate dense retrieval and steer generation toward attacker-chosen answers. We present the Tri-Layer Sieve, a middleware defense that sanitizes retrieved evidence through cross-embedding-space clustering with an independent judge model, structural filtering of trigger-payload artifacts, and LLM consistency verification. The design exploits a key weakness of retrieval-stage poisoning: a single document must satisfy one embedding geometry, one internal Trigger-Payload structure, and one generation objective - rarely all three simultaneously, a fragility that persists even against an adaptive attacker who paraphrases around it. On Natural Questions, HotpotQA, and MS-MARCO with Contriever retrieval (k=50), the Sieve reduces black-box Attack Success Rate from 67.0/87.0/64.0% to 3.0/14.0/4.0%, mitigates white-box HotFlip attacks from ~74% to 27.8% on NQ with Layer 3 enabled, and drives poisoned-document MRR to 0.000, while restoring clean accuracy from 13-33% under attack to 58-76%. Under an architecture-aware adversary who paraphrases triggers to evade the structural filter, enabling the consistency layer halves adaptive ASR (32.0% to 15.0% on NQ) while raising clean accuracy by 18 points, at an added latency of ~16-19 s/query under live retrieval. 
+
+---
+# Sources of Truth: A Multi-Platform, Multilingual Audit of Citations in AI Mental Health Information Queries 
+
+**Authors**: Phuong Anh Nguyen, Jill Noorily, Matthew Flathers, Haruka Notsu, Laura Ospina-Pinillos, Tommy Nguyen, Samantha Clark, Aoife Keane, Grace Thompson, John Torous  
+
+**Link**: [PDF](https://arxiv.org/pdf/2609.00319)  
+
+**Abstract**: Online health information seeking is shifting from keyword search, where users consider a ranked list of links, to conversational systems that compose a single answer and curate its citations. Source evaluation therefore passes from user to platform, yet what these systems surface is poorly characterized. We audited three free consumer products (ChatGPT, Perplexity, Google AI Overview) on twenty English mental health questions under two prompt conditions, with a subset of three also translated into six further languages of varying resource tiers. We recorded 15,942 citations across 1,140 responses and 1,713 unique domains, then classified every citation with a nine-category organizational typology applied by a deterministic classifier validated against human coding. Citations were heavily concentrated: the ten most-cited domains accounted for 43.6% of English citations, and government, commercial health, and academic sources were closely matched at roughly 22% each. Platforms differed little in typical citation volume but sharply in consistency and in the source types they favored. Explicitly requesting sources shifted composition only modestly. Non-English queries surfaced fewer citations and were routed to language-appropriate resources at significantly lower rates. We release the typology, classifier, and annotated corpus as reusable instruments for auditing generative health search. 
+
+---
