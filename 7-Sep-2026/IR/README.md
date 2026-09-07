@@ -1,0 +1,183 @@
+# Embedding Surgery: Localized Updates for Adaptive Ranking Correction in Dense Retrieval 
+
+**Authors**: Maddalena Amendola, Antonio Mallia, Raffaele Perego  
+
+**Link**: [PDF](https://arxiv.org/pdf/2609.05110)  
+
+**Abstract**: Dense retrieval systems are core components of modern search engines, recommendation platforms, and retrieval-augmented generation pipelines. They encode documents and queries into dense embeddings, enabling efficient semantic search via vector similarity. However, because document embeddings are computed offline and stored in static indexes, these systems struggle to adapt to user feedback or evolving search intent. To address this limitation, we introduce \emph{embedding surgery}, a lightweight approach for adaptive ranking correction in dense retrieval. The method applies localized, minimal updates to selected document embeddings at query time, guided by editorial feedback, user interactions, or pseudo-labels from large language models. We formulate embedding surgery as a convex optimization problem that enforces ranking constraints while minimizing modifications to the affected document representations. We integrate embedding surgery into standard dense retrieval pipelines and evaluate it on TREC Deep Learning, TREC Robust, TREC CAsT, and MS MARCO benchmarks. Results show consistent improvements (e.g., up to +60.64\% relative improvement in nDCG@10 on DL-Hard under editorial feedback), even under noisy or shifting feedback, with low computational cost and without disrupting the global structure of the embedding space. Extensive experiments show that ranking corrections propagate to semantically related queries and that embedding updates can be applied safely and efficiently to scalable Approximate Nearest Neighbor indexes via simple in-place overwriting, without requiring costly index reconstruction. Finally, embedding surgery complements query adaptation methods such as CoRocchio, yielding additional gains while being more robust to noisy feedback. 
+
+---
+# Beyond Co-purchase Relation: Evolution of Complementary Recommendations at Allegro 
+
+**Authors**: Aleksandra Osowska-Kurczab, Klaudia Nazarko, Eliška Kosturová, Lidia Wojciechowska, Michał Bień  
+
+**Link**: [PDF](https://arxiv.org/pdf/2609.05063)  
+
+**Abstract**: When a customer adds a professional camera to their cart, should the system suggest a matching lens, a generic tripod, or another camera body? Complementary Product Recommendation is vital for comprehensive basket building, yet standard models often fail to distinguish between items that are merely bought together and those that truly work together. In this paper, we present AlleCompanion: a production-scale retrieval framework deployed at this http URL that transforms noisy behavioural signals into precise semantic compatibility. We mitigate the intrinsic noise in large-scale co-purchase traffic by combining data-level filtering heuristics with a category-constrained Two Tower architecture. Within this framework, the Category Adapter guides the model in the embedding space, constraining candidates within logically complementary boundaries. Since modelling authentic user behaviour at scale is inherently difficult, we introduce ComCat, a multi-source Complementary Categories Mapping. ComCat acts as a translational layer that distils meaningful patterns from noisy traffic into a maintainable and controllable solution, integrating expert rules, human-in-the-loop feedback, LLM-based reasoning, and statistical mining. Our experimental results demonstrate that combining explicit category-level constraints with neural architectures effectively filters out co-purchase noise to surface recommendations that satisfy real-world user needs. Serving over 20 million active users monthly, the framework delivers significant uplifts in attributed GMV for organic discovery and drives substantial revenue growth in sponsored placements. 
+
+---
+# Repeated Queries Exhaust an LLM's Brand Recommendations but Not Its Sources 
+
+**Authors**: Dmitrij Żatuchin  
+
+**Link**: [PDF](https://arxiv.org/pdf/2609.05059)  
+
+**Abstract**: Whether repeated identical buying questions exhaust a language model's brand recommendations depends on retrieval. Across 300 question-engine cells (50 questions, six engines, 15 runs each, open extraction over 1,470 adjudicated organizations), the five engines answering without web search were still adding never-seen brands at run 15 in 86-92% of cells, with median repertoires of 15-31 organizations; the one retrieval-enabled engine closed its list (median 8 organizations, 64% of cells still adding), matching four earlier deep cells where web-search runs saturated by run ten. Cited-domain accumulation keeps rising at every horizon tested: four deep cells were still adding domains at run 24 with 59-84% of the Chao2 lower-bound estimate observed, and 44% of the retrieval engine's breadth cells were still adding domains at run 15. A single run shows 62-77% of the five-run brand set, and across engines the median question draws 38 organizations, of which a median of 15 appear in exactly one engine. Estimators are exact rarefaction and Chao2 richness; a parallel fixed-roster extraction reproduces flat curves on identical responses, so roster-bounded tracking manufactures plateaus that open extraction removes. 
+
+---
+# SAM-D2Q: Aligning Multimodal Doc2Query with Search Demand and Conversion for E-commerce 
+
+**Authors**: Hui Zhou, Jian Hui Ji, Lei Ma, Rong Xiao, Xiaoyi Zeng  
+
+**Link**: [PDF](https://arxiv.org/pdf/2609.04961)  
+
+**Abstract**: E-commerce search often suffers from vocabulary mismatch between user queries and merchant-authored product titles, since short titles cannot fully cover diverse user expressions or visual product attributes. Although Doc2Query alleviates this issue by generating pseudo-queries for document expansion, traditional methods are text-only and not optimized for e-commerce business objectives. As a result, they may produce semantically plausible but commercially ineffective expansions and miss key attributes present in product images. To this end, we propose E-commerce Search-Aligned Multimodal Doc2Query (SAM-D2Q), a business-aligned multimodal document expansion framework for e-commerce search under Boolean retrieval constraints. SAM-D2Q consists of three stages: (1) task-adapted multimodal supervised fine-tuning to enhance vision-language understanding of product titles, images, and user queries; (2) multimodal data augmentation to improve perception of key visual attributes and expansion coverage; and (3) reinforcement-learning-based preference alignment toward search business objectives, encouraging the model to generate pseudo-queries that better match user intent and commercial value. Offline experiments show that SAM-D2Q substantially improves retrieval performance over traditional Doc2Query methods. Deployed in the AliExpress production search system, SAM-D2Q improves online business metrics, increasing GMV by +3.38% and Pay Count by +2.27%. 
+
+---
+# AtomRec: Evolving Atomic Memory for Agentic Recommendation 
+
+**Authors**: Peiyu Hu, Weihai Lu, Siying Gu, Zhuodong Liu, Zhaokai Luo, Yuean Niu, Zhiyong Wang, Jia Wang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2609.04882)  
+
+**Abstract**: Agentic recommender systems use large language models to maintain semantic memory and support evidence-aware recommendation. However, existing memory mechanisms often compress user and item information into coarse summaries and connect them with scalar collaborative links, making it difficult to preserve fine-grained preference stages or retrieve interpretable evidence as user interests evolve. We propose \textsc{AtomRec}, an agentic recommender with evolving atomic collaborative memory. \textsc{AtomRec} represents user and item memories as structured atomic units, builds semantic links across related memories, and evolves related historical fields when new interactions arrive. During recommendation, it retrieves linked memories as multi-hop evidence paths rather than isolated neighbor summaries, allowing collaborative signals to support grounded ranking. Experiments on four public benchmarks show that \textsc{AtomRec} consistently outperforms state-of-the-art agentic and memory-augmented baselines, with around 8.5\% average relative improvement across metrics. 
+
+---
+# Personalized Task Dependency Graphs for Mitigating Signal Erosion in Multi-Task Recommendation 
+
+**Authors**: Fuyuan Liu, Tiandeng Wu, Yaqun Fang, Wei Zhou, Zehao Zhou, Wenping Chen, Qishun Mei, Jiaxin Zhou, Heng Chang, Yi Cao, Jiandong Ding  
+
+**Link**: [PDF](https://arxiv.org/pdf/2609.04862)  
+
+**Abstract**: Optimizing multiple conversion objectives is a core challenge in industrial recommendation, often limited by signal erosion in rigid architectures. Existing Multi-Task Learning (MTL) methods typically enforce uniform dependency strengths across a static conversion funnel, overlooking how task correlations naturally vary based on item characteristics. Hierarchical message passing along these fixed chains leads to cumulative signal attenuation, which degrades performance on sparse, deep-funnel objectives. To address this, we propose the Personalized Task Dependency Graphs (PTDG). While respecting necessary physical causal constraints (e.g., Click -> Pay), PTDG dynamically "rewires" the intensity of dependency pathways for each item via low-rank approximation to ensure structural robustness. We implement a GCN-based propagation with hard causal masking to establish adaptive information shortcuts. Additionally, we introduce an Adaptive Progressive Masking (APM) strategy that decouples shared parameters according to task sparsity, helping to stabilize optimization. Experiments on KuaiRand1K and an industrial dataset show that PTDG significantly improves AUC on sparse conversion tasks by up to 1.45%, while maintaining comparable performance on dense objectives. Online A/B testing shows PTDG improves Conversion Rate (CVR) by 1.2% and effective Cost Per Mille (eCPM) by 1.9% relative to the baseline. 
+
+---
+# Inventory-Grounded Policy-Level Optimization for Training-Free AI Search 
+
+**Authors**: Wei Zhou, Tiandeng Wu, Jiandong Ding, Zhufeng Fan, Yi Cao  
+
+**Link**: [PDF](https://arxiv.org/pdf/2609.04813)  
+
+**Abstract**: Early in deployment, an AI search system typically operates over a frequently updated product catalog, so the available items and their properties cannot be treated as stable knowledge that can be encoded in fixed prompts or strategies. Fine-tuning, reinforcement learning, and static prompt patches fit poorly: labels are scarce, rewards drift with inventory, model releases are costly, and prompt fixes quickly stale. We present Inventory-Grounded Policy-Level Optimization (IGPO), a training-free approach for fixed AI search pipelines. IGPO separates policy from environment facts: it learns Policy Guidelines for acting on runtime inventory evidence rather than memorizing available items. Online, IGPO grounds each query by probing the inventory and constructing an inventory portrait, then injects relevant Policy Guidelines into the retrieval and selection prompts. Offline, stochastic rollouts are grouped by query -- mixed outcome groups directly yield contrastive signal, and an inventory-guided exploration loop distinguishes missed retrieval routes from cases where no matching support is found under the observed inventory evidence. Since May 2026, IGPO has been deployed in a commercial smart-assistant AI search system. A 14-day online A/B test of the complete IGPO treatment shows a 3.17% relative CTR lift and a 38.9% reduction in audited bad cases. 
+
+---
+# VizIt: A multi-view framework for exploring single-cell, spatial, and genetic data online 
+
+**Authors**: Chenhang Christopher Zhang, Yanqing Lou, Jie Yuan, Mingming Lu, Jacob Parker, Himanshu Chintalapudi, Zechuan Lin, Clemens R. Scherzer, Yuxuan Hu, Ruifeng Hu, Xianjun Dong  
+
+**Link**: [PDF](https://arxiv.org/pdf/2609.04658)  
+
+**Abstract**: Multi-omic studies increasingly require data to be examined from complementary biological perspectives, yet interactive exploration remains fragmented across modalities and tools. We present VizIt, an open-source framework for multi-view exploration of single-cell and spatial transcriptomic, epigenomic and genetic data. VizIt connects gene-, cell type-, condition-, spatial-, genomic region- and variant-centered views, enabling seamless navigation across biological perspectives. We demonstrate VizIt through the Parkinson's Cell Atlas, a customizable interactive multi-omic resource. 
+
+---
+# Latent-Aligned Reasoning for Multimodal Recommendation 
+
+**Authors**: Jiarui Jin, Anyang Ji  
+
+**Link**: [PDF](https://arxiv.org/pdf/2609.04645)  
+
+**Abstract**: Multimodal Vision-Language Models (VLMs) have demonstrated remarkable capabilities in cross-modal understanding, yet a fundamental challenge persists when applying them to recommendation: as representations propagate through multi-step reasoning, both visual and textual signals progressively attenuate - a phenomenon we term cross-modal dilution. To address this, we propose LARK (Latent-Aligned Reasoning frameworK), a two-stage latent reasoning framework with complementary alignment mechanisms within a single VLM. In the first stage, learnable latent tokens are interleaved with multi-step chain-of-thought (CoT) reasoning and explicitly aligned with a frozen vision encoder, serving as visual checkpoints that preserve perceptual details throughout the reasoning chain. In the second stage, the latent representations are projected via a bridge MLP and trained with item-to-item contrastive learning; to prevent the reasoning semantics from fading, intermediate features are aligned with the CoT hidden states from the first stage, anchoring the final embeddings to the model's own reasoning output. Experiments on three public benchmarks and one industrial dataset show that LARK achieves state-of-the-art performance across multiple recommendation architectures, with controlled ablations confirming the distinct contribution of each component. 
+
+---
+# MURAL: Multimodal Uncertainty-aware Recommendation via Adaptive edge Learning 
+
+**Authors**: Ahmad Mousavi, Majid Alikhani, Yeon-Chang Lee, Roberto Corizzo, Yeganeh Abdollahinejad  
+
+**Link**: [PDF](https://arxiv.org/pdf/2609.04574)  
+
+**Abstract**: Multimodal Graph Neural Networks have become standard for recommendation by augmenting sparse interaction data with content features. Yet current architectures face two bottlenecks: structural rigidity, from a reliance on static precomputed similarity graphs that cannot adapt to evolving preferences; and semantic fragility, where noisy modality signals are indiscriminately fused, distorting the collaborative signal. We propose MURAL (Multimodal Uncertainty-aware Recommendation via Adaptive edge Learning), a unified framework that shifts multimodal recommendation from fixed structural augmentation to dynamic topology discovery. To address structural rigidity, an Adaptive Edge Learner combines a differentiable retrieval-augmented strategy with an approximate nearest neighbor search to discover latent item-item correlations that are both semantically adaptive and computationally scalable (O(NlogN)). To address semantic fragility, an Uncertainty-Aware Fusion module models the aleatoric uncertainty of heterogeneous modalities, dynamically down-weighting unreliable features while prioritizing high-confidence signals as a defense against cross-modal noise. We further employ a contrastive teacher-student alignment that anchors modality-specific representations to stable behavioral signals, ensuring optimization stability without gradient leakage. Experiments on large-scale benchmarks including TikTok and Amazon show that MURAL significantly surpasses both structural and generative state-of-the-art baselines, achieving superior accuracy while offering interpretability through domain-specific modality dominance and robustness under extreme data corruption. 
+
+---
+# SAGE: Semantic Attribute Graphs for Multi-Entity Visual Retrieval 
+
+**Authors**: Yongjoo Kim, Mincheol Kwon, Seonga Choi, Minseung Lee, Kyeong-Jin Oh, Hyunyoung Lee, Yunsu Choi, Jungbeom Lee  
+
+**Link**: [PDF](https://arxiv.org/pdf/2609.04255)  
+
+**Abstract**: Dense document images often contain many fine-grained visual and textual entities whose relevance depends on a user query. Standard vision-language retrievers encode cropped regions with a single vector, which can mix distinct entity signals and obscure the evidence needed for fine-grained retrieval. We call this failure mode Semantic Dilution and quantitatively show that it degrades entity-level retrieval as a function of entity density. To mitigate it, we propose SAGE, a training-free framework that parses semantic entities from dense document images, represents them as hierarchical graph nodes with multi-vector embeddings, and retrieves query-relevant evidence through iterative entity-level subgraph matching. We also introduce DEAR, a dataset of 1,055 query--image pairs sourced from product detail pages, where each query requires retrieving and comparing multiple fine-grained entities from visually dense inputs across four question types of increasing complexity. Experiments show that SAGE substantially reduces semantic dilution and outperforms patch-level and OCR-based retrieval baselines on DEAR, achieving a Recall@3 of 0.849 and a generation score of 2.746 on multi-entity visual comparison queries. Our code is available at this https URL. 
+
+---
+# Does Your Agent's Memory Survive a Model Upgrade? A Controlled Study of Memory Portability 
+
+**Authors**: Ankit Goyal, Jaideep Ray  
+
+**Link**: [PDF](https://arxiv.org/pdf/2609.05339)  
+
+**Abstract**: Model upgrades are routine; memory migrations are not. An agent can keep the same memory store and still forget: a new model may interpret old notes differently, mixed embedding versions may break retrieval, and repair may fail without the original evidence. We compare memory as the same history is preserved verbatim for long-context reading (LC-RAW), divided into chunks for retrieval-augmented generation (RAG), compressed by a model into natural-language notes (NOTES), or normalized into a fixed-schema knowledge graph (KG-fixed). The study uses 48 synthetic histories with randomized answer codes, exact scoring, and two open-weight models with sub 10 billion parameters.
+Our measurements show that fixed-schema structures transfer reliably, with KG-fixed accuracy changing by only $+0.0004 \pm 0.0020$ following a writer swap. Conversely, compressed NOTES exhibit high model coupling, with accuracy shifting asymmetrically by $+9.91$ or $-13.28$ percentage points depending on the specific migration direction. In RAG systems, partial embedding migrations using a 50/50 mixed index capture only a 4.96-point accuracy improvement, forfeiting the majority of the 11.90-point gain achieved through full re-embedding. Diagnostic decomposition attributes 80% ($0.467 \pm 0.014$) of the NOTES accuracy deficit to information lost during initial construction, whereas retrieval failures drive 81% ($0.364 \pm 0.012$) of the RAG deficit. Finally, store-only repair of NOTES fails to reach a 90% performance recovery target in all 48 test cases, whereas retaining the raw source history enables successful recovery in 34 of 48 cases for one tested direction. These findings highlight the necessity of direction-specific migration testing, strict embedding space isolation, and the retention of source histories for memory repair. 
+
+---
+# Students' Perception of Big Data Engineering in Higher Education Curricula: Expectations, Interest and Ethical Implications 
+
+**Authors**: Ioana-Georgiana Ciuciu, Petrescu Manuela-Andreea  
+
+**Link**: [PDF](https://arxiv.org/pdf/2609.05160)  
+
+**Abstract**: The study investigates students' interest and expectations in a Big Data Engineering course integrated with a Master curricula, as well as ethical implications of using Big Data. An anonymous online survey was conducted with 42 of the 67 students enrolled in the Big Data course offered to Computer Science and Bioinformatics Master's programs. The responses were analyzed and interpreted using thematic analysis, highlighting interesting aspects related to students' expectations, interest, and their perspective of the ethical implications of working with Big Data. The study concludes that, even though there is significant difference in students' background, the majority are interested in learning Big Data, for practical and personal reasons related to the potential for career growth and their passion for the field. The main expectation expressed is related to enhancing their knowledge related to Big Data via practical activities. All students demonstrate awareness of potential ethical threats related to security and privacy, while Computer Science students are aware of the possibility of introducing bias in data during acquisition and analysis and of potential abusive data usage. 
+
+---
+# Beyond Maintenance Manual Multimodal RAG: Suggesting What Tool 
+
+**Authors**: Seongjun Ha, Md Rashedul Islam  
+
+**Link**: [PDF](https://arxiv.org/pdf/2609.05116)  
+
+**Abstract**: Aircraft technicians are required to consult the maintenance manual (MM) for nearly every task, and locating the relevant procedure across hundreds of pages remains time-consuming. Multimodal retrieval augmented generation (MRAG) has been proposed to address this, allowing technicians to retrieve procedures, together with the accompanying figures, through natural-language queries. However, retrieval alone does not tell the technicians which tools the task requires. The MM identifies special tools only when the corresponding step is reached, and it does not state hand tool requirements at all; to select hand tools, technicians are required to find the hardware dimension from the illustrated parts catalog (IPC) and infer the right tool from it. We therefore propose MRAG-SWAT, an extension of the MRAG pipeline that returns the required hand tools and special tools alongside the retrieved procedure. The framework was implemented for the Lycoming IO-360-N1A engine and demonstrated on eight test queries. By presenting the correct tools together with the procedure, MRAG-SWAT may help reduce repeated trips to the tool crib, prevent damage to aircraft caused by improper tool selection, and thereby avoid additional maintenance tasks and support continued airworthiness. 
+
+---
+# Leveraging Low-Level Symbolic Competences for Unsupervised Grounding in Hallucination Detection 
+
+**Authors**: Renato Vukovic, Hsien-chin Lin, Carel van Niekerk, Benjamin Ruppik, Michael Heck, Shutong Feng, Nurul Lubis, Milica Gasic  
+
+**Link**: [PDF](https://arxiv.org/pdf/2609.05025)  
+
+**Abstract**: Hallucination-where a language model generates outputs that are factually incorrect or unsupported by the source-is a major challenge for both prompted and fine-tuned language models. Detecting hallucinations is difficult due to the opaque reasoning processes of LLMs, which often provide little insight into why a model's output may be inaccurate.
+In this work, we investigate whether an LLM can use an alternative, low level, symbolic competence such as SQL for unsupervised hallucination detection in some high level task. For this, we make an LLM build an SQL database from reference documents. This SQL database is then used for reasoning over the reference and the sampled response in a hallucination detection pipeline that is grounded in the database, thereby providing a neurosymbolic checkup.
+On RAGTruth and DiaHalu hallucination detection datasets, we find that our approach improves on direct prediction and competes with state-of-the-art hallucination detection methods, while not requiring domain-specific fine-tuning. Instead it relies on a low-level general competence already present in LLMs. This warrants further investigation of low-level LLM competences in neurosymbolic approaches. 
+
+---
+# A Tree-based RAG Framework for Evidence-Intensive QA via Adaptive Planning and Topology-Aware Evidence Gathering 
+
+**Authors**: Songeun Lee, Kyungjin Min, Injae Na, Suyeong Lee, Chiyoung Kim, Woohwan Jung  
+
+**Link**: [PDF](https://arxiv.org/pdf/2609.04981)  
+
+**Abstract**: Recent structured RAG methods leverage tree- or graph-based reasoning structures to improve multi-hop QA. However, they face key limitations in evidence-intensive QA, where answering a question requires synthesizing information scattered across dozens or even hundreds of documents: structural rigidity, which limits adaptive reasoning expansion, and topology-ignorant evidence gathering, which prevents effective integration of evidence across different reasoning nodes. To address these issues, we propose APT-RAG, an Adaptive Planning and Topology-aware evidence gathering RAG framework. Adaptive planning dynamically expands the reasoning structure based on question dependencies and evidence requirements, while topology-aware evidence gathering improves evidence coverage through sibling evidence reuse, direct retrieval, and evidence aggregation from child nodes. We further introduce evidence-guided batched answer generation to reduce significant generation overhead in evidence-intensive QA. In the experiments on evidence-intensive QA benchmarks, APT-RAG outperforms existing structured RAG methods. Our code is available at this https URL. 
+
+---
+# CAGE: Coherence-Aware Graph Encoding for Retrieval-Augmented Generation 
+
+**Authors**: Tong Qi, Jingyu Wu, Youbing Yin, Spencer Hong, Daben Liu, Erin Babinsky  
+
+**Link**: [PDF](https://arxiv.org/pdf/2609.04647)  
+
+**Abstract**: Traditional Retrieval-Augmented Generation (RAG) systems score each passage independently against the query, assembling context sets that may be individually relevant yet collectively incoherent. We introduce Coherence-Aware Graph Encoding (CAGE), a reranking framework that models "between-chunk coherence" across four dimensions: Intra-Domain Relevance, Noise Resistance, Informational Bonding, and Factual Consistency. Our pipeline transforms retrieved passages into directed heterogeneous entity graphs, amplifies factual anchors via min-out-degree reweighting, encodes structural patterns through a Relational Graph Convolutional Network, and fuses inter-chunk coherence with query relevance for final ranking. Evaluated across four multi-hop benchmarks, CAGE matches or outperforms strong baselines including monoT5 in Recall@5 on bridge-dominated datasets and consistently improves downstream Exact Match, demonstrating that structurally coherent context yields more precise answers even when retrieval recall is comparable or lower. 
+
+---
+# BioSync: Transformer-Based Cross-Modal Fusion for a Multimodal Physiological Digital Biomarker 
+
+**Authors**: Seyed Mahmoud Sajjadi Mohammadabadi  
+
+**Link**: [PDF](https://arxiv.org/pdf/2609.04504)  
+
+**Abstract**: Cardiac, neural, behavioral, and speech measurements from wearable and mobile devices provide partial, noise-sensitive views of physiological state. BioSync combines these measurements into the \textbf{BioSync Index (BSI)}, a continuous composite digital biomarker defined under the BEST framework. The model applies multi-head self-attention to modality tokens and adds a linear branch whose hypothesis class includes standard feature concatenation. This architecture is motivated by latent-variable measurement theory and by the possibility that joint observations contain information unavailable from individual modalities. We evaluated BioSync on two literature-informed synthetic cohorts: a four-modality cognitive-decline cohort using HRV, EEG, actigraphy, and speech, and a metabolic-autonomic cohort structured around the public AI-READI wearable schema. In the cognitive cohort, BioSync and concatenation obtained AUCs of 0.928 and 0.926, respectively. In the metabolic cohort, BioSync obtained accuracy/F1 of 0.764/0.766, compared with 0.756/0.758 for concatenation. The BSI correlated with latent severity in both cohorts ($r=0.91$ and $r=0.68$). A pure-attention ablation obtained cognitive-cohort AUC 0.911, locating the increase to 0.928 in the combined wide-and-deep architecture. With matched modality-dropout training, BioSync led concatenation at five of six cognitive-cohort corruption rates and at the highest metabolic-cohort rate. Its cognitive-cohort AUC was also higher than five published digital-biomarker reference values, although differences in datasets and tasks preclude a controlled benchmark claim. Comparison with single-modality, early-fusion, and late-fusion designs across six prespecified criteria identifies the model's computational properties; validation on real cohorts remains necessary. 
+
+---
+# Evaluation of Phonetic Encoding Algorithms on Transcription Datasets 
+
+**Authors**: Can Özbey, Emre Kaplan, Berkin Deniz Kahya  
+
+**Link**: [PDF](https://arxiv.org/pdf/2609.04391)  
+
+**Abstract**: In this work, a novel evaluation scheme built on a generalized variant of the Rand Index measure, namely, the Hüllermeier-Rifqi Index, is proposed in order to assess how well phonetic encoding algorithms conform to word-based transcriptions in IPA (International Phonetic Alphabet) notation. For this objective, the discordance score is obtained by calculating the absolute difference between the pairwise similarity values of ground-truth transcriptions and those of corresponding phonetic encodings, which are computed using normalized edit distance as a permutation dependent string metric. The resulting score is subsequently adjusted with respect to that of a random string generator incorporating the same alphabet as the encoder under consideration. A wide range of phonetic encoders were evaluated as such on multi-lingual transcription datasets along with their recall capabilities based on the collision rate. The validity of the proposed scheme is further supported by its applicability in measuring the orthographic transparency of a language when the writing system is viewed as an inherent phonetic representation. 
+
+---
+# Corporate-Family Resolution Is Not a String-Matching Problem: A Public Benchmark Stratified by Name Visibility 
+
+**Authors**: Harshit Gupta  
+
+**Link**: [PDF](https://arxiv.org/pdf/2609.04269)  
+
+**Abstract**: Deciding whether two supplier records belong to the same corporate family is a prerequisite for spend consolidation, credit exposure aggregation and sanctions screening. It is usually treated as entity matching, but the tasks differ: a family link connects records that are deliberately different entities, and the evidence often appears in neither record. We introduce CorpFam, a public benchmark of 54,864 candidate pairs over 10,307 corporate families, derived from 6,638,350 US federal award records in which every supplier self-reports its ultimate parent to a government registry. Pairs are stratified by name visibility: whether the names are identical after normalisation, share a distinctive token, or share none. Because strata have positive rates from 10.2% to 97.3%, we report per-stratum recall, base-rate invariant, rather than F1, which is not. The strongest of 5 matchers recovers 100.0% of identical pairs and 4.2% of invisible ones; no method exceeds 4.7% on the latter. The failure begins before matching. Blocking decides which pairs a matcher sees, and we evaluate 7 schemes spanning phonetic keys, attribute keys that ignore the name, and semantic nearest neighbours. None reaches three percent on invisible pairs, and their union recovers 6.8%. 93.2% of these links never enter the candidate set, so no matching-stage improvement can reach them. The links are real: against SEC Exhibit 21 subsidiary schedules, which share no provenance with procurement registration, 64.2% of invisible links are corroborated, against 0.16% under permuted parents and 0.41% against the same parent's wrong exhibit: two unrelated nulls agreeing to within 0.25 points. Corporate-family resolution is a retrieval problem misfiled as a matching problem; the intervention point is candidate generation, not ranking. The benchmark, adjudication log, and code reproducing every number are released. 
+
+---
