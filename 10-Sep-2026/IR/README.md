@@ -1,0 +1,101 @@
+# LiteRAG: Cost-Efficient Graph-Based Retrieval-Augmented Generation 
+
+**Authors**: Daniel Alejandro Coll Tejeda, Pedro García López, Daniel Barcelona-Pons  
+
+**Link**: [PDF](https://arxiv.org/pdf/2609.10239)  
+
+**Abstract**: Graph-based retrieval can improve multi-hop question answering, but existing approaches often incur high query-time costs and produce diffuse, oversized contexts that reduce generation efficiency. We present LiteRAG, a graph-based retrieval method that replaces expensive retrieval-time LLM control with query-conditioned algorithmic exploration and reasoning-chain context construction. On DistComp, a benchmark for multi-hop retrieval over distributed-systems papers, LiteRAG attains the highest overall quality among the evaluated methods (0.798) while reducing per-query latency by over 100$\times$ and cost by over 99% relative to GraphRAG Global and DRIFT. On UltraDomain, it matches LinearRAG on overall quality while using about 14$\times$ fewer tokens. An ablation study indicates that LiteRAG's query-adaptive thresholding and community-aware hub penalization are the main drivers of its token-efficiency gains. 
+
+---
+# Guaranteeing Faithful Evidence Extraction in Speculative Retrieval-Augmented Generation 
+
+**Authors**: Quentin Signé, Mohand Boughanem, Jose Moreno, Thiziri Belkacem  
+
+**Link**: [PDF](https://arxiv.org/pdf/2609.10046)  
+
+**Abstract**: Large Language Models (LLMs) are increasingly used as interfaces for information retrieval, but they remain prone to hallucinations and faithfulness errors, in which the generated answers diverge from the retrieved evidence. While Retrieval-Augmented Generation (RAG) and recent hybrid or semi-extractive approaches mitigate this issue, they do not guarantee that quoted or extracted spans are verbatim from the retrieved context. This limitation can have severe consequences in safety-critical domains, where answers must exactly match certified documentation.
+We introduce Constrained Hybrid Decoding (CHyD), a novel faithfulness-first paradigm for speculative RAG. While traditional speculative decoding is optimized for inference speed, CHyD repurposes this architecture to ensure faithful verbatim evidence extraction when the extraction mode is correctly triggered. Our approach enforces hard decoding constraints that restrict generation to continuous spans present in the retrieved documents. This design provides a robust but straightforward guarantee: any explicitly quoted span in the output appears verbatim in the provided context.
+We evaluate our method across state-of-the-art LLMs on diverse abstractive, extractive, and semi-extractive QA benchmarks, including technical datasets motivated by aircraft maintenance. Results show that existing hybrid methods frequently hallucinate quoted spans, with exact extraction accuracy dropping below 40% in technical domains. In contrast, our approach achieves near-perfect extraction faithfulness regardless of the model used. Although enforcing hard constraints introduces a trade-off with fluency-oriented metrics, our method improves exact answer correctness and remains competitive overall, highlighting its suitability for safety-critical information retrieval applications. 
+
+---
+# Purchase Advice and Observable Buyer Responses in Real AI Conversations 
+
+**Authors**: Benjamin Tannenbaum  
+
+**Link**: [PDF](https://arxiv.org/pdf/2609.09878)  
+
+**Abstract**: How often does a generative assistant persuade someone to buy, or persuade them not to buy? Conversation logs contain recommendations, but they do not necessarily record subsequent decisions. We audit 317 historical interactions from Aiso's proprietary research database of licensed, consent-based, de-identified conversations with commercially available AI assistants. Single-agent AI-assisted screening identifies 68 purchase-directed records; collapsing one shared-prefix copy yields 67 retained episodes, dated April 2023 to July 2025. Assistant responses provide candidate options, acquisition channels, or conditional preferences in 52 episodes (77.6%). One episode contains conditional redirection away from a named accommodation candidate. No episode is coded as advice to abandon or defer the purchase category. Only 18 episodes (26.9%) contain a subsequent user turn within the same purchase-related mission, compared with 23 (34.3%) that contain any later user turn. Using conversation depth alone therefore overstates this follow-up availability by 27.8%. Across 47 retained user follow-up messages, no explicit post-advice purchase commitment, completed-purchase report, or purchase-category abandonment statement is observed. These zeros describe recorded statements, not conversion or persuasion rates. The paper supplies operational definitions, text-free annotations, and reproducible descriptive results. Its central finding is a measurement limitation: recommendation content is observable much more often than a buyer's subsequent decision. The selected historical sample, unvalidated AI annotations, and missing transaction outcomes do not support a population-level or causal estimate of persuasion. 
+
+---
+# Should I Be Polite to My LLM Relevance Judge? Tone as a Severity Operating-Point Shift 
+
+**Authors**: Tian Zhang, Meng Li  
+
+**Link**: [PDF](https://arxiv.org/pdf/2609.09703)  
+
+**Abstract**: Large language models are increasingly used as relevance judges, yet their labels can shift with prompt surface form. We study one such feature -- tone -- on 3,498 TREC DL19/DL20 query-passage pairs, across eight judge models, five classifier-calibrated politeness levels, and three paraphrases per level. Effects are strongly model-dependent: one judge shows a structured U-shaped response, whereas most show only small changes. Where tone changes agreement, the results are more consistent with a shift in the judge's severity operating point -- its overall scoring leniency -- than with improved judgment. Agreement rises or falls as this shift moves the judge toward or away from human annotators' strictness. A query-disjoint cross-fit retains the expected association (Spearman $\rho = -0.683$; exact model-block permutation $p = 0.019$). Tone affects calibration-based agreement more than ranking outcomes: across 32 model-tone contrasts, the largest absolute mean change in NDCG@10 is 0.011, although Kendall's $\tau$ as low as 0.743 shows that reordering is reduced, not absent. The account reconciles prior contradictory findings and identifies prompt tone as a potential validity threat when absolute relevance labels matter. 
+
+---
+# Extracting Semantics from Cattle Reporting Categories for Data Interoperability and Findability 
+
+**Authors**: Kassy Raymond, Andrew Hamilton-Wright, Deborah Stacey  
+
+**Link**: [PDF](https://arxiv.org/pdf/2609.09381)  
+
+**Abstract**: Livestock population data disaggregated by age, sex, and production are important inputs to calculations and models that inform our understanding of global health, yet these data are fragmented across disparate sources. Bridging data siloes to improve the findability of data requires interoperability. Conventional approaches to improving the findability and interoperability of data include indexing standardized metadata. However, creating metadata is time and resource-intensive and is often difficult in domains such as livestock, which lack standards that address the needs of broad user groups. When metadata exist, they typically need to be standardized against a pre-existing vocabulary, ontology, or thesaurus, requiring a technique known as `crosswalking'. To overcome issues in the absence of metadata, the lack of standards, and the resource-intensive solutions that currently exist, this study uses a bottom-up approach. By leveraging real-world reporting categories in datasets, the composition and semantics of terms already present in the data were extracted and analyzed. Using cattle data as a pilot, we find the age, sex, and production modifiers present across cattle terms from five datasets from four data sources capture granularity not present in AGROVOC, the largest agricultural vocabulary in the world. We discuss how the composition and semantics of these terms can be used to improve the interoperability and findability of data without first requiring metadata to be generated or standards to be created. Rather than forcing datasets to conform to an existing vocabulary, this approach uses the semantics embedded in terms already present in datasets, allowing systems to make data more discoverable and interoperable while maintaining culturally and dataset-specific terminology. 
+
+---
+# Glyph: A Multi-Strategy Agentic System for Column Description and Sensitivity-Ontology Tagging of Enterprise Data Catalogs 
+
+**Authors**: Kostia Kudriavtsev, Parvez Rafi, Sha Sundaram  
+
+**Link**: [PDF](https://arxiv.org/pdf/2609.10430)  
+
+**Abstract**: Enterprise data lakes accumulate tables faster than human stewards can document or classify them, leaving columns with missing descriptions and unassigned governance labels. This documentation debt undermines data discovery, access control, and regulatory compliance. We present Glyph, a production system that frames two coupled problems, column description generation and column type annotation for data classification, as cooperating LLM agents orchestrated as stateful graphs. The Descriptor grounds generation in the pipeline source code that produces each column, retrieved on demand from an enterprise GitHub via a reasoning--acting tool loop (active Retrieval-Augmented Generation). The Tagger assigns labels from a governed 275-leaf Data Classification Ontology by running three complementary strategies in parallel (a description tagger, a line-of-business regex tagger, and a metadata tagger backed by a fine-tuned contrastive encoder over a vector database), then fuses their ranked outputs with Reciprocal Rank Fusion (RRF). We fine-tune a 6-layer MiniLM metadata encoder with an in-batch contrastive objective, lifting same-tag retrieval on an in-distribution held-out split from NDCG@10 0.55 to 0.92 (MAP@100 $0.19 \rightarrow 0.90$) relative to the stock base encoder. We report end-to-end multi-label tagging quality under a recall-weighted F2 objective across three evaluation groups, an ablation isolating each strategy and the RRF fusion, and the engineering decisions that distinguish Glyph from prior column-type-annotation work and from commercial value/regex sensitivity scanners: value-free and code-grounded design, per-tag provenance, and graceful degradation. Together these make multi-agent LLM cataloging auditable and operable as a production service. 
+
+---
+# GANDR: Claim Auditing for Verifiable Legal Answer Generation 
+
+**Authors**: Chen Qian, Yimeng Wang, Yu Chen, Lingfei Wu, Andreas Stathopoulos  
+
+**Link**: [PDF](https://arxiv.org/pdf/2609.10293)  
+
+**Abstract**: In high-stakes domains such as legal practice, a language-model answer is only useful to the extent that a reader can verify each claim against the source the system cites. Current grounded-generation pipelines score the answer as a whole, so a correct conclusion can rest on fabricated or loosely matched citations and still score well. Closing this gap requires both a system built for per-claim verification and an evaluation that measures it. We introduce GANDR (Grounded ANswer DRafter), a two-agent system in which a Drafter writes an answer in a structured legal-reasoning format and a separate Critic, with the same view as a human verifier, audits each claim against its cited source and emits a per-claim audit trace on every round. We pair it with a strict correctness criterion requiring every citation to resolve to a passage the retriever returned. On a 185-item legal benchmark where all six systems share one backbone, one retrieval surface, and one citation instruction, GANDR ranks first on every primary metric, reaching 70.8% strict accuracy and leading the strongest baseline by 11.3 points (p<0.01). Reverting the protocol-anchored commit rule lowers strict accuracy by 22.7 points, and the strict lead stays positive on three further backbones, at +3.2 to +6.5 points. This lead traces to the Drafter configuration and the protocol-anchored commit, not to rewriting. Against two law-trained annotators the audit flags under-supported claims at F1 0.84 as a binary detector, while its four-way verdict labels agree only weakly and are advisory. Code is available upon request. 
+
+---
+# The Answer Path and the Grounding Instruction in LLM Question Answering over Knowledge Graphs 
+
+**Authors**: Arquimedes Canedo  
+
+**Link**: [PDF](https://arxiv.org/pdf/2609.10237)  
+
+**Abstract**: A graph retrieval-augmented generation pipeline chooses which triples to put in the prompt, a syntax to write them in, an order to write them in, and a sentence telling the model what to do with them. We vary all four over six large language models and two knowledge-graph question answering benchmarks. Two of the four choices move the answer and the other two are flat. The first is whether the answer path, the triples needed to reach the answer, is in the prompt at all. Holding the number of triples fixed and replacing every triple that is not on the chain with material from an unrelated entity changes answer accuracy by +0.003 F1, while removing the chain costs most of what the graph was worth. Retrieval budget belongs on recall, and precision in the range we can test buys nothing. There is no retriever here: subgraphs come from gold SPARQL, so precision describes the context we build, not a system setting. The second is the grounding instruction. With no facts in the prompt, telling a model to answer using only the provided facts drops F1 from 0.299 to 0.035, a factor of 8.63. That figure describes an evaluation with an empty context arm rather than a working pipeline, and an experiment that applies the instruction to its context arm but not to its no-context baseline manufactures a spurious finding that graph context hurts at depth. We found one in our own results and retract it. Syntax, triple order and subgraph size produce no effect we can measure at multi-hop depth. The comparison that would price the grounding instruction against correct context is not measurable with a format-sensitive scorer, because the instruction determines the response format; we report it as an open contrast rather than a number. 
+
+---
+# From Retrieval to Weights: Parametric Individualization of Small Language Models with Individual Text Corpora 
+
+**Authors**: Christoph Wigbels, Ali Abusaleh, Markus T. Jansen, Alexander Mehler, Markus J. Hofmann  
+
+**Link**: [PDF](https://arxiv.org/pdf/2609.10155)  
+
+**Abstract**: We approach a cognitive simulation perspective on episodic and semantic memory in multiple-choice question answering by incorporating text from individual text corpora (ITC) into retrieval-augmented generation and DoRA fine-tuning. We web-crawl the search histories of 515 participants who answered 36 multiple-choice knowledge items and analyze a stratified subsample of 150 participants. For each participant, one DoRA adapter consolidates their ITC into a small language model (SLM) whose baseline correctness falls below the participants' lowest quartile. The adapter measurably writes the ITC into the weights: it fits its own participant's held-out text better than other participants' texts (dz =1.27), an individuality effect that increases with ITC size in rank order. On the generalized knowledge test, however, the adapter adds knowledge rather than alignment with the individual: log-loss match improves, whereas match accuracy under a bias-corrected PMI readout does not, and retrieval adds nothing on top. Our results demonstrate that ITCs can be consolidated into the weights of SLMs, an encouraging basis for individualized tutoring agents, and we discuss how to move from there toward a realistic simulation of episodic and semantic memory at the individual level. 
+
+---
+# When Does Low-Bit Quantization Preserve the Decisions of Vector Search? 
+
+**Authors**: Wenxuan Xiao, Xu Cao  
+
+**Link**: [PDF](https://arxiv.org/pdf/2609.09854)  
+
+**Abstract**: Low-bit quantization can achieve high recall on some vector representations and fail sharply on others, while average distortion and global rank correlation do not explain the difference. We study quantized vector search at the level of the comparisons consumed by ranking and graph-pruning algorithms. Our first result is a distribution-free decomposition: the probability that a comparison flips is bounded by the probability mass of exact margins near zero plus the tail probability of the calibrated residual. We then account for dependence between residuals that share a query or graph node, and derive covariance-aware second-moment identities and tail bounds under a joint MGF proxy. For a frozen candidate permutation, we prove a deterministic coupling theorem for Vamana neighbour selection: the approximate replay returns the exact neighbour list exactly when all candidate-level pruning actions agree on the frozen exact states. We connect these results to representation geometry through an exact Gaussian oracle, establish a strict correlation gain from a deterministic magnitude bit in an aligned bilinear model, and give a rare-contamination construction showing why marginal Gaussian diagnostics do not imply the required residual tails. When analytical assumptions are unavailable, a held-out block certificate bounds the selective failure risk of a frozen quantized rule. Across learned, classical, and synthetic embeddings, standardized exact margins predict held-out ranking and pruning flip rates substantially better than global rank correlation. The framework applies to coordinate binary codes, RaBitQ, Lucene BBQ, and product quantizers through a common decision interface. 
+
+---
+# High-probability guarantees for linear accessibility in feature superposition 
+
+**Authors**: Enrico Vompa  
+
+**Link**: [PDF](https://arxiv.org/pdf/2609.09556)  
+
+**Abstract**: Neural networks can leverage feature superposition to encode more concepts than dimensions, but cross-feature interference constrains the linear accessibility of simultaneously active features. By framing linear accessibility as a compressed sensing problem, we derive high-probability bounds for fixed supports under subgaussian noise, proving the sufficient dimension scales linearly ($d=O_{\varepsilon}(k \log m)$) rather than prior worst-case quadratic limits. We then validate these bounds across system parameters through Gaussian-tail approximations. These results quantify the geometric constraints of the linear representation hypothesis, providing a framework for evaluating sparse autoencoders, compositional generalization, and neural interpretability. 
+
+---
