@@ -1,0 +1,136 @@
+# Generative Late-Interaction Embeddings For Visual Document Retrieval 
+
+**Authors**: Mohamed Eltahir, Talal Aloushan, Rose Khairoalsendi, Jana Shata, Mohammed Alhassan, Leen Alrehaili, Tanveer Hussain, Naeemullah Khan  
+
+**Link**: [PDF](https://arxiv.org/pdf/2609.11808)  
+
+**Abstract**: Late-interaction retrieval is the state-of-the-art for visual document search, but it pays for its accuracy in storage. Existing compression methods retain a subset or local average of the N~1,000 vectors per page. Under aggressive storage budgets, however, these methods degrade sharply, and alternatives require retraining the encoder. Investigating this degradation across three encoders, we found two consistent properties: the vectors lie exactly on the unit sphere and concentrate near a manifold of intrinsic dimension five to six. This geometry yields two insights. First, standard k-means centroids fall inside the sphere, causing systematic underestimation of MaxSim scores. Normalizing them to the surface is a free correction worth up to +0.093 nDCG@5 over raw centroids. Second, because the page manifold has few degrees of freedom, the full set of vectors can be regenerated from only a few. To this end, we introduce Generative Late-Interaction Embeddings (GLIE): k << N vectors per page learned from the normalized centroids to serve as both a lightweight index and a basis for regenerating the page's full embedding set. At query time, search runs exclusively on these k vectors, and a decoder expands only the top candidates back to all N vectors for exact rescoring. At four vectors per page on ViDoRe v1, GLIE retains nearly 80% of the uncompressed system's nDCG@5, against 70% for the best prior post-hoc method. These results use a 415K-parameter network fitted in under three GPU-minutes on just a thousand training pages. At a matched training budget, fine-tuning the encoder does not reach even the training-free stage of GLIE, and the full system beats it at every budget. These patterns hold across a second encoder and ViDoRe v2. By reconstructing evidence on demand rather than sampling it, GLIE opens a new axis for storage-efficient retrieval, with the decoder as its main design surface. 
+
+---
+# Your Retriever Already Knows: Distribution-Shape QPP for RAG Retrieval Sufficiency 
+
+**Authors**: Matyáš Veselý, Michal Průšek, Jiří Franc  
+
+**Link**: [PDF](https://arxiv.org/pdf/2609.11646)  
+
+**Abstract**: Standard Retrieval-Augmented Generation (RAG) pipelines often provide no reliable inference-time signal of whether retrieval succeeded; on ambiguous or out-of-scope queries, generation may then hallucinate. Motivated by a Czech nuclear-regulator deployment where data sensitivity precludes third-party LLM APIs, we compare three Query Performance Prediction (QPP) paradigms for retrieval sufficiency in RAG: score-based features, a content-based LLM judge, and a hybrid. On the eight ViDoRe vision domains (14,514 queries), our 24 non-lexical features (GeneralQPP; 15 distribution-shape, 5 query-surface, 4 global) reach a weighted-average AUROC of 0.856 at 2 ms per query, ahead of a classic-QPP literature pool (Classic Full, 0.835) and well above a local Qwen3.5 LLM judge (0.649, +0.207 gap; $\sim$3000$\times$ faster and cheaper per query). Adding the LLM judgment as one feature (hybrid) matches S1 on ViDoRe (0.863) but gains a statistically significant edge on SÚJB (AUROC 0.911 at Hit@5, adversarial-detection 0.954; 1,510 queries, 500 synthetic adversarial), at LLM latency. Rankings agree across datasets (Spearman $\rho = 0.90$). Under Leave-One-Domain-Out, S1 drops to 0.706; a 13-feature LODO-stepwise subset (S1-Lean) recovers to 0.719 (+0.032 over the literature pool). 
+
+---
+# FedHUR: Learning Hierarchical Utility-Guided Client Relations for Personalized Federated Recommendation 
+
+**Authors**: Mingzhe Han, Jiahao Liu, Dongsheng Li, Jiankui Zhou, Hansu Gu, Peng Zhang, Ning Gu, Tun Lu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2609.11632)  
+
+**Abstract**: Federated recommendation enables collaborative model training while keeping user interaction data on local clients. A central problem in federated recommendation is how to aggregate useful information across clients for personalized recommendation. Existing personalized aggregation methods usually construct client relations from predefined parameter-based assumptions, such as parameter similarity or complementarity, and use these relations to determine aggregation weights. However, such methods construct a single global relation, which is insufficient to capture the hierarchical and multi-granularity nature of user relations in recommendation. Moreover, these predefined relations cannot directly reflect whether the related clients can improve prediction performance after aggregation. To address these limitations, we propose FedHUR, a federated recommendation framework for learning hierarchical utility-guided client relations. FedHUR takes item-item filters as the object for relation construction and aggregation. Specifically, it first aggregates and clusters each client's local information to obtain global hierarchical information. Each client computes hierarchical utility signals based on its local information and the global hierarchical information, indicating which collaborative information is useful for improving its prediction. The server uses these utility signals to retrieve clients that are useful to that client for further personalized aggregation. Extensive experiments on five real-world datasets show that FedHUR consistently outperforms existing federated recommendation baselines, demonstrating the effectiveness of hierarchical utility-guided client relation learning. Code is available at this https URL. 
+
+---
+# TimelyRAG: Semantic-Temporal Hybrid Retrieval for Time-Critical Question Answering in Overlapping-Evolving Documents 
+
+**Authors**: Youngeun Nam, Joeun Kim, Hwanjun Song, Susik Yoon, Jae-Gil Lee, Byung Suk Lee  
+
+**Link**: [PDF](https://arxiv.org/pdf/2609.11572)  
+
+**Abstract**: Although large language models (LLMs) and retrieval-augmented generation (RAG) have advanced open-domain question answering (QA), they remain unreliable when documents evolve through amendments. Existing time-sensitive retrieval methods address only the disjoint-evolving environment, where each update is an independent snapshot. However, laws, policies, and regulations often operate in overlapping-evolving environments, where amendments override earlier clauses while preserving most content, creating strong semantic overlap across versions. We propose TimelyRAG, a retriever-agnostic framework that incorporates temporal distance into ranking to align queries with version-appropriate documents. We also introduce TimelyQABench, the first benchmark for regulation-heavy domains with overlapping-evolving challenges. Experiments show consistent gains, up to +28.6% in nDCG@10, highlighting the importance of temporal reasoning for reliable QA over evolving documents. All resources are available at this https URL. 
+
+---
+# VikingRAG: Accurate and Token-efficient Retrieval-augmented Generation over Structured Documents 
+
+**Authors**: Peiyuan Gao, Gaoyuan Zhang, Haojie Qin, Yahui Sun, Qianyi Zhang, Yunhao Zhang, Zeyu Wang, Wei Lu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2609.11390)  
+
+**Abstract**: State-of-the-art retrieval-augmented generation (RAG) methods exploit document structures to acquire sufficient evidence, but often incur substantial token costs. To reduce structural-context tokens without compromising high RAG accuracy, we present {\sf VikingRAG}, a directory-aware semantic data management system that tightly integrates semantic and structural access to support structural-context-efficient, evidence-gap-driven multi-round retrieval. To further reduce token overhead of multi-round interaction, we materialize agentic multi-round retrieval traces as experience edges, and reuse these edges for similar queries, avoiding repeated multi-round exploration. To additionally reduce token costs when agentic multi-round retrieval is unnecessary, we introduce an adaptive escalation strategy that answers from one-round experience-augmented retrieval when the evidence is sufficient, and invokes agentic multi-round retrieval only otherwise. Experiments on real datasets show that the base system {\sf VikingRAG} matches high accuracy of state-of-the-art methods while consuming only 11.6\%--51.9\% of their tokens. With retrieval-trace reuse and adaptive escalation, token costs drop to 5.1\%--32.5\% while maintaining competitive accuracy and practical document-storage performance, showing the utility of this work for emerging AI knowledge bases. 
+
+---
+# UniRec: Cross-stage Multi-Task Fusion with Preference Alignment for Cascaded Recommender Systems 
+
+**Authors**: Lingyuan Kong, Jiaqi Cui, Fanjiao Zeng, Congqi Wang, Yu Li, Yuan Cheng, Jingxin Liu, Xiaoshuang Chen, Kaiqiao Zhan  
+
+**Link**: [PDF](https://arxiv.org/pdf/2609.11052)  
+
+**Abstract**: Industrial recommender systems use cascaded stages with different objectives, feature spaces, and latency constraints. Optimizing pre-ranking and ranking separately can create cross-stage inconsistency: upstream models may filter out items preferred by downstream rankers, and independently tuned downstream fusion can offset upstream improvements. Existing multi-task fusion methods focus on multi-objective fusion within the ranking stage, and cross-stage methods typically only add a downstream score factor to upstream ranking. Joint optimization of fusion modules across both stages remains largely unexplored.
+We propose UniRec, a Unified Cross-stage Recommendation Fusion model. First, the two fusion agents partially share input embeddings and are trained in a single computation graph, so gradients from either stage propagate through the shared representation and influence the other. Second, we introduce a dual-axis preference alignment objective: a vertical cross-stage consistency term transfers downstream pairwise preferences to the upstream fusion score, and a horizontal compact aggregation term reorganizes dozens of pairwise objectives over heterogeneous prior signals into bidirectional preference evidence. Third, we find that unconstrained end-to-end fusion optimization can exploit imbalances in item attribute distributions, over-concentrating on high-reward regions at the cost of other objectives. We therefore add an attribute group-relative regularization that computes advantages within attribute groups and normalizes the policy over the same groups, so uniformly promoting an entire high-reward group yields no optimization gain. Offline, UniRec consistently outperforms single-stage fusion and cross-stage coordination baselines. Online A/B tests show a 0.616\% gain in app usage duration. UniRec is fully deployed on the Kuaishou platform. 
+
+---
+# When Synthetic Data Hurts: On Catastrophic Forgetting in Skill Retrieval for LLM Agents 
+
+**Authors**: Syed Shariyar Murtaza, Yifan Nie, Utkarsh Soni, Eugene Wen, Arvid Frydenlund  
+
+**Link**: [PDF](https://arxiv.org/pdf/2609.10750)  
+
+**Abstract**: LLM agents increasingly rely on external skills retrieved at runtime, making skill selection from large repositories a critical challenge. We present a production skill router over 34,396 skills and a large-scale study of skill retrieval using limited real supervision and synthetic data. We found that the synthetic-data fine-tuning improves in-distribution retrieval but it causes catastrophic forgetting on real and out-of-distribution (OOD) data. We evaluate several forgetting mitigation fine-tuning approaches inspired by continual learning, including embedding-anchor regularization, Learning without Forgetting (LwF), Elastic Weight Consolidation (EWC), and L2-initialization. The results show that these approaches not only retain the performance on OOD skills retrieval but also improve the retrieval on synthetic in-distribution skills by 13.98\% for 0.6B Qwen retriever and reranker. Our results provide a practical benchmark and a robust fine-tuning recipe for scarce, multi-positive supervision. 
+
+---
+# RAG-Safety-Bench: Reliable Evaluation of Retrieval-Augmented LLM Safety 
+
+**Authors**: Adithiyan Rajan Indira Saravanan, Kathleen C. Fraser  
+
+**Link**: [PDF](https://arxiv.org/pdf/2609.11758)  
+
+**Abstract**: Allowing large language models (LLMs) to retrieve information from a set of trusted documents can increase reliability and reduce hallucination. However, recent work has demonstrated that retrieval-augmented generation (RAG) can have unintended side effects on the overall safety of the generated responses, when prompted for harmful or dangerous content. A clearer understanding of the mechanisms leading to this result is needed, as increasing numbers of end users turn to RAG to incorporate corporate documents and knowledge bases into LLM-based systems. We introduce RAG-Safety-Bench, a benchmark to measure the safety impact of RAG on LLM models. By removing the confounding effect of retriever quality, and cleanly separating the problem into four conditions -- non-RAG, RAG with an oracle document containing the answer to the harmful request, RAG with documents related to the harmful request but without the specific answer, and RAG with random, safe documents -- the benchmark isolates the impacts of different factors in the observed safety degradation. We report results across five open-source LLMs, showing an inverse relationship between benign and unsafe capability, strong evidence that baseline safety guardrails do not lead to downstream safety guarantees in the RAG case, and model-specific support for previous findings that even benign documents can lead to unsafe generation in retrieval-enabled systems. 
+
+---
+# ReGround: Grounding Reviewer Comments in Multimodal Evidence 
+
+**Authors**: Serwar Basch, Lizhen Qu, Iryna Gurevych  
+
+**Link**: [PDF](https://arxiv.org/pdf/2609.11460)  
+
+**Abstract**: Reviewer comments naturally relate to specific parts of the reviewed paper, yet grounding these comments to the underlying evidence is difficult due to long multimodal documents. Existing benchmarks do not capture this setting and largely focus on explicit, information-seeking queries. We introduce ReGround, a large-scale dataset for reviewer comment grounding that links 10,267 reviewer comments to 16,274 evidence in the original anonymous submission of 3,656 papers. We build on a simple observation: author rebuttals often include explicit references to content of the submission used to address reviewer comments, providing a high-precision annotation source. We cast grounding as a retrieval task and evaluate a wide range of retrieval methods. Results show that retrieval over the entire paper content performs poorly, evidence-type inference is a major bottleneck, and multimodal evidence provides complementary signals that text alone misses. Our dataset exposes grounding reviewer comments as a difficult and practically important problem for scientific document understanding. 
+
+---
+# SWRouter: Similarity-Contractive Window Routing for Multi-Turn Large Language Model Conversations 
+
+**Authors**: Yu Wang, Yuchen Li, Rui Kong, Xinran Chen, Jiamin Chen, Hengyi Cai, Shuaiqiang Wang, Jiashu Zhao, Yulun Zhang, Zhonghao Lyu, Haoyi Xiong, Linghe Kong, Jimmy Xiangji Huang, Dawei Yin  
+
+**Link**: [PDF](https://arxiv.org/pdf/2609.11414)  
+
+**Abstract**: Large language models exhibit complementary strengths, motivating routing methods that dispatch each query to the most suitable model. Although existing routers are effective in single-turn settings, they do not directly transfer to multi-turn dialogue, where routing performance critically depends on how historical context is segmented, retained, and incorporated into the current prompt. This introduces two fundamental challenges: preventing information loss and information confusion during context construction, and evaluating routing quality without conflating model selection with prompt construction quality. In this paper, we propose SWRouter, a Similarity-Contractive Window Router for multi-turn large language model routing. SWRouter combines a similarity-based context segmentation mechanism for prompt construction with a dual-metric evaluation framework that decouples construction accuracy from router performance. Experiments on multi-turn dialogue benchmarks demonstrate that SWRouter consistently surpasses strong baselines, achieving a 16.26% improvement in evaluation accuracy over the best individual large language model and an additional 8.22% gain over the Conv-ID Context baseline. Our results highlight that multi-turn large language model routing requires a joint design of context construction and evaluation, rather than a direct extension of single-turn routing methods. 
+
+---
+# REVA: Reusable Evidence View Aggregation for Context-Efficient RAG Serving 
+
+**Authors**: Tuan Nguyen, Qiran Hu, Banruo Liu, Khoa D. Doan, Kok-Seng Wong, Fan Lai  
+
+**Link**: [PDF](https://arxiv.org/pdf/2609.11209)  
+
+**Abstract**: Retrieval-augmented generation (RAG) improves knowledge-intensive large language model (LLM) applications by conditioning generation on retrieved documents, but longer contexts increase latency, key-value (KV) cache memory, and token cost. Post-retrieval compression can reduce this cost, yet existing compressors often operate independently for each query, rely on auxiliary models or rewriting, and introduce online overhead that can offset the benefit of shorter prompts. We revisit RAG compression from a data-mining perspective by aggregating historical query--document--model interactions into reusable evidence views. We first show that modern compressors have unstable gains over simple truncation and can add substantial inference-time latency. We then propose Reusable Evidence View Aggregation (REVA), a framework that mines the target generator's historical attention traces into a document-keyed, budget-agnostic score store. REVA maps token-level attention to readable word units, aggregates importance across repeated document accesses, and renders budget-specific plain-text views that preserve document order and the standard RAG interface. Across four representative benchmarks and modern LLMs, REVA improves generation quality by 1.0--5.8 points over existing advances, while reducing compression overhead by a factor of 5.3 to 15.6, adding less than 40 ms of latency. 
+
+---
+# Agentic Share-of-Search: A Multi-Agent AI System for Competitive Decision-Making in LLM-Mediated E-Commerce 
+
+**Authors**: Spandan Ghose Chowdhury  
+
+**Link**: [PDF](https://arxiv.org/pdf/2609.11190)  
+
+**Abstract**: AI shopping assistants increasingly redirect consumer discovery, creating an urgent need for tools that support seller-side competitive decision-making. We present a multi-agent AI system that automates competitive visibility measurement and root cause diagnosis in LLM-mediated ecommerce. The system introduces Agentic Share-of-Search (ASoS) as the decision target, deploys query agents across leading AI platforms, and uses a ReAct-based diagnostic agent to recommend prioritized merchandising interventions. A 100-trial ablation study, presented as a feasibility evaluation of this prototype, shows the agent recovers the ablated signal in 39% of trials (95% CI: 30.0% - 48.8%, 5.5x over chance), rising to 63.9% among high-correlation ablations. 
+
+---
+# Benchmark Radar: A Living Database and Search Engine for AI Benchmarks and Evaluation 
+
+**Authors**: Koutian Wu, Junjie Zhou, Ergan Shang, Jiayu Wang, Pengqian Han, Junkai Wang, Wanghan Xu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2609.11115)  
+
+**Abstract**: Benchmark researchers and developers of large language models (LLMs) and other AI systems need to find relevant evaluations, locate their benchmark datasets and code, and understand the settings behind reported scores. We present Benchmark Radar, a living database and search engine for retrieval and discovery of AI benchmarks, covering LLM evaluation, agentic and tool-use benchmarks, coding, reasoning, safety, and domain-specific evaluations. The system combines daily discovery of benchmark papers, repositories, datasets, and releases with a searchable benchmark catalog, mentions in model cards and technical reports, and score histories. It retains source identities and citations so readers can inspect candidate benchmarks and their evaluation evidence. Daily discovery draws on 37 sources: 13 direct connectors and 24 first-party research and engineering feeds. The catalog contains 1,283 source records drawn from 4 benchmark catalogs and 12,916 numeric observations on 790 records. We describe collection and retrieval, audit the full catalog, and examine benchmark saturation, adoption trends, and the limits of score comparisons. A worked example walks through a complete prior-art search, showing how to query the catalog and inspect benchmark evidence when designing a new evaluation. We release the web dashboard with a benchmark leaderboard, a Pareto frontier view of score against measured use, saturation and trend views, daily feeds, downloadable evidence, a command-line interface (CLI) for offline queries, and reproducible analysis. 
+
+---
+# Project Qualia: Recovering Experiential Music Structure from Session Co-occurrence Data 
+
+**Authors**: Nizam Mohammed, Abu B. S. Rahman, Dimuthu D. K. Arachchige  
+
+**Link**: [PDF](https://arxiv.org/pdf/2609.10862)  
+
+**Abstract**: This report presents results from Project Qualia, an ongoing effort to determine whether experiential similarity between songs, a structure not captured by genre or metadata taxonomies, can be recovered from real listening behavior. We constructed a large-scale dataset of listening sessions, comprising 1.29 billion scrobbles collected from 9,396 users via the this http URL API and reduced through a preprocessing pipeline to 531.6 million training scrobbles across 28.6 million sessions. On this corpus, we trained a skip-gram Word2Vec model (Song2Vec), treating each session as a sentence and each track as a token. As anticipated, the resulting embedding space was dominated by artist identity, a consequence of single-artist runs within sessions. To test for a subtler, artist-independent signal, we developed an artist-residual procedure: subtracting each artist's centroid from its tracks' embeddings and evaluating whether the remainder retained structure. Mean cross-artist cosine similarity fell from 0.2487 in raw embedding space to 0.0005 in residual space, yet 4,577 cross-artist track pairs retained cosine similarity $\ge 0.70$ in residual space, forming coherent genre- and era-based clusters, including trip-hop, 1990s grunge, 2020 mainstream pop, and cross-composer classical piano pairs at cosine similarity up to 0.95. These results confirm that the training data contains experiential structure independent of artist identity, establishing an empirical basis for an architecture designed to learn this experiential layer directly. 
+
+---
+# Following the Preference, Missing the Optimum: Compliance Without Optimization in AI Housing Recommendation 
+
+**Authors**: Hsuan Lo  
+
+**Link**: [PDF](https://arxiv.org/pdf/2609.10856)  
+
+**Abstract**: Large language models are becoming the first point of contact for consumer search in domains where the stakes are material and the law is explicit. Existing audits show that models steer housing seekers by perceived identity, but none can say what a user loses when a recommender overlooks a suitable option, for want of an enumerated inventory to score omissions against. We audit AI housing recommendation against a verifiable ground truth. For each of 150 synthetic renter scenarios in New York City we build a pool of 120 real listings with known rent, bedrooms and GTFS-computed transit commute, compute the exact set satisfying the renter's stated constraints, and derive its Pareto frontier. The primary outcome assumes no utility function: a recommendation is strictly dominated if the same pool holds a listing cheaper, faster to commute from and no smaller in bedrooms. Across 9,945 calls to three models from two vendors, compliance is near-perfect (1.8% violation against a 66.6% random floor), yet 39.0% of recommendations are strictly dominated, and the dominating listing is a median 900 USD/month cheaper and 3.5 minutes closer. A within-scenario manipulation separates two capabilities usually conflated: changing one sentence moves median recommended rent by 646 USD/month in the correct direction, so preferences are honored, yet recommendations still sit 606 USD/month above the five cheapest qualifying listings on the same screen, and an unambiguous lexicographic instruction gives no improvement under equivalence testing against a pre-specified 50 USD/month bound. The gap widens with candidate-set size and replicates across OpenAI and Anthropic models to within 3 USD. We characterize the failure as compliance without optimization, propose dominance-rate instrumentation as a deployable diagnostic, and release all code, prompts and per-call results. 
+
+---
