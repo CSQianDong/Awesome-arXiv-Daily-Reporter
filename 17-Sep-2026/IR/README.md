@@ -1,0 +1,158 @@
+# SURF: Subtractive Updates for Recommender Forgetting 
+
+**Authors**: Filippo Betello, Antonio Purificato, Nicola Tonellotto, Fabrizio Silvestri  
+
+**Link**: [PDF](https://arxiv.org/pdf/2609.18695)  
+
+**Abstract**: The increasing demand for user privacy and compliance with regulations such as GDPR has made machine unlearning a fundamental requirement for modern recommender systems. However, Sequential Recommender Systems (SRS) pose unique challenges for unlearning due to their reliance on temporal interaction patterns. Existing approaches either require computationally prohibitive full retraining or fail to account for the sequential nature of user behavior. We propose SURF (Subtractive Updates for Recommender Forgetting), a lightweight framework for approximate machine unlearning in SRS. SURF operates in three stages: (i) identifying the neighborhood of the item to forget in the embedding space, (ii) training an auxiliary model on this compact local subset, and (iii) subtracting the auxiliary model's scores from the original model at inference time. Experiments against five baselines on 7 datasets show that SURF achieves unlearning effectiveness comparable to full retraining while substantially reducing computational cost, yielding up to a 32% improvement in NDCG@20 while requiring just 2% of the original retraining baseline time budget. We share our code at this https URL. 
+
+---
+# Exploring LLMs and RAG for Plausible and Explainable Material Prediction of Vehicle Components 
+
+**Authors**: Frederik Wagner, Annerose Eichel, Sabine Schulte im Walde  
+
+**Link**: [PDF](https://arxiv.org/pdf/2609.18437)  
+
+**Abstract**: In this work, we explore whether LLMs can accurately predict and explain plausible materials for vehicle components such as brake discs or fuel injectors without requiring extensive fine-tuning. We test and evaluate three approaches: a standard generative LLM baseline, a single-pass Retrieval-Augmented Generation (RAG) approach, and an iterative Chain-of-Verification (CoVe) variant. For retrieval, we rely on publicly available data using a domain-filtered Wikipedia corpus. Since no gold standard exists for this task, we develop a custom web-based annotation tool supporting crucial functions for structured domain expert evaluation. LLM-based generation substantially outperforms prior work, which is not further surpassed by the tested RAG approaches. Our results surface remaining challenges for RAG-based systems: hyperparameter optimization, the availability of high-quality, legally accessible domain corpora, and expert evaluation study design. 
+
+---
+# One-Step Retrieval Framework for Real-Time Sponsored Search Ads Using Hierarchical Text Representations 
+
+**Authors**: Tongtong Liu, Renyu Zhang, Jiayu Ding, Hongchao Guo, Xintao Yang, He Wei, Zhaoyu Li, Haiyang Wu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2609.18296)  
+
+**Abstract**: Traditional retrieval systems typically use multi-stage cascading architectures (MCA), where each module is optimized independently, leading to inconsistent objectives and the premature elimination of high-potential candidates. Recent LLM-based generation methods offer end-to-end solutions but use discrete semantic identifiers (SIDs) to retrieve ads, which are not learned by the base LLM and require memorization of numerous SID-to-ad mappings during SFT, suffering from limited generalization to unseen ads, high maintenance and update costs. The one-to-one mapping between SIDs and advertisements leads to inefficient decoding. Moreover, these methods rely on a small reward model (e.g. pctr) for relevance and ranking, limiting the LLM's ability to fully assess ads' commercial value. To address these challenges, we propose A uNified Generation-discriminative-ranking reaL-time rEtrieval (ANGLE) framework. ANGLE uses LLM-generated hierarchical textual representations, which consist of commercial intent that provide high-level overviews and ad abstract that deliver fine-grained details. Additionally, ANGLE integrates retrieval, relevance, and ranking directly within a single LLM, enabling precise and efficient ranking of ads by leveraging the full capabilities of the LLM. We applied ANGLE to the real-world search scenarios, achieving a 1.81% increase in consumption and a 2.16% increase in gross merchandise volume (GMV). We also conducted offline evaluations of ANGLE and seven baselines, with ANGLE outperforming all across key metrics such as HR and ACR. 
+
+---
+# Quanta: A Self-Contained Python Library for Hybrid Retrieval over Quantised Embeddings, Lexical Indexes, and Knowledge Graphs 
+
+**Authors**: Ioannis E. Livieris  
+
+**Link**: [PDF](https://arxiv.org/pdf/2609.18248)  
+
+**Abstract**: An advanced retrieval-augmented generation pipeline is typically assembled from three or four independently operated systems: an approximate nearest-neighbour index, a full-text search engine, a graph database, and a relational document store. Each contributes its own deployment surface, configuration model, and failure modes, and the integration logic that binds them is written anew in every project. In this work, we present \textsc{Quanta}, an open-source Python library, which unifies dense vector search over 4-bit quantised embeddings, BM25 full-text retrieval, and knowledge-graph traversal behind a single retrieval API. Quanta makes two design commitments, which distinguish it from existing hybrid retrieval stacks. First, signals are combined by \emph{weighted reciprocal rank fusion} rather than by normalising heterogeneous scores onto a shared range, which we argue is ill-posed because such normalisations are query-dependent. Second, the graph is a \emph{candidate expander and not a relevance scorer}: traversal widens the candidate pool, and the newly admitted documents are re-scored by the dense indexes under an identifier allowlist, so structural adjacency determines what is considered while content evidence determines how it ranks. 
+
+---
+# Single-Token Expected-Value Scoring for Cold-Start Candidate Ranking 
+
+**Authors**: Qihang Wang, Jinwei Tan, Mengyuan Shi, Mayank Sharma, Shuai Zhao, Fuxian Li, Ryan Yan, Alexander P. Kreuzer, Mohit Jain, Dheeraj Toshniwal, Manoj Seethamsetty  
+
+**Link**: [PDF](https://arxiv.org/pdf/2609.18188)  
+
+**Abstract**: AI-assisted sourcing streamlines candidate review, reducing the administrative burden of manual screening for recruiters. However, deploying language models as production rankers remains challenging. Zero-shot Large Language Models (LLMs) may produce unstable, non-deterministic scores and rank less accurately, while conventional deep neural rankers require millions of logged interactions that a low-traffic, niche sourcing platform does not produce. What is available instead is a few hundred thousand ordinal relevance labels -- small by ranker-training standards, but sufficient when a pretrained language model already encodes the general world knowledge the task depends on.
+We present single-token expected-value scoring, a ranking primitive that casts candidate-job relevance as an ordinal classification over the grade tokens {1, ..., 5} and reads the relevance score as the expectation of the first-token probability distribution. Because the score comes from a single decoding step rather than open-ended generation, it is a deterministic function of the model's logits, requires no output parsing, and serves at low latency. To learn the non-linear interdependencies of heterogeneous hiring criteria from this supervision alone, we fine-tune a Small Language Model (SLM) with a hybrid ordinal regression loss combining a Mean Squared Error term, which preserves ordinal distance, with a categorical Cross-Entropy term, which sharpens class boundaries.
+We evaluate along two dimensions -- Jobseeker Relevance and Employer Relevance -- using NDCG@10 and low relevance rate. Offline, our fine-tuned model outperforms a heuristic baseline and zero-shot LLMs. An end-to-end simulation shows the same direction at larger magnitude (+54.2% Jobseeker NDCG@10, -46.7% low relevance rate), and a live online experiment reduces employer low-relevance by 27.3% and raises employer keep rate by 7.07%. 
+
+---
+# PageRecall: Measuring Page Selection in Literature-Grounded Question Answering 
+
+**Authors**: Aaditya Chauhan  
+
+**Link**: [PDF](https://arxiv.org/pdf/2609.18154)  
+
+**Abstract**: We describe our system for LitTraceQA (GroundLM @ EMNLP 2026): given a research question, retrieve the relevant papers from a pool of 27,487, cite the page and the table or figure where the answer lives, and answer in a requested format. Our main finding is that evidence grounding is limited by retrieval, not by reading. The page selector put the annotator's page, which we call the gold page, in front of the model that locates evidence only about half the time (52.6% gold-page recall), while that model, given the page, cited the right one in 45 of the 48 locators it emitted (94%). When the page was missing it rarely said so: of 45 such cases it returned nothing 14 times, a wrong page 24 times, and a correct page 7 times, so the pipeline failed quietly almost twice as often as it failed visibly. Since the failure was that the right page was never shown, the fix is to stop choosing: each retrieved paper fits in the model's context, so we show it whole. Page ranking survives only as a fallback inside papers too long to fit, which no test-split paper was, and gold-page recall reaches 100% on the papers we can parse. Separately, questions that identify their target by position rather than content, such as "the first author of the 24th reference", are served by parsing rather than retrieval: we resolve the bibliography into an addressable list, which also supplies identifiers the evidence metric scores. The final system scores 0.762 paper $F_1$, 0.441 evidence $F_1$ and 0.920 multiple-choice accuracy on the held-out test split. Because the pipeline depends on a closed model without seed control, we release a harness that verifies the paper's central claims against committed artifacts. 
+
+---
+# DUPAR: Dual-Path Conversational Retrieval via Speech Retriever with Cross-Turn Evidence Caching 
+
+**Authors**: Yuanjun Li, Yiwen Liu, Dapeng Li, Zhiwei Xu, Bin Zhang, Shengtao Zhang, Rong Shen  
+
+**Link**: [PDF](https://arxiv.org/pdf/2609.18042)  
+
+**Abstract**: Voice assistants grounded in external knowledge typically use automatic speech recognition (ASR) to transcribe speech queries before retrieving evidence from textual knowledge bases. This cascade adds latency and propagates recognition errors, whereas direct speech retrieval is vulnerable to cross-modal misalignment. To address these limitations, we propose DUPAR, a conversational retrieval framework with complementary slow and fast paths. The fast path uses a task-adapted audio encoder aligned with frozen BGE-M3 text embeddings to search a cross-turn evidence cache. When cache confidence is insufficient, the slow path fuses full-index retrieval using audio and ASR-transcript embeddings, and the selected evidence refreshes the next-turn evidence cache through one-hop graph expansion. On a domain-specific knowledge base, our trained audio encoder approaches text-retrieval accuracy on clean speech with a 3.75$\times$ query-side speedup over ASR + Text Encoder. It raises average Recall@10 from 0.771 to 0.875 on the noise benchmark and improves overall Recall@1 by 4.2 percentage points across synthesized speaking styles. Compared with full-index audio retrieval, cross-turn evidence caching significantly reduces retrieval errors when the previous turn retrieves correct evidence and the follow-up targets a one-hop neighboring chunk. 
+
+---
+# One Size Does Not Fit All! Dynamic Retriever and Generator Selection for RAG 
+
+**Authors**: Neeraj Anand, Payel Santra, Partha Basuchowdhuri, Debasis Ganguly, Sumit Bhatia  
+
+**Link**: [PDF](https://arxiv.org/pdf/2609.17709)  
+
+**Abstract**: Retrieval-Augmented Generation (RAG) systems typically employ fixed retriever and generator configurations across queries, despite substantial differences in query complexity and information needs, leading to inefficient allocation of computational resources. While retrieval and generation adaptivity have been studied independently, their joint effect on end-to-end RAG performance remains underexplored. We systematically analyze how retriever and generator complexity interacts across factoid and multi-hop question answering (QA), including bridge and composition reasoning tasks. Our analysis shows that stronger retrieval generally yields larger gains than increased generation effort, but both exhibit diminishing and non-monotonic returns, indicating that higher-complexity configurations are not uniformly better across queries. Motivated by these findings, we introduce DRAG, a query-adaptive framework for selecting retriever-generator configurations. We first propose DRAG$_\text{QPP}$, a training-free routing approach that uses Query Performance Prediction (QPP) signals to guide retriever selection and perplexity-based measures over retrieved context to guide generator selection. We further introduce DRAG$_\text{SFT}$, a supervised routing approach that fine-tunes an LLM to jointly predict retriever-generator configurations. Across three LLM families and four QA benchmarks, \qpprag~achieves performance comparable to strong static RAG baselines while substantially reducing inference latency, whereas DRAG$_\text{SFT}$ consistently improves effectiveness over static and training-free adaptive baselines. Overall, DRAG demonstrates that jointly adapting retrieval and generation achieves a more favorable effectiveness-efficiency trade-off than static RAG pipelines. 
+
+---
+# Scaling Articulated Rationales for MLLM-based Recommendation 
+
+**Authors**: Haoke Xiao, Yueyang Liu, Yuhui Zhang, Xiang Chen, Yufei Liu, Jia Xu, Yalong Guan, Xiaolan Zhu, Xiaoyu Zhang, Shijun Wang, Shuang Yang, Zijie Meng, Zejian Zhang, Ruochen Yang, Xiangyu Wu, Tingting Gao, Han Li, Lantao Hu, Cheng Luo, Kun Gai  
+
+**Link**: [PDF](https://arxiv.org/pdf/2609.17639)  
+
+**Abstract**: Modern recommendation systems largely infer user preferences from implicit behaviors such as clicks, watch time, and negative feedback, but these signals reveal what users do rather than why they like or dislike content. This work studies articulated user rationales (AURs), i.e., users' natural-language explanations of their preferences, as a new class of polarity-aware and reason-level textual signals for recommendation. Despite their potential value, AURs are difficult to use in industrial systems because they are naturally sparse, often low-quality, and only cover a small fraction of items. We present SARA (Scaling Articulated Rationales), an industrial framework that turns sparse AURs into scalable recommendation signals. SARA first builds a data engine that elicits and curates AURs from 240M Kuaishou Live users, producing SARA-HQ, a quality-controlled and author-centric rationale dataset. It then aligns a general-purpose MLLM into SARA-7B through large-scale SFT and Quality-Refining DPO, extending rationale generation from 86,564 AUR-covered authors to the full 10M-author space. Finally, SARA-Ranker integrates the generated positive and negative rationales into production ranking via rationale-aware interaction modeling and rejection-memory modeling. Extensive offline evaluation, human calibration, and online A/B tests show that SARA-7B generates more specific, polarity-consistent, and grounded rationales than strong MLLM baselines, while SARA-Ranker improves engagement and reduces negative feedback in production. Deployed with daily refresh for over 30 days, SARA establishes articulated rationales as a practical, first-class textual signal for industrial recommendation systems. 
+
+---
+# SEEK: Secure and Efficient Encrypted Keyword Search For Privacy-Preserving Messaging Protocols 
+
+**Authors**: Soumyadyuti Ghosh, Michail Maniatakos  
+
+**Link**: [PDF](https://arxiv.org/pdf/2609.18459)  
+
+**Abstract**: Encrypted communication protects sensitive user data but can facilitate harmful or unlawful exchanges, creating a trade-off between detecting dangerous messages and preserving end-user privacy. To address this, we propose SEEK, a practical and efficient encrypted keyword-search protocol for privacy-preserving messaging that combines homomorphic encryption with secure two-party computation (2PC). SEEK first partitions messages into ciphertext fragments with the minimum sufficient overlap, then homomorphically correlates them using encrypted keyword trapdoors. For long messages, this design can reduce sender-side encryption and upload overhead by up to two orders of magnitude over state-of-the-art baselines. It supports ASCII case-insensitive matching with one fixed-size encrypted trapdoor and one homomorphic multiplication per fragment, yielding up to 5.47x faster correlation computation than the strongest fragmentation-based baselines. SEEK then invokes 2PC-based selected decoding, blinded zero testing, and secure aggregation, revealing only the keyword presence-or-absence bit while hiding the keyword, its length, message contents, match counts, and locations. SEEK achieves 100% accuracy under case variations that result in exact-matching failures, without requiring additional trapdoors or online communication. We further realize SEEK as an end-to-end web and cross-platform mobile application. Prototype evaluation on a weekly messaging history yields an online computation time of 1.92 s per search, demonstrating the practical feasibility and efficiency of SEEK. 
+
+---
+# Understanding AI Provider Recommendations in Local Service Markets 
+
+**Authors**: Hazem Ibrahim, Yasir Zaki  
+
+**Link**: [PDF](https://arxiv.org/pdf/2609.18341)  
+
+**Abstract**: When someone asks an AI assistant which doctor to see or which firm to trust with their savings, the answer is a referral. We audit AI provider recommendations in four registry-backed service domains across the 100 largest U.S. metropolitan areas, matching every recommendation against the official registry for its domain (Medicare clinician and facility records, and SEC adviser disclosures), under three conditions: an open-weight model, a proprietary model without web search, and the same proprietary model with search. Without search, both models largely fabricate recommendations in the domains the web covers thinly. Only 4% of the open-weight model's recommended doctors and 11% of the proprietary model's match a clinician in the queried city, and the open-weight matches are name coincidences: its matched clinicians are no likelier to be primary-care doctors than names drawn at random from the registry. With search, 64-71% of recommendations in the same domains match a real provider. Search also changes who is recommended. Without it, recommended advisory firms carry SEC misconduct disclosures at 3.6 times the registry base rate, even after adjusting for firm size; with search, significantly below it. Restaurants, where quality and visibility are separately measurable, show a 3-5x review-count premium but a rating premium of at most a tenth of a star. Finally, search largely removes the metro-size penalty: without it, real recommendations concentrate in the largest metros; with it, match rates are similar across metro-size terciles. Whether an AI referral is trustworthy depends strongly on its retrieval configuration rather than on the underlying model alone, yet an answer produced without retrieval often carries no sign that its recommendations were never verified. 
+
+---
+# Time-Aligned Evolving Concept Graphs for Scientific Relation Forecasting 
+
+**Authors**: Fred Sun, Jingze Wang, Minkun Xu, Shangqi Guo  
+
+**Link**: [PDF](https://arxiv.org/pdf/2609.18163)  
+
+**Abstract**: Forecasting scientific relations can guide discovery by identifying promising connections before they emerge. Existing approaches often model concept semantics and graph structure separately or summarize semantics over coarse historical snapshots, leaving semantic representations potentially misaligned with rapidly evolving graph evidence. We propose a time-aligned evolving concept graph framework that jointly models semantic and structural evolution. Its core idea is to treat dated papers as shared update events, reconstructing semantic and structural states from the same publication history through each prediction time. Pair-level fusion combines these states to forecast first co-occurrence, relation formation, and conditional relation type. Holding architecture and training fixed, refreshing context alongside graph updates improves mean relation AUPRC by 16.6% over frozen context. On a graph built from 187,848 papers with 270,687 concepts and 7.45 million co-occurrence links, the complete framework improves mean relation AUROC from 0.9290 for the strongest evaluated baseline to 0.9722, with mean population-weighted AUPRC 0.005778. 
+
+---
+# LIGE-GR: A Smooth Leap from Ranking to Generative Recommendation in the LLM Era 
+
+**Authors**: Venkat Srinivas, Chenzhang He, Sam Woodmansee, Shawn Lian, Wenjie Hu, Renjie Jiang, Ziheng Huang, Xinyuan Zhang, Zhihao Zheng, Zhuoran Yu, Rui Li, Lei Yuan, Ziwei Li, Jimmy Jia, Mert Terzihan, Ekrem Kocaguneli, Yiming Liao, Zhichen Zhao, Yue Yin, Yue Weng, Wanlin Ma, Xufeng Cai, Weimiao Wu, Yezhou Huang, Du Zhang, Yukun Ding, Aaron Johnston, Yueming Wang, Zhaojie Gong, Yuting Zhang, Serena Li, Adithya Ganesh, Boying Liu, Haichuan Yang, Xialu Li, Matt Ma, Qunshu Zhang, John Joshua Miller, Praveen Rathinavelu, Cheng Huang, Aadhar Sachdeva, Josh Karns, Andres Aaron Gutierrez, Neil Agarwal, Gustas Pladis, Vladimir Batygin, Gopal Ray, Aditya Priyadarshi, Shantanu Patil, Zhe Wang, Penny Pan, Yiping Han, Arun Singh, Guangdeng Liao, Bi Xue, Xinyao Hu, Yang Song, Yisong Song, Meihong Wang, Haotian Wu, Deepak Agarwal, Ji Liu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2609.18148)  
+
+**Abstract**: The remarkable success of large language models (LLMs) has provided important inspiration for the next generation of recommender systems. Structurally, recommendation and language generation share a similarity: both aim to produce an ordered sequence that optimizes the user's experience. However, how to precisely absorb the essence of the LLM paradigm into mature industrial recommender systems remains an open problem.
+There are two challenges. First, it is unclear how to incorporate sequence-level generation and optimization from the LLM paradigm into recommendation. Second, real-world recommender systems are mature systems that have been iteratively customized for years around specific products, business constraints, serving infrastructure, and organizational ownership. Replacing such systems wholesale is often technically risky and organizationally disruptive.
+In this paper, we propose LIGE-GR, a listwise generation and evaluation recommendation framework that upgrades from a traditional ranking system based on itemwise recommendation toward a generative recommendation paradigm. Instead of rebuilding the entire recommendation stack from scratch, LIGE-GR generalizes the existing pointwise recommendation system into a listwise generation system. This allows mature recommender systems to benefit from listwise optimization while preserving compatibility with existing models, value functions, and serving infrastructure.
+We validate LIGE-GR in short-video recommendation on Instagram Reels and Facebook Video. On these recommendation surfaces, LIGE-GR improves time spent by 1.14 percent on Instagram Reels and 0.72 percent on Facebook Video, while requiring only modest additional inference resources. 
+
+---
+# How Calibration Content Shapes Attention-Based Reranking 
+
+**Authors**: Petros Karypis, Hossein Rajaby Faghihi, Peter Chen, Rui Zhu, Noveen Sachdeva, Yan Zhu, Julian McAuley  
+
+**Link**: [PDF](https://arxiv.org/pdf/2609.17764)  
+
+**Abstract**: Attention-based rerankers score documents by aggregating query-to-document attention and subtracting a null-query calibration pass to remove positional and structural bias. Although widely used, this calibration assumes that the null pass removes irrelevant signal from each document. We show that modern prompt content, e.g. constraints, instructions, personas, and demonstrations can violate this assumption when it enters the scoring readout, making the null pass relevance-aware rather than null. We find that calibration is especially harmful when applied to prompts containing longer, more detailed instructions as the null-pass step removes relevant signal. Based on these findings, we propose interpolated null calibration, a training-free modification that controls how much of the instruction content enters the null baseline. It recovers attention-based reranking performance on instruction-heavy tasks where standard calibration fails, while preserving calibration's benefits when the null pass remains relevance-agnostic. On instruction heavy tasks, the recovered rankings surpass generative rerankers. We also show that in-context demonstrations improve attention-based reranking with little calibration interference, since demonstrations act only through the query pass and leave the null pass unchanged. 
+
+---
+# Beyond Static RAG: An Adaptive, Tri-Metric Routing Framework for Efficient Long-Context Inference on Commodity GPUs 
+
+**Authors**: Saipraveen Vabbilisetty, Ajay Kumar Boddepalli, Deep Narayan Mishra, Shashank Kapadia, Haoan Wang, Anupriya Sharma  
+
+**Link**: [PDF](https://arxiv.org/pdf/2609.17564)  
+
+**Abstract**: Deploying retrieval-augmented generation (RAG) on commodity GPUs such as the NVIDIA T4 (16 GB VRAM) exposes a practical failure mode we call the Compression Paradox: neural prompt compression can add key-value (KV) cache contention and preprocessing latency that outweigh generation-time savings, while skipping compression can cause out-of-memory (OOM) failures on long contexts. We identify two distinct failure mechanisms when a vLLM-served LLM and a PyTorch-based compressor are co-deployed under tight memory budgets, and introduce the Tri-Metric Router, a deterministic, training-free policy that selects among Raw, Neural (LLMLingua-2), and Lexical (BM25) pipelines. The router uses three CPU-side signals: spatial complexity ($L$), syntactic density ($\rho_{key}$), and type-token ratio (TTR). Unlike prior semantic-only adaptation, our dispatch signal is hardware-physical, based on VRAM headroom and a latency crossover point. Thresholds are calibrated from profiling on LongBench qasper, yielding an operating crossover near 4,332 words on T4; our contribution is this calibration methodology rather than a hardware-specific constant. On out-of-distribution holdouts, the method achieves 0% OOM failures, 88.5 $\pm$ 4.4% oracle alignment, and 49.3% Combined F1, improving over always-on lexical compression by 5.2 points without additional VRAM or training cost. 
+
+---
+# On Predicting Post-Click Conversion Rate via Counterfactual Inference 
+
+**Authors**: Junhyung Ahn, Sanghack Lee  
+
+**Link**: [PDF](https://arxiv.org/pdf/2510.04816)  
+
+**Abstract**: Accurately predicting conversion rate (CVR) is essential in various recommendation domains such as online advertising systems and e-commerce. These systems utilize user interaction logs, which consist of exposures, clicks, and conversions. CVR prediction models are typically trained solely based on clicked samples, as conversions can only be determined following clicks. However, the sparsity of clicked instances necessitates the collection of a substantial amount of logs for effective model training. Recent works address this issue by devising frameworks that leverage non-clicked samples. While these frameworks aim to reduce biases caused by the discrepancy between clicked and non-clicked samples, they often rely on heuristics. Against this background, we propose a method to counterfactually generate conversion labels for non-clicked samples by using causality as a guiding principle, attempting to answer the question, "Would the user have converted if he or she had clicked the recommended item?" Our approach is named the Entire Space Counterfactual Inference Multi-task Model (ESCIM). We initially train a structural causal model (SCM) of user sequential behaviors and conduct a hypothetical intervention (i.e., click) on non-clicked items to infer counterfactual CVRs. We then introduce several approaches to transform predicted counterfactual CVRs into binary counterfactual conversion labels for the non-clicked samples. Finally, the generated samples are incorporated into the training process. Extensive experiments on public datasets illustrate the superiority of the proposed algorithm. Online A/B testing further empirically validates the effectiveness of our proposed algorithm in real-world scenarios. In addition, we demonstrate the improved performance of the proposed method on latent conversion data, showcasing its robustness and superior generalization capabilities. 
+
+---
+# The Death of Schema Linking? Text-to-SQL in the Age of Well-Reasoned Language Models 
+
+**Authors**: Karime Maamari, Fadhil Abubaker, Daniel Jaroslawicz, Amine Mhedhbi  
+
+**Link**: [PDF](https://arxiv.org/pdf/2408.07702)  
+
+**Abstract**: Schema linking is a crucial step in Text-to-SQL pipelines. Its goal is to retrieve the relevant tables and columns of a target database for a user's query while disregarding irrelevant ones. However, imperfect schema linking can often exclude required columns needed for accurate query generation. In this work, we revisit schema linking when using the latest generation of large language models (LLMs). We find empirically that newer models are adept at utilizing relevant schema elements during generation even in the presence of large numbers of irrelevant ones. As such, our Text-to-SQL pipeline entirely forgoes schema linking in cases where the schema fits within the model's context window in order to minimize issues due to filtering required schema elements. Furthermore, instead of filtering contextual information, we highlight techniques such as augmentation, selection, and correction, and adopt them to improve the accuracy of our Text-to-SQL pipeline. Our approach ranks first on the BIRD benchmark achieving an accuracy of 71.83%. 
+
+---
