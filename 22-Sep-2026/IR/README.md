@@ -1,0 +1,356 @@
+# UK-PRBENCH: A Paragraph-Level Precedent Retrieval Benchmark for United Kingdom Case Law 
+
+**Authors**: Damith Premasiri, Tharindu Ranasinghe  
+
+**Link**: [PDF](https://arxiv.org/pdf/2609.24613)  
+
+**Abstract**: Prior case retrieval (PCR) aims to identify precedent cases relevant to a given query case. Existing PCR benchmarks and methods predominantly operate at the document level, treating entire judgments as the unit of relevance. This formulation is suboptimal for legal practitioners, as judgments address multiple legal issues and only a small subset of paragraphs is relevant to a particular query. Addressing this gap, we introduce UK-PRBench, a benchmark for paragraph-level precedent retrieval in UK case law, constructed from judgments obtained from the UK National Archives and covering a broad range of UK courts and tribunals. Furthermore, we evaluate state-of-the-art retrieval models and establish baseline results. Our experiments show that paragraph-level precedent retrieval remains challenging for current retrieval approaches, highlighting substantial room for improvement. UK-PRBench provides a standardised benchmark for evaluating fine-grained precedent retrieval and advancing retrieval systems for the UK legal domain. 
+
+---
+# What Makes a Good Semantic ID for Generative Recommendation? A Reproducibility Study 
+
+**Authors**: Yufei Chen, Junchen Fu, Jujia Zhao, Yukun Zhao, Zhaochun Ren  
+
+**Link**: [PDF](https://arxiv.org/pdf/2609.24430)  
+
+**Abstract**: Generative recommendation has emerged as an active research direction, where items are commonly represented by semantic IDs (SIDs): discrete codes generated token by token. Despite strong empirical results, SID designs vary widely in construction strategy, codebook organization, and code length, making their true impact on recommendation performance unclear.
+We conduct a large-scale reproducibility study to systematically investigate the impact of semantic ID design on generative recommendation under a unified experimental framework. We focus on a fundamental question: What makes a good semantic ID for generative recommendation? To answer this question, we examine four aspects: the relative effectiveness of different semantic ID designs, the connection between codebook utilization and recommendation quality, the effect of semantic code length, and the influence of semantic ID design on local item semantic preservation. Through a unified evaluation and additional cross-dataset controlled analyses, we find that the effects of SID design are largely non-monotonic: no single SID design is universally best, and commonly used RQ-VAE- and OPQ-based designs can behave inconsistently across datasets. The method with the most balanced first-level codebook is not consistently the best recommender, showing that utilization is diagnostic but insufficient. Scaling either the generative backbone or the SID length is also not always beneficial. Finally, semantic-neighborhood analysis reveals that no single SID design dominates all notions of local semantic preservation; instead, different designs exhibit complementary strengths that remain stable across datasets and neighborhood sizes. Our study provides a controlled and reproducible understanding of semantic ID design and offers practical insights for future generative recommender systems. 
+
+---
+# Auditing Source Exposure in Baidu and Google AI Search 
+
+**Authors**: Yibo Li, Enci Guan, Yuedan Cai, Geng Liu, Francesco Pierri  
+
+**Link**: [PDF](https://arxiv.org/pdf/2609.24407)  
+
+**Abstract**: AI-generated overviews are becoming an increasingly prominent layer of search interfaces, yet their behavior in Chinese-language search remains underexplored. We conduct a cross-lingual audit of AI overview behavior on Baidu and Google using English queries sampled from MS MARCO and their translated Chinese counterparts. Our analysis examines when overviews are triggered across platform-language settings, which host domains receive visible exposure in Chinese-language overviews, how concentrated that exposure is, and how source overlap varies across settings. We also compare the embedding-based semantic similarity of generated answers for matched query intents. The results reveal substantial differences across platform-language settings in overview availability and visible source exposure. At the aggregate level, the settings exhibit low overlap in visible host-domain inventories, while matched-query answers yield median cosine similarities ranging from 0.701 to 0.813. These findings indicate that answer-level semantic similarity and aggregate source exposure capture distinct dimensions of AI-mediated search. Evaluations of AI search should therefore consider not only the content of generated answers but also how source visibility is distributed across platforms, languages, and information environments. 
+
+---
+# Graded-Relevance Composed Multimodal Retrieval for E-commerce Visual Search at Scale 
+
+**Authors**: Anubhav Gupta, Hrushikesh Mohapatra, Prijith Chandra, Asish Mohapatra, Anuj Garg, Arvind Maan, Sudip Datta, Venkat Bulusu, Sitesh Kumar Jalan  
+
+**Link**: [PDF](https://arxiv.org/pdf/2609.24152)  
+
+**Abstract**: Visual search on large e-commerce catalogs must serve both "similarity" queries that ask for items resembling an uploaded image and "modifier" queries that comprise an image and text describing a desired modification (e.g. a color change or style swap). The latter is the setting known as composed image retrieval (CIR). Existing CIR methods, however, treat relevance as binary and train on triplets with a single positive target - a poor fit for real catalogs where many candidates partially satisfy a user query and ranking across that partial-match spectrum drives the customer experience. We propose a methodology for training CIR retrievers on graded relevance, consisting of: (i) a VLM to curate training data, generating both queries (object detection + modifier synthesis) and 4-level relevance labels without manual annotation, (ii) an iterative relevance-feedback loop that expands the training set by mining hard negatives from the in-training retriever, and (iii) a hierarchy-aware angular objective to train the retriever directly on the graded labels rather than collapsing them to a binary split. We call this methodology GradCIR and instantiate it on a PaliGemma2 bi-encoder trained on 3.5M graded pairs curated from raw Walmart catalog data. A controlled graded-vs-binary ablation isolates the supervision granularity and shows lift of 4.9%-5.9% in NDCG@10. The same recipe applied to other multimodal encoders lifts early-fusion backbones by up to 8.5% NDCG@10. On the public FashionIQ benchmark, GradCIR (applied to PaliGemma2) reaches 0.6703 average recall when fine-tuned, slightly ahead of the strongest peer-reviewed supervised baseline we compare against, and matching or exceeding all published CLIP-L-class zero-shot CIR methods. The system is deployed in production at Walmart, where it's serving live visual-search user traffic. 
+
+---
+# A Redundancy Reduction Approach for Controllable Sequential Recommendations 
+
+**Authors**: Veronika Ivanova, Marina Munkhoeva, Ivan Razvorotnev, Evgeny Frolov  
+
+**Link**: [PDF](https://arxiv.org/pdf/2609.23849)  
+
+**Abstract**: Sequential recommendation must operate under long-tailed item distributions and popularity-driven concentration, often forcing practitioners to trade short-list accuracy against long-tail exposure. In this work, we study feature decorrelation as a mechanism for shaping representation geometry in dot-product sequential recommenders, and analyze how this, in turn, affects popularity-driven concentration. We propose a decorrelation-regularized training framework that augments next-item prediction with an auxiliary redundancy-reduction term, and instantiate it with BT-SR, which uses the Barlow Twins objective. To form label-consistent positive pairs without synthetic corruptions, we pair user histories that share the same next-item target. Beyond accuracy, we provide a geometric analysis showing how decorrelation suppresses shared low-rank directions in the user representation space that can give popular items a global scoring advantage, and we introduce a bucket-based alignment concentration metric to quantify this effect. Experiments on five public benchmarks show that BT-SR consistently improves next-item ranking quality, while the decorrelation strength acts as a simple control knob that reallocates accuracy across head and tail items, enabling accuracy-exposure trade-offs. Our analysis also reveals that the impact on head-vs-tail exposure differs across datasets, reflecting interactions between decorrelation and data temporal structure. 
+
+---
+# UNIQUE: A Unified Retrieval and Ranking System for Large-Scale Feed Recommendation 
+
+**Authors**: Zhuang Liu, Yongkang Fu, Zuodong Yang, Guangxing Chen, Zonggang Wu, Yuqi Lu, Shouke Qin, Shantao Li, Maolin Wang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2609.23718)  
+
+**Abstract**: Industrial mobile feed systems rely on a retrieval-ranking pipeline to serve large-scale, heterogeneous, and fast-changing content under strict latency constraints. However, existing pipelines still suffer from two critical issues: hierarchical quantization instability in candidate retrieval and information loss between separated retrieval and ranking stages. These issues hurt long-tail and cold-start recommendation and complicate efficient serving. To address them, we present UNIQUE, a unified retrieval and ranking recommendation framework with single-layer flat quantization. UNIQUE integrates generative code-based retrieval and target-aware ranking into one early-fusion architecture, enabling end-to-end training under a shared representation while preserving efficient candidate generation. A balanced quantization mechanism is further introduced to mitigate codebook imbalance and improve long-tail representation. Offline experiments evaluate UNIQUE from both retrieval and ranking perspectives, while codebook analysis shows more balanced resource allocation than hierarchical quantization. We deploy UNIQUE in the homepage feed, discovery-page, and short-video recommendation scenarios of Mobile Baidu, serving large-scale real-world traffic. Online A/B tests achieve a 0.96% gain in total watch duration and a 1.08% gain in total distribution volume, with notable improvements for new users and highly active users. Serving measurements show 89 ms P99 latency and 44.23% online inference MFU. These results show that UNIQUE provides a stable, efficient, and production-ready framework for unified retrieval and ranking in industrial recommendation. 
+
+---
+# MuSeR: Scalable Long-sequence Recommendation with Multi-interest Modeling 
+
+**Authors**: Yongkang Fu, Beining Bao, Yu Jiang, Xiangyu Zhao, Hongyang Wei, Guangxing Chen, Zuodong Yang, Shantao Li, Zonggang Wu, Yuqi Lu, Shouke Qin, Hanmeng Liu, Maolin Wang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2609.23677)  
+
+**Abstract**: Ultra-long user behavior sequences carry rich signals of stable and diverse preferences, yet industrial recommender systems typically truncate histories to a few hundred actions under strict latency and memory budgets, leaving long-term interests under-utilized. Users also pursue multiple heterogeneous intents across modalities such as news, Q&A, and short video, which sparse ID embeddings alone struggle to represent. We present Multi-interest Sequence Representation (MuSeR), a retrieval framework built on the deployed MGS system, which integrates three components: (i) hierarchical temporal compression, which retains recent actions at full resolution while progressively pooling older segments, so that per-user histories of $10^{4}$-$10^{5}$ interactions fit within a fixed serving budget; (ii) disentangled multi-query interest extraction with orthogonality regularization; and (iii) multimodal semantic alignment, which augments sparse item IDs with textual summaries distilled from a large language model. For industrial deployment, MuSeR further adopts asynchronous user-representation refresh with adaptive caching and hierarchical beam-search retrieval across heterogeneous hardware. On three public benchmarks and a large-scale industrial dataset, MuSeR consistently improves Recall@$K$ over strong long-sequence and multi-interest baselines. In online A/B tests on Baidu APP's homepage feed, discovery feed, and short-video scenarios, MuSeR yields +0.26% daily active users and +0.89% total session duration (both statistically significant, p<0.05), alongside reduced serving latency and cost. Rather than proposing a new modeling primitive, our contribution is a system-level integration that makes long-term, multi-interest, and multimodal modeling jointly deployable in a real-time production pipeline, together with the engineering practices required to sustain it. 
+
+---
+# Beyond Relevance: Structured Semantic Supervision for Product Search with LLM-Augmented Annotations 
+
+**Authors**: Girish A. Koushik, Swapnil Bhosale, Samarth Agrawal, Hadeel Sadany, Constantin Orasan, Xiatian Zhu, Diptesh Kanojia  
+
+**Link**: [PDF](https://arxiv.org/pdf/2609.23646)  
+
+**Abstract**: E-commerce search requires distinguishing products that are merely related to a query from those that directly satisfy the user's shopping intent. We augment query-product pairs with structured LLM-generated query and product attributes and human-validated relevance, explanations, and centrality judgments, and evaluate these signals using a simple dual-encoder retriever and MLP re-ranker. On an augmented subset of ESCI, a human-feature oracle reaches $0.9382$ nDCG@10, while a human-free trained $Q+P$ configuration reaches $0.9258$. Synthetic approximations of the human signals reach $0.9150$ overall but provide substantial gains for difficult, low-performing queries. Ablations show that most of the oracle improvement comes from post-edited explanations and annotator comments rather than the scalar centrality feature, suggesting that LLMs are most useful for exposing and approximating structured semantic supervision rather than replacing human judgment directly. 
+
+---
+# PSD: Pseudo Self-Distillation of Memory Representation Capabilities for LLM Agents 
+
+**Authors**: Pirzada Suhail, Menglin Xia, Xuchao Zhang, Mayukh Das, Chetan Bansal, Saravan Rajmohan  
+
+**Link**: [PDF](https://arxiv.org/pdf/2609.23449)  
+
+**Abstract**: Memory systems are becoming a core component of LLM agents, but constructing and maintaining memory remains expensive because it relies on repeated calls to large proprietary language models. This cost creates a major barrier to deploying memory-enhanced agents at scale. In this paper, we present Pseudo Self-Distillation (PSD), a framework that enables small language models (SLMs) to construct hierarchical memory representations by distilling behavior from a strong black-box oracle through a multi-stage training pipeline. Standard distillation methods require access to teacher logits or hidden states, which closed models do not expose. Unlike conventional self-distillation settings, where supervision is derived from a model's own predictions, sampled rollouts, or aggregated outputs, PSD enables a single-model distillation setup while channeling external oracle knowledge through the prompt. PSD uses a single small model in two roles: a teacher that sees a privileged prompt containing the oracle's answer as reference context, and a student that sees only the task prompt. The student learns to reproduce the teacher's output distribution, absorbing oracle-guided behavior into its own weights without accessing the oracle's internals. On LoCoMo, PSD-trained Qwen3-0.6B, 1.7B, and 4B match or exceed GPT-4.1-mini on downstream retrieval at a fraction of the deployment cost, with off-policy PSD achieving the strongest results across most conditions. We further show that this memory-construction capability transfers out-of-distribution to LongMemEval, despite the students being trained exclusively on LoCoMo with no exposure to LongMemEval data. 
+
+---
+# From Ranked Documents to Reliable Contexts: An Answer-Oriented Context Construct Framework for AI Search 
+
+**Authors**: Yunfei Zhong, Yinqiong Cai, Lixin Su, Haosheng Qian, Lixin Zou, Yixing Fan, Sheng Xu, Jiafeng Guo, Daiting Shi, Jingzhou He  
+
+**Link**: [PDF](https://arxiv.org/pdf/2609.23354)  
+
+**Abstract**: Traditional Web search follows a human-facing paradigm in which users inspect ranked documents and synthesize information themselves. In AI Search, retrieved documents instead serve as inputs to a generation model, shifting the retrieval objective from ranking documents by Search Satisfaction to constructing reliable context for correct answer generation. We formulate this shift as answer-oriented context construction through a three-stage framework: (1) Answer Support identifies candidate documents that contribute information to answer generation; (2) Content Trustworthiness assesses whether this information provides a reliable basis for correct answers from source, temporal, and factual perspectives; and (3) Context Organization selects, consolidates, and structures retained information under a finite context budget for consistent and robust generation. We further develop an industrial workflow spanning prior and posterior optimization and establish a systematic evaluation protocol covering both retrieval-side context and final answers. Experiments show consistent improvements at both Retrieval and Answer levels, demonstrating the effectiveness of the framework and its industrial implementation. 
+
+---
+# Semantic Candidate-Job Matching: A Comparative Evaluation of Dense Embedding Models in Hybrid Retrieval 
+
+**Authors**: Sai Yashwant, Siddhartha Jain, Anurag Dubey, Samaroha Chatterjee, Gantala Thulsiram  
+
+**Link**: [PDF](https://arxiv.org/pdf/2609.23307)  
+
+**Abstract**: This paper presents a comparative evaluation of dense embedding models for semantic candidate-job matching in high-volume staffing workflows. Incoming job descriptions are converted into structured English search text and language-specific keywords through LLM-based parsing, and candidate profiles are indexed as semantically enriched resume representations. We evaluate EmbeddingGemma (base) against EmbeddingGemma fine-tuned with Cached Multiple Negatives Ranking Loss (MNRL) within a unified hybrid retrieval pipeline that fuses vector similarity and full-text relevance via reciprocal rank fusion (RRF), and benchmark both against the MPNet model on a batch comparative evaluation dataset scored through the deployed job-candidate matching scoring pipeline. We further document, with mathematical detail, the broader set of contrastive fine-tuning objectives considered during model development (including AnglE/CoSENT-style refinement) and the empirical rationale for retaining Cached-MNRL-only adaptation as the preferred configuration. To support reproducible model selection, we define a broader evaluation framework comprising standard information retrieval metrics (Recall@K, mean reciprocal rank, nDCG) under the exact hybrid-retrieval protocol; the metrics used for the evaluation reported in this paper are fine-tuning convergence diagnostics and a batch comparative evaluation using the deployed AI-Match score and an independent LLM-as-a-Judge relevance score, and we state this scope explicitly rather than implying the full framework was measured. The paper addresses the gap between general-purpose embedding benchmarks and enterprise job-candidate matching constraints, providing a structured basis for comparing embedding strategies under realistic job-candidate retrieval conditions. 
+
+---
+# From Prompt to Recommendation: A Fitted Stage Model of Brand Visibility in AI Search 
+
+**Authors**: Benjamin Tannenbaum  
+
+**Link**: [PDF](https://arxiv.org/pdf/2609.23162)  
+
+**Abstract**: We analyze 34,960 unbranded prompt-engine observations from 75 anonymized Aiso projects, covering 2,854 distinct monitored prompts and repeated GPT and Gemini runs from June-September 2026. When neither the target brand nor its own domain appears in the observable live retrieval path, target mention rates are 2.8% for GPT and 3.8% for Gemini. With an own-domain citation but no branded fan-out, they rise to 49.0% and 58.4%. When both own-domain exposure and a branded fan-out occur, mention rates reach 91.4% and 100%.
+The relationship persists within the same project, prompt, and engine across repeated runs: among prompt cells that vary in own-domain exposure while holding branded fan-out absent, exposure is associated with a mean mention-rate increase of 40.2 percentage points on GPT and 49.0 points on Gemini. Prior visibility is independently persistent. A previous non-mention plus no current own-domain exposure yields next-run mention rates of 1.6% and 1.9%; previous mention plus current exposure yields 80.5% and 83.7%.
+We fit a chronological diagnostic model using prior-run history and contemporaneous retrieval indicators: $ \operatorname{logit}P(M_t=1)=\alpha_e+\beta_e\operatorname{logit}(\widetilde P_{t-1})+\gamma_e E_t+\delta_e F_t+\theta_e^\top X. $ On the latest 30% holdout, the full model achieves AUC 0.963 on GPT and 0.942 on Gemini, compared with 0.937/0.917 for prior history alone and 0.880/0.840 for live signals alone. A manually curated prompt sensitivity gives nearly identical AUCs (0.960 and 0.943). A separate 199-prompt page-corpus validation finds that prompt-page match predicts Gemini exposure (AUC 0.641) more clearly than GPT exposure (0.545), placing relevance upstream of a larger engine-mediated exposure effect. The equation is predictive and observational, not a causal description of proprietary engine internals. 
+
+---
+# Improving disruptive research in the EU: why strengthening European Research Council grants alone is not enough 
+
+**Authors**: Alonso Rodríguez-Navarro  
+
+**Link**: [PDF](https://arxiv.org/pdf/2609.23115)  
+
+**Abstract**: Disruptive innovation in the EU is not sufficiently competitive; this weakness puts at risk the social benefits that its citizens take for granted. This report argues that, in addition to addressing structural and economic deficiencies, the EU must improve disruptive research to strengthen its disruptive innovation capacity. Currently, the level of disruptive research is too low. Using graphene research as an example, for which the EU has a specific programme, this report shows that Germany, France, Italy, and Spain cannot compete with Singapore. Even more concerning, the research funded by the European Research Council on graphene fails to compete with research conducted in Singapore. Similarly, the EU is far from competing with the USA or China. A few examples in this report and cited references evidence that the situation is similar in other technologies. To overcome this situation, the EU must adopt drastic changes in research policy. However, such changes face a vanity culture among policymakers and, perhaps, scientists who have been proclaiming an inexistent research excellence for decades. Without drastic changes, the prospect of the EU becoming a technological leader at the level of the USA and China cannot be considered realistic. 
+
+---
+# Inherit4Rec: Parameter Inheritance for Efficient Scaling of Recommendation Models 
+
+**Authors**: Ruihao Zhang, Bo Chen, Xiao Wang, Jinlong Jiao, Tijian Hu, Qinglin Jia, Xiuqiang He, Xiangyu Zhao, Chaoyi Ma, Ruiming Tang, Wenwu Ou  
+
+**Link**: [PDF](https://arxiv.org/pdf/2609.23111)  
+
+**Abstract**: Scaling model capacity has emerged as an effective approach to overcoming performance bottlenecks in industrial recommender systems. However, repeatedly training larger dense models from scratch demands substantial data and time, while their growing computation conflicts with the strict serving budgets of industrial systems. Parameter inheritance provides a promising route for both dense model growth and sparse conversion, yet existing methods are primarily designed for static corpora and can suffer sharp performance drops under dynamically evolving recommendation data. To address these challenges, we propose Inherit4Rec, a parameter-inheritance framework that supports both Dense-to-Dense (D2D) growth and Dense-to-Sparse (D2S) conversion. Inherit4Rec-D2D combines hybrid growth with asymmetric training to preserve the forward function at expansion and maintain update continuity. Inherit4Rec-D2S constructs SMoE networks through co-activation-aware partitioning and a load-balancing loss, preserving dense-model capabilities while promoting balanced expert activation. Experiments on KuaiRand-1K and an industrial short-video recommendation dataset show that both transformations consistently outperform the evaluated inheritance baselines across all prediction objectives. These results demonstrate the effectiveness of Inherit4Rec for continual capacity expansion and computation-efficient sparse conversion in industrial recommender systems. 
+
+---
+# Per-Query Gating of LLM Rerankers for Multi-Hop Retrieval 
+
+**Authors**: Andre Bacellar  
+
+**Link**: [PDF](https://arxiv.org/pdf/2609.22880)  
+
+**Abstract**: LLM rerankers add of the order of \$0.2-0.3 per 1,000 queries and about a second of tail latency on top of a graph-augmented dense pipeline such as HippoRAG2, and on three multi-hop benchmarks they improve final-hop top-K coverage on seven of nine (dataset, K) cells, by up to +34.8 pp. We ask whether a learned per-query gate can skip the reranker where it will not help, using only features available before the LLM call (27 score and lexical statistics of the two retrieval lists plus a PCA of a small query embedding) with an executable fallback. Every choice, including the fallback and the threshold, is made inside the training fold and applied once to held-out queries, and harmful skips (the rerank would have found the target, the fallback did not) are reported next to the aggregate coverage. Across nine cells on 2WikiMultiHopQA, MuSiQue and HotpotQA the gate skips 51% of calls at an average held-out LastHop@K cost of 1.2 pp; four cells meet a pre-registered 1 pp rule, harmful skips occur in eight (190 harmful against 136 beneficial), and a random gate at the same skip rate loses 2 to 11 pp on the high-lift cells. A second rule sets each cell's threshold from a pre-specified budget on the expected harmful-skip rate over Platt-calibrated harm probabilities (ECE 0.025 after calibration, 0.094 before): at a 1 pp budget the gate skips 42% at -0.8 pp with 66 harmful skips and six cells within 1 pp, but realised harm exceeds the promise in six cells (mean 1.45 vs 0.83 pp), a selection optimism we quantify; a 0.5 pp budget realises about 1 pp. The harm probabilities are calibrated but barely discriminative (AUC 0.16 to 0.70). An earlier version reported 73% "lossless" savings; that figure rested on an oracle fallback and a wrong MuSiQue target, and we document both. 
+
+---
+# Parameterized Dense-Sparse Fusion for Hybrid Retrieval: Tuning a Rank-Score Mix on BEIR SciFact with Qdrant 
+
+**Authors**: Satyanarayan Pati, Srikanth Patil  
+
+**Link**: [PDF](https://arxiv.org/pdf/2609.22770)  
+
+**Abstract**: We study a parameterized hybrid ranker that fuses a dense embedding list and a sparse lexical list. The method has a small, explicit parameter vector: a dense prior $\alpha \in [0,1]$, a score-versus-rank mix $\lambda \in [0,1]$, an RRF smoothing parameter $\kappa > 0$, optional list-geometry coefficients that move $\alpha$ per query, and a router margin $\tau$ that can turn sparse search off. We grid-search those ranges on SciFact train (809 queries) and freeze the chosen values on SciFact test (300). The tuned rank-score mix ($\alpha = 0.8$, $\lambda = 0.75$, $\kappa = 20$) reaches 0.753 nDCG@10 and 0.889 recall@10, outperforming dense BGE (0.742 / 0.871) and equal-weight RRF (0.707 nDCG@10) on that test split. A list-conditioned $\alpha$ adds +0.0006 nDCG; a sparse-off router is rejected by the same train split (any $\tau$ that skipped approximately 50% of queries lost nDCG). These coefficients are dataset-specific. Equal RRF with the same models does not beat dense on a nine-zip BEIR macro-average (0.479 vs. 0.519 nDCG@10). Repeating the same train-then-freeze sweep independently on all 20 indexed units beats equal RRF on 20/20 and dense on 16/20 (unit-mean nDCG@10 0.467 vs. 0.462 dense vs. 0.420 RRF). Other corpora should reuse the ranges, not a copy of the SciFact point. 
+
+---
+# Beyond Raw Engagement: A Counterfactual Observability Framework for Recommender Systems at Netflix 
+
+**Authors**: Chaoran Guo, Ding Tong, Ting-Po Lee, Scarlet Chen  
+
+**Link**: [PDF](https://arxiv.org/pdf/2609.22747)  
+
+**Abstract**: Understanding the performance of large-scale recommender systems remains an underexplored challenge, especially for content creators and model developers. The raw engagement signals available to them, such as views and clicks, conflate content quality, model behavior, presentation bias, and audience reach, making it hard to attribute outcomes to the right cause.
+In this work, we present a general evaluation framework that enhances observability across multiple recommender systems at Netflix and demonstrate its effectiveness through several production deployments. The framework treats recommender-system observability as a counterfactual measurement problem: estimating what the recommender would have done, and what engagement would have followed, in the absence of a specific content item or model decision. We articulate three stakeholder-centered observability principles for content creators and model developers, and propose measurement methodologies covering bias reduction, relativity, and incrementality, applicable to both single-stage and cascading recommender systems and serving both audiences from a single measurement foundation. 
+
+---
+# Scoring With the Engine: Retrieval Exposure, Cross-Engine Divergence, and the Limits of Engine-Agnostic GEO Scores 
+
+**Authors**: Benjamin Tannenbaum  
+
+**Link**: [PDF](https://arxiv.org/pdf/2609.22655)  
+
+**Abstract**: Recent work asks whether generative-engine visibility can be approximated with deterministic, engine-free page scores. We separate two stages such scores can conflate: exposure to a live engine and citation selection conditional on exposure. In an observational audit of ChatGPT, Microsoft Copilot, Google, and Perplexity, 15 fixed commercial prompts produced 589 citation observations on 6 June 2026, corresponding to 528 unique URLs and 356 domains. Same-prompt cross-engine URL overlap was extremely small: mean pairwise Jaccard similarity was 0.0079, the median was zero, and 84.9% of engine pairs shared no cited URL. On the ten prompts observed on all four engines, mean exact-URL Jaccard was 0.0072. A matched-size hypergeometric baseline preserving each prompt's four-engine URL universe and each engine's list length predicts 0.1272, so observed overlap was only 5.7% of that baseline; zero URL overlap occurred in 86.7% of comparisons versus 12.3% expected. Top-five exact-URL overlap was zero in all 60 pairwise comparisons. A single engine captured only 11.4%-42.6% of the four-engine URL union, and 96.4% of observed URLs appeared in only one engine. A separate 5-to-6 June same-engine comparison found 67.0% mean URL-set turnover. These results do not invalidate engine-free page scoring; they identify its estimand. A score computed without a live engine can estimate page quality or query-page fit, while end-to-end visibility additionally depends on engine-specific exposure and selection. We therefore argue for reporting page fit, observed exposure, conditional selection, and final visibility as distinct quantities. 
+
+---
+# Guiding the coarse levels of semantic IDs makes the fine levels learnable 
+
+**Authors**: Bin Wang, Zhengyu Zhang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2609.22227)  
+
+**Abstract**: Generative retrieval represents each item by a short Semantic ID and casts recommendation as autoregressive generation of that sequence. Because the tokenizer is trained independently to reconstruct an item embedding, its codes are aligned with neither the downstream LLM nor the end task. Nearly every SID system therefore spends extra effort to bridge this gap--alignment corpora, reasoning/RL, or per-token encoders to make codes legible, or learned tokenizer supervision to make them task-aware--yet the recovered meaning is content-derived and may not be the meaning the task needs. We introduce Guided SID, which instead makes the levels that matter most meaningful by construction: we force the coarse RQ-VAE levels to encode a predefined categorical attribute--chosen to be text-grounded (hence legible to the LLM) and task-relevant--by deterministic supervised index assignment (overriding nearest-neighbor selection with the attribute label) while keeping the codebooks learnable (they still receive reconstruction gradients). A trie-merge construction maps any high-cardinality or set-valued attribute onto the fixed code budget while keeping merged buckets semantically coherent. Guiding costs nothing intrinsically: collision and reconstruction match or beat the vanilla baseline despite pinning the coarse level. In a matched end-to-end A/B differing only in the SID encoding, the guided retriever improves recall@k at every list length we measure (1.36x at k=1, 1.39x at k=10), raises mean reciprocal rank from 0.0260 to 0.0355, and predicts the pre-defined attribute 4.2x more often. 
+
+---
+# ECP-Bench: Benchmarking and Learning Entertainment Content Promotion with Foundation Models 
+
+**Authors**: Hyomin Kim, Bowen Chen, Jin Huang, Zhao Wang, Qiaozhu Mei, Shingo Takamatsu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2609.22150)  
+
+**Abstract**: Content promotion spans a broad set of skills, from understanding content to forecasting its market reception. However, LLMs' ability to support such promotion decisions remains underexplored. Existing studies are often limited to a single task (e.g., popularity prediction) or a small set of tasks within a single domain (e.g., movies). As a result, there is a lack of understanding of LLMs' abilities in the full promotion process and how these abilities generalize across different tasks and domains. In this work, we introduce ECP-Bench, a benchmark containing 1.9M movie, game, and music items and 423,451 questions across 33 tasks in five content-promotion skill families. Our evaluation shows that frontier models achieve only 51.9\% overall accuracy and lose much of their advantage on post-cutoff content, with drops of up to 19.1 percentage points. In contrast, open-weight models fine-tuned on ECP-Bench achieve up to 60.3\%, remain substantially more stable across the knowledge cutoff, generalize to unseen content and tasks, and exhibit meaningful cross-domain generalization. 
+
+---
+# Ascent: An Agentic System over the Model Context Protocol for Real-World Clinical Data Analysis 
+
+**Authors**: Angelo Ziletti, Leonardo D'Ambrosi, Melanie Tuchardt, Tim Kondziella  
+
+**Link**: [PDF](https://arxiv.org/pdf/2609.24620)  
+
+**Abstract**: Answering epidemiological questions from real-world clinical data requires medical coding, schema-aware SQL, and validation of implicit choices about populations, denominators, and time. We present Ascent, an agentic system that exposes medical coding, question answering, and cohort analysis through a shared Model Context Protocol tool surface for standardized and native schemas. We introduce EpiTrap, a dataset testing whether systems avoid recognized pharmacoepidemiological errors, and compare a fixed pipeline with agents across models and orchestrators. With capable models, agents improve accuracy over the fixed pipeline by an average of 27 and 20 percentage points on native and standardized schemas, respectively. These gains require more tool calls and longer runtimes. Experience from real projects highlights the system's value for feasibility assessment, diagnostic iteration, and expert-guided analysis. 
+
+---
+# When More Evidence Hurts: Publication-Bias Drift and Principled Stopping for Biomedical Causal Search 
+
+**Authors**: Fred Sun, Shangqi Guo  
+
+**Link**: [PDF](https://arxiv.org/pdf/2609.24101)  
+
+**Abstract**: Automated biomedical evidence synthesis depends on retrieving published studies, but the biomedical literature is systematically skewed toward positive findings. Deeper retrieval can therefore make a system \emph{more} likely to falsely infer benefit when the true effect is null. We formalise this phenomenon as \emph{evidence drift} and prove that, under a standard publication-bias model, the false-positive probability on null-effect queries follows a strictly increasing large-sample envelope in retrieval depth, approaching one. Empirically, on a held-out test set of 140 Cochrane-derived queries, drift rises monotonically from 7.9\% to 15.7\% as the retrieval budget grows from 3 to 20 steps, and concentrates in the null-effect class. We present DACG-agent, a drift-aware causal-graph agent that incrementally builds a causal knowledge graph from PubMed abstracts and applies a two-layer stopping policy with complementary roles: a KL-divergence monitor that detects posterior convergence (the accuracy layer), and a Bradley--Terry process reward model (PRM) whose online decline detection halts retrieval once evidence quality peaks (the efficiency layer). Against full-budget retrieval, DACG-agent reduces evidence drift from 15.7\% to 6.4\% and improves null-effect accuracy by 21 percentage points (40.0\%$\to$61.4\%) while using 67\% fewer retrieval steps; overall accuracy rises from 61.4\% to 69.3\% (95\% CI 61--77). A simulation confirms the drift result transfers from the analysed vote-counting aggregator to the deployed noisy-OR one. 
+
+---
+# UniK: Universal Knowledge Perception for Digital and Physical AI 
+
+**Authors**: Nirmit Desai, Kunal Sawarkar, Aditya Mahakali, Dongkon Lee, Kevin Park, Eric Song  
+
+**Link**: [PDF](https://arxiv.org/pdf/2609.23971)  
+
+**Abstract**: Two transformative classes of AI systems are reshaping how organizations operate: \textit{digital AI}, which reasons over enterprise knowledge to power chatbots and agent workflows; and \textit{physical AI}, which learns to control robots and autonomous systems from video, gameplay, and sensor telemetry. Both face the same foundational bottleneck: raw knowledge at scale, spanning heterogeneous modalities, locked in private corpora that existing AI infrastructure cannot access reliably or efficiently. We propose \textit{Universal Knowledge Perception (UniK)} as a common platform for both classes, covering the full knowledge lifecycle (ingestion, enrichment, indexing, retrieval, and continuous evaluation) across modalities from rich text and video to molecular data and sensor telemetry. We present UniK, built on Polymath Retrieval (multi-index fusion over automatically enriched indices) with no task-specific fine-tuning. Across five digital AI domains (medical literature, open-domain QA, chemistry, legal video proceedings, and government open data) UniK combined with an open-source 70-billion-parameter model consistently matches or outperforms frontier proprietary LLMs that are orders of magnitude larger: 76\% RAG accuracy on government data versus 47\% for GPT-5; 77.9\% on medical QA without fine-tuning; topping all open-source chemistry pipelines. We show that the same infrastructure directly addresses the data curation, indexing, and retrieval challenges facing physical AI world model training, where the knowledge problem is harder but structurally identical. 
+
+---
+# Q-TIE: A Lightweight and Generalizable Re-ranking Framework for Temporal Information Retrieval 
+
+**Authors**: Soyeon Kim, Hyunjin Kim, JinYeong Bak, Steven Euijong Whang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2609.23880)  
+
+**Abstract**: Temporal Information Retrieval (TIR) has been increasingly critical given the rise of Retrieval-Augmented Generation (RAG). Since temporally mismatched evidence can be highly misleading, TIR aims to retrieve documents that are both semantically and temporally relevant to a query. Two TIR paradigms have emerged - temporal retrievers and temporal re-rankers - differing in how temporal relevance is modeled. While these paradigms provide complementary strengths, our analysis reveals that each alone falls short of robust TIR: temporal retrievers provide flexible query understanding via learned representations, but often fail to explicitly account for temporal constraints; temporal re-rankers can enforce such constraints more explicitly, but often rely on predefined re-ranking rules. To address this, we propose Q-TIE, a re-ranking framework based on learned Temporal Intent Extraction (TIE). By introducing a TIE model that maps each query's temporal constraint into a unified interval representation (i.e., $\langle t_{start}, t_{end} \rangle$), Q-TIE generalizes beyond predefined rules via model-based learning while explicitly modeling temporal constraints as a separate signal - jointly achieving what each paradigm typically trades off. Experiments demonstrate that Q-TIE consistently outperforms existing TIR methods with stronger generalizability across temporal query types, and provides a lightweight yet effective add-on for temporally-aware RAG pipelines. Code: this https URL. 
+
+---
+# Explainable Recommendations at Scale: LLM Rationales for YouTube Music Artist Discovery 
+
+**Authors**: Xiao Liu, Yanwei Song, Srivaths Ranganathan, Yuan Chen, Zheyun Feng, Parker Steenburgh, Jochen Klingenhoefer, Nathan Lasche, Gergo Varady, Tim Steele  
+
+**Link**: [PDF](https://arxiv.org/pdf/2609.23877)  
+
+**Abstract**: Modern music streaming platforms face a persistent tradeoff: exploiting familiar content versus driving the exploration of novel items. While users frequently desire discovery, they hesitate to select unknown artists over proven favorites. Providing transparent, natural language rationales that explain why an unexplored item is recommended lowers this barrier. However, while Large Language Models (LLMs) excel at this nuanced explainability, their real-time deployment is severely bottlenecked by prohibitive inference costs and computational overhead. In this paper, we present an industry case study of a decoupled recommendation architecture that successfully scales exploration without compromising latency. Our system isolates LLM inference asynchronously offline, pre-computing personalized candidate pools of undiscovered artists alongside tailored rationales. Large-scale online A/B experiments validate our design. We demonstrate that combining LLM-backed recommendations with these explanatory rationales significantly reduces the trust barrier for new content, yielding statistically significant improvements in both user exploration and overall engagement on the discovery surfaces. 
+
+---
+# From UNDRR Reports to Event Records: Schema-Constrained LLM Extraction of Georeferenced Disasters 
+
+**Authors**: Camilla Andreozzi, Phuong-Anh Nguyen-Le, Zhijing Jin, Revati Mani  
+
+**Link**: [PDF](https://arxiv.org/pdf/2609.23853)  
+
+**Abstract**: Disaster-risk-reduction archives describe hazard events in prose that databases such as EM-DAT (Delforge et al., 2025) cannot ingest directly. We present an LLM pipeline that generates candidate georeferenced event records using a controlled hazard vocabulary and fixed schema, retaining evidence for review. Applied to 10,000 documents from PreventionWeb, the knowledge hub managed by UNDRR, it produced 3,572 records from 1,913 documents across 24 hazard types and resolved 81% of location mentions to OpenStreetMap geometries. On 171 human-positive document windows from a stratified 217-document reference set, GPT-5 achieved 86.0% pooled attribute $F_1$, versus 44.2% for the spaCy-gazetteer baseline. Evaluation pools hazard families, location strings, and event years within documents, without assessing their assignment to individual events. GPT-5.4 ranked highest among ten LLMs (86.6% $F_1$). Verbatim evidence occurrence was 72.0% for GPT-5 and 47.2% for GPT-5.4, measuring textual traceability without establishing attribute support. We report production failure modes and automated label and location-rule compliance checks. Prompts, schema, and outputs will be released for adaptation to national reporting archives. 
+
+---
+# MM-ContextFold: Context Folding for Multimodal Agentic Retrieval 
+
+**Authors**: Yang Tian, Fan Liu, Jingyuan Zhang, Zhenyang Li, Yupeng Hu, Liqiang Nie  
+
+**Link**: [PDF](https://arxiv.org/pdf/2609.23121)  
+
+**Abstract**: Multimodal Agentic Retrieval (MAR) requires agents to solve complex information-seeking tasks by iteratively invoking external tools. Typical frameworks such as ReAct maintain raw multimodal inputs and the accumulating interaction history in a single, ever-growing context, leading to the context explosion problem. While existing methods alleviate this issue by compressing redundant text, effective strategies for managing token-intensive visual content remain largely underexplored. To address this gap, we first conduct a systematic empirical study of approximately 10,000 trajectories. The results show that as visual cues are progressively extracted through external tools and textualized into the context, raw images become increasingly redundant. Continued image retention is associated with higher output entropy and can even degrade task accuracy. Motivated by these findings, we propose MM-ContextFold, a training-free framework that loads raw images only when needed. It maintains a persistent, text-only main context for high-level planning and spawns ephemeral branch contexts for image-dependent subtasks. Within each branch, the agent loads the relevant images, completes the subtask, and folds the result back into the main context as a concise textual summary; the images and branch trace are then discarded. Experiments on seven MAR benchmarks across five backbone models show that MM-ContextFold improves average accuracy by 6.3 percentage points over ReAct while reducing the working context length by 27.5\%. 
+
+---
+# Bridging Static and Agentic RAG for Taiwanese Historical Question Answering 
+
+**Authors**: Kai-Hsin Chen, Wei-Yu Chen, Xuanjun Chen, Jyh-Shing Roger Jang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2609.23056)  
+
+**Abstract**: Agentic retrieval-augmented generation (RAG) enables language models to adapt retrieval based on previously retrieved evidence, but it remains unclear whether such adaptive orchestration consistently outperforms well-designed static pipelines. We conduct a controlled comparison of agentic and static RAG for Taiwanese historical question answering, sharing the same generator and hybrid retrieval backend. Despite similar aggregate performance, the two pipelines differ on 70.83% of questions, with their advantages largely canceling out when averaged. An oracle that selects the better response per question improves the composite score by 0.2417 over the better individual pipeline, revealing substantial headroom for question-level selection. We therefore introduce a post-hoc selector that compares the two responses and their cited evidence, significantly outperforming either individual pipeline and recovering 60.34% of the oracle headroom. These results show that aggregate comparisons can obscure meaningful question-level differences between retrieval strategies, suggesting that exploiting their complementarity may be more fruitful than seeking a universally superior pipeline. 
+
+---
+# Attributable Post-Rationalization in RAG Citations: A Controlled Reproduction and an RLVR Comparison 
+
+**Authors**: Mehedi Khan, Md. Shariful Islam Bhuyan  
+
+**Link**: [PDF](https://arxiv.org/pdf/2609.23053)  
+
+**Abstract**: A RAG system can hand you the right answer and cite a source it did not actually use. Models output these unfaithful citations via post-rationalization: they write the answer first and then attach a citation to whatever passage looks close enough. Search agents are now trained with reinforcement learning from verifiable rewards (RLVR), which pays them for getting the answer right. We asked whether that training also teaches them to cite honestly.
+Improving an existing methodology with a required control, we compared an instruction-tuned model against three RLVR agents trained from it, on four question-answering datasets, using only free-tier Kaggle GPUs. Post-rationalization is everywhere: on Wikipedia-based questions roughly one citation in seven is unfaithful. RLVR does not fix it. The agents post-rationalize at their base model's rate, and one lands slightly worse. Rewarding correct answers buys nothing in citation faithfulness, so faithfulness has to be trained and measured on its own terms. 
+
+---
+# R-GEAN: Regimen-Guided Edit Action Network for Within-Admission Medication Change Prediction 
+
+**Authors**: Regan Mahat, Mansu Kim  
+
+**Link**: [PDF](https://arxiv.org/pdf/2609.22959)  
+
+**Abstract**: The medications prescribed to a patient often change during a hospital admission as clinicians start, stop, or continue therapies. We study whether models can predict which medication classes are added or removed between 24 hours after admission and discharge. Metrics that compare the complete discharge regimen can reward models for copying medications that remain unchanged, even when they identify no actual changes. We therefore introduce a leakage-controlled benchmark that predicts net ATC3 additions and removals using only prior completed admissions and information available within the first 24 hours of the current admission. Addition candidates are classes not active at 24 hours, whereas removal candidates are classes active at that time. We also introduce R-GEAN, an asymmetric candidate-scoring network with independent addition and removal predictors. Across 240,480 admissions from 82,286 patients, R-GEAN achieves the highest predefined summary of addition, removal, changed-regimen, and action-pattern performance, termed the edit composite (0.464), compared with 0.435 for the strongest primary comparator. Reimplemented RETAIN, GAMENet, and MICRON baselines obtain 0.428, 0.420, and 0.288, respectively. R-GEAN's advantage is concentrated in correctly identifying medication classes no longer active at discharge, while rare additions and admissions with multiple medication changes remain difficult. Rankings based on micro-F1 over the reconstructed discharge regimen and the edit composite correlate weakly across the evaluated models (Spearman r = 0.20). The continuation baseline achieves the highest complete-regimen score despite predicting no additions or removals. These results show that complete-regimen and edit-level evaluation measure different aspects of medication prediction. The benchmark evaluates observed prescribing changes, not treatment appropriateness 
+
+---
+# DOA-SORT: Directional Occlusion-Aware Multi-Object Tracking with Distributional Observations 
+
+**Authors**: Hao Wang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2609.22706)  
+
+**Abstract**: Identity association in multi-object tracking (MOT) is vulnerable to partial occlusion, truncated detections, and fluctuating confidence scores. Existing motion-dominant trackers commonly represent occlusion as a scalar penalty. This treatment misses the directional observation bias caused by occlusion: left, right, top, and bottom occlusions distort the location and shape of a detection in different ways. We propose \ours{} (Directional Occlusion-Aware SORT), an online and training-free tracker that models these biases explicitly. First, it infers a soft front--back ordering from box overlap and relative bottom positions, and estimates directional occlusion coverage and depth. It then constructs a mixture of one clean and four directional occlusion observation components. The model uses a five-dimensional observation comprising box center, area, confidence, and aspect ratio, and adapts observation noise to predicted occlusion and detection confidence. The directional mixture likelihood is used in high-confidence association, low-confidence association, and track recovery; ambiguity penalties and local order-consistency swaps further reduce identity errors among nearby objects. On the DanceTrack validation split, \ours{} improves HOTA from 63.00 to 66.34, AssA from 45.10 to 49.57, and IDF1 from 62.19 to 65.28 over OA-SORT with the same detector and evaluation protocol. The gains are concentrated in association quality while detection accuracy remains stable. Additional local evaluations on MOT17 and MOT20 train splits characterize cross-dataset behavior under the same no-ReID tracking protocol. 
+
+---
+# AdaMerge: Tuning-Free Patch Compression for Multi-Vector Visual Document Retrieval 
+
+**Authors**: Jianxin You, Kun Ni  
+
+**Link**: [PDF](https://arxiv.org/pdf/2609.22562)  
+
+**Abstract**: Multi-vector visual document retrieval (VDR) models such as ColPali and ColNomic achieve strong accuracy by representing each document with hundreds to thousands of patch-level embeddings, at substantial storage and latency cost. Existing compression methods either prune unimportant patches or merge similar ones into clusters; the recent state-of-the-art merging method Prune-then-Merge (PtM) consistently outperforms pruning-only baselines at high compression, but requires a per-dataset cluster budget m to be tuned by grid search. We observe that the merge-cosine sequence produced by hierarchical clustering exhibits a sharp cliff separating mergeable redundancy from salient signal, and that the location of this cliff is concentrated in a narrow band across more than 11,000 documents from 14 datasets. This suggests the merge boundary can be detected per document rather than tuned per dataset. Building on this observation, we propose AdaMerge, a plug-and-play compression method that (i) detects each document's own cliff via gap analysis on the merge-cosine trajectory, and (ii) builds attention-weighted cluster centroids to preserve salient signal. On the long-document benchmark ViDoRe-V2 (4 datasets, two backbones), AdaMerge significantly outperforms tuned PtM across the operating range (p < 10^-4); on the short-document benchmark ViDoRe-V1 (10 datasets, two backbones), where all merging methods are already near-lossless, AdaMerge matches tuned PtM without any per-dataset tuning. AdaMerge adds only about 10 ms per document and exposes a single global hyperparameter shared across all datasets and backbones. 
+
+---
+# IntLawNER: A Named Entity Recognition Dataset and Benchmark in International Law 
+
+**Authors**: Genis Skura, Roland Bouffanais, Didier Wernli  
+
+**Link**: [PDF](https://arxiv.org/pdf/2609.22529)  
+
+**Abstract**: International law provides the normative framework through which states coordinate action, regulate armed conflict, and protect human rights, yet its texts remain without token-level named entity recognition (NER) resources. We introduce IntLawNER, a NER dataset and benchmark for codified sources of international law, covering 2,987 gold-annotated sentences and 8,094 entity spans from International Court of Justice (ICJ) decisions, UN Security Council resolutions, and European Court of Human Rights (ECtHR) judgments, annotated with seven institution-specific entity types. We construct IntLawNER with a cost-effective hybrid algorithmic-agentic pipeline that reduces 468k source sentences to a compact annotation set through candidate retrieval, LLM-based vetting, and human review, with 89.6% of gold spans accepted unchanged from the silver layer. However, the silver-to-gold analysis reveals that human-machine aggregate agreement metrics can be misleading in domain-specific NER: Cohen's kappa=0.964 on boundary-matched spans masks a macro-F1 of 0.753 when missing entities, boundary errors, and label corrections are included. The benchmark shows that zero-shot span-based GLiNER collapses on entity types dependent on institutional function rather than surface form (0.243 micro-F1), while fine-tuned transformers struggle on rare labels. Carefully selected few-shot examples that demonstrate label contrasts improve every LLM over zero-shot prompting, with Claude Opus 4.6 reaching the best score of 0.873 micro-F1. We release IntLawNER as a benchmark and reusable resource for extracting references in international legal texts. 
+
+---
+# Semantics Delivery Network: Rethinking Web Retrieval Infrastructure for LLM Agents 
+
+**Authors**: Peichun Hua, Yunming Xiao  
+
+**Link**: [PDF](https://arxiv.org/pdf/2609.22486)  
+
+**Abstract**: Large language models (LLMs) increasingly rely on external sources when answering questions that require proprietary information or up-to-date live web content, through both traditional single-shot retrieval-augmented generation (RAG) and multi-turn agentic RAG. Yet today's web infrastructure is still built for human clients. Given a query, current search services return a list of URLs and snippets ranked for generic relevance; content delivery networks (CDNs) cache URL-addressed objects (texts, images, videos, etc.) without knowing which passage an agent needs. LLMs, in contrast, consume short, semantically coherent passages, hereafter "chunks", selected for downstream task utility rather than similarity alone, and may retrieve statefully across reasoning turns. Uncoordinated agents also repeat search, data acquisition, and semantic processing, duplicating work that could be shared. We argue that semantic chunk retrieval should become a first-class network-delivery abstraction. We propose Semantics Delivery Network (SemDN): an origin-authorized, hierarchical edge substrate that indexes, searches, and smart-caches web content at chunk granularity. SemDN serves agents on behalf of participating websites, amortizes data acquisition and processing across agents, and supports tenant-specific retrieval policies. Because, unlike URL caching, semantic retrieval provides no explicit miss signal, SemDN must estimate when its enrolled corpus may be incomplete or stale and trigger scoped discovery or refresh. It raises open questions about shareable retrieval state, hierarchical caching, coverage risk, and deployment. Our preliminary probes reveal a large gap between page content processed and chunks consumed, substantial task-local reuse, and higher answer quality per context token from chunk delivery. 
+
+---
+# Checkpoints Are Not Enough: Trust Calibration in CoSLR, a Human-AI System for Systematic Literature Reviews 
+
+**Authors**: MD Aidul Islam, Malik Abdul Sami, Muhammad Waseem, Zeeshan Rasheed, Kai-kristian Kemell, Zheying Zhang, Pekka Abrahamsson  
+
+**Link**: [PDF](https://arxiv.org/pdf/2609.22248)  
+
+**Abstract**: Systematic Literature Reviews (SLRs) are essential for evidence-based research but remain time-consuming, requiring researchers to manage large volumes of publications across planning, screening, analysis, and reporting. Large language models (LLMs) can now produce fluent, well-structured review text, which makes it difficult to distinguish synthesis that was verified by a researcher from synthesis that merely appears authoritative. This raises the risk that unverified AI-generated synthesis enters the scholarly record carrying the credibility of a systematic review. We present CoSLR, a Human-AI collaborative multi-agent system that supports the SLR workflow through a modular three-phase pipeline using large language models and Retrieval-Augmented Generation (RAG), and that places explicit, mandatory human checkpoints on the path between generated output and its acceptance. In a survey-based study with 63 participants, the system was received positively: 27 of 63 participants (42.9 percent) rated its usability highly, indicating that the mandatory checkpoints did not come at the cost of a workable interface. However, a checkpoint safeguards the review only if researchers use it to verify: 22 of 63 participants (34.9 percent) reported that they would trust AI-generated summaries and reports without additional human checking after only a short interaction with the system. These findings indicate that Human-AI collaboration can support literature review work, but that the effectiveness of human oversight depends on whether users are willing to exercise it. This is a calibration problem that interface design must address directly, not assume. 
+
+---
+# SCoR: A Hierarchical Framework for Forecasting Relations Between Scientific Concepts 
+
+**Authors**: Jingze Wang, Fred Sun, Shangqi Guo  
+
+**Link**: [PDF](https://arxiv.org/pdf/2609.22174)  
+
+**Abstract**: Anticipating emerging research directions is a critical goal of AI-assisted science. Existing methods mainly predict which concepts will co-occur in future papers, but co-occurrence captures shared attention rather than the scientific meaning of a connection, such as whether one method uses, combines, replaces, or contradicts another. We formulate research-direction discovery as hierarchical scientific-relation forecasting over a shared candidate-pair space, comprising three temporally aligned tasks: first co-occurrence, first scientific-relation formation, and relation type at formation. We construct SCoR-Graph from 187,848 cs.CV papers published between 2017 and 2026, yielding 270,687 consolidated concepts, 7.45 million co-occurrence edges, and 615,036 typed, directed relation edges. From cutoff-specific graph snapshots, we derive SCoR-Bench, a leakage-audited benchmark for these three capabilities, with expert-verified gold labels for the entire relation-type test set. We further introduce HiSCoR, a task-adapted model family that models relation emergence as a temporally evolving, hierarchically constrained process by encoding pre-cutoff event histories and conditioning relation formation on future co-occurrence. On the held-out 2025-2026 window, HiSCoR achieves an AUROC of 0.9515, a 2.4% relative improvement over the strongest temporal-graph baseline, and improves population-AUPRC by 14.0%; its relation-type variant achieves a Macro-AUROC of 0.7795. Ablations show that semantic, co-occurrence, and typed-relation views provide complementary predictive evidence. SCoR advances research-direction forecasting from predicting which concepts will co-occur to anticipating whether and how evidence-backed scientific relations will emerge. 
+
+---
+# Quantifying Hidden Salt for Precision Healthcare: Sodium Assessment via Joint-Factor Retrieval and Chain-of-Thought Inference 
+
+**Authors**: Mingyu Huang, Weiqing Min, Yuehui Fang, Yuna He, Shuqiang Jiang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2609.22171)  
+
+**Abstract**: Precision healthcare, particularly for conditions like hypertension and cardiovascular disease, necessitates monitoring of dietary sodium intake. However, tracking this is hindered by the prevalence of hidden salt in cooking, such as sodium in soy sauce and ketchup. While recipes offer a valuable data source for dietary analysis, sodium-rich seasonings are frequently omitted or described ambiguously in instructions. To solve this issue, we propose SALT, a Sodium Assessing & Level Tracking framework adopting an RAG framework to assess sodium content in recipes. Our framework first introduces a Joint-Factor Embedding Retrieval module to locate similar recipes with specified sodium content for addressing the lack of contextual references. These retrieved samples provide contexts for subsequent inference. Then we design a structured 4-hop Chain-of-Thought inference module to refine the vague estimation from language models through a multi-step sodium estimation. To facilitate our study, we further construct a recipe dataset SALT54k with $54,151$ entries labeled with sodium quantities across $11$ common seasonings. Results on SALT54k demonstrate that our method achieves state-of-the-art performance in sodium estimation. Additional real-world validations confirm the effectiveness of our method, demonstrating its potential as a practical solution for AI-assisted precision healthcare. 
+
+---
+# DeepInstructor: An Agentic AI Instructor for Experience-Driven Idea Evaluation 
+
+**Authors**: Rongcan Pei, Fang Guo, Qinglin Qi, Qi Zhu, Yun Luo, Jianhao Yan, Minjun Zhu, Qiujie Xie, Dehong Zheng, Yue Zhang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2609.22104)  
+
+**Abstract**: As automated scientific discovery advances, Large Language Models (LLMs) can now generate research ideas at an unprecedented scale, shifting the bottleneck from idea generation to idea evaluation. Existing evaluators mainly rely on parametric LLM knowledge or unstructured retrieval, producing judgments that lack the experience-grounded reasoning used by human instructors. To address this, we propose DeepInstructor, an agentic framework that formulates idea evaluation as reasoning over structured scholarly experience. DeepInstructor constructs an Experience Graph from 58,607 peer reviews and employs a ReAct-based agent to retrieve dimension-specific evidence for traceable evaluation. We further introduce DeepInstruct, a dataset with controlled pairwise comparisons across novelty, significance, and feasibility. Experiments show that DeepInstructor substantially outperforms existing baselines, improving Hit@1 and Hit@2 alignment with human judgments by 24.4% and 29.7%, respectively. Our findings suggest that scientific idea evaluation can be grounded in explicit reasoning over structured scholarly experience 
+
+---
+# AdaMem: Adaptive Memory Token Allocation for Soft Compression in Retrieval-Augmented Generation 
+
+**Authors**: Artem Sakhno, Grigorii Davydenko, Omar Zoloev, Julia Belikova, Andrey Savchenko, Maksim Makarenko  
+
+**Link**: [PDF](https://arxiv.org/pdf/2609.22100)  
+
+**Abstract**: Retrieval-augmented generation (RAG) improves language models with retrieved evidence, but processing many long passages is costly and can introduce distracting information. Soft compression addresses this challenge by encoding passages as compact sequences of continuous memory embeddings before generation. However, existing methods typically assign each retained passage an identical number of memory embeddings, irrespective of its query-specific relevance. To address this, we propose AdaMem, a relevance-guided soft-compression framework that maps learned passage-relevance estimates to a query-dependent allocation of a fixed memory-token budget. A shared query-conditioned compressor produces both continuous passage memories and relevance scores in a single pass; a deterministic allocation rule assigns more memory tokens to higher-scoring passages and can omit low-scoring ones. Across six open-domain QA benchmarks, AdaMem consistently outperforms OSCAR (the closely matched soft-compression baseline that uses uniform allocation) as well as other soft-compression methods at matched memory budgets. Under standard 16$\times$ compression, AdaMem improves sub-string match by up to 3.2 points (5.5%) over uniform allocation baseline, with an average relative gain of 3.4%; under aggressive 64$\times$ compression the average relative gain grows to 14.6%, with a maximum of 9.8 points (19.7%) on PopQA. AdaMem matches the answer quality of the uncompressed at up to 4$\times$ lower inference latency than full context baseline. AdaMem retains an efficiency profile comparable to the uniform-compression baseline, while achieving up to $4\times$ lower inference latency than full-context inference. Thus, relevance-guided memory allocation is particularly effective when retrieval pools are large and the available memory budget is tight. 
+
+---
