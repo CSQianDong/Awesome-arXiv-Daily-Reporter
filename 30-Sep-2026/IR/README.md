@@ -1,0 +1,266 @@
+# Effective Dense Retrieval using Only In-Context Examples 
+
+**Authors**: Nour Jedidi, Abdul Basit Ali, Hang Li, Jimmy Lin  
+
+**Link**: [PDF](https://arxiv.org/pdf/2609.38099)  
+
+**Abstract**: Turning decoder-only large language models (LLMs) into strong dense retrievers typically requires some form of retriever training. In this paper, we ask whether LLMs can instead be prompted to produce effective representations for dense retrieval given only a few in-context examples. To answer this, we introduce RICE (Representations from In-Context Examples), a simple "training-free" approach that extracts high-quality dense representations from LLMs. To do so, RICE conditions the LLM on examples that provide a shared context for query and document encoding. Our results demonstrate that RICE embeddings can substantially improve the accuracy of prompt-based LLM embeddings, establishing it as a simple method to build LLM-based dense retrievers that do not require training. We release our code at this https URL. 
+
+---
+# Generated Query Expansion Still Helps Strong Sparse Retrieval: A Controlled Study with SPLADE-v3 
+
+**Authors**: Ryan C. Barron, Cade W. Trotter, Maksim E. Eren, Kim Ø. Rasmussen, Liz D. Miller, Benjamin J. Migliori  
+
+**Link**: [PDF](https://arxiv.org/pdf/2609.37911)  
+
+**Abstract**: Scientific queries are often brief, while relevant papers use specialized vocabulary. Generated query expansion can bridge this mismatch, but earlier work suggests that its value shrinks as the underlying retriever becomes stronger. We test the four generated formats of term lists, a pseudo-document, multiple pseudo-references, and corpus-steered text all together with SPLADE-v3 on NFCorpus, TREC-COVID, and SciDocs. Every condition searches the same frozen document index and follows the same query-side integration rule and 256-dimension budget, isolating the effect of the added content. All twelve method-collection comparisons improve aggregate nDCG@10, with best relative gains of 4.81%, 8.92%, and 9.47%. Eleven remain significant after Holm correction. The gain persists in 103 of 114 interpolation settings, including every setting that assigns at least 30% of the mixture weight to the original query. Shuffled-text and non-contextual lexical-bag controls also remain above baseline in all 24 aggregate comparisons, showing that the added vocabulary carries most of the benefit. A corpus-induced typed concept graph, by contrast, produces no consistent gain, and its relation, depth, validation, random, and gating controls do not rescue it. Generated vocabulary can therefore complement a strong learned sparse retriever, provided that the original query remains strongly represented. 
+
+---
+# Towards Semi-Automatically Comparing Keyword-Based and Semantic Search Accuracy 
+
+**Authors**: Mohamed Ben Salha, Fiete Lüer, Maik Betka, Stefan Wagner  
+
+**Link**: [PDF](https://arxiv.org/pdf/2609.37749)  
+
+**Abstract**: The increasing importance of Information Retrieval (IR) in managing large datasets has highlighted significant limitations in traditional keyword-based search systems. Context-aware chat-based search methods, such as Retrieval Augmented Generation (RAG), have recently emerged, but their evaluation compared to keyword-based systems often relies on subjective user feedback. A rigorous, quantitative comparison between these paradigms remains lacking. This work introduces a novel, preliminary framework to quantitatively assess IR accuracy of search systems that produce different output formats, such as lists and messages. It focuses on two key aspects: the ranking accuracy for keyword-based systems and the completeness of retrieved information for semantic chat-based systems. Our approach enables semi-automatic comparisons of semantic and keyword-based methods using interchangeable equivalence classes tailored to domain-specific contexts (e.g., companies or problems). We validate the framework through an industrial case study, demonstrating statistically significant improvements in context-aware search over keyword-based methods, supported by analyses including the Mann-Whitney U-Test. With its adaptable design, the proposed framework provides a strong foundation for objectively assessing keyword-based and semantic chat-based search methods. 
+
+---
+# MERGE: Multi-LLM Ensemble for Retrieval via Generative Enrichment 
+
+**Authors**: Tzu-I Ho, Yung-Yu Shih, Shang-Yu Su, Dongzhe Wang, Yun-Nung Chen  
+
+**Link**: [PDF](https://arxiv.org/pdf/2609.37574)  
+
+**Abstract**: Large Language Models (LLMs) are increasingly used to enrich user queries in information retrieval (IR) so that a standard retriever such as BM25 can bridge vocabulary gaps with the target corpus. Any single LLM, however, is limited by its training data and architectural biases, and its enrichment behavior depends on hand-crafted prompts that must be re-engineered for each new model -- an expensive and poorly scalable process. We present MERGE (Multi-LLM Ensemble for Retrieval via Generative Enrichment), a two-stage framework: three heterogeneous 7-8B open-source LLMs independently produce candidate expansions, and a larger LLM generatively synthesizes them into a single query. To make prompt engineering scalable across the ensemble, we integrate a task-grounded Automatic Prompt Optimization (APO) loop into both stages. Unlike APO methods that judge candidates with an LLM evaluator, our loop scores each candidate by its downstream retrieval performance and runs a small tournament between the current champion prompt and optimizer-proposed drafts, terminating once the champion survives two consecutive rounds; a history-augmented variant additionally feeds the recent tournament trajectory back to the optimizer. MERGE is retriever-agnostic and issues a single BM25 pass with no rank fusion, no supervised document expansion, and no re-indexing. On five BEIR benchmarks (NQ, SciFact, FiQA, Touche-2020, DBPedia), MERGE improves BM25 nDCG@10 over the original queries by +2.1 to +14.9 points and matches or outperforms strong LLM-based query-expansion baselines despite using only compact open-source models. Ablations confirm that the Stage-2 ensemble beats any single Stage-1 LLM, and that task-grounded APO converts large seed-prompt regressions into consistent gains without hand-tuning. 
+
+---
+# Do Evidence-Reading Diagnostics Improve Interface Selection in Small LLM Recommenders? 
+
+**Authors**: Han Chen, Yingrui Li  
+
+**Link**: [PDF](https://arxiv.org/pdf/2609.37472)  
+
+**Abstract**: Behavioral tests measure how a language model reads evidence. We ask whether those measurements help choose a recommendation interface. We evaluate six small instruction-tuned checkpoints across four recommendation domains with chronological evaluation and 3,426 evaluation users. Each request ranks eight candidates. A baseline selector chooses among history-only prompting, prompting with collaborative evidence, and score fusion. It uses observable features and six stability prompts that vary wording and candidate order. An augmented selector adds features from six evidence-reading prompts that ask the model to compare support counts. An interface chosen once on development (validation) data for each domain and checkpoint scores 0.5524 NDCG@5, compared with 0.5447 for the baseline selector and 0.5428 for the augmented selector. Adding the diagnostic features changes NDCG@5 by -0.0019 (95% interval [-0.0046, 0.0004]). The interval includes zero, and its upper bound is below the analysis plan's 0.005 improvement target. Matching the selectors' hyperparameters also leaves the interval upper bound below that target. Evidence from retrieved similar users improves prompting by 0.0999 NDCG@5 over a control using randomly selected users matched for activity. The evidence-reading tests also reveal answer-position and tie-response biases. These results concern the tested selectors and candidate sets. They illustrate why diagnostic measurements should be evaluated by whether they improve recommendation choices beyond existing features and a fixed interface. 
+
+---
+# HELIX: Purified and Unified - Rethinking Feature Interaction and Sequence Modeling for Large-Scale Recommendation 
+
+**Authors**: Yuntao Zheng, Miao Zhang, Yadong Ding, Yanchuan Tang, Lixiyu Chen, Hao Wang, Quan Li, Shiying Cai, Yue Lin, Jiayu Li, Yu Feng, Wentao Yang, Rongkun Xing, Jiekai Wang, Mingge Zhang, Feiling Gong, Xiang Gao, Jinyu Dong, Yajing Zhang, Pengfei Ren, Yinzhou Wang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2609.37183)  
+
+**Abstract**: Industrial recommendation ranking models typically scale along two modeling axes: feature interaction over heterogeneous user, item, context, and cross features, and sequence modeling over long, informative, and multi-type user behavior histories. We find that scaling either capability in isolation is insufficient, as each exhibits a limited scaling ceiling and a suboptimal scaling-law slope. We conjecture that achieving a more favorable scaling-law slope requires jointly scaling both axes. To support this, we present HELIX, a purified and unified architecture for large-scale recommendation. HELIX interleaves sequence retrieval and feature interaction while enforcing one-way information flow from reusable sequence states to candidate-conditioned mix-tokens. This design preserves cross-depth communication between the two modeling axes while keeping user-side sequence computation amortizable, enabling flexible and asymmetric scaling of sequence modeling and feature interaction. Deployed in TikTok's e-commerce recommendation system, HELIX consistently improves offline CTR AUC, CVR AUC, and other ranking metrics. In online A/B tests, it achieves an approximately 6% increase in e-commerce video GMV per user. 
+
+---
+# Optimizing VLP-aligned Multimodal Intent Representation with Correct Visual Instantiation for Zero-Shot Composed Image Retrieval 
+
+**Authors**: Xuri Ge, Chunhao Wang, Junchen Fu, Haokun Wen, Zhiwei Xu, Ying Zhou, Zhumin Chen, Pengjie Ren, Zhaochun Ren, Xin Xin  
+
+**Link**: [PDF](https://arxiv.org/pdf/2609.36946)  
+
+**Abstract**: ZS-CIR aims to retrieve a target image from a reference image and a modification text without paired supervision, typically by encoding composed queries as text-dominant representations within the image-text matching space of VLPs. However, queries reconstructed by visual pseudo-word learning or MLLM-based target reasoning often deviate from the native VLP representation space due to reference noise and coarse text fusion in the former, and verbose, weakly visually grounded descriptions in the latter. In this paper, we propose a unified ZS-CIR framework (named VMIR-CVI) to reconstruct multimodal composite queries from two complementary perspectives for optimizing VLP-compatible multimodal intent representation. First, it reasons and converts the multimodal intent into a unified textual description, aligning with the native text space of the VLP backbones to produce more retrieval-compatible textual queries. Second, it reconstructs the query representation with correctly decoupled visual instance cues, reducing reference noise while preserving target-relevant content. Specifically, a VLP-aligned Multimodal Intent Reasoning (VMIR) module injects few-shot VLP-style exemplars into chain-of-thought prompts, guiding the MLLM to generate target-consistent intent queries. A Training-free Visual Instance Disentanglement (TVID) module decouples fine-grained visual instances from global reference features without additional optimization. Finally, a lightweight Hybrid-modal Intent Alignment and Fusion (HIAF) module integrates the reasoned textual intent and disentangled visual cues into a unified hybrid-modal representation for robust ZS-CIR. Extensive experiments on three CIR benchmarks, namely CIRR, CIRCO and FashionIQ, show that VMIR-CVI significantly outperforms existing baselines and achieves new state-of-the-art performance. Code and trained models will be publicly released. 
+
+---
+# GRP v0.1 Technical Report 
+
+**Authors**: Wenfeng Zhuo, Vincent Xue, Charles Wei, Cong Ni, Ruiming Lu, Jiwen Ren, Mo Li, Peng Yang, Xufei Wang, Dongheng Li, Jiacong He, Yi Song, Yufei Fan, Mikhail Obukhov, Yiwen Chen, Yvette Liu, Yin Ye, Chengjie Wu, Mingtao Zhang, Jinchao Ye, Lili Zhang, Chunhui Zhu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2609.36688)  
+
+**Abstract**: Industrial recommendation systems rely on multi-stage cascades whose retrieval, ranking, and serving components are difficult to replace jointly. We present GRP, a generative recommendation framework that combines retrieval, ranking, and reward modeling in a single encoder-decoder model, and evaluate a progressive path toward end-to-end recommendation. The model generates multimodal Semantic IDs and scores candidates with a jointly trained ranking module. The frozen ranking module then supplies rewards for reinforcement-learning post-training. We introduce mGRPO, which adds a reference-anchored margin to reward optimization to preserve the likelihood of logged targets. Offline experiments examine history encoding, model capacity allocation, event selection, tokenization, and reward discrimination. Serving optimizations reduce end-to-end retrieval latency by 69%. Online experiments evaluate the model as a retrieval source, with early-ranking bypass, and with replacement of weaker sources. In a retrieval-only comparison, view time increases by 0.46% and shares by 0.77% relative to production. A separate comparison combining bypass and source replacement yields increases of 0.82% in view time and 2.56% in shares, with neutral platform-level guardrails. These results support progressive deployment while identifying remaining gaps in ranking quality and performance across recommendation metrics. 
+
+---
+# Structured Interaction, Visual Localization, and Robust Execution for Complex Web Tasks: A Technical Report on the WebRetriever Challenge 
+
+**Authors**: Ziqi Zhang, Shaohui Li, Bing Li  
+
+**Link**: [PDF](https://arxiv.org/pdf/2609.35904)  
+
+**Abstract**: This report presents the web agent system developed for the WebRetriever Challenge. The system follows a structuredinteraction- first strategy, using semantic webpage information for routine browser operations and invoking visual perception only when structured representations are insufficient. Three key designs are introduced: grid-assisted visual localization for difficult-to-access controls, hierarchical context management for reducing redundant page and interaction history, and fault-aware execution mechanisms for stable multi-browser task processing. The system achieved a pass rate of up to 79% in local evaluation on Protocol 1. In the official Protocol 3 competition, it achieved a 59% pass rate with eight concurrent browser workers and ranked first overall, winning the WebRetriever Challenge. 
+
+---
+# Soft Curriculum Learning for Optimizing Fresh and Generalized Recommendations 
+
+**Authors**: Arnab Bhadury, Siyan Zheng, Anlan Yu, Palaksh Rungta, Jiawei Li, Changping Meng, Dapeng Hong, Chuan He, Onkar Dalal  
+
+**Link**: [PDF](https://arxiv.org/pdf/2609.35783)  
+
+**Abstract**: Large-scale recommender systems, particularly short-form video platforms, are often bottlenecked by massive popularity feedback loops. In such environments, as models recommend popular items, they generate an overwhelming amount of skewed training data for "head" items. This creates a self-reinforcing cycle where retrieval and ranking models memorize "head" item patterns at the expense of generalizing across the vast "tail" of the catalogue. While Curriculum Learning (CL) offers a powerful mechanism to break this feedback loop by systematically exposing models to progressively more difficult and less frequent examples, its adoption in industrial recommendation has been hampered by hardware utilization inefficiencies or the needs for complicated pre-processing techniques because dynamic data rejection algorithms tend to starve hardware accelearators (TPUs/GPUs) by becoming largely CPU-bound. In this work, we introduce a scalable Soft Curriculum Learning framework designed specifically for continuous training setups within industry-scale retrieval and ranking models. By utilizing loss annealing and in-graph weight adjustments rather than rigid data filtering, we break the popularity feedback and enable dynamic curriculum pacing without sacrificing system throughput. We demonstrate empirical evidence through applications across sequence-based retrieval models (such as SASRec), two-tower retrieval models, and large-scale continuous ranking models. Online A/B tests on our short-video platform demonstrate substantial lifts in both overall user satisfaction and fresh content consumption, all without degrading model throughput. 
+
+---
+# Financial Evidence Crowding: Diagnosing and Mitigating Constraint-Induced Displacement in Retrieval-Augmented Generation 
+
+**Authors**: Yixi Zhou, Jiayi Yin, Fan Zhang, Xiangyi He, Haipeng Zhang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2609.35782)  
+
+**Abstract**: Retrieval-augmented generation (RAG) retrieves candidate evidence and sends only a limited top-ranked subset, the top-k context, to a generator. In financial question answering, passages can match a query's topic while conflicting with its period, segment, metric scope, or table scope. We study the resulting set-level ordering failure, which we call financial evidence crowding. FinDeCrowd-Stress isolates this failure through matched compatible and incompatible candidate pools while fixing the query, relevant evidence, ranking model, candidate count, and retrieval budget. On a FinDER test split containing companies unseen during training, incompatible pools reduce top-10 evidence inclusion (Recall@10) by 0.147 relative to equally difficult compatible pools. This gap shows that conflicting candidates consume limited context slots and displace answer-supporting evidence. We then introduce FinDeCrowd-RAG, a learned score correction that combines a fixed relevance score with typed compatibility and local lexical competition. A query-level identity gate applies the correction only when it predicts a better order; otherwise, it preserves the original ranking. On identical controlled candidates, FinDeCrowd-RAG raises top-10 evidence inclusion from 0.757 to 0.902 by recovering evidence already present in the candidate set. On a FinDER index built without query-specific candidate insertion, gated reranking raises this inclusion rate from 0.420 to 0.492, while top-100 retrieval coverage remains 0.743 by design. With a fixed generator, the same ordering change improves answer accuracy and citation recall on FinanceBench and FinQA. These results identify constraint-induced displacement as a measurable RAG evaluation target and show that identity-gated reranking can recover evidence already covered by first-stage retrieval. 
+
+---
+# TSG Suggester: Tree-Structured Knowledge-Graph Retrieval for Troubleshooting Guide Recommendation in Cloud Incident Management 
+
+**Authors**: Shawn Pan, PavanUttej Ravva, Walt Williams, CJ Barberan, Nutan Sahoo, Ziran Min, David Gross, Irene Shaffer  
+
+**Link**: [PDF](https://arxiv.org/pdf/2609.35780)  
+
+**Abstract**: On call engineers in large scale cloud services work under intense time pressure, yet locating the correct Troubleshooting Guide (TSG) for an incident remains a largely manual, keyword driven process, and prior empirical work finds that guide search consumes a substantial fraction of total mitigation time.
+We present TSG Suggester, a retrieval system that recommends relevant TSGs directly from an incident description. We evaluate five retrieval strategies: Text Only RAG, Image Augmented RAG, RAPTOR, Tree Structured Retrieval, and our proposed Tree + Knowledge Graph (Tree+KG), on 314 real world incidents spanning 112 unique TSGs drawn from 18 service teams on a production incident management system.
+Tree+KG converts each guide into a tree that preserves its native section hierarchy, attaches LLM generated problem abstractions to internal nodes to bridge the solution oriented language of guides and the problem oriented language of incidents, extracts a per guide entity knowledge graph, and fuses embedding similarity with entity level matching at query time. Tree+KG attains 54.78% Top 1 and 82.48% Top 5 accuracy, leading every baseline at every cutoff, with an 8.58 point Top 1 gain over text only RAG.
+Two findings are of independent interest. First, structural alignment dominates: methods that preserve or rebuild document structure outperform flat chunking where precise discrimination matters. Second, and contrary to our initial hypothesis, multimodal enrichment actively hurts. Captioning guide screenshots and injecting the captions costs 22.64 Top 5 points relative to the text only baseline because generic captions dilute embeddings rather than sharpen them. We report error analyses for both results and provide concrete deployment guidance. 
+
+---
+# Post-Generation Verification Dominates Retrieval Optimization: A 2^4 Factorial Ablation of RAG Pipeline Features 
+
+**Authors**: Ng S. T. Chong  
+
+**Link**: [PDF](https://arxiv.org/pdf/2609.35774)  
+
+**Abstract**: Modern RAG pipelines stack many enhancement features, but these features are typically validated in isolation, leaving their interactions unmeasured. We run a 2^4 full factorial ablation of four pipeline features -- section expansion (SE), agentic search (AS), completeness check (CC), and table-of-contents-guided retrieval (ToC) -- across 16 configurations, 24 queries spanning eight interaction types, and two cloud-class models (768 conditions) on five public documents (78-492 pages), scoring every answer against a verified reference. Post-generation verification dominates: CC is the strongest feature (d=+0.48, p<0.001), improving accuracy, completeness, and usefulness simultaneously, and CC alone (4.31/5) outperforms every configuration without it, including the three-feature SE+AS+ToC (4.11). ToC yields a significant gain at zero LLM cost (d=+0.22); AS is small and unstable, helping some queries and harming others; SE is neutral. The highest-quality configuration roughly doubles baseline latency, producing a genuine quality-latency Pareto frontier of six configurations. Feature utility is strongly query-type dependent -- CC reaches d=+0.83 on completeness-demanding queries -- so single-query-type evaluations systematically mis-rank features. We conclude that verifying answers matters more than optimizing retrieval, and that factorial designs with diverse query types are necessary to evaluate RAG features. 
+
+---
+# Socrates-RAG: Premise-Directed Inquiry against Coordinated Evidence Poisoning 
+
+**Authors**: Renyu Zhao, Xinyuan Zou, Lanbin Liu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2609.35773)  
+
+**Abstract**: Retrieval-augmented generation (RAG) defenses typically decide how to filter or aggregate a fixed retrieved set. In open-corpus question answering, however, decisive evidence may be absent from the initial context but retrievable, making the next query part of the reliability problem. We introduce Socrates-RAG, a premise-directed active retrieval policy that represents competing answers, selects an unresolved premise whose resolution would discriminate them, and uses newly acquired evidence to refine a subsequent query before answering or abstaining. We formalize the resulting finite-budget evidence state and give a conditional rescue guarantee relative to repeated or topical-query policies.
+We evaluate Socrates-RAG against a matched control in which the same backbone generates ordinary relevance-oriented search queries; both policies share the initial evidence, deterministic retriever, two-query/top-three budget, answer prompt, and label-free evidence-chain release rule. On a disjoint 48-world counterfactual evaluation, premise-directed inquiry raises safe accuracy from 79.2% to 93.8%, with 8 wins, 1 loss, and 39 ties (two-sided exact p=.0391). Decisive-evidence recall improves by the same margin, while unsafe answers fall from one to zero. Both policies solve all 24 one-hop cases; the gain is concentrated in two-hop cases, where Socrates-RAG substitutes a newly resolved premise into its second query. This controlled study isolates a specific benefit of premise-directed acquisition without claiming general robustness on the open Web. 
+
+---
+# Beyond the Timeline: Augmenting Long-Video Memory with Grounded Entity Biographies 
+
+**Authors**: Hui Ren, Lei Fan, Henry Pao, Han Guo, Zeeshan Zia, Ying Chen, Alexander Schwing, Gang Hua  
+
+**Link**: [PDF](https://arxiv.org/pdf/2609.38155)  
+
+**Abstract**: Answering questions about long videos often requires connecting events involving the same objects across hours or days. Chronological descriptions and text-derived entities can leave physical identity unresolved: different objects may share a description, while observations of the same object remain disconnected across events. Retrieving relevant events therefore does not necessarily recover the "biography" of the particular entity a question concerns. To address this, we introduce Grounded Entity Biographies (GEB), a long-video memory framework that groups visually grounded observations of the same physical instance across clips into retrievable biographies while preserving the context of each moment. During question answering, the biography is retrieved alongside episodic evidence, allowing the model to follow an entity through events using identity links established during memory construction. Evaluations across four benchmarks, including day-long and week-long recordings, demonstrate improvements over prior memory frameworks in both multiple-choice and open-ended question answering. On EgoLifeQA, GEB achieves 72.0% accuracy, 4.4 percentage points above the best published result. Ablations show that grounded identity association and biography reading both contribute to the gains, which additional descriptions alone do not fully recover. 
+
+---
+# Auditable Long-Term Memory: A Deterministic Retrieval Chain Measured at 479/475 of 500 on LongMemEval-S 
+
+**Authors**: Christopher J. Chanhnourack  
+
+**Link**: [PDF](https://arxiv.org/pdf/2609.38021)  
+
+**Abstract**: We evaluate an auditable long-term memory system on LongMemEval-S. Its retrieval chain uses hybrid candidate retrieval, cross-encoder reranking, coverage-first packet compilation, and deterministic reasoning scaffolds; an LLM is used only as a replaceable final reader. The chain places all gold sessions in the candidate pool for 468/470 answerable questions and produces gold-complete packets for 462/470. With a Claude Opus reader called through an unpinned CLI alias, two 500-question passes score 479/500 and 475/500 under GPT-4o. The 72 answerable knowledge-update rows used a substantively modified scoring prompt whose effect under the official text has not been measured. The pair straddles Chronos High's published 478/500; differences in reader generation, scoring prompt, and possibly data version, plus within-system variance, establish neither superiority nor equivalence. A grok-4.6-high reader on the same packets scores 476/474, while a maximum-reasoning-effort agentic variant regresses to 461/465. The headline passes differ on eight verdict-flip rows. A second judge agrees with the headline judge on 493/500 rows (98.6%) in each pass and scores both passes 472/500; the official judge also flips three verdicts when re-scoring byte-identical pass-1 answers. Negative controls rejected a verifier that repaired three wrong drafts but broke eleven correct drafts. All components were developed on the same 500 questions, with no held-out evaluation or independent human adjudication; retrieval and scaffold method sources and transcript-derived audits are held; and the headline reader received extra operator context, its complete requests were not retained, and MCP tool availability is unresolved. We release materialized packets, scaffolds, reader outputs, judge verdicts, and controls for inspection and re-scoring. 
+
+---
+# BITEM at the NTCIR-19 R2C2 Task: Predicting Confidence from Agentic RAG Pipeline Signals 
+
+**Authors**: Julien Knafou, Luc Mottin, Alexandre Flament, Paul van Rijen, Esteban Gaillac, Patrick Ruch  
+
+**Link**: [PDF](https://arxiv.org/pdf/2609.37993)  
+
+**Abstract**: The BITEM team entered both subtasks of the NTCIR-19 R2C2 task with a single agentic pipeline, in which a model searches, reads and records evidence over a movie corpus while an orchestrator holds the record and rules on what may be submitted. A claim is admitted only once an entailment cascade has checked it against the passage it cites, and an answer is released only once enough checked evidence stands behind it. Each question is run three or four times, every pass retrieving from a corpus stripped of what the earlier passes have already seen. The confidence filed with each answer is computed by the orchestrator from what the run leaves behind and is never asked of the model, which is offered no way to rate itself. The two retrieval runs placed 4th and 5th of 22, pooling the passes was worth 0.0709 nDCG@20, and the gain was largest on the multi-hop and post-processing-heavy questions, where the organisers rank the pooled run top of the field. Sixteen of the 25 answer runs were built on passages these two runs supplied, 12 of them filed by other teams. HMR rewards a system whose confidence is high where it answers right and low where it answers wrong. The pipeline reached an accuracy of 0.9219, 6th of 25, while the confidence filed with those answers gave an HMR of 0.4915, 13th. A few rules crafted over those same recorded signals, with no further model call and no further retrieval, raise that to an accuracy of 0.9375, 5th, and an HMR of 0.6985, 9th. Ranking on HMR alone can reward a system for answering wrongly with low confidence, so we propose accHMR, the accuracy multiplied by HMR, which reports the reward in proportion to the accuracy, and on which the revised rules would have scored 0.6549, 5th. For future work, fitting a model on the numbers the pipeline already produces, rather than writing such rules by hand, would be a real step forward. 
+
+---
+# Relevance Is Not Sufficient Evidence: Detecting Evidence Gaps Before Generation in RAG 
+
+**Authors**: Suting Chen, Peichun Hua, Yunming Xiao  
+
+**Link**: [PDF](https://arxiv.org/pdf/2609.37469)  
+
+**Abstract**: Retrieval-augmented generation (RAG) grounds large language models in external sources, but retrieved passages often name the right entities without providing the facts needed to answer. Even when instructed to abstain, 12 generators answer 40.0-99.3% of insufficient-evidence questions. Training generators to abstain ties the decision to model weights, may reward answers recalled from parametric knowledge, and still requires a full generator call. Can sufficiency be judged from the question and evidence alone, before any answer exists? We identify pitfalls in constructing insufficient-evidence tests: removing relevant evidence or pairing evidence with unrelated questions can reveal labels through lexical overlap or evidence position. We build a paired benchmark using substitution, deletion, and question-swap constructions that vary answer support while controlling selected surface features, such as word use. Sufficiency can be judged without generating an answer, but no single signal works across all datasets. We introduce RINSE (Relevance Is Not Sufficient Evidence), which combines three signals: whether every part of the question is covered, whether any passage offers an answer, and whether a small language model reading the passages together judges them sufficient. Across six datasets, RINSE ranks sufficient above insufficient evidence with a score of 0.837 (chance 0.5), exceeding the best of 10 prior methods (0.746) and a frontier model queried through an API (0.784). Its weakest dataset scores higher than any other method's weakest (0.684 vs. 0.676). RINSE runs locally before generation, taking 36.5 ms per question on a single GPU. 
+
+---
+# Backdoor in the Loop: Compromising Agentic Search via Malicious Retrievers 
+
+**Authors**: Beining Xu, Peichun Hua, Yunming Xiao  
+
+**Link**: [PDF](https://arxiv.org/pdf/2609.37468)  
+
+**Abstract**: Agentic retrieval-augmented generation (RAG) interleaves reasoning with repeated retrieval, giving the retriever influence over both the evidence an agent observes and its subsequent search decisions. We study retriever backdoors that exploit this feedback loop and repurpose weak backdoor purification to conceal their presence. An attacker supplies a compromised retriever checkpoint while leaving the search agent and deployment corpus unchanged. Without corpus write access, the attacker can still suppress useful evidence, persistently retrieve a selected existing document, or steer the agent toward prolonged search, inflating retrieval, context, and latency cost. To conceal these behaviors from detection, we propose leveraging a controlled inject-and-remove cycle: deliberately inject a weaker backdoor and then unlearn it. This process weakens detector-visible signatures and fools the backdoor detectors with an illusion of purification while preserving the malicious retrieval behavior. These findings expose a systematic vulnerability in RAG systems in which a weak defense becomes an attacker's concealment tool for a backdoored retriever, even when the underlying corpus remains trustworthy. 
+
+---
+# ReMem: Rethinking Perception and Memory in Long-Context Recommendation Agents 
+
+**Authors**: Haohao Qu, Yongcheng Jing, Chun Hin Chan, Shanru Lin, Wenqi Fan, Dacheng Tao  
+
+**Link**: [PDF](https://arxiv.org/pdf/2609.37311)  
+
+**Abstract**: Recent Recommendation Agents (RecAgents) offer a promising alternative by shifting recommendation to an active, user-side paradigm, where generative agents autonomously perceive external platforms, reason over user preferences, and execute decisions. However, existing RecAgents still suffer from two critical limitations: brittle item perception based on noisy and heterogeneous item pages, and inefficient long-context reasoning over extended user histories and multi-step interaction traces. To address these challenges, we propose a novel recommendation agent framework, termed as ReMem, that combines OCR-based multimodal perception with time-evolving dynamic memory. Instead of parsing raw HTML, ReMem observes item pages through screenshots and extracts structured multimodal information via an OCR tool, enabling a more humanoid and platform-agnostic perception mechanism. To support long-horizon preference modeling, ReMem further introduces a chunk-wise sequential memory update strategy, where the agent selectively maintains a fixed-size memory of informative historical interactions while processing arbitrarily long contexts with linear inference complexity and bounded context length. This design allows the agent to preserve evolving user preferences without relying on external memory modules or disrupting the standard autoregressive generation process. To enhance the dynamic memory instruction, we further develop a multi-memory GRPO variant, which propagates the final-answer advantage to all intermediate conversations that contribute to the final response. Extensive experiments on three datasets demonstrate that ReMem consistently outperforms state-of-the-art baselines, achieving an average improvement of 5.16\% across three recommendation agent tasks, namely searching, ranking, and judging. 
+
+---
+# Follow the Entities: A Corpus Map for Agentic Search 
+
+**Authors**: Soyeong Jeong, Sujay Kumar Jauhar, Sung Ju Hwang, Andrew Joohun Nam  
+
+**Link**: [PDF](https://arxiv.org/pdf/2609.37226)  
+
+**Abstract**: Answering questions and completing tasks over large document collections often requires connecting evidence spread across multiple documents, such as a project's approval recorded in one, its requirements in another, and its latest status in a third. Recent LLM agents approach this by iteratively searching the full corpus rather than reading only a fixed set of top-ranked documents. However, when the corpus is exposed only as a flat collection of files, a relevant document gives no indication of how it relates to others, so the agent must rediscover these relationships for every query, often missing complementary evidence while simultaneously consuming substantial additional tokens. To address this, we introduce CorpusMap, a navigation layer that organizes the corpus around its recurring entities, which are identifiable from the documents themselves and can link a single document to many others across sources. Specifically, CorpusMap represents each recurring entity as an Entity Page that aggregates information about it and links to every document that refers to it, forming a graph between entities and documents that the agent can traverse to gather otherwise disconnected evidence. Moreover, since CorpusMap is constructed offline by resolving mentions of the same entity across documents, its links are shared across queries rather than rediscovered repeatedly at inference time. Using 7 different models with 3 benchmark datasets, we show that CorpusMap improves both evidence discovery and answer quality over raw-corpus agentic search while using fewer tokens on average, and further outperforms 4 alternative navigation layers, suggesting that entities serve as effective anchors for navigating large document collections. 
+
+---
+# Safer Content or Firmer Refusals? A Hybrid Perturbation Defense for Alignment under Harmful Fine-tuning 
+
+**Authors**: Muhammad Zeeshan Akram, Mufid Kamel Marican, Anvesh Reddy Yenugu, Ali Zain Kaimkhani, Minghong Fang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2609.36862)  
+
+**Abstract**: Fine-tuning-as-a-service lets users adapt a safety-aligned language model to their own data, but it also creates a harmful fine-tuning attack surface: a small amount of harmful data mixed into an otherwise benign fine-tuning set can degrade the model's alignment. Two recent alignment-stage defenses address this problem at different levels of the model. Vaccine improves the robustness of hidden embeddings to the representation shifts induced by harmful fine-tuning, whereas Booster simulates harmful weight updates and attenuates their effect during alignment. We investigate whether these mechanisms are complementary and propose VaccineBooster, a single alignment procedure that combines embedding perturbation and weight-level gradient attenuation within each training step. On Llama-2-7B aligned with BeaverTails and then attacked through poisoned fine-tuning, VaccineBooster achieves the lowest OpenAI moderation score among the compared defenses, 0.315, while a Booster-Only variant retains the highest post-attack refusal rate, 50%. Together with ablations over the embedding-perturbation and gradient-attenuation strengths, these results indicate a trade-off: embedding perturbation primarily reduces flagged harmful content, whereas gradient attenuation primarily preserves explicit refusal behavior. Because our evaluation uses ten prompts and a single unseeded run per configuration, we report this trade-off as an observed pattern rather than a statistically resolved effect. These results provide practical guidance for prioritizing content safety or refusal retention when aligned models are exposed to untrusted fine-tuning. 
+
+---
+# Does the Unsafe Gradient Survive a Conversation? On the Fragility of Gradient-Based Jailbreak Detection in Multi-Turn Dialogue 
+
+**Authors**: Omar Sheta, Rinku Deuja, Hadi Masoudi, Minghong Fang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2609.36849)  
+
+**Abstract**: Safety-aligned language models are commonly deployed as multi-turn assistants, which lets adversaries spread unsafe intent across several user turns instead of a single prompt. Gradient-based jailbreak detectors such as GradSafe were developed for single prompts: they score an input by the alignment between its induced gradient and a fixed unsafe reference direction, and their effectiveness in multi-turn dialogue remains unclear. We conduct a controlled evaluation of gradient-based jailbreak detection in multi-turn settings. We extend GradSafe with a Context Window Scanner that applies the detector to fixed-size windows of user turns and uses the maximum window score as the conversation-level score. We evaluate different window sizes, attack families, benign conversation distributions, and target models. The results differ sharply between synthetic and realistic benign settings. Against synthetic benign conversations, the detector achieves an ROC-AUC of 0.98 on human-authored multi-turn jailbreaks. On WildChat benign conversations, ROC-AUC drops to 0.76, and a threshold calibrated on synthetic data flags more than 90% of benign conversations as unsafe. Under realistic benign distributions, single-turn windows give the highest separability, whereas longer windows and accumulated contexts reduce performance. The detector is also sensitive to the attack-generation method and target model: successful Crescendo attacks receive scores comparable to or lower than benign conversations, and Qwen2.5-7B-Instruct yields near-random separability with a different optimal window size. These findings show that gradient-based signals can support multi-turn jailbreak detection, but reliable deployment requires calibration on realistic benign conversations, short-window scoring, length-aware thresholds, and evaluation across attack types and model architectures. 
+
+---
+# Retrieval Sensitivity to Identity Signals in Queries 
+
+**Authors**: Andrew Tang, Nicholas Deas, Kathleen McKeown, Vishal Misra  
+
+**Link**: [PDF](https://arxiv.org/pdf/2609.36534)  
+
+**Abstract**: Dense retrievers decide which documents reach users and the language models that use them, yet they are typically evaluated with neutral queries. We ask whether the identity signals that real users express in their queries---political ideology and dialect---bias what a retriever returns. We design evaluations in two domains, political news and consumer-health questions, each pairing a controlled synthetic set that varies only the identity signal with naturalistic queries. Across five dense retrievers and a sparse baseline, every retriever (i) retrieves articles that align with the query's own political lean and (ii) performs worse for questions written in African American Language (AAL) than in White Mainstream English (WME). Two analyses tie these gaps to queries' identity signals beyond surface vocabulary: partialling out an aggregate lexical-asymmetry score leaves the synthetic gaps largely intact, and linear probes recover lean and dialect from the retrievers' query embeddings beyond token-level features. Left unaddressed, such retrieval biases risk contributing to polarization and reinforcing the health disparities already faced by AAL speakers. Code is available at this https URL. 
+
+---
+# ARCagent: An Adaptive Retrieval Calibration Agent for Clinical Question Answering 
+
+**Authors**: Yuyan Chen  
+
+**Link**: [PDF](https://arxiv.org/pdf/2609.36392)  
+
+**Abstract**: In diseases where clinical guidelines are incomplete, contested, or mutually contradictory, knowledge completeness and dynamic conflict-aware synthesis are two safety-critical properties that standard Retrieval-Augmented Generation systems do not provide. Therefore, we present \sysname, an adaptive retrieval calibration clinical question-answering agent for ME/CFS, a disease where diagnostic frameworks coexist and major guidelines actively contradict each other on treatment. ARCagent contributes three components. First, a 1,706-chunk, 10-source knowledge base with a structured inter-guideline conflict registry spanning all active ME/CFS diagnostic frameworks. Second, a conflict-aware retrieval calibration pipeline that re-ranks retrieved evidence using query-specific focus and conflict signals. Third, a benchmark scored by LLM-as-Judge, avoiding systematic underestimation averaging 10.1 percentage points caused by keyword matching. ARCagent achieves 95.3%, outperforming all base LLMs. Code is available at this https URL. 
+
+---
+# Better Nearest Neighbor Graph Indices via (Efficient) LLM-Guided Pruning 
+
+**Authors**: Fangzhou Wu, Haike Xu, Sandeep Silwal  
+
+**Link**: [PDF](https://arxiv.org/pdf/2609.36359)  
+
+**Abstract**: Graph-based approximate nearest neighbor search (ANNS) is widely used for large-scale semantic search. Its indices are constructed primarily based on geometric relationships among embeddings of an input dataset (e.g., documents or images), rather than explicitly optimizing for semantic relevance. However, when using these indices for downstream query retrieval, performance is evaluated based on the semantic relevance of the retrieved results to the query. This creates a fundamental "geometry-semantic" mismatch between how the indices are constructed and how their retrieval results are evaluated. While existing LLM-based reranking methods can partially mitigate this mismatch at query time, they leave this underlying structural problem in the graph unresolved. We therefore propose LLM-Guided Graph Pruning (LGP), a general framework that addresses this mismatch directly by leveraging LLM reasoning to refine an existing ANN graph index itself. LGP identifies structurally "low-value" neighbors of nodes and replaces them with LLM-selected alternatives that provide useful semantic information while retaining desired geometric structures of the original graph, including sparsity and efficient navigability. Experiments on representative semantic retrieval benchmarks show that LGP consistently improves end-to-end retrieval performance over both vanilla greedy graph search and LLM-based reranking across widely used graph-based ANN indices such as DiskANN and HNSW. 
+
+---
+# ThuRunel: Dynamic Decoupling for Structured Advisory Dialogue 
+
+**Authors**: Yuyan Chen  
+
+**Link**: [PDF](https://arxiv.org/pdf/2609.36340)  
+
+**Abstract**: High-stakes advisory domains such as medical aesthetics, legal consultation, and educational planning exhibit a two-phase structure. The early phase requires empathetic elicitation and emotional support, and the late phase requires authoritative specialist judgment. Neither fully automated agents nor human junior consultants adequately address this structure at scale. We formalize the core design challenge as dynamic decoupling, asking how an AI advisory agent should decide what to ask, when to stop, what to resolve autonomously, and what to forward to the specialist. We present ThuRunel, an advisory agent combining a finite-state belief management framework, a chain-of-thought teacher synthesis protocol, and learned generation adapters. Against eleven baselines, ThuRunel achieves consistent improvements in elicitation completeness and specialist brief quality. ThuRunel is publicly deployed as a bilingual web application in which the same decoupling decisions operate from the client's side, grounded in a curated knowledge base that cites its sources in every answer. 
+
+---
+# GeoOutageBench: Benchmarking Ambiguity-aware, Ontology-grounded Geospatiotemporal KGQA for Multimodal Power Outage and Resilience Analysis 
+
+**Authors**: Ethan D. Frakes, Amy Kvien, Rishabh Kundu, Redad Mehdi, Van D. Tran, Vibha S. Mandayam, Kristopher O. Davis, Erika I. Barcelos, Roger H. French, Yinghui Wu, Mengjie Li  
+
+**Link**: [PDF](https://arxiv.org/pdf/2609.36082)  
+
+**Abstract**: We introduce GeoOutageBench, a benchmark for assessing LLM-based geospatiotemporal KGQA for multimodal outage and resilience analysis. Unlike existing KGQA benchmarks for Web knowledge, GeoOutageBench considers a spatiotemporal KG that integrates visual, textual, and structured data from outage records, remote sensing, weather observations, storm and power events, geographic entities, and domain ontologies. It provides a competency query taxonomy at different difficulty levels from spatiotemporal containment and proximity, spatiotemporal co-occurrence analysis, multimodal evidence, to hypothetical evaluation. Over multimodal KG and query classes, GeoOutageBench provides user-configurable evaluation of three important, highly coherent yet less studied tasks: (1) LLMs' understanding for ambiguous geospatiotemporal questions in terms of NL to SPARQL interpretation, (2) query-driven assessment of ontology utility, and (3) answer accuracy of multimodal KGQA retrieval. GeoOutageBench provides a design principle and foundation for assessing LLM-KG systems that support real-world infrastructure resilience analysis. Our benchmark, source code, data, results, and other documentation are available at this https URL. 
+
+---
+# Mnemon: Raw Records, Fast Judgments, Slow Thoughts 
+
+**Authors**: Guangren Wang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2609.36059)  
+
+**Abstract**: Long-term memory lets an LLM assistant use a history it can no longer reread, and most memory systems build it by rewriting conversations into facts, graphs or typed memories at write time. We argue that the work of memory divides, as thinking does, into two systems. Most of it is fast System 1 work: many small, independent yes/no judgments about records, such as whether a record is needed or no longer current, which a decision model makes by the dozen in a third of a second. Only a little is slow System 2 work: writing a few search queries, naming what the reply needs and composing the answer, which an LLM does well but slowly. We present Mnemon, a memory agent built on this division. It keeps conversations as raw, dated records; an LLM (System 2) plans searches over them, a decision model, Jev (System 1), judges what the searches return, and rules with explicit budgets turn the judgments into a small View for an unchanged answering model. A background pass consolidates each record once into topic timelines, value histories and standing instructions linked to the records, so that questions about a whole conversation reach evidence their own searches miss. Because nothing is decided about a record when it is written, the same agent can read any store that returns dated records.
+With gpt-4.1-mini answering, as in a public re-evaluation of 14 systems, Mnemon scores 91.7% on LoCoMo, the highest among them, and 83.8% on LongMemEval-S, from under 4k tokens of context per question, with the lowest effective cost index on LoCoMo. With a reasoning model answering, it reaches 92.2% on LoCoMo and 94.4% on LongMemEval-S, the latter on par with the best published results. From 100K to 10M tokens of history on BEAM, its cost per question grows by a factor of 1.11. On the same records, Jev separates gold evidence better than two LLMs and is 3-11 times faster. 
+
+---
