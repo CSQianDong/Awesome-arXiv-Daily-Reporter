@@ -1,0 +1,101 @@
+# Benchmarking Literature Retrieval for a Model Organism: A Dictyostelium Case Study 
+
+**Authors**: Yun Wang, Gad Shaulsky, Tomaž Curk, Blaž Zupan  
+
+**Link**: [PDF](https://arxiv.org/pdf/2610.03130)  
+
+**Abstract**: Biological literature retrieval systems are often developed and evaluated using broad biomedical corpora and general-purpose search tasks. However, many curated knowledge bases operate in narrower model-organism domains, where the literature is sparse and terminology is organism-specific. We introduce a retrieval benchmark from dictyBase for Dictyostelium, a model organism in cell and developmental biology. The benchmark consists of curator-generated biological queries linked to PubMed-indexed articles, together with structured gene annotations. Using this benchmark, we study three factors in niche biological retrieval: cross-encoder reranking, gene-aware query expansion, and abstract-only versus full-text retrieval. We report that reranking and gene-aware query expansion improve retrieval selectively: reranking is most useful when the model is well suited to biological evidence matching, whereas curated annotations help clarify compact biological queries by reducing vocabulary mismatch. Full-text chunks substantially improve retrieval when abstracts omit supporting evidence, increasing both candidate recall and top-rank performance, although these cases are harder than queries supported by abstracts. Data and code are publicly available at this https URL, and the benchmark dataset is additionally archived on Zenodo. 
+
+---
+# Learning Query Encoders Can Be Hard Even When Vector Retrieval Is Geometrically Easy 
+
+**Authors**: Anders Wikum, Nina Mishra, Amin Saberi, Tal Wagner  
+
+**Link**: [PDF](https://arxiv.org/pdf/2610.02749)  
+
+**Abstract**: Efficient vector retrieval requires both a corpus geometry that supports retrieving the right documents through vector similarity, and a query encoder that can embed queries near their desired documents in the embedding space. Recent work has studied geometric capacity through the lens of the minimum embedding dimension needed to realize all top-$k$ answer sets of $n$ documents. We study a different notion of geometric capacity--the maximum recall achievable for a frozen document index--and explore whether learned query encoders can reach this ceiling. On several real-world retrieval benchmarks, we show that retrieval quality of single-vector query encoders often lies far below what the document indices can support.
+Motivated by this observation, we give theoretical evidence that learning query encoders can be computationally hard. In particular, we construct a retrieval task that (1) admits a query encoder with perfect recall which is representable by a small one-hidden-layer ReLU network, but (2) any statistical-query learner (a class capturing learners that access training data through aggregate statistics) provably requires exponentially many statistical queries to achieve non-trivial recall advantage over the random baseline $k/n$. Taken together, our results suggest substantial unrealized geometric capacity in retrieval benchmarks and establish query encoder learnability as a possible barrier in embedding-based retrieval. 
+
+---
+# When History Misleads: Asymmetric Margin Supervision for Instruction-Guided LLM Generative Recommendation 
+
+**Authors**: Ming Yin, Yuhan Yang, Chen Chen, Xinyu Lin, Wentao Shi, Fangcong Yin, Chaofei Yang, Chao Yang, Jiyan Yang, Hui Zhang, Ning Jiang, Yiran Chen, Qifan Wang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2610.02600)  
+
+**Abstract**: In instruction-guided generative recommendation, LLM-based recommenders need to balance two goals: responding to the user's current request and aligning with the preferences in their interaction history. When the two conflict, history events can override the request. We show that turning the effect of individual history events into supervision faces two obstacles. First, the events that most influence a recommendation are not necessarily the ones that support the target item. Second, removing a misleading event can raise the target's score but a competing item's score even more, so a higher target score alone does not guarantee a better ranking. We propose Asymmetric Intervention-Guided Margin Supervision (AIMS), which converts the effect of removing individual history events into ranking supervision. For training requests already ranked correctly, a frozen reference model identifies request-specific deletions that improve both the target's score and its margin over a competitor near the recommendation cutoff. These margins serve as training targets, while the complete history is retained as input. Training combines cross-entropy with an asymmetric auxiliary loss that penalizes margin shortfalls and routes its gradient only through the competitor score. Inference is unchanged, requiring no history editing or deletion search. Across six LLM backbones on an industrial dataset and two public benchmarks, AIMS improves Recall and NDCG over strong baselines. Ablations support request-specific margins and asymmetric supervision, and the selected deletions preferentially remove constraint-violating history. 
+
+---
+# Adaptive Sparsity Optimization with Learnable Soft Top-K and Per-Term Thresholding for Efficient Retrieval 
+
+**Authors**: Wentai Xie, Parker Carlson, Shanxiu He, Tao Yang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2610.02572)  
+
+**Abstract**: Recent work on neural sparse retrieval has demonstrated strong relevance by leveraging Large Language Models (LLMs) for semantic term expansion. However, learned models paired with previous sparsification techniques still yield overly long document and query vectors partly due to a large LLM vocabulary, imposing a serious challenge to retrieval time and space efficiency. This paper proposes a scheme for optimizing model sparsity through a synergy of adaptive strategies, including learnable soft top-K, per-term thresholding, and FLOPs regularization to increase the sparsity of query and document vectors. Experimental results with Lion-SP model on the MS MARCO and BEIR datasets demonstrate that the proposed scheme can outperform the baselines by significantly reducing the average query and document lengths. Our scheme can achieve much shorter retrieval latency and lower storage cost while maintaining highly competitive relevance. 
+
+---
+# MRVQ: One Resident Index for Dimension- and Rate-Elastic Vector Search 
+
+**Authors**: Sean Culatana, Shang-En Huang, Kang Li  
+
+**Link**: [PDF](https://arxiv.org/pdf/2610.03651)  
+
+**Abstract**: Dense-retrieval services must switch among embedding-prefix dimensions and index bit rates as latency, quality, and memory budgets change. Tuning a quantizer separately for each rate gives the best quality, but the retrieval tier then holds several code streams and quantizer states at once. We introduce Matryoshka Residual Vector Quantization (MRVQ), a post-hoc residual quantizer for frozen embeddings. Its maximum-rate code can be truncated two ways: dropping residual stages lowers the rate, and dropping embedding coordinates lowers the dimension. One resident artifact therefore serves every (dimension, rate) pair we evaluate. Across FiQA and NFCorpus, four embedding families, and {4, 8, 16}-byte codes, MRVQ is the lowest-RAM design we evaluate. It uses 17.8-22.0x less memory than three separately trained QINCo2 indices, and 1.89-2.02x less than a lean shared-model steelman. The saving is not free: per-rate QINCo2 is 0.026-0.107 nDCG@10 better on FiQA. But MRVQ beats PQ, OPQ, and AdANNS-OPQ at matched code size. We also evaluate a low-build-cost PCA-scalar design that attains quality comparable to RaBitQ and its extension while fitting 420x faster at the median. Finally, we report two negative results: QINCo2 collapses when trained at high rates, and a ranking-bound hypothesis misses its pre-specified acceptance criteria. MRVQ is therefore a low-memory operating point for elastic retrieval, not a universal quality winner. 
+
+---
+# TSGuard: A Real-Time Framework for Detecting and Imputing Missing Data in Streaming Time Series 
+
+**Authors**: Imane Hocine, Asma Abboura, Soror Sahri, Abhijith Senthilkumar, Yacine Hakimi, Grégoire Danoy  
+
+**Link**: [PDF](https://arxiv.org/pdf/2610.03147)  
+
+**Abstract**: Streaming sensor applications routinely suffer from delayed or missing observations caused by faults, communication losses, or environmental interference. Although recent imputation methods exploit temporal and spatial dependencies effectively, most either assume offline access to future observations or prioritize throughput without enforcing domain plausibility. We present TSGuard, a real-time demonstration system for monitoring, validating, and imputing missing values in streaming time series. TSGuard combines a lightweight graph-aware temporal imputation model with constraint-aware validation, fallback estimation, and operator-facing explanations.
+Rather than treating imputation as an isolated prediction task, TSGuard integrates it into a broader data-quality loop: detect problematic observations, impute missing values, validate estimated against physical and spatial constraints, and either retain the original value as a plausible anomaly or replace it when it violates domain constraints. Using environmental sensing as a motivating setting, the demo enables users to inspect delayed sensors, compare imputers, define constraints, and validate flagged values in real time. The combination of lightweight online spatiotemporal imputation, domain-aware validation, and explicit retain-or-replace decisions is our central contribution, while interactive explanations make these decisions inspectable and actionable. for operators. 
+
+---
+# Query-aware routing for Cross-lingual performance gains in Encoders 
+
+**Authors**: Akshay Jain, Edward Kim  
+
+**Link**: [PDF](https://arxiv.org/pdf/2610.02875)  
+
+**Abstract**: Multilingual encoders can exhibit reduced retrieval effectiveness when queries and relevant documents differ in language, despite strong same-language performance. We investigate whether Finnish and Swedish cross-lingual retrieval can improve while preserving an encoder's existing same-language performance and document index. We combine a query-only low-rank adapter, trained against frozen document embeddings, with deterministic routing based on query and index languages. Cross-language queries use the adapter, while same-language queries use the original encoder. SampoTron, our fine-tuned low-rank (LoRA) adapter alongwith the Nemotron-3-Embed-1B model, improves average retrieval quality across six English, Finnish, and Swedish directions from 0.241 to 0.291 in normalized discounted cumulative gain (nDCG) at rank ten, a 20.9% relative gain on a sampled financial benchmark. All six cross-lingual directions improve, and routing preserves the original same-language performance, including two full-corpus Finnish evaluations. The approach enables selective cross-language specialization with reusable document embedding vectors. 
+
+---
+# Asterism: Exploring and Synthesizing Scattered Observations into Literature-Grounded Hypotheses and Theories 
+
+**Authors**: Joseph Chee Chang, Michael D'Arcy, Amy X. Zhang, Pao Siangliulue, Sangho Suh, Aakanksha Naik, Jena D. Hwang, Javier Ramos Benitez, Stella Wroblewski, Matt Latzke, Michael Cuoco, Ruben Lozano-Aguilera, Kris Ganjam, Joel Chan, Doug Downey, Peter Jansen, Kyle J. Travaglini, Daniel S. Weld  
+
+**Link**: [PDF](https://arxiv.org/pdf/2610.02673)  
+
+**Abstract**: A theory draws many independent observations into one framework with novel hypotheses. A researcher building such a theory must synthesize observations scattered across many papers, each describing related concepts but often in different terms. Which concepts matter most also depends on their preferences and research questions. Recent approaches scale theory synthesis with LLMs, but automate away choices and intuitions from researchers. We present Asterism, which extracts observations from hundreds of papers as concept-relation triples, with concepts unified in a hierarchical ontology. Researchers curate an evidence graph using the ontology and aggregate observations at different levels of granularity to focus theory formation on specific phenomena of interest. In a field deployment (n=10), researchers worked from observations to theories, and kept concepts and hypotheses fitting their preferences. In two case studies, teams of immunology and agriculture researchers discovered mechanisms outside their standard analyses and constructed hypotheses worth follow-up experiments. 
+
+---
+# On-Premises Multi-Course RAG Tutoring for Business Education: Hardware-Software Trade-offs in a Campus AI Tutor 
+
+**Authors**: Sidney Shapiro, Joshua Lindemann  
+
+**Link**: [PDF](https://arxiv.org/pdf/2610.02510)  
+
+**Abstract**: Campus AI tutors based on retrieval-augmented generation (RAG) must ground answers in assigned course materials while keeping textbooks and student dialogue on institutional infrastructure. We present CourseChat, an on-premises, multi-course RAG tutor for undergraduate business education, deployed behind a campus web gateway and intended for use embedded in Moodle. Six isolated course offerings, each keyed by its own course reference number (CRN), share twin-edge AI hosts running a FastAPI service, a local vector database, and a local large language model (LLM) served by Ollama. We report two generation-model bake-off rounds, a separate fixed-evidence source-fidelity comparison, and conversation and quiz audits. Several larger models failed the classroom speed gate, but a 12B model and a 7B alternative passed. A separate mixture-of-experts candidate improved some corrections while introducing new factual and continuity errors. We therefore retain the 8B production model pending a demonstrated overall improvement, rather than claiming that 8B is universally optimal. Software changes improved follow-up topic resolution while preserving course scope; 435 prebuilt questions across 65 modules decouple practice from live generation. The results support treating model choice, evidence selection, serving compatibility, and product design as a joint engineering decision. They do not establish learning gains: faculty ratings, peak-load capacity, and complete public-gateway acceptance remain separate evaluation needs. 
+
+---
+# SOLO: Certified-Recall Metric Similarity Search with Scan-Only Sampled Inverted Lists 
+
+**Authors**: Édgar Chávez  
+
+**Link**: [PDF](https://arxiv.org/pdf/2610.02387)  
+
+**Abstract**: We present SOLO, an index for approximate nearest-neighbor search in general metric spaces whose serving path contains no ranking heuristic of any kind: a query is routed to the $k_s$ nearest points of a random sample of the database, and every object in the touched posting lists is evaluated with the true distance. Because nothing must outrank anything, recall equals a coverage probability computable from the stored index: one ground-truth pass over a query sample certifies every operating point at once, without serving any of them -- a recall certificate, and for a navigable graph no analogous object exists at any price. The whole index is one recursive rule -- sample the collection, post each object to its $b$ nearest sample points, split any list that outgrows a bound, always scan the leaves -- and its operating surface obeys an equal-work law, recall $\approx f(b \cdot k_s)$, whose level is a one-scalar signature of the dataset. The same scan-only structure gives a serving floor no graph architecture reaches once the router is itself indexed by the same rule: Deep-100M served at recall 0.9977 from 1 GB of resident memory (enforced cap, 10.7 bytes per object) and at 0.9964 from 256 MB, Deep-1B at recall 0.9925 from 512 MB (and from 96 MB at depth 3), inserts that are one search, and deletes that are exact. Throughput is competitive where the hardware allows it -- up to $1.8\times$ a tuned HNSW at $10^8$ on a two-socket 32-core server, with operating points to the right of where that graph saturates -- and the tables report it against HNSW, DiskANN, GRAFT, NAPP, misi, and SPANN's assignment rule on the same hardware and ground truth. 
+
+---
+# A Manifold-Aware Topic Modeling Approach via Rank-Based Prototypes 
+
+**Authors**: Thiago César Castilho Almeida, Daniel Carlos Guimarães Pedronette  
+
+**Link**: [PDF](https://arxiv.org/pdf/2609.29630)  
+
+**Abstract**: Recent topic models leverage pretrained embeddings, but neural architectures produce latent representations without grounding in specific texts, and clustering-based pipelines assign representative documents only post hoc, relying on absolute distances distorted by hubness and anisotropy in high-dimensional spaces. We introduce MARETopic, a training-free framework that casts topic discovery as rank-based prototype selection. After projecting embeddings onto a low-dimensional manifold, MARETopic builds ranked lists encoding ordinal neighborhood structure. A greedy algorithm selects exactly K exemplar documents, real corpus texts, whose neighborhoods cover the corpus. Two variants share this criterion. MARETopic$_\text{Corr}$ scores candidates with a query performance predictor and a rank correlation measure, leading Purity and NMI on the two benchmarks with the most categories, ahead of both neural and clustering-based topic models. MARETopic$_\text{Diff}$ scores them with a rank-based diffusion matrix, needs neither measure, and runs 1.7 to 1.9 times faster. Without a single gradient update, MARETopic leads topic coherence on two of three datasets. A novel inter-topic Maximal Marginal Relevance step raises vocabulary diversity at little cost in coherence. Our code is available at this https URL. 
+
+---
