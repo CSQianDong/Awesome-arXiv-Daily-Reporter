@@ -1,0 +1,165 @@
+# Does Document Structure Help Dense Retrieval? A Placebo-Controlled Ablation of Four Mechanisms Across Two Corpora 
+
+**Authors**: Andrey Kuehlkamp, Priscila Correa Saboia Moreira, Samuel Rund  
+
+**Link**: [PDF](https://arxiv.org/pdf/2610.10170)  
+
+**Abstract**: Retrieval-augmented generation systems increasingly rely on document-structure treatments: structure-aligned chunking, LLM-generated chunk contexts, heading-path metadata, and hierarchical two-stage retrieval. Separate studies support each on different corpora, embedders, and metrics, and none control for a shared confound: any text prepended to a chunk perturbs its embedding. We present a mechanism-isolating ablation testing all four treatments under one protocol, matching chunk sizes across conditions and adding a semantically null placebo---heading paths that are structurally valid but shuffled across documents. We score retrieval with a coverage-aware nDCG and test four pre-registered contrasts via document-clustered bootstrap with Holm correction, on two distant corpora: 200 Wikipedia Featured Articles (951 queries) and 1,585 QASPER papers (4,303 questions). Organization helps, and the cause is content, not tokens: structure-aligned chunks with real heading paths beat contextualized fixed windows (+0.022 / +0.012 cov-nDCG@10) and the placebo (+0.010 / +0.016). Naive two-stage hierarchical retrieval hurts (-0.033 / -0.015), traceable to first-stage section recall. Gold structure beats LLM-induced structure on Wikipedia but not on QASPER. Effects are small ($dz$ 0.06-0.11) but Holm-significant and consistent across corpora. 
+
+---
+# Training with Missed Targets in Generative Recommendation: Separating Supervision from Probability Competition 
+
+**Authors**: Xuesi Wang, Yangbin Shi, Xiaolin Zheng  
+
+**Link**: [PDF](https://arxiv.org/pdf/2610.10124)  
+
+**Abstract**: Generative recommenders return a limited candidate set and may omit observed targets before reranking. A training strategy appends these missed targets to reranker training lists, although inference still ranks only original candidates. This operation simultaneously changes retrieved-target weight, adds supervision over appended targets, and makes the two groups compete for probability. An append/no-append comparison therefore cannot explain changes in returned-item rankings. We construct three matched losses that hold retrieved-target weight fixed while introducing appended-target supervision and group competition separately. The intermediate loss trains within both groups but normalizes them separately, preventing training-only targets from competing with inference candidates. Experiments with a released OneRec model and locally trained Amazon generators show that this competition can harm returned-item ranking. In four prespecified Amazon Video Games comparisons, removing it improved full-target normalized discounted cumulative gain (FT-NDCG) by 7.8--22.2\%; 95\% intervals over users and three of four intervals over training runs excluded zero. A conservative development-set rule selected appended-target training for two of three generators in one held-out category and rejected it for all three in another, avoiding a 1.7\% loss. Candidate completion should therefore be evaluated for each generator rather than applied automatically. 
+
+---
+# Inverting Multi-Vector Visual Document Indices 
+
+**Authors**: Zhuchenyang Liu, Yao Zhang, Yu Xiao  
+
+**Link**: [PDF](https://arxiv.org/pdf/2610.09920)  
+
+**Abstract**: Prevailing multi-vector visual document retrievers store each page as about a thousand patch vectors, often in vector databases run by a third party. Since no one can read a page from its vectors, this index is easily treated as less sensitive than the page. However, because the index keeps one vector per patch in raster order, and each vector is computed by a vision-language model pre-trained to read documents, we hypothesize that whoever runs or breaches the store can reproduce a page from its index alone. We frame inversion as conditional document image generation and infer from the vectors what the attack needs: the encoder, the page shape and, for shuffled vectors, their order. On the ViDoRe v3 benchmark, pages inverted from raw indices recover 47% of the words and 45% of the sensitive tokens. Used as queries against the stored indices, they rank their source page first 98.4% of the time. We test two cheap protections, token pooling and shuffling, which both cut word recall to about 8%. A model that restores the order of a shuffled index raises the share of source pages ranked first from 3.8% to 93.5%, while inverting a pooled index remains open. To test generalisation, we apply the same attack unchanged to another multi-vector retriever: its inverted pages still rank their source page first 70.2% of the time, though its word recall stays below a nearest-neighbour baseline. Multi-vector visual document retrievers are therefore vulnerable to inversion through their stored index, which should be protected like the documents it encodes. 
+
+---
+# The Impact of Backbone Evolution on LLM-Based Relevance Assessments 
+
+**Authors**: Chuting Yu, Guido Zuccon, Teerapong Leelanupab  
+
+**Link**: [PDF](https://arxiv.org/pdf/2610.09820)  
+
+**Abstract**: LLMs are evolving rapidly, with newer models offering stronger capabilities. This suggests that in LLM-based relevance judging, more capable models will achieve higher agreement with human judgements under the same prompt. We challenge this understanding by investigating the behavior of LLM-based relevance judges under backbone evolution. Keeping the prompts fixed, we evaluate a representative single-prompt (UMBRELA) and a rubric-based prompt (EXAM) across sequential model versions of commercial (Gemini, GPT) and open-weight (Qwen, Llama) models. Overall, we find no consistent evidence that newer versions lead to better relevance judges. Crucially, similar or improved aggregate performance does not imply judgment stability: correct judgements made by an earlier version of an LLM backbone are not necessarily preserved by later versions. We investigate the potential drivers of these regressions. Our findings caution against the assumption that judging prompts designed and validated for one backbone version will perform equivalently or better when the model is updated, even within the same family. 
+
+---
+# Towards Explaining Query Expansion Performance in Information Retrieval 
+
+**Authors**: Sourav Saha, Aditya Dutta, Soumajit Pramanik, Mandar Mitra  
+
+**Link**: [PDF](https://arxiv.org/pdf/2610.09724)  
+
+**Abstract**: Query Expansion (QE) techniques have long been widely used in Information Retrieval (IR) to address the vocabulary mismatch problem. They remain relevant in modern retrieval systems, including those based on large language models (LLMs). However, no single QE method consistently outperforms others across all queries. This work seeks to explain the variation in QE performance through two complementary perspectives. The first is the concept of an Ideal Expanded Query (IEQ)--a hypothetical query that maximizes retrieval effectiveness with a downstream BM25 retrieval model. The second is a separability perspective, which quantifies how distinctly relevant and non-relevant documents are scored for a given expanded query using Cohen's (d). We develop a separability measure and practical formulations to approximate the IEQ and investigate how these factors relate to retrieval effectiveness. Extensive experiments on the TREC Robust collection, TREC DL 2019-2022 passage collections, and TREC DL 2019-2020 document collections reveal several interesting patterns. In particular, we find that expanded queries that are closer to the ideal expanded query tend to achieve higher retrieval effectiveness. We further show that the separability of relevant and non-relevant documents provides a complementary perspective for understanding QE performance. 
+
+---
+# Finding the Right Balance: Relevance and Diversity in LLM Retrieval 
+
+**Authors**: Guillaume Brouillette, Faustin Kagabo, Usef Faghihi, Nadia Ghazzali  
+
+**Link**: [PDF](https://arxiv.org/pdf/2610.09412)  
+
+**Abstract**: Retrieval diversification is widely available in retrieval-augmented generation (RAG) frameworks, yet prior studies disagree on whether it improves retrieval and answer quality. We show that its effectiveness varies primarily with candidate-pool redundancy, in a pattern consistent with the number of distinct evidence pieces a query requires. Using controlled near-duplicate injection and production-style overlapping chunking, we find that diversification harms relevance, evidence coverage and answer quality on clean pools, but becomes beneficial on multi-evidence tasks when redundancy causes nearest-neighbor retrieval to select repeated passages. We therefore introduce a query-adaptive rule that diversifies only when the effective number of distinct documents in the nearest-neighbor top-$k$ selection falls below the query's evidence requirement. Computed from existing embeddings, the rule captures most of the achievable gain, transfers across datasets and encoders and automatically reduces to nearest-neighbor retrieval for single-evidence queries. We also introduce RNG-Score, a geometric reranker with an exact nearest-neighbor fallback whose margin indicates duplicate structure. Overall, we conclude that diversification should be used selectively, based on observable redundancy and evidence requirements. 
+
+---
+# From Chunks to Functional Evidence: Function-Aware Retrieval for EDA Documentation QA 
+
+**Authors**: Xiaotian Qiu, Kairui Liu, Shi Chenyi, Jinyuan Deng, Qi Sun, Cheng Zhuo  
+
+**Link**: [PDF](https://arxiv.org/pdf/2610.09361)  
+
+**Abstract**: Retrieval-Augmented Generation (RAG) is widely used to ground answers in documents. For complex technical documentation, however, the primary bottleneck is often not model reasoning but a mismatch between a query and the way knowledge is organized for retrieval. This mismatch is pronounced in Electronic Design Automation (EDA) documentation, where the information needed for an answer is scattered across heterogeneous yet tightly coupled artifacts. We therefore redesign the basic retrieval unit of RAG. Instead of operating on isolated chunks or binary relations, we collect typed artifacts into EDA functional units. Each unit is recorded as a hyperedge with links to its source chunks. We then train an encoder to align queries with functional units and combine unit retrieval with direct chunk retrieval. After mapping the selected units back to their sources, a unified reranker chooses the evidence given to the generator. On the newly constructed EDADocEval-QA dataset, our method improves ROUGE-L by 37.1% over Chunk RAG and 55.6% over the strongest graph baseline. On the public ORD-MMBench benchmark, it improves ROUGE-L by 30.0% over the strongest baseline. These results support function-aware evidence organization in the evaluated EDA documentation settings. 
+
+---
+# Reading Position Is the Baseline to Beat: A Time-Ordered Evaluation of Personalised Highlight Prediction 
+
+**Authors**: Kazuki Nakayashiki, Keisuke Watanabe  
+
+**Link**: [PDF](https://arxiv.org/pdf/2610.09262)  
+
+**Abstract**: A reader's first highlights on a page are the cheapest personal signal a reading product has. The natural plan is to suggest what similar earlier readers marked, and to judge the result against popularity. We argue that the baseline to beat is reading position. In a time-ordered evaluation on one social highlighting platform (7,343 reader-page pairs on 1,511 pages after one highlight), ranking the sentences just below a reader's first highlight, with no other reader's data, puts the next highlight in the top five 47% of the time, against 26% for popularity and 29% for the better of two similarity methods. The baseline depends on the target: over all later highlights that ranking loses to popularity, while popularity discounted by distance from the latest highlight, at the scale with the best average precision of three tried, beats popularity and both similarity methods on both targets. In a comparison specified in advance, neither similarity method shows a gain over popularity in average precision over all later highlights, from one to five highlights, and a gain of +0.01 is excluded. Nor would a gain by itself show that a method has found a reader's preferences: synthetic readers who share one set of preferences produce one, and an evaluation out of time order shows a method where the reader went. The position results are exploratory and unconfirmed. Personalisation inside a document should be evaluated in time order and against reading position. 
+
+---
+# Quantize by Drift: Label-Free Mixed-Precision Post-Training Quantization for Text Embedders 
+
+**Authors**: Hyojung Han, Jongmin Kim, Seung-Hun Jeon  
+
+**Link**: [PDF](https://arxiv.org/pdf/2610.09227)  
+
+**Abstract**: Mixed-precision post-training quantization needs a per-module sensitivity signal; for a text embedder the obvious one -- the retrieval quality a module costs when quantized -- needs relevance labels that deployments rarely have. We measure a label-free substitute: quantization-induced representation drift, obtained by quantizing one module, re-encoding the corpus, and recording how far the output embeddings moved from their full-precision positions. What is specific is the observable: the deployed output representation a dense retriever ranks with. Across five development embedders, configuration-level drift orders sampled mixed-precision plans against held-out retrieval quality at a macro Spearman of 0.911, the sensitivity transports across calibration corpora and retrieval domains in the usable regime, module drifts compose rank-consistently but not numerically, and relevance-derived sensitivity adds no consistent value. The method is one additive allocation under a hard packed-byte budget, with no labels and no search. On three embedders held untouched until method, baselines and hypotheses were frozen and sealed, the pre-registered directional hypothesis against the prior LieQ criterion holds (3/3 at the main budget, no collapse) and drift scores above a two-sided LieQ steelman in 2/3; but at the main budget drift is numerically lower than same-budget uniform precision on all three (-0.99, -0.85, -1.01 points), having reduced module and whole-model drift as designed. Output drift is thus a robust coarse sensitivity signal, not a universally optimal allocation objective: it avoids the catastrophic failures of the transferred signed-geometry adaptation and can remain usable at stressed budgets where uniform collapses, but fine-grained redistribution around a strong uniform operating point remains unresolved. 
+
+---
+# What Transfers from a VLM Teacher? Comparing Supervision Signals for Visual Document Retrieval 
+
+**Authors**: Saba Sturua, Han Xiao  
+
+**Link**: [PDF](https://arxiv.org/pdf/2610.09177)  
+
+**Abstract**: Visual document retrievers are trained contrastively: each query is matched to one page labelled relevant - the positive - and pushed away from negatives, pages presumed irrelevant. Recent methods distil a vision-language model (VLM) teacher into the retriever by enriching that positive, transferring the teacher's attention over it or a description of it. We ask whether the teacher is better spent on the other side, judging the candidates the retriever mines as negatives, which the label says nothing about. With student, data, optimizer and evaluation fixed, teacher-judged hard negatives and score distillation raise ViDoRe v2 nDCG@5 from 55.2 to 62.6 and 63.0; description alignment, as adapted here, gains 2.6 points and attention grounding nothing measurable. Against teacher-free rules that select four candidates from the same mined pool at identical training compute, the best of which is the positive-aware threshold current systems use, the teacher's judgement adds 4.1 points on v2 and 1.7 on v3. This is consistent with how incomplete the labels are. Annotators judge about two of a query's four top-ranked mined candidates relevant, none of them labelled, so training pushes the retriever away from relevant pages treated as negatives. What reaches the student is coarse: under a greedily decoded 0-100 rating prompt, 82% of the teacher's ratings come back at one end of the scale or the other, and a relevant/irrelevant partition keeps most of the distillation gain. A ten-annotator audit places the teacher within the range of variation among human annotators, and finds it reliable where a query has a single determinate answer. We release the code, the teacher's 3.3M judgements and page descriptions, the mined pools, the human audit and the trained adapters at this https URL. 
+
+---
+# Trustworthy Domain-Specific AI for Structured Knowledge Retrieval and Reasoning 
+
+**Authors**: Ryan C. Barron  
+
+**Link**: [PDF](https://arxiv.org/pdf/2610.08894)  
+
+**Abstract**: This dissertation presents a scalable architecture for transforming unstructured, domain-specific text into structured knowledge for retrieval and reasoning. It integrates semi-automatic corpus curation, semantic structuring, retrieval, and inference into an interpretable pipeline.
+The research introduces Binary Bleed, an adapted binary search method that reduces low-rank search complexity for Non-negative Matrix Factorization (NMF), and Hierarchical NMF with automatic latent feature selection (HNMFk), a depth-adaptive topic modeling method that produces interpretable taxonomies guided by subject matter experts. These representations populate a typed Knowledge Graph and a semantically aligned Vector Store containing extracted latent features, synchronized through an event-driven substrate.
+Tensor-Structured Retrieval-Augmented Generation (T-SRAG) dynamically routes queries across retrieval paths. Contrastive alignment maps document and query embeddings to hierarchical topic structures to improve semantic fidelity and reduce hallucinations. Beyond retrieval, tensor-based link prediction identifies and completes missing links in the Knowledge Graph, supporting inference grounded in citation structure.
+Applications across cybersecurity, law, materials science, and healthcare demonstrate improvements in retrieval precision, early trend detection, hypothesis generation, and hallucination mitigation. The dissertation provides a deployable, modular foundation for trustworthy, domain-specific AI systems that retrieve and reason over structured knowledge. 
+
+---
+# Two-Level Softmax Sampling Done Right: Correcting Bias from Size Imbalance and Dispersion 
+
+**Authors**: Walid Bendada, Guillaume Salha-Galvan  
+
+**Link**: [PDF](https://arxiv.org/pdf/2610.10483)  
+
+**Abstract**: Sampling from a softmax distribution is a fundamental operation in machine learning, but its linear complexity in the number of items makes exact sampling impractical at scale. Two-level softmax (2LS) sampling is a popular alternative enabling sublinear-time sampling. Assuming items are partitioned into clusters, 2LS first samples a cluster and then an item within it. In this paper, we show that, despite its advantages, 2LS introduces systematic and undesirable sampling biases, which arise from misweighting clusters by ignoring both cluster size imbalance and intra-cluster similarity dispersion. We propose two sampling methods, Size-Corrected 2LS (S-2LS) and Size- and Dispersion-Corrected 2LS (SD-2LS), which correct these biases and provide provably better softmax approximations with negligible to non-existent computational overhead. In-depth experiments on five large-scale datasets validate the improved sampling properties of our methods. We recommend their consistent use in place of standard 2LS in future work. 
+
+---
+# CrossWeave: Bridging Perspectives Across Online Communities with a Dual-Pane Design 
+
+**Authors**: Fei Fang, Reva Hirave, William Jurayj, Yuqi Li, Brian Lu, Tarik Metin, Tsugunobu Miyake, Kateryna Morhun, Yash Permalla, Kenan Rustamov, Allen Shen, Haojun Shi, Prabhav Singh, Xiheng Tom Wang, Kevin Xu, Qingcheng Zeng, Jiayi Zhang, Daniel Khashabi, Andrew Perrin, Tiziano Piccardi, Ziang Xiao, Jason Eisner  
+
+**Link**: [PDF](https://arxiv.org/pdf/2610.10441)  
+
+**Abstract**: Social media systems typically display conversations among already familiar contributors, which can be predictable and one-sided. In civic discourse, this design narrows discussion, reinforces divides, and distorts the perception of public opinion. To encourage cross-community engagement, we present CrossWeave, an AI-powered bridging system that augments the standard social media feed. As the user reads a post, CrossWeave surfaces diverse relevant posts from other threads in a side pane and highlights the connections. Users are invited to venture out of their echo chamber, explore a broader range of views and arguments, and ``click across'' to engage with their authors. When they do, CrossWeave facilitates constructive posting, not only by showcasing relevant past content but also by simulating possible reactions as the user drafts a post. 
+
+---
+# ExperienceIndex: Artifact-Grounded Memory 
+
+**Authors**: Peter Baile Chen, Geoffrey X. Yu, Xinming Liu, Samuel Madden, Dan Roth, Jacob Andreas, Doug Downey, Michael Cafarella  
+
+**Link**: [PDF](https://arxiv.org/pdf/2610.10091)  
+
+**Abstract**: Knowledge-intensive tasks require answering many questions by reasoning about a shared corpus of artifacts (e.g., court cases, or scientific literature). As humans interact with these corpora, they naturally accumulate experiential knowledge about artifacts, enabling them to quickly identify the complete set of relevant artifacts for each new task. However, existing AI agents lack appropriate memory solutions to build or reuse such artifact-grounded experience, leading to lower answer quality and higher online cost. Existing memory solutions extract and reuse information from prior task-solving traces, but they primarily focus on user preferences, factual attributes, or abstract reasoning patterns rather than persistent artifact-specific knowledge. We introduce ExperienceIndex, a novel experience layer for AI agents that captures and reuses knowledge about artifacts based on prior reasoning traces. ExperienceIndex stores two complementary forms of experience: (i) single-artifact experiences that summarize an artifact's contribution to prior tasks and (ii) artifact-pair experiences that encode structural relationships discovered during past reasoning. Integrated as lightweight middleware, ExperienceIndex uses an experience retrieval mechanism to guide agents toward the complete set of relevant artifacts for new tasks, improving both answer quality and efficiency. Across diverse corpora and agentic solutions with different search frameworks, ExperienceIndex delivers consistent gains, raising answer quality by up to 11.0 points and reducing online dollar cost by up to 50.5%. We further demonstrate two benefits: (i) cross-task generalization, where experiences accumulated from text-to-SQL tasks transfer to factoid QA tasks over the same artifact corpus, and (ii) teacher-student learning, where experiences from a stronger model enable a weaker model to reach comparable performance. 
+
+---
+# SoccerNet-FoulRet: Retrieving Semantically Similar Soccer Foul Videos 
+
+**Authors**: Jacobus Arthur, Ahmad Sait, Batool Hani, Merey Ramazanova, Jan Held, Marc Van Droogenbroeck, Bernard Ghanem, Anthony Cioppa, Silvio Giancola  
+
+**Link**: [PDF](https://arxiv.org/pdf/2610.09742)  
+
+**Abstract**: Refereeing decisions in professional soccer remain inconsistent because referees cannot easily compare a contentious foul against similar past cases. We cast this as a retrieval problem and introduce SoccerNet-FoulRet, the first benchmark for semantic foul retrieval. Given a query foul, the task is to retrieve past fouls judged to be relevant precedents, regardless of camera angle, teams, or appearance. This differs from prior video-to-video retrieval, which matches clips by visual similarity or a shared event. Here, relevance is defined by refereeing interpretation. We build the benchmark from the SoccerNet-MVFoul dataset and evaluate retrieval ability of zero-shot video and vision-language embedders together with a task-specific fine-tuned baseline on 693 human-verified queries and category-relevance labels. Semantic foul retrieval remains challenging. The strongest zero-shot model achieves under 5% HitRate@10 on human-verified precedents, while category-supervised fine-tuning improves category relevance but transfers only modestly to precedent retrieval. We release SoccerNet-FoulRet to establish semantic foul retrieval as an open problem: this https URL. 
+
+---
+# Building Navigable Graphs Without Search in Three Composable Stages 
+
+**Authors**: Édgar Chávez  
+
+**Link**: [PDF](https://arxiv.org/pdf/2610.09041)  
+
+**Abstract**: Navigable graphs can be built without searching for neighbors: partition the data, evaluate every pair inside each part, and select each point's edges from the candidates. We give such a construction in three separable stages and show that the middle one decides the quality. The pool is any partition with a few memberships per point. The ending turns a point's candidates into out-edges; ours keeps a bounded heap, prunes by occlusion with a per-corpus slack, and appends reverse edges, re-pruning only where a list overflows. The spine is any edge set, exempt from the prune, that keeps the graph reachable from its entry; ours, half-space-proximal edges over a random sample, routes monotonically to every sampled point and replaces a spanning tree at 1/10 to 1/500 of its cost. The ending composes with any partitioner: on PiPNN's own candidate pool it beats PiPNN's ending on each of six corpora from $10^6$ to $10^8$ points, by 3 to 14% in distance evaluations at equal recall, and with 60 to 120 memberships per point the composed build matches or beats a full dense construction at k=10 and k=100 on all six, in 0.5 to 0.9 of its build time, deterministically. The analysis explains why. Once a pool is localised its quality is set by the data: every pool built on GIST lands within 4% of the exact-kNN ceiling, and the pairs a block cover misses are predicted, point by point, by the local clustering of the kNN graph, whose zero-clustering tail sets the memberships a corpus needs and grows with n. All code, patches and logs are public. 
+
+---
+# From High Recall to High Utility: Dataset-Adaptive Post-Processing of LLM-Generated Customer Intents 
+
+**Authors**: Mahesh Viswanathan, Joan Rossello, Leticia Fernandes, Paul Mutawe  
+
+**Link**: [PDF](https://arxiv.org/pdf/2610.09039)  
+
+**Abstract**: Large language models can extract useful signals from heterogeneous enterprise data, but high-recall extraction often produces outputs that are duplicated, uneven in granularity, semantically overlapping, or too numerous for downstream systems and human reviewers to use effectively. We present a dataset-adaptive post-processing architecture developed for Customer Intent Extraction (CIE), where unstructured customer language is transformed into stable, traceable intent units. The approach separates recall-oriented extraction from utility-oriented reduction. Source-specific preprocessing first isolates evidence from multimodal plans, sparse operational records, and structured opportunity data. Candidate intents are then standardized and deduplicated, optionally enriched with metadata for embedding computation, represented in a shared semantic vector space, and grouped using a clustering strategy selected according to the candidate set's characteristics. Cluster-level keywords provide an explainability layer, while singleton reassignment requires agreement between embedding and keyword similarity. Finally, constrained language-model aggregation produces one concise intent per cluster without introducing unsupported concepts, and the resulting unit retains provenance, clustering, embedding, and generation metadata. This treats post-processing not as cosmetic cleanup, but as a semantic reduction layer converting high-recall LLM outputs into reusable enterprise intelligence. We also describe two downstream applications: Machine-Generated Intents, which infer likely objectives for customers lacking direct evidence from peer customers with similar profiles, and intent-guided semantic retrieval and mapping, which uses the stable intent as a query against a downstream decision space, illustrated here by mapping customer intents to business outcomes. 
+
+---
+# BEACON-SP: Ontology-Grounded GraphRAG Framework for Clinical Suicide Risk Assessment 
+
+**Authors**: Kemal Davaslioglu, Nathan Conger, Sastry Kompella, Yalin E. Sagduyu, Nathaniel D. Bastian  
+
+**Link**: [PDF](https://arxiv.org/pdf/2610.09026)  
+
+**Abstract**: We present BEACON-SP, an ontology-grounded Graph Retrieval-Augmented Generation (GraphRAG) framework for clinician-facing decision support in behavioral health settings such as suicide prevention, where effective assessment requires integrating heterogeneous clinical, behavioral, social, and temporal evidence. BEACON-SP combines patient knowledge graphs with ontology-guided retrieval to support multi-hop reasoning across diagnoses, medications, risk and protective factors, life events, and temporal relationships. The framework is enabled by a comprehensive suicide prevention ontology that integrates the Three-Step Theory, the Integrated Motivational-Volitional Model, and the Suicide Social Determinants of Health Ontology into a unified representation of patient risk factors. We construct ontology-grounded patient knowledge graphs and evaluate BEACON-SP for clinician-facing question answering. Compared with a vector-based retrieval-augmented generation (RAG) baseline on a 1,500-query benchmark spanning 15 clinical categories and 100 patients, BEACON-SP improves completeness, clinical relevance, and evidence grounding under a corrected comparative evaluation protocol, with a small gain on factual accuracy. In paired criterion-level comparisons, GraphRAG is preferred in 76.4% of cases. These results demonstrate the potential of ontology-guided GraphRAG to provide structured, contextualized patient evidence for clinical decision support. 
+
+---
