@@ -1,0 +1,434 @@
+# Diverse-Teacher On-Policy Distillation for Generative Recommendation 
+
+**Authors**: Zhipeng Yi, Xinyu Lin, Minxuan Shan, Zipeng Chen, Yujiao Zhao, Chuanyu Xu, Wenjie Wang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2611.03272)  
+
+**Abstract**: Generative recommendation generates the semantic ID (SID) of the next item from a user's interaction history. Existing training objectives mainly supervise target SID tokens, while on-policy distillation (OPD) provides denser supervision through a teacher's probability distribution over all tokens for more effective and efficient training. However, OPD can aggravate popularity bias: teacher feedback favors popular-item tokens, transferring this preference to the student, while student rollout favors popular items, leaving unpopular-item SID paths rarely generated and supervised. These two sources of bias reinforce each other and reduce recommendation diversity. We propose HERO, a diversity-aware OPD framework. Heterogeneous teacher distillation trains two teachers specializing in popular and unpopular items and routes each training sample to the teacher matching the popularity group of its ground-truth item. The student learns from the routed teacher's probability distribution along its own generated SIDs. Diversity-aware item rollout incorporates ground-truth SIDs of unpopular items into training, covering SID paths that the student rarely generates. Only the student is used for inference. Offline experiments on an industrial dataset and three public datasets further demonstrate its effectiveness, diversity, and robustness. Moreover, we deploy HERO in the "Guess What You Like" module on the 1688 homepage, where a 15-day online A/B test shows a 3.412% increase in gross merchandise value (GMV). 
+
+---
+# Dhārā Bench: An Evidence-Oriented Retrieval Benchmark for Indian Knowledge Systems 
+
+**Authors**: Avinash Holenarasipur Nagendra, Anand Kaniyaar Sriranga Prasad, Kousik Sarathy Sridharan, Mohan Raghavan  
+
+**Link**: [PDF](https://arxiv.org/pdf/2611.03196)  
+
+**Abstract**: Dhārā Bench is a retrieval benchmark for Indian Knowledge Systems (IKS), with 325 questions in 12 categories and 60,121 text chunks from 15 source groups. The categories were developed based on 4,500 questions submitted to the Dhārā application; the evaluation set combines corpus-aligned application queries with expert-contributed questions. The annotations comprise 7,578 question-chunk relevance links involving 6,847 distinct corpus chunks. For 34 composite and multi-hop questions, 401 conjugate groups specify alternative sets of passages that jointly support each question. Chunk identifiers and hierarchical references connect the judgments to their source texts. The paper describes corpus preparation, annotation, and validation, and reports a fixed BM25 baseline implemented with Pyserini with $k_1=0.9$ and $b=0.4$. Across all questions, BM25 achieves MRR@20 of 0.315, Recall@10 of 0.182, and nDCG@10 of 0.205. On the group-annotated subset, complete-evidence scores are CE_Recall@20 = 0.294 and CE_MRR@20 = 0.141. The category results expose particularly weak verse retrieval, while group scores reveal gaps between finding individual passages and completing their support. The corpus and evaluation code are available at this https URL. 
+
+---
+# Every Clause Counts: Instruction-Following Reranking by Multiplying Small, Answerable Questions 
+
+**Authors**: S. M. Mahbub Uddin Ahmed, Abdullah Al Musaddiq  
+
+**Link**: [PDF](https://arxiv.org/pdf/2611.03179)  
+
+**Abstract**: People often attach instructions to their search queries, asking for pages written for beginners, documents in a certain language or official sources only. Most rerankers were trained to judge topical relevance and treat such instructions as a few extra words. On the InfoSearch benchmark, even GPT-4o used as a list-wise reranker reaches an average WISE (Weighted Instruction Sensitivity Evaluation) of only 33.5. We present DMReranker (Decision-Model Reranker), a zero-shot reranker that splits an instructed query into a topic and a short list of typed clauses. A small judge model answers one narrow question per clause, and the answer probabilities are multiplied into a single score. Nothing is trained, and the configuration was frozen before the test runs. Reranking the same top-100 candidates as the published baselines, DMReranker reaches a macro WISE of 50.9 over all six InfoSearch dimensions while keeping original-mode nDCG@10 at 82.9. It trails GPT-4o on the stricter SICR (Strict Instruction Compliance Ratio) metric, 19.2 against 32.1. We show that this gap follows from how a product of probabilities behaves when SICR compares raw scores across runs. Computed from ranks, our SICR is 67.0. On the same judge, splitting the instruction raises WISE from 32.9 to 47.6 over a single combined question, while raw-score SICR falls. Scoring all six dimensions cost about $10 at list price. 
+
+---
+# Preprocessing Choices in Fine-Tuning Data Matter: Utility and Demographic Sensitivity in LLM-Based Recommendation 
+
+**Authors**: Furkan Yasir Goksu, Yaren Yilmaz, Sule Gunduz Oguducu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2611.03113)  
+
+**Abstract**: Large language models (LLMs) have introduced a generative approach to recommendation, producing item lists from textual representations of user histories and item information. However, this generative setting raises challenges concerning output validity, prompt consistency, and sensitivity to demographic descriptors. In this work, we investigate how preprocessing choices in fine-tuning data affect recommendation utility and fairness-related behavior in a generative LLM-based recommender system. We first establish a controlled recommendation pipeline that combines supervised fine-tuning, catalog-constrained decoding, and prompt augmentation. We then study three preprocessing choices: item-title representation, demographic balancing, and auxiliary item-knowledge enrichment. Experiments on MovieLens-1M show that the catalog-constrained pipeline eliminates out-of-catalog items and ensures complete ten-item outputs, while prompt augmentation improves prompt consistency and utility. Original MovieLens titles increase HR@10 from 10.67% to 12.47% and Coverage@10 from 41.36% to 47.88%. Fairness-related effects are attribute-dependent: age balancing and knowledge enrichment reduce selected group-level utility gaps while largely preserving utility, whereas gender balancing reduces utility without improving the evaluated gender-related indicators. Overall, preprocessing choices in fine-tuning data should be evaluated jointly in terms of utility, output behavior, and demographic sensitivity. 
+
+---
+# PACERec: Progressive Adaptation of LLM Item Embeddings with Collaborative Evidence for Recommendation 
+
+**Authors**: Junzhao Huang, Xi Wu, Zihan Wang, Zijing Wang, Ming Wang, Kang Liu, Xiaocui Yang, Shi Feng, Daling Wang, Yifei Zhang, Ting Yang, Xurui Li  
+
+**Link**: [PDF](https://arxiv.org/pdf/2611.03068)  
+
+**Abstract**: Large language model (LLM) embeddings have been increasingly adopted in sequential recommendation to encode static item attributes and alleviate the limitations of item ID embeddings under sparse interactions. However, these embeddings typically capture only static content similarity while neglecting sequential transitions, and since their adaptation quality relies on sparse per-item updates or global geometric calibration, existing methods still struggle to explicitly transfer preceding interaction contexts from frequent to long-tail items under unevenly distributed behavioral evidence, limiting recommendation effectiveness across the catalog. To address this challenge, we propose PACERec, an ID-free progressive adaptation framework that incorporates preceding interaction contexts into semantic representation adaptation by learning a shared velocity field from items with sufficient interactions via frequency-weighted flow matching. In this way, PACERec progressively guides static LLM embeddings toward collaborative behavioral targets while preserving original item semantics, overcoming sparse per-item updates to effectively generalize sequential transition patterns to long-tail items for both user modeling and candidate scoring. Extensive experiments on three real-world datasets across three sequential backbones demonstrate the superiority of our method over competitive baselines in both overall and long-tail recommendation. 
+
+---
+# E-GenRM: Generative Reward Modeling for Open-Ended E-Commerce Shopping Agents 
+
+**Authors**: Ying Sun, Qiuyu Zhao, Xiao Wang, Xiyu Zhao, Gege Shi, Zenghui Sun, Jinsong Lan, Haihong Tang, Bo Zheng  
+
+**Link**: [PDF](https://arxiv.org/pdf/2611.03008)  
+
+**Abstract**: We present E-GenRM (E-commerce Generative Reward Model), a generative reward model tailored to e-commerce shopping agents. User expectations are shifting from simple product queries to open-ended shopping tasks. However, existing trajectories and reward designs remain largely bounded by current agent usage patterns and known failures, providing limited guidance for further capability improvement. These limitations call for an integrated reward modeling framework for open-ended shopping agent tasks. On the data side, E-GenRM leverages naturally occurring user behavior across the shopping app to construct diverse, long-horizon conversational trajectories beyond established usage patterns. On the modeling side, E-GenRM first learns from behavior-grounded evaluation chains through supervised fine-tuning. It is then optimized through criterion-guided reinforcement learning, which rewards correct preference judgments and evidence-supported factual claims under each criterion. Personalized hard-negative training further improves its sensitivity to user preferences reflected in shopping behavior, beyond explicit requirements. We additionally develop an active evidence retrieval extension that acquires missing e-commerce information for evaluation. On E-GenRM-Bench, E-GenRM-27B achieves 87.40\% preference accuracy, outperforming the strongest baseline by 6.97 percentage points. In a 14-day online A/B test on Taobao, a shopping agent post-trained with E-GenRM improves the effective shopping-assistance rate by 1.39 percentage points and user satisfaction by 2.33 percentage points. 
+
+---
+# Learning to Adjudicate: Verifier-Guided Multi-Agent Reasoning for E-Commerce Relevance 
+
+**Authors**: Shi Shu, Hao Chen, Baopu Qiu, Chao Wei, Weiru Zhang, Xiu Li, Xiaoyi Zeng  
+
+**Link**: [PDF](https://arxiv.org/pdf/2611.02758)  
+
+**Abstract**: Relevance modeling is fundamental to e-commerce search, determining how well retrieved products satisfy the needs expressed in a user's query. Accurate judgments require interpreting user intent, comparing product attributes, and applying business-specific matching criteria. Current methods based on large language models (LLMs) leverage contextual understanding and reasoning, focusing on incorporating domain-specific context and enhancing reasoning performance. Despite these advances, difficult query-product pairs remain challenging when evidence from different perspectives supports conflicting conclusions. A single reasoning pass may fail to reconcile these conflicts and ensure that decisive evidence guides the final judgment. To address this challenge, we propose Collaborative Adjudication with Debate and Replay Experience (CADRE), a framework for evidence-based adjudication in e-commerce relevance assessment. CADRE organizes three expert agents sharing a frozen backbone to analyze product attributes, user intent, and business rules in separate contexts, while a trainable Verifier assesses their supporting evidence against the applicable matching criteria to determine relevance. Under expert disagreement, a Verifier-guided debate elicits targeted clarification and revision of disputed interpretations before final adjudication. We optimize the Verifier through multi-turn group relative policy optimization and adapt successful-experience replay so that trajectories yielding correct terminal labels can be reused alongside fresh rollouts in subsequent updates. For efficient online serving, we use CADRE as an offline teacher to distill its relevance judgments into a lightweight student model. Offline evaluations and online A/B tests on an e-commerce search advertising platform demonstrate that CADRE improves relevance classification and key business and relevance satisfaction metrics. 
+
+---
+# RecRSI: Mechanism-Guided Discovery of Recommendation Algorithms 
+
+**Authors**: Tingran Gan, Zhouziyue Lu, Dian Jin, Tao Li, Yang Gao, Ming Liu, Weiwen Liu, Jianghao Lin, Weinan Zhang, Yong Yu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2611.02487)  
+
+**Abstract**: Improving recommendation algorithms for the Web requires coordinating interacting design choices and learning from experiments. We present RecRSI, an LLM-based research framework that uses mechanism hypotheses to organize algorithm discovery. Each hypothesis links a proposed mechanism change to a reference design, a rationale, and an expected observation. MechSpace derives implementable primitives and composition rules from the task source; Research Line uses this space and prior evidence to develop and test hypotheses; Mechanism Feedback carries outcomes and their design context into subsequent research. This organization makes each experiment inform which mechanisms to develop, revise, or combine next. Across four initial recommenders and four datasets, RecRSI yields average relative improvements of 8.48% in NDCG@5 and 6.88% in HR@5 over the initial algorithms, and 2.60% and 2.20%, respectively, over the strongest competing result for each setting and metric. Component and process studies link these gains to coordinated mechanism choices and evidence-guided follow-up. Our code is publicly available at this https URL. 
+
+---
+# Multi-Teacher Reasoning Distillation for LLM Recommendation with Self-Exploration 
+
+**Authors**: Liangbo Ning, Siyuan Liang, Yi Zhou, Yifeng Zhang, Qing Li, Wenqi Fan, Dacheng Tao  
+
+**Link**: [PDF](https://arxiv.org/pdf/2611.02457)  
+
+**Abstract**: Reasoning-augmented recommender systems (RecSys) enhance user preference modeling by generating reasoning trajectories over historical interactions before making recommendations. Knowledge distillation provides a practical paradigm for transferring such reasoning capabilities from powerful large language models to lightweight RecSys. However, existing methods typically rely on a single fixed teacher, remain constrained by the teacher knowledge ceiling, and indiscriminately distill teacher-generated trajectories without assessing their actual utility for downstream recommendation. To address these limitations, we propose MUSE (Multi-Teacher Utility-guided Selection with Self-Exploration), an adaptive reasoning distillation framework that jointly improves reasoning generation and reasoning utilization. MUSE first constructs a diverse reasoning pool using multiple teacher LLMs and progressively augments it via student self-exploration, enabling the student to leverage the strengths of different teachers and gradually explore reasoning strategies beyond teacher imitation. We then develop Rank-Gain Utility Assessment (RGUA), which evaluates each candidate according to the normalized full-catalog rank improvement of the ground-truth item and identifies the most and least recommendation-beneficial trajectories. Based on these utility-aware trajectory pairs, we introduce dual-level contrastive learning objectives that guide the student generator to prefer beneficial reasoning while training the recommendation encoder to more effectively exploit recommendation-relevant preference evidence. Extensive experiments on three real-world datasets demonstrate the effectiveness and robustness of the proposed framework. 
+
+---
+# Adversarial Robustness of Retrieval-Based Fact-Checking: Detecting and Mitigating Evidence Contamination 
+
+**Authors**: Alamgir Munir Qazi, John P. McCrae, Jamal Abdul Nasir  
+
+**Link**: [PDF](https://arxiv.org/pdf/2611.02139)  
+
+**Abstract**: Retrieval-based fact-checking systems ground verification in large document collections, creating a critical vulnerability: adversarial evidence contamination. We demonstrate that factually inconsistent but contextually coherent evidence generated to satisfy both retrieval-similarity and linguistic-fluency constraints can systematically mislead verification models. Contaminating just 3.1-7.4% of training corpora with five label-specific strategies causes adversarial content to penetrate up to 35.2% of top-k retrievals, degrading verification accuracy by up to 46.9% relative F1. Existing retrieval-stage defenses, validated against gradient-optimized or syntactically anomalous attacks, transfer poorly to this threat model: detection rates collapse and F1 recovery exhibits high variance across seeds. We propose GLAD (Geometric-Lexical Adversarial Defense), which fuses dense embedding peer-coherence with lexical distributional isolation. Across two benchmarks, two embedding models, and five random seeds, GLAD achieves the highest detection rates (70-86%) and the most consistent F1 recovery, reclaiming 73-80% of contamination-induced degradation on LIAR-RAW while approaching clean baselines on RAWFC. Crucially, unlike defenses that trade clean performance for robustness, GLAD imposes negligible cost on uncontaminated corpora. 
+
+---
+# Multicriteria Recommendation System by Leveraging Predefined, Implicit, and Undefined Criteria 
+
+**Authors**: Emrul Hasan, Chen Ding  
+
+**Link**: [PDF](https://arxiv.org/pdf/2611.02040)  
+
+**Abstract**: Data sparsity, a long-standing problem in the recommendation system, occurs when the user-item utility matrix is sparse. For years, many approaches have been experimented with, including utilizing user's textual reviews and multiple criteria ratings. In a review-based recommendation system, user preferences and item attributes are learned from reviews, while in multi-criteria recommendation systems, criteria ratings are used for the recommendation task. Multi-criteria are domain-specific pre-defined explicit criteria and users are bound to provide feedback only on these criteria with discrete values. On the contrary, users are free to express their opinions through textual reviews, which can cover multiple perspectives or aspects. It is possible that these pre-defined, domain-specific explicit criteria are not enough to fully capture the multi-faceted user preferences. To this end, we propose a novel multi-criteria recommendation model that utilizes predefined, implicit, and undefined criteria. We use a semantic similarity-based sentence clustering method to identify the predefined and implicit criteria and a sentiment analyzer to estimate their ratings. The criteria that are extracted from the review and are aligned with predefined criteria are referred to as implicit criteria. A sentence is considered as expressing opinions on an undefined criterion if the similarity score between this sentence and all the predefined criteria is lower than a predefined threshold. Ratings are computed for each extracted implicit criterion and the undefined criterion based on the review content. Finally, we use all three types of criteria and an aggregation model to make the final rating prediction for the recommendation system. Our proposed method demonstrates the superiority compared to several baselines on TripAdvisor and Beer Advocate datasets. 
+
+---
+# Multi-criteria Rating and Review based Recommendation Model 
+
+**Authors**: Emrul Hasan, Chen Ding, Alfredo Cuzzocrea  
+
+**Link**: [PDF](https://arxiv.org/pdf/2611.02019)  
+
+**Abstract**: These days, due to the advancement of information technology, recommendation system has become one of the key tools for e-commerce business. E-commerce platforms allow users to provide feedback in both written comments and numerical ratings. Recommendation systems are utilized to recommend users to new or unseen items based on these previously collected comments or ratings. In recent years, multi-aspect or multi-criteria based recommendation systems have been studied a lot by the recommendation research community. However, these research works are conducted either with reviews or ratings, not with both. In this project, we argue that integrating both textual reviews (with multiple aspects) and numerical multi-criteria ratings can further enhance the overall rating prediction accuracy. We propose a Multi-criteria Rating and Review based Recommendation model (MRRRec). We show that incorporating multi-criteria ratings into multi-aspect ratings from reviews has a great impact on performance. Our proposed model outperforms several state-of-the-art models such as ANR, DeepCoNN, and Deep Multi-criteria Recommendation System in terms of MSE, MAE, precision, recall, and F1. We show that our proposed model achieves an average of 19% and 23.0% lower MSE and MAE respectively and 7.0%, 1.0% and 3.8% higher precision, recall, and F1 score respectively. We further show that our model performs significantly better with Word2Vec word embedding than the GloVe word embedding method. 
+
+---
+# Same Trajectory, Different Knowledge: Information-State-Aware On-Policy Distillation for Search Agents 
+
+**Authors**: Minhao Sun, Xian-Ling Mao, Eric Tao, Zi-Ao Ma, Zhijing Wu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2611.01987)  
+
+**Abstract**: On-policy distillation trains search agents with teacher feedback on student-generated trajectories. Recent methods augment the teacher's context with supporting evidence, reference answers, or hindsight information. However, this privileged information may allow the teacher to rely on facts that the student cannot reliably recover from its current state. The resulting information-state mismatch can lead the teacher to undervalue retrieval that helps the student establish those facts. To address this mismatch, we introduce Information-State-Aware Distillation (ISA-Distill), which adapts teacher feedback to the student's factual recoverability. ISA-Distill estimates how reliably the student can recover action-relevant knowledge and derives teacher feedback for the same sampled action from two complementary views. The fact-use view supplies the teacher with the relevant fact, producing feedback that guides the student in using knowledge. The evidence-seeking view instead presents the information need, producing feedback that guides the student in acquiring supporting evidence. The two signals are weighted toward fact use when recoverability is high and toward evidence seeking when it is low, and the resulting feedback guides policy optimization. Experiments across diverse QA benchmarks and model scales demonstrate improved answer accuracy and retrieval efficiency. Our code and model checkpoints will be open-sourced. 
+
+---
+# EvoRec: A Unified Self-Evolving Agentic Recommender with Dynamic Reflection Trees 
+
+**Authors**: Mengting Li, Long Zhang, Hao Jiang, Sheng Yu, Fei Pan, Peng Jiang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2611.01977)  
+
+**Abstract**: Conventional recommender systems rely on fixed cascaded pipelines, limiting their ability to adapt to evolving user needs and feedback. Existing agentic recommenders introduce reasoning and tool use but often lack end-to-end decision control and systematic failure reflection. We propose EvoRec, a unified agentic recommendation framework that combines autonomous decision-making with reflection-driven self-evolution. A Need Agent infers user needs from long-term, short-term, and working memory. A Planning Agent adaptively allocates retrieval budgets between Behavior Continuation and Need Satisfaction, selects retrieval tools, and sets ranking-fusion weights. An Acting Executor executes the plan and records decision traces. Following user feedback, a Dynamic Reflection Tree identifies failures in need inference, planning, or previous repairs, proposes personalized corrections, and validates them through replay. Verified repairs update working memory and are distilled into reusable cross-user strategies, enabling continual improvement without parameter updates. Experiments on a Kuaishou local-services advertising dataset show a 15.7% Hit@50 improvement over the strongest baseline. Hierarchical reflection further improves Hit@50 by 13.1% among users with prior repairs. In a seven-day online A/B test, nearline EvoRec increases advertising revenue by 4.6% and CTCVR by 3.5%, with a 14.5% revenue gain for high-intent users. These results demonstrate the effectiveness of reflection-driven self-evolution in industrial-scale recommendation. 
+
+---
+# EAGR: Evidence-Guided Adaptive Graph Retrieval 
+
+**Authors**: Sonam Gupta, Vignesh P, Vishwajeet Kumar, Adnan Qidwai, Anand Eswaran, Jaydeep Sen, Sachindra Joshi  
+
+**Link**: [PDF](https://arxiv.org/pdf/2611.01910)  
+
+**Abstract**: Retrieval-Augmented Generation (RAG) for multi-hop reasoning requires retrieval to adapt as intermediate evidence reveals new information needs. Existing approaches support such retrieval through explicit graph structures or iterative query reformulation, introducing graph-construction or query-time overhead. We present Evidence-Guided Adaptive Graph Retrieval (EAGR), a framework in which accumulated evidence dynamically determines which semantic directions to explore next, and which requires no dedicated graph database and no explicit graph materialization. EAGR operates over an implicit semantic graph induced by compact passage metadata pre-ingested into a standard VectorDB. Starting from dense-retrieval seed passages, an LLM iteratively assesses accumulated evidence, identifies promising semantic directions, expands the retrieval frontier through metadata-based neighborhood lookup, and terminates once sufficient evidence has been collected. By precomputing semantic metadata, EAGR enables evidence-conditioned graph exploration without materializing an explicit graph, maintaining a dedicated GraphDB, or iteratively rewriting the query. Across three widely used multi-hop QA benchmarks, EAGR achieves the highest LLM-based answer accuracy among evaluated methods, outperforming the vanilla RAG by 17\% and strongest graph-aware baseline by 4\% percentage points averaged across three popular benchmarks HotPotQA, 2WikiMultiHopQA, and MuSiQue. 
+
+---
+# IncVNM: An Interactive Recommender System with Incremental von Neumann-Morgenstern Utility Learning 
+
+**Authors**: Jiaxin Wei, Jia Liu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2611.01786)  
+
+**Abstract**: In modern recommender systems, users are often presented with products whose outcomes are random. The values of such products depend on their entire outcome distributions and on users' attitudes toward risk, making them difficult to evaluate using traditional product-level recommendation methods. We propose \textsc{IncVNM}, an interactive recommender system that incrementally learns a user-specific von Neumann--Morgenstern (VNM) utility function from ordinal click feedback generated during ordinary webpage browsing. At each interaction, \textsc{IncVNM} converts the click order within a displayed product list into pairwise comparisons between outcome distributions and updates the nominal utility by minimizing its deviation from the previous estimate while incorporating the newly observed pairwise comparisons. To close the interaction loop, an entropy-regularized sampling policy balances exploitation of the learned utility against exploration for additional preference information. We evaluate \textsc{IncVNM} in a rolling-window experiment with different response-error probabilities and show that it substantially outperforms the expected-return, mean--variance, discounted-UCB, and distribution-aware BPR baselines. 
+
+---
+# Measuring User Success in Randomized Search Experiments: Interpreting Good Abandonment in Generative AI Search 
+
+**Authors**: Minha Hwang, Shavak Agrawal, David Chen, Carto Wong, Xin Du, Tiannan Wang, Georg Buscher, Zheng Chen  
+
+**Link**: [PDF](https://arxiv.org/pdf/2611.01582)  
+
+**Abstract**: Randomized search experiments increasingly evaluate experiences in which large language models answer information needs directly on the results page. Click status alone cannot identify success: a click may lead to an unsatisfactory result, while no click may indicate successful answer consumption, or "good abandonment." Prior research has shown that good abandonment is difficult to detect because dwell, scrolling, and reformulation are meaningful only in context. We present Session Success Rate (SSR), a human-grounded, interpretable outcome metric designed for online controlled experiments. Trained judges label complete session experiences using privacy-protected interaction evidence and video recordings; these offline labels train models scored online from query events, viewport behavior, result-page interactions, and semantic reformulations. Out-of-sample evaluation on 6,904 labeled queries yields 0.75 balanced accuracy overall and 0.68 within abandoned queries; session-level balanced accuracy is 0.68. The sample shows why interaction status is not an adequate outcome: 53.2% of abandonments were successful and 6.5% of clicked queries were unsuccessful. In a validation portfolio of seven ranking and five non-ranking experiments, SSR agreed with Sessions per User in seven cases, was inconclusive in four, and disagreed in one under a common p < 0.05 rule. Separately, across approximately 4,000 production experiments, SSR produced about 2.5 times the binary sensitivity of Sessions per User; in the studied workflow, this supported lower traffic allocations and greater experiment throughput under a fixed traffic budget. 
+
+---
+# CCD: Context-Calibrated Open-Entity Out-of-Distribution Detection in In-Context Tabular Foundation Models 
+
+**Authors**: Zhangkai Wu, Xu Zhang, Zhihao Hao, Zhihong Cui, Yongmin Yoo, Xianxun Zhu, Kaize Shi  
+
+**Link**: [PDF](https://arxiv.org/pdf/2611.01489)  
+
+**Abstract**: In-context tabular foundation models (TFMs), such as TabPFN, predict from a labelled context without updating their parameters and are increasingly used for out-of-distribution (OOD) detection in Web applications, whose test rows come from entities absent from that context. Such applications need open-entity OOD detection: a new entity must not be mistaken for an unknown class, and an unknown class must still be caught. Existing detectors fail in this setting, and an entity-split gap hides the failure: random splits also place the test entities in the context. The failure arises because every TFM score reflects how unfamiliar a row is to the context. This produces an entity-over-class bias: known-class rows of new entities look more OOD than familiar ones, sometimes more than unknown classes. Specifically, the two OOD scores most widely used with in-context TFMs face an entity-class trade-off: the TFM's predictive confidence misses unknown classes, whereas the distance of a test row to the context flags new entities. To address this problem, we hold a group of entities out of the context and score them with the remaining context, which turns them into new entities of known classes and tells us how such rows should score. To measure detection on new entities, we build NEO-Tab (New-Entity OOD detection on Tables), 14 grouped and temporal tables on which all test rows come from new entities. We then propose Context-Calibrated Detection (CCD), which uses these group-out swaps on in-distribution data to calibrate three distances and the confidence against new-entity references. CCD weights them by their sensitivity and sharpness, keeps the model frozen and uses no OOD data. On NEO-Tab, CCD outperforms 16 existing detectors on every metric we report, and its lead holds on three TFM backbones. 
+
+---
+# "PRISM" Is Not All You Need: Cross-Topic Name Collisions and Scientific Paper Retrieval 
+
+**Authors**: Jingjie Ning, Xueqi Li, Yibo Kong  
+
+**Link**: [PDF](https://arxiv.org/pdf/2611.01362)  
+
+**Abstract**: Scientific names increasingly connect papers from different research topics, leaving readers to recover a paper's identity from context. We study this convergence in 564,861 AI-related arXiv records. Cross-topic name collision grows 4.33-fold from a pooled 2020-2022 reference to 2026, compared with 1.12-fold within topics. A second sentence encoder reproduces the pattern, and name-group resampling quantifies its uncertainty. Fixed word-frequency bands locate the main increase in an intermediate-frequency vocabulary shared by many research areas. We then measure the ambiguity that remains after supplying research clues. With the same three-term query construction, shared-name targets retain matched identification deficits of 25.7 percentage points under title-based BM25 and 6.9 points under title-plus-abstract E5. Within fixed same-name candidates, listwise language-model ranking reaches 89.2% using the query and candidate titles. Topic-specific comparisons show that context resolves more cross-topic ambiguity. The evaluation separates candidate competition, document fields, and contextual ranking through lexical, dense, and language-model baselines. Source-linked cases and a portable evaluation collection make the phenomenon inspectable and reusable for scientific retrieval and research assistants. 
+
+---
+# Dynamic Click Destinations: Personalizing Post Ad-Click Landing Experiences 
+
+**Authors**: Apurva Pathak, Yuya Shiraki, Iman Jenabzadeh, Nikhil Bhale, Yuwen Tan, Shashank Rangarajan, Amirmehdi Sharifzad  
+
+**Link**: [PDF](https://arxiv.org/pdf/2611.01287)  
+
+**Abstract**: Apps that monetize outbound (offsite) ad clicks have multiple post ad-click levers that influence user and business outcomes, including the landing page shown on the advertiser's site, whether the click resolves to a webpage or an app on the user's device, and whether it resolves to a native in-product surface or an external website. We refer to personalization over these levers as post ad-click destination automation. The optimal destination is heterogeneous across users, advertisers, placements, devices, and inferred intent, making static, one-size-fits-all destination policies suboptimal.
+We present Dynamic Click Destinations (DCD), a production personalization framework that selects a destination for each eligible offsite ad click to maximize Advertiser Value (AV), a value-weighted conversion outcome. DCD applies to any post-click destination decision where the system can choose among destination options at click time and downstream conversion feedback is available. We describe an evolution of learning objectives from post-conversion destination inference, to two-task destination-conditioned conversion prediction, to a single-task policy model that directly predicts which of two destinations is better for a given click, trained with Advantage Actor Critic (A2C)-inspired soft labels derived from a higher-capacity destination-conditioned "critic" model.
+In a web-vs-app case study, online A/B experiments at scale on a major advertising platform show that per-click personalization with DCD outperforms both static routing policies, with the single-task objective delivering the largest gains. These results highlight post ad-click destination as an important and under-explored lever in conversion optimization and demonstrate that personalized destination automation can outperform one-size-fits-all destination policies. 
+
+---
+# Improving Ads Ranking Models with Auxiliary Supervision: Techniques and Insights 
+
+**Authors**: Nikhil Bhale, Apurva Pathak, SaiSujithKumarReddy MarapaReddy, Xiao Yin, Prateek Bhansali  
+
+**Link**: [PDF](https://arxiv.org/pdf/2611.01280)  
+
+**Abstract**: Accurate prediction of post-click Conversion Rate (CVR) is essential for personalized ad delivery in the advertising industry. Traditional ads ranking models rely on conversion events (e.g., a user purchasing an item) as ground truth labels for training. However, these conversion events are often sparse or missing, which limits the effectiveness of model learning. The primary contributions of this paper are: (1) a case study on the use of auxiliary supervision from a diverse set of user events and metadata signals beyond traditional conversion events, and (2) advanced modeling techniques designed to maximize the value of these signals. We detail architectural innovations such as linearized labels for improved auxiliary signal precision, a split architecture to facilitate training task decomposition, and a novel Label Combination (LaCo) approach for robustly managing noisy auxiliary data. Empirical results demonstrate that these methods deliver measurable improvements in ranking models, underscoring their versatility and effectiveness across recommendation systems and related domains. 
+
+---
+# SIDRec: End-to-End Semantic ID Representation and Modeling for Recommendation 
+
+**Authors**: Zhuohang Jiang, Yongsen Pan, Pangjing Wu, Zihuai Zhao, Zheng Hu, Yuxin Chen  
+
+**Link**: [PDF](https://arxiv.org/pdf/2611.01136)  
+
+**Abstract**: Semantic IDs (SIDs) have emerged as a promising approach for discriminative recommendation by encoding continuous item rep- resentations into compact discrete identifiers. However, existing SID-based methods face two fundamental limitations: semantic mis- match between content semantics and collaborative preferences, and objective mismatch between SID construction and downstream recommendation optimization. To address these challenges, we propose SIDRec, an end-to-end recommendation-aware SID learn- ing framework that jointly models content and collaborative in- formation while aligning SID construction with recommendation objectives. Specifically, SIDRec introduces a self-updating fusion mechanism that explicitly integrates pretrained content represen- tations with collaborative embeddings initialized from a trained recommendation model, enabling preference-aware semantic mod- eling. Furthermore, SIDRec employs an MMoE-inspired joint opti- mization mechanism with shared experts and task-specific gates, allowing recommendation supervision to directly guide differen- tiable quantization and produce task-adaptive discrete representa- tions. Extensive experiments on three public benchmark datasets demonstrate that SIDRec consistently outperforms all competing methods across both AUC and GAUC, achieving up to 5.15% relative improvements over the strongest baselines. Further ablation stud- ies validate the effectiveness and complementarity of collaborative semantic modeling and end-to-end SID optimization. 
+
+---
+# Do GEO Gains Survive the Live Web? Evaluating In-the-Wild Visibility Gains of Generative Engine Optimization via LIVE-GEO 
+
+**Authors**: Runze Kong, Haibo Jin, Xucheng Yu, Xiaoqi Wang, Huimin Zeng, Haohan Wang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2611.01126)  
+
+**Abstract**: Generative engine optimization (GEO) rewrites web content so that LLM-based search systems, also termed generative engines (GEs), rank it higher in their answers and recommendations. However, existing GEO evaluations typically rely on directly supplied text or controlled retrieval pipelines, and whether GEO gains survive the live Web remains unclear, leaving a gap in understanding how GEO strategies affect the visibility of live webpages when accessed and ranked by GEs. To address this gap, we introduce LIVE-GEO, a benchmark for Live, In-the-wild Visibility Evaluation for GEO. LIVE-GEO publishes GEO-rewritten products as live webpages. We use LIVE-GEO to evaluate five existing GEO strategies (CORE, C-SEO, E-GEO, AgenticGEO, and Statistics Addition), applying them to the product descriptions and reviews of 80 fictional brands across 18 product families. We run experiments on three GEs (ChatGPT with GPT-6, Gemini 3.6 Thinking, and Grok in Expert mode), four direct-text API evaluators (GPT-4o, DeepSeek, Kimi, and Claude), and a direct-text local evaluator (Qwen2.5-3B-Instruct). With frozen $\pm0.2\%$ prices, most direct-text evaluators and GEs receiving product URLs give CORE the highest Top-1 rate, reaching 66.3%-76.3% on the GEs, yet other strategies vary in relative performance, and the GEs select the same top product for only 48.8%-66.3% of brands. We also find that ChatGPT is sensitive to the order of candidate URLs: CORE's Top-1 rate is 73.8% and 93.8% under two opposite fixed orders, and the randomized order used by LIVE-GEO yields 82.5%, between the two. In the numerical-faithfulness check, the JEV verifier agrees with the reference labels on 90.7% of 194 numerical benchmark cases and with human judgments on all 50 sampled descriptions, and it flags 86 of the 400 rewritten descriptions, including all 80 Statistics Addition descriptions. 
+
+---
+# Numerical Embeddings for CTR Prediction: A Taxonomy, Unified Benchmark, and Open-Source FuxiCTR Extension 
+
+**Authors**: Heng Yao, Hanwei Zhu, Tianying Liu, Yulou Shu, Siyun Hou  
+
+**Link**: [PDF](https://arxiv.org/pdf/2611.01090)  
+
+**Abstract**: Numerical embeddings map scalar features into vectors before a click-through rate (CTR) backbone combines the fields. To our knowledge, NumEmbBench is the first open benchmark dedicated to comparing numerical embeddings for CTR prediction. We classify 18 configurations into six mechanism-based families and evaluate them through one FuxiCTR interface. After equal-budget validation tuning, we compare frozen configurations on three datasets, nine backbones, and five seeds under a shared train-only z-score protocol. DEER has the best mean rank, but six methods lead at least one dataset--backbone setting. A matched native-scale test changes the winner in 11 of 27 settings, while paired latency measurements show that accuracy and inference cost need not move together. Code and per-seed results: this https URL 
+
+---
+# Growth of global science: reflections on measurability and scientometric insights 
+
+**Authors**: Robert Tijssen, Erik van Wijk, Alfredo Yegros  
+
+**Link**: [PDF](https://arxiv.org/pdf/2611.01086)  
+
+**Abstract**: Global science has become much larger and more interconnected in recent years. Such a complex and adaptive social system defies any attempt to systematically and comprehensively measure or monitor its growth and evolution. Yet, as it continues to expand and enhance its public value, effective evidence-based assessment has become increasingly critical for understanding its dynamics and managing the system. This paper offers a framework for addressing system-level measurability challenges. Inspired by Derek de Solla Prices pioneering scientometric work in the 1960s, this paper addresses analytical issues related to current measurements of the systems expansion since the turn of the 21st century. Our empirical analysis of global science dynamics presents new macro-level data on several observable megatrends in research publication output worldwide. Acknowledging the limited analytical scope of these trend data to understand the dynamics of global science, we outline currently available options to improve system-level measurability under conditions of ambiguity and uncertainty. Looking forward, we discuss likely future directions to establish integrated, multi-stakeholder measurement infrastructures. 
+
+---
+# Where Beam Search Loses Top-Ranked Items:First-Step Coverage in Generative Recommendation 
+
+**Authors**: Heng Yao, Hanwei Zhu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2611.01072)  
+
+**Abstract**: Generative recommendation can reproduce a wider beam's ranked output with roughly half the prefix-capacity budget by reallocating retention capacity across semantic-ID positions. We identify a \emph{first-step coverage bottleneck}: across six full-test settings of the TIGER generative recommender spanning three domains and two identifier constructions, every pruned exact top-10 path is first lost at the initial decoding step. An exact-catalog reference isolates search losses and guides a controlled budget intervention. Moving width to the first step raises Search Recall@10 by 0.96--10.90 percentage points at Beam-50's unchanged budget. Across all 77,373 test users with residual-quantized variational autoencoder (RQ-VAE) tokenization, the reallocated schedule reproduces Beam-100's ordered top-10 at nominal budgets of 151 rather than 301, without retraining or changing identifiers or scores. Matched-output timing saves 6.35--6.39\% of decoder latency; profiling identifies the execution costs that limit the translation from reduced search work to runtime savings. Larger-candidate experiments reveal how output size changes retention requirements. These findings make budget placement an actionable serving decision: locate ranking loss, redirect search capacity, and preserve downstream inputs before increasing uniform beam width. 
+
+---
+# PACT: Defending Recommendation against Promotional News Rewriting via Attack-Diverse Score Consistency 
+
+**Authors**: Chongxian Chen, Fan Mo, Xin Fan, Hayato Yamana  
+
+**Link**: [PDF](https://arxiv.org/pdf/2611.00972)  
+
+**Abstract**: Personalized news recommenders are increasingly vulnerable to LLM-powered promotional attacks, where content providers rephrase headlines to manipulate rankings without altering underlying facts. Defending against such manipulation requires covering a wide spectrum of LLM generators and optimization strategies--ranging from stylistic prompting to reinforcement feedback--without incurring prohibitive training or inference costs. In this work, we present PACT (Pooled Attack Consistency Training), a model-agnostic defense that decouples relevance estimation from superficial rhetorical variations. PACT integrates three synergistic operations: it pools offline, fact-checked rewrites from multi-generator and multi-strategy attack sources; samples a constant number of variants at each training visit to yield an unbiased estimator of the pool-wide consistency objective under a fixed compute budget; and aligns original and rewritten ranking scores within the same user context jointly with click supervision. Requiring no architectural modifications or test-time filtering, PACT deploys the trained recommender with zero extra latency. Across nine experimental settings spanning three recommendation backbones and three unseen-generator attacks, PACT consistently achieves the lowest promotion rate and target exposure, outperforming the strongest defense baseline by up to 3.0 percentage points in promotion reduction under LANCE. Further evaluations verify that PACT's superiority holds robustly under unseen attack-strategy holdouts and adaptive white-box retraining, while keeping clean recommendation utility virtually intact. 
+
+---
+# When 200 OK Is Not an Answer: Silent Fetch Failures in Agentic Web Content Acquisition 
+
+**Authors**: Shuyang Zhang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2611.00884)  
+
+**Abstract**: Web agents and answer engines fetch pages at question time, and liveness checks of cited sources treat an HTTP 200 response as success. We measure how often that assumption fails and what it does to measurements built on fetched pages. We fetched 10,307 URLs in three days with a polite static client and a rendered browser client: pages from 1,507 sites in five strata, random non-existent paths on every site, and the 4,795 URLs cited by expert-verified claims in ExpertQA. We define a taxonomy of what a 200 response contains, label the static 200 responses automatically, and check the labels against 300 items reviewed by an LLM-based assistant; a human check of 60 of them retained every reviewed usability label after discussion. By the automatic labels, 20.9% of the pages that a static client receives with status 200 do not contain the page's main content: app shells, bot challenges, block pages, error and placeholder pages, and partial content. On the held-out test split, the reviewed sample lowers this estimate from 25.5% to 20.0%. 13.1% of the sites whose random-path probe was answered returned 200. The error propagates: for the cited sources, treating 200 as content overstates the share of claim-source pairs that can be checked against live content by 12.2 points and inflates the apparent silent citation-drift rate from 5.8% to 21.9%. Cheap heuristics catch most of it. Text length, probe comparison and redirect-to-root, combined and tuned on held-out sites, recover 86% of unusable reviewed responses at a false-alarm rate near 5%. Content-reading detectors perform comparably: the best, the text classifier, gains five to seven points of recall at more than twice the false-alarm rate. We argue that agents and their evaluations should report fetch outcomes explicitly instead of inferring them from the status line and will release the labelled data and code. 
+
+---
+# EduExplain: A Benchmark for Explanation-Set Retrieval and Storyboard Construction in Educational Explanation 
+
+**Authors**: Aryan Ahmed, Riti Verma, Sanskar Singh, Maya Ramanath  
+
+**Link**: [PDF](https://arxiv.org/pdf/2611.00802)  
+
+**Abstract**: Generating an educational explanation for a learner's query is not a single retrieval step but a pipeline: a system must first retrieve a compact set of complementary resources--passages, figures, examples, activities--that jointly support an explanation, then structure that set into an ordered, timed, role-assigned plan before rendering it as a lesson or video. Existing retrieval benchmarks evaluate neither stage at the level these applications require: they score individual documents rather than explanation sets, and provide no ground truth for how a set should be organised into an explanation. We present EduExplain, a benchmark providing human-validated ground truth for both stages. Built from secondary-level science textbooks, it comprises 6,921 typed, multimodal resources and 2,123 concepts, and pairs each of 321 learner-oriented queries with one or more human-validated explanation sets (retrieval ground truth) and 741 reference storyboards (structuring ground truth). The benchmark exposes characteristics absent from prior datasets: heterogeneous multimodal retrieval units, multiple valid explanation sets per query, and plans whose quality depends on pedagogical role composition, grounding, and timing rather than relevance alone. We describe an LLM-assisted, human-validated construction pipeline, report inter-annotator agreement for both layers, and establish baselines for each stage--lexical, dense, multimodal, and cross-encoder retrieval paired with four selection strategies, and free-form and fixed-template storyboard construction. Our results show that first-stage retrieval quality dominates retrieval-stage performance, that off-the-shelf diversity-based selection underperforms simple top-ranked selection, and that unconstrained and rigidly templated structuring both fall short of the reference plans. The benchmark is available at this https URL. 
+
+---
+# WeSearch: A Unified Model-Centric Retrieval Framework for WeChat Search 
+
+**Authors**: Kepu Zhang, Yuzhe Cai, Yue Shu, Dawei Chen, Jinhai Zhu, Yuan Xu, Zehua Dai, Tongke Ni, Ziyao Chen, Chen Fu, Jie Shao, Chao Wang, Xiangmin Wang, Ruifeng Zhao, Rongchun Yao, Jie Yin, Weixin Qiu, Nan Song, Junyang Li, Fan Li, Quanchao Hui, Yulong Ou, Qiang Chen, Hao Cao, Sen Yang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2611.00530)  
+
+**Abstract**: We present WeSearch, a unified, model-centric retrieval framework for large-scale, continuously evolving content search. Prevailing methods assign documents fixed hierarchical Semantic IDs, implicitly assuming each document follows a single coherent semantic path-an assumption that often breaks down for multi-topic documents. WeSearch instead retrieves query-relevant clusters and then ranks atomic documents within the resulting query-specific candidate space, decoupling candidate pruning from fine-grained relevance modeling. Combined with relevance-aware training, compact document representations, and incremental index updates, this design enables weekly-or daily when needed-model refreshes. Deployed as the primary semantic retrieval path in WeChat Search alongside a lexical syntax tree, WeSearch shows consistent one-week A/B gains on corpora from hundreds of millions to billions of documents, and a one-month full-traffic A/B test confirms stable improvements of +0.68% CTR and +2.27% per-user article clicks, together with a 41% reduction in retrieval resource cost and a 19 ms reduction in graphic-text retrieval latency. WeSearch is now fully deployed in WeChat Search, serving 100% of production traffic. 
+
+---
+# From FAIR to AI-FAIR Metadata-First Infrastructure for AI-Enabled Science 
+
+**Authors**: Elizabeth G. Campolongo, Eric R. Sokol, Marty Downs, Gina Glenne, Gregory E. Maurer, Sydne Record, Dustin R. Rubenstein, Matthew J. Thompson, Christine Laney, Hilmar Lapp, Max Tarjan, Tanya Berger-Wolf  
+
+**Link**: [PDF](https://arxiv.org/pdf/2611.03327)  
+
+**Abstract**: Artificial intelligence (AI) technologies and their capabilities have advanced rapidly over the past few years, leading to widespread interest and adoption in the biological and ecological sciences. However, the data infrastructure and computational resources that provide the foundation for AI workflows in ecology and biodiversity science remain fragmented. Moreover, the flow of value remains largely unidirectional: data move from collectors, through repositories and aggregators into models, and finally to research products or management actions. The derived value, such as corrected taxonomies, annotations, quality flags, and insights, rarely returns to source communities. We propose an extension of the original FAIR principles to address the needs of AI-ready infrastructure: the AI-FAIR metadata criteria, which place AI-enabled science in the context of a bidirectional Question-Data-Model triangle. This framework is designed to facilitate large-scale content-based analysis across diverse collections and ensure that the scientists generating the data benefit from the AI-enabled advances built on their data. Alongside these criteria, we introduce an agentic evaluation workflow that both rates existing datasets on the AI-FAIR and traditional FAIR criteria and provides actionable feedback where critical metadata is missing or incomplete. This modular dataset evaluation tool, paired with a domain-appropriate checklist, translates these principles into a reusable assessment of machine-learning readiness, AI-readiness for specified tasks, traceability, and ethical and CARE-aligned stewardship. Through this approach we aim to create a community-informed system to close the model data loop, so that AI also enriches data to further enable scientific discovery. 
+
+---
+# DR Pixel: Page-Native Deep Research with Vision-Language Models 
+
+**Authors**: Tiansheng Hu, Yichuan Wang, James V. Talwar, Nicholas Tomlin, Chen Zhao, Sewon Min  
+
+**Link**: [PDF](https://arxiv.org/pdf/2611.03097)  
+
+**Abstract**: Complex documents such as scientific papers contain rich information in tables, figures, and equations; however, existing deep research (DR) agents typically reduce papers to OCR-extracted text. We instead ask whether vision-language models (VLMs) can enable page-native deep research: directly retrieving and reasoning over rendered document page images. We introduce DR Pixel, the first open-source end-to-end multimodal DR agent that uses rendered page images as its sole retrieval and reasoning unit, operating over a corpus of 1.06M pages. To evaluate this setting, we construct DRPixelBench, a benchmark on scientific papers requiring reasoning over text, figures, tables, and equations. Surprisingly, page-native DR already works well without training, outperforming OCR-based baselines across state-of-the-art models like GPT-5.4, Gemini-3.5-Flash, and Qwen3.6-27B, while requiring fewer tool calls. We next turn to DR training. A key challenge is that teacher trajectories for agentic supervised finetuning are noisy, mixing critical reasoning and action steps with redundant or failed attempts. To address this, we introduce counterfactual credit reweighting, a fine-grained credit assignment method that weights individual reasoning and action steps by their counterfactual contribution to the final answer. Our training improves retrieval recall by about 15 points and final accuracy by over 10 points on DRPixelBench, and likewise outperforms the untrained baseline on four existing benchmarks. On out-of-distribution ViDoRe-V3, DR Pixel comes within 1.8 points of an oracle that is given the gold pages directly. Our results suggest that the conventional OCR-then-retrieve pipeline is not only unnecessary but suboptimal: directly retrieving and reasoning over visual document pages makes complex DR both more effective and more efficient. 
+
+---
+# PlagiaCorpus: A Bilingual, Adversarial, and Cross-Lingual Dataset for Forensic Plagiarism Detection 
+
+**Authors**: Adel Ammar, Serry Sibaee, Wadii Boulila  
+
+**Link**: [PDF](https://arxiv.org/pdf/2611.02940)  
+
+**Abstract**: PlagiaCorpus is a bilingual Arabic-English dataset for benchmarking plagiarism and text-reuse detection, including reuse produced by large language models (LLMs) and reuse across languages. It contains 198,643 text records: a source corpus of 34,885 passages drawn from English and Arabic Wikipedia and two openly licensed book collections, and 163,758 queries (147,381 for training and 16,377 for testing). The queries cover five reuse classes of increasing difficulty, namely verbatim copying, character-level obfuscation, same-language paraphrasing by two different LLMs, and English--Arabic translation with structural paraphrasing, together with a Safe class of non-reused passages. Every positive query is linked to its source passage, and the train/test split is grouped by source passage so that no passage contributes queries to both splits. The release was curated through language identification, removal of LLM generation artefacts, and exact and cross-lingual de-duplication. Technical validation reports per-class length statistics, automatic checks of the train/test split, and inter-annotator agreement on a manually rated sample. The dataset is distributed in JSON and Parquet formats under a CC BY-SA 4.0 license. 
+
+---
+# Bridging Low-Level Image Fusion and High-Level Semantic Understanding 
+
+**Authors**: Guangyuan Dong, Lingdong Shen, Xudong Zhang, Haodong Jing, Haoyu Wang, Zihao Li, Zonghao Ying, Ziyu Song, Shenghao Liu, Jiachen Luo, Hao Zhang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2611.02896)  
+
+**Abstract**: Remote sensing image fusion and semantic interpretation are usually optimized separately, so reconstruction quality need not preserve downstream retrieval utility. We propose LANCE, which uses structured language as an explicit, indexable semantic state. A frozen vision-language model maps the input to a closed-vocabulary text record; a language-conditioned generator fuses the imagery; and a dense verifier with a differentiable continuous summarizer re-describes the output. Text-text consistency and anti-collapse contrastive text-mask losses with negative queries close the loop without dense annotations or VLM fine-tuning. A variational EM formulation yields a per-step contraction result under regularity assumptions, distinguishing semantic faithfulness from verifier overfitting. Across seven test sets on GF2, QuickBird, WorldView-III, and WorldView-II, LANCE improves reduced-scale reference metrics by up to 11.7% (median 2.1%) over the strongest learning baseline. Independent evaluation using a held-out VLM and a supervised aerial detector yields gains of +6.4 mAP and +0.072 open-vocabulary F1 over the closest competitor. Text perturbations, cross-verifier transfer, and pseudo-RGB ablations examine the mechanisms underlying these gains. The framework connects image fusion to verifiable semantic representations for multimodal retrieval and knowledge management. 
+
+---
+# SearchInject: Retrieval Exposure Control for Indirect Prompt Injection in Language-Model Search 
+
+**Authors**: Kainan Zhou, Gangzhen Qian, Janet Sung, Zhi Jing, Rong Bao, Qianru Lao  
+
+**Link**: [PDF](https://arxiv.org/pdf/2611.02643)  
+
+**Abstract**: An indirect prompt injection can affect a search-augmented large language model only after its carrier page reaches model context. SearchInject controls this admission decision with a joint score combining retrieval relevance, search-abuse cues, instruction likelihood, and two relevance interactions. A quarantine threshold is selected under an empirical 0.5% clean-candidate false-quarantine constraint on a calibration split. Evaluation uses 300 held-out SciFact queries and held-out payload categories within four construction families already represented during development. Across 1,200 query-family outcomes per retriever, top-10 target exposure falls from 0.9408 to 0.1583 for BM25, from 0.9158 to 0.1508 for a normalized hybrid, and from 0.8450 to 0.1375 for latent semantic analysis. These are relative reductions of 83.2-83.7%; the largest absolute change in clean normalized discounted cumulative gain at rank 10 is 0.0018. The frozen threshold yields clean test false-quarantine rates of 0.59-0.65%, above the empirical calibration constraint. A query-level analytical reanalysis accounts for the repeated construction outcomes under an independent-query assumption. A separate 104-case generation follow-up records context removal but no confirmed undefended hijacks under a post hoc endpoint, so it cannot estimate a reduction in attack success. The evidence supports retrieval exposure control within the evaluated construction families; the benefit of the interaction terms at matched clean cost remains unresolved. 
+
+---
+# Nonreciprocal Spherical Attention and Retrieval: Sharp Coarsening Clocks and Certified Score Correction 
+
+**Authors**: Faruk Alpay, Taylan Alpay  
+
+**Link**: [PDF](https://arxiv.org/pdf/2611.02237)  
+
+**Abstract**: We develop nonreciprocal spherical attention as a mathematical framework for coarsening and compressed nearest-neighbor retrieval. For two shrinking acute blocks whose centers have zero skew pairing and whose total mass ratio is subexponential in inverse temperature, we prove $\lim_{\beta\to\infty}\beta^{-1}\log T_\beta=1-\cos\phi$, without restricting particle-count growth. An explicit three-body flow has two rigorously separated metastable exponents. For finite compression, mass centering yields a sharp $O(r^2)$ attention-output error bound at fixed temperature, with an explicit spherical-normalization correction. We formulate skew query-side score calibration as a strictly convex moment problem and derive a unique normal equation, residual-based optimization certificates, and bounded low-rank projections. A norm-aware margin objective calibrates native squared-distance rankings. Experiments use semantic retrieval data, one million visual descriptors with three codebook seeds, and a ten-million-vector FAISS IVF-PQ index with recomputed exact cosine ground truth. On SIFT1M, skew margin calibration raises native-L2 hit@10 from 0.8926 to 0.8948; symmetric calibration reaches 0.8996. The ten-million-vector index reaches 0.8827 hit@10 at 0.1794 ms per query in a four-thread batch benchmark, while validation selects no skew update. Exact streamed attention over ten million keys evaluates compressed memory on 1,024 held-out queries. Independent matrix solves, automatic differentiation, finite differences, interval arithmetic, full-flow tests, and nine Rocq-checked algebra lemmas support reproducibility. Directionality alone does not establish retrieval superiority. 
+
+---
+# CST: Lightweight Risk Triage with Source-Grounded Evidence for Web Discussions 
+
+**Authors**: Zhihua Wang, Yifeng Gao, Yunhao Feng, Rui Pan, Baiheng Zhao, Zixing Chen, Nan Li  
+
+**Link**: [PDF](https://arxiv.org/pdf/2611.01710)  
+
+**Abstract**: Web communities rely on moderators to catch harmful messages such as insults, hate speech, and scams, but no one can read every message. Existing tools give each message a risk score, which tells moderators where to look but not what to read or how to check it. Yet meaning depends on context: the same reply, "I agree.", can support or oppose removing someone from a group. Moderators therefore need source-grounded evidence, not just scores: a few key messages kept with their original wording and replies. We present CST, a lightweight triage pipeline that first decides where to look, then what to show. It scores risk by pairing character patterns, which capture exact wording, with sentence meaning from a fixed multilingual model, so it handles several languages and runs on an ordinary CPU. It then groups related messages and picks from each group in turn, so a small reading budget covers different parts of a discussion, and links every pick back to the original thread. Across six tasks from five datasets in several languages, CST ranks harmful messages more accurately than a fully fine-tuned multilingual model and, under the same budget, finds more of them than reading by score alone. In a user study, reviewers needed at least 27% less time with CST's grouped evidence while keeping decision accuracy above 94%. CST turns risk scores into evidence that moderators can read quickly and check in context. Code and dataset reconstruction resources will be released at this https URL. 
+
+---
+# CREDO: Evidence-Conditioned Credit Assignment for Temporal Reasoning Agents 
+
+**Authors**: Yue Leng, Shengtao Wen, Xiang Chen, Xinyi Zeng, Yu Tian, Sheng-Jun Huang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2611.01643)  
+
+**Abstract**: Temporal Knowledge Graph Question Answering (TKGQA) requires language model agents to retrieve evidence, select relevant facts, and perform multi-step temporal reasoning. However, the trajectory-level outcome signal in GRPO does not explicitly distinguish the quality of intermediate decisions: downstream failures can penalize useful evidence acquisition, while identical rewards in all-failed groups eliminate the relative outcome signal despite differences in intermediate progress. We propose Credit Redistribution with Evidence-Driven Opportunities (CREDO), which uses intermediate evidence to recover local supervision, including in all-failed groups, and determine where outcome supervision acts. CREDO assigns positive stage-level credit through comparisons among rollouts of the same question and uses retained answer overlap as an opportunity proxy to shift part of the outcome-policy weight toward reasoning and answering. The framework preserves terminal rewards and trajectory-level advantages, while redistribution conserves total outcome-policy weight per trajectory. Following the public evaluation protocol of prior work, CREDO raises Overall accuracy from 78.0% to 82.4% and Multiple accuracy from 55.0% to 65.6% on MultiTQ relative to the strongest published baseline in our comparison. On TimelineKGQA, it raises cross-KG accuracy from 30.9% to 36.4% relative to our reproduced baseline via direct transfer to ICEWS Actor under matched training and evaluation settings. 
+
+---
+# LLM-Enhanced Multimodal House Price Prediction using Structured, Textual, and Visual Features 
+
+**Authors**: Khandokar Md. Rahat Hossain, Souvik Das, Tahsina Hashem, Mohammed Eunus Ali, Tanzima Hashem  
+
+**Link**: [PDF](https://arxiv.org/pdf/2611.01615)  
+
+**Abstract**: Accurate house price prediction is essential for real estate buyers, sellers, agents, and financial institutions. Traditional methods rely primarily on structured data, e.g., number of bedrooms, bathrooms, parkings, but they overlook rich contextual information embedded in textual descriptions and property photos. Previous deep learning approaches for house price prediction have fused multimodal data but they fall short to extract structured spatio-temporal and contextual features from texts and semantic visual information from images. In this paper, we introduce a novel multimodal framework that addresses these limitations by systematically integrating structured attributes, textual descriptions, and visual images of properties to achieve higher prediction accuracy while maintaining interpretability. We use a large language model to derive domain-specific spatio-temporal and contextual features from text, and an unsupervised vision-language approach to automatically group photos into meaningful classes like indoor, outdoor, mixed, or floorplan, that are commonly present in real-world house listings. These categories are created without manual labeling by aligning image clusters with carefully designed pseudo text prompts. We fuse all features into a unified representation and use an optimized regressor to predict prices. Experiments on a large real-world property dataset demonstrate that our method outperforms traditional methods and existing multimodal baselines. Ablation studies confirm that the novel textual feature extraction and categorized visual embeddings substantially contribute to more accurate and reliable price predictions. 
+
+---
+# Federated Vector Retrieval across Heterogeneous VectorDBs 
+
+**Authors**: Mintaek Lim, Sieun Hyeon, Geon Chio, Jaeyoung Do  
+
+**Link**: [PDF](https://arxiv.org/pdf/2611.01514)  
+
+**Abstract**: Vector databases are now core infrastructure for AI retrieval systems, yet many real deployments must serve queries over multiple independently constructed vectorDBs built with different embedding models. This creates a systems problem of federated retrieval over heterogeneous vectorDBs: vectors and similarity scores are not directly comparable across embedding spaces, while fully resolving this incompatibility through corpus-wide re-embedding and re-indexing is often operationally prohibitive. Existing methods therefore face a difficult trade-off between retrieval quality, construction cost, and query throughput. We present HVMap, a lightweight compatibility layer for federated retrieval across heterogeneous vectorDBs. Instead of rebuilding databases into a unified space, HVMap learns bidirectional mappings between embedding spaces using a fuzzy contrastive loss, enabling calibrated cross-database scoring without corpus migration or index reconstruction. HVMap is system-agnostic and further scales to multi-vectorDB settings while preserving ranking fidelity through a hub-based architecture. We evaluate HVMap in open-domain, cross-domain, and scale-out settings, and also construct a new benchmark for heterogeneous cross-domain federation. Across these settings, HVMap consistently achieves a better quality--cost--throughput trade-off than baselines, achieving up to 3.59X higher nDCG@10, up to 2.01X higher query throughput, and construction time as low as 0.3% of baseline methods. These results show that HVMap makes heterogeneous vectorDB federation practical at scale. 
+
+---
+# Wrong Together: Shared Bias in User Simulation 
+
+**Authors**: Saber Zerhoudi  
+
+**Link**: [PDF](https://arxiv.org/pdf/2611.01354)  
+
+**Abstract**: User simulators generate responses in place of human participants, allowing researchers to estimate the result of a study. To use these estimates before collecting human responses, researchers need a way to assess their reliability. We test whether disagreement among simulators can identify unreliable estimates of a group's response proportions and of differences between groups. We evaluate this signal using 6 language-model simulators and existing GlobalOpinionQA responses for 60 questions in 12 countries. Disagreement predicts invalidity more accurately for differences between two groups than for a single group's response proportions (AUC 0.87 versus 0.71). Errors shared by the simulators remain invisible to this signal. When such an error affects both groups equally, it cancels in the comparison, helping explain the stronger result for group differences. We test this explanation by estimating the shared bias using one set of groups and subtracting it from predictions for a separate set. This correction reduces prediction error without changing disagreement among the simulators. In a retrospective analysis, we simulate referring the 20% of group comparisons with the greatest disagreement for human assessment. Among the remaining comparisons with a conclusive validity judgment, 54.8% are judged invalid, compared with 63.7% before referral. 
+
+---
+# OntoDoc: Automatically Generating Ontology Resource Descriptions 
+
+**Authors**: Juan Guajardo Gutierrez, Mike Tran, Nasim Shirvani Mahdavi, Chengkai Li  
+
+**Link**: [PDF](https://arxiv.org/pdf/2611.01276)  
+
+**Abstract**: Knowledge graphs and ontologies form the backbone of structured, machine-readable knowledge representation, yet ontology terms often lack natural language descriptions, limiting their accessibility and reuse. Existing ontology verbalization approaches tend to rely on rule-based or template-driven techniques that operate on strict, formal schema axioms, resulting in rigid verbalizations that fail to convey richer contextual semantics. We present OntoDoc, a multi-agent framework for automatically generating natural language descriptions for any Internationalized Resource Identifier (IRI) within a SPARQL endpoint or RDF file. OntoDoc operates through a four-stage pipeline: (1) a Database Context agent that adaptively explores the knowledge graph via SPARQL to collect semantically informative triples about the target IRI; (2) a Web Context agent that retrieves and re-ranks encyclopedic background knowledge from Wikipedia and the open web; (3) an Assumption Generation agent that synthesizes both contexts into a structured, evidence-grounded list of intermediate assumptions; and (4) a Description Generation agent that produces the final natural language description from the grounded assumptions. We evaluate OntoDoc on three knowledge graphs spanning biomedical, agricultural, and cross-domain settings, using both automatic scoring via Large Language Models (LLMs) and human evaluation with 11 annotators. OntoDoc consistently matches or exceeds a naive LLM baseline and a template-based ontology verbalizer in accuracy. Furthermore, it vastly outperforms both baselines in the completeness of the generated descriptions, delivering an average 12% improvement in completeness over the naive baseline across all domains, and improving completeness scores by as much as 2.8 points on a 5-point scale relative to the ontology verbalizer. 
+
+---
+# HiPaper: A Human-AI Collaborative System for Academic Literature Triage and Scholarly Sensemaking 
+
+**Authors**: Ye Jia, Pangjing Wu, Hayley Y.W. Gu, Zhuohang Jiang, Xu Yuan, Peter H.F. Ng, Zackary P. T. Sin, Qing Li, Chen Li  
+
+**Link**: [PDF](https://arxiv.org/pdf/2611.00762)  
+
+**Abstract**: Scholarly sensemaking requires researchers to iteratively retrieve, collect, and synthesize literature as their understanding evolves. However, existing scholarly tools provide only partial support for this process. Recent artificial intelligence (AI)-based systems generally rely on opaque submit-and-wait pipelines that it users' ability to inspect, revise, and validate intermediate outputs. In this study, we present HiPaper, a human-AI collaborative literature review system informed by a formative study with academic experts. HiPaper organizes scholarly sensemaking as a three-stage interactive workflow spanning Retrieval, Collection, andSynthesis, centralized on the human-in-the-loop paradigm that exposes intermediate AI-generated content for user inspection and intervention through a persistent workspace called Knowledge Pocket. Through this workflow, users can iteratively refine search intent, curate and organize papers with AI-enriched metadata and clustering, and conduct evidence-traceable synthesis over selected literature. Our user study with 14 Ph.D. students showed that HiPaper efficiently supports scholarly sensemaking by enabling human-AI collaboration in both familiar and unfamiliar domains. Furthermore, the findings highlight how staged interactions with intermediate AI-generated content successfully scaffold user interactions throughout the sensemaking process. 
+
+---
+# DuSE-Bench: Benchmarking Joint Reasoning over Evolving Dialogue and Documents 
+
+**Authors**: Guanjie Cheng, Jianfeng Gao, Yufei Tong, Xinkui Zhao, Shuiguang Deng  
+
+**Link**: [PDF](https://arxiv.org/pdf/2611.00755)  
+
+**Abstract**: Persistent Web information assistants must combine evolving document facts with user requirements established and revised across sessions. Yet systematic evaluation of how changes in both sources affect response requirements and evidence attribution remains limited. To address this gap, we introduce Dual-Source Evolution Benchmark (DuSE-Bench), a benchmark comprising 1,000 tasks across five scenarios, including 700 whose required premises originate in both dialogue and documents. An evolving Support Graph guides task construction and preserves links from updated facts and reused conclusions to original turns and passages. Task annotations distinguish grounding source from state dependence and enable separate evaluation of response content, response type, and source attribution. Experiments across 11 baseline configurations reveal persistent challenges in joint reasoning over evolving dialogue and documents, with content accuracy on jointly grounded tasks reaching at most 56.7%. Moreover, improvements in content accuracy can coincide with poorer response choice, while content-correct responses frequently lack complete attribution to original evidence. Matched evidence substitutions further show that the effect of replacing one source's evidence depends on support from the other. These findings motivate coordinating dialogue memory and document retrieval to apply current user requirements and document facts together while preserving their original support. The data are available at this https URL. 
+
+---
+# ElectroChemLLM: A Multimodal LLM Pipeline for High-Fidelity Electrochemical Informatics 
+
+**Authors**: Dikshya Mohanty, Manoj Praveen Nandigama, Kuldeepsinh Raj, Sourav Kanti Maiti, Jiannan Yang, Ruiqi Luo, Srinivasa Phani Madhav Marupudi, Mounika Geriki, Prayag Raghunandan, Puneet Lingutla, Tengfei Ma, Niranjan Balasubramanian, Nav Nidhi Rajput  
+
+**Link**: [PDF](https://arxiv.org/pdf/2611.00638)  
+
+**Abstract**: Electrochemistry is central to solving many modern-day challenges, including energy storage systems for a sustainable future, and its advancement relies heavily on the data from past findings. Existing automated pipelines are limited by text-only architectures, context fragmentation, and numerical hallucinations - collectively preventing accurate, large-scale curation of property databases. We introduce ElectrochemLLM, a multimodal information extraction pipeline that jointly identifies structured electrochemical records encompassing electrolyte compositions, electrode materials, cell configurations, and their measured physicochemical properties from unstructured scientific PDFs at scale. By combining hybrid document parsing with vision-capable LLM orchestration, the pipeline extracts verifiable, structured data across text, tables, and figures. Evaluated on the battery-electrolyte subset of our manually annotated benchmark of 232 papers, ElectrochemLLM achieves an F-1 score of 0.97, and has been applied to curate ElectroChemDB, a structured database spanning 15,000 electrochemical research articles. We demonstrate the utility of this resource by training machine learning models for electrolyte property prediction, illustrating a complete pathway from unstructured literature to predictive materials discovery. 
+
+---
+# MEMENTO: Learning Context Management for Long Context Processing Agents 
+
+**Authors**: Yunfan Zhang, Taehoon Hwang, Kathleen McKeown, Smaranda Muresan  
+
+**Link**: [PDF](https://arxiv.org/pdf/2611.00244)  
+
+**Abstract**: LLM agents that operate over long inputs must perform context management: deciding what to retain in a fixed-size context window. A common approach is compaction, where the model replaces its history with a self-generated note. Yet off-the-shelf agentic models, including GPT-5.5 and GLM-5.3, often write ineffective notes, and reinforcement learning (RL) alone rarely discovers useful note-taking behavior. We present MEMENTO, a long-context agent built on Qwen3-8B and trained to manage its context through compaction. We first bootstrap note-taking by fine-tuning on synthetic trajectories annotated with notes generated in hindsight, then reinforce it with RL using a reward that combines answer correctness, note-quality heuristics, and confidence calibration. Although trained only to compact into a fresh window, MEMENTO extends at test time to strategies such as context folding and confidence-based backtracking. On book-level question answering across four benchmarks, with books of up to 2.5M tokens, MEMENTO raises Qwen3-8B's accuracy from 36.9% to 67.8% while never holding more than 20K tokens in context. It outperforms GPT-5.5 agent in the same harness (13.1%) and full book context (56.7%) at less than 1/50 the cost. It also nearly matches a ~100x larger GLM-5.3 agent (69.3%) at 1/9 the cost, and comes within 6.4 points of GLM-5.3 full context at 1/26 the cost. 
+
+---
+# PatchScout: Thematic Web Data Collection via Information Foraging 
+
+**Authors**: Michael West, Eduard Dragut  
+
+**Link**: [PDF](https://arxiv.org/pdf/2611.00169)  
+
+**Abstract**: Researchers often need web corpora that are not answers to a single query, but reusable collections of documents spanning many decentralized sources. We refer to this problem as thematic web data collection: assembling semantically relevant documents that share a common theme but are scattered across heterogeneous and structurally disconnected regions of the web. Existing approaches, including traversal-based methods and LLM-driven web agents, are limited by local exploration or short-horizon stopping, preventing comprehensive collection. We formulate this task as a long-horizon information foraging problem over query-induced semantic patches, where the central challenge is deciding when to continue local exploitation and when to switch to new regions. We propose PatchScout, a multi-agent framework that instantiates a class of patch-switching policies to balance local exploitation and adaptive patch switching under a fixed budget. Experiments on four live-web topics show that PatchScout substantially improves yield and domain coverage over traversal-based and search-augmented reasoning agent baselines. In an applied social science setting with an incomplete prior collection, PatchScout discovers 102 previously unidentified entities, illustrating its ability to expand existing thematic datasets. 
+
+---
+# SpatialVec: A Unified Representation Learning Framework for Geospatial Objects with Boundary-Aware Sampling 
+
+**Authors**: Samya Acharja, Kanchan Chowdhury  
+
+**Link**: [PDF](https://arxiv.org/pdf/2611.00111)  
+
+**Abstract**: Spatial representation learning is essential for Geospatial Artificial Intelligence (GeoAI) applications, enabling machine learning models to capture the geometry, location, and spatial relationships of geographic entities such as points, polylines, and polygons. Existing spatial encoding methods often struggle to preserve fine-grained topological information, particularly for interactions involving complex geometries such as polylines and polygons. These approaches inadequately capture boundary structure and local spatial context, causing topology-sensitive relationships near geometry boundaries to be underrepresented in the learned embedding space. Consequently, accurately modeling complex spatial interactions remains a significant challenge for downstream spatial reasoning tasks. To fill the gap, we introduce SpatialVec, a boundary-aware spatial representation learning framework that adaptively samples geometry boundaries and their surrounding regions, capturing fine-grained geometric structures critical for topology-aware spatial reasoning. A transformer-based encoder-decoder trained through geometry reconstruction produces compact, geometry-aware, and unified representations for points, polylines, and polygons. Empirical evaluation on two real-world datasets shows that SpatialVec substantially improves the preservation of challenging topological relationships involving polygonal interactions and outperforms state-of-the-art baselines significantly on downstream prediction and classification tasks. 
+
+---
