@@ -1,0 +1,276 @@
+# Sheaf-Inspired Structured Scoring Extensions of LightGCN for Collaborative Filtering 
+
+**Authors**: Ksenia Belkovskaya, Timur Lidzhiev, Maria Stebliy, Alexander Tarakanov  
+
+**Link**: [PDF](https://arxiv.org/pdf/2611.17226)  
+
+**Abstract**: Graph-based collaborative filtering learns user and item representations by propagating embeddings over a user--item interaction graph. We investigate a modular, sheaf-inspired scoring extension placed on top of a three-layer LightGCN backbone. The motivation comes from cellular sheaves, where local vector spaces are related by linear restriction maps; here, this idea motivates structured, pair-dependent transformations of user and item embeddings rather than a change to graph propagation. We compare the identity inner-product scorer, diagonal, rank-one low-rank, and full matrix residual scorers, and a parameter-matched residual MLP baseline (\texttt{mlp\_full}) on Amazon-Book, Gowalla, MovieLens-1M, and Yelp2018. We report ranking quality and catalog coverage at cutoffs 10 and 20. The selected structured variants show modest, dataset-dependent changes in ranking quality and sometimes substantial changes in coverage. Our method is inspired by sheaf geometry but does not construct a cellular sheaf or implement sheaf-Laplacian diffusion; the experiments therefore do not establish a causal benefit from sheaf geometry itself. 
+
+---
+# Evaluation of Music Version Retrieval Methods for Setlist Identification in Live Concerts 
+
+**Authors**: Andres Ferraro, Albin Correya  
+
+**Link**: [PDF](https://arxiv.org/pdf/2611.17070)  
+
+**Abstract**: Automatic setlist identification aims to identify the songs performed in live concert recordings by matching noisy and variable-quality audio against a database of reference tracks. This task presents challenges beyond conventional music version identification, including substantial arrangement differences, background noise, and the need to process continuous recordings efficiently at large scale. In this work, we evaluate modern music version retrieval methods for setlist identification using the ASID benchmark, comparing the established Re-MOVE system with CLEWS and NAVE, an internal neural audio version embedding model. Our results show that NAVE and CLEWS substantially outperform Re-MOVE. Notably, NAVE uses 256-dimensional embeddings, compared with 1024 dimensions for CLEWS, providing a four-fold reduction in embedding storage while achieving better retrieval performance. We further evaluate music/non-music gating and find modest improvements in detection and temporal coverage, while qualitative analysis suggests that such preprocessing can improve recognition boundaries beyond what the standard ASID metrics capture. Overall, the results demonstrate that segment-level audio embeddings provide a strong basis for scalable setlist identification and that compact representations can achieve strong accuracy under realistic live-concert conditions at much lower storage and serving cost. 
+
+---
+# SignalAudit-QD: A Reproducible Audit Resource for External Signals in AI-Query Forecasting 
+
+**Authors**: Amir Rafe, Iman Jamshidi, Gourab Sil, Subasish Das  
+
+**Link**: [PDF](https://arxiv.org/pdf/2611.16947)  
+
+**Abstract**: SignalAudit-QD is a reproducible audit resource for testing whether a dated public signal adds information beyond query history in a fixed 20-term U.S. AI panel. It aligns two archived Google Trends extractions with eight USPTO AI-patent publication streams and releases origin-indexed predictions, paired losses, provenance, executable tests, and tamper-evident run manifests. Both inputs are retrospective reconstructions obtained after the modeled 2020--2023 origins; the task is therefore a pseudo-origin assay within frozen measurement vintages, not a historical deployment simulation. In the designated one-month comparison, adding a two-component patent block to a level ridge changes macro mean absolute error by +0.0012 Trends points, with conditional 95% moving-block interval [-0.0363,+0.0387]. This establishes neither aggregate benefit nor equivalence. Alternative dimensions, semantic mapping, patent definitions, a second extraction, and a three-month horizon remain unresolved; persistence-anchored and nonlinear hosts instead show model-specific worsening, tiny for the anchored fit. Matched timing controls expose availability assumptions, while a planted-signal assay detects only the largest tested injection. A within-query high-interest alert demonstrates the released interface but not online utility. The contribution is a bounded negative case study and an extensible evidence schema for auditing external-signal claims in temporal information retrieval. 
+
+---
+# KuaiRecV2: Benchmarking Large-Scale Continual Learning for Diversified and Multi-task Recommendation 
+
+**Authors**: Chenxu Li, Shuchang Liu, Hantao Shu, Wei Yuan, Zhe Xu, Guoqing Hu, Yan Wang, Biao Yang, Xiang Li, Cheng Ling, Fan Yang, Yongqi Liu, Lantao Hu, Han Li, Kaiqiao Zhan, Kun Gai, An Zhang, Xiang Wang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2611.16795)  
+
+**Abstract**: Recommender systems, which retrieve items of interest to users based on their interaction histories, have recently witnessed several key technological advancements, benefiting from the semantic representation space and model-data scaling. Nevertheless, practitioners and researchers have frequently encountered critical inconsistencies between simple offline evaluations and complex online results, and this gap still exists in the era of large models. In this work, we address several key factors that contribute to this inconsistency: 1) the \textit{large-scale continual learning challenge} that assumes a practical demand to maintain long-term model effectiveness under dynamic item pools and distributional shifts; 2) the \textit{combinatorial diversity challenge} that requires the generation strategy to solve the accuracy-diversity trade-off in both the finer token level and the holistic item level; and 3) the \textit{multi-task reward balancing challenge}, which is particularly critical for modern generative models that can accurately model the sequence distribution but are less controllable for the multi-task demands.
+To address these challenges and further pave the way for the development of more realistic recommendation solutions, we introduce KuaiRecV2, a deliberately constructed benchmark with industrial-level datasets from Kuaishou. Specifically, we provide a large-scale interaction dataset with million-scale multi-modal item information and long-term interaction records across 30 days, with a dynamic video candidate pool. Additionally, we provide a rigorous benchmark that evaluates retrieval accuracy, diversity, and multi-task performance in one rubric system, where an effective advancement occurs if and only if the new method improves all metrics. The code is available at this https URL 
+
+---
+# Active Learning of Approximate LLM Ranking for Energy-Efficient Retrieval of Long Queries 
+
+**Authors**: Ohad Porat, Elad Yom-Tov  
+
+**Link**: [PDF](https://arxiv.org/pdf/2611.16488)  
+
+**Abstract**: Search engines and Large Language Models (LLMs) offer complementary strengths for document retrieval: lexical retrievers which rely on keyword matching are fast and energy-efficient, whereas LLMs capture semantic meaning and excel at interpreting long, context-rich queries. However, this comes at a cost that is computationally and energetically prohibitive.
+We propose the LLM Active Approximation Model (LAAM), a hybrid retrieval framework that introduces a lightweight learned predictor which serves as an intermediary between semantic retrieval and LLM retrieval. LAAM is refined through an active learning loop where an LLM labels a small number of documents. By concentrating LLM evaluations on the most informative documents, the framework substantially reduces inference cost while preserving retrieval effectiveness.
+We evaluate the proposed framework on TREC Robust 2004 using Lucene with BM25 retrieval and DeepSeek v3 as the LLM, under three levels of query verbosity. For verbose queries, LAAM achieves 87% of average P@10 achieved by DeepSeek's reranking (0.459 vs. 0.526), while requiring only 3.3% of the per-query energy consumption. LAAM is statistically significantly better than BM25 and is indistinguishable from DeepSeek on average precision, though not on MAP (Friedman test, P<0.05 with post-hoc testing).
+Overall, our results demonstrate that selectively approximating LLM relevance judgments through active learning enables retrieval accuracy to be controlled directly through the evaluation (and consequently energy) budget. Rather than committing to either inexpensive (and less accurate) lexical retrieval or exhaustive (and expensive) LLM reranking, our framework exposes a continuous spectrum of operating points along the energy--accuracy curve, allowing practitioners to select how to trade retrieval quality with computational budget. 
+
+---
+# RMIT-ADM+S at TREC RAG 2026: Research Agents, Retriever Ablations, and Open-Weight Replication 
+
+**Authors**: Oleg Zendel, Kun Ran, Chenglong Ma, Nguyen Khoi Vo, Shuai Wang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2611.16425)  
+
+**Abstract**: We describe the RMIT-ADM+S team's participation in the TREC 2026 Retrieval-Augmented Generation (RAG) track using the ClimbMix corpus. We submitted seven research-agent runs using proprietary OpenAI and open-weight models, exploring different retrieval strategies, writer models, and agent workflows. Pre-submission ablations identified writer selection and adjacent-chunk expansion as the main factors affecting answer quality. In the official NIST evaluation, six of seven runs exceeded the track median across all three rubric/nugget collections. Our best-performing run, brief-hybrid, achieved the highest all-item coverage among our submissions and tied the track maximum (0.892) for Batch-1 vital coverage. Human side-by-side preferences differed across evaluation batches: the open-weight owa-glm5 led Batch 1 despite lower automated coverage, while sol-research-first led Batch 2. These findings highlight differences between automated coverage measures and human preferences, as well as the potential of lower-cost open-weight models for research-agent systems. 
+
+---
+# AntEmbed: Dual-Mode Multimodal Embedding Model for Efficient and Fine-Grained Retrieval 
+
+**Authors**: Kehang Jia, Teng Liu, Juntao Li, Hua Chen, Jinxiong Chang, Xiaobo Liang, Min Zhang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2611.16405)  
+
+**Abstract**: Discriminative embeddings encode original multimodal inputs efficiently but struggle with fine-grained semantics. Generative embeddings use reasoning to capture query intent and relevance evidence, but incur higher computational costs. We propose AntEmbed, a dual-mode multimodal embedding model that supports efficient retrieval and reasoning-enhanced fine-grained matching in a unified embedding space. First, we construct retrieval-oriented reasoning content that captures query intent and confusion-aware semantic evidence. We treat original and reasoning-enhanced candidate inputs as semantically equivalent views, and use multi-positive contrastive learning with a single embedding token to align discriminative and generative embeddings. Second, cross-mode self-distillation transfers fine-grained semantic information from reasoning-enhanced to original representations through candidate similarity-distribution distillation and query representation alignment. This strengthens discriminative embeddings without requiring additional online reasoning. Both retrieval modes share a single candidate index. On MMEB-v2, AntEmbed-8B achieves an overall score of 81.5 with reasoning-enhanced embeddings, outperforming the strongest baseline by 3.1 points. 
+
+---
+# ReSID: Rethinking Long-Tail Retrieval in Generative Recommendation through Item Reachability 
+
+**Authors**: Muyu Zou, Shunye Tang, Yi Xu, Haibo Xing, Yandong Wang, Lingyu Mu, Jinxin Hu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2611.16404)  
+
+**Abstract**: Generative recommendation (GR) represents items with discrete Semantic IDs (SIDs) and casts retrieval as sequence generation. Under skewed interaction distributions and tight serving budgets, GR struggles to retrieve long-tail items. In this work, we are the first to study long-tail reachability across the complete pipeline of SID construction, decoding, and matching. We find that under equal code lengths, parallel SID construction consistently outperforms sequential SIDs on tail items. Moreover, even when full generation fails, decoded sequences carry locally consistent information that retrieves relevant tail items via partial matching. Yet this recovery is bounded by upstream search, failing once beam search prunes all prefixes completable within a fixed mismatch tolerance. Motivated by these findings, we propose ReSID to jointly preserve and recover tail candidates. Built on long parallel SIDs, ReSID pairs popularity-debiased and user-semantic-aware beam search to keep promising paths alive with partial SID matching to recover items from surviving tokens. ReSID achieves state-of-the-art long-tail retrieval while maintaining competitive overall accuracy, with lower latency and higher throughput under narrow beams. ReSID is deployed in our production system, serving main user traffic with substantial business gains. We release our complete code and model checkpoints to support full reproducibility and real-world deployment at this https URL. 
+
+---
+# TriGen: A Generative Paradigm for Trigger-Induced Recommendation 
+
+**Authors**: Muyu Zou, Haibo Xing, Shunye Tang, Liyan Tie, Lingyu Mu, Yandong Wang, Jinxin Hu  
+
+**Link**: [PDF](https://arxiv.org/pdf/2611.16395)  
+
+**Abstract**: Generative recommendation typically operates under the User-Induced Recommendation (UIR) setting, predicting target items by autoregressively generating semantic IDs as a passive continuation of long-term user history. However, this paradigm overlooks Trigger-Induced Recommendation (TIR), an essential industrial scenario where a user click triggers an immediate follow-up feed. In TIR, recommendations must dynamically align with the instant trigger intent without compromising historical preference continuity. Traditional TIR methods rely on discriminative scoring and cannot guide token-level generation, while existing generative models lack mechanisms to reconcile this structural tension. To address this challenge, we propose TriGen, establishing a tailored generative paradigm for trigger-induced recommendation. TriGen introduces calibrated tail injection to re-encode local history, adaptively arbitrates between persistent tastes and immediate impulses via dynamic gating, and applies position-specific transformations to sustain level-aware trigger guidance across decoding steps. Extensive offline evaluations confirm consistent gains over competitive baselines. Furthermore, online A/B tests across six country markets demonstrate significant revenue and GMV improvements, leading to the full production deployment of TriGen. 
+
+---
+# CURATOR: Scalable Fine-grained Evidence Selection for Retrieval-Augmented Generation using Decision Models 
+
+**Authors**: Shib Dasgupta, Bandish Parikh, Rashmi Gangadharaiah  
+
+**Link**: [PDF](https://arxiv.org/pdf/2611.16366)  
+
+**Abstract**: Retrieval-augmented generation (RAG) provides entire retrieved passages to the LLM, even though only a handful of spans within them contain the evidence pertaining to the question. While precise selection of these spans can improve context utilization, identifying them in isolation is challenging. A span may appear irrelevant by itself, and deciding whether to retain it may require examining other retrieved information. One can evaluate each span's candidacy with the full retrieved context, but this is computationally inefficient as the same text must be processed repeatedly. Pretrained decision model can be used to efficiently evaluate multiple spans simultaneously, allowing each decision to consider the surrounding spans as well. However, our experiments show that their ability to identify relevant evidence deteriorates as the number of simultaneous decisions increases.
+To address this, we introduce CURATOR, a fine-tuned decision model trained to make reliable evidence-selection decisions over large candidate sets. By training a decision model to select varying numbers of supporting spans from large candidate pools, CURATOR develops the capability to select evidence for RAG while retaining the computational efficiency of joint decision-making. We observe that CURATOR maintains a strong evidence discrimination capability as the number of candidates increases, generalizes across different tasks and document domains, and improves downstream RAG performance, particularly when the available context is limited. 
+
+---
+# GA-HEL: A Knowledge-Driven Expert System for Open-Set, Granularity-Aware Hierarchical Event Linking in Social Media 
+
+**Authors**: Shengqi Zhou, Zhigang Liu, Wenxiang Zhu, Zhentao Cang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2611.16194)  
+
+**Abstract**: Social-media event intelligence requires a system to determine whether a post belongs to a registered event space, identify the supported hierarchy path, and stop at the deepest level warranted by the evidence. We formulate this requirement as open-set hierarchical event linking over frozen Storyline--Episode--Atomic Event Cards. GA-HEL implements a three-stage, knowledge-driven expert-system funnel: open-set scope control limits candidate exposure before hierarchical reasoning, hierarchy-aware decoders select a supported path and depth, and deterministic legal-path validation checks each record before database-compatible use. A 200-post Pilot supports task and mechanism development, while a separately annotated 497-post Expansion set evaluates transfer across four held-out Storylines and a hard-negative pool. Method implementations, prompts, Event Cards, candidate order, and six systems' predictions were frozen before Expansion Gold annotation. The resulting evaluation combines end-to-end hierarchical matching, open-set rejection, structural validation, ablation, cross-Storyline analysis, and an independent expert reannotation of a fixed audited subset. GA-HEL remains competitive with strong global full-card reasoning while providing explicit scope control and hierarchy-valid structured records. Error analysis identifies unsupported descent from Episode-level evidence to Atomic Events as the dominant remaining challenge. The task definition, frozen resource, and auditable protocol provide a reproducible foundation for scope-aware event intelligence. Code, Event Cards, labels, frozen predictions, and evaluation scripts are available at this https URL. 
+
+---
+# From Tokens to Behaviors: Rethinking Generative Recommendation for User Trajectory Prediction 
+
+**Authors**: Jiaqi Wang, Hanchen Yang, Hengyu Zhang, Hongxu Ma, Wenqi Rao, Hongyang Wang, Zhongbo Sun, Renliang Qian, Weixin Chen, Wengen Li, Jihong Guan, Shuigeng Zhou, Qingpeng Cai, Peng Jiang, Hong Cheng  
+
+**Link**: [PDF](https://arxiv.org/pdf/2611.16159)  
+
+**Abstract**: User behavior trajectory prediction (UBTP) aims to capture how a user's needs evolve over time by predicting the sequence of future interactions from that user's interaction history. Recent generative recommendation (GR) methods address this task through autoregressive generation of semantic IDs (SIDs). However, serial SID decoding couples token generation with behavior state transitions and requires multiple dependent steps per interaction. Discrete item feedback overlooks predictive uncertainty, and teacher-forced training leaves a training-inference gap in trajectory generation. To address these limitations, we propose TraGR, a behavior-aware generative recommendation framework that aligns generation, feedback, and learning with successive user behaviors. Its behavior-level architecture predicts SID tokens in parallel within each interaction and models behavioral transitions through recurrent state updates, with joint SID and item-level supervision. Probability feedback combines the selected behavior with a probability-weighted summary of alternatives to guide subsequent predictions. Relation-aware trajectory learning incorporates collaborative transition signals and later credit assignment into training on model-generated trajectories. Experiments on four public datasets demonstrate that TraGR consistently outperforms state-of-the-art baselines across different prediction horizons. Code: this https URL. 
+
+---
+# Bag of concepts can enhance other text representations for medical systematic review screening 
+
+**Authors**: Radosław Pytlak, Paweł Cichosz, Bartłomiej Fajdek, Bogdan Jastrzębski  
+
+**Link**: [PDF](https://arxiv.org/pdf/2611.15798)  
+
+**Abstract**: The paper examines the choice of text representation for semi-automated systematic literature review (SLR) systems based on active learning. Motivated by the insufficient attention that the bag of concepts representation has received so far, the paper discusses the implementation and experimental evaluation of several variations thereof. The experimental study was performed on medical SLR case studies, with results reported for random forest classification, cluster initialization and uncertainty sampling. The utility of bag of concepts features obtained using different ontologies is evaluated by applying them within the active learning framework to sequentially create classification models based on training data iteratively expanded with expert annotations. Systematic experiments compare BoW, BoC, PubMedBERT, Jina, Gemma and Qwen3 representations, together with combinations of BoC and each of the other representations. The evaluation uses workload savings and performance profiles adapted from optimization benchmarking. The results suggest that concept-based features can provide complementary information, with the BoC-augmented representations achieving higher mean workload savings on the DERP cases than their corresponding base representations. The Qwen3+BoC representation gives the best average performance in this comparison. The effects of augmentation vary across case studies and base representations. The paper also concentrates on the impact of ontology choice on document classification outcomes. In particular, the paper compares the predictive value of bag of concepts representations based on chosen ontologies with that of representations obtained using MedCAT with a UMLS-based dictionary. 
+
+---
+# ReAlign: Reward-Guided Preference Alignment for Generative Re-Ranking 
+
+**Authors**: YaChen Yan, Liubo Li  
+
+**Link**: [PDF](https://arxiv.org/pdf/2611.15445)  
+
+**Abstract**: Re-ranking refines the upstream ranked list to maximize listwise user utility. Existing two-stage generator-evaluator methods decouple list generation from list evaluation, leaving the generator without direct access to the listwise utility signal, while scoring-based one-stage methods score items under a fixed upstream permutation context without explicitly searching the permutation space. We propose \textbf{ReAlign}, a reward-guided preference alignment framework that couples a listwise reward model with a candidate-aware autoregressive generator. The reward model decomposes the listwise reward into position-wise contributions, modeling user exposure through a survival-based exposure module and item value through per-objective heads for heterogeneous engagement signals. The generator is trained in two stages: supervised pre-training on logged exposure lists to establish a relevance prior, followed by reward-guided post-training that aligns the generator with the reward model through complementary distribution and ranking alignment over within-pool standardized rewards. Extensive offline experiments show that ReAlign consistently outperforms existing state-of-the-art baselines. 
+
+---
+# SurvEval: Listwise Re-Ranking Evaluator via Survival-Based Exposure and Multi-Objective Value Modeling 
+
+**Authors**: YaChen Yan, Liubo Li  
+
+**Link**: [PDF](https://arxiv.org/pdf/2611.15434)  
+
+**Abstract**: Re-ranking is a crucial stage in recommender systems, yet existing evaluators oversimplify user browsing assumptions and collapse multi-objective signals into a single scalar, limiting their ability to reflect true listwise utility. We propose \textbf{SurvEval}, a listwise evaluator that jointly models user exposure and item value for re-ranking evaluation. We formalize the sequential browsing process as a discrete-time survival model, deriving monotonically decreasing reaching probabilities that capture the cascading structure of user browsing. We further introduce a multi-objective value estimation module with dedicated per-objective prediction heads and uncertainty-based loss weighting to adaptively balance objectives of varying scales and noise levels. Both components are jointly optimized via a unified transformer backbone, and the listwise utility is obtained by summing the position-wise products of reaching probabilities and conditional item value estimates. Extensive experiments on KuaiRand and Avito demonstrate that SurvEval achieves superior performance over state-of-the-art baselines. 
+
+---
+# When Direction Matters: Diagnosing Relational Instruction Following in Dense Retrieval 
+
+**Authors**: Zhanyu Wu, Richong Zhang  
+
+**Link**: [PDF](https://arxiv.org/pdf/2611.15417)  
+
+**Abstract**: Dense retrievers increasingly claim the ability to condition retrieval on natural-language relevance criteria beyond a short query. We identify a specific weakness in this capability: the evaluated models perform well when lexical or attribute cues distinguish the target, but become much less reliable when relevance depends on a directional relation over the same entities. We introduce SwitchIR, a controlled diagnostic that contrasts Constraint Shift and Explicit Filtering with Relational Flip, where the query and document pair remain fixed while the requested relation direction reverses. Across representative embedding and late-interaction retrievers, the primary joint metric is high on the two cue-available controls and consistently low on Relational Flip; the same ordering persists in an LLM-assisted, manually reviewed realistic variant. An exact margin decomposition shows that both directions are correct only when the direction-sensitive query--document interaction exceeds the direction-invariant pair preference. Empirically, direction-sensitive changes are common, but their aligned interaction is usually too weak to overcome that preference. Diagnostic fine-tuning shows that models can learn relational behavior that generalizes across relation families, with stronger generalization in the larger model. 
+
+---
+# Measuring, Revealing and Mitigating Harmful Content Propagation in Recommender Systems 
+
+**Authors**: Xiaokun Zhang, Youlin Wu, Junyu Lu, Jiamin Chen, Zhaochun Ren, Hongfei Lin, Fenglong Ma, Xue Liu, Chen Ma  
+
+**Link**: [PDF](https://arxiv.org/pdf/2611.15160)  
+
+**Abstract**: Recommender systems help users navigate vast amounts of information by filtering content according to their historical behaviors. As these systems increasingly shape everyday information access, they largely determine the content users are exposed to. However, current research typically prioritizes catering to user interest, while overlooking the existence and propagation of harmful content, such as violence, hate speech, and pornography. In this work, we take a systematic step toward investigating harmful content in recommender systems from three aspects: measuring, revealing, and mitigating. First, we construct datasets with harmfulness-related annotations and present new evaluation metrics to quantitatively measure the harmfulness of recommendation results. Second, our empirical analysis reveals that users tend to engage with harmful content and prevailing recommendation methods often contribute to the proliferation of such content. Third, to address this issue, we introduce a generic framework, MitiHarm, which integrates harmfulness-related signals into both item and user representation learning. Experiments show that MitiHarm can significantly mitigate the propagation of harmful content while preserving user satisfaction. Resources of this work are available at this https URL. 
+
+---
+# Similar but Not Redundant: Embedding-Gated Refinement for High-Granularity Topic Models 
+
+**Authors**: Daniel Denley, Robert L. Nicol, Mike J. Chantler  
+
+**Link**: [PDF](https://arxiv.org/pdf/2611.17030)  
+
+**Abstract**: High-granularity topic modelling extracts hundreds of niche topics from a corpus, yet this regime is rarely studied and is more commonly framed as a failure mode: "over-clustering," in which coherent themes fragment into redundant subtopics. We argue that this framing conflates genuine redundancy with topics that are semantically similar but meaningfully distinct, and that the central challenge in high-granularity modelling is separating the two. Recent post-hoc refinement methods address topic redundancy through either embedding-based similarity thresholding or LLM-guided merging. We show that neither suffices in high-granularity settings and propose embedding-gated iterative merge (EGIM), a hybrid approach that iteratively generates context-rich topic representations, uses embedding similarity to propose candidate merges across the topic space, then applies LLM judgement to accept only genuinely redundant pairs while preserving niche distinctions. Across two patent corpora and one legal corpus, LLM judgement rejects 83% of embedding-identified candidates as non-redundant. EGIM improves discriminability on merged topics by 25-55% over a prior iterative LLM baseline while better preserving the original topic distribution. 
+
+---
+# Anonymous in Name Only: A Critical Review and a Reidentification Exercise on the European Commission's Anonymization Measures for Google Search Data under Article 6(11) of the DMA 
+
+**Authors**: David Sánchez, Benet Manzanares, Josep Domingo-Ferrer  
+
+**Link**: [PDF](https://arxiv.org/pdf/2611.17012)  
+
+**Abstract**: In July 2026, the European Commission (EC) set out the anonymization measures Alphabet must implement to share Google Search data with competing search engines under Article 6(11) of the Digital Markets Act. As the first concrete illustration of how the EC operationalizes anonymization under the EU digital rulebook, this methodology could become a regulatory benchmark. In this paper, we show why it should not. We critically review the anonymization measures proposed by the EC, from the characterization of residual risk to the suppression thresholds and the reliance on contractual safeguards. For each of those issues, we highlight significant conceptual flaws, and, where applicable, we illustrate these flaws with empirical observations from real Google Search data provided by Alphabet and protected under the EC's measures. Importantly, we present examples of low-effort reidentification, record linkage, and confidential attribute inference achieved through straightforward and automatable attack patterns. Our findings show that the approach of the EC relies on unjustified heuristics rather than formal privacy guarantees, underestimates the risks inherent in free-text search queries, and sacrifices data utility without achieving meaningful protection. We also demonstrate that the proposed measures do not meet any of the three anonymization criteria established by the European Data Protection Board (EDPB): no record isolation, no linkage, and no inference. Practitioners and regulators are therefore cautioned against treating these measures as a sound anonymization practice. 
+
+---
+# HyperPage: Learned Page Layouts for Disk-Resident Graph Vector Indexes 
+
+**Authors**: Xinyu Zhang, Jingze Li, Baihua Zheng, Weiwei Sun  
+
+**Link**: [PDF](https://arxiv.org/pdf/2611.16149)  
+
+**Abstract**: Disk-resident graph indexes such as DiskANN store each vector with its graph edges as one record on SSD pages. A search needs the page of every record it expands, so its page reads depend on the page layout, that is, which records share a page. Search agents trained with reinforcement learning query one such index run after run, and every graph traversal can be logged with the records it expands. We therefore use the logs of a finished run to lay out the index for a declared memory budget, so later runs read fewer pages. In contrast, existing layouts such as Starling and MARGO are computed from the graph and vectors and use no logs. Learning a layout from logs is challenging, because the logs must stay valid under every layout, the saving depends on what the budget caches, and the best layout is NP-hard to find. Our key observation is that DiskANN-style search routes on in-memory codes and the records it expands, never on their page-mates. As a result, the logged traversals price every layout by replay, and cached records add no page reads. Accordingly, we propose HyperPage, which first builds layouts for the declared budget on the logged traversals of uncached records. It then selects one layout, together with the budget split between hot records and a page cache, by replaying validation steps. In addition, a Lagrangian lower bound shows how far a layout may be from the optimum. We learn from one Search-R1 agent run and test on a later run with a different reward, over 1M and 21M passages. Across seven cache budgets, HyperPage reads 5.2% to 21.2% fewer pages than MARGO, and no compared layout reads fewer. The advantage is largest when the cache is small. For example, at 1% of the 1M index, MARGO needs nearly 3 times the budget to read as few pages. On the 21M index, HyperPage also cuts search time per step by up to 10.4%. The saving holds for a second agent model and a second corpus. 
+
+---
+# Calibrated Early Termination with Bounded Optimality Gaps for Constrained Vector Search 
+
+**Authors**: Xinyu Zhang, Jingze Li, Baihua Zheng, Weiwei Sun  
+
+**Link**: [PDF](https://arxiv.org/pdf/2611.16148)  
+
+**Abstract**: Vector search over learned embeddings is the retrieval layer of recommendation and retrieval-augmented generation, and many applications cap how many answer items one category may contribute. Graph indexes answer a query by best-first traversal, and where it stops determines its cost and whether its answer is exact. We study early termination for such constrained $k$-nearest-neighbor ($k$-NN) queries, with plain $k$-NN as a special case, and seek the cheapest stopping rule whose answer is exact with probability at least $1-\varepsilon$. Learned early-termination methods instead target average recall, which does not guarantee exact answers. Multiple testing can calibrate any parameterized stopping rule to our target, but it cannot tell how much a better rule with the same risk and observations would save. Answering this needs a lower bound on the optimum of a rule family too large to enumerate, valid for the query population. Our key idea is to declare the observations a rule may use and to consider every rule monotone in them. Risk-constrained stopping then becomes a linear program over an order polytope, whose Lagrangian minimizers form a nested chain of staircase rules computed exactly by dynamic programming. Fixed-sequence binomial tests along this chain calibrate our rule, CaST, whose failure probability is at most $\varepsilon$ with confidence $1-\delta$. Lagrangian weak duality bounds the optimum of the declared class from below at all risk levels at once, without a union bound over the rules. On two datasets of one million items each, CaST replayed on logged searches costs at most 1.132 times the class optimum for risk levels from 0.03 to 0.10, at 95% joint confidence per setting. Larger savings thus need a rule outside the class. At a common risk target on held-out queries, CaST is faster than every other calibrated rule we time, which take 4.8% to 45.5% more mean time. 
+
+---
+# REWEAVE: Online Learning for Workload-Adaptive HNSW Indexes 
+
+**Authors**: Minghao Li, Nick Koudas, Raghav Mittal  
+
+**Link**: [PDF](https://arxiv.org/pdf/2611.16060)  
+
+**Abstract**: Vector databases rely on Hierarchical Navigable Small World (HNSW) indexes for similarity search, but a graph built from data alone can be poorly matched to a skewed or changing query workload. We present REWEAVE (Reward-Guided Rewiring of Vector Graphs), an online index-maintenance method that learns edge utility from query feedback and periodically rewires the bottom layer within the original per-node degree cap. The method supports sparse exact-neighbor feedback combined with self-labels, and standard HNSW serving without learning overhead once adaptation is disabled.
+Under explicit assumptions we prove value-estimation and graph-stabilization guarantees. Under stationary skew, REWEAVE improves held-out recall by up to 23.3 percentage points over HNSW. In comparisons with query-aware baselines on up to 100M vectors, it achieves up to 3.3x NGFix's query throughput at recall@100 of 0.80. On Amazon-ESCI with query drift, it increases stream recall@100 from 0.745 to 0.979 with 34% fewer search distance computations than frozen HNSW. These results illustrate the potential to improve retrieval quality and reduce search effort within an existing graph-degree budget, while incurring additional work during adaptation. 
+
+---
+# Wayfinder: Adaptive Resource Routing from Agent Citations 
+
+**Authors**: Miguel Romero, George Karypis  
+
+**Link**: [PDF](https://arxiv.org/pdf/2611.16053)  
+
+**Abstract**: To act effectively, agents must gather contextual information across resources such as chats, issue trackers, email and knowledge bases, to answer questions like "what was decided in the last project meeting?" or "where is the FAQ for our internal tooling?" Where this information lives in a user's environment is unknown to the agent, so it re-explores the same resources across consecutive interactions. Common routing approaches represent each resource as a tool and rely on high-level descriptions to generalize to unseen environments. Such descriptions often fail to separate similar or overlapping resources and cannot improve from the agent's subsequent interactions. We introduce Wayfinder, an adaptive router that uses the documents cited by the downstream agent as feedback about where relevant information resides. These citations update Wayfinder's internal resource representations, which subsequent interactions use to prioritize the resources likely to contain relevant information. We also introduce resource augmentation during offline reinforcement learning, which anonymizes and permutes resource identities to discourage training-time overfitting of which resource holds which topic; our ablations suggest it helps most when few training environments are available. Because no openly available professional environments pair realistic queries with resource-access patterns, we construct and release three controlled testbeds derived from existing datasets: NFCorpus, FEVER and Tech Startup. Compared with supervised, tool-retrieval and contextual bandit baselines under a shared closed-loop protocol, Wayfinder gives the best routing when resources contain semantically overlapping content that static descriptions cannot distinguish, while description-based tool retrieval suffices when resources are drawn from distinct corpora. 
+
+---
+# Predicting the Needle in a Petabyte Scale Haystack: Open-Vocabulary Event Anticipation in Satellite Imagery 
+
+**Authors**: Shreelekha Revankar, Mikhail Klassen, Creon Levit, Ash Hoover, Kavita Bala, Bharath Hariharan  
+
+**Link**: [PDF](https://arxiv.org/pdf/2611.16000)  
+
+**Abstract**: Satellite constellations now image the Earth daily, capturing the lifecycle of events from deforestation to urban construction. Anticipating these events before completion enables timely intervention, yet existing systems cannot jointly identify where a change occurs, what it will become, and when it will finish across an open vocabulary. Building such a model requires diverse event data, but events are like needles in a haystack, making manual annotation at global scale infeasible. We address this problem by representing change as the vector difference between vision-language model embeddings at distinct time points. This arithmetic approach allows us to search for semantic transformations directly in the latent space, enabling (1) an automated data engine for global event discovery without manual annotation and (2) the largest global satellite event dataset to our knowledge, comprising 21,000+ locations across 64+ event types with ~2M images from PlanetScope and Sentinel-2 spanning six continents, to train (3) a novel global-scale event anticipation model. Our model detects change with a 93.5% max F1 score, outperforms baselines 3.6x on predicted event retrieval, and forecasts completion dates with a 3-day median error, even nine months before completion. Code: this https URL 
+
+---
+# HeriKGQA: Grounded Knowledge-Graph Question Answering over Cultural Heritage Sensor Data 
+
+**Authors**: Lingxiao Kong, Vasileios Arampatzakis, Vasileios Sevetlidis, George Pavlidis, Zeyd Boukhers  
+
+**Link**: [PDF](https://arxiv.org/pdf/2611.15904)  
+
+**Abstract**: Cultural heritage sites are increasingly monitored by sensor networks, but querying their data requires database expertise. Large Language Models (LLMs) offer a natural-language interface, yet over raw sensor records they lose track of which sensor, site, and time each value belongs to, and silently miscompute. We present HeriKGQA, a knowledge-graph question-answering method that confines the LLM to interpreting questions and phrasing answers, leaving computation to SPARQL and deterministic code. Questions are parsed into intents constrained by a heritage ontology aligning W3C SOSA/SSN with CIDOC-CRM, compiled into SPARQL, and answered from query results and temporal, spatial, and anomaly facts derived by a grounding layer, with error correction guarding each LLM step. On 500 questions over real data from five heritage sites, HeriKGQA reaches 99.0% accuracy, 18.2 points above the strongest of three baselines using the same LLM and receiving the same anomaly rules and answer conventions, with comparable answer quality while running almost four times faster. Without grounding, accuracy drops by 12.2 points and on anomaly questions from 99% to 66%. We report lessons from development and live deployment. 
+
+---
+# When Local Definitions Are Missing: Stable Errors in Language Models 
+
+**Authors**: Zengqing Wu, Chuan Xiao  
+
+**Link**: [PDF](https://arxiv.org/pdf/2611.15597)  
+
+**Abstract**: Contracts, technical manuals, and online communities often give familiar words special meanings and define them in one place. A language model that reads a passage without that definition may use the usual meaning and give an answer that sounds right but is wrong. We study this with multiple-choice questions whose correct answers depend on a local definition. The questions come from a synthetic vocabulary, commercial contracts, Reddit community glossaries, and the documentation of a decentralized exchange. We ask three language models each question with and without the definition. Without using the answer key, we then test whether their repeated answers and stated confidence reveal their own errors. Separately, we give a small open model the answer key and test whether it can predict which questions larger models get wrong. We report three findings. (1) Familiar words that a source redefines cause the most errors. Models often repeat the same wrong answer, and neither repeated answers nor stated confidence reliably flag it. (2) The source definition fixes most errors on synthetic questions, but a definition drawn from the model's own prior knowledge does not. In real contracts, the source definition fixes only about half of the errors. (3) Given an answer key, a small model can rank questions by how likely larger models are to get them wrong. These results call for tests that check answers against the full source, including its local definitions. 
+
+---
+# SimRec: Learning to Search, Ask, and Recommend from Simulated Interaction 
+
+**Authors**: Yaxin Zhang, Xingyu Wu, Yuchen Yan, Yuqin Dai, Hong Zhao, Lixing Shen, Zhan Chen, Jian Shao, Yongliang Shen  
+
+**Link**: [PDF](https://arxiv.org/pdf/2611.15426)  
+
+**Abstract**: LLM-based recommendation agents can search catalogs, inspect products, ask users, and revise rejected recommendations. However, these behaviors are often governed by hand-designed workflows, while existing training methods optimize isolated components such as query rewriting or list ranking rather than the interaction policy as a whole. We present SimRec, a reinforcement learning framework that trains the full interaction policy of a tool-integrated recommendation agent. SimRec introduces two components. A task-anchored user simulator provides feedback on every recommendation: conditioned on the current task need rather than on user profile, and it can be an external LLM or the recommender itself under self-play. A task-aligned reward optimizes the whole trajectory with GRPO, crediting natural retrieval quality and valid tool use alongside the final hit, with training-only target injection to handle sparse hits over large catalogs. On ESCI and Amazon C4, SimRec improves the NDCG@100 of a Qwen3-4B agent from 32.23% to 35.42% and from 22.94% to 24.72%}, outperforming training-free agents on far larger backbones and task-aligned baselines on NDCG. Analysis shows that the trained agent verifies candidates, uses preferences, and recovers from rejected recommendations far more often than its untrained counterpart. Our code is available at this https URL . 
+
+---
+# Vision-Grounded Semantic Learning and Alignment for Scalable Multilingual Text-Based Person Retrieval 
+
+**Authors**: Xinyu Zhou, Fan Li, Shasha Chen, Min Cao, Ahtamjan Ahmat, Qiaoming Zhu, Mang Ye  
+
+**Link**: [PDF](https://arxiv.org/pdf/2611.15328)  
+
+**Abstract**: Multilingual Text-Based Person Retrieval (TBPR) aims to retrieve individuals with texts in multiple languages. Despite its practical importance, it has been overlooked by existing research, which mainly focuses on English-only retrieval. The only prior attempt at multilingual TBPR suffers from (1) the absence of a large-scale, multilingual pretraining dataset and (2) a suboptimal model architecture for multilingual text encoding and cross-modal alignment, which employs a shared encoder that overlooks linguistic heterogeneity and relies on English as a pivot for cross-modal alignment, introducing English-centric bias. For this, we contribute MultiPedes, the first large-scale, pedestrian-centric multilingual pretraining dataset. It contains 10 million image-text pairs across four languages, constructed by a multilingual quality-aware data construction pipeline. We also propose ViSeLA (Vision-grounded Semantic Learning and Alignment), a novel framework featuring: (1) a semantic-aware multilingual learning module that extends the mixture-of-experts architecture by routing language-invariant semantics to specialized experts for improved multilingual feature learning; and (2) a vision-grounded cross-modal alignment module that employs a semantic probe to capture fine-grained semantics across modalities, enabling direct cross-modal alignment without relying on a pivot language. Extensive experiments on both multilingual and English-only TBPR datasets demonstrate the effectiveness of ViSeLA. The dataset and code are available at this https URL 
+
+---
+# When Does a Recommendation Spark Curiosity? Theory, Measurement, and Field Evidence 
+
+**Authors**: Pan Li, Alexander Tuzhilin  
+
+**Link**: [PDF](https://arxiv.org/pdf/2611.14938)  
+
+**Abstract**: Curiosity, the drive to close the gap between what one knows and what one wants to know, pulls consumers beyond their familiar content, sustains engagement, and breaks them out of the filter bubbles of repetitive, relevance-only recommendations. Despite its importance, curiosity is hardly incorporated into modern recommender systems for lack of a formal measure. The information-gap theory of curiosity provides no formal quantitative model that a recommender system can operate on, and existing proxy metrics do not accurately measure the curiosity that a recommended item evokes. To fill this research gap, we formalize the information-gap theory into five axioms of curiosity and construct the canonical formulation of a computational measure of the curiosity that a recommended item evokes in a consumer. We validate our curiosity measure through a survey-based study, in which it matches consumers' self-reported curiosity and outperforms alternative proxy metrics. We subsequently build a curiosity-aware recommender system that incorporates this measure into the utility function design, and we show through offline experiments on three real-world datasets that it significantly outperforms the state-of-the-art methods. Furthermore, we conduct a large-scale online controlled experiment at a major video-streaming platform in Asia, where we show that our method significantly increases click-through rate, video views, and time spent over the latest production system, leading to tangible economic impact for the company. Our method has since been deployed on the platform and remains in operation. Our findings establish consumer curiosity as a measurable and actionable objective for recommender systems, with important managerial implications for digital platforms to recommend what consumers wonder about. 
+
+---
+# Stage-Resolved EBV-Induced B-Cell Programs Across CNS Selection and Multiple Sclerosis Compartments 
+
+**Authors**: Hasan Jamil, Alexander Gow  
+
+**Link**: [PDF](https://arxiv.org/pdf/2611.14524)  
+
+**Abstract**: Epstein-Barr virus (EBV) is implicated in multiple sclerosis (MS), but whether EBV-conditioned B cells retain stable transcriptional programs after CNS selection remains uncertain. We reanalyzed datasets spanning experimental EBV infection, CNS-homing B cells in humanized mice, early-MS blood, and paired human CSF and blood. A frozen EBV-induced B-cell factor (F12) was transferred without outcome-driven modification and evaluated using anatomical, sequencing-depth, metabolic, coherence-matched, lineage, and exposure controls. F12 did not predict MS activity (AUC=0.487; p=0.489) and was lower in CSF in nine evaluable participants (mean difference -0.0560; coherence-matched p=0.015). It also remained lower in brain than spleen in all five EBV-exposed mice after matched-depth rarefaction (p=0.0313) and coherence-matched calibration (p=0.0225). The splenic TBX21+CXCR3+ transcriptional gate did not reliably represent the state of anatomically selected brain B cells. An enriched 287-gene cross-system bridge lacked B-lineage and EBV-exposure specificity. In human CSF, an early EBV-associated program was depleted (-0.0492; p=0.0197), whereas latency-III and lymphoblastoid cell line-like programs increased (+0.0666; p=0.0092 and +0.0148; p=0.0096, respectively). Opposite early and late program directions persisted after removing shared genes. No external program met the prespecified prospective criterion. These findings support stage- and compartment-dependent remodeling of EBV-associated B-cell transcription rather than persistence of a stable RNA signature. They distinguish cellular trafficking from transcriptional-state preservation and show that cross-system molecular resemblance alone cannot establish ancestry. EBV-directed biomarker studies should integrate host transcription with virologic, clonotypic, antigen-specific, epigenetic, and longitudinal evidence. 
+
+---

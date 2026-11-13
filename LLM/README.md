@@ -2,6 +2,7 @@
 
 | Date | Link | Number of Papers |
 |:----:|:----:|:----------------:|
+| 13-Nov-2026 | [Link](https://github.com/Deriq-Qian-Dong/Awesome-arXiv-Daily-Reporter/blob/main/13-Nov-2026/topic/LLM_related_papers.md) | 0 |
 | 11-Nov-2026 | [Link](https://github.com/Deriq-Qian-Dong/Awesome-arXiv-Daily-Reporter/blob/main/11-Nov-2026/topic/LLM_related_papers.md) | 0 |
 | 10-Nov-2026 | [Link](https://github.com/Deriq-Qian-Dong/Awesome-arXiv-Daily-Reporter/blob/main/10-Nov-2026/topic/LLM_related_papers.md) | 0 |
 | 9-Nov-2026 | [Link](https://github.com/Deriq-Qian-Dong/Awesome-arXiv-Daily-Reporter/blob/main/9-Nov-2026/topic/LLM_related_papers.md) | 0 |
